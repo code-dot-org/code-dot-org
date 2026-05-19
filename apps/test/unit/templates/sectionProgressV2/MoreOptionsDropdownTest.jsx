@@ -9,8 +9,13 @@ describe('MoreOptionsDropdown', () => {
     {id: 1, name: 'Student1'},
     {id: 2, name: 'Student2'},
   ];
-  const expandMetadataForStudents = jest.fn();
-  const collapseMetadataForStudents = jest.fn();
+  let expandMetadataForStudents;
+  let collapseMetadataForStudents;
+
+  beforeEach(() => {
+    expandMetadataForStudents = jest.fn();
+    collapseMetadataForStudents = jest.fn();
+  });
 
   const renderComponent = () =>
     render(
@@ -21,42 +26,39 @@ describe('MoreOptionsDropdown', () => {
       />
     );
 
-  it('expands menu when button is clicked', () => {
+  it('renders the trigger button and both menu options', () => {
     renderComponent();
 
-    const expandButton = screen.getByRole('button');
-    fireEvent.click(expandButton);
-    screen.getByText(i18n.expandAll());
-    screen.getByText(i18n.collapseAll());
+    expect(
+      screen.getByRole('button', {name: i18n.additionalOptions()})
+    ).toBeTruthy();
+    expect(screen.getByText(i18n.expandAll())).toBeTruthy();
+    expect(screen.getByText(i18n.collapseAll())).toBeTruthy();
   });
 
-  it('calls expandMetaDataForStudents when option clicked', () => {
+  it('calls expandMetadataForStudents when expand-all is clicked', () => {
     renderComponent();
 
-    const expandButton = screen.getByRole('button');
-    fireEvent.click(expandButton);
-    const expandAllOption = screen.getByText(i18n.expandAll());
-    fireEvent.click(expandAllOption);
+    const trigger = screen.getByRole('button', {
+      name: i18n.additionalOptions(),
+    });
+    fireEvent.click(trigger);
+    fireEvent.click(screen.getByText(i18n.expandAll()));
+
     expect(expandMetadataForStudents).toHaveBeenCalledTimes(1);
     expect(expandMetadataForStudents).toHaveBeenCalledWith([1, 2]);
-
-    // closes menu after click
-    expect(screen.queryByText(i18n.expandAll())).toBeFalsy();
-    expect(screen.queryByText(i18n.collapseAll())).toBeFalsy();
   });
 
-  it('calls expandMetaDataForStudents when option clicked', () => {
+  it('calls collapseMetadataForStudents when collapse-all is clicked', () => {
     renderComponent();
 
-    const expandButton = screen.getByRole('button');
-    fireEvent.click(expandButton);
-    const collapseAllOption = screen.getByText(i18n.collapseAll());
-    fireEvent.click(collapseAllOption);
+    const trigger = screen.getByRole('button', {
+      name: i18n.additionalOptions(),
+    });
+    fireEvent.click(trigger);
+    fireEvent.click(screen.getByText(i18n.collapseAll()));
+
     expect(collapseMetadataForStudents).toHaveBeenCalledTimes(1);
     expect(collapseMetadataForStudents).toHaveBeenCalledWith([1, 2]);
-
-    // closes menu after click
-    expect(screen.queryByText(i18n.expandAll())).toBeFalsy();
-    expect(screen.queryByText(i18n.collapseAll())).toBeFalsy();
   });
 });

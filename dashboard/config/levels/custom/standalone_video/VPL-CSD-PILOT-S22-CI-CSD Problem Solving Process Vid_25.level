@@ -9,7 +9,7 @@
     "video_key": "csd_problem_solving_process",
     "instructions_important": "false",
     "display_name": "Video: Problem Solving Process",
-    "long_instructions": "#### The chapter begins with a problem solving experience that can be used to anchor students in the formal problem solving process that will be used throughout the CS Discoveries course. This video is included in in Lesson 2 of Unit 1 - Problem Solving and Computing to introduce students to this process. \r\n\r\n### **As you watch the video, consider the following:**\r\n#### How might my students apply the Problem Solving Process to problems they encounter in their everyday lives?",
+    "long_instructions": "The chapter begins with a problem solving experience that can be used to anchor students in the formal problem solving process that will be used throughout the CS Discoveries course. This video is included in in Lesson 2 of Unit 1 - Problem Solving and Computing to introduce students to this process. \r\n\r\n### **As you watch the video, consider the following:**\r\nHow might my students apply the Problem Solving Process to problems they encounter in their everyday lives?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 20185,

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-30 01:55:45 UTC",
+    "serialized_at": "2026-05-17 23:10:23 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10536,10 +10536,11 @@
   "resources": [
     {
       "name": "[Exemplar] Physical Designs",
-      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "url": "https://docs.google.com/document/d/1tjqfJu4XmwuzA6rLzV8yLZ6ejh0SQq5jwYAAk-JhOqo/view",
       "key": "_exemplar_physical_designs",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -10548,10 +10549,11 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "url": "https://docs.google.com/document/d/1ccglcgafqr2ettqlYnqCaoawwDTuvtSkaZ5sj3qarzA/view",
       "key": "_warm_up_word_search_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -10561,10 +10563,11 @@
     },
     {
       "name": "Accelerometer",
-      "url": "https://docs.google.com/presentation/d/1NYts3KmFd6zo0_d07xjXOStc3DqisAtGmutMrHVWHZ0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-aJAsaDRVHF-aC9XIYuoGzGUXhOlwZ7x8nY6FjbTCvA/view",
       "key": "accelerometer",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10665,10 +10668,11 @@
     },
     {
       "name": "Board Events",
-      "url": "https://docs.google.com/presentation/d/1flj0XqDR7dqw1lEvsIppwY593HEvfWEfnPhHWlPrh0A/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GinnNhaK2L_yQFIZuwDs93NA_oH8in56HQpB1CXdYw8/view",
       "key": "board_events_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10677,10 +10681,11 @@
     },
     {
       "name": "Board Sensors",
-      "url": "https://docs.google.com/presentation/d/1IyU59Y_F6d60m82TdOyCKgOSRLRInvi8qdK65cjfKRk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1hmT8E9HZj461XIhhLO4z-_vTYE7fO5pAWVTY8rWAcz8/view",
       "key": "board_sensors",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10750,10 +10755,11 @@
     },
     {
       "name": "Color LEDs",
-      "url": "https://docs.google.com/presentation/d/1QgukRnMUinscoXsWJDCv9mQfwOVFpgF3u4YzqnDsc5w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xOKR0WDNRVOYy97ct5NPShxinL2qo1VzSDeFuseH2z4/view",
       "key": "color_leds",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10774,10 +10780,11 @@
     },
     {
       "name": "Combining Inputs and Outputs",
-      "url": "https://docs.google.com/presentation/d/1_aQGzVqEx2SvDdtVl1V6X-ldVGOHdHmAc5VLU1VR8TI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1RS5UNHyh83rCz2HJkwXV0A3TMS0FpeisxV1vGfRMG8g/view",
       "key": "combining_inputs_and_outputs",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11020,10 +11027,11 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/19gABe67DnUsn-yJ2WPJ8jH-2AwZ-5Pzrfi4Z8865Xiw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vH7CclN_Els2VaiZWtQgvXLXf5-V4GDxHLrWcJg4nTY/view",
       "key": "functions_3",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11045,10 +11053,11 @@
     },
     {
       "name": "Getting Screen Inputs",
-      "url": "https://docs.google.com/presentation/d/1dyFKKjSo6ETNmuuy3kPkPxoSAHfa4WjgnJV6gRXDhU8/template/preview",
+      "url": "https://docs.google.com/presentation/d/19BfwKvv03nEHD_yg4QazDucai80ohe-z4s8xXvIqRw8/view",
       "key": "getting_screen_inputs",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11108,10 +11117,11 @@
     },
     {
       "name": "Making Music",
-      "url": "https://docs.google.com/presentation/d/1DfAaFqCKrhsZDDLybxC4HzmWIezhOF-CMobGOs8GlQ0/template/preview",
+      "url": "https://docs.google.com/presentation/d/16YyFHc1LKX-uiHuN27KP4GDZVvtkjUbCes-p2p5E7aU/view",
       "key": "making_music",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11120,10 +11130,11 @@
     },
     {
       "name": "Mini-Project: Field Collector App",
-      "url": "https://docs.google.com/presentation/d/1Nyw-7Jfampy5Y-pVp-CdTPXdxAB8lrZchDopI5SaKnY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ZR00FZH-fi7_H2ox6ygxXb-m6OlAgKa5pNBS1g725c4/view",
       "key": "mini-project_field_collector_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11132,10 +11143,11 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1JqUnriZfRw0It6bYSIfM-GO6Bg6bsXI19j89esUhNQo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DtMufBP3LPLuZilY7GdmUwj0AwEsvt254X9wCv7Hk2s/view",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11182,10 +11194,11 @@
     },
     {
       "name": "Physical Design Template ",
-      "url": "https://docs.google.com/presentation/d/14JoHOAylxs6Wxe8i3v1N8FRWoOxKfQDonWcpiGCgLbw/edit",
+      "url": "https://docs.google.com/presentation/d/1vpDe8EZYS_kytXhspO86htmw8CslBHNzP-gzj5gTWM0/view",
       "key": "physical_design_template",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -11194,10 +11207,11 @@
     },
     {
       "name": "Physical Designs",
-      "url": "https://docs.google.com/document/d/1eZfDCPovs0MMUeR4B6ZFSyC6fmCa9yRY2CtvKvZgP1k/edit#",
+      "url": "https://docs.google.com/document/d/1JBGGltOS0WcLqWA8AahbGKxwrDKFmyBJ_4lu8Duuezg/view",
       "key": "physical_designs",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -11207,10 +11221,11 @@
     },
     {
       "name": "Physical Designs",
-      "url": "https://docs.google.com/presentation/d/1Riy0B1eS_jvSXldEDelzt4-wCJy_Sz03nj5965sSGKI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1zGnP05EiTW-C5TFjRhjb3mNE9EqRhxC_m1tmBqGB3sI/view",
       "key": "physical_designs_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11231,10 +11246,11 @@
     },
     {
       "name": "Physical Inputs and Buttons",
-      "url": "https://docs.google.com/presentation/d/1_kXGjM7TXxkQVoRurN7TvUgMrM7Hil4yYuqxnH9m9wI/template/preview",
+      "url": "https://docs.google.com/presentation/d/15FAi0IEYW8u_fe0v_AweTZ7cl-rGkJN1tU-bm4bXcfA/view",
       "key": "physical_inputs_and_buttons",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11255,10 +11271,11 @@
     },
     {
       "name": "Physical Outputs and LEDs",
-      "url": "https://docs.google.com/presentation/d/1PYDAxPMNilhoBOF9VX7jW3kavN0WgwO1WEPhRqM115Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1f7b4Dq8pJcB2_aR-OIZ0BlBlC0vdtZIfBQDCnREdK74/view",
       "key": "physical_outputs_and_leds",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11279,10 +11296,11 @@
     },
     {
       "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1adyft9qT9H9YNs-UVWuDReqPbiOIF4UfZvPH2m7BBUU/view",
+      "url": "https://docs.google.com/document/d/1Tyzdf9kJahJ-Ar491fvALGBcxnkRueWmVFkKcbRxZqI/view",
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -11343,10 +11361,11 @@
     },
     {
       "name": "Project: Human Device Interaction",
-      "url": "https://docs.google.com/presentation/d/1vvTt31q8GOHk28tfpcLR7QhN1ber0yKII0B9g1RM0Uc/template/preview",
+      "url": "https://docs.google.com/presentation/d/16i2DBumWO2cdd3a5HTcQJOAuUrU6ayyBc8wO-YAGHrI/view",
       "key": "project_human_device_interaction",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11355,10 +11374,11 @@
     },
     {
       "name": "Project: Prototype an Innovation",
-      "url": "https://docs.google.com/presentation/d/1_snS7_LpC7Xso0nOIxvrlPxuaY9i3avGUmMeUtRAVzA/template/preview",
+      "url": "https://docs.google.com/presentation/d/15AB6kUbroU3SYkz-19Xe1ew4Fpg5f3GhXu8I1hxTir0/view",
       "key": "project_prototype_an_innovation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11565,10 +11585,11 @@
     },
     {
       "name": "The Circuit Playground",
-      "url": "https://docs.google.com/presentation/d/1Rs6bmELGlDsYU3nuFMK0v4n10gczJzhBn9BX606WdGI/template/preview",
+      "url": "https://docs.google.com/presentation/d/19tH_Wxn_liIu52Z5fHn21rb3a0BiRiLhFqNoSnEqYF8/view",
       "key": "the_circuit_playground",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11636,10 +11657,11 @@
     },
     {
       "name": "Updating Screen Elements",
-      "url": "https://docs.google.com/presentation/d/1uM2raJI2dSLV8WZTKadSrM7A3qnHIhKkb-YQaEd6ZZo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-fpWBOJOtgMAHcyrR4xZR0mM8_T2TOxCy-zWHCX2CkY/view",
       "key": "updating_screen_elements",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11673,10 +11695,11 @@
     },
     {
       "name": "Variables and If Statements",
-      "url": "https://docs.google.com/presentation/d/1meIgaXqGJeq7FPfzYRIdMSg533cM8xQQk3VnfdS68p8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Pvi1BzYRKmS8fdkWIVt5lgLs5GAtWOfY1gOX82i7quw/view",
       "key": "variables_and_if_statements",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

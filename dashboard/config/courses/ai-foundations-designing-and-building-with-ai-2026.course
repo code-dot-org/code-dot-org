@@ -32,7 +32,17 @@
     "version_year": "2026"
   },
   "resources": [
-
+    {
+      "name": "AIF Designing and Building with AI Syllabus",
+      "url": "https://docs.google.com/document/d/1ow_qH2bPxBGKPoClSeIKkeM-9sSwTDucqSkXRZL713s/edit?usp=sharing",
+      "key": "aif_designing_and_building_with_ai_syllabus",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aif_designing_and_building_with_ai_syllabus"
+      }
+    }
   ],
   "student_resources": [
 

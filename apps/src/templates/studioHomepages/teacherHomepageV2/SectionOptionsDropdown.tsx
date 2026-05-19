@@ -26,7 +26,7 @@ export interface SectionOptionsDropdownProps {
   onDeleteClickCallback: (sectionId: number) => void;
 }
 
-const CERTIFICATE_URL = '/certificates/batch';
+export const CERTIFICATE_URL = '/certificates/batch';
 
 const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   const hideShowEvent = section.hidden

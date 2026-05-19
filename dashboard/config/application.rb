@@ -3,7 +3,6 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
@@ -99,9 +98,9 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
+    config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources

@@ -11,462 +11,259 @@
     "bubble_choice_description": "Plan how a habit app updates different entries using inputs like mood selection to create different results.",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "image",
-            "version": 95,
-            "versionNonce": 56201437,
-            "isDeleted": false,
             "id": "pTd4Ot8qbOG3KpLek4lxX",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 857.7857714275674,
-            "y": -835.3396897194259,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 1360.347566355617,
-            "height": 2595.0108466892475,
-            "seed": 1058962103,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777013594974,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184",
-            "scale": [
-              1,
-              1
-            ]
-          },
-          {
             "type": "image",
-            "version": 163,
-            "versionNonce": 583933818,
-            "isDeleted": false,
+            "position": {
+              "x": 1525.275146743342,
+              "y": -671.4305628116854
+            },
+            "style": {
+              "width": 1360.347566355617,
+              "height": 2595.0108466892475
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4c-revised-v4_2026/uuid/0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 712,
+              "height": 1589
+            },
+            "dragging": false,
+            "width": 712,
+            "height": 1589,
+            "resizing": false
+          },
+          {
             "id": "78OfZ6hJZQ6IaLekqCLRU",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2288.5032621062946,
-            "y": -862.8149573409007,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 2684.9550435745796,
-            "height": 860.3723344051137,
-            "seed": 1181918988,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1776661663219,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "a004ccafdda68ddf95e868121eb5e4f688bbdb94",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 2294.5032621062946,
+              "y": -756.8149573409007
+            },
+            "style": {
+              "width": 2684.9550435745796,
+              "height": 860.3723344051137
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026/uuid/a004ccafdda68ddf95e868121eb5e4f688bbdb94.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1951,
+              "height": 810
+            },
+            "width": 1951,
+            "height": 810,
+            "resizing": false,
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 308,
-            "versionNonce": 1267549591,
-            "isDeleted": false,
             "id": "Iz7T6ynAu7uWbB-275DLK",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2324.299044792164,
-            "y": 250.60445172280242,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 1745.5150146484375,
-            "height": 188.52523911552464,
-            "seed": 2001081908,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1777013134880,
-            "link": null,
-            "locked": false,
-            "fontSize": 75.41009564620985,
-            "fontFamily": 1,
-            "text": "Use the colored circles to annotate the user \nactions and inputs the function needs.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Use the colored circles to annotate the user \nactions and inputs the function needs.",
-            "lineHeight": 1.25,
-            "baseline": 160
+            "type": "text",
+            "position": {
+              "x": 2324.299044792164,
+              "y": 250.60445172280242
+            },
+            "data": {
+              "text": "Use the colored circles to annotate the user \nactions and inputs the function needs.",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 454,
+              "height": 75
+            }
           },
           {
-            "type": "ellipse",
-            "version": 136,
-            "versionNonce": 1902044390,
-            "isDeleted": false,
             "id": "fzryWdtslZRNnZ8eQ4JQ8",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2338.0339592053906,
-            "y": 19.764953347304868,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 1582791604,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 2338.0339592053906,
+              "y": 19.764953347304868
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 274,
-            "versionNonce": 68863098,
-            "isDeleted": false,
             "id": "lwDYAg0I09y2AZUx06ryE",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3438.543976565166,
-            "y": 8.605335386558181,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 1577970996,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3438.543976565166,
+              "y": 8.605335386558181
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 285,
-            "versionNonce": 1933400102,
-            "isDeleted": false,
             "id": "9GRYBJwDX2EQRZXfh28Ye",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3235.9539889700754,
-            "y": 8.605335386558181,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 1783577012,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3235.9539889700754,
+              "y": 8.605335386558181
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 307,
-            "versionNonce": 1811948858,
-            "isDeleted": false,
             "id": "MZRyEKXHHkP_-W36YEXjt",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3634.2665069536447,
-            "y": 8.605335386558181,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 668997428,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3634.2665069536447,
+              "y": 8.605335386558181
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 320,
-            "versionNonce": 1869308774,
-            "isDeleted": false,
             "id": "vVSPCPEQe6sctUtRQWo8Q",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 3833.4227659454295,
-            "y": 8.605335386558181,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 1730742836,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 3833.4227659454295,
+              "y": 8.605335386558181
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 171,
-            "versionNonce": 435908090,
-            "isDeleted": false,
             "id": "soh_rF4zqU8zeZAr0nNB5",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2535.4733538955215,
-            "y": 19.764953347304868,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 350559116,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 2535.4733538955215,
+              "y": 19.764953347304868
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 196,
-            "versionNonce": 674629286,
-            "isDeleted": false,
             "id": "g_zwfUqDzwlU3chgsnLap",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2731.1958842840004,
-            "y": 19.764953347304868,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 1468702988,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 2731.1958842840004,
+              "y": 19.764953347304868
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           },
           {
-            "type": "ellipse",
-            "version": 194,
-            "versionNonce": 588226234,
-            "isDeleted": false,
             "id": "09YFgq6dABtrKHUp9p-AJ",
-            "fillStyle": "cross-hatch",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 2933.7858718790917,
-            "y": 19.764953347304868,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#ffc9c9",
-            "width": 175.12015876863825,
-            "height": 175.12015876863825,
-            "seed": 333534988,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
+            "type": "shape",
+            "position": {
+              "x": 2933.7858718790917,
+              "y": 19.764953347304868
             },
-            "boundElements": [
-
-            ],
-            "updated": 1776661671310,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 175.12015876863825,
+              "height": 175.12015876863825
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 175,
+              "height": 175
+            }
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": -808.2922264027163,
-          "scrollY": 1171.0854103807524,
-          "zoom": {
-            "value": 0.2912286075949666
-          }
-        },
-        "files": {
-          "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184": {
-            "mimeType": "image/png",
-            "id": "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184",
-            "created": 1777013139828,
-            "lastRetrieved": 1777013139828
-          },
-          "a004ccafdda68ddf95e868121eb5e4f688bbdb94": {
-            "mimeType": "image/png",
-            "id": "a004ccafdda68ddf95e868121eb5e4f688bbdb94",
-            "created": 1776581560568,
-            "lastRetrieved": 1776581560568
-          }
-        },
-        "externalFiles": {
-          "948d036d561148f177bbaeadb0c03447b70b2acc": {
-            "id": "948d036d561148f177bbaeadb0c03447b70b2acc",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4a_2026/uuid/948d036d561148f177bbaeadb0c03447b70b2acc.png",
-            "starterAsset": true,
-            "filenameWithExtension": "948d036d561148f177bbaeadb0c03447b70b2acc.png",
-            "uploaded": true
-          },
-          "2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0": {
-            "id": "2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4a_2026/uuid/2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0.png",
-            "starterAsset": true,
-            "filenameWithExtension": "2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0.png",
-            "uploaded": true
-          },
-          "a13ed1267843dc283f398b597f146c3869429cc8": {
-            "id": "a13ed1267843dc283f398b597f146c3869429cc8",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4a_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-            "starterAsset": true,
-            "filenameWithExtension": "a13ed1267843dc283f398b597f146c3869429cc8.png",
-            "uploaded": true
-          },
-          "c2d279660f60b9c3717ba7306d8024976020d097": {
-            "id": "c2d279660f60b9c3717ba7306d8024976020d097",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026/uuid/c2d279660f60b9c3717ba7306d8024976020d097.png",
-            "starterAsset": true,
-            "filenameWithExtension": "c2d279660f60b9c3717ba7306d8024976020d097.png",
-            "uploaded": true
-          },
-          "a004ccafdda68ddf95e868121eb5e4f688bbdb94": {
-            "id": "a004ccafdda68ddf95e868121eb5e4f688bbdb94",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026/uuid/a004ccafdda68ddf95e868121eb5e4f688bbdb94.png",
-            "starterAsset": true,
-            "filenameWithExtension": "a004ccafdda68ddf95e868121eb5e4f688bbdb94.png",
-            "uploaded": true
-          },
-          "dfa910d23452204ea0887ee85fd2fc77046be9e1": {
-            "id": "dfa910d23452204ea0887ee85fd2fc77046be9e1",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4a-revised-v3_2026/uuid/dfa910d23452204ea0887ee85fd2fc77046be9e1.png",
-            "starterAsset": true,
-            "filenameWithExtension": "dfa910d23452204ea0887ee85fd2fc77046be9e1.png",
-            "uploaded": true
-          },
-          "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184": {
-            "id": "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184",
-            "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson6-level4c-revised-v4_2026/uuid/0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184.png",
-            "starterAsset": true,
-            "filenameWithExtension": "0a4dc19a6c26cf5fd4d374cb6da55962ee7f6184.png",
-            "uploaded": true
-          }
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -637.8928857137837,
+          "y": 349.41984485971295,
+          "zoom": 0.5
         }
       }
     },
@@ -1161,6 +958,6 @@
     "thumbnail_url": "https://images.code.org/0f40347133980b28f7eead0691d57a75-entry-1.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-24T06:16:49.920+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v4_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v4_2026\"},{\"changed_at\":\"2026-04-24 06:18:28 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:45:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:53:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:55:29 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 07:00:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T06:16:49.920+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v4_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-revised-v4_2026\"},{\"changed_at\":\"2026-04-24 06:18:28 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:45:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:53:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 06:55:29 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-24 07:00:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 12:49:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:05:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

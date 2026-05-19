@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Exploration: Upgrade Your Words\r\n\r\nThis chatbot will help you choose more interesting words in your writing.\r\n\r\n#### Task:\r\n\r\n* **Choose** one a purpose for using AI that you identified.\r\n* **Test** this AI chatbot to see how well it helps with your purpose.\r\n* **Judge** what AI did well and what it did not do well.\r\n\r\n_**Prompt example:**_\r\n\r\n_I'm trying to write a hip hop song and I need help with rhymes for these words: crew, logic, happy._",
+    "long_instructions": "## Choose Better Words\r\n\r\nThis chatbot will help you choose more interesting words in your writing.\r\n\r\n1. Choose one the purposes for using AI that you identified.\r\n\r\n2. Test this chatbot to see how well it helps with that purpose.\r\n\r\n   **Prompt example:** I'm trying to write a hip hop song and I need help with rhymes for these words: crew, logic, happy\r\n\r\n3. Judge what AI did well and what it did not do well.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,11 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "display_name": "Upgrade Your Words",
-    "bubble_choice_description": "Like an **Advertiser** who makes sure every word is chosen with care",
+    "display_name": "Choose Better Words",
+    "bubble_choice_description": "This chatbot will help you choose more interesting words in your writing.",
     "thumbnail_url": "https://images.code.org/cfe38ab3f3b25e5e76c5797ae9f67aa3-ai_advertiser.jpg",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-29T15:09:27.078+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level4d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level4d_2026\"},{\"changed_at\":\"2026-04-29 15:10:41 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 15:23:13 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-29T15:09:27.078+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level4d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level4d_2026\"},{\"changed_at\":\"2026-04-29 15:10:41 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 15:23:13 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 16:31:06 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

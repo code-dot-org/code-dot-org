@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Thinking Critically about AI Project\r\n\r\n\r\n\r\n#### Task:\r\n\r\n* Add a tip to your guide that tells your audience exactly how to check if AI information is true\r\n* \r\nUse what you learned today about how AI generates responses to explain why it matters.\r\n\r\n",
+    "long_instructions": "## Generate and Judge Project\r\n\r\nUse pattern recognition before you write your tip. Look back at your AI Audit Field Notes that you have so far. What do they have in common when AI gets things wrong or misleading? Write one sentence describing the pattern you noticed across your testing.\r\n\r\nThen write your tip as if you're a fact-checker producing public guidance. Your reader should be able to follow your specific steps to verify any AI output, not just the ones you tested. What exactly should someone do, in what order?",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -37,6 +37,6 @@
     "project_template_level_name": "thinking_critically_project-template_2026",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-25T01:16:54.907+00:00\",\"changed\":[\"cloned from \\\"aid-thinking_critically_lesson6_level2_2026\\\"\"],\"cloned_from\":\"aid-thinking_critically_lesson6_level2_2026\"},{\"changed_at\":\"2026-04-25 01:17:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-25T01:16:54.907+00:00\",\"changed\":[\"cloned from \\\"aid-thinking_critically_lesson6_level2_2026\\\"\"],\"cloned_from\":\"aid-thinking_critically_lesson6_level2_2026\"},{\"changed_at\":\"2026-04-25 01:17:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:14:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 19:19:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-04 01:51:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

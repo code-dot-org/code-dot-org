@@ -5,8 +5,10 @@ import {Provider} from 'react-redux';
 import {
   createMemoryRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
+  useLocation,
 } from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -25,7 +27,11 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
@@ -34,6 +40,11 @@ import i18n from '@cdo/locale';
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
 jest.mock('@cdo/apps/util/HttpClient');
+
+const LocationElement = () => {
+  const location = useLocation();
+  return <div>{location.pathname}</div>;
+};
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -197,12 +208,25 @@ describe('TeacherHomepage', () => {
         <RouterProvider
           router={createMemoryRouter(
             createRoutesFromElements([
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
-                }
-              />,
+              <Route path="/">
+                <Route
+                  path={TEACHER_NAVIGATION_PATHS.home}
+                  element={
+                    <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
+                  }
+                />
+                <Route
+                  path={TEACHER_NAVIGATION_SECTIONS_URL}
+                  element={<Outlet />}
+                >
+                  <Route path={SPECIFIC_SECTION_BASE_URL} element={<Outlet />}>
+                    <Route
+                      path={TEACHER_NAVIGATION_PATHS.progress}
+                      element={<LocationElement />}
+                    />
+                  </Route>
+                </Route>
+              </Route>,
             ]),
             {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
           )}
@@ -278,6 +302,63 @@ describe('TeacherHomepage', () => {
     await screen.findByText('High School Practice Section');
     screen.getByText(/DEMO-123/);
     screen.getByText('Demo');
+  });
+
+  it('creates a demo section and navigates to progress without reloading', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.resolve({
+          value: {
+            high: {
+              demo_type: 'high',
+              section_name: 'High School Practice Section',
+              avatar_color: 8,
+              avatar_emoji: 5,
+              login_type: 'email',
+              participant_type: 'student',
+              unit: {
+                name: 'aif2-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+              unit_group: {
+                name: 'artificial-intelligence-foundations-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+            },
+          },
+          response: new Response(),
+        });
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/high') {
+        return Promise.resolve({
+          json: () =>
+            Promise.resolve({
+              ...serverSections[0],
+              id: 21,
+              name: 'High School Practice Section',
+            }),
+        });
+      }
+
+      return Promise.resolve({json: () => Promise.resolve({})});
+    });
+
+    renderComponent([]);
+    fireEvent.click(await screen.findByText(i18n.viewProgressButton()));
+    await act(async () => await new Promise(process.nextTick));
+
+    screen.getByText('/sections/21/progress');
   });
 
   it('falls back to the empty homepage when the demo section is disabled', async () => {

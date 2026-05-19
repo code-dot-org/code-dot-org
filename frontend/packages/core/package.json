@@ -51,25 +51,28 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
+    "camelcase-keys": "^10.0.2",
     "events": "^3.3.0",
     "flat": "^6.0.1",
-    "tldts": "^7.0.23"
+    "tldts": "^7.0.23",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
-    "@sentry/browser": "^10.51.0",
+    "@sentry/browser": "catalog:",
+    "@tanstack/react-query": "catalog:",
     "@types/flat": "^5.0.5",
     "@types/node": "catalog:",
     "@types/tldjs": "^2",
     "@types/uuid": "^10.0.0",
     "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "ky": "^1.14.3",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "ky": "catalog:",
     "prettier": "catalog:",
-    "react": "^19.2.0",
+    "react": "catalog:",
     "typescript": "catalog:",
-    "uuid": "^11.1.0",
+    "uuid": "^14.0.0",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
@@ -77,8 +80,9 @@
   },
   "peerDependencies": {
     "@sentry/browser": "^10.51.0",
+    "@tanstack/react-query": "*",
     "ky": "^1.14.3",
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react": "^18.0.0 || ^19.0.0",
     "uuid": ">=8.3.2"
   }
 }
