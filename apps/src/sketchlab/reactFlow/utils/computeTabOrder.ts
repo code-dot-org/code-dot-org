@@ -189,11 +189,18 @@ export function computeTabOrder(
   }
 
   // Build outgoing adjacency list, filtering to edges whose endpoints exist.
+  // Dedupe by edge.id: the upstream edges state can briefly hold the same
+  // edge twice (e.g. when a connect callback fires before an addEdge
+  // dedupe has been applied), and duplicate tab-order entries would trap
+  // keyboard focus by mapping two slots to the same DOM element.
   const outgoing = new Map<string, string[]>();
   const connectedIds = new Set<string>();
   const validEdges: SketchlabReactFlowEdge[] = [];
+  const seenEdgeIds = new Set<string>();
   for (const edge of edges) {
     if (!nodeMap.has(edge.source) || !nodeMap.has(edge.target)) continue;
+    if (seenEdgeIds.has(edge.id)) continue;
+    seenEdgeIds.add(edge.id);
     connectedIds.add(edge.source);
     connectedIds.add(edge.target);
     validEdges.push(edge);
