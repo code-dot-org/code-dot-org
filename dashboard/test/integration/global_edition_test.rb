@@ -37,6 +37,15 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _(path).must_equal international_page_path
       end
 
+      it 'does not redirect /health_check even with a region-locked locale' do
+        cookies[:language_] = ge_region_locale
+
+        get '/health_check'
+
+        must_respond_with 200
+        _(path).must_equal '/health_check'
+      end
+
       context 'when region locked locale is set via params' do
         let(:params) {{set_locale: ge_region_locale}}
         let(:extra_params) {{foo: 'bar'}}

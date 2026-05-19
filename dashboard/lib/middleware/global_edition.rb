@@ -35,6 +35,8 @@ module Middleware
           ::OmniAuth.config.path_prefix + '/', # e.g. `/users/auth/`
           # Exclude HoC legacy API routes from Global Edition scope.
           ::HocLegacy::API_ROOT_PATH + '/', # e.g. `/api/hour/`
+          # Infrastructure endpoints must not be redirected by locale-based region resolution.
+          '/health_check',
         ].freeze
       end
 
