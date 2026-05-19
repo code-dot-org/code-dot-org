@@ -428,4 +428,38 @@ describe('LessonOverview', () => {
     );
     analyticsSpy.restore();
   });
+
+  describe('inline editing data attributes', () => {
+    it('omits data-editable-field when lesson.editable is not provided', () => {
+      const wrapper = shallow(<LessonOverview {...defaultProps} />);
+      expect(wrapper.find('[data-editable-field]').length).to.equal(0);
+    });
+
+    it('emits data-editable-field for each lesson markdown field when lesson.editable is set', () => {
+      const lesson = {
+        ...defaultProps.lesson,
+        inline_editing_enabled: true,
+        editable: {
+          overview: 'Lesson:1:overview',
+          purpose: 'Lesson:1:purpose',
+          preparation: 'Lesson:1:preparation',
+          assessment_opportunities: 'Lesson:1:assessment_opportunities',
+        },
+      };
+      const wrapper = shallow(
+        <LessonOverview {...defaultProps} lesson={lesson} />
+      );
+
+      const editableNodes = wrapper.find('[data-editable-field]');
+      const values = editableNodes
+        .map(n => n.prop('data-editable-field'))
+        .sort();
+      expect(values).to.eql([
+        'Lesson:1:assessment_opportunities',
+        'Lesson:1:overview',
+        'Lesson:1:preparation',
+        'Lesson:1:purpose',
+      ]);
+    });
+  });
 });

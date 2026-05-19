@@ -1694,4 +1694,183 @@ class LessonsControllerTest < ActionController::TestCase
                                   name: 'pilot teacher can view pilot modular course'
     end
   end
+
+  # PATCH/GET /lessons/:id/inline_field — in-page editor endpoint.
+  # See openspec/changes/easy-lesson-editor/.
+
+  test_user_gets_response_for :update_inline_field,
+    method: :patch,
+    params: -> {{id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'overview', value: 'new'}},
+    user: nil,
+    response: :redirect,
+    redirected_to: '/users/sign_in'
+  test_user_gets_response_for :update_inline_field,
+    method: :patch,
+    params: -> {{id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'overview', value: 'new'}},
+    user: :student,
+    response: :forbidden
+  test_user_gets_response_for :update_inline_field,
+    method: :patch,
+    params: -> {{id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'overview', value: 'new'}},
+    user: :teacher,
+    response: :forbidden
+  test_user_gets_response_for :update_inline_field,
+    method: :patch,
+    params: -> {{id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'overview', value: 'new'}},
+    user: :levelbuilder,
+    response: :success
+
+  test 'inline_field PATCH updates a Lesson markdown field and returns rendered source' do
+    sign_in @levelbuilder
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id,
+      field: 'overview', value: 'overview with a [link](/foo)'
+    }
+
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal 'overview with a [link](/foo)', body['value']
+    # rendered_source is the value run through MarkdownPreprocessor.
+    refute_nil body['rendered_source']
+    @lesson.reload
+    assert_equal 'overview with a [link](/foo)', @lesson.overview
+  end
+
+  test 'inline_field PATCH updates a LessonActivity name (non-markdown field)' do
+    sign_in @levelbuilder
+    activity = create(:lesson_activity, lesson: @lesson, name: 'old name')
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'LessonActivity', record_id: activity.id,
+      field: 'name', value: 'new name'
+    }
+
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal 'new name', body['value']
+    # Non-markdown field: rendered_source == value (no preprocessing applied).
+    assert_equal 'new name', body['rendered_source']
+    activity.reload
+    assert_equal 'new name', activity.name
+  end
+
+  test 'inline_field PATCH updates an ActivitySection description' do
+    sign_in @levelbuilder
+    activity = create(:lesson_activity, lesson: @lesson)
+    section = create(:activity_section, lesson_activity: activity, description: 'old')
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'ActivitySection', record_id: section.id,
+      field: 'description', value: 'fixed typo'
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal 'fixed typo', section.description
+  end
+
+  test 'inline_field PATCH rejects fields not on the allowlist with 422' do
+    sign_in @levelbuilder
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id,
+      field: 'student_overview', value: 'student overview new'
+    }
+
+    assert_response :unprocessable_entity
+    assert_includes JSON.parse(@response.body)['error'], 'not editable'
+    @lesson.reload
+    refute_equal 'student overview new', @lesson.student_overview
+  end
+
+  test 'inline_field PATCH rejects unknown models with 422' do
+    sign_in @levelbuilder
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'Vocabulary', record_id: 1,
+      field: 'word', value: 'pwned'
+    }
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'inline_field PATCH rejects records that belong to a different lesson with 404' do
+    sign_in @levelbuilder
+    other_activity = create(:lesson_activity, lesson: @lesson2, name: 'other lesson activity')
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'LessonActivity', record_id: other_activity.id,
+      field: 'name', value: 'pwned'
+    }
+
+    assert_response :not_found
+    other_activity.reload
+    assert_equal 'other lesson activity', other_activity.name
+  end
+
+  test 'inline_field PATCH returns 404 when the record does not exist' do
+    sign_in @levelbuilder
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'LessonActivity', record_id: 99_999_999,
+      field: 'name', value: 'whatever'
+    }
+
+    assert_response :not_found
+  end
+
+  test 'inline_field PATCH calls write_script_json after a successful save in levelbuilder mode' do
+    sign_in @levelbuilder
+
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?('rewritten body')
+    end.once
+
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id,
+      field: 'overview', value: 'rewritten body'
+    }
+
+    assert_response :success
+  end
+
+  test 'inline_field PATCH does not write script_json when levelbuilder_mode is off' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+
+    # The before_action :require_levelbuilder_mode_or_test_env will short-circuit
+    # in production, but the Rails test env is whitelisted by that gate. So we
+    # specifically prove the in-action write_script_json branch is skipped.
+    patch :update_inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id,
+      field: 'overview', value: 'no write please'
+    }
+
+    assert_response :success
+  end
+
+  test 'inline_field GET returns the raw stored value for an allowlisted field' do
+    sign_in @levelbuilder
+    @lesson.update!(properties: @lesson.properties.merge(overview: 'lesson overview raw'))
+
+    get :inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'overview'
+    }
+
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal 'lesson overview raw', body['value']
+  end
+
+  test 'inline_field GET rejects non-allowlisted fields with 422' do
+    sign_in @levelbuilder
+
+    get :inline_field, params: {
+      id: @lesson.id, model: 'Lesson', record_id: @lesson.id, field: 'student_overview'
+    }
+
+    assert_response :unprocessable_entity
+  end
 end

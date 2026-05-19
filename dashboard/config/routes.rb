@@ -580,6 +580,8 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :inline_field, to: 'lessons#inline_field'
+        patch :inline_field, to: 'lessons#update_inline_field', as: :update_inline_field
         post :clone
       end
     end

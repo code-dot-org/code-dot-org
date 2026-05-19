@@ -477,8 +477,8 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(user, can_view_teacher_markdown, unit_group_unit: nil)
-    {
+  def summarize_for_lesson_show(user, can_view_teacher_markdown, unit_group_unit: nil, inline_editing_enabled: false)
+    summary = {
       id: id,
       unit: script.summarize_for_lesson_show(unit_group_unit: unit_group_unit),
       position: relative_position,
@@ -490,7 +490,7 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)},
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit, inline_editing_enabled: inline_editing_enabled)},
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
@@ -505,7 +505,10 @@ class Lesson < ApplicationRecord
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
       title: localized_title,
+      inline_editing_enabled: inline_editing_enabled,
     }
+    summary[:editable] = Services::LessonInlineEditing.editable_ids_for(self) if inline_editing_enabled
+    summary
   end
 
   def summarize_for_rollup(user, unit_group_unit: nil)

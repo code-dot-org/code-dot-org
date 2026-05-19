@@ -55,6 +55,9 @@ class LessonOverview extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {inlineEditingActive: false};
+    this.inlineEditingModule = null;
+
     analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
       lessonId: props.lesson.id,
       lessonName: props.lesson.displayName,
@@ -64,6 +67,31 @@ class LessonOverview extends Component {
       unitLink: props.lesson.unit.link,
     });
   }
+
+  componentWillUnmount() {
+    if (this.inlineEditingModule) {
+      this.inlineEditingModule.disable();
+    }
+  }
+
+  toggleInlineEditing = async () => {
+    const next = !this.state.inlineEditingActive;
+    this.setState({inlineEditingActive: next});
+
+    if (next) {
+      // Dynamic import: the editor module and its EnhancedSafeMarkdown
+      // dependency only load when a levelbuilder flips edit mode on.
+      if (!this.inlineEditingModule) {
+        this.inlineEditingModule = await import(
+          /* webpackChunkName: "lesson-inline-editing" */
+          './inlineEditing/InlineEditingController'
+        );
+      }
+      this.inlineEditingModule.enable(this.props.lesson.id);
+    } else if (this.inlineEditingModule) {
+      this.inlineEditingModule.disable();
+    }
+  };
 
   handleResource = (e, action, url = null) => {
     e.preventDefault(); // Prevent navigation to url until callback
@@ -156,6 +184,24 @@ class LessonOverview extends Component {
               {`< ${lesson.unit.displayName}`}
             </a>
             <div style={styles.dropdowns}>
+              {lesson.inline_editing_enabled && (
+                <div style={{marginRight: 5}}>
+                  <Button
+                    __useDeprecatedTag
+                    color={
+                      this.state.inlineEditingActive
+                        ? Button.ButtonColor.orange
+                        : Button.ButtonColor.gray
+                    }
+                    onClick={this.toggleInlineEditing}
+                    text={
+                      this.state.inlineEditingActive
+                        ? 'Exit edit mode'
+                        : 'Edit on page'
+                    }
+                  />
+                </div>
+              )}
               <div style={{marginRight: 5}}>
                 <DropdownButton
                   color={Button.ButtonColor.gray}
@@ -188,28 +234,38 @@ class LessonOverview extends Component {
             {lesson.overview && (
               <div>
                 <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.overview}
-                  expandableImages
-                />
+                <div data-editable-field={lesson.editable?.overview}>
+                  <EnhancedSafeMarkdown
+                    markdown={lesson.overview}
+                    expandableImages
+                  />
+                </div>
               </div>
             )}
             {lesson.purpose && (
               <div>
                 <h2>{i18n.purpose()}</h2>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.purpose}
-                  expandableImages
-                />
+                <div data-editable-field={lesson.editable?.purpose}>
+                  <EnhancedSafeMarkdown
+                    markdown={lesson.purpose}
+                    expandableImages
+                  />
+                </div>
               </div>
             )}
             {lesson.assessmentOpportunities && (
               <div>
                 <h2>{i18n.assessmentOpportunities()}</h2>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.assessmentOpportunities}
-                  expandableImages
-                />
+                <div
+                  data-editable-field={
+                    lesson.editable?.assessment_opportunities
+                  }
+                >
+                  <EnhancedSafeMarkdown
+                    markdown={lesson.assessmentOpportunities}
+                    expandableImages
+                  />
+                </div>
               </div>
             )}
             {lesson.standards.length > 0 && (
@@ -256,10 +312,12 @@ class LessonOverview extends Component {
             {lesson.preparation && (
               <div>
                 <h2>{i18n.preparation()}</h2>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.preparation}
-                  expandableImages
-                />
+                <div data-editable-field={lesson.editable?.preparation}>
+                  <EnhancedSafeMarkdown
+                    markdown={lesson.preparation}
+                    expandableImages
+                  />
+                </div>
               </div>
             )}
             {Object.keys(lesson.resources).length > 0 && (

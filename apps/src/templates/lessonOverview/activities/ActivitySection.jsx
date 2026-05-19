@@ -18,7 +18,9 @@ export default class ActivitySection extends Component {
     return (
       <div>
         <h3 id={`activity-section-${section.key}`}>
-          {section.displayName}
+          <span data-editable-field={section.editable?.name}>
+            {section.displayName}
+          </span>
           {section.duration > 0 && (
             <span>
               {i18n.activityHeaderTime({
@@ -49,6 +51,7 @@ export default class ActivitySection extends Component {
                   marginBottom: 5,
                 }),
               }}
+              data-editable-field={section.editable?.description}
             >
               <EnhancedSafeMarkdown markdown={section.text} expandableImages />
             </div>
