@@ -9,6 +9,8 @@
 // then editable inline before saving.
 
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useState} from 'react';
 
 import {createLesson, updateLesson} from './api';
@@ -29,6 +31,40 @@ interface AuthorPageProps {
   lessonId?: string;
   initialLesson?: LessonPlan;
 }
+
+// Section header rendered above each editable field on a checkpoint
+// card: an icon, a small uppercase label, and a trailing info icon
+// wrapped in a tooltip that explains what the field is for.
+const SectionLabel: React.FC<{
+  iconName: string;
+  iconClassName?: string;
+  label: string;
+  tooltipId: string;
+  tooltipText: string;
+}> = ({iconName, iconClassName, label, tooltipId, tooltipText}) => (
+  <>
+    <FontAwesomeV6Icon
+      iconName={iconName}
+      iconStyle="solid"
+      className={`${styles.sectionIcon}${
+        iconClassName ? ` ${iconClassName}` : ''
+      }`}
+    />
+    {label}
+    <WithTooltip
+      tooltipProps={{
+        text: tooltipText,
+        tooltipId,
+        size: 's',
+        direction: 'onTop',
+      }}
+    >
+      <span className={styles.sectionInfo} aria-describedby={tooltipId}>
+        <FontAwesomeV6Icon iconName="circle-info" iconStyle="regular" />
+      </span>
+    </WithTooltip>
+  </>
+);
 
 function newCheckpoint(): Checkpoint {
   return {
@@ -520,7 +556,9 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                   </div>
                   <div className={styles.checkpointInput}>
                     <div className={styles.checkpointRow}>
-                      <strong>#{i + 1}</strong>
+                      <span className={styles.checkpointBadge}>
+                        Checkpoint #{i + 1}
+                      </span>
                       <SimpleDropdown
                         name={`checkpoint-${i}-lab-type`}
                         labelText="Lab type"
@@ -545,9 +583,25 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                       </button>
                     </div>
 
-                    <label className={styles.field}>
-                      <span>Title</span>
+                    {/* jsx-a11y can't trace label↔control through the
+                        SectionLabel abstraction even though htmlFor+id
+                        actually bind them.  Suppress the rule rather than
+                        flatten the JSX. */}
+                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                    <label
+                      className={`${styles.field} ${styles.titleField}`}
+                      htmlFor={`cp-${cp.id}-title`}
+                    >
+                      <span>
+                        <SectionLabel
+                          iconName="tag"
+                          label="Title"
+                          tooltipId={`tip-title-${cp.id}`}
+                          tooltipText="Short student-facing heading shown in the AI Tutor sidebar and the checkpoint badge. Keep it punchy — 3–7 words."
+                        />
+                      </span>
                       <input
+                        id={`cp-${cp.id}-title`}
                         type="text"
                         value={cp.title}
                         onChange={e =>
@@ -563,13 +617,21 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                         themselves are the content. */}
                     {cp.labType !== 'panels' && (
                       <>
-                        <label className={styles.field}>
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                        <label
+                          className={styles.field}
+                          htmlFor={`cp-${cp.id}-desc`}
+                        >
                           <span>
-                            Description — what the student should do and any
-                            context the AI Tutor needs. Never shown verbatim;
-                            the tutor paraphrases on the fly.
+                            <SectionLabel
+                              iconName="message-lines"
+                              label="Description"
+                              tooltipId={`tip-desc-${cp.id}`}
+                              tooltipText="What the student should do, plus any context the AI Tutor needs. The tutor paraphrases this — it is never shown verbatim."
+                            />
                           </span>
                           <textarea
+                            id={`cp-${cp.id}-desc`}
                             value={cp.description}
                             onChange={e =>
                               updateCheckpoint(i, {description: e.target.value})
@@ -578,11 +640,22 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                           />
                         </label>
 
-                        <label className={styles.field}>
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                        <label
+                          className={styles.field}
+                          htmlFor={`cp-${cp.id}-success`}
+                        >
                           <span>
-                            Success criteria (what the AI Tutor checks)
+                            <SectionLabel
+                              iconName="circle-check"
+                              iconClassName={styles.sectionIconSuccess}
+                              label="Success criteria"
+                              tooltipId={`tip-success-${cp.id}`}
+                              tooltipText="Observable thing the AI Tutor verifies before advancing the student. Be specific about what their work must contain."
+                            />
                           </span>
                           <textarea
+                            id={`cp-${cp.id}-success`}
                             value={cp.successCriteria}
                             onChange={e =>
                               updateCheckpoint(i, {
@@ -597,7 +670,14 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
 
                     {cp.labType === 'panels' && (
                       <div className={styles.field}>
-                        <span>Slide captions</span>
+                        <span>
+                          <FontAwesomeV6Icon
+                            iconName="images"
+                            iconStyle="solid"
+                            className={styles.sectionIcon}
+                          />
+                          Slide captions
+                        </span>
                         {(cp.panels?.length ?? 0) === 0 ? (
                           <p className={styles.muted}>
                             No slides yet — add one to get started.

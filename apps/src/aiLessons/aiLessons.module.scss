@@ -143,8 +143,7 @@
 }
 
 textarea,
-input[type='text'],
-select {
+input[type='text'] {
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
@@ -166,19 +165,6 @@ textarea {
   line-height: 1.4;
 }
 
-select {
-  // Default browser selects render shorter than text inputs and clip
-  // descender/cap-height with our 14px font; match the input height.
-  height: 38px;
-  appearance: none;
-  // Use a small chevron SVG instead of the native arrow so the height
-  // stays consistent across browsers.
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23404040' d='M6 8 0 0h12z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 32px;
-}
-
 .checkpointList {
   list-style: decimal inside;
   padding: 0;
@@ -189,10 +175,16 @@ select {
 }
 
 .checkpointInput {
+  // The card opts into the design system's Dark theme via
+  // data-theme="Dark" on its wrapper, so all the semantic tokens below
+  // resolve to their dark-mode values automatically.  No need to reach
+  // for `*-inverse` / `*-octonary` slots by hand.
   background: var(--background-neutral-primary);
-  padding: 16px;
-  border-radius: 6px;
+  color: var(--text-neutral-primary);
+  padding: 24px 28px;
+  border-radius: 10px;
   border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 35%);
   list-style-position: outside;
   min-width: 0;
   // Animate a small fade + slide-in when the parent carousel switches
@@ -202,6 +194,80 @@ select {
 
   > .field:last-child {
     margin-bottom: 0;
+  }
+
+  // Field labels: small uppercase tag with an icon on the left.
+  .field > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-neutral-tertiary);
+  }
+
+  // Inputs and textareas inside the card resolve through the same
+  // dark-mode tokens, so they read coherently against the dark frame
+  // without us having to pick separate colours.
+  textarea,
+  input[type='text'] {
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+  }
+
+  // Title input is the marquee field on the card — give it some heft.
+  .titleField input[type='text'] {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 18px;
+  }
+
+  // Make the spacing under the title a bit looser than the rest.
+  .titleField {
+    margin-bottom: 22px;
+  }
+}
+
+.checkpointBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  text-transform: uppercase;
+}
+
+.sectionIcon {
+  font-size: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+.sectionIconSuccess {
+  color: var(--text-success-primary);
+}
+
+// Trailing info-icon next to a section label.  Wrapped in <WithTooltip>;
+// keep it visually subtle so the label still reads first.
+.sectionInfo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--text-neutral-tertiary);
+  cursor: help;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -248,13 +314,7 @@ select {
   gap: 12px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
-
-  select {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 240px;
-  }
+  margin-bottom: 20px;
 
   strong {
     flex: 0 0 auto;
