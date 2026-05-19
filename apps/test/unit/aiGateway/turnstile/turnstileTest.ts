@@ -90,7 +90,8 @@ describe('TurnstileManager stale pre-fetch', () => {
     const result = await m.getToken();
 
     expect(result).toBe(freshToken);
-    expect(freshChallenge).toHaveBeenCalledTimes(1);
+    // call #1: fresh challenge replacing stale token; call #2: schedulePrefetch after delivery
+    expect(freshChallenge).toHaveBeenCalledTimes(2);
   });
 
   it('uses a pre-fetched token that is still within TOKEN_MAX_AGE_MS', async () => {
