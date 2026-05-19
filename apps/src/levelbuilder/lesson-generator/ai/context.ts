@@ -80,3 +80,39 @@ export interface LevelContext extends LessonContext {
   // sibling-forward: a level never sees its successors.
   precedingLevels?: string;
 }
+
+// Page-scope context for /lessons/[id]/slides/generate. Sits between
+// LessonContext and SlideContext: the slides page plans an intro deck
+// for one lesson, so it sees everything LessonContext has plus
+// slides-page-specific signals (the deck-level outline prompt and a
+// formatted dump of the lesson's existing levels, used by the AI to
+// frame the deck without spoiling the levels).
+export interface SlidesPageContext extends LessonContext {
+  // The free-text outline the levelbuilder typed for the deck as a
+  // whole (audience, depth, tone). Drives the outline-AI plan and is
+  // also re-quoted per-slide so individual slide AIs honour the same
+  // audience the deck was planned against.
+  slidesOutline?: string;
+
+  // Formatted text dump of the lesson's existing level content
+  // (panels + weblab2 sources). The deck planner uses it to set the
+  // stage for the student without spoiling solutions. JSON-encoded
+  // blob, as produced by loadLessonLevelProperties.
+  levelContents?: string;
+}
+
+export interface SlideContext extends SlidesPageContext {
+  // 1-based ordinal of this slide within the deck. Used as a logging
+  // tag and to derive the per-slide image filename.
+  slideIndex: number;
+
+  // The per-slide description the levelbuilder typed (or the outline
+  // AI wrote). Drives the per-slide AI call directly.
+  slideDescription: string;
+
+  // Formatted text of slides already generated earlier in the same
+  // run. Same sibling-forward shape as precedingLevels: a slide never
+  // sees its successors. Used by the per-slide AI for continuity
+  // (recurring imagery, callbacks between cards).
+  precedingSlides?: string;
+}

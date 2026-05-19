@@ -17,6 +17,12 @@ export interface ExistingLessonData {
   // for display purposes (the page tells the user where the source of
   // truth lives so they can find and version-control it).
   slidesFilePath: string;
+  // Outer-scope context piped down from the Lesson + Unit this slide
+  // deck belongs to. Feeds the slides + per-slide AI prompts so the
+  // deck matches the lesson's framing and the unit's audience.
+  generateOutline?: string | null;
+  unitName?: string;
+  unitOutline?: string | null;
 }
 
 // One row inside slides.json. `panel` is null until the levelbuilder has

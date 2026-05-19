@@ -583,6 +583,9 @@ class Lesson < ApplicationRecord
       generateSlidesOutline: generate_slides_outline,
       slides: read_slides['slides'] || [],
       slidesFilePath: slides_relative_path,
+      generateOutline: generate_outline,
+      unitName: script&.localized_title,
+      unitOutline: script&.generate_outline,
     }
   end
 

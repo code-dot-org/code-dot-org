@@ -13,6 +13,7 @@ import SlidesOutlineBlock from './components/SlidesOutlineBlock';
 import SlidesProgressDialog from './components/SlidesProgressDialog';
 import SlidesSummaryDialog from './components/SlidesSummaryDialog';
 import {buildInitialState, newSlideSpec} from './helpers/buildInitialState';
+import {formatPrecedingSlides, PriorSlide} from './helpers/precedingSlides';
 import {saveSlidesData} from './slidesApi';
 import {
   ExistingLessonData,
@@ -128,11 +129,14 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
         setOutlineError(`Couldn't load lesson levels: ${message}. Continuing.`);
       }
 
-      const planned = await generateSlidesOutline(
-        lesson.name,
-        outline.trim() || undefined,
-        levelPropertiesById
-      );
+      const planned = await generateSlidesOutline({
+        unitName: lesson.unitName,
+        unitOutline: lesson.unitOutline ?? undefined,
+        lessonName: lesson.name,
+        lessonOutline: lesson.generateOutline ?? undefined,
+        slidesOutline: outline.trim() || undefined,
+        levelContents: JSON.stringify(levelPropertiesById, null, 2),
+      });
       const newSpecs: SlideSpec[] = planned.map(s => ({
         ...newSlideSpec(),
         description: s.description,
@@ -149,7 +153,14 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
     } finally {
       setIsOutlining(false);
     }
-  }, [lesson.id, lesson.name, outline]);
+  }, [
+    lesson.id,
+    lesson.name,
+    lesson.unitName,
+    lesson.unitOutline,
+    lesson.generateOutline,
+    outline,
+  ]);
 
   const handleGenerateSlides = useCallback(async () => {
     setTopLevelError(null);
@@ -164,6 +175,23 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
     // wipe the others' work).
     const finalSpecs: SlideSpec[] = [...slideSpecs];
 
+    // Build the page-scope context once. Each per-slide call narrows
+    // this to a SlideContext by adding slideIndex, slideDescription,
+    // and a sibling-forward precedingSlides summary.
+    const slidesPageCtx = {
+      unitName: lesson.unitName,
+      unitOutline: lesson.unitOutline ?? undefined,
+      lessonName: lesson.name,
+      lessonOutline: lesson.generateOutline ?? undefined,
+      slidesOutline: outline.trim() || undefined,
+    };
+
+    // Running sibling-forward summary. Includes every slide we either
+    // just generated or that already had a panel; cards we skip
+    // entirely (empty description) don't contribute, since they have
+    // nothing for the next slide to build on.
+    const priorSlides: PriorSlide[] = [];
+
     for (let i = 0; i < slideSpecs.length; i++) {
       const spec = slideSpecs[i];
       const description = spec.description.trim();
@@ -176,9 +204,16 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
       }
 
       // Skip cards whose Generate flag is off and that already have a
-      // panel. The flow lets the user keep an existing panel intact.
+      // panel. The flow lets the user keep an existing panel intact —
+      // but we still feed its content into the precedingSlides context
+      // so later slides see the deck as it will actually render.
       if (!spec.generate && spec.panel) {
         appendLog(`Slide ${i + 1}: keeping existing panel.`);
+        priorSlides.push({
+          position: i + 1,
+          description,
+          panel: spec.panel,
+        });
         continue;
       }
 
@@ -198,12 +233,13 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
           phase: 'generating-image',
         });
         appendLog(`Slide ${i + 1}: generating image…`);
-        const panel = await generateSlide(
-          lesson.name,
-          i,
-          description,
-          outline.trim() || undefined
-        );
+        const precedingSlidesText = formatPrecedingSlides(priorSlides);
+        const panel = await generateSlide({
+          ...slidesPageCtx,
+          slideIndex: i,
+          slideDescription: description,
+          precedingSlides: precedingSlidesText || undefined,
+        });
         finalSpecs[i] = {
           ...spec,
           panel,
@@ -211,6 +247,7 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
           lastGeneratedDescription: description,
         };
         generated.push({key: spec.key, description});
+        priorSlides.push({position: i + 1, description, panel});
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
         appendLog(`Slide ${i + 1}: failed — ${message}`);
@@ -247,7 +284,16 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
     setSummary({generated, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [slideSpecs, lesson.id, lesson.name, outline, appendLog]);
+  }, [
+    slideSpecs,
+    lesson.id,
+    lesson.name,
+    lesson.unitName,
+    lesson.unitOutline,
+    lesson.generateOutline,
+    outline,
+    appendLog,
+  ]);
 
   return (
     <div className={moduleStyles.container}>

@@ -5,6 +5,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import {SlideContext} from '../../lesson-generator/ai/context';
 import {generateAndUploadPanelImage} from '../../lesson-generator/ai/panels';
 import {
   getTextModel,
@@ -59,23 +60,21 @@ interface SlidePlan {
   teacherNote: string;
 }
 
-// Generate a single slide-as-panel from a free-text description. The
-// description is whatever the levelbuilder typed (or whatever the
-// outline AI wrote earlier) for this slide card. The optional outline
-// is the page-level prompt the levelbuilder provided when planning the
-// deck — we pass it through so the model can match its requested
-// audience, depth, and tone instead of defaulting to a friendly
-// elementary register.
+// Generate a single slide-as-panel from a SlideContext. The context
+// carries everything the per-slide AI needs: the slide's own
+// description, the deck-level outline (for audience/tone), inherited
+// lesson + unit context, and a sibling-forward summary of slides
+// already generated earlier in the same run.
 //
 // We make ONE gemini-flash call to plan the panel (text + image prompt
 // + layout), then a second image call to render the picture, and
 // assemble a Panel.
-export async function generateSlide(
-  lessonName: string,
-  slideIndex: number,
-  description: string,
-  outline?: string
-): Promise<Panel> {
+export async function generateSlide(ctx: SlideContext): Promise<Panel> {
+  const hasAnyOutline = !!(
+    ctx.slidesOutline ||
+    ctx.lessonOutline ||
+    ctx.unitOutline
+  );
   const prompt = [
     'You are helping a curriculum author build a single intro slide',
     'shown to students BEFORE a CS lesson begins. The slide is a',
@@ -83,20 +82,50 @@ export async function generateSlide(
     'overlay. The slide should set context, motivation, or framing —',
     'never walk through a solution.',
     '',
-    ...(outline?.trim()
+    ...(ctx.unitOutline
       ? [
-          'Outline (the levelbuilder typed this when planning the whole',
-          'slide deck — match the audience, depth, vocabulary, and tone',
-          'it implies; do not soften technical content if the outline',
-          'asks for it):',
-          outline.trim(),
+          `Unit context — this lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad framing (audience, arc, recurring themes):`,
+          ctx.unitOutline,
           '',
         ]
-      : [
+      : []),
+    ...(ctx.lessonOutline
+      ? [
+          'Lesson outline (the levelbuilder typed this for the lesson as',
+          'a whole; match its tone and the concepts it names):',
+          ctx.lessonOutline,
+          '',
+        ]
+      : []),
+    ...(ctx.slidesOutline
+      ? [
+          'Slides outline (the levelbuilder typed this when planning the',
+          'whole slide deck — match the audience, depth, vocabulary, and',
+          'tone it implies; do not soften technical content if the',
+          'outline asks for it):',
+          ctx.slidesOutline,
+          '',
+        ]
+      : []),
+    ...(!hasAnyOutline
+      ? [
           'No outline was provided. Default to a tone appropriate for the',
           'description below; do not assume any specific grade level.',
           '',
-        ]),
+        ]
+      : []),
+    ...(ctx.precedingSlides
+      ? [
+          'Preceding slides in this deck, in order. Use them for continuity',
+          '— consistent imagery, callbacks, building on prior framing — but',
+          'do NOT regenerate or summarize them; only build the slide',
+          'described last:',
+          ctx.precedingSlides,
+          '',
+        ]
+      : []),
     'For the supplied slide description, return:',
     '  - text: markdown to overlay. Match the audience and depth from',
     '    the outline above. If the description names specific syntax,',
@@ -110,10 +139,13 @@ export async function generateSlide(
     '    misconceptions to anticipate, classroom prompts, or what to',
     '    emphasise before showing this slide. Never shown to students.',
     '',
-    `Slide description: ${description}`,
+    `Slide description: ${ctx.slideDescription}`,
   ].join('\n');
 
-  const context = {level: lessonName, subtask: `slide-${slideIndex + 1}-plan`};
+  const context = {
+    level: ctx.lessonName,
+    subtask: `slide-${ctx.slideIndex + 1}-plan`,
+  };
   logPrompt(PROMPT_TAGS.PANELS_PLAN, prompt, context);
   const response = await generateText({
     model: getTextModel(),
@@ -130,8 +162,8 @@ export async function generateSlide(
 
   const imageUrl = await generateAndUploadPanelImage(
     plan.imagePrompt,
-    `${lessonName}-slide`,
-    slideIndex
+    `${ctx.lessonName}-slide`,
+    ctx.slideIndex
   );
 
   return {

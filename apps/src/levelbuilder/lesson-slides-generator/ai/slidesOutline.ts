@@ -2,8 +2,8 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 
+import {SlidesPageContext} from '../../lesson-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -32,20 +32,18 @@ export interface OutlineSlide {
   description: string;
 }
 
-// Given the lesson's existing levels (their content) plus the user's
-// optional outline prompt for the slides, ask the model for a sequence
-// of slide descriptions to show students BEFORE the lesson.
+// Given the slides-page context (lesson identity, optional deck-level
+// outline, formatted lesson level content, and inherited unit/lesson
+// outline fields), ask the model for a sequence of slide descriptions
+// to show students BEFORE the lesson.
 //
 // The slides should set up context for the lesson without giving away
 // the work. Concretely: introduce the topic and stakes, motivate why
 // this matters, mention the technique or concept the student is about
 // to use, but stop short of walking through the solution.
 export async function generateSlidesOutline(
-  lessonName: string,
-  outline: string | undefined,
-  levelPropertiesById: LevelPropertiesMap
+  ctx: SlidesPageContext
 ): Promise<OutlineSlide[]> {
-  const lessonContext = JSON.stringify(levelPropertiesById, null, 2);
   const prompt = [
     'You are helping a curriculum author plan a sequence of intro slides',
     'shown to students BEFORE they begin a CS lesson. The slides set up',
@@ -59,27 +57,51 @@ export async function generateSlidesOutline(
     'to 3-6 unless the outline below asks for more.',
     '',
     'Audience and tone: the unit may be aimed at any grade range, from',
-    'elementary to high school or beyond. Read the outline below for',
-    "the levelbuilder's intent and match it. If no outline is provided,",
+    'elementary to high school or beyond. Read the outlines below for',
+    "the levelbuilder's intent and match them. If no outline is provided,",
     'infer the level from the lesson content; do not assume any',
     'specific grade.',
     '',
-    `Lesson: ${lessonName}`,
+    `Lesson: ${ctx.lessonName}`,
     '',
-    ...(outline?.trim()
+    ...(ctx.unitOutline
       ? [
-          'Outline (the levelbuilder typed this; match its audience,',
-          'depth, vocabulary, and tone — do not soften technical content',
-          'if the outline asks for it):',
-          outline.trim(),
+          `Unit context — this lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad framing (audience, arc, recurring themes)`,
+          'but the deck itself is about the specific lesson below:',
+          ctx.unitOutline,
           '',
         ]
       : []),
-    'Lesson level content (the existing generated levels of this lesson,',
-    'in order). Use these to understand what the student is about to do',
-    'so the slides can set the stage without spoiling solutions:',
-    lessonContext,
-    '',
+    ...(ctx.lessonOutline
+      ? [
+          'Lesson outline (the levelbuilder typed this when planning the',
+          "lesson's own levels — match its tone and the concepts it names",
+          'when framing the intro deck):',
+          ctx.lessonOutline,
+          '',
+        ]
+      : []),
+    ...(ctx.slidesOutline
+      ? [
+          'Slides outline (the levelbuilder typed this specifically for',
+          'this deck; match its audience, depth, vocabulary, and tone —',
+          'do not soften technical content if the outline asks for it):',
+          ctx.slidesOutline,
+          '',
+        ]
+      : []),
+    ...(ctx.levelContents
+      ? [
+          'Lesson level content (the existing generated levels of this',
+          'lesson, in order). Use these to understand what the student',
+          'is about to do so the slides can set the stage without',
+          'spoiling solutions:',
+          ctx.levelContents,
+          '',
+        ]
+      : []),
     'IMPORTANT — what each `description` should look like:',
     "Write each description in the curriculum author's voice, as a brief",
     'plan for the slide. The levelbuilder will scan a list of these on a',
@@ -105,7 +127,7 @@ export async function generateSlidesOutline(
     'syntax or terminology you want carried into the slide text.',
   ].join('\n');
 
-  const context = {level: lessonName, subtask: 'slides-outline'};
+  const context = {level: ctx.lessonName, subtask: 'slides-outline'};
   logPrompt(PROMPT_TAGS.LESSON_OUTLINE, prompt, context);
   const response = await generateText({
     model: getTextModel(),
