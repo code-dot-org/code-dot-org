@@ -4,6 +4,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
+require 'optparse'
 
 BATCH_SIZE = 1000
 
@@ -12,42 +13,100 @@ BATCH_SIZE = 1000
 #
 # Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
-def delete_in_batches(scope)
-  deleted_record_count = 0
+def delete_in_batches(scope, max_batches: nil, dry_run: false, table_name:)
+  affected_record_count = 0
+  processed_batches = 0
 
   scope.in_batches(of: BATCH_SIZE) do |batch|
-    deleted_record_count += batch.delete_all
+    break if max_batches && processed_batches >= max_batches
+
+    if dry_run
+      batch_count = batch.count
+      puts "#{table_name} batch #{processed_batches + 1} SQL: #{batch.to_sql}"
+      puts "#{table_name} batch #{processed_batches + 1} rows that would be deleted: #{batch_count}"
+      affected_record_count += batch_count
+    else
+      affected_record_count += batch.delete_all
+    end
+
+    processed_batches += 1
   end
 
-  deleted_record_count
+  affected_record_count
 end
 
-def delete_requests_in_batches(request_scope)
-  deleted_request_count = 0
-  deleted_event_retry_count = 0
+def delete_requests_in_batches(request_scope, max_batches: nil, dry_run: false)
+  affected_request_count = 0
+  affected_event_retry_count = 0
+  processed_batches = 0
 
   request_scope.in_batches(of: BATCH_SIZE) do |batch|
-    deleted_request_count += batch.delete_all
+    break if max_batches && processed_batches >= max_batches
+
+    if dry_run
+      batch_count = batch.count
+      puts "AichatRequest batch #{processed_batches + 1} SQL: #{batch.to_sql}"
+      puts "AichatRequest batch #{processed_batches + 1} rows that would be deleted: #{batch_count}"
+      affected_request_count += batch_count
+    else
+      affected_request_count += batch.delete_all
+    end
   rescue ActiveRecord::InvalidForeignKey
     request_ids = batch.pluck(:id)
-    deleted_event_retry_count += AichatEvent.where(request_id: request_ids).delete_all
-    deleted_request_count += AichatRequest.where(id: request_ids).delete_all
+    affected_event_retry_count += AichatEvent.where(request_id: request_ids).delete_all
+    affected_request_count += AichatRequest.where(id: request_ids).delete_all
+  ensure
+    processed_batches += 1
   end
 
-  [deleted_request_count, deleted_event_retry_count]
+  [affected_request_count, affected_event_retry_count]
 end
 
-def main
+def parse_options
+  options = {dry_run: false, batches: nil}
+
+  OptionParser.new do |opts|
+    opts.banner = 'Usage: delete_old_ai_chat_data [--dry-run] [--batches N]'
+
+    opts.on('--dry-run', 'Print SQL and counts only; do not delete data') do
+      options[:dry_run] = true
+    end
+
+    opts.on('--batches N', Integer, 'Process only N batches per table') do |value|
+      raise OptionParser::InvalidArgument, 'batches must be positive' if value <= 0
+      options[:batches] = value
+    end
+  end.parse!
+
+  options
+end
+
+def main(options)
+  max_batches = options[:batches]
+
   # Make sure we're deleting Events (90 days old) a day before Requests (91 days old)
   # to ensure we don't have foreign key constraint issues when deleting Requests that are still referenced by Events.
-  deleted_event_count = delete_in_batches(AichatEvent.where(created_at: ...90.days.ago))
+  event_scope = AichatEvent.where(created_at: ...90.days.ago)
+  request_scope = AichatRequest.where(created_at: ...91.days.ago)
+
+  if options[:dry_run]
+    puts "AichatEvent delete scope SQL: #{event_scope.to_sql}"
+    puts "AichatRequest delete scope SQL: #{request_scope.to_sql}"
+    dry_run_event_count = delete_in_batches(event_scope, max_batches: max_batches, dry_run: true, table_name: 'AichatEvent')
+    dry_run_request_count, = delete_requests_in_batches(request_scope, max_batches: max_batches, dry_run: true)
+    puts "AichatEvent total rows that would be deleted: #{dry_run_event_count}"
+    puts "AichatRequest total rows that would be deleted: #{dry_run_request_count}"
+    return
+  end
+
+  deleted_event_count = delete_in_batches(event_scope, max_batches: max_batches, table_name: 'AichatEvent')
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(AichatRequest.where(created_at: ...91.days.ago))
+  deleted_request_count, deleted_event_retry_count = delete_requests_in_batches(request_scope, max_batches: max_batches)
   ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
   if deleted_event_retry_count > 0
     ChatClient.message('cron-daily', "Deleted #{deleted_event_retry_count} additional AichatEvent records while retrying AichatRequest batch deletes")
   end
 end
 
-main
+main(parse_options)
