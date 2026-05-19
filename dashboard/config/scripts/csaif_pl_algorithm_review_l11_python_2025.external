@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/304337796cc2c249691d622fb078c3fc-image-1741021380057.png" alt="clipboard with flowchart" style="border-radius:10px; float: right; ; height: 120px; margin: 0px 20px 0px 10px; ">
 
-#### An **algorithm** is a set of step-by-step instructions designed to accomplish a specific task. 
+An **algorithm** is a set of step-by-step instructions designed to accomplish a specific task. 
 
-#### Just like a recipe guides a chef or a GPS provides directions, algorithms help computers solve problems efficiently. 
+Just like a recipe guides a chef or a GPS provides directions, algorithms help computers solve problems efficiently. 
 
 
 ## Key Concepts in Algorithms
@@ -47,9 +47,9 @@ markdown <<MARKDOWN
 ---
 
 
-#### Now that we’ve explored each of these building blocks, it’s time to combine them into more advanced algorithms! 
+Now that we’ve explored each of these building blocks, it’s time to combine them into more advanced algorithms! 
 
-#### By integrating sequencing, selection, and iteration, we can create algorithms that solve complex problems, from sorting data to recognizing patterns in images.
+By integrating sequencing, selection, and iteration, we can create algorithms that solve complex problems, from sorting data to recognizing patterns in images.
 
 
 ## Let's practice building algorithms!

@@ -7,17 +7,17 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/73700f1338f5136a047468c4bde73234-image-1761078350609.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
 
-#### Now that you’ve used HTML, CSS, and AI to modify a website, it’s time to build one!
+Now that you’ve used HTML, CSS, and AI to modify a website, it’s time to build one!
 
-#### Think back to the four parts of the site from the last level:
+Think back to the four parts of the site from the last level:
 
-- #### **Navigation bar-** Links to main pages
+- **Navigation bar-** Links to main pages
 
-- #### **Hero-** Main attention-grabbing section
+- **Hero-** Main attention-grabbing section
 
-- #### **Cards-** Grouped content previews
+- **Cards-** Grouped content previews
 
-- #### **Footer-** Info and links at page bottom
+- **Footer-** Info and links at page bottom
 
 
 <div style="clear:both;"></div>

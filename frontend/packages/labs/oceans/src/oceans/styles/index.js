@@ -267,6 +267,9 @@ const styles = {
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
+    background: 'none',
+    border: 'none',
+    padding: 0,
   },
   selectedControl: {
     color: colors.orange,

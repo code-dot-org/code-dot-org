@@ -8,14 +8,14 @@
           "type": "panel",
           "name": "variable_panel",
           "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
-          "visible": "true",
+          "visible": "false",
           "elements": [
             {
               "type": "text",
               "name": "module",
               "startWithNewLine": false,
               "defaultValueExpression": "{module_name}",
-              "readOnly": false
+              "readOnly": true
             }
           ]
         },

@@ -4,7 +4,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   # Returns list of current user's SectionInstructor records
   # GET /section_instructors
   def index
-    section_instructors = SectionInstructor.where(instructor_id: current_user&.id)
+    section_instructors = SectionInstructor.where(instructor_id: current_user&.id).includes(:invited_by, :section, :instructor)
 
     render json: section_instructors, each_serializer: Api::V1::SectionInstructorSerializer
   end
@@ -14,7 +14,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   def show
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
-    section_instructors = SectionInstructor.where(section: section)
+    section_instructors = SectionInstructor.where(section: section).includes(:invited_by, :section, :instructor)
 
     render json: section_instructors, each_serializer: Api::V1::SectionInstructorSerializer
   end

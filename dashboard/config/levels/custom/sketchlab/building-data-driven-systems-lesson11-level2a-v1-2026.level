@@ -1,0 +1,2267 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-05-15T03:51:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Wireframe Your Data Page and Cards\r\n\r\nIn this level, you’ll plan how your dataset will appear in your app.\r\n\r\n## Do This:\r\n\r\n- Create a wireframe of your full page layout.\r\n- Include a header/title, description area, card section, and placeholders for future controls.\r\n- Create a wireframe of one data card.\r\n- Label where each schema field will appear on the card.\r\n- Use arrows or notes to connect schema fields to UI labels if helpful.\r\n\r\nKeep your wireframes simple using boxes, labels, and arrows rather than detailed artwork.\r\n\r\nThis will help you prepare to render your dataset with `.map()` in the next level.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "_DBHmOIe67URgpXp6Cbhr",
+            "type": "shape",
+            "position": {
+              "x": -460.05450806512,
+              "y": -222.2076559285631
+            },
+            "style": {
+              "width": 736.4923735859911,
+              "height": 1390.3630783784213
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 736,
+              "height": 1390
+            }
+          },
+          {
+            "id": "jVr_bR7hYEzm1f2A1Kof8",
+            "type": "text",
+            "position": {
+              "x": 383.5304561332118,
+              "y": -100.60638277369276
+            },
+            "data": {
+              "text": "Add wireframe assets to \ncreate your full-page below",
+              "fontColor": "#1e1e1e",
+              "fontSize": 49.109207050709294,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 622,
+              "height": 146
+            }
+          },
+          {
+            "id": "Tk5a4B5U0CuTWLllNnysx",
+            "type": "shape",
+            "position": {
+              "x": 369.67221635756914,
+              "y": 97.37189978508866
+            },
+            "style": {
+              "width": 627.0448853689527,
+              "height": 971.5592311660703
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 627,
+              "height": 972
+            }
+          },
+          {
+            "id": "oImg9c_KP25EYQA6JRiqv",
+            "type": "shape",
+            "position": {
+              "x": -358.00905474622255,
+              "y": 52.27878339516394
+            },
+            "style": {
+              "width": 136.0507840229393,
+              "height": 74.57607031109836
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 136,
+              "height": 75
+            }
+          },
+          {
+            "id": "bgfkDQeqPWYn1n3WEvYjP",
+            "type": "shape",
+            "position": {
+              "x": -358.37967376410097,
+              "y": 135.46534379477342
+            },
+            "style": {
+              "width": 136.0507840229393,
+              "height": 74.57607031109836
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ced4da",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 136,
+              "height": 75
+            }
+          },
+          {
+            "id": "kS6HnZ8ALF_EZOTPPjIM8",
+            "type": "shape",
+            "position": {
+              "x": -197.9425907192865,
+              "y": 50.954164047826566
+            },
+            "style": {
+              "width": 73.24964114410453,
+              "height": 73.24964114410453
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 73,
+              "height": 73
+            }
+          },
+          {
+            "id": "4Xewyzfgesl2uq26kDsZo",
+            "type": "shape",
+            "position": {
+              "x": -173.46102263365447,
+              "y": 63.213306971847004
+            },
+            "style": {
+              "width": 24.21765916832384,
+              "height": 24.21765916832384
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#ced4da",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 24,
+              "height": 24
+            }
+          },
+          {
+            "id": "9-8oO7RoGxoa-Pl1-cedE",
+            "type": "text",
+            "position": {
+              "x": -307.60795522757076,
+              "y": -16.698042083203404
+            },
+            "data": {
+              "text": "Images",
+              "fontColor": "#000",
+              "fontSize": 30.861259036605265,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 118,
+              "height": 58
+            }
+          },
+          {
+            "id": "FatGWDHkjo1I9Z8nrgbKh",
+            "type": "text",
+            "position": {
+              "x": -287.0676271793452,
+              "y": -311.6554224498578
+            },
+            "data": {
+              "text": "Wireframe Assets",
+              "fontColor": "#1e1e1e",
+              "fontSize": 49.46035393572585,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 411,
+              "height": 82
+            }
+          },
+          {
+            "id": "P_YE8j724i4acViHI470Z",
+            "type": "shape",
+            "position": {
+              "x": -87.16491172679241,
+              "y": 349.1483242461345
+            },
+            "style": {
+              "width": 207.83126053922783,
+              "height": 31.33338098789791
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 208,
+              "height": 31
+            }
+          },
+          {
+            "id": "LQmgypnqU51utdD8jJtXn",
+            "type": "text",
+            "position": {
+              "x": -76.66528468942283,
+              "y": 359.84881419421487
+            },
+            "data": {
+              "text": "Input Field Text",
+              "fontColor": "#495057",
+              "fontSize": 9.400395458786152,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 83,
+              "height": 38
+            }
+          },
+          {
+            "id": "e6gPw7snzm4-kQucjV7Ao",
+            "type": "text",
+            "position": {
+              "x": -84.01464645699514,
+              "y": 333.0667493447098
+            },
+            "data": {
+              "text": "Label",
+              "fontColor": "#000000",
+              "fontSize": 9.293842899987714,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "sgFz4L-jISYrSwzRU5wuz",
+            "type": "text",
+            "position": {
+              "x": -84.72413589993278,
+              "y": 385.0859114800918
+            },
+            "data": {
+              "text": "Message",
+              "fontColor": "#000000",
+              "fontSize": 7.137403250539733,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "YaxG80fMzd6iEZnpgu7Hr",
+            "type": "shape",
+            "position": {
+              "x": -87.28567588729231,
+              "y": 427.79598377177
+            },
+            "style": {
+              "width": 207.83126053922783,
+              "height": 31.33338098789791
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#c92a2a"
+            },
+            "measured": {
+              "width": 208,
+              "height": 31
+            }
+          },
+          {
+            "id": "zpmzZL-ad0nGHZkoUXXB_",
+            "type": "text",
+            "position": {
+              "x": -76.66528468942283,
+              "y": 438.8630792070825
+            },
+            "data": {
+              "text": "Input Field Text",
+              "fontColor": "#000000",
+              "fontSize": 9.400395458786152,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 83,
+              "height": 38
+            }
+          },
+          {
+            "id": "ol-icD-EWRIYRsWj-tfP4",
+            "type": "text",
+            "position": {
+              "x": -84.01464645699514,
+              "y": 411.83517303084534
+            },
+            "data": {
+              "text": "Label",
+              "fontColor": "#000000",
+              "fontSize": 9.293842899987714,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "8PGJF3sYXS-FqVTpxBq3u",
+            "type": "text",
+            "position": {
+              "x": -84.84705656329879,
+              "y": 463.7314145028612
+            },
+            "data": {
+              "text": "Error message",
+              "fontColor": "#c92a2a",
+              "fontSize": 7.137403250539733,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 64,
+              "height": 38
+            }
+          },
+          {
+            "id": "PsuTlXmn0S0Ar1_ojjWV_",
+            "type": "shape",
+            "position": {
+              "x": -87.28567588729231,
+              "y": 507.8000836001646
+            },
+            "style": {
+              "width": 207.83126053922783,
+              "height": 31.33338098789791
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#2b8a3e"
+            },
+            "measured": {
+              "width": 208,
+              "height": 31
+            }
+          },
+          {
+            "id": "3dQr9K2zLe15_p6kLIUeX",
+            "type": "text",
+            "position": {
+              "x": -76.66528468942283,
+              "y": 518.9900996988432
+            },
+            "data": {
+              "text": "Input Field Text",
+              "fontColor": "#000000",
+              "fontSize": 9.400395458786152,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 83,
+              "height": 38
+            }
+          },
+          {
+            "id": "EoETQFh7S48Wf2WDEpDjO",
+            "type": "text",
+            "position": {
+              "x": -84.01464645699514,
+              "y": 491.96219352260607
+            },
+            "data": {
+              "text": "Label",
+              "fontColor": "#000000",
+              "fontSize": 9.293842899987714,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "RcSWO7Ojq7Y9uGUFR0kT1",
+            "type": "text",
+            "position": {
+              "x": -84.84705656329879,
+              "y": 543.7355143312556
+            },
+            "data": {
+              "text": "Success message",
+              "fontColor": "#2b8a3e",
+              "fontSize": 7.137403250539733,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 75,
+              "height": 38
+            }
+          },
+          {
+            "id": "PKG7O0J0g5e6T7jkih90_",
+            "type": "shape",
+            "position": {
+              "x": 93.04704436091697,
+              "y": 434.04569832286234
+            },
+            "style": {
+              "width": 17.48854816292447,
+              "height": 17.48854816292447
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#c92a2a"
+            },
+            "measured": {
+              "width": 17,
+              "height": 17
+            }
+          },
+          {
+            "id": "Q_HraXwyhYSOHcz5nuxwQ",
+            "type": "text",
+            "position": {
+              "x": 99.91391429083467,
+              "y": 438.03015154009097
+            },
+            "data": {
+              "text": "!",
+              "fontColor": "#c92a2a",
+              "fontSize": 9.400395458786152,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "6Gp6zAQZ7_Je7tumduOHt",
+            "type": "shape",
+            "position": {
+              "x": 92.93872910332539,
+              "y": 513.7605954332596
+            },
+            "style": {
+              "width": 17.48854816292447,
+              "height": 17.48854816292447
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#2b8a3e"
+            },
+            "measured": {
+              "width": 17,
+              "height": 17
+            }
+          },
+          {
+            "id": "j1xMizmH-xEhyC0-9Q4SU",
+            "type": "text",
+            "position": {
+              "x": -87.52951451063791,
+              "y": 279.7354844963742
+            },
+            "data": {
+              "text": "Input Fields",
+              "fontColor": "#000",
+              "fontSize": 26.204845762659456,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 154,
+              "height": 52
+            }
+          },
+          {
+            "id": "mb1bG81A_d-VSyjV_tfpQ",
+            "type": "shape",
+            "position": {
+              "x": -60.23117688529953,
+              "y": 51.79058348808468
+            },
+            "style": {
+              "width": 136.8132285046205,
+              "height": 74.99400331811859
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 137,
+              "height": 75
+            }
+          },
+          {
+            "id": "VALWi1rkJFk70D-kktLSg",
+            "type": "shape",
+            "position": {
+              "x": -59.34434541883843,
+              "y": 134.76810935885902
+            },
+            "style": {
+              "width": 75.37989873169201,
+              "height": 10.99092619136772
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#868e96",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 75,
+              "height": 11
+            }
+          },
+          {
+            "id": "ev5reryn4_XU7n2jyML4E",
+            "type": "shape",
+            "position": {
+              "x": -59.435909219301834,
+              "y": 152.88206825193743
+            },
+            "style": {
+              "width": 135.54530625744866,
+              "height": 4.791097655936557
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 136,
+              "height": 5
+            }
+          },
+          {
+            "id": "Ze-2msk0K16DTaSKCJlAJ",
+            "type": "shape",
+            "position": {
+              "x": -58.97347668405291,
+              "y": 171.05593250297372
+            },
+            "style": {
+              "width": 98.91470666924177,
+              "height": 6.171503838479912
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 99,
+              "height": 6
+            }
+          },
+          {
+            "id": "QbJXykO8xpvY0w_Rtzbfe",
+            "type": "shape",
+            "position": {
+              "x": -69.24242708508609,
+              "y": 45.90802686663598
+            },
+            "style": {
+              "width": 154.85984781582522,
+              "height": 187.40904263313936
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 155,
+              "height": 187
+            },
+            "dragging": false
+          },
+          {
+            "id": "_Wu9wt9zVI38O4QYkQIbp",
+            "type": "shape",
+            "position": {
+              "x": -59.435909219301834,
+              "y": 162.17751272534713
+            },
+            "style": {
+              "width": 135.54530625744866,
+              "height": 4.791097655936557
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 136,
+              "height": 5
+            }
+          },
+          {
+            "id": "EKFDFxxGhHzCWUuEXZMvB",
+            "type": "shape",
+            "position": {
+              "x": -58.95459771353853,
+              "y": 193.14025509716245
+            },
+            "style": {
+              "width": 80.96114182396278,
+              "height": 20.183434914143618
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 81,
+              "height": 20
+            }
+          },
+          {
+            "id": "j0CWMXrNSspGh6GrwoVww",
+            "type": "text",
+            "position": {
+              "x": -42.172625461022676,
+              "y": 199.2203643934642
+            },
+            "data": {
+              "text": "Read more",
+              "fontColor": "#000000",
+              "fontSize": 7.234526781009471,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "QPfAE6UaEXcifHYn27kCN",
+            "type": "text",
+            "position": {
+              "x": -31.60139743044897,
+              "y": -11.24466443773008
+            },
+            "data": {
+              "text": "Card",
+              "fontColor": "#000000",
+              "fontSize": 34.97686368015933,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 93,
+              "height": 63
+            }
+          },
+          {
+            "id": "JrPaN2YqVXwyYVcw8kCj9",
+            "type": "text",
+            "position": {
+              "x": -340.39143379821144,
+              "y": 268.2150965702184
+            },
+            "data": {
+              "text": "Buttons",
+              "fontColor": "#000",
+              "fontSize": 32.14935848670156,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 131,
+              "height": 60
+            }
+          },
+          {
+            "id": "MvGFPRDczqguXGnmny8sx",
+            "type": "shape",
+            "position": {
+              "x": -385.35277523873447,
+              "y": 335.90235657948864
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "rvnWfATLhvE4wd6gyu5tt",
+            "type": "text",
+            "position": {
+              "x": -364.1322699043526,
+              "y": 344.9279590902733
+            },
+            "data": {
+              "text": "Default",
+              "fontColor": "#000",
+              "fontSize": 14.608897252355098,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 66,
+              "height": 38
+            }
+          },
+          {
+            "id": "_4dMHnt3CNv3GFdLhUkw5",
+            "type": "shape",
+            "position": {
+              "x": -260.9874726696871,
+              "y": 337.8614672649401
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#40c057",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "FCCh6qhNhLE-4DCsiM3n-",
+            "type": "text",
+            "position": {
+              "x": -233.25899056469325,
+              "y": 345.45639598958724
+            },
+            "data": {
+              "text": "Primary",
+              "fontColor": "#000",
+              "fontSize": 14.046850638753902,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 65,
+              "height": 38
+            }
+          },
+          {
+            "id": "Q3A-GQesqIMV4RoEcGdpv",
+            "type": "shape",
+            "position": {
+              "x": -385.4098531688305,
+              "y": 388.04920130165874
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "BNmiw8081gAhDENtF1uii",
+            "type": "text",
+            "position": {
+              "x": -372.8095958994859,
+              "y": 397.7386401278239
+            },
+            "data": {
+              "text": "Default",
+              "fontColor": "#000",
+              "fontSize": 14.245553986996645,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 65,
+              "height": 38
+            }
+          },
+          {
+            "id": "46ihSZsZKEp1yV67QSEO6",
+            "type": "shape",
+            "position": {
+              "x": -387.28113570968753,
+              "y": 437.5270310312304
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "_v4AS2UZK9uYTpw81EVYc",
+            "type": "text",
+            "position": {
+              "x": -355.833316543087,
+              "y": 445.24546750870735
+            },
+            "data": {
+              "text": "Default",
+              "fontColor": "#000",
+              "fontSize": 13.697700469698527,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 63,
+              "height": 38
+            }
+          },
+          {
+            "id": "WpMQdCttcCpnINvX4I0cY",
+            "type": "shape",
+            "position": {
+              "x": -260.5289540343631,
+              "y": 388.5488160890459
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#40c057",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "nY9o0mp7kuP-ZrNhE9bL3",
+            "type": "text",
+            "position": {
+              "x": -242.97566791102372,
+              "y": 396.2489429183163
+            },
+            "data": {
+              "text": "Primary",
+              "fontColor": "#000",
+              "fontSize": 13.569962602971012,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 64,
+              "height": 38
+            }
+          },
+          {
+            "id": "1sGyHn7294ZD2Fd2Mq7iu",
+            "type": "shape",
+            "position": {
+              "x": -260.5289540343631,
+              "y": 440.0451020624952
+            },
+            "style": {
+              "width": 106.78647842008745,
+              "height": 34.104438269614796
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#40c057",
+              "strokeColor": "#000"
+            },
+            "measured": {
+              "width": 107,
+              "height": 34
+            }
+          },
+          {
+            "id": "Zu7vbnNYqBYW9ulkemFpA",
+            "type": "text",
+            "position": {
+              "x": -225.41733340124256,
+              "y": 448.45985049903277
+            },
+            "data": {
+              "text": "Primary",
+              "fontColor": "#000",
+              "fontSize": 13.88504934089892,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 65,
+              "height": 38
+            }
+          },
+          {
+            "id": "zEG8t_VhnaaXg7KqUNpfz",
+            "type": "shape",
+            "position": {
+              "x": -233.04260995286677,
+              "y": 674.4508657096525
+            },
+            "style": {
+              "width": 390.58072173184075,
+              "height": 205.4492937847989
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 391,
+              "height": 205
+            }
+          },
+          {
+            "id": "bWVHG5qi99m_7XeYnwTlj",
+            "type": "shape",
+            "position": {
+              "x": 12.208960503496542,
+              "y": 750.9200149429206
+            },
+            "style": {
+              "width": 93.59300677018582,
+              "height": 51.302891810925765
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 94,
+              "height": 51
+            }
+          },
+          {
+            "id": "Me1Il4cOSJC8l2Rrb3HLO",
+            "type": "text",
+            "position": {
+              "x": -199.2021406933593,
+              "y": 740.5700159299298
+            },
+            "data": {
+              "text": "Headline Text",
+              "fontColor": "#000000",
+              "fontSize": 22.220925704791952,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 153,
+              "height": 47
+            }
+          },
+          {
+            "id": "Aq5H86mMqg3tNyIuPtGp3",
+            "type": "text",
+            "position": {
+              "x": -194.9749926501704,
+              "y": 773.1772850561331
+            },
+            "data": {
+              "text": "Subtitle text can be a bit longer",
+              "fontColor": "#000000",
+              "fontSize": 7.893875969681887,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 129,
+              "height": 38
+            }
+          },
+          {
+            "id": "_cOXExs2RnLj-hNuL_1px",
+            "type": "shape",
+            "position": {
+              "x": -195.31760428710754,
+              "y": 795.6959781070717
+            },
+            "style": {
+              "width": 47.968695817417945,
+              "height": 15.3197806462295
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#40c057",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 48,
+              "height": 15
+            }
+          },
+          {
+            "id": "V9jz2GqZrt4nMZwYS3umx",
+            "type": "text",
+            "position": {
+              "x": -182.86191567135745,
+              "y": 799.1076350053767
+            },
+            "data": {
+              "text": "Primary",
+              "fontColor": "#000000",
+              "fontSize": 6.309872892637122,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "L_LgSQ_dfQzs98plL-Gau",
+            "type": "text",
+            "position": {
+              "x": -110.25338125696726,
+              "y": 599.8290458698892
+            },
+            "data": {
+              "text": "Hero",
+              "fontColor": "#000000",
+              "fontSize": 49.536282556366956,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 128,
+              "height": 82
+            }
+          },
+          {
+            "id": "CVWXe-vK__XDVtKiJlxNM",
+            "type": "shape",
+            "position": {
+              "x": -409.9724633626415,
+              "y": 653.1365588514674
+            },
+            "style": {
+              "width": 77.64482210445898,
+              "height": 19.15112847278068
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ced4da",
+              "strokeColor": "#999999"
+            },
+            "measured": {
+              "width": 78,
+              "height": 19
+            }
+          },
+          {
+            "id": "0IMttamwFvJZkymRpKrt2",
+            "type": "shape",
+            "position": {
+              "x": -410.07229091846784,
+              "y": 638.0048030211223
+            },
+            "style": {
+              "width": 78.3120905039227,
+              "height": 240.51085239232046
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#999999"
+            },
+            "measured": {
+              "width": 78,
+              "height": 241
+            }
+          },
+          {
+            "id": "E6Shbva_lxDdpiT_6kYTq",
+            "type": "text",
+            "position": {
+              "x": -400.4469337603757,
+              "y": 658.8931060395081
+            },
+            "data": {
+              "text": "Active Item",
+              "fontColor": "#000000",
+              "fontSize": 7.962666179168326,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 59,
+              "height": 38
+            }
+          },
+          {
+            "id": "pf3Le_XwRG0VZlvy5_hkw",
+            "type": "text",
+            "position": {
+              "x": -400.9119200072464,
+              "y": 730.2120135537809
+            },
+            "data": {
+              "text": "Default Item",
+              "fontColor": "#495057",
+              "fontSize": 7.962666179168326,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 62,
+              "height": 38
+            }
+          },
+          {
+            "id": "xWUB9apvG-3iNDF-lLAh1",
+            "type": "text",
+            "position": {
+              "x": -400.46269600603273,
+              "y": 753.4350554878525
+            },
+            "data": {
+              "text": "Default Item",
+              "fontColor": "#495057",
+              "fontSize": 7.962666179168326,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 62,
+              "height": 38
+            }
+          },
+          {
+            "id": "VKa-r5W64vUn9J5kFJX1E",
+            "type": "text",
+            "position": {
+              "x": -400.46269600603273,
+              "y": 779.4086092890025
+            },
+            "data": {
+              "text": "Default Item",
+              "fontColor": "#495057",
+              "fontSize": 7.962666179168326,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 62,
+              "height": 38
+            }
+          },
+          {
+            "id": "z-FkNP_t1xDcQeQfPdgIW",
+            "type": "text",
+            "position": {
+              "x": -390.75315268156237,
+              "y": 678.2596518695957
+            },
+            "data": {
+              "text": "Nested Item",
+              "fontColor": "#495057",
+              "fontSize": 6.422469603579535,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "aK0Hin8TBgmeRtQSuHe2h",
+            "type": "text",
+            "position": {
+              "x": -390.75315268156237,
+              "y": 689.6610095612101
+            },
+            "data": {
+              "text": "Nested Item",
+              "fontColor": "#495057",
+              "fontSize": 6.422469603579535,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "Z1Mpuhlo02moke_Bsq3D0",
+            "type": "text",
+            "position": {
+              "x": -390.75315268156237,
+              "y": 701.5536239091219
+            },
+            "data": {
+              "text": "Nested Item",
+              "fontColor": "#495057",
+              "fontSize": 6.422469603579535,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            }
+          },
+          {
+            "id": "qkPP4uW0hKquJzleuAs6b",
+            "type": "text",
+            "position": {
+              "x": -413.68115239119265,
+              "y": 577.382490216121
+            },
+            "data": {
+              "text": "Sidebar",
+              "fontColor": "#000000",
+              "fontSize": 32.86044714764617,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 130,
+              "height": 61
+            }
+          },
+          {
+            "id": "a6T-66bcL3qyLcsrmvKEG",
+            "type": "shape",
+            "position": {
+              "x": -356.8701941902382,
+              "y": 1028.8335392177105
+            },
+            "style": {
+              "width": 176.55484068627447,
+              "height": 25.742953431372598
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#868e96",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 177,
+              "height": 26
+            }
+          },
+          {
+            "id": "kpSykAyzMJojY24l1KeCd",
+            "type": "shape",
+            "position": {
+              "x": -357.426451849552,
+              "y": 1071.5380428941812
+            },
+            "style": {
+              "width": 310.6081495098033,
+              "height": 13.059129901960773
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 311,
+              "height": 13
+            }
+          },
+          {
+            "id": "ep2XWcbUYEMHr7Gnt6-7U",
+            "type": "shape",
+            "position": {
+              "x": -357.426451849552,
+              "y": 1093.8151568647695
+            },
+            "style": {
+              "width": 310.6081495098033,
+              "height": 13.059129901960773
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 311,
+              "height": 13
+            }
+          },
+          {
+            "id": "nd3PqyZVQIG1ZeICbgRat",
+            "type": "shape",
+            "position": {
+              "x": -356.84434400641476,
+              "y": 1117.5437107863381
+            },
+            "style": {
+              "width": 265.0773590686267,
+              "height": 11.550245098039113
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 265,
+              "height": 12
+            }
+          },
+          {
+            "id": "SWj-yP2jJmlTBtZ85j2R_",
+            "type": "text",
+            "position": {
+              "x": -6.52852265648562,
+              "y": 1030.3138502327106
+            },
+            "data": {
+              "text": "(Title)",
+              "fontColor": "#000000",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 60,
+              "height": 39
+            }
+          },
+          {
+            "id": "VSqnPhUEgmOIs5TbHtPxU",
+            "type": "text",
+            "position": {
+              "x": -3.0495187502356202,
+              "y": 1068.4852369514606
+            },
+            "data": {
+              "text": "(Body Text)",
+              "fontColor": "#000000",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 100,
+              "height": 39
+            }
+          },
+          {
+            "id": "QFDhezz6UYLhsy3iWNhk3",
+            "type": "text",
+            "position": {
+              "x": -368.39302091786317,
+              "y": 921.8924766556694
+            },
+            "data": {
+              "text": "Placeholder text",
+              "fontColor": "#000000",
+              "fontSize": 60.532407407407376,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 456,
+              "height": 97
+            }
+          },
+          {
+            "id": "Q_1zFgDuKOeH2f6hxqdst",
+            "type": "shape",
+            "position": {
+              "x": -417.05333161020735,
+              "y": -112.73942817565387
+            },
+            "style": {
+              "width": 647.9066528041883,
+              "height": 48.28129851193073
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 648,
+              "height": 48
+            }
+          },
+          {
+            "id": "04CfXeuKwvs4QfLMzjdr9",
+            "type": "shape",
+            "position": {
+              "x": -402.6367108322006,
+              "y": -99.89095091671948
+            },
+            "style": {
+              "width": 38.14421780868801,
+              "height": 20.908706184177056
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 38,
+              "height": 21
+            }
+          },
+          {
+            "id": "phNOOhG8hAhQ8-3fEvfQO",
+            "type": "shape",
+            "position": {
+              "x": -176.57682794466757,
+              "y": -94.25424516885056
+            },
+            "style": {
+              "width": 69.4467346380177,
+              "height": 9.528079547954196
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 69,
+              "height": 10
+            }
+          },
+          {
+            "id": "EzC765H7VIRoOvADxOTsy",
+            "type": "shape",
+            "position": {
+              "x": -87.18682096334112,
+              "y": -94.086584130137
+            },
+            "style": {
+              "width": 69.4467346380177,
+              "height": 9.528079547954196
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 69,
+              "height": 10
+            }
+          },
+          {
+            "id": "CVV5EmoJDckFGrlhyCvMn",
+            "type": "shape",
+            "position": {
+              "x": 6.131788993290684,
+              "y": -94.22757182178248
+            },
+            "style": {
+              "width": 69.4467346380177,
+              "height": 9.528079547954196
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#c8c8c8",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 69,
+              "height": 10
+            }
+          },
+          {
+            "id": "uVIpN1ggZzH_ubf77Jf9x",
+            "type": "shape",
+            "position": {
+              "x": 120.32186758937394,
+              "y": -105.43871368675724
+            },
+            "style": {
+              "width": 96.40758446205523,
+              "height": 30.07325420821292
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#12b886",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 96,
+              "height": 30
+            }
+          },
+          {
+            "id": "9I3jOm1AdApUz7OBnTNY7",
+            "type": "text",
+            "position": {
+              "x": 135.22934819225225,
+              "y": -95.83942909229972
+            },
+            "data": {
+              "text": "Get started",
+              "fontColor": "#000000",
+              "fontSize": 10.503525718098782,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 72,
+              "height": 38
+            }
+          },
+          {
+            "id": "GCr3Gmo5gy7akiqYfCTrB",
+            "type": "text",
+            "position": {
+              "x": -382.44172448953486,
+              "y": -197.80907307885286
+            },
+            "data": {
+              "text": "Header",
+              "fontColor": "#000000",
+              "fontSize": 43.346254566445204,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 160,
+              "height": 74
+            }
+          },
+          {
+            "id": "ssegzfEMvyTqXrrjnL32I",
+            "type": "shape",
+            "position": {
+              "x": 1113.0055496909017,
+              "y": 87.37189978508866
+            },
+            "style": {
+              "width": 627.0448853689527,
+              "height": 971.5592311660703
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 627,
+              "height": 972
+            }
+          },
+          {
+            "id": "ITRRBi37v-NKR8RHiQv39",
+            "type": "text",
+            "position": {
+              "x": 1124.0125728324297,
+              "y": -103.93971610702602
+            },
+            "data": {
+              "text": "Add wireframe assets to \ncreate your card view below",
+              "fontColor": "#1e1e1e",
+              "fontSize": 49.109207050709294,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 636,
+              "height": 146
+            }
+          },
+          {
+            "id": "ec472147-421e-45ae-ab0a-f092f7f84256",
+            "type": "lineAnchor",
+            "position": {
+              "x": -341.2073830484253,
+              "y": 105.1069643278459
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "53b23051-6cd5-4320-8061-a5f4e87b0423",
+            "type": "lineAnchor",
+            "position": {
+              "x": -246.1024943667905,
+              "y": 105.22629705567239
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "dabb440f-acab-4348-8293-f7e3fb1a3114",
+            "type": "lineAnchor",
+            "position": {
+              "x": -341.44719503772467,
+              "y": 188.2935247274555
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f5917629-67c3-467e-8aed-a6158453d3f3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -246.34230635608986,
+              "y": 188.412857455282
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "293063da-e735-4aa2-8e82-e47d0964c282",
+            "type": "lineAnchor",
+            "position": {
+              "x": -170.76023387366786,
+              "y": 81.45491622095625
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0ae71f66-d11b-4369-a65e-51da01329dc2",
+            "type": "lineAnchor",
+            "position": {
+              "x": -160.76023387366786,
+              "y": 81.45491622095625
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "79f94b85-6d8e-467c-aeb7-bb5fee947961",
+            "type": "lineAnchor",
+            "position": {
+              "x": 88.01448752449562,
+              "y": 517.6963042085875
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "21df047b-47f2-4aec-9106-8b076bbea652",
+            "type": "lineAnchor",
+            "position": {
+              "x": 102.05306145885659,
+              "y": 521.2260735866224
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6275603c-5389-452a-87e9-bfcd9c55081f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 92.03988926485124,
+              "y": 521.4803812442989
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e1414cc4-9b85-4bbe-84f5-e75be28ddb83",
+            "type": "lineAnchor",
+            "position": {
+              "x": 109.24878356583088,
+              "y": 510.3533931485189
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "94c5f74f-351a-4862-9fb6-06d92ab6d37e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -43.28572854214224,
+              "y": 104.94527128623821
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "88ae14bf-3b82-4c9c-b03f-ae5544c6d65d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 52.29609787421718,
+              "y": 105.06527276860712
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e487a9d4-5c1c-4a55-8016-fafccb1fd136",
+            "type": "lineAnchor",
+            "position": {
+              "x": -4.778988469769274,
+              "y": 196.54467296832402
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "1c40f72e-3e56-42ef-92e5-71bf576249c6",
+            "type": "lineAnchor",
+            "position": {
+              "x": 13.736560446975412,
+              "y": 196.9304586793138
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f4273af4-56eb-4ac5-85eb-02b215724cee",
+            "type": "lineAnchor",
+            "position": {
+              "x": -314.87913538168596,
+              "y": 397.5137851711134
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "19a616b4-f739-4a4d-be9f-3b8ec55b7c33",
+            "type": "lineAnchor",
+            "position": {
+              "x": -292.8356473684721,
+              "y": 398.0593995092377
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "53064ca8-3b88-47d1-acff-c00078dcb274",
+            "type": "lineAnchor",
+            "position": {
+              "x": -382.8248062100779,
+              "y": 447.57123409929426
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d843ae8b-9eca-4e92-9e61-30afd6ee4780",
+            "type": "lineAnchor",
+            "position": {
+              "x": -372.8248062100779,
+              "y": 447.57123409929426
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e5e52733-fdf3-4704-a870-252b23a4f3d6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -195.2132829632493,
+              "y": 398.3698729618361
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "20992183-5156-4e73-95b4-c22be10cdc13",
+            "type": "lineAnchor",
+            "position": {
+              "x": -173.16979495003542,
+              "y": 398.91548729996043
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "072dca11-8b22-485b-ab27-8c830cf84bb8",
+            "type": "lineAnchor",
+            "position": {
+              "x": -253.38272245319195,
+              "y": 450.5226737329534
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "bb2e7ce1-f692-4208-88f6-3632157d5416",
+            "type": "lineAnchor",
+            "position": {
+              "x": -243.38272245319195,
+              "y": 450.5226737329534
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "a41b839b-0b37-46ac-aa49-7eef5efa2812",
+            "type": "lineAnchor",
+            "position": {
+              "x": 20.596426276542047,
+              "y": 785.627353419766
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "84dd06e8-7ed7-4dcd-8e3d-6c90076e5438",
+            "type": "lineAnchor",
+            "position": {
+              "x": 89.14237645065612,
+              "y": 785.7094456244055
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "bb09c105-f574-4f82-89b8-e82d83abd59f",
+            "type": "lineAnchor",
+            "position": {
+              "x": -357.4332824448675,
+              "y": 656.2237644651703
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6d4149aa-7ed3-4325-912c-87551d4ec2c4",
+            "type": "lineAnchor",
+            "position": {
+              "x": -340.0989894326298,
+              "y": 656.5560349355766
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "847db018-b057-425a-8de6-fab09d5ccd6a",
+            "type": "lineAnchor",
+            "position": {
+              "x": -404.9484324866951,
+              "y": -88.74364892987052
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e11de461-9235-45f4-b2bc-bca191eea310",
+            "type": "lineAnchor",
+            "position": {
+              "x": -371.08778784749126,
+              "y": -88.71019191163569
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "fcde9ad1-130c-4b9a-b69e-76a9d1e035b6",
+            "source": "ec472147-421e-45ae-ab0a-f092f7f84256",
+            "target": "53b23051-6cd5-4320-8061-a5f4e87b0423",
+            "type": "straight"
+          },
+          {
+            "id": "0512eea3-ecde-4c7b-b53a-2febae0d1d7f",
+            "source": "dabb440f-acab-4348-8293-f7e3fb1a3114",
+            "target": "f5917629-67c3-467e-8aed-a6158453d3f3",
+            "type": "straight"
+          },
+          {
+            "id": "ebf8145d-a7d3-4e26-af59-1f278412ed50",
+            "source": "293063da-e735-4aa2-8e82-e47d0964c282",
+            "target": "0ae71f66-d11b-4369-a65e-51da01329dc2",
+            "type": "straight"
+          },
+          {
+            "id": "61f476ae-a913-453e-973a-34bcab306d91",
+            "source": "79f94b85-6d8e-467c-aeb7-bb5fee947961",
+            "target": "21df047b-47f2-4aec-9106-8b076bbea652",
+            "type": "straight"
+          },
+          {
+            "id": "77a096e3-945c-47bf-a474-81a0f2a6d6a6",
+            "source": "6275603c-5389-452a-87e9-bfcd9c55081f",
+            "target": "e1414cc4-9b85-4bbe-84f5-e75be28ddb83",
+            "type": "straight"
+          },
+          {
+            "id": "81fec623-5aca-49fb-bf14-7b63c695f34c",
+            "source": "94c5f74f-351a-4862-9fb6-06d92ab6d37e",
+            "target": "88ae14bf-3b82-4c9c-b03f-ae5544c6d65d",
+            "type": "straight"
+          },
+          {
+            "id": "7f93ebce-5767-450c-be45-ec1c5da66b75",
+            "source": "e487a9d4-5c1c-4a55-8016-fafccb1fd136",
+            "target": "1c40f72e-3e56-42ef-92e5-71bf576249c6",
+            "type": "straight"
+          },
+          {
+            "id": "b2bcaab4-6b00-4aad-86ae-f24147848e8e",
+            "source": "f4273af4-56eb-4ac5-85eb-02b215724cee",
+            "target": "19a616b4-f739-4a4d-be9f-3b8ec55b7c33",
+            "type": "straight"
+          },
+          {
+            "id": "ac0ac425-6d3e-4cf9-818e-0aeb0cb4e51b",
+            "source": "53064ca8-3b88-47d1-acff-c00078dcb274",
+            "target": "d843ae8b-9eca-4e92-9e61-30afd6ee4780",
+            "type": "straight"
+          },
+          {
+            "id": "5f1e2b4c-4edb-4149-b02d-ffe4dfda6ecc",
+            "source": "e5e52733-fdf3-4704-a870-252b23a4f3d6",
+            "target": "20992183-5156-4e73-95b4-c22be10cdc13",
+            "type": "straight"
+          },
+          {
+            "id": "452582f1-ab90-4abd-b704-58e57970b490",
+            "source": "072dca11-8b22-485b-ab27-8c830cf84bb8",
+            "target": "bb2e7ce1-f692-4208-88f6-3632157d5416",
+            "type": "straight"
+          },
+          {
+            "id": "6a8c2562-18a9-4aa4-b754-b5301a4722d4",
+            "source": "a41b839b-0b37-46ac-aa49-7eef5efa2812",
+            "target": "84dd06e8-7ed7-4dcd-8e3d-6c90076e5438",
+            "type": "straight"
+          },
+          {
+            "id": "c1a248f4-794d-450c-9359-d90347a494ff",
+            "source": "bb09c105-f574-4f82-89b8-e82d83abd59f",
+            "target": "6d4149aa-7ed3-4325-912c-87551d4ec2c4",
+            "type": "straight"
+          },
+          {
+            "id": "07335cb1-5bd2-4425-9ff0-ca9b59da3810",
+            "source": "847db018-b057-425a-8de6-fab09d5ccd6a",
+            "target": "e11de461-9235-45f4-b2bc-bca191eea310",
+            "type": "straight"
+          }
+        ],
+        "viewport": {
+          "x": 243.84857056486493,
+          "y": 185.86696304393837,
+          "zoom": 0.38190369343766123
+        }
+      }
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-sketchlab-template-v1-2026",
+    "display_name": "Schema Sketch Lab",
+    "thumbnail_url": "https://images.code.org/8e0dc1455f8a6adf88d1768e4ab82b2b-diagram.png",
+    "bubble_choice_description": "Sketch a simple plan for your dataset by mapping your schema fields to a card layout and planning how your data will appear in your app.",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-15T03:51:04.087+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level1d-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level1d-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-15 03:54:36 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-19 00:13:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

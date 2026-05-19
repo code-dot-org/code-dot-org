@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Filters, Labels, and What Gets Seen
 
-#### When you browse a website or app, filters help narrow down large lists of items.
+When you browse a website or app, filters help narrow down large lists of items.
 
 ### But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
 ## Two Websites, Same Goal
-#### Below are two websites that sell similar products.
-#### Both allow users to filter results, but they do it differently.
+Below are two websites that sell similar products.
+Both allow users to filter results, but they do it differently.
 
 <div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
@@ -101,6 +101,6 @@ markdown <<MARKDOWN
 
 
 ## Next up
-#### You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
+You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
 
 MARKDOWN

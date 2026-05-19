@@ -284,15 +284,15 @@ class ActiveSupport::TestCase
   end
 
   def set_request_locale(locale)
-    request.env['cdo.locale'] = locale
+    I18n.locale = locale
   end
 
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    request.env['cdo.locale'] = I18n.default_locale = locale
+    I18n.locale = I18n.default_locale = locale
     yield
   ensure
-    request.env['cdo.locale'] = I18n.default_locale = original_locale
+    I18n.locale = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -427,7 +427,7 @@ class ActionController::TestCase
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
-    request.env['cdo.locale'] = 'en-US'
+    I18n.locale = 'en-US'
   end
 
   # As `current_user` is not accessible from controller tests (only from within the controller),

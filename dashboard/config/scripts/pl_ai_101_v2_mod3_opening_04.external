@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Benefits of Using AI in Education
 
-#### AI is not designed to replace teachers - it is most powerful when used to support and extend teaching practice. For many educators, the biggest benefit of AI is its ability to reduce time spent on routine tasks, allowing more time for what matters most: working directly with students.
+AI is not designed to replace teachers - it is most powerful when used to support and extend teaching practice. For many educators, the biggest benefit of AI is its ability to reduce time spent on routine tasks, allowing more time for what matters most: working directly with students.
 
 <p style="text-align:center;"><img src="https://images.code.org/43c45055ef874764a0fdf2a7c1d0387a-Screenshot 2026-02-04 at 2.27.14 PM.png" alt="Pie chart showing 49% of a teacher's time in direct interaction with students."></p>
 
 *Image: McKinsey 2020*
 
-#### As the graphic above shows, teachers spend a significant portion of their roughly 50-hour workweek on preparation, evaluation, and administrative responsibilities—often outside of direct instruction. In fact, less than half of a teacher’s time is spent in direct interaction with students.
+As the graphic above shows, teachers spend a significant portion of their roughly 50-hour workweek on preparation, evaluation, and administrative responsibilities—often outside of direct instruction. In fact, less than half of a teacher’s time is spent in direct interaction with students.
 
-#### There are two key areas where AI can help streamline work:
+There are two key areas where AI can help streamline work:
 
-* #### **Supporting Teaching Practice**: AI can support instructional planning by generating ideas, materials, and feedback, helping teachers design lessons and differentiate more efficiently while staying aligned to student needs.
+* **Supporting Teaching Practice**: AI can support instructional planning by generating ideas, materials, and feedback, helping teachers design lessons and differentiate more efficiently while staying aligned to student needs.
 
-* #### **Assisting with School Operations:** AI can streamline routine tasks like communication, planning, and administrative work, reducing time spent outside of instruction.
+* **Assisting with School Operations:** AI can streamline routine tasks like communication, planning, and administrative work, reducing time spent outside of instruction.
 
-#### By reducing time spent on routine tasks, AI helps teachers spend more time working directly with students, providing support, and making instructional decisions. This shift allows teachers to focus on the parts of teaching that have the greatest impact on student learning.
+By reducing time spent on routine tasks, AI helps teachers spend more time working directly with students, providing support, and making instructional decisions. This shift allows teachers to focus on the parts of teaching that have the greatest impact on student learning.
 MARKDOWN
