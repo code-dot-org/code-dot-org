@@ -7,13 +7,16 @@
  *   yarn update-ai-gateway-schema-snapshots
  *
  * Flags:
- *   FORCE=1   Allow UNKNOWN_NARROWING changes (a previously unconstrained
- *             field is being given a concrete type). Use only when you are
- *             **absolutely** certain the narrowing is intentional and safe.
- *             The snapshot will be annotated with a _warnings entry that will
- *             appear in the PR diff to prompt reviewer scrutiny.
+ *   FORCE=1           Allow UNKNOWN_NARROWING changes (a previously
+ *                     unconstrained field is being given a concrete type).
+ *                     The snapshot will be annotated with a _warnings entry.
  *
- * HARD_BREAKING changes are always refused — create a new schema version.
+ *   FORCE_BREAKING=1  Allow HARD_BREAKING changes (required↔optional flip,
+ *                     field removed, type changed, new required field). Only
+ *                     use when ALL consumers (worker + client) are updated
+ *                     atomically in the same deploy, or the schema has never
+ *                     reached production. The snapshot will be annotated with
+ *                     a _warnings entry. Prefer creating a new schema version.
  */
 
 import fs from 'fs';
@@ -32,6 +35,7 @@ const SNAPSHOT_DIR = path.resolve(
 );
 
 const FORCE = process.env.FORCE === '1';
+const FORCE_BREAKING = process.env.FORCE_BREAKING === '1';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -60,6 +64,7 @@ export type UpdateOutcome =
   | {status: 'up_to_date'}
   | {status: 'updated'; changes: string[]}
   | {status: 'force_updated'; warnings: string[]}
+  | {status: 'force_breaking'; warnings: string[]}
   | {status: 'refused_hard_breaking'; errors: string[]}
   | {status: 'refused_narrowing'; errors: string[]};
 
@@ -68,7 +73,8 @@ export function computeUpdate(
   version: number | string,
   currentSchema: JsonSchema,
   existingSnapshot: JsonSchema | null,
-  force: boolean
+  force: boolean,
+  forceBreaking = false
 ): UpdateOutcome {
   // No existing snapshot — safe to create
   if (existingSnapshot === null) {
@@ -88,12 +94,21 @@ export function computeUpdate(
   const hardBreaking = changes.filter(c => c.kind === 'HARD_BREAKING');
   const narrowing = changes.filter(c => c.kind === 'UNKNOWN_NARROWING');
 
-  // Hard breaking — always refused
+  // Hard breaking — refused unless FORCE_BREAKING=1
   if (hardBreaking.length > 0) {
-    return {
-      status: 'refused_hard_breaking',
-      errors: hardBreaking.map(c => c.description),
-    };
+    if (!forceBreaking) {
+      return {
+        status: 'refused_hard_breaking',
+        errors: hardBreaking.map(c => c.description),
+      };
+    }
+    const warnings = hardBreaking.map(
+      c =>
+        `FORCE_BREAKING on ${new Date().toISOString().slice(0, 10)}: ` +
+        `${c.description} — hard-breaking contract change; ` +
+        `ensure all consumers are updated atomically or schema is pre-production`
+    );
+    return {status: 'force_breaking', warnings};
   }
 
   // Unknown narrowing — refused unless FORCE=1
@@ -128,6 +143,14 @@ export function computeUpdate(
 
 describe('update AI Gateway schema snapshots', () => {
   it('writes snapshots for all schema versions', () => {
+    if (FORCE_BREAKING) {
+      console.warn(
+        '\n🚨  FORCE_BREAKING=1 is set. HARD_BREAKING contract changes will be\n' +
+          '   written to snapshots with a _warnings annotation. Only use this\n' +
+          '   when ALL consumers are updated atomically or the schema has never\n' +
+          '   reached production. Prefer a new schema version.\n'
+      );
+    }
     if (FORCE) {
       console.warn(
         '\n⚠️  FORCE=1 is set. UNKNOWN_NARROWING changes will be written to\n' +
@@ -151,7 +174,8 @@ describe('update AI Gateway schema snapshots', () => {
             version,
             currentSchema,
             existing,
-            FORCE
+            FORCE,
+            FORCE_BREAKING
           );
 
           switch (outcome.status) {
@@ -180,6 +204,19 @@ describe('update AI Gateway schema snapshots', () => {
                 `  ⚠️   ${label}: FORCE updated (unknown narrowing)`
               );
               outcome.warnings.forEach(w => console.warn(`       ⚠️  ${w}`));
+              break;
+            }
+
+            case 'force_breaking': {
+              const withWarnings: JsonSchema = {
+                _warnings: outcome.warnings,
+                ...currentSchema,
+              };
+              writeSnapshot(p, withWarnings);
+              console.warn(
+                `  🚨  ${label}: FORCE_BREAKING — hard-breaking changes written`
+              );
+              outcome.warnings.forEach(w => console.warn(`       🚨  ${w}`));
               break;
             }
 

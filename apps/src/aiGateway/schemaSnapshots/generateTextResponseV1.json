@@ -1,4 +1,9 @@
 {
+  "_warnings": [
+    "FORCE_BREAKING on 2026-05-19: 'root.usage.promptTokens' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production",
+    "FORCE_BREAKING on 2026-05-19: 'root.usage.completionTokens' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production",
+    "FORCE_BREAKING on 2026-05-19: 'root.usage' changed from required to optional — hard-breaking contract change; ensure all consumers are updated atomically or schema is pre-production"
+  ],
   "type": "object",
   "properties": {
     "text": {
