@@ -145,20 +145,26 @@ module Levels
       return [] if contained_level_names.blank?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
       Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
-        result = child_levels.contained
+        # Curriculum data which does not update frequently. We can have ~20ms replication lag,
+        # by reading from the :reading role
+        ActiveRecord::Base.connected_to(role: :reading) do
+          result = child_levels.contained
 
-        # attempt to use the new parent-child many-to-many table to retrieve the
-        # levels themselves, but if we have a contained_level_names property and
-        # no actual associations, fall back to retrieving the levels directly.
-        # Once the new m2m implementation has been fully deployed, we can remove
-        # this fallback.
-        if result.blank?
-          result = contained_level_names.map do |contained_level_name|
-            Unit.cache_find_level(contained_level_name)
+          # attempt to use the new parent-child many-to-many table to retrieve the
+          # levels themselves, but if we have a contained_level_names property and
+          # no actual associations, fall back to retrieving the levels directly.
+          # Once the new m2m implementation has been fully deployed, we can remove
+          # this fallback.
+          if result.blank?
+            result = contained_level_names.map do |contained_level_name|
+              Unit.cache_find_level(contained_level_name)
+            end
           end
-        end
 
-        return result
+          # NOTE: do not use `return` here; a non-local return from inside the
+          # Rails.cache.fetch block would skip the cache write.
+          result
+        end
       end
     end
 
@@ -168,13 +174,19 @@ module Levels
       return nil if try(:project_template_level_name).nil?
       cache_key = "LevelsWithinLevels/project_template/#{project_template_level_name}"
       Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
-        # attempt to use the new parent-child many-to-many table to retrieve
-        # the level, but if we have a project_template_level_name property and
-        # no actual association, fall back to retrieving the level directly.
-        # Once the new m2m implementation has been fully deployed, we can
-        # remove this fallback.
-        return (child_levels.project_template.first ||
-                Level.find_by_key(project_template_level_name))
+        # Curriculum data which does not update frequently. We can have ~20ms replication lag,
+        # by reading from the :reading role
+        ActiveRecord::Base.connected_to(role: :reading) do
+          # attempt to use the new parent-child many-to-many table to retrieve
+          # the level, but if we have a project_template_level_name property and
+          # no actual association, fall back to retrieving the level directly.
+          # Once the new m2m implementation has been fully deployed, we can
+          # remove this fallback.
+          # NOTE: do not use `return` here; a non-local return from inside the
+          # Rails.cache.fetch block would skip the cache write.
+          child_levels.project_template.first ||
+            Level.find_by_key(project_template_level_name)
+        end
       end
     end
 

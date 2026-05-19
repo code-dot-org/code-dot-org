@@ -189,6 +189,53 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
   end
 
+  # Swap the global :null_store from test_helper for a real in-memory store so
+  # we can observe Rails.cache.fetch writes and reads.
+  def with_memory_cache
+    original = Rails.cache
+    Rails.cache = ActiveSupport::Cache::MemoryStore.new
+    Unit.stubs(:should_cache?).returns(true)
+    yield
+  ensure
+    Rails.cache = original
+  end
+
+  test 'contained_levels writes through to Rails.cache and reuses it' do
+    contained = create(:multi)
+    parent = create(:level, contained_level_names: [contained.name])
+    cache_key = "LevelsWithinLevels/contained/#{contained.name}"
+
+    with_memory_cache do
+      assert_nil Rails.cache.read(cache_key)
+      assert_equal [contained], parent.contained_levels
+      # If the block uses a non-local `return`, Rails.cache.fetch never writes.
+      assert_equal [contained], Rails.cache.read(cache_key),
+        'contained_levels did not populate Rails.cache'
+
+      # Delete the join row out-of-band; a working cache must shield the read.
+      ParentLevelsChildLevel.where(parent_level_id: parent.id).delete_all
+      assert_equal [contained], parent.contained_levels,
+        'subsequent contained_levels call hit the DB instead of the cache'
+    end
+  end
+
+  test 'project_template_level writes through to Rails.cache and reuses it' do
+    template_level = create(:level)
+    real_level = create(:level, project_template_level_name: template_level.name)
+    cache_key = "LevelsWithinLevels/project_template/#{template_level.name}"
+
+    with_memory_cache do
+      assert_nil Rails.cache.read(cache_key)
+      assert_equal template_level, real_level.project_template_level
+      assert_equal template_level, Rails.cache.read(cache_key),
+        'project_template_level did not populate Rails.cache'
+
+      ParentLevelsChildLevel.where(parent_level_id: real_level.id).delete_all
+      assert_equal template_level, real_level.project_template_level,
+        'subsequent project_template_level call hit the DB instead of the cache'
+    end
+  end
+
   test 'project template level cannot have its own project template level' do
     project_backed_level = create(:level, name: 'project backed')
     template_level = create(:level)
