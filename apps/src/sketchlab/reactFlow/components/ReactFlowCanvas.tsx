@@ -196,6 +196,13 @@ export default function ReactFlowCanvas({
     pushSnapshot();
   }, [pushSnapshot]);
 
+  // After element is deleted from the DOM, focus falls to body.
+  // Return it to the canvas container so keyboard shortcuts (undo, etc.)
+  // keep working without requiring a click or tab navigation.
+  const handleElementsDeleted = useCallback(() => {
+    canvasContainerRef.current?.focus();
+  }, []);
+
   // Intercept React Flow's change callbacks to push undo snapshots before
   // resize-stop and delete. Drag is handled by handleNodeDragStart instead.
   // Adds that bypass onNodesChange (direct setNodes calls) are handled at
@@ -673,6 +680,8 @@ export default function ReactFlowCanvas({
                 onReconnectStart={handleReconnectStart}
                 onReconnect={handleReconnect}
                 onReconnectEnd={handleReconnectEnd}
+                onNodesDelete={handleElementsDeleted}
+                onEdgesDelete={handleElementsDeleted}
                 onNodeDragStart={handleNodeDragStart}
                 onNodeDragStop={handleNodeDragStop}
                 isValidConnection={isValidConnection}
