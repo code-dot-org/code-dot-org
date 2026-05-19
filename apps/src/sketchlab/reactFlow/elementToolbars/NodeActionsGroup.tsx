@@ -39,8 +39,7 @@ export default function NodeActionsGroup({
         updateNode(nodeId, {zIndex: newBackZIndex(items, nodeId)});
       }}
       onDuplicate={() => duplicateNode(nodeId)}
-      handlesVisible={handlesVisible}
-      onToggleHandles={onToggleHandles}
+      handlesToggle={{visible: handlesVisible, onToggle: onToggleHandles}}
     />
   );
 }

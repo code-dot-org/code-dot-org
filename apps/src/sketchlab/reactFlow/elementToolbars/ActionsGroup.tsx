@@ -6,14 +6,20 @@ import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
 import styles from './element-toolbar.module.scss';
 
+interface HandlesToggle {
+  visible: boolean;
+  onToggle: () => void;
+}
+
 interface ActionsGroupProps {
   onDelete?: () => void;
   onLock?: () => void;
   onBringToFront?: () => void;
   onSendToBack?: () => void;
   onDuplicate?: () => void;
-  handlesVisible?: boolean;
-  onToggleHandles?: () => void;
+  // Bundled so the `visible` boolean can't be supplied without an
+  // `onToggle` handler (which previously left aria-pressed undefined).
+  handlesToggle?: HandlesToggle;
 }
 
 export default function ActionsGroup({
@@ -22,8 +28,7 @@ export default function ActionsGroup({
   onBringToFront,
   onSendToBack,
   onDuplicate,
-  handlesVisible,
-  onToggleHandles,
+  handlesToggle,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
@@ -97,10 +102,10 @@ export default function ActionsGroup({
             </IconButton>
           </Tooltip>
         )}
-        {onToggleHandles && (
+        {handlesToggle && (
           <Tooltip
             title={
-              handlesVisible
+              handlesToggle.visible
                 ? 'Hide connection handles'
                 : 'Show connection handles'
             }
@@ -110,16 +115,16 @@ export default function ActionsGroup({
               size="small"
               className={styles.fontSizeButton}
               aria-label={
-                handlesVisible
+                handlesToggle.visible
                   ? 'Hide connection handles'
                   : 'Show connection handles'
               }
-              aria-pressed={handlesVisible}
-              onClick={onToggleHandles}
+              aria-pressed={handlesToggle.visible}
+              onClick={handlesToggle.onToggle}
             >
               <FontAwesomeV6Icon
-                iconName={handlesVisible ? 'empty-set' : 'circle'}
-                iconStyle={handlesVisible ? 'solid' : 'regular'}
+                iconName={handlesToggle.visible ? 'empty-set' : 'circle'}
+                iconStyle={handlesToggle.visible ? 'solid' : 'regular'}
               />
             </IconButton>
           </Tooltip>

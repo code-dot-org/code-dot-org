@@ -134,11 +134,15 @@ export default function LineEdgeToolbar({
 
   // useNodesData subscribes to data changes on these endpoints so the
   // toolbar's handle-visibility icon flips when showHandles is toggled.
+  // It can return null entries for missing ids (and during teardown), so
+  // the predicate also narrows away nulls.
   const endpointInfo = useNodesData<LineAnchorNodeType>([
     edge.source,
     edge.target,
   ]);
-  const anchorEndpoints = endpointInfo.filter(n => n.type === 'lineAnchor');
+  const anchorEndpoints = endpointInfo.filter(
+    (n): n is LineAnchorNodeType => !!n && n.type === 'lineAnchor'
+  );
   const handlesVisible =
     anchorEndpoints.length === 0 ||
     anchorEndpoints.some(n => n.data.showHandles !== false);
@@ -275,8 +279,11 @@ export default function LineEdgeToolbar({
               const items = [...getNodes(), ...getEdges()];
               updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
             }}
-            handlesVisible={handlesVisible}
-            onToggleHandles={onToggleHandles}
+            handlesToggle={
+              onToggleHandles
+                ? {visible: handlesVisible, onToggle: onToggleHandles}
+                : undefined
+            }
           />
         </>
       )}
