@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
@@ -28,8 +28,6 @@ import WebLabView from './WebLabView';
 var filesApi = require('@cdo/apps/clientApi').files;
 
 var assetListStore = require('../code-studio/assets/assetListStore');
-
-export const WEBLAB_FOOTER_HEIGHT = 30;
 
 /**
  * An instantiable WebLab class
@@ -100,6 +98,7 @@ WebLab.prototype.init = function (config) {
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
+  this.disallowedHtmlAttrs = config.disallowedHtmlAttrs;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
@@ -226,7 +225,7 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <WebLabView
         onAddFileHTML={onAddFileHTML.bind(this)}
@@ -241,7 +240,10 @@ WebLab.prototype.init = function (config) {
         onMount={() => this.onMount(config)}
       />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

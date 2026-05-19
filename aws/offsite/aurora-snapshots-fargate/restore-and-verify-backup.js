@@ -8,8 +8,12 @@ const { RDSClient,
   DeleteDBClusterCommand
 } = require("@aws-sdk/client-rds");
 const mysqlPromise = require("promise-mysql");
-const Honeybadger = require("honeybadger");
+const Honeybadger = require("@honeybadger-io/js");
 const crypto = require('crypto');
+
+Honeybadger.configure({
+  apiKey: process.env.HONEYBADGER_API_KEY
+});
 
 function generateSimplePassword(length = 16) {
   const chars = 'abcdefghijklmnopqrstuvwxyz';
@@ -31,39 +35,9 @@ const REGION = process.env.REGION;
 const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
 const DB_ENGINE = process.env.DB_ENGINE;
 const DB_NAME = process.env.DB_NAME;
+const MAX_ATTEMPTS = parseInt(process.env.DB_RESTORE_MAX_ATTEMPTS, 10)  || 240;
+const DELAY_SECONDS = parseInt(process.env.DB_RESTORE_DELAY_SECONDS, 10)  || 60;
 const NEW_PASSWORD = generateSimplePassword(32);
-
-const main = async () => {
-  const rdsClient = new RDSClient({ region: REGION });
-
-  try {
-    console.log("Starting restore of database from latest snapshot");
-
-    await restoreLatestSnapshot(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-    console.log("Database restored and available");
-
-    await changePassword(rdsClient, DB_CLUSTER_ID, NEW_PASSWORD);
-    console.log("Successfully changed password");
-    // Sleep for 30 seconds to wait for password change to take effect
-    await sleepMs(30000);
-
-    await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
-    console.log("verified");
-  } catch (error) {
-    Honeybadger.notify(error, {
-      name: "Offsite account snapshot verification"
-    });
-    console.log(error);
-    throw error;
-  } finally {
-    console.log("deleting cluster");
-    await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-  }
-};
-
-if (require.main === module) {
-  main();
-}
 
 const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
   // Ignore snapshots with "retain" in the name or any automated snapshots
@@ -116,13 +90,13 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
 
   await rdsClient.send(createInstanceCommand);
 
-  // Wait for instance to be available
+  // Wait for instance to be available.
   let instanceAvailable = false;
   let attempts = 0;
-  const maxAttempts = 120;
-  const delaySeconds = 60;
 
-  while (!instanceAvailable && attempts < maxAttempts) {
+  console.log(`Waiting for instance. Max timeout: ${(MAX_ATTEMPTS * DELAY_SECONDS) / 3600} hours.`);
+
+  while (!instanceAvailable && attempts < MAX_ATTEMPTS) {
     try {
       const describeInstanceCommand = new DescribeDBInstancesCommand({
         DBInstanceIdentifier: instanceId
@@ -133,16 +107,16 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
         instanceAvailable = true;
       } else {
         attempts++;
-        await sleepMs(delaySeconds * 1000);
+        await sleepMs(DELAY_SECONDS * 1000);
       }
     } catch (error) {
       attempts++;
-      await sleepMs(delaySeconds * 1000);
+      await sleepMs(DELAY_SECONDS * 1000);
     }
   }
 
   if (!instanceAvailable) {
-    throw new Error(`Instance ${instanceId} did not become available after ${maxAttempts} attempts`);
+    throw new Error(`Instance ${instanceId} did not become available after ${MAX_ATTEMPTS} attempts (${(MAX_ATTEMPTS * DELAY_SECONDS) / 60} minutes)`);
   }
 };
 
@@ -200,19 +174,41 @@ const verifyDb = async (rdsClient, instanceId, password) => {
 };
 
 const deleteCluster = async (rdsClient, clusterId, instanceId) => {
-  const deleteInstanceCommand = new DeleteDBInstanceCommand({
-    DBInstanceIdentifier: instanceId,
-    SkipFinalSnapshot: true
-  });
+  try {
+    await rdsClient.send(new DeleteDBInstanceCommand({ DBInstanceIdentifier: instanceId, SkipFinalSnapshot: true }));
+    await rdsClient.send(new DeleteDBClusterCommand({ DBClusterIdentifier: clusterId, SkipFinalSnapshot: true }));
+  } catch (e) {
+    console.error("Cleanup failed:", e.message);
+  }
+};
 
-  await rdsClient.send(deleteInstanceCommand);
+const main = async () => {
+  const rdsClient = new RDSClient({ region: REGION });
 
-  const deleteClusterCommand = new DeleteDBClusterCommand({
-    DBClusterIdentifier: clusterId,
-    SkipFinalSnapshot: true
-  });
+  try {
+    console.log("Starting restore of database from latest snapshot");
 
-  await rdsClient.send(deleteClusterCommand);
+    await restoreLatestSnapshot(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
+    console.log("Database restored and available");
+
+    await changePassword(rdsClient, DB_CLUSTER_ID, NEW_PASSWORD);
+    console.log("Successfully changed password");
+    // Sleep for 30 seconds to wait for password change to take effect
+    await sleepMs(30000);
+
+    await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
+    console.log("verified");
+  } catch (error) {
+    // Explicitly wait for the notification to be sent before exiting.
+    await Honeybadger.notifyAsync(error, {
+      name: "Offsite account snapshot verification"
+    });
+    console.error("Task failed:", error.message);
+    throw error; // Rethrow to ensure the ECS task is marked as failed
+  } finally {
+    console.log("deleting cluster");
+    await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
+  }
 };
 
 module.exports = {
@@ -225,3 +221,7 @@ module.exports = {
   DB_ENGINE,
   DB_NAME
 };
+
+if (require.main === module) {
+  main();
+}

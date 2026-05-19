@@ -7,7 +7,6 @@ import {
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
@@ -19,6 +18,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -399,7 +399,7 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <div>
           <AppView
@@ -413,7 +413,10 @@ export default class Craft {
           <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
         </div>
       </Provider>,
-      document.getElementById(config.containerId)
+      document.getElementById(config.containerId),
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -648,7 +651,6 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.mainBlockSpace.traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -676,17 +678,18 @@ export default class Craft {
       return;
     }
 
-    // Fail immediately for empty repeat blocks, etc.
-    const initialTestResults = studioApp().getTestResults(false);
-    if (Craft.isPreAnimationFailure(initialTestResults)) {
-      Craft.reportResult(false);
-      return;
+    if (Craft.initialConfig.level.freePlay) {
+      Craft.reportResult(true, true);
+    } else {
+      // Fail immediately for empty repeat blocks, etc.
+      const initialTestResults = studioApp().getTestResults(false);
+      if (Craft.isPreAnimationFailure(initialTestResults)) {
+        Craft.reportResult(false);
+        return;
+      }
     }
 
     studioApp().playAudio('start');
-
-    // Start tracing calls.
-    Blockly.mainBlockSpace.traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();
@@ -799,25 +802,30 @@ export default class Craft {
     });
   }
 
-  static getTestResultFrom(success, studioTestResults) {
+  static getTestResultFrom(success, studioTestResults, suppressDialog) {
     if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
       return TestResults.APP_SPECIFIC_FAIL;
     }
 
     if (Craft.initialConfig.level.freePlay) {
-      return TestResults.FREE_PLAY;
+      return suppressDialog ? TestResults.LEVEL_STARTED : TestResults.FREE_PLAY;
     }
 
     return studioTestResults;
   }
 
-  static reportResult(success) {
+  static reportResult(success, suppressDialog) {
     const studioTestResults = studioApp().getTestResults(success);
-    const testResultType = Craft.getTestResultFrom(success, studioTestResults);
+    const testResultType = Craft.getTestResultFrom(
+      success,
+      studioTestResults,
+      suppressDialog
+    );
 
-    const image = Craft.initialConfig.level.freePlay
-      ? Craft.gameController.getScreenshot()
-      : null;
+    const image =
+      Craft.initialConfig.level.freePlay && !suppressDialog
+        ? Craft.gameController.getScreenshot()
+        : null;
     // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
     const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
@@ -845,6 +853,10 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        if (suppressDialog) {
+          return;
+        }
+
         const sharing = Craft.initialConfig.level.freePlay;
         if (sharing && response.level_source) {
           trySetLocalStorage('craftHeroShareLink', response.level_source);

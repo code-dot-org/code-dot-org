@@ -1,3 +1,4 @@
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 export function locationField(icon: SVGElement, onClick: () => void) {
@@ -12,7 +13,7 @@ export function locationField(icon: SVGElement, onClick: () => void) {
     }
     return '';
   };
-  return new Blockly.FieldButton({
+  return new CdoFieldButton({
     onClick,
     transformText: transformTextSetField,
     icon,

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q10_2026'
+
+question 'A login form changes its border color from gray to red when an entered password is too short. A user with low vision says the red is hard to see and they don''t know what changed. Which POUR principle is this design failing?'
+wrong 'Robust — it does not work across browsers.'
+
+right 'Perceivable — the user cannot notice the change because color alone is the only signal.'
+wrong 'Operable — the form cannot be filled out.'
+wrong 'Understandable — the form has too many fields.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

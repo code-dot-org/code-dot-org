@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Decrement Operator\n\nThe decrement operator `--` subtracts `1` from a number variable. Use `--` when your app needs to decrease a value, such as a score, count, or step number.",
+  "examples": "[{\"name\":\"Decrease Favorites\",\"description\":\"Subtract one from the favorites count when a button is clicked.\",\"code\":\"```\\nremoveFavoriteButton.addEventListener(\\\"click\\\", () =\\u003e {\\n  favoritesCount--;\\n  countText.textContent = favoritesCount;\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "decrement-operator",
+  "name": "Decrement Operator",
+  "syntax": "`favoritesCount--;`",
+  "tips": "- Use `--` after a number variable to subtract `1`.\n- `favoritesCount--;` means the same thing as `favoritesCount = favoritesCount - 1;`.\n- Use `let` for a variable that will change.\n- Do not use `--` on strings or Boolean values.\n- In Web Lab, `--` is often used inside button click functions to update counts.",
+  "methods": [
+
+  ]
+}

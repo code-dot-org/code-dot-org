@@ -84,7 +84,11 @@ p.countText {
   margin-bottom: 0 !important;
   padding: 0 2px;
 
-  color: var(--light-white, #fff);
+  strong {
+    span {
+      color: var(--text-neutral-white-fixed, #fff);
+    }
+  }
   font-variant-ligatures: no-common-ligatures;
 }
 

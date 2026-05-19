@@ -3,6 +3,7 @@ export interface UserAddedSelectionContextItem {
   filename: string;
   lineReference?: {start: number; end: number};
   displayName: string;
+  timestamp?: string;
 }
 
 export type UserAddedSelectionContext = {

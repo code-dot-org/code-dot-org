@@ -1,8 +1,4 @@
-import {
-  Button,
-  LinkButton,
-  buttonColors,
-} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import SelfPacedPLCatalogCourseFacilitatedWorkshops from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogCourseFacilitatedWorkshops';
@@ -46,18 +42,23 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
       defaultImageSrc={defaultImageSrc}
       actionRowContent={
         <>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             onClick={() => updateExpandedCardKey(courseOffering.key)}
-            text={i18n.quickView()}
-            size="m"
-            type="secondary"
-            color="gray"
-          />
-          <LinkButton
-            text="Start"
+            type="button"
+          >
+            {i18n.quickView()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             href={courseOffering.course_version_path}
-            color={buttonColors.purple}
-          />
+          >
+            {'Start'}
+          </MuiButton>
         </>
       }
       relatedProposalsHeader="Facilitated workshops"
@@ -69,13 +70,15 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
       onCloseExpandedCard={() => updateExpandedCardKey(courseOffering.key)}
       expandedCardActionRowContent={
         <>
-          <LinkButton
-            text="Start professional learning"
-            href={courseOffering.course_version_path}
-            color={buttonColors.purple}
-            size="m"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={moduleStyles.plCatalogExpandedCardStartLearningButton}
-          />
+            href={courseOffering.course_version_path}
+          >
+            {'Start professional learning'}
+          </MuiButton>
         </>
       }
     />

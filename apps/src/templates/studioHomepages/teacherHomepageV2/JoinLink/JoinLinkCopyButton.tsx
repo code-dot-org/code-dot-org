@@ -8,7 +8,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -49,11 +49,9 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: sourceName},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SECTION_CARD_CLASS_CODE_CLICKED, {
+      source: sourceName,
+    });
     setShowCopiedMsg(true);
     setTimeout(() => {
       setShowCopiedMsg(false);
@@ -99,7 +97,11 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
             </span>
           </TooltipOverlay>
         )}
-        {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
+        {showCopiedMsg && (
+          <Typography variant="body3" component="span">
+            {i18n.copySectionCodeSuccess()}
+          </Typography>
+        )}
       </div>
     )
   ) : (
@@ -117,7 +119,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
             aria-label={i18n.whyWithQuestionMark()}
             type="button"
           >
-            <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
+            <FontAwesomeV6Icon iconName="circle-question" iconStyle="regular" />
           </button>
         </Typography>
       </div>
@@ -127,7 +129,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           description={i18n.noSectionDialogBody({classroom: classroomType})}
           primaryButtonProps={{
             onClick: () => setShouldShowDialog(false),
-            text: i18n.ok(),
+            children: i18n.ok(),
           }}
           onClose={() => setShouldShowDialog(false)}
         />

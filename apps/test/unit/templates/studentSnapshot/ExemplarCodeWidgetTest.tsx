@@ -25,7 +25,6 @@ const SAMPLE_EXEMPLAR_DATA = {
       '0': {
         id: '0',
         name: 'main.py',
-        language: 'py',
         contents: '# My soccer stats tracker!\ngoals_scored = 5\n',
         folderId: '0',
         active: false,

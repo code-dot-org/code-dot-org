@@ -3,6 +3,8 @@ import '@code-dot-org/component-library-styles/colors.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 
+import {MuiDecorator} from './decorators';
+
 injectFontAwesome();
 
 //Stub jquery fileupload library function
@@ -16,4 +18,5 @@ export const parameters = {
     },
   },
 };
+export const decorators = [MuiDecorator];
 export const tags = ['autodocs'];

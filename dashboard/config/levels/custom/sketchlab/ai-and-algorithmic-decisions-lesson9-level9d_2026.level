@@ -1,0 +1,1539 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-20T23:46:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to implement **one** of the following rules:\r\n\r\n   a. The lights turn on only if motion is detected **AND** it is nighttime.\r\n\r\n   b. The lights turn on if motion is detected **OR** it is nighttime.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "Hf4cfjPrrZTMrgE9bJFuN",
+            "type": "shape",
+            "position": {
+              "x": 833.7640410740881,
+              "y": 218.7631283815918
+            },
+            "style": {
+              "width": 275.1771240234375,
+              "height": 220
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Motion \nDetected?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 275,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "j1Py3PAnkv08nk2eQAQHU",
+            "type": "shape",
+            "position": {
+              "x": 627.0780214442506,
+              "y": 490.7475420913297
+            },
+            "style": {
+              "width": 272.1294642857143,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is it \nnighttime?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 272,
+              "height": 270
+            }
+          },
+          {
+            "id": "J_GzeTzM_YC2CQMkQIJAM",
+            "type": "shape",
+            "position": {
+              "x": 1076.904160469147,
+              "y": 493.84862801692907
+            },
+            "style": {
+              "width": 270.9867117745537,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is it \nnighttime?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 271,
+              "height": 270
+            }
+          },
+          {
+            "id": "o2Fsz0cIK9aDyojPKAkZM",
+            "type": "text",
+            "position": {
+              "x": -263.49991761315096,
+              "y": 364.8077769234176
+            },
+            "data": {
+              "text": "motionDetected (T/F)",
+              "fontColor": "#ffffff",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 175,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "D0QfQpXzHF-kQDmD9bC1X",
+            "type": "text",
+            "position": {
+              "x": -46.18089762535716,
+              "y": 363.22388147113156
+            },
+            "data": {
+              "text": "isNighttime (T/F)",
+              "fontColor": "#ffffff",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 141,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "2bSks9HV1uJOWiEOMwuOA",
+            "type": "text",
+            "position": {
+              "x": 814.4568014212117,
+              "y": 461.3057561015718
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            }
+          },
+          {
+            "id": "H8p5VqO6xyOM3g7x5h7rh",
+            "type": "text",
+            "position": {
+              "x": 580.7269027225562,
+              "y": 735.4278277649693
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "qNnQIqMWgGNIOhFzRcHaX",
+            "type": "text",
+            "position": {
+              "x": 1060.7588440644408,
+              "y": 468.47245328581687
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            }
+          },
+          {
+            "id": "MYDBIi9otHcU-SMSFnOuW",
+            "type": "text",
+            "position": {
+              "x": 1314.040969064859,
+              "y": 730.6036195151881
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "c1n-FPmtja9law5NMzuSe",
+            "type": "text",
+            "position": {
+              "x": 861.9959150286094,
+              "y": 731.1154186014604
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 68,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "BD9C2j9GPvVTCxacrUwYi",
+            "type": "text",
+            "position": {
+              "x": 1064.9343858611624,
+              "y": 729.8922299620677
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 61,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "805c57d5-39dd-439c-8894-2616eb969d5e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 687.4669779746501,
+              "y": 673.9503752089068
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "f60d1977-b285-4145-a4c7-0690f2ac10f7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 612.9380712007368,
+              "y": 857.218902814927
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "47793e0a-6945-44bc-b92f-e3613e0dcce8",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1147.8228149572592,
+              "y": 694.1079226048934
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "e01caab7-b0d4-41db-b33e-b9ec7bd7c026",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1073.2939081833456,
+              "y": 877.3764502109135
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "86aae62d-7e2b-4496-b8a9-7d4f3985afca",
+            "type": "lineAnchor",
+            "position": {
+              "x": 829.5143196415398,
+              "y": 673.4385397921844
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "7a08c59c-3a4e-48ec-8f90-d9be3e828634",
+            "type": "lineAnchor",
+            "position": {
+              "x": 898.2931337024092,
+              "y": 864.9748205232883
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "bc38507e-d13d-4073-8bc9-c5f3c95ed2d0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1278.7289061044164,
+              "y": 674.8164986463651
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "12385d24-d5d4-46ad-a136-a0deeb30e1f9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1354.3975144361889,
+              "y": 873.2425736483718
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "acbe958f-c299-45d0-b680-4a0bb35d79dc",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 536.0090837010714,
+              "y": 853.999004828273
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "962a0439-5f0d-460b-8333-018e63bd0c3b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 792.3094305786635,
+              "y": 857.572665086634
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "6ee7fb65-982e-430e-9a4c-9b75559f0550",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1021.0506003726437,
+              "y": 857.5726650866338
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cbd45aa1-20ee-4391-bcde-2f9404fad48a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "outcome",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1277.350947250236,
+              "y": 860.3285827949952
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "c1d30378-e1ff-4261-9a65-f9c6e5289896",
+            "source": "Hf4cfjPrrZTMrgE9bJFuN",
+            "target": "j1Py3PAnkv08nk2eQAQHU",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "fe60f890-0a82-49cc-ba39-31fc867987da",
+            "source": "Hf4cfjPrrZTMrgE9bJFuN",
+            "target": "J_GzeTzM_YC2CQMkQIJAM",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "1d4a0eb1-f8ab-4b9e-8b3d-ebbd1fa8b94c",
+            "source": "805c57d5-39dd-439c-8894-2616eb969d5e",
+            "target": "f60d1977-b285-4145-a4c7-0690f2ac10f7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          },
+          {
+            "id": "20a745a8-2bab-4187-a5fa-cc56dbd10043",
+            "source": "47793e0a-6945-44bc-b92f-e3613e0dcce8",
+            "target": "e01caab7-b0d4-41db-b33e-b9ec7bd7c026",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "id": "94d4fc7d-f631-4967-9d33-28e6d5e60233",
+            "source": "86aae62d-7e2b-4496-b8a9-7d4f3985afca",
+            "target": "7a08c59c-3a4e-48ec-8f90-d9be3e828634",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "id": "ede33464-8126-4ddf-9998-1c46565f2cfa",
+            "source": "bc38507e-d13d-4073-8bc9-c5f3c95ed2d0",
+            "target": "12385d24-d5d4-46ad-a136-a0deeb30e1f9",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          }
+        ],
+        "viewport": {
+          "x": -122.98772780832178,
+          "y": -116.34997981604147,
+          "zoom": 0.7257110740034726
+        }
+      }
+    },
+    "display_name": "Smart Home Automation",
+    "bubble_choice_description": "Decide when a smart home system should turn on lights based on motion and time of day.",
+    "thumbnail_url": "https://images.code.org/c57d43713a432373f10604d3dddb73ff-smart-home.png",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "2V7fGaocgxUFgIPnSGMUc",
+            "type": "shape",
+            "position": {
+              "x": 720.7380746056049,
+              "y": -46.527528134819335
+            },
+            "style": {
+              "width": 275.1771240234375,
+              "height": 220
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Motion \nDetected?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 275,
+              "height": 220
+            },
+            "dragging": false
+          },
+          {
+            "id": "6dzvmAkgHgK_LFgXUli0g",
+            "type": "shape",
+            "position": {
+              "x": 475.0888365964675,
+              "y": 266.6390253429667
+            },
+            "style": {
+              "width": 272.1294642857143,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is it \nnighttime?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 272,
+              "height": 270
+            },
+            "dragging": false
+          },
+          {
+            "id": "YCK8z0QsKzcSj6sdZcakc",
+            "type": "shape",
+            "position": {
+              "x": 930.0899626307901,
+              "y": 259.39013724971363
+            },
+            "style": {
+              "width": 270.9867117745537,
+              "height": 270
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is it \nnighttime?",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 271,
+              "height": 270
+            }
+          },
+          {
+            "id": "kAk-o8N8dOiGpSeQSulbg",
+            "type": "shape",
+            "position": {
+              "x": 419.037338217823,
+              "y": 605.7419255946327
+            },
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Lights \nturn on",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#e03131",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 141,
+              "height": 156
+            }
+          },
+          {
+            "id": "bh-t2K5zUivAB0iYuCquX",
+            "type": "shape",
+            "position": {
+              "x": 649.4731972826439,
+              "y": 609.2964715271717
+            },
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Lights \nturn on",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#e03131",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 141,
+              "height": 156
+            }
+          },
+          {
+            "id": "k7dLUd77lm3MahkyFr6VX",
+            "type": "shape",
+            "position": {
+              "x": 1114.3158621119524,
+              "y": 604.9308159274358
+            },
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Lights \ndo NOT \nturn on",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#e03131",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 141,
+              "height": 156
+            }
+          },
+          {
+            "id": "iAhuyYaqKLpK-b7ieD-Ik",
+            "type": "shape",
+            "position": {
+              "x": 873.1519117646958,
+              "y": 603.3800022685944
+            },
+            "style": {
+              "width": 140.7890625,
+              "height": 156
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Lights \nturn on",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#e03131",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 141,
+              "height": 156
+            }
+          },
+          {
+            "id": "1mugNbo6Bfr4nNBq5_DVr",
+            "type": "shape",
+            "position": {
+              "x": -423.1049246119526,
+              "y": 51.69200137922428
+            },
+            "style": {
+              "width": 821.3898617260127,
+              "height": 474.2331138608705
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 821,
+              "height": 474
+            }
+          },
+          {
+            "id": "03zMo0uMesZytlE1s2Zwj",
+            "type": "text",
+            "position": {
+              "x": -401.7929797145441,
+              "y": 74.70238149817015
+            },
+            "data": {
+              "text": "Truth Table - Use this to plan your flowchart",
+              "fontColor": "#1e1e1e",
+              "fontSize": 28.66105333399012,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 577,
+              "height": 55
+            }
+          },
+          {
+            "id": "ivVo2mOhZ0XSF44OUezvq",
+            "type": "image",
+            "position": {
+              "x": -417.2432032685001,
+              "y": 118.85460551893362
+            },
+            "style": {
+              "width": 812.4053816867607,
+              "height": 322.70547105890773
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9d_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 812,
+              "height": 323
+            }
+          },
+          {
+            "id": "L3CVwg4tqFC8JQ3LYYkfA",
+            "type": "text",
+            "position": {
+              "x": -407.2077245416019,
+              "y": 138.28240263632864
+            },
+            "data": {
+              "text": "motionDetected (T/F>",
+              "fontColor": "#ffffff",
+              "fontSize": 16.892708592333882,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 188,
+              "height": 40
+            }
+          },
+          {
+            "id": "OoxryVwZSfwY0clA0atmQ",
+            "type": "text",
+            "position": {
+              "x": -200.9282119438405,
+              "y": 137.83180953834642
+            },
+            "data": {
+              "text": "isNighttime (T/F)",
+              "fontColor": "#ffffff",
+              "fontSize": 20.256774635198973,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 173,
+              "height": 44
+            }
+          },
+          {
+            "id": "s43wCR65a2aDaSZ6G8Tez",
+            "type": "text",
+            "position": {
+              "x": 10.806713385691353,
+              "y": 135.7383990035874
+            },
+            "data": {
+              "text": "Outcome (Lights turn on?)",
+              "fontColor": "#ffffff",
+              "fontSize": 22.742885044642847,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 288,
+              "height": 48
+            }
+          },
+          {
+            "id": "HTz0kgbNMkz6x7mKH2GKt",
+            "type": "shape",
+            "position": {
+              "x": -1.8528284593133435,
+              "y": 168.52237832061138
+            },
+            "style": {
+              "width": 388.8281366716147,
+              "height": 63.61862179464932
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 389,
+              "height": 64
+            }
+          },
+          {
+            "id": "HoND6XkArPEw1vFXFSoDO",
+            "type": "shape",
+            "position": {
+              "x": -2.2499212192613527,
+              "y": 232.95432647448325
+            },
+            "style": {
+              "width": 388.8281366716147,
+              "height": 63.61862179464932
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 389,
+              "height": 64
+            }
+          },
+          {
+            "id": "gm0gJYSa5NiLifmZQjLGT",
+            "type": "shape",
+            "position": {
+              "x": -2.5410355312911292,
+              "y": 298.4550466811766
+            },
+            "style": {
+              "width": 388.8281366716147,
+              "height": 63.10165090125174
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 389,
+              "height": 63
+            }
+          },
+          {
+            "id": "mdvY4e_nvcLytmQFMFEB9",
+            "type": "shape",
+            "position": {
+              "x": -2.6130386305274556,
+              "y": 361.22632907012854
+            },
+            "style": {
+              "width": 388.6108590497522,
+              "height": 69.48511758494332
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 389,
+              "height": 69
+            }
+          },
+          {
+            "id": "uE0K6lwdKd8gfKDEVCRrx",
+            "type": "text",
+            "position": {
+              "x": 617.6360211554421,
+              "y": 149.81009781104464
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "MPdVz1J2uovsQ9i8Fisr2",
+            "type": "text",
+            "position": {
+              "x": 506.9445241557714,
+              "y": 502.34729585193446
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "XD4zkI2kkaZIELd03Mtba",
+            "type": "text",
+            "position": {
+              "x": 986.9272259850108,
+              "y": 135.35232691857067
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "phVpmZogAAvknNmKfBpVR",
+            "type": "text",
+            "position": {
+              "x": 1125.888005601084,
+              "y": 512.6806349981398
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "oL6WZc2m2qmYQGQWeHPJ9",
+            "type": "text",
+            "position": {
+              "x": 653.1735687521254,
+              "y": 507.6805986676898
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "ZwmABCL-O3HTWf4lVEGlE",
+            "type": "text",
+            "position": {
+              "x": 933.277735418792,
+              "y": 513.3472042992
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#1971c2",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "9XZI6lX76ynOHRBbBlbk9",
+            "type": "text",
+            "position": {
+              "x": -389.6907704405826,
+              "y": 450.5138506208148
+            },
+            "data": {
+              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.266682942708346,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 716,
+              "height": 81
+            }
+          },
+          {
+            "id": "mktjOQ53PEHgbAXmikpgE",
+            "type": "text",
+            "position": {
+              "x": -361.4285539899538,
+              "y": 181.278577532087
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "UJNg5R-eDhEKKbYL1wbnx",
+            "type": "text",
+            "position": {
+              "x": -165.03118024553407,
+              "y": 181.92140851702004
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "t0fu-aTZ33XLFNMBV25HN",
+            "type": "text",
+            "position": {
+              "x": -358.459873744418,
+              "y": 245.92139107840393
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "F7OFt3mLCJPLplw9ApyVO",
+            "type": "text",
+            "position": {
+              "x": -161.88839285714118,
+              "y": 314.20713152204235
+            },
+            "data": {
+              "text": "True",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 73,
+              "height": 54
+            }
+          },
+          {
+            "id": "AdyUkRBkTvx-fpUgdlWOc",
+            "type": "text",
+            "position": {
+              "x": -167.60267857142696,
+              "y": 249.34999738420754
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "f_deDkU67nDeHpoJEckhE",
+            "type": "text",
+            "position": {
+              "x": -357.8973039899537,
+              "y": 313.34997994559143
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "bCk6uHRG7Lr8dgxjsphG_",
+            "type": "text",
+            "position": {
+              "x": -359.32587541852513,
+              "y": 378.2071140834262
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "Woa1qPfm27uLuX63CEmvC",
+            "type": "text",
+            "position": {
+              "x": -167.3259277343734,
+              "y": 381.34998866489946
+            },
+            "data": {
+              "text": "False",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 82,
+              "height": 54
+            }
+          },
+          {
+            "id": "Pt2hp2Oxz_f_rY2Lok85q",
+            "type": "text",
+            "position": {
+              "x": 12.959891183037485,
+              "y": 183.92139979771196
+            },
+            "data": {
+              "text": "Yes - the lights turn on",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 301,
+              "height": 54
+            }
+          },
+          {
+            "id": "FuQGtIfpxoZQJ-m-9gjCt",
+            "type": "text",
+            "position": {
+              "x": 15.492547171458114,
+              "y": 249.63572910853787
+            },
+            "data": {
+              "text": "Yes - the lights turn on",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 301,
+              "height": 54
+            }
+          },
+          {
+            "id": "w2SlQ5ldnHtZ_B9q7avwn",
+            "type": "text",
+            "position": {
+              "x": 13.206867762976003,
+              "y": 312.20714024135043
+            },
+            "data": {
+              "text": "Yes - the lights turn on",
+              "fontColor": "#e03131",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 301,
+              "height": 54
+            }
+          },
+          {
+            "id": "-fy6nlMF0k99_cBOD-K2h",
+            "type": "text",
+            "position": {
+              "x": 8.349690028601117,
+              "y": 385.20714896065857
+            },
+            "data": {
+              "text": "No - the lights do NOT turn on",
+              "fontColor": "#e03131",
+              "fontSize": 23.65715680803566,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 341,
+              "height": 49
+            }
+          },
+          {
+            "id": "b176c091-f47a-4f40-8642-6a236af970dd",
+            "type": "lineAnchor",
+            "position": {
+              "x": 43.3936031230194,
+              "y": 349.6625987077367
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e14dcf2a-f144-49c8-804d-a591cba8c5a1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 273.3936031230194,
+              "y": 349.6625987077367
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "470545cf-2da0-4e5a-9721-a1b8cf8f2e80",
+            "type": "lineAnchor",
+            "position": {
+              "x": 77.89351651919424,
+              "y": 153.39769984354731
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "aba4ddbc-a38d-42ec-b844-26bbc8f72197",
+            "type": "lineAnchor",
+            "position": {
+              "x": 307.89351651919424,
+              "y": 153.39769984354731
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "7f4e8758-9587-4990-b9b0-edb08596d267",
+            "type": "lineAnchor",
+            "position": {
+              "x": 787.5787897809125,
+              "y": 115.16376329315446
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6f09432d-e6fa-487f-a98c-2e4395a54484",
+            "type": "lineAnchor",
+            "position": {
+              "x": 911.8459277286476,
+              "y": 121.16895427261183
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "2551b920-948a-4f24-906a-e6b44808df38",
+            "source": "6f09432d-e6fa-487f-a98c-2e4395a54484",
+            "target": "YCK8z0QsKzcSj6sdZcakc",
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "4170a24a-48d2-4b43-b75d-1e6554d5721b",
+            "source": "6dzvmAkgHgK_LFgXUli0g",
+            "target": "kAk-o8N8dOiGpSeQSulbg",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "67144dd4-392d-4349-9466-73c4ecf3994f",
+            "source": "6dzvmAkgHgK_LFgXUli0g",
+            "target": "bh-t2K5zUivAB0iYuCquX",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "e018e384-65a1-497e-9419-e51642cf936a",
+            "source": "YCK8z0QsKzcSj6sdZcakc",
+            "target": "iAhuyYaqKLpK-b7ieD-Ik",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "cc0d2e7d-e45f-444f-a97d-0b8a430bfa09",
+            "source": "YCK8z0QsKzcSj6sdZcakc",
+            "target": "k7dLUd77lm3MahkyFr6VX",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "e2b0a5c7-ee3e-46ae-bad7-6e0a0fbbaf7d",
+            "source": "b176c091-f47a-4f40-8642-6a236af970dd",
+            "target": "e14dcf2a-f144-49c8-804d-a591cba8c5a1",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          },
+          {
+            "id": "b168a924-ad09-497c-9606-e8fbbe55c4c1",
+            "source": "470545cf-2da0-4e5a-9721-a1b8cf8f2e80",
+            "target": "aba4ddbc-a38d-42ec-b844-26bbc8f72197",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          },
+          {
+            "id": "8864d39b-e1d8-488f-8863-f21b6345b9c4",
+            "source": "7f4e8758-9587-4990-b9b0-edb08596d267",
+            "target": "6dzvmAkgHgK_LFgXUli0g",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "top-target"
+          }
+        ],
+        "viewport": {
+          "x": 268.78135261045816,
+          "y": 118.64267054173757,
+          "zoom": 0.5924294083125766
+        }
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.579+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9d_2025\"},{\"changed_at\":\"2026-04-16 02:23:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:27:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:28:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:31:06 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:30:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:18:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:51:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:54:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 23:07:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:18:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:19:53 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

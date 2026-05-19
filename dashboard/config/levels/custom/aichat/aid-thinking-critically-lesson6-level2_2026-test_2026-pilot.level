@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-03-10T14:56:06.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Image Generation\r\n\r\nThis optional AI Chat can assist with generating images for use in your AI Guide project.\r\n\r\n####Possible ideas on how to use the tool:\r\n\r\n* Generate icons that represent ratings within your guide\r\n* Generate an image or avatar to represent your audience\r\n* Choose a similar visual style (realistic, cartoon, etc) for your images\r\n* Attach a quick sketch and ask AI to create a more detailed version of it\r\n* Illustrate your advice and guidance\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Skeptical Teen",
+    "bubble_choice_description": "Designed to push back like a peer who thinks rules are dramatic or unnecessary.",
+    "thumbnail_url": "https://images.code.org/957fe2186fdc373b9638744f4426fbbc-think.png",
+    "name_suffix": "_2026-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:56:06.200+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson6-level2_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson6-level2_2026-test\"}]"
+}]]></config>
+</Aichat>

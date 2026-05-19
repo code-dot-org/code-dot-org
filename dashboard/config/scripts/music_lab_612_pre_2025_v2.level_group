@@ -1,0 +1,21 @@
+name 'music-lab-612-pre_2025-v2'
+title 'Music Lab Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'music-lab-612-pre-intro_2025-v2'
+level 'music-lab-612-pre-q1_2025-v2'
+level 'music-lab-612-pre-q2_2025-v2'
+level 'music-lab-612-pre-q3_2025-v2'
+level 'music-lab-612-pre-q4_2025-v2'
+level 'music-lab-612-pre-q5_2025-v2'
+level 'music-lab-612-pre-q6_2025-v2'
+
+page
+level 'music-lab-612-pre-q7_2025-v2'
+level 'music-lab-612-pre-q8_2025-v2'
+level 'music-lab-612-pre-q9_2025-v2'
+level 'music-lab-612-pre-q10_2025-v2'
+level 'music-lab-612-pre-careersQ_2025-v2'

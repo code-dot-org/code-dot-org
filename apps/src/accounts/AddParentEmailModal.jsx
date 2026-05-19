@@ -166,7 +166,6 @@ export default class AddParentEmailModal extends React.Component {
               type="email"
               value={values.parentEmail}
               disabled={saving}
-              tabIndex="1"
               onKeyDown={this.onKeyDown}
               onChange={this.onParentEmailChange}
               autoComplete="off"
@@ -184,7 +183,6 @@ export default class AddParentEmailModal extends React.Component {
               type="email"
               value={values.confirmedParentEmail}
               disabled={saving}
-              tabIndex="1"
               onKeyDown={this.onKeyDown}
               onChange={this.onConfirmedParentEmailChange}
               autoComplete="off"

@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 // import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
@@ -41,18 +41,15 @@ const LinkOption: React.FC<LinkElementProps> = ({
           to={url}
           className={styles.dropdownMenuItem}
           onClick={() => {
-            if (eventName)
-              analyticsReporter.sendEvent(
-                eventName,
-                eventOptions,
-                PLATFORMS.BOTH
-              );
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
           }}
         >
           {iconName && (
             <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
           )}
-          <span>{label}</span>
+          <Typography variant="body2" component="span">
+            {label}
+          </Typography>
         </Link>
       ) : (
         <a
@@ -64,22 +61,25 @@ const LinkOption: React.FC<LinkElementProps> = ({
           className={styles.dropdownMenuItem}
           href={url}
           onClick={() => {
-            if (eventName)
-              analyticsReporter.sendEvent(
-                eventName,
-                eventOptions,
-                PLATFORMS.BOTH
-              );
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
           }}
         >
           {labelStyle === 'b' ? (
-            <span>
+            <Typography component="span" variant="body2">
               <b>{label}</b>
-            </span>
+            </Typography>
           ) : labelStyle === 'i' ? (
-            <span style={{paddingLeft: '1em'}}>{label}</span>
+            <Typography
+              component="span"
+              variant="body2"
+              style={{paddingLeft: '1em'}}
+            >
+              {label}
+            </Typography>
           ) : (
-            <span>{label}</span>
+            <Typography component="span" variant="body2">
+              {label}
+            </Typography>
           )}
         </a>
       )}

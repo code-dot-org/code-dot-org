@@ -2,13 +2,10 @@ import {
   default as FontAwesomeV6Icon,
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
-
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
@@ -21,6 +18,7 @@ interface SidebarOptionProps {
   unitPosition?: number;
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
+  showErrorIcon: boolean;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
@@ -30,13 +28,8 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   unitPosition,
   unitName,
   pathKey,
+  showErrorIcon,
 }) => {
-  const reportMetric = (path: string) => () => {
-    analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_PAGE, {
-      nextPage: path,
-    });
-  };
-
   return (
     <NavLink
       key={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
@@ -49,7 +42,6 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}
-      onClick={reportMetric(pathKey)}
     >
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon
@@ -62,13 +54,22 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
           }
         />
       </div>
-      <BodyTwoText
+      <Typography
         className={classNames(styles.linkText, {
           [styles.selected]: isSelected,
         })}
+        variant="body2"
+        gutterBottom
       >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
-      </BodyTwoText>
+      </Typography>
+      {showErrorIcon && (
+        <FontAwesomeV6Icon
+          iconName="triangle-exclamation"
+          iconStyle="solid"
+          className={styles.errorIcon}
+        />
+      )}
     </NavLink>
   );
 };

@@ -53,7 +53,8 @@
       "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg"
     },
     "name_suffix": "_v2-2025",
-    "submittable": "false"
+    "submittable": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:37.724+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1_2025\"}]"

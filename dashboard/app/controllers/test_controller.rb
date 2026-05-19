@@ -79,7 +79,14 @@ class TestController < ApplicationController
     raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
     unit = unit_group_unit.script
 
-    section = Section.create!(name: "New Section", user: user, script: unit, unit_group: unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    ai_chat_access_level = AichatAccessHelper.compute_ai_chat_access_level(unit_group)
+    section = Section.create!(name: "New Section",
+                              user: user,
+                              script: unit,
+                              unit_group: unit_group,
+                              participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+                              ai_chat_access_level: ai_chat_access_level
+)
 
     render json: {section_code: section.code}
   end
@@ -174,7 +181,7 @@ class TestController < ApplicationController
   end
 
   def get_i18n_t
-    locale = params[:locale] || request.env['cdo.locale']
+    locale = params[:locale] || I18n.locale.to_s
     render plain: I18n.t(params.require(:key), locale: locale)
   end
 

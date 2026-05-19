@@ -12,7 +12,6 @@ import {mockAppOptions} from '../test_utils';
 const defaultFile: ProjectFile = {
   id: '1',
   name: '',
-  language: '',
   contents: '',
   folderId: '',
 };

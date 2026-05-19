@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -11,14 +12,18 @@ export interface SuggestedPrompt {
   label: string;
   show: boolean;
   selected: boolean;
+  icon?: string;
 }
 
 interface SuggestedPromptsProps {
   suggestedPrompts: Array<SuggestedPrompt>;
+  canToggle?: boolean;
 }
 
 const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   suggestedPrompts,
+  // If true, other chips aren't disabled when one is selected.
+  canToggle = false,
 }) => {
   const hasSelection = suggestedPrompts.some(prompt => prompt.selected);
   const visiblePrompts = suggestedPrompts.filter(prompt => prompt.show);
@@ -30,7 +35,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
       aria-label="Suggested Prompts"
     >
       {visiblePrompts.map(prompt => {
-        const isDisabled = hasSelection && !prompt.selected;
+        const isDisabled = !canToggle && hasSelection && !prompt.selected;
 
         return (
           <button
@@ -46,6 +51,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
             aria-label={prompt.label}
           >
             <span>{prompt.label}</span>
+            {prompt.icon && <FontAwesomeV6Icon iconName={prompt.icon} />}
           </button>
         );
       })}

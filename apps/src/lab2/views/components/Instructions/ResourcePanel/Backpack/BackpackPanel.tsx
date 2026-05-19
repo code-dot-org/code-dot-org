@@ -1,7 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton, Snackbar, Fade} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import {TransitionGroup} from 'react-transition-group';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -30,8 +31,18 @@ interface BackpackPanelProps extends BackpackProps {
   ) => void;
 }
 
-type AlertConfig = {type: 'success' | 'danger'; message: string};
 const PRIMARY_BACKPACK_KEY = 'PRIMARY';
+
+// No-op transition for the Snackbar's transition slot
+// since the transition is handled by the inner TransitionGroup and Fade
+const SnackbarPassthrough = React.forwardRef<
+  HTMLDivElement,
+  {children?: React.ReactNode}
+>(({children}, ref) => <div ref={ref}>{children}</div>);
+
+type AlertConfig = {id: number; type: 'success' | 'danger'; message: string};
+const ALERT_AUTO_HIDE_MS = 3000;
+let nextAlertId = 0;
 
 const BackpackPanel: React.FC<BackpackPanelProps> = ({
   validateFileName,
@@ -43,6 +54,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   supportedFileTypes,
   backpackRefreshKey,
   onImageFlagged,
+  addFileTooltipText,
+  addFileHandler,
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
@@ -108,12 +121,18 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     [primaryBackpackApi, secondaryBackpackApis]
   );
 
+  const removeAlert = useCallback((id: number) => {
+    setAlertList(prevAlerts => prevAlerts.filter(alert => alert.id !== id));
+  }, []);
+
   const addAlert = useCallback(
     (type: 'success' | 'danger', message: string) => {
-      setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+      const id = nextAlertId++;
+      setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
       openPanelCallback();
+      setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
     },
-    [openPanelCallback]
+    [openPanelCallback, removeAlert]
   );
 
   useEffect(() => {
@@ -245,14 +264,16 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         title="An error occurred"
         message="Your Backpack failed to load, please try again."
         BottomComponent={
-          <Button
-            iconLeft={{iconName: 'refresh'}}
-            text="Retry"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
             onClick={() => loadBackpackFiles(true)}
-            size="s"
-            type="secondary"
-            color="gray"
-          />
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="refresh" />}
+          >
+            {'Retry'}
+          </MuiButton>
         }
       />
     );
@@ -269,10 +290,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         key={fileName}
         fileName={fileName}
         backpackApi={backpackApi}
-        addAlert={(type, message) => {
-          setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
-          openPanelCallback();
-        }}
+        addAlert={addAlert}
         validateFileName={validateFileName}
         saveFileToProject={saveFileToProject}
         createNewProjectFile={createNewProjectFile}
@@ -283,26 +301,35 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         disableActions={actionInProgress}
         isSecondaryBackpack={isSecondaryBackpack}
         onImageFlagged={onImageFlagged}
+        addFileTooltipText={addFileTooltipText}
+        addFileHandler={addFileHandler}
       />
     );
   };
 
   return (
     <div className={moduleStyles.backpackPanelWithFiles}>
+      <Snackbar
+        open
+        slots={{transition: SnackbarPassthrough}}
+        className={moduleStyles.alertContainer}
+      >
+        <TransitionGroup className={moduleStyles.alertList}>
+          {alertList.map(({id, type, message}) => (
+            <Fade key={id} mountOnEnter unmountOnExit>
+              <div>
+                <Alert
+                  type={type}
+                  text={message}
+                  size="s"
+                  onClose={() => removeAlert(id)}
+                />
+              </div>
+            </Fade>
+          ))}
+        </TransitionGroup>
+      </Snackbar>
       <div className={moduleStyles.fileListContainer}>
-        {alertList.map((alert, index) => (
-          <Alert
-            type={alert.type}
-            text={alert.message}
-            key={index}
-            size="s"
-            onClose={() => {
-              const newList = [...alertList];
-              newList.splice(index, 1);
-              setAlertList(newList);
-            }}
-          />
-        ))}
         {isBackpackEmpty && (
           <BackpackMessage
             type="neutral"
@@ -326,9 +353,13 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                     key={`backpack-${appName}`}
                     className={moduleStyles.secondaryFileList}
                   >
-                    <BodyThreeText className={moduleStyles.backpackDivider}>
+                    <Typography
+                      className={moduleStyles.backpackDivider}
+                      variant="body3"
+                      gutterBottom
+                    >
                       {convertProjectTypeToDisplayName(appName as ProjectType)}
-                    </BodyThreeText>
+                    </Typography>
                     {secondaryFileList?.map(fileName =>
                       renderFileChip(
                         fileName,
@@ -343,18 +374,20 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           : undefined}
       </div>
       {saveToBackpackButton && (
-        <Button
-          text={saveToBackpackButton.text}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          className={moduleStyles.saveButton}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (error: string) =>
               addAlert('danger', error)
             )
           }
-          size="s"
-          type="secondary"
-          color="gray"
-          className={moduleStyles.saveButton}
-        />
+          type="button"
+        >
+          {saveToBackpackButton.text}
+        </MuiButton>
       )}
     </div>
   );

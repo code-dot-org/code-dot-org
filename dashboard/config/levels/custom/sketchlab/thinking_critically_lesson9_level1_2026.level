@@ -1,0 +1,42 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-04-27T00:38:41.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Generate and Judge Project\r\n\r\nSave your project to your **Backpack**.\r\n",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 1905.1218081342977,
+          "scrollY": 2130.0674403996845,
+          "zoom": {
+            "value": 0.161156018383785
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "display_name": "Project Work",
+    "bubble_choice_description": "Work on your Generate and Judge Project.",
+    "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
+    "project_template_level_name": "thinking_critically_project-template_2026",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-27T00:38:41.879+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-27 00:42:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:15:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 19:22:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-03 16:55:30 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Sketchlab>

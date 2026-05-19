@@ -1,4 +1,7 @@
 import type {IconButtonProps} from '@mui/material/IconButton';
+import type {Components, Theme} from '@mui/material/styles';
+
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /**
  * MUI IconButton style overrides to match icon-only button design.
@@ -124,6 +127,15 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
       },
+      // Loading: keep active background, hide original icon via transparent color
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-brand-purple-primary)',
+        color: 'transparent',
+      },
+      // Color only the spinner, not the (now-transparent) original icon
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
     },
   },
   {
@@ -145,6 +157,13 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-neutral-primary-inverse)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-inverse)',
+      },
     },
   },
   {
@@ -164,6 +183,13 @@ const iconButtonVariants = [
       },
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-octonary)',
+        color: 'var(--text-neutral-primary)',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-neutral-white-fixed)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
         color: 'var(--text-neutral-primary)',
       },
     },
@@ -187,6 +213,13 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-error-primary)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
     },
   },
 
@@ -209,10 +242,19 @@ const iconButtonVariants = [
         border: '1px solid var(--borders-brand-purple-primary)',
         color: 'var(--text-brand-purple-primary)',
       },
-      '&.Mui-disabled': {
-        borderColor: 'var(--borders-neutral-disabled) !important',
+      // Exclude loading state so !important doesn't fight the loading border override
+      '&.Mui-disabled:not(.MuiIconButton-loading)': {
+        borderColor: 'var(--borders-neutral-disabled)',
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
+      },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-brand-purple-primary)',
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-brand-purple-primary)',
       },
     },
   },
@@ -239,6 +281,14 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-neutral-solid)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-primary)',
+      },
     },
   },
   {
@@ -263,6 +313,14 @@ const iconButtonVariants = [
         borderColor: 'var(--borders-neutral-disabled)',
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
+      },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-neutral-strong)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-primary)',
       },
     },
   },
@@ -289,6 +347,14 @@ const iconButtonVariants = [
         color: 'var(--neutral-gray-80)',
         backgroundColor: 'unset',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--neutral-base-white)',
+        backgroundColor: 'var(--neutral-base-black)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--neutral-base-white)',
+      },
     },
   },
   {
@@ -314,6 +380,14 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-error-primary)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-error-primary)',
+      },
     },
   },
 
@@ -338,6 +412,13 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-brand-purple-primary)',
+      },
     },
   },
   {
@@ -359,6 +440,13 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-primary)',
       },
     },
   },
@@ -382,6 +470,13 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-neutral-quaternary)',
+      },
     },
   },
   {
@@ -403,6 +498,13 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         color: 'var(--text-neutral-tertiary)',
         backgroundColor: 'transparent',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--neutral-base-white)',
       },
     },
   },
@@ -426,6 +528,13 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'transparent',
+      },
+      '&.MuiIconButton-loading .MuiIconButton-loadingIndicator': {
+        color: 'var(--text-error-primary)',
+      },
     },
   },
 ] satisfies Array<{
@@ -433,11 +542,22 @@ const iconButtonVariants = [
   style: unknown;
 }>;
 
-export const ICON_BUTTON_OVERRIDES = {
+export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
+  defaultProps: {
+    disableRipple: true,
+    loadingIndicator: (
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        iconStyle="solid"
+        animationType="spin"
+      />
+    ),
+  },
   variants: iconButtonVariants,
   styleOverrides: {
     root: () => {
       return {
+        position: 'relative', // Required for absolute-positioned loadingIndicator
         borderRadius: '0.25rem', // Force square corners (MUI defaults to circular)
         transition: 'all 0.2s ease-in-out',
         boxShadow: 'none', // Remove MUI's default shadow

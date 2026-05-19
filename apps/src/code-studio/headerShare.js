@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getStore} from '../redux';
@@ -41,7 +41,7 @@ export function shareProject(shareUrl) {
     const canPublish =
       !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <ShareDialog
           isProjectLevel={!!dashboard.project.isProjectLevel()}
@@ -59,7 +59,10 @@ export function shareProject(shareUrl) {
           userSharingDisabled={appOptions.userSharingDisabled}
         />
       </Provider>,
-      dialogDom
+      dialogDom,
+      {
+        legacyReactDomRender: true,
+      }
     );
 
     getStore().dispatch(showShareDialog());

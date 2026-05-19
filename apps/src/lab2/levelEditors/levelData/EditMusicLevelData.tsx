@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -190,9 +190,9 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   setLevelData({...levelData, packId, sounds});
                 }}
               />
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <i>Numbers in square brackets indicate the pack tempo (BPM).</i>
-              </BodyFourText>
+              </Typography>
             </div>
           )}
           {levelData.library && loadedLibraries[levelData.library] ? (
@@ -294,11 +294,15 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             <label htmlFor="validationTimeout" className={moduleStyles.label}>
               Validation Timeout:
             </label>
-            <BodyFourText className={moduleStyles.helperText}>
+            <Typography
+              className={moduleStyles.helperText}
+              variant="body4"
+              gutterBottom
+            >
               This value determines when (in measures) non-success validation
               messages should start appearing. If the timeout is reached or the
               last measure has completed, messages will be shown.
-            </BodyFourText>
+            </Typography>
 
             <input
               type="number"

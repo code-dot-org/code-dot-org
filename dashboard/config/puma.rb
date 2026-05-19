@@ -1,6 +1,8 @@
 path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
+require 'concurrent' # Need for `:auto`
+CDO.execution_context = :web_application
 
 if CDO.dashboard_sock
   bind "unix://#{CDO.dashboard_sock}"
@@ -8,7 +10,8 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-workers CDO.dashboard_workers
+# `:auto` Uses `Concurrent.available_processor_count`, rounded down if the result is fractional.
+workers CDO.dashboard_workers.is_a?(Numeric) ? CDO.dashboard_workers : :auto
 threads 1, 5
 
 directory deploy_dir('dashboard')
@@ -32,6 +35,17 @@ before_fork do
 end
 
 before_worker_boot do |_index|
-  Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
+  Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
+end
+
+# Code to run in the Puma parent process after it boots, and also after a phased restart completes.
+after_booted do
+  Cdo::AppServerHooks.after_booted
+end
+
+# Enable the Puma control server with a Unix socket.
+if CDO.puma_control_server_token
+  control_socket = "unix://#{dashboard_dir(CDO.puma_control_server_relative_socket_path)}"
+  activate_control_app control_socket, {auth_token: CDO.puma_control_server_token}
 end

@@ -50,7 +50,8 @@
       "blueprint_3.png": "79e51c90-060f-42be-866b-469407d7a04f.png",
       "blueprint_4.png": "60770973-3cc3-45f9-9784-51b493207428.png"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:03.812+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level4_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level4_2025\"}]"

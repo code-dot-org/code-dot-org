@@ -1,0 +1,66 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-18T19:09:53.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Random Joke (Promise Chain)</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header>\n    <h1>Random Joke Generator</h1>\n    <p>Click the button to load a joke from the Official Joke API.</p>\n  </header>\n\n  <main>\n    <button id=\"btn\">Get a joke</button>\n    <p id=\"status\">Status: ready</p>\n\n    <section class=\"card\" aria-live=\"polite\">\n      <h2>Joke</h2>\n      <p id=\"setup\">(setup will appear here)</p>\n      <p id=\"punchline\">(punchline will appear here)</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  margin: 24px;\n  line-height: 1.4;\n}\nbutton {\n  padding: 10px 14px;\n  font-size: 16px;\n}\n.card {\n  margin-top: 16px;\n  padding: 16px;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  max-width: 650px;\n}\n#status {\n  margin-top: 12px;\n  font-weight: 600;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.querySelector(\"#btn\");\nconst statusEl = document.querySelector(\"#status\");\nconst setupEl = document.querySelector(\"#setup\");\nconst punchlineEl = document.querySelector(\"#punchline\");\n\nbtn.addEventListener(\"click\", function () {\n  statusEl.textContent = \"Status: loading...\";\n\n  fetch(\"https://official-joke-api.appspot.com/random_joke\")\n    .then(function (response) {\n      return response.json();\n    })\n    .then(function (data) {\n      setupEl.textContent = data.setup;\n      punchlineEl.textContent = data.punchline;\n      statusEl.textContent = \"Status: done\";\n    });\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Refactor the Code\r\n\r\nThis `.then()` promise chain loads a joke from the [Random Joke API](https://official-joke-api.appspot.com/random_joke) but the code is hard to read.\r\n\r\nUse AI Tutor to refactor (or rewrite) the code in `script.js` using `async` and `await`. Make sure not to change *how* the app works - it should still display a random joke every time the button is clicked.\r\n\r\n:::details [Not sure where to start?]\r\n1) Create an async function `getJoke()`.\r\n2) Move the `fetch(...)` code inside `getJoke()` and rewrite it using:\r\n   - `await fetch(url)`\r\n   - `await response.json()`\r\n3) Update the button click handler so it calls `getJoke()`. \r\n4) Check that clicking “Get a joke” displays a setup and punchline.\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpO5i6w6Xr7PNjGUn97\nv3HGVYZAxsXwYTumGKpdwmtvLD3pnuF+vRWFQiPflkKr9Drk6KB//d9Mr8vG\nfLkmDLEp6hl9i2umZxwIZe0g1QhFjKh7l2GtXshzc4a6dOOH+//REW8Xbv87\nIq0GK84q5gVcIvBontrAXyke0dOP//MLBLXXmAfN57Jdj4hiVFCKg4yYWMvF\n2FC4YTA3ov8zSJsAh2tMAoOqKAN3hCs4Qs+HeG5k4ty0El3WcRlzgQE6NYjB\nUs1ru6pqNHgNIYxpfLM69j71muXVcRx/ilugopxyQ4mTVin4rrXWLxIT8r/v\nL3slwHEszSKX6LFRBdRFBe1T/0BNKwlWtm3nQvh5VejmFRVOKNLy3Ze6sQrV\nv2hX74TqVji6m5rdMo0RRZzETJFKUmWrYZDYJDILLV1hHDVHZ5+P4dNs49GE\nFj+z4DcI8QjGw7FaOzpvlxg3Ixsf1UUswiYwUnxTMz8ujD+dm7zKVqn0LP6e\n6SqNmIhHwfq28Xq5D/b7nfUCI+TOgrPQv6APGzxc4Rv6TqowftoYwl2Fg8QR\n1b+K0k/uZmp+QEqbTvL92JneX/HIIjW9v7Sno8DD72pSi72IAuQpSZ1E+jJj\nki086MKbZm7fjLU6X8RUhbF9eSKfvk5S0mZiULeEAC/xIVVpGWtrUP6K1WLx\nZT+14u2zd8Sps+NTTp7iVGtSbH3izS+44/N10xEtlN/kmzPW99Sa7VLD+cxl\nRXwjZ87A/1duHto3ejfABWHCILofan4W6Yz0aNCrSUgblwXKmXwNhEx12zfB\nXrFrq8ilzjKrnWXEwQmPdAp6lFJbIabuwRyynfCMUaKHeAn0ajx63sg449U9\nagLIQQBFsNh3rl+zCDyZdb7Q6u0hQccAd5GCnm7VtE9WERJyoyHLE8YTRi6U\nlKwhxSiHf4qKTIHsz/O0Rs6k0aOHiuV7rtBvAxPAN2DDvoK6bCJUVuc5nfyY\nqSMIMhu8aOpH7F7qEIojRolGPQSrl6CwSpdhnf2sAyd4n0ZkDSn4ic52rqh3\nWUKW+MJJeXBJEM3JhAYC1+e1oaluOr+dc1f5tsQSZwqVZYtPVJ2ilXtImpvK\netZWeWL2rgLcERY75KuMHbAFIBDX0t9Btp7u9AgQ0L6oTab2ATrLBGCawkml\nLkhnuUZ8K4LFcw8RHexr72WxxZjDkZh1VMGWKwiDUObgMp5jp2vStE7NXSqO\n1wn/lX5CY9gOzET5ukxjjd+UKv+XBOW5c03Kzx6PTWDk33bu19rIaCKo+psK\nZ1UCcDbqWw0feFKS8Zzc4p1HVdxtIaSACR60iof8N4/LYLdxfCiaPHWgJpzp\n6nG73EKP699Dc79r75QiC+C/TDoOFCda6K/EbuqRSzVsMxtZkUnPsR2qeaLa\ntdnErXD7ev+KZDpyQXhVERDLp6DjHgHrCsZrCnHToRPLFo6Mr1llTBCiAsId\nLF159EV9kikoF2MxkogrNAfeFJX1tyN6QDeMiE/EApVYtvEjKZZkbSe26S9V\nCpWvjtE8UfSJoXjl5ltiksyPVNtx7uI7i4uRJmDr0sJs4rLi7uLPWevaNM2M\niEn0CFTKbV+ijU3ViFsBADifTcP9gJ3vG/RNw6sWjwz7WhK6c6j6Z3udnpaL\nCeeV6PQZ7kKcoTQD4S3VpET2JMRmQ3jBd8BXOpiLX77KSVIRRUUiG/rxruDs\nPZgWMAgMDvadDOO8dK0N0+43ICChce8uET4YlJo5f7FKnyPDXwrc6Lg5DwLF\nTdKcgBXKfXXP8DtZjWLo5fnaqW5jaGMc+vkI0UOj92BbARWv0G1e2sEMUOVi\nqhenE5pQhgtOp/rEyK+1A4jLzYZnOAWMqPW029wJTlfYH3Q650s450/5h2qF\nBYiIrCNC1q8iSY6Q+wcaGD7n1xXPSgvqagjlTRbIurpLPQVR25H5GbjfC/JX\nndOsGbcE1vbWTJL8d/US/PK4pF8raWv3TEwfBaoZI2t5+YomACmwLEoM6yPN\n+gSq8503pe8TNx8svdXfs6Jdh4V8Ixadk7nvENP7Q+4KDr4AKrNKqfCR7rit\nt3AO8wvexMpj4kw0iX7o7Lt12xgvyrrW9V63ht9D7lJDo9Y47UzKR2oqC/x5\ncGDalKFLKmp2NYi1Xup+kds6agCY9TOHwUkOG9B+xU0u4rsiMrfcIN9cMPF0\nYkaOLdNWwqI5jQLYA7wRMBLaD2A1Eroh5jP9ooleZb4JRZsq0qq2WqUAwr5P\nOnS/CS5tUmzJMgzxYsC7ZkoBGBKX+k1YU/zrVjBk0jARiQM0exXbwhN1QKys\n42WYdM45Xm6OOjYnmdJYFaQGHCX6xqALZW5uNS6pQWtm+dM+AvP4aZQMfMVa\nOyQ64exf0N1r7J5NO31FRFG2UmQs5/VCZrWTbwK2Ums3XPTLkVDDfaKwMKgU\nEV1scdiO6FUk7pMgkW5fqT58KXp3mtlpbv0Dq3+hv/SJ2NfcqDBsPnyz3Wv6\n8I00zHlHA6TlbrUS5qDMdEgSoggmWlbHd3Q8Pn+sVSicrwJ5CXKXEuDn6f0w\nNXY1uWgxDYE7mVbU2BfHch5SC2uNRBK07lzO1tccXAFujYy330yIcq0sktKm\nNSsAyFmwbQ8Awn4skVqthxF+mkbUu1VmzIs/W1Gm3mBFmN03p+hJPIgx7W2c\n69uvxzsiGTVLSNuH7hmO/Yi0u4ef2323fy2uRwSFtfYghprH4EKZ/Mj24jFp\nt14QNe625O5K9xnFW0zYz8ps50ikC4pXzFBEcS4gGWrlWT/bxbrL3OyP+75K\nLytTb9u+u3vZJKAwzNzA/92Ort/BcwvjE6V/tvhSwhn0q4YGByv+CSTtAnBI\nIMw7h8Wm4V2JSNmsaYrcyfM8YZkmiazi5jo5T0fuj2J+DyQp4t+F4XeEeQOw\nfkoJN7zV9Q8tIONKeg3CMbIwMe86vRqAEFJksHKFmnlx2/7L0/HA7UfrWRGR\n9ZBBGAv6ZHNhBbJP00qFC+pOcvT2DObBwAZAobtGU6SNmZe2uZ05z3NEWCHE\n/ZIXlOAxzPwg5xfi9JgZ0dqF+lL94vcLF0SvCvQyCqDLhdKQ+UU7mZh9ouPY\nv5X6zi0OqD4lkmRXNpupONJrj/CJjzvC/ecLigtXXQqp7ukRa/P/7JGwWojt\nXplalp/RHxyQLBSk/CjTQIItc6C7JciMObgVZGhPCnjhaOGOvPsW0iRjLJq5\nCpA1+Aal0w8/X/QBJFJQIrowLSKwPPUXyqZlWZ8zY4o9SE0D6P5fpkp32owW\nOk3slvXGLposxtPma08KTV2xz/Rf/XFo/eA0nFm+ebakIby3HfZCjyE2Zjny\n4zb+Wq5xPyMfT8dIrO6P5lMbDvGfp0kB525G2D8RiP+SFWcFNPfJ99VIUzwq\nOyRkB+efQoBI+S8KmAykxslWEWZVleyaFu6qkQNOqUjgp3jFSnobAtlRvNyS\nlYDVkjw6XL0lWbyUe1H1smi5o+ZJGtC8tYegvAlhbQI78KWNuciNzxRWDIoj\njaN2Rr8bux9SNmI4NTRbj1J4359vauht3CGr5TV3UuIeJDn2YceJKB3VkVS1\nHBtOQ4qBST/8qFlWseLNNL53QRPp6PxgwqUvoj2HwV1UTaWVBHTz3ig+ncCo\nhcvft9ZFiRfhhm1D022h8rEemkcFdCo=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T19:09:53.713+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson4-level1-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson4-level1-test-2025-pilot\"}]"
+}]]></config>
+</Weblab2>

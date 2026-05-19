@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-12-15T17:06:37.000Z",
   "level_num": "custom",
@@ -16,13 +17,13 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -64,9 +65,9 @@
     "bubble_choice_description": "Display the schema information for the app you've chosen to design.",
     "display_name": "Choose Your Own",
     "thumbnail_url": "https://images.code.org/82d6ca43ce7c2cc37622a7bf09532553-creatyourown.png",
-    "name_suffix": "_2025-pilot"
+    "name_suffix": "_2025-pilot",
+    "long_instructions": "## Wiring Your Custom App Data to the Display\r\n\r\nYour task is to populate and display data for three items in your **custom app** using the schema you designed in the previous level. This exercise uses **parallel arrays** and **manual indexing**.\r\n\r\n1.  **Update HTML and CSS:** Upload the picture of your schema and work with AI to update the `index.html` and `style.css` files.\r\n    * **Customize:** Change the labels, IDs, and CSS class names in the starter HTML and CSS to match the fields in your schema (e.g., change `fieldA-1` to something specific like `status-1` or `priority-1`).\r\n\r\n2.  **Define Parallel Arrays (Data):** In your `script.js` file, find the \"Student Task 1\" section. Define three or more **parallel arrays** (lists) that hold the data for your custom app items.\r\n    * Each array must contain at least three examples.\r\n    * **Critical:** The item at the same **index** (e.g., index `[0]`) across all arrays must belong to the same single app item.\r\n    * *Example:* Define `const itemNames = [\"...\", \"...\", \"...\"];`\r\n\r\n3.  **Manually Wire the Data (JavaScript):** In the `script.js` file, first update the **DOM Element Hooks** variables (e.g., change `fieldA1` to your new variable name) to match your customized HTML IDs. Then, complete the empty `updateDisplay` function under \"Student Task 2\". Write code that uses **manual indexing** to assign array values to the correct HTML element.\r\n\r\n    * **Item 1:** Use the DOM variables for Item 1 (e.g., `title1`) and access the data at array **index `[0]`** (e.g., `itemNames[0]`).\r\n    * **Item 2:** Use the DOM variables for Item 2 (e.g., `title2`) and access the data at array **index `[1]`**.\r\n    * **Item 3:** Use the DOM variables for Item 3 (e.g., `title3`) and access the data at array **index `[2]`**.\r\n\r\n4.  **Test:** Run your code. The three items in your custom app's display should now correctly show the specific data you defined in your arrays."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:37.726+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3c-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3c-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:37.726+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3c-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3c-test-2025\"},{\"changed_at\":\"2026-02-10 02:46:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

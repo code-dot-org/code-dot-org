@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -735,21 +736,15 @@ describe('LearningGoals - Enzyme', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+    deprecatedExpect(wrapper.text()).to.contain(
       i18n.rubricLearningGoalSummary()
     );
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[1].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
   });
 
   it('renders the summary page after AI evaluations are run', () => {
@@ -761,7 +756,7 @@ describe('LearningGoals - Enzyme', () => {
       />
     );
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+    deprecatedExpect(wrapper.text()).to.contain(
       i18n.rubricLearningGoalSummary()
     );
   });
@@ -828,9 +823,7 @@ describe('LearningGoals - Enzyme', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -839,9 +832,7 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[1].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -852,9 +843,7 @@ describe('LearningGoals - Enzyme', () => {
         teacherHasEnabledAi={false}
       />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -979,15 +968,25 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+
+    const title = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h5')
+      .at(0);
+    deprecatedExpect(title.find('span').text()).to.equal(
       i18n.rubricLearningGoalSummary()
     );
-    deprecatedExpect(
-      wrapper.find('BodyThreeText StrongText').at(0).text()
-    ).to.equal('Learning Goal 1');
-    deprecatedExpect(wrapper.find('BodyThreeText').at(2).text()).to.equal(
-      'Limited Evidence'
-    );
+
+    const strongNodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'strong');
+    deprecatedExpect(strongNodes.at(0).text()).to.equal('Learning Goal 1');
+
+    const body3Texts = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3')
+      .map(node => node.text());
+    deprecatedExpect(body3Texts).to.include('Limited Evidence');
     postStub.restore();
   });
 

@@ -1,0 +1,1033 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-10T16:32:33.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Exploration 3: Safer Social Media\r\n\r\n**Inquiry Question**: How can we update images that we provide to AI to account for safety and privacy?\r\n\r\n1. Choose one of the social media posts, drag it into the _Original Image_ section, and analyze possible data what you see. List data points visible within the post into three categories: public, private, and sensitive.\r\n2. Save your sketch into the backpack. Import the canvas into the AI Chat on Level 2 and ask it multiple questions about the person who might have made the social media post.\r\n3. Copy the image into the _Anonymized Image_ section. Drag and resize the black boxes to hide private or sensitive data in the image.\r\n\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "9MN6FQW-gRPK6mrh7hYw-",
+            "type": "shape",
+            "position": {
+              "x": -539,
+              "y": 10.75
+            },
+            "style": {
+              "width": 1286.0000000000005,
+              "height": 787.9999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1286,
+              "height": 788
+            }
+          },
+          {
+            "id": "iN_mv987vqmZSIAK6sshC",
+            "type": "text",
+            "position": {
+              "x": 19.16666666666606,
+              "y": 20.333333333333428
+            },
+            "data": {
+              "text": "Original Image",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 160,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "iDWY96bxd3AoTelH6wn0R",
+            "type": "text",
+            "position": {
+              "x": -133.0000000000009,
+              "y": 1935.166666666666
+            },
+            "data": {
+              "text": "Anonymized Image",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 207,
+              "height": 47
+            }
+          },
+          {
+            "id": "psLob9HKcLpvn9u3UyJzu",
+            "type": "text",
+            "position": {
+              "x": -329.000000000001,
+              "y": -193.49999999999983
+            },
+            "data": {
+              "text": "Safer Social Media",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 200,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "bSFG0FSCuzuL3YPjmcL5a",
+            "type": "shape",
+            "position": {
+              "x": -524.0833333333335,
+              "y": 842.2976190476193
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403577
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "sazKT7KGmWQBfF5f7M6As",
+            "type": "shape",
+            "position": {
+              "x": -87.3537110669323,
+              "y": 842.2976190476193
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403575
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "WuvDU_kheh-n2kkJEGPXF",
+            "type": "shape",
+            "position": {
+              "x": 349.3858515573222,
+              "y": 844.8075594054721
+            },
+            "style": {
+              "width": 386.53081510934373,
+              "height": 889.1650099403575
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 387,
+              "height": 889
+            }
+          },
+          {
+            "id": "TUYY7MxPGF99CusDLJTKW",
+            "type": "text",
+            "position": {
+              "x": -440.5000000000007,
+              "y": 861.8333333333333
+            },
+            "data": {
+              "text": "Public Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 129,
+              "height": 47
+            }
+          },
+          {
+            "id": "m_HNcRJd_KOBPF9C3LoVq",
+            "type": "text",
+            "position": {
+              "x": -25.500000000001137,
+              "y": 864.3333333333333
+            },
+            "data": {
+              "text": "Private Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 137,
+              "height": 47
+            }
+          },
+          {
+            "id": "b8gVDeUO3TmkSGJdoElf3",
+            "type": "text",
+            "position": {
+              "x": 406.99999999999886,
+              "y": 859.3333333333333
+            },
+            "data": {
+              "text": "Sensitive Data",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 159,
+              "height": 47
+            }
+          },
+          {
+            "id": "6-POMe_KEUxquov80lNrx",
+            "type": "image",
+            "position": {
+              "x": -625.1666666666679,
+              "y": 765.5476190476195
+            },
+            "style": {
+              "width": 188.5,
+              "height": 188.5
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/27f944a08094f2088c427571f3b065aef3237460.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 45
+            },
+            "measured": {
+              "width": 189,
+              "height": 189
+            },
+            "dragging": false
+          },
+          {
+            "id": "_33VALnMZcW3HIYKFvCGe",
+            "type": "image",
+            "position": {
+              "x": -819.8333333333333,
+              "y": 296.8809523809525
+            },
+            "style": {
+              "width": 188.5,
+              "height": 188.5
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/27f944a08094f2088c427571f3b065aef3237460.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 340
+            },
+            "measured": {
+              "width": 189,
+              "height": 189
+            },
+            "dragging": false
+          },
+          {
+            "id": "wSEijdcDOJ7nSGJqhZpxH",
+            "type": "shape",
+            "position": {
+              "x": -532.3333333333335,
+              "y": 1920.7499999999989
+            },
+            "style": {
+              "width": 1286.0000000000005,
+              "height": 787.9999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1286,
+              "height": 788
+            }
+          },
+          {
+            "id": "7JBXNL9zw3bQjVZKG1a6g",
+            "type": "image",
+            "position": {
+              "x": -591.4336677193592,
+              "y": 1718.8809523809523
+            },
+            "style": {
+              "width": 188.5,
+              "height": 188.5
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/27f944a08094f2088c427571f3b065aef3237460.png",
+              "altText": "",
+              "showHandles": false,
+              "rotation": 45
+            },
+            "measured": {
+              "width": 189,
+              "height": 189
+            },
+            "dragging": false
+          },
+          {
+            "id": "Eln6uDMhOJ19ZnjMuZNmu",
+            "type": "image",
+            "position": {
+              "x": -396.74999999999955,
+              "y": 1554.6309523809525
+            },
+            "style": {
+              "width": 128.66666666666674,
+              "height": 128.66666666666674
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/fcaf39c607267bb51cc2554664eadc0674bd491c.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 129,
+              "height": 129
+            }
+          },
+          {
+            "id": "i5kSdcGzZ5TdRabXuRpZA",
+            "type": "image",
+            "position": {
+              "x": 65.25000000000023,
+              "y": 1563.297619047619
+            },
+            "style": {
+              "width": 114.66666666666652,
+              "height": 114.66666666666652
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/1f338b076ec6bd4ef09f87962bf3ac9d29c802b4.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 115,
+              "height": 115
+            }
+          },
+          {
+            "id": "QRFWxChj5TgTgrOCP5kvu",
+            "type": "image",
+            "position": {
+              "x": 489.91666666666583,
+              "y": 1571.2976190476188
+            },
+            "style": {
+              "width": 118.66666666666697,
+              "height": 118.66666666666697
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1a_2026-test/uuid/fbb975c70188869daeac255de991cb080bd34f71.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 119,
+              "height": 119
+            }
+          },
+          {
+            "id": "9LwcZ0SEN0eQnfRMgwR1d",
+            "type": "shape",
+            "position": {
+              "x": -481.4160052910061,
+              "y": 945.9999999999992
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "C7lbp2tFQva4iqNMkaPgC",
+            "type": "shape",
+            "position": {
+              "x": -479.85956790123544,
+              "y": 1071.2932098765425
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "6jXtxX1L500xan3jkLHR3",
+            "type": "shape",
+            "position": {
+              "x": -481.4160052910061,
+              "y": 1195.8082010582002
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "VjHpCeUKwAmJxEsWhgp7V",
+            "type": "shape",
+            "position": {
+              "x": -482.58333333333417,
+              "y": 1323.046957671957
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "nmgGMHEImWHZ6kG1DTIy1",
+            "type": "shape",
+            "position": {
+              "x": -481.4160052910061,
+              "y": 1450.2857142857135
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "4rQuJYOVir703RpSUpbHA",
+            "type": "shape",
+            "position": {
+              "x": -38.08267195767286,
+              "y": 942.6666666666657
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "4-bXqIG8O2TQyA9wkiDw7",
+            "type": "shape",
+            "position": {
+              "x": -36.52623456790218,
+              "y": 1067.959876543209
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "d3O2WdXSFyNYTOETouEqR",
+            "type": "shape",
+            "position": {
+              "x": -38.08267195767286,
+              "y": 1192.4748677248667
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "Q03Hje_c2TY9NWaCUSXxg",
+            "type": "shape",
+            "position": {
+              "x": -39.25000000000091,
+              "y": 1319.7136243386235
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "rIGzaBF5WgqRksDCaKAUv",
+            "type": "shape",
+            "position": {
+              "x": -38.08267195767286,
+              "y": 1446.95238095238
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "_G_pngFXUwfZ0AAZsLl2v",
+            "type": "shape",
+            "position": {
+              "x": 400.2506613756604,
+              "y": 940.9999999999992
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "GGU1m81A16upYBGSlZWfa",
+            "type": "shape",
+            "position": {
+              "x": 401.8070987654311,
+              "y": 1066.2932098765425
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "nYS_rzdFyYxGs7IypFexs",
+            "type": "shape",
+            "position": {
+              "x": 400.2506613756604,
+              "y": 1190.8082010582002
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "tQ4wkPyvT4rOd6yblnWvs",
+            "type": "shape",
+            "position": {
+              "x": 399.08333333333235,
+              "y": 1318.046957671957
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "_WTNxQhulh_S9y5mfThiF",
+            "type": "shape",
+            "position": {
+              "x": 400.2506613756604,
+              "y": 1445.2857142857135
+            },
+            "style": {
+              "width": 291.83201058201064,
+              "height": 84.04761904761916
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 292,
+              "height": 84
+            }
+          },
+          {
+            "id": "nK9cnZzTRhnlq3VEKwD_m",
+            "type": "text",
+            "position": {
+              "x": 921.9166666666654,
+              "y": 1850.0277777777774
+            },
+            "data": {
+              "text": "Drag and resize these black boxes to \ncover private or sensitive data in the\nsocial media image you selected.",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 382,
+              "height": 104
+            }
+          },
+          {
+            "id": "eewq1yaSyXp7r-myNLBRN",
+            "type": "text",
+            "position": {
+              "x": 744.5833333333323,
+              "y": 1125.3611111111109
+            },
+            "data": {
+              "text": "Analyze ONE image and list data points visible \nwithin the post into three categories: \npublic, private, and sensitive",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 478,
+              "height": 104
+            },
+            "dragging": false
+          },
+          {
+            "id": "jhqGaph69cLD8Rtd8Jtua",
+            "type": "image",
+            "position": {
+              "x": -568.464285714286,
+              "y": -197.30952380952158
+            },
+            "style": {
+              "width": 232.0000000000001,
+              "height": 232.0000000000001
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1c_2026-test/uuid/62669e4369c9dd3579ccb71bd820e65d96f5126f.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 220,
+              "height": 188
+            },
+            "dragging": false,
+            "width": 220,
+            "height": 188,
+            "resizing": false
+          },
+          {
+            "id": "WenUUxq4FQQsWRlAST8zo",
+            "type": "text",
+            "position": {
+              "x": -1315.607142857143,
+              "y": -162.44841269841237
+            },
+            "data": {
+              "text": "Choose one of the images below\nand drag it into the \"Original Image\"\nbox",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 367,
+              "height": 104
+            }
+          },
+          {
+            "id": "q_4obqLVCQpgfxTC2N69j",
+            "type": "image",
+            "position": {
+              "x": -1265.2976190476186,
+              "y": -50.90692014510523
+            },
+            "style": {
+              "width": 373.41052267220516,
+              "height": 346.7640630022503
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1c_2026-test/uuid/4063ea47ca6aaa4182aa141156d158c8c7406111.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 373,
+              "height": 347
+            }
+          },
+          {
+            "id": "nmq70syxlFrIf8F3d7kvq",
+            "type": "image",
+            "position": {
+              "x": -1263.2976190476181,
+              "y": 700.8917840731216
+            },
+            "style": {
+              "width": 375.52548131370344,
+              "height": 351.63202545068935
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1c_2026-test/uuid/6bb81e72974d5ffd49b9695cad9440fbec1570a9.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 376,
+              "height": 352
+            }
+          },
+          {
+            "id": "g_ZrhEj84zNn9p-n5pc1v",
+            "type": "image",
+            "position": {
+              "x": -1283.6420068027203,
+              "y": 320.6904761904773
+            },
+            "style": {
+              "width": 413.3443877551022,
+              "height": 347.3333333333335
+            },
+            "data": {
+              "src": "/level_starter_assets/aid-thinking-critically-lesson7-level1c_2026-test/uuid/c48020f4669b1dd5c716140445b37a0d823755e5.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 413,
+              "height": 347
+            }
+          },
+          {
+            "id": "FVb5bwqYIxXtH3YpmZ24y",
+            "type": "shape",
+            "position": {
+              "x": 821.416666666667,
+              "y": 1961.9642857142862
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "dmva0iJGFAIzomF2-96MR",
+            "type": "shape",
+            "position": {
+              "x": 823.6388888888889,
+              "y": 2066.4087301587306
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "C2KCw-udNO996xDxofboG",
+            "type": "shape",
+            "position": {
+              "x": 824.7500000000001,
+              "y": 2167.519841269842
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "36FE4xRjanBdkvzUKOHfm",
+            "type": "shape",
+            "position": {
+              "x": 823.4166666666666,
+              "y": 2269.9642857142862
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "KbYsFMXHryP6k2BWGbx3_",
+            "type": "shape",
+            "position": {
+              "x": 1188.0833333333337,
+              "y": 1958.6309523809527
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "KX2BPXOZGIciALzQ6deqJ",
+            "type": "shape",
+            "position": {
+              "x": 1190.3055555555557,
+              "y": 2063.075396825397
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "nrEmXaAJQqTJXhAreqRhV",
+            "type": "shape",
+            "position": {
+              "x": 1191.416666666667,
+              "y": 2164.1865079365084
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          },
+          {
+            "id": "HABWQguOq49ia5s72UlDa",
+            "type": "shape",
+            "position": {
+              "x": 1190.0833333333335,
+              "y": 2266.6309523809527
+            },
+            "style": {
+              "width": 313.3333333333335,
+              "height": 79.99999999999999
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#1e1e1e",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 313,
+              "height": 80
+            }
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 753.1587377622435,
+          "y": 146.84500327623596,
+          "zoom": 0.5
+        }
+      }
+    },
+    "display_name": "Safer Social Media",
+    "bubble_choice_description": "How can we update images that we provide to AI to account for safety and privacy?",
+    "thumbnail_url": "https://images.code.org/6f08a8b948fbee481f77f6c44b2386b7-1c.png",
+    "name_suffix": "_2026-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T16:32:33.293+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson7-level1c_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson7-level1c_2026-test\"},{\"changed_at\":\"2026-05-04 19:35:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

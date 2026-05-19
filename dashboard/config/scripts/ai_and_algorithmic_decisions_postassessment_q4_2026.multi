@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q4_2026'
+
+question 'A movie ticket app starts with `let seatsAvailable = 50;`. Each time a user buys a ticket, the app runs `seatsAvailable = seatsAvailable - 1;` and updates a "Seats left" number on the page. What three-step pattern is this an example of?'
+
+wrong 'Listen, generate, display.'
+wrong 'Specify, predict, claim.'
+wrong 'Function, parameter, argument.'
+right 'Create a variable, update the variable, display the updated value.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+MARKDOWN

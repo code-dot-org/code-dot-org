@@ -1157,6 +1157,59 @@ module Services
       assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
+    test 'seed clears md5 when course version is missing and resources are present' do
+      script = create_script_tree(name_prefix: 'test-md5-clear')
+      assert script.get_course_version
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      # Verify the JSON contains resources and vocabularies
+      data = JSON.parse(json)
+      assert data['resources'].any?, 'expected resources in serialized data'
+      assert data['vocabularies'].any?, 'expected vocabularies in serialized data'
+
+      # Destroy the unit group and course version so they won't be available during seed
+      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy = Unit.find(script.id)
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
+      script_to_destroy.original_unit_group.course_version.destroy!
+      script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json(json, md5: md5)
+
+      seeded_script = Unit.find_by_name(script.name)
+      assert_nil seeded_script.md5, 'md5 should be nil because course version was missing and resources/vocab were present'
+    end
+
+    test 'seed preserves md5 when course version is missing but no resources or vocabularies' do
+      script = create_script_tree(
+        name_prefix: 'test-md5-no-resources',
+        num_resources_per_lesson: 0,
+        num_resources_per_script: 0,
+        num_vocabularies_per_lesson: 0
+      )
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      data = JSON.parse(json)
+      assert_empty data['resources'], 'expected no resources in serialized data'
+      assert_empty data['vocabularies'], 'expected no vocabularies in serialized data'
+
+      # Destroy the unit group and course version
+      script_to_destroy = Unit.find(script.id)
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
+      script_to_destroy.original_unit_group.course_version.destroy!
+      script_to_destroy.destroy!
+      unit_group_to_destroy.destroy!
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json(json, md5: md5)
+
+      seeded_script = Unit.find_by_name(script.name)
+      assert_equal md5, seeded_script.md5, 'md5 should be preserved when no resources or vocabularies need importing'
+    end
+
     test 'seed_from_json_file stores md5 when provided' do
       script = create_script_tree(name_prefix: 'test-md5-storage')
       json = ScriptSeed.serialize_seeding_json(script)

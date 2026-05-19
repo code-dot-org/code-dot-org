@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -11,6 +10,7 @@ import {LegacySingleLevelGroupDialog} from '@cdo/apps/legacySharedComponents/Leg
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import {getStore} from '@cdo/apps/redux';
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 
@@ -37,13 +37,16 @@ $(document).ready(() => {
       const container = this;
       const store = getStore();
 
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={store}>
           <InstructorsOnly>
             <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
           </InstructorsOnly>
         </Provider>,
-        container
+        container,
+        {
+          legacyReactDomRender: true,
+        }
       );
     });
   }

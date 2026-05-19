@@ -188,9 +188,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :join, params: {id: section.code}
     assert_response :forbidden
@@ -306,6 +304,48 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # See section_test.rb for tests covering the shape of the section summary.
     assert_equal returned_section.summarize.with_indifferent_access,
       returned_json.with_indifferent_access
+  end
+
+  test 'create: enables ai_chat_access_level for courses requiring ai chat tools' do
+    sign_in @teacher
+    unit_group = create_unit_group_with_essential_ai_chat_tools
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], returned_section.ai_chat_access_level
+  end
+
+  test 'create: enables ai_chat_access_level for courses with optional ai chat tools when teacher is in pilot' do
+    sign_in @teacher
+    SingleUserExperiment.stubs(:enabled?).returns(true)
+    unit_group = create_unit_group_with_optional_ai_chat_tools
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], returned_section.ai_chat_access_level
+  end
+
+  test 'create: does not enable ai_chat_access_level for courses without ai chat tools' do
+    sign_in @teacher
+    unit_group = @csp_unit_group
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED], returned_section.ai_chat_access_level
   end
 
   test 'invalid params does not create section and returns an error' do
@@ -1032,6 +1072,72 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: enables ai_chat_access_level when assigning a course that requires ai chat tools" do
+    sign_in @teacher
+    unit_group = create_unit_group_with_essential_ai_chat_tools
+    section = create(:section, user: @teacher, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when already enabled and course changes" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: nil, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when set to essential_only and course changes" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: nil, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when course does not change" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: unit_group.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED], section.ai_chat_access_level
+  end
+
   test "update: course_id is not updated if invalid" do
     UnitGroup.stubs(:course_assignable?).returns(false)
 
@@ -1253,44 +1359,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     Section.find returned_json['id']
   end
 
-  test "update_sharing_disabled updates sharing_disabled" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script.id)
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: true
-    }
-    assert_response :success
-    section.reload
-    assert_equal(true, section.sharing_disabled)
-
-    post :update_sharing_disabled, params: {
-      id: section.id,
-      sharing_disabled: false
-    }
-    assert_response :success
-    section.reload
-    assert_equal(false, section.sharing_disabled)
-  end
-
-  test "update_sharing_disabled: cannot update section you dont own" do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
-  end
-
-  test "update_sharing_disabled: cannot update section if not logged in " do
-    post :update_sharing_disabled, params: {
-      id: @section.id,
-      sharing_disabled: true,
-    }
-    assert_response :forbidden
-  end
-
   test "available_participant_types: returns forbidden if no user" do
     get :available_participant_types
     assert_response :forbidden
@@ -1475,33 +1543,173 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  test 'can toggle ai_tutor_enabled by the section teacher' do
+  test 'can set ai_chat_access_level by the section teacher' do
     sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
     assert_response :success
     @section.reload
-    assert @section.ai_tutor_enabled
-
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
-    assert_response :success
-    @section.reload
-    refute @section.ai_tutor_enabled
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], @section.ai_chat_access_level
   end
 
-  test 'cannot set ai_tutor_enabled by a different teacher' do
+  test 'cannot set ai_chat_access_level by a different teacher' do
     sign_in @following_teacher
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
     assert_response :forbidden
   end
 
-  test 'set ai_tutor_enabled returns 403 for unauthorized access' do
-    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+  test 'set ai_chat_access_level returns 403 for unauthorized access' do
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
     assert_response :forbidden
   end
 
-  test 'set ai_tutor_enabled fails when section does not exist' do
+  test 'set ai_chat_access_level fails when section does not exist' do
     sign_in @teacher
-    post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
+    post :set_ai_chat_access_level, params: {id: -1, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level fails for invalid value' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: 'invalid_value'}
+    assert_response :bad_request
+  end
+
+  test 'set ai_chat_access_level fails when passed nil' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: nil}
+    assert_response :bad_request
+  end
+
+  # Helper: build a section with a script containing two lessons, each with one script level.
+  # Lessons belong to a lesson_group so unit.lessons (through lesson_groups) finds them.
+  # Returns [section, student, lesson1, lesson2, sl1, sl2].
+  def setup_suggested_lesson_section
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    sl2 = create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, user: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    [section, student, lesson1, lesson2, sl1, sl2]
+  end
+
+  test 'get suggested_lesson returns nil when not set and section has no script' do
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_nil json_response
+  end
+
+  test 'get suggested_lesson returns fresh stored data without recomputing' do
+    lesson = create(:lesson)
+    fresh_timestamp = Time.now.utc.iso8601
+    @section.update!(suggested_lesson: {'lesson_id' => lesson.id, 'timestamp' => fresh_timestamp})
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_equal lesson.id, json_response['lesson_id']
+    # timestamp unchanged confirms no recompute happened
+    assert_equal fresh_timestamp, json_response['timestamp']
+    assert_equal lesson.localized_title, json_response['name']
+    assert json_response['url'].present?
+  end
+
+  test 'get suggested_lesson omits name and url when lesson is not found' do
+    fresh_timestamp = Time.now.utc.iso8601
+    @section.update!(suggested_lesson: {'lesson_id' => -1, 'timestamp' => fresh_timestamp})
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_equal(-1, json_response['lesson_id'])
+    assert_nil json_response['name']
+    assert_nil json_response['url']
+  end
+
+  test 'get suggested_lesson computes when data is absent and section has script' do
+    section, student, _lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+    assert json_response['timestamp'].present?
+    assert json_response['name'].present?
+  end
+
+  test 'get suggested_lesson recomputes when data is stale' do
+    section, student, lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    stale_timestamp = 2.hours.ago.utc.iso8601
+    section.update!(suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => stale_timestamp})
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+    refute_equal stale_timestamp, json_response['timestamp']
+  end
+
+  test 'get suggested_lesson skips compute when section has no script' do
+    sign_in @teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :success
+    assert_nil json_response
+    assert_nil @section.reload.suggested_lesson
+  end
+
+  test 'get suggested_lesson suggests first lesson when no students have completed any lesson' do
+    section, _student, lesson1, _lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson1.id, json_response['lesson_id']
+  end
+
+  test 'get suggested_lesson returns completed_unit when all lessons are completed' do
+    section, student, _lesson1, _lesson2, sl1, sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert json_response['completed_unit']
+    assert json_response['timestamp'].present?
+    assert_nil json_response['lesson_id']
+  end
+
+  test 'get suggested_lesson uses majority threshold: half or more students must complete' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, user: @teacher, script: unit)
+    student1 = create(:follower, section: section).student_user
+    create(:follower, section: section)
+
+    # 1 of 2 students (50%) completed lesson1 — meets the >= half threshold
+    create(:user_level, user: student1, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lesson, params: {id: section.id}
+    assert_response :success
+    assert_equal lesson2.id, json_response['lesson_id']
+  end
+
+  test 'get suggested_lesson is forbidden for a different teacher' do
+    sign_in @following_teacher
+    get :suggested_lesson, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'get suggested_lesson returns 403 for unauthenticated user' do
+    get :suggested_lesson, params: {id: @section.id}
     assert_response :forbidden
   end
 
@@ -1542,6 +1750,149 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal [@beta_unit_1.id.to_s, @beta_unit_2.id.to_s], cv_summary['units'].keys
   end
 
+  # create_demo
+
+  test 'create_demo: returns forbidden when not signed in' do
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns bad_request for invalid section type' do
+    sign_in @teacher
+    post :create_demo, params: {demo_type: 'invalid'}
+    assert_response :bad_request
+  end
+
+  test 'create_demo: creates section with preset config' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_equal 'My first AIF section', section.name
+    assert_equal 'email', section.login_type
+    assert_equal 'student', section.participant_type
+    assert_equal ['9', '10'], section.grades
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+    assert_equal 'high', section.demo_type
+    assert_equal 'high', returned_json['demo_type']
+  end
+
+  test 'create_demo: adds demo students to the section' do
+    sign_in @teacher
+    stub_demo_preset
+    demo_student = create(:student)
+    CDO.stubs(:demo_student_ids).returns({'high' => [demo_student.id.to_s]})
+    Policies::DemoSections.reset_cache!
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    section = returned_section
+    assert_includes section.students.map(&:id), demo_student.id
+  end
+
+  test 'create_demo: students cannot create demo sections' do
+    sign_in @student
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :forbidden
+  end
+
+  test 'create_demo: returns conflict when teacher already has a demo section of that type' do
+    sign_in @teacher
+    stub_demo_preset
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :success
+
+    post :create_demo, params: {demo_type: 'high'}
+    assert_response :conflict
+    assert_includes JSON.parse(@response.body)['error'], 'high'
+  end
+
+  test 'presets: returns forbidden when not signed in' do
+    get :presets
+    assert_response :forbidden
+  end
+
+  test 'presets: returns the preset projections' do
+    sign_in @teacher
+    high_unit = create(:unit, name: 'fake-high-unit')
+    middle_unit = create(:unit, name: 'fake-middle-unit')
+    high_unit_group = create(:unit_group, name: 'fake-high-course')
+    middle_unit_group = create(:unit_group, name: 'fake-middle-course')
+    create(:unit_group_unit, unit_group: high_unit_group, script: high_unit, position: 1)
+    create(:unit_group_unit, unit_group: middle_unit_group, script: middle_unit, position: 1)
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns(
+      {
+        high: {
+          demo_type: 'high',
+          section_name: 'Fake High Practice Section',
+          avatar_color: 8,
+          avatar_emoji: 5,
+          login_type: 'email',
+          participant_type: 'student',
+          unit: {
+            name: high_unit.name,
+            display_name: high_unit.localized_title,
+          },
+          unit_group: {
+            name: high_unit_group.name,
+            display_name: high_unit_group.localized_title,
+          },
+        },
+        middle: {
+          demo_type: 'middle',
+          section_name: 'Fake Middle Practice Section',
+          avatar_color: 1,
+          avatar_emoji: 0,
+          login_type: 'word',
+          participant_type: 'student',
+          unit: {
+            name: middle_unit.name,
+            display_name: middle_unit.localized_title,
+          },
+          unit_group: {
+            name: middle_unit_group.name,
+            display_name: middle_unit_group.localized_title,
+          },
+        },
+      }
+    )
+
+    get :presets
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 'Fake High Practice Section', response['high']['section_name']
+    assert_equal high_unit.name, response['high']['unit']['name']
+    assert_equal 'student', response['middle']['participant_type']
+  end
+
+  test 'presets: returns an empty response when no preset can be projected' do
+    sign_in @teacher
+    Policies::DemoSections.stubs(:preset_views_for_all_types).returns({})
+
+    get :presets
+
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  private def stub_demo_preset
+    Policies::DemoSections.stubs(:get_preset).with('high').returns(
+      {
+        section_name: 'My first AIF section',
+        login_type: 'email',
+        participant_type: 'student',
+        grades: ['9', '10'],
+        unit_name: @csp_script.name,
+        unit_group_name: @csp_unit_group.name,
+      }
+    )
+  end
+
   private def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
@@ -1559,5 +1910,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     create(:code_review_group_member, follower: @followers[0], code_review_group: @group1)
     create(:code_review_group_member, follower: @followers[1], code_review_group: @group1)
     create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
+  end
+
+  private def create_unit_group_with_essential_ai_chat_tools
+    unit = create(:unit, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    activity_section = lesson.activity_sections.first
+    create(:script_level, levels: [create(:aichat)], activity_section: activity_section)
+    unit_group = create(:unit_group, :stable)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    unit_group
+  end
+
+  private def create_unit_group_with_optional_ai_chat_tools
+    unit = create(:unit, :with_levels, lessons_count: 1, levels_count: 1)
+    unit.levels.first.update!(ai_tutor_available: true)
+    unit_group = create(:unit_group, :stable)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    unit_group
   end
 end

@@ -317,10 +317,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-  require 'devise/custom_failure'
-  config.warden do |manager|
-    manager.failure_app = Devise::CustomFailure
-  end
 
   require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
@@ -358,14 +354,6 @@ Devise.setup do |config|
     User.marketing_segment_data_keys.each do |key|
       auth.cookies[environment_specific_cookie_name("_teacher_#{key}")] = {value: "", expires: Time.at(0), domain: :all}
     end
-  end
-
-  OmniAuth.config.before_request_phase do |env|
-    session = env['rack.session']
-    Metrics::Events.log_event(
-      session: session,
-      event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
-    )
   end
 
   # ==> Mountable engine configurations

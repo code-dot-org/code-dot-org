@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-03T23:35:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Explain How Your Function Works",
+    "long_instructions": "Think about one of the parameterized functions you created in this lesson.\r\n\r\nAnswer the following:\r\n\r\n- What does it do?\r\n- What input does it take?\r\n- How does the input change what happens on the page?\r\n- Give one example:\r\n  - Input → What Changes → What is Displayed",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-03T23:35:04.374+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level5_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level5_2026\"},{\"changed_at\":\"2026-04-03 23:36:13 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-06 00:56:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -43,6 +43,7 @@ class UnitOverviewHeader extends Component {
     courseId: PropTypes.number,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
+    isOnTeacherDashboard: PropTypes.bool,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -108,6 +109,7 @@ class UnitOverviewHeader extends Component {
       isVerifiedInstructor,
       hasVerifiedResources,
       children,
+      isOnTeacherDashboard,
     } = this.props;
 
     const displayVerifiedResources =
@@ -198,7 +200,7 @@ class UnitOverviewHeader extends Component {
               />
             )}
           </div>
-          {!location.pathname.includes('teacher_dashboard') && (
+          {!isOnTeacherDashboard && (
             <ProtectedStatefulDiv ref={element => (this.protected = element)} />
           )}
         </div>

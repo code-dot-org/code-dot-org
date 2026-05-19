@@ -22,8 +22,8 @@ class Services::Clever::V3AuthOptionBuilderTest < ActiveSupport::TestCase
         _(result.authentication_id).must_equal clever_v3_id
       end
 
-      it 'sets version to v3.1' do
-        _(result.version).must_equal AuthenticationOption::Clever::VERSION[:v3_1]
+      it 'sets version to v3.0' do
+        _(result.version).must_equal AuthenticationOption::Clever::VERSION[:v3]
       end
 
       it 'preserves credential type as clever' do

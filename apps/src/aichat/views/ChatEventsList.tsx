@@ -1,37 +1,57 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState, useCallback} from 'react';
+import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
-import {ChatAsset, ChatEvent, isChatMessage} from '../types';
+import {
+  AiChatDisabledState,
+  ChatAsset,
+  ChatEvent,
+  isChatMessage,
+  ModelParameters,
+} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
+import EmptyStudentChatHistory from './EmptyStudentChatHistory';
 import WaitingAnimation from './WaitingAnimation';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
+  clientType?: string;
+  modelParameters?: ModelParameters;
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isAiTutorVersion?: boolean;
+  hasInstructionsDrawer?: boolean;
+  disabledState?: AiChatDisabledState;
+  renderLastMessagePostText?: (
+    onRequestScrollToBottom: () => void
+  ) => React.ReactNode;
 }
 
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
+  clientType,
+  modelParameters,
   events,
   isTeacherView,
   buildAssetUrl,
-  isAiTutorVersion,
+  hasInstructionsDrawer,
+  disabledState,
+  renderLastMessagePostText,
 }) => {
-  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
+  const chatDisabled = disabledState?.disabled ?? false;
+  const chatDisabledMessage = disabledState?.disabledMessage;
+  const chatDisabledLink = disabledState?.disabledLink;
+
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
@@ -83,6 +103,22 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       finalEventRef.current?.focus();
     }
   };
+
+  const hasChatHistory = events.length > 0;
+
+  const resolvedLastMessagePostText = useMemo(() => {
+    if (renderLastMessagePostText) {
+      return renderLastMessagePostText(scrollToLastMessage);
+    }
+  }, [renderLastMessagePostText, scrollToLastMessage]);
+
+  const lastChatMessageIndex = useMemo(() => {
+    if (!resolvedLastMessagePostText) return -1;
+    for (let i = events.length - 1; i >= 0; i--) {
+      if (isChatMessage(events[i])) return i;
+    }
+    return -1;
+  }, [events, resolvedLastMessagePostText]);
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -179,37 +215,30 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
-      {showScrollToBottom && (
-        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
-            className={moduleStyles.scrollToBottomButton}
-            ariaLabel="Scroll to bottom of messages"
-            aria-controls="chat-workspace-conversation"
-          />
-        </div>
-      )}
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
-          <ChatDisabled message={chatDisabledMessage} />
+        {chatDisabled && !(isTeacherView && hasChatHistory) ? (
+          <ChatDisabled message={chatDisabledMessage} link={chatDisabledLink} />
         ) : (
           <>
+            {hasInstructionsDrawer && (
+              <div className={moduleStyles.instructionsDrawerInset} />
+            )}
+            {isTeacherView && !hasChatHistory && <EmptyStudentChatHistory />}
             {events.map((event, index) => {
-              const isLastMessage = index === events.length - 1;
+              const isLastEvent = index === events.length - 1;
+              const isLastChatMessage = index === lastChatMessageIndex;
               return (
                 <ChatEventView
                   event={event}
                   key={event.timestamp}
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
-                  isAiTutorVersion={isAiTutorVersion}
-                  isLastMessage={isLastMessage}
-                  ref={isLastMessage ? finalEventRef : undefined}
+                  clientType={clientType}
+                  modelParameters={modelParameters}
+                  postText={
+                    isLastChatMessage ? resolvedLastMessagePostText : undefined
+                  }
+                  ref={isLastEvent ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {
                     if (e.key === 'Escape' && e.target === e.currentTarget) {
@@ -224,6 +253,22 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           </>
         )}
       </div>
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            className={moduleStyles.scrollToBottomButton}
+            onClick={() => scrollToLastMessage()}
+            aria-label="Scroll to bottom of messages"
+            type="button"
+            aria-controls="chat-workspace-conversation"
+          >
+            <FontAwesomeV6Icon iconName="arrow-down" />
+          </MuiIconButton>
+        </div>
+      )}
     </div>
   );
 };

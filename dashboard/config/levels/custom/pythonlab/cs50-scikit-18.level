@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:58:34.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.9\n# Standard Description: Find and filter out missing or N/A data.\n#\n# Rationale: Before you can fix missing data, you have to FIND it. \n# This tutorial teaches students how to use pandas to scan a large dataset \n# for \"NaN\" (Not a Number) values and then decide whether to \"Filter\" \n# (remove) them or not.\n\n\"\"\"\nWelcome! Imagine you are a teacher grading tests, but some students \nleft their names blank or skipped entire pages. You can't just ignore \nthe empty spaces—you have to identify them and decide what to do.\n\nIn data science, we call this \"Finding and Filtering\". \nWe use the tool 'isna()' to find the gaps and 'dropna()' to filter them out.\n\"\"\"\n\nimport pandas as pd\nimport numpy as np\n\n# --- OUR BROKEN DATASET ---\n# Let's create a dataset of 10 runners. Some values are missing (np.nan).\ndata = {\n    'Runner_Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank', 'Grace', 'Hank', 'Ivy', 'Jack'],\n    'Time_Seconds': [120, np.nan, 145, 130, np.nan, 125, 140, np.nan, 135, 128],\n    'Heart_Rate': [160, 165, np.nan, 155, 170, 162, np.nan, 158, 163, 160]\n}\ndf = pd.DataFrame(data)\n\nprint(\"--- The Original Dataset ---\")\nprint(df)\nprint(\"\\n\")\n\n# --- STEP 1: FINDING THE GAPS ---\nprint(\"--- Step 1: Finding Missing Data ---\")\n# .isna() turns the table into True/False. True means a value is missing.\nmissing_map = df.isna()\nprint(\"Missing Value Map (True = Missing):\")\nprint(missing_map)\n\n# We can also get a count for each column\nprint(\"\\nCount of missing values per column:\")\nprint(df.isna().sum())\nprint(\"\\n\")\n\n# --- STEP 2: FILTERING (DROPPING) ---\nprint(\"--- Step 2: Filtering (Removing) Missing Data ---\")\n# Sometimes, if a row is missing too much info, we just delete it.\n# 'dropna()' removes any row that has at least one missing value.\nfiltered_df = df.dropna()\n\nprint(f\"Original rows: {len(df)}\")\nprint(f\"Filtered rows: {len(filtered_df)}\")\nprint(\"\\nCleaned Dataset (Only people with ALL information):\")\nprint(filtered_df)\n\n\"\"\"\n--- YOUR TURN ---\nWe have a dataset of weather reports.\n1. Use 'df_weather.isna().sum()' to find which column has the most missing data.\n2. Use 'df_weather.dropna(subset=[\"Temperature\"])' to ONLY remove rows \n   where Temperature is missing (keeping the rows where only Humidity is missing).\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\ndf_weather = pd.DataFrame({\n    'Day': ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],\n    'Temperature': [72, np.nan, 68, np.nan, 75],\n    'Humidity': [40, 45, np.nan, 50, 42]\n})\n\n# TODO: Find the counts of missing values\n# TODO: Filter the data only for missing Temperatures\n# df_clean = ...\n\nprint(\"\\nFinal clean weather data:\")\n# print(df_clean)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWUvGD8UkiaxyfiY4WkhWNd4MfOwYQ4u+\n1K2cIgYJvSfSaRV3ILclEJBvW2gF2EK9Q5RHRtDLUzO2tWR3jlvyFJa/qN0M\nR6AK3z8xDmuGN3EwIWQiUXD7GEDFcxr3yRpBgsF551yYAkHgRGZmWjuu1Qcj\nKzbCfmoJJPck+AnLqmbyqDnCLjugVH1SCm0HdKrlMuWGWCjFw50Csyk7IFOm\nXeo1xveXyZOzZQgiUpMJJ5RJGqHdpJsixnZYMS7V8RosnvT9ipXnCDMaArUN\nRzaLg+d/IMZBxmNEcm41TUPenXb5xC0dceyMj4UAQnsOHSPxElT47bVIsDfl\niH1ddDxdE2ca90/Fj0bSMZILpj7bnWAvVl7VSd232DiqKZDwezlHEkk7mIZH\nbE60RBxcazN6NMYBVmE9pnhGhcp+Qng+s0gBMo3slnAzeCB/cxdwP4V9ZisE\nKgDUmjSLTEKUf50qh64VigThZgj4pTeYFi3rBoRPfwXLW729AdZlxXophme3\nsf4zVc9I23BwyX7nbOThEjX2EnkQnjQKxhLQUlp1cwekrVN2f27qaBijT633\nyAenQHjxOl1g58INPT9cQioVkq7ad8ckX6js0iLfWB94qo03fpN/mEj7rRpp\n/WWKMXRn8y2/0ycAF2Zvku5ocx1URbb3qGktdT8WOE0kNusErjp0mvTwFlkY\nYritgyq6m33x+nxTk8pKZy8G5tby+TZ/LS6meeodNUJTTETX96KpSPOnrs3+\ngaGv/2lQ6uasXLZgMw9AlbugHWRbp603WXAk6IMLQT+Njz4nE68jMzr+Vtut\nesWl9fEe8JwqvW0AgDkiCdbYOMUXr7bYSXK8FlzcolyTkBeifUzkHS5iIe/y\nsomHG9WkLifN2berbe0sBpcPNdBZN32AdNj14oKTI1DQGyzAY88LWVuvlnCx\nSz3n+WzzShJBWO0Hbq80E1J3VUkCP22Sk3w4UlHm5sklLWhR1p4EYguIqU/1\nvNh4Rl3A7E4O/DhHKaTTFqy0rNBCOPYbI1sZY9qJSwMSp0y+IFCYfAeWlQKg\nonxefgwMHwQNKcmudxqLD5uFXE5PvNXBaFqdadoP2H1OzxS/KqrEMXPwVUax\n8cnxE0OfcxkjPiVhdAv/sAHMgpwDNq+vO/nKcaov5dFetNs/tuVJh0Vp3szZ\nbZ1bBL6pCUZW80IfiJwKBdW5F9nwCjRE9n96J6jTGCmrBTrrv9u/uEeBzXoM\nbWnQ58OX+r/mMSQ49Kst4rRKcj9A2QiGB0DoxcryqbbXFsC7kxuNhPHOFrCx\n/C0+d3PCorpcy30pT4Te1QS4zYDn4+odFKbrBLMUjyz6Kp1sSJCAGBUbq+NA\n7RdqLtC7pYudMIY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:58:34.421+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-17\\\"\"],\"cloned_from\":\"cs50-scikit-17\"},{\"changed_at\":\"2026-02-18 16:58:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:35:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:36:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:36:41 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

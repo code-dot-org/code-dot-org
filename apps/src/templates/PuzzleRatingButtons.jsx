@@ -84,7 +84,6 @@ class PuzzleRatingButtons extends Component {
           onClick={this.like}
         >
           <svg
-            version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px"
@@ -108,7 +107,6 @@ class PuzzleRatingButtons extends Component {
           onClick={this.dislike}
         >
           <svg
-            version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px"

@@ -1,0 +1,34 @@
+{
+  "name": "ai-foundations-year1-2026",
+  "script_names": [
+    "problem-solving-with-ai-2026",
+    "ai-and-the-systems-that-power-it-2026",
+    "the-fabric-of-the-internet-and-ai-2026",
+    "insights-from-data-and-ai-2026",
+    "ai-generated-design-2026",
+    "ai-and-algorithmic-decisions-2026",
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-foundations-year1",
+    "has_verified_resources": true,
+    "numbered_units": "auto",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

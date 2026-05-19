@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-02-16T19:31:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nInteract with this AI chat bot to ask any clarifying questions you have about how AI works.\r\n\r\nFor example, you can ask:\r\n>- What are embeddings?\r\n>- Why doesn't ChatGPT know what day it is?\r\n>- What does an 2nd grade student need to know about how AI works?\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Elementary Scenario: During a science project about animals, the student is tasked with researching different species. They encounter various search results on the internet, including articles, videos, and AI generated images of both real and fake animals. \nAnswer: The student applies AI literacy skills by recognizing and selecting credible sources of information. They understand the importance of verifying information and avoiding biased or misleading content, demonstrating critical thinking skills in evaluating AI-generated search results.",
+          "Middle School Scenario: In a social studies class, students are discussing current events. The topic of conversation shifts to climate change, and the teacher mentions the role of AI in climate prediction models. Intrigued, the student decides to explore the concept further. They use online resources to learn about how AI algorithms analyze vast amounts of data to make predictions about future climate patterns. \nAnswer: The student engages in AI literacy by understanding basic concepts of AI and its applications, broadening their understanding of technology's impact on various fields.",
+          "High School Scenario: As part of a research project in their computer science class, students are exploring the ethical implications of facial recognition technology. The student examines different perspectives on the use of facial recognition in surveillance systems and its potential consequences for privacy and civil liberties. \nAnswer: They apply AI literacy skills by critically analyzing the ethical dilemmas posed by AI technologies, considering societal implications and advocating for responsible AI development and deployment. Additionally, they may engage in discussions about bias and fairness in AI algorithms, demonstrating an understanding of complex AI-related issues.",
+          "Administrator Scenario: In preparing to write a difficult email to a parent regarding a sensitive matter concerning their child's behavior in school, a teacher decides to utilize AI to assist in crafting a thoughtful and empathetic message. \nAnswer: By leveraging AI to assist in composing the email, the teacher demonstrates a proactive approach to communication while also considering the ethical implications of AI technology in educational contexts. They prioritize effective communication and empathy in addressing sensitive matters with parents, showcasing a thoughtful integration of AI tools into their professional practice."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Answer the users questions about AI. Be friendly and informative. Use technical language, but keep in mind your audience is teachers and other educators. Occasionally ask the user understands what you're talking about, or if they'd like more information. Use metaphors, scenarios, and examples. Don't let the topic stray from how AI works. ",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-16T19:31:18.981+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-whatai-03b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-whatai-03b\"},{\"changed_at\":\"2026-02-16 19:33:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-16 19:35:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Aichat>

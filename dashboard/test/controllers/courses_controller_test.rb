@@ -45,23 +45,23 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       @unit_group_regular = create(:unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     end
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 13
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
+
+      ActiveRecord::Base.connection.disable_query_cache!
 
       offering = create(:course_offering, key: 'csx')
 
@@ -81,21 +81,21 @@ class CoursesControllerTest < ActionController::TestCase
     end
 
     test 'signed out user views course overview with caching enabled' do
-      assert_cached_queries(0) do
+      assert_cached_queries(2) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(7) do
+      assert_cached_queries(9) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(12) do
+      assert_cached_queries(14) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -473,6 +473,16 @@ class CoursesControllerTest < ActionController::TestCase
                               name: 'pilot instructor can view pilot course'
   ) do
     assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
+  end
+
+  test 'teacher with only a hidden section for the course is not redirected to teacher dashboard' do
+    teacher = create(:teacher)
+    create(:section, :hidden, user: teacher, unit_group: @unit_group_regular)
+    sign_in teacher
+
+    get :show, params: {course_name: @unit_group_regular.name}
+
+    assert_response :success
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},

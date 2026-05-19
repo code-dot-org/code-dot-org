@@ -27,6 +27,15 @@ class AidiffArtifact < ApplicationRecord
 
   accepts_nested_attributes_for :aidiff_artifact_associations, allow_destroy: true
 
+  def self.to_markdown(text, type)
+    # Put spaces at the end of the line for Markdown newlines
+    new_text = text.gsub('\n', '    \n')
+
+    Kernel.const_get(type).to_markdown(JSON::Validator.parse(new_text))
+  rescue
+    text
+  end
+
   def summarize
     {
       id: id,

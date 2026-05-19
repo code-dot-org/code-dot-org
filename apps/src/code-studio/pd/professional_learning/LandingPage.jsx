@@ -1,23 +1,22 @@
 // My Professional Learning landing page
 // studio.code.org/my-professional-learning
-
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
 
+import ActionBlocksWrapper from '@cdo/apps/code-studio/pd/professional_learning/ActionBlocksWrapper';
+import SetUpSections from '@cdo/apps/code-studio/pd/professional_learning/SetUpSections';
 import DCDO from '@cdo/apps/dcdo';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
@@ -394,7 +393,9 @@ function LandingPage({
   const RenderSelfPacedPL = () => {
     return (
       <section id={'self-paced-pl'}>
-        <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plLandingSelfPacedProgressHeading()}
+        </Typography>
         <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />
       </section>
     );
@@ -411,7 +412,7 @@ function LandingPage({
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
           {
-            color: 'purple',
+            color: 'primary',
             url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
@@ -427,7 +428,7 @@ function LandingPage({
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [
           {
-            color: 'purple',
+            color: 'primary',
             url: pegasus(
               myPLStaticRecommendedPLSelfPacedBlockButtonUrl ||
                 '/educate/professional-development-online'
@@ -444,7 +445,9 @@ function LandingPage({
   const RenderOwnedPlSections = () => {
     return (
       <section>
-        <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plSectionsInstructorTitle()}
+        </Typography>
         <SetUpSections
           headingText={i18n.newSectionCreate()}
           descriptionText={i18n.newSectionMyPlAdd()}
@@ -608,7 +611,9 @@ function LandingPage({
         )}
         {!hideMyPLStaticRecommendedPL && (
           <section>
-            <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+            <Typography variant="h2" gutterBottom>
+              {i18n.plLandingRecommendedHeading()}
+            </Typography>
             {RenderStaticRecommendedPL()}
           </section>
         )}
@@ -621,7 +626,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsFacilitatorResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsFacilitatorResources()}
+          </Typography>
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
@@ -644,7 +651,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsRegionalPartnerResources()}
+          </Typography>
           {RenderRegionalPartnerResources()}
         </section>
         <LandingPageWorkshopsTable
@@ -662,7 +671,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsWorkshopResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsWorkshopResources()}
+          </Typography>
           <BorderedCallToAction
             key={4}
             headingText={i18n.plSectionsWorkshopTitle()}

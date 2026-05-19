@@ -1,10 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  BodyFourText,
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -88,15 +84,19 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
       initiallyCollapsed={false}
     >
       <div className={moduleStyles.indentedContainer}>
-        <Button
-          text="Clear allowed sounds (enable all sounds)"
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          disabled={!currentValue}
           onClick={() => {
             onChange(undefined);
           }}
-          size="s"
-          disabled={!currentValue}
-          iconLeft={{iconName: 'ban'}}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="ban" />}
+        >
+          {'Clear allowed sounds (enable all sounds)'}
+        </MuiButton>
       </div>
       {library.packs.map(pack => {
         if (pack.restricted && pack.id !== selectedPack) {
@@ -111,21 +111,25 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
           <div className={moduleStyles.indentedContainer} key={pack.id}>
             <CollapsibleSection
               headerContent={
-                <BodyTwoText className={moduleStyles.noMargin}>
+                <Typography
+                  className={moduleStyles.noMargin}
+                  variant="body2"
+                  gutterBottom
+                >
                   {currentlySelected && currentlySelected.length > 0 ? (
-                    <StrongText>{title}</StrongText>
+                    <Typography variant="strong">{title}</Typography>
                   ) : (
                     title
                   )}
-                </BodyTwoText>
+                </Typography>
               }
             >
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <i>
                   Numbers in square brackets indicate the length of the sound in
                   measures.
                 </i>
-              </BodyFourText>
+              </Typography>
               <div className={moduleStyles.indentedContainer}>
                 <Checkbox
                   name={pack.name + '-select-all'}

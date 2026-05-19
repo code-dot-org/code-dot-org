@@ -1,18 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import AllCodeDocs from '@cdo/apps/levelbuilder/code-docs-editor/AllCodeDocs';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');
   const allCategories = getScriptData('allCategories');
 
-  ReactDOM.render(
+  createReactRoot(
     <AllCodeDocs
       programmingEnvironments={programmingEnvironments}
       allCategories={allCategories}
     />,
-    document.getElementById('container')
+    document.getElementById('container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

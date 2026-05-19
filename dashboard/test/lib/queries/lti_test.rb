@@ -63,18 +63,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal lti_course, Queries::Lti.get_lti_course_from_section_code(section_code)
   end
 
-  test 'creates an LTI course given metadata from an LTI launch ID token' do
-    lti_integration = create(:lti_integration)
-    lti_course = Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: 'context-id', deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
-    assert lti_course
-  end
-
-  test 'finds an existing LTI course given metadata from an LTI launch ID token' do
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid)
-    assert_equal lti_course, Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: lti_course.context_id, deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
-  end
-
   test 'lti_user_ids should return the subjects (user id) for a given user' do
     lti_integration = create(:lti_integration)
     lti_user_identity = create(:lti_user_identity, lti_integration: lti_integration)

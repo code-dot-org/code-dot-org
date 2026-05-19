@@ -271,7 +271,7 @@ class SectionsControllerTest < ActionController::TestCase
     get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1"}, {"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
+    assert_equal response_json, [{"text" => "Flappy Code", "value" => "/teacher_dashboard/sections/#{@flappy_section.id}/courses/flappy/units/1"}, {"text" => "Flappy Code", "value" => "/courses/flappy/units/1/lessons/1/levels/1"}]
   end
 
   describe '#retrieve_lessons_for_dropdown' do
@@ -304,8 +304,8 @@ class SectionsControllerTest < ActionController::TestCase
       _(response_unit[:text]).must_equal unit.title_for_display(unit_group_unit: unit_group_unit)
     end
 
-    it 'returns unit path' do
-      _(response_unit[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}"
+    it 'returns unit teacher dashboard path' do
+      _(response_unit[:value]).must_equal "/teacher_dashboard/sections/#{section.id}/courses/#{unit_group.name}/units/#{unit_position}"
     end
 
     it 'returns lesson name' do
@@ -315,6 +315,17 @@ class SectionsControllerTest < ActionController::TestCase
     it 'returns lesson path' do
       _(response_lesson[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}/lessons/1/levels/1"
     end
+  end
+
+  test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
+    sign_in @teacher
+
+    get :retrieve_lessons_for_dropdown, params: {id: 'high'}
+
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal "/teacher_dashboard/sections/:sectionId/courses/original-allthethings-course/units/1", response_json.first['value']
+    assert_match %r{\A/courses/original-allthethings-course/units/1/lessons/\d+/levels/1\z}, response_json.second['value']
   end
 
   describe 'POST /sections/:id/log_in' do

@@ -4,7 +4,7 @@ require 'retryable'
 require 'json'
 require 'cdo/honeybadger'
 
-class Slack
+module Slack
   COLOR_MAP = {
     green: 'good',
     yellow: 'warning',
@@ -40,30 +40,25 @@ class Slack
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
-  # Returns the user (mention) name of the user.
-  # WARNING: Does not include the mention character '@'.
+  # Returns a mention tag '<@id>' for a user based on their email.
   # @param email [String] The email of the Slack user.
-  # @raise [ArgumentError] If the email does not correspond to a Slack user.
-  # @return [nil | String] The user (mention) name for the Slack user.
-  def self.user_name(email)
-    members = post_to_slack("https://slack.com/api/users.list")['members']
-    raise "Failed to query users.list" unless members
-    user = members.find {|member| email == member['profile']['email']}
+  # @raise [RuntimeError] If the Slack API call fails or the email does not
+  #   correspond to a Slack user.
+  # @return [String] The user (mention) tag for the Slack user.
+  def self.user_mention_tag(email)
+    response = post_to_slack("https://slack.com/api/users.list")
+    raise "Failed to query users.list" unless response
+    user = response['members'].find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
-    user['name']
-  end
-
-  def self.user_id(name)
-    members = post_to_slack("https://slack.com/api/users.list")['members']
-    raise "Failed to query users.list" unless members
-    user = members.find {|member| name == member['name']}
-    raise "Slack user #{name} not found" unless user
-    user['id']
+    "<@#{user['id']}>"
   end
 
   # @param channel_name [String] The channel to fetch the topic.
+  # @param raw [Boolean] Whether to skip rewriting Slack user-ID mentions
+  #   (`<@U12345>`) into display-name text (`@displayname`). Pass `raw: true`
+  #   when the caller needs to preserve user IDs (e.g. to extract them).
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map: false)
+  def self.get_topic(channel_name, use_channel_map: false, raw: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -73,7 +68,8 @@ class Slack
 
     response = post_to_slack("https://slack.com/api/conversations.info?channel=#{channel_id}")
     return nil unless response
-    replace_user_links(response['channel']['topic']['value'])
+    topic = response['channel']['topic']['value']
+    raw ? topic : replace_user_links(topic)
   end
 
   # @param channel_name [String] The channel to update the topic.

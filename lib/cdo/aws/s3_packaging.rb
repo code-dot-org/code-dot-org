@@ -55,7 +55,7 @@ class S3Packaging
   # Uploads the created package to s3
   # @return package
   def upload_package_to_s3(package)
-    raise "Generated different package for same contents" unless package_matches_download(package)
+    raise "Generated different package for same contents, see diff in logs" unless package_matches_download(package, log_if_different: true)
     upload_package(package)
     package
   end
@@ -153,7 +153,7 @@ class S3Packaging
   # its own). This validates that the one we created is identical to the one
   # that was uploaded.
   # @return [Boolean] True unless we have an existing package and it's different
-  private def package_matches_download(package)
+  private def package_matches_download(package, log_if_different: false)
     begin
       old_package = download_package
     rescue Aws::S3::Errors::NoSuchKey
@@ -162,19 +162,44 @@ class S3Packaging
     end
 
     @logger.info 'Existing package on s3. Validating equivalence'
-    packages_equivalent(old_package, package)
+    packages_equivalent(old_package, package, log_if_different: log_if_different)
+  end
+
+  private def delete_oldest_file_until_smaller_than(glob, max_size_gb:)
+    max_size_bytes = max_size_gb * 1024 * 1024 * 1024
+    FileUtils.rm_f(
+      Dir[glob].min_by {|f| File.mtime(f)}
+    ) while Dir[glob].sum {|f| File.size(f)} > max_size_bytes
+  end
+
+  private def warn_packages_differ(diff_output, dir1, dir2, max_size_gb: 20, diff_dir: File.join(Dir.home, 'generated-different-packages'))
+    FileUtils.mkdir_p(diff_dir)
+
+    delete_oldest_file_until_smaller_than("#{diff_dir}/*.diff", max_size_gb: max_size_gb)
+
+    timestamp = Time.now.utc.strftime('%Y%m%dT%H%M%SZ')
+    diff_path = "#{diff_dir}/s3-vs-local-#{timestamp}.diff"
+    RakeUtils.system__("diff -ruN #{dir1} #{dir2} > #{diff_path}")
+
+    @logger.warn <<~TEXT
+      Packages differed:
+      #{diff_output}
+
+      For a unified diff, see: #{diff_path}
+    TEXT
   end
 
   # Checks to see if two packages are equivalent by unpacking them into tempfiles
   # and comparing the results. Simply comparing the packages themselves is not
   # sufficient, because they can contain metadata.
-  private def packages_equivalent(package1, package2)
+  private def packages_equivalent(package1, package2, log_if_different: false)
     diff = Dir.mktmpdir do |dir1|
       RakeUtils.system "tar -zxf #{package1.path} -C #{dir1}"
       Dir.mktmpdir do |dir2|
         RakeUtils.system "tar -zxf #{package2.path} -C #{dir2}"
-        _, output = RakeUtils.system__ "diff -rq #{dir1} #{dir2}"
-        output
+        _, diff_output = RakeUtils.system__ "diff -rq #{dir1} #{dir2}"
+        warn_packages_differ(diff_output, dir1, dir2) if !diff_output.empty? && log_if_different
+        diff_output
       end
     end
     diff.empty?

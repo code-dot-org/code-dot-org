@@ -1,13 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {
-  BodyFourText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -20,6 +15,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
   handleSaveDuplicateFile,
@@ -60,6 +56,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   setActionInProgress,
   isSecondaryBackpack,
   onImageFlagged,
+  addFileTooltipText = 'Add to project',
+  addFileHandler,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -67,7 +65,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       getFileIconNameAndStyle({
         name: fileName,
         id: '',
-        language: '',
         contents: '',
         folderId: '',
       }),
@@ -89,9 +86,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     } else if (!isFileSupported) {
       return 'File type not supported in this project';
     } else {
-      return 'Add to project';
+      return addFileTooltipText;
     }
-  }, [disableActions, inReadOnly, isFileSupported]);
+  }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
@@ -108,6 +105,17 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async (isSecondaryBackpack?: boolean) => {
+    // Use the addFileHandler if provided; otherwise fall back to default logic.
+    if (addFileHandler) {
+      onClickAddFile(
+        backpackApi,
+        fileName,
+        addAlert,
+        setActionInProgress,
+        addFileHandler
+      );
+      return;
+    }
     setActionInProgress(true);
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
@@ -216,12 +224,20 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         </div>
       )}
       <div className={moduleStyles.fileInfo} title={fileName}>
-        <BodyThreeText className={moduleStyles.infoText}>
-          <StrongText>{fileName}</StrongText>
-        </BodyThreeText>
-        <BodyFourText className={moduleStyles.infoText}>
+        <Typography
+          className={moduleStyles.infoText}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{fileName}</Typography>
+        </Typography>
+        <Typography
+          className={moduleStyles.infoText}
+          variant="body4"
+          gutterBottom
+        >
           {fileExtension?.toUpperCase()}
-        </BodyFourText>
+        </Typography>
       </div>
       <div className={moduleStyles.fileActions}>
         {isRecentlyAdded ? (
@@ -246,15 +262,16 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             }}
           >
             <div>
-              <Button
-                size="xs"
-                isIconOnly
-                icon={{iconName: 'plus'}}
-                color="gray"
-                type="secondary"
+              <MuiIconButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
                 onClick={() => handleAdd(isSecondaryBackpack)}
+                type="button"
                 disabled={addButtonDisabled}
-              />
+              >
+                <FontAwesomeV6Icon iconName="plus" />
+              </MuiIconButton>
             </div>
           </WithTooltip>
         )}
@@ -272,11 +289,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           labelText={`${fileName} options`}
           size={'xs'}
           triggerButtonProps={{
-            color: 'gray',
-            icon: {iconName: 'ellipsis-vertical'},
-            isIconOnly: true,
-            type: 'tertiary',
-            size: 'xs',
+            color: 'tertiary',
+            children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+            variant: 'text',
+            size: 'extraSmall',
           }}
           menuPlacement="right"
           disabled={disableActions}

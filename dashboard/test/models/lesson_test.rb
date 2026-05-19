@@ -568,16 +568,21 @@ class LessonTest < ActiveSupport::TestCase
     create(:course_version, course_offering: course_offering0, content_root: course0, key: '2999')
     lesson0 = create(:lesson, script: script0, key: 'foo')
 
-    # measure the query count of the summarize method before checking the result
-    # of related_lessons, so that the count is not artificially reduced by
-    # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(8) do
-      summaries = lesson1.summarize_related_lessons
-    end
 
-    assert_queries(1) do
-      assert_equal [lesson0, lesson2, lesson5, lesson6], lesson1.related_lessons
+    # Avoid using the ActiveRecord query cache so that we can count queries
+    # precisely and consistently.
+    ActiveRecord::Base.connection.uncached do
+      # measure the query count of the summarize method before checking the result
+      # of related_lessons, so that the count is not artificially reduced by
+      # anything being cached from the call to related_lessons.
+      assert_queries(8) do
+        summaries = lesson1.summarize_related_lessons
+      end
+
+      assert_queries(1) do
+        assert_equal [lesson0, lesson2, lesson5, lesson6], lesson1.related_lessons
+      end
     end
 
     assert_equal 4, summaries.count
@@ -1365,5 +1370,100 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal("This is the translated overview", lesson.get_localized_property(:overview))
       I18n.locale = I18n.default_locale
     end
+  end
+
+  test 'summarize_for_rubric_edit returns lesson info with levels' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script, name: 'Test Lesson', relative_position: 3)
+    level = create(:level, name: 'test level')
+    create(:script_level, lesson: lesson, script: script, levels: [level])
+
+    summary = lesson.summarize_for_rubric_edit
+
+    assert_equal lesson.id, summary[:id]
+    assert_equal script.title_for_display, summary[:unitName]
+    assert_equal 3, summary[:lessonNumber]
+    assert_equal 'Test Lesson', summary[:lessonName]
+    assert_equal 1, summary[:levels].length
+    assert_equal level.id, summary[:levels].first[:id]
+    assert_equal level.name, summary[:levels].first[:name]
+    assert_equal level.type, summary[:levels].first[:type]
+  end
+
+  test 'summarize_for_rubric_edit includes submittable flag for regular levels' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    submittable_level = create(:level, name: 'submittable level', properties: {submittable: 'true'})
+    non_submittable_level = create(:level, name: 'non submittable level')
+    create(:script_level, lesson: lesson, script: script, levels: [submittable_level])
+    create(:script_level, lesson: lesson, script: script, levels: [non_submittable_level])
+
+    summary = lesson.summarize_for_rubric_edit
+
+    assert_equal 2, summary[:levels].length
+    submittable_summary = summary[:levels].find {|l| l[:name] == 'submittable level'}
+    non_submittable_summary = summary[:levels].find {|l| l[:name] == 'non submittable level'}
+    assert_equal true, submittable_summary[:isSubmittable]
+    assert_equal false, non_submittable_summary[:isSubmittable]
+  end
+
+  test 'summarize_for_rubric_edit includes sublevels for BubbleChoice levels' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    bubble_choice = create(:bubble_choice_level, name: 'bubble choice level')
+    sublevel1 = create(:level, name: 'sublevel 1')
+    sublevel2 = create(:level, name: 'sublevel 2')
+    bubble_choice.child_levels << sublevel1
+    bubble_choice.child_levels << sublevel2
+    create(:script_level, lesson: lesson, script: script, levels: [bubble_choice])
+
+    summary = lesson.summarize_for_rubric_edit
+
+    assert_equal 1, summary[:levels].length
+    bubble_choice_summary = summary[:levels].first
+    assert_equal bubble_choice.id, bubble_choice_summary[:id]
+    assert_equal 'BubbleChoice', bubble_choice_summary[:type]
+    assert_equal 2, bubble_choice_summary[:sublevels].length
+    assert_equal sublevel1.id, bubble_choice_summary[:sublevels].first[:id]
+    assert_equal sublevel1.name, bubble_choice_summary[:sublevels].first[:name]
+    assert_equal sublevel2.id, bubble_choice_summary[:sublevels].second[:id]
+    assert_equal sublevel2.name, bubble_choice_summary[:sublevels].second[:name]
+  end
+
+  test 'summarize_for_rubric_edit sets isSubmittable true if any BubbleChoice sublevel is submittable' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    bubble_choice = create(:bubble_choice_level, name: 'bubble choice with submittable')
+    submittable_sublevel = create(:level, name: 'submittable sublevel', properties: {submittable: 'true'})
+    non_submittable_sublevel = create(:level, name: 'non submittable sublevel')
+    bubble_choice.child_levels << submittable_sublevel
+    bubble_choice.child_levels << non_submittable_sublevel
+    create(:script_level, lesson: lesson, script: script, levels: [bubble_choice])
+
+    summary = lesson.summarize_for_rubric_edit
+
+    bubble_choice_summary = summary[:levels].first
+    assert_equal true, bubble_choice_summary[:isSubmittable]
+  end
+
+  test 'summarize_for_rubric_edit sets isSubmittable false if no BubbleChoice sublevel is submittable' do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    bubble_choice = create(:bubble_choice_level, name: 'bubble choice without submittable')
+    sublevel1 = create(:level, name: 'sublevel a')
+    sublevel2 = create(:level, name: 'sublevel b')
+    bubble_choice.child_levels << sublevel1
+    bubble_choice.child_levels << sublevel2
+    create(:script_level, lesson: lesson, script: script, levels: [bubble_choice])
+
+    summary = lesson.summarize_for_rubric_edit
+
+    bubble_choice_summary = summary[:levels].first
+    assert_equal false, bubble_choice_summary[:isSubmittable]
   end
 end

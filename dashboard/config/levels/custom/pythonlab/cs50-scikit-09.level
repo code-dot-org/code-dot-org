@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:56:45.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.1\n# Standard Description: Describe a simple model of the data processing cycle (input-processing-output).\n#\n# Rationale: Building a model involves many steps: cleaning, scaling, and training. \n# We call this a \"Pipeline\". A Pipeline ensures that every transformation applied \n# to the training data is ALSO applied to the test data automatically, reducing errors.\n\n\"\"\"\nWelcome! A true AI engineer doesn't just run one model. They build a \"Pipeline\".\nThink of an assembly line in a factory:\n1. Raw materials enter (Data).\n2. Machines process it (Scaling, Cleaning).\n3. The final product is made (Prediction).\n\nWe use scikit-learn's 'Pipeline' to automate this!\n\"\"\"\n\nfrom sklearn.datasets import load_breast_cancer\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.linear_model import LogisticRegression\nimport numpy as np\n\n# --- LOAD DATA ---\n# Let's introduce some missing values to make it harder!\ndata = load_breast_cancer()\nX, y = data.data, data.target\n\n# Randomly replace 20 values with NaN (missing)\nrng = np.random.RandomState(42)\nmask = rng.rand(*X.shape) < 0.1 # 10% missing data\nX[mask] = np.nan\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)\n\n# --- PART 1: THE PIPELINE ---\nprint(\"--- Part 1: Building the Pipeline ---\")\n# Our pipeline will have 3 steps:\n# 1. Imputer: Fill in missing values.\n# 2. Scaler: Scale the features.\n# 3. Classifier: Make the prediction.\n\npipeline = Pipeline([\n    ('imputer', SimpleImputer(strategy='mean')),\n    ('scaler', StandardScaler()),\n    ('classifier', LogisticRegression())\n])\n\n# We treat the pipeline just like a regular model!\n# We call .fit(), and it automatically runs Step 1 -> Step 2 -> Step 3.\npipeline.fit(X_train, y_train)\n\n# When we predict, it also runs Step 1 -> Step 2 -> Step 3 on the test data!\nscore = pipeline.score(X_test, y_test)\n\nprint(f\"Pipeline Accuracy: {score:.2%}\")\nprint(\"\\nNotice: We didn't have to manually transform X_test!\")\nprint(\"The pipeline remembered exactly how to scale and impute based on X_train.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've set up a regression problem (predicting numbers) with missing data.\n1. Create a Pipeline with TWO steps:\n   - 'imputer': SimpleImputer(strategy='median')\n   - 'regressor': LinearRegression()\n2. Fit the pipeline to X_train_reg, y_train_reg.\n3. Print the R^2 score on the test set.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nfrom sklearn.datasets import load_diabetes\nfrom sklearn.linear_model import LinearRegression\n\ndiabetes = load_diabetes()\nX_reg, y_reg = diabetes.data, diabetes.target\n\n# Add some missing values\nrng = np.random.RandomState(42)\nmask = rng.rand(*X_reg.shape) < 0.1\nX_reg[mask] = np.nan\n\nX_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(X_reg, y_reg, random_state=42)\n\n# TODO: Create the pipeline\n# my_pipeline = Pipeline([ ... ])\n\n# TODO: Fit the pipeline\n\n# TODO: Score the pipeline!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWTOExULWZmqyR0h0qEGbF2Tef2l14IDw\nGNgIaVaixhWaGisn/4N+RQ+UQwVWnw7VhCJx0+B1L8vYOwA0bWVJKPY0l07u\n3hEXcH1yFoRQE/FUbGSjK2KqaqKFtbnAxQpzrZe5JiNd5RV9dhYoCswRSauU\nUbiCA5Aopt8yKH5A7rKZnV7JaivXIhDivqfGAozZWdKFUuGjPC8fGOuWL4MT\nPuIq5J9Iw1gkucfGflkMIXPSppS9/ZvrhawdDKTtpcMXCrxNim0SJz4fP/2J\njCaWJ+1OgSL8vdbJpbbuPeMshLzYaGDRfjVqxiI3ZcHThz2mBIqhmNITmAWG\nS+qoxsXvJ3cWZuNTvyGH+Zo3jUMTCfuTVqHNMSJBbIUlIfhipXbmY/ghgrZu\nM+LlfJHQu0nB+w3IywR9ApTcMf99zbLUORF65rWR9YraDBZHxqHY2aMBRFtN\nuwCoTGl4XXWi9k44UnFfr6cv+nwhFAUIav63e6iPwviiB11/hW0r4NRzqpQ4\nnyYlFHy57DdPnnPN9ErPyzexByRXpYKCiHJXxmdvOZ7HGxoYzcH/7t4Rcppl\neHL6hJFTu/bDV5Jd9JOFwhwrbPQDbb+EC+nDCWdC2FZb4Rqd99FGzT6f/3t4\nQXruTIOdWjs4e2TzmM77vuIbPiU8h8lig+/FX56S9YbNaQjhy2ygYKHRhh91\nKvmyiwGEPmr2ABUdKH0jKNoiOaRZftiaxHyfnxRLfWmDbHDi49MHP4ck25dL\n/+DH+xWQRaLNfnz4t1jWk8RSce8wtKF3XuVaFxUwmGVFPgFLINKz70k34uda\n6Yux0BBDtzsFPLL1Bk8AazhN+4//d0vtCl+PaKtx3OweT97SapW9NcYEv8Sj\nJoZ13c1yarezBd/AWibRDRzEAqLDJ4euOKmoEPICOerxn8rgAWZHLUZZA/qr\nqK5RzibZX3eDBBygV4qww4IaBbCzJryUwp+yCYjh7XFrF6Pp1bW1MYOKpCpJ\nXoQDVg1TvCnNwNn/RgVIyHopEQNrwdrMun4wJ1oK0u2coW3SvH71X20yeJqd\nig8pDfB0AerTXl8QW/m+Jo+KCxJ6H+n96rcHq/nqPaz+EB4kqNmmzxaWwYGs\nCrnd2Xc5I21xqXKOTeHOGOWCWVAhuuX64Zqo7oQFE68ytfcXRAs4cOVWC0DT\n6aufy0BRHThDBZGziVjIMAI5eDkOmSzStKOLwBH5l8LuTvTFXBQeNKQ9MaHx\n3QgPFg27vBf4ZjQWF0mknbbfiNXwq/DNjINT33plAMEi7C+GLsr9H8G9Ykhb\njwKxF3qOT5lNDWLwE1E5umi8/1uZ/EUqNfgDn3biWLkFMi5swC+N0aqsim5C\nthJUr7njkBIQhjtQ/t32PwD+s/WWv+Aj9YFnzwgH7zVdXRCrgwF4I/mXFko0\nkEH2fdsOGtPZr3bqZ66dNQCWk1BgdxsVQ4IjOifFIBEYY4cEnX6Ik/CLjOLg\nyMbkQ5AaRzY/nSGRVGmUPKlnpgbtB9lstJms7yKnU3ezTQAH5gfNiB/hCMxw\nMgChLCIkP9zaaMcgY0V+D/HbQb50xgM/PBUFfMkMtBcJ2071q/6C1Cus+cdi\nKeoYw0K2Osl8hsJIFZ0wCLqYxGLtMSlwGEksvw07pGo8u8qzujJ6tjMEGo/M\n90qaubHQ8AkaY2Fjc78kbEarAZEVME8b62Pot9G0M9PPF4GofiYs8WlWvs0/\n4Fy5bghoirsm1N6rnbLif+I046lmSw0ku4B08jhC7o6l9tdnK7yEODMppG55\n5nYqfwOMtIfkRKPybIgvSQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:56:45.695+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-08\\\"\"],\"cloned_from\":\"cs50-scikit-08\"},{\"changed_at\":\"2026-02-18 16:56:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:26:08 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:26:17 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:26:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

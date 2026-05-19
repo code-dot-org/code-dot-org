@@ -1,0 +1,216 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-21T22:01:15.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is an allthethings sketch lab level that uses the React Flow version of start sources.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "c3320c9f-6810-463d-9206-0579cda04bf1",
+            "type": "shape",
+            "position": {
+              "x": 533,
+              "y": 465.5
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "here are some start sources!"
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            }
+          },
+          {
+            "id": "27e8f16c-3cf2-42bd-839a-f694f73ab815",
+            "type": "shape",
+            "position": {
+              "x": 373.25,
+              "y": 334.25
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": ""
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1a62511b-1009-4782-a549-d8a6c9f2ed5f",
+            "type": "shape",
+            "position": {
+              "x": 730.75,
+              "y": 628.75
+            },
+            "data": {
+              "shapeType": "triangle",
+              "label": ""
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cb650d47-0924-4571-b0a6-0df017b93e63",
+            "type": "shape",
+            "data": {
+              "shapeType": "triangle",
+              "label": "immovable triangle",
+              "locked": true
+            },
+            "position": {
+              "x": 228.79613527564902,
+              "y": 459.64602796373435
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "b49a3361-2c78-47be-9920-c4f7efa293e3",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "hi"
+            },
+            "position": {
+              "x": 389.1141214032667,
+              "y": 672.5886300492422
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "94f138a3-2d64-461e-807f-1058e9689050",
+            "type": "text",
+            "data": {
+              "text": "text "
+            },
+            "position": {
+              "x": 435.86399618289664,
+              "y": 612.5929574153837
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "127d0050-90d5-4588-a740-21d6c74b7813",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "background",
+              "backgroundColor": "var(--sketchlab-bg-yellow)"
+            },
+            "position": {
+              "x": 525.4679228438542,
+              "y": 454.4225477443024
+            },
+            "width": 412,
+            "height": 374,
+            "measured": {
+              "width": 412,
+              "height": 374
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -1
+          }
+        ],
+        "edges": [
+          {
+            "source": "27e8f16c-3cf2-42bd-839a-f694f73ab815",
+            "sourceHandle": "right-source",
+            "target": "c3320c9f-6810-463d-9206-0579cda04bf1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__27e8f16c-3cf2-42bd-839a-f694f73ab815right-source-c3320c9f-6810-463d-9206-0579cda04bf1top-target"
+          }
+        ],
+        "viewport": {
+          "x": -136.39914051638857,
+          "y": -302.7176662115528,
+          "zoom": 1.2834258975629043
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "7669b7ac-6c88-48e4-82b8-adc51255a92c",
+            "type": "shape",
+            "position": {
+              "x": 909,
+              "y": 465.5
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "here's an exemplar!"
+            },
+            "style": {
+              "width": 160,
+              "height": 120
+            },
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "selected": true,
+            "domAttributes": {
+              "tabIndex": 0
+            }
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -843.5,
+          "y": -502,
+          "zoom": 2
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-21T15:01:15.829-07:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"},{\"changed_at\":\"2026-04-21 15:01:55 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:07:12 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 15:12:54 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 10:30:43 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-30 13:22:05 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:18:24 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

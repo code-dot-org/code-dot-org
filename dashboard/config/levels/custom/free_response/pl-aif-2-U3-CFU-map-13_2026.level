@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-03-24T03:58:06.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Bias in Data \r\n\r\n#### Bias happens when some people, ideas, or situations are represented more than others in a way that is unfair.\r\n\r\n#### In data and AI, bias often comes from who is missing or who is overrepresented in a dataset. If one group appears much more often than others, the results can reflect an uneven or incomplete view of the world.\r\n\r\n---\r\n\r\n<img src=\"https://images.code.org/aa466cc4ed48dcdf28bb18b34243afec-image-1766178239978.png\" alt=\"choice level with animal adoption, community fair, and metro expansion\" width=\"750px\" style=\"display: block; margin-left: auto; margin-right: auto;border-radius:10px; \">\r\n\r\n\r\n## Connecting to Learning\r\n\r\n#### In lesson 5, students will explore how data can shape fairness in real-world systems by choosing between animal adoption, community events, or metro expansion scenarios. \r\n\r\n#### In each case, the way data was collected and used affected which groups or outcomes were prioritized.\r\n\r\n#### Similarly, when we use `.map()` to create a new dataset, we make decisions about what information to keep and what to leave out.\r\n\r\n---\r\n\r\n> #### **Reflect on one of the following:**\r\n> - #### If a dataset mostly includes some categories and leaves others out, how could that lead to bias when we use that data?\r\n>- #### How can examples like this help students understand that bias can come from data choices, not just from the technology itself?\r\n> - #### Where might similar data choices affect fairness in the real world (for example, in transportation, school programs, or community resources)?\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/student-logins-reflection/40539\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:58:06.433+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-CFU-map-13\\\"\"],\"cloned_from\":\"pl-aif-2-U3-CFU-map-13\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

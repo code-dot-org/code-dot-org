@@ -1,0 +1,3741 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-10T21:47:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Brand Designers often start by looking at other brands to identify trends and get inspiration for their own designs.\r\n\r\n## Do This:\r\n\r\n1. Compare each pair of websites shown here.\r\n2. In the boxes below each brand, write down what you notice about color, topography, layout, and overall tone.\r\n3. Then, explain who each brand seems to target. Use specific evidence from the design (colors, fonts, imagry, layout) to support your thinking about the intended audience.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "FbKwV7eDGo3BzwfoYGICJ",
+            "type": "shape",
+            "position": {
+              "x": 1256.8645962499827,
+              "y": 80.63777324462654
+            },
+            "style": {
+              "width": 990.2067988092057,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 990,
+              "height": 402
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "Jjl_hBqlVCE56_xJ8TDaJ",
+            "type": "image",
+            "position": {
+              "x": 246.2388441297744,
+              "y": -336.3999786376953
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            },
+            "dragging": false
+          },
+          {
+            "id": "8tFutogCi2IeMRMwylP9R",
+            "type": "image",
+            "position": {
+              "x": 1351.9761429709943,
+              "y": -350.4571104503809
+            },
+            "style": {
+              "width": 759.0147783251232,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 759,
+              "height": 428
+            }
+          },
+          {
+            "id": "UqKNp2WOYTFv-Jnz72XKd",
+            "type": "image",
+            "position": {
+              "x": 266.3259672734154,
+              "y": 606.7047998337523
+            },
+            "style": {
+              "width": 762.7722772277228,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 763,
+              "height": 428
+            }
+          },
+          {
+            "id": "ze3jTv-xTUYqSsh2zZsxz",
+            "type": "image",
+            "position": {
+              "x": 1352.4867166186132,
+              "y": 609.3522331601112
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            }
+          },
+          {
+            "id": "a_EOz32pq49R-ru81sxLC",
+            "type": "text",
+            "position": {
+              "x": 381.35426318647234,
+              "y": -380.26773754954775
+            },
+            "data": {
+              "text": "Nike",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 63,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "DrFl_3o70c7pRmctU9jsG",
+            "type": "text",
+            "position": {
+              "x": 797.7354927062988,
+              "y": -376.7
+            },
+            "data": {
+              "text": "Adidas",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 85,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "9hXhv2Om3Btx2LYuOt7Yl",
+            "type": "shape",
+            "position": {
+              "x": 138.77463423695656,
+              "y": 96.19674258823079
+            },
+            "style": {
+              "width": 970.7782622578663,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 971,
+              "height": 402
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "2dClnZpU5c5RPyx667PlV",
+            "type": "text",
+            "position": {
+              "x": 174.36596950822025,
+              "y": 170.92680975842114
+            },
+            "data": {
+              "text": "The Nike brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 144,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "Dga-oAwEV1PL89-2JCnc1",
+            "type": "text",
+            "position": {
+              "x": 678.0548194057419,
+              "y": 172.7839912888954
+            },
+            "data": {
+              "text": "The Adidas brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 160,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "utpPyGY-oRfyNaVx2pnZk",
+            "type": "text",
+            "position": {
+              "x": 1293.9856313069656,
+              "y": 260.9786347888771
+            },
+            "data": {
+              "text": "Who is Spotify's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 349,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "U4rrU0waivyHCgrO7eYHQ",
+            "type": "text",
+            "position": {
+              "x": 1768.9727381267944,
+              "y": 258.6279253906198
+            },
+            "data": {
+              "text": "Who is SoundCloud's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 399,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "szzHusomO0r-RUcWOl8Fa",
+            "type": "text",
+            "position": {
+              "x": 1261.5093408880716,
+              "y": 79.44945421216391
+            },
+            "data": {
+              "text": "What do you notice about the Spotify brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 464,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "N3F26hO-NwU2MMF8HFg8q",
+            "type": "text",
+            "position": {
+              "x": 1741.1508443583557,
+              "y": 81.46375736506583
+            },
+            "data": {
+              "text": "What do you notice about the SoundCloud brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 514,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "xupR7oxkNQPxZgeu6llMm",
+            "type": "text",
+            "position": {
+              "x": 1290.797149616299,
+              "y": 154.43592999840607
+            },
+            "data": {
+              "text": "The Spotify brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 164,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "tA5-zYPotEz6czDDwnQdC",
+            "type": "text",
+            "position": {
+              "x": 1792.2726606152564,
+              "y": 150.96765114131838
+            },
+            "data": {
+              "text": "The SoundCloud brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 201,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "xnp0gakObvQF02pHRVPqt",
+            "type": "text",
+            "position": {
+              "x": 1290.3520607512019,
+              "y": 334.843748274289
+            },
+            "data": {
+              "text": "It seems like Spotify's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 323,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "hXi9d90xELesvTLJCPUTe",
+            "type": "text",
+            "position": {
+              "x": 1799.2176735916773,
+              "y": 326.4084332853761
+            },
+            "data": {
+              "text": "It seems like SoundCloud's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 359,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "2F91zIG2tVAC1rl1y5tI8",
+            "type": "text",
+            "position": {
+              "x": 1490.3962796529127,
+              "y": -389.5071012951074
+            },
+            "data": {
+              "text": "Spotify",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 90,
+              "height": 47
+            }
+          },
+          {
+            "id": "vvQSz2B50l1JvUfn41GZb",
+            "type": "text",
+            "position": {
+              "x": 1841.131296611967,
+              "y": -385.50720592680375
+            },
+            "data": {
+              "text": "SoundCloud",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 140,
+              "height": 47
+            }
+          },
+          {
+            "id": "gBs-PJuWZoowvPR9CHCqm",
+            "type": "text",
+            "position": {
+              "x": 416.0301829746794,
+              "y": 567.2547148204994
+            },
+            "data": {
+              "text": "Netflix",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 84,
+              "height": 47
+            }
+          },
+          {
+            "id": "dOzyb7XtzGlzC9kWTTa3-",
+            "type": "text",
+            "position": {
+              "x": 779.8560197012765,
+              "y": 566.1119187127979
+            },
+            "data": {
+              "text": "Disney",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 84,
+              "height": 47
+            }
+          },
+          {
+            "id": "twFBlYwDL2ADdQffOzU59",
+            "type": "shape",
+            "position": {
+              "x": 161.97442737636663,
+              "y": 1039.6185661846614
+            },
+            "style": {
+              "width": 1002.7782099420182,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1003,
+              "height": 402
+            },
+            "zIndex": -1,
+            "dragging": false
+          },
+          {
+            "id": "Bdj3EPVvBMTENdYjfKNBa",
+            "type": "text",
+            "position": {
+              "x": 174.88787916309957,
+              "y": 1217.0262349446612
+            },
+            "data": {
+              "text": "Who is Netflix's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 343,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "2ERs7TNekJlVz6d_qmza4",
+            "type": "text",
+            "position": {
+              "x": 672.9742286504037,
+              "y": 1213.5976460774737
+            },
+            "data": {
+              "text": "Who is Disney's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 343,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "uwMJLmYStbKdpIPxSH-L9",
+            "type": "text",
+            "position": {
+              "x": 171.38933746736836,
+              "y": 1035.5834213983444
+            },
+            "data": {
+              "text": "What do you notice about the Netflix brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 457,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "rAgXh-MoErVaYWB6AfQk-",
+            "type": "text",
+            "position": {
+              "x": 676.0308409376527,
+              "y": 1039.8834039597282
+            },
+            "data": {
+              "text": "What do you notice about the Disney brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 457,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "MnezZ2f5vbxSZteYVMdmb",
+            "type": "text",
+            "position": {
+              "x": 207.24648032451137,
+              "y": 1112.709988728151
+            },
+            "data": {
+              "text": "The Netflix brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 159,
+              "height": 39
+            }
+          },
+          {
+            "id": "yiwXMT4Z6r_f-ss9W7ocG",
+            "type": "text",
+            "position": {
+              "x": 688.5009794874576,
+              "y": 1111.131203953058
+            },
+            "data": {
+              "text": "The Disney brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 160,
+              "height": 39
+            }
+          },
+          {
+            "id": "EzU0VaH8KRpEu-MgYBOzM",
+            "type": "text",
+            "position": {
+              "x": 198.5009794874577,
+              "y": 1292.4547714960008
+            },
+            "data": {
+              "text": "It seems like Netflix's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 318,
+              "height": 60
+            }
+          },
+          {
+            "id": "xd2Kry6iit6Um9wZe2COP",
+            "type": "text",
+            "position": {
+              "x": 679.5456049059848,
+              "y": 1298.2404683430987
+            },
+            "data": {
+              "text": "It seems like Disney's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 318,
+              "height": 60
+            }
+          },
+          {
+            "id": "QteU4ALXZc70vXyWnpcsq",
+            "type": "text",
+            "position": {
+              "x": 1863.32195009504,
+              "y": 572.5879304431737
+            },
+            "data": {
+              "text": "Walmart",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 100,
+              "height": 47
+            }
+          },
+          {
+            "id": "YM5EDzEpsYbx62B-AuNs5",
+            "type": "text",
+            "position": {
+              "x": 1486.6223896571564,
+              "y": 571.4450035458522
+            },
+            "data": {
+              "text": "Target",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 81,
+              "height": 47
+            }
+          },
+          {
+            "id": "EFW_UqI6eXjOjNt15BVrA",
+            "type": "shape",
+            "position": {
+              "x": 1240.691557875141,
+              "y": 1042.0422415426071
+            },
+            "style": {
+              "width": 1011.9210147690271,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1012,
+              "height": 402
+            },
+            "zIndex": -2,
+            "dragging": false
+          },
+          {
+            "id": "HkT_UR03QyzhjMgcBy4nQ",
+            "type": "text",
+            "position": {
+              "x": 1259.6047515869136,
+              "y": 1223.0736665271584
+            },
+            "data": {
+              "text": "Who is Target's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 340,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "HcKfsqWH9h9d_TQYII9rL",
+            "type": "text",
+            "position": {
+              "x": 1749.6911010742178,
+              "y": 1225.6450776599709
+            },
+            "data": {
+              "text": "Who is Walmart's target audience?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 359,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "pJdJJt__z0ejBIozHH6h-",
+            "type": "text",
+            "position": {
+              "x": 1259.565481095029,
+              "y": 1045.2839135307372
+            },
+            "data": {
+              "text": "What do you notice about the Target brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 454,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "FW_5_NYk1EXr4BbVtDn3z",
+            "type": "text",
+            "position": {
+              "x": 1750.110061373286,
+              "y": 1046.6655193512802
+            },
+            "data": {
+              "text": "What do you notice about the Walmart brand?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 473,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "_pY0UyRbqn_sUPQgTKAIx",
+            "type": "text",
+            "position": {
+              "x": 1284.820425851004,
+              "y": 1109.7574203106483
+            },
+            "data": {
+              "text": "The Target brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 157,
+              "height": 39
+            }
+          },
+          {
+            "id": "GMAKdtQCMKwxHKaUrLoe2",
+            "type": "text",
+            "position": {
+              "x": 1767.2178519112717,
+              "y": 1108.1786355355553
+            },
+            "data": {
+              "text": "The Walmart brand ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 171,
+              "height": 39
+            }
+          },
+          {
+            "id": "g2GBRW9sjcdo9kVhrZTkg",
+            "type": "text",
+            "position": {
+              "x": 1277.2178519112717,
+              "y": 1289.502203078498
+            },
+            "data": {
+              "text": "It seems like Target's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 316,
+              "height": 60
+            }
+          },
+          {
+            "id": "IJgPbAuXytvSAm2wLLAWj",
+            "type": "text",
+            "position": {
+              "x": 1758.262477329799,
+              "y": 1295.2878999255959
+            },
+            "data": {
+              "text": "It seems like Walmart's target audience is ... \nbecause ... ",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 330,
+              "height": 60
+            }
+          },
+          {
+            "id": "481d1e61-11e5-4755-9768-3f223fcdc7e0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 644.6092208780957,
+              "y": 1041.811896914527
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "4cca2b5f-5514-44c1-b69e-3d55f8ace2e7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 654.6092208780957,
+              "y": 1423.5262000674288
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "4a4de861-77d9-40ac-bdfa-be0e8d420625",
+            "type": "lineAnchor",
+            "position": {
+              "x": 180.81794377317215,
+              "y": 1084.5262175060452
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "20e4fc29-2eca-4719-b2b4-65b078d86b41",
+            "type": "lineAnchor",
+            "position": {
+              "x": 621.6750517530829,
+              "y": 1084.5262175060452
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8d47fa24-6b0d-459f-a638-ebe7354e3013",
+            "type": "text",
+            "data": {
+              "text": "What do you notice about the Nike brand?",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 160.86920783093242,
+              "y": 109.83198487440055
+            },
+            "measured": {
+              "width": 436,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "7b097704-917a-451b-b988-44f00fdc508a",
+            "type": "text",
+            "data": {
+              "text": "What do you notice about the Adidas brand?",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 646.7261126709601,
+              "y": 105.02556560886279
+            },
+            "measured": {
+              "width": 458,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "1508d1c9-ea40-4256-8ac8-48e3cb4a4b84",
+            "type": "text",
+            "data": {
+              "text": "Who is Nike's target audience?",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 181.27776685164935,
+              "y": 281.6694976992965
+            },
+            "measured": {
+              "width": 321,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "c7128064-814a-43bf-a2e4-db39e3517f6b",
+            "type": "text",
+            "data": {
+              "text": "Who is Adidas target audience?",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 717.9517897331109,
+              "y": 288.0673579441173
+            },
+            "measured": {
+              "width": 329,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "2209ef31-1f86-494b-8e01-c8db13daadc8",
+            "type": "text",
+            "data": {
+              "text": "It seems like Nike's target audience is... \nbecause ..",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 172.27598822666278,
+              "y": 334.0268286171597
+            },
+            "measured": {
+              "width": 299,
+              "height": 78
+            },
+            "dragging": false,
+            "width": 299,
+            "height": 78,
+            "resizing": false
+          },
+          {
+            "id": "ee9ad83e-3112-4a58-a6ce-0492edbd1e68",
+            "type": "text",
+            "data": {
+              "text": "It seems like Adidas' target audience is ... \nbecause ...",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 680.2759882266628,
+              "y": 348.0268286171597
+            },
+            "measured": {
+              "width": 312,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "3972916c-ca74-407e-998f-eb9d151711b5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 675.7999903018581,
+              "y": 1082.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "98059258-b13a-435f-9dc4-600fa2e8092b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1116.6570982817689,
+              "y": 1082.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f6593a59-1369-48d3-88a2-ec4aed55ea69",
+            "type": "lineAnchor",
+            "position": {
+              "x": 674.0499903018581,
+              "y": 1260.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "15b9d628-b2b5-47e2-9b16-d321a00b37fd",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1114.9070982817689,
+              "y": 1260.6913793984097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5c27c779-6382-4c65-b322-0ec262a944b3",
+            "type": "lineAnchor",
+            "position": {
+              "x": 186.1024805362331,
+              "y": 1263.2109106484097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "3a2d5dcc-52c7-46c4-9f00-0c0291ff0bc4",
+            "type": "lineAnchor",
+            "position": {
+              "x": 626.9595885161439,
+              "y": 1263.2109106484097
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "86183b76-c1b3-459a-816d-9d1d1d5c24e9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1258.7799767661936,
+              "y": 1088.8409309229146
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b31c9ce6-2328-445c-ae22-a16afbc01830",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1699.6370847461044,
+              "y": 1088.8409309229146
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "1aad35aa-0898-45c2-a3c8-383364b743c0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1749.9841401694966,
+              "y": 1088.0221711437139
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b6a8bf0d-83b1-4770-b0f5-f0d865c99604",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2190.8412481494074,
+              "y": 1088.0221711437139
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "fa35c846-59e1-4fe3-a90d-b8e084555069",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1755.4178144821267,
+              "y": 1278.200772085774
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "77dc2e46-c6dd-4fa2-9341-637cb13a4776",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2196.2749224620375,
+              "y": 1278.200772085774
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5219ab89-3563-4dd5-817a-9d079613631b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1259.8667171702448,
+              "y": 1268.4201583230395
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "edc51deb-3669-4385-9fbd-94a70ee1e692",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1700.7238251501558,
+              "y": 1268.4201583230395
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e5d85f08-0fc7-439a-905d-668a287a7a8c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1722.1184925457019,
+              "y": 1034.5745917037968
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "627385c9-657e-47b8-b504-ec8cca82968a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1732.1184925457019,
+              "y": 1416.2888948566986
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "89121485-7805-4e30-8b41-8561b2569290",
+            "type": "lineAnchor",
+            "position": {
+              "x": 614.3547169481963,
+              "y": 100.26242013522437
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ae1c9526-87cb-42c5-afcc-6db77d6df6ca",
+            "type": "lineAnchor",
+            "position": {
+              "x": 624.3547169481963,
+              "y": 481.9767232881261
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ad02f185-ae2e-444a-a4a3-ff4ef5096c20",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1727.3547169481963,
+              "y": 68.42648699487836
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "763b8f1e-a2b2-414d-80fc-ae8b14044676",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1737.3547169481963,
+              "y": 450.1407901477801
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8cad3ac6-10ea-42cd-a28b-37ae995c88f7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 645.3547169481963,
+              "y": 150.75058367456586
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "feeffc1e-abbd-40bb-9214-fee7e29d527e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1086.211824928107,
+              "y": 150.75058367456586
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d5bf6e16-0c15-4c88-992b-adf49902f371",
+            "type": "lineAnchor",
+            "position": {
+              "x": 641.3547169481963,
+              "y": 327.63669207300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2fdba1de-6926-44af-ace7-0430f1136831",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1082.211824928107,
+              "y": 327.63669207300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c9d52d8-9914-41cc-a148-cd9a4f33909d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 159.35471694819626,
+              "y": 155.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "99ca4ef6-f70c-4b7c-8f08-2a7c190fdab0",
+            "type": "lineAnchor",
+            "position": {
+              "x": 600.211824928107,
+              "y": 155.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c22cd5c-8436-48ed-8702-ab1e2dccadcc",
+            "type": "lineAnchor",
+            "position": {
+              "x": 161.35471694819626,
+              "y": 327.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b415b87e-97ee-422c-8846-58eeb6daf4ac",
+            "type": "lineAnchor",
+            "position": {
+              "x": 602.211824928107,
+              "y": 327.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9d8f2139-7a4f-4eae-ba4c-424b18e320f5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1257.3547169481963,
+              "y": 315.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "13c27cff-2a28-43e8-bf0d-4165e0bbc98e",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1698.211824928107,
+              "y": 315.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "3c42b385-a35c-4c57-8de8-5a9d19260234",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1753.3547169481963,
+              "y": 317.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f99d7ecd-9aac-4a60-9e78-3a7be72c0a50",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2194.211824928107,
+              "y": 317.80075457300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0c400923-fc9d-4457-a090-4990efa10c0c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1273.3547169481963,
+              "y": 137.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "0eb91954-2054-4ce4-898a-2ad8ad7d7590",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1714.211824928107,
+              "y": 137.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ed996dfa-8f7e-4a6d-9a28-4c9f5610635d",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1747.3547169481963,
+              "y": 135.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "dc7173bf-4c2c-4d52-82ce-30d025536c76",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2188.211824928107,
+              "y": 135.96481707300336
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "15b8b855-87f8-45a5-92f7-7b176d1be90d",
+            "source": "481d1e61-11e5-4755-9768-3f223fcdc7e0",
+            "target": "4cca2b5f-5514-44c1-b69e-3d55f8ace2e7",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "591c1016-ef33-4d1b-8b6d-2463938ebb81",
+            "source": "4a4de861-77d9-40ac-bdfa-be0e8d420625",
+            "target": "20e4fc29-2eca-4719-b2b4-65b078d86b41",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "26295204-d1a3-41ec-b820-a24964b32290",
+            "source": "3972916c-ca74-407e-998f-eb9d151711b5",
+            "target": "98059258-b13a-435f-9dc4-600fa2e8092b",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "beae1bcb-204c-4c99-b75e-f5d18cd749e7",
+            "source": "f6593a59-1369-48d3-88a2-ec4aed55ea69",
+            "target": "15b9d628-b2b5-47e2-9b16-d321a00b37fd",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "f51df389-7e0f-4361-b5e6-3cdccb146a98",
+            "source": "5c27c779-6382-4c65-b322-0ec262a944b3",
+            "target": "3a2d5dcc-52c7-46c4-9f00-0c0291ff0bc4",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "ad250725-45b2-41ea-a6c9-bca712f46998",
+            "source": "86183b76-c1b3-459a-816d-9d1d1d5c24e9",
+            "target": "b31c9ce6-2328-445c-ae22-a16afbc01830",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "78b47230-517f-453a-ab09-77db68755327",
+            "source": "1aad35aa-0898-45c2-a3c8-383364b743c0",
+            "target": "b6a8bf0d-83b1-4770-b0f5-f0d865c99604",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "2974e102-01b8-4a0f-8106-d36b7ae8a788",
+            "source": "fa35c846-59e1-4fe3-a90d-b8e084555069",
+            "target": "77dc2e46-c6dd-4fa2-9341-637cb13a4776",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "31a3c2c1-ca7b-4486-8a6b-8595daebd2e7",
+            "source": "5219ab89-3563-4dd5-817a-9d079613631b",
+            "target": "edc51deb-3669-4385-9fbd-94a70ee1e692",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "275c9cb3-1337-4fe2-822b-4d590b23fca4",
+            "source": "e5d85f08-0fc7-439a-905d-668a287a7a8c",
+            "target": "627385c9-657e-47b8-b504-ec8cca82968a",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "571c34df-411b-4edf-9ae9-ff0691ec3600",
+            "source": "89121485-7805-4e30-8b41-8561b2569290",
+            "target": "ae1c9526-87cb-42c5-afcc-6db77d6df6ca",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "103fbac3-54e3-48be-8d0e-2e8732607c13",
+            "source": "ad02f185-ae2e-444a-a4a3-ff4ef5096c20",
+            "target": "763b8f1e-a2b2-414d-80fc-ae8b14044676",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "4128eaa5-42d3-4f91-b04b-335bc4329e11",
+            "source": "8cad3ac6-10ea-42cd-a28b-37ae995c88f7",
+            "target": "feeffc1e-abbd-40bb-9214-fee7e29d527e",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "f6c57929-b332-41b9-ae3e-75b7b64205be",
+            "source": "d5bf6e16-0c15-4c88-992b-adf49902f371",
+            "target": "2fdba1de-6926-44af-ace7-0430f1136831",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "0ec1ce4f-f785-42c6-90eb-1901232ebce3",
+            "source": "0c9d52d8-9914-41cc-a148-cd9a4f33909d",
+            "target": "99ca4ef6-f70c-4b7c-8f08-2a7c190fdab0",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "cec6bdf6-2d3a-4d26-9e2b-85d6cd5c54f0",
+            "source": "0c22cd5c-8436-48ed-8702-ab1e2dccadcc",
+            "target": "b415b87e-97ee-422c-8846-58eeb6daf4ac",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "5679fa22-4193-4a7a-892f-1a23c9105cbc",
+            "source": "9d8f2139-7a4f-4eae-ba4c-424b18e320f5",
+            "target": "13c27cff-2a28-43e8-bf0d-4165e0bbc98e",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "3bd15997-34dc-43d6-b5e2-7fe4a09a3810",
+            "source": "3c42b385-a35c-4c57-8de8-5a9d19260234",
+            "target": "f99d7ecd-9aac-4a60-9e78-3a7be72c0a50",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "b663f22e-9c87-449e-bc52-589e1935c380",
+            "source": "0c400923-fc9d-4457-a090-4990efa10c0c",
+            "target": "0eb91954-2054-4ce4-898a-2ad8ad7d7590",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          },
+          {
+            "id": "035ce6be-b946-4ca5-935a-46a5d3eec302",
+            "source": "ed996dfa-8f7e-4a6d-9a28-4c9f5610635d",
+            "target": "dc7173bf-4c2c-4d52-82ce-30d025536c76",
+            "type": "straight",
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            }
+          }
+        ],
+        "viewport": {
+          "x": 31.061195236935475,
+          "y": 126.66067748077774,
+          "zoom": 0.3617953312675707
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "4oNh-C2N_P4lFiKtuWBSO",
+            "type": "shape",
+            "position": {
+              "x": 353.684151510231,
+              "y": -48.06028130794232
+            },
+            "style": {
+              "width": 990.2067988092057,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 990,
+              "height": 402
+            },
+            "dragging": false
+          },
+          {
+            "id": "TzD1VrecN-CFxHJSueqlv",
+            "type": "image",
+            "position": {
+              "x": -637.999554821623,
+              "y": -479.58599315766367
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            }
+          },
+          {
+            "id": "3j3Fp3ZW0idfwsLOy4-Bd",
+            "type": "image",
+            "position": {
+              "x": 441.7377440195969,
+              "y": -501.6431249703493
+            },
+            "style": {
+              "width": 759.0147783251232,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 759,
+              "height": 428
+            }
+          },
+          {
+            "id": "OOyNVdKGGs5JYLzOrEK2j",
+            "type": "image",
+            "position": {
+              "x": -643.9124316779819,
+              "y": 455.51878531378395
+            },
+            "style": {
+              "width": 762.7722772277228,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 763,
+              "height": 428
+            }
+          },
+          {
+            "id": "uXykPAdmuDtb5s_zoLG4X",
+            "type": "image",
+            "position": {
+              "x": 442.2483176672158,
+              "y": 458.1662186401428
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            }
+          },
+          {
+            "id": "-umSvFGXoIfwMBccPJS4s",
+            "type": "text",
+            "position": {
+              "x": -503.5551103771786,
+              "y": -524.7860084164528
+            },
+            "data": {
+              "text": "Nike",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 91,
+              "height": 65
+            }
+          },
+          {
+            "id": "auZO7UEQ0SClT8DpRU1IW",
+            "type": "text",
+            "position": {
+              "x": -80.50290624509853,
+              "y": -527.8860145199684
+            },
+            "data": {
+              "text": "Adidas",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 128,
+              "height": 65
+            }
+          },
+          {
+            "id": "8vje3mG75SGT0bOgEVi77",
+            "type": "text",
+            "position": {
+              "x": -648.2530408494163,
+              "y": 133.22111177048924
+            },
+            "data": {
+              "text": "Who is Nike's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 294,
+              "height": 44
+            },
+            "zIndex": 3
+          },
+          {
+            "id": "w3m3AwBiQ6Rl3sBSsxBVb",
+            "type": "text",
+            "position": {
+              "x": -176.45245796367465,
+              "y": 135.79252290330174
+            },
+            "data": {
+              "text": "Who is Adidas's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 314,
+              "height": 44
+            },
+            "zIndex": 4
+          },
+          {
+            "id": "3oIuTdex4qNvS536GnmBs",
+            "type": "text",
+            "position": {
+              "x": -703.8944920038527,
+              "y": -43.364585076609046
+            },
+            "data": {
+              "text": "What do you notice about the Nike brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 398,
+              "height": 44
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "62BhzLNmf-O6fEobbr2wN",
+            "type": "text",
+            "position": {
+              "x": -240.25298853356844,
+              "y": -43.350281923707314
+            },
+            "data": {
+              "text": "What do you notice about the Adidas brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 418,
+              "height": 44
+            },
+            "zIndex": 2
+          },
+          {
+            "id": "aQoavinT8-kmUmjwVQQNR",
+            "type": "shape",
+            "position": {
+              "x": -745.6020275401427,
+              "y": -49.636630963215765
+            },
+            "style": {
+              "width": 970.7782622578663,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 971,
+              "height": 402
+            },
+            "dragging": false
+          },
+          {
+            "id": "AadnWbe7M6rHHVGykvKZY",
+            "type": "text",
+            "position": {
+              "x": -716.4659031366651,
+              "y": 6.639335927839781
+            },
+            "data": {
+              "text": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
+              "fontColor": "#e03131",
+              "fontSize": 14.399998256138392,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 439,
+              "height": 93
+            }
+          },
+          {
+            "id": "-5kjzrcIgvps80ww-5LLj",
+            "type": "text",
+            "position": {
+              "x": -243.18823476116896,
+              "y": 18.71358329111741
+            },
+            "data": {
+              "text": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 466,
+              "height": 101
+            },
+            "dragging": false
+          },
+          {
+            "id": "l9aWkiCku0LGYK4vmH27l",
+            "type": "text",
+            "position": {
+              "x": -706.9257071266206,
+              "y": 202.64964832182847
+            },
+            "data": {
+              "text": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 363,
+              "height": 101
+            }
+          },
+          {
+            "id": "jQG1PEfO0DYdKJ7PMpI2_",
+            "type": "text",
+            "position": {
+              "x": -224.73815481077224,
+              "y": 205.93534516892674
+            },
+            "data": {
+              "text": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 410,
+              "height": 101
+            }
+          },
+          {
+            "id": "qQ8kjJ_AZHbQqKGJGa4kt",
+            "type": "text",
+            "position": {
+              "x": 425.74723235556826,
+              "y": 131.79262026890876
+            },
+            "data": {
+              "text": "Who is Spotify's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 319,
+              "height": 44
+            }
+          },
+          {
+            "id": "ykZPol0WcxySurZ4SWcAp",
+            "type": "text",
+            "position": {
+              "x": 899.8335818428723,
+              "y": 134.36403140172126
+            },
+            "data": {
+              "text": "Who is SoundCloud's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 365,
+              "height": 44
+            }
+          },
+          {
+            "id": "PVCNlpnxpZgHGmQxBOWhL",
+            "type": "text",
+            "position": {
+              "x": 372.3915478026943,
+              "y": -44.7930765781897
+            },
+            "data": {
+              "text": "What do you notice about the Spotify brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 423,
+              "height": 44
+            }
+          },
+          {
+            "id": "l8l-BQxTn4D0apGFccmxH",
+            "type": "text",
+            "position": {
+              "x": 836.0330512729784,
+              "y": -44.778773425287795
+            },
+            "data": {
+              "text": "What do you notice about the SoundCloud brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 469,
+              "height": 44
+            }
+          },
+          {
+            "id": "GY1VeoIzabITXrZwS3u4m",
+            "type": "text",
+            "position": {
+              "x": 378.10583351698006,
+              "y": 16.47637405239858
+            },
+            "data": {
+              "text": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 413,
+              "height": 101
+            }
+          },
+          {
+            "id": "lY7vgsdujsthf7z3SWIZm",
+            "type": "text",
+            "position": {
+              "x": 858.2174057826048,
+              "y": 14.897589277305325
+            },
+            "data": {
+              "text": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 486,
+              "height": 101
+            }
+          },
+          {
+            "id": "M_urrXCbvN5XA-Ie4RlJV",
+            "type": "text",
+            "position": {
+              "x": 369.3603326799264,
+              "y": 196.22115682024798
+            },
+            "data": {
+              "text": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 381,
+              "height": 101
+            }
+          },
+          {
+            "id": "gFzkrqZo7IzFgD1xBoIBz",
+            "type": "text",
+            "position": {
+              "x": 850.4049580984533,
+              "y": 202.00685366734626
+            },
+            "data": {
+              "text": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 478,
+              "height": 101
+            }
+          },
+          {
+            "id": "Bszt2kPlXfCBRUyQ0DANT",
+            "type": "text",
+            "position": {
+              "x": 580.1578807015153,
+              "y": -540.6931158150758
+            },
+            "data": {
+              "text": "Spotify",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 136,
+              "height": 65
+            }
+          },
+          {
+            "id": "zXrS5AICIc8e91kCS2-NX",
+            "type": "text",
+            "position": {
+              "x": 930.8928976605696,
+              "y": -536.6932204467721
+            },
+            "data": {
+              "text": "SoundCloud",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 218,
+              "height": 65
+            }
+          },
+          {
+            "id": "D_S4J4UCF0qinm4jGtDIF",
+            "type": "text",
+            "position": {
+              "x": -494.20821597671795,
+              "y": 416.0687003005311
+            },
+            "data": {
+              "text": "Netflix",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 126,
+              "height": 65
+            }
+          },
+          {
+            "id": "F0fvMCJ54T41yr-pdXBzP",
+            "type": "text",
+            "position": {
+              "x": -130.38237925012083,
+              "y": 414.92590419282953
+            },
+            "data": {
+              "text": "Disney",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 126,
+              "height": 65
+            }
+          },
+          {
+            "id": "owj9MdYH85tJmFTR0pVo6",
+            "type": "shape",
+            "position": {
+              "x": -743.4797579641051,
+              "y": 888.2897773157766
+            },
+            "style": {
+              "width": 1002.7782099420182,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1003,
+              "height": 402
+            },
+            "dragging": false
+          },
+          {
+            "id": "S6fyJacKFnplBRMiTy99X",
+            "type": "text",
+            "position": {
+              "x": -655.3505197882978,
+              "y": 1076.8402204246927
+            },
+            "data": {
+              "text": "Who is Netflix's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 313,
+              "height": 44
+            }
+          },
+          {
+            "id": "NBeLfrNmyRYGoNqJNonNj",
+            "type": "text",
+            "position": {
+              "x": -181.26417030099367,
+              "y": 1079.4116315575052
+            },
+            "data": {
+              "text": "Who is Disney's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 313,
+              "height": 44
+            }
+          },
+          {
+            "id": "4nV3go7-yu6dHmw3d8rKk",
+            "type": "text",
+            "position": {
+              "x": -725.849061484029,
+              "y": 901.397406878376
+            },
+            "data": {
+              "text": "What do you notice about the Netflix brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 417,
+              "height": 44
+            }
+          },
+          {
+            "id": "r6qE-vSjnhwQPCgKWcEjy",
+            "type": "text",
+            "position": {
+              "x": -222.2075580137447,
+              "y": 903.6973894397598
+            },
+            "data": {
+              "text": "What do you notice about the Disney brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 417,
+              "height": 44
+            }
+          },
+          {
+            "id": "kVmZCYZzoLEjDtkGxHrp7",
+            "type": "text",
+            "position": {
+              "x": -734.9919535041182,
+              "y": 945.5239567695666
+            },
+            "data": {
+              "text": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 458,
+              "height": 101
+            }
+          },
+          {
+            "id": "2rfc_31gr3Lzcgy5CSDyT",
+            "type": "text",
+            "position": {
+              "x": -219.4515656692971,
+              "y": 959.9451894330896
+            },
+            "data": {
+              "text": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 415,
+              "height": 101
+            }
+          },
+          {
+            "id": "CtXrOsQJY_d7i0BamMXpq",
+            "type": "text",
+            "position": {
+              "x": -712.8802591681807,
+              "y": 1141.2687569760324
+            },
+            "data": {
+              "text": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 412,
+              "height": 101
+            }
+          },
+          {
+            "id": "_lGvdRYhBlphJQowl69Mg",
+            "type": "text",
+            "position": {
+              "x": -231.83572094273393,
+              "y": 1147.0544538231302
+            },
+            "data": {
+              "text": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 392,
+              "height": 80
+            }
+          },
+          {
+            "id": "2pEB-YinZcHRPMEjAT0MB",
+            "type": "text",
+            "position": {
+              "x": 953.0835511436426,
+              "y": 421.40191592320537
+            },
+            "data": {
+              "text": "Walmart",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 152,
+              "height": 65
+            }
+          },
+          {
+            "id": "kB6MkAHqefTfZu_JAtuvn",
+            "type": "text",
+            "position": {
+              "x": 576.3839907057591,
+              "y": 420.2589890258838
+            },
+            "data": {
+              "text": "Target",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 121,
+              "height": 65
+            }
+          },
+          {
+            "id": "zJs7MwzEfhYfdkIVZ6-K-",
+            "type": "shape",
+            "position": {
+              "x": 325.36145733422074,
+              "y": 888.2863032626162
+            },
+            "style": {
+              "width": 1011.9210147690271,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1012,
+              "height": 402
+            },
+            "dragging": false
+          },
+          {
+            "id": "Ln0xMO7J7WHG9wSvEsAvp",
+            "type": "text",
+            "position": {
+              "x": 423.36635263551625,
+              "y": 1073.88765200719
+            },
+            "data": {
+              "text": "Who is Target's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 310,
+              "height": 44
+            }
+          },
+          {
+            "id": "KzkDjGo_QfUBynHAoGEtt",
+            "type": "text",
+            "position": {
+              "x": 897.4527021228205,
+              "y": 1076.4590631400024
+            },
+            "data": {
+              "text": "Who is Walmart's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 328,
+              "height": 44
+            }
+          },
+          {
+            "id": "-IfLNj63pCDysaUgFN9cu",
+            "type": "text",
+            "position": {
+              "x": 347.15361241857977,
+              "y": 898.4448384608733
+            },
+            "data": {
+              "text": "What do you notice about the Target brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 414,
+              "height": 44
+            }
+          },
+          {
+            "id": "UJAuJIngPyOA8Ebhw9UgL",
+            "type": "text",
+            "position": {
+              "x": 849.6522761846231,
+              "y": 904.1733837315202
+            },
+            "data": {
+              "text": "What do you notice about the Walmart brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 432,
+              "height": 44
+            }
+          },
+          {
+            "id": "c5HPB3dV0S3XfohmsPSF5",
+            "type": "text",
+            "position": {
+              "x": 327.7249014810799,
+              "y": 942.571431948604
+            },
+            "data": {
+              "text": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 489,
+              "height": 101
+            }
+          },
+          {
+            "id": "fLds1FnECckzaU3LMf5vi",
+            "type": "text",
+            "position": {
+              "x": 859.2651323683563,
+              "y": 956.9926210155868
+            },
+            "data": {
+              "text": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 407,
+              "height": 101
+            }
+          },
+          {
+            "id": "45jqO3Yy0VFQ8EOC0E6jJ",
+            "type": "text",
+            "position": {
+              "x": 340.69370379692793,
+              "y": 1130.316223435762
+            },
+            "data": {
+              "text": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 402,
+              "height": 101
+            }
+          },
+          {
+            "id": "KEDSwHoEijdlol-1YiOe1",
+            "type": "text",
+            "position": {
+              "x": 850.3099321730442,
+              "y": 1142.9589585083058
+            },
+            "data": {
+              "text": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 443,
+              "height": 80
+            }
+          },
+          {
+            "id": "f6a843ad-0468-43cc-b788-7e963fb6f59c",
+            "type": "lineAnchor",
+            "position": {
+              "x": -259.03731426947775,
+              "y": -52.9932262596447
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6914ed8d-9ee1-4a78-8cd5-3260d9d990c6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -249.03731426947775,
+              "y": 328.72107689325713
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e85b360c-43d4-44f8-9cd6-491538cf4e1e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -727.6087428409062,
+              "y": -15.27890566812681
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "360d9049-d485-4184-a43e-11a043776b4d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -286.75163486099547,
+              "y": -15.27890566812681
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "465eae25-425e-4781-852f-a2eafa2ebe34",
+            "type": "lineAnchor",
+            "position": {
+              "x": -238.32423692388113,
+              "y": -10.424012589984727
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "02517653-d38a-4da5-a8f4-adfc5158e9b1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 202.5328710560296,
+              "y": -10.424012589984727
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "a8a4aff0-2225-4a0d-ba83-f5c2587433df",
+            "type": "lineAnchor",
+            "position": {
+              "x": -716.3242020466487,
+              "y": 168.43314770577422
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d1fedff3-2a1a-4a5b-971d-0cd97a5429a5",
+            "type": "lineAnchor",
+            "position": {
+              "x": -275.46709406673796,
+              "y": 168.43314770577422
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b11278a2-250d-4886-9d98-f45b438eed3e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -229.46707662812196,
+              "y": 170.71882711425633
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "09336589-13e0-4aa9-8ef6-82c22e219308",
+            "type": "lineAnchor",
+            "position": {
+              "x": 211.39003135178876,
+              "y": 170.71882711425633
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "134a87ab-0d9e-4e33-95fd-c06898aab3d1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 817.2487255370693,
+              "y": -54.421717761225295
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b1c2bee9-5b84-4005-a91c-be0903b7efa3",
+            "type": "lineAnchor",
+            "position": {
+              "x": 827.2487255370693,
+              "y": 327.29258539167654
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f2186543-64a4-412b-a2a7-d89ca2c80653",
+            "type": "lineAnchor",
+            "position": {
+              "x": 348.67729696564083,
+              "y": -16.707397169707406
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "bdbed325-ad75-4c96-a9b7-7353625320b5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 789.5344049455516,
+              "y": -16.707397169707406
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e91373a5-ad61-4b61-8f5b-c782bf6db8f9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 837.9618028826658,
+              "y": -11.852504091565265
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9bd57a42-e346-4b4b-a53e-2d84c531e81f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1304.1056765694352,
+              "y": -11.852504091565265
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b6909edb-88bc-4264-b66e-4e2ede201f6f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 359.96183775989834,
+              "y": 167.00465620419357
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "79ad65fe-2c48-4711-b935-df51f15b48bb",
+            "type": "lineAnchor",
+            "position": {
+              "x": 800.8189457398091,
+              "y": 167.00465620419357
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ab7b578c-4370-4807-8eab-b1b9c185febb",
+            "type": "lineAnchor",
+            "position": {
+              "x": -263.84902660679666,
+              "y": 890.6258823945587
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ed4ff9c8-ff97-4da2-93d1-e201b174f004",
+            "type": "lineAnchor",
+            "position": {
+              "x": -253.84902660679666,
+              "y": 1272.3401855474606
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "50bc1cec-2931-4f73-b365-7fd885ab27c3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -732.4204551782252,
+              "y": 928.3402029860769
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b8d227a2-ed5d-471e-a974-e03835d46fe5",
+            "type": "lineAnchor",
+            "position": {
+              "x": -291.5633471983145,
+              "y": 928.3402029860769
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "93386e57-86a0-4b18-aebd-bf0f47ce6fc3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -243.13594926120015,
+              "y": 933.195096064219
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f5993b91-6512-46d4-8a8a-13d96bb75366",
+            "type": "lineAnchor",
+            "position": {
+              "x": 223.00792442556917,
+              "y": 933.195096064219
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "21dd731e-f08f-4eb1-a436-56019e9a11e4",
+            "type": "lineAnchor",
+            "position": {
+              "x": -721.1359143839677,
+              "y": 1112.0522563599775
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2b5e38d6-abf4-4cf8-9447-ce7960509e7d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -280.278806404057,
+              "y": 1112.0522563599775
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "cd09a4a8-fd9d-46b6-bb6e-ea627824efc6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -234.2787889654411,
+              "y": 1114.3379357684603
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "948d8494-51a2-41b1-b5b9-be75a5cd5ce6",
+            "type": "lineAnchor",
+            "position": {
+              "x": 206.57831901446963,
+              "y": 1114.3379357684603
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ca119873-c854-4cb8-9bd5-d4a1d974c315",
+            "type": "lineAnchor",
+            "position": {
+              "x": 814.8678458170175,
+              "y": 887.673313977056
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9067680b-590d-499f-9ddb-3e27590dddd9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 824.8678458170175,
+              "y": 1269.3876171299578
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d0c8937c-5c83-4be0-a951-68298fa0df0f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 346.29641724558905,
+              "y": 925.3876345685741
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9f23f339-6a25-4c2f-a9e8-ed60aa0ce58c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 787.1535252254998,
+              "y": 925.3876345685741
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9e3a236f-f38d-4f7d-8c63-3d8a52384498",
+            "type": "lineAnchor",
+            "position": {
+              "x": 835.580923162614,
+              "y": 930.2425276467158
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "c6c0742b-3def-485f-a4d5-0a1cccfe1d8c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1301.7247968493834,
+              "y": 930.2425276467158
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5f7b728d-da51-4f65-b1cf-e7cfd7b57c27",
+            "type": "lineAnchor",
+            "position": {
+              "x": 357.58095803984634,
+              "y": 1109.0996879424747
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "15b34f27-48cc-4c87-9cd9-ed61a2a30d05",
+            "type": "lineAnchor",
+            "position": {
+              "x": 798.4380660197571,
+              "y": 1109.0996879424747
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5e02bf96-fe46-4be7-9f9f-f1d431a2a5ed",
+            "type": "lineAnchor",
+            "position": {
+              "x": 844.4380834583731,
+              "y": 1111.3853673509575
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "c354e824-1533-415a-9069-d25d147c8d75",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1285.2951914382838,
+              "y": 1111.3853673509575
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e9463e94-9dbe-44b9-9ba3-e23aabb8413f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 844.884603831499,
+              "y": 166.0018011940872
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "70bbd9b8-c7d2-4623-85fb-28db3c29e42a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1311.0284775182686,
+              "y": 166.0018011940872
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "04e38218-d850-4031-be18-e246cfea8f3f",
+            "source": "f6a843ad-0468-43cc-b788-7e963fb6f59c",
+            "target": "6914ed8d-9ee1-4a78-8cd5-3260d9d990c6",
+            "type": "straight",
+            "zIndex": 5
+          },
+          {
+            "id": "1f7f1858-d52b-4e3c-8855-d8a02006cec1",
+            "source": "e85b360c-43d4-44f8-9cd6-491538cf4e1e",
+            "target": "360d9049-d485-4184-a43e-11a043776b4d",
+            "type": "straight",
+            "zIndex": 9
+          },
+          {
+            "id": "2a7ac741-d80d-423b-87a3-7fadd68e8c27",
+            "source": "465eae25-425e-4781-852f-a2eafa2ebe34",
+            "target": "02517653-d38a-4da5-a8f4-adfc5158e9b1",
+            "type": "straight",
+            "zIndex": 7
+          },
+          {
+            "id": "9062ebdd-4c48-4fba-8270-73405b4796a3",
+            "source": "a8a4aff0-2225-4a0d-ba83-f5c2587433df",
+            "target": "d1fedff3-2a1a-4a5b-971d-0cd97a5429a5",
+            "type": "straight",
+            "zIndex": 8
+          },
+          {
+            "id": "70ddb6b3-d4cc-4334-a0b5-a030fa274a1a",
+            "source": "b11278a2-250d-4886-9d98-f45b438eed3e",
+            "target": "09336589-13e0-4aa9-8ef6-82c22e219308",
+            "type": "straight",
+            "zIndex": 6
+          },
+          {
+            "id": "9ce52008-dd33-4f89-bed5-7c11efaa1081",
+            "source": "134a87ab-0d9e-4e33-95fd-c06898aab3d1",
+            "target": "b1c2bee9-5b84-4005-a91c-be0903b7efa3",
+            "type": "straight",
+            "zIndex": 22
+          },
+          {
+            "id": "cb82fdc6-4c79-448e-958a-89b01c7c6514",
+            "source": "f2186543-64a4-412b-a2a7-d89ca2c80653",
+            "target": "bdbed325-ad75-4c96-a9b7-7353625320b5",
+            "type": "straight",
+            "zIndex": 20
+          },
+          {
+            "id": "8cf8c5a3-deda-40c5-b212-3b533d3287af",
+            "source": "e91373a5-ad61-4b61-8f5b-c782bf6db8f9",
+            "target": "9bd57a42-e346-4b4b-a53e-2d84c531e81f",
+            "type": "straight",
+            "zIndex": 23
+          },
+          {
+            "id": "3f978399-373b-4940-914b-cf6a618bb294",
+            "source": "b6909edb-88bc-4264-b66e-4e2ede201f6f",
+            "target": "79ad65fe-2c48-4711-b935-df51f15b48bb",
+            "type": "straight",
+            "zIndex": 21
+          },
+          {
+            "id": "23b95de1-1d3f-4b26-93f4-7552e3379587",
+            "source": "ab7b578c-4370-4807-8eab-b1b9c185febb",
+            "target": "ed4ff9c8-ff97-4da2-93d1-e201b174f004",
+            "type": "straight",
+            "zIndex": 12
+          },
+          {
+            "id": "b00ea9bb-3414-4b92-882f-a136a4a40090",
+            "source": "50bc1cec-2931-4f73-b365-7fd885ab27c3",
+            "target": "b8d227a2-ed5d-471e-a974-e03835d46fe5",
+            "type": "straight",
+            "zIndex": 10
+          },
+          {
+            "id": "3b824d71-d161-4979-a1db-86fe29d4e916",
+            "source": "93386e57-86a0-4b18-aebd-bf0f47ce6fc3",
+            "target": "f5993b91-6512-46d4-8a8a-13d96bb75366",
+            "type": "straight",
+            "zIndex": 13
+          },
+          {
+            "id": "eb360613-c29c-4149-be5b-39d51c09e1ae",
+            "source": "21dd731e-f08f-4eb1-a436-56019e9a11e4",
+            "target": "2b5e38d6-abf4-4cf8-9447-ce7960509e7d",
+            "type": "straight",
+            "zIndex": 11
+          },
+          {
+            "id": "2dd71745-2d03-4f9e-8404-46019398339a",
+            "source": "cd09a4a8-fd9d-46b6-bb6e-ea627824efc6",
+            "target": "948d8494-51a2-41b1-b5b9-be75a5cd5ce6",
+            "type": "straight",
+            "zIndex": 14
+          },
+          {
+            "id": "15d8fb8e-467a-464e-aae9-d0696261d974",
+            "source": "ca119873-c854-4cb8-9bd5-d4a1d974c315",
+            "target": "9067680b-590d-499f-9ddb-3e27590dddd9",
+            "type": "straight",
+            "zIndex": 17
+          },
+          {
+            "id": "f2504f0a-f9d1-473c-a6bf-822247dc7ee9",
+            "source": "d0c8937c-5c83-4be0-a951-68298fa0df0f",
+            "target": "9f23f339-6a25-4c2f-a9e8-ed60aa0ce58c",
+            "type": "straight",
+            "zIndex": 15
+          },
+          {
+            "id": "c8c72c17-441e-4c30-a976-321eff194f85",
+            "source": "9e3a236f-f38d-4f7d-8c63-3d8a52384498",
+            "target": "c6c0742b-3def-485f-a4d5-0a1cccfe1d8c",
+            "type": "straight",
+            "zIndex": 18
+          },
+          {
+            "id": "1d14fce1-2ce3-4345-8699-f27ae5d58460",
+            "source": "5f7b728d-da51-4f65-b1cf-e7cfd7b57c27",
+            "target": "15b34f27-48cc-4c87-9cd9-ed61a2a30d05",
+            "type": "straight",
+            "zIndex": 16
+          },
+          {
+            "id": "4cf51d56-11a5-4a36-8346-f6cdc76e176b",
+            "source": "5e02bf96-fe46-4be7-9f9f-f1d431a2a5ed",
+            "target": "c354e824-1533-415a-9069-d25d147c8d75",
+            "type": "straight",
+            "zIndex": 19
+          },
+          {
+            "id": "6f097eee-524f-4c8c-95d6-c419c34e3733",
+            "source": "e9463e94-9dbe-44b9-9ba3-e23aabb8413f",
+            "target": "70bbd9b8-c7d2-4623-85fb-28db3c29e42a",
+            "type": "straight",
+            "zIndex": 23,
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          }
+        ],
+        "viewport": {
+          "x": 388.16434082753125,
+          "y": 193.23059038372975,
+          "zoom": 0.36225992309448796
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:37:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 17:31:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:32:20 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:33:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:33:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:12 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:19 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:36:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,6 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -12,7 +12,6 @@ import {
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
 
 import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../../constants';
 
@@ -23,14 +22,17 @@ import moduleStyles from './predict.module.scss';
 interface PredictQuestionProps {
   levelProperties: LevelProperties;
   className?: string;
+  showJavascriptWarning?: boolean;
+  showSubmitButton?: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   levelProperties,
   className,
+  showJavascriptWarning,
+  showSubmitButton,
 }) => {
   const {predictSettings, appName} = levelProperties;
-  const isWeblab2 = appName === 'weblab2';
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const dispatch = useAppDispatch();
@@ -150,17 +152,26 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             );
           })
         )}
+        {showJavascriptWarning && !predictAnswerLocked && (
+          <Typography variant="body4">
+            Javascript will not run until you submit your prediction.
+          </Typography>
+        )}
       </div>
       {/* Because weblab2 does not have a 'Run' button to indicate that they have submitted their answer,
         we display a 'Submit answer button. */}
-      {isWeblab2 && (
-        <Button
-          onClick={onSubmitAnswer}
-          text={commonI18n.submitAnswer()}
-          size="s"
-          className={moduleStyles.submitButton}
+      {showSubmitButton && (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           disabled={predictAnswerLocked || !hasAnswer}
-        />
+          className={moduleStyles.submitButton}
+          onClick={onSubmitAnswer}
+          type="button"
+        >
+          {'Submit Answer'}
+        </MuiButton>
       )}
       <PredictResetButton />
     </div>

@@ -29,7 +29,7 @@ module Services
 
         new_auth_option = clever_auth_option.dup
         new_auth_option.authentication_id = clever_v3_id
-        new_auth_option.version = AuthenticationOption::Clever::VERSION[:v3_1]
+        new_auth_option.version = AuthenticationOption::Clever::VERSION[:v3]
 
         new_auth_option
       end

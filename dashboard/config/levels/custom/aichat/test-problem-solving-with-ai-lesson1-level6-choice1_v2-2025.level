@@ -51,7 +51,8 @@
       "presenter.jpg": "997daa23-4293-4731-8082-8347dbc15dd4.jpg",
       "presenter2.jpg": "ac3bc566-cfd6-4438-857c-616b653aeb56.jpg",
       "presenter3.jpg": "5874b2e9-1f9a-4be6-8359-7716049dce76.jpg"
-    }
+    },
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:33.769+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1_2025\"}]"

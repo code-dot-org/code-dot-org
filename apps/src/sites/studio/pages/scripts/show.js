@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -31,6 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
@@ -109,7 +109,7 @@ function initPage() {
   const showAiAssessmentsAnnouncement =
     scriptData.showAiAssessmentsAnnouncement;
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       {parentalPermissionBannerData && (
         <ParentalPermissionBanner {...parentalPermissionBannerData} />
@@ -154,7 +154,10 @@ function initPage() {
         showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
-    mountPoint
+    mountPoint,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   tooltipifyVocabulary();
@@ -196,7 +199,7 @@ function displayDifferentiationChat(scriptData) {
   );
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
           context={{
@@ -206,7 +209,10 @@ function displayDifferentiationChat(scriptData) {
           scriptName={scriptData.name}
         />
       </Provider>,
-      aiDiffFabMountPoint
+      aiDiffFabMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 }

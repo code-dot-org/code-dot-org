@@ -12,7 +12,7 @@
     "parent_level_id": 20018,
     "name_suffix": "_2023",
     "display_name": "Video: Intro to CSS",
-    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to styling web pages with CSS.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n####How is the style of a web page different from structure?",
+    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to styling web pages with CSS.\r\n\r\n## As you watch the video, consider the following:\r\n\r\nHow is the style of a web page different from structure?",
     "encrypted": "false"
   },
   "published": true,

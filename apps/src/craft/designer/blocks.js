@@ -1,6 +1,8 @@
 import {EventType} from '@code-dot-org/craft';
 import _ from 'lodash';
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {addSerializationHooksToBlock} from '@cdo/apps/blockly/utils';
 
@@ -183,7 +185,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -213,9 +215,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(
-          blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS
-        ),
+        new CdoFieldDropdown(blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -246,7 +246,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(
+        new CdoFieldDropdown(
           blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS
         ),
         'DIR'
@@ -465,14 +465,14 @@ export const install = (blockly, blockInstallOptions) => {
       helpUrl: '',
       init: function () {
         let dropdownOptions = keysToDropdownOptions(dropdownArray);
-        const dropdown = new blockly.FieldDropdown(dropdownOptions);
+        const dropdown = new CdoFieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
         if (doSort) {
           dropdownOptions = _.sortBy(dropdownOptions, 0);
         }
         this.setStyle(BlockStyles.DEFAULT);
         this.appendDummyInput()
-          .appendField(new blockly.FieldLabel(blockText))
+          .appendField(new CdoFieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -490,7 +490,7 @@ export const install = (blockly, blockInstallOptions) => {
       helpUrl: '',
       init: function () {
         this.setStyle(BlockStyles.DEFAULT);
-        this.appendDummyInput().appendField(new blockly.FieldLabel(blockText));
+        this.appendDummyInput().appendField(new CdoFieldLabel(blockText));
         this.setPreviousStatement(true);
         this.setNextStatement(true);
       },
@@ -511,11 +511,11 @@ export const install = (blockly, blockInstallOptions) => {
       helpUrl: '',
       init: function () {
         const dropdownOptions = keysToDropdownOptions(types);
-        const dropdown = new blockly.FieldDropdown(dropdownOptions);
+        const dropdown = new CdoFieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
         this.setStyle(BlockStyles.DEFAULT);
         this.appendDummyInput()
-          .appendField(new blockly.FieldLabel(blockText))
+          .appendField(new CdoFieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -628,7 +628,7 @@ export const install = (blockly, blockInstallOptions) => {
         k.toString(),
         k.toString(),
       ]);
-      const dropdown = new blockly.FieldDropdown(dropdownOptions);
+      const dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.LOOP);
@@ -660,18 +660,18 @@ export const install = (blockly, blockInstallOptions) => {
       const entityTypeDropdownOptions = keysToDropdownOptions(
         SPAWNABLE_ENTITY_TYPES
       );
-      const entityTypeDropdown = new blockly.FieldDropdown(
+      const entityTypeDropdown = new CdoFieldDropdown(
         entityTypeDropdownOptions
       );
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
-      const locationDropdown = new blockly.FieldDropdown(locationOptions);
+      const locationDropdown = new CdoFieldDropdown(locationOptions);
       locationDropdown.setValue(locationOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
-        .appendField(new blockly.FieldLabel(i18n.blockActionSpawn()))
+        .appendField(new CdoFieldLabel(i18n.blockActionSpawn()))
         .appendField(entityTypeDropdown, 'TYPE')
-        .appendField(new blockly.FieldLabel(' '))
+        .appendField(new CdoFieldLabel(' '))
         .appendField(locationDropdown, 'DIRECTION');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -690,14 +690,14 @@ export const install = (blockly, blockInstallOptions) => {
       const entityTypeDropdownOptions = keysToDropdownOptions(
         SPAWNABLE_ENTITY_TYPES
       );
-      const entityTypeDropdown = new blockly.FieldDropdown(
+      const entityTypeDropdown = new CdoFieldDropdown(
         entityTypeDropdownOptions
       );
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
-        .appendField(new blockly.FieldLabel('spawn'))
+        .appendField(new CdoFieldLabel('spawn'))
         .appendField(entityTypeDropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -713,7 +713,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move north'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move north'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -727,7 +727,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move south'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move south'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -741,7 +741,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move east'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move east'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -755,7 +755,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move west'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move west'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -779,10 +779,7 @@ export const install = (blockly, blockInstallOptions) => {
         return [SOUNDS_TO_DISPLAY_TEXT[key] || key, key];
       });
       dropdownOptions = _.sortBy(dropdownOptions, 0);
-      const dropdown = new blockly.FieldDropdown(
-        dropdownOptions,
-        onSoundSelected
-      );
+      const dropdown = new CdoFieldDropdown(dropdownOptions, onSoundSelected);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);
@@ -805,7 +802,7 @@ export const install = (blockly, blockInstallOptions) => {
       const dropdownOptions = keysToDropdownOptions(
         _.range(1, 11).map(x => x.toString())
       );
-      const dropdown = new blockly.FieldDropdown(dropdownOptions);
+      const dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);

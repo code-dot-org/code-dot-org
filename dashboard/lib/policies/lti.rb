@@ -30,11 +30,18 @@ class Policies::Lti
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
+  # For security reasons, we only allow target_link_uris that are on domains we control.
+  # This is to prevent abuse of our LTI integration to launch unexpected URLs.
+  ALLOWED_TARGET_LINK_URI_DOMAINS = Set.new(
+    [
+      'code.org',
+      'csforall.org',
+    ]
+).freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
-                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
-                           'Teacher']
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
 ).freeze
   STAFF_ROLES = Set.new(
     [
@@ -58,7 +65,6 @@ class Policies::Lti
   DEEP_LINKING_CONTENT_ITEMS_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/content_items'
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration"
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name"
-  CLASSLINK_ROLE_KEY = 'classLink_role'
   VERSION_CLAIM = 'https://purl.imsglobal.org/spec/lti/claim/version'
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
@@ -105,17 +111,6 @@ class Policies::Lti
       supported_message_types: [
         MessageType::RESOURCE_LINK_REQUEST,
         MessageType::DEEP_LINKING_REQUEST,
-      ],
-    },
-    # https://launchpad.classlink.com/.well-known/openid-configuration
-    classlink: {
-      name: 'ClassLink',
-      issuer: "https://launchpad.classlink.com",
-      auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth",
-      jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks",
-      access_token_url: "https://launchpad.classlink.com/oauth2/v2/token",
-      supported_message_types: [
-        MessageType::RESOURCE_LINK_REQUEST,
       ],
     },
   }
@@ -165,10 +160,6 @@ class Policies::Lti
   MAX_COURSE_MEMBERSHIP = 1000
 
   def self.get_account_type(roles)
-    # ClassLink includes a non-standard role as a string instead of an array of strings
-    if roles.is_a?(String)
-      return STAFF_ROLES.include?(roles) ? User::TYPE_TEACHER : User::TYPE_STUDENT
-    end
     roles.each do |role|
       return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
@@ -216,6 +207,21 @@ class Policies::Lti
   def self.find_platform_name_by_issuer(issuer)
     platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
     platform_name.to_s
+  end
+
+  def self.allowed_target_link_uri?(target_link_uri)
+    uri = URI.parse(target_link_uri.to_s)
+    return false unless uri.is_a?(URI::HTTP)
+
+    host = uri.host.to_s.downcase
+    return false if host.blank?
+
+    ALLOWED_TARGET_LINK_URI_DOMAINS.any? do |domain|
+      normalized_domain = domain.downcase
+      host == normalized_domain || host.end_with?(".#{normalized_domain}")
+    end
+  rescue URI::InvalidURIError
+    false
   end
 
   # Returns the email provided by the LMS when creating the User through LTI

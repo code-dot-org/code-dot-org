@@ -17,7 +17,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_nil garbage_token
   end
 
-  test 'oauth_tokens_for_provider returns most recently updated tokens for migrated teacher' do
+  test 'oauth_tokens_for_provider returns most recently created tokens for migrated teacher' do
     Timecop.freeze do
       user = create(:teacher)
       create(:authentication_option,
@@ -71,6 +71,96 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     user = create(:teacher, :clever_sso_provider, :demigrated)
     clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
     assert_equal 'fake-oauth-token', clever_token
+  end
+
+  describe '#uid_for_provider' do
+    let(:user) {create(:teacher)}
+    let(:provider) {AuthenticationOption::CLEVER}
+    let(:version) {nil}
+    let(:v3) {AuthenticationOption::Clever::VERSION[:v3]}
+    subject(:uid_for_provider) {user.uid_for_provider(provider, version)}
+
+    context 'when version is nil' do
+      it 'returns the latest authentication option for the provider' do
+        Timecop.freeze do
+          create(:authentication_option,
+            user: user,
+            credential_type: provider,
+            authentication_id: 'legacy-id',
+            version: nil
+          )
+
+          Timecop.travel(1.minute) do
+            create(:authentication_option,
+              user: user,
+              credential_type: provider,
+              authentication_id: 'new-id',
+              version: v3
+            )
+          end
+        end
+
+        _(uid_for_provider).must_equal 'new-id'
+      end
+    end
+
+    context 'when a version is provided' do
+      context 'when matching authentication options exist' do
+        let(:version) {v3}
+
+        it 'returns the latest authentication option for that version' do
+          # Note: this is a rare edge case but could happen, since users can have multiple
+          # Clever auth options with different authentication_ids.
+          Timecop.freeze do
+            create(:authentication_option,
+              user: user,
+              credential_type: provider,
+              authentication_id: 'legacy-id',
+              version: nil
+            )
+            Timecop.travel(1.minute) do
+              create(:authentication_option,
+                user: user,
+                credential_type: provider,
+                authentication_id: 'newer-v3-id',
+                version: v3
+              )
+            end
+            Timecop.travel(2.minutes) do
+              create(:authentication_option,
+                user: user,
+                credential_type: provider,
+                authentication_id: 'newest-v3-id',
+                version: v3
+              )
+            end
+          end
+
+          _(uid_for_provider).must_equal 'newest-v3-id'
+        end
+      end
+
+      context 'when no matching authentication options exist' do
+        let(:version) {'invalid-version'}
+
+        it 'returns nil' do
+          create(:authentication_option,
+            user: user,
+            credential_type: provider,
+            authentication_id: 'default-version-id',
+            version: nil
+          )
+          create(:authentication_option,
+            user: user,
+            credential_type: provider,
+            authentication_id: 'v3-id',
+            version: v3
+          )
+
+          _(uid_for_provider).must_be_nil
+        end
+      end
+    end
   end
 
   test 'does nothing if user is already migrated' do

@@ -1,10 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React, {useMemo} from 'react';
 
@@ -111,20 +108,26 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   return (
     <div className={style.chatHeader}>
       <div className={style.chatHeaderTitle}>
-        <BodyThreeText noMargin>
-          <StrongText>{threadTitle}</StrongText>
-        </BodyThreeText>
+        <Typography variant="body3">
+          <Typography variant="strong">{threadTitle}</Typography>
+        </Typography>
       </div>
       <div className={style.chatHeaderButtons}>
         <ActionDropdown
           size="s"
+          useIconButton={false}
           triggerButtonProps={{
-            size: 's',
-            color: 'gray',
-            type: 'secondary',
-            text: commonI18n.aiDifferentiation_suggest_prompt(),
+            size: 'small',
+            color: 'tertiary',
+            variant: 'outlined',
+            children: commonI18n.aiDifferentiation_suggest_prompt(),
             'aria-label': commonI18n.aiDifferentiation_suggest_prompt(),
-            iconLeft: {iconName: 'solid-pen-sparkle', iconFamily: 'kit'},
+            startIcon: (
+              <FontAwesomeV6Icon
+                iconName="solid-pen-sparkle"
+                iconFamily="kit"
+              />
+            ),
           }}
           labelText={commonI18n.aiDifferentiation_suggest_prompt()}
           name="aiDiffChatHeaderDropdown"
@@ -135,15 +138,16 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
           document={<AiDiffPdf messages={messages} />}
           fileName="ai_differentiation_chat.pdf"
         >
-          <Button
-            color="gray"
-            size="s"
-            type="secondary"
-            isIconOnly
-            icon={{iconName: 'download'}}
+          <MuiIconButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
             onClick={() => {}}
             aria-label={commonI18n.aiDifferentiation_download_pdf()}
-          />
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="download" />
+          </MuiIconButton>
         </PDFDownloadLink>
       </div>
     </div>

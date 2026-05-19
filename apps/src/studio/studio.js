@@ -17,6 +17,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -2397,11 +2398,14 @@ Studio.init = function (config) {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -2943,9 +2947,6 @@ Studio.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
@@ -5926,9 +5927,12 @@ Studio.askForInput = function (question, callback) {
     Studio.queueCallback(callback, [value]);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
-    target
+    target,
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

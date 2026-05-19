@@ -42,7 +42,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       !selectedStudentId ||
       !sectionId
     ) {
-      console.log('Missing required parameters');
+      console.error('Missing required parameters');
       return;
     }
 
@@ -58,7 +58,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       student_id: selectedStudentId.toString(),
       section_id: sectionId.toString(),
     });
-    HttpClient.fetchJson<{json: string}>(
+    HttpClient.fetchJson<{json: string; updated_at: string | null}>(
       `/student_snapshots/lesson_insight?${params}`
     )
       .then(response => {
@@ -70,7 +70,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
             setInsightData(parsedData);
           } catch (parseError) {
             console.error('Error parsing insight JSON:', parseError);
-            setError('Failed to parse insight data');
+            setError('Error loading insight data');
           }
         }
       })
@@ -78,7 +78,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
         // Only update state if this request is still current
         if (currentRequestRef.current === requestId) {
           console.error('Error fetching insight prompt:', error);
-          setError('Failed to fetch insight data');
+          setError('Error loading insight data');
         }
       })
       .finally(() => {
@@ -89,7 +89,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       });
   }, [selectedLessonId, selectedUnitId, selectedStudentId, sectionId]);
 
-  React.useEffect(loadInsight, [loadInsight]);
+  React.useEffect(() => loadInsight(), [loadInsight]);
 
   return (
     <WidgetTemplate
@@ -97,18 +97,20 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       gridWidth={1}
       gridHeight={2}
       loading={loading}
-      settingsOptions={[
-        {
-          onClick: loadInsight,
-          isOptionDestructive: false,
-          icon: {iconName: 'arrows-rotate'},
-          label: 'Refresh Insight',
-          value: 'refresh_insight',
-        },
-      ]}
     >
-      {error && <Typography color="error">{error}</Typography>}
-      {insightData && (
+      {error && (
+        <div className={styles.widgetBody}>
+          <div className={styles.errorContainer}>
+            <FontAwesomeV6Icon
+              iconName="triangle-exclamation"
+              iconStyle="regular"
+              aria-label="Error"
+            />
+            <Typography color="error">{error}</Typography>
+          </div>
+        </div>
+      )}
+      {insightData && !error && (
         <div className={styles.widgetBody}>
           <div>
             <div className={styles.insightText}>

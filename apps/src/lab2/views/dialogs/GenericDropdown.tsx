@@ -2,7 +2,7 @@ import {
   SimpleDropdown,
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useEffect} from 'react';
 
 import {useDialogControl} from './DialogControlContext';
@@ -37,7 +37,11 @@ const GenericDropdownBody: React.FunctionComponent<
 > = ({message, dropdownLabel, handleInputChange, items, selectedValue}) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
+      {message && (
+        <Typography variant="body2" gutterBottom>
+          {message}
+        </Typography>
+      )}
       <SimpleDropdown
         name="dialog-dropdown"
         items={items}

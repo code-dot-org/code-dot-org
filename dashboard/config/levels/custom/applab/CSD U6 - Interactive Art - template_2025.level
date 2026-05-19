@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:08:49.000Z",
   "level_num": "custom",
@@ -113,14 +114,17 @@
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
       "tempSensor.F": null,
-      "tempSensor.C": null
+      "tempSensor.C": null,
+      "comment": null
     },
     "ai_tutor_available": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:08:49.735+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Interactive Art - template_2024\\\"\"],\"cloned_from\":\"CSD U6 - Interactive Art - template_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:08:49.735+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Interactive Art - template_2024\\\"\"],\"cloned_from\":\"CSD U6 - Interactive Art - template_2024\"},{\"changed_at\":\"2026-03-23 19:46:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

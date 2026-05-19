@@ -1,0 +1,51 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.table {
+  width: 90%;
+  margin: 8px auto auto;
+}
+
+.row {
+  height: 41px;
+  color: $cyan;
+  border: 1px solid $lighter_cyan;
+  background-color: $lightest_gray;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lighter_cyan;
+  }
+}
+
+.td {
+  padding: 1px;
+}
+
+.selected {
+  @include main-font-bold;
+  color: $white;
+  background-color: $light_cyan;
+}
+
+.studentTableRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.meRow {
+  padding: 1px 1px 1px 5px;
+}
+
+.name {
+  padding-left: 5px;
+  margin: 1px 1px 1px 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.linkIcon {
+  margin-left: 10px;
+}

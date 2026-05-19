@@ -3,7 +3,6 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCode} from '@cdo/apps/blockly/utils';
@@ -12,6 +11,7 @@ import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import localization from '@cdo/apps/localization';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
@@ -192,7 +192,7 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ErrorBoundary
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
@@ -216,7 +216,10 @@ Dance.prototype.init = function (config) {
         />
       </ErrorBoundary>
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -597,15 +600,6 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   } else {
     this.studioApp_.playAudio('failure');
   }
-  const state = getStore().getState();
-  const validationResult = result ? 'PASSED' : 'FAILED';
-  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-    levelPath: state.pageConstants.currentScriptLevelUrl,
-    result: validationResult,
-    message, // feedback message key
-    userId: state.currentUser.userId,
-  });
-
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',
@@ -673,7 +667,6 @@ Dance.prototype.runButtonClick = async function () {
     value: getStore().getState().dance.selectedSong,
   });
 
-  Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
 
   try {

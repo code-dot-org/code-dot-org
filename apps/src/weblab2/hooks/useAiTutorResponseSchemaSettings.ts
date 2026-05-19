@@ -6,6 +6,7 @@ import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
   setViewingAiTutorVersion,
+  setAiTutorVersionFiles,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -20,7 +21,7 @@ import {
   getMergedAiTutorCodeWithSource,
   isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
-import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
+import {setAiFilePathToPreview} from '../weblab2Redux';
 
 /**
  * Custom hook that provides AI tutor response schema settings based on the current
@@ -28,7 +29,8 @@ import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
  * AI tutor responses including accept/reject functionality.
  */
 export const useAiTutorResponseSchemaSettings = (
-  source: MultiFileSource | undefined
+  source: MultiFileSource | undefined,
+  isWidgetView?: boolean
 ): ResponseSchemaSettings | undefined => {
   const dispatch = useAppDispatch();
 
@@ -47,7 +49,8 @@ export const useAiTutorResponseSchemaSettings = (
         const files = formattedResponse.code;
         if (
           !acceptRejectAnswerTypes.includes(answerType) ||
-          !isAcceptRejectCodeFileTypes(files)
+          !isAcceptRejectCodeFileTypes(files) ||
+          isWidgetView
         ) {
           return formatCopyPasteResponse(jsonResponse.answer);
         }
@@ -98,5 +101,5 @@ export const useAiTutorResponseSchemaSettings = (
         return formattedResponse.explanation;
       },
     };
-  }, [dispatch, source]);
+  }, [dispatch, source, isWidgetView]);
 };

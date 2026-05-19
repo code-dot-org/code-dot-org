@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -6,15 +7,16 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import SortByNameDropdown from '../SortByNameDropdown';
+
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
-} from '../sectionProgress/sectionProgressRedux';
-import SortByNameDropdown from '../SortByNameDropdown';
+} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -77,12 +79,16 @@ function StudentColumn({
       aria-expanded={false}
       id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
-      <FontAwesome
-        icon="caret-right"
+      <FontAwesomeV6Icon
+        iconName="caret-right"
+        iconStyle="solid"
         title="caret"
         className={styles.studentColumnNameCaret}
       />
-      {getFullName(student)}
+      <span className={styles.studentColumnNameText}>
+        {getFullName(student)}
+      </span>
+      {student.isDemoStudent && <DemoChip />}
     </button>
   );
 
@@ -98,11 +104,15 @@ function StudentColumn({
         aria-expanded={true}
         id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
-        <FontAwesome
-          icon="caret-down"
+        <FontAwesomeV6Icon
+          iconName="caret-down"
+          iconStyle="solid"
           className={styles.studentColumnNameCaret}
         />
-        {getFullName(student)}
+        <span className={styles.studentColumnNameText}>
+          {getFullName(student)}
+        </span>
+        {student.isDemoStudent && <DemoChip />}
       </button>
       <div
         className={classNames(

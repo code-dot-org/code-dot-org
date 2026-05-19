@@ -1,4 +1,4 @@
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {MusicConditions} from '@cdo/apps/music/progress/MusicConditions';
@@ -130,7 +130,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
         name="level[validations]"
         value={JSON.stringify(validations)}
       />
-      <Typography semanticTag="p" visualAppearance="body-three">
+      <Typography variant="body3" gutterBottom>
         Edit validations for this level. Currently only supported by Lab2 labs.
         <br />
         NOTE: Validations are checked in the order they are listed. The first

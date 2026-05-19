@@ -118,6 +118,9 @@ const generateComponents = (
     return {...acc, [displayName]: TypographyElement};
   }, {});
 
+/**
+ * @deprecated Use MUI `Typography` from `@mui/material` instead.
+ */
 export const {
   Heading1,
   Heading2,

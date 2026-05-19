@@ -1,4 +1,5 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
@@ -139,6 +140,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
+  const hasContinued = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.perfect
+  );
 
   // The secondary finish button avoids a reappearance animation by not using
   // the unique index.
@@ -146,16 +150,16 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     ? undefined
     : validationIndex;
 
-  const [type, color] =
+  const [variant, color] =
     showSecondaryFinishButton && !hasNextLevel
-      ? (['secondary', 'black'] as const)
-      : (['primary', 'purple'] as const);
+      ? (['outlined', 'secondary'] as const)
+      : (['contained', 'primary'] as const);
 
-  const iconRight = useMemo(
+  const endIcon = useMemo(
     () =>
-      hasNextLevel
-        ? ({iconName: 'arrow-right', iconStyle: 'solid'} as const)
-        : undefined,
+      hasNextLevel ? (
+        <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
+      ) : undefined,
     [hasNextLevel]
   );
 
@@ -207,6 +211,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       | 'Validate'
       | 'SubmitPrediction'
       | 'Run'
+      | 'Edit'
       | 'AiTutorVersion'
       | undefined;
     let canContinue: boolean = true;
@@ -219,9 +224,16 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     } else if (isAiTutorVersion) {
       action = 'AiTutorVersion';
       canContinue = false;
-    } else if (requireRun) {
-      action = 'Run';
-      canContinue = hasRun;
+    } else if (!hasContinued) {
+      // If the user has not already continued, gate continue on run or edit if
+      // those flag(s) are set.
+      if (requireRun) {
+        action = 'Run';
+        canContinue = hasRun;
+      } else if (levelProperties.requireEditToContinue) {
+        action = 'Edit';
+        canContinue = hasEdited;
+      }
     }
     const key = action
       ? (`to${hasNextLevel ? 'Continue' : 'Finish'}${action}` as const)
@@ -229,14 +241,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return [canContinue, key ? lab2I18n[key]() : undefined];
   }, [
     submittable,
-    hasNextLevel,
     isPredictLevel,
-    predictResponseSubmitted,
     hasValidationConditions,
+    isAiTutorVersion,
+    hasContinued,
+    hasNextLevel,
+    predictResponseSubmitted,
     validationSatisfied,
     requireRun,
+    levelProperties.requireEditToContinue,
     hasRun,
-    isAiTutorVersion,
+    hasEdited,
   ]);
 
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
@@ -287,14 +302,15 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
           ) : (
             <ContinueButton
               disabled={!continueEnabled}
-              type={type}
+              variant={variant}
               color={color}
-              iconRight={iconRight}
-              text={textVariant === 'simple' ? simpleText : text}
+              endIcon={endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}
-            />
+            >
+              {textVariant === 'simple' ? simpleText : text}
+            </ContinueButton>
           )}
         </div>
         {showTts && feedbackMessage && !hideContinueIfDisabled && (

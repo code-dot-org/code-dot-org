@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
@@ -16,8 +16,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
   useEffect(() => {
     analyticsReporter.sendEvent(
       EVENTS.UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT,
-      {source: sourcePage},
-      PLATFORMS.BOTH
+      {source: sourcePage}
     );
   }, [sourcePage]);
 
@@ -36,7 +35,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
             title={i18n.accountKeepStudentAccountCardTitle()}
             content={i18n.accountKeepStudentAccountCardContentGeneric()}
             buttonText={i18n.accountKeepStudentAccountCardButton()}
-            buttonType="secondary"
+            variant="outlined"
             href="/home"
           />
           <AccountCard
@@ -45,7 +44,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
             title={i18n.accountSwitchTeacherAccountCardTitle()}
             content={i18n.accountSwitchTeacherAccountCardContentGeneric()}
             buttonText={i18n.accountSwitchTeacherAccountCardButton()}
-            buttonType="primary"
+            variant="contained"
             href={`/users/edit${returnToUrlParam}#change-user-type-modal-form`}
           />
         </div>

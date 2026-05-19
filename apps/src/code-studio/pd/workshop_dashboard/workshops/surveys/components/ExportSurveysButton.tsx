@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 import {useParams} from 'react-router-dom';
 
@@ -52,18 +52,20 @@ export const ExportSurveysButton = () => {
 
   return (
     <>
-      <Button
-        className={styles.exportButton}
-        iconLeft={
-          loading
-            ? {iconName: 'spinner', animationType: 'spin'}
-            : {iconName: 'download'}
-        }
-        onClick={() => setFormsDialogOpen(true)}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
         disabled={!workshopId || !forms?.length}
-        text="Export survey results"
-        size="s"
-      />
+        loadingPosition="start"
+        loading={loading}
+        className={styles.exportButton}
+        onClick={() => setFormsDialogOpen(true)}
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="download" />}
+      >
+        {'Export survey results'}
+      </MuiButton>
       {formsDialogOpen && (
         <CustomDialog
           className={commonStyles.customDialog}
@@ -97,13 +99,17 @@ export const ExportSurveysButton = () => {
                         </Typography>
                       </td>
                       <td>
-                        <Button
-                          size="xs"
-                          text="Download csv"
+                        <MuiButton
+                          variant="contained"
+                          color="primary"
+                          size="extraSmall"
                           onClick={() => {
                             handleDownload(form);
                           }}
-                        />
+                          type="button"
+                        >
+                          {'Download csv'}
+                        </MuiButton>
                       </td>
                     </tr>
                   );
@@ -118,12 +124,15 @@ export const ExportSurveysButton = () => {
               />
             )}
           </div>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             onClick={handleClose}
-            type="secondary"
-            color="gray"
-            text="Close"
-          />
+            type="button"
+          >
+            {'Close'}
+          </MuiButton>
         </CustomDialog>
       )}
     </>

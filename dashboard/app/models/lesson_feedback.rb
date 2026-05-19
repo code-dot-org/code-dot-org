@@ -14,5 +14,14 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
+# Indexes
+#
+#  index_lesson_feedbacks_on_lesson_student  (lesson_id,student_id) UNIQUE
+#
 class LessonFeedback < ApplicationRecord
+  belongs_to :teacher, class_name: 'User'
+  belongs_to :student, class_name: 'User'
+  belongs_to :lesson
+
+  validates :lesson_id, uniqueness: {scope: :student_id}
 end

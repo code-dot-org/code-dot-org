@@ -1,0 +1,1436 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-29T06:26:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## **Map Data to a Card**\r\n\r\n### **Do This:**\r\n\r\n1. Decide what your card will represent.\r\n   *Example: one sneaker, one dessert, one pet*\r\n\r\n2. Label each part of the card with the kind of information it should show:\r\n\r\n   * image\r\n   * title\r\n   * description\r\n   * badge\r\n\r\n3. Make sure your labels match your topic.\r\n\r\n4. Save your work to your **Backpack** so you can use it in the next level.\r\n\r\n",
+    "display_name": "Card View",
+    "bubble_choice_description": "Label the data needed to display one item, such as an image, title, description, and badge.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "NDqO_0hLdRVBhtTykUexI",
+            "type": "text",
+            "position": {
+              "x": 2425.021570688009,
+              "y": -1383.020992817874
+            },
+            "data": {
+              "text": "Map Data to a Card",
+              "fontColor": "#1e1e1e",
+              "fontSize": 139.7748902707639,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1593,
+              "height": 376
+            },
+            "dragging": false,
+            "width": 1593,
+            "height": 376,
+            "resizing": false
+          },
+          {
+            "id": "QxHRdL3CDUXPltCaaq-zy",
+            "type": "text",
+            "position": {
+              "x": 1814.1111952018546,
+              "y": -983.5593901020022
+            },
+            "data": {
+              "text": "Label each part of the card with the kind of information \nit should show.",
+              "fontColor": "#1e1e1e",
+              "fontSize": 61.61662781962848,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1063,
+              "height": 258
+            },
+            "dragging": false
+          },
+          {
+            "id": "4yr6SlSp99lCdItuEsYHt",
+            "type": "shape",
+            "position": {
+              "x": 1638.94494407017,
+              "y": -611.4394587184458
+            },
+            "style": {
+              "width": 1518.471116748729,
+              "height": 518.8745561429001
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1518,
+              "height": 519
+            },
+            "dragging": false
+          },
+          {
+            "id": "h4SzvfgGyEfovISb0qlIO",
+            "type": "text",
+            "position": {
+              "x": 1663.3265912808206,
+              "y": -578.9624473286096
+            },
+            "data": {
+              "text": "My card represents: ",
+              "fontColor": "#1e1e1e",
+              "fontSize": 67.81137649894099,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 636,
+              "height": 106
+            },
+            "dragging": false
+          },
+          {
+            "id": "QrXKmYI7z76zKNjw8gS6Z",
+            "type": "shape",
+            "position": {
+              "x": 1621.8237116284001,
+              "y": 427.9785113000035
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            },
+            "dragging": false
+          },
+          {
+            "id": "0aOor1jRClg7y8rl4StES",
+            "type": "text",
+            "position": {
+              "x": 1800.8789026370475,
+              "y": 503.10249875582576
+            },
+            "data": {
+              "text": "image",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 204,
+              "height": 107
+            }
+          },
+          {
+            "id": "DbmbpnAcGqpCDyVx3WCPz",
+            "type": "shape",
+            "position": {
+              "x": 1617.5434035179574,
+              "y": 711.7026678271187
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#d0bfff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "veFzoWPBAzqG5oviTsPn5",
+            "type": "text",
+            "position": {
+              "x": 1814.7937509646842,
+              "y": 773.9857309516132
+            },
+            "data": {
+              "text": "title",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 138,
+              "height": 107
+            }
+          },
+          {
+            "id": "NujXO_R3T11ZiuswuCxrU",
+            "type": "shape",
+            "position": {
+              "x": 1617.5434035179574,
+              "y": 1010.0554144821159
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "J8yqWe4_qbHfuqcRjgZvf",
+            "type": "text",
+            "position": {
+              "x": 1714.2181131473012,
+              "y": 1072.3384776066105
+            },
+            "data": {
+              "text": "description",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 362,
+              "height": 107
+            }
+          },
+          {
+            "id": "5Q_tyBQApHINtI6QTRRQe",
+            "type": "shape",
+            "position": {
+              "x": 1617.5434035179574,
+              "y": 1298.4886171598728
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "BGDIQDNJ45UGu-aSzgxWx",
+            "type": "text",
+            "position": {
+              "x": 1793.2052805056999,
+              "y": 1360.7716802843674
+            },
+            "data": {
+              "text": "badge",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 210,
+              "height": 107
+            }
+          },
+          {
+            "id": "0hWtnJ64tMFdW2FIjiPn6",
+            "type": "shape",
+            "position": {
+              "x": 3946.717402886672,
+              "y": -632.7881333306519
+            },
+            "style": {
+              "width": 1831.5719252305314,
+              "height": 2206.7078075759387
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1832,
+              "height": 2207
+            },
+            "dragging": false
+          },
+          {
+            "id": "sN85OuD6y_9yyw-JGb_yT",
+            "type": "shape",
+            "position": {
+              "x": 4079.958721062052,
+              "y": 238.16638345375986
+            },
+            "style": {
+              "width": 1413.988335274313,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#d0bfff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1414,
+              "height": 210
+            }
+          },
+          {
+            "id": "NE9ySa0rT5s0kLcEIwRbH",
+            "type": "text",
+            "position": {
+              "x": 4663.32021352831,
+              "y": 271.49729993022066
+            },
+            "data": {
+              "text": "title",
+              "fontColor": "#1e1e1e",
+              "fontSize": 114.54180294517,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 219,
+              "height": 167
+            }
+          },
+          {
+            "id": "haUBVqnNjAd2jGMbtkLGp",
+            "type": "shape",
+            "position": {
+              "x": 4080.502392001369,
+              "y": 510.03790859183005
+            },
+            "style": {
+              "width": 1413.9884369995748,
+              "height": 665.3948117320404
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1414,
+              "height": 665
+            }
+          },
+          {
+            "id": "1kCQMsNz0ZlCmh_lFCBCm",
+            "type": "text",
+            "position": {
+              "x": 4477.091694509268,
+              "y": 764.9135925659339
+            },
+            "data": {
+              "text": "description",
+              "fontColor": "#1e1e1e",
+              "fontSize": 121.5517016416495,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 632,
+              "height": 176
+            }
+          },
+          {
+            "id": "VfNux1EKvdC6SkY00ud72",
+            "type": "shape",
+            "position": {
+              "x": 4086.058218824286,
+              "y": 1213.8416963932843
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "cbCZvxWj3h7Mw-Xh4PWFc",
+            "type": "text",
+            "position": {
+              "x": 4228.633802233091,
+              "y": 1261.3099503543672
+            },
+            "data": {
+              "text": "badge",
+              "fontColor": "#1e1e1e",
+              "fontSize": 91.92206296977425,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 277,
+              "height": 137
+            }
+          },
+          {
+            "id": "i5DDtawjIgHwEBZE2jo7U",
+            "type": "shape",
+            "position": {
+              "x": 4068.4344153919164,
+              "y": -593.4620394209257
+            },
+            "style": {
+              "width": 1437.036946614584,
+              "height": 737.0371500651042
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1437,
+              "height": 737
+            }
+          },
+          {
+            "id": "7JNiEtLVq3tBvd_97yR4V",
+            "type": "image",
+            "position": {
+              "x": 4599.47146373176,
+              "y": -481.12870608759204
+            },
+            "style": {
+              "width": 374.962849934896,
+              "height": 374.962849934896
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson2-level3a-v1-2026/uuid/41b11318e43a860938cfe74dca926d5d17c99a43.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 375,
+              "height": 375
+            }
+          },
+          {
+            "id": "6eRiJQMTKoHfPuLfOMj2v",
+            "type": "text",
+            "position": {
+              "x": 4645.672903900719,
+              "y": -133.73974938186325
+            },
+            "data": {
+              "text": "image",
+              "fontColor": "#1e1e1e",
+              "fontSize": 110.07405598958339,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 318,
+              "height": 161
+            }
+          },
+          {
+            "id": "dbc3fnzlot2ysVLVmih4J",
+            "type": "text",
+            "position": {
+              "x": 1633.9006651772297,
+              "y": -4.973844302450871
+            },
+            "data": {
+              "text": "Example mapping:",
+              "fontColor": "#6741d9",
+              "fontSize": 96.6945281759697,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 811,
+              "height": 144
+            },
+            "dragging": false
+          },
+          {
+            "id": "c2b7db18-1a02-4b39-9369-d5ca3e024a50",
+            "type": "shape",
+            "position": {
+              "x": 1458.1835980523138,
+              "y": -638.0249226647584
+            },
+            "style": {
+              "width": 1831.5719252305314,
+              "height": 2206.7078075759387
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1832,
+              "height": 2207
+            },
+            "dragging": false
+          },
+          {
+            "id": "91942112-7687-40fb-85ab-a80015594649",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 2453.723232200875,
+              "y": 400.2048172554459
+            },
+            "width": 684,
+            "height": 257,
+            "measured": {
+              "width": 684,
+              "height": 257
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "f13c8dbe-45f6-445b-8386-54994ba784bc",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2433.1327595488756,
+              "y": 813.7008941870708
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "c7bf774b-9cf3-46d1-9fa0-11a99d0d242d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 2443.922717511985,
+              "y": 988.4080074622235
+            },
+            "width": 684,
+            "height": 257,
+            "measured": {
+              "width": 684,
+              "height": 257
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "08b40cae-776e-4c41-b835-1cd9730c6f3b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 2443.9227175119854,
+              "y": 695.4644567265707
+            },
+            "width": 684,
+            "height": 257,
+            "measured": {
+              "width": 684,
+              "height": 257
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "cd391632-6519-4735-a382-2162cb96f1c8",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 2446.98230792843,
+              "y": 1276.786635851075
+            },
+            "width": 684,
+            "height": 257,
+            "measured": {
+              "width": 684,
+              "height": 257
+            },
+            "resizing": false,
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "5ada2380-d96f-4291-9e06-f3771d0f9770",
+            "source": "QrXKmYI7z76zKNjw8gS6Z",
+            "target": "91942112-7687-40fb-85ab-a80015594649",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "strokeWidth": 5,
+              "color": "var(--sketchlab-stroke-default)"
+            },
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          },
+          {
+            "id": "000a01ff-af82-45b9-b6bb-0d4c7d700566",
+            "source": "DbmbpnAcGqpCDyVx3WCPz",
+            "target": "f13c8dbe-45f6-445b-8386-54994ba784bc",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "strokeWidth": 5,
+              "color": "var(--sketchlab-stroke-default)"
+            },
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "id": "02c1f0f5-1384-4506-86b5-0c7e2cae5cc4",
+            "source": "NujXO_R3T11ZiuswuCxrU",
+            "target": "c7bf774b-9cf3-46d1-9fa0-11a99d0d242d",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "strokeWidth": 5,
+              "color": "var(--sketchlab-stroke-default)"
+            },
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          },
+          {
+            "id": "fe42a0d2-380d-4d67-8af2-20537835577c",
+            "source": "5Q_tyBQApHINtI6QTRRQe",
+            "target": "cd391632-6519-4735-a382-2162cb96f1c8",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "strokeWidth": 5,
+              "color": "var(--sketchlab-stroke-default)"
+            },
+            "style": {
+              "strokeWidth": 5,
+              "stroke": "var(--sketchlab-stroke-default)"
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          }
+        ],
+        "viewport": {
+          "x": -195.8422630994911,
+          "y": 283.6417129518485,
+          "zoom": 0.20828942012445917
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "szcgVikMcPISsS6ZKhGMQ",
+            "type": "text",
+            "position": {
+              "x": 468.6950995475743,
+              "y": -2082.3673740747213
+            },
+            "data": {
+              "text": "Map Data to a Card",
+              "fontColor": "#1e1e1e",
+              "fontSize": 139.7748902707639,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1817,
+              "height": 363
+            },
+            "dragging": false,
+            "width": 1817,
+            "height": 363,
+            "resizing": false
+          },
+          {
+            "id": "MB7WlG-A1tYwMVvbBb6Sa",
+            "type": "text",
+            "position": {
+              "x": -396.681077457303,
+              "y": -1650.7145959939269
+            },
+            "data": {
+              "text": "Label each part of the card with the kind of information \nit should show.",
+              "fontColor": "#1e1e1e",
+              "fontSize": 61.61662781962848,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1063,
+              "height": 258
+            },
+            "dragging": false
+          },
+          {
+            "id": "gD0je8D1EXs1AXBgxJvfR",
+            "type": "shape",
+            "position": {
+              "x": -550.6743830714136,
+              "y": -1139.9068188823435
+            },
+            "style": {
+              "width": 1518.471116748729,
+              "height": 518.8745561429001
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1518,
+              "height": 519
+            }
+          },
+          {
+            "id": "lDDePgAnZI6z_oHzaLt54",
+            "type": "text",
+            "position": {
+              "x": -504.8911953085503,
+              "y": -1090.308575050737
+            },
+            "data": {
+              "text": "My card represents: ",
+              "fontColor": "#1e1e1e",
+              "fontSize": 67.81137649894099,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 636,
+              "height": 106
+            }
+          },
+          {
+            "id": "cZsebwav1SqpIJDXTMI4B",
+            "type": "text",
+            "position": {
+              "x": -276.7789382155099,
+              "y": -935.9582140558814
+            },
+            "data": {
+              "text": "one squishy toy",
+              "fontColor": "#1e1e1e",
+              "fontSize": 107.62275299788189,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 774,
+              "height": 158
+            }
+          },
+          {
+            "id": "uyPFE4The6Y2DWSVd3-E9",
+            "type": "shape",
+            "position": {
+              "x": -550.6743830714136,
+              "y": -354.4664111591219
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "d2I9Icezyxsz2AQ5IDMjs",
+            "type": "text",
+            "position": {
+              "x": -367.3388839523234,
+              "y": -292.18334803462767
+            },
+            "data": {
+              "text": "image",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 204,
+              "height": 107
+            }
+          },
+          {
+            "id": "zh824HknmMWFuZ7ddL3dp",
+            "type": "shape",
+            "position": {
+              "x": -550.6743830714136,
+              "y": -83.58317896333483
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#d0bfff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "X_PrzTgR_vNBUqX5vWezE",
+            "type": "text",
+            "position": {
+              "x": -353.42403562468667,
+              "y": -21.3001158388397
+            },
+            "data": {
+              "text": "title",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 138,
+              "height": 107
+            }
+          },
+          {
+            "id": "t1Dl3a3TYw9x7T3fDUWQP",
+            "type": "shape",
+            "position": {
+              "x": -550.6743830714136,
+              "y": 214.76956769166281
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "pJXZEui-v6FoMv5_xe34A",
+            "type": "text",
+            "position": {
+              "x": -453.9996734420697,
+              "y": 277.05263081615703
+            },
+            "data": {
+              "text": "description",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 362,
+              "height": 107
+            }
+          },
+          {
+            "id": "KqtvPAgyjPz8OtQvSRrov",
+            "type": "shape",
+            "position": {
+              "x": -550.6743830714136,
+              "y": 503.20277036941934
+            },
+            "style": {
+              "width": 541.7660452352507,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 542,
+              "height": 210
+            }
+          },
+          {
+            "id": "zwZPyenbpCgwf9G6PvErr",
+            "type": "text",
+            "position": {
+              "x": -375.01250608367104,
+              "y": 565.4858334939145
+            },
+            "data": {
+              "text": "badge",
+              "fontColor": "#1e1e1e",
+              "fontSize": 68.21836830831614,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 210,
+              "height": 107
+            }
+          },
+          {
+            "id": "LNk-jg7ZQc6XhfsmaWRCo",
+            "type": "text",
+            "position": {
+              "x": 245.44742469443264,
+              "y": -335.5553442669742
+            },
+            "data": {
+              "text": "squishy photo",
+              "fontColor": "#1e1e1e",
+              "fontSize": 89.61667197437507,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 583,
+              "height": 135
+            },
+            "dragging": false
+          },
+          {
+            "id": "uI353ZVVRyRFK1bPz-ig3",
+            "type": "text",
+            "position": {
+              "x": 239.43733727219347,
+              "y": -73.87097928516148
+            },
+            "data": {
+              "text": "squishy name",
+              "fontColor": "#1e1e1e",
+              "fontSize": 88.71334738039951,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 558,
+              "height": 133
+            },
+            "dragging": false
+          },
+          {
+            "id": "eXP9F6HXflTyF4amChFfP",
+            "type": "text",
+            "position": {
+              "x": 216.76037973276686,
+              "y": 115.35866410918914
+            },
+            "data": {
+              "text": "texture and style \n(soft, slow-rising, \nscented, etc.)",
+              "fontColor": "#1e1e1e",
+              "fontSize": 86.19782992063074,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 704,
+              "height": 354
+            },
+            "dragging": false
+          },
+          {
+            "id": "wGMNpHkYDYf4hGW0PvZ4c",
+            "type": "text",
+            "position": {
+              "x": 194.08372736912145,
+              "y": 496.52029625125283
+            },
+            "data": {
+              "text": "type or category\n(food squishy, \nanimal squishy, etc)",
+              "fontColor": "#1e1e1e",
+              "fontSize": 85.43213990896898,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 769,
+              "height": 351
+            },
+            "dragging": false
+          },
+          {
+            "id": "IbEn3fZqbbZw3aT0EVqMm",
+            "type": "shape",
+            "position": {
+              "x": 1644.5350030612628,
+              "y": -1291.4842556241551
+            },
+            "style": {
+              "width": 1831.5719252305314,
+              "height": 2206.7078075759387
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1832,
+              "height": 2207
+            },
+            "dragging": false
+          },
+          {
+            "id": "5QkmNJzaCx5rr9uB_dVwi",
+            "type": "shape",
+            "position": {
+              "x": 1830.360772550409,
+              "y": -406.0605160047552
+            },
+            "style": {
+              "width": 1413.988335274313,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#d0bfff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1414,
+              "height": 210
+            },
+            "dragging": false
+          },
+          {
+            "id": "DXU62G9LCmmBAQjZdsQ8d",
+            "type": "text",
+            "position": {
+              "x": 2042.0208885040606,
+              "y": -383.4500594029826
+            },
+            "data": {
+              "text": "Strawberry Squishy",
+              "fontColor": "#1e1e1e",
+              "fontSize": 114.54180294517,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1017,
+              "height": 167
+            },
+            "dragging": false
+          },
+          {
+            "id": "3Am9RGbXbE8dp5iBgqiRZ",
+            "type": "shape",
+            "position": {
+              "x": 1825.479099361574,
+              "y": -139.7444107885593
+            },
+            "style": {
+              "width": 1413.9884369995748,
+              "height": 665.3948117320404
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1414,
+              "height": 665
+            },
+            "dragging": false
+          },
+          {
+            "id": "53CiZiUYPml-JDOK2eKFq",
+            "type": "text",
+            "position": {
+              "x": 1975.5413883886467,
+              "y": -32.78568306019211
+            },
+            "data": {
+              "text": "Soft, slow-rising, and \nstrawberry scented toy.",
+              "fontColor": "#1e1e1e",
+              "fontSize": 109.31046449767143,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1063,
+              "height": 444
+            },
+            "dragging": false
+          },
+          {
+            "id": "pVrnon62PwIrYl_rxtOcj",
+            "type": "shape",
+            "position": {
+              "x": 1814.1079044798566,
+              "y": 613.0175499599815
+            },
+            "style": {
+              "width": 641.7660452352505,
+              "height": 209.8390866343841
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 642,
+              "height": 210
+            },
+            "dragging": false
+          },
+          {
+            "id": "uRzVpO7wTNEXRwSNwgLfV",
+            "type": "text",
+            "position": {
+              "x": 1856.683487888662,
+              "y": 649.6351156647617
+            },
+            "data": {
+              "text": "food squishy",
+              "fontColor": "#1e1e1e",
+              "fontSize": 91.92206296977425,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 545,
+              "height": 137
+            },
+            "dragging": false
+          },
+          {
+            "id": "ABCYPhA19Ac5lT3-CwJk0",
+            "type": "image",
+            "position": {
+              "x": 1977.3899021697434,
+              "y": -1241.5049496619408
+            },
+            "style": {
+              "width": 1038.5554199218748,
+              "height": 764.1023359785567
+            },
+            "data": {
+              "src": "/level_starter_assets/building-data-driven-systems-lesson2-level3a-v1-2026/uuid/4b853a4f087d101e7fa16b388d7e4d302533fd37.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1039,
+              "height": 764
+            },
+            "dragging": false
+          },
+          {
+            "id": "EibB81rH5YWt2DXOGKI_t",
+            "type": "text",
+            "position": {
+              "x": -534.5517300355314,
+              "y": -554.1500998688434
+            },
+            "data": {
+              "text": "Example mapping:",
+              "fontColor": "#6741d9",
+              "fontSize": 96.6945281759697,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 811,
+              "height": 144
+            }
+          },
+          {
+            "id": "395b77f2-32c8-4545-95ec-e1a6352ac96c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 36.7748836607434,
+              "y": -254.54686784193018
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "47d70e44-253e-4cea-97e0-fbda35518d17",
+            "type": "lineAnchor",
+            "position": {
+              "x": 157.94565113740416,
+              "y": -254.54686784193018
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "35f9994a-7efd-48cb-b857-c100cc0bfd91",
+            "type": "lineAnchor",
+            "position": {
+              "x": 36.7748836607434,
+              "y": 16.33636435385779
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d1270508-babf-419a-b3c9-1f7b630838bb",
+            "type": "lineAnchor",
+            "position": {
+              "x": 157.94565113740416,
+              "y": 16.33636435385779
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "269616ef-e680-458b-be32-923efa3d92b3",
+            "type": "lineAnchor",
+            "position": {
+              "x": 36.77488366074385,
+              "y": 314.6891110088545
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6f8f6399-b57b-4a97-87e4-1ee4f65770d5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 157.9456511374046,
+              "y": 314.6891110088545
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "1ae63b48-d630-4dd4-ac24-895bb74956f4",
+            "type": "lineAnchor",
+            "position": {
+              "x": 36.7748836607434,
+              "y": 603.122313686612
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6a9c8a05-7103-4374-af4c-9cbec3932f73",
+            "type": "lineAnchor",
+            "position": {
+              "x": 157.94565113740416,
+              "y": 603.122313686612
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e8b81ff0-5dd9-47a5-a854-32bebf678a3c",
+            "type": "shape",
+            "position": {
+              "x": -706.9634726964609,
+              "y": -1276.426921519159
+            },
+            "style": {
+              "width": 1831.5719252305314,
+              "height": 2206.7078075759387
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1832,
+              "height": 2207
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "066a1cec-9356-4d29-9d5a-e9c2b376e636",
+            "source": "395b77f2-32c8-4545-95ec-e1a6352ac96c",
+            "target": "47d70e44-253e-4cea-97e0-fbda35518d17",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "baffe9b0-4d20-40bc-b791-dbe2d7390da9",
+            "source": "35f9994a-7efd-48cb-b857-c100cc0bfd91",
+            "target": "d1270508-babf-419a-b3c9-1f7b630838bb",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "a6e27272-3d65-4c99-9be0-2ad42125bf07",
+            "source": "269616ef-e680-458b-be32-923efa3d92b3",
+            "target": "6f8f6399-b57b-4a97-87e4-1ee4f65770d5",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "2bf8eeef-bb51-44fa-838c-951efde2192d",
+            "source": "1ae63b48-d630-4dd4-ac24-895bb74956f4",
+            "target": "6a9c8a05-7103-4374-af4c-9cbec3932f73",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          }
+        ],
+        "viewport": {
+          "x": 284.29191907847144,
+          "y": 457.1492777570968,
+          "zoom": 0.18432010511759309
+        }
+      }
+    },
+    "name_suffix": "_2026",
+    "thumbnail_url": "https://images.code.org/1e0a212c0a824e02d646e2125c00461f-card.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29T06:26:02.588+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3a-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3a-v1-2026\"},{\"changed_at\":\"2026-04-29 06:26:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:12:18 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-18 23:44:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:46:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:46:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:47:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

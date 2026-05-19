@@ -17,6 +17,11 @@ To run a mimic, from the repo root:
 This will build and run the same k8s charts, but MUCH faster. Instead of our
 real application, the resulting services will use stubbed out applications.
 
+The dashboard service is backed by a tiny Rails app in
+`k8s/mimic/code-dot-org/dashboard-server-mimic`. This is intentionally
+independent from the real `dashboard/` app, which stays minimal and only exists
+to satisfy Dockerfile build-context requirements.
+
 ## Modify Mimic when you use COPY in a Dockerfile
 
 Every file depended on by k8s/docker/*dockerfile needs to be present in

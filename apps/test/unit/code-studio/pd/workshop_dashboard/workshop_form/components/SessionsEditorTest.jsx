@@ -124,18 +124,15 @@ describe('SessionsEditor', () => {
     });
   });
 
-  it('does not allow deleting the last session', async () => {
+  it('does not allow deleting the last session', () => {
     renderDefault();
 
     const [firstSessionDeleteButton] = screen.getAllByRole('button', {
       name: 'delete workshop session',
     });
     expect(firstSessionDeleteButton).toBeDisabled();
-    await user.click(firstSessionDeleteButton);
-
-    await waitFor(() => {
-      expect(mockDispatchSessions).toHaveBeenCalledTimes(0);
-    });
+    // Do not click disabled button - userEvent.click throws on pointer-events: none
+    expect(mockDispatchSessions).toHaveBeenCalledTimes(0);
   });
 
   it('allows deleting any but the last session', async () => {

@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
@@ -14,11 +13,12 @@ import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
 import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
 import TurnOffAiDiff from '@cdo/apps/accounts/TurnOffAiDiff';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -45,11 +45,14 @@ $(document).ready(() => {
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <MigrateToMultiAuth />
       </Provider>,
-      migrateMultiAuthMountPoint
+      migrateMultiAuthMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -57,18 +60,24 @@ $(document).ready(() => {
     'account-information'
   );
   if (accountInformationMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <AccountInformation {...scriptData} />,
-      accountInformationMountPoint
+      accountInformationMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
   const schoolInformationMountPoint =
     document.getElementById('school-information');
   if (schoolInformationMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <SchoolInformation {...scriptData} />,
-      schoolInformationMountPoint
+      schoolInformationMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -110,7 +119,7 @@ $(document).ready(() => {
   const ltiSyncSettingsMountPoint =
     document.getElementById('lti-sync-settings');
   if (ltiSyncSettingsMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <LtiRosterSyncSettings
         ltiRosterSyncEnabled={
           ltiSyncSettingsMountPoint.getAttribute(
@@ -120,7 +129,10 @@ $(document).ready(() => {
         formId={'lti-sync-settings-form'}
         lmsName={lmsName}
       />,
-      ltiSyncSettingsMountPoint
+      ltiSyncSettingsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -128,7 +140,7 @@ $(document).ready(() => {
     'lockout-linked-accounts'
   );
   if (lockoutLinkedAccountsMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <LockoutLinkedAccounts
         pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-pending-email'
@@ -154,7 +166,10 @@ $(document).ready(() => {
         )}
         usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
       />,
-      lockoutLinkedAccountsMountPoint
+      lockoutLinkedAccountsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -162,11 +177,14 @@ $(document).ready(() => {
 
   if (turnOffAiDiffMountPoint && experiments.isEnabled('ai-differentiation')) {
     const store = getStore();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <TurnOffAiDiff />
       </Provider>,
-      turnOffAiDiffMountPoint
+      turnOffAiDiffMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -187,7 +205,7 @@ $(document).ready(() => {
 
   const deleteAccountMountPoint = document.getElementById('delete-account');
   if (deleteAccountMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <DeleteAccount
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
@@ -196,15 +214,16 @@ $(document).ready(() => {
         hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
       />,
-      deleteAccountMountPoint
+      deleteAccountMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
-  analyticsReporter.sendEvent(
-    EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
-    {'user type': userType},
-    PLATFORMS.BOTH
-  );
+  analyticsReporter.sendEvent(EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED, {
+    'user type': userType,
+  });
 
   initializeCreatePersonalAccountControls();
 });

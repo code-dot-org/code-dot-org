@@ -71,42 +71,12 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.mute_music
   end
 
-  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
-    sign_in(@user)
-    assert_nil @user.show_progress_table_v2
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
-    assert_response :success
-    @user.reload
-    assert_equal 'v2', @user.show_progress_table_v2
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
-    assert_response :success
-    @user.reload
-    assert_equal 'legacy', @user.show_progress_table_v2
-  end
-
-  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
-    sign_in(@user)
-    assert_nil @user.progress_table_v2_timestamp
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert_nil @user.progress_table_v1_timestamp
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert @user.progress_table_v1_timestamp
-  end
-
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
     teacher = create(:teacher, lti_roster_sync_enabled: true)
     sign_in(teacher)
 
     assert teacher.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :success
     teacher.reload
     assert_nil teacher.lti_roster_sync_enabled
@@ -116,7 +86,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
 
     assert_nil @user.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :unauthorized
     @user.reload
     assert_nil @user.lti_roster_sync_enabled
@@ -244,16 +214,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal "true", test_user.parent_email_banner_dismissed
   end
 
-  test 'a post request to set_standards_report_info_to_seen' do
-    test_user = create(:user)
-    sign_in(test_user)
-    assert_nil test_user.has_seen_standards_report_info_dialog
-    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
-    assert_response :success
-    test_user.reload
-    assert_equal true, test_user.has_seen_standards_report_info_dialog
-  end
-
   test "a get request to get current returns signed out user info" do
     get :current
     assert_response :success
@@ -263,7 +223,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test "a get request to get current returns signed in user info" do
-    teacher = create(:teacher)
+    teacher = create(:teacher, grades_teaching: %w[9 10 11 12])
     sign_in(teacher)
     get :current
     assert_response :success
@@ -275,7 +235,19 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
     assert_equal teacher.educator_role, response["educator_role"]
+    assert_equal %w[9 10 11 12], response["grades_teaching"]
     assert_equal false, response["is_verified_instructor"]
+  end
+
+  test "a get request to get current returns empty grades_teaching when unset" do
+    teacher = create(:teacher, grades_teaching: nil)
+    sign_in(teacher)
+
+    get :current
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal [], response["grades_teaching"]
   end
 
   test "a get request to get school_name returns school object" do
@@ -302,49 +274,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
     get :get_school_name, params: {user_id: '-1'}
     assert_response 403
-  end
-
-  test "teacher can update ai tutor access for student in section" do
-    teacher = create(:teacher)
-    student_in_section = create(:student)
-    section = create(:section, teacher: teacher)
-    section.students << student_in_section
-
-    sign_in(teacher)
-
-    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}
-    assert_response :no_content
-    student_in_section.reload
-    assert_equal true, student_in_section.ai_tutor_access_denied
-  end
-
-  test 'teacher cannot update ai tutor access for student not in section' do
-    teacher = create(:teacher)
-    student_not_in_section = create(:student)
-    create(:section, teacher: teacher)
-
-    sign_in(teacher)
-
-    post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
-    assert_response :unauthorized
-  end
-
-  test 'student cannot modify ai tutor access' do
-    student = create(:student)
-
-    sign_in(student)
-
-    post :update_ai_tutor_access, params: {user_id: student.id, ai_tutor_access: false}
-    assert_response :unauthorized
-  end
-
-  test 'updating ai tutor access for uncreated user returns unauthorized' do
-    teacher = create(:teacher)
-    sign_in(teacher)
-
-    post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
-
-    assert_response :unauthorized
   end
 
   test 'set_seen_ta_scores updates seen_ta_scores_map' do

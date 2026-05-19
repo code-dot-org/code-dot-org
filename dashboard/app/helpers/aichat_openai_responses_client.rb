@@ -59,15 +59,6 @@ class AichatOpenaiResponsesClient < AichatAiClient
     body
   end
 
-  # Override base headers and merge in Bearer token.
-  private def headers
-    super.merge(
-      {
-        "Authorization" => "Bearer #{api_key}"
-      }
-    )
-  end
-
   # Convert role from internal representation to OpenAI's role
   # (user/model => user/assistant).
   private def convert_role(role)

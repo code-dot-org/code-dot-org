@@ -88,7 +88,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
   private initializeAngleHelper(): void {
     const container = this.createAngleHelperContainer();
     const sourceBlock = this.getSourceBlock() as BlocklyCore.Block;
-    this.angleHelper = new Blockly.AngleHelper(this.getDirection(), {
+    this.angleHelper = new CdoAngleHelper(this.getDirection(), {
       onUpdate: this.updateDropdownMenuOptions.bind(this),
       snapPoints: this.getOptions().map(option => parseInt(option[1])),
       arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,

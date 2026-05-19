@@ -1,0 +1,127 @@
+name 'pl-progress-bar-sandbox_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Progress Bar Sandbox 
+
+
+
+## Option 1: Simple Unit Progress - Manual Fill
+
+**Best for:** super low-maintenance, drop-in everywhere
+
+**How it works:** you copy/paste the same component and just change the percent.
+
+
+**Total time:** 90 min → percent is “how far through the module you are.”
+
+<div style="max-width:85%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+  <p style="font-size:14pt; margin:0 0 8px 0;"><strong>Unit progress</strong> • 35% complete</p>
+  <div style="background:#e9ecef; border-radius:999px; height:14px; overflow:hidden;">
+    <div style="width:35%; height:14px; background:#0093A4;"></div>
+  </div>
+  <p style="font-size:12pt; margin:8px 0 0 0; color:#555;">~32 of 90 minutes</p>
+</div>
+
+---
+
+## Option 2: Section “stepper” with time estimates (checks + highlight)
+
+**Best for:** teachers love seeing what’s coming + pacing
+**How it works:** a row of “pills” with times. You manually mark completed items with ✅ and highlight the current one.
+
+<div style="max-width:95%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+  <p style="font-size:14pt; margin:0 0 10px 0;"><strong>Module roadmap</strong> (90 minutes)</p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Intro (5)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Loops (20)</div>
+    <div style="font-size:10pt; padding:4px 10px; border-radius:999px; background:#0093A4; color:white;"><strong>▶ Cards + Loops (20)</strong></div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering + Transparency(15)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Copying Data (15)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering Data (10)</div>
+    <div style="font-size:10pt; padding:5px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Wrap-up (5)</div>
+  </div>
+</div>
+
+**Color logic suggestion**
+
+**Completed**: #e4d7f0 (soft purple)
+
+**Current:** #0093A4 (teal)
+
+**Upcoming:** white card w/ subtle shadow
+
+---
+
+## Option 3: 
+
+**Option 3**: Table-style “agenda tracker” (easy to scan)
+
+This would be used at the beginning or end of each section. Or, just an overview at the beginning. 
+
+<div style="max-width:85%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+<p style="font-size:14pt; margin:0 0 10px 0;"><strong>Today’s agenda</strong> (90 minutes)</p>
+<table style="width:100%; border-collapse:collapse; font-size:13pt;">
+ <tr>
+      <th style="text-align:left; padding:8px;">Status</th>
+      <th style="text-align:left; padding:8px;">Section</th>
+      <th style="text-align:left; padding:8px;">Time</th>
+    </tr>
+
+ <tr style="background:white; box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+      <td style="padding:8px;">✅</td><td style="padding:8px;">Introduction</td><td style="padding:8px;">5 min</td>
+    </tr>
+ <tr style="background:white;">
+      <td style="padding:8px;">✅</td><td style="padding:8px;">Introducing loops</td><td style="padding:8px;">20 min</td>
+    </tr>
+ <tr style="background:#e4d7f0;">
+      <td style="padding:8px;">⏳</td><td style="padding:8px;"><strong>Displaying objects with loops</strong></td><td style="padding:8px;">20 min</td>
+    </tr>
+ <tr style="background:white;">
+      <td style="padding:8px;">⬜</td><td style="padding:8px;">Filtering and transparency</td><td style="padding:8px;">15 min</td>
+    </tr>
+    <tr style="background:white;">
+      <td style="padding:8px;">⬜</td><td style="padding:8px;">Copying data</td><td style="padding:8px;">15 min</td>
+    </tr>
+    <tr style="background:white;">
+      <td style="padding:8px;">⬜</td><td style="padding:8px;">Filtering data</td><td style="padding:8px;">10 min</td>
+    </tr>
+    <tr style="background:white;">
+      <td style="padding:8px;">⬜</td><td style="padding:8px;">Wrapping up</td><td style="padding:8px;">5 min</td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## Option 4: “Learning module sidebar” feel (Levelbuilder-friendly approximation)
+
+This is an attempt to create a sidebar similar to ones in coureses like Coursear. Levelbuilder can't quite capture it. 
+
+<div style="max-width:85%; margin:16px auto; display:flex; gap:14px; align-items:flex-start;">
+
+  <!-- Faux sidebar -->
+<div style="width:260px; background:#f7f8fa; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+<p style="font-size:14pt; margin:0 0 8px 0;"><strong>Module</strong></p>
+
+<p style="font-size:13pt; margin:8px 0;">✅ Introduction <span style="color:#555;">(5)</span></p>
+    <p style="font-size:13pt; margin:8px 0;">✅ Loops <span style="color:#555;">(20)</span></p>
+    <p style="font-size:13pt; margin:8px 0; background:#0093A4; color:white; padding:6px 8px; border-radius:8px;"><strong>▶ Cards + Loops</strong> <span style="color:white;">(20)</span></p>
+    <p style="font-size:13pt; margin:8px 0;">⬜ Filtering + Transparency <span style="color:#555;">(15)</span></p>
+    <p style="font-size:13pt; margin:8px 0;">⬜ Copying Data <span style="color:#555;">(15)</span></p>
+    <p style="font-size:13pt; margin:8px 0;">⬜ Filtering Data <span style="color:#555;">(10)</span></p>
+    <p style="font-size:13pt; margin:8px 0;">⬜ Wrap-up <span style="color:#555;">(5)</span></p>
+  </div>
+
+  <!-- Main content placeholder -->
+<div style="flex:1; background:white; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+    <p style="font-size:14pt; margin:0;"><strong>You are here:</strong> Displaying objects with loops (20 min)</p>
+    <p style="font-size:14pt; margin:8px 0 0 0;">Use this page to introduce the concept, then move into the practice activity.</p>
+  </div>
+
+</div>
+
+
+MARKDOWN

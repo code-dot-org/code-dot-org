@@ -2,11 +2,12 @@ import AddToAiTutorChatButton from '@codebridge/Editor/AddToAiTutorChatButton';
 import {EditorState, StateField} from '@codemirror/state';
 import {showTooltip, Tooltip} from '@codemirror/view';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
@@ -59,6 +60,10 @@ export const getAddToAiTutorField = (
                 end: endingLine.number,
               },
               filename: filename,
+              timestamp: new Date().toLocaleTimeString(currentLocale(), {
+                hour: 'numeric',
+                minute: '2-digit',
+              }),
             })
           );
         };
@@ -70,9 +75,12 @@ export const getAddToAiTutorField = (
           create: () => {
             const dom = document.createElement('div');
             dom.className = moduleStyles.aiTutorTooltip;
-            ReactDOM.render(
+            createReactRoot(
               <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
-              dom
+              dom,
+              {
+                legacyReactDomRender: true,
+              }
             );
             return {dom};
           },

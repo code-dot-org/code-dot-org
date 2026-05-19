@@ -222,6 +222,43 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_invalid_weblab_html_file_is_not_found_on_read
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
+    filename = 'index.html'
+    invalid_html = '<button onclick="alert(1)">Click me</button>'
+
+    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, invalid_html)
+    assert successful?
+
+    Projects.any_instance.unstub(:get)
+    Projects.any_instance.stubs(:get).returns({projectType: 'weblab'})
+
+    @api.get_object(filename)
+    assert not_found?
+
+    @api.get_object(filename, '', {'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate})
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')}
+    assert not_found?
+
+    get "/projects/weblab/#{@channel_id}/", '', {
+      'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org'),
+      'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate
+    }
+    assert not_found?
+
+    Projects.any_instance.unstub(:get)
+    @api.delete_object(filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
@@ -263,6 +300,31 @@ class FilesTest < FilesApiTestBase
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
+
+    delete_all_manifest_versions
+  end
+
+  def test_content_type_for_webp_and_markdown
+    webp_filename = @api.randomize_filename('image.webp')
+    md_filename = @api.randomize_filename('readme.md')
+
+    post_file_data(@api, webp_filename, 'fake-webp-bytes', 'image/webp')
+    assert successful?
+    post_file_data(@api, md_filename, '# Hello', 'text/markdown')
+    assert successful?
+
+    @api.get_object(webp_filename)
+    assert successful?
+    assert_match 'image/webp', last_response['Content-Type']
+
+    @api.get_object(md_filename)
+    assert successful?
+    assert_match 'text/markdown', last_response['Content-Type']
+
+    @api.delete_object(webp_filename)
+    assert successful?
+    @api.delete_object(md_filename)
+    assert successful?
 
     delete_all_manifest_versions
   end
@@ -781,8 +843,8 @@ class FilesTest < FilesApiTestBase
     # Can't test abuse score functionality, since it's been moved to Rails.
     #src_api.patch_abuse(10)
 
-    expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
-    expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_sound_info = {'filename' => escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects["files"]
@@ -870,26 +932,46 @@ class FilesTest < FilesApiTestBase
     png_data = 'fake-png-bytes'
     jpeg_data = 'fake-jpeg-bytes'
 
-    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/png', nil).returns(:everyone)
+    png_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(png_moderation_result)
 
     header 'CONTENT_TYPE', 'image/png'
     post '/v3/images/moderate', png_data
     assert successful?
-    assert_equal({'rating' => 'everyone'}, JSON.parse(last_response.body))
+    assert_equal png_moderation_result, JSON.parse(last_response.body)
 
-    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/jpeg', nil).returns(:racy)
+    jpeg_moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 2}
+      ]
+    }
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/jpeg').returns(jpeg_moderation_result)
 
     header 'CONTENT_TYPE', 'image/jpeg'
     post '/v3/images/moderate', jpeg_data
     assert successful?
-    assert_equal({'rating' => 'racy'}, JSON.parse(last_response.body))
+    assert_equal jpeg_moderation_result, JSON.parse(last_response.body)
   end
 
   def test_moderate_image_unsupported_type
-    header 'CONTENT_TYPE', 'image/gif'
-    post '/v3/images/moderate', 'fake-gif-bytes'
+    header 'CONTENT_TYPE', 'image/bmp'
+    post '/v3/images/moderate', 'fake-bmp-bytes'
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Unsupported image type. Only PNG and JPEG files are allowed.'}, JSON.parse(last_response.body))
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    assert_equal({'error' => "Unsupported image type. Only #{allowed} files are allowed."}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_empty_body_returns_400
+    ImageModeration.expects(:moderate_image).never
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/moderate', ''
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
   end
 
   private def delete_all_files(bucket)
@@ -919,5 +1001,16 @@ class FilesTest < FilesApiTestBase
 
   private def delete_all_manifest_versions
     delete_all_file_versions 'manifest.json'
+  end
+end
+
+class FilesApiHtmlValidationTest < Minitest::Test
+  def test_valid_html_content_disallows_on_attrs
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+
+    api = FilesApi.allocate
+
+    assert api.valid_html_content?('<div></div>')
+    refute api.valid_html_content?('<button onclick="alert(1)">Click me</button>')
   end
 end

@@ -1,5 +1,13 @@
 import {Order} from 'blockly/javascript';
 
+import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from '@cdo/apps/blockly/addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from '@cdo/apps/blockly/addons/cdoFieldBitmap';
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
@@ -127,7 +135,7 @@ const customInputTypes = {
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = ' \uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
-        block.setTitleValue(soundValue, inputConfig.name);
+        block.setFieldValue(soundValue, inputConfig.name);
       };
       const onClick = () => {
         dashboard.assets.showAssetManager(onSelect, 'audio', null, {
@@ -169,7 +177,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
+          new CdoFieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -198,7 +206,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
+          new CdoFieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -253,7 +261,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(label)
         .appendField(
-          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
+          new CdoFieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },
@@ -283,7 +291,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldVariable(
+          new CdoFieldVariable(
             null,
             null,
             null,
@@ -325,9 +333,7 @@ const customInputTypes = {
         return behaviorOptions;
       };
 
-      const dropdownField = new Blockly.FieldBehaviorPicker(
-        menuGeneratorFunction
-      );
+      const dropdownField = new CdoFieldBehaviorPicker(menuGeneratorFunction);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdownField, inputConfig.name);
@@ -343,7 +349,7 @@ const customInputTypes = {
         block.workspace.id === Blockly.getMainWorkspace().id &&
         toolboxConfigurationSupportsEditButton(block)
       ) {
-        const editButton = new Blockly.FieldButton({
+        const editButton = new CdoFieldButton({
           value: i18n.edit(),
           onClick: editButtonHandler,
           colorOverrides: {button: 'blue', text: 'white'},
@@ -403,10 +409,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldColour('#ff0000', undefined, options),
-          'VAL'
-        );
+        .appendField(new CdoFieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
@@ -436,7 +439,7 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+        .appendField(new CdoFieldVariable(), inputConfig.name);
     },
 
     generateCode(block, arg) {
@@ -459,10 +462,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldBitmap(null, null, config),
-          inputConfig.name
-        );
+        .appendField(new CdoFieldBitmap(null, null, config), inputConfig.name);
     },
     generateCode(block, arg) {
       // Convert 2d array into a string.
@@ -619,7 +619,7 @@ export default {
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl('/docs/spritelab/codestudio_spriteName');
@@ -628,7 +628,7 @@ export default {
           .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
+              : new CdoFieldVariable(
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,
@@ -638,7 +638,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.setStyle('sprite_blocks');
       },
@@ -649,7 +649,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,

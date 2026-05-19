@@ -70,6 +70,8 @@ export interface ButtonPropsToMuiCoreOutput {
   color: MuiButtonProps['color'];
   size: 'extraSmall' | 'small' | 'medium' | 'large';
   disabled: boolean;
+  loading?: MuiButtonProps['loading'];
+  loadingPosition?: MuiButtonProps['loadingPosition'];
   className?: string;
   id?: string;
   onClick?: (
@@ -104,9 +106,6 @@ export function transformButtonPropsCore(
       | React.MouseEvent<HTMLAnchorElement>,
   ) => void;
   baseProps: ButtonPropsToMuiCoreOutput;
-  spinnerIcon: {iconName: 'spinner'; iconStyle: 'solid'; animationType: 'spin'};
-  spinnerPosition: 'left' | 'right';
-  addPendingButtonWithHiddenTextClass: boolean;
 } {
   const {
     type = 'primary',
@@ -128,7 +127,7 @@ export function transformButtonPropsCore(
     analyticsCallback,
     iconLeft,
     iconRight,
-    icon,
+    icon: _icon, // eslint-disable-line @typescript-eslint/no-unused-vars -- excluded from ...rest to prevent unknown prop on MuiButton
     ...rest
   } = props;
 
@@ -148,12 +147,20 @@ export function transformButtonPropsCore(
       }
     : onClick;
 
+  const loadingPosition: MuiButtonProps['loadingPosition'] = iconLeft
+    ? 'start'
+    : iconRight
+      ? 'end'
+      : undefined;
+
   // Base props (without icons and children, which are handled separately)
   const baseProps: ButtonPropsToMuiCoreOutput = {
     variant,
     color: muiColor,
     size: muiSize,
     disabled: disabled,
+    loading: isPending,
+    loadingPosition,
     className: forceHover ? `${className || ''} force-hover`.trim() : className,
     id,
     onClick: handleClick,
@@ -175,25 +182,11 @@ export function transformButtonPropsCore(
     ...rest,
   };
 
-  // Spinner icon definition
-  const spinnerIcon = {
-    iconName: 'spinner' as const,
-    iconStyle: 'solid' as const,
-    animationType: 'spin' as const,
-  };
-
-  const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
-  const addPendingButtonWithHiddenTextClass =
-    isPending && !icon && !iconLeft && !iconRight;
-
   return {
     variant,
     muiSize,
     muiColor,
     handleClick,
     baseProps,
-    spinnerIcon,
-    spinnerPosition,
-    addPendingButtonWithHiddenTextClass,
   };
 }

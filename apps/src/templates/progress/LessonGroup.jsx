@@ -24,6 +24,7 @@ class LessonGroup extends React.Component {
     groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -93,7 +94,7 @@ class LessonGroup extends React.Component {
           {hasLessonGroupInfo && (
             <span>
               <FontAwesome
-                icon="info-circle"
+                icon="circle-info"
                 style={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />
@@ -121,7 +122,10 @@ class LessonGroup extends React.Component {
               styles.bottom,
             ]}
           >
-            <TableType groupedLesson={this.props.groupedLesson} />
+            <TableType
+              groupedLesson={this.props.groupedLesson}
+              isOnLevelView={this.props.isOnLevelView}
+            />
           </div>
         )}
       </div>
@@ -135,7 +139,7 @@ const styles = {
   },
   header: {
     padding: 20,
-    backgroundColor: color.purple,
+    backgroundColor: color.dark_charcoal,
     fontSize: 18,
     ...fontConstants['main-font-semi-bold'],
     color: 'white',
@@ -153,7 +157,7 @@ const styles = {
     marginRight: 10,
   },
   contents: {
-    backgroundColor: color.lighter_purple,
+    backgroundColor: color.lighter_gray,
     padding: 20,
   },
   contentsBlue: {

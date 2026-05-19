@@ -48,6 +48,12 @@ class SlackTest < Minitest::Test
     refute Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
   end
 
+  def test_user_mention_tag_with_error_response
+    Slack.stubs(:post_to_slack).returns(false)
+    err = assert_raises(RuntimeError) {Slack.user_mention_tag('user@example.com')}
+    assert_match(/users\.list/, err.message)
+  end
+
   def test_replace_user_links
     Slack.stubs(:get_display_name).returns('elsa')
     assert_equal 'DOTD: @elsa; DTS: yes',

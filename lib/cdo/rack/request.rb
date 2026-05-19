@@ -1,21 +1,19 @@
 require 'rack/request'
 require 'rack/session/abstract/id'
+require 'i18n'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
 require 'cdo/global_edition'
-require 'cdo/i18n'
 
 module Cdo
   module RequestExtension
-    LOCALE_ENV = 'cdo.locale'.freeze
-
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
 
     def trusted_proxy?(ip)
-      super(ip) || TRUSTED_PROXIES.any? do |proxy|
+      super || TRUSTED_PROXIES.any? do |proxy|
         proxy.include?(ip)
       rescue
         false
@@ -33,11 +31,7 @@ module Cdo
     end
 
     def locale
-      env[LOCALE_ENV] || Cdo::I18n::DEFAULT_LOCALE
-    end
-
-    def locale=(value)
-      env[LOCALE_ENV] = value if Cdo::I18n.available_locale?(value)
+      ::I18n.locale.to_s
     end
 
     def referer_site_with_port
@@ -101,6 +95,10 @@ module Cdo
       env[:splat_path_info]
     end
 
+    def user
+      env['warden']&.user
+    end
+
     def user_id
       @user_id ||= user_id_from_session_store
     end
@@ -142,7 +140,7 @@ module Cdo
     end
 
     def ge_region
-      RequestStore.store[Cdo::GlobalEdition::REGION_KEY]
+      Cdo::GlobalEdition.current_region
     end
 
     # Initialize a private instance of the SessionStore used in Dashboard, so

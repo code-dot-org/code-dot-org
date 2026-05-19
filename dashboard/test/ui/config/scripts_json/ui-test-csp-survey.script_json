@@ -1,0 +1,153 @@
+{
+  "script": {
+    "name": "ui-test-csp-survey",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-02 20:24:04 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-csp-survey"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp-survey"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp-survey"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7cd052b2-7adc-45b7-b954-3afe287b736d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cd052b2-7adc-45b7-b954-3afe287b736d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp-survey"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9eea6be9-1d59-4d12-ab24-fe6c9e55af6f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9eea6be9-1d59-4d12-ab24-fe6c9e55af6f",
+        "lesson_activity.key": "7cd052b2-7adc-45b7-b954-3afe287b736d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test anonymous student survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp-survey",
+        "activity_section.key": "9eea6be9-1d59-4d12-ab24-fe6c9e55af6f"
+      },
+      "level_keys": [
+        "Test anonymous student survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Test anonymous student survey",
+        "script_level.level_keys": [
+          "Test anonymous student survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp-survey",
+        "activity_section.key": "9eea6be9-1d59-4d12-ab24-fe6c9e55af6f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

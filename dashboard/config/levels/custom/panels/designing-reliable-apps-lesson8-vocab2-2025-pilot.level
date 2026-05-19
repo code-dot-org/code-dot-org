@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-11T19:37:34.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Fallback\n\nA **fallback** is a backup plan that a program takes automatically when its primary option fails to work. \n\nFor example, if an app can't connect to the server to get new messages, it falls back to showing you the messages it saved from the last time you were online.",
+        "imageUrl": "https://images.code.org/91ed6db3651289f1ff3af5ed0999318d-Screenshot 2026-02-12 at 9.56.24 AM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-11T19:37:34.805+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-11 19:37:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 16:57:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

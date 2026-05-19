@@ -1,0 +1,92 @@
+name 'pl-ai-101-V2-mod4-AIchat-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Education Specific AI Tools
+
+Some tools are specifically designed for educational settings and may better align with school requirements. These tools can provide a safer entry point for integrating AI directly into classrooms.
+
+When looking for student-friendly AI tools, look for ones that:
+* Prioritize student privacy
+* Offer teacher controls or dashboards
+* Focus on learning support rather than answer-giving
+
+Below are a few examples of AI tools developed specificaly for educational use.
+
+👉 If you are interested, click on the logo to learn more. 
+
+<br>
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  "><strong>Important Disclaimer</strong> <br><br>Just because a tool was designed specifically for educational use does not mean it's okay to use in your school or classroom. <br><br><strong>When in doubt always follow school and district guidelines.</strong>
+  </p>
+</div>
+
+<br>
+
+
+<div style="display: grid; gap:16px; max-width:900px; margin:auto;">
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Khanmigo by Khan Academy</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI tutor and teaching assistant that supports learning by guiding students through problems rather than giving direct answers.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">SchoolAI</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI learning assistant designed to adapt to each student’s learning style, pace, and interests. It provides on-demand help and guidance while keeping teachers informed.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+<!-- Row -->
+<div style="display:grid; grid-template-columns: 2fr 1fr; align-items:center; background:#fff; border-radius:14px; border:2px solid #5a2ca0; padding:20px;">
+
+<div>
+<div style="font-size:22px; font-weight:700; margin-bottom:6px;">Grammarly</div>
+<div style="font-size:16px; line-height:1.5;">
+An AI-powered writing support tool that helps students generate ideas, receive feedback, and improve clarity in their work.
+</div>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center;">
+<img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
+style="max-width:180px; max-height:80px; object-fit:contain;">
+</div>
+
+</div>
+
+</div>
+
+We'll return to choosing AI tools in Moduel 5, Ensuring a Responsible Approach to AI.
+MARKDOWN

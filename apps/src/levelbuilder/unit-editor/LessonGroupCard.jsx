@@ -253,6 +253,7 @@ class LessonGroupCard extends Component {
                   name={lessonGroup.key || '(none)'}
                   move={this.handleMoveLessonGroup}
                   remove={this.handleRemoveLessonGroup}
+                  isDeleteable={true}
                 />
               )}
             </div>
@@ -317,7 +318,7 @@ class LessonGroupCard extends Component {
               style={styles.addButton}
               type="button"
             >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              <i style={{marginRight: 7}} className="fa-solid fa-circle-plus" />
               Lesson
             </button>
           </div>

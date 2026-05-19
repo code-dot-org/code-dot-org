@@ -1,3 +1,6 @@
+import CdoFieldDropdown from '../blockly/addons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
+
 /**
  * Blockly App: Bounce
  *
@@ -235,7 +238,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle('default');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.SOUNDS),
+        new CdoFieldDropdown(this.SOUNDS),
         'SOUND'
       );
       this.setPreviousStatement(true);
@@ -337,7 +340,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting ball speed
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('default');
@@ -365,7 +368,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting paddle speed
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('default');
@@ -395,7 +398,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setBackground = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
       this.setStyle('variable_blocks');
@@ -426,7 +429,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setTeam = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
 
       // default to warriors if we can
       if (this.VALUES.length > 14) {
@@ -456,7 +459,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setBall = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
       this.setStyle('variable_blocks');
@@ -482,7 +485,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setPaddle = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
       this.setStyle('variable_blocks');
@@ -510,7 +513,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setPaddleDropdown = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldImageDropdown(this.VALUES, 54, 61);
+      var dropdown = new CdoFieldImageDropdown(this.VALUES, 54, 61);
       if (this.VALUES.length > 1) {
         dropdown.setValue(this.VALUES[1][1]);
       }

@@ -1,4 +1,4 @@
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React, {HTMLAttributes, forwardRef} from 'react';
 
@@ -60,12 +60,12 @@ const AiTutorVersionActionNotification = forwardRef<
           )}
           {commitDescription && (
             <div className={moduleStyles.commitDescriptionContainer}>
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <div>
                   <strong>What changed:</strong>
                 </div>
                 <div>{commitDescription}</div>
-              </BodyFourText>
+              </Typography>
             </div>
           )}
         </div>

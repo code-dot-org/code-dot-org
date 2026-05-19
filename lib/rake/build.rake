@@ -42,6 +42,17 @@ namespace :build do
     end
   end
 
+  desc 'Builds new Code Studio App (vite).'
+  timed_task_with_logging :studio do
+    Dir.chdir(frontend_dir) do
+      ChatClient.log 'Installing <b>studio</b> dependencies...'
+      RakeUtils.yarn_install
+
+      ChatClient.log 'Building <b>studio</b>...'
+      RakeUtils.system 'yarn build --filter @code-dot-org/studio'
+    end
+  end
+
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -196,9 +207,6 @@ namespace :build do
           raise exception
         end
       end
-
-      ChatClient.log 'Restarting <b>pegasus</b> web server.'
-      RakeUtils.restart_service CDO.pegasus_web_server_name unless rack_env?(:development)
     end
   end
 
@@ -212,6 +220,7 @@ namespace :build do
 
   tasks = []
   tasks << :apps if CDO.build_apps
+  tasks << :studio if CDO.build_studio && !rack_env?(:levelbuilder) && !rack_env?(:production)
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :i18n if CDO.build_i18n

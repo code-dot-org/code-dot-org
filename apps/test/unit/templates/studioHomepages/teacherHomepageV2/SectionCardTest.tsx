@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
@@ -28,7 +28,6 @@ describe('SectionCard', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -71,7 +70,10 @@ describe('SectionCard', () => {
     jest.restoreAllMocks();
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(
+    initialRoute = '/teacher_dashboard/home',
+    sectionOverride = section
+  ) {
     return render(
       <Provider store={store}>
         <RouterProvider
@@ -82,8 +84,8 @@ describe('SectionCard', () => {
                 element={
                   <SectionCard
                     studioUrlPrefix="https://studio.code.org"
-                    id={section.id}
-                    section={section}
+                    id={sectionOverride.id}
+                    section={sectionOverride}
                     onDeleteClickCallback={() => {}}
                   />
                 }
@@ -101,6 +103,11 @@ describe('SectionCard', () => {
     screen.getByText('Period 1');
   });
 
+  it('renders demo chip for demo sections', () => {
+    renderComponent('/teacher_dashboard/home', {...section, demoType: 'high'});
+    screen.getByText('Demo');
+  });
+
   it('renders section class code with login info link', () => {
     renderComponent();
     const link = screen.getByRole('button', {name: 'ABCDEF'});
@@ -111,8 +118,7 @@ describe('SectionCard', () => {
     );
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: 'teacherHomepage'},
-      PLATFORMS.BOTH
+      {source: 'teacherHomepage'}
     );
   });
 

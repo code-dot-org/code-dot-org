@@ -1,5 +1,9 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
+import {
   SectionLoginType,
   UserTypes,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -10,7 +14,6 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  aiTutorEnabled: boolean;
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
@@ -23,11 +26,11 @@ export interface Section {
   courseVersionId?: number | null;
   courseVersionName?: string;
   createdAt?: string;
+  demoType?: DemoType | null;
   grades: string[];
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
-  isAssignedEssentialAiChat?: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
@@ -47,6 +50,31 @@ export interface Section {
   unitPosition: string | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
+  assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  aiChatAccessLevel?: AiChatAccessLevel;
+}
+
+export type DemoType = 'elementary' | 'middle' | 'high';
+
+export interface DemoPresetUnit {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetCourse {
+  name: string;
+  displayName: string;
+}
+
+export interface DemoPresetView {
+  demoType: DemoType;
+  sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  loginType: NonNullable<Section['loginType']>;
+  participantType: NonNullable<Section['participantType']>;
+  unit: DemoPresetUnit | null;
+  unitGroup: DemoPresetCourse | null;
 }
 
 type Course = {
@@ -58,7 +86,6 @@ type Course = {
 };
 
 export interface UserEditableSection {
-  aiTutorEnabled?: boolean;
   codeReviewExpiresAt?: number | null;
   courseId?: number | null;
   courseOfferingId?: number | null;
@@ -79,7 +106,6 @@ export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
 export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
-  ai_tutor_enabled?: boolean;
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
   code: string;
@@ -89,6 +115,7 @@ export interface ServerSection {
   course_version_id?: number | null;
   courseVersionName?: string | null;
   createdAt?: string;
+  demo_type?: DemoType | null;
   grades?: string[];
   hidden: boolean;
   id: number;
@@ -115,6 +142,7 @@ export interface ServerSection {
 export interface Student {
   familyName: string;
   id: number;
+  isDemoStudent: boolean;
   name: string;
   secretPictureName: string;
   secretPictureUrl: string;
@@ -127,6 +155,7 @@ export interface Student {
 export interface ServerStudent {
   family_name: string;
   id: number;
+  is_demo_student: boolean;
   name: string;
   secret_picture_name: string;
   secret_picture_url: string;
@@ -136,12 +165,57 @@ export interface ServerStudent {
   user_type: keyof typeof UserTypes;
 }
 
+export interface ServerDemoPresetUnit {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetCourse {
+  name: string;
+  display_name: string;
+}
+
+export interface ServerDemoPresetView {
+  demo_type: DemoType;
+  section_name: string;
+  avatar_color: number;
+  avatar_emoji: number;
+  login_type: NonNullable<Section['loginType']>;
+  participant_type: NonNullable<Section['participantType']>;
+  unit: ServerDemoPresetUnit | null;
+  unit_group: ServerDemoPresetCourse | null;
+}
+
 //TODO: better types here
 export interface AssignmentCourseOffering {
   elementary: object;
   high: object;
   hoc: object;
   middle: object;
+}
+
+export interface CourseOffering {
+  id: number;
+  display_name: string;
+  is_featured: boolean;
+  participant_audience: string;
+  course_versions: {
+    [courseVersionId: number]: CourseVersion;
+  };
+}
+
+export interface CourseVersion {
+  id: number;
+  content_root_id: number;
+  is_recommended: boolean;
+  is_stable: boolean;
+  key: string;
+  locale_codes: [string];
+  locale: [string];
+  name: string;
+  path: string;
+  units: object;
+  version_year: string;
 }
 
 export type SectionInstructor = {

@@ -1,0 +1,61 @@
+name 'pl-aif-2-U6-day-by-day-10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day-by-Day Plan (Finising up)
+
+<img src="https://images.code.org/b8d3064cf4d4237a57634993fd1c553d-image-1776870634672.png" alt="Road to a castle with signs milestone 4 and milestone 5" width="350px" style="border-radius:10px; float:right; margin: 20px 40px 0px 40px;">
+
+This final phase emphasizes the importance of feedback and iteration to refine and strengthen the app before showcasing. 
+
+Reflection plays a key role in helping students recognize their growth and make their learning visible.
+
+<div style="clear:both;"></div>
+
+## Days 8–10: Feedback & Showcase
+
+
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- Day 8 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/210faf38ba2f992a45b484495de56398-image-1776870280262.png" alt="Day 8" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Feedback &amp; Iteration + Benchmark C</b></h3>
+      <p style="font-size: 14pt;">Students gather feedback from peers, AI, or the teacher using the TAG protocol (Tell, Ask, Give) and decide what to revise. The class then pauses for Benchmark C to reflect on progress and identify the most important next steps.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        💬 “What feedback matters most, and what should we revise before finalizing?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Day 9 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/7c5b59a309bdc368e90f2696c4b5d485-image-1776870301906.png" alt="Day 9" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Final App</b></h3>
+      <p style="font-size: 14pt;">This is the final decision-making day. Students stabilize the app and prioritize fixes that improve clarity and reliability rather than adding new features.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        ✅ “What changes will make our app clearer, more reliable, and ready to share?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Day 10 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/e8629de4699ea35f8a6765593ed55fb7-image-1776870327789.png" alt="Day 10" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Showcase &amp; Reflection</b></h3>
+      <p style="font-size: 14pt;">Students participate in a gallery walk to share their work, self-assess using the project rubric, and complete a final reflection on their process.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🌟 “What did we create, what did we learn, and how did our process shape the final product?”
+      </p>
+    </div>
+  </div>
+
+</div>
+
+![]()
+MARKDOWN

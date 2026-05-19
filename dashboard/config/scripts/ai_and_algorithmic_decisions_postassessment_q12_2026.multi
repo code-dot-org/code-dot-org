@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q12_2026'
+
+question 'A shopping app gives free shipping when a user''s order is over $50 AND the user is a member. A non-member spending $300 does not get free shipping. A teacher asks: "Who does this rule keep out?" What is the most useful student response?'
+
+wrong 'The rule keeps out people whose internet is too slow to load the checkout page.'
+wrong 'The rule keeps out everyone — free shipping is never offered.'
+wrong 'No one is kept out because the rule is fair.'
+right 'The rule keeps out non-members who spend a lot, and it''s worth asking whether the rule should be changed to include them.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

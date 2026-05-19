@@ -446,6 +446,7 @@ en:
       legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
       videos: "Videos"
+      hour_of_ai: Hour of AI
       hour_of_code: "Hour of Code"
       csf: "CS Fundamentals"
 
@@ -482,6 +483,7 @@ en:
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Game Lab'
+      game_design: 'Sprite Lab (Game Design)'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
@@ -494,6 +496,7 @@ en:
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       music: 'Music Lab'
+      music_dance_ai: 'Mix & Move with AI'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Poetry'
@@ -508,6 +511,7 @@ en:
       thebadguys: 'The Bad Guys'
       loading: 'Loading...'
       weblab: 'Web Lab'
+      weblab2: 'Web Lab (new)'
       view_all: 'View all projects...'
 
     popup:
@@ -1563,6 +1567,7 @@ en:
   global_edition:
     regions:
       fa: Farsi
+      in: India
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes

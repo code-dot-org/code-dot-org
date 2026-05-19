@@ -55,6 +55,7 @@ module Services
           ao.credential_type = provider
           ao.authentication_id = user.uid
           ao.data = oauth_token_json
+          ao.version = provider == AuthenticationOption::CLEVER ? AuthenticationOption::Clever::VERSION[:v3] : nil
         elsif user.email.present? || user.hashed_email.present?
           ao.credential_type = AuthenticationOption::EMAIL
         else

@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
@@ -340,18 +340,21 @@ const MassDeleteContainer: React.FC = () => {
                   ⚠️ CSV contains usernames - will need conversion to IDs before
                   deletion
                 </p>
-                <Button
-                  text={
-                    isConverting
-                      ? 'Converting...'
-                      : 'Convert usernames to student IDs'
-                  }
-                  onClick={convertUsernamesToIds}
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
                   disabled={isConverting}
                   className={
                     isConverting ? styles.converting : styles.convertButton
                   }
-                />
+                  onClick={convertUsernamesToIds}
+                  type="button"
+                >
+                  {isConverting
+                    ? 'Converting...'
+                    : 'Convert usernames to student IDs'}
+                </MuiButton>
                 {conversionError && (
                   <p className={styles.conversionError}>{conversionError}</p>
                 )}
@@ -366,16 +369,26 @@ const MassDeleteContainer: React.FC = () => {
       </div>
 
       <div className={styles.buttonSection}>
-        <Button
-          text="Test delete"
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          disabled={!csvData || !teacherId.trim() || hasUsernames}
           onClick={() => deleteProgress(true)}
+          type="button"
+        >
+          {'Test delete'}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={!csvData || !teacherId.trim() || hasUsernames}
-        />
-        <Button
-          text="Delete for real"
           onClick={() => deleteProgress(false)}
-          disabled={!csvData || !teacherId.trim() || hasUsernames}
-        />
+          type="button"
+        >
+          {'Delete for real'}
+        </MuiButton>
         {(!csvData || !teacherId.trim()) && (
           <p className={styles.disabledInfo}>
             {!teacherId.trim() && !csvData

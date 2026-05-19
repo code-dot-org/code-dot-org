@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-12T17:56:39.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Launch Day! \n\nYour new website launches today. But oh no! The API is down and you have been tasked as the crisis manager. \n\nRead through the following scenarios. Then, choose one scenario and code a solution for it in the next level.",
+        "imageUrl": "https://images.code.org/795f46772c991af9986266cfe02971bb-Screenshot 2026-02-12 at 1.17.27 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-4924dc9a-fb44-41bc-bae5-576df2ce68c3",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "# Scenario 1: Tech Speak\n\nYou try to load the page and see an error message. If your users see this, they will have no idea what it means!\n",
+        "imageUrl": "https://images.code.org/a29e63d106cc213d6125dc71a3d95274-Screenshot 2026-02-12 at 1.11.20 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-1478fca0-c150-484d-9045-bb4fb8c4bb70"
+      },
+      {
+        "text": "# Scenario 2: Missing Fallback\n\nThere's probably supposed to be an image here...but the only thing loading is an icon and the image name. That can't be right!\n",
+        "imageUrl": "https://images.code.org/89c836c350026fb446a0c68ee6a8d0d7-Screenshot 2026-02-12 at 1.13.51 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-e17e7e1f-1182-4a03-8f5a-db17c53d55a7"
+      },
+      {
+        "text": "# Scenario 3: Should I Refresh?\n\nThe page failed to load, but there's no button to try again. Do I have to reload the entire page for it to work?\n",
+        "imageUrl": "https://images.code.org/664bb6b9071fa96b1d2e53d94727b8e1-Screenshot 2026-02-12 at 1.23.22 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-f45f4b07-c757-4fa4-a6c0-0e3e27b0296b",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-12 20:07:46 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:09:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:14:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:23:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:24:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:25:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:25:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

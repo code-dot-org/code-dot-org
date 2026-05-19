@@ -14,11 +14,11 @@ module ReadReplicaHelper
         Gatekeeper.allows('dashboard_read_replica')
       end
 
-      def connected_to(database: nil, role: nil, prevent_writes: false, &blk)
+      def connected_to(role: nil, prevent_writes: false, &blk)
         if read_replica?
           super
         else
-          super(database: database, role: :writing, prevent_writes: prevent_writes, &blk)
+          super(role: :writing, prevent_writes: prevent_writes, &blk)
         end
       end
     end

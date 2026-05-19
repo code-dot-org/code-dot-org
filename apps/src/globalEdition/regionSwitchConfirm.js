@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {default as GlobalEditionRegionSwitchConfirm} from '@cdo/apps/templates/globalEdition/RegionSwitchConfirm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
+  createReactRoot(
     <GlobalEditionRegionSwitchConfirm
       code={getScriptData('code')}
       name={getScriptData('name')}
     />,
-    document.getElementById('global-edition-region-switch-confirm-container')
+    document.getElementById('global-edition-region-switch-confirm-container'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

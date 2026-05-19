@@ -1,8 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -49,11 +46,13 @@ const MusicProjectBar: React.FC<{
         )
       )}
       <div className={styles.text}>
-        <BodyThreeText>{isLoading ? 'Loading...' : title}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {isLoading ? 'Loading...' : title}
+        </Typography>
         {packFolder && (
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             {`${packFolder.name} - ${packFolder.artist}`}
-          </BodyFourText>
+          </Typography>
         )}
       </div>
     </div>

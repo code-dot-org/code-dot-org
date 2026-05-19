@@ -13,7 +13,7 @@ export function shrinkBlockSpaceContainer(
   workspace: ExtendedWorkspaceSvg,
   withPadding: boolean
 ) {
-  const container = workspace.getContainer();
+  const container = workspace.svgGroup_.parentNode;
 
   // Calculate the minimum required size for the container,
   const metrics = workspace.getMetrics();

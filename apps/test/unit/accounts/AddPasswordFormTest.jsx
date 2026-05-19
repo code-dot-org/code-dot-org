@@ -1,6 +1,6 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import '@testing-library/jest-dom';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddPasswordForm, {
   SAVING_STATE,
@@ -9,140 +9,149 @@ import AddPasswordForm, {
   PASSWORDS_MUST_MATCH,
 } from '@cdo/apps/accounts/AddPasswordForm';
 import * as utils from '@cdo/apps/utils';
-
-import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import i18n from '@cdo/locale';
 
 describe('AddPasswordForm', () => {
-  let wrapper, handleSubmit;
+  let handleSubmit;
+
+  const renderForm = props => {
+    render(<AddPasswordForm handleSubmit={handleSubmit} {...props} />);
+    return {
+      passwordField: screen.getByLabelText(i18n.password()),
+      passwordConfirmationField: screen.getByLabelText(
+        i18n.passwordConfirmation()
+      ),
+      submitButton: screen.getByRole('button', {name: i18n.createPassword()}),
+    };
+  };
+
+  const setPasswords = (passwordField, passwordConfirmationField, password) => {
+    fireEvent.change(passwordField, {target: {value: password}});
+    fireEvent.change(passwordConfirmationField, {target: {value: password}});
+  };
 
   beforeEach(() => {
-    handleSubmit = () => {};
-    wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
-    sinon.stub(utils, 'reload');
+    handleSubmit = jest.fn();
+    jest.spyOn(utils, 'reload').mockImplementation(() => {});
   });
 
   afterEach(() => {
-    utils.reload.restore();
+    jest.restoreAllMocks();
   });
 
   it('enables form submission if passwords have minimum length and match', () => {
-    wrapper.setState({
-      password: 'mypassword',
-      passwordConfirmation: 'mypassword',
-    });
-    const submitButton = wrapper.find('button');
-    expect(submitButton).not.to.have.attr('disabled');
+    const {passwordField, passwordConfirmationField, submitButton} =
+      renderForm();
+    setPasswords(passwordField, passwordConfirmationField, 'mypassword');
+
+    expect(submitButton).toBeEnabled();
   });
 
   it('disables form submission if passwords are empty', () => {
-    wrapper.setState({
-      password: '',
-      passwordConfirmation: '',
-    });
-    expect(wrapper.find('button')).to.have.attr('disabled');
+    const {submitButton} = renderForm();
+
+    expect(submitButton).toBeDisabled();
   });
 
   it('disables form submission if passwords are too short', () => {
-    wrapper.setState({
-      password: 'short',
-      passwordConfirmation: 'short',
-    });
-    expect(wrapper.find('button')).to.have.attr('disabled');
+    const {passwordField, passwordConfirmationField, submitButton} =
+      renderForm();
+    setPasswords(passwordField, passwordConfirmationField, 'short');
+
+    expect(submitButton).toBeDisabled();
   });
 
   it('disables form submission if passwords do not match', () => {
-    wrapper.setState({
-      password: 'newpassword',
-      passwordConfirmation: 'notnewpassword',
+    const {passwordField, passwordConfirmationField, submitButton} =
+      renderForm();
+    fireEvent.change(passwordField, {target: {value: 'newpassword'}});
+    fireEvent.change(passwordConfirmationField, {
+      target: {value: 'notnewpassword'},
     });
-    expect(wrapper.find('button')).to.have.attr('disabled');
+
+    expect(submitButton).toBeDisabled();
   });
 
   it('renders password length validation errors if passwords are too short', () => {
-    wrapper.setState({
-      password: 'short',
-      passwordConfirmation: 'short',
-    });
-    const fieldErrors = wrapper.find('FieldError');
-    expect(fieldErrors).to.have.length(2);
-    expect(fieldErrors.at(0)).to.have.text(PASSWORD_TOO_SHORT);
-    expect(fieldErrors.at(1)).to.have.text(PASSWORD_TOO_SHORT);
+    const {passwordField, passwordConfirmationField} = renderForm();
+    setPasswords(passwordField, passwordConfirmationField, 'short');
+
+    expect(screen.getAllByText(PASSWORD_TOO_SHORT)).toHaveLength(2);
   });
 
   it('renders a password mismatch validation error if passwords do not match', () => {
-    wrapper.setState({
-      password: 'newpassword',
-      passwordConfirmation: 'notnewpassword',
+    const {passwordField, passwordConfirmationField} = renderForm();
+    fireEvent.change(passwordField, {target: {value: 'newpassword'}});
+    fireEvent.change(passwordConfirmationField, {
+      target: {value: 'notnewpassword'},
     });
-    expect(wrapper.find('FieldError')).to.have.text(PASSWORDS_MUST_MATCH);
+
+    expect(screen.getByText(PASSWORDS_MUST_MATCH)).toBeInTheDocument();
   });
 
-  it('renders the form submission state', () => {
-    wrapper.setState({
-      submissionState: {message: SAVING_STATE},
-    });
-    expect(wrapper.find('#uitest-add-password-status')).to.have.text(
-      SAVING_STATE
-    );
+  it('renders the form submission state', async () => {
+    handleSubmit.mockReturnValue(new Promise(() => {}));
+    const {passwordField, passwordConfirmationField, submitButton} =
+      renderForm();
+    setPasswords(passwordField, passwordConfirmationField, 'mypassword');
+    fireEvent.click(submitButton);
+
+    await screen.findByText(SAVING_STATE);
   });
 
   describe('on successful submission', () => {
+    let passwordField, passwordConfirmationField, submitButton;
+
     beforeEach(async () => {
-      handleSubmit = sinon.stub().resolves({});
-      wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
-      wrapper.setState({
-        password: 'mypassword',
-        passwordConfirmation: 'mypassword',
+      handleSubmit.mockResolvedValue({});
+      ({passwordField, passwordConfirmationField, submitButton} = renderForm());
+      setPasswords(passwordField, passwordConfirmationField, 'mypassword');
+      fireEvent.click(submitButton);
+
+      await waitFor(() => {
+        expect(handleSubmit).toHaveBeenCalledWith('mypassword', 'mypassword');
       });
-      const submitButton = wrapper.find('button');
-      submitButton.simulate('click');
-      await handleSubmit;
+      await screen.findByText(SUCCESS_STATE);
     });
 
-    it('resets the password field to its default state', async () => {
-      const passwordField = wrapper.find('input').at(0);
-      expect(passwordField).to.have.value('');
+    it('resets the password field to its default state', () => {
+      expect(passwordField).toHaveValue('');
     });
 
-    it('resets the password confirmation field to its default state', async () => {
-      const passwordConfirmationField = wrapper.find('input').at(1);
-      expect(passwordConfirmationField).to.have.value('');
+    it('resets the password confirmation field to its default state', () => {
+      expect(passwordConfirmationField).toHaveValue('');
     });
 
-    it('renders the success state', async () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
-        SUCCESS_STATE
-      );
+    it('renders the success state', () => {
+      expect(screen.getByText(SUCCESS_STATE)).toBeInTheDocument();
     });
   });
 
   describe('on failed submission', () => {
+    let passwordField, passwordConfirmationField, submitButton;
+
     beforeEach(async () => {
-      handleSubmit = sinon.stub().rejects(new Error('Oh no!'));
-      wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
-      wrapper.setState({
-        password: 'mypassword',
-        passwordConfirmation: 'mypassword',
+      handleSubmit.mockRejectedValue(new Error('Oh no!'));
+      ({passwordField, passwordConfirmationField, submitButton} = renderForm());
+      setPasswords(passwordField, passwordConfirmationField, 'mypassword');
+      fireEvent.click(submitButton);
+
+      await waitFor(() => {
+        expect(handleSubmit).toHaveBeenCalledWith('mypassword', 'mypassword');
       });
-      const submitButton = wrapper.find('button');
-      submitButton.simulate('click');
-      await handleSubmit;
+      await screen.findByText('Oh no!');
     });
 
     it('does not reset the password field to its default state', () => {
-      const passwordField = wrapper.find('input').at(0);
-      expect(passwordField).to.have.value('mypassword');
+      expect(passwordField).toHaveValue('mypassword');
     });
 
     it('does not reset the password confirmation field to its default state', () => {
-      const passwordConfirmationField = wrapper.find('input').at(1);
-      expect(passwordConfirmationField).to.have.value('mypassword');
+      expect(passwordConfirmationField).toHaveValue('mypassword');
     });
 
     it('renders the error state', () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
-        'Oh no!'
-      );
+      expect(screen.getByText('Oh no!')).toBeInTheDocument();
     });
   });
 });

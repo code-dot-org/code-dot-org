@@ -44,7 +44,8 @@
     "bubble_choice_description": "Use AI Chat to revise and improve the content you generated earlier.",
     "display_name": "Refining and Editing Chat",
     "thumbnail_url": "https://images.code.org/c6edf3d4c4597cd87585ae6612cc85f2-film-editing.png",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:08.459+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1d_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1d_2025\"}]"

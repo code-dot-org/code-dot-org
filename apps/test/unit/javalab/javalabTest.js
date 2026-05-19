@@ -1,5 +1,3 @@
-import ReactDOM from 'react-dom';
-
 import project from '@cdo/apps/code-studio/initApp/project';
 import Javalab from '@cdo/apps/javalab/Javalab';
 import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
@@ -15,6 +13,11 @@ import {
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
+
+jest.mock('@cdo/apps/util/createReactRoot', () => ({
+  __esModule: true,
+  createReactRoot: jest.fn(),
+}));
 
 window.fetch = jest
   .fn()
@@ -37,7 +40,6 @@ describe('Javalab', () => {
     stubRedux();
     registerReducers(commonReducers);
     jest.spyOn(project, 'autosave').mockClear().mockImplementation();
-    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation();
     jest.spyOn(getStore(), 'dispatch').mockClear().mockImplementation();
     stubStudioApp();
     javalab.studioApp_ = studioApp();

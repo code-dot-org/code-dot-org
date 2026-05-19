@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:57:48.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.4\n# Standard Description: Describe the importance of dataset curation.\n#\n# Rationale: Curation is like being a museum curator. You don't just throw \n# things in a room; you organize, label, and clean them so they make sense. \n# Curating a dataset means making sure column names are clear, units are \n# consistent, and the data is \"balanced\" and fair.\n\n\"\"\"\nWelcome! Have you ever tried to read someone else's messy handwriting? \nIt's hard! AI also struggles with \"messy\" data. \n\nCuration is the art of polishing data. It involves:\n1. Renaming columns so they are easy to understand.\n2. Converting units (like changing inches to centimeters).\n3. Ensuring the data is organized in a logical way.\n\"\"\"\n\nimport pandas as pd\n\n# --- THE RAW (UNCURATED) DATA ---\n# This data is a mess! The column names are vague and the units are mixed.\nraw_data = {\n    'c1': ['apple', 'BANANA', 'cherry '], # Inconsistent capitalization and spaces\n    'val_x': [1.2, 0.5, 2.1],             # What does \"val_x\" mean?\n    'temp': [72, 25, 68]                   # Wait, is 25 hot or cold? (Mixed Fahrenheit/Celsius)\n}\ndf = pd.DataFrame(raw_data)\n\nprint(\"--- Raw Uncurated Data ---\")\nprint(df)\nprint(\"\\n\")\n\n# --- STEP 1: CLEAR LABELING ---\nprint(\"--- Step 1: Labeling ---\")\n# Let's rename columns to be descriptive.\ndf = df.rename(columns={'c1': 'Fruit_Name', 'val_x': 'Weight_Kg', 'temp': 'Temperature_F'})\nprint(df)\nprint(\"\\n\")\n\n# --- STEP 2: CONSISTENCY ---\nprint(\"--- Step 2: Ensuring Consistency ---\")\n# Fix the fruit names (lowercase and remove extra spaces)\ndf['Fruit_Name'] = df['Fruit_Name'].str.lower().str.strip()\n\n# Fix the temperature (the 25 was actually Celsius, let's convert to Fahrenheit)\n# Formula: (C * 9/5) + 32\ndf.loc[df['Temperature_F'] == 25, 'Temperature_F'] = (25 * 9/5) + 32\n\nprint(\"--- Final Curated Dataset ---\")\nprint(df)\nprint(\"\\n\")\nprint(\"Much better! Now a human AND an AI can understand this data.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have a tiny dataset of people's heights. \n1. The column 'h' is vague. Rename it to 'Height_Inches'.\n2. The name '   alex  ' has extra spaces. Use .str.strip() to fix it.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\npeople = pd.DataFrame({\n    'n': ['   alex  ', 'sam', 'jo'],\n    'h': [65, 70, 62]\n})\n\n# TODO: Rename 'n' to 'Name' and 'h' to 'Height_Inches'\n# TODO: Strip the extra spaces from the 'Name' column\n\nprint(\"Clean and curate this data!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWRyp3zrjOSVolROwyNhg7pFDJtg2kcQO\nN4GaeroPXE7wc248N1EO/8y8eW3aUwJuX4NhyuSWpQrSktFtrUZEeb87zZIT\nvGbg1ZZKECimvrGAhfRqFukI4u9kki65+kROISlhRcEbZpdGaYICpdSTp7kD\nVlo0vnh+oXzDOV6fAWDgvl3oV9cD7KHSg/VW3eW41vy7VU5uHWlYwkHHm4mH\nTaefNOuZHZyzBkOBm27gkBSf/xeFozfoA5CMzNC0D2KnIKfMlgVKXt9ctUkc\nSN/zPUJoUMDMDFYOtk5OgrX3a0j1hHL/S2axxnvoabM3E0eFO/SoD7vHYKcz\nMukEA8WhW2W06wUv9Z68qTix/vr7cteYxjI4Paj8x/5lXbDhkcsRkSq+Ks4c\nSpNcDgBgbAkT28JgazDCn/MwRUTgK8cX9s+G1VBd3eNc648wgXf7kaY8TI89\nj8Vti95bxDY+eBxzFEaFLdSXlCyC1vmBhXuXhFNJIEpUjOkux5E0R70KlvSl\nfQDmptbx8QUlwCHj0ao5zwwCbqLi7wFS+Uf2C38yCNkJGY/h5+70ASV73Lwm\nPY9KnbWuMLjcZVAgkZ4tdWJkwfUj1zut+Ee+eTHDa996N6XwOzB0POLtITYN\nP1oC846l8OiXCg2db374tNfYz8L82P1vkgV/J0yJO9dG5iRzH7YrBZEnrsJX\nij538V22Cqe6JJ8SxJEvPdThkHZ+CYoWoYNJteD0RMU69XkmRajy2qWx/+jz\njI8E4pH7YYZ0ib2hI7aoBlnmFf0p3Jy+atvyHKIs6lhGAxyQOzcQjH8Zzi3t\ndD1KbIVVvPU/euWY7KOWJGMk7bZpxSVmzuNR8j8dbwrfriSac6kMaQkxKqKH\nfSpuQEd8sjO8oPe52OXpnOU5QldqG9o9p/u70VVa7fyXLodilDwd12sdzmW3\nHWHuPEbgEMBbGwCdjDGppWw8859FwcTRraiDAePBeDje6tuN/O/P6OFBSrjE\nja8WEHQLycj35ZT+KnlfLgo9gEsow+FeicT8x7mL0lqARV4IZSWdqB0KtCMs\nIpf01N3E42pC3Vih\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:57:48.544+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-13\\\"\"],\"cloned_from\":\"cs50-scikit-13\"},{\"changed_at\":\"2026-02-18 16:57:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:29:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:30:07 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

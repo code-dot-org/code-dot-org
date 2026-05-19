@@ -8,6 +8,9 @@ class UnitGroupTest < ActiveSupport::TestCase
   class CachingTests < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
+      # Disable Rails' automatic caching, so we can test our manual caching
+      # logic without interference
+      ActiveRecord::Base.connection.disable_query_cache!
     end
 
     def populate_cache_and_disconnect_db
@@ -106,7 +109,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
@@ -165,7 +168,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
@@ -211,7 +214,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
 
     serialization = unit_group.serialize
     unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
@@ -565,7 +568,8 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
-                  :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
+                  :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path,
+                  :ai_chat_tools_dependency], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -574,6 +578,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'Version title', summary[:version_title]
     assert_equal 2, summary[:scripts].length
     assert_equal false, summary[:has_verified_resources]
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE], summary[:ai_chat_tools_dependency]
 
     # spot check that we have fields that show up in Unit.summarize(false)
     assert_equal 'unit1', summary[:scripts][0][:name]
@@ -1131,6 +1136,39 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert_equal single_unit_course.default_units.first, single_unit_course.first_unit
     assert_equal multi_unit_course.default_units.first, multi_unit_course.first_unit
+  end
+
+  test 'file_path returns UI test directory for ui-test- prefixed courses' do
+    expected = Rails.root.join('test/ui/config/courses/ui-test-example.course')
+    assert_equal expected, UnitGroup.file_path('ui-test-example')
+  end
+
+  test 'file_path returns normal directory for non-ui-test courses' do
+    expected = Rails.root.join('config/courses/regular-course.course')
+    assert_equal expected, UnitGroup.file_path('regular-course')
+  end
+
+  test 'file_path returns normal directory when ui-test is not a prefix' do
+    expected = Rails.root.join('config/courses/my-ui-test-course.course')
+    assert_equal expected, UnitGroup.file_path('my-ui-test-course')
+  end
+
+  test 'file_path respects custom root_path for UI test courses' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('test/ui/config/courses/ui-test-example.course')
+    assert_equal expected, UnitGroup.file_path('ui-test-example', custom_root)
+  end
+
+  test 'file_path respects custom root_path for normal courses' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('config/courses/regular-course.course')
+    assert_equal expected, UnitGroup.file_path('regular-course', custom_root)
+  end
+
+  test 'file_path works with globbing pattern' do
+    # Globbing pattern '**' doesn't start with 'ui-test-', so goes to normal directory
+    result = UnitGroup.file_path('**', Rails.root)
+    assert_equal Rails.root.join('config/courses/**.course'), result
   end
 
   test 'has_ai_chat_tools? returns true for ai tutor available levels' do

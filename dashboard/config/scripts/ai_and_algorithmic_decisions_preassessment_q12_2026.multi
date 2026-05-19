@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q12_2026'
+
+question 'A fitness tracker awards a "Daily Goal" badge if the user takes 10,000 steps AND stretches for at least 5 minutes. Which logical operator does the code need?'
+
+wrong 'OR — either condition is enough on its own.'
+right 'AND — both conditions must be true at the same time.'
+wrong 'NOT — only one condition must be false.'
+wrong 'No operator — either step count or stretching alone awards the badge.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+MARKDOWN

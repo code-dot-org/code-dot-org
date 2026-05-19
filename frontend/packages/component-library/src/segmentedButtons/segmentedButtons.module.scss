@@ -44,8 +44,8 @@
     // Focus styles
     &:focus-visible {
       outline: none;
-      background-color: var(--background-brand-teal-light);
-      border-color: var(--borders-brand-teal-primary);
+      background-color: var(--background-brand-teal-extra-light);
+      border-color: var(--borders-brand-teal-light);
     }
 
     // Pressed styles
@@ -78,8 +78,8 @@
 
     // Focus styles
     &:focus-visible {
-      background-color: var(--background-brand-teal-primary);
       color: var(--text-neutral-white-fixed);
+      background-color: var(--background-brand-teal-primary);
     }
 
     // Pressed styles

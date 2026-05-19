@@ -12,7 +12,27 @@
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
-        "es-MX"
+        "es-MX",
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "fa-IR",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "kn-IN",
+        "ko-KR",
+        "pl-PL",
+        "pt-BR",
+        "sk-SK",
+        "ta-IN",
+        "te-IN",
+        "tr-TR",
+        "th-TH",
+        "zh-CN",
+        "zh-TW"
       ],
       "topic_tags": [
         "ai"
@@ -22,7 +42,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-01 15:42:58 UTC",
+    "serialized_at": "2026-03-07 03:46:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

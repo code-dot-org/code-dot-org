@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -11,6 +10,7 @@ import {
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
 import UserChatMessageEditor from '@cdo/apps/aichat/views/UserChatMessageEditor';
+import {AichatLabState} from '@cdo/apps/aichatLab/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {
   AiChatClientTypes,
@@ -21,17 +21,26 @@ const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
 let mockState: {
   aichat: Partial<AichatState>;
+  aichatLab: Partial<AichatLabState>;
+  pageConstants?: {
+    locale: string;
+  };
 } = {
   aichat: {
     chatEventsCurrent: [],
-    saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  aichatLab: {
+    saveInProgress: false,
+  },
+  pageConstants: {
+    locale: 'en_us',
   },
 };
 
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  __esModule: true,
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppSelector: (selector: (s: unknown) => unknown) => selector(mockState),
   useAppDispatch: () => mockDispatch,
 }));
@@ -60,19 +69,17 @@ describe('UserChatMessageEditor', () => {
     mockState = {
       aichat: {
         chatEventsCurrent: [],
-        saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
+      },
+      aichatLab: {
+        saveInProgress: false,
       },
     };
   });
 
   it('disables editor when disabled via context', async () => {
-    render(
-      <AiChatDisabledProvider chatDisabled>
-        <UserChatMessageEditor {...baseProps} />
-      </AiChatDisabledProvider>
-    );
+    render(<UserChatMessageEditor {...baseProps} chatDisabled={true} />);
 
     const textarea = screen.getByPlaceholderText(
       commonI18n.aiUserMessagePlaceholder()

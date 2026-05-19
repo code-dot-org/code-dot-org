@@ -1,6 +1,5 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2025-09-25T19:52:41.000Z",
   "level_num": "custom",
@@ -47,8 +46,10 @@
     "name_suffix": "_v2-2025",
     "offer_browser_tts": "false",
     "submittable": "false",
-    "disable_edit_run_for_submission": "false"
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:41.086+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2c_2025\"},{\"changed_at\":\"2025-11-05 18:53:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

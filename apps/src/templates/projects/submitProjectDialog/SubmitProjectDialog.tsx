@@ -1,13 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -58,14 +55,10 @@ const SubmitProjectDialog: React.FunctionComponent<
   const onSubmit = useCallback(async () => {
     setIsSubmitButtonDisabled(true);
     setShowSubmitError(false);
-    analyticsReporter.sendEvent(
-      EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
     metricsReporterIncrementCounter('SubmitProjectDialog.SubmitAttempt');
     try {
       await submitProject(channelId, projectType, projectDescription);
@@ -111,15 +104,19 @@ const SubmitProjectDialog: React.FunctionComponent<
       onDeactivate={null}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3 className={moduleStyles.heading3}>
+        <Typography className={moduleStyles.heading3} variant="h3" gutterBottom>
           {i18n.submitProjectGallery_header()}
-        </Heading3>
+        </Typography>
       </div>
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
-        <BodyTwoText className={moduleStyles.bodyTwoText}>
+        <Typography
+          className={moduleStyles.bodyTwoText}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.submitProjectGallery_describeProject()}
-        </BodyTwoText>
+        </Typography>
         <textarea
           id="submission-input"
           value={projectDescription}
@@ -127,9 +124,13 @@ const SubmitProjectDialog: React.FunctionComponent<
           placeholder={i18n.submitProjectGallery_placeholder()}
           maxLength={150}
         />
-        <BodyTwoText className={moduleStyles.bodyTwoText}>
+        <Typography
+          className={moduleStyles.bodyTwoText}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.submitProjectGallery_details()}
-        </BodyTwoText>
+        </Typography>
       </div>
       <hr />
       {showSubmitError && (
@@ -151,20 +152,26 @@ const SubmitProjectDialog: React.FunctionComponent<
           />
         </div>
         <div className={moduleStyles.bottomSectionButtons}>
-          <Button
-            iconLeft={{iconName: 'arrow-left'}}
+          <MuiButton
+            variant="outlined"
+            color="white"
+            size="medium"
             onClick={onGoBack}
-            type="secondary"
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="arrow-left" />}
+          >
+            {i18n.submitProjectGallery_goBack()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
             color="white"
-            text={i18n.submitProjectGallery_goBack()}
-          />
-          <Button
+            size="medium"
             onClick={onSubmit}
-            type="primary"
-            color="white"
-            text={i18n.submit()}
+            type="button"
             disabled={isSubmitButtonDisabled}
-          />
+          >
+            {i18n.submit()}
+          </MuiButton>
         </div>
       </div>
     </AccessibleDialog>

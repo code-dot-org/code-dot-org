@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q6_2026-pilot'
+
+question 'A student wants to create an "AI Credibility Guide" for younger students. Which piece of advice would be LEAST useful to include?'
+
+wrong '"Check whether specific facts in the AI\'s response can be confirmed by a reliable outside source."'
+right '"If the AI sounds confident and uses technical language, you can trust the response without checking it."'
+wrong '"Look for signs the AI may have misunderstood your question, such as an answer that doesn\'t quite fit what you asked."'
+wrong '"Slow down before sharing AI-generated content — ask yourself whether you have actually verified what it claims."'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

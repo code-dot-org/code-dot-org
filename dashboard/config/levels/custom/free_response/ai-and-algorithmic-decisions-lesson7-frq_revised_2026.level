@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-11T02:18:46.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "##### Reflect on one of the features you explored:\r\n* ##### What does JavaScript change?\r\n* ##### What triggers the change?\r\n* ##### Which part of POUR does this support?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "true",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-11 02:34:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 02:35:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 02:36:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-11 02:37:40 +0000\",\"changed\":[\"height\",\"placeholder\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

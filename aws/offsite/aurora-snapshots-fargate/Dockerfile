@@ -1,17 +1,12 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    ca-certificates
-
-# install node, based on instructions at https://github.com/nodesource/distributions#using-ubuntu-1
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get update && \
+RUN apt-get update && apt-get install -y curl ca-certificates && \
+    curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
     apt-get install -y nodejs && \
-    npm install -g corepack && \
-    corepack enable
+    rm -rf /var/lib/apt/lists/*
 
 COPY . /root
 WORKDIR /root
-RUN npm install
+RUN npm ci --only=production
+
 ENTRYPOINT ["node", "/root/restore-and-verify-backup.js"]

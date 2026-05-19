@@ -2,42 +2,60 @@
   "name": "@code-dot-org/music-lab",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "description": "Code.org Music lab",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/music/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/music"
+  },
+  "license": "SEE LICENSE IN LICENSE",
   "exports": {
     ".": {
-      "import": "./dist/App.js",
-      "require": "./dist/App.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit"
   },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "@code-dot-org/core": "workspace:*"
   },
   "devDependencies": {
-    "@eslint/js": "catalog:",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-react-refresh": "catalog:",
-    "globals": "catalog:",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "jsdom": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "typescript": "catalog:",
-    "typescript-eslint": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
-    "vite-plugin-externalize-deps": "catalog:"
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }

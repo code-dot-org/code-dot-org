@@ -66,6 +66,7 @@ describe('TeacherNavigationBar', () => {
     {
       id: 12,
       name: 'Period 2',
+      demo_type: 'middle',
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
@@ -229,13 +230,22 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText(i18n.classSections());
     screen.getByRole('combobox');
     const p1 = await screen.findByText('Period 1');
-    const p2 = screen.getByText('Period 2');
+    const p2 = screen.getByText('Period 2 (demo)');
     expect(p1.compareDocumentPosition(p2)).toBe(
       Node.DOCUMENT_POSITION_PRECEDING
     );
     screen.getByText('Period 3');
     expect(screen.queryByText('hidden')).toBeNull();
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test('renders demo marker in section dropdown options', async () => {
+    renderDefault(12);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown.selectedOptions[0].textContent).toBe('Period 2 (demo)');
+    screen.getByRole('option', {name: 'Period 2 (demo)'});
+    screen.getByRole('option', {name: 'Period 1'});
   });
 
   test('renders all navbarComponents', async () => {
@@ -318,6 +328,15 @@ describe('TeacherNavigationBar', () => {
     const dropdownAfterClick = screen.getByRole('combobox');
     expect(dropdownAfterClick).toHaveValue('14');
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
+  });
+
+  test('hidden section not in sectionOrder is shown when selected', async () => {
+    renderDefault(15);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown).toHaveValue('15');
+    screen.getByText('hidden');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('15');
   });
 
   test('AI settings tab displayed when teacher has access', async () => {

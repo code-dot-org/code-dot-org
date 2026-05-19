@@ -2,7 +2,8 @@
  * Blocks specific to Bee
  */
 
-import {numberValidator} from '@cdo/apps/blockly/utils';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import {interpolateMsg, numberValidator} from '@cdo/apps/blockly/utils';
 
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
@@ -175,7 +176,7 @@ function addIfFlowerHive(blockly, generator) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(LOCATIONS),
+        new CdoFieldDropdown(LOCATIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -214,7 +215,7 @@ function addIfElseFlowerHive(blockly, generator) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(LOCATIONS),
+        new CdoFieldDropdown(LOCATIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -253,10 +254,11 @@ function addRepeatedActionBlock(
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         blockMsg,
-        ['NUM', 'Number', Blockly.ALIGN_RIGHT],
-        Blockly.ALIGN_RIGHT
+        ['NUM', 'Number', Blockly.inputs.Align.RIGHT],
+        Blockly.inputs.Align.RIGHT
       );
 
       this.setInputsInline(true);
@@ -302,13 +304,10 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       }
 
       this.appendDummyInput().appendField(conditionalMsg);
-      this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(arg1),
-        'ARG1'
-      );
+      this.appendDummyInput().appendField(new CdoFieldDropdown(arg1), 'ARG1');
       this.appendDummyInput().appendField(' ');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(Blockly.RTL ? RTL_OPERATORS : OPERATORS),
+        new CdoFieldDropdown(Blockly.RTL ? RTL_OPERATORS : OPERATORS),
         'OP'
       );
       this.appendDummyInput().appendField(' ');

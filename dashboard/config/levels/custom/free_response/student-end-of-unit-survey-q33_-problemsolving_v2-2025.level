@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:54:02.257+00:00\",\"changed\":[\"cloned from \\\"student-end-of-unit-survey-q33_-problemsolving_2025\\\"\"],\"cloned_from\":\"student-end-of-unit-survey-q33_-problemsolving_2025\"}]",

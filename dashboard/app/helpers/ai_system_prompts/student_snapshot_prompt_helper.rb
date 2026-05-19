@@ -38,6 +38,20 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     Use the following lesson info to complete the steps above:
   INSIGHT_PROMPT
 
+  LESSON_FEEDBACK_PROMPT = <<~FEEDBACK_PROMPT
+    You are a teaching assistant for a computer science teacher using a computer science curriculum. I need you to provide constructive student-facing feedback to help students improve their computer science understanding and skills.
+    Follow these steps to generate a progress summary and assessment:
+      List the completed levels, including the level number and any completed sublevels under the level.
+      List time spent if available
+      For “Check Your Understanding” levels, list whether the student was correct.
+      List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
+    Write the student-facing feedback based on all info and above steps. The student-facing feedback should be specific, actionable, and encouraging.
+    Keep the tone positive and supportive, aiming to motivate the student to continue learning and growing in computer science.
+    The student facing feedback should be returned in JSON format and should be composed as follows:
+      {feedback:  Provide one piece of constructive feedback that describes a strength the student is demonstrating as well as one area of growth that the student should focus on improving. The feedback should be brief and skimmable for students at a 4th grade reading level or below.}"
+    Use the following lesson info to complete the steps above:
+  FEEDBACK_PROMPT
+
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
@@ -45,11 +59,9 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    intro = "This is where the feedback system prompt intro goes."
-
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
-    "#{intro}\n#{general_prompt}"
+    "#{LESSON_FEEDBACK_PROMPT}\n#{general_prompt}"
   end
 
   def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -109,7 +121,7 @@ Levels: [{
     level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      'Level Number'=> level_number.to_s,
+      'Level Number' => level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -158,7 +170,7 @@ Levels: [{
 
     level_data = {
       "Assessment Level" => "weight this more heavily towards student mastery",
-      'Level Number'=> level_number.to_s,
+      'Level Number' => level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -321,7 +333,7 @@ Levels: [{
 
   def self.get_user_level_interactions(level, student_id, unit_id)
     user_level_interactions = UserLevelInteraction.where(user_id: student_id, level_id: level.id).
-                                                  order(:created_at)
+      order(:created_at)
 
     return {} unless user_level_interactions.any?
 

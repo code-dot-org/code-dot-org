@@ -1,0 +1,11 @@
+name 'CSD U2L10-L4-2025'
+display_name 'Mini-Project Choices'
+description 'Choose your user to add style!'
+
+sublevels
+level 'CSD U2L10-L4a-2025'
+level 'CSD U2L10-L4b-2025'
+level 'CSD U2L10-L4c-2025'
+level 'CSD U2L10-L4d-2025'
+
+uses_lab2

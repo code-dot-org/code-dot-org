@@ -5,23 +5,24 @@ import {Provider} from 'react-redux';
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import sectionProgress, {
   startLoadingProgress,
   finishLoadingProgress,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {createStore} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProgressV2.jsx';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {createStore} from './sectionProgressTestHelpers';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
 const DEFAULT_PROPS = {};
 
-jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+jest.mock('@cdo/apps/templates/sectionProgressV2/sectionProgressLoader');
 
 describe('SectionProgressV2', () => {
   let store;

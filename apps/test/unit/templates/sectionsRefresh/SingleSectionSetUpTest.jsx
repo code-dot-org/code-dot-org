@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import Chips from '@code-dot-org/component-library/chips';
+import TextField from '@code-dot-org/component-library/textField';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -48,7 +49,7 @@ describe('SingleSectionSetUp', () => {
     );
 
     wrapper
-      .find('input')
+      .find(TextField)
       .at(0)
       .simulate('change', {target: {value: 'Section 1'}});
     expect(updateSectionSpy).toHaveBeenCalledTimes(1);
@@ -103,7 +104,7 @@ describe('SingleSectionSetUp', () => {
     expect(updateSectionSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('renders section avatar and button when teacher-homepage-v2 experiment is enabled', () => {
+  it('renders section avatar and button', () => {
     renderComponent();
     screen.getByText('Avatar');
     screen.getByText('Edit avatar');

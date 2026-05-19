@@ -56,7 +56,8 @@
       "Wright Brothers Patent.pdf": "33680831-2ec6-4678-983e-43c5c0276672.pdf",
       "Susan B Anthony.pdf": "1db2e781-65ab-4f6a-b958-802ffaa56aae.pdf"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:38.115+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3_2025\"}]"

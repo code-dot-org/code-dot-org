@@ -1,4 +1,4 @@
-class AidiffLessonHooksController <ApplicationController
+class AidiffLessonHooksController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
@@ -29,9 +29,9 @@ class AidiffLessonHooksController <ApplicationController
     end
   end
 
-  # def show
-  #   #TODO: render the projection page
-  # end
+  def show
+    @aidiff_lesson_hook
+  end
 
   #TODO actually validate here
   private def validate_json(content)

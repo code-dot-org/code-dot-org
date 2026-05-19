@@ -1,0 +1,47 @@
+$purple: hsl(271deg 58% 65%);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255 255 255 / 0.5);
+  margin-bottom: 16px;
+}
+
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bigNumber {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(7rem, 20vw, 14rem);
+  font-weight: 800;
+  line-height: 0.9;
+  color: $purple;
+}
+
+.statHeading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+.statSubtitle {
+  font-size: 1rem;
+  color: rgba(255 255 255 / 0.55);
+  margin-top: 8px;
+}

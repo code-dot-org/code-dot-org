@@ -1,9 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  BodyFourText,
-  StrongText,
-  EmText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
@@ -75,16 +71,18 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
   return (
     <div>
       {aiFeedbackReceived && (
-        <EmText className={style.aiFeedbackReceived}>
+        <Typography className={style.aiFeedbackReceived} variant="em">
           <FontAwesome icon="circle-check" />
           {i18n.aiFeedbackReceived()}
-        </EmText>
+        </Typography>
       )}
       {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
         <div className={style.aiAssessmentFeedback}>
-          <BodyFourText>
-            <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
-          </BodyFourText>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">
+              {i18n.aiFeedbackNegativeWhy()}
+            </Typography>
+          </Typography>
           <Checkbox
             label={i18n.aiFeedbackFalsePos()}
             size="xs"
@@ -123,7 +121,9 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
           />
           {aiFeedbackOther && (
             <div className={style.aiFeedbackOther}>
-              <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+              <Typography variant="strong">
+                {i18n.aiFeedbackOtherDetails()}{' '}
+              </Typography>
               <textarea
                 className={style.aiFeedbackTextbox}
                 onChange={e => {

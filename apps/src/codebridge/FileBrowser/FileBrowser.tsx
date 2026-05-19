@@ -14,10 +14,10 @@ import {
   DragOverEvent,
   DragEndEvent,
   DragCancelEvent,
+  KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
-  KeyboardSensor,
 } from '@dnd-kit/core';
 import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import classNames from 'classnames';
@@ -197,7 +197,8 @@ export const FileBrowser = React.memo(() => {
             accessibility={{
               announcements,
               screenReaderInstructions: {
-                draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
+                draggable:
+                  'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
               },
             }}
           >
@@ -216,14 +217,21 @@ export const FileBrowser = React.memo(() => {
                   }
                 )}
               >
-                <div id="uitest-files-list" className={moduleStyles.folder}>
+                {/* role="list" needed: list-style:none strips VoiceOver semantics */}
+                {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+                <ol
+                  id="uitest-files-list"
+                  className={moduleStyles.folder}
+                  role="list"
+                  aria-label={codebridgeI18n.filesHeader()}
+                >
                   <InnerFileBrowser
                     parentId={DEFAULT_FOLDER_ID}
                     folders={source.folders}
                     files={source.files}
                     appName={appName}
                   />
-                </div>
+                </ol>
               </Droppable>
             </DndDataContextProvider>
           </DndContext>

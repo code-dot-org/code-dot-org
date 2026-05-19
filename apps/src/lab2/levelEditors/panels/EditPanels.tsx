@@ -2,11 +2,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  Heading3,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -16,12 +12,19 @@ import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import EditPanelsLinks from './EditPanelsLinks';
+
 import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
 
 const PANEL_WIDTH = 1920;
 const PANEL_HEIGHT = 1080;
+
+// Fraction of viewport width occupied by the pinned preview. Paired with
+// `width: Nvw` in edit-panels.module.scss via `:export`.
+const PINNED_WIDTH_VIEWPORT_FRACTION =
+  parseFloat(moduleStyles.pinnedWidthVw) / 100;
 
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {
@@ -34,6 +37,7 @@ function sanitizePanels(panels: Panel[], levelName: string) {
 
 interface EditPanelsProps {
   initialPanels: Panel[];
+  initialUseLinks?: boolean;
   levelName: string;
 }
 
@@ -42,13 +46,45 @@ interface EditPanelsProps {
  */
 const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
   initialPanels,
+  initialUseLinks = false,
   levelName,
 }) => {
   const [panels, setPanels] = useState<Panel[]>(
     sanitizePanels(initialPanels, levelName)
   );
+  const [useLinks, setUseLinks] = useState<boolean>(initialUseLinks);
   const [toastMessage, setToastMessage] = useState('');
   const [toastIndex, setToastIndex] = useState(0);
+  const [pinPreview, setPinPreview] = useState(false);
+  const [pinnedScale, setPinnedScale] = useState(0.5);
+  const previewSlotRef = useRef<HTMLDivElement | null>(null);
+
+  // Pin the preview once its reserved slot scrolls above the viewport.
+  // `position: sticky` is unreliable here due to ancestor flex and Bootstrap
+  // collapse wrappers, so a scroll listener drives it instead. The same
+  // listener updates pinnedScale so the 1920x1080 inner surface fits the
+  // shrunk outer box across viewport resizes.
+  useEffect(() => {
+    const onScroll = () => {
+      const slot = previewSlotRef.current;
+      if (!slot) return;
+      // Unpin once the whole editor is above the viewport.
+      const editor = document.getElementById('panels-editor');
+      const editorOffscreen =
+        !!editor && editor.getBoundingClientRect().bottom <= 0;
+      setPinPreview(slot.getBoundingClientRect().top <= 0 && !editorOffscreen);
+      setPinnedScale(
+        (window.innerWidth * PINNED_WIDTH_VIEWPORT_FRACTION) / PANEL_WIDTH
+      );
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
 
   // Update a panel. Replaces a panel with the given key with the new panel.
   const updatePanel = useCallback(
@@ -130,22 +166,54 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         name="level[level_data]"
         value={JSON.stringify({})}
       />
-      <Heading3>Preview</Heading3>
-      <div className={moduleStyles.panelsContainer}>
-        <Toast message={toastMessage} index={toastIndex} />
-        <div className={moduleStyles.fullSizeContainer}>
-          <ThemeProvider>
-            <PanelsView
-              panels={panels}
-              onContinue={onContinue}
-              targetWidth={PANEL_WIDTH}
-              targetHeight={PANEL_HEIGHT}
-              offerBrowserTts={false}
-              resetOnChange={false}
-              levelId={null}
-            />
-          </ThemeProvider>
+      <input
+        type="hidden"
+        id="level_use_links"
+        name="level[use_links]"
+        value={useLinks ? 'true' : 'false'}
+      />
+      <Typography variant="h3" gutterBottom>
+        Preview
+      </Typography>
+      <div ref={previewSlotRef} className={moduleStyles.panelsSlot}>
+        <div
+          className={classNames(
+            moduleStyles.panelsContainer,
+            pinPreview && moduleStyles.panelsContainerPinned
+          )}
+          style={
+            pinPreview
+              ? ({'--pinned-scale': pinnedScale} as React.CSSProperties)
+              : undefined
+          }
+        >
+          <Toast message={toastMessage} index={toastIndex} />
+          <div className={moduleStyles.fullSizeContainer}>
+            <ThemeProvider>
+              <PanelsView
+                panels={panels}
+                onContinue={onContinue}
+                targetWidth={PANEL_WIDTH}
+                targetHeight={PANEL_HEIGHT}
+                offerBrowserTts={false}
+                resetOnChange={false}
+                levelId={null}
+                useLinks={useLinks}
+              />
+            </ThemeProvider>
+          </div>
         </div>
+      </div>
+      <div className={moduleStyles.fieldRow}>
+        <ThemeProvider>
+          <Checkbox
+            checked={useLinks}
+            name="use_links"
+            label="Use links for navigation"
+            size="s"
+            onChange={event => setUseLinks(event.target.checked)}
+          />
+        </ThemeProvider>
       </div>
       {panels.length > 0 && (
         <div className={moduleStyles.addButtonContainer}>
@@ -164,6 +232,8 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             key={panel.key}
             panel={panel}
             index={index}
+            allPanels={panels}
+            useLinks={useLinks}
             updatePanel={updatePanel}
             movePanel={movePanel}
             deletePanel={deletePanel}
@@ -187,6 +257,8 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
 interface EditPanelProps {
   panel: Panel;
   index: number;
+  allPanels: Panel[];
+  useLinks: boolean;
   updatePanel: (panel: Panel) => void;
   movePanel: (key: string, direction: 'up' | 'down') => void;
   deletePanel: (key: string) => void;
@@ -196,6 +268,8 @@ interface EditPanelProps {
 const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   panel,
   index,
+  allPanels,
+  useLinks,
   updatePanel,
   movePanel,
   deletePanel,
@@ -204,9 +278,13 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
   return (
     <div className={moduleStyles.panelEditor}>
       <div className={moduleStyles.fieldRow}>
-        <Heading5 className={moduleStyles.panelHeader}>
+        <Typography
+          className={moduleStyles.panelHeader}
+          variant="h5"
+          gutterBottom
+        >
           Panel {index + 1}
-        </Heading5>
+        </Typography>
         {index !== 0 && (
           <button
             type="button"
@@ -300,6 +378,29 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           }
         />
       </div>
+      {useLinks && (
+        <div className={moduleStyles.fieldRow}>
+          <Checkbox
+            checked={!!panel.showContinueButton}
+            name="showContinueButton"
+            label="Show Continue button on this panel"
+            size="s"
+            onChange={event =>
+              updatePanel({
+                ...panel,
+                showContinueButton: event.target.checked,
+              })
+            }
+          />
+        </div>
+      )}
+      {useLinks && (
+        <EditPanelsLinks
+          panel={panel}
+          allPanels={allPanels}
+          updatePanel={updatePanel}
+        />
+      )}
       {last && (
         <div className={moduleStyles.fieldRow}>
           <label htmlFor={panel.nextUrl}>
@@ -343,9 +444,13 @@ const Toast: React.FunctionComponent<{message: string; index: number}> = ({
           show && message && moduleStyles.toastShow
         )}
       >
-        <BodyThreeText className={moduleStyles.toastMessage}>
+        <Typography
+          className={moduleStyles.toastMessage}
+          variant="body3"
+          gutterBottom
+        >
           {message}
-        </BodyThreeText>
+        </Typography>
       </div>
     </div>
   );

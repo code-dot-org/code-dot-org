@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q10_2026-pilot_2026'
+
+question 'An AI recommendation system suggests news articles to a user based on articles they have clicked before. Over time, the user only sees articles that match their existing views. What concept does this BEST illustrate?'
+
+wrong 'Data privacy violation, because the AI is tracking the user\'s behavior without permission.'
+right 'How predictive AI systems can limit perspectives by reinforcing existing patterns rather than exposing users to a broader range of ideas.'
+wrong 'Responsible co-creation, because the user and AI are working together to curate a personalized news feed.'
+wrong 'Beneficial AI, because the user is getting exactly the content they want.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

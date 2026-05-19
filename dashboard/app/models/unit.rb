@@ -84,7 +84,7 @@ class Unit < ApplicationRecord
               :levels_child_levels
             ]
           },
-          :lesson,
+          {lesson: :rubrics},
           :callouts
         ],
         lessons: [
@@ -112,7 +112,14 @@ class Unit < ApplicationRecord
           :objectives,
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
-          :opportunity_standards
+          :opportunity_standards,
+          :jit_pl_concepts,
+          :lessons_resources,
+          :lessons_vocabularies,
+          :lessons_standards,
+          :lessons_opportunity_standards,
+          :lessons_programming_expressions,
+          :jit_pl_concepts_lessons
         ],
         unit_group_units: {
           unit_group: :course_version
@@ -171,6 +178,7 @@ class Unit < ApplicationRecord
   end
 
   UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UI_TEST_JSON_DIRECTORY = "#{Rails.root}/test/ui/config/scripts_json".freeze
 
   def self.unit_json_directory
     UNIT_JSON_DIRECTORY
@@ -350,6 +358,12 @@ class Unit < ApplicationRecord
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
+    # Unit caching is designed for use within the running web application, but we
+    # can't easily limit it to that scenario until the CDO.running_web_application?
+    # helper is fixed (see https://github.com/code-dot-org/code-dot-org/pull/71525).
+    # In the interim, make sure we skip caching during rake seed tasks, which
+    # sometimes break when caching is enabled.
+    return false if File.basename($0) == 'rake'
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -626,10 +640,6 @@ class Unit < ApplicationRecord
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
-  end
-
-  def has_standards_associations?
-    curriculum_umbrella == 'CSF' && (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019')
   end
 
   def standards
@@ -1309,7 +1319,6 @@ class Unit < ApplicationRecord
         curriculum_umbrella: curriculum_umbrella,
         version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
-        hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
@@ -1611,7 +1620,7 @@ class Unit < ApplicationRecord
       :curriculum_umbrella,
       :weekly_instructional_minutes,
       :content_area,
-      :topic_tags
+      :topic_tags,
     ]
     boolean_keys = [
       :has_unnumbered_lessons,
@@ -1854,8 +1863,15 @@ class Unit < ApplicationRecord
     Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
   end
 
+  # Returns the filepath for a unit's script JSON file.
+  # UI test scripts (those with names starting with 'ui-test-') are stored in
+  # test/ui/config/scripts_json/, while normal scripts are stored in config/scripts_json/.
+  #
+  # @param [String] unit_name - the name of the unit
+  # @return [String] - the absolute filepath to the .script_json file
   def self.script_json_filepath(unit_name)
-    "#{unit_json_directory}/#{unit_name}.script_json"
+    directory = unit_name.start_with?('ui-test-') ? UI_TEST_JSON_DIRECTORY : unit_json_directory
+    "#{directory}/#{unit_name}.script_json"
   end
 
   def get_unit_overview_pdf_url
@@ -1896,11 +1912,6 @@ class Unit < ApplicationRecord
   def show_ai_assessments_announcement?(user)
     # limit to CSD to avoid showing on allthethings
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
-  end
-
-  # TODO-AITUTOR: update or remove
-  def has_ai_tutor_level?
-    levels.with_ai_tutor_available.exists?
   end
 
   def has_ai_chat_tools?

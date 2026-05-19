@@ -19,6 +19,7 @@ const STUDENTS: ServerStudent[] = [
   {
     id: 1,
     family_name: 'hill',
+    is_demo_student: false,
     name: 'bobby',
     user_type: 'STUDENT',
     secret_picture_name: '',
@@ -30,6 +31,7 @@ const STUDENTS: ServerStudent[] = [
   {
     id: 2,
     family_name: 'morgendorffer',
+    is_demo_student: false,
     name: 'daria',
     user_type: 'STUDENT',
     secret_picture_name: '',

@@ -15,15 +15,15 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Transparency</strong> the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes.</p>
 </div>
 
-#### AI-generated content can blur the line between real and misleading; consequently, here are some ethical and legal challenges it's risen.
+AI-generated content can blur the line between real and misleading; consequently, here are some ethical and legal challenges it's risen.
 
-#### 🔎 **Think About** 
-#### While you're reviewing these scenarios, here are some questions you may wish to reflect on.
-* #### *Who should own AI-generated content - the AI creator, the user, the company, or shared ownership? What happens if AI uses copyrighted material in training?*
-* #### *Should AI-generated art be considered “real art”? Who should get credit—the AI, the programmer, or the person providing the prompt?*
-* #### *Should musicians have control over AI trained on their music? Who should be compensated when AI-generated music is sold?*
+🔎 **Think About** 
+While you're reviewing these scenarios, here are some questions you may wish to reflect on.
+* *Who should own AI-generated content - the AI creator, the user, the company, or shared ownership? What happens if AI uses copyrighted material in training?*
+* *Should AI-generated art be considered “real art”? Who should get credit—the AI, the programmer, or the person providing the prompt?*
+* *Should musicians have control over AI trained on their music? Who should be compensated when AI-generated music is sold?*
 
-#### Your answers may be very personal, guided by your own legal, ethical, or creative values.
+Your answers may be very personal, guided by your own legal, ethical, or creative values.
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
 
@@ -56,7 +56,7 @@ markdown <<MARKDOWN
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 11. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 11. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/1/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
 MARKDOWN

@@ -9,9 +9,14 @@
     "aif6-v2-2025"
   ],
   "original_script_names": [
-
+    "aif1-v2-2025",
+    "aif2-v2-2025",
+    "aif3-v2-2025",
+    "aif4-v2-2025",
+    "aif6-v2-2025",
+    "aif5-v3"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -21,7 +26,7 @@
         "key": "fc284d01-9d4a-471c-881f-bb62d50bca8a",
         "notice": "AI Foundations Professional Development",
         "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-        "link": "https://studio.code.org/courses/teaching-ai-foundations-s1-v2/",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025/",
         "type": "information",
         "visibility": "Teacher-only",
         "dismissible": true,
@@ -138,7 +143,9 @@
       "url": "\thttps://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"

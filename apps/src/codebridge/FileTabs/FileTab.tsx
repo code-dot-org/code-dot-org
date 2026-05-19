@@ -1,8 +1,8 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -15,6 +15,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -69,7 +70,7 @@ const FileTab = ({file}: FileTabProps) => {
     if (isAiTutorVersion) {
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
         fileName: file.name,
-        fileType: file.language,
+        fileType: getFileExtension(file.name),
         aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
           ? 'true'
           : 'false',
@@ -91,7 +92,7 @@ const FileTab = ({file}: FileTabProps) => {
           iconStyle={iconStyle}
           className={iconClassName}
         />
-        <BodyFourText noMargin>{file.name}</BodyFourText>
+        <Typography variant="body4">{file.name}</Typography>
       </div>
       <CloseButton
         onClick={() => dispatch(closeFileThunk(file.id))}

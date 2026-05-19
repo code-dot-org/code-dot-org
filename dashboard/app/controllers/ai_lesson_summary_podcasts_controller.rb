@@ -1,17 +1,31 @@
 class AiLessonSummaryPodcastsController < ApplicationController
   before_action :authenticate_user!
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_FOLDER = 'podcasts/'
 
-  def generate_podcast
-    if current_user && (SingleUserExperiment.enabled?(user: current_user, experiment_name: 'ai_lesson_summaries') || DCDO.get('show-aita-lesson-summaries', false))
+  def show
+    podcast_filename = PODCAST_FOLDER + 'lesson_' + params[:lesson_id].to_s + '_podcast.mp3'
+    return head :not_found unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, podcast_filename)
+    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, podcast_filename)
+    send_data podcast, type: 'audio/mpeg', disposition: 'inline'
+  end
 
-      script = AiLessonSummariesHelper.generate_lesson_summary(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
-      script = JSON.parse(script)['podcast_script']
-      podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
+  def generate_podcasts_by_unit
+    return head :forbidden unless DCDO.get('ai-lesson-summary-podcasts', false)
 
-      send_data podcast, :type => 'audio/mpeg', :dispensation => 'attachment', :filename => 'podcast.mp3'
-    else
-      head :forbidden
-    end
+    unit = Unit.find_by(id: podcast_params[:unit_id])
+    return head :not_found unless unit
+
+    # AI Podcasts are currently only available in AIF sections
+    return head :forbidden unless unit.foundations_of_cs?
+
+    lesson_ids = unit.lessons.select(&:has_lesson_plan).map(&:id)
+    request = {
+      user_id: current_user.id,
+      lesson_ids: lesson_ids,
+      unit_id: unit.id
+    }
+    AiLessonSummaryPodcastsJob.perform_later(request: request)
   end
 
   private def podcast_params

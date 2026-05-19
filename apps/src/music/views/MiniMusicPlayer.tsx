@@ -2,9 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../../lab2/Lab2Registry';
 import {SourcesStore} from '../../lab2/projects/SourcesStore';
@@ -36,13 +35,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   );
 
   const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore());
-  const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
+  const analyticsReporter = useRef<MusicAnalyticsReporter>(
+    new MusicAnalyticsReporter()
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
-  );
-  const {userId, userType, signInState} = useAppSelector(
-    state => state.currentUser
   );
 
   // Setup library and workspace, and analyticsReporter on mount
@@ -51,16 +49,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
-    await analyticsReporter.current.startSession();
+    analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);
 
   useEffect(() => {
     onMount();
   }, [onMount]);
-
-  useEffect(() => {
-    analyticsReporter.current.setUserProperties(userId, userType, signInState);
-  }, [userId, userType, signInState]);
 
   // This is the main function that is called when a song is played in the mini player
   // Loads code from the server, compiles the song, executes it to generate events,

@@ -2,7 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
@@ -41,7 +41,6 @@ describe('InitialSectionCreationInterstitial', () => {
     expect(analyticsSpy.mock.calls[1]).toEqual([
       EVENTS.SECTION_SETUP_STARTED,
       {},
-      PLATFORMS.BOTH,
     ]);
 
     analyticsSpy.mockRestore();

@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton, IconButtonProps} from '@mui/material';
 import React, {useState} from 'react';
 
 import i18n from '@cdo/locale';
@@ -8,7 +8,7 @@ import style from './feedback-toggle.module.scss';
 
 interface FeedbackToggleProps {
   color?: 'gray' | 'white' | 'black' | 'multi';
-  size?: ComponentSizeXSToL;
+  size?: IconButtonProps['size'];
   onThumbsUpClick: () => void;
   onThumbsDownClick: () => void;
 }
@@ -16,7 +16,7 @@ interface FeedbackToggleProps {
 const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
   onThumbsUpClick,
   onThumbsDownClick,
-  size = 'm',
+  size = 'medium',
   color = 'gray',
 }) => {
   const [thumbsUp, setThumbsUp] = useState(false);
@@ -56,32 +56,34 @@ const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
 
   return (
     <div className={style.container}>
-      <Button
-        aria-label={i18n.aiResponseThumbsUp()}
-        onClick={handleThumbsUpClick}
+      <MuiIconButton
+        variant="contained"
         color="white"
         size={size}
-        isIconOnly
-        icon={{
-          iconStyle: thumbsUp ? 'solid' : 'regular',
-          iconName: 'thumbs-up',
-        }}
-        type="primary"
         className={getIconStyle(thumbsUp, 'thumbs-up')}
-      />
-      <Button
-        aria-label={i18n.aiResponseThumbsDown()}
-        onClick={handleThumbsDownClick}
+        onClick={handleThumbsUpClick}
+        aria-label={i18n.aiResponseThumbsUp()}
+        type="button"
+      >
+        <FontAwesomeV6Icon
+          iconStyle={thumbsUp ? 'solid' : 'regular'}
+          iconName="thumbs-up"
+        />
+      </MuiIconButton>
+      <MuiIconButton
+        variant="contained"
         color="white"
         size={size}
-        isIconOnly
-        icon={{
-          iconStyle: thumbsDown ? 'solid' : 'regular',
-          iconName: 'thumbs-down',
-        }}
-        type="primary"
         className={getIconStyle(thumbsDown, 'thumbs-down')}
-      />
+        onClick={handleThumbsDownClick}
+        aria-label={i18n.aiResponseThumbsDown()}
+        type="button"
+      >
+        <FontAwesomeV6Icon
+          iconStyle={thumbsDown ? 'solid' : 'regular'}
+          iconName="thumbs-down"
+        />
+      </MuiIconButton>
     </div>
   );
 };

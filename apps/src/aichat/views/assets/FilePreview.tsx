@@ -2,11 +2,9 @@ import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
-
-import aichatI18n from '@cdo/apps/aichat/locale';
 
 import styles from './staged-files-preview.module.scss';
 
@@ -15,6 +13,7 @@ const FilePreview: React.FC<{
   filename: string;
   fileDetail?: string | number;
   url?: string;
+  timestamp?: string;
   isUploading?: boolean;
   onRemove?: () => void;
   onLoadError?: () => void;
@@ -23,6 +22,7 @@ const FilePreview: React.FC<{
   filename,
   fileDetail,
   url,
+  timestamp,
   isUploading,
   onRemove,
   onLoadError,
@@ -108,7 +108,7 @@ const FilePreview: React.FC<{
               tooltipId: 'close-button',
               direction: 'onTop',
               size: 'xs',
-              text: aichatI18n.remove(),
+              text: 'Remove',
               className: styles.closeTooltip,
             }}
             tooltipOverlayClassName={styles.closeTooltipOverlay}
@@ -148,16 +148,16 @@ const FilePreview: React.FC<{
             />
           </div>
           <div className={styles.filenameContainer}>
-            <StrongText>{filename}</StrongText>
-            <span className={styles.fileDetail}>
-              {[
-                type === 'pdf' ? 'PDF' : null,
-                type === 'text' ? fileExtension.toUpperCase() : null,
-                fileDetail ? fileDetail : null,
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            </span>
+            <div className={styles.filenameRow}>
+              <Typography variant="body4" className={styles.filenameText}>
+                {fileDetail ? `${filename} ${fileDetail}` : filename}
+              </Typography>
+              {timestamp && (
+                <Typography variant="body4" className={styles.timestamp}>
+                  {timestamp}
+                </Typography>
+              )}
+            </div>
           </div>
         </>
       )}

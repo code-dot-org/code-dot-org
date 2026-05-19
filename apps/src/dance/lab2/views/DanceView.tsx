@@ -1,5 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
@@ -12,14 +13,16 @@ import React, {
   useState,
 } from 'react';
 
+import * as BlockUtils from '@cdo/apps/block_utils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  getBlockDefinitionsForUpdatedLocale,
   loadBlocksToWorkspace,
-  updateLocale,
+  refreshWorkspacesForUpdatedLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
 import {
@@ -90,7 +93,6 @@ import GenerateDance from './GenerateDance';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
-
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
 
@@ -399,7 +401,15 @@ const DanceView: React.FunctionComponent<{
 
     // Ensure that Blockly localizes when the locale changes
     localization.on('change', info => {
-      updateLocale(localization.rtl);
+      const blockDefinitions = getBlockDefinitionsForUpdatedLocale(
+        localization.rtl
+      );
+      BlockUtils.installCustomBlocks({
+        blockly: Blockly,
+        blockDefinitions,
+        customInputTypes: Blockly.SourceCustomInputTypes,
+      });
+      refreshWorkspacesForUpdatedLocale(localization.rtl);
     });
 
     if (isShareView) {
@@ -676,15 +686,19 @@ const DanceView: React.FunctionComponent<{
           headerClassName={moduleStyles.panelHeader}
           rightHeaderContent={
             !readonlyWorkspace && (
-              <Button
-                text={commonI18n.startOver()}
-                iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
-                color={'black'}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
                 onClick={onClickStartOver}
-                ariaLabel={commonI18n.startOver()}
-                size={'xs'}
-                type="secondary"
-              />
+                aria-label={commonI18n.startOver()}
+                type="button"
+                endIcon={
+                  <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
+                }
+              >
+                {commonI18n.startOver()}
+              </MuiButton>
             )
           }
         >

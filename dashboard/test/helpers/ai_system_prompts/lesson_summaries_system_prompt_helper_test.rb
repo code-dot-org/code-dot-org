@@ -78,11 +78,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     assert_includes prompt, "Vocabulary:"
     assert_includes prompt, @vocab1.word
     assert_includes prompt, @vocab1.definition
-    assert_includes prompt, "Your summary should be returned in JSON format and should be composed as follows:
-    {learning_objective: this should be a brief, one paragraph summary of the lesson, focusing on each of the Learning Objectives and how they will be achieved,
-    lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
-    misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
-    tips: additional strategies or ideas to help with teaching the lesson}"
+    assert_includes prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]
   end
 
   test "get_system_prompt returns prompt with lesson data in the podcast script format" do
@@ -122,13 +118,7 @@ class AiSystemPrompts::LessonSummariesSystemPromptHelperTest < ActionView::TestC
     assert_includes prompt, "Unit overview:"
     assert_includes prompt, @fake_unit_description
 
-    assert_includes prompt, "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
-    - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
-    - Second, give a one sentence overview that lists the lesson name and describes what its about
-    - Third, describe what materials are needed for the lesson
-    - Fourth, summarize the lesson's Learning Objectives, give an overview of what the lesson entails, describe the activities and new vocabulary terms, and describe how this lesson connects to the Goals and Big Questions in the Unit Overview
-    - Fifth, provide step by step instructions using the Teacher Tips and Misconceptions in the lesson plan to show the teacher how to run the lesson
-    - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening."
+    assert_includes prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]
   end
 
   test "get_system_prompt includes personalization when current_user is set" do

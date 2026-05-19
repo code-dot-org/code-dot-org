@@ -1,0 +1,52 @@
+name 'pl-ai-101-V2-mod5-fictions-08'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Deepfakes and AI-Generated Media
+
+So far, we’ve explored how AI can generate misleading or incorrect text. However, AI can also be used to intentionally create highly convincing images, audio, and video.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Deepfakes:</strong> using AI in order to manipulate or generate realistic content that can make it appear as though someone said or did something they did not.</p>
+</div>
+
+Deepfakes can come in many formats:
+
+<div style="max-width:1200px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
+
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;">
+
+<div style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06); padding:16px; text-align:center;">
+<img src="https://images.code.org/4c2e77b5bea42d480691a7168f4b4782-Screenshot 2026-04-23 at 12.00.14 PM.png" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:16px; font-weight:600;">
+Videos of people doing things they never did
+</div>
+</div>
+
+<div style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06); padding:16px; text-align:center;">
+<img src="https://images.code.org/836bbbb416219a343fb7acad6ba0e2b0-Screenshot 2026-04-23 at 12.00.23 PM.png" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:16px; font-weight:600;">
+Audio recordings that mimic a person’s voice
+</div>
+</div>
+
+<div style="background:#ffffff; border:2px solid #5a2ca0; border-radius:14px; overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,0.06); padding:16px; text-align:center;">
+<img src="https://images.code.org/7eac1610ecf0395b64e4a20cdc1dfcb4-Screenshot 2026-04-23 at 12.00.28 PM.png" style="width:150px; height:150px; object-fit:contain; margin-bottom:12px;">
+<div style="font-size:16px; font-weight:600;">
+Images that depict events that never happened
+</div>
+</div>
+
+</div>
+</div>
+
+<br>
+
+>#### **💬 Quick Reflection:** Can you think of an example of a deepfake you've seen or heard of?
+
+Deepfakes are designed to look and sound believable even when they are not accurate. Much like AI fictions, they can:
+* Blur the line between real and fake information
+* Be used to spread misinformation or manipulate opinions
+* Create confusion about what sources can be trusted
+MARKDOWN

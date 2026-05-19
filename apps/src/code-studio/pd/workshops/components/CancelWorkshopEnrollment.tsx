@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -68,27 +68,29 @@ const CancelWorkshopEnrollmentButton: React.FC<
           onClose={() => setAlert(null)}
         />
       )}
-      <Button
-        type="secondary"
-        color="destructive"
-        size="s"
-        text="Unenroll from workshop"
-        onClick={() => setShowConfirmation(true)}
-        isPending={isSubmitting}
+      <MuiButton
+        variant="outlined"
+        color="error"
+        size="small"
+        loading={isSubmitting}
         className={moduleStyles.unenrollButton}
-      />
+        onClick={() => setShowConfirmation(true)}
+        type="button"
+      >
+        {'Unenroll from workshop'}
+      </MuiButton>
       {showConfirmation && (
         <Modal
           title="Cancel Registration?"
           description="Are you sure you want to cancel your registration?"
           primaryButtonProps={{
             onClick: handleCancel,
-            text: 'Yes, cancel registration',
-            color: 'destructive',
+            children: 'Yes, cancel registration',
+            color: 'error',
           }}
           secondaryButtonProps={{
             onClick: () => setShowConfirmation(false),
-            text: 'No, keep registration',
+            children: 'No, keep registration',
           }}
           onClose={() => setShowConfirmation(false)}
         />

@@ -10,7 +10,7 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "#### This video is included in Lesson 7 of Unit 1 - Problem Solving and Computing to reinforce the process of computing.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n#### Think of something your students do on the computer. \r\n* #### What sort of input, output, storage, and processing are happening?\r\n* #### How might you incorporate this example into a class discussion?",
+    "long_instructions": "This video is included in Lesson 7 of Unit 1 - Problem Solving and Computing to reinforce the process of computing.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\nThink of something your students do on the computer. \r\n* What sort of input, output, storage, and processing are happening?\r\n* How might you incorporate this example into a class discussion?",
     "display_name": "IOSP Model",
     "parent_level_id": 21735,
     "name_suffix": "_may2025"

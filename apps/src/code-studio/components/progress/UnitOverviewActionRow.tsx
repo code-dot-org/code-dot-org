@@ -2,6 +2,7 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -48,6 +49,7 @@ interface UnitOverviewActionRowProps {
   scriptResourcesPdfUrl: string;
   publishedState: string;
   teacherResources: TeacherResource[];
+  aiChatToolsDependency: AiChatToolsDependencyValue;
 }
 
 const compilePdfDropdownOptions = (
@@ -90,6 +92,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   scriptResourcesPdfUrl,
   publishedState,
   teacherResources,
+  aiChatToolsDependency,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
@@ -213,6 +216,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 isAssigningCourseOnly={false}
                 isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
+                aiChatToolsDependency={aiChatToolsDependency}
               />
             </div>
           )}

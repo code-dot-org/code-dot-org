@@ -7,10 +7,10 @@ class AichatEventsControllerTest < ActionController::TestCase
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
+    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
     @authorized_student1 = create(:follower, section: @section).student_user
 
-    @level = create(:level)
+    @level = create(:level, type: 'Aichat')
     @script = create(:script, :in_single_unit_course)
 
     @valid_student1_chat_message1 = {role: 'user', chatMessageText: 'hello from authorized student 1 - message 1', status: 'ok', timestamp: Time.now.to_i}
@@ -61,12 +61,12 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'unauthorized users can access log_chat_event from ai tutor levels' do
+  test 'unauthorized users cannot access log_chat_event from ai tutor levels' do
     sign_in(@unauthorized_student)
     ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     params_with_ai_tutor_client_type = @valid_params_log_chat_event.merge(aichatContext: @valid_params_log_chat_event[:aichatContext].merge(clientType: ai_tutor_client_type))
     post :log_chat_event, params: params_with_ai_tutor_client_type, as: :json
-    assert_response :success
+    assert_response :forbidden
   end
 
   test 'authorized teacher has access to log_chat_event' do

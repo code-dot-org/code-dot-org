@@ -34,6 +34,7 @@ const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
                   ? getLineReferenceText(contextItem.lineReference)
                   : undefined
               }
+              timestamp={contextItem.timestamp}
               isUploading={false}
               onRemove={() =>
                 dispatch(removeItemFromUserAddedSelectionContext(displayName))

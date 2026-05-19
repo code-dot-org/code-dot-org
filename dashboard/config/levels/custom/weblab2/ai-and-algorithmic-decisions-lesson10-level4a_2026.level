@@ -1,0 +1,113 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:46:38.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Like Button\r\n\r\nA user reported that the Like button is not working correctly.\r\n\r\n### Expected Behavior:\r\n\r\n- Clicking the button should switch between \"Like\" and \"Liked\"\r\n- The heart icon should update to match the current state\r\n- The like count should increase when liked and return when unliked\r\n\r\n### Do This:\r\n\r\n1. Run the app and test the Like button.\r\n2. Investigate the code.\r\n3. Fix the issues.\r\n\r\nUse AI (if needed) to explain the code before making changes.\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Fix the Like Button",
+    "bubble_choice_description": "Investigate and fix a broken Like button. Figure out what’s wrong and make sure the icon, count, and behavior all update correctly.",
+    "thumbnail_url": "https://images.code.org/3d2dd0e8a027b3ae5881b0f550a66d48-like-love-count.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Weekend Photo Drop</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main class=\"page\">\n      <section class=\"post-card\">\n        <img\n          id=\"postImage\"\n          src=\"city_sunset.jpg\"\n          alt=\"City skyline at sunset\"\n          class=\"post-image\"\n        />\n\n        <div class=\"post-content\">\n          <p class=\"post-label\">Featured Post</p>\n          <h1 class=\"post-title\">Weekend Photo Drop</h1>\n          <p class=\"post-caption\">Sunset walk downtown 🌆</p>\n\n          <button id=\"btnToggle\" class=\"like-button\">\n            <img\n              id=\"heartEmpty\"\n              src=\"heart-empty.png\"\n              alt=\"\"\n              class=\"heart-icon\"\n            />\n            <img\n              id=\"heartFull\"\n              src=\"heart-full.png\"\n              alt=\"\"\n              class=\"heart-icon hidden\"\n            />\n            <span id=\"buttonText\">Like</span>\n          </button>\n\n          <p id=\"likeCountEl\" class=\"like-count\">124 likes</p>\n        </div>\n      </section>\n    </main>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background: #f3f4f6;\n  color: #111827;\n}\n\n.page {\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 32px 16px;\n}\n\n.post-card {\n  width: 100%;\n  max-width: 380px;\n  background: #ffffff;\n  border: 1px solid #d1d5db;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);\n}\n\n.post-image {\n  width: 100%;\n  height: 260px;\n  object-fit: cover;\n  display: block;\n}\n\n.post-content {\n  padding: 20px;\n}\n\n.post-label {\n  margin: 0 0 8px 0;\n  font-size: 13px;\n  font-weight: 700;\n  color: #6b7280;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n}\n\n.post-title {\n  margin: 0 0 8px 0;\n  font-size: 28px;\n  line-height: 1.1;\n}\n\n.post-caption {\n  margin: 0 0 18px 0;\n  font-size: 17px;\n  color: #374151;\n}\n\n.like-button {\n  display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  border: 1px solid #d1d5db;\n  background: #ffffff;\n  color: #111827;\n  border-radius: 999px;\n  padding: 12px 18px;\n  font-size: 18px;\n  font-weight: 600;\n  cursor: pointer;\n}\n\n.like-button:hover {\n  background: #f9fafb;\n}\n\n.heart-icon {\n  width: 22px;\n  height: 22px;\n  display: block;\n}\n\n.hidden {\n  display: none;\n}\n\n.like-count {\n  margin: 16px 0 0 0;\n  font-size: 20px;\n  font-weight: 700;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// State\nlet liked = false;\nconst likeCount = 124;\n\n// Selectors\nconst btnToggle = document.getElementById(\"btnToggle\");\nconst heartEmpty = document.getElementById(\"heartEmpty\");\nconst heartFull = document.getElementById(\"heartFull\");\nconst likeCountEl = document.getElementById(\"likeCountEl\");\nconst buttonText = document.getElementById(\"buttonText\");\n\n// Render UI from state\nconst render = () => {\n  if (liked) {\n    heartEmpty.classList.add(\"hidden\");\n    heartFull.classList.add(\"hidden\"); \n    buttonText.textContent = \"Liked\";\n    likeCountEl.textContent = likeCount + 1 + \" likes\";\n  } else {\n    heartEmpty.classList.remove(\"hidden\");\n    heartFull.classList.add(\"hidden\");\n    buttonText.textContent = \"Like\";\n    likeCountEl.textContent = likeCount + \" likes\";\n  }\n};\n\n// Wire: click -> flip -> render\nbtnToggle.addEventListener(\"click\", () => {\n  liked = liked; \n  render();\n});\n\n// Initial render\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "heart-full.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level2a-test-2025/uuid/cb44e72a-874a-44d6-9913-60a82cb9849f.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "heart-empty.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level2a-test-2025/uuid/a8bca1eb-6ebf-4e4a-9024-ef32246c9bef.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "city_sunset.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level4a_2026/uuid/7a93c938-00b9-4c56-afa6-2df62af402eb.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nQe0qM/kbh7DQzez0\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:38.787+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4a_2025\"},{\"changed_at\":\"2026-04-16 17:53:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 17:55:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 17:57:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:05:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:07:22 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:07:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:08:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:12:26 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:31:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 18:38:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 18:38:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

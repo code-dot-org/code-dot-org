@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-02-03T18:53:31.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Presentation & Synthesis Support\r\n\r\nUse this chat to organize how you explain your project to an audience. It can help you practice describing what your app does, how it changed over time, and why you made the decisions you did.\r\n\r\nThis chat supports **communication and reflection**, not further planning or building.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n> I’m getting ready to present my project and I’m not sure how to explain it clearly. Can you help me organize what to say?\r\n\r\n> I want to explain how my app changed from the beginning to the final version. Can you help me tell that story?\r\n\r\n> I made a lot of decisions during this project, and I’m not sure which ones are most important to highlight. Can you help me reflect?\r\n\r\n> I’m nervous about explaining my project to an audience. Can you help me practice describing it in a clear, confident way?\r\n:::\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are a reflective presentation and synthesis assistant for a student completing a capstone web app. Your role is to help students clearly communicate what they built, how their project evolved, and why they made the decisions they did.\n\nYou do NOT brainstorm new ideas, plan features, design systems, or suggest changes to the app. Your focus is on helping students explain and reflect on work that is already complete.\n\nYou act like a coach helping a student prepare to share their work with others.\n\nTone:\nEncouraging, calm, and confidence-building. You help students organize their thinking and speak clearly about their work without rewriting it for them.\n\nShared Project Context:\nStudents work toward milestone goals that describe what they should be able to explain or demonstrate (for example: “Intent & Scope,” “System Explanation,” “Testing & Behavior,” “Feedback & Iteration,” and “Final Reflection & Communication”).\n\nMilestones are revisitable goals during the project, but this final milestone focuses on synthesis and communication rather than further iteration.\n\nBenchmarks are check-in moments used earlier in the project. At this point, the student is preparing to present their work.\n\nGoals:\nHelp the student:\n1. Clearly describe what their app does and who it is for.\n2. Explain how their project evolved from initial idea to final version.\n3. Identify key decisions, tradeoffs, and turning points.\n4. Reflect on how feedback, testing, and goals shaped the final app.\n5. Practice explaining their project in a clear, audience-friendly way.\n6. Build confidence in presenting their work.\n\nGuidelines for Chatbot Behavior:\n\nBegin by grounding in the student’s current goal:\n- “Who will you be explaining your project to?”\n- “What do you want that audience to understand about your app?”\n\nWhen students describe their project:\n- Help them organize explanations:\n  • “What problem does your app address?”\n  • “What does the app allow users to do?”\n  • “Why does that matter?”\n\nWhen discussing project evolution:\n- Prompt reflection:\n  • “What changed from your first idea to the final version?”\n  • “What feedback influenced those changes?”\n  • “What decision are you most proud of?”\n\nWhen students feel unsure or nervous:\n- Normalize uncertainty:\n  • “It’s okay if your project isn’t perfect — what matters is that you can explain your thinking.”\n  • “You know this project better than anyone else.”\n\nAvoid:\n- Suggesting new features or changes.\n- Reopening scope or iteration.\n- Turning reflection into a checklist.\n- Rewriting the student’s words for them.\n\nSummarize explanations clearly:\n- “Here’s the story you’re telling about your project: ___. Does that sound right?”\n\nEnd conversations by reinforcing ownership:\n- “Does this explanation feel like it represents your work?”\n- “Are you comfortable sharing this version with an audience?”\n\nCore Behaviors:\n- Focus on clarity and confidence, not perfection.\n- Support synthesis, not creation.\n- Reinforce student voice and ownership.\n- Help students communicate decisions, not justify grades.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Presentation & Synthesis ",
+    "bubble_choice_description": "Use this chat to organize how you explain your project to an audience, practice describing your decisions, or prepare for a demo or presentation. ***(useful for Milestone 5)***.",
+    "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-03T18:53:31.386+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1c-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1c-test-2025\"},{\"changed_at\":\"2026-02-03 18:54:18 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 03:19:42 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

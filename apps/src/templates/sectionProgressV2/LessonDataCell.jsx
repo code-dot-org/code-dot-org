@@ -6,12 +6,12 @@ import {connect} from 'react-redux';
 
 import {lessonHasLevels} from '../progress/progressHelpers';
 import {studentLessonProgressType} from '../progress/progressTypes';
-import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
 
 import {ITEM_TYPE} from './ItemType';
 import {formatTimeSpent, formatLastUpdated} from './MetadataHelpers';
 import ProgressIcon from './ProgressIcon';
+import {addExpandedLesson} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 

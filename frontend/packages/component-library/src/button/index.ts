@@ -8,6 +8,11 @@ export type {GenericButtonProps} from './GenericButton';
 
 // Constants
 export {buttonColors} from './Button';
+export {
+  colorMap as buttonColorToMuiColorMap,
+  variantMap as buttonTypeToMuiVariantMap,
+  sizeMap as buttonSizeToMuiSizeMap,
+} from './buttonPropsToMuiCore';
 
 // Components
 export {default as GenericButton} from './GenericButton';

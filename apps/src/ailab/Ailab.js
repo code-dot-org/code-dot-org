@@ -1,11 +1,12 @@
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
+import localization from '@cdo/apps/localization';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from '../redux';
 import {
@@ -26,21 +27,21 @@ import mlPlaygroundMsg from './mlPlayground_locale';
  */
 const MOBILE_PORTRAIT_WIDTH = 900;
 
-function getInstructionsDefaults() {
+function getInstructionsDefaults(aiMsg) {
   var instructions = {
-    selectDataset: ailabMsg.selectDataset(),
-    uploadedDataset: ailabMsg.uploadedDataset(),
-    selectedDataset: ailabMsg.selectedDataset(),
-    dataDisplayLabel: ailabMsg.dataDisplayLabel(),
-    dataDisplayFeatures: ailabMsg.dataDisplayFeatures(),
-    selectedFeatureNumerical: ailabMsg.selectedFeatureNumerical(),
-    selectedFeatureCategorical: ailabMsg.selectedFeatureCategorical(),
-    trainModel: ailabMsg.trainModel(),
-    generateResults: ailabMsg.generateResults(),
-    results: ailabMsg.results(),
-    resultsDetails: ailabMsg.resultsDetails(),
-    saveModel: ailabMsg.saveModel(),
-    modelSummary: ailabMsg.modelSummary(),
+    selectDataset: aiMsg.selectDataset(),
+    uploadedDataset: aiMsg.uploadedDataset(),
+    selectedDataset: aiMsg.selectedDataset(),
+    dataDisplayLabel: aiMsg.dataDisplayLabel(),
+    dataDisplayFeatures: aiMsg.dataDisplayFeatures(),
+    selectedFeatureNumerical: aiMsg.selectedFeatureNumerical(),
+    selectedFeatureCategorical: aiMsg.selectedFeatureCategorical(),
+    trainModel: aiMsg.trainModel(),
+    generateResults: aiMsg.generateResults(),
+    results: aiMsg.results(),
+    resultsDetails: aiMsg.resultsDetails(),
+    saveModel: aiMsg.saveModel(),
+    modelSummary: aiMsg.modelSummary(),
   };
 
   return instructions;
@@ -124,15 +125,26 @@ Ailab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  // Localize
+  const aiMsg = Object.entries(ailabMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => {
+      return localization.translate(msgFunction(...args), ['ailab']);
+    };
+    return acc;
+  }, {});
+
   getStore().dispatch(
-    setDynamicInstructionsDefaults(getInstructionsDefaults())
+    setDynamicInstructionsDefaults(getInstructionsDefaults(aiMsg))
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
     </Provider>,
-    document.getElementById(config.containerId)
+    document.getElementById(config.containerId),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
@@ -195,12 +207,28 @@ Ailab.prototype.initMLActivities = function () {
     instructionsDismissed,
   } = require('@code-dot-org/ml-playground');
 
+  // Localize by crawling the localization object and wrapping every function
+  // with a call to the client-side localization library
+  const reduceValue = (acc, [key, msgFunctionOrObject]) => {
+    if (typeof msgFunctionOrObject === 'function') {
+      const msgFunction = msgFunctionOrObject; // as t(...args) => string
+      acc[key] = (...args) => {
+        return localization.translate(msgFunction(...args), ['ailab']);
+      };
+    } else {
+      const msgObject = msgFunctionOrObject; // as Record<string, t(...args) => string | Record<...>>
+      acc[key] = Object.entries(msgObject).reduce(reduceValue, {});
+    }
+    return acc;
+  };
+  const mlMsg = Object.entries(mlPlaygroundMsg).reduce(reduceValue, {});
+
   // Set initial state for UI elements.
   initAll({
     mode,
     onContinue,
     setInstructionsKey,
-    i18n: mlPlaygroundMsg,
+    i18n: mlMsg,
     saveTrainedModel,
     logMetric,
   });

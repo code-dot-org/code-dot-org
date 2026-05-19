@@ -66,8 +66,8 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({answers, response}) => {
                   iconName="check"
                   iconStyle="solid"
                   className={classNames(
-                    styles.multiAnswerIcon,
-                    styles.multiAnswerIconCorrect
+                    styles.answerIcon,
+                    styles.answerIconCorrect
                   )}
                 />
               )}
@@ -76,8 +76,8 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({answers, response}) => {
                   iconName="xmark"
                   iconStyle="solid"
                   className={classNames(
-                    styles.multiAnswerIcon,
-                    styles.multiAnswerIconIncorrect
+                    styles.answerIcon,
+                    styles.answerIconIncorrect
                   )}
                 />
               )}

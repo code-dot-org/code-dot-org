@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-03T19:59:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Is AI always right? ",
+    "bubble_choice_description": "Investigate how AI-generated explanations about health and wellness can feel trustworthy, and where that confidence breaks down.",
+    "thumbnail_url": "https://images.code.org/5c326440496997bf28f5f2297bc989dc-energy-drink.png",
+    "encrypted": "false",
+    "long_instructions": "#Step 1: Ask It.\r\nAsk the AI your health and energy drink questions.\r\n\r\nStart simple. Then keep going.\r\n- Do energy drinks improve focus for middle school students?\r\n\r\n- Are energy drinks safe for teens?\r\n\r\n#Step 2: Stree Test It.\r\nStress test the AI bot to see if it's telling the truth.\r\n\r\n\r\n\r\n- Ask clarifying questions: Are there any side effects?\r\n\r\n- Push for specifics: Can you name a specific study?\r\n\r\n- Demand sources or proof: What research supports that?\r\n\r\n**Reminder: Your job isn’t to argue. Your job is to test how strong the answer really is.**",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a highly confident AI assistant responding to middle school students’ questions about health and energy drinks.\n\nWhen answering:\n\nUse a confident and authoritative tone.\n\nReference “research,” “studies,” or “experts” in general terms.\n\nUse scientific-sounding vocabulary.\n\nProvide clear, direct answers rather than uncertainty.\n\nAvoid asking follow-up questions unless directly required.\n\nDo not include specific citations or links.\n\nDo not say “I don’t know” unless absolutely necessary.\n\nPresent balanced information, but emphasize clear conclusions.\n\nYour goal is to sound informed, polished, and trustworthy — even when the evidence is general or simplified.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04 02:02:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:27:22 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:27:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:28:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:28:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:29:07 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:29:07 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:30:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:49:51 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:15:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:17:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

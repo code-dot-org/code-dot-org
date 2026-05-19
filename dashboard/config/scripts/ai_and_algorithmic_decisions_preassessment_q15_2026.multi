@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q15_2026'
+
+question 'A student asks AI to fix a bug in their game. The AI suggests a code change. The student pastes it in, but the game still doesn\'t work. What should the student do next?'
+
+wrong 'Ask the AI for a totally different solution and paste that one in.'
+wrong 'Assume the original bug is unfixable and start over.'
+wrong 'Restart the computer.'
+right 'Read the AI''s code carefully, predict what it should do, test step by step, and find where the logic actually breaks.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

@@ -14,13 +14,21 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
-import {ComponentType, LazyExoticComponent} from 'react';
+import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
+import type {
+  ImageNodeData,
+  LineAnchorNodeData,
+  ShapeNodeData,
+  TextNodeData,
+} from '../sketchlab/reactFlow/types';
 
 export {Theme};
 
@@ -82,7 +90,55 @@ export type LabConfig = {[key: string]: {[key: string]: string}};
 export type Source =
   | BlocklySource
   | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+  | ExcalidrawSourceWithExternalFiles
+  | SketchlabReactFlowSource;
+
+// -- REACT FLOW SKETCH LAB -- //
+
+// Serializable node/edge types for project storage. These mirror the
+// @xyflow/react Node/Edge fields we persist, without the complex DOM
+// types that are incompatible with Immer's WritableDraft. Cast to/from
+// the full React Flow types at the read/write boundary.
+interface SketchlabReactFlowNodeBase {
+  id: string;
+  position: {x: number; y: number};
+  // width and height are set by NodeResizer when the user drags a handle
+  // (or by keyboard resize) and are persisted so the node restores at the
+  // correct size on reload.
+  width?: number;
+  height?: number;
+  style?: CSSProperties;
+}
+
+export type SketchlabReactFlowNode =
+  | (SketchlabReactFlowNodeBase & {type: 'shape'; data: ShapeNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'text'; data: TextNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData})
+  | (SketchlabReactFlowNodeBase & {
+      type: 'lineAnchor';
+      data: LineAnchorNodeData;
+    });
+
+export interface SketchlabReactFlowEdge {
+  id: string;
+  source: string;
+  target: string;
+  style?: CSSProperties;
+  data?: {
+    locked?: boolean;
+  };
+  sourceHandle?: string;
+  targetHandle?: string;
+  type?: string;
+  markerStart?: EdgeMarkerType;
+  markerEnd?: EdgeMarkerType;
+}
+
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -129,7 +185,7 @@ export type ExcalidrawSourceWithExternalFiles = Omit<
 };
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
-  uploadFailed?: boolean;
+  uploaded?: boolean;
   starterAsset?: boolean;
   filenameWithExtension?: string;
 };
@@ -153,7 +209,6 @@ export interface MultiFileSource {
 export interface ProjectFile {
   id: FileId;
   name: string;
-  language: string;
   contents: string;
   active?: boolean;
   folderId: string;
@@ -228,12 +283,13 @@ export interface LevelProperties {
   referenceLinks?: string[];
   helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
+  showExemplarLink?: boolean;
   exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  productTours?: string[];
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
@@ -249,6 +305,8 @@ export interface LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
+  aiTutorPromptSettings?: AiTutorPromptSettings;
+  levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -258,6 +316,8 @@ export interface LevelProperties {
   customHelperLibrary?: string;
   validationCode?: string;
   hideVersionHistory?: boolean;
+  parentLevelName?: string;
+  requireEditToContinue?: boolean;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
@@ -457,3 +517,5 @@ export interface LabProps<
 }
 
 export type ShareDialogId = 'hoc2024' | 'hoai2025';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

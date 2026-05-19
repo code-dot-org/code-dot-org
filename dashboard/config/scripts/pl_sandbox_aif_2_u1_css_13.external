@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing CSS 
 
-####  Now that we have the structure of a website, let’s add some style!
+Now that we have the structure of a website, let’s add some style!
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>CSS</b> (Cascading Style Sheets) is the language that controls the look and feel of a webpage.
 </p>
 </div>
 
-#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+If HTML is the structure, CSS is the design, it handles colors, fonts, spacing, and layout.
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="
@@ -27,38 +27,38 @@ markdown <<MARKDOWN
   </p>
 </div>
 
-#### With CSS you can...
-- #### Changes colors, fonts, and text sizes
-- #### Controls spacing (margins, padding, alignment)
-- #### Adds borders, backgrounds, and styles
-- #### Defines layout (how sections of a page are arranged)
+With CSS you can...
+- Changes colors, fonts, and text sizes
+- Controls spacing (margins, padding, alignment)
+- Adds borders, backgrounds, and styles
+- Defines layout (how sections of a page are arranged)
 
 <div style="clear:both;"></div>
 
 ---
 
 ## How it Works 
-#### To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
+To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
 
 <img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="link code to connect html to css file" width="450px" style="display: block;  float:left ;border-radius:10px; ">
 
 <div style="clear:both;"></div>
 
-#### That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
+That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
 
-####  Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
+Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
 
 ---
 
 ## CSS Selectors and Properties
 
-#### Each CSS rule has three parts:
+Each CSS rule has three parts:
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
 
   <!-- 🎯 Selectors Card -->
   <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
-    <h4 style="margin-top: 0; color: #005b6b;">🎯 <strong>Selectors</strong></h4>
+    <p>🎯 <strong>Selectors</strong></p>
     <p style="margin-bottom: 12px;font-size: 14pt">
      Tell the browser <strong>which HTML elements</strong> to style (like <code>body</code>, <code>header</code>, or <code>h1</code>).
     </p>
@@ -66,7 +66,7 @@ markdown <<MARKDOWN
 
   <!-- 🎨 Properties Card -->
   <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
-    <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties</strong></h4>
+    <p>🎨 <strong>Properties</strong></p>
     <p style="margin-bottom: 12px;font-size: 14pt">
       Name <strong>what you want to change</strong> about an element, such as <code>color</code>, <code>margin</code>, or <code>background-color</code>.
       </p>
@@ -74,13 +74,20 @@ markdown <<MARKDOWN
 
   <!-- ＃ Values Card -->
   <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
-    <h4 style="margin-top: 0; color: #005b6b;">＃ <strong>Values</strong></h4>
+    <p>＃ <strong>Values</strong></p>
     <p style="margin-bottom: 12px;font-size: 14pt">
       Set <strong>how the property changes</strong>, like <code>blue</code>, <code>20px</code>, or <code>center</code>.
       </p>
 </div>
 </div>
 
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
 
 > #### Review the CSS below and try to identify the selectors, properties, and values. 
 
@@ -101,9 +108,10 @@ Click to show example how this might look on a webpage.
 <img src="https://images.code.org/a546b33c4184dc532d0e59c7e15f6104-Screenshot%202026-01-16%20at%2012.52.29%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
 </div>
 </details>
+</div>
 
 <br>
 
-## Up Next: let's take a look at some common CSS tags and see what they do. 
+
 
 MARKDOWN

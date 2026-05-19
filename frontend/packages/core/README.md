@@ -1,204 +1,142 @@
 # @code-dot-org/core
 
-Essential configurations and utilities for the Code.org platform. This package provides core functionality for environment detection, API endpoint configuration, brand detection, and global settings management across all Code.org frontend applications.
+Runtime utilities shared by all Code.org frontend applications: environment detection, site configuration, brand detection, and dashboard API client.
 
-## 📦 Package Information
+Optional code.org-specific integrations (localization, observability) are available as sub-path exports and registered via the plugin model — open-source forks can omit them entirely.
 
-- **Package Name**: `@code-dot-org/core`
-- **Type**: ESM/CommonJS hybrid module
-- **Target**: Browser environments
-- **Test Framework**: Vitest
-- **Build Tool**: Vite with TypeScript
+## Boot
 
-## 🚀 Installation
+Call once before rendering to register site config on `window.__CODE_STUDIO__` and initialize plugins:
 
-```bash
-npm install @code-dot-org/core
+```ts
+import {initializeCore} from '@code-dot-org/core';
+import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
+
+initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
 ```
 
-## 📋 Table of Contents
+`initializeCore` accepts an optional options object. Use the `plugins` field to pass an array of `CorePlugin` implementations. Pass an empty object (or no argument) to boot without any plugins.
 
-- [Key Features](#key-features)
-- [Usage Examples](#usage-examples)
-- [Architecture](#architecture)
-- [Development](#development)
-- [Testing](#testing)
+## Site configuration
 
-## 🌟 Key Features
+`CodeStudioConfig` is a singleton with `environment`, `brand`, `dashboardApiUrl`, and `host`, derived from `window.location.hostname` at module load time:
 
-### Environment Detection
-
-**Source**: [`src/environment/`](./src/environment/)
-
-Automatically detects the current Code.org environment (development, staging, production, etc.) based on hostname analysis. Provides both direct environment detection and boolean helper functions for common environment checks.
-
-- **Main Function**: `getEnvironmentFromHostname()` - See [getEnvironmentFromHostname.ts](./src/environment/getEnvironmentFromHostname.ts)
-- **Environment Types**: Six distinct environments - See [environment.ts](./src/environment/environment.ts)
-- **Helper Functions**: Boolean checkers like `isProductionEnvironment()` - See individual files in [src/environment/](./src/environment/)
-
-### Configuration Management
-
-**Source**: [`src/config/`](./src/config/)
-
-Global configuration singleton that automatically detects and provides environment-aware settings. Creates a `window.__CODE_STUDIO__` global and exports a `CodeStudioConfig` singleton.
-
-- **Main Class**: `SiteConfig` - See [SiteConfig.ts](./src/config/SiteConfig.ts)
-- **Initialization**: `initializeCodeStudioConfig()` - See [initializeCodeStudioConfig.ts](./src/config/initializeCodeStudioConfig.ts)
-
-### Dashboard API Integration
-
-**Source**: [`src/dashboard/`](./src/dashboard/)
-
-Provides environment-specific Dashboard API endpoint URLs for making requests to the Code.org backend services.
-
-- **Main Function**: `getDashboardApiUrl()` - See [getDashboardApiUrl.ts](./src/dashboard/getDashboardApiUrl.ts)
-
-### Brand Detection
-
-**Source**: [`src/brand/`](./src/brand/)
-
-Determines the current brand (code.org, etc.) based on hostname parsing to enable brand-specific features and styling.
-
-- **Brand Types**: `Brand` type definition - See [brand.ts](./src/brand/brand.ts)
-- **Detection Function**: `getBrandFromHostname()` - See [getBrandFromHostname.ts](./src/brand/getBrandFromHostname.ts)
-
-## 🔧 Usage Examples
-
-### Basic Environment Detection
-
-```typescript
-import {
-  getEnvironmentFromHostname,
-  isProductionEnvironment,
-} from '@code-dot-org/core';
-
-// Get current environment
-const env = getEnvironmentFromHostname();
-console.log(`Running in: ${env}`);
-
-// Check specific environment
-if (isProductionEnvironment()) {
-  console.log('Production mode - enabling analytics');
-}
-```
-
-### Using the Configuration Singleton
-
-```typescript
+```ts
 import {CodeStudioConfig} from '@code-dot-org/core';
 
-// Access global configuration
-console.log(`Brand: ${CodeStudioConfig.brand}`);
-console.log(`Environment: ${CodeStudioConfig.environment}`);
-console.log(`Dashboard API: ${CodeStudioConfig.dashboardApiUrl}`);
-
-// Also available globally
-console.log(window.__CODE_STUDIO__.environment);
+const {environment, brand, dashboardApiUrl} = CodeStudioConfig;
 ```
 
-### Dashboard API Integration
+`CodeStudioConfig.observability` is also typed on `SiteConfig` itself because
+core parses that runtime config directly from the Rails `<meta name="app-config">`
+tag before plugins run. When the tag omits observability config, core normalizes
+the value to `{provider: 'none'}`.
 
-```typescript
+## Dashboard API client
+
+`DashboardApiClient` is a typed HTTP client for the Rails dashboard backend, available via the `/api` sub-path export:
+
+```ts
+import {DashboardApiClient} from '@code-dot-org/core/api';
+import type {LevelPropertiesResponse} from '@code-dot-org/core/api';
+
+const level: LevelPropertiesResponse =
+  await DashboardApiClient.labs.levels.getLevelProperties({levelId: '46446'});
+
+const theme = await DashboardApiClient.users.userPreference.getTheme();
+```
+
+## Localization
+
+`localization` and `useLocalization` are available via the `./plugins/localization` sub-path export. Register `localizationPlugin` at bootstrap to wire it into the core lifecycle:
+
+```ts
+import {initializeCore} from '@code-dot-org/core';
 import {
-  getDashboardApiUrl,
-  getEnvironmentFromHostname,
+  localizationPlugin,
+  localization,
+  useLocalization,
+} from '@code-dot-org/core/plugins/localization';
+
+initializeCore({plugins: [localizationPlugin]});
+
+// In a React component:
+const locale = useLocalization();
+
+// Manually translate a string:
+const translated = localization.translate('my english string');
+```
+
+See [`src/plugins/localization/README.md`](src/plugins/localization/README.md) for full usage details.
+
+## Observability
+
+`observabilityPlugin`, `recordError`, `logger`, and `metrics` are available via the `./plugins/observability` sub-path export:
+
+```ts
+import {initializeCore} from '@code-dot-org/core';
+import {
+  logger,
+  observabilityPlugin,
+  recordError,
+} from '@code-dot-org/core/plugins/observability';
+
+initializeCore({plugins: [observabilityPlugin]});
+
+recordError(new Error('boom'), {area: 'studio'});
+logger.info('Studio booted', {area: 'studio'});
+```
+
+The plugin dynamically imports the Sentry adapter, so the provider SDK can stay
+out of the initial bundle when observability is disabled. Log and metric
+sampling are session-based using a per-tab session ID stored in `sessionStorage`.
+Calls made immediately after `initializeCore({plugins: [observabilityPlugin]})`
+are buffered and replayed once the async provider client finishes loading.
+
+See [`src/plugins/observability/README.md`](src/plugins/observability/README.md) for full usage details.
+
+## Plugin vs. new package
+
+When adding a new code.org-specific integration, use this table to decide where it belongs:
+
+| Criterion                          | Plugin in `@code-dot-org/core`                                               | New `frontend/packages/*` package                                                         |
+| ---------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **npm dependency weight**          | Lightweight or external-script-only (e.g. LocalizeJS loads via `<script>`)   | Heavy npm dep that would contaminate core's `package.json` even as an optional peer       |
+| **Bundle isolation**               | Excluded from main bundle via sub-path import discipline                     | Guaranteed by package boundary — bundler never pulls it in unless the package is imported |
+| **Code.org specificity**           | Tightly coupled to `SiteConfig` / `window.__CODE_STUDIO__`                   | Independently useful without core's config                                                |
+| **Number of similar integrations** | ≤ ~3–4 total plugins expected                                                | Many integrations of the same kind (e.g. one per analytics provider)                      |
+| **Cross-cutting concern**          | Needs `onCoreReady` lifecycle (e.g. reads `environment` to configure itself) | Has its own lifecycle independent of core boot                                            |
+| **Open-source fork impact**        | Fork omits the sub-path import — code stays in repo but is never bundled     | Fork omits the entire package from `package.json` — code never enters the repo clone      |
+
+**Default rule:** Start as a plugin in core. Graduate to a new package only if the npm dependency weight or architectural independence makes the package boundary genuinely necessary.
+
+## Writing a plugin
+
+Implement `CorePlugin` and pass it to `initializeCore`:
+
+```ts
+import type {
+  CorePlugin,
+  SiteConfig,
+  SiteConfigExtensions,
 } from '@code-dot-org/core';
 
-const env = getEnvironmentFromHostname();
-const apiUrl = getDashboardApiUrl(env);
+const myPlugin: CorePlugin = {
+  onCoreReady(config: SiteConfig & SiteConfigExtensions) {
+    // config.environment, config.brand, etc. are available here
+  },
+};
 
-// Make API request
-fetch(`${apiUrl}/api/v1/user`)
-  .then(response => response.json())
-  .then(data => console.log(data));
+initializeCore({plugins: [myPlugin]});
 ```
 
-### Brand-Specific Logic
+To extend `SiteConfig`'s type with plugin-specific fields, use module augmentation:
 
-```typescript
-import {CodeStudioConfig} from '@code-dot-org/core';
-
-switch (CodeStudioConfig.brand) {
-  case 'code.org':
-    // Code.org specific features
-    break;
+```ts
+declare module '@code-dot-org/core' {
+  interface SiteConfigExtensions {
+    myFeature: {enabled: boolean};
+  }
 }
-```
-
-## 🏗️ Architecture
-
-### Directory Structure
-
-```
-src/
-├── [feature]/
-│   ├── __tests__/           # Unit Tests
-│   ├── brand.ts             # Brand type definition
-│   ├── index.ts             # Export file
-└── index.ts                # Main export file
-```
-
-### Design Principles
-
-1. **Singleton Pattern**: `SiteConfig` uses singleton pattern for global state
-2. **Environment-First**: All utilities prioritize environment detection
-3. **Type Safety**: Full TypeScript support with strict typing
-4. **Browser-Only**: Designed specifically for browser environments
-5. **Zero Runtime Config**: Configuration determined at runtime from browser context
-
-### Dependencies
-
-- **Development**: Vite, Vitest, TypeScript, ESLint
-
-## 🛠️ Development
-
-### Adding New Utilities
-
-1. **Create the utility file** in the appropriate subdirectory
-2. **Add TypeScript types** if needed
-3. **Export from subdirectory index** (e.g., `src/environment/index.ts`)
-4. **Export from main index** (`src/index.ts`) if public API
-5. **Write comprehensive tests** in `__tests__/` directory
-6. **Update this README** with documentation
-
-## 🧪 Testing
-
-### Test Framework
-
-- **Framework**: Vitest
-- **Configuration**: Global test utilities enabled
-- **Coverage**: Include all source files
-
-### Running Tests
-
-```bash
-# Run all tests
-yarn test
-```
-
-### Test Structure
-
-Tests are organized alongside source files in `__tests__/` directories:
-
-```
-src/environment/__tests__/
-├── environment.test.ts
-├── getEnvironmentFromHostname.test.ts
-└── is[Environment]Environment.test.ts
-```
-
-### Writing Tests
-
-```typescript
-import {getEnvironmentFromHostname} from '../getEnvironmentFromHostname';
-
-describe('getEnvironmentFromHostname', () => {
-  beforeEach(() => {
-    // Setup test environment
-  });
-
-  it('should detect development environment', () => {
-    // Test implementation
-  });
-});
 ```

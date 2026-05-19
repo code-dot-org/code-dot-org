@@ -1,0 +1,9 @@
+name 'test-music-lab-loops-explore-challenge-choice_v2_2025-v2'
+display_name 'Challenge'
+description 'Choose additional challenges to try!'
+
+sublevels
+level 'music-lab-loops-explore-practice-a_v3_2025-v2'
+level 'music-lab-loops-explore-practice-b_v3_2025-v2'
+level 'music-lab-loops-explore-practice-e_v2_2025-v2'
+level 'music-lab-loops-explore-challenge-freeplay_v2_2025-v2'

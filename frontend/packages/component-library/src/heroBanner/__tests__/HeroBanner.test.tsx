@@ -1,6 +1,6 @@
+import {ButtonProps as MuiButtonProps} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 
-import {LinkButtonProps} from '@/button';
 import {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
 
@@ -63,8 +63,8 @@ describe('HeroBanner', () => {
   });
 
   it('renders button if buttonProps is provided', () => {
-    const buttonProps: LinkButtonProps = {
-      text: 'Click me!',
+    const buttonProps: MuiButtonProps = {
+      children: 'Click me!',
       href: '/link',
     };
     render(<HeroBanner {...defaultProps} buttonProps={buttonProps} />);

@@ -9,6 +9,14 @@ export default defineConfig(({mode}) => {
   const isDev = mode === 'development';
 
   return {
+    build: {
+      outDir: 'dist',
+    },
+    // Radium (used by oceans-lab) references `global` in its CSS vendor-prefix
+    // plugin; shim it to globalThis so the browser context doesn't throw.
+    define: {
+      global: 'globalThis',
+    },
     server: {
       allowedHosts: isDev ? ['localhost-studio.code.org'] : undefined,
       fs: {
@@ -28,11 +36,7 @@ export default defineConfig(({mode}) => {
         target: 'react',
         autoCodeSplitting: true,
       }),
-      react({
-        babel: {
-          plugins: [['babel-plugin-react-compiler']],
-        },
-      }),
+      react(),
     ],
   };
 });

@@ -1,0 +1,26 @@
+name 'SP-VPL-21-mod3-Tools-c4u_25_2026'
+title 'Check for Understanding'
+description 'Match the statement with the appropriate tool.'
+height'125'
+question 'I am looking for a tool that my students can use to make web pages using HTML and CSS.'
+answer 'Web Lab'
+
+question 'I would like to use a tool where students can learn fundamental programming concepts while being given the freedom to create their own games using either text or blocks.'
+answer 'Game Lab'
+
+question 'My students are interested in designing apps that they can share with their friends.'
+answer 'App Lab'
+
+question 'I want to teach my students how to use tabular data to train a machine learning model.'
+answer 'AI Lab'
+
+question 'I want my students to create and remix music while learning programming concepts like sequencing, loops, and triggers.'
+answer 'Music Lab'
+
+question 'I am looking for a tool where my students can interact with an AI to generate text and images while practicing responsible and critical use.'
+answer 'AI Chat Lab'
+
+question 'I would like a tool where students can brainstorm, sketch, and visually organize their ideas using text, images, and shapes.'
+answer 'Sketch Lab'
+
+allow_multiple_attempts true

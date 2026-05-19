@@ -1,5 +1,8 @@
+import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
+import CdoFieldNumber from '@cdo/apps/blockly/addons/cdoFieldNumber';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import {
   updatePointerBlockImage,
   updatePointerBlockWarning,
@@ -16,6 +19,8 @@ import {
 } from '@cdo/apps/blockly/utils/fields/miniToolbox';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
+import CdoFieldDropdown from './blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from './blockly/addons/cdoFieldImage';
 import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
@@ -189,7 +194,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
         input.appendField(title);
       }
       if (titleImage) {
-        input.appendField(new blockly.FieldImage(titleImage));
+        input.appendField(new CdoFieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -299,7 +304,7 @@ exports.cleanBlocks = function (blocksDom) {
  * Adds any functions from functionsXml to blocksXml. If a function with the
  * same id is already present in blocksXml, it won't be added again.
  */
-exports.appendNewFunctions = function (blocksXml, functionsXml) {
+exports.appendNewFunctionsXml = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
@@ -553,12 +558,8 @@ const STANDARD_INPUT_TYPES = {
     addInputRow(blockly, block, inputConfig) {
       const inputRow = block
         .appendValueInput(inputConfig.name)
-        .setAlign(blockly.ALIGN_RIGHT);
-      if (inputConfig.strict) {
-        inputRow.setStrictCheck(inputConfig.type);
-      } else {
-        inputRow.setCheck(inputConfig.type);
-      }
+        .setAlign(BlocklyCore.inputs.Align.RIGHT);
+      inputRow.setCheck(inputConfig.type);
       return inputRow;
     },
     generateCode(block, inputConfig) {
@@ -584,7 +585,7 @@ const STANDARD_INPUT_TYPES = {
         currentInputRow
           .appendField(inputConfig.label)
           .appendField(
-            new Blockly.FieldImage(
+            new CdoFieldImage(
               Blockly.assetUrl(inputConfig.customOptions.assetUrl),
               inputConfig.customOptions.width,
               inputConfig.customOptions.height
@@ -607,7 +608,7 @@ const STANDARD_INPUT_TYPES = {
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = sanitizeOptions(inputConfig.options);
-      const dropdown = new blockly.FieldDropdown(options);
+      const dropdown = new CdoFieldDropdown(options);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdown, inputConfig.name);
@@ -636,7 +637,7 @@ const STANDARD_INPUT_TYPES = {
       // Add the variable field to the block
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(new CdoFieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
@@ -649,13 +650,13 @@ const STANDARD_INPUT_TYPES = {
       const {type} = inputConfig;
       let field;
       if (type === Blockly.BlockValueType.NUMBER) {
-        field = new Blockly.FieldNumber();
+        field = new CdoFieldNumber();
       } else if (type.includes('ClampedNumber')) {
         const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
         if (clampedNumberMatch) {
           const min = parseFloat(clampedNumberMatch[1]);
           const max = parseFloat(clampedNumberMatch[2]);
-          field = new Blockly.FieldNumber(0, min, max);
+          field = new CdoFieldNumber(0, min, max);
         }
       } else {
         field = new Blockly.FieldTextInput();
@@ -935,10 +936,12 @@ exports.createJsWrapperBlockCreator = function (
       init: function () {
         this.setStyle(style || BlockStyles.DEFAULT);
 
+        const check =
+          returnType === Blockly.BlockValueType.NONE ? null : returnType;
         if (returnType) {
           this.setOutput(
             true,
-            returnType,
+            check,
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {

@@ -1,13 +1,11 @@
 /** @file Test InfoHelpTip component */
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
-
-// "it renders" test that checks for FontAwesome and ReactTooltip
 
 describe('InfoHelpTip', () => {
   const DEFAULT_PROPS = {
@@ -15,18 +13,20 @@ describe('InfoHelpTip', () => {
     content: 'test content',
   };
 
-  it('renders FontAwesome', () => {
+  it('renders FontAwesomeV6Icon', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
-    expect(wrapper.find(FontAwesome)).toHaveLength(1);
-    expect(wrapper.find(FontAwesome).props().icon).toBe('info-circle');
+    expect(wrapper.find(FontAwesomeV6Icon)).toHaveLength(1);
+    expect(wrapper.find(FontAwesomeV6Icon).props().iconName).toBe(
+      'circle-info'
+    );
   });
 
   it('renders ReactTooltip', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
     expect(wrapper.find(ReactTooltip)).toHaveLength(1);
     expect(wrapper.find(ReactTooltip).props().id).toBe('test-id');
-    expect(wrapper.find(BodyTwoText)).toHaveLength(1);
-    expect(wrapper.find(BodyTwoText).at(0).props().children).toBe(
+    expect(wrapper.find(Typography)).toHaveLength(1);
+    expect(wrapper.find(Typography).at(0).props().children).toBe(
       'test content'
     );
   });

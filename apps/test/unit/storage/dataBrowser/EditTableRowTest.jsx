@@ -29,7 +29,7 @@ describe('EditTableRow', () => {
       const wrapper = createEditTableRow();
 
       let button = wrapper.find('[id="editTableRowButton"]').at(0);
-      expect(button.prop('text')).toContain('i18n-edit');
+      expect(button.prop('children')).toContain('i18n-edit');
     });
 
     it('should render a localized string for "Save"', () => {
@@ -41,7 +41,7 @@ describe('EditTableRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('[id="saveTableRowButton"]').at(0);
-      expect(saveButton.prop('text')).toContain('i18n-save');
+      expect(saveButton.prop('children')).toContain('i18n-save');
     });
 
     it('should render a localized string for "Delete"', () => {
@@ -53,7 +53,7 @@ describe('EditTableRow', () => {
       const wrapper = createEditTableRow();
 
       let deleteButton = wrapper.find('[id="deleteTableRowButton"]').at(0);
-      expect(deleteButton.prop('text')).toContain('i18n-delete');
+      expect(deleteButton.prop('children')).toContain('i18n-delete');
     });
   });
 });

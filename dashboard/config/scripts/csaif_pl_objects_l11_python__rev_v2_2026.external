@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Objects in Programming 
 
-#### In programming, an **object** is a collection of data (attributes) and behaviors (functions/methods). 
+In programming, an **object** is a collection of data (attributes) and behaviors (functions/methods). 
 
-#### **Objects** are used to model real-world things in a way that computers can understand and manipulate.
+**Objects** are used to model real-world things in a way that computers can understand and manipulate.
 
 ## What is an Object? 
 
@@ -32,12 +32,12 @@ markdown <<MARKDOWN
     </div>
 </div>
 
-#### In Python, **objects** are instances of classes, which define these attributes and functions.
+In Python, **objects** are instances of classes, which define these attributes and functions.
 
 
 ## Example: A Camera as an Object
 
-#### A camera is a great example of an object because it has both attributes (characteristics) and functions (actions it can perform).
+A camera is a great example of an object because it has both attributes (characteristics) and functions (actions it can perform).
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; width: 95%; margin: 20px auto;">
    
@@ -74,7 +74,7 @@ markdown <<MARKDOWN
 </div>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ These concepts are covered in Lesson 5. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ These concepts are covered in Lesson 5. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 ## Next, let's see how the Painter object works in the Neighborhood! 

@@ -3,13 +3,13 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
+Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
 require 'cdo/global_edition'
@@ -26,6 +26,12 @@ require 'cdo/pycall'
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
 
+# Our CI process runs a custom build step before assets:precompile, so we skip
+# Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
+# These must be set before Bundler.require loads vite_ruby, which checks them at load time.
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_EXTENSION"] = "true"
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_INSTALL"] = "true"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -33,12 +39,16 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
-    # Manually configure some values to match defaults for the next version of
-    # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
-    # TODO infra: remove these values once we're loading defaults for 7.0 above
-    config.active_support.disable_to_s_conversion = true
+    # Convert cookies from old (:marshall) to new (:json) default format
+    # TODO infra: remove this override after 40 days in production (as
+    # determined by CDO.dashboard_session_ttl_days)
+    config.action_dispatch.cookies_serializer = :hybrid
+
+    # Continue to use old, 6.1-only cache format version while we figure out
+    # some issues with 7.0
+    config.active_support.cache_format_version = 6.1
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
@@ -52,9 +62,6 @@ module Dashboard
       require 'cdo/rack/cookie_dcdo'
       config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
     end
-
-    require 'cdo/rack/global_edition'
-    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -89,18 +96,15 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
+    config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
-    if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
-      require 'pegasus_sites'
-      config.middleware.insert_after VarnishEnvironment, PegasusSites
-    end
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -131,23 +135,19 @@ module Dashboard
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
     config.i18n.fallbacks[:defaults] = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:map] ||= {}
     config.i18n.default_locale = Cdo::I18n::DEFAULT_LOCALE
     LOCALES = Cdo::I18n::LOCALE_CONFIGS
     Cdo::I18n.available_languages.each do |language|
       locale = language[:locale_s]
-      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+      fallback_locale = Cdo::I18n::LOCALE_FALLBACKS[locale]
 
       config.i18n.available_locales << locale
-      config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
+      config.i18n.fallbacks[:map][locale] = fallback_locale if fallback_locale
     end
 
-    config.after_initialize do
-      # For some reason custom fallbacks need to be set on the I18n module
-      # itself and can't be configured using config.i18n.fallbacks.
-      # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
-      # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
-      I18n.fallbacks.map(es: :'es-MX')
-      I18n.fallbacks.map(pt: :'pt-BR')
+    Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|
+      config.i18n.fallbacks[:map][short_locale] = normalized_locale
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.

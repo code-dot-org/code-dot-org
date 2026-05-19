@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {TEACHER_NAVIGATION_SECTIONS_URL} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
@@ -39,7 +39,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
         : path === 'materials'
         ? EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED
         : EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED;
-    analyticsReporter.sendEvent(navEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(navEvent, {});
   };
 
   return (

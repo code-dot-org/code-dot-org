@@ -11,7 +11,7 @@
         ]
   = f.text_area 'log_conditions', placeholder: 'Insert JSON Data', rows: 4, value: @level.log_conditions ? JSON.pretty_generate(@level.log_conditions) : ''
   :javascript
-    levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
+    levelbuilder.initializeCodeMirror6('level_log_conditions', 'javascript');
 
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}

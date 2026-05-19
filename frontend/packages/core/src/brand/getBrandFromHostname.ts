@@ -1,4 +1,4 @@
-import type {parse} from 'tldjs';
+import type {parse} from 'tldts';
 import type {Brand} from './brand';
 
 export function getBrandFromHostname(

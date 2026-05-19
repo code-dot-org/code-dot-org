@@ -30,7 +30,7 @@ describe('AddTableRow', () => {
       const wrapper = createAddTableRow();
 
       let addButton = wrapper.find('[id="addTableRowButton"]').at(0);
-      expect(addButton.prop('text')).toContain('i18n-add-to-table');
+      expect(addButton.prop('children')).toContain('i18n-add-to-table');
     });
 
     it('should render a localized string for the placeholder text', () => {

@@ -14,8 +14,8 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       margin: 5px;
     }
     .blocklyFieldGrid .blocklyFieldGridItem {
-      border: none;
-      padding: 0px;
+      border: none !important;
+      padding: 0px !important;
       margin: 0px;
     }
     .blocklyFieldGrid .blocklyFieldGridItem img {

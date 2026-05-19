@@ -23,8 +23,6 @@ describe('AdvancedSettingToggles', () => {
       i18n.enableLessonExtrasToggle()
     );
     expect(lessonExtrasToggle).toBeNull();
-    const aiTutorToggle = screen.queryByText(i18n.enableAITutor());
-    expect(aiTutorToggle).toBeNull();
   });
 
   it('renders Lesson Extras toggle when available, enabled', () => {
@@ -55,19 +53,5 @@ describe('AdvancedSettingToggles', () => {
     );
     const ttsToggle = screen.getByLabelText(i18n.enableTtsAutoplayToggle());
     expect(ttsToggle).not.toHaveAttribute('checked');
-  });
-
-  it('renders enable AI Tutor toggle when available, enabled', () => {
-    render(
-      <AdvancedSettingToggles
-        updateSection={() => {}}
-        section={{
-          aiTutorEnabled: true,
-        }}
-        aiTutorAvailable={true}
-      />
-    );
-    const aiTutorToggle = screen.getByLabelText(i18n.enableAITutor());
-    expect(aiTutorToggle).toHaveAttribute('checked');
   });
 });

@@ -38,13 +38,13 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     levelProperties,
     onRun,
     onStop,
-    AiTutorResponseView,
     hiddenContextCallback,
     startSources,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    tutorVideos,
     config,
     onImageFlagged,
   } = useCodebridgeContext();
@@ -131,6 +131,15 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
+  const documentationUrl = useMemo(() => {
+    if (appName === 'pythonlab') {
+      return '/docs/ide/pythonlab';
+    } else if (appName === 'weblab2') {
+      return '/docs/ide/weblab2';
+    }
+    return undefined;
+  }, [appName]);
+
   return (
     <div style={style} className={className}>
       <ResourcePanel
@@ -143,25 +152,22 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isValidating,
           isValidateDisabled: !hasLoadedEnvironment || isRunning,
         }}
-        AiTutorResponseView={AiTutorResponseView}
         className={moduleStyles.instructionsContainer}
         headerClassName={moduleStyles.infoPanelHeader}
         levelProperties={levelProperties}
         requireRun={appName === 'pythonlab'}
         hiddenContextCallback={hiddenContextCallback}
         settings={settings}
+        aiTutorSystemPrompt={aiTutorSystemPrompt}
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
-        isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
-        aiTutorSystemPromptName={aiTutorSystemPromptName}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        documentationUrl={
-          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
-        }
+        tutorVideos={tutorVideos}
+        documentationUrl={documentationUrl}
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}
+        hasInstructionsDrawer={appName === 'weblab2'}
       />
     </div>
   );

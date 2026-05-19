@@ -44,7 +44,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openSaveToBackpackPrompt:** Opens a prompt for saving a file to the user's backpack.
  */
 export const usePrompts = () => {
-  const {levelProperties} = useCodebridgeContext();
+  const {levelProperties, config} = useCodebridgeContext();
   const {validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
@@ -127,6 +127,7 @@ export const usePrompts = () => {
     sendLab2AnalyticsEvent,
     isStartMode,
     validationFile,
+    validFileTypes: config.editableFileTypes,
   } satisfies PAFunctionArgs<typeof globalOpenNewFilePrompt>);
 
   const openMoveFilePrompt = usePartialApply(globalOpenMoveFilePrompt, {

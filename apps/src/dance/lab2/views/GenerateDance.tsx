@@ -1,4 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -305,24 +306,25 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             onTextChange={onAdlibTextChange}
           />
 
-          <Button
-            id="generate-dance-button"
-            ariaLabel={
-              aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
-            }
-            text={
-              aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
-            }
-            type="primary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
-            isPending={aiGenerateState !== 'none'}
+          <MuiButton
+            variant="contained"
+            color="secondary"
+            size="small"
+            loading={aiGenerateState !== 'none'}
+            loadingPosition="start"
             disabled={aiGenerateState !== 'none'}
+            id="generate-dance-button"
             onClick={() => {
               generateDance();
             }}
-          />
+            aria-label={
+              aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+            }
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+          >
+            {aiGenerateState === 'none' ? 'Generate code' : 'Generating code'}
+          </MuiButton>
         </>
       )}
 
@@ -343,13 +345,12 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            className={styles.buttonWide}
             id="back-to-prompt-button"
-            ariaLabel={'Back to prompt'}
-            text={'Back to prompt'}
-            type="secondary"
-            color="black"
-            size="s"
             onClick={() => {
               startOver();
               analyticsReporter.sendEvent(
@@ -357,32 +358,37 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 {levelPath: window.location.pathname}
               );
             }}
-            className={styles.buttonWide}
-          />
+            aria-label="Back to prompt"
+            type="button"
+          >
+            {'Back to prompt'}
+          </MuiButton>
 
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            loadingPosition="start"
+            className={styles.buttonWide}
             id="regenerate-button"
-            ariaLabel={'Regenerate'}
-            text={'Regenerate'}
-            type="secondary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
             onClick={() => {
               startOver();
               resetProgram();
               generateDance(true);
             }}
-            className={styles.buttonWide}
-          />
+            aria-label="Regenerate"
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+          >
+            {'Regenerate'}
+          </MuiButton>
 
-          <Button
+          <MuiButton
+            variant="contained"
+            color="secondary"
+            size="small"
+            className={styles.buttonWide}
             id="use-code-button"
-            ariaLabel={'Use code'}
-            text={'Use code'}
-            type="primary"
-            color="black"
-            size="s"
             onClick={() => {
               // Skip the 'editing' state when showing the three tabs.
               setAiGenerateState(hasParent ? 'edited' : 'editing');
@@ -394,8 +400,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 }
               );
             }}
-            className={styles.buttonWide}
-          />
+            aria-label="Use code"
+            type="button"
+          >
+            {'Use code'}
+          </MuiButton>
         </div>
       )}
 
@@ -430,12 +439,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             showTts={showTts}
           />
           <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Back to prompt'}
-              text={'Back to prompt'}
-              type="secondary"
-              color="black"
-              size="s"
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              className={styles.buttonWide}
               onClick={() => {
                 startOver();
                 analyticsReporter.sendEvent(
@@ -443,8 +451,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                   {levelPath: window.location.pathname}
                 );
               }}
-              className={styles.buttonWide}
-            />
+              aria-label="Back to prompt"
+              type="button"
+            >
+              {'Back to prompt'}
+            </MuiButton>
             {hasParent && (
               <NavigationArea
                 levelProperties={levelProperties}

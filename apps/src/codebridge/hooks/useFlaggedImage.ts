@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -44,14 +44,10 @@ export const useFlaggedImage = () => {
             {'Content-Type': 'application/json; charset=UTF-8'}
           );
           dispatch(setIsBlockedAbuse(true));
-          analyticsReporter.sendEvent(
-            EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
-            {
-              UploaderType: 'Lab2 File Uploader',
-              ProjectType: appName,
-            },
-            PLATFORMS.STATSIG
-          );
+          analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+            UploaderType: 'Lab2 File Uploader',
+            ProjectType: appName,
+          });
         } catch (error) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
@@ -70,14 +66,10 @@ export const useFlaggedImage = () => {
   };
 
   const handleCancelFlaggedImage = (appName: string) => {
-    analyticsReporter.sendEvent(
-      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
-      {
-        UploaderType: 'Lab2 File Uploader',
-        ProjectType: appName,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Lab2 File Uploader',
+      ProjectType: appName,
+    });
     setFlaggedImageData(null);
   };
 

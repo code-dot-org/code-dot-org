@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -80,22 +80,24 @@ class ConfirmImportButton extends React.Component {
           onConfirm={this.handleConfirm}
           title={msg.confirmImportOverwriteTitle()}
         />
-        <Button
-          id="confirmImportButton"
-          text={msg.importCSV()}
-          onClick={() => this.importFileInput.click()}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          loading={this.state.isImporting}
           disabled={this.state.isImporting}
-          isPending={this.state.isImporting}
-          ariaLabel={msg.importCSV()}
           className={classNames(
             dataStyles.button,
             dataStyles.buttonText,
             dataStyles.buttonRightMargin
           )}
-          size="s"
-          type="secondary"
-          color="gray"
-        />
+          id="confirmImportButton"
+          onClick={() => this.importFileInput.click()}
+          aria-label={msg.importCSV()}
+          type="button"
+        >
+          {msg.importCSV()}
+        </MuiButton>
       </span>
     );
   }

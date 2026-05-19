@@ -108,7 +108,7 @@ module Services
     end
 
     def self.get_pdf_enabled_scripts
-      Unit.all.select do |script|
+      Unit.includes(:lessons).all.select do |script|
         next false if [PUBLISHED_STATE.pilot, PUBLISHED_STATE.in_development].include?(script.get_published_state)
         next false if script.use_legacy_lesson_plans
         script.is_migrated && script.seeded_from.present?
@@ -124,7 +124,7 @@ module Services
 
     # Intended to be run to get all lesson plans from all stable units to the AI S3 bucket
     def self.generate_lesson_plan_pdfs_for_all_stable_units
-      Unit.all.select(&:stable?).each do |unit|
+      Unit.includes(lessons: :resources).all.select(&:stable?).each do |unit|
         generate_lesson_plan_pdfs_for_ai(unit)
       end
     end
@@ -183,7 +183,7 @@ module Services
 
     def self.generate_metadata_for_ai(script, lesson)
       course_name = script.get_original_unit_group ? script.get_original_unit_group.name : script.name
-      metadata ={
+      metadata = {
         course: course_name,
         unit_fullname: script.name,
         unit: script.unit_number ? format("U%02d", script.unit_number) : "U01",

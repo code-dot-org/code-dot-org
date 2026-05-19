@@ -1,0 +1,87 @@
+name 'pl-ai-101-V2-mod3-llm-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Categories of AI Use
+
+AI can support many aspects of teaching practice. Being clear about how you are using AI can help ensure it supports your instruction, aligns to your goals, and keeps you in control of decisions.
+
+One way to think about AI use in education is across three common categories:
+
+<div style="display:grid; gap:16px; max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<!-- Card 1 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/26c7cee156eb4de81ef0f03d54404d5e-Screenshot 2026-04-09 at 11.39.48 AM.png" 
+     alt="Planning illustration" 
+     style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Planning and Preparation</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI can support the work you do before instruction.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Brainstorming lesson ideas or activities</li>
+<li>Generating examples, questions, or practice problems</li>
+<li>Creating draft lesson plans, rubrics, or assessments</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+AI helps you save time and explore options, but you decide what to use and how it fits your students and standards.
+</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/bbc956fe61b854eca56e743d69da30e9-Screenshot 2026-04-09 at 11.39.44 AM.png" 
+     alt="Planning illustration" 
+     style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Communication and Materials Creation</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI can help you draft and refine materials you use with students or families.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Writing parent emails or classroom updates</li>
+<li>Creating instructions, handouts, or slide content</li>
+<li>Adjusting language for clarity, tone, or readability</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+AI provides a starting point, but you are responsible for reviewing, revising, and ensuring the final product reflects your voice and context.
+</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div style="display:grid; grid-template-columns:160px 1fr; gap:16px; border:2px solid #8C52BA; border-radius:16px; padding:18px; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="display:flex; align-items:center; justify-content:center; padding:10px;">
+<img src="https://images.code.org/f350733c22d0ac7a2a97019e2e957dbe-Screenshot 2026-04-09 at 11.39.52 AM.png" 
+     alt="Planning illustration" 
+     style="width:200px; height:200px; object-fit:contain;">
+</div>
+<div>
+<div style="font-size:22px; font-weight:800; margin-bottom:8px; color:#141414;">Reflection and Improvement</div>
+<div style="font-size:16px; line-height:1.5; margin-bottom:10px;">
+AI can support you in thinking about and improving your teaching.
+</div>
+<div style="font-size:16px; font-weight:700; margin-bottom:6px;">This might include:</div>
+<ul style="margin:0 0 12px 20px; padding:0; font-size:15px; line-height:1.5;">
+<li>Getting feedback on a lesson plan or assessment</li>
+<li>Identifying gaps in alignment or rigor</li>
+<li>Exploring ways to better support different learners</li>
+</ul>
+<div style="font-size:15px; line-height:1.5;">
+AI acts as a thought partner, helping you reflect and refine your practice while you remain the decision-maker.
+</div>
+</div>
+</div>
+
+</div>
+MARKDOWN

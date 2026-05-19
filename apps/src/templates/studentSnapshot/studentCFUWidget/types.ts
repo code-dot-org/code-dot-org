@@ -1,6 +1,17 @@
-export type CFULevelType = 'Multi' | 'Match' | 'FreeResponse' | 'LevelGroup';
+export type CFULevelType =
+  | 'Multi'
+  | 'Match'
+  | 'FreeResponse'
+  | 'LevelGroup'
+  | 'Aichat'
+  | 'Panels';
 
-export type CFUMultipleLevelAnswer = {text: string; correct: boolean};
+// For Multi CFUs, answers include a correctness flag.
+// For Match CFUs, answers only have text and `correct` is omitted.
+export type CFUMultipleLevelAnswer = {
+  text: string;
+  correct?: boolean;
+};
 
 // Base level properties shared by all level types
 interface CFULevelBase {
@@ -13,6 +24,10 @@ interface CFULevelBase {
   progression?: string;
   progression_display_name?: string;
   question_text: string | string[] | null;
+  level_url?: string | null;
+  // For Match CFUs, the left-column options (terms). For LevelGroup, this
+  // will be an array of per-sublevel options arrays.
+  options?: string[] | (string[] | null)[] | null;
 }
 
 // LevelGroup level - answers is an array of arrays (or nulls)
@@ -23,7 +38,7 @@ export interface CFULevelGroup extends CFULevelBase {
 
 // Other level types - answers is a single array
 export interface CFULevelOther extends CFULevelBase {
-  type: 'Multi' | 'Match' | 'FreeResponse';
+  type: Exclude<CFULevelType, 'LevelGroup'>;
   answers: CFUMultipleLevelAnswer[] | null;
 }
 

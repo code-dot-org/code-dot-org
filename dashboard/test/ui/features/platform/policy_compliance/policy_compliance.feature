@@ -1,6 +1,5 @@
 @no_mobile
 Feature: Policy Compliance
-  @pegasus_content
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
@@ -11,10 +10,6 @@ Feature: Policy Compliance
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Not Submitted"
-
-    # The sign out button should navigate and show the sign in button
-    And I click "#lockout-signout" to load a new page
-    Then check that the URL contains "http://code.org"
 
   Scenario: Existing under 13 account in Colorado should not be locked out.
     Given I am on "http://studio.code.org"
@@ -76,7 +71,7 @@ Feature: Policy Compliance
 
     # Have the student pick a state (outside the policy region)
     Given I select the "Alabama" option in dropdown "user_us_state"
-    Then I click "#submit-update"
+    Then I click "#submit-update" to load a new page
     Then I wait until element "div#account-update-success" is visible
 
     # Right now, we have to assert that the experiment is active

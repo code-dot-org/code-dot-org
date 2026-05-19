@@ -1,0 +1,1217 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-03-20T23:43:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model the scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Heart Button\r\n\r\n- If the user favorites an item, fill the heart with color and add one to the \"favorites\" count.\r\n- If the user un-favorites an item, change the heart to an outline and remove the fill.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "hH2DAUooIAO0vXh9hMv5S",
+            "type": "shape",
+            "position": {
+              "x": 1462.167320067385,
+              "y": -947.9222054181167
+            },
+            "style": {
+              "width": 820.8000488281249,
+              "height": 816.0000305175777
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f5f5f5",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 834,
+              "height": 984
+            },
+            "dragging": false,
+            "resizing": false,
+            "width": 834,
+            "height": 984,
+            "zIndex": -2
+          },
+          {
+            "id": "Bai414pWxTjKhQUOPfvMf",
+            "type": "shape",
+            "position": {
+              "x": 1029.0225811912878,
+              "y": -2180.408229494849
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 419,
+              "height": 658
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "width": 419,
+            "height": 658,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "FtgHojQj0r-NGEdWG3qwn",
+            "type": "shape",
+            "position": {
+              "x": 1115.9966429453027,
+              "y": -1987.65817227439
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": true
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            }
+          },
+          {
+            "id": "zkSEJggB5H41vAfSHlkfy",
+            "type": "shape",
+            "position": {
+              "x": 1063.9965513925683,
+              "y": -1881.4581448085696
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": true
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            }
+          },
+          {
+            "id": "ShdFCxEhX5czohTMarVgm",
+            "type": "shape",
+            "position": {
+              "x": 1111.9965208749902,
+              "y": -2093.6581264980227
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            }
+          },
+          {
+            "id": "ZOBGIFjYik4_rmRsTXfaS",
+            "type": "text",
+            "position": {
+              "x": 1110.6336312672427,
+              "y": -2164.4082714565193
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 255,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "yKrKGz6XJ0YVeZHCRJyAl",
+            "type": "shape",
+            "position": {
+              "x": 1476.7472419095202,
+              "y": -2213.5556053923065
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1228.0001068115228
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "showHandles": false,
+              "locked": false
+            },
+            "measured": {
+              "width": 1880,
+              "height": 1228
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "8oCi9FdX4b1qwt-t9szdG",
+            "type": "shape",
+            "position": {
+              "x": 1655.1095086286714,
+              "y": -719.1627259193004
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User adds \n`Hawaiian shirt` \nto cart",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 331,
+              "height": 95
+            },
+            "width": 331,
+            "height": 95,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "McFE1K1B6hPIr4g31ZgHp",
+            "type": "shape",
+            "position": {
+              "x": 1631.7843906971218,
+              "y": -383.4238765393456
+            },
+            "style": {
+              "width": 386.6180947548282,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is\ntotalPrice > 50",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 387,
+              "height": 176
+            },
+            "dragging": false
+          },
+          {
+            "id": "qlBV88RTuhf7W4W_L-7SG",
+            "type": "shape",
+            "position": {
+              "x": 1687.3196611176857,
+              "y": -887.808269016801
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start Online\nShopping",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 267,
+              "height": 110
+            },
+            "width": 267,
+            "height": 110,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "Mt_aglExI-SgcyRjW1iPJ",
+            "type": "shape",
+            "position": {
+              "x": 1674.376571283142,
+              "y": -542.2616688123853
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Function to \ncalculate Total \nPrice",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 297,
+              "height": 111
+            },
+            "width": 297,
+            "height": 111,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "J74rgIGp6UGdmSgGjoWTH",
+            "type": "shape",
+            "position": {
+              "x": 1509.870839255198,
+              "y": -141.5804892948654
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Free Shipping!",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 237,
+              "height": 104
+            },
+            "dragging": false,
+            "width": 237,
+            "height": 104,
+            "resizing": false
+          },
+          {
+            "id": "vrco96t5fb3aOyVwob9K1",
+            "type": "shape",
+            "position": {
+              "x": 1940.299375806537,
+              "y": -132.00909560066884
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User pays shipping",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 237,
+              "height": 98
+            },
+            "width": 237,
+            "height": 98,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "0_fgPOPFKkFqlOXYeAqI8",
+            "type": "text",
+            "position": {
+              "x": 1761.5081318587456,
+              "y": -942.5178480711562
+            },
+            "data": {
+              "text": "Example",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 101,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "1a0d52a4-fe99-4d14-8162-8c96a82a112e",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1317.456937476612,
+              "y": -1781.0789743591195
+            },
+            "measured": {
+              "width": 130,
+              "height": 95
+            },
+            "width": 130,
+            "height": 95,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "c2823c7d-01da-4260-b681-4c727ce14448",
+            "type": "text",
+            "data": {
+              "text": "Yes"
+            },
+            "position": {
+              "x": 1658.1673256602057,
+              "y": -207.41506444701008
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "bec9375e-9879-4cbb-90fc-94886c19ceda",
+            "type": "text",
+            "data": {
+              "text": "No"
+            },
+            "position": {
+              "x": 1898.1673256602057,
+              "y": -207.41506444701008
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "7fb1df2a-fdad-4ce9-8434-0cec9824311a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1313.0633340260317,
+              "y": -1715.741528495907
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ff7d1853-30a1-457a-933a-f45bb1effc48",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1357.0633492848208,
+              "y": -1882.7415361253015
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "28b8f1b4-3475-429b-a415-ac110d0d3e58",
+            "type": "shape",
+            "position": {
+              "x": 1137.1583299689266,
+              "y": -1653.8028518029735
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Variable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "3351e9fc-53e9-4b6a-b76c-6c07a13f5b0d",
+            "type": "shape",
+            "position": {
+              "x": 2069.729768650603,
+              "y": -536.5758299232233
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "totalPrice",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "55b0ebb3-0a0d-44ff-aa27-acced236d688",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1860.556658013514,
+              "y": -509.4393897760478
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f2ddfeee-7b5e-440c-b997-86c3c2e608be",
+            "type": "lineAnchor",
+            "position": {
+              "x": 2090.5566580135137,
+              "y": -509.4393897760478
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "d1b94516-76cb-4eda-b496-da24d6336f04",
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "target": "J74rgIGp6UGdmSgGjoWTH",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "04112967-7fe5-49b3-b0d3-9d357bc62400",
+            "source": "Mt_aglExI-SgcyRjW1iPJ",
+            "target": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "55ac1357-122a-4dee-b152-94e5057a33b0",
+            "source": "8oCi9FdX4b1qwt-t9szdG",
+            "target": "Mt_aglExI-SgcyRjW1iPJ",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "8c369f96-1162-4ccd-a7b2-29533ad6aace",
+            "source": "qlBV88RTuhf7W4W_L-7SG",
+            "target": "8oCi9FdX4b1qwt-t9szdG",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "target": "vrco96t5fb3aOyVwob9K1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__McFE1K1B6hPIr4g31ZgHpbottom-source-vrco96t5fb3aOyVwob9K1top-target"
+          },
+          {
+            "id": "e6794f6d-2db2-4198-bdc8-8e29bd644d4a",
+            "source": "7fb1df2a-fdad-4ce9-8434-0cec9824311a",
+            "target": "ff7d1853-30a1-457a-933a-f45bb1effc48",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "source": "8oCi9FdX4b1qwt-t9szdG",
+            "sourceHandle": "top-source",
+            "target": "8oCi9FdX4b1qwt-t9szdG",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__8oCi9FdX4b1qwt-t9szdGtop-source-8oCi9FdX4b1qwt-t9szdGtop-target"
+          },
+          {
+            "id": "61f89172-fa0e-4bf1-a056-aea743b2bdd0",
+            "source": "55b0ebb3-0a0d-44ff-aa27-acced236d688",
+            "target": "f2ddfeee-7b5e-440c-b997-86c3c2e608be",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          }
+        ],
+        "viewport": {
+          "x": -219.66637662997397,
+          "y": 622.4444849741747,
+          "zoom": 0.27448023473696315
+        }
+      }
+    },
+    "display_name": "Heart Button",
+    "bubble_choice_description": "Create a flowchart for a \"favorite\" button. ",
+    "thumbnail_url": "https://images.code.org/c33bec9a39042c6dffbc14be5980bf91-Screenshot 2026-04-14 at 5.17.41 PM.png",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "SO1uGidt_JIWQHOH7wQKt",
+            "type": "shape",
+            "position": {
+              "x": -143.765099393992,
+              "y": -238.8905903984341
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 406,
+              "height": 635
+            },
+            "dragging": false
+          },
+          {
+            "id": "8X-BnVzSA4EoPsgs50OQ2",
+            "type": "shape",
+            "position": {
+              "x": -61.274404014261364,
+              "y": -49.323528901677086
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "QjOnV8D59UzNBuIdEDVIM",
+            "type": "shape",
+            "position": {
+              "x": -73.3155987467872,
+              "y": 53.80273727028104
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            },
+            "dragging": false
+          },
+          {
+            "id": "-_duDvXgU-Ctt-bkpxJu7",
+            "type": "shape",
+            "position": {
+              "x": -43.7581970275385,
+              "y": -164.54476700689648
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "WW2Yxn2vYNLhC9XzSHLwc",
+            "type": "text",
+            "position": {
+              "x": -83.61763784142384,
+              "y": -229.25937779425882
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "#1e1e1e",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 319,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "E-J-i8ZMOVy0h_rkSUrMH",
+            "type": "shape",
+            "position": {
+              "x": 357.6307544453307,
+              "y": -284.5743841682765
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1228.0001068115228
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1084,
+              "height": 1222
+            },
+            "width": 1084,
+            "height": 1222,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "ZEUO_CCfuO0tkWX0USowM",
+            "type": "text",
+            "position": {
+              "x": 764.1238164750382,
+              "y": -251.37250376504596
+            },
+            "data": {
+              "text": "Your Workspace",
+              "fontColor": "#1e1e1e",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 221,
+              "height": 54
+            }
+          },
+          {
+            "id": "cVPvLFd41ZuM8v6P5ytwa",
+            "type": "shape",
+            "position": {
+              "x": 691.6765667414722,
+              "y": 60.333221275822865
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 103.29918101686826
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Favorites count is\nset to 0",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 103
+            }
+          },
+          {
+            "id": "L60LkKU4_3eH5cCLUwLEE",
+            "type": "shape",
+            "position": {
+              "x": 582.1289006001514,
+              "y": 404.8591066172654
+            },
+            "style": {
+              "width": 469.8509712291261,
+              "height": 218.84834612244285
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is\n\n",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 470,
+              "height": 219
+            }
+          },
+          {
+            "id": "UBDXelCsG5k33UbY2pnLc",
+            "type": "shape",
+            "position": {
+              "x": 695.5169138421049,
+              "y": -125.65997410532172
+            },
+            "style": {
+              "width": 241.11239683314906,
+              "height": 103.05610928534233
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Go to \nwebsite",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 241,
+              "height": 103
+            }
+          },
+          {
+            "id": "6RRucFdAwKIJS-4qn1YV8",
+            "type": "shape",
+            "position": {
+              "x": 699.1991010433047,
+              "y": 253.55234764048294
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 102
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User clicks heart \nbutton",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 102
+            }
+          },
+          {
+            "id": "tBuxAiXHQZHbhAsv_KD9U",
+            "type": "shape",
+            "position": {
+              "x": 499.0751133630682,
+              "y": 674.0804922769541
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 102
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fill in heart and \nadd one to \nfavoritesCount",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 102
+            }
+          },
+          {
+            "id": "SSyj0MjWCpBP0Fp_n-kIm",
+            "type": "shape",
+            "position": {
+              "x": 913.0890852008316,
+              "y": 669.9137602367333
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 132
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Remove fill from \nheart and \nsubtract one from\nfavoritesCount",
+              "backgroundColor": "#e9ecef",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 132
+            }
+          },
+          {
+            "id": "ymb29PX0VcgtzL_jEMN8O",
+            "type": "text",
+            "position": {
+              "x": 442.38923792038577,
+              "y": 212.1160079740863
+            },
+            "data": {
+              "text": "Model",
+              "fontColor": "#1e1e1e",
+              "fontSize": 34.02796551143896,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 113,
+              "height": 62
+            }
+          },
+          {
+            "id": "iEXxn2uHdN9OeqJmvVY4I",
+            "type": "shape",
+            "position": {
+              "x": 1025.9671323840948,
+              "y": -60.63277671376309
+            },
+            "style": {
+              "width": 286.12810701599943,
+              "height": 117.29418384021795
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "favorites",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 286,
+              "height": 117
+            }
+          },
+          {
+            "id": "qAuxGjjfELfF8OBfvtmpg",
+            "type": "text",
+            "position": {
+              "x": 718.683434243032,
+              "y": 502.05595689438417
+            },
+            "data": {
+              "text": "favorites set \nto true?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 28.832460948025982,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 185,
+              "height": 93
+            }
+          },
+          {
+            "id": "HAmml3CTh4T2_bH293MJN",
+            "type": "shape",
+            "position": {
+              "x": 1035.1115094329784,
+              "y": 110.50596604833308
+            },
+            "style": {
+              "width": 301.7771620535868,
+              "height": 117.29418384021795
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "favoritesCount",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 302,
+              "height": 117
+            }
+          },
+          {
+            "id": "oS3zum_spHBzV96Xt4OZJ",
+            "type": "shape",
+            "position": {
+              "x": -57.06246288594993,
+              "y": 278.28588829676744
+            },
+            "style": {
+              "width": 231.15911762042447,
+              "height": 72.99037364781316
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Variable",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 231,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "6b9a1400-5b2c-4d3c-a0e0-518d5c29977b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 154.08731698312738,
+              "y": 250.10944393384122
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ed97a025-e177-482f-88f9-29595b3d05ce",
+            "type": "lineAnchor",
+            "position": {
+              "x": 198.08733224191644,
+              "y": 83.10943630444669
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "0a6ac2e5-d688-49df-8cb1-c728bfbd1a29",
+            "source": "6b9a1400-5b2c-4d3c-a0e0-518d5c29977b",
+            "target": "ed97a025-e177-482f-88f9-29595b3d05ce",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "b1aff198-800e-4a67-aeda-98d752593775",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "SSyj0MjWCpBP0Fp_n-kIm",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "e525d770-cf39-4db4-8298-c0f2477b908f",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "tBuxAiXHQZHbhAsv_KD9U",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "c071e062-2a95-49b1-8da3-565f38d311da",
+            "source": "6RRucFdAwKIJS-4qn1YV8",
+            "target": "L60LkKU4_3eH5cCLUwLEE",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "ad97b5ef-03a6-4787-8d51-1c01adf12e6d",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "6RRucFdAwKIJS-4qn1YV8",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "55bcd4d9-7601-4408-9d53-25901ceff758",
+            "source": "UBDXelCsG5k33UbY2pnLc",
+            "target": "cVPvLFd41ZuM8v6P5ytwa",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "b2cad140-8467-4fcd-b29c-80df8b8f94eb",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "iEXxn2uHdN9OeqJmvVY4I",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "68ec9ea2-0aba-41b8-8a63-924e8cccdb06",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "HAmml3CTh4T2_bH293MJN",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          }
+        ],
+        "viewport": {
+          "x": 158.76570654107567,
+          "y": 204.15831642016337,
+          "zoom": 0.4405619316675571
+        }
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:29.924+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2025\"},{\"changed_at\":\"2026-04-01 17:12:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:19:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:23:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:25:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:31:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:43:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:42:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:57:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:04 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:00:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-03 18:00:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:55:47 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:15:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:16:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:18:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:21:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:28:52 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:29:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:34:44 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:55 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:41:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:18:48 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 09:49:04 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 09:51:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:06:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:57:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:21:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:23:14 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:25:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:29:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 18:44:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:53:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:09:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

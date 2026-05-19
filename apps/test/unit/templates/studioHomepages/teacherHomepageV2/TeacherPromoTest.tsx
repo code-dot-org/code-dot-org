@@ -70,6 +70,7 @@ describe('TeacherPromo', () => {
     );
 
     const linkElement = screen.getByRole('link', {name: 'Learn More'});
+    // FontAwesomeV6Icon renders as <i>
     expect(linkElement.querySelector('i')).toBeInTheDocument();
   });
 

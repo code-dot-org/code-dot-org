@@ -21,7 +21,7 @@ module AidiffPromptHelper
             },
             "type" => {
               "type" => "string",
-              "enum" => ["short_answer", "multiple_choice", "free_response"],
+              "enum" => %w(short_answer multiple_choice free_response true_false fill_in_the_blank),
               "description" => "The type of question this is, either short answer, multiple choice, or free response"
             },
             "answer" => {
@@ -45,13 +45,13 @@ module AidiffPromptHelper
       "lesson_hook" => {
         "type" => "object",
         "required" => ["introduction", "activity", "wrap_up"],
-        "description"=> "The lesson hook content that will be shown to students. It should be age-appropriate, generate interest in the lesson, take 1-5 minutes, and geared toward student interests.",
+        "description" => "The lesson hook content that will be shown to students. It should be age-appropriate, generate interest in the lesson, take 1-5 minutes, and geared toward student interests.",
         "properties" => {
           "introduction" => {
             "type" => "string",
               "description" => "The introduction of the lesson hook's activity to the students. It should get student attention."
           },
-          "activity" =>{
+          "activity" => {
             "type" => "string",
                 "description" => "A short activity that engages students and frames the lesson content. This should be markdown formatted."
           },

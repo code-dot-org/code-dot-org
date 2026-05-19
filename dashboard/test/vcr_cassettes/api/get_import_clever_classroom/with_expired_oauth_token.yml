@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v2.1/sections/expected_course_id/students
+    uri: https://api.clever.com/v3.0/sections/expected_course_id/users?role=student
     body:
       encoding: US-ASCII
       string: ''

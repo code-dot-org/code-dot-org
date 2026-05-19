@@ -21,6 +21,8 @@
 
 /public/code-studio-package
 /public/apps-package
+/public/studio-package
+/public/frontend-studio
 
 # Vite Ruby
 /public/vite*

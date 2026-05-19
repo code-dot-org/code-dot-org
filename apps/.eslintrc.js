@@ -8,10 +8,7 @@
 const rulesToEventuallyReenable = {
   'jsx-a11y/anchor-is-valid': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
-  'jsx-a11y/label-has-associated-control': 'off',
-  'jsx-a11y/no-noninteractive-element-interactions': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
-  'jsx-a11y/tabindex-no-positive': 'off',
 };
 
 const accessibilityTestingMessage =
@@ -106,6 +103,14 @@ module.exports = {
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
     'mocha/no-exclusive-tests': 'error',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        controlComponents: ['MarkdownEnabledTextarea', 'DatePicker'],
+        assert: 'either',
+        depth: 25,
+      },
+    ],
     'react/button-has-type': 'error',
     'react/display-name': 'off',
     'react/jsx-closing-bracket-location': 'error', // autofixable
@@ -189,6 +194,16 @@ module.exports = {
           {
             name: 'sinon-chai',
             message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: '@code-dot-org/component-library/typography',
+            message:
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
+          },
+          {
+            name: '@code-dot-org/component-library/button',
+            message:
+              'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: cd frontend/packages/component-library && yarn codemod:buttons <path>',
           },
         ],
         patterns: [

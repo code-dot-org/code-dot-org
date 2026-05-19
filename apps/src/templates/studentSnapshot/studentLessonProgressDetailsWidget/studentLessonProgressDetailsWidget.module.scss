@@ -15,6 +15,16 @@
     flex-direction: row;
     gap: 0.25rem;
 
+    .loading {
+      justify-content: center;
+
+      .loadingSpinner {
+        i {
+          padding: 0;
+        }
+      }
+    }
+
     .lessonDetail {
       display: flex;
       flex-direction: row;

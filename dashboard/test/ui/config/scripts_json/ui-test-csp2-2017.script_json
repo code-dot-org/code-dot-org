@@ -1,0 +1,154 @@
+{
+  "script": {
+    "name": "ui-test-csp2-2017",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSP",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-01 00:43:13 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-csp2-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp2-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Lesson One",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp2-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4aa47cd9-da57-4574-bfe6-329cd83c19ff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4aa47cd9-da57-4574-bfe6-329cd83c19ff",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp2-2017"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9455ea03-7c01-4633-9c5a-220b884ad835",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9455ea03-7c01-4633-9c5a-220b884ad835",
+        "lesson_activity.key": "4aa47cd9-da57-4574-bfe6-329cd83c19ff"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab free play"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp2-2017",
+        "activity_section.key": "9455ea03-7c01-4633-9c5a-220b884ad835"
+      },
+      "level_keys": [
+        "gamelab free play"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "gamelab free play",
+        "script_level.level_keys": [
+          "gamelab free play"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csp2-2017",
+        "activity_section.key": "9455ea03-7c01-4633-9c5a-220b884ad835"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

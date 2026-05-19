@@ -52,7 +52,8 @@
       "dining room.jpg": "4b3af1bb-0435-4dcf-b1a3-e29d6dd46d36.jpg",
       "dining room 2.jpeg": "cbd48488-e26f-4e50-b69f-10850b9a0119.jpeg"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:37.926+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice2_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice2_2025\"}]"

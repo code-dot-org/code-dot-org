@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-csf",
+  "script_names": [
+    "ui-test-csf"
+  ],
+  "original_script_names": [
+    "ui-test-csf"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-csf",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
