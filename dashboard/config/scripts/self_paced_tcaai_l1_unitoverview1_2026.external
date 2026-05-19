@@ -15,8 +15,9 @@ markdown <<MARKDOWN
 </div>
 
 In this unit, students investigate how artificial intelligence systems generate output, make predictions, and influence the world around them through hands-on explorations. Throughout the unit, students examine where AI succeeds, where it breaks down, and why human judgment still matters when using AI systems.
+<br><br>
 
-### **Generate and Judge Guide**
+#### **Generate and Judge Guide**
 
 A central throughline of the unit is the **Generate and Judge Guide**, which students build lesson-by-lesson as they test AI systems and refine their thinking about responsible AI use.
 
@@ -32,19 +33,21 @@ By the end of the unit, students synthesize their findings into this final guide
 
 ## Frequently Asked Questions
 
-### **Do I need to be an AI expert to teach this curriculum?**
+#### **Do I need to be an AI expert to teach this curriculum?**
 
 Thinking Critically About AI is designed to build conceptual understanding, not technical expertise. Teachers do not need a background in artificial intelligence, computer science, or programming to successfully teach this unit.
 
 Some familiarity with using large language models (LLMs) and writing prompts can be helpful. However, the unit is intentionally structured so that teachers and students can investigate AI systems together through guided testing, discussion, and reflection.
+<br><Br>
 
-### **How Does the Generate and Judge Guide Work?**
+#### **How Does the Generate and Judge Guide Work?**
 
 The Generate and Judge Guide acts as a throughline across the unit. Students revisit and expand their guide throughout multiple lessons as they test AI systems, collect examples, identify patterns, and refine their thinking.
 
 This ongoing structure helps students move beyond first impressions and toward evidence-based conclusions. By the end of the unit, students will have created a guide grounded in their own investigations, experiences, and reflections about responsible AI use.
+<br><Br>
 
-### **Will students use tools like ChatGPT or other public AI systems?**
+#### **Will students use tools like ChatGPT or other public AI systems?**
 
 Students will interact with AI within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org-managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms. 
 MARKDOWN
