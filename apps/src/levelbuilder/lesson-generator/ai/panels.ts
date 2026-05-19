@@ -17,14 +17,14 @@ import {
   PROMPT_TAGS,
 } from './shared';
 
-const PANEL_LAYOUTS: PanelLayout[] = [
+const PANEL_LAYOUTS = [
   'text-top-left',
   'text-top-center',
   'text-top-right',
   'text-bottom-left',
   'text-bottom-center',
   'text-bottom-right',
-];
+] as const satisfies readonly PanelLayout[];
 
 const panelsPlanSchema = Output.object({
   schema: z.object({
@@ -50,14 +50,7 @@ const panelsPlanSchema = Output.object({
                 'or only suggested by shapes — never spell out any words.'
             ),
           layout: z
-            .enum([
-              'text-top-left',
-              'text-top-center',
-              'text-top-right',
-              'text-bottom-left',
-              'text-bottom-center',
-              'text-bottom-right',
-            ])
+            .enum(PANEL_LAYOUTS)
             .describe('Where the text overlay sits on the panel.'),
         })
       )
@@ -74,11 +67,8 @@ interface PanelPlan {
 
 // Returns the per-panel plan for a Panels-type level. We split planning from
 // image generation so the levelbuilder gets per-panel progress and so a single
-// failed image doesn't waste the whole panel set. The full LevelContext
-// is passed in so the prompt can fold in every outer scope (lesson
-// outline, preceding levels, target project, and — once it lands —
-// unit outline) without growing more positional args. Panels are
-// narrative so the target project mostly informs what to introduce or
+// failed image doesn't waste the whole panel set. Panels are narrative,
+// so the target project (when set) mostly informs what to introduce or
 // motivate; the actual code appears only in adjacent weblab2 levels.
 async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
   const prompt = [

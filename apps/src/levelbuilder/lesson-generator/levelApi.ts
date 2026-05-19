@@ -117,9 +117,14 @@ export async function updateStartSources(
 // Level.permitted_params, so any name accepted there works here. Goes
 // over PUT because Rails routes both PATCH and PUT to :update and
 // HttpClient lacks a patch helper.
+// Narrow the property name to keys this page actually writes. The level
+// edit controller would accept any permitted attribute, but limiting the
+// call sites here catches typos at the boundary and documents intent.
+export type LevelProperty = 'long_instructions' | 'generate_prompt';
+
 export async function updateLevelProperty(
   levelId: number,
-  property: string,
+  property: LevelProperty,
   value: string
 ): Promise<void> {
   const form = new FormData();
