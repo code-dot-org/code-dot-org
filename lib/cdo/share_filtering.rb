@@ -181,7 +181,7 @@ module ShareFiltering
   # @param [String] program_name the student's program's name
   # @param [String] locale a two-character ISO 639-1 language code
   def self.find_name_failure(program_name, locale, exceptions: false)
-    # return nil unless Gatekeeper.allows('webpurify', default: true)
+    return nil unless Gatekeeper.allows('webpurify', default: true)
 
     find_failure(program_name, locale, {}, exceptions: exceptions)
   end
@@ -350,7 +350,7 @@ module ShareFiltering
   # @return [ShareFailure, nil]
   def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
     # We only fail programs when the webpurity service is enabled
-    # return nil unless Gatekeeper.allows('webpurify', default: true)
+    return nil unless Gatekeeper.allows('webpurify', default: true)
 
     # First, check for PII issues
     pii_failure = find_pii_failure(text, exceptions: exceptions)

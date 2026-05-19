@@ -85,8 +85,6 @@ module Geocoder
   MAX_GEOCODER_ATTEMPTS = 3
 
   def self.find_potential_street_address(text)
-    puts "find_potential_street_address"
-    puts "text: #{text}"
     return nil unless text
 
     # Try each multi-digit number as a potential address start.
@@ -98,7 +96,6 @@ module Geocoder
 
       pos = Regexp.last_match.begin(0)
       candidate = text[pos..].split.first(MAX_ADDRESS_WORDS).join(' ')
-      puts "candidate: #{candidate}"
 
       next if candidate.length < MIN_ADDRESS_LENGTH
       next if candidate.count(' ') < 2
@@ -109,9 +106,6 @@ module Geocoder
       # Skip unless a result is a street-level address (place_type 'address') with relevance >= 0.8.
       # Mapbox returns high relevance scores for city/region matches too, so place_type guards against those.
       next if results.none? do |r|
-        puts r.relevance
-        puts r.address
-        puts r.data['place_type']
         r.relevance >= 0.8 && r.address && r.data['place_type']&.include?('address')
       end
 
