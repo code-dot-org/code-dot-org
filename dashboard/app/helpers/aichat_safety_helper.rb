@@ -23,10 +23,6 @@ module AichatSafetyHelper
       input = safety_check_input(text, level_id)
       output_type = 'Unstructured'
 
-      # Release DB connection before blocking on HTTP — prevents exhausting the
-      # connection pool while waiting on OpenAI (which can take up to 30s).
-      ActiveRecord::Base.connection_pool.release_connection
-
       # Retry only on network-related exceptions.
       response = Retryable.retryable(
         tries: 2,
