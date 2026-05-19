@@ -1,7 +1,7 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
-import {useClipboard} from '../context';
+import {useClipboard, usePushSnapshot} from '../context';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
@@ -20,15 +20,21 @@ export default function NodeActionsGroup({
   const {deleteElements, updateNode, updateNodeData, getNodes, getEdges} =
     useReactFlow();
   const {duplicateNode} = useClipboard();
+  const pushSnapshot = usePushSnapshot();
   return (
     <ActionsGroup
       onDelete={() => deleteElements({nodes: [{id: nodeId}]})}
-      onLock={() => updateNodeData(nodeId, {locked: true})}
+      onLock={() => {
+        pushSnapshot();
+        updateNodeData(nodeId, {locked: true});
+      }}
       onBringToFront={() => {
+        pushSnapshot();
         const items = [...getNodes(), ...getEdges()];
         updateNode(nodeId, {zIndex: newFrontZIndex(items, nodeId)});
       }}
       onSendToBack={() => {
+        pushSnapshot();
         const items = [...getNodes(), ...getEdges()];
         updateNode(nodeId, {zIndex: newBackZIndex(items, nodeId)});
       }}
