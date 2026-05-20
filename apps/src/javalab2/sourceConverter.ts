@@ -14,14 +14,7 @@ import {
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
-export interface JavalabFlatFile {
-  text: string;
-  tabOrder: number;
-  isVisible: boolean;
-  isValidation: boolean;
-}
-
-export type JavalabFlatSource = Record<string, JavalabFlatFile>;
+import {JavalabFlatFile, JavalabFlatSource} from './types';
 
 function projectFileType(flat: JavalabFlatFile): ProjectFileType {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
@@ -62,9 +55,9 @@ export function flatToMultiFile(
     .map(([name, props], i) => ({name, props, i}))
     .filter(e => e.props.isVisible && !e.props.isValidation);
   visible.sort((a, b) => {
-    const ta = Number.isFinite(a.props.tabOrder) ? a.props.tabOrder : a.i;
-    const tb = Number.isFinite(b.props.tabOrder) ? b.props.tabOrder : b.i;
-    if (ta !== tb) return ta - tb;
+    const tabA = resolveTabOrder(a.props.tabOrder, a.i);
+    const tabB = resolveTabOrder(b.props.tabOrder, b.i);
+    if (tabA !== tabB) return tabA - tabB;
     return a.i - b.i;
   });
   const openFiles = visible
@@ -72,6 +65,18 @@ export function flatToMultiFile(
     .filter((id): id is FileId => !!id);
 
   return {folders: {}, files, openFiles};
+}
+
+// tabOrder is optional on the legacy shape and can be missing, NaN, or
+// duplicated across files. Fall back to the file's position in the source
+// hash when it isn't a usable finite number.
+function resolveTabOrder(
+  tabOrder: number | undefined,
+  fallback: number
+): number {
+  return typeof tabOrder === 'number' && Number.isFinite(tabOrder)
+    ? tabOrder
+    : fallback;
 }
 
 function isVisibleForFlatShape(file: ProjectFile): boolean {

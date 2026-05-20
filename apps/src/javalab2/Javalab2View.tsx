@@ -26,8 +26,8 @@ import {
   stopJavaCode,
 } from './javabuilderRunner';
 import HorizontalLayout from './layout/HorizontalLayout';
-import {flatToMultiFile, JavalabFlatSource} from './sourceConverter';
-import {JavalabLevelProperties} from './types';
+import {flatToMultiFile} from './sourceConverter';
+import {JavalabFlatSource, JavalabLevelProperties} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),

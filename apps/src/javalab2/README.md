@@ -61,6 +61,11 @@ Conversion is confined to two boundaries:
 of truth for the flat schema. Tests live in
 `apps/test/unit/javalab2/sourceConverterTest.ts`.
 
+Right now it's simplest to keep the old format so we don't have to touch Javabuilder.
+However, this format prevents us from enabling folders. A potential extension if we want to enable
+folders would be to start persisting code as MultiFileSource and have Javabuilder handle
+that format.
+
 ## Run flow
 
 `javabuilderRunner.ts` reuses the legacy

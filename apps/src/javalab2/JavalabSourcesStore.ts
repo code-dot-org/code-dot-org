@@ -5,11 +5,8 @@ import {
   ProjectType,
 } from '@cdo/apps/lab2/types';
 
-import {
-  flatToMultiFile,
-  JavalabFlatSource,
-  multiFileToFlat,
-} from './sourceConverter';
+import {flatToMultiFile, multiFileToFlat} from './sourceConverter';
+import {JavalabFlatSource} from './types';
 
 // Java Lab persists sources to S3 in a legacy flat shape
 // ({filename: {text, tabOrder, isVisible, isValidation}}) for compatibility

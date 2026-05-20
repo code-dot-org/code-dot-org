@@ -3,8 +3,8 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   flatToMultiFile,
   multiFileToFlat,
-  JavalabFlatSource,
 } from '@cdo/apps/javalab2/sourceConverter';
+import {JavalabFlatSource} from '@cdo/apps/javalab2/types';
 import {
   MultiFileSource,
   ProjectFileType,
@@ -95,6 +95,20 @@ describe('javalab2 sourceConverter', () => {
       const names = (mf.openFiles ?? []).map(id => mf.files[id].name);
       expect(names).toEqual(['A.java', 'B.java', 'C.java']);
     });
+
+    it('tolerates tabOrder and isValidation being absent', () => {
+      // The legacy on-the-wire shape marks both fields optional; old level
+      // configs may omit them entirely.
+      const mf = flatToMultiFile({
+        'A.java': {text: 'a', isVisible: true},
+        'B.java': {text: 'b', isVisible: true},
+      });
+      const names = (mf.openFiles ?? []).map(id => mf.files[id].name);
+      expect(names).toEqual(['A.java', 'B.java']);
+      Object.values(mf.files).forEach(f => {
+        expect(f.type).toBe(ProjectFileType.STARTER);
+      });
+    });
   });
 
   describe('multiFileToFlat', () => {
@@ -124,13 +138,17 @@ describe('javalab2 sourceConverter', () => {
         expect(round[name].isValidation).toBe(original[name].isValidation);
       });
 
+      // multiFileToFlat always assigns a tabOrder, even though the type
+      // field is optional on the wire.
+      const mainTab = round['Main.java'].tabOrder!;
+      const helperTab = round['Helper.java'].tabOrder!;
+      const hiddenTab = round['Hidden.java'].tabOrder!;
+      const testTab = round['Test.java'].tabOrder!;
       // Visible files keep their relative order in tabOrder
-      expect(round['Main.java'].tabOrder).toBeLessThan(
-        round['Helper.java'].tabOrder
-      );
+      expect(mainTab).toBeLessThan(helperTab);
       // Hidden / validation files get a tabOrder >= count of visible files
-      expect(round['Hidden.java'].tabOrder).toBeGreaterThanOrEqual(2);
-      expect(round['Test.java'].tabOrder).toBeGreaterThanOrEqual(2);
+      expect(hiddenTab).toBeGreaterThanOrEqual(2);
+      expect(testTab).toBeGreaterThanOrEqual(2);
     });
 
     it('SUPPORT and VALIDATION files report isVisible=false', () => {

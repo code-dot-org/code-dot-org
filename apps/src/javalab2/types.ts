@@ -2,6 +2,18 @@ import {CodebridgeLevelProperties} from '@codebridge/types';
 
 export type CsaViewMode = 'console' | 'neighborhood' | 'theater';
 
+// Java Lab's legacy on-the-wire source shape. The S3 main.json holds
+// {source: <JavalabFlatSource>} and startSources /
+// templateSources / exemplarSources are also in this shape.
+export interface JavalabFlatFile {
+  text: string;
+  tabOrder?: number;
+  isVisible: boolean;
+  isValidation?: boolean;
+}
+
+export type JavalabFlatSource = Record<string, JavalabFlatFile>;
+
 // Java Lab 2's levelProperties extend the codebridge ones. start_sources,
 // template_sources, and exemplar_sources arrive over the wire in the
 // legacy flat JavalabFlatSource shape, but they share field names with
