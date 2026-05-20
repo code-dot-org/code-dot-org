@@ -1,11 +1,8 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {TextLink} from '@dsco_/link';
-import {
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-  Typography,
-} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
@@ -331,16 +328,11 @@ const ExpandedCurriculumCatalogCard = ({
             </div>
             <div className={style.relatedCurriculaContainer}>
               <div className={style.closeButtonContainer}>
-                <MuiIconButton
+                <CloseButton
                   onClick={onClose}
-                  variant="text"
-                  color="secondary"
-                  size="medium"
-                  className={style.closeButton}
                   aria-label="Close Button"
-                >
-                  <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-                </MuiIconButton>
+                  size="l"
+                />
               </div>
               {recommendedSimilarCurriculum && (
                 <div className={style.relatedContainer}>

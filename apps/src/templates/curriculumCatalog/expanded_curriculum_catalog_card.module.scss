@@ -39,29 +39,6 @@ $container-width: 960px;
   display: flex;
   justify-content: end;
   line-height: normal;
-
-  button.closeButton {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    height: auto;
-  }
-
-  button:active {
-    border: none !important;
-  }
-
-  button:hover {
-    background-color: transparent;
-  }
-
-  i {
-    text-decoration: none;
-    color: var(--text-neutral-quaternary);
-    font-size: 20px;
-  }
 }
 
 .compatibilityContainer {
@@ -143,7 +120,7 @@ $container-width: 960px;
 
   i {
     font-size: 0.875rem;
-    color: var(--text-neutral-quaternary);
+    color: var(--text-neutral-secondary);
     line-height: 1.48;
   }
 }
@@ -264,7 +241,7 @@ p.subjectsText {
   position: relative;
   max-width: 600px;
   height: auto;
-  border: 1px solid var(--borders-neutral-solid);
+  border: 1px solid transparent;
   padding-top: 16px;
   box-sizing: border-box;
 }
