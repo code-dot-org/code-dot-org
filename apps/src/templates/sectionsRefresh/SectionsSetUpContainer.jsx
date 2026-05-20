@@ -423,7 +423,12 @@ export default function SectionsSetUpContainer({
           >
             {i18n.setUpClassSectionsSubheader()}
           </Typography>
-          <MuiButton color="primary" variant="text" onClick={onURLClick}>
+          <MuiButton
+            type="button"
+            color="primary"
+            variant="text"
+            onClick={onURLClick}
+          >
             {i18n.setUpClassSectionsSubheaderLink()}
           </MuiButton>
         </>
