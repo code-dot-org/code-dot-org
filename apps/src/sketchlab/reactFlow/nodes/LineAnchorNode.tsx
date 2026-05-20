@@ -12,7 +12,7 @@ import {lineAnchorHandleId} from '../utils/lineAnchors';
 
 import styles from './line-anchor-node.module.scss';
 
-function LineAnchorNode({data, selected}: NodeProps<LineAnchorNodeType>) {
+function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
   const isSourceAnchor = data.lineAnchorRole === 'source';
   const handleType = isSourceAnchor ? 'source' : 'target';
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
@@ -22,11 +22,12 @@ function LineAnchorNode({data, selected}: NodeProps<LineAnchorNodeType>) {
   // as we create two hidden nodes with an edge in between them.
   const isConnectable = connections.length === 0;
 
-  // When handles are hidden the anchor is invisible, which makes keyboard
-  // focus invisible too. Unhide while this anchor is the focused entry
-  // so the user can see where they are without losing the persistent
-  // hide-handles preference.
-  const showHandles = data.showHandles !== false || selected;
+  // When data.showHandles is false the handle is hidden via the .hidden
+  // class. The handle is re-shown when the wrapper .react-flow__node-lineAnchor
+  // has DOM :focus — see react-flow-canvas.module.scss. We rely on DOM
+  // focus rather than the `selected` prop so the override still applies in
+  // read-only mode (where displayNodes forces selected=false).
+  const showHandles = data.showHandles !== false;
 
   return (
     <div className={styles.anchorNode} aria-label="Line endpoint">
