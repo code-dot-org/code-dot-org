@@ -9,42 +9,45 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student_ids
 
   test 'demo_student_ids returns ids for known type' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3'], 'middle' => ['4', '5']})
+    high1 = create(:student)
+    high2 = create(:student)
+    create(:student) # middle, not returned
+    DemoStudent.create!(user: high1, demo_type: 'high')
+    DemoStudent.create!(user: high2, demo_type: 'high')
 
-    assert_equal [2, 3], Policies::DemoSections.demo_student_ids(:high)
+    assert_equal [high1.id, high2.id].sort, Policies::DemoSections.demo_student_ids(:high).sort
   end
 
   test 'demo_student_ids returns empty array for unknown demo type' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    DemoStudent.create!(user: create(:student), demo_type: 'high')
 
     assert_equal [], Policies::DemoSections.demo_student_ids(:unknown_type)
   end
 
-  test 'demo_student_ids returns empty array when config is nil' do
-    CDO.stubs(:demo_student_ids).returns(nil)
-
+  test 'demo_student_ids returns empty array when no rows exist' do
     assert_equal [], Policies::DemoSections.demo_student_ids(:high)
   end
 
-  test 'demo_student_ids converts string ids to integers' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['10', '11']})
+  test 'demo_student_ids accepts string argument' do
+    student = create(:student)
+    DemoStudent.create!(user: student, demo_type: 'high')
 
-    assert_equal [10, 11], Policies::DemoSections.demo_student_ids(:high)
+    assert_equal [student.id], Policies::DemoSections.demo_student_ids('high')
   end
 
   # all_demo_student_ids
 
   test 'all_demo_student_ids returns combined ids from all types' do
-    CDO.stubs(:demo_student_ids).returns(
-      {'high' => ['2', '3'], 'middle' => ['4', '5'], 'elementary' => []}
-    )
+    high = create(:student)
+    middle = create(:student)
+    DemoStudent.create!(user: high, demo_type: 'high')
+    DemoStudent.create!(user: middle, demo_type: 'middle')
+    Policies::DemoSections.reset_cache!
 
-    assert_equal [2, 3, 4, 5], Policies::DemoSections.all_demo_student_ids.sort
+    assert_equal Set[high.id, middle.id], Policies::DemoSections.all_demo_student_ids
   end
 
-  test 'all_demo_student_ids returns empty array when config is nil' do
-    CDO.stubs(:demo_student_ids).returns(nil)
-
+  test 'all_demo_student_ids returns empty set when no rows exist' do
     assert_equal Set[], Policies::DemoSections.all_demo_student_ids
   end
 
@@ -184,14 +187,17 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student?
 
   test 'demo_student? returns true for a demo student id' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    student = create(:student)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
-    assert Policies::DemoSections.demo_student?(2)
+    assert Policies::DemoSections.demo_student?(student.id)
   end
 
   test 'demo_student? returns false for a non-demo student id' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    DemoStudent.create!(user: create(:student), demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
-    refute Policies::DemoSections.demo_student?(999)
+    refute Policies::DemoSections.demo_student?(-1)
   end
 end

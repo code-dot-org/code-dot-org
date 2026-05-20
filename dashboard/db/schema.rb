@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_20_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -639,6 +639,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "demo_students", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "demo_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["demo_type"], name: "index_demo_students_on_demo_type"
+    t.index ["user_id", "demo_type"], name: "index_demo_students_on_user_id_and_demo_type", unique: true
+    t.index ["user_id"], name: "index_demo_students_on_user_id"
   end
 
   create_table "donor_schools", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2879,6 +2889,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_12_120000) do
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
+  add_foreign_key "demo_students", "users"
   add_foreign_key "external_notifications", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"
