@@ -9,8 +9,7 @@
     "the-design-process-2026",
     "data-and-society-2026",
     "creating-apps-with-devices-circuit-2026",
-    "creating-apps-with-devices-microbit-2026",
-    "problem-solving-and-computing-2026"
+    "creating-apps-with-devices-microbit-2026"
   ],
   "unit_prefixes": [
     "1",
@@ -21,8 +20,7 @@
     "5",
     "6",
     "7a",
-    "7b",
-    "10"
+    "7b"
   ],
   "original_script_names": [
     "web-development-2026",
@@ -33,7 +31,7 @@
     "data-and-society-2026",
     "creating-apps-with-devices-circuit-2026",
     "creating-apps-with-devices-microbit-2026",
-    "problem-solving-and-computing-2026"
+    "programming-with-music-lab-2026"
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
