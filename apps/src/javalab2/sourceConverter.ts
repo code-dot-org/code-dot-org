@@ -4,6 +4,9 @@
 // MultiFileSource. Conversion happens at exactly two boundaries:
 // JavalabSourcesStore (S3 round-trip) and Javalab2View (start_sources at
 // mount). These functions are pure.
+// Known issue: we don't persist which files are 'open' when converting,
+// because legacy Java Lab did not have a concept of closing files.
+// This will be handled in a future phase.
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 

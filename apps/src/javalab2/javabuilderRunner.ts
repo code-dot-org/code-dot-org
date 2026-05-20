@@ -3,8 +3,6 @@ import {Dispatch, AnyAction} from 'redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
 import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
-// The legacy Javabuilder connection is reused as-is. A TS port can come later;
-// for Phase 1 we only need a working console run.
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -81,8 +79,7 @@ export async function handleRunClick(
     };
 
     // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
-    // handling, no validation result reporting. Callbacks for those slots are
-    // no-ops so the legacy class still satisfies its contract.
+    // handling, no validation result reporting.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       /* miniApp */ null,
