@@ -6,6 +6,7 @@ import {ExecutionType} from '@cdo/apps/javalab/constants';
 // The legacy Javabuilder connection is reused as-is. A TS port can come later;
 // for Phase 1 we only need a working console run.
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 
 import {JavalabLevelProperties} from './types';
@@ -58,6 +59,12 @@ export async function handleRunClick(
 
   dispatch(setHasRun(true));
 
+  // Lab2 owns the channel id via ProjectManager rather than the legacy
+  // `project` singleton, so pass it through explicitly.
+  const channelId = Lab2Registry.getInstance()
+    .getProjectManager()
+    ?.getChannelId();
+
   // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
   // handling, no validation result reporting. Callbacks for those slots are
   // no-ops so the legacy class still satisfies its contract.
@@ -70,14 +77,15 @@ export async function handleRunClick(
     /* setIsRunning */ () => {},
     /* setIsTesting */ () => {},
     ExecutionType.RUN,
-    /* miniAppType */ undefined,
+    /* miniAppType */ levelProperties.csaViewMode || 'console',
     state.currentUser,
     /* onMarkdownLog */ writeToConsole,
     csrfToken,
     /* onValidationPassed */ () => {},
     /* onValidationFailed */ () => {},
     /* onConnectDone */ () => {},
-    /* setIsCaptchaDialogOpen */ () => {}
+    /* setIsCaptchaDialogOpen */ () => {},
+    channelId
   );
 
   activeConnection.connectJavabuilder();
