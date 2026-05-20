@@ -6,7 +6,7 @@ import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {useClipboard} from '../context';
+import {useClipboard, usePushSnapshot} from '../context';
 import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
@@ -129,6 +129,7 @@ export default function LineEdgeToolbar({
 }: LineEdgeToolbarProps) {
   const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
     useReactFlow();
+  const pushSnapshot = usePushSnapshot();
 
   const isLocked = edge.data?.locked === true;
 
@@ -150,6 +151,7 @@ export default function LineEdgeToolbar({
     anchorEndpoints.length > 0
       ? () => {
           const next = !handlesVisible;
+          pushSnapshot();
           anchorEndpoints.forEach(n =>
             updateNodeData(n.id, {showHandles: next})
           );
