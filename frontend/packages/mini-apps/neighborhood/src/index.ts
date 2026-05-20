@@ -24,6 +24,7 @@ export type {
   ConsoleSignal,
   ConsoleSignalType,
   NeighborhoodExceptionType,
+  NeighborhoodLevelProperties,
   NeighborhoodSignal,
   NeighborhoodSignalType,
 } from './types';

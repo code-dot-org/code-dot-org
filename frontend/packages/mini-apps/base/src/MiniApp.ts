@@ -2,12 +2,10 @@ import type {ComponentType} from 'react';
 
 /**
  * Props passed to a mini-app's preview component by the codebridge runtime.
- * Kept narrow; mini-apps that need more should accept it via their own
- * factory `deps` instead.
+ * Currently empty; reserved so the contract has a stable place to grow.
  */
-export interface MiniAppPreviewProps {
-  handleScaling?: boolean;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface MiniAppPreviewProps {}
 
 /**
  * Console + run-state callbacks that codebridge supplies to a mini-app at
@@ -83,12 +81,6 @@ export interface MiniApp<Signal = unknown> {
    * their existing canvas directly.
    */
   captureThumbnail?(): Promise<HTMLCanvasElement | null>;
-
-  /**
-   * Optional: preview scaling factor codebridge should apply when laying
-   * out the panel. Returning undefined keeps the default.
-   */
-  getPreviewScale?(): number | undefined;
 
   /** The React component codebridge renders inside the preview panel. */
   PreviewComponent: ComponentType<MiniAppPreviewProps>;

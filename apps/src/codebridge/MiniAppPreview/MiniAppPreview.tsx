@@ -9,16 +9,12 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {createMiniApp, getMiniAppAdapter} from '@codebridge/miniAppRegistry';
 import {IconButton as MuiIconButton} from '@mui/material';
-import {throttle} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
-import {scaleMiniApp} from '../Workspace/outputHelpers';
 
 import moduleStyles from './mini-app-preview.module.scss';
 
@@ -28,7 +24,6 @@ interface MiniAppPreviewProps {
   isMaximized: boolean;
   style?: React.CSSProperties;
   showMaximizeButton?: boolean;
-  handleScaling?: boolean;
 }
 
 const tooltipProps: TooltipProps = {
@@ -44,7 +39,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   isMaximized,
   style,
   showMaximizeButton = true,
-  handleScaling,
 }) => {
   const {levelProperties} = useCodebridgeContext();
   const dispatch = useAppDispatch();
@@ -92,32 +86,12 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     };
   }, [miniAppName, dispatch]);
 
-  // Window-resize scaling. The container ref points at the wrapper
-  // around the rendered preview; on resize we recompute the scale and
-  // apply it through the shared apps-side helper.
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scaleForWindowResize = useCallback(() => {
-    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
-    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
-    scaleMiniApp(height, width);
-  }, []);
-  const throttledScale = useMemo(
-    () => throttle(scaleForWindowResize, 30),
-    [scaleForWindowResize]
-  );
-  useEffect(() => {
-    if (!handleScaling || !miniApp) return;
-    throttledScale();
-    window.addEventListener('resize', throttledScale);
-    return () => window.removeEventListener('resize', throttledScale);
-  }, [throttledScale, handleScaling, miniApp]);
-
   const miniAppComponent = useMemo(() => {
     const PreviewComponent = miniApp?.PreviewComponent;
     if (!PreviewComponent || !miniAppName) return null;
     const rendered = (
-      <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-        <PreviewComponent handleScaling={handleScaling} />
+      <div className={moduleStyles.miniAppContainer}>
+        <PreviewComponent />
       </div>
     );
     const Adapter = getMiniAppAdapter(miniAppName);
@@ -125,7 +99,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       return <Adapter miniApp={miniApp}>{rendered}</Adapter>;
     }
     return rendered;
-  }, [miniApp, miniAppName, handleScaling]);
+  }, [miniApp, miniAppName]);
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);

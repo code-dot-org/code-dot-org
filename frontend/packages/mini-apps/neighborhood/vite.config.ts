@@ -56,6 +56,13 @@ export default defineConfig({
           // side resolves via the `require` exports-map entry, so
           // this is the consumer the CJS dist actually serves.
           interop: 'auto',
+          // Emit a single CJS chunk. Without this, canvg's internal
+          // `import(...)` calls cause rollup to code-split the bundle
+          // into two chunks that reference each other — apps's webpack
+          // circular-dependency checker then fails the build. ESM
+          // output keeps its split because no current consumer trips
+          // a cycle check on it.
+          inlineDynamicImports: true,
         },
       ],
     },

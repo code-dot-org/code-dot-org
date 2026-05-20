@@ -14,7 +14,6 @@ import {
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
 } from './constants';
-import {scaleMiniApp} from './outputHelpers';
 
 interface VerticalOutputProps {
   className?: string;
@@ -100,12 +99,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
           );
         }
         setAdjustedMiniAppHeight(newMiniAppHeight);
-
-        const newHeight = newMiniAppHeight;
-        const newWidth = desiredWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setMiniAppPreviewScale(scale);
 
         setWaitingForResize(false);
       }

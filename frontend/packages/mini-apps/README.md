@@ -44,7 +44,6 @@ interface MiniApp<Signal = unknown> {
 
   parseException?(traceback: string): string | null;
   captureThumbnail?(): Promise<HTMLCanvasElement | null>;
-  getPreviewScale?(): number | undefined;
 
   PreviewComponent: ComponentType<MiniAppPreviewProps>;
 }
@@ -66,8 +65,8 @@ Codebridge and PythonLab drives the mini-app through `pyodideRunner` and
 6. After a successful run, codebridge calls `captureThumbnail?()`. The
    mini-app rasterizes its visualization into a canvas (SVG-based
    mini-apps can use the `svgToCanvas` helper from
-   `@code-dot-org/mini-app-base/svg`); codebridge then crops by preview
-   scale, downsizes to thumbnail width, encodes a PNG, and saves it.
+   `@code-dot-org/mini-app-base/svg`); codebridge then downsizes it to
+   thumbnail width, encodes a PNG, and saves it.
 
 `reset()` is independent of run lifecycle; codebridge calls it when the
 student edits the project (e.g. resets the maze).

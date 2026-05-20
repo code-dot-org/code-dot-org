@@ -14,7 +14,6 @@ import {
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
 } from './constants';
-import {scaleMiniApp} from './outputHelpers';
 
 interface HorizontalOutputProps {
   height: number;
@@ -107,12 +106,6 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
           );
         }
         setAdjustedMiniAppWidth(newMiniAppWidth);
-
-        const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
-        const newWidth = newMiniAppWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setMiniAppPreviewScale(scale);
 
         setWaitingForResize(false);
       }

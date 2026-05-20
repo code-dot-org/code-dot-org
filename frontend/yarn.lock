@@ -1613,6 +1613,7 @@ __metadata:
     "@types/react-dom": "catalog:"
     "@vitejs/plugin-react": "catalog:"
     canvg: "npm:^4.0.3"
+    classnames: "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
     prettier: "catalog:"

@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import {useState, type ChangeEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -27,14 +28,9 @@ const NeighborhoodVisualization = ({
   };
 
   return (
-    <div className={className}>
+    <div className={classnames(moduleStyles.container, className)}>
       <div className={moduleStyles.neighborhoodPreviewBackground}>
-        {/* id="visualization" is a runtime contract with apps —
-            scaleMiniApp (apps/src/codebridge/Workspace/outputHelpers.ts)
-            uses a jQuery selector on this id to apply responsive
-            sizing on resize. The .visualization class supplies the
-            initial static layout. */}
-        <div id="visualization" className={moduleStyles.visualization}>
+        <div className={moduleStyles.visualization}>
           <svg id={SVG_ID} className={moduleStyles.fitted}>
             <g id={LOOK_ID}>
               <path d="M 0,-15 a 15 15 0 0 1 15 15" />

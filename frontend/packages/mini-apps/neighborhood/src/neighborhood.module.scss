@@ -1,30 +1,20 @@
 .container {
   background: var(--background-neutral-black-fixed);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .neighborhoodPreviewBackground {
   background: var(--background-neutral-black-fixed);
+  flex: 1 1;
+  overflow: hidden;
 }
 
-// Layout for the visualization wrapper. Previously inherited from
-// apps/style/common.scss's `#visualization` rule via the legacy
-// MazeVisualization → ProtectedVisualizationDiv chain; now owned by
-// the package so the layout works without depending on apps stylesheets.
-// The `#visualization` id on the wrapper element is still required —
-// `scaleMiniApp` in apps (apps/src/codebridge/Workspace/outputHelpers.ts)
-// looks it up via jQuery on resize to apply explicit width/height/
-// margin-left for responsive sizing and horizontal centering. These
-// static rules are the initial state before that runs.
 .visualization {
+  height: 100%;
   position: relative;
-  height: 400px;
-
-  // Pin transform-origin so the runtime `scale(...)` applied by
-  // scaleMiniApp anchors at the top-left, matching the legacy
-  // `#visualization.responsive > *` rule.
-  > * {
-    transform-origin: 0 0;
-  }
 
   .fitted {
     height: 100%;
@@ -35,6 +25,7 @@
 
 .sliderContainer {
   display: flex;
+  flex: 0 0;
   justify-content: center;
   margin-top: 2px;
 
@@ -59,13 +50,13 @@
 }
 
 .queue {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
   background: var(--background-neutral-tertiary);
   border-radius: 4px;
   font-family: monospace;
   font-size: 0.85rem;
+  margin-top: 0.5rem;
   min-height: 2rem;
+  padding: 0.5rem;
 }
 
 .queueItem {
@@ -82,6 +73,6 @@
 }
 
 .queueEmpty {
-  opacity: 0.6;
   font-style: italic;
+  opacity: 0.6;
 }
