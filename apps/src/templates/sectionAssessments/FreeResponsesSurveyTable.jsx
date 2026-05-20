@@ -10,6 +10,8 @@ import i18n from '@cdo/locale';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 
+import moduleStyles from './free-responses-table.module.scss';
+
 export const COLUMNS = {
   RESPONSE: 0,
 };
@@ -53,7 +55,9 @@ class FreeResponsesSurveyTable extends Component {
       <div>
         {response && <Typography variant="body3">{response}</Typography>}
         {!response && (
-          <Typography variant="body3">{i18n.emptyFreeResponse()}</Typography>
+          <Typography variant="body3" className={moduleStyles.noResponse}>
+            {i18n.emptyFreeResponse()}
+          </Typography>
         )}
       </div>
     );

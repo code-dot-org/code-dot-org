@@ -58,7 +58,9 @@ class FreeResponsesAssessmentsTable extends Component {
           </Typography>
         )}
         {!response && (
-          <Typography vartiant="body3">{i18n.emptyFreeResponse()}</Typography>
+          <Typography variant="body3" className={moduleStyles.noResponse}>
+            {i18n.emptyFreeResponse()}
+          </Typography>
         )}
       </div>
     );
