@@ -6,23 +6,12 @@ import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {JavalabLevelProperties} from './types';
 
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
-let csrfToken: string | null = null;
-
-async function ensureCsrfToken(): Promise<string | null> {
-  if (csrfToken) return csrfToken;
-  try {
-    const response = await fetch('/project_commits/get_token', {method: 'GET'});
-    csrfToken = response.headers.get('csrf-token');
-  } catch (e) {
-    csrfToken = null;
-  }
-  return csrfToken;
-}
 
 // Javabuilder explicitly sends newline messages,
 // so any other console output is written as a partial line
@@ -41,11 +30,14 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   levelProperties: JavalabLevelProperties
 ): Promise<void> {
-  await ensureCsrfToken();
+  let csrfToken: string | null = null;
+  try {
+    csrfToken = await getAuthenticityToken();
+  } catch (e) {
+    csrfToken = null;
+  }
 
   const state = getStore().getState();
-  const serverLevelId =
-    state.pageConstants?.serverLevelId ?? levelProperties.id;
 
   if (
     levelProperties.csaViewMode &&
@@ -83,7 +75,7 @@ export async function handleRunClick(
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       /* miniApp */ null,
-      serverLevelId,
+      levelProperties.id,
       /* options */ {},
       writeNewline,
       /* setIsRunning */ finishRun,

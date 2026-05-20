@@ -58,18 +58,18 @@ const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const viewDispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button
   // is enabled as soon as the view mounts. Reset on unmount so a later
   // navigation to a lab with a real environment isn't tricked.
   useEffect(() => {
-    viewDispatch(setLoadedCodeEnvironment(true));
+    dispatch(setLoadedCodeEnvironment(true));
     return () => {
-      viewDispatch(setLoadedCodeEnvironment(false));
+      dispatch(setLoadedCodeEnvironment(false));
     };
-  }, [viewDispatch]);
+  }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
   // Convert here before passing to codebridge.
