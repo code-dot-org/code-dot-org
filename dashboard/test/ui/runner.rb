@@ -165,9 +165,8 @@ def parse_options
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
                                "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
                                "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
-                               "Device Farm Chrome can reach a localhost-style URL in CI when WORKER_IP " \
-                               "is exported and the ui-tests step uses network_mode: host -- see " \
-                               "USE_DEVICE_FARM_TAG in lib/rake/ci.rake."
+                               "Note: Device Farm cannot reach localhost on development machines -- " \
+                               "use a public domain (e.g. via ngrok)."
               ) do
         options.device_farm = true
       end

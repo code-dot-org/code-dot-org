@@ -139,7 +139,7 @@ clone:
 # ui-tests step does too (so puma on 0.0.0.0:3000 is reachable on the
 # worker's primary ENI from Device Farm via VPC peering). With
 # network_mode: host the docker-compose service-DNS names
-# (ci-tests-redis, ci-tests-mysql) no longer resolve, so the step adds
+# (ci-tests-redis, ci-tests-mysql) do not resolve, so the step adds
 # matching /etc/hosts entries pointing at 127.0.0.1.
 services:
   - name: ci-tests-redis
@@ -245,7 +245,8 @@ steps:
     pull: always
     # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
     # on the worker's primary ENI, reachable from Device Farm's Chrome via
-    # VPC peering (see USE_DEVICE_FARM_TAG comment in lib/rake/ci.rake).
+    # VPC peering. For more details, see device_farm_desktop_browser in
+    # dashboard/test/ui/features/support/connect.rb.
     network_mode: host
     environment:
       CI_JOB: 'ui_tests'
@@ -269,7 +270,7 @@ steps:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
       # With network_mode: host on this step and on both services, the
-      # docker service-DNS names no longer resolve. Point them at
+      # docker service-DNS names do not resolve. Point them at
       # 127.0.0.1 where the daemons now bind on the host.
       - echo "127.0.0.1 ci-tests-redis" | sudo tee -a /etc/hosts
       - echo "127.0.0.1 ci-tests-mysql" | sudo tee -a /etc/hosts

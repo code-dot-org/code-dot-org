@@ -71,15 +71,6 @@ SKIP_EYES = 'skip eyes'.freeze
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
 # Use AWS Device Farm instead of SauceLabs for remote browser testing.
-# Requires DEVICE_FARM_DESKTOP_PROJECT_ARN to be set as a CI secret, and
-# the Device Farm project to live in the same VPC as the drone workers.
-# Both paths run against the in-container puma at
-# localhost-studio.code.org:3000 (same URL the local-webdriver first
-# run uses); Device Farm's Chrome reaches that puma via the drone
-# worker's VPC-private IP, because the ui-tests step runs in
-# network_mode: host so puma binds the worker's primary ENI and Chrome's
-# --host-resolver-rules (set in features/support/connect.rb) maps
-# localhost-studio.code.org to $WORKER_IP.
 USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
@@ -134,12 +125,12 @@ namespace :ci do
     end
     use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
     ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
-    # Sauce Connect tunnels the SauceLabs browser into the in-container
-    # puma. Device Farm doesn't need a tunnel -- its Chrome reaches puma
-    # via the worker's VPC-private IP. Tunnel is still required for
-    # SauceLabs when eyes is running, since eyes always uses a remote
-    # browser.
-    needs_sauce_connect = !use_device_farm && (!ui_test_browsers.empty? || test_eyes?)
+    # Sauce Connect tunnels the SauceLabs browser into the in-container puma.
+    #
+    # Device Farm doesn't need a tunnel -- it reaches puma via the worker's
+    # VPC-private IP address. See device_farm_desktop_browser in
+    # dashboard/test/ui/features/support/connect.rb for more details.
+    needs_sauce_connect = !use_device_farm
     if needs_sauce_connect
       Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
