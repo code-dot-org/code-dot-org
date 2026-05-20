@@ -20,7 +20,11 @@ import {
   JAVALAB_EDITABLE_FILE_TYPES,
   JAVALAB_SUPPORTED_FILE_TYPES,
 } from './constants';
-import {handleRunClick, stopJavaCode} from './javabuilderRunner';
+import {
+  handleRunClick,
+  sendJavaConsoleInput,
+  stopJavaCode,
+} from './javabuilderRunner';
 import HorizontalLayout from './layout/HorizontalLayout';
 import {flatToMultiFile, JavalabFlatSource} from './sourceConverter';
 import {JavalabLevelProperties} from './types';
@@ -124,6 +128,7 @@ const Javalab2View: React.FunctionComponent<
           startSources={startSources}
           onRun={onRun}
           onStop={stopJavaCode}
+          sendConsoleInput={sendJavaConsoleInput}
           levelProperties={codebridgeLevelProperties}
         />
       )}

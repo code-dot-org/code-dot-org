@@ -2,7 +2,7 @@ import {Dispatch, AnyAction} from 'redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
-import {ExecutionType} from '@cdo/apps/javalab/constants';
+import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 // The legacy Javabuilder connection is reused as-is. A TS port can come later;
 // for Phase 1 we only need a working console run.
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
@@ -96,4 +96,11 @@ export function stopJavaCode(): void {
     activeConnection.closeConnection();
     activeConnection = null;
   }
+}
+
+export function sendJavaConsoleInput(input: string): void {
+  if (!activeConnection) return;
+  activeConnection.sendMessage(
+    JSON.stringify({messageType: InputMessageType.SYSTEM_IN, message: input})
+  );
 }
