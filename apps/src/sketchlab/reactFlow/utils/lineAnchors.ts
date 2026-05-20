@@ -80,24 +80,14 @@ export function attachEdgeToFreshAnchor(
   return {anchor, edgePatch};
 }
 
-// When one side of an edge is being detached, look at the side that's
-// staying put. If that side is an existing lineAnchor with toolbar
-// state worth inheriting (currently just hidden handles), return
-// it so the new anchor can adopt the same state.
-export function inheritedAnchorBaseData(
-  edge: {source: string; target: string},
-  detachingSide: 'source' | 'target',
-  getNode: (id: string) => SketchlabReactFlowNode | undefined
-): Partial<NodeDataBase> {
-  const otherId = detachingSide === 'source' ? edge.target : edge.source;
-  const otherNode = getNode(otherId);
-  if (
-    otherNode?.type === 'lineAnchor' &&
-    otherNode.data.showHandles === false
-  ) {
-    return {showHandles: false};
-  }
-  return {};
+// When one side of an edge is being detached, decide what data the new
+// anchor should carry. The edge-level `data.showHandles` is the
+// source of truth because it persists through attach-to-node cycles when
+// no anchor exists to carry the state.
+export function inheritedAnchorBaseData(edge: {
+  data?: {showHandles?: boolean} | undefined;
+}): Partial<NodeDataBase> {
+  return edge.data?.showHandles === false ? {showHandles: false} : {};
 }
 
 // Returns an object containing the current flow position of the

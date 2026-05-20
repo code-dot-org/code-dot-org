@@ -480,7 +480,7 @@ export function useKeyboardNavigation({
         const {anchor, edgePatch: patch} = attachEdgeToFreshAnchor(
           postMovePosition,
           side,
-          inheritedAnchorBaseData(focusedEdge, side, getNode)
+          inheritedAnchorBaseData(focusedEdge)
         );
         newAnchors.push(anchor);
         Object.assign(edgePatch, patch);

@@ -81,9 +81,7 @@ export function useLineEdgeDrag({
           const {anchor, edgePatch} = attachEdgeToFreshAnchor(
             pending.flowPosition,
             pending.side,
-            draggedEdge
-              ? inheritedAnchorBaseData(draggedEdge, pending.side, getNode)
-              : undefined
+            draggedEdge ? inheritedAnchorBaseData(draggedEdge) : undefined
           );
           newAnchors.push(anchor);
           Object.assign(combinedPatch, edgePatch);
@@ -130,7 +128,7 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [getEdge, getNode, screenToFlowPosition, setNodes, setEdges]
+    [getEdge, screenToFlowPosition, setNodes, setEdges]
   );
 
   const stopLineEdgeDrag = useCallback(
