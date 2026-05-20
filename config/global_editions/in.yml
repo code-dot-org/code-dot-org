@@ -41,7 +41,7 @@ header:
       - title: my_dashboard
         url: /in/en/home
         domain: studio.code.org
-        id: header-student-home
+        id: header-teacher-home
       - title: course_catalog
         url: /in/en/catalog
         domain: studio.code.org

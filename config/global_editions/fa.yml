@@ -57,7 +57,7 @@ header:
       - title: my_dashboard
         url: /fa/home
         domain: studio.code.org
-        id: header-student-home
+        id: header-teacher-home
       - title: course_catalog
         url: /fa/catalog
         domain: studio.code.org

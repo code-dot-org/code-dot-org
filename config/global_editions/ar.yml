@@ -60,7 +60,7 @@ header:
       - title: my_dashboard
         url: /ar/home
         domain: studio.code.org
-        id: header-student-home
+        id: header-teacher-home
       - title: course_catalog
         url: /ar/catalog
         domain: studio.code.org
