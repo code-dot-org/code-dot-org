@@ -177,7 +177,7 @@ header:
             url: /cookies
           - title: legal_tos
             domain: code.org
-            url: /tos
+            url: /terms-of-service
 
     teacher:
       - title: learn
@@ -278,7 +278,7 @@ header:
             url: /cookies
           - title: legal_tos
             domain: code.org
-            url: /tos
+            url: /terms-of-service
 
   # Help button (?)
   help:
@@ -356,7 +356,7 @@ footer:
       - title: store
         url: https://store.code.org
       - title: tos_short
-        url: /tos
+        url: /terms-of-service
         domain: code.org
 
 # These override specially wrapped components in particular pages.

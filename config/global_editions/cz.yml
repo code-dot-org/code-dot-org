@@ -67,7 +67,7 @@ header:
           - title: legal_cookie_notice
             url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/en-US/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
@@ -83,7 +83,7 @@ header:
           - title: legal_cookie_notice
             url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/en-US/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
@@ -102,7 +102,7 @@ footer:
       - title: cookie_notice
         url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: https://code-org.translate.goog/en-US/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
 
 # Route matching to influence properties of components
 pages:
