@@ -101,7 +101,10 @@ come in a later phase. Differences from legacy use:
   and committing a named version for free.
 
 ## Deferred to later phases
-
+- **More robust source conversion** Java Lab did not have the concept of
+  a 'closed' file, only a visible one, where files that were not visible were
+  hidden support files. We should add an additional field when converting back
+  from MultiFileSource that captures the open/closed state of files.
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
 - **Neighborhood mini-app**
