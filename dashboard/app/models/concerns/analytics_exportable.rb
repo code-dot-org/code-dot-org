@@ -88,6 +88,13 @@ module AnalyticsExportable
   # replicated via Zero ETL (no primary key or blob columns). Iterates over
   # every table in the local database connection.
   #
+  # `connection.primary_key(table_name)` returns a String for a single-column
+  # primary key, an Array of column names for a composite primary key (e.g.,
+  # `school_stats_by_years` has `PRIMARY KEY (school_id, school_year)`), and
+  # nil when the table has no PRIMARY KEY constraint. Zero ETL supports both
+  # single and composite primary keys, so any non-blank return value counts
+  # as has_pk.
+  #
   # @param db_name [String] database name to use in filter expressions.
   #   Defaults to the connection's current database. Override to generate
   #   filters for a different environment (e.g., dashboard_production)
@@ -97,9 +104,8 @@ module AnalyticsExportable
   def self.zero_etl_exclude_filters(db_name: nil, connection: ActiveRecord::Base.connection)
     db_name ||= connection.current_database
     connection.tables.filter_map do |table_name|
-      columns = connection.columns(table_name)
-      has_pk = columns.any? {|col| col.name == connection.primary_key(table_name)}
-      has_blob = columns.any? {|col| BLOB_DATA_TYPES.include?(col.type)}
+      has_pk = connection.primary_key(table_name).present?
+      has_blob = connection.columns(table_name).any? {|col| BLOB_DATA_TYPES.include?(col.type)}
       "exclude: #{db_name}.#{table_name}" unless has_pk && !has_blob
     end
   end

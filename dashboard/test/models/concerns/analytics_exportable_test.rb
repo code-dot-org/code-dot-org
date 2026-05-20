@@ -122,6 +122,20 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_equal ['exclude: my_db.schema_migrations'], excludes
   end
 
+  test 'zero_etl_exclude_filters does not exclude tables with composite primary keys' do
+    # `connection.primary_key` returns an Array for a composite PK
+    # (e.g., school_stats_by_years has PRIMARY KEY (school_id, school_year)).
+    # Zero ETL supports composite PKs, so the table must not be excluded.
+    conn = mock_connection('my_db',
+      'school_stats_by_years' => {
+        primary_key: ['school_id', 'school_year'],
+        columns: [mock_column('school_id', :integer), mock_column('school_year', :string)]
+      }
+    )
+
+    assert_empty AnalyticsExportable.zero_etl_exclude_filters(connection: conn)
+  end
+
   test 'zero_etl_exclude_filters excludes tables with blob columns' do
     conn = mock_connection('my_db',
       'attachments' => {primary_key: 'id', columns: [mock_column('id', :integer), mock_column('data', :binary)]},
