@@ -40,8 +40,12 @@ export function flatToMultiFile(
   const files: Record<FileId, ProjectFile> = {};
   const idByName = new Map<string, FileId>();
 
+  // IDs must be numeric strings — codebridge's getNextFileId allocates new
+  // IDs as `String(max(Number(existingId)) + 1)`, so any non-numeric prefix
+  // here would make Number(id) === NaN and every newly-allocated id would
+  // collide on 'NaN'.
   entries.forEach(([name, props], i) => {
-    const id = `f${i}`;
+    const id = String(i);
     idByName.set(name, id);
     files[id] = {
       id,

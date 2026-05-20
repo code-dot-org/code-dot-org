@@ -9,6 +9,7 @@ import {
   MultiFileSource,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
+import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 function flatFile(
   text: string,
@@ -67,6 +68,22 @@ describe('javalab2 sourceConverter', () => {
 
       const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
       expect(openNames).toEqual(['Main.java']);
+    });
+
+    it('emits numeric-string file IDs that play nicely with getNextFileId', () => {
+      // getNextFileId allocates `String(max(Number(id)) + 1)`. If any id is
+      // non-numeric (e.g. 'f0'), Number(id) is NaN and every newly-allocated
+      // id collides on 'NaN', overwriting previous files. Guard the format.
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1),
+      });
+      Object.values(mf.files).forEach(f => {
+        expect(f.id).toMatch(/^\d+$/);
+      });
+      const next = getNextFileId(Object.values(mf.files));
+      expect(next).toBe('2');
+      expect(next).not.toBe('NaN');
     });
 
     it('falls back to insertion order when tabOrder is missing or duplicated', () => {
