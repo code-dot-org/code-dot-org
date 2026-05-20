@@ -82,41 +82,34 @@ module Geocoder
 
   MIN_ADDRESS_LENGTH = 10
   MAX_ADDRESS_WORDS = 8
-  MAX_GEOCODER_ATTEMPTS = 1
 
   def self.find_potential_street_address(text)
     return nil unless text
 
-    # Try each multi-digit number as a potential address start.
+    # Find the first multi-digit number as a potential house number.
     # Single-digit numbers ("level 3", "score 5") are almost never house numbers.
-    # Cap geocoder calls at MAX_GEOCODER_ATTEMPTS to limit API usage.
-    # '|' is used to separate text block fields that are concatenated together to avoid
-    # "bleeding" across block text field boundaries. No-op when text contains no '|'.
-    attempts = 0
-    text.scan(/\b[0-9]{2,}\b/) do
-      break if attempts >= MAX_GEOCODER_ATTEMPTS
+    # '|' separates concatenated text block fields — split on it so the candidate
+    # doesn't bleed across block boundaries. No-op when text contains no '|'.
+    match = text.match(/\b[0-9]{2,}\b/)
+    return nil unless match
 
-      pos = Regexp.last_match.begin(0)
-      segment = text[pos..].split('|').first || ''
-      candidate = segment.split.first(MAX_ADDRESS_WORDS).join(' ')
+    pos = match.begin(0)
+    segment = text[pos..].split('|').first || ''
+    candidate = segment.split.first(MAX_ADDRESS_WORDS).join(' ')
 
-      next if candidate.length < MIN_ADDRESS_LENGTH
-      next if candidate.count(' ') < 2
+    return nil if candidate.length < MIN_ADDRESS_LENGTH
+    return nil if candidate.count(' ') < 2
 
-      attempts += 1
-      results = Geocoder.search(candidate)
+    results = Geocoder.search(candidate)
 
-      # Skip unless a result is a street-level address (place_type 'address') with relevance >= 0.8.
-      # If for some reason we fall back to a non-Mapbox lookup, relevance is hard-coded to 1.0 and
-      # place_type is absent, so the candidate is rejected — preferring false negatives over false positives.
-      next if results.none? do |r|
-        r.relevance >= 0.8 && r.address && r.data&.dig('place_type')&.include?('address')
-      end
-
-      return candidate
+    # Require a street-level address (place_type 'address') with relevance >= 0.8.
+    # If for some reason we fall back to a non-Mapbox lookup, relevance is hard-coded to 1.0 and
+    # place_type is absent, so the candidate is rejected — preferring false negatives over false positives.
+    return nil if results.none? do |r|
+      r.relevance >= 0.8 && r.address && r.data&.dig('place_type')&.include?('address')
     end
 
-    nil
+    candidate
   end
 
   # Temporarily, for a given block, configure Geocoder to raise all errors.
