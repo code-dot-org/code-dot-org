@@ -104,9 +104,10 @@ module Geocoder
       results = Geocoder.search(candidate)
 
       # Skip unless a result is a street-level address (place_type 'address') with relevance >= 0.8.
-      # Mapbox returns high relevance scores for city/region matches too, so place_type guards against those.
+      # If for some reason we fall back to a non-Mapbox lookup, relevance is hard-coded to 1.0 and
+      # place_type is absent, so the candidate is rejected — preferring false negatives over false positives.
       next if results.none? do |r|
-        r.relevance >= 0.8 && r.address && r.data['place_type']&.include?('address')
+        r.relevance >= 0.8 && r.address && r.data&.dig('place_type')&.include?('address')
       end
 
       return candidate
