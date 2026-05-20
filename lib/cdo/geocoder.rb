@@ -90,12 +90,15 @@ module Geocoder
     # Try each multi-digit number as a potential address start.
     # Single-digit numbers ("level 3", "score 5") are almost never house numbers.
     # Cap geocoder calls at MAX_GEOCODER_ATTEMPTS to limit API usage.
+    # '|' is used to separate text block fields that are concatenated together to avoid
+    # "bleeding" across block text field boundaries. No-op when text contains no '|'.
     attempts = 0
     text.scan(/\b[0-9]{2,}\b/) do
       break if attempts >= MAX_GEOCODER_ATTEMPTS
 
       pos = Regexp.last_match.begin(0)
-      candidate = text[pos..].split.first(MAX_ADDRESS_WORDS).join(' ')
+      segment = text[pos..].split('|').first || ''
+      candidate = segment.split.first(MAX_ADDRESS_WORDS).join(' ')
 
       next if candidate.length < MIN_ADDRESS_LENGTH
       next if candidate.count(' ') < 2

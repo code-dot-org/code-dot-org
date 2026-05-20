@@ -63,16 +63,13 @@ module ShareFiltering
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
     return failure if failure
 
-    # Address: check each block element individually to avoid false positives from
-    # concatenation (e.g. "level 3" joined with "game over" → "level 3 game over").
-    # Only check elements that contain a digit since addresses require one.
-    texts.grep(/\d/).each do |text|
-      address = Geocoder.find_potential_street_address(text)
-      if address
-        failure = ShareFailure.new(FailureType::ADDRESS, address)
-        raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
-        return failure
-      end
+    # Address: join digit-containing elements with " | " as a non-whitespace separator.
+    digit_text = texts.grep(/\d/).join(' | ')
+    address = Geocoder.find_potential_street_address(digit_text)
+    if address
+      failure = ShareFailure.new(FailureType::ADDRESS, address)
+      raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
+      return failure
     end
 
     find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
