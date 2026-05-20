@@ -1,5 +1,16 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
 .sketchlabContainer {
   width: 100%;
   height: 100%;
   display: flex;
+}
+
+// Trim the default Alert chrome so it fits flush against the
+// workspace header, matching the codebridge Workspace banner.
+.previousVersionBanner {
+  border-bottom: variables.$default-border;
+  border-radius: 0;
+  padding-block: 0;
+  height: 39px;
 }

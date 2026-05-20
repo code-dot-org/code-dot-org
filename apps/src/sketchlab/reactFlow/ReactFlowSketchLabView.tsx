@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
@@ -27,6 +28,7 @@ import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
@@ -115,6 +117,39 @@ function ReactFlowSketchLabViewInner({
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
+  );
+
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const versionDetails = useAppSelector(
+    state => state.lab2Project.versionDetails
+  );
+
+  const locale = currentLocale();
+  const versionDate = useMemo(() => {
+    if (!versionDetails?.lastModified) {
+      return '';
+    }
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+    // Strip the space before AM/PM to keep the banner compact.
+    return dateFormatter
+      .format(new Date(versionDetails.lastModified))
+      .replace(/\s(AM|PM)/gi, '$1');
+  }, [versionDetails, locale]);
+
+  const versionBannerText = versionDate ? (
+    <>
+      You're viewing a previous version of this project from{' '}
+      <strong>{versionDate}</strong>.
+    </>
+  ) : (
+    "You're viewing the initial version of this project."
   );
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
@@ -278,6 +313,14 @@ function ReactFlowSketchLabViewInner({
           >
             {teacherViewingStudent && (
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+            )}
+            {viewingOldVersion && (
+              <Alert
+                className={styles.previousVersionBanner}
+                text={versionBannerText}
+                type="warning"
+                size="xs"
+              />
             )}
             <ReactFlowCanvas
               key={mountKey}
