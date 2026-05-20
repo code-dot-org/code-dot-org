@@ -33,20 +33,6 @@ export function useRubric() {
 }
 
 /**
- * Bypass provider for surfaces that mount Lab2 views without the full
- * level-properties / rubric infrastructure (e.g. the AI Lessons hackathon
- * prototype).  Supplies inert defaults so useRubric() consumers in the
- * lab tree don't throw.
- */
-export const NullRubricProvider: React.FC<{children: React.ReactNode}> = ({
-  children,
-}) => (
-  <RubricContext.Provider value={{showRubric: false, isLoading: false}}>
-    {children}
-  </RubricContext.Provider>
-);
-
-/**
  * Rubric context wrapper that loads the lesson rubric and teacher evaluations asynchronously.
  */
 const RubricWrapper: React.FC<{children: React.ReactNode}> = ({children}) => {

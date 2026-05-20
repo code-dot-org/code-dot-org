@@ -182,14 +182,14 @@ PUT    /ai_lessons/:id/progress                   # write this user's progress
 
 - **Lab integration is messy.** `EmbeddedLab.tsx` is the seam between
   AI Lessons and Lab2. It synthesises `levelProperties`, injects a
-  custom `ProjectManager` into `Lab2Registry`, dispatches
-  `setHideResourcePanel`, wraps in `NullRubricProvider` +
-  `ExtraLinksButtonContext` + `DialogManager`, and threads
-  `lessonId`/`labType` through everywhere. A few small upstream changes
-  in `ResourcePanel`, `InfoPanel`, and `MusicLabView` opt those views
-  out of rendering when `state.lab.hideResourcePanel` is true. Worth
-  reviewing whether the abstraction belongs in lab2 itself or whether
-  there's a cleaner extension point.
+  custom `ProjectManager` into `Lab2Registry`, wraps in `DialogManager`,
+  passes `hideResourcePanel` (an `ExtraLabProps` field defined in
+  `lab2/types.ts`) down to the lab view, and threads
+  `lessonId`/`labType` through everywhere. `MusicLabView` and
+  `InfoPanel` (weblab2) read the `hideResourcePanel` prop and drop the
+  ResourcePanel column when it's true. Worth reviewing whether the
+  abstraction belongs in lab2 itself or whether there's a cleaner
+  extension point.
 - **Big files.** `AuthorPage.tsx`, `StudentPage.tsx`, and `EmbeddedLab.tsx`
   are all north of 400 LOC. Break out smaller components: the carousel,
   the lab-mount setup hook, the panels carousel, the chat composer.

@@ -1,6 +1,7 @@
-// Initialization side-effects that every AI Lessons entry shim shares:
-// - Force the design-system light theme at the document root, in case the
-//   surrounding studio chrome left it on dark.
+// Initialization side-effects the AI Lessons entry shim runs once on
+// mount:
+// - Force the design-system light theme at the document root, in case
+//   the surrounding studio chrome left it on dark.
 // - Pull in the global code-studio Redux module so its reducers
 //   (lab, lab2Project, lab2View, progress, currentUser, etc.) are
 //   registered with the singleton store before any lab views mount.

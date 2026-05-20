@@ -41,6 +41,7 @@ const MIN_DEBUG_PANEL_HEIGHT = 200;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
+  hideResourcePanel,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
 
@@ -180,6 +181,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         <InfoPanel
           style={{width: leftPanelWidth}}
           className={classNames(lab2Styles.flexShrink0, panelClassName)}
+          hideResourcePanel={hideResourcePanel}
         />
         <ResizeBar
           isVertical={true}

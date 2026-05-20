@@ -189,13 +189,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   validationSettings,
   ...instructionsProps
 }) => {
-  // Host surfaces (e.g. the AI Lessons hackathon) can opt out of the
-  // ResourcePanel entirely by dispatching setHideResourcePanel(true).  We
-  // do this before any other hooks so the component renders truly nothing
-  // and consumes no extra layout space.
-  const hideResourcePanel = useAppSelector(
-    state => state.lab.hideResourcePanel
-  );
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
@@ -561,10 +554,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);
-
-  if (hideResourcePanel) {
-    return null;
-  }
 
   return (
     <>

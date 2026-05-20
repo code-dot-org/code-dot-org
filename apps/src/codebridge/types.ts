@@ -85,6 +85,9 @@ export interface MazeCell {
 export interface LayoutProps {
   isProjectLevel?: boolean;
   isWidgetView?: boolean;
+  // Forwarded from the host lab's ExtraLabProps so the layout can drop
+  // the ResourcePanel column entirely. See lab2/types.ts.
+  hideResourcePanel?: boolean;
 }
 
 export interface ProjectPickerSettings {

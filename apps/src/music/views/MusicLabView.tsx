@@ -88,6 +88,7 @@ interface MusicLabViewProps {
   overrideProjectManager?: ProjectManager;
   startSources: ProjectSources;
   viewingOldVersion: boolean;
+  hideResourcePanel?: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -114,6 +115,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   overrideProjectManager,
   startSources,
   viewingOldVersion,
+  hideResourcePanel,
 }) => {
   const dialogControl = useDialogControl();
 
@@ -160,10 +162,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const blockMode = useSelector(getBlockMode);
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
-  );
-  // Host surfaces can suppress the entire ResourcePanel column.
-  const hideResourcePanel = useAppSelector(
-    state => state.lab.hideResourcePanel
   );
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
   const teacherViewingStudent = Boolean(

@@ -52,6 +52,7 @@ type CodebridgeProps = {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
+  hideResourcePanel?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -72,6 +73,7 @@ export const Codebridge = React.memo(
     aiTutorResponseSchemaSettings,
     tutorVideos,
     secondaryBackpackAppNames,
+    hideResourcePanel,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -236,6 +238,7 @@ export const Codebridge = React.memo(
             <InnerLayout
               isProjectLevel={levelProperties.isProjectLevel}
               isWidgetView={levelProperties.widgetView}
+              hideResourcePanel={hideResourcePanel}
             />
           </div>
         </BackpackAPIContext.Provider>

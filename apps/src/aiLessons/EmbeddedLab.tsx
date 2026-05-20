@@ -15,17 +15,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
-import {
-  onLevelChange,
-  setChannel,
-  setHideResourcePanel,
-} from '@cdo/apps/lab2/lab2Redux';
+import {onLevelChange, setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {AppName, Channel, LabProps, ProjectSources} from '@cdo/apps/lab2/types';
-import {NullRubricProvider} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import DialogManager from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import {ExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel} from '@cdo/apps/panels/types';
@@ -184,9 +178,10 @@ function useLabSetup(
   appName: AppName,
   levelProperties: LabProps['levelProperties'],
   initialSources?: ProjectSources
-) {
+): ProjectManager | undefined {
   const dispatch = useAppDispatch();
   const {setTheme} = useTheme();
+  const [manager, setManager] = useState<ProjectManager>();
 
   useEffect(() => {
     const channel = syntheticChannel(
@@ -203,24 +198,26 @@ function useLabSetup(
         initialSources,
       })
     );
-    // Suppress the lab's ResourcePanel entirely — the AI Tutor owns all
-    // instructions/help on this surface.
-    dispatch(setHideResourcePanel(true));
 
-    // Install a custom ProjectManager so lab2 view saves (Weblab2's
+    // Build a custom ProjectManager so lab2 view saves (Weblab2's
     // setAndSaveProjectSources thunk, MusicView's saveCode) persist to
     // our per-(lesson, labType) source storage.  All checkpoints sharing
     // a lab type within a lesson write to the same file.
-    const manager = new AiLessonsProjectManager(lessonId, labType);
+    const m = new AiLessonsProjectManager(lessonId, labType);
     if (initialSources) {
-      manager.setLastSource(initialSources);
+      m.setLastSource(initialSources);
     }
-    // The Lab2Registry typing wants the full ProjectManager class but the
-    // surface lab2 callers actually use (save + setLastSource) is what we
-    // implement.  Cast through unknown to satisfy the type check.
-    Lab2Registry.getInstance().setProjectManager(
-      manager as unknown as ProjectManager
-    );
+    // Music reads the ProjectManager from the `projectManager` prop
+    // (ExtraLabProps); weblab2 still goes through the singleton, so for
+    // those labs install on the registry too. The cast is needed because
+    // the Lab2Registry typing wants the full ProjectManager class but
+    // our shim only implements the surface (save + setLastSource) that
+    // lab2 callers actually use.
+    const asPM = m as unknown as ProjectManager;
+    if (labType !== 'music') {
+      Lab2Registry.getInstance().setProjectManager(asPM);
+    }
+    setManager(asPM);
 
     const theme = LAB_DEFAULT_THEME[appName] || 'Light';
     setTheme(theme);
@@ -232,7 +229,7 @@ function useLabSetup(
 
     return () => {
       // Force-flush any pending save before leaving this lab type.
-      manager.destroy();
+      m.destroy();
     };
   }, [
     dispatch,
@@ -244,6 +241,8 @@ function useLabSetup(
     initialSources,
     setTheme,
   ]);
+
+  return manager;
 }
 
 const Lab2MountedView: React.FC<{
@@ -263,7 +262,7 @@ const Lab2MountedView: React.FC<{
   levelProperties,
   initialSources,
 }) => {
-  useLabSetup(
+  const projectManager = useLabSetup(
     lessonId,
     labType,
     checkpoint,
@@ -279,23 +278,19 @@ const Lab2MountedView: React.FC<{
       style={{width: '100%', height: '100%'}}
     >
       <Suspense fallback={<div className={styles.labMessage}>Loading…</div>}>
-        <ExtraLinksButtonContext.Provider
-          value={{setShowExtraLinksButton: () => {}}}
-        >
-          <NullRubricProvider>
-            {/* DialogManager provides the dialog control context that
-                lab2 surfaces (Music's Start Over confirmation, the lab2
-                Skip dialog, etc.) expect.  Without it, `useDialogControl()`
-                falls back to a no-op default and dialogs silently fail to
-                open / re-open after dismissal. */}
-            <DialogManager>
-              <LabView
-                levelProperties={levelProperties}
-                initialSources={initialSources}
-              />
-            </DialogManager>
-          </NullRubricProvider>
-        </ExtraLinksButtonContext.Provider>
+        {/* DialogManager provides the dialog control context that
+            lab2 surfaces (Music's Start Over confirmation, the lab2
+            Skip dialog, etc.) expect.  Without it, `useDialogControl()`
+            falls back to a no-op default and dialogs silently fail to
+            open / re-open after dismissal. */}
+        <DialogManager>
+          <LabView
+            levelProperties={levelProperties}
+            initialSources={initialSources}
+            hideResourcePanel={true}
+            projectManager={projectManager}
+          />
+        </DialogManager>
       </Suspense>
     </div>
   );
