@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# User Personas\r\n\r\n#### Explain what a user persona is and how it helps in designing a computer vision application.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# User Personas\r\n\r\nExplain what a user persona is and how it helps in designing a computer vision application.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

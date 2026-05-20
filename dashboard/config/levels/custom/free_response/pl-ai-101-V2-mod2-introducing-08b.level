@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# AI for Oceans Reflection\r\n\r\n#### Congratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> #### In the reflection box below, answer **one or more** of the following questions:\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<br>",
+    "long_instructions": "# AI for Oceans Reflection\r\n\r\nCongratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> In the reflection box below, answer **one or more** of the following questions:\r\n> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<br>",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

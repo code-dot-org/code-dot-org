@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Step 2, Reflection\r\n\r\n#### Now that you've modified your lesson to include teaching with AI, take a moment to reflect on the process.\r\n\r\n> #### In the reflection box below:\r\n> #### 1. Describe the original lesson and the change(s) you made to the lesson to integrate AI.\r\n> #### 2. Describe one way working with AI Chat Lab strengthed your lesson.\r\n> #### **Bonus!** Align your lesson plan to the AILit Framework Knowledge, Skills, Attitudes, and Domains.\r\n\r\n#### We'll retun to this lesson throughout the Module for future revision and reflection.",
+    "long_instructions": "# Step 2, Reflection\r\n\r\nNow that you've modified your lesson to include teaching with AI, take a moment to reflect on the process.\r\n\r\n> In the reflection box below:\r\n> 1. Describe the original lesson and the change(s) you made to the lesson to integrate AI.\r\n> 2. Describe one way working with AI Chat Lab strengthed your lesson.\r\n> **Bonus!** Align your lesson plan to the AILit Framework Knowledge, Skills, Attitudes, and Domains.\r\n\r\nWe'll retun to this lesson throughout the Module for future revision and reflection.",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
