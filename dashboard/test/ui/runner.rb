@@ -478,12 +478,13 @@ def report_tests_finished(start_time, run_results, s3_status_page_url = nil)
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
   report_kind = $options.with_status_page ? 'TEST SUITE' : 'TEST MANUAL RUN'
-  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
-  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
-  test_report += "\n"
+  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
   test_report += status_page_links(s3_status_page_url)
   test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
+  # Slack truncates long messages. Show failures list last, so that status page
+  # links are not truncated when there are many failures.
+  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
 
   ChatClient.log test_report, color: 'purple'
 end
