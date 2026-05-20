@@ -16,33 +16,92 @@ interface ConfirmationDialogProps {
 class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   render() {
     return (
-      <Box className="ocean-confirmation-dialog__bg">
-        <Box className="ocean-confirmation-dialog">
-          <Box className="ocean-confirmation-dialog__content">
+      <Box
+        sx={{
+          backgroundColor: 'var(--ocean-color-transparent-black)',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          borderRadius: '10px',
+        }}
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            backgroundColor: 'var(--ocean-color-white)',
+            color: 'var(--ocean-color-dark-grey)',
+            transform: 'translate(-50%, -50%)',
+            top: '50%',
+            bottom: 'initial',
+            left: '50%',
+            padding: '2%',
+            borderRadius: '8px',
+          }}
+        >
+          <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
             <img
               src={snail}
-              className="ocean-confirmation-dialog__img"
+              style={{
+                position: 'absolute',
+                bottom: '-46%',
+                left: '-41%',
+                height: '100%',
+              }}
               alt=""
             />
             <Box>
-              <Box className="ocean-confirmation-dialog__header confirmation-text">
+              {/* confirmation-text is a test-hook class. */}
+              <Box
+                className="confirmation-text"
+                sx={{
+                  fontSize: '220%',
+                  color: 'var(--ocean-color-dark-grey)',
+                  paddingBottom: '5%',
+                  textAlign: 'center',
+                }}
+              >
                 {I18n.t('areYouSure')}
               </Box>
-              <Box className="ocean-confirmation-dialog__text">
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  backgroundColor: 'var(--ocean-color-light-grey)',
+                  padding: '5%',
+                  borderRadius: '5px',
+                }}
+              >
                 {I18n.t('eraseWarning')}
               </Box>
             </Box>
           </Box>
-          <Box className="ocean-confirmation-dialog__buttons">
+          <Box sx={{paddingTop: '5%', clear: 'both'}}>
+            {/* dialog-button is a test-hook class. */}
             <Button
               onClick={this.props.onYesClick}
-              className="ocean-confirmation-dialog__yes-button dialog-button"
+              className="dialog-button"
+              sx={{
+                backgroundColor: 'var(--ocean-color-red)',
+                color: 'var(--ocean-color-white)',
+                left: '5%',
+                padding: '3.5% 8%',
+                width: '35%',
+              }}
             >
               <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}
-              className="ocean-confirmation-dialog__no-button dialog-button"
+              className="dialog-button"
+              sx={{
+                backgroundColor: 'var(--ocean-color-orange)',
+                color: 'var(--ocean-color-white)',
+                float: 'right',
+                right: '5%',
+                padding: '3.5% 8%',
+                width: '35%',
+              }}
             >
               {I18n.t('cancel')}
             </Button>

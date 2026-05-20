@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
 import Box from '@mui/material/Box';
+import type {SxProps, Theme} from '@mui/material/styles';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -27,25 +28,61 @@ export const stopTypingSounds = () => {
   }
 };
 
-/**
- * Map a `GuideEntry.style` value to its modifier class name.  The
- * registry's keys are typed as strings ("Info" / "Center" / etc.); we
- * mirror them here to a small registry so the lookup is type-safe.
- */
-const GUIDE_STYLE_CLASS: Record<string, string> = {
-  Info: 'ocean-guide--info',
-  Center: 'ocean-guide--center',
+/** Base sx for the guide bubble. */
+const GUIDE_BASE_SX: SxProps<Theme> = {
+  position: 'absolute',
+  backgroundColor: 'var(--ocean-color-transparent-black)',
+  color: 'var(--ocean-color-white)',
+  borderRadius: '5px',
+  maxWidth: '80%',
+  bottom: '2%',
+  left: '50%',
+  transform: 'translateX(-50%)',
 };
 
-/** Map a `GuideEntry.arrow` value to its modifier class name. */
-const GUIDE_ARROW_CLASS: Record<string, string> = {
-  BotRight: 'ocean-guide__arrow--bot-right',
-  LowerLeft: 'ocean-guide__arrow--lower-left',
-  LowerRight: 'ocean-guide__arrow--lower-right',
-  LowishRight: 'ocean-guide__arrow--lowish-right',
-  LowerCenter: 'ocean-guide__arrow--lower-center',
-  UpperRight: 'ocean-guide__arrow--upper-right',
-  UpperFarRight: 'ocean-guide__arrow--upper-far-right',
+/** Additional sx merged in for each guide style variant. */
+const GUIDE_STYLE_SX: Record<string, SxProps<Theme>> = {
+  Info: {
+    backgroundColor: 'var(--ocean-color-white)',
+    color: 'var(--ocean-color-dark-grey)',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: '2%',
+  },
+  Center: {
+    top: '50%',
+    left: '50%',
+    bottom: 'initial',
+    maxWidth: '47%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+/** Base sx for the arrow image. */
+const ARROW_BASE_SX: SxProps<Theme> = {
+  position: 'absolute',
+  width: '8%',
+};
+
+/** Additional sx for each arrow placement. */
+const GUIDE_ARROW_SX: Record<string, SxProps<Theme>> = {
+  BotRight: {top: '15%', right: '12.5%', transform: 'translateX(-50%)'},
+  LowerLeft: {bottom: '17%', left: '8.5%', transform: 'translateX(-50%)'},
+  LowerRight: {bottom: '17%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowishRight: {bottom: '28%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowerCenter: {bottom: '22%', left: '50.5%', transform: 'translateX(-50%)'},
+  UpperRight: {
+    top: '13%',
+    right: '-2%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
+  UpperFarRight: {
+    top: '15%',
+    right: '-4.6%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
 };
 
 class Guide extends React.Component<Record<string, never>> {
@@ -158,15 +195,33 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Background variant: hidden, info-darkened, or the default scrim.
-    let bgClassName = 'ocean-guide__bg';
-    if (currentGuide) {
-      if (currentGuide.noDimBackground) {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--hidden';
-      } else if (currentGuide.style === 'Info') {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--info';
-      }
-    }
+    // Background scrim: hidden, info-darkened, or default semi-transparent.
+    const bgSx: SxProps<Theme> = {
+      backgroundColor: currentGuide?.noDimBackground
+        ? 'transparent'
+        : currentGuide?.style === 'Info'
+          ? 'var(--ocean-color-transparent-black)'
+          : 'rgb(0 0 0 / 30%)',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      borderRadius: currentGuide?.noDimBackground ? 0 : '10px',
+      pointerEvents: currentGuide?.noDimBackground ? 'none' : undefined,
+    };
+
+    // Guide bubble: base position + style-variant overrides.
+    const guideSx: SxProps<Theme> = {
+      ...GUIDE_BASE_SX,
+      ...(currentGuide?.style ? GUIDE_STYLE_SX[currentGuide.style] : {}),
+    } as SxProps<Theme>;
+
+    // Arrow image position.
+    const arrowSx: SxProps<Theme> = {
+      ...ARROW_BASE_SX,
+      ...(currentGuide?.arrow ? GUIDE_ARROW_SX[currentGuide.arrow] : {}),
+    } as SxProps<Theme>;
 
     // Start playing the typing sounds.
     if (
@@ -193,31 +248,21 @@ class Guide extends React.Component<Record<string, never>> {
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
-    const guideClassName =
-      currentGuide &&
-      currentGuide.style &&
-      GUIDE_STYLE_CLASS[currentGuide.style]
-        ? `ocean-guide ${GUIDE_STYLE_CLASS[currentGuide.style]}`
-        : 'ocean-guide';
-
-    const arrowClassName =
-      currentGuide &&
-      currentGuide.arrow &&
-      GUIDE_ARROW_CLASS[currentGuide.arrow]
-        ? `ocean-guide__arrow ${GUIDE_ARROW_CLASS[currentGuide.arrow]}`
-        : 'ocean-guide__arrow';
-
-    // imageStyle on a GuideEntry is one of two opaque {top,left} object
-    // literals from guidesHoc / guidesK5; pass through verbatim.
-    const imageStyle = currentGuide?.imageStyle;
-
     return (
       <Box>
         {currentGuide && currentGuide.image && (
-          <img
+          <Box
+            component="img"
             src={currentGuide.image}
-            className="ocean-guide__image"
-            style={imageStyle}
+            sx={{
+              position: 'absolute',
+              bottom: '1%',
+              left: '15%',
+              zIndex: 2,
+              maxHeight: '45%',
+              maxWidth: '35%',
+            }}
+            style={currentGuide.imageStyle}
             alt=""
           />
         )}
@@ -225,24 +270,31 @@ class Guide extends React.Component<Record<string, never>> {
           <Box>
             <Box
               key={currentGuide.id}
-              className={bgClassName}
+              sx={bgSx}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
             >
-              <Box
-                aria-labelledby="guide-heading"
-                tabIndex={-1}
-                className={`guide-dialog ${guideClassName}`}
-              >
+              <Box aria-labelledby="guide-heading" tabIndex={-1} sx={guideSx}>
                 <Box>
                   {currentGuide.style === 'Info' && (
-                    <Box id="guide-heading" className="ocean-guide__heading">
+                    <Box
+                      id="guide-heading"
+                      sx={{
+                        fontSize: '220%',
+                        color: 'var(--ocean-color-dark-grey)',
+                        paddingBottom: '5%',
+                        textAlign: 'center',
+                      }}
+                    >
                       {I18n.t('didYouKnow')}
                     </Box>
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <Box className="ocean-guide__typing-text" aria-hidden="true">
+                  <Box
+                    sx={{position: 'absolute', padding: '20px'}}
+                    aria-hidden="true"
+                  >
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -254,40 +306,67 @@ class Guide extends React.Component<Record<string, never>> {
                   </Box>
 
                   <Box
-                    className={
+                    sx={
                       currentGuide.style === 'Info'
-                        ? 'ocean-guide__final-text-container--info'
+                        ? {
+                            backgroundColor: 'var(--ocean-color-light-grey)',
+                            borderRadius: '10px',
+                          }
                         : undefined
                     }
                   >
                     <div
                       ref={this.guideDialogRef}
+                      className="guide-dialog"
                       aria-live="polite"
                       tabIndex={0}
                       onKeyDown={this.onGuideKeyDown}
-                      className="ocean-guide__final-text"
-                    >
-                      {currentGuide.textFn(getState())}
-                    </div>
+                      style={{padding: '20px', color: 'rgb(0 0 0 / 0%)'}}
+                    />
                   </Box>
                   {renderClickToContinueReminder && (
-                    <Box className="ocean-guide__continue-reminder">
-                      <img
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        right: '1%',
+                        bottom: 0,
+                        width: '5%',
+                        minWidth: '25px',
+                        height: '15px',
+                        animation:
+                          '0.25s ease-in 4s 1 normal backwards running fadein',
+                      }}
+                    >
+                      <Box
+                        component="img"
                         src={fingerClickIcon1}
                         alt=""
-                        className="ocean-guide__continue-reminder-1"
+                        sx={{width: '100%', position: 'absolute'}}
                       />
-                      <img
+                      <Box
+                        component="img"
                         src={fingerClickIcon2}
                         alt=""
-                        className="ocean-guide__continue-reminder-2"
+                        sx={{
+                          animation:
+                            '1s linear 0.5s infinite normal none running blink',
+                          width: '100%',
+                          position: 'absolute',
+                        }}
                       />
                     </Box>
                   )}
                   {currentGuide.style === 'Info' && (
                     <Button
-                      className="ocean-guide__info-button"
                       onClick={() => {}}
+                      sx={{
+                        backgroundColor: 'var(--ocean-color-orange)',
+                        color: 'var(--ocean-color-white)',
+                        transform: 'translate(-50%)',
+                        marginLeft: '50%',
+                        marginTop: '2%',
+                        padding: '3% 7%',
+                      }}
                     >
                       {I18n.t('continue')}
                     </Button>
@@ -296,7 +375,7 @@ class Guide extends React.Component<Record<string, never>> {
               </Box>
             </Box>
             {currentGuide.arrow && (
-              <img src={arrowDownImage} className={arrowClassName} alt="" />
+              <Box component="img" src={arrowDownImage} sx={arrowSx} alt="" />
             )}
           </Box>
         )}

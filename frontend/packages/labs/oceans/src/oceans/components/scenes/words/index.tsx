@@ -1,3 +1,4 @@
+import type {SxProps, Theme} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import _ from 'lodash';
 import * as React from 'react';
@@ -11,8 +12,8 @@ import {getState, setState} from '@/oceans/state';
 interface WordSetEntry {
   textKey: string;
   choices: string[][];
-  /** Class name for the word-button modifier (column layout). */
-  buttonClass: string;
+  /** MUI sx sizing for word-choice buttons (column layout). */
+  buttonSx: SxProps<Theme>;
 }
 
 /*
@@ -29,7 +30,12 @@ export const wordSet: Record<string, WordSetEntry> = {
       ['blue', 'green', 'red'],
       ['circular', 'rectangular', 'triangular'],
     ],
-    buttonClass: 'ocean-word-button--2col',
+    buttonSx: {
+      width: '20%',
+      marginLeft: '14%',
+      marginRight: '14%',
+      marginTop: '2%',
+    },
   },
   long: {
     textKey: 'wordQuestionLong',
@@ -52,7 +58,12 @@ export const wordSet: Record<string, WordSetEntry> = {
         'wild',
       ],
     ],
-    buttonClass: 'ocean-word-button--3col',
+    buttonSx: {
+      width: '20%',
+      marginLeft: '6%',
+      marginRight: '6%',
+      marginTop: '2%',
+    },
   },
 };
 
@@ -142,7 +153,15 @@ class Words extends React.Component<Record<string, never>, WordsState> {
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
-              className={`words-button ocean-word-button ${entry.buttonClass}`}
+              /* words-button is a test-hook class. */
+              className="words-button"
+              sx={{
+                ...entry.buttonSx,
+                '&:hover, &:focus': {
+                  backgroundColor: 'var(--ocean-color-orange)',
+                  color: 'var(--ocean-color-white)',
+                },
+              }}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {I18n.t(item)}

@@ -1,6 +1,8 @@
 import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Box from '@mui/material/Box';
+import ButtonBase from '@mui/material/ButtonBase';
+import type {SxProps, Theme} from '@mui/material/styles';
 import * as React from 'react';
 
 import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
@@ -36,9 +38,17 @@ class Train extends React.Component<Record<string, never>, TrainState> {
       setState({showConfirmationDialog: false});
     };
 
-    const botHeadClassName = this.state.headOpen
-      ? 'ocean-train__bot-head ocean-train__bot-head--open'
-      : 'ocean-train__bot-head';
+    const botHeadSx: SxProps<Theme> = {
+      transition: 'transform 500ms',
+      left: '3%',
+      width: '43%',
+      top: '0%',
+      position: 'absolute',
+      direction: 'ltr',
+      ...(this.state.headOpen
+        ? {transform: 'rotate(90deg)', transformOrigin: 'bottom right'}
+        : {}),
+    };
 
     return (
       <Body>
@@ -55,21 +65,68 @@ class Train extends React.Component<Record<string, never>, TrainState> {
         >
           {state.trainingQuestion}
         </Box>
-        <Box className="ocean-train__bot">
-          <img src={aiBotHead} className={botHeadClassName} alt="" />
-          <img src={aiBotBody} className="ocean-train__bot-body" alt="" />
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '30%',
+            right: '-2%',
+            width: '30%',
+            direction: 'ltr',
+          }}
+        >
+          <Box component="img" src={aiBotHead} sx={botHeadSx} alt="" />
+          <Box
+            component="img"
+            src={aiBotBody}
+            sx={{width: '49%', marginTop: '30%', direction: 'ltr'}}
+            alt=""
+          />
         </Box>
-        <Box className="ocean-counter">
-          <img src={counterIcon} className="ocean-counter__img" alt="" />
-          <span className="ocean-counter__num" id="uitest-train-count">
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '2%',
+            right: '7%',
+            backgroundColor: 'var(--ocean-color-transparent-black)',
+            color: 'var(--ocean-color-neon-blue)',
+            borderRadius: '33px',
+            textAlign: 'right',
+            minWidth: '7%',
+            height: '5%',
+            padding: '1% 2.5%',
+          }}
+        >
+          <Box
+            component="img"
+            src={counterIcon}
+            sx={{float: 'left', height: '100%'}}
+            alt=""
+          />
+          <span style={{fontSize: '90%'}} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </Box>
-        <Box
-          component="button"
-          type="button"
-          className="ocean-erase-button"
+        <ButtonBase
+          disableRipple
           aria-label={I18n.t('erase')}
+          sx={{
+            position: 'absolute',
+            top: '2%',
+            right: '1.2%',
+            cursor: 'pointer',
+            borderRadius: '50px',
+            padding: '0.75% 1.2%',
+            fontSize: '120%',
+            backgroundColor: 'var(--ocean-color-white)',
+            color: 'var(--ocean-color-grey)',
+            height: '6%',
+            width: '2.4%',
+            border: 'none',
+            '&:hover, &:focus': {
+              backgroundColor: 'var(--ocean-color-red)',
+              color: 'var(--ocean-color-white)',
+            },
+          }}
           onClick={() => {
             setState({
               showConfirmationDialog: true,
@@ -79,12 +136,25 @@ class Train extends React.Component<Record<string, never>, TrainState> {
         >
           <FontAwesomeIcon
             icon={faTrash}
-            className="ocean-erase-button__icon"
+            style={{display: 'block', margin: 'auto', height: '100%'}}
           />
-        </Box>
-        <Box className="ocean-train__buttons">
+        </ButtonBase>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '83%',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <Button
-            className="ocean-train__button-no"
+            sx={{
+              '&:hover': {
+                backgroundColor: 'var(--ocean-color-red)',
+                color: 'var(--ocean-color-white)',
+              },
+            }}
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(false);
@@ -96,7 +166,13 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             {noButtonText}
           </Button>
           <Button
-            className="ocean-train__button-yes"
+            sx={{
+              marginLeft: '10px',
+              '&:hover': {
+                backgroundColor: 'var(--ocean-color-green)',
+                color: 'var(--ocean-color-white)',
+              },
+            }}
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(true);
@@ -109,7 +185,13 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           </Button>
         </Box>
         <Button
-          className="ocean-button--continue"
+          sx={{
+            position: 'absolute',
+            bottom: '2%',
+            right: '1.2%',
+            backgroundColor: 'var(--ocean-color-orange)',
+            color: 'var(--ocean-color-white)',
+          }}
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           {I18n.t('continue')}
