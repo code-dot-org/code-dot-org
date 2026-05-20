@@ -1,0 +1,12 @@
+import {expect, test} from 'playwright/test';
+
+import {LabPage} from './poms/LabPage';
+
+test.describe('Console health', () => {
+  test('no unhandled JS errors on page load', async ({page}) => {
+    const pageErrors: Error[] = [];
+    page.on('pageerror', err => pageErrors.push(err));
+    await LabPage.load(page);
+    expect(pageErrors).toHaveLength(0);
+  });
+});

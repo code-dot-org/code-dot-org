@@ -32,6 +32,8 @@
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -47,6 +49,7 @@
     "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
     "jsdom": "catalog:",
+    "playwright": "catalog:",
     "prettier": "catalog:",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

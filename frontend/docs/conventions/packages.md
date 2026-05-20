@@ -180,6 +180,23 @@ The standalone `index.html` shall include a development-safe
 `<meta name="app-config" content='{"observability":{"provider":"none"}}' />`
 stub so observability-enabled labs initialize cleanly outside Rails.
 
+### End-to-end tests
+
+Each lab is generated with a Playwright e2e suite:
+
+- `playwright.config.ts` — Chromium only, auto-starts `yarn dev`, `TARGET_URL` env override for remote targets
+- `e2e/poms/LabPage.ts` — base Page Object (heading locator + `goto`/`load`); extend per feature
+- `e2e/smoke.spec.ts` — verifies the lab renders its root heading after load
+- `e2e/console-health.spec.ts` — verifies no unhandled JS errors on load
+
+Run locally: `yarn test:ui` (reuses an already-running `yarn dev` at port 5173).
+Run in CI: `yarn test:ui:ci` (spins up its own server via `webServer`).
+
+The generator also creates `.github/workflows/<name>-ci.yml` (two jobs: `build`
+via `turbo release:dryrun` and `e2e` via Playwright in the pinned container) and
+updates `frontend-ci.yml` with a `paths-filter` output, filter entry, conditional
+job, and `teardown.needs` entry for the new lab.
+
 ## Runtime config
 
 Runtime values (API endpoints, feature flags, DSNs) come from `@code-dot-org/core`'s
