@@ -29,25 +29,25 @@ header:
 
     student:
       - title: my_dashboard
-        url: /cs/home
+        url: /cz/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /cs/catalog
+        url: /cz/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /cs/home
+        url: /cz/home
         domain: studio.code.org
         id: header-teacher-home
       - title: course_catalog
-        url: /cs/catalog
+        url: /cz/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /cs/my-professional-learning
+        url: /cz/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -56,7 +56,7 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /cs/catalog
+        url: /cz/catalog
         id: learn
       - title: legal
         type: expander
@@ -72,7 +72,7 @@ header:
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /cs/catalog
+        url: /cz/catalog
         id: learn
       - title: legal
         type: expander
