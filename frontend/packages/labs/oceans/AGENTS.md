@@ -14,9 +14,8 @@ Consumed by:
   responsive shell classes).
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
-ESLint flat config, Prettier, Stylelint. Scene components use class
-components and CSS classes (via `scenes.css`) for styling; Radium has
-been removed.
+ESLint flat config, Prettier, Stylelint. Scene components are class
+components styled via CSS classes (`scenes.css`).
 
 ## Setup
 
