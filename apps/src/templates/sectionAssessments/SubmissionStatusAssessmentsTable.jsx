@@ -86,7 +86,7 @@ class SubmissionStatusAssessmentsTable extends Component {
       );
     } else {
       return (
-        <Typography variant="body3">
+        <Typography variant="body3" component="span">
           <Typography variant="strong" component="strong">
             {name}
           </Typography>
