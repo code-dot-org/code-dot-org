@@ -434,7 +434,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_client.stubs(:available_credits).returns(false)
     AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
 
-    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true).
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, false).
       returns({script: @test_script})
     AWS::S3.expects(:upload_to_bucket).never
 
@@ -446,7 +446,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     mock_client.stubs(:available_credits).returns(true)
     AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
 
-    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true).
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, true).
       returns({script: @test_script})
     AWS::S3.stubs(:exists_in_bucket).returns(false)
     AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
@@ -458,6 +458,18 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
       @test_audio_data,
       no_random: true
     )
+
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
+  end
+
+  test "create_and_save_to_s3 skips upload when script is nil" do
+    mock_client = mock('client')
+    mock_client.stubs(:available_credits).returns(true)
+    AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, true).
+      returns({script: nil})
+    AWS::S3.expects(:upload_to_bucket).never
 
     AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
   end

@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 ## Let's see what this looks like in code:
 
-#### This code defines the variables using the keyword `let`.
+This code defines the variables using the keyword `let`.
 
-#### In JavaScript, a variable must be declared, or defined, before it can be used. 
+In JavaScript, a variable must be declared, or defined, before it can be used. 
 
 <p style="text-align:center;">
   <img src="https://images.code.org/3fc90531df0a250a6d4d032641296c12-image-1762197748560.png" 
@@ -29,11 +29,11 @@ markdown <<MARKDOWN
 
 ## Remember:
 
-#### There are always two steps when working with variables:
+There are always two steps when working with variables:
 
-- #### 1. Define the variable (give it a name and a starting value).
+- 1. Define the variable (give it a name and a starting value).
 
-- #### 2. Use or update the variable within the program’s actions or logic.
+- 2. Use or update the variable within the program’s actions or logic.
 
 
 ## Let's practice! 

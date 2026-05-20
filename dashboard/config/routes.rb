@@ -218,6 +218,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          get 'suggested_lesson'
         end
         collection do
           get 'membership'
@@ -414,6 +415,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
@@ -480,6 +482,7 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'generate', to: 'lessons#generate_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -579,6 +582,7 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :generate
         post :clone
       end
     end

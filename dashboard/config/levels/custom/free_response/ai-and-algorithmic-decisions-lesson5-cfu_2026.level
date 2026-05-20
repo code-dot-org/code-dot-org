@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-17T02:30:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Pick a simple feature you've seen in any app — like, save, mute, follow, archive.\r\n\r\n1. What should this feature do?\r\n\r\n2. What should this feature never do?\r\n\r\n3. What is the one condition the code needs to check to decide what to do?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-17T02:30:29.442+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-cfu_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-cfu_2026\"},{\"changed_at\":\"2026-05-17 02:30:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

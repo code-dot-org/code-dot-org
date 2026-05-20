@@ -7,11 +7,11 @@ markdown <<MARKDOWN
 
 # Promise chain vs. async/await
   
-#### You already know how to use a Promise chain with <code style="font-size:12pt;">.then()</code>.
+You already know how to use a Promise chain with <code style="font-size:12pt;">.then()</code>.
 
-#### In this level, you’ll compare two versions of the *same* logic: one written with a Promise chain and one written with <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code>.
+In this level, you’ll compare two versions of the *same* logic: one written with a Promise chain and one written with <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code>.
 
-#### Your job is to explain what looks different and why the behavior stays the same.
+Your job is to explain what looks different and why the behavior stays the same.
  
 
 <div style="background:#f7f8fa; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
@@ -180,5 +180,5 @@ markdown <<MARKDOWN
 
 ## Next 
 
-#### Change a Promise chain to an async/ await function in Web Lab. 
+Change a Promise chain to an async/ await function in Web Lab. 
 MARKDOWN

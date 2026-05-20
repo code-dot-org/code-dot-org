@@ -13,10 +13,10 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
-- #### The code creates a line chart based on the label "date" or "line style."
-- #### The line in the chart will be "blue."
-- #### The line chart has a title and axis labels.
-- #### The code mentions *plt.bar*, indicating the creation of a bar chart.
+- The code creates a line chart based on the label "date" or "line style."
+- The line in the chart will be "blue."
+- The line chart has a title and axis labels.
+- The code mentions *plt.bar*, indicating the creation of a bar chart.
 
 <div style="clear:both;"></div>
 <br>
@@ -29,9 +29,9 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
-- #### Why the code doesn't explicitly state that it creates a line chart.
-- #### Why the bar chart lacks a title and axis labels.
-- #### The importance of adding titles and axis labels to a chart.
+- Why the code doesn't explicitly state that it creates a line chart.
+- Why the bar chart lacks a title and axis labels.
+- The importance of adding titles and axis labels to a chart.
 
 <br>
 
