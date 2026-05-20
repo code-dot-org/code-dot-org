@@ -21,16 +21,16 @@ markdown <<MARKDOWN
 
 # Filtering and Transparency
 
-#### When you scroll through a feed (videos, posts, news, shopping), you’re not seeing everything available. You’re seeing what an algorithm decided to show you based on **filters**.
+When you scroll through a feed (videos, posts, news, shopping), you’re not seeing everything available. You’re seeing what an algorithm decided to show you based on **filters**.
 
-#### Sometimes those filters are helpful. Sometimes they can hide information in ways you don’t notice.
+Sometimes those filters are helpful. Sometimes they can hide information in ways you don’t notice.
 
 ---
 ## Scenario: The Feed You See
 
-#### Imagine two teachers, Ms. Rivera and Mr. Chen, open the same app during lunch to look for classroom ideas about AI.
+Imagine two teachers, Ms. Rivera and Mr. Chen, open the same app during lunch to look for classroom ideas about AI.
 
-#### They type the same search: “AI projects for beginners” …but their feeds look very different.
+They type the same search: “AI projects for beginners” …but their feeds look very different.
 
 <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed A (Ms. Rivera)</div> <div style="font-size:13pt; color:#555; margin-bottom:10px;">Mostly upbeat “AI makes teaching easier” content</div>
 
@@ -72,9 +72,9 @@ markdown <<MARKDOWN
 
 ## Reflect: What do filters change?
 
-#### Take a moment to compare the two feeds.
-#### 👉 What effect do these filters have on what you see or don’t see?
-#### 👉 Who decides what gets filtered out?
+Take a moment to compare the two feeds.
+👉 What effect do these filters have on what you see or don’t see?
+👉 Who decides what gets filtered out?
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
 <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
@@ -128,16 +128,16 @@ markdown <<MARKDOWN
 
 ## Transparency Check: What would you want to see?
 
-#### Many platforms apply filters quietly. But designers can make filters more transparent.
-#### Below are two interface styles. One makes filtering visible. One does not.
+Many platforms apply filters quietly. But designers can make filters more transparent.
+Below are two interface styles. One makes filtering visible. One does not.
 
 <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1: Transparent</div> <div style="background:#f2fbf4; border:1px solid #cdebd6; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>Active filters:</strong> Following • Education • Last 7 days<br> <span style="font-size:11pt;">(You can edit these)</span> </div> <div style="font-size:12pt; color:#444;">Users can tell what’s shaping the feed and adjust it.</div> </div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2: Hidden</div> <div style="background:#fff3f3; border:1px solid #f1c1c1; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>For you</strong><br> <span style="font-size:11pt;">(No explanation)</span> </div> <div style="font-size:12pt; color:#444;">Users may assume this is “what’s out there,” not what was selected.</div> </div> </div>
 
-#### 👉 Which design feels more trustworthy? Why?
+👉 Which design feels more trustworthy? Why?
 
 ## Next
 
-#### Let's see how filters work in JavaScript.
+Let's see how filters work in JavaScript.
 
 <div style="max-width:95%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
   <p style="font-size:14pt; margin:0 0 10px 0;"><strong>Module roadmap</strong> (90 minutes)</p>

@@ -7,6 +7,7 @@
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import HeroBanner from '@code-dot-org/component-library/heroBanner';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -304,13 +305,10 @@ const CurriculumCatalog = ({
             <Typography variant="body2" gutterBottom>
               {assignSuccessMessage}
             </Typography>
-            <button
+            <CloseButton
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}
-              type="button"
-            >
-              <strong>X</strong>
-            </button>
+            />
           </div>
         </div>
       )}

@@ -2715,8 +2715,32 @@ a.download-video {
   }
 }
 
+.free-response {
+  li {
+    font-size: 16px;
+  }
+}
+
+#level_markdown_textarea_preview.external.content-level,
+#level_long_instructions_preview.external.content-level,
 .external .content-level {
   overflow: hidden;
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
+  }
 }
 
 .external-video-container {
@@ -2884,6 +2908,22 @@ a.download-video {
 
   &-full-width {
     width: unset;
+  }
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
   }
 }
 

@@ -1,17 +1,30 @@
 {
   "name": "teaching-exploring-ai-and-computing-2026",
   "script_names": [
-
+    "self-paced-pl-intro-to-teaching-exploring-ai-computing-2026",
+    "self-paced-pl-teaching-problem-solving-with-ai-2026",
+    "self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026",
+    "self-paced-pl-teaching-fabric-of-the-internet-2026",
+    "self-paced-pl-teaching-ai-powered-threats-and-defenses-2026",
+    "self-paced-pl-teaching-insights-from-data-and-ai-2026",
+    "self-paced-pl-teaching-foundations-of-ai-programming-2026"
   ],
   "original_script_names": [
-
+    "self-paced-pl-intro-to-teaching-exploring-ai-computing-2026",
+    "self-paced-pl-teaching-problem-solving-with-ai-2026",
+    "self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026",
+    "self-paced-pl-teaching-fabric-of-the-internet-2026",
+    "self-paced-pl-teaching-ai-powered-threats-and-defenses-2026",
+    "self-paced-pl-teaching-insights-from-data-and-ai-2026",
+    "self-paced-pl-teaching-foundations-of-ai-programming-2026"
   ],
   "published_state": "in_development",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-exploring-ai-and-computing",
+    "has_verified_resources": true,
     "version_year": "2026"
   },
   "resources": [

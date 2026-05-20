@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-preassessment-q8_2026'
 
-question 'A streaming site has a "Next Episode" button that loads the next video in your playlist every time you click it. What happens in the code when that button is pressed?'
+question 'A student writes `const addItem = () => { ... }` and then writes `addItem()` somewhere else. What did the second line do?'
 
-right 'The app calls a function that runs the steps to load the next episode.'
-wrong 'The app automatically deletes the previous episode from its database.'
-wrong 'The app randomly picks a new show for you to watch.'
-wrong 'The app changes the website\'s layout colors to match the new episode.'
+wrong 'Defined the function for the first time.'
+wrong 'Created a new variable named addItem.'
+wrong 'Deleted the function.'
+right 'Called the function so its steps ran.'
 
 allow_multiple_attempts true
 

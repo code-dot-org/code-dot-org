@@ -113,7 +113,13 @@ class Unit < ApplicationRecord
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
           :opportunity_standards,
-          :jit_pl_concepts
+          :jit_pl_concepts,
+          :lessons_resources,
+          :lessons_vocabularies,
+          :lessons_standards,
+          :lessons_opportunity_standards,
+          :lessons_programming_expressions,
+          :jit_pl_concepts_lessons
         ],
         unit_group_units: {
           unit_group: :course_version
@@ -1194,7 +1200,7 @@ class Unit < ApplicationRecord
   end
 
   def finish_url(unit_group_unit: nil)
-    return hoc_finish_url if hoc_or_hoai?
+    return hoc_finish_url if hoc_or_hoai? && !pl_course?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
     ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)

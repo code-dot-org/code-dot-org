@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI Chat Helper\r\n\r\nUse AI Chat to test and refine your rule. You can ask for help checking your truth table, verifying your outcomes, or explaining how your AND/OR logic works.",
+    "long_instructions": "## Do This:\r\n\r\nUse the AI to test and refine your rule. You can ask for help checking your truth table, verifying your outcomes, or explaining how your AND/OR logic works.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -48,11 +48,11 @@
     "starter_assets": {
       "flowchart.png": "21d65c0a-b700-49c6-af87-b1c8970647d9.png"
     },
-    "display_name": "AI Chat",
-    "bubble_choice_description": "Use AI Chat to brainstorm or test your rule. Ask for help coming up with conditions, checking your truth table, or explaining how your AND/OR logic works.",
+    "display_name": "Logic Help",
+    "bubble_choice_description": "Brainstorm or test your rule. Ask for help coming up with conditions, checking your truth table, or explaining how your AND/OR logic works.",
     "thumbnail_url": "https://images.code.org/e3b30b90888bb720d756811b4fc347ce-Icon Template (11).png",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.812+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9e_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9e_2025\"},{\"changed_at\":\"2026-04-16 02:33:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.812+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9e_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9e_2025\"},{\"changed_at\":\"2026-04-16 02:33:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 17:47:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:47:35 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

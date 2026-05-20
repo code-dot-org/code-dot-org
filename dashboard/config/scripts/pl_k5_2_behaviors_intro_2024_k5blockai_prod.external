@@ -10,18 +10,18 @@ markdown <<MARKDOWN
 
 
 
-#### Here are the major takeaways covered in the module: 
+Here are the major takeaways covered in the module: 
 
-#### <b>Big Idea #1:</b> Understanding what data a computer will need in order to make predictions in the future.
-#### <b>Big Idea #2:</b> There is a human component to training a model, thus, any human bias may be reflected in the predictions the computer makes. 
-#### <b>Big Idea #3:</b> Sometimes AI gets it wrong in a way that a human wouldn’t. 
+<b>Big Idea #1:</b> Understanding what data a computer will need in order to make predictions in the future.
+<b>Big Idea #2:</b> There is a human component to training a model, thus, any human bias may be reflected in the predictions the computer makes. 
+<b>Big Idea #3:</b> Sometimes AI gets it wrong in a way that a human wouldn’t. 
 
 ## Main Ideas to Reinforce with Students:
-#### 👷 AI can help us automate tasks
-#### 📊 Machine learning algorithms require data provided to it by humans
-#### ⠳ AI makes predictions based on patterns it has seen from large datasets
-#### ❌ AI can sometimes be wrong or unfair
-#### 🪄 AI is not magical or random
+👷 AI can help us automate tasks
+📊 Machine learning algorithms require data provided to it by humans
+⠳ AI makes predictions based on patterns it has seen from large datasets
+❌ AI can sometimes be wrong or unfair
+🪄 AI is not magical or random
 
 
 <div style="clear:both"/>
