@@ -96,13 +96,13 @@ def device_farm_desktop_browser(http_client: nil)
 
   # In CI under USE_DEVICE_FARM_TAG, tests target
   # localhost-studio.code.org:3000 (same URL the local-webdriver first run
-  # uses, so cookie scoping and redirects match). Device Farm's Chrome is
-  # in another VPC; the ui-tests step runs in network_mode: host so puma
-  # binds the worker's primary ENI. Chrome's --host-resolver-rules MAP
-  # rewrites in-browser DNS to the worker's VPC-private IP while the URL,
-  # Host header, Origin, and cookie domain stay as the public-style names.
-  # localhost.code.org is mapped too because --local sets PEGASUS_TEST_DOMAIN
-  # to it.
+  # uses, so cookie scoping and redirects match). Device Farm's Chrome
+  # session runs in the same VPC as the drone workers; the ui-tests step
+  # uses network_mode: host so puma binds the worker's primary ENI.
+  # Chrome's --host-resolver-rules MAP rewrites in-browser DNS to the
+  # worker's VPC-private IP while the URL, Host header, Origin, and cookie
+  # domain stay as the public-style names. localhost.code.org is mapped
+  # too because --local sets PEGASUS_TEST_DOMAIN to it.
   if $device_farm_browser_config['browserName'] == 'chrome' && ENV['WORKER_IP']
     chrome_options = capabilities['goog:chromeOptions'] || {}
     chrome_args = chrome_options['args'] || []
