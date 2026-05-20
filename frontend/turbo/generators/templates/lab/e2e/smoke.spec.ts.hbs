@@ -1,0 +1,10 @@
+import {expect, test} from 'playwright/test';
+
+import {LabPage} from './poms/LabPage';
+
+test.describe('{{pascalCase name}} Lab smoke', () => {
+  test('lab loads and renders heading', async ({page}) => {
+    const lab = await LabPage.load(page);
+    await expect(lab.heading).toBeVisible();
+  });
+});
