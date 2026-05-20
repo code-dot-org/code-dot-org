@@ -1,24 +1,30 @@
-import Radium from 'radium';
 import * as React from 'react';
 
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
-import styles from '@/oceans/styles';
-import {mergeStyles} from '@/oceans/styles/mergeStyles';
 
+/** Props accepted by the lab's shared <Button>. */
 interface ButtonProps {
+  /** Additional class names composed onto `.ocean-button`. */
   className?: string;
-  /** Single style or array of styles (Radium merges arrays at runtime). */
-  style?:
-    | React.CSSProperties
-    | ReadonlyArray<React.CSSProperties | false | null | undefined>;
+  /**
+   * Escape hatch for inline CSS custom properties (e.g. dynamic
+   * percentages set as `--ocean-bar-width`).  Static visual styling
+   * lives in CSS classes; this is only for genuinely per-render values.
+   */
+  style?: React.CSSProperties;
   children?: React.ReactNode;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
   id?: string;
 }
 
-const UnwrappedButton = class Button extends React.Component<ButtonProps> {
+/**
+ * Shared button used across scenes.  Dismisses any active guide and plays
+ * the configured sound (`sound` prop, default `'other'`) unless the click
+ * handler explicitly returns `false`.
+ */
+class Button extends React.Component<ButtonProps> {
   onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     guide.dismissCurrentGuide();
     const clickReturnValue = this.props.onClick && this.props.onClick(event);
@@ -30,22 +36,21 @@ const UnwrappedButton = class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const propStyle = this.props.style;
-    const propStyles: Array<React.CSSProperties | false | null | undefined> =
-      Array.isArray(propStyle) ? [...propStyle] : [propStyle];
-    const style = mergeStyles(styles.button, ...propStyles);
+    const className = this.props.className
+      ? `ocean-button ${this.props.className}`
+      : 'ocean-button';
     return (
       <button
         type="button"
         id={this.props.id}
-        className={this.props.className}
-        style={style}
+        className={className}
+        style={this.props.style}
         onClick={this.onClick}
       >
         {this.props.children}
       </button>
     );
   }
-};
+}
 
-export default Radium(UnwrappedButton);
+export default Button;

@@ -1,0 +1,735 @@
+/*
+ * Scene-level styles for the AI for Oceans lab.
+ *
+ * These classes replace the JS-object inline styles that used to live in
+ * src/oceans/styles/index.js.  Names follow a BEM-lite convention
+ * (`ocean-<block>__<element>--<modifier>`) so they don't leak into the
+ * host (curriculum / studio shell / standalone DemoShell).
+ *
+ * Everything below is verbatim translation of the prior CSSProperties
+ * objects.  Percentages stay as percentages and resolve against the
+ * font-size cascade established in oceansLab.css.
+ */
+
+/*
+ * Reset box-sizing inside the React UI overlay.  CssBaseline (and most
+ * modern resets) set border-box globally; the lab's %-based padding /
+ * height inside #container-react assumes content-box (matching the
+ * curriculum path's Rails-default behaviour).  Re-scope locally rather
+ * than fighting the host.
+ */
+#container-react,
+#container-react * {
+  box-sizing: content-box;
+}
+
+:root {
+  /* Was colors.js.  Kept in lockstep with src/oceans/styles/colors.js,
+   * which is still the only colour source for code paths that need a JS
+   * value (e.g. canvas / Markdown). */
+  --ocean-color-white: white;
+  --ocean-color-black: black;
+  --ocean-color-grey: #4d575f;
+  --ocean-color-dark-grey: #2f353e;
+  --ocean-color-light-grey: #e7e7e7;
+  --ocean-color-green: #56c568;
+  --ocean-color-yellow-green: #b9bf15;
+  --ocean-color-red: #eb5757;
+  --ocean-color-orange: #febe40;
+  --ocean-color-neon-blue: #3cfff8;
+  --ocean-color-teal: #3fbed5;
+  --ocean-color-transparent-black: rgb(0 0 0 / 85%);
+  --ocean-color-transparent-white: rgb(255 255 255 / 80%);
+}
+
+/* ── Body / content scaffolding ───────────────────────────────────── */
+
+.ocean-body {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.ocean-body__children {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ocean-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ── Button base ───────────────────────────────────────────────────── */
+
+.ocean-button {
+  cursor: pointer;
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-grey);
+  font-size: 100%;
+
+  /* em so padding scales with font-size regardless of consumer context. */
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  min-width: 15%;
+  border: none;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.ocean-button--continue {
+  position: absolute;
+  bottom: 2%;
+  right: 1.2%;
+  background-color: var(--ocean-color-orange);
+  color: var(--ocean-color-white);
+}
+
+.ocean-button--finish {
+  background-color: var(--ocean-color-orange);
+  color: var(--ocean-color-white);
+  position: absolute;
+  bottom: 2%;
+  right: 1.2%;
+}
+
+.ocean-button--play-again {
+  background-color: var(--ocean-color-yellow-green);
+  color: var(--ocean-color-white);
+  position: absolute;
+  bottom: 13.5%;
+  right: 1.2%;
+}
+
+.ocean-button--back {
+  position: absolute;
+  bottom: 2%;
+  left: 1.2%;
+}
+
+/* ── Words scene ───────────────────────────────────────────────────── */
+
+.ocean-words__text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 120%;
+  color: var(--ocean-color-white);
+}
+
+.ocean-word-button--2col {
+  width: 20%;
+  margin-left: 14%;
+  margin-right: 14%;
+  margin-top: 2%;
+}
+
+.ocean-word-button--3col {
+  width: 20%;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 2%;
+}
+
+/* Hover/focus tinting for the words buttons. */
+.ocean-word-button:hover,
+.ocean-word-button:focus {
+  background-color: var(--ocean-color-orange);
+  color: var(--ocean-color-white);
+}
+
+/* ── Confirmation dialog ───────────────────────────────────────────── */
+
+.ocean-confirmation-dialog__bg {
+  background-color: var(--ocean-color-transparent-black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  /* legacy: zPosition was a typo in the old JS object; ignored at runtime */
+}
+
+.ocean-confirmation-dialog {
+  position: absolute;
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-dark-grey);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  bottom: initial;
+  left: 50%;
+  padding: 2%;
+  border-radius: 8px;
+}
+
+.ocean-confirmation-dialog__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ocean-confirmation-dialog__img {
+  position: absolute;
+  bottom: -46%;
+  left: -41%;
+  height: 100%;
+}
+
+.ocean-confirmation-dialog__header {
+  font-size: 220%;
+  color: var(--ocean-color-dark-grey);
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.ocean-confirmation-dialog__text {
+  text-align: center;
+  background-color: var(--ocean-color-light-grey);
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.ocean-confirmation-dialog__buttons {
+  padding-top: 5%;
+  clear: both;
+}
+
+.ocean-confirmation-dialog__yes-button {
+  background-color: var(--ocean-color-red);
+  color: var(--ocean-color-white);
+  left: 5%;
+  padding: 3.5% 8%;
+  width: 35%;
+}
+
+.ocean-confirmation-dialog__no-button {
+  background-color: var(--ocean-color-orange);
+  color: var(--ocean-color-white);
+  float: right;
+  right: 5%;
+  padding: 3.5% 8%;
+  width: 35%;
+}
+
+/* ── Loading / activity-intro ──────────────────────────────────────── */
+
+.ocean-loading {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-width: 30%;
+}
+
+/* ── Training scene ───────────────────────────────────────────────── */
+
+.ocean-train__question {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 180%;
+  color: var(--ocean-color-white);
+  white-space: nowrap;
+}
+
+.ocean-train__buttons {
+  position: absolute;
+  top: 83%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ocean-train__button-yes {
+  margin-left: 10px;
+}
+
+.ocean-train__button-yes:hover {
+  background-color: var(--ocean-color-green);
+  color: var(--ocean-color-white);
+}
+
+.ocean-train__button-no:hover {
+  background-color: var(--ocean-color-red);
+  color: var(--ocean-color-white);
+}
+
+.ocean-train__bot {
+  position: absolute;
+  top: 30%;
+  right: -2%;
+  width: 30%;
+  direction: ltr;
+}
+
+.ocean-train__bot-head {
+  transition: transform 500ms;
+  left: 3%;
+  width: 43%;
+  top: 0%;
+  position: absolute;
+  direction: ltr;
+}
+
+.ocean-train__bot-head--open {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+.ocean-train__bot-body {
+  width: 49%;
+  margin-top: 30%;
+  direction: ltr;
+}
+
+.ocean-counter {
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  background-color: var(--ocean-color-transparent-black);
+  color: var(--ocean-color-neon-blue);
+  border-radius: 33px;
+  text-align: right;
+  min-width: 7%;
+  height: 5%;
+  padding: 1% 2.5%;
+}
+
+.ocean-counter__img {
+  float: left;
+  height: 100%;
+}
+
+.ocean-counter__num {
+  font-size: 90%;
+}
+
+.ocean-erase-button {
+  position: absolute;
+  top: 2%;
+  right: 1.2%;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0.75% 1.2%;
+  font-size: 120%;
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-grey);
+  height: 6%;
+  width: 2.4%;
+  border: none;
+}
+
+.ocean-erase-button:hover,
+.ocean-erase-button:focus {
+  background-color: var(--ocean-color-red);
+  color: var(--ocean-color-white);
+}
+
+.ocean-erase-button__icon {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+/* ── Predict scene (media controls) ────────────────────────────────── */
+
+.ocean-media-controls {
+  position: absolute;
+  width: 100%;
+  bottom: 3.5%;
+  display: flex;
+  justify-content: center;
+  direction: ltr;
+}
+
+.ocean-media-control {
+  cursor: pointer;
+  margin: 0 20px;
+  font-size: 180%;
+  color: var(--ocean-color-white);
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.ocean-media-control--selected {
+  color: var(--ocean-color-orange);
+}
+
+.ocean-media-control:hover,
+.ocean-media-control:active {
+  color: var(--ocean-color-orange);
+}
+
+.ocean-media-control__time-scale {
+  width: 40px;
+  font-size: 80%;
+  text-align: center;
+}
+
+/* ── Pond scene ────────────────────────────────────────────────────── */
+
+.ocean-pond__surface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.ocean-pond__bot {
+  position: absolute;
+  height: 27%;
+  top: 59%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-45%);
+  pointer-events: none;
+}
+
+.ocean-pond__recall-icons {
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  height: 8.5%;
+  width: 9.5%;
+  display: flex;
+  align-items: center;
+  direction: ltr;
+}
+
+/* When the info-icon isn't rendered, the recall icons shift to the
+ * lab's right edge to take its place. */
+.ocean-pond__recall-icons--no-info {
+  right: 1.2%;
+}
+
+.ocean-toggle-icon {
+  cursor: pointer;
+  height: 100%;
+  width: 50%;
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-grey);
+  border: none;
+  padding: 12%;
+  display: flex;
+  margin: 0;
+}
+
+.ocean-toggle-icon:focus {
+  /* z-index above sibling so the focus ring isn't clipped */
+  position: relative;
+  z-index: 1;
+}
+
+.ocean-toggle-icon--matching-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ocean-toggle-icon--non-matching-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ocean-toggle-icon--bg-green {
+  background-color: var(--ocean-color-green);
+  color: var(--ocean-color-white);
+}
+
+.ocean-toggle-icon--bg-red {
+  background-color: var(--ocean-color-red);
+  color: var(--ocean-color-white);
+}
+
+.ocean-info-icon-container {
+  position: absolute;
+  top: 2%;
+  right: 1.2%;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0.75% 1.2%;
+  font-size: 120%;
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-grey);
+  height: 6%;
+  width: 2.5%;
+  border: none;
+}
+
+.ocean-info-icon-container:hover,
+.ocean-info-icon-container:focus {
+  background-color: var(--ocean-color-teal);
+  color: var(--ocean-color-white);
+}
+
+.ocean-info-icon-container--active {
+  background-color: var(--ocean-color-teal);
+  color: var(--ocean-color-white);
+}
+
+.ocean-info-icon {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+/* ── Pond info panel ──────────────────────────────────────────────── */
+
+.ocean-pond-panel--left {
+  position: absolute;
+  width: 30%;
+  background-color: var(--ocean-color-transparent-black);
+  color: var(--ocean-color-white);
+  border-radius: 10px;
+  left: 3%;
+  top: 16%;
+  padding: 2%;
+  pointer-events: none;
+}
+
+.ocean-pond-panel--right {
+  position: absolute;
+  width: 30%;
+  background-color: var(--ocean-color-transparent-black);
+  color: var(--ocean-color-white);
+  border-radius: 10px;
+  right: 3%;
+  top: 16%;
+  padding: 2%;
+  pointer-events: none;
+}
+
+.ocean-pond-panel__pre-text {
+  margin-bottom: 5%;
+}
+
+.ocean-pond-panel__post-text {
+  margin-top: 3%;
+}
+
+.ocean-pond-panel__row {
+  position: relative;
+  margin-bottom: 7%;
+}
+
+.ocean-pond-panel__bar--general {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 150%;
+  background-color: var(--ocean-color-teal);
+
+  /* width set per-row via --ocean-bar-width CSS variable */
+  width: var(--ocean-bar-width, 0%);
+}
+
+.ocean-pond-panel__bar-text--general {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  text-align: right;
+}
+
+.ocean-pond-panel__bar--green {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 150%;
+  background-color: var(--ocean-color-green);
+  width: var(--ocean-bar-width, 0%);
+}
+
+.ocean-pond-panel__bar-text--green {
+  position: absolute;
+  top: 30%;
+  left: 53%;
+}
+
+.ocean-pond-panel__bar--red {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 150%;
+  background-color: var(--ocean-color-red);
+  width: var(--ocean-bar-width, 0%);
+}
+
+.ocean-pond-panel__bar-text--red {
+  position: absolute;
+  top: 30%;
+  width: 47%;
+  text-align: right;
+}
+
+/* ── Guide overlay ────────────────────────────────────────────────── */
+
+.ocean-guide {
+  position: absolute;
+  background-color: var(--ocean-color-transparent-black);
+  color: var(--ocean-color-white);
+  border-radius: 5px;
+  max-width: 80%;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide--info {
+  background-color: var(--ocean-color-white);
+  color: var(--ocean-color-dark-grey);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  bottom: initial;
+  left: 50%;
+  padding: 2%;
+}
+
+.ocean-guide--center {
+  top: 50%;
+  left: 50%;
+  bottom: initial;
+  max-width: 47%;
+  transform: translate(-50%, -50%);
+}
+
+.ocean-guide__image {
+  position: absolute;
+  bottom: 1%;
+  left: 15%;
+  z-index: 2;
+  max-height: 45%;
+  max-width: 35%;
+}
+
+.ocean-guide__heading {
+  font-size: 220%;
+  color: var(--ocean-color-dark-grey);
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.ocean-guide__typing-text {
+  position: absolute;
+  padding: 20px;
+}
+
+.ocean-guide__final-text-container--info {
+  background-color: var(--ocean-color-light-grey);
+  border-radius: 10px;
+}
+
+.ocean-guide__final-text {
+  padding: 20px;
+  color: rgb(0 0 0 / 0%);
+}
+
+.ocean-guide__continue-reminder {
+  position: absolute;
+  right: 1%;
+  bottom: 0;
+  width: 5%;
+  min-width: 25px;
+  height: 15px;
+  animation: 0.25s ease-in 4s 1 normal backwards running fadein;
+}
+
+.ocean-guide__continue-reminder-1 {
+  width: 100%;
+  position: absolute;
+}
+
+.ocean-guide__continue-reminder-2 {
+  animation: 1s linear 0.5s infinite normal none running blink;
+  width: 100%;
+  position: absolute;
+}
+
+.ocean-guide__bg {
+  background-color: rgb(0 0 0 / 30%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Info-style guides darken the page more heavily. */
+.ocean-guide__bg--info {
+  background-color: var(--ocean-color-transparent-black);
+}
+
+.ocean-guide__bg--hidden {
+  background-color: transparent;
+  pointer-events: none;
+  border-radius: 0;
+}
+
+.ocean-guide__arrow {
+  position: absolute;
+  width: 8%;
+}
+
+.ocean-guide__arrow--bot-right {
+  top: 15%;
+  right: 12.5%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide__arrow--lower-left {
+  bottom: 17%;
+  left: 8.5%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide__arrow--lower-right {
+  bottom: 17%;
+  right: 0.75%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide__arrow--lowish-right {
+  bottom: 28%;
+  right: 0.75%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide__arrow--lower-center {
+  bottom: 22%;
+  left: 50.5%;
+  transform: translateX(-50%);
+}
+
+.ocean-guide__arrow--upper-right {
+  top: 13%;
+  right: -2%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.ocean-guide__arrow--upper-far-right {
+  top: 15%;
+  right: -4.6%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.ocean-guide__info-button {
+  background-color: var(--ocean-color-orange);
+  color: var(--ocean-color-white);
+  transform: translate(-50%);
+  margin-left: 50%;
+  margin-top: 2%;
+  padding: 3% 7%;
+}

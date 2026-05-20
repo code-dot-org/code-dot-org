@@ -14,10 +14,11 @@ Consumed by:
   responsive shell classes).
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
-ESLint flat config, Prettier, Stylelint. The lab still uses Radium for
-inline styles and class components — these are inherited from the original
-ml-activities source and intentionally preserved verbatim; see "Style
-conventions" below.
+ESLint flat config, Prettier, Stylelint. Styling is plain CSS classes
+(`src/oceans/styles/oceansLab.css` for the responsive frame, `scenes.css`
+for per-scene rules) — no Radium, no inline-style JS objects. Class
+components are still present (carry-over from the original ml-activities
+source); the follow-up PR collapses them to function components.
 
 ## Setup
 

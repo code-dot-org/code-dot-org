@@ -6,21 +6,28 @@ import Button from '@/oceans/components/common/Button';
 import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
 import Guide from '@/oceans/components/common/Guide';
 import guide from '@/oceans/models/guide';
-import styles from '@/oceans/styles';
 
 interface BodyProps {
   children?: React.ReactNode;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
+/**
+ * 16:9 padded scaffold used by every scene.  When a modal guide is on
+ * screen, marks the scene tree `inert` so screen readers / Tab focus
+ * stay inside the dialog.
+ */
 class Body extends React.Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
 
     return (
-      <div style={styles.body} onClick={this.props.onClick}>
-        <div style={styles.bodyChildren} inert={modalGuide ? '' : undefined}>
+      <div className="ocean-body" onClick={this.props.onClick}>
+        <div
+          className="ocean-body__children"
+          inert={modalGuide ? '' : undefined}
+        >
           {this.props.children}
         </div>
         <Guide />
@@ -33,13 +40,15 @@ interface ContentProps {
   children?: React.ReactNode;
 }
 
+/** Top-aligned absolute content container used by the Words scene. */
 const Content = ({children}: ContentProps) => (
-  <div style={styles.content}>{children}</div>
+  <div className="ocean-content">{children}</div>
 );
 
+/** Centered loading spinner.  Used while assets / models warm up. */
 const Loading = () => (
   <Body>
-    <img src={loadingGif} style={styles.loading} alt="Loading" />
+    <img src={loadingGif} className="ocean-loading" alt="Loading" />
   </Body>
 );
 
