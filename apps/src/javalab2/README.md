@@ -97,28 +97,28 @@ come in a later phase. Differences from legacy use:
   `ConfigType` gained an opt-in `hideNewFolderButton` flag.
 - Run button enabled at mount — Java has no client-side runtime to warm
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
+- Utilizes Lab2 resource panel, which gives us instructions, version history,
+  and committing a named version for free.
 
 ## Deferred to later phases
 
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
-- **Neighborhood mini-app** — shared neighborhood visualization +
-  console-signal routing.
+- **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
-- **Backpack** (file snippets pulled into the file tree).
+- **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
-- **Code review / commit dialog**.
-- **Exemplar + start_sources edit mode in codebridge** — currently the
-  levelbuilder edit modes still go through the legacy bundle. `useSource`
-  already understands these modes for MultiFile-shape sources, but the
-  flat-shape `prepareSourceForLevelbuilderSave` path needs work.
-- **Starter assets** (signed URLs surfaced to the file tree).
+- **Code review**.
+- **start_sources and exemplar edit modes** — currently trying
+  to edit start sources will break things, as it will save the MultiFileSource
+  version of the code.
+- **Starter assets** and image asset support in general.
 - **TS port of `JavabuilderConnection`** — currently imported from
   `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
   redux-thunk side effects and emit events instead.
-- **Contained levels** — `contained_level_names` is in
-  `serialized_attrs` but lab2 contained-level support is thin; audit
-  production usage before counting this for v1.
+- **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
+  version of predict levels. We will need to support converting these levels
+  to the lab2 predict level setup.
 - **Decommissioning the legacy bundle**. `apps/src/javalab/` stays
   until parity is reached and all production levels have flipped
   `uses_lab2`.
