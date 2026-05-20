@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@mui/material/styles';
 import * as React from 'react';
 
 import {Loading, ConfirmationDialog} from '@/oceans/components/common';
@@ -8,6 +9,7 @@ import Words from '@/oceans/components/scenes/words';
 
 import {Modes} from './constants';
 import {getState, setState} from './state';
+import oceanTheme from './theme';
 
 export default class UI extends React.Component {
   render() {
@@ -18,19 +20,21 @@ export default class UI extends React.Component {
     ).includes(currentMode as number);
 
     return (
-      <div>
-        {isLoading && <Loading />}
-        {currentMode === Modes.Words && <Words />}
-        {currentMode === Modes.Training && <Train />}
-        {currentMode === Modes.Predicting && <Predict />}
-        {currentMode === Modes.Pond && <Pond />}
-        {state.showConfirmationDialog && (
-          <ConfirmationDialog
-            onYesClick={state.confirmationDialogOnYes as () => void}
-            onNoClick={() => setState({showConfirmationDialog: false})}
-          />
-        )}
-      </div>
+      <ThemeProvider theme={oceanTheme}>
+        <div>
+          {isLoading && <Loading />}
+          {currentMode === Modes.Words && <Words />}
+          {currentMode === Modes.Training && <Train />}
+          {currentMode === Modes.Predicting && <Predict />}
+          {currentMode === Modes.Pond && <Pond />}
+          {state.showConfirmationDialog && (
+            <ConfirmationDialog
+              onYesClick={state.confirmationDialogOnYes as () => void}
+              onNoClick={() => setState({showConfirmationDialog: false})}
+            />
+          )}
+        </div>
+      </ThemeProvider>
     );
   }
 }

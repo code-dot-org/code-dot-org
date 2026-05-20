@@ -1,4 +1,5 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
+import Box from '@mui/material/Box';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -211,7 +212,7 @@ class Guide extends React.Component<Record<string, never>> {
     const imageStyle = currentGuide?.imageStyle;
 
     return (
-      <div>
+      <Box>
         {currentGuide && currentGuide.image && (
           <img
             src={currentGuide.image}
@@ -221,27 +222,27 @@ class Guide extends React.Component<Record<string, never>> {
           />
         )}
         {!!currentGuide && (
-          <div>
-            <div
+          <Box>
+            <Box
               key={currentGuide.id}
               className={bgClassName}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
             >
-              <div
+              <Box
                 aria-labelledby="guide-heading"
                 tabIndex={-1}
                 className={`guide-dialog ${guideClassName}`}
               >
-                <div>
+                <Box>
                   {currentGuide.style === 'Info' && (
-                    <div id="guide-heading" className="ocean-guide__heading">
+                    <Box id="guide-heading" className="ocean-guide__heading">
                       {I18n.t('didYouKnow')}
-                    </div>
+                    </Box>
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <div className="ocean-guide__typing-text" aria-hidden="true">
+                  <Box className="ocean-guide__typing-text" aria-hidden="true">
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -250,9 +251,9 @@ class Guide extends React.Component<Record<string, never>> {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                  </div>
+                  </Box>
 
-                  <div
+                  <Box
                     className={
                       currentGuide.style === 'Info'
                         ? 'ocean-guide__final-text-container--info'
@@ -268,9 +269,9 @@ class Guide extends React.Component<Record<string, never>> {
                     >
                       {currentGuide.textFn(getState())}
                     </div>
-                  </div>
+                  </Box>
                   {renderClickToContinueReminder && (
-                    <div className="ocean-guide__continue-reminder">
+                    <Box className="ocean-guide__continue-reminder">
                       <img
                         src={fingerClickIcon1}
                         alt=""
@@ -281,7 +282,7 @@ class Guide extends React.Component<Record<string, never>> {
                         alt=""
                         className="ocean-guide__continue-reminder-2"
                       />
-                    </div>
+                    </Box>
                   )}
                   {currentGuide.style === 'Info' && (
                     <Button
@@ -291,15 +292,15 @@ class Guide extends React.Component<Record<string, never>> {
                       {I18n.t('continue')}
                     </Button>
                   )}
-                </div>
-              </div>
-            </div>
+                </Box>
+              </Box>
+            </Box>
             {currentGuide.arrow && (
               <img src={arrowDownImage} className={arrowClassName} alt="" />
             )}
-          </div>
+          </Box>
         )}
-      </div>
+      </Box>
     );
   }
 }

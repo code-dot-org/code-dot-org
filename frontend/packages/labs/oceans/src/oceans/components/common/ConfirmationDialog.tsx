@@ -1,5 +1,6 @@
 import {faEraser} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Box from '@mui/material/Box';
 import * as React from 'react';
 
 import snail from '@/assets/images/snail-large.png';
@@ -15,24 +16,24 @@ interface ConfirmationDialogProps {
 class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   render() {
     return (
-      <div className="ocean-confirmation-dialog__bg">
-        <div className="ocean-confirmation-dialog">
-          <div className="ocean-confirmation-dialog__content">
+      <Box className="ocean-confirmation-dialog__bg">
+        <Box className="ocean-confirmation-dialog">
+          <Box className="ocean-confirmation-dialog__content">
             <img
               src={snail}
               className="ocean-confirmation-dialog__img"
               alt=""
             />
-            <div>
-              <div className="ocean-confirmation-dialog__header confirmation-text">
+            <Box>
+              <Box className="ocean-confirmation-dialog__header confirmation-text">
                 {I18n.t('areYouSure')}
-              </div>
-              <div className="ocean-confirmation-dialog__text">
+              </Box>
+              <Box className="ocean-confirmation-dialog__text">
                 {I18n.t('eraseWarning')}
-              </div>
-            </div>
-          </div>
-          <div className="ocean-confirmation-dialog__buttons">
+              </Box>
+            </Box>
+          </Box>
+          <Box className="ocean-confirmation-dialog__buttons">
             <Button
               onClick={this.props.onYesClick}
               className="ocean-confirmation-dialog__yes-button dialog-button"
@@ -45,9 +46,9 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
             >
               {I18n.t('cancel')}
             </Button>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Box>
+      </Box>
     );
   }
 }

@@ -1,3 +1,4 @@
+import Typography from '@mui/material/Typography';
 import _ from 'lodash';
 import * as React from 'react';
 
@@ -126,7 +127,17 @@ class Words extends React.Component<Record<string, never>, WordsState> {
       <Body>
         <Content>
           {entry.textKey && (
-            <div className="ocean-words__text">{I18n.t(entry.textKey)} </div>
+            <Typography
+              component="div"
+              sx={{
+                textAlign: 'center',
+                marginTop: '20px',
+                fontSize: '120%',
+                color: 'var(--ocean-color-white)',
+              }}
+            >
+              {I18n.t(entry.textKey)}{' '}
+            </Typography>
           )}
           {this.state.choices.map((item, itemIndex) => (
             <Button

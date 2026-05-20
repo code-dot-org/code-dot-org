@@ -5,6 +5,7 @@ import {
   faPlay,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Box from '@mui/material/Box';
 import * as React from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
@@ -113,8 +114,9 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
     return (
       <Body>
         {this.state.displayControls && (
-          <div className="ocean-media-controls" id="uitest-media-ctrl">
-            <button
+          <Box className="ocean-media-controls" id="uitest-media-ctrl">
+            <Box
+              component="button"
               type="button"
               aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
@@ -127,8 +129,9 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
                   `x${this.state.timeScale}`}
               </span>
               <FontAwesomeIcon icon={faBackward} aria-hidden />
-            </button>
-            <button
+            </Box>
+            <Box
+              component="button"
               type="button"
               aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
@@ -139,8 +142,9 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
                 icon={state.isRunning ? faPause : faPlay}
                 aria-hidden
               />
-            </button>
-            <button
+            </Box>
+            <Box
+              component="button"
               type="button"
               aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
@@ -153,8 +157,8 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-            </button>
-          </div>
+            </Box>
+          </Box>
         )}
         {!state.isRunning && !state.isPaused && (
           <Button

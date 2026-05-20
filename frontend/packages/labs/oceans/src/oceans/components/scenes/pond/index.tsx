@@ -1,5 +1,6 @@
 import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Box from '@mui/material/Box';
 import _ from 'lodash';
 import * as React from 'react';
 
@@ -233,12 +234,12 @@ class Pond extends React.Component {
 
     return (
       <Body>
-        <div
+        <Box
           role="button"
           aria-label="Fish pond"
           tabIndex={0}
-          onClick={this.onPondClick}
-          onKeyDown={e => {
+          onClick={this.onPondClick as React.MouseEventHandler<HTMLElement>}
+          onKeyDown={(e: React.KeyboardEvent<HTMLElement>) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
               setState({pondClickedFish: null});
@@ -246,11 +247,14 @@ class Pond extends React.Component {
           }}
           className="ocean-pond__surface"
         />
-        <div className={recallIconsClassName}>
-          <button
+        <Box className={recallIconsClassName}>
+          <Box
+            component="button"
             key="toggle-matching"
             type="button"
-            onClick={e => this.getMatchingFishSet(e, true)}
+            onClick={(e: React.MouseEvent<HTMLElement>) =>
+              this.getMatchingFishSet(e as React.MouseEvent, true)
+            }
             aria-label={I18n.t('switchToMatchingItems')}
             className={matchingToggleClassName}
           >
@@ -258,11 +262,14 @@ class Pond extends React.Component {
               icon={faCheck}
               style={{width: '100%', height: '100%'}}
             />
-          </button>
-          <button
+          </Box>
+          <Box
+            component="button"
             key="toggle-non-matching"
             type="button"
-            onClick={e => this.getMatchingFishSet(e, false)}
+            onClick={(e: React.MouseEvent<HTMLElement>) =>
+              this.getMatchingFishSet(e as React.MouseEvent, false)
+            }
             aria-label={I18n.t('switchToNonMatchingItems')}
             className={nonMatchingToggleClassName}
           >
@@ -270,29 +277,32 @@ class Pond extends React.Component {
               icon={faBan}
               style={{width: '100%', height: '100%'}}
             />
-          </button>
-        </div>
+          </Box>
+        </Box>
         {showInfoButton && (
-          <button
+          <Box
+            component="button"
             type="button"
             id="uitest-info-btn"
             aria-label={I18n.t('fishInformation')}
             aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
             className={infoButtonClassName}
-            onClick={this.onPondPanelButtonClick}
+            onClick={(e: React.MouseEvent<HTMLElement>) =>
+              this.onPondPanelButtonClick(e as React.MouseEvent)
+            }
           >
             <FontAwesomeIcon
               icon={faInfo}
               className="ocean-info-icon"
               aria-hidden
             />
-          </button>
+          </Box>
         )}
         <img className="ocean-pond__bot" src={aiBotClosed} alt="" />
         {state.canSkipPond && (
-          <div id="uitest-nav-btns">
+          <Box id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (
-              <div>
+              <Box>
                 <Button
                   className="ocean-button--play-again"
                   onClick={() => {
@@ -309,7 +319,7 @@ class Pond extends React.Component {
                 >
                   {I18n.t('finish')}
                 </Button>
-              </div>
+              </Box>
             ) : (
               <Button
                 className="ocean-button--continue"
@@ -318,7 +328,7 @@ class Pond extends React.Component {
                 {I18n.t('continue')}
               </Button>
             )}
-            <div>
+            <Box>
               <Button
                 className="ocean-button--back"
                 onClick={() => {
@@ -328,8 +338,8 @@ class Pond extends React.Component {
               >
                 {I18n.t('trainMore')}
               </Button>
-            </div>
-          </div>
+            </Box>
+          </Box>
         )}
         {state.pondPanelShowing && <PondPanel />}
       </Body>

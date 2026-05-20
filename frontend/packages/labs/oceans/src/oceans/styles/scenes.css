@@ -44,26 +44,11 @@
 
 /* ── Body / content scaffolding ───────────────────────────────────── */
 
-.ocean-body {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-}
-
-.ocean-body__children {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.ocean-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+/*
+ * ocean-body, ocean-body__children, ocean-content, ocean-loading were
+ * converted to MUI Box sx props in common/index.tsx and are no longer
+ * needed here.
+ */
 
 /* ── Button base ───────────────────────────────────────────────────── */
 
@@ -114,12 +99,7 @@
 
 /* ── Words scene ───────────────────────────────────────────────────── */
 
-.ocean-words__text {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 120%;
-  color: var(--ocean-color-white);
-}
+/* ocean-words__text is now handled by Typography sx in words/index.tsx */
 
 .ocean-word-button--2col {
   width: 20%;
@@ -218,25 +198,11 @@
 
 /* ── Loading / activity-intro ──────────────────────────────────────── */
 
-.ocean-loading {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  max-width: 30%;
-}
+/* ocean-loading is now handled by Box sx in common/index.tsx */
 
 /* ── Training scene ───────────────────────────────────────────────── */
 
-.ocean-train__question {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 180%;
-  color: var(--ocean-color-white);
-  white-space: nowrap;
-}
+/* ocean-train__question is now handled by Box sx in train/index.tsx */
 
 .ocean-train__buttons {
   position: absolute;

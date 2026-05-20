@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+import Box from '@mui/material/Box';
 import * as React from 'react';
 
 import I18n from '@/oceans/i18n';
@@ -31,23 +31,25 @@ class PondPanel extends React.Component {
       : state.pondFishMaxExplainValue;
 
     return (
-      <div>
+      <Box>
         {!state.pondClickedFish && (
-          <div
+          <Box
             className="ocean-pond-panel--left"
-            onClick={this.onPondPanelClick}
+            onClick={
+              this.onPondPanelClick as React.MouseEventHandler<HTMLElement>
+            }
           >
             {state.pondExplainGeneralSummary && (
-              <div>
-                <div className="ocean-pond-panel__pre-text">
+              <Box>
+                <Box className="ocean-pond-panel__pre-text">
                   {I18n.t('mostImportantParts')}
-                </div>
+                </Box>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
-                  <div key={i}>
+                  <Box key={i}>
                     {f.importance > 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box className="ocean-pond-panel__row">
                         &nbsp;
-                        <div
+                        <Box
                           className="ocean-pond-panel__bar--general"
                           style={barWidthStyle(
                             (Math.abs(f.importance) /
@@ -56,33 +58,35 @@ class PondPanel extends React.Component {
                           )}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--general">
+                        </Box>
+                        <Box className="ocean-pond-panel__bar-text--general">
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
-                  </div>
+                  </Box>
                 ))}
-                <div className="ocean-pond-panel__post-text">
+                <Box className="ocean-pond-panel__post-text">
                   {I18n.t('clickIndividualFish')}
-                </div>
-              </div>
+                </Box>
+              </Box>
             )}
-          </div>
+          </Box>
         )}
         {state.pondClickedFish && (
-          <div
+          <Box
             className={
               state.pondPanelSide === 'left'
                 ? 'ocean-pond-panel--left'
                 : 'ocean-pond-panel--right'
             }
-            onClick={e => this.onPondPanelClick(e)}
+            onClick={(e: React.MouseEvent<HTMLElement>) =>
+              this.onPondPanelClick(e as React.MouseEvent)
+            }
           >
             {state.pondExplainFishSummary && (
-              <div>
-                <div
+              <Box>
+                <Box
                   className="ocean-pond-panel__pre-text"
                   id="pondTextMarkdown"
                 >
@@ -94,48 +98,48 @@ class PondPanel extends React.Component {
                       }).toLowerCase(),
                     })}
                   />
-                </div>
+                </Box>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
-                  <div key={i}>
+                  <Box key={i}>
                     {f.impact < 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box className="ocean-pond-panel__row">
                         &nbsp;
-                        <div
+                        <Box
                           className="ocean-pond-panel__bar--green"
                           style={barWidthStyle(
                             ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
                           )}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--green">
+                        </Box>
+                        <Box className="ocean-pond-panel__bar-text--green">
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
                     {f.impact > 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box className="ocean-pond-panel__row">
                         &nbsp;
-                        <div
+                        <Box
                           className="ocean-pond-panel__bar--red"
                           style={barWidthStyle(
                             ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
                           )}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--red">
+                        </Box>
+                        <Box className="ocean-pond-panel__bar-text--red">
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
-                  </div>
+                  </Box>
                 ))}
-              </div>
+              </Box>
             )}
-          </div>
+          </Box>
         )}
-      </div>
+      </Box>
     );
   }
 }

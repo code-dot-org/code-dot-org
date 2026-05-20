@@ -1,5 +1,6 @@
 import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Box from '@mui/material/Box';
 import * as React from 'react';
 
 import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
@@ -41,18 +42,31 @@ class Train extends React.Component<Record<string, never>, TrainState> {
 
     return (
       <Body>
-        <div className="ocean-train__question">{state.trainingQuestion}</div>
-        <div className="ocean-train__bot">
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '15%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            fontSize: '180%',
+            color: 'var(--ocean-color-white)',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {state.trainingQuestion}
+        </Box>
+        <Box className="ocean-train__bot">
           <img src={aiBotHead} className={botHeadClassName} alt="" />
           <img src={aiBotBody} className="ocean-train__bot-body" alt="" />
-        </div>
-        <div className="ocean-counter">
+        </Box>
+        <Box className="ocean-counter">
           <img src={counterIcon} className="ocean-counter__img" alt="" />
           <span className="ocean-counter__num" id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
-        </div>
-        <button
+        </Box>
+        <Box
+          component="button"
           type="button"
           className="ocean-erase-button"
           aria-label={I18n.t('erase')}
@@ -67,8 +81,8 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             icon={faTrash}
             className="ocean-erase-button__icon"
           />
-        </button>
-        <div className="ocean-train__buttons">
+        </Box>
+        <Box className="ocean-train__buttons">
           <Button
             className="ocean-train__button-no"
             onClick={() => {
@@ -93,7 +107,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             &nbsp; &nbsp;
             {yesButtonText}
           </Button>
-        </div>
+        </Box>
         <Button
           className="ocean-button--continue"
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
