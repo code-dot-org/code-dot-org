@@ -172,10 +172,10 @@
 
 .quiz-option {
   padding: 10px 16px;
-  border: 1px solid rgb(255 255 255 / 30%);
+  border: 1px solid var(--neutral-white-alpha-30);
   border-radius: 6px;
   background: transparent;
-  color: #fff;
+  color: var(--neutral-base-white);
   font-family: Figtree, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -184,7 +184,7 @@
   transition: border-color 0.15s;
 
   &:not(:disabled):hover {
-    border-color: rgb(255 255 255 / 70%);
+    border-color: var(--neutral-white-alpha-70);
   }
 
   &:disabled {
@@ -195,7 +195,7 @@
 .quiz-option-wrong {
   border-color: #e53e3e !important;
   background-color: rgb(229 62 62 / 15%) !important;
-  color: #fc8181 !important;
+  color: var(--accent-strawberry-40) !important;
 }
 
 .quiz-option-correct {
@@ -210,15 +210,15 @@
   font-family: Figtree, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #a0aec0;
+  color: var(--neutral-gray-50);
 }
 
 // Onboarding tour step container styles.
 .custom-shepherd-onboarding-container {
   @extend %shepherd-step-container-base;
 
-  background-color: $light_black;
-  color: #fff;
+  background-color: var(--neutral-base-black);
+  color: var(--neutral-base-white);
 
   // Lay out the content as a flex row so the sparkle+text and the X button
   // all sit on the same line, with the footer wrapping beneath.
@@ -236,7 +236,7 @@
     flex: 1;
     min-width: 0;
     order: 1;
-    color: #fff;
+    color: var(--neutral-base-white);
     padding: 0;
     margin-bottom: 0;
   }
@@ -253,7 +253,7 @@
   // Take the cancel icon out of absolute positioning so it sits inline.
   .shepherd-cancel-icon {
     position: static;
-    color: #fff;
+    color: var(--neutral-base-white);
 
     &:hover {
       color: rgb(200 200 200);
@@ -270,6 +270,6 @@
   }
 
   &.shepherd-element > .shepherd-arrow:before {
-    background-color: rgb(41 47 54);
+    background-color: var(--neutral-base-black);
   }
 }
