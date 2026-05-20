@@ -124,10 +124,28 @@ module Cdo
         # replaces views for each model and drops orphaned views that no longer
         # correspond to any model in the set.
         #
+        # When a block is supplied, it is called before each unit of Redshift
+        # work so callers can report progress. The yielded events are:
+        #
+        #   yield(:apply, table_name)              # before create-or-replace for one model
+        #   yield(:applied, table_name)            # after create-or-replace for one model
+        #   yield(:error, table_name, exception)   # create-or-replace raised; sync continues
+        #   yield(:drop_batch, [fqn, ...])         # before the single DROP batch (skipped when empty)
+        #
+        # CREATE MATERIALIZED VIEW populates the view synchronously on Redshift,
+        # so large source tables can take minutes per view; the :apply / :applied
+        # events let an interactive caller emit per-model progress lines.
+        #
+        # Per-model failures (e.g., the source Zero ETL table not yet replicated,
+        # transient Redshift errors) are caught and reported via the :error event
+        # rather than aborting the whole run; the failed view name is added to
+        # the returned plan under :failed.
+        #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to sync
         # @param dry_run [Boolean] when true, returns the plan without executing
+        # @yield [event, payload] optional progress callback (see above)
         # @return [Hash] :to_add, :to_update, :to_drop arrays of fully-qualified view names
         def self.sync_all_views(client:, environment_type:, models:, dry_run: false)
           generators = models.map {|model| new(model)}
@@ -140,15 +158,25 @@ module Cdo
           plan = {
             to_add: (desired_fqns - existing_fqns).sort,
             to_update: (desired_fqns & existing_fqns).sort,
-            to_drop: (existing_fqns - desired_fqns).sort
+            to_drop: (existing_fqns - desired_fqns).sort,
+            failed: []
           }
 
           unless dry_run
             generators.each do |gen|
-              gen.create_or_replace_views(client: client, environment_type: environment_type)
+              table_name = gen.model.table_name
+              yield(:apply, table_name) if block_given?
+              begin
+                gen.create_or_replace_views(client: client, environment_type: environment_type)
+                yield(:applied, table_name) if block_given?
+              rescue StandardError => exception
+                plan[:failed] << table_name
+                yield(:error, table_name, exception) if block_given?
+              end
             end
 
             unless plan[:to_drop].empty?
+              yield(:drop_batch, plan[:to_drop]) if block_given?
               client.batch_execute(plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"})
             end
           end

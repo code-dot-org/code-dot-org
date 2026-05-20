@@ -38,7 +38,16 @@ namespace :redshift do
     require 'cdo/aws/redshift/client'
 
     Rails.application.eager_load!
-    AnalyticsExportable.validate_exported_models!
+
+    errors = AnalyticsExportable.exportability_errors
+    if errors.any?
+      warn "[AnalyticsExportable] Skipping models that cannot be exported via Zero ETL:"
+      errors.each {|msg| warn "  - #{msg}"}
+      warn ""
+    end
+
+    models = AnalyticsExportable.valid_exported_models
+    abort "No exportable models found." if models.empty?
 
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
@@ -49,7 +58,7 @@ namespace :redshift do
     plan = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
       client: client,
       environment_type: env,
-      models: AnalyticsExportable.exported_models,
+      models: models,
       dry_run: true
     )
 
@@ -83,13 +92,36 @@ namespace :redshift do
     print "\nProceed? [y/N] "
     abort "Aborted." unless $stdin.gets&.strip&.downcase == 'y'
 
-    Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
+    puts "\nApplying #{models.length} model(s)..."
+    started_at = Time.now
+
+    result = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
       client: client,
       environment_type: env,
-      models: AnalyticsExportable.exported_models
-    )
+      models: models
+    ) do |event, payload, extra|
+      case event
+      when :apply
+        print "  applying #{payload}..."
+        $stdout.flush
+      when :applied
+        puts " done"
+      when :error
+        puts " FAILED"
+        warn "    #{extra.class}: #{extra.message.lines.first&.strip}"
+      when :drop_batch
+        puts "  dropping #{payload.length} orphaned view(s)..."
+      end
+    end
 
-    puts "Done. #{plan[:to_add].length} added, #{plan[:to_update].length} updated, #{plan[:to_drop].length} dropped."
+    elapsed = (Time.now - started_at).round(1)
+    puts "Done in #{elapsed}s. #{plan[:to_add].length} added, #{plan[:to_update].length} updated, #{plan[:to_drop].length} dropped."
+
+    if result[:failed].any?
+      warn "\n#{result[:failed].length} model(s) failed; re-run after addressing each:"
+      result[:failed].each {|t| warn "  - #{t}"}
+      exit 1
+    end
   end
 end
 

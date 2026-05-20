@@ -56,26 +56,48 @@ module AnalyticsExportable
     @exported_models = Set.new
   end
 
-  # Returns validation errors for all registered models.
+  # Returns per-model exportability errors for every registered model that
+  # fails validation. The primary-key check consults the database (via
+  # `connection.primary_key`) rather than the Rails model's `primary_key`
+  # attribute: a model can declare `self.primary_key = 'id'` even when the
+  # underlying table only has a UNIQUE index and no `PRIMARY KEY` constraint
+  # (e.g., the `schools` table), and Zero ETL requires a real database-level
+  # primary key.
   #
-  # The primary-key check consults the database (via `connection.primary_key`)
-  # rather than the Rails model's `primary_key` attribute. A model can declare
-  # `self.primary_key = 'id'` even when the underlying table only has a UNIQUE
-  # index and no `PRIMARY KEY` constraint (e.g., the `schools` table), and Zero
-  # ETL requires a real database-level primary key.
-  #
-  # @return [Array<String>] human-readable error messages, empty when valid.
-  def self.exportability_errors
-    exported_models.each_with_object([]) do |model, errors|
+  # @return [Hash{Class => Array<String>}] invalid models mapped to their
+  #   reason strings (without the model-name prefix). Empty when all models
+  #   are valid.
+  def self.exportability_errors_by_model
+    exported_models.each_with_object({}) do |model, errors_by_model|
+      reasons = []
       if model.connection.primary_key(model.table_name).blank?
-        errors << "#{model.name} cannot be exported: Zero ETL requires a primary key"
+        reasons << "Zero ETL requires a primary key"
       end
 
       blob_columns = model.columns.select {|col| BLOB_DATA_TYPES.include?(col.type)}.map(&:name)
       unless blob_columns.empty?
-        errors << "#{model.name} cannot be exported: Zero ETL does not support blob columns (#{blob_columns.join(', ')})"
+        reasons << "Zero ETL does not support blob columns (#{blob_columns.join(', ')})"
       end
+
+      errors_by_model[model] = reasons if reasons.any?
     end
+  end
+
+  # Returns validation errors for all registered models as a flat list of
+  # human-readable strings prefixed with the model name.
+  # @return [Array<String>] human-readable error messages, empty when valid.
+  def self.exportability_errors
+    exportability_errors_by_model.flat_map do |model, reasons|
+      reasons.map {|reason| "#{model.name} cannot be exported: #{reason}"}
+    end
+  end
+
+  # Returns the subset of registered models that pass exportability checks.
+  # Use this in long-running jobs (e.g., `redshift:sync_materialized_views`)
+  # that should warn-and-skip invalid models rather than abort the run.
+  # @return [Set<Class>]
+  def self.valid_exported_models
+    exported_models - exportability_errors_by_model.keys
   end
 
   # @raise [ArgumentError] if any model lacks a primary key or has blob columns.

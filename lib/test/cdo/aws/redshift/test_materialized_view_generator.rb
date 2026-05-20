@@ -524,6 +524,118 @@ module Cdo
             end
           end
 
+          it 'yields :apply and :applied events around each create-or-replace when a block is given' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute)
+
+            events = []
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model, activities_model]
+            ) {|event, payload| events << [event, payload]}
+
+            assert_equal(
+              [
+                [:apply, 'users'], [:applied, 'users'],
+                [:apply, 'activities'], [:applied, 'activities']
+              ],
+              events
+            )
+          end
+
+          it 'yields :drop_batch with the list of fqns before dropping orphaned views' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'},
+                {'schema' => 'dashboard_test', 'name' => 'zeroetl_old_table'}
+              ]
+            )
+            client.stubs(:batch_execute)
+
+            drop_events = []
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: [model]
+            ) {|event, payload| drop_events << payload if event == :drop_batch}
+
+            assert_equal 1, drop_events.length
+            assert_includes drop_events[0], 'dashboard_test_pii.zeroetl_old_table'
+            assert_includes drop_events[0], 'dashboard_test.zeroetl_old_table'
+          end
+
+          it 'does not yield :drop_batch when to_drop is empty' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute)
+
+            events = []
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            ) {|event, _payload| events << event}
+
+            refute_includes events, :drop_batch
+          end
+
+          it 'does not yield any events on dry_run' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}]
+            )
+
+            events = []
+            MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :test,
+              models: [model],
+              dry_run: true
+            ) {|event, _| events << event}
+
+            assert_empty events
+          end
+
+          it 'continues past per-model failures and reports them via :error and :failed' do
+            client.stubs(:execute).returns([])
+
+            # First batch_execute (PII view for users) fails; remaining succeed.
+            call_count = 0
+            client.stubs(:batch_execute).with do |_sqls|
+              call_count += 1
+              raise Cdo::Aws::Redshift::Client::QueryError, 'Relation does not exist' if call_count == 1
+              true
+            end
+
+            events = []
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model, activities_model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            error_events = events.select {|e| e[0] == :error}
+            assert_equal 1, error_events.length
+            assert_equal 'users', error_events[0][1]
+            assert_instance_of Cdo::Aws::Redshift::Client::QueryError, error_events[0][2]
+
+            assert_equal ['users'], plan[:failed]
+            # Subsequent model still got an :applied event.
+            assert(events.any? {|ev, payload, _| ev == :applied && payload == 'activities'})
+          end
+
+          it 'reports an empty :failed array when all models succeed' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            assert_empty plan[:failed]
+          end
+
           it 'handles empty model set' do
             client.stubs(:execute).returns(
               [

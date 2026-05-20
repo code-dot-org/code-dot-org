@@ -103,6 +103,44 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_nothing_raised {AnalyticsExportable.validate_exported_models!}
   end
 
+  test 'exportability_errors_by_model maps each invalid model to its reasons' do
+    no_pk = create_base_model('NoPkModel', db_primary_key: nil)
+    blob = create_base_model('BlobModel', columns: [mock_column('id', :integer), mock_column('data', :binary)])
+    valid = create_base_model('ValidModel')
+    no_pk.export_to_analytics
+    blob.export_to_analytics
+    valid.export_to_analytics
+
+    by_model = AnalyticsExportable.exportability_errors_by_model
+    assert_equal [no_pk, blob].to_set, by_model.keys.to_set
+    assert_includes by_model[no_pk].first, 'Zero ETL requires a primary key'
+    assert_includes by_model[blob].first, 'Zero ETL does not support blob columns'
+  end
+
+  test 'exportability_errors_by_model returns empty hash when all models are valid' do
+    create_base_model('ValidA').export_to_analytics
+    create_base_model('ValidB').export_to_analytics
+    assert_empty AnalyticsExportable.exportability_errors_by_model
+  end
+
+  test 'valid_exported_models excludes models that fail validation' do
+    valid = create_base_model('ValidModel')
+    no_pk = create_base_model('NoPkModel', db_primary_key: nil)
+    valid.export_to_analytics
+    no_pk.export_to_analytics
+
+    assert_equal Set[valid], AnalyticsExportable.valid_exported_models
+  end
+
+  test 'valid_exported_models returns all models when none fail validation' do
+    a = create_base_model('ValidA')
+    b = create_base_model('ValidB')
+    a.export_to_analytics
+    b.export_to_analytics
+
+    assert_equal Set[a, b], AnalyticsExportable.valid_exported_models
+  end
+
   test 'reset_exported_models! clears the registry' do
     model = create_base_model('ResetTestModel')
     model.export_to_analytics
