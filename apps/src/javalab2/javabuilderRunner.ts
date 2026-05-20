@@ -68,30 +68,43 @@ export async function handleRunClick(
     .getProjectManager()
     ?.getChannelId();
 
-  // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
-  // handling, no validation result reporting. Callbacks for those slots are
-  // no-ops so the legacy class still satisfies its contract.
-  activeConnection = new JavabuilderConnection(
-    writeToConsole,
-    /* miniApp */ null,
-    serverLevelId,
-    /* options */ {},
-    writeNewline,
-    /* setIsRunning */ () => {},
-    /* setIsTesting */ () => {},
-    ExecutionType.RUN,
-    /* miniAppType */ levelProperties.csaViewMode || 'console',
-    state.currentUser,
-    /* onMarkdownLog */ writeToConsole,
-    csrfToken,
-    /* onValidationPassed */ () => {},
-    /* onValidationFailed */ () => {},
-    /* onConnectDone */ () => {},
-    /* setIsCaptchaDialogOpen */ () => {},
-    channelId
-  );
+  // Return a promise that stays pending until JavabuilderConnection signals
+  // the program has finished (via its setIsRunning(false) callback, fired
+  // from onExit / onClose / onError / onTimeout). This enables the run/stop
+  // state in Codebridge.
+  await new Promise<void>(resolve => {
+    let resolved = false;
+    const finishRun = (running: boolean) => {
+      if (running || resolved) return;
+      resolved = true;
+      resolve();
+    };
 
-  activeConnection.connectJavabuilder();
+    // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
+    // handling, no validation result reporting. Callbacks for those slots are
+    // no-ops so the legacy class still satisfies its contract.
+    activeConnection = new JavabuilderConnection(
+      writeToConsole,
+      /* miniApp */ null,
+      serverLevelId,
+      /* options */ {},
+      writeNewline,
+      /* setIsRunning */ finishRun,
+      /* setIsTesting */ () => {},
+      ExecutionType.RUN,
+      /* miniAppType */ levelProperties.csaViewMode || 'console',
+      state.currentUser,
+      /* onMarkdownLog */ writeToConsole,
+      csrfToken,
+      /* onValidationPassed */ () => {},
+      /* onValidationFailed */ () => {},
+      /* onConnectDone */ () => {},
+      /* setIsCaptchaDialogOpen */ () => {},
+      channelId
+    );
+
+    activeConnection.connectJavabuilder();
+  });
 }
 
 export function stopJavaCode(): void {
