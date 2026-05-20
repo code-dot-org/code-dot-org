@@ -112,7 +112,8 @@
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
-      cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
+      # Turn off the deletion job temporarily so we can test it manually.
+      # cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'openai_pdf_processing_availability_check')
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
