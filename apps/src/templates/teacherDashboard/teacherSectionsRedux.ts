@@ -1054,7 +1054,7 @@ function fetchJSON(url: string, params?: object) {
   return new Promise((resolve, reject) => {
     $.getJSON(url, params)
       .done(resolve)
-      .fail(jqxhr => {
+      .fail(jqxhr =>
         reject(
           new Error(`
         url: ${url}
@@ -1062,8 +1062,8 @@ function fetchJSON(url: string, params?: object) {
         statusText: ${jqxhr.statusText}
         responseText: ${jqxhr.responseText}
       `)
-        );
-      });
+        )
+      );
   });
 }
 
