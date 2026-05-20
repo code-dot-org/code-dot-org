@@ -197,7 +197,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/using_text_mode
   def post_using_text_mode
-    @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
+    @user.using_text_mode = !!to_bool(params[:using_text_mode])
     @user.save
 
     render json: {using_text_mode: !!@user&.using_text_mode}
@@ -205,7 +205,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/mute_music
   def post_mute_music
-    @user.mute_music = !!params[:mute_music].try(:to_bool)
+    @user.mute_music = !!to_bool(params[:mute_music])
     @user.save
 
     render json: {mute_music: !!@user&.mute_music}
@@ -215,7 +215,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_sort_by_family_name
     return head :unauthorized unless current_user
 
-    current_user.sort_by_family_name = !!params[:sort_by_family_name].try(:to_bool)
+    current_user.sort_by_family_name = !!to_bool(params[:sort_by_family_name])
     current_user.save
 
     head :no_content
@@ -225,7 +225,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_has_seen_homepage_welcome
     return head :unauthorized unless current_user
 
-    current_user.has_seen_homepage_welcome = !!params[:has_seen_homepage_welcome].try(:to_bool)
+    current_user.has_seen_homepage_welcome = !!to_bool(params[:has_seen_homepage_welcome])
     current_user.save!
 
     head :no_content
@@ -235,7 +235,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_has_dismissed_personalization_alert
     return head :unauthorized unless current_user
 
-    current_user.has_dismissed_personalization_alert = !!params[:has_dismissed_personalization_alert].try(:to_bool)
+    current_user.has_dismissed_personalization_alert = !!to_bool(params[:has_dismissed_personalization_alert])
     current_user.save!
 
     head :no_content
@@ -253,7 +253,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_ai_rubrics_disabled
     return head :unauthorized unless current_user
 
-    current_user.ai_rubrics_disabled = !!params[:ai_rubrics_disabled].try(:to_bool)
+    current_user.ai_rubrics_disabled = !!to_bool(params[:ai_rubrics_disabled])
     current_user.save
 
     head :no_content
@@ -262,7 +262,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_ai_differentiation_enabled
     return head :unauthorized unless current_user
 
-    current_user.ai_differentiation_toggled_off = !params[:ai_differentiation_enabled].try(:to_bool)
+    current_user.ai_differentiation_toggled_off = !to_bool(params[:ai_differentiation_enabled])
     current_user.save
 
     head :no_content
