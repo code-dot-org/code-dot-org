@@ -94,6 +94,23 @@ def device_farm_desktop_browser(http_client: nil)
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
+  # In CI under USE_DEVICE_FARM_TAG, tests target
+  # localhost-studio.code.org:3000 (same URL the local-webdriver first run
+  # uses, so cookie scoping and redirects match). Device Farm's Chrome is
+  # in another VPC; the ui-tests step runs in network_mode: host so puma
+  # binds the worker's primary ENI. Chrome's --host-resolver-rules MAP
+  # rewrites in-browser DNS to the worker's VPC-private IP while the URL,
+  # Host header, Origin, and cookie domain stay as the public-style names.
+  # localhost.code.org is mapped too because --local sets PEGASUS_TEST_DOMAIN
+  # to it.
+  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['WORKER_IP']
+    chrome_options = capabilities['goog:chromeOptions'] || {}
+    chrome_args = chrome_options['args'] || []
+    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{ENV['WORKER_IP']}, MAP localhost.code.org #{ENV['WORKER_IP']}"
+    chrome_options['args'] = chrome_args
+    capabilities['goog:chromeOptions'] = chrome_options
+  end
+
   SeleniumBrowser.remote(
     url,
     capabilities: capabilities,

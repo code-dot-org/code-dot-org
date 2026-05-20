@@ -72,10 +72,15 @@ SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
 # Use AWS Device Farm instead of SauceLabs for remote browser testing.
 # Requires DEVICE_FARM_DESKTOP_PROJECT_ARN to be set as a CI secret.
-# Note: Device Farm browsers connect to public URLs; they cannot reach localhost.
-# When this tag is present, SauceLabs browser configs are replaced with
-# browsers_device_farm.json (Chrome and Firefox only) and no Sauce Connect
-# proxy is started.
+# This branch runs against the in-container puma at
+# localhost-studio.code.org:3000 (same URL the local-webdriver
+# first run uses). Device Farm's Chrome reaches that puma via the
+# drone worker's VPC-private IP -- the ui-tests step runs in
+# network_mode: host so puma binds the worker's primary ENI, and
+# Chrome's --host-resolver-rules (set in
+# features/support/connect.rb) maps localhost-studio.code.org to
+# $WORKER_IP. VPC peering between the drone-worker VPC and the
+# codeorg-dev VPC (where Device Farm's ENIs land) is required.
 USE_DEVICE_FARM_TAG = 'use device farm'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
@@ -130,9 +135,10 @@ namespace :ci do
     end
     use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
     if use_device_farm
-      # AWS Device Farm: no proxy tunnel needed; browsers connect to public URLs.
-      # Tests are pointed at the public test domain rather than localhost.
-      RakeUtils.wait_for_url('http://test-studio.code.org')
+      # AWS Device Farm: no Sauce Connect tunnel; Device Farm Chrome
+      # reaches the in-container puma at localhost-studio.code.org:3000
+      # via the worker's VPC-private IP (see USE_DEVICE_FARM_TAG comment).
+      RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
       Dir.chdir('dashboard/test/ui') do
         container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
         eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -143,26 +149,41 @@ namespace :ci do
         # Because CI runs Device Farm in the codeorg-dev AWS account, this limit
         # is not shared with the prod limits in the prod AWS account, which
         # affect local development and the chef-managed test environment.
+        #
+        # `--local` + `--config X` sets the localhost domains while still
+        # routing reruns through the named browsers (--config flips
+        # options.local=false but the domain overrides stick). `--first-run-local`
+        # uses the in-container chromedriver for the first attempt and Device
+        # Farm for reruns.
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--feature #{container_features.join(',')} " \
+            "--local " \
             "--device-farm " \
             "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
             "--ci " \
+            "--db " \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
         if test_eyes?
+          # No iPhone here: Device Farm desktop doesn't offer iPhone, and
+          # all @eyes_mobile scenarios are skipped today anyway, so
+          # dropping it is a no-op for coverage.
           RakeUtils.system_stream_output "bundle exec ./runner.rb " \
               "--eyes " \
               "--feature #{container_eyes_features.join(',')} " \
+              "--local " \
               "--device-farm " \
               "--config Chrome " \
               "--ci " \
+              "--db " \
               "--parallel #{PARALLEL_COUNT} " \
               "--retry_count 1 " \
+              "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
               "--with-status-page " \
               "--html"
         end

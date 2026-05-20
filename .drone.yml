@@ -135,11 +135,21 @@ name: ui
 clone:
   disable: true
 
+# Both services share the worker's host network namespace because the
+# ui-tests step does too (so puma on 0.0.0.0:3000 is reachable on the
+# worker's primary ENI from Device Farm via VPC peering). With
+# network_mode: host the docker-compose service-DNS names
+# (ci-tests-redis, ci-tests-mysql) no longer resolve, so the step adds
+# matching /etc/hosts entries pointing at 127.0.0.1.
 services:
   - name: ci-tests-redis
     image: redis
-    ports:
-      - 6379
+    network_mode: host
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -233,6 +243,10 @@ steps:
     # see: docker/ci/Dockerfile
     image: codedotorg/cdo-ci:1.23
     pull: always
+    # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
+    # on the worker's primary ENI, reachable from Device Farm's Chrome via
+    # VPC peering (see USE_DEVICE_FARM_TAG comment in lib/rake/ci.rake).
+    network_mode: host
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -254,11 +268,23 @@ steps:
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
+      # With network_mode: host on this step and on both services, the
+      # docker service-DNS names no longer resolve. Point them at
+      # 127.0.0.1 where the daemons now bind on the host.
+      - echo "127.0.0.1 ci-tests-redis" | sudo tee -a /etc/hosts
+      - echo "127.0.0.1 ci-tests-mysql" | sudo tee -a /etc/hosts
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
+      # Worker's VPC-private IP, used as the Device Farm Chrome browser's
+      # target. Puma binds 0.0.0.0:3000 on the worker's host net; the
+      # browser resolves localhost-studio.code.org -> $WORKER_IP via a
+      # Chrome flag set in dashboard/test/ui/features/support/connect.rb.
+      - IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600")
+      - export WORKER_IP=$(curl -s -H "X-aws-ec2-metadata-token:$IMDS_TOKEN" http://169.254.169.254/latest/meta-data/local-ipv4)
+      - echo "WORKER_IP=$WORKER_IP"
       - EXIT_CODE=0
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
