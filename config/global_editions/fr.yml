@@ -63,11 +63,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/en-US/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
@@ -79,11 +79,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/en-US/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/fr/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
@@ -97,12 +97,12 @@ footer:
   links:
     studio:
       - title: privacy
-        url: https://code-org.translate.goog/en-US/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/fr/privacy?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: https://code-org.translate.goog/en-US/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/fr/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: https://code-org.translate.goog/en-US/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/fr/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fr-FR&_x_tr_hl=en&_x_tr_pto=wapp
 
 # Route matching to influence properties of components
 pages:
