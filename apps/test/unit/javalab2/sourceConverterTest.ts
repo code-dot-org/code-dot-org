@@ -1,13 +1,14 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+
+import {
+  flatToMultiFile,
+  multiFileToFlat,
+  JavalabFlatSource,
+} from '@cdo/apps/javalab2/sourceConverter';
 import {
   MultiFileSource,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
-import {
-  flatToMultiFile,
-  multiFileToFlat,
-  JAVALAB_ROOT_FOLDER_ID,
-  JavalabFlatSource,
-} from '@cdo/apps/javalab2/sourceConverter';
 
 function flatFile(
   text: string,
@@ -25,7 +26,7 @@ describe('javalab2 sourceConverter', () => {
         const mf = flatToMultiFile(input as JavalabFlatSource | null);
         expect(Object.keys(mf.files)).toHaveLength(0);
         expect(mf.openFiles).toEqual([]);
-        expect(mf.folders[JAVALAB_ROOT_FOLDER_ID]).toBeDefined();
+        expect(mf.folders).toEqual({});
       });
     });
 
@@ -38,7 +39,7 @@ describe('javalab2 sourceConverter', () => {
       expect(file.name).toBe('Main.java');
       expect(file.contents).toBe('class Main {}');
       expect(file.type).toBe(ProjectFileType.STARTER);
-      expect(file.folderId).toBe(JAVALAB_ROOT_FOLDER_ID);
+      expect(file.folderId).toBe(DEFAULT_FOLDER_ID);
       expect(mf.openFiles).toEqual([file.id]);
     });
 

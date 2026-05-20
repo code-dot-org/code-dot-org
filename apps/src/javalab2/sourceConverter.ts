@@ -5,13 +5,13 @@
 // JavalabSourcesStore (S3 round-trip) and Javalab2View (start_sources at
 // mount). These functions are pure.
 
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+
 import {
   FileId,
-  FolderId,
   MultiFileSource,
   ProjectFile,
   ProjectFileType,
-  ProjectFolder,
 } from '@cdo/apps/lab2/types';
 
 export interface JavalabFlatFile {
@@ -23,21 +23,6 @@ export interface JavalabFlatFile {
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;
 
-export const JAVALAB_ROOT_FOLDER_ID: FolderId = 'root';
-export const JAVALAB_ROOT_FOLDER_NAME = 'src';
-
-const EMPTY_MULTI_FILE_SOURCE: MultiFileSource = {
-  folders: {
-    [JAVALAB_ROOT_FOLDER_ID]: {
-      id: JAVALAB_ROOT_FOLDER_ID,
-      name: JAVALAB_ROOT_FOLDER_NAME,
-      parentId: '0',
-    },
-  },
-  files: {},
-  openFiles: [],
-};
-
 function projectFileType(flat: JavalabFlatFile): ProjectFileType {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
@@ -48,16 +33,8 @@ export function flatToMultiFile(
   flat: JavalabFlatSource | null | undefined
 ): MultiFileSource {
   if (!flat || Object.keys(flat).length === 0) {
-    return {...EMPTY_MULTI_FILE_SOURCE, files: {}, openFiles: []};
+    return {folders: {}, files: {}, openFiles: []};
   }
-
-  const folders: Record<FolderId, ProjectFolder> = {
-    [JAVALAB_ROOT_FOLDER_ID]: {
-      id: JAVALAB_ROOT_FOLDER_ID,
-      name: JAVALAB_ROOT_FOLDER_NAME,
-      parentId: '0',
-    },
-  };
 
   const entries = Object.entries(flat);
   const files: Record<FileId, ProjectFile> = {};
@@ -70,7 +47,7 @@ export function flatToMultiFile(
       id,
       name,
       contents: props.text ?? '',
-      folderId: JAVALAB_ROOT_FOLDER_ID,
+      folderId: DEFAULT_FOLDER_ID,
       type: projectFileType(props),
     };
   });
@@ -90,7 +67,7 @@ export function flatToMultiFile(
     .map(e => idByName.get(e.name))
     .filter((id): id is FileId => !!id);
 
-  return {folders, files, openFiles};
+  return {folders: {}, files, openFiles};
 }
 
 function isVisibleForFlatShape(file: ProjectFile): boolean {

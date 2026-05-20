@@ -4,15 +4,16 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {
-  LabProps,
-  MultiFileSource,
-  ProjectSources,
-} from '@cdo/apps/lab2/types';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 
 import {
   DEFAULT_PROJECT,
@@ -34,6 +35,9 @@ const defaultConfig: ConfigType = {
   editableFileTypes: JAVALAB_EDITABLE_FILE_TYPES,
   supportedFileTypes: JAVALAB_SUPPORTED_FILE_TYPES,
   activeLayout: 'horizontal',
+  // Java Lab's S3 source shape is a flat {filename: contents} hash, so
+  // nested folders have nowhere to be persisted.
+  hideNewFolderButton: true,
   layoutComponents: {
     horizontal: HorizontalLayout,
     vertical: HorizontalLayout,
@@ -50,17 +54,32 @@ const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const viewDispatch = useAppDispatch();
+
+  // Java Lab has no client-side runtime to warm up (Javabuilder lives in
+  // AWS). Mark the code environment loaded immediately so the Run button
+  // is enabled as soon as the view mounts. Reset on unmount so a later
+  // navigation to a lab with a real environment isn't tricked.
+  useEffect(() => {
+    viewDispatch(setLoadedCodeEnvironment(true));
+    return () => {
+      viewDispatch(setLoadedCodeEnvironment(false));
+    };
+  }, [viewDispatch]);
 
   // Rails sends Javalab's start_sources / template_sources / exemplar_sources
   // in the legacy flat shape. Codebridge wants MultiFileSource. Convert once
   // here before any codebridge hook reads them.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
-    const flatStart =
-      levelProperties.startSources as JavalabFlatSource | undefined;
-    const flatTemplate =
-      levelProperties.templateSources as JavalabFlatSource | undefined;
-    const flatExemplar =
-      levelProperties.exemplarSources as JavalabFlatSource | undefined;
+    const flatStart = levelProperties.startSources as
+      | JavalabFlatSource
+      | undefined;
+    const flatTemplate = levelProperties.templateSources as
+      | JavalabFlatSource
+      | undefined;
+    const flatExemplar = levelProperties.exemplarSources as
+      | JavalabFlatSource
+      | undefined;
 
     return {
       ...levelProperties,
