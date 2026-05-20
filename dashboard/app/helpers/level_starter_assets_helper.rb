@@ -56,6 +56,7 @@ module LevelStarterAssetsHelper
   end
 
   def self.prefix(key)
+    raise ArgumentError, 'key must be a non-empty String' if key.nil? || !key.is_a?(String) || key.empty?
     S3_PREFIX + key
   end
 
