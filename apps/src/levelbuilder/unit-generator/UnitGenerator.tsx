@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {createUuid} from '@cdo/apps/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
+import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
 import {generateUnitOutline} from './ai/unitOutline';
@@ -55,30 +55,8 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
 
-  // The aichat gateway expects a context on every access-token request.
-  // We're not actually inside an aichat lab, but the lesson generator
-  // page does the same thing: borrow the AI_CHAT_LAB context so the
-  // generateText path passes its access check.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: null,
-      scriptId: unit.id,
-      channelId: undefined,
-      lessonId: undefined,
-    });
-  }, [unit.id]);
-
-  // Block accidental navigation while a save is in flight.
-  useEffect(() => {
-    if (!isSaving) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [isSaving]);
+  useAichatContext({scriptId: unit.id});
+  useBeforeUnloadWhile(isSaving);
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {

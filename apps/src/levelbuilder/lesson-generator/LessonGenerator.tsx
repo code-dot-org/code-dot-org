@@ -1,11 +1,11 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
+import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
 import {generateLessonOutline} from './ai/outline';
@@ -98,33 +98,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
 
-  // The AI gateway expects an AichatContext on every access-token request.
-  // We're not actually inside an aichat lab here, but setting the context
-  // up front lets the levelbuilder page reuse the same generateText path
-  // the chat lab uses without each call site having to thread its own
-  // context through. Levelbuilders pass the access check unconditionally.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId: lesson.id,
-    });
-  }, [lesson.id]);
-
-  // Block accidental navigation while generation is in progress. The user
-  // explicitly asked for a confirmation prompt; the browser default
-  // beforeunload dialog is the only portable way to get one.
-  useEffect(() => {
-    if (!isGenerating) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [isGenerating]);
+  useAichatContext({lessonId: lesson.id});
+  useBeforeUnloadWhile(isGenerating);
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
