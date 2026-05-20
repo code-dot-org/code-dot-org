@@ -5,19 +5,32 @@ description 'description here'
 markdown <<MARKDOWN
 # Student Learning Tools
 
-## Sketch Lab
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
 
-Sketch Lab is a digital design workspace similar to Canva or Figma where students can annotate, draw, create, and edit content. In Thinking Critically About AI, students use Sketch Lab to apply what they have learned in each lesson by completing structured, hands-on activities that build toward their final project.
+<img 
+src="https://images.code.org/694418d5d24e8a432f285868df3b9644-image-1779214201653.25.40 AM.png" 
+alt="Sketch Lab icon" 
+style="width:60px; height:60px; border-radius:12px;">
+
+<h2 style="margin:0;">
+Sketch Lab
+</h2>
+
+</div>
+
+Sketch Lab is a digital design workspace similar to Canva or Figma where students can annotate, draw, organize ideas, and create visual projects. In Thinking Critically About AI, students use Sketch Lab throughout the unit to apply what they learn in each lesson and continuously build their Generate and Judge Guide.
+
+Rather than creating the entire project at the end of the unit, students revisit their guide repeatedly as they test AI systems, collect evidence, generate images, revise ideas, and add recommendations for responsible AI use.
 
 <div style="text-align: center; margin: 20px auto;">
   <img 
-    src="https://images.code.org/2f9936cfd475d9ee5fdd32ac094176a2-image-1772846190646.15.08 PM.png" 
-    alt="Screenshot of Sketch Lab" 
-    style="border-radius: 40px; height: 300px;">
+    src="https://images.code.org/d70c82fc592a0a17fec6a6d02f4dc8e9-image-1779214153330.08.06 AM.png" 
+    alt="A Sketch Lab canvas that includes the Generate and Judge planning guide" 
+    style="border-radius: 0px; height: 300px;">
 </div>
 
+Sketch Lab helps students move beyond simply discussing AI systems toward creating a polished, evidence-based product that reflects their own thinking, experiences, and judgments.
 
-They will annotate AI-generated content, map ideas, draft guidance, and design visuals that clarify complex conclusions. By combining analysis and design, Sketch Lab helps students move from exploration to polished, evidence-based communication.
 
-**Up Next**: Try out Sketch Lab!
+**Up Next**: You will preview the Generate and Judge Guide canvas in Sketch Lab. This is the same canvas that students will work on and return to, starting in Lesson 3.
 MARKDOWN
