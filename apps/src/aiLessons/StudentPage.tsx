@@ -32,7 +32,6 @@ import {
   TutorMessage,
 } from './tutor';
 import {LessonPlan} from './types';
-import {useAutoCheckOnRun} from './useAutoCheckOnRun';
 import {useStudentWork} from './useStudentWork';
 
 import styles from './aiLessons.module.scss';
@@ -278,8 +277,14 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     }
   }, [currentIndex, lesson.checkpoints.length]);
 
-  // Fire a check the moment the student hits Run/Play in the lab.
-  useAutoCheckOnRun(handleCheck, !busy && phase === 'in-progress');
+  // Fire a check the moment the student hits Run/Play in the lab. The
+  // lab view calls our `onRun` prop (an ExtraLabProps field) from its
+  // Run/Play handler — no redux digging needed.
+  const handleLabRun = useCallback(() => {
+    if (!busy && phase === 'in-progress') {
+      handleCheck();
+    }
+  }, [busy, phase, handleCheck]);
 
   if (phase === 'celebrate') {
     return (
@@ -387,6 +392,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           checkpoint={checkpoint}
           lessonId={lesson.id || ''}
           onLabComplete={handlePanelsComplete}
+          onRun={handleLabRun}
         />
       </main>
     </div>

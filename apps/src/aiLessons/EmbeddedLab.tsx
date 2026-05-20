@@ -54,6 +54,9 @@ interface EmbeddedLabProps {
   // finished the lab portion of the checkpoint — currently only the
   // Continue button on the last panel of a Panels checkpoint.
   onLabComplete?: () => void;
+  // Fires when the student presses Run/Play inside the embedded lab.
+  // Forwarded to the lab view via ExtraLabProps.
+  onRun?: () => void;
 }
 
 // Stable synthetic level IDs per (lesson, lab type).  All checkpoints in
@@ -253,6 +256,7 @@ const Lab2MountedView: React.FC<{
   view: React.LazyExoticComponent<React.ComponentType<LabProps>>;
   levelProperties: LabProps['levelProperties'];
   initialSources?: ProjectSources;
+  onRun?: () => void;
 }> = ({
   lessonId,
   labType,
@@ -261,6 +265,7 @@ const Lab2MountedView: React.FC<{
   view: LabView,
   levelProperties,
   initialSources,
+  onRun,
 }) => {
   const projectManager = useLabSetup(
     lessonId,
@@ -289,6 +294,7 @@ const Lab2MountedView: React.FC<{
             initialSources={initialSources}
             hideResourcePanel={true}
             projectManager={projectManager}
+            onRun={onRun}
           />
         </DialogManager>
       </Suspense>
@@ -320,6 +326,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   checkpoint,
   lessonId,
   onLabComplete,
+  onRun,
 }) => {
   const labType = checkpoint.labType as LabType;
   const id = synthesizeLevelId(lessonId, labType);
@@ -421,6 +428,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
         view={Weblab2EntryPoint.view}
         levelProperties={levelProperties}
         initialSources={initialSources}
+        onRun={onRun}
       />
     );
   }
@@ -435,6 +443,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
         view={MusicEntryPoint.view}
         levelProperties={levelProperties}
         initialSources={initialSources}
+        onRun={onRun}
       />
     );
   }

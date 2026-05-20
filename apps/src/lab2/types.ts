@@ -534,6 +534,13 @@ export interface ExtraLabProps {
   // project) without thrashing the singleton. Currently honored by
   // Music; other labs still go through the singleton.
   projectManager?: ProjectManager;
+  // Fire-and-forget signal the lab view emits when the student kicks
+  // off a run/play of their code. The host can use it to react (e.g.
+  // the AI Lessons tutor auto-evaluates the work on each Play). Lab
+  // views are responsible for calling this at the right moment;
+  // currently honored by Music (on Play). Weblab2 has no explicit Run
+  // action so this is a no-op there.
+  onRun?: () => void;
 }
 
 export type LabProps<

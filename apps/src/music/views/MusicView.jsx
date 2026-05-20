@@ -99,6 +99,7 @@ class UnconnectedMusicView extends React.Component {
     channel: PropTypes.object,
     projectManager: PropTypes.object,
     hideResourcePanel: PropTypes.bool,
+    onRun: PropTypes.func,
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -749,6 +750,7 @@ class UnconnectedMusicView extends React.Component {
     if (play) {
       this.playSong();
       this.analyticsReporter.onButtonClicked('play');
+      this.props.onRun?.();
     } else {
       this.stopSong();
     }
