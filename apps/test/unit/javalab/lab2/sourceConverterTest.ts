@@ -3,8 +3,8 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   flatToMultiFile,
   multiFileToFlat,
-} from '@cdo/apps/javalab2/sourceConverter';
-import {JavalabFlatSource} from '@cdo/apps/javalab2/types';
+} from '@cdo/apps/javalab/lab2/sourceConverter';
+import {JavalabFlatSource} from '@cdo/apps/javalab/lab2/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 

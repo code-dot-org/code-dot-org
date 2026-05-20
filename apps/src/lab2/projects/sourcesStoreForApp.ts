@@ -1,4 +1,4 @@
-import {JavalabSourcesStore} from '@cdo/apps/javalab2/JavalabSourcesStore';
+import {JavalabSourcesStore} from '@cdo/apps/javalab/lab2/JavalabSourcesStore';
 
 import {AppName} from '../types';
 
