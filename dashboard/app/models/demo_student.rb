@@ -15,7 +15,7 @@
 #
 class DemoStudent < ApplicationRecord
   belongs_to :user
-  validates :demo_type, inclusion: {in: Policies::DemoSections::DEMO_TYPES.map(&:to_s)}
+  validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::DEMO_TYPES.map(&:to_s)}}
   validates :user_id, uniqueness: {scope: :demo_type}
   validate :user_must_be_student
 

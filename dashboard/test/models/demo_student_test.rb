@@ -51,4 +51,13 @@ class DemoStudentTest < ActiveSupport::TestCase
 
     assert_includes Policies::DemoSections.all_demo_student_ids, student.id
   end
+
+  test 'invalidates Policies::DemoSections cache on destroy' do
+    student = create(:student)
+    record = DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.all_demo_student_ids # warm cache (now contains student)
+    record.destroy!
+
+    refute_includes Policies::DemoSections.all_demo_student_ids, student.id
+  end
 end

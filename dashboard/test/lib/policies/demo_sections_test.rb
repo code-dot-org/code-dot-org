@@ -15,7 +15,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     DemoStudent.create!(user: high1, demo_type: 'high')
     DemoStudent.create!(user: high2, demo_type: 'high')
 
-    assert_equal [high1.id, high2.id].sort, Policies::DemoSections.demo_student_ids(:high).sort
+    assert_equal [high1.id, high2.id].sort, Policies::DemoSections.demo_student_ids(:high)
   end
 
   test 'demo_student_ids returns empty array for unknown demo type' do

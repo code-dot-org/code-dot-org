@@ -53,7 +53,7 @@ class Policies::DemoSections
   end
 
   def self.demo_student_ids(demo_type)
-    DemoStudent.where(demo_type: demo_type.to_s).pluck(:user_id)
+    DemoStudent.where(demo_type: demo_type.to_s).order(:user_id).pluck(:user_id)
   end
 
   def self.preset_view(demo_type)
