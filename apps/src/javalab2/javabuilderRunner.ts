@@ -26,10 +26,13 @@ async function ensureCsrfToken(): Promise<string | null> {
   return csrfToken;
 }
 
+// Javabuilder explicitly sends newline messages,
+// so any other console output is written as a partial line
+// to avoid extra newlines.
 function writeToConsole(message: string) {
   CodebridgeRegistry.getInstance()
     .getConsoleManager()
-    ?.writeConsoleMessage(message);
+    ?.writePartialLine(message);
 }
 
 function writeNewline() {
