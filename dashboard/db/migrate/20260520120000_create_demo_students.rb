@@ -1,7 +1,11 @@
 class CreateDemoStudents < ActiveRecord::Migration[7.0]
   def change
     create_table :demo_students do |t|
-      t.references :user, null: false, foreign_key: true, type: :integer
+      t.references :user,
+        null: false,
+        foreign_key: {on_delete: :cascade},
+        type: :integer,
+        index: false
       t.string :demo_type, null: false
       t.timestamps
     end
