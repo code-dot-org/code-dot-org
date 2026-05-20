@@ -11,10 +11,7 @@
  * flex-column main area.  No JS measurement required.
  */
 
-/* Scene styles are imported via App.tsx so they ship with the lab in any
- * consumer; this file scopes the studio-style shell + the lab-frame +
- * the #container-react box-sizing reset, which only the embedding host
- * needs to opt into. */
+/* The host opts in to this file; the lab itself ships its own styles. */
 
 .oceans-lab-shell {
   flex: 1;
