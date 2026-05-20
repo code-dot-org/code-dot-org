@@ -4,7 +4,7 @@ import React, {useMemo} from 'react';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './previousVersionAlert.module.scss';
+import moduleStyles from './previous-version-alert.module.scss';
 
 // Renders the warning banner shown in a lab2 workspace when the user is
 // viewing a previous version of their project loaded from version history.
