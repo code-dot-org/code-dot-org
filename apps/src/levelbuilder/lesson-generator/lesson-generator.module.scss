@@ -1,63 +1,13 @@
-.container {
-  padding: 24px 32px 96px 32px;
-  font-family: inherit;
-  max-width: 1080px;
-}
-
-.heading {
-  margin: 0 0 8px 0;
-}
-
-.subheading {
-  margin: 0 0 24px 0;
-  color: #555;
-}
+// Page-specific styles for the lesson generator. Everything generic
+// (page chrome, outline block, card shell, footer, dialog scaffolding)
+// lives in curriculum-generator.module.scss; this file holds only the
+// classes the lesson page uniquely needs.
 
 .fieldRow {
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-.outlineBlock {
-  border: 1px dashed #b0b0b0;
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin-bottom: 24px;
-  background: #fbfbfb;
-}
-
-.outlineHeading {
-  margin: 0;
-  font-weight: 600;
-  font-size: 14px;
-  color: #444;
-}
-
-.outlineHelp {
-  margin: 8px 0;
-  font-size: 13px;
-  color: #555;
-}
-
-.outlineInput {
-  width: 100%;
-  min-height: 90px;
-  resize: vertical;
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.outlineActions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
 }
 
 .fieldRow label {
@@ -70,24 +20,12 @@
   font-size: 14px;
 }
 
-.levelList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.levelCard {
-  border: 1px solid #d6d6d6;
-  border-radius: 6px;
-  padding: 16px;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.levelCardUnsupported {
+// Read-only variant of the shared card frame, rendered for existing
+// levels whose lab type the generator doesn't support. The card sits
+// in the list so the user can reorder around it without losing the
+// level from the lesson; muted background + dashed border signal "you
+// can't edit this here."
+.cardUnsupported {
   background: #f3f3f3;
   border-style: dashed;
 }
@@ -99,75 +37,8 @@
   font-size: 13px;
 }
 
-.levelCardHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.levelCardHeader h3 {
-  margin: 0;
-  flex: 1;
-}
-
-.levelCardHeader .iconButton {
-  background: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.levelCardHeader .iconButton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.levelCardHeader .deleteButton {
-  background: transparent;
-  border: 1px solid #c44;
-  color: #c44;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
-.cardField {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.cardField label,
-.cardMain label {
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.cardField input,
-.cardField select,
-.cardMain textarea {
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.cardBody {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.cardSidebar {
-  flex: 0 0 240px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+// "Generate this level" checkbox on each card. Inline-flex so the
+// label sits to the right of the checkbox at the same baseline.
 .skipLabel {
   display: inline-flex;
   align-items: center;
@@ -182,140 +53,8 @@
   margin: 0;
 }
 
-.cardMain {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.cardMain textarea {
-  flex: 1;
-  width: 100%;
-  min-height: 110px;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-@media (max-width: 720px) {
-  .cardBody {
-    flex-direction: column;
-  }
-
-  .cardSidebar {
-    flex: initial;
-  }
-}
-
-.addButtonRow {
-  margin-top: 16px;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  border-top: 1px solid #d6d6d6;
-  padding: 12px 32px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  z-index: 10;
-  box-shadow: 0 -2px 6px rgb(0 0 0 / 6%);
-}
-
-// Shared box model so <button> and <a> render at the same height.
-// box-sizing+border on both keeps the inner content box the same
-// regardless of which element this class lands on.
-.primaryButton,
-.secondaryButton {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 1.2;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.primaryButton {
-  background: #0094ca;
-  color: #fff;
-  font-weight: 600;
-}
-
-.primaryButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.secondaryButton {
-  background: #fff;
-  color: #333;
-  border-color: #ccc;
-}
-
-.dialogBackdrop {
-  position: fixed;
-  inset: 0;
-  background: rgb(0 0 0 / 40%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.dialog {
-  background: #fff;
-  border-radius: 6px;
-  padding: 20px 24px;
-  min-width: 440px;
-  max-width: 640px;
-  max-height: 80vh;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.dialog h2 {
-  margin: 0 0 4px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.dialog h3 {
-  margin: 8px 0 2px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.dialog p {
-  margin: 0;
-}
-
-.dialog ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.dialog li + li {
-  margin-top: 2px;
-}
-
+// Progress bar in the per-level generation dialog. The bar is a wrap
+// around an inner block whose width animates from 0 → 100%.
 .progressLine {
   font-family: monospace;
   font-size: 13px;
@@ -337,17 +76,6 @@
 
 .summaryGood {
   color: #060;
-}
-
-.summaryBad {
-  color: #c33;
-}
-
-.dialogActions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 8px;
 }
 
 .dialogNote {

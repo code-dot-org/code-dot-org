@@ -1,112 +1,11 @@
-.container {
-  padding: 24px 32px 96px 32px;
-  font-family: inherit;
-  max-width: 1080px;
-}
+// Page-specific styles for the unit generator. Everything generic
+// (page chrome, outline block, card shell, footer, dialog scaffolding)
+// lives in curriculum-generator.module.scss; this file holds only the
+// classes the unit page uniquely needs.
 
-.heading {
-  margin: 0 0 8px 0;
-}
-
-.subheading {
-  margin: 0 0 24px 0;
-  color: #555;
-}
-
-.outlineBlock {
-  border: 1px dashed #b0b0b0;
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin-bottom: 24px;
-  background: #fbfbfb;
-}
-
-.outlineHeading {
-  margin: 0;
-  font-weight: 600;
-  font-size: 14px;
-  color: #444;
-}
-
-.outlineHelp {
-  margin: 8px 0;
-  font-size: 13px;
-  color: #555;
-}
-
-.outlineInput {
-  width: 100%;
-  min-height: 90px;
-  resize: vertical;
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.outlineActions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.lessonList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.lessonCard {
-  border: 1px solid #d6d6d6;
-  border-radius: 6px;
-  padding: 16px;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.lessonCardHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.lessonCardHeader h3 {
-  margin: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.lessonCardHeader .iconButton {
-  background: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.lessonCardHeader .iconButton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.lessonCardHeader .deleteButton {
-  background: transparent;
-  border: 1px solid #c44;
-  color: #c44;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
+// Lesson-key tags inside the card title. The "existing" pill is shown
+// for lessons already in the unit; "new" for cards the user added in
+// this session.
 .tagExisting,
 .tagNew {
   display: inline-block;
@@ -130,62 +29,6 @@
   color: #265;
 }
 
-.cardField {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.cardField label,
-.cardMain label {
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.cardField input,
-.cardMain textarea {
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.cardField input:read-only,
-.cardField input:disabled {
-  background: #f0f0f0;
-  color: #555;
-}
-
-.cardBody {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.cardSidebar {
-  flex: 0 0 240px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.cardMain {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.cardMain textarea {
-  flex: 1;
-  width: 100%;
-  min-height: 110px;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
 .createdSeparately {
   font-weight: 400;
   font-size: 12px;
@@ -203,116 +46,9 @@
   text-decoration: underline;
 }
 
-@media (max-width: 720px) {
-  .cardBody {
-    flex-direction: column;
-  }
-
-  .cardSidebar {
-    flex: initial;
-  }
-}
-
-.addButtonRow {
-  margin-top: 16px;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  border-top: 1px solid #d6d6d6;
-  padding: 12px 32px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  z-index: 10;
-  box-shadow: 0 -2px 6px rgb(0 0 0 / 6%);
-}
-
-.primaryButton,
-.secondaryButton {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 1.2;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.primaryButton {
-  background: #0094ca;
-  color: #fff;
-  font-weight: 600;
-}
-
-.primaryButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.secondaryButton {
-  background: #fff;
-  color: #333;
-  border-color: #ccc;
-}
-
-.dialogBackdrop {
-  position: fixed;
-  inset: 0;
-  background: rgb(0 0 0 / 40%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.dialog {
-  background: #fff;
-  border-radius: 6px;
-  padding: 18px 22px;
-  min-width: 440px;
-  max-width: 640px;
-  max-height: 80vh;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.dialog h2 {
-  margin: 0 0 2px;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.dialog p {
-  margin: 0;
-}
-
-.dialog ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.dialog li + li {
-  margin-top: 2px;
-}
-
-// Compact list for the success dialog. Distinct from .lessonList (the
-// main page's card list, which is a 16px-gap flex column); here we want
-// dense text rows with tight inline tags.
+// Compact list for the success dialog. Tighter than the shared
+// .dialog ul (which has default browser margin) and styled with
+// disc markers + inline tags.
 .summaryList {
   margin: 0;
   padding-left: 20px;
@@ -333,18 +69,7 @@
   text-decoration: underline;
 }
 
-.summaryBad {
-  color: #c33;
-}
-
 .muted {
   color: #777;
   font-size: 12px;
-}
-
-.dialogActions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 8px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import {UnitGenerationSummary} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../unit-generator.module.scss';
 
 interface UnitGenerateDialogProps {
@@ -27,13 +28,13 @@ const UnitGenerateDialog: React.FC<UnitGenerateDialogProps> = ({
 }) => {
   const showingSummary = summary !== null && !isSaving;
   return (
-    <div className={moduleStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={moduleStyles.dialog}>
+    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
+      <div className={sharedStyles.dialog}>
         {!showingSummary && (
           <>
             <h2>{error ? 'Save failed' : 'Saving lessons…'}</h2>
             {error ? (
-              <p className={moduleStyles.summaryBad} role="alert">
+              <p className={sharedStyles.summaryBad} role="alert">
                 {error}
               </p>
             ) : (
@@ -69,18 +70,18 @@ const UnitGenerateDialog: React.FC<UnitGenerateDialogProps> = ({
             </ul>
           </>
         )}
-        <div className={moduleStyles.dialogActions}>
+        <div className={sharedStyles.dialogActions}>
           {(showingSummary || error) && (
             <button
               type="button"
-              className={moduleStyles.secondaryButton}
+              className={sharedStyles.secondaryButton}
               onClick={onClose}
             >
               Stay here
             </button>
           )}
           {showingSummary && (
-            <a href={editUnitUrl} className={moduleStyles.primaryButton}>
+            <a href={editUnitUrl} className={sharedStyles.primaryButton}>
               Back to unit editor
             </a>
           )}

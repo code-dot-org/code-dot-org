@@ -5,11 +5,13 @@ import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
+
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {generateWeblab2Level} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
-import OutlineBlock from './components/OutlineBlock';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
 import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
@@ -38,6 +40,7 @@ import {
 } from './types';
 
 import moduleStyles from './lesson-generator.module.scss';
+import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
 // Display labels for the per-card Lab dropdown. `satisfies` keeps the
 // label literals narrow (handy if a caller ever wants them) while
@@ -62,7 +65,30 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   // was rendered with and isn't expected to change.
   const initial = useMemo(() => buildInitialState(lesson), [lesson]);
   const [prefix, setPrefix] = useState<string>(initial.prefix);
-  const [levelSpecs, setLevelSpecs] = useState<LevelSpec[]>(initial.specs);
+  const {
+    specs: levelSpecs,
+    setSpecs: setLevelSpecs,
+    updateSpec,
+    removeSpec,
+    moveSpec,
+    addSpec,
+  } = useReorderableList<LevelSpec>({
+    initial: initial.specs,
+    getKey: s => s.key,
+    newSpec: newLevelSpec,
+    // Editing the description re-derives the `generate` checkbox from
+    // whether the description still matches what we last generated for.
+    // The user can still override manually after.
+    onAfterPatch: (_prev, next, patch) => {
+      if (!('description' in patch)) return next;
+      return {
+        ...next,
+        generate:
+          next.lastGeneratedDescription === undefined ||
+          next.description.trim() !== next.lastGeneratedDescription,
+      };
+    },
+  });
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState<ProgressUpdate | null>(null);
   const [progressLog, setProgressLog] = useState<string[]>([]);
@@ -99,45 +125,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     window.addEventListener('beforeunload', handler);
     return () => window.removeEventListener('beforeunload', handler);
   }, [isGenerating]);
-
-  const updateSpec = useCallback((key: string, patch: Partial<LevelSpec>) => {
-    setLevelSpecs(specs =>
-      specs.map(s => {
-        if (s.key !== key) return s;
-        const next = {...s, ...patch};
-        // If the description was edited, re-derive whether to generate based
-        // on whether it now matches the description recorded at the last
-        // successful generation. The user can still manually toggle the
-        // checkbox afterward.
-        if ('description' in patch) {
-          next.generate =
-            next.lastGeneratedDescription === undefined ||
-            next.description.trim() !== next.lastGeneratedDescription;
-        }
-        return next;
-      })
-    );
-  }, []);
-
-  const removeSpec = useCallback((key: string) => {
-    setLevelSpecs(specs => specs.filter(s => s.key !== key));
-  }, []);
-
-  const moveSpec = useCallback((key: string, direction: 'up' | 'down') => {
-    setLevelSpecs(specs => {
-      const index = specs.findIndex(s => s.key === key);
-      if (index === -1) return specs;
-      const target = direction === 'up' ? index - 1 : index + 1;
-      if (target < 0 || target >= specs.length) return specs;
-      const next = [...specs];
-      [next[index], next[target]] = [next[target], next[index]];
-      return next;
-    });
-  }, []);
-
-  const addSpec = useCallback(() => {
-    setLevelSpecs(specs => [...specs, newLevelSpec()]);
-  }, []);
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
@@ -180,7 +167,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline, lesson.name, lesson.unitName, lesson.unitOutline]);
+  }, [
+    outline,
+    lesson.name,
+    lesson.unitName,
+    lesson.unitOutline,
+    setLevelSpecs,
+  ]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -491,19 +484,31 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
+  }, [
+    validationError,
+    lesson,
+    levelSpecs,
+    fullName,
+    appendLog,
+    outline,
+    setLevelSpecs,
+  ]);
 
   return (
-    <div className={moduleStyles.container}>
-      <h1 className={moduleStyles.heading}>
+    <div className={sharedStyles.container}>
+      <h1 className={sharedStyles.heading}>
         Generate levels for "{lesson.name}"
       </h1>
-      <p className={moduleStyles.subheading}>
+      <p className={sharedStyles.subheading}>
         Plan a sequence of levels and let AI fill them with starter content.
         Each level is created, populated, and added to the end of this lesson.
       </p>
 
       <OutlineBlock
+        heading="Optional: generate the levels below from an outline"
+        helpText="Describe the learning experience you want this lesson to take a student through. The AI will turn that into a sequence of Panels and Web Lab 2 levels with IDs and per-level descriptions. You can edit or remove any of them before generating their content below."
+        placeholder="e.g. Introduce the student to CSS selectors, then have them style a simple form, then reflect on what they learned."
+        buttonLabel="Generate outline"
         value={outline}
         onChange={setOutline}
         onGenerate={handleGenerateOutline}
@@ -524,7 +529,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         />
       </div>
 
-      <div className={moduleStyles.levelList}>
+      <div className={sharedStyles.cardList}>
         {levelSpecs.map((spec, index) => (
           <LevelCard
             key={spec.key}
@@ -541,10 +546,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         ))}
       </div>
 
-      <div className={moduleStyles.addButtonRow}>
+      <div className={sharedStyles.addButtonRow}>
         <button
           type="button"
-          className={moduleStyles.secondaryButton}
+          className={sharedStyles.secondaryButton}
           onClick={addSpec}
           disabled={isGenerating}
         >
@@ -553,18 +558,18 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       </div>
 
       {topLevelError && (
-        <p className={moduleStyles.summaryBad} role="alert">
+        <p className={sharedStyles.summaryBad} role="alert">
           {topLevelError}
         </p>
       )}
 
-      <footer className={moduleStyles.footer}>
-        <a href={lesson.editLessonUrl} className={moduleStyles.secondaryButton}>
+      <footer className={sharedStyles.footer}>
+        <a href={lesson.editLessonUrl} className={sharedStyles.secondaryButton}>
           Back to lesson edit
         </a>
         <button
           type="button"
-          className={moduleStyles.primaryButton}
+          className={sharedStyles.primaryButton}
           onClick={handleGenerate}
           disabled={isGenerating || !!validationError}
           title={validationError || ''}

@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
 import {LessonSpec} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../unit-generator.module.scss';
 
 interface LessonCardProps {
@@ -26,8 +27,8 @@ const LessonCard: React.FC<LessonCardProps> = ({
 }) => {
   const isExisting = spec.id !== undefined;
   return (
-    <div className={moduleStyles.lessonCard}>
-      <div className={moduleStyles.lessonCardHeader}>
+    <ReorderableCard
+      title={
         <h3>
           Lesson {index + 1} — <code>{spec.key || '<key>'}</code>
           {isExisting && (
@@ -41,44 +42,23 @@ const LessonCard: React.FC<LessonCardProps> = ({
             </span>
           )}
         </h3>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.reactKey, 'up')}
-          disabled={disabled || index === 0}
-          aria-label="Move up"
-          title="Move up"
-        >
-          <FontAwesomeV6Icon iconName="arrow-up" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.reactKey, 'down')}
-          disabled={disabled || index === total - 1}
-          aria-label="Move down"
-          title="Move down"
-        >
-          <FontAwesomeV6Icon iconName="arrow-down" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.deleteButton}
-          onClick={() => onRemove(spec.reactKey)}
-          disabled={disabled}
-          aria-label="Remove lesson"
-          title={
-            isExisting
-              ? 'Remove from this unit (the lesson will be destroyed on save)'
-              : 'Remove lesson'
-          }
-        >
-          <FontAwesomeV6Icon iconName="trash" />
-        </button>
-      </div>
-      <div className={moduleStyles.cardBody}>
-        <div className={moduleStyles.cardSidebar}>
-          <div className={moduleStyles.cardField}>
+      }
+      canMoveUp={index > 0}
+      canMoveDown={index < total - 1}
+      onMoveUp={() => onMove(spec.reactKey, 'up')}
+      onMoveDown={() => onMove(spec.reactKey, 'down')}
+      onRemove={() => onRemove(spec.reactKey)}
+      removeAriaLabel="Remove lesson"
+      removeTitle={
+        isExisting
+          ? 'Remove from this unit (the lesson will be destroyed on save)'
+          : 'Remove lesson'
+      }
+      disabled={disabled}
+    >
+      <div className={sharedStyles.cardBody}>
+        <div className={sharedStyles.cardSidebar}>
+          <div className={sharedStyles.cardField}>
             <label htmlFor={`name-${spec.reactKey}`}>Name</label>
             <input
               id={`name-${spec.reactKey}`}
@@ -88,7 +68,7 @@ const LessonCard: React.FC<LessonCardProps> = ({
               disabled={disabled}
             />
           </div>
-          <div className={moduleStyles.cardField}>
+          <div className={sharedStyles.cardField}>
             <label htmlFor={`key-${spec.reactKey}`}>Key</label>
             <input
               id={`key-${spec.reactKey}`}
@@ -114,7 +94,7 @@ const LessonCard: React.FC<LessonCardProps> = ({
             </a>
           )}
         </div>
-        <div className={moduleStyles.cardMain}>
+        <div className={sharedStyles.cardMain}>
           <label htmlFor={`outline-${spec.reactKey}`}>
             Generate prompt
             {spec.createdSeparately && (
@@ -137,7 +117,7 @@ const LessonCard: React.FC<LessonCardProps> = ({
           />
         </div>
       </div>
-    </div>
+    </ReorderableCard>
   );
 };
 
