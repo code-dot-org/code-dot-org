@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Understanding Embeddings
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how language models use embeddings to store the meaning of words
-* #### Describe how embeddings show the similarity or difference between two items
+* Explain how language models use embeddings to store the meaning of words
+* Describe how embeddings show the similarity or difference between two items
 
 ## **Key Terms**
 
-* #### **Embedding** - A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
+* **Embedding** - A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
 
 ## Resources
 

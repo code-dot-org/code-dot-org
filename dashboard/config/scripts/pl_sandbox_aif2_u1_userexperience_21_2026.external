@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Focusing on User Experience
 
-#### Once your students have gotten the basics on creating simple websites using HTML and CSS with AI, they will start diving into design elements that connect the user to their page.
+Once your students have gotten the basics on creating simple websites using HTML and CSS with AI, they will start diving into design elements that connect the user to their page.
 
-#### Check out some of the highlights from these lessons.
+Check out some of the highlights from these lessons.
 
 <br>
 
@@ -45,7 +45,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### Many lessons in this unit make use of the **Sketch Lab** tool, which you’ll have a chance to explore and practice with shortly.
+Many lessons in this unit make use of the **Sketch Lab** tool, which you’ll have a chance to explore and practice with shortly.
 
 <div style="clear:both;"></div>
 

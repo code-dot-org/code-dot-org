@@ -5,8 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Interactivity in Web Apps
 
-#### When you visit a website or open an app, you’re not just looking at information—you’re doing something with it. 
-#### Interactivity is what turns a static page into an engaging experience. It’s what allows users to click, tap, type, scroll, or hover to make something happen.
+When you visit a website or open an app, you’re not just looking at information, you’re doing something with it. 
+Interactivity is what turns a static page into an engaging experience. It’s what allows users to click, tap, type, scroll, or hover to make something happen.
 
 <details style="background:#f7f8fa; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin:20px 0;">
   <summary style="font-size:16pt; font-weight:bold; cursor:pointer;">

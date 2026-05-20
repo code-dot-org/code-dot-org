@@ -209,3 +209,16 @@ $tabs-default-spacing: 4px;
 
   @include focus-styles;
 }
+
+.assetImageWrapper {
+  position: relative;
+  display: inline-flex;
+  align-self: end;
+
+  --overflow-menu-opacity: 0;
+
+  &:hover,
+  &:focus-within {
+    --overflow-menu-opacity: 1;
+  }
+}

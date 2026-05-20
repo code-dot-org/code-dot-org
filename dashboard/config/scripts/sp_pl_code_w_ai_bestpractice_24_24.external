@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Tips for Using LLMs in Class 
 
-#### Interacting with AI offers a dynamic and engaging approach to get your students excited about coding, and with thoughtful consideration, your lessons can be seamlessly executed. The lessons in this unit are designed to help you scaffold and model appropriate use of LLMs. 
+Interacting with AI offers a dynamic and engaging approach to get your students excited about coding, and with thoughtful consideration, your lessons can be seamlessly executed. The lessons in this unit are designed to help you scaffold and model appropriate use of LLMs. 
 
 ## Targeted Assistance
 
-#### Don't have the LLM write entire programs or essays. Instead, use it for specific tasks. You may have noticed each lesson introduces different ways to interact with AI.
+Don't have the LLM write entire programs or essays. Instead, use it for specific tasks. You may have noticed each lesson introduces different ways to interact with AI.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">📝 Brainstorming</summary>

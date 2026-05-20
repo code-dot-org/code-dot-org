@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Conclusion
-#### By the end of this unit, your students will be fluent with functions to analyze and visualize data using the python pandas library. 
+By the end of this unit, your students will be fluent with functions to analyze and visualize data using the python pandas library. 
 
 >#### **Note:** this professional learning module does not cover all of the levels and coding activities in the lesson plans, but gives a brief overview of each lesson. 
 > #### It is recommended that you read the **entire lesson** plan before teaching the lessons.  

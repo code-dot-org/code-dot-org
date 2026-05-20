@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-30 01:56:41 UTC",
+    "serialized_at": "2026-05-19 14:02:07 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -16179,10 +16179,11 @@
   "resources": [
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/view",
+      "url": "https://docs.google.com/document/d/1LTiitXn7Q5gItcWX_t6NDtMa3wuKmFHVyOrv2NiTZ6w/view",
       "key": "_warm_up_word_search_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16192,10 +16193,11 @@
     },
     {
       "name": "(Warm Up) Word Search [KEY]",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1bNiOVgRfzmQPjf4EwqrTpZvparUTjQX5dtjetLKLV7s/view",
       "key": "_warm_up_word_search_key_",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -16204,10 +16206,11 @@
     },
     {
       "name": "Activity Guide - Robot Face Planning",
-      "url": "https://docs.google.com/document/d/1xy53Z--2I9X4k75Besh15eGTY3Rpo8Asdba6uctI9nY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Zz6KFYWWQ8XWD1pCixXL7ndwZCIzu5RYSh4LYdLkLXc/view",
       "key": "activity_guide_-_robot_face_planning",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16261,10 +16264,11 @@
     },
     {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1fHRgDgi5mCgPFitc3nM4StqO1ciaGjmQCLREmTnveFg/view",
+      "url": "https://docs.google.com/document/d/1jyD_2XJsOE0FqB0zCUzrtPjHyg_YqulLfy9_xe3bNWo/view",
       "key": "animated_scene",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -16274,10 +16278,11 @@
     },
     {
       "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1a2qv6xH8ewMu9SrKaFt3hbPM6JGSJ0kqjyc-UzQ_3xE/view",
+      "url": "https://docs.google.com/document/d/184lcpfigNjTaI-cH9KR-F2Y3uHyGTh2zIq7K0Jw9YXo/view",
       "key": "animated_scene_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16287,10 +16292,11 @@
     },
     {
       "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/1YrtHnzB6kLGtFt05gQEHjfbX5aWWYlv3YRdTsR5VR3M/view",
+      "url": "https://docs.google.com/document/d/1lO3CL2LGbkAlIUA-5vt8SK4CNOAQEserXcyNenCENV8/view",
       "key": "animated_scene_planning",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16299,10 +16305,11 @@
     },
     {
       "name": "Animation and Game Design for Users",
-      "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1GhSxlOd141DSyw1WUKuAzdQCftl5UMmWeGAW4G-Xl70/view",
       "key": "animation_and_game_design_for_users",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16312,10 +16319,11 @@
     },
     {
       "name": "Animation and Game Design Template",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_Z_kNynHATDMPPC6yAuN1i09AFyAOHcPUZE0JhkaDRw/view",
       "key": "animation_and_game_design_template",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -16361,10 +16369,11 @@
     },
     {
       "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
+      "url": "https://docs.google.com/document/d/1WJ8NNNrB3B9PDWdkbsK3CYq48B3NhDN1bg40tQ0kHY0/view",
       "key": "captioned_scenes",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -16374,10 +16383,11 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1pSfutXv_HqPGrU-dWIDbwFgo0RiG0_8x58c3c5heGfY/view",
+      "url": "https://docs.google.com/document/d/14wR3EjcDKsqe0UbVGMMPzK92Tao8BLjyMt6Q2_cz-0s/view",
       "key": "collision_detection",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16398,10 +16408,11 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1yKK_3UkcNSimxtJ4G9iP7K0D8b2_B19SrhkUcJyJR-g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1yG_eo2ESaXDa3WGiWJAMCxtiTrkp7Pl2X_1vJZvhogc/view",
       "key": "collision_detection_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16410,10 +16421,11 @@
     },
     {
       "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/1YThab-y4Vg-ltanqwNykC4nOaT0gKdKFHtS1INoHWHM/view",
+      "url": "https://docs.google.com/document/d/1i45DzbrFXq5TI04eY5y_p3BOW8NQTrp9FEv0BbRgxMk/view",
       "key": "collision_detection_version_a_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16423,10 +16435,11 @@
     },
     {
       "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1U3t6FGGvvqAVdz-rudQIJsDW4ubfEaSelaVqENp_kVw/view",
+      "url": "https://docs.google.com/document/d/1BTe8E2Rq3jenOQJgim1l6BzxN8_3oKaY46JfupVCDfc/view",
       "key": "collision_detection_version_b_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16436,10 +16449,11 @@
     },
     {
       "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/1esa_3_MhBj8F10Om9besT5YQuYUjeRRz1FqIoQ_ipiA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uczAbG07XLytqp5o10qT7QoUo-ehJHBg46btlo_J5J8/view",
       "key": "collisions",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16448,10 +16462,11 @@
     },
     {
       "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1rXNodvpCUF-fQmmj13U9br5qInqyVCnPf6WER9xLi04/template/preview",
+      "url": "https://docs.google.com/presentation/d/16OsSV0c5pqykYKdwwNiSOMRqEXIAiF-XtOfk9VZ9v74/view",
       "key": "complex_sprite_movement",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16460,10 +16475,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16486,10 +16502,11 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1tDYqoKSIIlKJnxgjJwwDcRAVs-ghDBlQVF1nncM2d7Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/12TnrmfMbTWr2irDYV4JrVFcc_xs4j6eywWljH4SaGms/view",
       "key": "conditionals",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16575,10 +16592,11 @@
     },
     {
       "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1ScMzt0GzhV_f-hMtrWCRCI0pha4mtmlGrrtrp76KIqg/view",
+      "url": "https://docs.google.com/document/d/1vw0AC6ioCop4f8Z_3mQ0GY3uasg3H2m9_G2wZCILfUc/view",
       "key": "defender_game",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -16587,10 +16605,11 @@
     },
     {
       "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1bWhfO6YBUVSGQo6mGCiAvZpJfOy4MplwT4pecP17qHw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1rza9e6Y8nEqXTr03AxTFIgrMLaudDDZ1zxNBzPpEMx0/view",
       "key": "drawing_in_game_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16625,10 +16644,11 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1XuLY5osr9sZMfLAWMkqi8C7IdG_Uu3PshqKeSIhtKno/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1bnEzJUayLJ2W234eE5ttUT0M8RGIA3e6Ta2Cs1XOvso/view",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16649,10 +16669,11 @@
     },
     {
       "name": "Drawing Shapes (Version A)",
-      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
+      "url": "https://docs.google.com/document/d/10hifRe3zw9v16oADnnxDrvxORAtNU8xqkTBeG8Il4pA/view",
       "key": "drawing_shapes_version_a_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16662,10 +16683,11 @@
     },
     {
       "name": "Drawing Shapes (Version B)",
-      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
+      "url": "https://docs.google.com/document/d/1uis8CFHxw2jlfZ34eTK_MX1f4_jDKQAlaVx8so77Aes/view",
       "key": "drawing_shapes_version_b_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16675,10 +16697,11 @@
     },
     {
       "name": "Exemplar - Animation and Game Design Activity Guide",
-      "url": "https://docs.google.com/document/d/1MgNcavou62Y4BykohkGT_MR8Rj1nKIeInEUVU2qaxq0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1g0FXbgmjtcP6IRVxKr_dR9tcdf51vryuo2rGFcOJzwI/view",
       "key": "exemplar_-_animation_and_game_design_activity_guide",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16687,10 +16710,11 @@
     },
     {
       "name": "Exemplar - Interactive Card",
-      "url": "https://docs.google.com/document/d/1Z13UA6i0PTT83UVdtEjSsZqxyGinVYoz3SFIUAnkwVY/view",
+      "url": "https://docs.google.com/document/d/1UQoEJmjS1l0tOKikJnEZ4jyGsgWXtUZfURaHdtprPtM/view",
       "key": "exemplar_-_interactive_card",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16699,10 +16723,11 @@
     },
     {
       "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/18ExVv8sNgHTQ3SZmk3fYazqXJgy-q59NxgjjP4ZsITo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/117-rzvIAzUKQ_egRprJWsIb1AohjmAJfqIddYUI7HKY/view",
       "key": "extra_code_in_challenge_levels",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -16723,10 +16748,11 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1dTUv-Qj1Kg_9oEYfAR70iL2ud6y8XFectzYKCi4MLyE/view",
+      "url": "https://docs.google.com/document/d/1uHvFcJ6Se3iVEKce1iyAn0PBUrM1Ggom59Y7QMO2qSs/view",
       "key": "flyer_game",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -16736,10 +16762,11 @@
     },
     {
       "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/14by40I7v6BwWh7venZO83xk1qgeHE4hmNjdfQo1BsbQ/view",
+      "url": "https://docs.google.com/document/d/1-8_sMCrMnEHMW5Ia5-XIDF41hHaOUtl5dEDnVnYs6cA/view",
       "key": "flyer_game_-_project_guide",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16748,10 +16775,11 @@
     },
     {
       "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1_n916C-OpKAquctNSkD5SdsWqC1RI9WQQzQ0EcZV_48/view",
+      "url": "https://docs.google.com/document/d/14XrzG9vZmDWtEYxEWGZpo1wFAsyVbsflMSSv1QwbwuU/view",
       "key": "flyer_game_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16786,10 +16814,11 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1ClPlD6ff94HJUAMwSJ8e2yst6e_D5bpmim0Dp7cXR34/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Wy-E9PdZAYh0LFRGJhV3wNruYjM58XWtBm0b_B_tkPo/view",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16835,10 +16864,11 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
+      "url": "https://docs.google.com/document/d/1xTjcdTjKZvCFTloXUa8mdUXntzKMsDsaZXdnSrSeTFk/view",
       "key": "interactive_card",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -16848,10 +16878,11 @@
     },
     {
       "name": "Interactive Card - Activity Guide",
-      "url": "https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view",
+      "url": "https://docs.google.com/document/d/10ZYIhg5y88nE_fmu8o65lcy-kraA42EqQnhoBjVLSeA/view",
       "key": "interactive_card_-_activity_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16861,10 +16892,11 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1HwcWQLHiuPEOlPaM6axOFGgu7peYsrCZnT7Juea-rfA/view",
+      "url": "https://docs.google.com/document/d/1E8_NMWj9qdO_oFd1bbqS67-upKHbfh0oGR9PGjOuX8Q/view",
       "key": "interactive_card_-_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16873,10 +16905,11 @@
     },
     {
       "name": "Interactive Card - Peer Review",
-      "url": "https://docs.google.com/document/d/1e9HdHppRFxkszxCF2m9YWr-jt1EK8DupSrsP6q2_060/view",
+      "url": "https://docs.google.com/document/d/1c-vaHr7ef6jIgIVPS-hh9EgCq0e8Sc1KP6x36EJo8J8/view",
       "key": "interactive_card_-_peer_review",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16886,10 +16919,11 @@
     },
     {
       "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view",
+      "url": "https://docs.google.com/document/d/1jKk9hv2yn1GhvtirjnJO109lTNn-gjF3R2TpofAZ3c4/view",
       "key": "interactive_card_-_student_checklist",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -16938,10 +16972,11 @@
     },
     {
       "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1bgNOcwrT-n84tyNtGDbRKKAKx-49mP3nPlbS5V5cnZ0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kv59r8ecf0bA1jRSbJIubcSei8pHpUdBlv6WNlG0lQk/view",
       "key": "keyboard_input",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16950,10 +16985,11 @@
     },
     {
       "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1m0szgz6YtE4RucBUFWpocRxu3r0hKpn3JDgPoK7nwOQ/view",
+      "url": "https://docs.google.com/document/d/1_W8r_78QYz9E4BCFj4yWQ0mTZPhLRgZDhNEQpwFSdDE/view",
       "key": "make_your_own_game",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16962,10 +16998,11 @@
     },
     {
       "name": "Make Your Own Game - Peer Review",
-      "url": "https://docs.google.com/document/d/1VOlmo7osjS7We0ebREm3M54Gwr4o13p7irHfIASDvFE/view",
+      "url": "https://docs.google.com/document/d/1TXRmIxa8oQZMP-YX6I6yCXnXwIK1l81ASgjHIYdNIq4/view",
       "key": "make_your_own_game_-_peer_review",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -16975,10 +17012,11 @@
     },
     {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1VHUhfblKwRZieZXM8YYHr3mkilbjEQhcQmcmwNaUUHc/view",
+      "url": "https://docs.google.com/document/d/1SDlXuCkW4VnltbbN5kFcjjpWxnbF91aciFGX5tGwqR0/view",
       "key": "make_your_own_game_-_sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -16987,10 +17025,11 @@
     },
     {
       "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1YDsOmgD3NvRjIQwGpZsH_17TIXpQaVUhtjFpyh4-qGw/view",
+      "url": "https://docs.google.com/document/d/11V7FwLbe3gAckgCx_igDexjlyoKtwQ3eiL65ytLP54c/view",
       "key": "make_your_own_game_-_student_checklist",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -17000,10 +17039,11 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/14oPvmdvm_BfOn5KBSov6jyhoEMRHygdNNIXl-fe4g-Q/view",
+      "url": "https://docs.google.com/document/d/1dbgZHdqxzgaLIp6CiuMQJMDa4zUCkx6WH-YojS2F1N0/view",
       "key": "make_your_own_game_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -17013,10 +17053,11 @@
     },
     {
       "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1BHsR1x8scsPsfaQoNEIgkz1rSLwG2hnKkjmVrPX55lw/view",
+      "url": "https://docs.google.com/document/d/1wy_XP53N5G5p9oRkXAlmBtJh9XTTXNW_VAoDskiBzF4/view",
       "key": "make_your_own_game_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -17026,10 +17067,11 @@
     },
     {
       "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1K_axYLp1S_wR_WRnp0Epp_LDsNLsIuODCj6RPFUorog/template/preview",
+      "url": "https://docs.google.com/presentation/d/1zOf5YsX4C7jgSTr6KOgyFBIjIGi5O7MOUscAm17qcMA/view",
       "key": "mini-project_-_animation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17038,10 +17080,11 @@
     },
     {
       "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1tTLeCnyAHknY2SyxgqxDbg9sI7udaNPVw2C3-vHCCHw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1p7tLJKobriIFi_L2_kqXkU9tqNheqnKyO_WFZ8xm-Mw/view",
       "key": "mini-project_-_captioned_scenes",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17050,10 +17093,11 @@
     },
     {
       "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1LaIaV9sm8aJYL27ByafjARzgNb3hIbJIumKBs0qnNQw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oCOETpGa1fHPOF6BYn_K5_FBX7NqpmkUtazMNmJ8R24/view",
       "key": "mini-project_-_flyer_game",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17062,10 +17106,11 @@
     },
     {
       "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1EJJ-JQKv7knPl8GXRWiEZkLE43WpEvJK5enuP9LDg6s/template/preview",
+      "url": "https://docs.google.com/presentation/d/18A6p3GyDWgNPmLIgF6LdqbsS-zorY2HvdGAmaw8Wj1s/view",
       "key": "mini-project_-_robot_faces",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17074,10 +17119,11 @@
     },
     {
       "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/12aKp4tvaKcLQVdWyhVguGKtcHvkjxCr29QdWvQS7AxI/view",
       "key": "mini-project_-_robot_faces_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -17086,10 +17132,11 @@
     },
     {
       "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/17XUl4Z08ksLJqmLJzNJwMkhvD8LrRAvp2whc560Q83A/template/preview",
+      "url": "https://docs.google.com/presentation/d/10OpaurVfsnVVbCx5eoWZ13whtaJMc-ncD6NNux7XXV0/view",
       "key": "mini-project_-_side_scroller",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17098,10 +17145,11 @@
     },
     {
       "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/1zxFNweZNdkXc1YsVROgDQ2fmrxbbgCgZQtMPS-POmg4/view",
+      "url": "https://docs.google.com/document/d/1yJlXQSNlal8AUO_RsvxDra-VBA1ujTuSi4vV8HAS2Ds/view",
       "key": "mini-project_guide_-_side_scroller",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -17110,10 +17158,11 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view",
+      "url": "https://docs.google.com/document/d/1Y-Colhv41Kp8EZsUtGrvYKtahNLT2H7SmoPAratRcts/view",
       "key": "mini_project_-_captioned_scenes",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -17122,10 +17171,11 @@
     },
     {
       "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1I3CWiaVL-m3q49m5J2FVSVGQK_HYJCYUUpO6ZPZsBNA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1RFFSqxKdm0Pz5-7MuPepqJsCII-k4jXmef2nzO12aiU/view",
       "key": "mouse_input",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17146,10 +17196,11 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1F9RH16-Yph9gapZyBKbnnh-LEJUwN20Ipa5D4rIMz1g/view",
+      "url": "https://docs.google.com/document/d/1mIb1eZUF8kc8X_zKZHmRFmk9bnLq4h91FFsMEmbiAWI/view",
       "key": "planning_your_platform_game",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -17158,10 +17209,11 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1FqTjwpAuFrVidZ_j6aGw895FivFCRO2CZSvhHqWuEik/view",
+      "url": "https://docs.google.com/document/d/1r7azlgpcYTn6q2ULGFCcsyjDoCSzYG78whQ9b5MJZUM/view",
       "key": "planning_your_platform_game_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -17171,10 +17223,11 @@
     },
     {
       "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1O4bfdQmx_M8-AzAI0GmUKkErGlL26a-P1UC8D_2xqLs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1UgUAjgflvIRbRzflzPGNLskeTffs4UWG8KPDrpKo29g/view",
       "key": "plotting_shapes",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17183,10 +17236,11 @@
     },
     {
       "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1adyft9qT9H9YNs-UVWuDReqPbiOIF4UfZvPH2m7BBUU/view",
+      "url": "https://docs.google.com/document/d/1Tyzdf9kJahJ-Ar491fvALGBcxnkRueWmVFkKcbRxZqI/view",
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -17209,10 +17263,11 @@
     },
     {
       "name": "Programming for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1QJTgXE4bO3hyMxdrDk9wucshxaaBFpcas5MoCX-DNE8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ihONuyNRCIMcda9WeutKqwCMEBDgvqo21cPwaC_Br9Q/view",
       "key": "programming_for_a_purpose",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17221,10 +17276,11 @@
     },
     {
       "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/1P_XWf1rcbsmTw4xycNfyIIgdxWONj287ylxsYbTnOR8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1R5Jj29JacymfkdNXoeAJQvq1Sqn0_jUaBPlyqVcc6qY/view",
       "key": "project_-_design_a_game",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17233,10 +17289,11 @@
     },
     {
       "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1WPiFVLFkuA0kYii9_XA65cTgdhNJp6A2L4CR40P7KBo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1eZA4zQdcbxAkJu4iiwZmpR_71TxZ-xoQA8ZCMUx49UA/view",
       "key": "project_-_interactive_card",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17245,10 +17302,12 @@
     },
     {
       "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1N1m8la6XsQrn1X2Yq97gRfg4HRh1glk-gTHBK0fUDZA/view",
+      "url": "https://drive.google.com/file/d/1-IEAvsMJzvoOgF7AKufS8Jh_l39gRbuH9pwpdZ3EfUM/view",
       "key": "random_dot_flipbook",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "random_dot_flipbook"
@@ -17268,10 +17327,11 @@
     },
     {
       "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1wGEmc5Le7yplEoDzGSvWeaNxSxXCLUgu3f9DPZIwzF0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XHBrvKnYFInE9D5dVZJjt6qwuah85CO8g3DUCk-Q75o/view",
       "key": "random_numbers_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17280,10 +17340,12 @@
     },
     {
       "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1VEgpZKDn4kvZvRSafrDSqB3so1HzKeeA8WAWLQZsoL0/view",
+      "url": "https://drive.google.com/file/d/1670sqvNYR1tOKDChXvp_zXGR0HtadbjkMwk9S86Gnso/view",
       "key": "random_sprite_flipbook",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "random_sprite_flipbook"
@@ -17291,10 +17353,11 @@
     },
     {
       "name": "Robot Faces",
-      "url": "https://docs.google.com/document/d/1MQBo1-nmTLCjrUihCOBSU9X__V7LgS4H0Clc2obp_Ek/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_exVkgjSS_7Y8G5wvd0zBH8WYMNin-Sb0NeOz77zcZ8/view",
       "key": "robot_faces",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -17328,10 +17391,11 @@
     },
     {
       "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1HGeX0jqJRNhvVggcwgYEge_m2liwREqcIe7ioSLrIyM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vTRPJCoL54d7ZCEYVws7MgtSEevrWCL594HRDi-dOlo/view",
       "key": "shapes_and_parameters_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17340,10 +17404,11 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1iSosF7vOAc5_iqr9cBYfgDjbiVERhkbKNMa1RJK_mv8/view",
+      "url": "https://docs.google.com/document/d/19bGLR3bSqBHgtI9iOtcyWd9xYedRpJ1bdDghiFY4Tlg/view",
       "key": "side_scroller",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -17353,10 +17418,11 @@
     },
     {
       "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1WW92Ti8Xg1Evn8rQtRZq8Xltf5NP8cP_ZVrWHuiQPFk/view",
+      "url": "https://docs.google.com/document/d/1nBDiCdT50w5eqtrizWNUEEnhEf8blKivu3Ns4Bmbm-k/view",
       "key": "side_scroller_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -17379,10 +17445,11 @@
     },
     {
       "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1pz872KrUOQwVzCQ0hTFQP-nnap_fuj683iGHIEJC4f4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1IMaB5jTrqmHfSnaZ3oRjMAnwOeokQhQjUFzzdH0LdTQ/view",
       "key": "sprite_movement_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17403,10 +17470,11 @@
     },
     {
       "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1lXQZubMuJ4727CqmBJwd3pOy55oFYbbo9960UxLTXCc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gpZ_HlRjxAI-TPHOHAJmDRJ6DBSTPF1F0OIMKQMR8yE/view",
       "key": "sprite_properties_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17428,10 +17496,11 @@
     },
     {
       "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view",
+      "url": "https://docs.google.com/document/d/1gJH-TZRAXb2YkTAUnXUCpQugRi7v8jOC-T6fZ-aqZn0/view",
       "key": "sprite_scene_planning",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -17453,10 +17522,11 @@
     },
     {
       "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1ONvRNfx1y9rfvRV7Y68nb9oo3v7tvsHt4OwJ4cUK9HE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XAI4nidd5auCPSQcBguycAhSRo9_YBXavGdt3o1e_Hs/view",
       "key": "sprites_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17475,10 +17545,11 @@
     },
     {
       "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1Zm25EfxB2rMi0wHvlNf_F1R1oar0zZFVIIAJWeIEQKo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tDIivJm7EVeieEDMtZN1nX7AF4BmXaruxW-gPC8QSek/view",
       "key": "text",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17512,10 +17583,11 @@
     },
     {
       "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1imAOQ_w4tBEKgMO_K30Dh0MKLCvDORjEfVhybM8nFSU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-RBsJjOBpuLtl32iTPoVs4shr84HPx1Jfg1M3uwUeyE/view",
       "key": "the_draw_loop_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17524,10 +17596,11 @@
     },
     {
       "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1CqJ4QCZMFqvzQECVc96PEtzMHiCMNsiSjVbnLisw0lM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dHRUQNL-WXoCUwerhU1oPl1xAmx5kOWpXFGPbHmQGhc/view",
       "key": "the_game_design_process",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17570,10 +17643,11 @@
     },
     {
       "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1PvYBJaQiRy9Z70afGQMd4mF7h6FmYR2V4_giZ8OjEsg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1PSz8cxuyPhGr3PH2PFDVOyzvz_hPpjRO7h1y-PxuOtY/view",
       "key": "using_the_game_design_process",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17607,10 +17681,11 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1-QFe2TlgeOb8_ap7eWCv3CLF_t7qUTBGvU2qbrLwu9A/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_l_zumEtyLMK2UUlHR0sHFq5VmJP93N6f_IdUFxuQqs/view",
       "key": "variables_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17644,10 +17719,11 @@
     },
     {
       "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/1uoga0K_11JZI6K01TxuoJQ8JgtH29Th-3nZn1nggfGY/template/preview",
+      "url": "https://docs.google.com/presentation/d/12cYjoXT0obfkSNaEOPxB5sHHVoW4ZShahjIDyi2FbC0/view",
       "key": "velocity_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
