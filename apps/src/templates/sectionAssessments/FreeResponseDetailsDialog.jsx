@@ -23,7 +23,11 @@ class FreeResponseDetailsDialog extends Component {
     return (
       <Dialog
         title={i18n.questionText()}
-        customContent={<SafeMarkdown markdown={questionAndAnswers.question} />}
+        customContent={
+          <div id="dsco-dialog-description">
+            <SafeMarkdown markdown={questionAndAnswers.question} />
+          </div>
+        }
         onClose={closeDialog}
         primaryButtonProps={{
           onClick: closeDialog,

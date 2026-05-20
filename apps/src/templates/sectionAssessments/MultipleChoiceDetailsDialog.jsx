@@ -32,7 +32,7 @@ class MultipleChoiceDetailsDialog extends Component {
     }
 
     return (
-      <div>
+      <div id="dsco-dialog-description">
         <SafeMarkdown
           className={moduleStyles.multipleChoiceDetailsQuestion}
           markdown={questionAndAnswers.question}

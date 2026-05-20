@@ -26,7 +26,7 @@ class MatchDetailsDialog extends Component {
     }
 
     return (
-      <div>
+      <div id="dsco-dialog-description">
         <SafeMarkdown markdown={questionAndAnswers.question} />
         {questionAndAnswers.answers &&
           questionAndAnswers.options &&

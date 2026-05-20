@@ -20,7 +20,7 @@ class MultipleChoiceSurveyQuestionDialog extends Component {
     const {questionData} = this.props;
 
     return (
-      <div>
+      <div id="dsco-dialog-description">
         <SafeMarkdown
           className={moduleStyles.multipleChoiceDetailsQuestion}
           markdown={questionData.question}
