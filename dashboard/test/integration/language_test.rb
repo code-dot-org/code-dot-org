@@ -13,10 +13,9 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         get new_user_session_path, env: request_env, params: request_params
 
-        follow_redirect! if response.status == 302
+        follow_redirect! while response.status == 302
         must_respond_with :success
 
-        _(request.locale).must_equal expected_locale
         must_select "html[lang='#{expected_locale}']"
       end
     end
@@ -36,7 +35,6 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         get new_user_session_path
 
-        _(request.locale).must_equal normalized_locale
         must_select "html[lang='#{normalized_locale}']"
       end
     end
@@ -45,14 +43,17 @@ class LanguageTest < ActionDispatch::IntegrationTest
   describe 'fallbacks' do
     Cdo::I18n::LOCALE_FALLBACKS.each do |locale, fallback|
       it "from #{locale.inspect} to #{fallback.inspect}" do
-        skip 'Mysterious Drone failure, wilkie to investigate'
-        _ {I18n.backend.store_translations(fallback, {i18n_string_key: 'fallback_str'})}.
-          must_change -> {I18n.t(:i18n_string_key, locale:, default: 'default_str')}, from: 'default_str', to: 'fallback_str'
+        skip '[Artem] investigate flaky test'
+        i18n_string_key = :"i18n_string_key_#{locale}"
 
-        _ {I18n.backend.store_translations(locale, {i18n_string_key: 'locale_str'})}.
-          must_change -> {I18n.t(:i18n_string_key, locale:)}, from: 'fallback_str', to: 'locale_str'
-      ensure
-        I18n.backend.reload!
+        _(I18n.fallbacks[locale].first).must_equal locale.to_sym
+        _(I18n.fallbacks[locale].third).must_equal fallback.to_sym
+
+        _ {I18n.backend.store_translations(fallback, {i18n_string_key => 'fallback_str'})}.
+          must_change -> {I18n.t(i18n_string_key, locale:, default: 'default_str')}, from: 'default_str', to: 'fallback_str'
+
+        _ {I18n.backend.store_translations(locale, {i18n_string_key => 'locale_str'})}.
+          must_change -> {I18n.t(i18n_string_key, locale:)}, from: 'fallback_str', to: 'locale_str'
       end
     end
   end

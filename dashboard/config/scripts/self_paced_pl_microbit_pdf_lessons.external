@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Pathways
 
-#### Navigating this course is different from other Code.org courses. The partnership with micro:bit allows us to experience different platforms. Although Code.org will still function as the home base for the course, at times, you will be directed to the micro:bit classroom website to code the micro:bits. 
+Navigating this course is different from other Code.org courses. The partnership with micro:bit allows us to experience different platforms. Although Code.org will still function as the home base for the course, at times, you will be directed to the micro:bit classroom website to code the micro:bits. 
 
-#### Expect the flow of the course to look something like this: 
+Expect the flow of the course to look something like this: 
 
 ## Pathway Overview
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ## Simple Navigation
 
-#### Your students will simply follow the flow of the Code.org course you assign. Whenever it's time for your students to use the micro:bit platform, a link will be provided in their Code.org course to simplify navigation. 
+Your students will simply follow the flow of the Code.org course you assign. Whenever it's time for your students to use the micro:bit platform, a link will be provided in their Code.org course to simplify navigation. 
 
 
 

@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:44:20.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -56,11 +56,7 @@
             },
             "width": 731,
             "height": 902,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
             "id": "JucVLJAin0j1LMt6msMEZ",
@@ -72,18 +68,14 @@
             "data": {
               "text": "Message: What will the user see?",
               "fontColor": "#000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 343,
-              "height": 47
+              "width": 254,
+              "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "tJAZKd_1uGRvY3P0KQP8T",
@@ -95,12 +87,12 @@
             "data": {
               "text": "Action: What should the user do next?",
               "fontColor": "#000000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 394,
-              "height": 47
+              "width": 291,
+              "height": 39
             }
           },
           {
@@ -120,11 +112,7 @@
               "width": 182,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "fBy4xyYgrrqcZ-APMfeKb",
@@ -143,11 +131,7 @@
               "width": 133,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "-kslNR-1WviAOdfBvO4IM",
@@ -163,16 +147,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           },
           {
@@ -189,16 +169,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           }
         ],
@@ -206,9 +182,9 @@
 
         ],
         "viewport": {
-          "x": 1856.7030953862113,
-          "y": 771.7762508341748,
-          "zoom": 0.6466187050359712
+          "x": 2187.899781357985,
+          "y": 951.3855781494472,
+          "zoom": 0.7759424460431654
         }
       }
     },
@@ -944,6 +920,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.760+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:34:30 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.760+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:34:30 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:31:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

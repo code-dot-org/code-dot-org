@@ -1,12 +1,12 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T00:49:37.000Z",
+  "created_at": "2026-04-14T23:01:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Create a Conditional Flowchart\r\n\r\nExplore the flowchart components. Then, create a flowchart to model your own  conditional.\r\n\r\nSave your sketch to your **Backpack**, so you can use it in the following level.",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model your own scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Example Scenario: Shopping Cart\r\n\r\n- If the user adds at least one item, display the notification badge with the current item total.\r\n- If the user has no items in their cart, hide the badge.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -24,20 +24,21 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 821,
               "height": 816
-            }
+            },
+            "zIndex": -2
           },
           {
             "id": "Bai414pWxTjKhQUOPfvMf",
             "type": "shape",
             "position": {
-              "x": 1014.6336923023989,
-              "y": -2198.7415628281824
+              "x": 1022.6336923023989,
+              "y": -2194.7415628281824
             },
             "style": {
               "width": 405.99998474121094,
@@ -47,12 +48,19 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "locked": true
             },
             "measured": {
-              "width": 406,
-              "height": 635
-            }
+              "width": 414,
+              "height": 559
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "width": 414,
+            "height": 559,
+            "resizing": false
           },
           {
             "id": "FtgHojQj0r-NGEdWG3qwn",
@@ -68,9 +76,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -92,9 +100,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -116,9 +124,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -135,13 +143,14 @@
             },
             "data": {
               "text": "Flowchart Components ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 255,
-              "height": 47
+              "width": 254,
+              "height": 46
             }
           },
           {
@@ -159,29 +168,11 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1880,
               "height": 1228
-            }
-          },
-          {
-            "id": "2tm9i046KFB5_Regv0SDT",
-            "type": "text",
-            "position": {
-              "x": 2328.2590989612395,
-              "y": -2174.338340668448
-            },
-            "data": {
-              "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 177,
-              "height": 47
             }
           },
           {
@@ -198,9 +189,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User adds \n`Hawaiian shirt` \nto cart",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -216,7 +207,7 @@
             "id": "McFE1K1B6hPIr4g31ZgHp",
             "type": "shape",
             "position": {
-              "x": 1650.8391041575326,
+              "x": 1654.2951041575325,
               "y": -423.55571572189695
             },
             "style": {
@@ -225,10 +216,10 @@
             },
             "data": {
               "shapeType": "diamond",
-              "label": "Is\n\n",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "label": "Is\ntotalPrice > 50\n",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -251,9 +242,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start Online\nShopping",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -278,9 +269,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Function to \ncalculate Total \nPrice",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -306,9 +297,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Free Shipping!",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -333,18 +324,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User pays shipping",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
               "width": 221,
               "height": 96
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 221,
             "height": 96,
@@ -358,94 +345,22 @@
               "y": -577.709167752942
             },
             "data": {
-              "text": "Model",
-              "fontColor": "#1e1e1e",
+              "text": "Example",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 79,
-              "height": 47
-            }
-          },
-          {
-            "id": "AkKIXIm448d8U3O4Fc4UA",
-            "type": "shape",
-            "position": {
-              "x": 1093.4257312761297,
-              "y": -1668.498026098448
-            },
-            "style": {
-              "width": 231.15911762042447,
-              "height": 72.99037364781316
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Variable",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large"
-            },
-            "measured": {
-              "width": 231,
-              "height": 73
-            }
-          },
-          {
-            "id": "XDCOD5UItDGJdGoMLVb81",
-            "type": "shape",
-            "position": {
-              "x": 2050.485588049628,
-              "y": -556.165313546116
-            },
-            "style": {
-              "width": 202.29915687557042,
-              "height": 96.51582450387939
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "totalPrice",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large"
-            },
-            "measured": {
-              "width": 202,
-              "height": 97
-            },
-            "dragging": false
-          },
-          {
-            "id": "h__jPxufyvUf0w0Y8n84N",
-            "type": "text",
-            "position": {
-              "x": 1757.5696470531598,
-              "y": -338.7362949454713
-            },
-            "data": {
-              "text": "totalPrice > 50",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 164,
-              "height": 47
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+              "width": 101,
+              "height": 46
             }
           },
           {
             "id": "d084920f-9aba-40a4-a827-ef990ed84cab",
             "type": "lineAnchor",
             "position": {
-              "x": 1319.0633187672427,
-              "y": -1709.741528495907
+              "x": 1277.0633187672427,
+              "y": -1707.741528495907
             },
             "style": {
               "width": 10,
@@ -463,8 +378,8 @@
             "id": "7c9c8a44-0958-4667-8b1e-244078d144ed",
             "type": "lineAnchor",
             "position": {
-              "x": 1363.0633340260317,
-              "y": -1876.7415361253015
+              "x": 1321.0633340260317,
+              "y": -1874.7415361253015
             },
             "style": {
               "width": 10,
@@ -477,6 +392,59 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "dea69974-1fe5-40d3-88ee-562e47f3a423",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors"
+            },
+            "position": {
+              "x": 1310.6336870950345,
+              "y": -1822.2884360077232
+            },
+            "measured": {
+              "width": 110,
+              "height": 123
+            },
+            "dragging": false,
+            "width": 110,
+            "height": 123,
+            "resizing": false
+          },
+          {
+            "id": "779ff79f-7aa1-46ea-9c5e-5d45bea0c584",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1705.2616870950344,
+              "y": -261.1084360077233
+            },
+            "measured": {
+              "width": 57,
+              "height": 38
+            },
+            "dragging": false
+          },
+          {
+            "id": "6bcb17c0-cbb8-4767-bc76-9363c8abf088",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1921.2616870950344,
+              "y": -264.3269203827233
+            },
+            "measured": {
+              "width": 57,
+              "height": 38
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -485,16 +453,6 @@
             "source": "d084920f-9aba-40a4-a827-ef990ed84cab",
             "target": "7c9c8a44-0958-4667-8b1e-244078d144ed",
             "type": "straight",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
-            "id": "3c9a6ce4-ee23-4c79-ba0b-ad14d948732b",
-            "source": "McFE1K1B6hPIr4g31ZgHp",
-            "target": "vrco96t5fb3aOyVwob9K1",
-            "sourceHandle": "right-source",
-            "targetHandle": "left-target",
             "markerEnd": {
               "type": "arrowclosed"
             }
@@ -540,25 +498,25 @@
             }
           },
           {
-            "id": "642e09ce-5e59-4fb2-95f5-2331ac9d43b4",
-            "source": "Mt_aglExI-SgcyRjW1iPJ",
-            "target": "XDCOD5UItDGJdGoMLVb81",
-            "sourceHandle": "right-source",
-            "targetHandle": "left-target",
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "target": "vrco96t5fb3aOyVwob9K1",
+            "targetHandle": "top-target",
             "markerEnd": {
               "type": "arrowclosed"
-            }
+            },
+            "id": "xy-edge__McFE1K1B6hPIr4g31ZgHpbottom-source-vrco96t5fb3aOyVwob9K1top-target"
           }
         ],
         "viewport": {
-          "x": -361.83149198501724,
-          "y": 1197.1574626327679,
-          "zoom": 0.5
+          "x": -491.4789368351336,
+          "y": 1275.2958130614916,
+          "zoom": 0.5565488559496535
         }
       }
     },
     "display_name": "Choose Your Own Scenario",
-    "bubble_choice_description": "Use Sketch Lab to design a flowchart for your own scenario. ",
+    "bubble_choice_description": "Create a flowchart for your own scenario. ",
     "thumbnail_url": "https://images.code.org/1c6c44de7140845be4df066516add379-Screenshot 2026-04-14 at 5.21.08 PM.png",
     "exemplar_sources": {
       "source": {
@@ -2349,6 +2307,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-14T23:01:20.719+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 23:02:03 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:04:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:21:59 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:42:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:15:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:02:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:24:39 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:25:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:26:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:27:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:28:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

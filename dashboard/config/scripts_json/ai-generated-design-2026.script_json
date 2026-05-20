@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-24 16:27:01 UTC",
+    "serialized_at": "2026-05-18 18:35:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6723,7 +6723,7 @@
     {
       "key": "abstraction",
       "word": "abstraction",
-      "definition": "the practice of focusing only on the details that matter for what you're trying to do and leaving out everything else",
+      "definition": "hides complex details and shows only the essential features",
       "properties": {
       },
       "seeding_key": {

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Student-Centered Teaching
 
-#### At the core of Code.org's many curriculum offerings is **student-centered teaching**. We aim to influence students’ attitudes and perceptions towards computer science by increasing engagement, confidence, and sense of belonging with student-centered strategies that ensure equitable learning opportunities and outcomes.
+At the core of Code.org's many curriculum offerings is **student-centered teaching**. We aim to influence students’ attitudes and perceptions towards computer science by increasing engagement, confidence, and sense of belonging with student-centered strategies that ensure equitable learning opportunities and outcomes.
 
 <div style="display: flex; justify-content: center; gap: -40px; padding: 20px;">
   <img src="https://images.code.org/bd09034cea4d5ac5ce165ea07e01f1cc-image-1736451863730.44.20 AM.png" alt="Two younger students look at the camera and smile while sitting in front of laptops." style="width: 200px; height: 200px; object-fit: cover; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(-10deg); border-radius: 10px;">
@@ -14,11 +14,11 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/f4d8a372523528928dccbc70efa9999a-image-1736452273108.51.10 AM.png" alt="Two middle school students work on the same computer. One is speaking and gesturing while the other listens." style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(5deg);">
 </div>
 
-#### In particular, the Code.org curriculum aims to positively impact equity by designing content and activities that support teachers in providing students with multiple avenues to learn and understand computer science concepts so that all students can be successful. At Code.org, we work to identify and eliminate barriers that have prevented the inclusion and full participation of underrepresented groups in computer science.
+In particular, the Code.org curriculum aims to positively impact equity by designing content and activities that support teachers in providing students with multiple avenues to learn and understand computer science concepts so that all students can be successful. At Code.org, we work to identify and eliminate barriers that have prevented the inclusion and full participation of underrepresented groups in computer science.
 
 ## What is Student-Centered Teaching?
 
-#### Our approach to implementing student-centered teaching and addressing equity consists of four main threads:
+Our approach to implementing student-centered teaching and addressing equity consists of four main threads:
 
 <table style="width: 100%; margin: auto;">
   <tr style="border-bottom: 1px solid black;">
@@ -43,5 +43,5 @@ markdown <<MARKDOWN
   </tr>
 </table>
 
-#### In the next few levels, we'll go over examples of **each** of these threads in the Code.org curriculum so you can see what they look like in practice. Each thread will have relevant elementary, middle, and high school examples.
+In the next few levels, we'll go over examples of **each** of these threads in the Code.org curriculum so you can see what they look like in practice. Each thread will have relevant elementary, middle, and high school examples.
 MARKDOWN

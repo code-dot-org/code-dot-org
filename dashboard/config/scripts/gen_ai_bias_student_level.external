@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Recap: Lesson 3 - Bias in the Machine
 
-#### Afer this lesson, you can **describe** patterns in collections of data sources that contribute to bias.
+Afer this lesson, you can **describe** patterns in collections of data sources that contribute to bias.
 
 ## **Key Terms**
 
-* #### **Bias** - When a model favors certain information over others.
+* **Bias** - When a model favors certain information over others.
 
 ## Resources
 

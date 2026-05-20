@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip} from '@mui/material';
+import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
 import {
@@ -19,9 +19,20 @@ import styles from './toolbar.module.scss';
 interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
   levelName: string;
+  onUndo: () => void;
+  canUndo: boolean;
+  onRedo: () => void;
+  canRedo: boolean;
 }
 
-export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
+export default function Toolbar({
+  onAddNode,
+  levelName,
+  onUndo,
+  canUndo,
+  onRedo,
+  canRedo,
+}: ToolbarProps) {
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
@@ -86,7 +97,7 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
       className={styles.toolbar}
       elevation={3}
       role="toolbar"
-      aria-label="Add shapes, lines, and images"
+      aria-label="Canvas tools"
       aria-orientation="vertical"
     >
       <Tooltip title="Add rectangle" placement="right">
@@ -154,24 +165,11 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
         </IconButton>
       </Tooltip>
 
-      <Tooltip title="Add line" placement="right">
-        <IconButton
-          aria-label="Add line"
-          id={`${uid}-line`}
-          onClick={() => onAddNode({type: 'line'})}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="minus" />
-        </IconButton>
-      </Tooltip>
-
       <Tooltip title="Add arrow" placement="right">
         <IconButton
           aria-label="Add arrow"
           id={`${uid}-arrow`}
-          onClick={() => onAddNode({type: 'arrow'})}
+          onClick={() => onAddNode({type: 'line'})}
           size="small"
           color="tertiary"
           variant="outlined"
@@ -192,8 +190,37 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
           <FontAwesomeV6Icon iconName="image" />
         </IconButton>
       </Tooltip>
-
       <FileInput />
+      <Divider flexItem />
+      <Tooltip title="Undo" placement="right">
+        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
+        <span>
+          <IconButton
+            aria-label="Undo"
+            onClick={onUndo}
+            disabled={!canUndo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-left" />
+          </IconButton>
+        </span>
+      </Tooltip>
+      <Tooltip title="Redo" placement="right">
+        <span>
+          <IconButton
+            aria-label="Redo"
+            onClick={onRedo}
+            disabled={!canRedo}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="rotate-right" />
+          </IconButton>
+        </span>
+      </Tooltip>
     </Paper>
   );
 }

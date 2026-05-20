@@ -33,6 +33,13 @@ interface BackpackPanelProps extends BackpackProps {
 
 const PRIMARY_BACKPACK_KEY = 'PRIMARY';
 
+// No-op transition for the Snackbar's transition slot
+// since the transition is handled by the inner TransitionGroup and Fade
+const SnackbarPassthrough = React.forwardRef<
+  HTMLDivElement,
+  {children?: React.ReactNode}
+>(({children}, ref) => <div ref={ref}>{children}</div>);
+
 type AlertConfig = {id: number; type: 'success' | 'danger'; message: string};
 const ALERT_AUTO_HIDE_MS = 3000;
 let nextAlertId = 0;
@@ -304,7 +311,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     <div className={moduleStyles.backpackPanelWithFiles}>
       <Snackbar
         open
-        slots={{transition: React.Fragment}}
+        slots={{transition: SnackbarPassthrough}}
         className={moduleStyles.alertContainer}
       >
         <TransitionGroup className={moduleStyles.alertList}>

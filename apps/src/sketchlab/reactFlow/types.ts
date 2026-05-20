@@ -51,8 +51,7 @@ export type AddNodeRequest =
   | {type: 'shape'; data: ShapeNodeData}
   | {type: 'text'; data: TextNodeData}
   | {type: 'image'; data: ImageNodeData}
-  | {type: 'line'}
-  | {type: 'arrow'};
+  | {type: 'line'};
 
 export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
@@ -63,3 +62,5 @@ export type SketchLabNode =
   | TextNodeType
   | ImageNodeType
   | LineAnchorNodeType;
+
+export type ArrowHeadValue = 'none' | 'start' | 'end' | 'both';

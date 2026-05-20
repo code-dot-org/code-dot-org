@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Property: Checked\n\nThe `.checked` property represents whether a checkbox is selected. It gives a boolean value: `true` if the checkbox is checked and `false` if it is not checked.",
+  "examples": "[{\"name\":\"Read a Checkbox\",\"description\":\"This stores whether the ticket checkbox is checked.\",\"code\":\"```\\nconst ticketBox = document.getElementById(\\\"ticketBox\\\");\\n\\nlet hasTicket = ticketBox.checked;\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "property-checked",
+  "name": "Property: Checked",
+  "syntax": "`let hasTicket = ticketBox.checked;`",
+  "tips": "- Use `.checked` with checkbox inputs.\n- `.checked` gives a boolean value: `true` or `false`.\n- Do not put quotation marks around `true` or `false`.\n- Make sure the checkbox element has been selected before reading its `.checked` value.\n- In Web Lab, `.checked` often appears inside event handlers when the page needs to respond to a user’s checkbox choice.",
+  "methods": [
+
+  ]
+}
