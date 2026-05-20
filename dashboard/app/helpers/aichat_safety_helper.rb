@@ -22,6 +22,7 @@ module AichatSafetyHelper
       attempts = 0
       input = safety_check_input(text, level_id)
       output_type = 'Unstructured'
+      safety_read_timeout = DCDO.get('aichat_safety_openai_read_timeout', DCDO.get('openai_http_read_timeout', 30))
 
       # Retry only on network-related exceptions.
       response = Retryable.retryable(
@@ -31,7 +32,7 @@ module AichatSafetyHelper
         attempts += 1
         start_time_unstructured = Time.now
         begin
-          client.request_chat_completion(input, 1)
+          client.request_chat_completion(input, 1, read_timeout: safety_read_timeout)
         ensure
           duration = Time.now - start_time_unstructured
           report_detailed_latency(duration, output_type, role)
@@ -52,7 +53,7 @@ module AichatSafetyHelper
         start_time_structured = Time.now
         begin
           # Fallback to structured call (non-retryable)
-          response = client.request_chat_completion(input, 0, options: {text: structured_response_format})
+          response = client.request_chat_completion(input, 0, options: {text: structured_response_format}, read_timeout: safety_read_timeout)
         ensure
           duration = Time.now - start_time_structured
           report_detailed_latency(duration, output_type, role)
