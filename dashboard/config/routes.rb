@@ -1260,6 +1260,12 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
     get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
 
+    get '/dashboardapi/v1/teacher_dashboard_notes', to: 'api/v1/teacher_dashboard_notes#index', defaults: {format: 'json'}
+    post '/dashboardapi/v1/teacher_dashboard_notes', to: 'api/v1/teacher_dashboard_notes#create', defaults: {format: 'json'}
+    patch '/dashboardapi/v1/teacher_dashboard_notes/:id/layout', to: 'api/v1/teacher_dashboard_notes#update_layout', defaults: {format: 'json'}
+    patch '/dashboardapi/v1/teacher_dashboard_notes/:id', to: 'api/v1/teacher_dashboard_notes#update', defaults: {format: 'json'}
+    delete '/dashboardapi/v1/teacher_dashboard_notes/:id', to: 'api/v1/teacher_dashboard_notes#destroy', defaults: {format: 'json'}
+
     # We want to allow searchs with dots, for instance "St. Paul", so we specify
     # the constraint on :q to match anything but a slash.
     # @see http://guides.rubyonrails.org/routing.html#specifying-constraints

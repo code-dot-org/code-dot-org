@@ -1366,6 +1366,7 @@ class Unit < ApplicationRecord
     end
     summary = {
       unitId: id,
+      unitGroupId: unit_group_unit&.course_id || original_unit_group&.id,
       title: title_for_display(unit_group_unit: unit_group_unit),
       name: name,
       unitNumber: unit_position,
