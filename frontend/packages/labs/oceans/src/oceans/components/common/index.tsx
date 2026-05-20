@@ -26,7 +26,9 @@ class Body extends React.Component<BodyProps> {
       <div className="ocean-body" onClick={this.props.onClick}>
         <div
           className="ocean-body__children"
-          inert={modalGuide ? '' : undefined}
+          ref={el => {
+            if (el) el.inert = !!modalGuide;
+          }}
         >
           {this.props.children}
         </div>

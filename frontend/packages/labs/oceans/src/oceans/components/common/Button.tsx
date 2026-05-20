@@ -4,19 +4,13 @@ import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
 
 /** Props accepted by the lab's shared <Button>. */
-interface ButtonProps {
-  /** Additional class names composed onto `.ocean-button`. */
-  className?: string;
-  /**
-   * Escape hatch for inline CSS custom properties (e.g. dynamic
-   * percentages set as `--ocean-bar-width`).  Static visual styling
-   * lives in CSS classes; this is only for genuinely per-render values.
-   */
-  style?: React.CSSProperties;
-  children?: React.ReactNode;
+interface ButtonProps
+  extends Pick<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    'className' | 'style' | 'id' | 'children'
+  > {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
-  id?: string;
 }
 
 /**
