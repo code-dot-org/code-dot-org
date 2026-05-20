@@ -1,10 +1,10 @@
 {
   "key": "focus-on-coding",
-  "display_name": "Focus on Coding (CS Discoveries)",
+  "display_name": "Focus on Coding (AI Discoveries)",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "collections",
   "image": "https://images.code.org/1051573352c6954036412cd466a8b4a9-Programming.png",
@@ -17,5 +17,7 @@
   "published_date": "2023-07-10 09:00:00 UTC",
   "self_paced_pl_course_offering_key": "self-paced-pl-csd",
   "ai_teaching_assistant_available": true,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }
