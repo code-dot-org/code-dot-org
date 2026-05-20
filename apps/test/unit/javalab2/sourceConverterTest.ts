@@ -5,10 +5,7 @@ import {
   multiFileToFlat,
 } from '@cdo/apps/javalab2/sourceConverter';
 import {JavalabFlatSource} from '@cdo/apps/javalab2/types';
-import {
-  MultiFileSource,
-  ProjectFileType,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 function flatFile(
@@ -90,7 +87,12 @@ describe('javalab2 sourceConverter', () => {
       const mf = flatToMultiFile({
         'A.java': flatFile('a', 0),
         'B.java': flatFile('b', 0), // duplicate
-        'C.java': {text: 'c', tabOrder: NaN, isVisible: true, isValidation: false},
+        'C.java': {
+          text: 'c',
+          tabOrder: NaN,
+          isVisible: true,
+          isValidation: false,
+        },
       });
       const names = (mf.openFiles ?? []).map(id => mf.files[id].name);
       expect(names).toEqual(['A.java', 'B.java', 'C.java']);
@@ -115,9 +117,9 @@ describe('javalab2 sourceConverter', () => {
     it('returns {} for nil/empty input', () => {
       expect(multiFileToFlat(null)).toEqual({});
       expect(multiFileToFlat(undefined)).toEqual({});
-      expect(
-        multiFileToFlat({folders: {}, files: {}, openFiles: []})
-      ).toEqual({});
+      expect(multiFileToFlat({folders: {}, files: {}, openFiles: []})).toEqual(
+        {}
+      );
     });
 
     it('round-trips a multi-file source with mixed types', () => {
@@ -129,9 +131,7 @@ describe('javalab2 sourceConverter', () => {
       };
       const round = multiFileToFlat(flatToMultiFile(original));
 
-      expect(Object.keys(round).sort()).toEqual(
-        Object.keys(original).sort()
-      );
+      expect(Object.keys(round).sort()).toEqual(Object.keys(original).sort());
       Object.keys(original).forEach(name => {
         expect(round[name].text).toBe(original[name].text);
         expect(round[name].isVisible).toBe(original[name].isVisible);
