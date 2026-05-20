@@ -2,14 +2,19 @@
  * Sizing for the AI for Oceans lab.  Mirrors apps/src/fish/FishView.jsx:
  *   - 16:9 aspect ratio
  *   - clamped between 320 px and 1280 px wide
- *   - base font-size scales proportionally so Radium %-relative styles
- *     cascade identically to the curriculum path
+ *   - base font-size scales proportionally so the lab's %-relative
+ *     scene styles cascade identically to the curriculum path
  *
  * Sizing uses cqi/cqb so the lab tracks any nearest container's size.
  * Where no ancestor has container-type set, cqi/cqb fall back to small
  * viewport units (svw/svb) per spec, which is fine for the studio's
  * flex-column main area.  No JS measurement required.
  */
+
+/* Scene styles are imported via App.tsx so they ship with the lab in any
+ * consumer; this file scopes the studio-style shell + the lab-frame +
+ * the #container-react box-sizing reset, which only the embedding host
+ * needs to opt into. */
 
 .oceans-lab-shell {
   flex: 1;
@@ -51,13 +56,5 @@
   font-size: calc(var(--oceans-lab-width) * var(--oceans-lab-font-scale));
 }
 
-/*
- * Reset box-sizing inside the React UI overlay.  CssBaseline (and most
- * modern resets) set border-box globally; Radium's %-based padding/height
- * inside #container-react assumes content-box (the curriculum path's
- * Rails-default behaviour).  Re-scope locally rather than fighting the host.
- */
-#container-react,
-#container-react * {
-  box-sizing: content-box;
-}
+/* The box-sizing reset for #container-react lives in scenes.css so it
+ * ships with the lab itself; this file no longer carries it. */
