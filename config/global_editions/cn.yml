@@ -1,0 +1,185 @@
+# China Global Edition Region
+
+# The structure of a global configuration is to start with the page context and
+# then list the page name, then list components within that page.
+#
+# The component can then specify a value that overrides component properties
+# with the ones given here, or, if the value is 'false', it removes the
+# component from the page.
+
+locales: [zh-CN]
+locale_lock: true
+countries:
+  - CN # China
+  - SG # Singapore
+
+# The list of available project types
+project_types: &project_types
+
+# The top bar on the site consisting of dropdown menus and navigation links
+header:
+  # The topbar (which is collapsed into the hamburger in certain contexts)
+  top:
+    signed_out:
+      - title: about
+        id: header-about
+        domain: code.org
+        url: /zh-Hans/global
+      - title: hour_of_ai
+        id: header-hoa
+        url: https://csforall.org/zh-Hans/hour-of-ai
+
+    student:
+      - title: my_dashboard
+        url: /cn/home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /cn/catalog
+        domain: studio.code.org
+        id: header-student-courses
+
+    teacher:
+      - title: my_dashboard
+        url: /cn/home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /cn/catalog
+        domain: studio.code.org
+        id: header-teacher-courses
+      - title: professional_learning
+        url: /cn/my-professional-learning
+        domain: studio.code.org
+        id: header-teacher-professional-learning
+
+  # The three-bar "hamburger" menu
+  hamburger:
+    student:
+      - title: learn
+        domain: studio.code.org
+        url: /cn/catalog
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+          - title: legal_cookie_notice
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+          - title: legal_tos
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+
+    teacher:
+      - title: learn
+        domain: studio.code.org
+        url: /cn/catalog
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+          - title: legal_cookie_notice
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+          - title: legal_tos
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+
+  # Help button (?)
+  help:
+    # The report_bug item is special in that it only appears when appropriate
+    - title: report_bug
+      url: https://support.code.org/hc/en-us/requests/new
+      id: report-bug
+
+# The navigation region found at the bottom of each page
+footer:
+  links:
+    studio:
+      - title: privacy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+        style: "color: #ffa400;"
+      - title: cookie_notice
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+      - title: tos_short
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+    code_org:
+      - title: privacy_policy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+      - title: terms
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+    hour_of_code:
+      - title: terms
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
+      - title: privacy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
+      - title: cookie
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
+
+# Route matching to influence properties of components
+pages:
+  # All pages
+  - path: /
+    components:
+      CurriculumCatalog:
+        # Do not allow switching away from showing ONLY translated courses
+        forceTranslated: true
+      StartNewProject:
+        # Show only available project options
+        availableProjectTypes: *project_types
+      CurriculumQuickAssign:
+        # For section setup, truncate the 'quick access' course listing to
+        # only items that are translated to the current locale
+        courseFilters:
+          language: zh-CN
+      AssignmentVersionSelector:
+        # When viewing a course, only populate the version selector with
+        # versions that are translated
+        courseFilters:
+          language: zh-CN
+      # Hide the right panel with "New Features", "Announcements", etc.
+      TeacherPromotions: false
+  # Teacher dashboard
+  - path: /teacher_dashboard
+    components:
+      DownloadParentLetterButton: false
+      ManageStudentsLoginInfo:
+        providePrivacyLetter: false
+  # Home dashboards
+  - path: /home
+    components:
+      MarketingAnnouncementBanner: false
+      TeacherResources: false
+      IncubatorBanner: false
+  # Account Settings
+  - path: /users/edit
+    components:
+      # Do not allow LTI use
+      LtiRosterSyncSettings: false
+      # Do not provide parental links to information about how to create accounts when deleting sections / accounts
+      PersonalLoginDialog:
+        hideInstructions: true
+      TeacherWarning:
+        hideInstructions: true
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /zh-Hans/global
