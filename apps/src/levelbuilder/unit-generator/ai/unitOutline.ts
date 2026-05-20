@@ -3,17 +3,13 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
-import {UnitContext} from '../../lesson-generator/ai/context';
-// We piggy-back on the lesson generator's shared logging + model helpers
-// so the unit page tags its prompts with the same `lesson-gen/*` family
-// the lesson generator uses. The console grouping conventions stay
-// uniform across both pages.
+import {UnitContext} from '../../curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../lesson-generator/ai/shared';
+} from '../../curriculum-generator/ai/shared';
 
 // Bounds on the unit outline plan. Quoted both in the prompt and in
 // the zod schema so the limits stay in sync.
