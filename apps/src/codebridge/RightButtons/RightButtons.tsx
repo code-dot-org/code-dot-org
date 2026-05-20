@@ -80,7 +80,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           {widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()}
         </MuiButton>
       )}
-      {appName === 'pythonlab' && (
+      {(appName === 'pythonlab' || appName === 'javalab') && (
         <WithTooltip tooltipProps={tooltipProps}>
           <MuiIconButton
             variant="text"
