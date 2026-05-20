@@ -82,7 +82,7 @@ module Geocoder
 
   MIN_ADDRESS_LENGTH = 10
   MAX_ADDRESS_WORDS = 8
-  MAX_GEOCODER_ATTEMPTS = 3
+  MAX_GEOCODER_ATTEMPTS = 1
 
   def self.find_potential_street_address(text)
     return nil unless text
