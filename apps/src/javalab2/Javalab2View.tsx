@@ -1,0 +1,115 @@
+import {Codebridge} from '@codebridge/Codebridge';
+import {useSource} from '@codebridge/hooks/useSource';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {java} from '@codemirror/lang-java';
+import {json} from '@codemirror/lang-json';
+import {LanguageSupport} from '@codemirror/language';
+import React, {useMemo, useState} from 'react';
+
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {
+  DEFAULT_PROJECT,
+  JAVALAB_EDITABLE_FILE_TYPES,
+  JAVALAB_SUPPORTED_FILE_TYPES,
+} from './constants';
+import {handleRunClick, stopJavaCode} from './javabuilderRunner';
+import HorizontalLayout from './layout/HorizontalLayout';
+import {flatToMultiFile, JavalabFlatSource} from './sourceConverter';
+import {JavalabLevelProperties} from './types';
+
+const javalabLangMapping: {[key: string]: LanguageSupport} = {
+  java: java(),
+  json: json(),
+};
+
+const defaultConfig: ConfigType = {
+  languageMapping: javalabLangMapping,
+  editableFileTypes: JAVALAB_EDITABLE_FILE_TYPES,
+  supportedFileTypes: JAVALAB_SUPPORTED_FILE_TYPES,
+  activeLayout: 'horizontal',
+  layoutComponents: {
+    horizontal: HorizontalLayout,
+    vertical: HorizontalLayout,
+    share: HorizontalLayout,
+    widget: HorizontalLayout,
+  },
+};
+
+// Java Lab 2 — minimal Phase 1 lab2 shell. Loads a level, edits code in
+// codebridge, runs against Javabuilder, prints stdout/stderr to the
+// codebridge console. Validation, neighborhood, theater, captcha, backpack,
+// and start_sources edit mode are deferred to later phases.
+const Javalab2View: React.FunctionComponent<
+  LabProps<JavalabLevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
+  const [config, setConfig] = useState<ConfigType>(defaultConfig);
+
+  // Rails sends Javalab's start_sources / template_sources / exemplar_sources
+  // in the legacy flat shape. Codebridge wants MultiFileSource. Convert once
+  // here before any codebridge hook reads them.
+  const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
+    const flatStart =
+      levelProperties.startSources as JavalabFlatSource | undefined;
+    const flatTemplate =
+      levelProperties.templateSources as JavalabFlatSource | undefined;
+    const flatExemplar =
+      levelProperties.exemplarSources as JavalabFlatSource | undefined;
+
+    return {
+      ...levelProperties,
+      startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
+      templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
+      exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
+    };
+  }, [levelProperties]);
+
+  const {startSources} = useSource(
+    DEFAULT_PROJECT,
+    codebridgeLevelProperties,
+    initialSources
+  );
+
+  const sourceLevelId = useAppSelector(
+    state => state.lab2Project.projectSourceLevelId
+  );
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+  const hasSource = !!source;
+
+  const onRun = async (
+    _runTests: boolean,
+    dispatch: AppDispatch,
+    _source: MultiFileSource | undefined
+  ) => {
+    // Javabuilder reads source from S3. Flush the in-memory editor first so
+    // S3 reflects what the user sees before the WS connection opens.
+    await Lab2Registry.getInstance().getProjectManager()?.flushSave();
+    await handleRunClick(dispatch, levelProperties);
+  };
+
+  return (
+    <div>
+      {hasSource && sourceLevelId === levelProperties.id && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          onRun={onRun}
+          onStop={stopJavaCode}
+          levelProperties={codebridgeLevelProperties}
+        />
+      )}
+    </div>
+  );
+};
+
+export default Javalab2View;
