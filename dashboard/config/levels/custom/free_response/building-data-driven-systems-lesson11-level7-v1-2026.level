@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-15T05:26:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflect on Inclusivity in Your Dataset",
+    "long_instructions": "Reflect on the interface that you just created.\r\n\r\n* What part of your app makes the data easiest to understand right now? Give 1–2 specific examples.\r\n* What part of your app might still be confusing, hard to scan, or hard to use?\r\n* Based on what you noticed, what is one change you made or will make to improve clarity or accessibility? How will this help users understand your data more easily?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Accessibility and Clarity",
+    "thumbnail_url": "https://images.code.org/464e75ae884ae65e09f919f71795b8a8-thought-leadership.png",
+    "bubble_choice_description": "Reflect on your app interface, identify what is clear or confusing, and choose one improvement to make your data easier for users to understand.",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T05:26:15.278+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level4-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level4-v1-2026\"},{\"changed_at\":\"2026-05-15 05:27:47 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

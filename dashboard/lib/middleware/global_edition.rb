@@ -23,16 +23,23 @@ module Middleware
       REGION_KEY = Cdo::GlobalEdition::REGION_KEY
       LOCALE_KEY = Cdo::I18n::LOCALE_COOKIE_KEY
 
-      # HTTP paths that to be excluded from Global Edition scope.
-      EXCLUDED_PATHS = [
-        # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
-        # Instead of repeating this process for each new Global Edition region,
-        # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
-        # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
-        ::OmniAuth.config.path_prefix, # e.g. `/users/auth`
-        # Exclude HoC legacy API routes from Global Edition scope.
-        *(defined?(HocLegacy::Engine) ? [HocLegacy::API_ROOT_PATH] : []),
-      ].compact.freeze
+      # HTTP path prefixes to be excluded from Global Edition scope.
+      def self.excluded_path_prefixes
+        @excluded_path_prefixes ||= [
+          Rails.application.config.assets.prefix + '/', # e.g. `/assets/`
+          '/public/',
+          # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
+          # Instead of repeating this process for each new Global Edition region,
+          # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
+          # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
+          ::OmniAuth.config.path_prefix + '/', # e.g. `/users/auth/`
+          # Exclude HoC legacy API routes from Global Edition scope.
+          ::HocLegacy::API_ROOT_PATH + '/', # e.g. `/api/hour/`
+          # Exclude health check routes such as `/health_check`.
+          Rails.application.routes.url_helpers.health_check_path,
+          Rails.application.routes.url_helpers.home_health_check_path,
+        ].freeze
+      end
 
       attr_reader :app, :env, :request, :original_script_name, :original_path_info, :original_path, :original_region,
                   :original_locale
@@ -80,6 +87,7 @@ module Middleware
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
         return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
+        return app.call(env) if excluded_path?(request.path)
 
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.GET.key?(REGION_KEY)
@@ -99,12 +107,12 @@ module Middleware
           international_path = original_path_info.sub('/global/fa', '')
           request.path_info = international_path unless existing_route?
 
-          if redirectable?(international_path)
+          if redirectable?
             fallback_path = regional_path_for('fa', international_path)
             fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
             setup_redirect_to(fallback_path)
           end
-        elsif effective_region && Cdo::GlobalEdition.region_available?(effective_region)
+        elsif effective_region
           if url_region == effective_region && (url_locale.nil? || url_locale == original_locale)
             normalize_request_for_routing
           else
@@ -173,6 +181,7 @@ module Middleware
         @effective_region =
           if original_locale
             locale_regions = Cdo::GlobalEdition.locales_regions[original_locale]
+            locale_regions = locale_regions&.select {|region| Cdo::GlobalEdition.region_available?(region)}
             return if locale_regions.blank?
 
             return original_region if locale_regions.include?(original_region)
@@ -242,17 +251,17 @@ module Middleware
       end
 
       private def excluded_path?(path)
-        EXCLUDED_PATHS.any? {|excluded_path| path.match?(excluded_path)}
+        path.start_with?(*self.class.excluded_path_prefixes)
       end
 
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?(path = main_path)
+      private def redirectable?
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
-        !excluded_path?(path)
+        true
       end
 
       private def regional_path_for(region, main_path)

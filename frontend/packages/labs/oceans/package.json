@@ -64,6 +64,7 @@
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "lodash": "^4.17.5",
+    "playwright": "catalog:",
     "prettier": "catalog:",
     "prop-types": "^15.8.1",
     "query-string": "4.1.0",

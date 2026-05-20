@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Using Resources
 
-<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><b>Using resources</b> is a core, authentic practice of computer science.  Whether novice or expert, all programmers rely on code documentation and other resources when writing programs.</p></div>
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px;"><b>Using resources</b> is a core, authentic practice of computer science.  Whether novice or expert, all programmers rely on code documentation and other resources when writing programs.</p></div>
 
 <img src="https://images.code.org/e7be9e7d1044b2ae78871193f71cbb66-image-1628699169394.jpg" alt="Two students working on the same laptop computer." width="350px" style="border-radius:10px; float:right; margin-left:25px; margin-right:25px; margin-top:25px; margin-bottom:25px;">
 
@@ -16,7 +16,7 @@ Your role as the teacher is to help students develop the skill of finding answer
 <div style="clear:both;">
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">❓ How is using resources related to the problem solving process?</summary>
+<summary style="font-size: 16px; font-weight: bold;">❓ How is using resources related to the problem solving process?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -28,7 +28,7 @@ Your role as the teacher is to help students develop the skill of finding answer
 </p></div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🧰 What resources are available to students?</summary>
+<summary style="font-size: 16px; font-weight: bold;">🧰 What resources are available to students?</summary>
 
 AI Discoveries includes several key resources to support students in the learning process. For the most part, these resources are set up to be used as needed, not read as a pre-reading or presented as a lecture. Students are not expected to already know all of the needed information when they engage in programming activities.  This structure reflects the “discovery” model of the course, but also supports students in the authentic use of resources and code documentation.
 
@@ -45,7 +45,7 @@ AI Discoveries includes several key resources to support students in the learnin
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">📝 Reference Materials</summary>
+    <summary style="font-size: 16px; font-weight: bold;">📝 Reference Materials</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:55px;">
     <p>
 <img src="https://images.code.org/a6a6651a33342fadc4cd9eef5080f4ae-image-1626742414625.png" width="200px" style="border-radius:10px; float:left; margin-left:10px; margin-right:30px; margin-bottom: 32px;">
@@ -57,7 +57,7 @@ AI Discoveries includes several key resources to support students in the learnin
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.2em; font-weight: bold;">💻 Code Documentation</summary>
+    <summary style="font-size: 16px; font-weight: bold;">💻 Code Documentation</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:30px;">
     <p>
 <img src="https://images.code.org/9f586a73a42b26a46c545f5bc2ea9660-image-1626742871998.png" width="200px" style="border-radius:10px; float:left; margin-left:10px; margin-right:30px; margin-bottom: 30px;">
@@ -72,12 +72,13 @@ AI Discoveries includes several key resources to support students in the learnin
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 How is using resources connected to the curriculum?</summary>
+<summary style="font-size: 16px; font-weight: bold;">🔎 How is using resources connected to the curriculum?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 Informational resources are available to students throughout programming lessons to give them just-in-time information to solve their problems. These resources allow students to self-differentiate, deciding for themselves how much help they need for a particular activity. Students should continue to explore resources and previous solutions throughout the lessons as they experiment and create computational artifacts.
 </p></div></details>
+<br><br>
 
-### <a href="" target="blank" rel="noopener noreferrer">Click here</a> to read the AI Discoveries Guide to Using Resources.
+<a href="https://docs.google.com/document/d/1NwC5kX7EaBsAEdFh_ZDbin_N4Jb2inUck9-Bz7KtMjk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Click here</a> to read the AI Discoveries Guide to Using Resources.
 MARKDOWN

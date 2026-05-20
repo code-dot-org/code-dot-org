@@ -13,37 +13,31 @@ markdown <<MARKDOWN
 ">
 
   <p style="
-      font-size: 18pt; 
-      margin: 0; 
-      letter-spacing: 1px; 
-      opacity: 0.95;
-  ">
-    <strong>Educator Module:</strong>
-  </p>
-
-  <p style="
       font-size: 36pt; 
       margin: 12px 0 0 0; 
       line-height: 1.1; 
       font-weight: 700;
   ">
-    Thinking Critically About AI
+    Teaching Thinking Critically 
+    <br>About AI
   </p>
 
 </div>
 
 # Welcome!
 
-This professional learning module is designed to prepare you to teach Code.org's Thinking Critically About AI unit, part of the AI Discoveries curriculum. This curriculum is an engaging, hands-on dive into artificial intelligence, equipping students to evaluate AI-generated information, recognize its limitations, and apply thoughtful human judgment.
+This professional learning module is designed to prepare you to teach Code.org’s Thinking Critically About AI unit, part of the AI Discoveries curriculum. This unit invites students to explore artificial intelligence not just as users, but as thoughtful evaluators, testers, and decision-makers. 
+
+Through hands-on investigations, discussions, and project work, students examine how AI systems generate outputs, where those systems succeed or fail, and what role humans should play when using AI responsibly. Throughout the unit, students build a “Generate and Judge” guide that captures their evidence, reflections, and recommendations for responsible AI use.
 
 ___
 
 
 <div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
-  <img src="https://images.code.org/74f3ec76174ef6324dcf99cd83747c77-MS20.png"
+  <img src="https://images.code.org/78ac19831a5a0ff265110bc3fe014666-image-1778694592909.49.48 AM.png"
        alt=""
        style="border-radius: 10px; width: 32%;">
-  <img src="https://images.code.org/39865d85d9b427a3d61825ec2b7b2a8d-MS23.png"
+  <img src="https://images.code.org/6deda55a4986774181c21959b6314eb8-image-1778694725622.52.01 AM.png"
        alt=""
        style="border-radius: 10px; width: 32%;">
   <img src="https://images.code.org/94cdfab9f34af898f2dcefba81b8798a-image-1772147512323.47.44 PM.png"
@@ -51,16 +45,18 @@ ___
        style="border-radius: 10px; width: 32%;">
 </div>
 
-___
+<hr aria-hidden="true">
 
 
 By the end of this professional learning module, you will be able to:
 
-* Articulate how human decisions can influence AI behavior, including issues of bias, privacy, credibility, and environmental impact.
-* Guide students in analyzing AI outputs for accuracy, bias, safety, and ethical implications.
-* Understand how Thinking Critically About AI models key Project Based Learning (PBL) elements such as sustained inquiry, critique and revision, student voice and choice, and public product development.
+* Explain how the unit helps students develop critical thinking habits around AI systems.
+* Guide students in evaluating AI outputs for accuracy, bias, privacy and safety risks, credibility, and appropriateness.
+* Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+* Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+* Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
----
+<hr aria-hidden="true">
 
 <div style="
   margin: 32px 0;
@@ -70,7 +66,7 @@ By the end of this professional learning module, you will be able to:
 ">
   <a
     class="btn btn-large btn-primary"
-    href="https://form.jotform.com/260644998906171"
+    href="ADD SURVEY LINK"
     target="_blank"
     rel="noopener noreferrer"
     style="white-space: nowrap;"
@@ -80,7 +76,7 @@ By the end of this professional learning module, you will be able to:
 
   <div>
     <div style="
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       margin-bottom: 4px;
     ">
@@ -96,7 +92,7 @@ By the end of this professional learning module, you will be able to:
   </div>
 </div>
 
----
+<hr aria-hidden="true">
 
-### **Suggested total time for this module:** 75 minutes
+**Suggested total time for this module:** 70 minutes
 MARKDOWN
