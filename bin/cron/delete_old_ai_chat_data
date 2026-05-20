@@ -50,7 +50,6 @@ def delete_events_in_batches(scope, max_batches: nil, dry_run: false)
 
     if dry_run
       batch_count = batch.count
-      puts "AichatEvent batch #{processed_batches + 1} SQL: #{batch.to_sql}"
       puts "AichatEvent batch #{processed_batches + 1} rows that would be deleted: #{batch_count}"
       affected_record_count += batch_count
     else
@@ -73,7 +72,6 @@ def delete_requests_in_batches(request_scope, max_batches: nil, dry_run: false)
 
     if dry_run
       batch_count = batch.count
-      puts "AichatRequest batch #{processed_batches + 1} SQL: #{batch.to_sql}"
       puts "AichatRequest batch #{processed_batches + 1} rows that would be deleted: #{batch_count}"
       affected_request_count += batch_count
     else
