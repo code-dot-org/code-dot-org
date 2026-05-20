@@ -3,6 +3,8 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
@@ -14,11 +16,13 @@ const CHECKLIST_ITEMS = [
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
   reviewSyllabusTour: Tour | null;
+  demoType: DemoType;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   createSectionTour,
   reviewSyllabusTour,
+  demoType,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 

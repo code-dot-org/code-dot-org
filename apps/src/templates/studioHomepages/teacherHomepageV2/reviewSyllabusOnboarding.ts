@@ -6,6 +6,8 @@ import {
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+
 export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
   'reviewSyllabusOnboardingCurrentStep';
 
@@ -73,8 +75,9 @@ const highlightAttachedElement = (selector: string) => ({
   },
 });
 
-// Steps shown on the teacher homepage before navigating to a lesson.
-export const createReviewSyllabusHomepageSteps = (
+// ── High school steps ────────────────────────────────────────────────────────
+
+const createHighSchoolHomepageSteps = (
   tour: Tour,
   sessionStorageKey: string
 ): StepOptions[] => {
@@ -180,10 +183,7 @@ const QUIZ_LEVEL_QUESTION = `
   <div class="quiz-feedback" aria-live="polite"></div>
 `;
 
-// Steps shown on the unit overview page after navigating from the homepage.
-export const createReviewSyllabusUnitOverviewSteps = (
-  tour: Tour
-): StepOptions[] => {
+const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
   tour.on('complete', () => controller.abort());
@@ -259,6 +259,12 @@ export const createReviewSyllabusUnitOverviewSteps = (
         show() {
           quizAdvanceTimer = null;
 
+          document
+            .querySelectorAll<HTMLButtonElement>('.quiz-option')
+            .forEach(btn => {
+              btn.dataset.originalText = btn.textContent?.trim() ?? '';
+            });
+
           quizClickHandler = (e: Event) => {
             const target = e.currentTarget as HTMLButtonElement;
             const allOptions = Array.from(
@@ -275,8 +281,17 @@ export const createReviewSyllabusUnitOverviewSteps = (
                 tour.next();
               }, 1000);
             } else {
+              allOptions.forEach(btn => {
+                if (btn.classList.contains('quiz-option-wrong')) {
+                  btn.classList.remove('quiz-option-wrong');
+                  btn.textContent = btn.dataset.originalText ?? '';
+                  btn.disabled = false;
+                }
+              });
               target.classList.add('quiz-option-wrong');
-              target.textContent = `\u274C ${target.textContent?.trim() ?? ''}`;
+              target.textContent = `❌ ${
+                target.dataset.originalText ?? target.textContent?.trim() ?? ''
+              }`;
               target.disabled = true;
               const feedback =
                 document.querySelector<HTMLElement>('.quiz-feedback');
@@ -321,4 +336,33 @@ export const createReviewSyllabusUnitOverviewSteps = (
     },
     createCompletionStep(tour, 'Review the Syllabus', 'Stay on this page'),
   ];
+};
+
+// ── Public API ───────────────────────────────────────────────────────────────
+
+// Steps shown on the teacher homepage before navigating to a lesson.
+export const createReviewSyllabusHomepageSteps = (
+  tour: Tour,
+  sessionStorageKey: string,
+  demoType: DemoType
+): StepOptions[] => {
+  switch (demoType) {
+    case 'high':
+      return createHighSchoolHomepageSteps(tour, sessionStorageKey);
+    default:
+      return [];
+  }
+};
+
+// Steps shown on the unit overview page after navigating from the homepage.
+export const createReviewSyllabusUnitOverviewSteps = (
+  tour: Tour,
+  demoType: DemoType
+): StepOptions[] => {
+  switch (demoType) {
+    case 'high':
+      return createHighSchoolUnitOverviewSteps(tour);
+    default:
+      return [];
+  }
 };

@@ -1,6 +1,10 @@
+import {useEffect} from 'react';
+
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createReviewSyllabusHomepageSteps,
@@ -9,6 +13,8 @@ import {
 } from './reviewSyllabusOnboarding';
 
 export {REVIEW_SYLLABUS_ONBOARDING_STEP_KEY};
+
+const REVIEW_SYLLABUS_DEMO_TYPE_KEY = 'reviewSyllabusOnboardingDemoType';
 
 // Call this on the unit overview page to resume the tour after lesson navigation.
 // Runs outside React so it works regardless of render mode.
@@ -19,10 +25,15 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   );
   if (!savedStepId) return;
 
+  const demoType = tryGetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, '') as
+    | DemoType
+    | '';
+  if (!demoType) return;
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
-  tour.addSteps(createReviewSyllabusUnitOverviewSteps(tour));
+  tour.addSteps(createReviewSyllabusUnitOverviewSteps(tour, demoType));
 
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
@@ -33,13 +44,22 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   tour.show(startStep.id);
 };
 
-const useReviewSyllabusTour = () => {
+const useReviewSyllabusTour = (demoType: DemoType | null) => {
+  useEffect(() => {
+    if (demoType) {
+      trySetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, demoType);
+    }
+  }, [demoType]);
+
   const {tour} = useOnboardingTour({
     getSteps: tour =>
-      createReviewSyllabusHomepageSteps(
-        tour,
-        REVIEW_SYLLABUS_ONBOARDING_STEP_KEY
-      ),
+      demoType
+        ? createReviewSyllabusHomepageSteps(
+            tour,
+            REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+            demoType
+          )
+        : [],
     sessionStorageKey: REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
   });
 
