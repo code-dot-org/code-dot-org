@@ -24,12 +24,7 @@ class Body extends React.Component<BodyProps> {
 
     return (
       <div className="ocean-body" onClick={this.props.onClick}>
-        <div
-          className="ocean-body__children"
-          ref={el => {
-            if (el) el.inert = !!modalGuide;
-          }}
-        >
+        <div className="ocean-body__children" inert={!!modalGuide || undefined}>
           {this.props.children}
         </div>
         <Guide />

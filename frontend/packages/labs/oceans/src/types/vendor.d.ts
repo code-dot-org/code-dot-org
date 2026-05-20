@@ -4,6 +4,10 @@
  * actually used in this codebase are declared.
  */
 
+// Opt in to React's experimental types, which add `inert` to HTMLAttributes.
+// Remove when upgrading to React 19 (@types/react 19 includes it in index.d.ts).
+/// <reference types="react/experimental" />
+
 declare module 'react-typist' {
   import type {Component, ReactNode} from 'react';
   interface TypistProps {
