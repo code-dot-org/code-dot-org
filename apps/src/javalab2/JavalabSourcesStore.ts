@@ -15,7 +15,7 @@ import {
 // ({filename: {text, tabOrder, isVisible, isValidation}}) for compatibility
 // with Javabuilder, which reads the same main.json. Codebridge, however,
 // expects MultiFileSource. This store mediates: load() converts S3's flat
-// shape into MultiFileSource for Redux; save() converts back before writing.
+// shape into MultiFileSource; save() converts back before writing.
 export class JavalabSourcesStore extends SourcesStore {
   async load(channelId: string, versionId?: string) {
     const raw = await super.load(channelId, versionId);

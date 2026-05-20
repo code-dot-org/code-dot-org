@@ -39,8 +39,8 @@ const defaultConfig: ConfigType = {
   editableFileTypes: JAVALAB_EDITABLE_FILE_TYPES,
   supportedFileTypes: JAVALAB_SUPPORTED_FILE_TYPES,
   activeLayout: 'horizontal',
-  // Java Lab's S3 source shape is a flat {filename: contents} hash, so
-  // nested folders have nowhere to be persisted.
+  // For now, Java Lab does not support folders, for backwards compatibility with
+  // the legacy source format.
   hideNewFolderButton: true,
   layoutComponents: {
     horizontal: HorizontalLayout,
@@ -53,15 +53,15 @@ const defaultConfig: ConfigType = {
 // Java Lab 2 — minimal Phase 1 lab2 shell. Loads a level, edits code in
 // codebridge, runs against Javabuilder, prints stdout/stderr to the
 // codebridge console. Validation, neighborhood, theater, captcha, backpack,
-// and start_sources edit mode are deferred to later phases.
+// and start_sources edit mode are TODOs.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const viewDispatch = useAppDispatch();
 
-  // Java Lab has no client-side runtime to warm up (Javabuilder lives in
-  // AWS). Mark the code environment loaded immediately so the Run button
+  // Java Lab has no client-side runtime to warm up.
+  // Mark the code environment loaded immediately so the Run button
   // is enabled as soon as the view mounts. Reset on unmount so a later
   // navigation to a lab with a real environment isn't tricked.
   useEffect(() => {
@@ -71,9 +71,8 @@ const Javalab2View: React.FunctionComponent<
     };
   }, [viewDispatch]);
 
-  // Rails sends Javalab's start_sources / template_sources / exemplar_sources
-  // in the legacy flat shape. Codebridge wants MultiFileSource. Convert once
-  // here before any codebridge hook reads them.
+  // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
+  // Convert here before passing to codebridge.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
     const flatStart = levelProperties.startSources as
       | JavalabFlatSource
