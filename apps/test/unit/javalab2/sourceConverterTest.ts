@@ -80,7 +80,6 @@ describe('javalab2 sourceConverter', () => {
       });
       const next = getNextFileId(Object.values(mf.files));
       expect(next).toBe('2');
-      expect(next).not.toBe('NaN');
     });
 
     it('falls back to insertion order when tabOrder is missing or duplicated', () => {

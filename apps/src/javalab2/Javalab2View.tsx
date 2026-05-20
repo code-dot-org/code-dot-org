@@ -24,7 +24,7 @@ import {
   handleRunClick,
   sendJavaConsoleInput,
   stopJavaCode,
-} from './javabuilderRunner';
+} from './javabuilderRunUtils';
 import HorizontalLayout from './layout/HorizontalLayout';
 import {flatToMultiFile} from './sourceConverter';
 import {JavalabFlatSource, JavalabLevelProperties} from './types';
