@@ -103,21 +103,6 @@ footer:
         url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
         url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-    code_org:
-      - title: privacy_policy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-      - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-    hour_of_code:
-      - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
-      - title: privacy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
-      - title: cookie
-        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=cs-CZ&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
 
 # Route matching to influence properties of components
 pages:

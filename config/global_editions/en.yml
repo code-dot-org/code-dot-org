@@ -358,54 +358,7 @@ footer:
       - title: tos_short
         url: /tos
         domain: code.org
-    code_org:
-      - title: privacy_policy
-        url: /privacy
-        domain: code.org
-        style: "color: #ffa400;"
-      - title: cookie_notice
-        url: /cookies
-        domain: code.org
-      - title: about
-        url: /about
-        domain: code.org
-      - title: partners
-        url: /partners
-        domain: code.org
-      - title: blog
-        url: https://medium.com/@codeorg
-        target: _blank
-      - title: donate
-        url: /donate
-        domain: code.org
-      - title: store
-        url: shop
-        domain: code.org
-      - title: support
-        url: http://support.code.org/
-        target: _blank
-      - title: terms
-        url: /tos
-        domain: code.org
-    hour_of_code:
-      - title: contact
-        url: http://support.code.org/hc/en-us/requests/new
-        target: _blank
-      - title: support
-        url: http://support.code.org
-        target: _blank
-      - title: terms
-        url: /tos
-        domain: code.org
-        target: _blank
-      - title: privacy
-        url: /privacy
-        domain: code.org
-        target: _blank
-      - title: cookie
-        domain: hourofcode.com
-        url: /cookies
-        target: _blank
+
 # These override specially wrapped components in particular pages.
 #
 # When we navigate to such a page that matches /:region<your mask>
