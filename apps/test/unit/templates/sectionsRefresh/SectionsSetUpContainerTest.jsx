@@ -116,23 +116,19 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Add Coteachers is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
-    // at(0) is the subheader help link (no startIcon); the expandable section
-    // toggles start at at(1): Add Coteachers, then at(2) Advanced Settings.
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
+    const coteacherToggle = () => wrapper.find('#uitest-expandable-coteacher');
+
+    expect(caretIcon(coteacherToggle())).to.equal('caret-right');
+    coteacherToggle().simulate('click', {preventDefault: () => {}});
+    expect(caretIcon(coteacherToggle())).to.equal('caret-down');
   });
 
   it('renders advanced settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find(MuiButton)
-      .at(2)
+      .find('#uitest-expandable-settings')
       .simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
@@ -142,12 +138,11 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(2)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(2))).to.equal('caret-down');
+    const advancedToggle = () => wrapper.find('#uitest-expandable-settings');
+
+    expect(caretIcon(advancedToggle())).to.equal('caret-right');
+    advancedToggle().simulate('click', {preventDefault: () => {}});
+    expect(caretIcon(advancedToggle())).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
