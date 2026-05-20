@@ -1,0 +1,74 @@
+name 'pl_sandbox_aif-2-U1-pl-context_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Ready for the Curriculum
+
+<img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="Insert alt text here" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+This professional learning module is designed to give you a **guided introductio** to the core concepts, tools, and instructional approaches used throughout Unit 1.
+
+Think of this module as an opportunity to **build familiarity** with the learning experience students will encounter while exploring web design and AI-supported development. 
+
+While this module highlights important ideas and teaching strategies, it is not intended to cover every lesson or concept in depth. 
+
+We still recommend reviewing individual lessons and lesson materials before teaching them with students.
+
+<br>
+
+## This Module Covers:
+
+<div style="width: 100%; margin: 25px 0px;">
+
+  <!-- Top Row -->
+  <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;">
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">👥 User-Centered Design</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Explore how designers create digital experiences that meet the needs of real users.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🤖 HTML with AI</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Learn how AI can support building and structuring webpages with HTML.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🎨 CSS with AI</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Discover how AI tools can help style and customize webpages using CSS.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+<div style="display: flex; justify-content: center; gap: 15px;">
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🖊️ Wireframes & Web Design</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Practice planning layouts and organizing content before building webpages.
+      </p>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">💡 AI-Supported Pedagogy</p>
+      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+        Explore instructional strategies for helping students effectively prompt AI, evaluate responses, and use AI tools responsibly during the design process.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+--- 
+
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
+MARKDOWN

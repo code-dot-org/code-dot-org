@@ -27426,6 +27426,8 @@ en:
           student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
+          lessons: {}
+          name: csd5-2026
         csd6a-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27495,6 +27497,8 @@ en:
           student_description: Learn how to program by creating music!
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
           description_audience: ''
+          lessons: {}
+          name: programming-with-music-lab-2026
         hoai-web-design-pilot-v1:
           lessons: {}
           lesson_groups: {}
@@ -27898,6 +27902,8 @@ en:
             - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: building-data-driven-systems-with-ai-2026
         iterating-with-ai-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27933,6 +27939,8 @@ en:
             - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: iterating-with-ai-2026
         designing-reliable-apps-with-ai-and-apis-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27968,6 +27976,8 @@ en:
             - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: designing-reliable-apps-with-ai-and-apis-2026
         web-apps-with-ai-capstone-project-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28001,6 +28011,8 @@ en:
             - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: web-apps-with-ai-capstone-project-2026
         hoai-web-design-pilot-v2:
           lessons: {}
           lesson_groups: {}
@@ -28224,7 +28236,7 @@ en:
               name: Unit Projects
           lesson_groups: {}
           name: self-paced-pl-thinking-critically-about-ai-2026
-          title: 'Educator Module: Thinking Critically about AI'
+          title: Preparing to Teach Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -28290,7 +28302,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-web-dev-2026
-          title: Teaching Web Development
+          title: Preparing to Teach Web Development
           description_audience: ''
           description_short: ''
           description: |-
@@ -28319,7 +28331,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-programming-with-music-lab-2026
-          title: Teaching Programming with Music Lab
+          title: Preparing to Teach Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
@@ -28328,7 +28340,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-data-and-society-2026
-          title: Teaching Data and Society
+          title: Preparing to Teach Data and Society
           description_audience: "'26-'27"
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
@@ -28384,7 +28396,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
-          title: 'Preparing to Teach: Creating Apps with Devices (micro:bit)'
+          title: Preparing to Teach Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
           description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28422,19 +28434,19 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-intro-to-teaching-exploring-ai-computing-2026
-          title: Preparing to Teach the Exploring AI & Computing Curriculum
+          title: Preparing to Teach the Exploring AI & CS Curriculum
           description_audience: ''
           description_short: ''
           description: |-
             ##Start Here!
 
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Exploring AI & Computing Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
 
             #### It is recommended that you complete this module before working through any of the unit specific modules.
           student_description: |-
             ##Start Here!
 
-            #### This professional learning module is designed to help you prepare to teach Semester 1 of Code.org’s [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
 
             #### It is recommended that you complete this module before working through any of the unit specific modules.
         self-paced-pl-teaching-ai-generated-design-2026:
@@ -28544,6 +28556,8 @@ en:
             '
           description_short: Learn how humans work with computers to solve problems.
           description_audience: ''
+          lessons: {}
+          name: problem-solving-and-computing-2026
         csd3a-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28568,6 +28582,8 @@ en:
           student_description: Learn how to program by creating music!
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
           description_audience: ''
+          lessons: {}
+          name: csd3a-2026
         foundations-of-ai-programming-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28748,11 +28764,11 @@ en:
           description: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
           student_description: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026:
           lessons: {}
           lesson_groups: {}
@@ -28761,13 +28777,13 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
           student_description: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-fabric-of-the-internet-2026:
           lessons: {}
           lesson_groups: {}
@@ -28776,13 +28792,13 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/4).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/4).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-powered-threats-and-defenses-2026:
           lessons: {}
           lesson_groups: {}
@@ -28791,13 +28807,13 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/5).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/5).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-insights-from-data-and-ai-2026:
           lessons: {}
           lesson_groups: {}
@@ -28821,9 +28837,9 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5).
 
-            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5) but can also stand alone for grades 9-12.
           student_description: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
 
@@ -28835,8 +28851,16 @@ en:
           title: 'Preparing to Teach: Designing & Building with AI'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          student_description: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
         self-paced-pl-teaching-ai-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28955,16 +28979,225 @@ en:
           student_description: ''
         pl-csd-summer-2026-day1:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 1
+          name: pl-csd-summer-2026-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-csd-summer-2026-day2:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 2
+          name: pl-csd-summer-2026-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-csd-summer-2026-day3:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 3
+          name: pl-csd-summer-2026-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-csd-summer-2026-day4:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 4
+          name: pl-csd-summer-2026-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-csd-summer-2026-day5:
           lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 5
+          name: pl-csd-summer-2026-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit1:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
           lesson_groups: {}
+          name: aif-year2-semester1-unit1
+          title: AIF Year 2 Semester 1 Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit2
+          title: AIF Year 2 Semester 1 Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-ai-101-mod1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod1-2026
+          title: Introducing AI for Educators
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI Literacy and explain the benefits of AI literacy for both educators and students.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI Literacy and explain the benefits of AI literacy for both educators and students.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-ai-101-mod2-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod2-2026
+          title: Understanding AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to build your foundational understanding of AI.
+
+            **You will:**
+
+            * Define artificial intelligence and explain its fundamental concepts.
+            * Identify common applications of AI in various fields, illustrating its broad impact and potential.
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to build your foundational understanding of AI.
+
+            **You will:**
+
+            * Define artificial intelligence and explain its fundamental concepts.
+            * Identify common applications of AI in various fields, illustrating its broad impact and potential.
+
+            **Suggested time:** 60 minutes
+        self-paced-pl-ai-101-mod3-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod3-2026
+          title: Transforming Teaching with AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to help you learn how to use AI to support your role as an educator.
+
+            **You will:**
+
+            * Learn guiding principles when using AI in an educational context.
+            * Practice how to effectively use AI tools to support various educational tasks.
+            * Assess the suitability of different AI tools and platforms for their specific teaching contexts.
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to help you learn how to use AI to support your role as an educator.
+
+            **You will:**
+
+            * Learn guiding principles when using AI in an educational context.
+            * Practice how to effectively use AI tools to support various educational tasks.
+            * Assess the suitability of different AI tools and platforms for their specific teaching contexts.
+
+            **Suggested time:** 60 minutes
+        self-paced-pl-ai-101-mod5-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod5-2026
+          title: Ensuring a Responsible Approach to AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
+
+            **You will:**
+            * Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
+            * Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
+            * Revisit the benefits and address the risks of AI in an educational setting.
+
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
+
+            **You will:**
+            * Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
+            * Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
+            * Revisit the benefits and address the risks of AI in an educational setting.
+
+
+            **Suggested time:** 60 minutes
+        self-paced-pl-ai-101-mod4-2026:
+          lessons: {}
+          lesson_groups: {}
+        aif-year2-semester1-unit3:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit3
+          title: AIF Year 2 Semester 1 Unit 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit4:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit4
+          title: AIF Year 2 Semester 1 Unit 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit5:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit5
+          title: AIF Year 2 Semester 1 Unit 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit6
+          title: AIF Year 2 Semester 1 Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
