@@ -1,21 +1,23 @@
 {
   "key": "teaching-web-dev",
-  "display_name": "teaching-web-dev",
+  "display_name": "Preparing to Teach Web Development",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
-  "image": null,
-  "cs_topic": null,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "AID",
+  "grade_levels": "6,7,8,9,10",
+  "header": "self_paced",
+  "image": "https://images.code.org/b201eb43b1cd401b06f2c877714b1277-csd-unit-web-development.avif",
+  "cs_topic": "web_design,programming",
   "school_subject": null,
-  "device_compatibility": null,
-  "description": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries - Web Development with your students.",
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+    "CS Discoveries"
+  ]
 }
