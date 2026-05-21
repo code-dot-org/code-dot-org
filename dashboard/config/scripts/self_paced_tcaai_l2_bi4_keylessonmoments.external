@@ -1,0 +1,51 @@
+name 'self-paced-TCaAI-L2-BI4-KeyLessonMoments'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: Humans Are Responsible for How AI Is Used
+
+As students approach the end of the unit, they begin shifting from investigating AI systems toward defending their own evidence-based positions about responsible AI use. The following activity takes place in Lesson 10, **after** students have completed their Generate and Judge Guide.
+
+## Lesson 10: The Human Role in AI
+
+<img 
+src="https://images.code.org/31ccc45ce7d2dcf9ba4b7823d2b8e257-image-1779250114699.jpeg" 
+alt="" 
+style="width:35%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/10" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+📎 **Student Resource**: <a href="https://docs.google.com/document/d/1Zp2z-P9xbxAUahjnADlCgHkIf_7POKsxJC8zXc8bW8A/edit?usp=sharing" target="blank" rel="noopener noreferrer">The Final Verdict Activity Guide</a>
+
+**Lesson Objectives**: 
+
+* Describe how your understanding of AI has evolved over this unit
+* Make a clear claim about how people should use AI and support your claim with evidence
+
+### Student Activity: The Human Role Debate
+
+In this lesson, students participate in a structured discussion about how much control humans should maintain when using AI systems.
+
+Throughout the debate, students are expected to support their claims using evidence gathered across the unit, including examples of bias and missing perspectives, privacy and safety concerns, and situations where AI was useful or effective. Rather than searching for one “correct” answer, students practice defending nuanced positions and responding thoughtfully to competing viewpoints.
+
+This lesson helps students synthesize the major ideas from across the unit into a more evidence-based understanding of responsible AI use.
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+Open the Lesson 10 lesson plan and review the debate structure and discussion prompts students use throughout the activity.
+
+As you explore the lesson, consider the following question:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> How can structured debate help students move from reacting to AI emotionally toward defending evidence-based positions about responsible AI use?
+</p>
+
+</div>
+
+![]()
+MARKDOWN

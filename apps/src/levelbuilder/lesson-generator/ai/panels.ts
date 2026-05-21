@@ -66,7 +66,9 @@ interface PanelPlan {
 
 // Returns the per-panel plan for a Panels-type level. We split planning from
 // image generation so the levelbuilder gets per-panel progress and so a single
-// failed image doesn't waste the whole panel set.
+// failed image doesn't waste the whole panel set. Panels are narrative,
+// so the target project (when set) mostly informs what to introduce or
+// motivate; the actual code appears only in adjacent weblab2 levels.
 async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
@@ -104,6 +106,18 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
           'but do NOT regenerate or summarize them; only build the level',
           'described last:',
           ctx.precedingLevels,
+        ]
+      : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final app the lesson builds toward.',
+          'Adjacent Web Lab 2 levels work toward this code, so these panels',
+          'should motivate, foreshadow, or recap concepts that show up in',
+          'it. The student never sees the code itself; use it as background',
+          'so your story lands on relevant ideas. Do not paste code into',
+          'panel text.',
+          ctx.targetProject,
         ]
       : []),
     '',
