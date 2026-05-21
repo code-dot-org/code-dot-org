@@ -25,6 +25,7 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
@@ -38,13 +39,19 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+  logoTransitionGifUrl?: string;
+  logoSvgUrl?: string;
 }
 
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
-const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+  logoTransitionGifUrl,
+  logoSvgUrl,
+}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
@@ -237,6 +244,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   return (
     <div className={styles.teacherHomepage}>
+      {logoTransitionGifUrl && logoSvgUrl && (
+        <LogoTransition gifSrc={logoTransitionGifUrl} svgSrc={logoSvgUrl} />
+      )}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName

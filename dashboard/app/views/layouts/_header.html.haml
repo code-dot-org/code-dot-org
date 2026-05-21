@@ -74,7 +74,7 @@
   .navbar-static-top.header
     .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
       .header_left
-        .header_logo
+        .header_logo#header_logo_container
           - if current_user
             = link_to(image_tag(Cdo::Brand.header_logo_filename(request), alt: Cdo::Brand.logo_alt_text(request)), home_path, {id: "logo_home_link"})
           - else

@@ -77,6 +77,8 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
+  logoTransitionGifUrl?: string;
+  logoSvgUrl?: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -85,6 +87,8 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
+  logoTransitionGifUrl,
+  logoSvgUrl,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -124,7 +128,11 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <TeacherHomepage
+                  studioUrlPrefix={studioUrlPrefix}
+                  logoTransitionGifUrl={logoTransitionGifUrl}
+                  logoSvgUrl={logoSvgUrl}
+                />
                 <ScrollRestoration />
               </div>
             </>
@@ -350,6 +358,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAiChatSettings,
       selectedSection,
       studioUrlPrefix,
+      logoTransitionGifUrl,
+      logoSvgUrl,
     ]
   );
 

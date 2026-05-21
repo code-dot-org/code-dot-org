@@ -18,7 +18,7 @@ module Cdo
     BRANDS = {
       BRAND_CODE_ORG => {
         logo_filename: 'logo.svg',
-        header_logo_filename: 'logo-inverse.svg',
+        header_logo_filename: 'code2-logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
         legal_name: 'Code.org',
