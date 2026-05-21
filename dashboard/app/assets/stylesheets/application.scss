@@ -231,6 +231,12 @@ img.video_thumbnail {
     }
 
     .header_logo {
+      width: 38px;
+      padding: 6px 14px;
+      margin-top: 0;
+    }
+
+    html[data-brand="codeai"] & .header_logo {
       position: relative;
       width: auto;
       max-width: 240px;
@@ -1180,12 +1186,23 @@ $default-modal-width: 640px;
 }
 
 .header_logo {
-  position: relative;
   float: left;
   z-index: 1;
+  margin-top: -24px;
+  padding-top: 14px;
+  min-width: 0;
+  max-width: 55px;
+  width: 55px;
+
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+html[data-brand="codeai"] .header_logo {
+  position: relative;
   margin-top: 0;
   padding-top: 0;
-  min-width: 0;
   max-width: 240px;
   width: auto;
   height: 50px;
@@ -1196,10 +1213,6 @@ $default-modal-width: 640px;
     height: 30px;
     width: auto;
     display: block;
-  }
-
-  a:hover {
-    background-color: transparent;
   }
 }
 
