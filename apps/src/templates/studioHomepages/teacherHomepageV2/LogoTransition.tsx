@@ -35,7 +35,8 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
   );
 
   // Synchronously (before first paint): take over visibility management
-  // from Rails and position the card at the viewport center.
+  // from Rails, size the card to exactly overlay the native <img>, and
+  // displace it to the viewport center.
   //
   // The Rails-injected <style#logo-transition-pre-hide> uses the selector
   // `#header_logo_container img` to hide the native logo before React
@@ -45,9 +46,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
   // visibility:hidden on the native <img> only, then clear that inline
   // style on unmount so other routes show the native logo again.
   //
-  // Non-uniform scale gives the centered modal a friendlier aspect ratio
-  // than the narrow header slot would; the <img>s use object-fit:contain
-  // so they stay undistorted while the white card background morphs.
+  // The card's natural rect is set from the native <img>'s bounding rect
+  // (relative to the container), so when the morph transform clears, the
+  // card lands precisely on the hidden native logo. A uniform scale to
+  // a modal-sized width keeps the GIF and SVG undistorted throughout.
   useLayoutEffect(() => {
     if (!mountTarget) return;
 
@@ -57,18 +59,24 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
     }
     document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
 
-    if (cardRef.current) {
-      const rect = mountTarget.getBoundingClientRect();
-      if (rect.width && rect.height) {
+    if (cardRef.current && nativeImg) {
+      const containerRect = mountTarget.getBoundingClientRect();
+      const nativeRect = nativeImg.getBoundingClientRect();
+      if (nativeRect.width && nativeRect.height) {
+        const naturalTop = nativeRect.top - containerRect.top;
+        const naturalLeft = nativeRect.left - containerRect.left;
+        cardRef.current.style.top = `${naturalTop}px`;
+        cardRef.current.style.left = `${naturalLeft}px`;
+        cardRef.current.style.width = `${nativeRect.width}px`;
+        cardRef.current.style.height = `${nativeRect.height}px`;
+
         const modalWidth = Math.min(window.innerWidth * 0.6, 600);
-        const modalHeight = Math.min(window.innerHeight * 0.4, 300);
-        const scaleX = modalWidth / rect.width;
-        const scaleY = modalHeight / rect.height;
-        const sourceCx = rect.left + rect.width / 2;
-        const sourceCy = rect.top + rect.height / 2;
+        const scale = modalWidth / nativeRect.width;
+        const sourceCx = nativeRect.left + nativeRect.width / 2;
+        const sourceCy = nativeRect.top + nativeRect.height / 2;
         const tx = window.innerWidth / 2 - sourceCx;
         const ty = window.innerHeight / 2 - sourceCy;
-        cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
+        cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
       }
     }
 
