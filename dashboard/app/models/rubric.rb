@@ -36,7 +36,7 @@ class Rubric < ApplicationRecord
       id: id,
       learningGoals: learning_goals.map(&:summarize),
       script: {
-        id: get_script_level.script.id,
+        id: script_level&.script&.id || lesson.script_id,
       },
       lesson: {
         id: lesson.id,
