@@ -308,7 +308,19 @@ class DatablockStorageController < ApplicationController
   end
 
   private def find_table
-    DatablockStorageTable.find([@project_id, params[:table_name]])
+    # `table_name` must be a scalar String. If the client supplied an Array
+    # (e.g. `?table_name[]=a&table_name[]=b`), passing it through to
+    # `DatablockStorageTable.find([@project_id, params[:table_name]])` causes
+    # CompositePrimaryKeys to wrap the Array as a CompositeKeys object that
+    # Arel cannot quote, raising a TypeError 500. Match the validation that
+    # `where_table` already performs.
+    unless params[:table_name].is_a?(String) && params[:table_name].present?
+      raise StudentFacingError, "Table parameter value must be a string"
+    end
+
+    # Coerce @project_id to an Integer so the composite key's first component
+    # is always a scalar.
+    DatablockStorageTable.find([@project_id.to_i, params[:table_name]])
   rescue ActiveRecord::RecordNotFound
     raise StudentFacingError, "You tried to use a table called \"#{params[:table_name]}\" but that table doesn't exist in this app"
   end
