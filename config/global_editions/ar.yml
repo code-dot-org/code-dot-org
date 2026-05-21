@@ -1,4 +1,4 @@
-# Farsi Global Region
+# Arabic Global Edition Region
 
 # The structure of a global configuration is to start with the page context and
 # then list the page name, then list components within that page.
@@ -7,63 +7,66 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [fa-IR]
+locales: [ar-SA]
 locale_lock: true
-countries: [IR]
+countries:
+  - BH # Bahrain
+  - IQ # Iraq
+  - JO # Jordan
+  - KW # Kuwait
+  - LB # Lebanon
+  - OM # Oman
+  - PS # Palestine
+  - QA # Qatar
+  - SA # Saudi Arabia
+  - SY # Syria
+  - AE # United Arab Emirates
+  - YE # Yemen
+  - DZ # Algeria
+  - EG # Egypt
+  - LY # Libya
+  - MR # Mauritania
+  - MA # Morocco
+  - SD # Sudan
+  - TN # Tunisia
 
 # The list of available project types
 project_types: &project_types
-  - spritelab
-  - artist
-  - applab
-  - gamelab
 
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
   top:
     signed_out:
-      - title: teach
-        id: header-teach
-        domain: code.org
-        url: /global/fa/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /global/fa/about
-      - title: csf
-        id: header-csf
-        domain: code.org
-        url: /global/fa/csf
+        url: /ar/global
       - title: hour_of_ai
         id: header-hoa
-        url: https://csforall.org/fa/hour-of-ai
-      - title: videos
-        id: header-videos
-        domain: code.org
-        url: /global/fa/videos
+        url: https://csforall.org/ar/hour-of-ai
 
     student:
       - title: my_dashboard
-        url: /fa/home
+        url: /ar/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /fa/catalog
+        url: /ar/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /fa/home
+        url: /ar/home
         domain: studio.code.org
         id: header-teacher-home
       - title: course_catalog
-        url: /fa/catalog
+        url: /ar/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /fa/my-professional-learning
+        url: /ar/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -72,40 +75,40 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /fa/catalog
+        url: /ar/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/privacy?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/terms-of-service?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /fa/catalog
+        url: /ar/catalog
         id: learn
       - title: legal
         type: expander
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/privacy?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/ar/terms-of-service?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
     # The report_bug item is special in that it only appears when appropriate
     - title: report_bug
-      url: https://support.code.org/hc/ir-fa/requests/new
+      url: https://support.code.org/hc/en-us/requests/new
       id: report-bug
 
 # The navigation region found at the bottom of each page
@@ -113,12 +116,12 @@ footer:
   links:
     studio:
       - title: privacy
-        url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/ar/privacy?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/ar/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/ar/terms-of-service?_x_tr_sl=auto&_x_tr_tl=ar-SA&_x_tr_hl=en&_x_tr_pto=wapp
 
 # Route matching to influence properties of components
 pages:
@@ -133,14 +136,14 @@ pages:
         availableProjectTypes: *project_types
       CurriculumQuickAssign:
         # For section setup, truncate the 'quick access' course listing to
-        # only items that are translated to Farsi
+        # only items that are translated to the current locale
         courseFilters:
-          language: fa-IR
+          language: ar-SA
       AssignmentVersionSelector:
         # When viewing a course, only populate the version selector with
         # versions that are translated
         courseFilters:
-          language: fa-IR
+          language: ar-SA
       # Hide the right panel with "New Features", "Announcements", etc.
       TeacherPromotions: false
   # Teacher dashboard
@@ -181,4 +184,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /ar/global
