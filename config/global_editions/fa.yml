@@ -57,7 +57,7 @@ header:
       - title: my_dashboard
         url: /fa/home
         domain: studio.code.org
-        id: header-teacher-home
+        id: header-student-home
       - title: course_catalog
         url: /fa/catalog
         domain: studio.code.org
@@ -79,11 +79,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
@@ -95,11 +95,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
@@ -113,12 +113,27 @@ footer:
   links:
     studio:
       - title: privacy
-        url: https://code-org.translate.goog/fa/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: https://code-org.translate.goog/fa/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: https://code-org.translate.goog/fa/terms-of-service?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+    code_org:
+      - title: privacy_policy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+      - title: terms
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+    hour_of_code:
+      - title: terms
+        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
+      - title: privacy
+        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
+      - title: cookie
+        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
+        target: _blank
 
 # Route matching to influence properties of components
 pages:

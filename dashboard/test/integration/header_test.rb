@@ -145,7 +145,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
             {
               'Privacy Policy'   => '//test.code.org/privacy',
               'Cookie Notice'    => '//test.code.org/cookies',
-              'Terms of Service' => '//test.code.org/terms-of-service'
+              'Terms of Service' => '//test.code.org/tos'
             }.each do |text, href|
               must_select 'a[href=?]', href, text
             end
