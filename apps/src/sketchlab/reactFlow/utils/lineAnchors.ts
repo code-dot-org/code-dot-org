@@ -99,15 +99,18 @@ export function resolveEdgeEndpoint(
 }
 
 // Inverse of snapAnchorIfNearby: when a real node is dropped, any free
-// (lineAnchor) edge endpoint whose visible handle lands inside the node's
-// on-screen rect is re-routed onto the node's nearest matching handle.
-// Orphaned anchors are pruned by the canvas's anchor-cleanup effect.
+// (lineAnchor) edge endpoint whose visible handle lies within radiusPx of
+// one of the dropped node's matching handles is re-routed onto that
+// handle. This matches the magnetic radius the user already feels when
+// dragging an edge endpoint near a node. Orphaned anchors are pruned by
+// the canvas's anchor-cleanup effect.
 export function snapEdgesIntoDraggedNode({
   draggedNodeId,
   edges,
   getNode,
   flowToScreenPosition,
   setEdges,
+  radiusPx,
 }: {
   draggedNodeId: string;
   edges: SketchlabReactFlowEdge[];
@@ -118,36 +121,22 @@ export function snapEdgesIntoDraggedNode({
       currentEdges: SketchlabReactFlowEdge[]
     ) => SketchlabReactFlowEdge[]
   ) => void;
+  radiusPx: number;
 }): void {
-  // Read the dropped node's rect from the DOM so text nodes (auto-sized)
-  // and zoom levels are handled the same way the user sees them.
-  const nodeElement = document.querySelector<HTMLElement>(
-    `.react-flow__node[data-id="${CSS.escape(draggedNodeId)}"]`
-  );
-  if (!nodeElement) return;
-  const nodeRect = nodeElement.getBoundingClientRect();
-
   const patchByEdgeId = new Map<string, Partial<SketchlabReactFlowEdge>>();
   edges.forEach(edge => {
     (['source', 'target'] as const).forEach(side => {
       const endpointId = side === 'source' ? edge.source : edge.target;
       const anchor = getNode(endpointId);
       if (!anchor || anchor.type !== 'lineAnchor') return;
-      const handleFlowPosition = anchorHandleFlowPosition(
-        anchor.position,
-        side
+      const handleScreenPosition = flowToScreenPosition(
+        anchorHandleFlowPosition(anchor.position, side)
       );
-      const handleScreenPosition = flowToScreenPosition(handleFlowPosition);
-      const isInsideRect =
-        handleScreenPosition.x >= nodeRect.left &&
-        handleScreenPosition.x <= nodeRect.right &&
-        handleScreenPosition.y >= nodeRect.top &&
-        handleScreenPosition.y <= nodeRect.bottom;
-      if (!isInsideRect) return;
       const snap = findNearestHandleOnNode(
         draggedNodeId,
         handleScreenPosition,
-        side
+        side,
+        radiusPx
       );
       if (!snap) return;
       patchByEdgeId.set(edge.id, {

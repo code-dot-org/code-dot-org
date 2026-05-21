@@ -266,14 +266,15 @@ export default function ReactFlowCanvas({
         });
         return;
       }
-      // A real node was dropped: attach any free line endpoint sitting
-      // inside the node's rect to the node's nearest matching handle.
+      // A real node was dropped: attach any free line endpoint whose
+      // handle lands within the snap radius of one of the node's handles.
       snapEdgesIntoDraggedNode({
         draggedNodeId: node.id,
         edges: getEdges(),
         getNode,
         flowToScreenPosition,
         setEdges,
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
       });
     },
     [getEdges, getNode, flowToScreenPosition, setEdges]

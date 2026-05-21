@@ -49,20 +49,21 @@ export function getEventClientPosition(
 }
 
 // Returns the nearest handle on the given node matching the required type,
-// by screen distance. Unlike findNearestHandleInRadius, this is scoped to a
-// single node and has no radius cap — used when we already know the target
-// node (e.g. the node the user just dropped onto a free line endpoint) and
-// just want to pick which side of it to attach to.
+// within the given screen-pixel radius. Mirrors findNearestHandleInRadius
+// but scoped to one node — used when a real node is dropped near a free
+// line endpoint and we just need to pick which side of that node to snap
+// onto.
 export function findNearestHandleOnNode(
   targetNodeId: string,
   screenPoint: XYPosition,
-  requiredType: 'source' | 'target'
+  requiredType: 'source' | 'target',
+  radiusPx: number
 ): SnapTarget | null {
   const handles = document.querySelectorAll<HTMLElement>(
     `.react-flow__handle[data-nodeid="${CSS.escape(targetNodeId)}"]`
   );
   let closest: SnapTarget | null = null;
-  let closestDistance = Infinity;
+  let closestDistance = radiusPx;
 
   handles.forEach(handle => {
     const handleType = getHandleType(handle);
