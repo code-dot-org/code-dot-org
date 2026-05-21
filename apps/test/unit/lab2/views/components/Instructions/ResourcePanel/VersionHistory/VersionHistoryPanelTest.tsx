@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {render, screen, waitFor} from '@testing-library/react';
+import {render, screen, waitFor, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -320,6 +320,55 @@ describe('VersionHistoryPanel', () => {
 
     const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(true);
+  });
+
+  it('preserves selected version across tab reopen when viewing an old version', async () => {
+    store.dispatch(setViewingOldVersion(true));
+
+    const {rerender} = render(
+      <ThemeProvider>
+        <Provider store={store}>
+          <VersionHistoryPanel
+            startSources={{source: ''}}
+            selectedVersion="2"
+            setSelectedVersion={setSelectedVersion}
+            levelId={123}
+            disabled={false}
+            isOpen={false}
+          />
+        </Provider>
+      </ThemeProvider>
+    );
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+    setSelectedVersion.mockClear();
+
+    // Simulate the tab becoming active again.
+    await act(async () => {
+      rerender(
+        <ThemeProvider>
+          <Provider store={store}>
+            <VersionHistoryPanel
+              startSources={{source: ''}}
+              selectedVersion="2"
+              setSelectedVersion={setSelectedVersion}
+              levelId={123}
+              disabled={false}
+              isOpen={true}
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+    });
+
+    // The reopen path must not clear the selection — clearing would let the
+    // panel fall back to the latest version even though an old version is
+    // still being viewed.
+    expect(setSelectedVersion).not.toHaveBeenCalledWith('');
+    expect(setSelectedVersion).not.toHaveBeenCalledWith('3');
   });
 
   it('hides restore button when viewing as another user', async () => {
