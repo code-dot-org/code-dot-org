@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {render, screen, waitFor, act} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -324,8 +324,18 @@ describe('VersionHistoryPanel', () => {
 
   it('preserves selected version across tab reopen when viewing an old version', async () => {
     store.dispatch(setViewingOldVersion(true));
+    const {rerender} = renderDefault({selectedVersion: '2', isOpen: false});
 
-    const {rerender} = render(
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+    const initialCallCount =
+      mockedProjectManager.getVersionList.mock.calls.length;
+    setSelectedVersion.mockClear();
+
+    // Simulate the tab becoming active again.
+    rerender(
       <ThemeProvider>
         <Provider store={store}>
           <VersionHistoryPanel
@@ -334,35 +344,20 @@ describe('VersionHistoryPanel', () => {
             setSelectedVersion={setSelectedVersion}
             levelId={123}
             disabled={false}
-            isOpen={false}
+            isOpen={true}
           />
         </Provider>
       </ThemeProvider>
     );
 
+    // Wait for the reopen effect to fire and the version list to refetch.
     await waitFor(
-      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      () =>
+        expect(
+          mockedProjectManager.getVersionList.mock.calls.length
+        ).toBeGreaterThan(initialCallCount),
       {timeout: 2000}
     );
-    setSelectedVersion.mockClear();
-
-    // Simulate the tab becoming active again.
-    await act(async () => {
-      rerender(
-        <ThemeProvider>
-          <Provider store={store}>
-            <VersionHistoryPanel
-              startSources={{source: ''}}
-              selectedVersion="2"
-              setSelectedVersion={setSelectedVersion}
-              levelId={123}
-              disabled={false}
-              isOpen={true}
-            />
-          </Provider>
-        </ThemeProvider>
-      );
-    });
 
     // The reopen path must not clear the selection — clearing would let the
     // panel fall back to the latest version even though an old version is
