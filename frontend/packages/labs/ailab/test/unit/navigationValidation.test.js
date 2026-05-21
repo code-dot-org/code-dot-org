@@ -1,42 +1,42 @@
-import { isPanelEnabled } from "../../src/helpers/navigationValidation.js";
+import {isPanelEnabled} from '../../src/helpers/navigationValidation';
 
 const initialState = {
   data: [],
   selectedFeatures: [],
   accuracyCheckExamples: [],
-  saveStatus: "notStarted",
-  trainedModelDetails: {}
+  saveStatus: 'notStarted',
+  trainedModelDetails: {},
 };
 
 const dataUploadedState = {
   ...initialState,
   data: [
     {
-      name: "Hermione",
+      name: 'Hermione',
       isEvil: false,
-      house: "Gryffindor"
+      house: 'Gryffindor',
     },
     {
-      name: "Harry",
+      name: 'Harry',
       isEvil: false,
-      house: "Gryffindor"
+      house: 'Gryffindor',
     },
     {
-      name: "Voldemort",
+      name: 'Voldemort',
       isEvil: true,
-      house: "Slytherin"
-    }
-  ]
+      house: 'Slytherin',
+    },
+  ],
 };
 
 const selectedLabelState = {
   ...dataUploadedState,
-  labelColumn: "isEvil"
+  labelColumn: 'isEvil',
 };
 
 const selectedFeaturesState = {
   ...selectedLabelState,
-  selectedFeatures: ["house"]
+  selectedFeatures: ['house'],
 };
 
 /*
@@ -46,91 +46,91 @@ const selectedFeaturesState = {
 */
 const sameFeatureLabelState = {
   ...dataUploadedState,
-  labelColumn: "isEvil",
-  selectedFeatures: ["isEvil"]
+  labelColumn: 'isEvil',
+  selectedFeatures: ['isEvil'],
 };
 
 const resultsState = {
   ...selectedFeaturesState,
-  accuracyCheckExamples: [0, 0]
+  accuracyCheckExamples: [0, 0],
 };
 
 const savingModelState = {
   ...resultsState,
   trainedModelDetails: {
-    name: "Which Hogwarts House is Evil?"
+    name: 'Which Hogwarts House is Evil?',
   },
-  saveStatus: "started"
+  saveStatus: 'started',
 };
 
 const savedModelState = {
   ...savingModelState,
-  saveStatus: "success"
+  saveStatus: 'success',
 };
 
-describe("isPanelEnabled", () => {
-  test("dataDisplayLabel - disabled", async () => {
-    const result = isPanelEnabled(initialState, "dataDisplayLabel");
+describe('isPanelEnabled', () => {
+  test('dataDisplayLabel - disabled', async () => {
+    const result = isPanelEnabled(initialState, 'dataDisplayLabel');
     expect(result).toBe(false);
   });
 
-  test("dataDisplayLabel - enabled", async () => {
-    const result = isPanelEnabled(dataUploadedState, "dataDisplayLabel");
+  test('dataDisplayLabel - enabled', async () => {
+    const result = isPanelEnabled(dataUploadedState, 'dataDisplayLabel');
     expect(result).toBe(true);
   });
 
-  test("dataDisplayFeatures - disabled", async () => {
-    const result = isPanelEnabled(dataUploadedState, "dataDisplayFeatures");
+  test('dataDisplayFeatures - disabled', async () => {
+    const result = isPanelEnabled(dataUploadedState, 'dataDisplayFeatures');
     expect(result).toBe(false);
   });
 
-  test("dataDisplayFeatures - enabled", async () => {
-    const result = isPanelEnabled(selectedLabelState, "dataDisplayFeatures");
+  test('dataDisplayFeatures - enabled', async () => {
+    const result = isPanelEnabled(selectedLabelState, 'dataDisplayFeatures');
     expect(result).toBe(true);
   });
 
-  test("selectFeatures - disabled", async () => {
-    const result = isPanelEnabled(selectedLabelState, "selectFeatures");
+  test('selectFeatures - disabled', async () => {
+    const result = isPanelEnabled(selectedLabelState, 'selectFeatures');
     expect(result).toBe(false);
   });
 
-  test("selectFeatures - enabled", async () => {
-    const result = isPanelEnabled(selectedFeaturesState, "selectFeatures");
+  test('selectFeatures - enabled', async () => {
+    const result = isPanelEnabled(selectedFeaturesState, 'selectFeatures');
     expect(result).toBe(true);
   });
 
-  test("trainModel - disabled", async () => {
-    const result = isPanelEnabled(sameFeatureLabelState, "trainModel");
+  test('trainModel - disabled', async () => {
+    const result = isPanelEnabled(sameFeatureLabelState, 'trainModel');
     expect(result).toBe(false);
   });
 
-  test("trainModel - enabled", async () => {
-    const result = isPanelEnabled(selectedFeaturesState, "trainModel");
+  test('trainModel - enabled', async () => {
+    const result = isPanelEnabled(selectedFeaturesState, 'trainModel');
     expect(result).toBe(true);
   });
 
-  test("results - disabled", async () => {
-    const result = isPanelEnabled(selectedFeaturesState, "results");
+  test('results - disabled', async () => {
+    const result = isPanelEnabled(selectedFeaturesState, 'results');
     expect(result).toBe(false);
   });
 
-  test("results - enabled", async () => {
-    const result = isPanelEnabled(resultsState, "results");
+  test('results - enabled', async () => {
+    const result = isPanelEnabled(resultsState, 'results');
     expect(result).toBe(true);
   });
 
-  test("modelSummary - disabled, no model name", async () => {
-    const result = isPanelEnabled(resultsState, "modelSummary");
+  test('modelSummary - disabled, no model name', async () => {
+    const result = isPanelEnabled(resultsState, 'modelSummary');
     expect(result).toBe(false);
   });
 
-  test("modelSummary - disabled, save in progress", async () => {
-    const result = isPanelEnabled(savingModelState, "modelSummary");
+  test('modelSummary - disabled, save in progress', async () => {
+    const result = isPanelEnabled(savingModelState, 'modelSummary');
     expect(result).toBe(false);
   });
 
-  test("modelSummary - enabled", async () => {
-    const result = isPanelEnabled(savedModelState, "modelSummary");
+  test('modelSummary - enabled', async () => {
+    const result = isPanelEnabled(savedModelState, 'modelSummary');
     expect(result).toBe(true);
   });
 });

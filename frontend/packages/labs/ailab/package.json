@@ -1,40 +1,67 @@
 {
   "name": "@code-dot-org/ml-playground",
   "version": "0.0.47",
-  "main": "dist/main.js",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/code-dot-org/ml-playground.git"
   },
+  "license": "MIT",
+  "author": "",
+  "main": "dist/main.js",
+  "files": [
+    "dist/**/!(mainDev.js)",
+    "i18n/mlPlayground.json",
+    "public/datasets/*.json",
+    "public/*.json"
+  ],
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --static public --host 0.0.0.0 --allowed-hosts all",
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx src",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "start": "yarn run dev",
+    "test": "yarn run lint && jest",
+    "test:unit": "jest ./test/unit/*.js",
+    "typecheck": "tsc -b --noEmit",
+    "preversion": "yarn install && yarn run test",
+    "version": "yarn run build",
+    "postversion": "git push && git push --tags && yarn publish"
+  },
+  "prettier": "./index.mjs",
   "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
     "moduleNameMapper": {
       ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
       "^@public(.*)$": "<rootDir>/public/$1"
     }
   },
-  "author": "",
-  "license": "MIT",
-  "private": false,
-  "engines": {
-    "node": ">=22.21",
-    "npm": ">=3.10.8"
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "start": "yarn run dev",
-    "dev": "webpack-dev-server --mode development --static public --host 0.0.0.0 --allowed-hosts all",
-    "lint": "eslint --ext .js,.jsx src",
-    "test": "yarn run lint && jest",
-    "test:unit": "jest ./test/unit/*.js",
-    "preversion": "yarn install && yarn run test",
-    "version": "yarn run build",
-    "postversion": "git push && git push --tags && yarn publish"
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.0",
+    "chart.js": "^2.9.4",
+    "react-chartjs-2": "^2.11.1",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/eslint-parser": "^7.28.6",
     "@babel/preset-env": "^7.29.2",
     "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.58.1",
+    "@typescript-eslint/parser": "^8.58.1",
     "babel-jest": "^29.7.0",
     "babel-loader": "^10.1.1",
     "copy-webpack-plugin": "^11.0.0",
@@ -48,6 +75,8 @@
     "jest": "^29.7.0",
     "messageformat": "^2.3.0",
     "ml-knn": "^3.0.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-packagejson": "^2.5.5",
     "query-string": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -55,23 +84,15 @@
     "react-redux": "^9.2.0",
     "redux": "^4.0.5",
     "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.2",
     "webpack": "^5.106.0",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.2.3"
   },
-  "files": [
-    "dist/**/!(mainDev.js)",
-    "i18n/mlPlayground.json",
-    "public/datasets/*.json",
-    "public/*.json"
-  ],
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
-    "chart.js": "^2.9.4",
-    "react-chartjs-2": "^2.11.1",
-    "reselect": "^4.0.0"
+  "engines": {
+    "node": ">=22.21",
+    "npm": ">=3.10.8"
   }
 }

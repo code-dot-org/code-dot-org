@@ -1,71 +1,71 @@
 const CopyPlugin = require('copy-webpack-plugin');
-const path = require("path");
+const path = require('path');
 
 const commonConfig = {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     // Note: Separate aliases are required for aliases to work in unit tests. These should
     // be added in package.json in the jest configuration.
     alias: {
       '@ml': path.resolve(__dirname, 'src'),
-      '@public': path.resolve(__dirname, 'public')
-    }
+      '@public': path.resolve(__dirname, 'public'),
+    },
   },
   output: {
-    filename: "[name].js",
+    filename: '[name].js',
     library: {
-      type: 'umd'
+      type: 'umd',
     },
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpg)$/,
         type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: 8192
-          }
+            maxSize: 8192,
+          },
         },
         generator: {
-          filename: 'assets/images/[name][ext][query]'
-        }
+          filename: 'assets/images/[name][ext][query]',
+        },
       },
-    ]
+    ],
   },
   performance: {
-    assetFilter: function(assetFilename) {
+    assetFilter: function (assetFilename) {
       return /^assets\//.test(assetFilename);
     },
     maxAssetSize: 300000,
-    maxEntrypointSize: 10500000
-  }
+    maxEntrypointSize: 10500000,
+  },
 };
 
 const firstConfigOnly = {
   output: {
-    clean: true
+    clean: true,
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
           from: 'public/datasets/*.*',
-          to: 'assets/datasets/[name][ext]'
-        }
-      ]
-    })
-  ]
+          to: 'assets/datasets/[name][ext]',
+        },
+      ],
+    }),
+  ],
 };
 
 const externalConfig = {
@@ -73,35 +73,35 @@ const externalConfig = {
     lodash: 'lodash',
     react: 'react',
     'react-dom': 'react-dom',
-    'react/jsx-runtime': 'react/jsx-runtime'
-  }
+    'react/jsx-runtime': 'react/jsx-runtime',
+  },
 };
 
 const defaultConfig = [
   {
     entry: {
-      assetPath: './src/assetPath.js'
+      assetPath: './src/assetPath.ts',
     },
     ...commonConfig,
     ...firstConfigOnly,
-    ...externalConfig
+    ...externalConfig,
   },
   {
     entry: {
-      mainDev: './src/indexDev.js'
+      mainDev: './src/indexDev.tsx',
     },
-    ...commonConfig
-  }
+    ...commonConfig,
+  },
 ];
 
 const productionConfig = [
   {
     entry: {
-      main: './src/indexProd.js'
+      main: './src/indexProd.tsx',
     },
     ...commonConfig,
-    ...externalConfig
-  }
+    ...externalConfig,
+  },
 ];
 
 module.exports = (env, argv) => {
@@ -111,4 +111,3 @@ module.exports = (env, argv) => {
 
   return defaultConfig;
 };
-

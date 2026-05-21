@@ -11,15 +11,27 @@
     }
   },
   "fields": [
-    { "type": "numerical", "id": "Age", "description": "Age of the patient." },
-    { "type": "categorical", "id": "Sex", "description": "Biological sex of the patient." },
-    { "type": "categorical", "id": "Chest Pain Type", "description": "Type of chest pain." },
+    {"type": "numerical", "id": "Age", "description": "Age of the patient."},
+    {
+      "type": "categorical",
+      "id": "Sex",
+      "description": "Biological sex of the patient."
+    },
+    {
+      "type": "categorical",
+      "id": "Chest Pain Type",
+      "description": "Type of chest pain."
+    },
     {
       "type": "numerical",
       "id": "Resting Blood Pressure",
       "description": "Whether they have chest pain, and if so whether it is anginal: a feeling like your heart is being squeezed."
     },
-    { "type": "numerical", "id": "Cholesterol", "description": "Cholesterol in the blood." },
+    {
+      "type": "numerical",
+      "id": "Cholesterol",
+      "description": "Cholesterol in the blood."
+    },
     {
       "type": "categorical",
       "id": "Fasting Blood Sugar > 120mg/dl",

@@ -1,33 +1,33 @@
 /* Mock state to be used across the testing suite. */
 
-import MessageFormat from "messageformat";
+import MessageFormat from 'messageformat';
 
 export const regressionState = {
   data: [
     {
       sun: 'high',
-      height: 3.8
+      height: 3.8,
     },
     {
       sun: 'high',
-      height: 3.9
+      height: 3.9,
     },
     {
       sun: 'medium',
-      height: 2.6
+      height: 2.6,
     },
     {
       sun: 'medium',
-      height: 2.5
+      height: 2.5,
     },
     {
       sun: 'low',
-      height: 0.9
+      height: 0.9,
     },
     {
       sun: 'low',
-      height: 1.6
-    }
+      height: 1.6,
+    },
   ],
   labelColumn: 'height',
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
@@ -36,15 +36,15 @@ export const regressionState = {
   selectedFeatures: ['sun'],
   columnsByDataType: {
     height: 'numerical',
-    sun: 'categorical'
+    sun: 'categorical',
   },
   featureNumberKey: {
-    'sun': {
-      'low' : 0,
-      'medium' : 1,
-      'high' : 2,
-    }
-  }
+    sun: {
+      low: 0,
+      medium: 1,
+      high: 2,
+    },
+  },
 };
 
 export const classificationState = {
@@ -52,33 +52,33 @@ export const classificationState = {
     {
       weather: 'sunny',
       temp: 'hot',
-      play: 'no'
+      play: 'no',
     },
     {
       weather: 'overcast',
       temp: 'hot',
-      play: 'yes'
+      play: 'yes',
     },
     {
       weather: 'overcast',
       temp: 'mild',
-      play: 'yes'
+      play: 'yes',
     },
     {
       weather: 'overcast',
       temp: 'cool',
-      play: 'yes'
+      play: 'yes',
     },
     {
       weather: 'rainy',
       temp: 'mild',
-      play: 'yes'
+      play: 'yes',
     },
     {
       weather: 'rainy',
       temp: 'cool',
-      play: 'no'
-    }
+      play: 'no',
+    },
   ],
   currentColumn: 'temp',
   labelColumn: 'play',
@@ -86,27 +86,34 @@ export const classificationState = {
   columnsByDataType: {
     weather: 'categorical',
     temp: 'categorical',
-    play: 'categorical'
+    play: 'categorical',
   },
   accuracyCheckLabels: [1, 0, 0, 0, 0, 1],
-  accuracyCheckExamples: [[0,2], [1,2], [1,1], [1,0], [2,1], [2,0]],
+  accuracyCheckExamples: [
+    [0, 2],
+    [1, 2],
+    [1, 1],
+    [1, 0],
+    [2, 1],
+    [2, 0],
+  ],
   prediction: 0,
   featureNumberKey: {
-    'temp': {
-      'cool' : 0,
-      'mild' : 1,
-      'hot' : 2,
+    temp: {
+      cool: 0,
+      mild: 1,
+      hot: 2,
     },
-    'play': {
-      'yes' : 0,
-      'no' : 1
+    play: {
+      yes: 0,
+      no: 1,
     },
-    'weather': {
-      'sunny' : 0,
-      'overcast' : 1,
-      'rainy': 2
-    }
-  }
+    weather: {
+      sunny: 0,
+      overcast: 1,
+      rainy: 2,
+    },
+  },
 };
 
 export const batCountMax = 100;
@@ -118,47 +125,56 @@ export const allNumericalState = {
   data: [
     {
       batCount: batCountMax,
-      mosquitoCount: mosquitoCountMin
+      mosquitoCount: mosquitoCountMin,
     },
     {
       batCount: 90,
-      mosquitoCount: 2
-    },{
+      mosquitoCount: 2,
+    },
+    {
       batCount: 80,
-      mosquitoCount: 3
-    },{
+      mosquitoCount: 3,
+    },
+    {
       batCount: 70,
-      mosquitoCount: 4
-    },{
+      mosquitoCount: 4,
+    },
+    {
       batCount: 60,
-      mosquitoCount: 5
-    },{
+      mosquitoCount: 5,
+    },
+    {
       batCount: 50,
-      mosquitoCount: 6
-    },{
+      mosquitoCount: 6,
+    },
+    {
       batCount: batCountMin,
-      mosquitoCount: mosquitoCountMax
-    }
+      mosquitoCount: mosquitoCountMax,
+    },
   ],
   currentColumn: 'batCount',
   labelColumn: 'mosquitoCount',
   selectedFeatures: ['batCount'],
   columnsByDataType: {
     batCount: 'numerical',
-    mosquitoCount: 'numerical'
-  }
+    mosquitoCount: 'numerical',
+  },
 };
 
 export const premadeDatasetId = 'bats_eat_mozzies';
 export const premadeDatasetName = 'Bats Eat Mozzies';
 export const premadeDatasetNameLocalized = 'Localized Bats Eat Mozzies';
 export const batDatasetDescription = 'Count of bats and mosquitios';
-export const batDatasetDescriptionLocalized = 'Localized How many mosquitoes there are.';
+export const batDatasetDescriptionLocalized =
+  'Localized How many mosquitoes there are.';
 export const mosquitoDescription = 'How many mosquitoes there are.';
 export const batDatasetUses = 'People can have a fun time learning about bats';
-export const batDatasetUsesLocalized = 'Localized People can have a fun time learning about bats';
-export const batDatasetMisuses = 'Hunters could use this information to avoid bats';
-export const batDatasetMisusesLocalized = 'Localized Hunters could use this information to avoid bats';
+export const batDatasetUsesLocalized =
+  'Localized People can have a fun time learning about bats';
+export const batDatasetMisuses =
+  'Hunters could use this information to avoid bats';
+export const batDatasetMisusesLocalized =
+  'Localized Hunters could use this information to avoid bats';
 
 export const premadeDatasetState = {
   ...allNumericalState,
@@ -169,24 +185,24 @@ export const premadeDatasetState = {
       description: batDatasetDescription,
       context: {
         potentialUses: batDatasetUses,
-        potentialMisuses: batDatasetMisuses
-      }
+        potentialMisuses: batDatasetMisuses,
+      },
     },
     defaultLabelColumn: 'mosquitoCount',
     fields: [
       {
         id: 'mosquitoCount',
         type: 'numerical',
-        description: mosquitoDescription
+        description: mosquitoDescription,
       },
       {
         id: 'batCount',
         type: 'numerical',
-        description: 'How many bats there are.'
-      }
-    ]
-  }
-}
+        description: 'How many bats there are.',
+      },
+    ],
+  },
+};
 
 export const premadeDatasetTranslations = new MessageFormat('en').compile({
   datasets: {
@@ -194,21 +210,22 @@ export const premadeDatasetTranslations = new MessageFormat('en').compile({
       name: premadeDatasetNameLocalized,
       fields: {
         mosquitoCount: {
-          description: "mosquitoCount description"
-        }
+          description: 'mosquitoCount description',
+        },
       },
       card: {
         description: batDatasetDescriptionLocalized,
         context: {
           potentialUses: batDatasetUsesLocalized,
-          potentialMisuses: batDatasetMisusesLocalized
-        }
-      }
-    }
-  }
+          potentialMisuses: batDatasetMisusesLocalized,
+        },
+      },
+    },
+  },
 });
 
-export const playDatasetDescription = "Survey of the weather, temperature and whether it was a good day to play outside.";
+export const playDatasetDescription =
+  'Survey of the weather, temperature and whether it was a good day to play outside.';
 
 export const userUploadedDatasetState = {
   ...classificationState,
@@ -216,14 +233,14 @@ export const userUploadedDatasetState = {
     name: 'play-outside-today?.csv',
   },
   trainedModelDetails: {
-    datasetDescription: playDatasetDescription
-  }
-}
+    datasetDescription: playDatasetDescription,
+  },
+};
 export const premadeDataset = {
-    "id": premadeDatasetId,
-    "name": premadeDatasetName,
-    "path": "datasets/bats.csv",
-    "metadataPath": "datasets/bats.json",
-    "imagePath": "datasets/bats.jpg"
+  id: premadeDatasetId,
+  name: premadeDatasetName,
+  path: 'datasets/bats.csv',
+  metadataPath: 'datasets/bats.json',
+  imagePath: 'datasets/bats.jpg',
 };
 export const premadeDatasets = [premadeDataset];

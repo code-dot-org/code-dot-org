@@ -37,7 +37,11 @@
       "id": "weight",
       "description": "The car's weight in pounds."
     },
-    { "type": "numerical", "id": "acceleration", "description": "The acceleration of the car." },
+    {
+      "type": "numerical",
+      "id": "acceleration",
+      "description": "The acceleration of the car."
+    },
     {
       "type": "categorical",
       "id": "model year",

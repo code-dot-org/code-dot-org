@@ -5,10 +5,10 @@ import {
   getResultsByGrade,
   getPercentCorrect,
   getResultsDataInDataTableForm,
-  getSummaryStat
-} from '../../src/helpers/accuracy.js';
-import { classificationState, regressionState } from './testData';
-import { ResultsGrades, MLTypes } from '../../src/constants.js';
+  getSummaryStat,
+} from '../../src/helpers/accuracy';
+import {classificationState, regressionState} from './testData';
+import {ResultsGrades, MLTypes} from '../../src/constants';
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,
@@ -16,7 +16,7 @@ const regressionGrades = [
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
-  ResultsGrades.INCORRECT
+  ResultsGrades.INCORRECT,
 ];
 
 const mixedGrades = [
@@ -25,7 +25,7 @@ const mixedGrades = [
   ResultsGrades.CORRECT,
   ResultsGrades.INCORRECT,
   ResultsGrades.INCORRECT,
-  ResultsGrades.INCORRECT
+  ResultsGrades.INCORRECT,
 ];
 
 const allCorrectGrades = [
@@ -34,7 +34,7 @@ const allCorrectGrades = [
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
-  ResultsGrades.CORRECT
+  ResultsGrades.CORRECT,
 ];
 
 const allIncorrectGrades = [
@@ -43,7 +43,7 @@ const allIncorrectGrades = [
   ResultsGrades.INCORRECT,
   ResultsGrades.INCORRECT,
   ResultsGrades.INCORRECT,
-  ResultsGrades.INCORRECT
+  ResultsGrades.INCORRECT,
 ];
 
 const mostlyCorrectGrades = [
@@ -52,91 +52,91 @@ const mostlyCorrectGrades = [
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
-  ResultsGrades.INCORRECT
+  ResultsGrades.INCORRECT,
 ];
 
-const inaccuratePercent = "0.00";
-const accuratePercent = "100.00";
-const mostlyCorrectPercent = "83.33";
-const lowAccuracyPercent = "33.33";
+const inaccuratePercent = '0.00';
+const accuratePercent = '100.00';
+const mostlyCorrectPercent = '83.33';
+const lowAccuracyPercent = '33.33';
 // error tolerance of +/- 0.15, 4/6 correct
-const regressionPercent = "66.67";
+const regressionPercent = '66.67';
 
-const accurateResults  = [1, 0, 0, 0, 0, 1];
+const accurateResults = [1, 0, 0, 0, 0, 1];
 const mixedResults = [0, 0, 0, 1, 1, 0];
 const mostlyAccurateResults = [1, 0, 0, 0, 0, 0];
 const inaccurateResults = [0, 1, 1, 1, 1, 0];
 
 const classificationTestCases = [
   {
-    case: "classification - accurate",
+    case: 'classification - accurate',
     results: accurateResults,
     grades: allCorrectGrades,
-    percent: accuratePercent
+    percent: accuratePercent,
   },
   {
-    case: "classification - inaccurate",
+    case: 'classification - inaccurate',
     results: inaccurateResults,
     grades: allIncorrectGrades,
-    percent: inaccuratePercent
+    percent: inaccuratePercent,
   },
   {
-    case: "classification - mostly accurate",
+    case: 'classification - mostly accurate',
     results: mostlyAccurateResults,
     grades: mostlyCorrectGrades,
-    percent: mostlyCorrectPercent
+    percent: mostlyCorrectPercent,
   },
   {
-    case: "classification - low accuracy",
+    case: 'classification - low accuracy',
     results: mixedResults,
     grades: mixedGrades,
-    percent: lowAccuracyPercent
-  }
+    percent: lowAccuracyPercent,
+  },
 ];
 
 const gradesTestCases = [
   {
-    case: "getResultsByGrade - correct, regression",
+    case: 'getResultsByGrade - correct, regression',
     state: regressionState,
     grades: regressionGrades,
-    gradeType: ResultsGrades.CORRECT
+    gradeType: ResultsGrades.CORRECT,
   },
   {
-    case: "getResultsByGrade - incorrect, regression",
+    case: 'getResultsByGrade - incorrect, regression',
     state: regressionState,
     grades: regressionGrades,
-    gradeType: ResultsGrades.INCORRECT
+    gradeType: ResultsGrades.INCORRECT,
   },
   {
-    case: "getResultsByGrade - correct, classification",
+    case: 'getResultsByGrade - correct, classification',
     state: classificationState,
     grades: mixedGrades,
-    gradeType: ResultsGrades.CORRECT
+    gradeType: ResultsGrades.CORRECT,
   },
   {
-    case: "getResultsByGrade - incorrect, classification",
+    case: 'getResultsByGrade - incorrect, classification',
     state: classificationState,
     grades: mixedGrades,
-    gradeType: ResultsGrades.INCORRECT
-  }
-]
+    gradeType: ResultsGrades.INCORRECT,
+  },
+];
 
 const regressionDataForTable = [
-  { sun: 'high', height: 4 },
-  { sun: 'high', height: 3.75 },
-  { sun: 'medium', height: 2.63 },
-  { sun: 'medium', height: 2.46 },
-  { sun: 'low', height: 1.6 },
-  { sun: 'low', height: 1 }
+  {sun: 'high', height: 4},
+  {sun: 'high', height: 3.75},
+  {sun: 'medium', height: 2.63},
+  {sun: 'medium', height: 2.46},
+  {sun: 'low', height: 1.6},
+  {sun: 'low', height: 1},
 ];
 
 const classificationDataForTable = [
-  { temp: 'cool', weather: 'rainy', play: 'yes' },
-  { temp: 'mild', weather: 'rainy', play: 'yes' },
-  { temp: 'mild', weather: 'overcast', play: 'yes' },
-  { temp: 'mild', weather: 'sunny', play: 'no' },
-  { temp: 'hot', weather: 'overcast', play: 'no' },
-  { temp: 'hot', weather: 'sunny', play: 'yes' }
+  {temp: 'cool', weather: 'rainy', play: 'yes'},
+  {temp: 'mild', weather: 'rainy', play: 'yes'},
+  {temp: 'mild', weather: 'overcast', play: 'yes'},
+  {temp: 'mild', weather: 'sunny', play: 'no'},
+  {temp: 'hot', weather: 'overcast', play: 'no'},
+  {temp: 'hot', weather: 'sunny', play: 'yes'},
 ];
 
 describe('get accuracy', () => {
@@ -146,14 +146,14 @@ describe('get accuracy', () => {
       const accuracy = getAccuracyClassification(classificationState);
       expect(accuracy.grades).toEqual(testCase.grades);
       expect(accuracy.percentCorrect).toEqual(testCase.percent);
-    })
-  })
+    });
+  });
 
   test('regression', async () => {
     const accuracy = getAccuracyRegression(regressionState);
     expect(accuracy.grades).toEqual(regressionGrades);
     expect(accuracy.percentCorrect).toBe(regressionPercent);
-  })
+  });
 });
 
 describe('get grades', () => {
@@ -162,13 +162,13 @@ describe('get grades', () => {
       classificationState['accuracyCheckPredictedLabels'] = testCase.results;
       const grades = getAccuracyGrades(classificationState);
       expect(grades).toEqual(testCase.grades);
-    })
-  })
+    });
+  });
 
   test('regression', async () => {
     const grades = getAccuracyGrades(regressionState);
     expect(grades).toEqual(regressionGrades);
-  })
+  });
 });
 
 describe('get percent correct', () => {
@@ -177,13 +177,13 @@ describe('get percent correct', () => {
       classificationState['accuracyCheckPredictedLabels'] = testCase.results;
       const percentCorrect = getPercentCorrect(classificationState);
       expect(percentCorrect).toEqual(testCase.percent);
-    })
-  })
+    });
+  });
 
   test('regression', async () => {
     const percentCorrect = getPercentCorrect(regressionState);
     expect(percentCorrect).toEqual(regressionPercent);
-  })
+  });
 });
 
 describe('get results', () => {
@@ -192,10 +192,10 @@ describe('get results', () => {
       const results = getResultsByGrade(testCase.state, testCase.gradeType);
       const resultsCount = results.examples.length;
       const expectedCount = testCase.grades.filter(
-        grade => grade === testCase.gradeType
+        grade => grade === testCase.gradeType,
       ).length;
       expect(resultsCount).toBe(expectedCount);
-    })
+    });
   });
 
   test('regression - all', async () => {

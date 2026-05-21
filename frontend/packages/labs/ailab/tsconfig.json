@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "lib": [
+      "es2024",
+      "DOM",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator"
+    ],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "outDir": "./dist",
+    "paths": {
+      "@ml/*": ["./src/*"],
+      "@public/*": ["./public/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

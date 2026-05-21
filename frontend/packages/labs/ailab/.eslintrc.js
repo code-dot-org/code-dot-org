@@ -3,80 +3,81 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  "globals": {
-  },
-  "plugins": [
-    "jsx-a11y",
-    "react-hooks"
-  ],
-  "extends": [
+  globals: {},
+  plugins: ['@typescript-eslint', 'jsx-a11y', 'react-hooks'],
+  extends: [
     'plugin:react/recommended',
-    "eslint:recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended"
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "rules": {
-    "array-bracket-spacing": ["error", "never"],
-    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
-    "comma-dangle": "off",
-    curly: "error",
-    "dot-location": ["error", "property"],
-    "eol-last": "error",
-    eqeqeq: "error",
-    "jsx-quotes": "error", // autofixable
-    "keyword-spacing": "error",
-    "no-array-constructor": "error",
-    "no-console": "off",
-    "no-duplicate-imports": "error",
-    "no-empty": "off",
-    "no-eval": "error",
-    "no-ex-assign": "off",
-    "no-extra-boolean-cast": "off",
-    "no-implicit-globals": "error",
-    "no-new-object": "error",
-    "no-trailing-spaces": "error",
-    "no-undef": "error",
-    "no-unused-vars": ["error", { args: "none" }],
-    "no-useless-escape": "off",
-    "no-with": "error",
-    "object-curly-spacing": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/button-has-type": "error",
-    "react/display-name": "off",
-    "react/jsx-closing-bracket-location": "error", // autofixable
-    "react/jsx-curly-spacing": "error", // autofixable
-    "react/jsx-first-prop-new-line": ["error", "multiline"],
-    "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "off",
-    "react/jsx-wrap-multilines": "error", // autofixable
-    "react/no-danger": "error",
-    "react/no-find-dom-node": "off",
-    "react/no-render-return-value": "off",
-    "react/no-string-refs": "off",
-    "react/no-unescaped-entities": "off",
-    "react/self-closing-comp": "error",
-    semi: "off", // enforced by babel/semi
-    "space-before-blocks": "error",
-    strict: "error",
-    "jsx-a11y/no-onchange": 0
-
-  }
+  rules: {
+    'array-bracket-spacing': ['error', 'never'],
+    'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+    'comma-dangle': 'off',
+    curly: 'error',
+    'dot-location': ['error', 'property'],
+    'eol-last': 'error',
+    eqeqeq: 'error',
+    'jsx-quotes': 'error',
+    'keyword-spacing': 'error',
+    'no-array-constructor': 'off',
+    '@typescript-eslint/no-array-constructor': 'error',
+    'no-console': 'off',
+    'no-duplicate-imports': 'error',
+    'no-empty': 'off',
+    'no-eval': 'error',
+    'no-ex-assign': 'off',
+    'no-extra-boolean-cast': 'off',
+    'no-implicit-globals': 'error',
+    'no-new-object': 'error',
+    'no-trailing-spaces': 'error',
+    'no-undef': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
+    'no-useless-escape': 'off',
+    'no-with': 'error',
+    'object-curly-spacing': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/button-has-type': 'error',
+    'react/display-name': 'off',
+    'react/jsx-closing-bracket-location': 'error',
+    'react/jsx-curly-spacing': 'error',
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
+    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-key': 'off',
+    'react/jsx-no-target-blank': 'off',
+    'react/jsx-wrap-multilines': 'error',
+    'react/no-danger': 'error',
+    'react/no-find-dom-node': 'off',
+    'react/no-render-return-value': 'off',
+    'react/no-string-refs': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off',
+    'react/self-closing-comp': 'error',
+    semi: 'off',
+    'space-before-blocks': 'error',
+    strict: 'off',
+    'jsx-a11y/no-onchange': 0,
+  },
 };

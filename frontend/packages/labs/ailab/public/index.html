@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -12,7 +12,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #F2F2F2;
+        background-color: #f2f2f2;
       }
       #root {
         position: fixed;
@@ -31,14 +31,17 @@
         width: 100%;
       }
       .ailab-image-hover:hover {
-         transform: scale(1.03, 1.03);
-         transition: 0.1s ease-in-out;
+        transform: scale(1.03, 1.03);
+        transition: 0.1s ease-in-out;
       }
     </style>
   </head>
   <body>
     <div id="instructions"></div>
-    <select id="mode-select" onchange="location = '?mode=' + this.options[this.selectedIndex].value">
+    <select
+      id="mode-select"
+      onchange="location = '?mode=' + this.options[this.selectedIndex].value"
+    >
       <option disabled selected value="/">Jump to mode...</option>
       <option value="">default</option>
       <option value="minimal">minimal</option>

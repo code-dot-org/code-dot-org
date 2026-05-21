@@ -12,12 +12,12 @@
   },
   "defaultLabelColumn": "Loneliness",
   "fields": [
-	{
+    {
       "type": "categorical",
       "id": "Loneliness",
       "description": "I feel lonely in life."
     },
-	{
+    {
       "type": "categorical",
       "id": "Movies",
       "description": "I enjoy watching movies"
