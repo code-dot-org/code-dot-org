@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# AI for Oceans Reflection\r\n\r\nCongratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> In the reflection box below, answer **one or more** of the following questions:\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<br>",
+    "long_instructions": "# AI for Oceans Reflection\r\n\r\n#### Congratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> #### In the reflection box below, answer **one or more** of the following questions:\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<br>",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -21,7 +21,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-02-06T20:15:35.790+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-llm-06\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-llm-06\"},{\"changed_at\":\"2026-02-06 20:15:47 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-18 16:22:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-20 17:33:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-20 17:15:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-02-06T20:15:35.790+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-llm-06\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-llm-06\"},{\"changed_at\":\"2026-02-06 20:15:47 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-18 16:22:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-20 17:33:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

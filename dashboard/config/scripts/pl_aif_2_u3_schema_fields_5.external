@@ -15,8 +15,7 @@ A music app, for example, doesn’t just store song titles. It also needs artist
 
 </div>
 
-Together, these help students move from “I can store a list” to “I can organize real-world data for a web app.
-
+Together, these help students move from “I can store a list” to “I can organize real-world data for a web app.”
 ---
 ## What is a Schema?
 
@@ -58,43 +57,7 @@ For a music app, a schema for a song might look like this:
 
 - **isFavorite** – whether the user has marked it as a favorite (boolean)
 
-This schema doesn’t write any code yet. It just gives a shared language: “Each song in our app has these four pieces of data.
+This schema doesn’t write any code yet. It just gives a shared language: “Each song in our app has these four pieces of data.”
 
-<div style="clear:both;"></div>
 
----
-
-## Quick Check: Build a Schema
-
-A movie app needs to store information about each movie.
-
-What schema fields would you include, and what type of data would each one store?
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-Reveal One Possible Schema
-</summary>
-
-<div style="margin-top:16px;background:#F5F7F8;border-radius:12px;padding:18px;font-size:16px;line-height:1.7;">
-
-🎬 <strong>title</strong> → string<br>
-
-⭐ <strong>rating</strong> → number<br>
-
-🎭 <strong>genre</strong> → string<br>
-
-⏱️ <strong>lengthInMinutes</strong> → number<br>
-
-👀 <strong>hasWatched</strong> → boolean
-
-</div>
-</details>
-
-<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
-
-<p style="font-size:18px;line-height:1.5;margin:0;">
-<strong>💡 Teacher Tip:</strong> Real-world examples help students better understand why schemas matter. For example, students already recognize that apps like Spotify, Netflix, or TikTok store different kinds of information about songs, movies, or videos. Connecting schemas to familiar apps makes structured data feel more meaningful and practical.
-</p>
-
-</div>
 MARKDOWN

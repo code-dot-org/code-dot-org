@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit 1 Scenario Quiz
+# Unit 1 Scenario Quiz 
 
 **Directions:**  
 The following scenarios represent common situations you may encounter while supporting students using AI to build websites with HTML and CSS.
@@ -14,292 +14,262 @@ For each scenario, select the facilitation move that best supports strong prompt
 
 ## Question 1: Starting with the Big Picture
 
-<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
+<img src="https://images.code.org/8c50b5a07d5a8e6442887c219fba4fda-image-1778251654466.png"  
+     alt="student overwhelmed by lots of code"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-  <div style="flex:2;">
+**Scenario:**  
+A student opens the starter code for an HTML page and immediately says, “There’s too much code. I don’t understand any of this.”
 
-  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
+They seem overwhelmed and are unsure where to begin.
 
-  <p style="font-size:14pt; line-height:1.5;">
-      A student opens the starter code for an HTML page and immediately says, “There’s too much code. I don’t understand any of this.”
-    </p>
+What is the best facilitation move?
 
-  <p style="font-size:14pt; line-height:1.5;">
-      They seem overwhelmed and are unsure where to begin.
-    </p>
+<div style="clear:both;"></div>
 
-  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
-      What is the best facilitation move?
-    </p>
 
-  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Tell them they need to understand every line before continuing
+</summary>
 
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          A) Tell them they need to understand every line before continuing
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> This may make the student feel more overwhelmed. The goal is to help them understand the structure of the page first.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          B) Help them identify the main parts of the webpage first
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
-          <strong>Correct Answer:</strong> Help the student focus on the big parts of the page, such as the header, navigation, main content, images, links, buttons, and footer. Students do not need to understand every line right away.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          C) Skip the starter code and begin a new webpage from scratch
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> The starter code is there to support students. They should learn how to make sense of and build from what is already provided.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          D) Tell them to ask AI to explain all of the code at once
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Asking for everything at once may still feel overwhelming. Students should first identify the main sections of the page.
-        </div>
-      </details>
-
-   </div>
-  </div>
-
-  <div style="flex:1; text-align:center;">
-    <img 
-      src="https://images.code.org/f9bd81764694c97a385e57e9235622d1-image-1779307716173.png"
-      alt="student typing vague prompt into AI"
-      style="width:100%; max-width:300px; border-radius:10px;"
-    >
-  </div>
-
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> This may make the student feel more overwhelmed. The goal is to help them understand the structure of the page first.
 </div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Help them identify the main parts of the webpage first
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Help the student focus on the big parts of the page, such as the header, navigation, main content, images, links, buttons, and footer. Students do not need to understand every line right away.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Skip the starter code and begin a new webpage from scratch
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> The starter code is there to support students. They should learn how to make sense of and build from what is already provided.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Tell them to ask AI to explain all of the code at once
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Asking for everything at once may still feel overwhelming. Students should first identify the main sections of the page.
+</div>
+</details>
 
 ---
 
+
 ## Question 2: Jumping to AI Without a Clear Goal
 
-<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
+<img src="https://images.code.org/9db2823087cde67466a97ba0d1e6e71d-image-1778251863228.png"  
+     alt="student typing vague prompt into AI"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-  <div style="flex:2;">
+**Scenario:**  
+A student wants to use AI to build part of their website and types, “Make my website better.”
 
-  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
+The AI gives them a response, but it does not match what they wanted.
 
-  <p style="font-size:14pt; line-height:1.5;">
-      A student wants to use AI to build part of their website and types, “Make my website better.”
-    </p>
+What should you do?
 
-  <p style="font-size:14pt; line-height:1.5;">
-      The AI gives them a response, but it does not match what they wanted.
-    </p>
+<div style="clear:both;"></div>
 
-  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
-      What should you do?
-    </p>
 
-  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
 
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          A) Tell them AI is not useful for HTML and CSS
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> AI can be useful when students write clear prompts and review the response thoughtfully.
-        </div>
-      </details>
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Tell them AI is not useful for HTML and CSS
+</summary>
 
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          B) Help them revise the prompt with a clearer goal and more context
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
-          <strong>Correct Answer:</strong> Guide the student to explain what they are building, who the website is for, what part they want help with, and what the AI response should include.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          C) Give them the finished website code so they can move on
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Giving the final code skips the learning goal of prompting and iteration.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          D) Tell them to keep submitting the same prompt until they get a better answer
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Repeating the same vague prompt is unlikely to improve the result.
-        </div>
-      </details>
-
-  </div>
-  </div>
-
-  <div style="flex:1; text-align:center;">
-    <img 
-      src="https://images.code.org/8c50b5a07d5a8e6442887c219fba4fda-image-1778251654466.png"
-      alt="student overwhelmed by lots of code"
-      style="width:100%; max-width:300px; border-radius:10px;"
-    >
-  </div>
-
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> AI can be useful when students write clear prompts and review the response thoughtfully.
 </div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Help them revise the prompt with a clearer goal and more context
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Guide the student to explain what they are building, who the website is for, what part they want help with, and what the AI response should include.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Give them the finished website code so they can move on
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Giving the final code skips the learning goal of prompting and iteration.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Tell them to keep submitting the same prompt until they get a better answer
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Repeating the same vague prompt is unlikely to improve the result.
+</div>
+</details>
 
 ---
 
 ## Question 3: Locating the TODO Before Editing
 
-<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
+<img src="https://images.code.org/138259ea4ef3b73b150659ccd5f41050-image-1778252098758.png"  
+     alt="student unsure where to place code"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-  <div style="flex:2;">
+**Scenario:**  
+A student wants to add a new section to their homepage, but they start typing code into a random part of the HTML file.
 
-<p style="font-size:16pt;"><strong>Scenario:</strong></p>
+When you ask where the new section belongs, they are not sure.
 
-<p style="font-size:14pt; line-height:1.5;">
-      A student wants to add a new section to their homepage, but they start typing code into a random part of the HTML file.
-    </p>
+What is the best facilitation move?
 
-  <p style="font-size:14pt; line-height:1.5;">
-      When you ask where the new section belongs, they are not sure.
-    </p>
+<div style="clear:both;"></div>
 
-   <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
-      What is the best facilitation move?
-    </p>
 
-  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
 
-  <details>
-  <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          A) Let them place the code anywhere and fix it later
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Students should build the habit of locating where changes belong before editing.
-        </div>
-      </details>
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Let them place the code anywhere and fix it later
+</summary>
 
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          B) Tell them HTML order does not matter
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> HTML structure does matter and affects how the page is displayed.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          C) Ask them to find the TODO task and point to where the new code should go
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
-          <strong>Correct Answer:</strong> Direct the student to the TODO section and have them identify the exact place where their new content belongs before editing.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          D) Ask AI to decide where the code should go without reading the starter code
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Students should first understand the code structure before asking AI for help.
-        </div>
-      </details>
-
-  </div>
-  </div>
-
-  <div style="flex:1; text-align:center;">
-    <img 
-      src="https://images.code.org/d432dde9e263d139432fc38d7b27d8c4-image-1779307586499.png"
-      alt="student unsure where to place code"
-      style="width:100%; max-width:300px; border-radius:10px;"
-    >
-  </div>
-
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Students should build the habit of locating where changes belong before editing.
 </div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Tell them HTML order does not matter
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> HTML structure does matter and affects how the page is displayed.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Ask them to find the TODO task and point to where the new code should go
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Direct the student to the TODO section and have them identify the exact place where their new content belongs before editing.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Ask AI to decide where the code should go without reading the starter code
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Students should first understand the code structure before asking AI for help.
+</div>
+</details>
+
 
 ---
 
 ## Question 4: Treating AI Output as Final Code
 
-<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
+<img src="https://images.code.org/6363ada0ea3b384472fcd24d46cb011c-image-1778252315642.png"  
+     alt="student not testing webpage"  
+     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-  <div style="flex:2;">
+**Scenario:**  
+A student uses AI to generate CSS for their website. They paste the code in, but they do not preview the page or check whether the design matches their goal.
 
-  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
+They say, “The AI gave it to me, so it should be right.”
 
-  <p style="font-size:14pt; line-height:1.5;">
-      A student uses AI to generate CSS for their website. They paste the code in, but they do not preview the page or check whether the design matches their goal.
-    </p>
+What should you do?
 
-  <p style="font-size:14pt; line-height:1.5;">
-      They say, “The AI gave it to me, so it should be right.”
-    </p>
+<div style="clear:both;"></div>
 
-  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
-      What should you do?
-    </p>
 
-  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
 
-  <details>
-    <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          A) Tell them to delete all AI-generated code
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> The goal is to revise and improve the code, not discard it completely.
-        </div>
-      </details>
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+A) Tell them to delete all AI-generated code
+</summary>
 
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          B) Remind them that AI output is a draft and ask them to test and refine it
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
-          <strong>Correct Answer:</strong> Encourage the student to preview the webpage, check what changed, and refine both the code and their prompt.
-        </div>
-      </details>
-
-  <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          C) Approve the work because the student used AI
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Using AI is only part of the process. Students must still test and review their work.
-        </div>
-      </details>
-
-   <details>
-        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-          D) Tell them design choices do not need to be tested
-        </summary>
-        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
-          <strong>Incorrect Answer:</strong> Students should always preview and evaluate their design choices.
-        </div>
-      </details>
-
-  </div>
-  </div>
-
-  <div style="flex:1; text-align:center;">
-    <img 
-      src="https://images.code.org/6363ada0ea3b384472fcd24d46cb011c-image-1778252315642.png"
-      alt="student not testing webpage"
-      style="width:100%; max-width:300px; border-radius:10px;"
-    >
-  </div>
-
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> The goal is to revise and improve the code, not discard it completely.
 </div>
+</details>
 
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+B) Remind them that AI output is a draft and ask them to test and refine it
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Correct Answer:</strong> Encourage the student to preview the webpage, check what changed, and refine both the code and their prompt.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+C) Approve the work because the student used AI
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Using AI is only part of the process. Students must still test and review their work.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+D) Tell them design choices do not need to be tested
+</summary>
+
+<div style="margin-top:16px;font-size: 12pt;">
+<strong>Incorrect Answer:</strong> Students should always preview and evaluate their design choices.
+</div>
+</details>
+
+![]()
 MARKDOWN

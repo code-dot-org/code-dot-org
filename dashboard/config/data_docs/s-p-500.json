@@ -1,5 +1,0 @@
-{
-  "key": "s-p-500",
-  "name": "S&P 500 Value 1979-2026",
-  "content": "**Description**: Data about the historical value of the S&P 500 stock market index. Data spans 12/26/1979 through 5/20/2026. \r\n\r\n**Source**: SPX stock ticker historical data\r\n\r\n**_Columns_**:\r\n* **Date** (string): the specific calendar day the stock market was open for trading. \r\n* **Price** (numerical): the final closing value of the S&P 500 index at the end of that trading day.\r\n* **Open** (numerical): the initial starting value of the index when the market opened for trading that morning.\r\n* **High** (numerical): the absolute highest value the index reached at any point during that day's trading session.\r\n* **Low** (numerical): the absolute lowest value the index fell to during that day's trading session.\r\n* **Change %** (numerical): the percentage by which the index's closing price increased or decreased compared to the previous trading day's close.\r\n\r\n"
-}

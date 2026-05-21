@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-20 20:49:43 UTC",
+    "serialized_at": "2026-05-20 04:44:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1038,28 +1038,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-TCaAI-L3-SampleProject"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-SampleProject"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Project Deep Dive"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "self-paced-TCaAI-L3-Placeholder"
         ],
         "lesson.key": "lesson-6",
@@ -1072,8 +1050,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 5,
+      "chapter": 36,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1496,18 +1474,6 @@
         "level.key": "self-paced-TCaAI-L3-ProjectDeepDive",
         "script_level.level_keys": [
           "self-paced-TCaAI-L3-ProjectDeepDive"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-SampleProject",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-SampleProject"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",

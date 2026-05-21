@@ -10,7 +10,6 @@ To get comfortable working with data in JavaScript, it helps to understand how i
 In the example below, **supplies is an array**, meaning it’s a list that holds multiple items.
 
 Each of those items is an **object**, and every object represents one record. In this case, one classroom supply.
-
 ---
 
 <img src="https://images.code.org/c5a7e0009b56ddb7354fac9fdbf65bf8-image-1766003842988.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
@@ -32,54 +31,23 @@ This structure is extremely common in real-world data: a dataset (the array) mad
 
 ---
 
+## 🔍 Check for Understanding
 
-## 🔍 Check for Understanding: Read the Structure
-
-Look at the array of objects below. Then use the questions to check whether you can identify the main parts of the structure.
-
-<img src="https://images.code.org/006df5661ce3cdff8a7710c36f530456-image-1779291695656.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+> #### Before moving on, pause and define the following terms in your own words: **array, object, and property**.
+> - #### How do these three concepts work together when organizing data? 
 
 <details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-Which part is the array?
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+Check your thinking
 </summary>
 
-<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
-The array is <code>pets</code>. It holds the full list of pet objects.
+<div style="margin-top:16px; background:#f7f8fa;">
+<p style = "font-size: 14pt;">An <b>array</b> is a collection or list that holds multiple items.</p>
+<p style = "font-size: 14pt;">An <b>object</b> is a single item in that list that stores related information.</p>
+<p style = "font-size: 14pt;">A <b>property</b> is a specific piece of information (a key-value pair) inside an object.</p>
+<p style = "font-size: 14pt;">They work together because an array stores multiple objects, and each object uses properties to describe its data.</p>
 </div>
 </details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-Which part is one object?
-</summary>
-
-<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
-One object is <code>{ id: 201, name: "Milo", type: "Dog" }</code>. It represents one pet record.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-Which part is one property?
-</summary>
-
-<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
-One property is <code>name</code>. A property stores one specific piece of information inside an object.
-</div>
-</details>
-
-<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
-
-<p style="font-size:18px;line-height:1.5;margin:0;">
-<strong>💡 Teacher Tip:</strong> Students may understand the words array, object, and property separately, but still struggle to see how they fit together in code. Have them point to each part in the example before asking them to explain it in words.
-</p>
-
-</div>
 
 
 ---
@@ -87,6 +55,8 @@ One property is <code>name</code>. A property stores one specific piece of infor
 ## Next up
 
 We will use AI to generate an array with 5 objects and practice updating an app. 
+
+
 
 
 MARKDOWN

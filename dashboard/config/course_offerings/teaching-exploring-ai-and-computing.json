@@ -1,14 +1,14 @@
 {
   "key": "teaching-exploring-ai-and-computing",
-  "display_name": "Teaching AI Foundations: Exploring AI and CS",
+  "display_name": "teaching-exploring-ai-and-computing",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Professional Learning",
-  "marketing_initiative": "AIF",
+  "curriculum_type": null,
+  "marketing_initiative": null,
   "grade_levels": null,
-  "header": "self_paced",
-  "image": "https://images.code.org/0091ef098db0aaf6978704c63f775417-AIF1.avif",
-  "cs_topic": "artificial_intelligence",
+  "header": null,
+  "image": null,
+  "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
@@ -16,8 +16,6 @@
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": true,
-  "facilitator_course_permissions": [
-
-  ]
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

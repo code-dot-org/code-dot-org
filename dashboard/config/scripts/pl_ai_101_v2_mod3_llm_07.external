@@ -16,15 +16,17 @@ To use AI effectively in your teaching practice, it’s important to move beyond
 
 Rather than thinking of prompts as fixed templates, it’s helpful to think of prompting as a skill. Like any skill, it improves with practice.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering:</strong> A technique that involves refining and adjusting the inputs given to AI models to achieve more accurate or desired outputs.</p>
-</div>
+Strong prompts typically include:
+* Clear context (grade level, subject, task)
+* A specific goal or outcome
+* Relevant details or constraints
+* A clear request for what you want the AI to produce
 
-There are a number of ways to format prompts to get better outputs from LLMs. One simple prompt engineering structure you can use is **TaCo FoRT**.
+When these elements are missing, responses tend to be vague or less useful. When they are included, AI is much more likely to generate something you can actually use.
+
+This is where prompt frameworks such as **TaCo FoRT** can help.
 
 <p align="center">
 <img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
 </p>
-
-
 MARKDOWN

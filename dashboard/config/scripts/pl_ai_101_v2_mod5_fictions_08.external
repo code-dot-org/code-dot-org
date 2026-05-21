@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Deepfakes and AI-Generated Media
 
-AI can generate misleading or incorrect text. However, AI can also be used to intentionally create highly convincing images, audio, and video.
+So far, we’ve explored how AI can generate misleading or incorrect text. However, AI can also be used to intentionally create highly convincing images, audio, and video.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Deepfakes:</strong> using AI in order to manipulate or generate realistic content that can make it appear as though someone said or did something they did not.</p>
@@ -43,7 +43,7 @@ Images that depict events that never happened
 
 <br>
 
-> **💬 Quick Reflection:** Can you think of an example of a deepfake you've seen or heard of?
+>#### **💬 Quick Reflection:** Can you think of an example of a deepfake you've seen or heard of?
 
 Deepfakes are designed to look and sound believable even when they are not accurate. Much like AI fictions, they can:
 * Blur the line between real and fake information

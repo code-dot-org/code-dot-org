@@ -9,128 +9,52 @@ Imagine opening a music app and seeing a playlist labeled “Top 10 Songs Right 
 
 <br>
 
-<img src="https://images.code.org/87e2e5cfc91d0d45db89936e0818a5d1-image-1767631501751.png" alt="example list of top 10 songs" width="500px" style="border-radius:10px; float:right; margin: 0 10px 10px 20px;">
+<img src="https://images.code.org/87e2e5cfc91d0d45db89936e0818a5d1-image-1767631501751.png" alt="example list of top 10 songs" width="400px" style= "border-radius:10px; float:right; margin: 0 10px 10px 20px;">
 
-## Design the Playlist
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
 
-You are designing the rule for the “Top 10 Songs Right Now” playlist.
+**Pause & Reflect**
 
-**Before clicking, think about which rule you would use and what that rule might leave out.**
+- If an app only shows songs from the Top 10, what happens to everyone else?
 
-<div style="clear:both;"></div>
+- What rule do you think the app uses to decide which songs appear?
 
-<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin:24px 0;">
+- What is one change you could make to that rule to make the playlist feel more fair or inclusive?
 
-  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
-      🎧 Most streamed songs
-    </summary>
-    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
-      This rule keeps songs with the highest play counts.<br><br>
-      <strong>What might get left out?</strong><br>
-      Newer artists, local artists, or songs that are loved by smaller groups of listeners.
-    </div>
-  </details>
+<br>
 
-  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
-      🆕 Newest songs
-    </summary>
-    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
-      This rule keeps songs released most recently.<br><br>
-      <strong>What might get left out?</strong><br>
-      Older songs, classics, or songs that are still popular but not new.
-    </div>
-  </details>
+> #### You may have considered things like: someone decided this rule, some data is included, some is excluded, newer, older, or less mainstream artists may be left out. 
 
-  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
-      🌎 Trending near you
-    </summary>
-    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
-      This rule keeps songs that are popular in your location.<br><br>
-      <strong>What might get left out?</strong><br>
-      Songs trending in other communities, regions, or cultures.
-    </div>
-  </details>
-
-  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
-      🌱 Emerging artists
-    </summary>
-    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
-      This rule keeps songs from artists with fewer total streams.<br><br>
-      <strong>What might get left out?</strong><br>
-      The most popular or familiar songs that many users may expect to see.
-    </div>
-  </details>
-
-</div>
-
-<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
-
-<p style="font-size:18px;line-height:1.5;margin:0;">
-<strong>💡 Key Idea:</strong> A filter is not just a technical rule. It is a choice about what gets included, what gets hidden, and what users are most likely to see.
-</p>
-
-</div>
-
+👉 This playlist didn’t happen by accident. It was created using a **filtering algorithm**.
 ---
 
-## What is a filter algorithm?
+## What is a filter algorithm? 
 
 A **filter algorithm** is a rule a program uses to look through a list of data and keep only the items that meet certain conditions.
 
-In JavaScript, filtering is often used with arrays of objects to narrow a large list into a smaller, more relevant one, like deciding which songs, messages, or results appear in a web app.
+In JavaScript, filtering is often used with arrays of objects to narrow a large list into a smaller, more relevant one like deciding which songs, messages, or results appear in a web app.
 
 <br>
 
-<div style="text-align:center;width:80%;margin:0 auto;">
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="
-    font-size:18px;
-    background-color:#F5F7F8;
-    padding:12px 18px;
-    border-left:5px solid #8148B2;
-    border-right:5px solid #8148B2;
-    display:inline-block;
-    line-height:1.5;
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
   ">
-    Every filter starts as a <b>condition</b>.<br>
-    Every condition is a <b>choice</b> that changes what is visible and what is hidden.
+    Every filter starts as a <b>condition</b>. <br>Every condition is a <b>choice</b> that changes what is visible and what is hidden.
   </p>
 </div>
 
----
 
-## Quick Check
 
-Think back to the playlist rule you chose.
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-What condition did your filter use?
-</summary>
-
-<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
-Your condition might have been based on stream count, release date, location, or artist popularity. The condition tells the program which songs to keep.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
-What did your filter hide?
-</summary>
-
-<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
-Every filter leaves something out. That is why students should think carefully about the rule they choose and what impact it has on the results.
-</div>
-</details>
 
 ---
+## Next up
 
-## Next Up
-
-Let’s take a look at how this algorithm looks in JavaScript.
+Let's take a look at how this algorithm looks in JavaScript. 
 MARKDOWN

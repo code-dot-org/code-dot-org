@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:34.000Z",
   "level_num": "custom",
@@ -43,7 +42,7 @@
           "language": "css",
           "contents": "/* 1) ADD A RULE SET FOR EACH PSEUDO-CLASS TO STYLE THE ANCHOR TAG */\n\n\n\n\n\n\n\n/* body style */\nbody {\n  background-color: #f3eff6;\n  text-align: center;\n  font-family: Arial;\n}\n\n/* title style */\nh1 {\n  font-family: Arial;\n  font-size: 36px;\n  text-align: center;\n}\n\nh2 {\n  font-size: 24px;\n}\n\n/* paragraph style */\np {\n  font-size: 18px;\n}\n\n/* image flex layout style */\n.container1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n}\n\n/* image flex layout style */\n.container2 {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n}\n\n/* image style */\nimg {\n  border-style: solid;\n  border-radius: 15px;\n  width: 350px;\n  margin: 15px;\n}\n\n/* citation style */\n.citation {\n  height: 300px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.citation > p {\n  font-size: 12px;\n  font-style: italic;\n}",
           "folderId": "0",
-          "active": true
+          "active": false
         },
         "3": {
           "id": "3",
@@ -83,12 +82,16 @@
           "folderId": "0",
           "url": "/level_starter_assets/CSD%20U2L18-L7-2025/uuid/a2c24941-0768-4b16-b190-35aa4c578621.png",
           "type": "starter",
-          "active": false
+          "active": true
         }
       },
       "openFiles": [
         "1",
-        "2"
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
       ]
     },
     "ai_tutor_prompt_settings": {
@@ -104,11 +107,9 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2",
-    "offer_browser_tts": "false",
-    "require_edit_to_continue": "false",
-    "encrypted_exemplar_sources": "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\n"
+    "name_suffix": "_2025-v2"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:34.248+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L7-2025\"},{\"changed_at\":\"2026-05-20 17:17:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:22:09 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:22:40 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:23:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:23:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:34.248+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L7-2025\"}]"
 }]]></config>
 </Weblab2>

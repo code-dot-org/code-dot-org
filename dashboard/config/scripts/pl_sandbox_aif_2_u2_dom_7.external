@@ -58,7 +58,7 @@ Those three steps are how we turn static HTML into something dynamic.
 
 <p style="font-size:14pt;">
 The <strong>DOM (Document Object Model)</strong> is the system that makes those three steps possible.
-Think of the DOM like a <strong>live blueprint of your webpage</strong>.<br><br>
+Think of the DOM like a <strong>live blueprint of your webpage</strong>.
 If HTML is the building plan and CSS is the paint and decor, the DOM is the 
 <strong>labeled wiring system inside the walls</strong> that lets JavaScript flip switches and make things happen.
 </p>
@@ -95,60 +95,12 @@ If HTML is the building plan and CSS is the paint and decor, the DOM is the
 When JavaScript interacts with the DOM, <strong>structure (HTML), style (CSS), and behavior (JavaScript)</strong> work together as one unified, dynamic system.
 </p>
 
-
 <hr>
 
-<h2>Quick Check: Which Step Is It?</h2>
+<h2>Next Up</h2>
 
 <p style="font-size:14pt;">
-Read each JavaScript action below. Before clicking, decide whether it is an example of <strong>Select</strong>, <strong>Listen</strong>, or <strong>Update</strong>.
+Now let’s see what this looks like in actual code.
 </p>
 
-<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin:24px 0;">
-
-  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-  <summary style="cursor:pointer; font-weight:700; list-style:none; text-align:center; padding:6px 0;">
-  <code style="font-size:10pt; background:#ffffff; padding:6px 10px; border-radius:8px; display:inline-block;">
-    document.querySelector("#message")
-  </code>
-</summary>
-    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
-      ✅ <strong>Select</strong><br>
-      This code chooses an element from the page so JavaScript can work with it.
-    </div>
-  </details>
-
-  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
- <summary style="cursor:pointer; font-weight:700; list-style:none; text-align:center; padding:6px 0;">
-  <code style="font-size:10pt; background:#ffffff; padding:6px 10px; border-radius:8px; display:inline-block;">
-    button.addEventListener("click", ...)
-  </code>
-</summary>
-    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
-      ✅ <strong>Listen</strong><br>
-      This code waits for a user action, like a click, before running a response.
-    </div>
-  </details>
-
-  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
-  <summary style="cursor:pointer; font-weight:700; list-style:none; text-align:center; padding:6px 0;">
-  <code style="font-size:10pt; background:#ffffff; padding:6px 10px; border-radius:8px; display:inline-block;">
-    message.textContent = "Hello!"
-  </code>
-</summary>
-    <div style="margin-top:14px; font-size:12pt; line-height:1.5;">
-      ✅ <strong>Update</strong><br>
-      This code changes what the user sees on the page.
-    </div>
-  </details>
-
-</div>
-
-<div style="background-color:#B7E0E5; border-radius:30px; color:#000000; width:95%; padding:18px 24px; margin:24px 0;">
-
-<p style="font-size:18px; line-height:1.5; margin:0;">
-<strong>💡 Teacher Tip:</strong> Students may copy JavaScript without understanding which job each line is doing. Ask them to label code as <strong>Select</strong>, <strong>Listen</strong>, or <strong>Update</strong> before they try to change it.
-</p>
-
-</div>
 MARKDOWN
