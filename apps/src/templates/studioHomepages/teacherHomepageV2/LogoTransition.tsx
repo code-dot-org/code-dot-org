@@ -8,15 +8,20 @@ interface LogoTransitionProps {
   svgSrc: string;
 }
 
-// Total time the GIF plays before we cross-fade to the static SVG. GIFs do not
-// fire an "ended" event, so this is calibrated to the asset's animation length.
+// GIFs do not fire an "ended" event, so the play duration is calibrated to
+// the asset's animation length.
 const GIF_DURATION_MS = 2500;
 const CROSSFADE_MS = 500;
 const MORPH_MS = 700;
 
-// Selector for the .header_logo container in the Rails-rendered site header,
-// which is also where the morphed logo lands.
+// The .header_logo container in the Rails-rendered site header; also where
+// the morphed card lands.
 const HEADER_LOGO_SELECTOR = '#header_logo_container';
+
+// Style tag id used by show.html.haml to pre-hide the native logo <img>
+// before React mounts. Removed when LogoTransition unmounts so the native
+// logo can show again on other routes.
+const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
 type Phase = 'gif' | 'crossfade' | 'morphing' | 'done';
 
@@ -29,35 +34,46 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
       : null
   );
 
-  // Hide the Rails-rendered <img> for the duration of the animation; restore
-  // visibility once the morph lands so the static logo takes over.
+  // Keep the Rails-rendered <img> hidden for as long as LogoTransition is
+  // mounted: the React card IS the visible logo from the moment the page
+  // loads (the pre-hide <style> in show.html.haml suppresses the initial
+  // flash) through the end of the morph (the card lands in place). On
+  // unmount (user navigates away from /home), clear the inline hide and
+  // remove the pre-hide style tag so the native logo takes over again.
   useEffect(() => {
     if (!mountTarget) return;
     const nativeImg = mountTarget.querySelector<HTMLImageElement>('img');
-    if (!nativeImg) return;
-    nativeImg.style.visibility = 'hidden';
+    if (nativeImg) {
+      nativeImg.style.visibility = 'hidden';
+    }
     return () => {
-      nativeImg.style.visibility = '';
+      if (nativeImg) {
+        nativeImg.style.visibility = '';
+      }
+      document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
     };
   }, [mountTarget]);
 
-  // Before first paint, transform the card from its natural location inside
-  // .header_logo to a centered, scaled-up position in the viewport. When the
-  // morph phase starts we clear the transform and the CSS transition does the
-  // rest, sliding it back to the header.
+  // Before first paint, displace and scale the card from its natural rect
+  // inside .header_logo out to a centered modal-sized rect in the viewport.
+  // Non-uniform scale gives the modal a friendlier aspect ratio than the
+  // narrow header slot would imply; the image inside uses object-fit:contain
+  // so it stays undistorted while the white card background morphs.
   useLayoutEffect(() => {
     if (!mountTarget || !cardRef.current) return;
     const rect = mountTarget.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
 
-    const centeredWidth = Math.min(window.innerWidth * 0.5, 520);
-    const scale = centeredWidth / rect.width;
+    const modalWidth = Math.min(window.innerWidth * 0.6, 600);
+    const modalHeight = Math.min(window.innerHeight * 0.4, 300);
+    const scaleX = modalWidth / rect.width;
+    const scaleY = modalHeight / rect.height;
     const sourceCx = rect.left + rect.width / 2;
     const sourceCy = rect.top + rect.height / 2;
     const tx = window.innerWidth / 2 - sourceCx;
     const ty = window.innerHeight / 2 - sourceCy;
 
-    cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
   }, [mountTarget]);
 
   useEffect(() => {
@@ -78,18 +94,20 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
   }, []);
 
   // Clearing the transform lets the CSS transition glide the card from the
-  // viewport center back to its natural rect inside .header_logo.
+  // viewport center back to its natural rect inside .header_logo, while the
+  // .cardLanded class fades out the white fill/shadow in lockstep.
   useEffect(() => {
     if (phase === 'morphing' && cardRef.current) {
       cardRef.current.style.transform = '';
     }
   }, [phase]);
 
-  if (!mountTarget || phase === 'done') return null;
+  if (!mountTarget) return null;
 
   const gifHidden = phase !== 'gif' && phase !== 'crossfade';
   const svgHidden = phase === 'gif';
-  const backdropFading = phase === 'morphing';
+  const backdropFading = phase === 'morphing' || phase === 'done';
+  const cardLanded = phase === 'morphing' || phase === 'done';
 
   return (
     <>
@@ -102,7 +120,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
         document.body
       )}
       {createPortal(
-        <div ref={cardRef} className={styles.card}>
+        <div
+          ref={cardRef}
+          className={`${styles.card} ${cardLanded ? styles.cardLanded : ''}`}
+        >
           <img
             src={gifSrc}
             alt=""
