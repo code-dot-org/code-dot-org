@@ -5,12 +5,15 @@
 
 -# When the codeai-brand logo morph animation will run on initial load,
 -# pre-hide the Rails-rendered header logo so users don't see it flash
--# before the React modal mounts. The LogoTransition component removes
--# this <style> tag when it unmounts (i.e., user navigates away from /home).
+-# before the React modal mounts. Emit into <head> via content_for so the
+-# rule is parsed before the header markup; otherwise the browser paints
+-# the logo and *then* hides it. LogoTransition removes the tag when its
+-# useLayoutEffect runs.
 - if Cdo::Brand.current_brand_code(request) == Cdo::Brand::BRAND_CODEAI && request.path.end_with?('/teacher_dashboard/home')
-  %style#logo-transition-pre-hide
-    :plain
-      #header_logo_container img { visibility: hidden; }
+  - content_for :head do
+    %style#logo-transition-pre-hide
+      :plain
+        #header_logo_container img { visibility: hidden; }
 
 :ruby
   teacher_dashboard_data = {}
