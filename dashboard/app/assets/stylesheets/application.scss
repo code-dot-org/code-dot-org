@@ -1201,6 +1201,11 @@ $default-modal-width: 640px;
 
 html[data-brand="codeai"] .header_logo {
   position: relative;
+  // No new stacking context here: the LogoTransition card portals into this
+  // element with z-index 9999 and must sit above the document.body backdrop
+  // at z-index 9998. The base rule sets z-index: 1, which would cap the
+  // card's effective stacking at 1; z-index: auto avoids creating a context.
+  z-index: auto;
   margin-top: 0;
   padding-top: 0;
   max-width: 240px;

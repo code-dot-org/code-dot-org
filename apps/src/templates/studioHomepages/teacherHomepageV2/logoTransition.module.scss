@@ -44,6 +44,14 @@
   box-shadow: none;
 }
 
+// Applied on the first render only, so the layout-effect-applied transform
+// places the card at the modal position with no opening animation. Removed
+// after the first paint, restoring the regular transitions that drive the
+// morph back to the header slot.
+.cardNoTransition {
+  transition: none;
+}
+
 .image {
   position: absolute;
   inset: 0;

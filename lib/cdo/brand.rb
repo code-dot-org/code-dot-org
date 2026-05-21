@@ -26,7 +26,7 @@ module Cdo
       },
       BRAND_CODEAI => {
         logo_filename: 'logo.svg',
-        header_logo_filename: 'code2-logo-inverse.svg',
+        header_logo_filename: 'codeai-logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
         legal_name: 'Code.ai',

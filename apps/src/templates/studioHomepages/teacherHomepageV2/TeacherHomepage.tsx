@@ -40,6 +40,7 @@ const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
   logoTransitionGifUrl?: string;
+  logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
 
@@ -50,6 +51,7 @@ interface EssentialAiDependencyResponse {
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
   logoTransitionGifUrl,
+  logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
   const isMiniTutorialEnabled =
@@ -245,7 +247,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   return (
     <div className={styles.teacherHomepage}>
       {logoTransitionGifUrl && logoSvgUrl && (
-        <LogoTransition gifSrc={logoTransitionGifUrl} svgSrc={logoSvgUrl} />
+        <LogoTransition
+          gifSrc={logoTransitionGifUrl}
+          mp4Src={logoTransitionMp4Url}
+          svgSrc={logoSvgUrl}
+        />
       )}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>

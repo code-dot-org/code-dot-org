@@ -78,6 +78,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   logoTransitionGifUrl?: string;
+  logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
 
@@ -88,6 +89,7 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   logoTransitionGifUrl,
+  logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
   const sectionId = useAppSelector(
@@ -131,6 +133,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 <TeacherHomepage
                   studioUrlPrefix={studioUrlPrefix}
                   logoTransitionGifUrl={logoTransitionGifUrl}
+                  logoTransitionMp4Url={logoTransitionMp4Url}
                   logoSvgUrl={logoSvgUrl}
                 />
                 <ScrollRestoration />
@@ -359,6 +362,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       selectedSection,
       studioUrlPrefix,
       logoTransitionGifUrl,
+      logoTransitionMp4Url,
       logoSvgUrl,
     ]
   );

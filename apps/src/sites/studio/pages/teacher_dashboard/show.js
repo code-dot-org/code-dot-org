@@ -51,6 +51,7 @@ const {
   providers,
   flash,
   logoTransitionGifUrl,
+  logoTransitionMp4Url,
   logoSvgUrl,
 } = scriptData;
 
@@ -108,12 +109,14 @@ $(document).ready(function () {
         <TeacherHomepage
           studioUrlPrefix={scriptData.studioUrlPrefix}
           logoTransitionGifUrl={logoTransitionGifUrl}
+          logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
           logoTransitionGifUrl={logoTransitionGifUrl}
+          logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />
       )}
