@@ -52,7 +52,7 @@
 // places the card at the modal position with no opening animation. The
 // inner image transitions are also suppressed: the card starts at 0x0
 // until JS sizes it, which would otherwise animate the image's
-// calc(100% - 20px) width/height from ~0 to their final values — that's
+// calc(100% - 60px) width/height from ~0 to their final values — that's
 // the squish-then-correct on the first frame. Removed after the first
 // paint, restoring the regular transitions that drive the morph back to
 // the header slot.
@@ -61,7 +61,7 @@
   transition: none;
 }
 
-// 10px of breathing room around the GIF/SVG/video in the centered modal.
+// 30px of breathing room around the GIF/SVG/video in the centered modal.
 // Width/height are explicit (calc-based, not derived from right/bottom
 // insets) because <video> won't auto-size off those insets the way <img>
 // does — without an explicit width it falls back to the media's intrinsic
@@ -70,10 +70,10 @@
 // (177x30) state and crush the logo.
 .image {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
+  top: 30px;
+  left: 30px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
   object-fit: contain;
   opacity: 1;
   transition:
