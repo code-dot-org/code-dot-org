@@ -11,8 +11,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     @lesson3 = create(:lesson, lesson_group: lesson_group)
     @request = {
       user_id: @user.id,
-      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
-      credits_available: false
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id]
     }
     @section = create(:section, user: @user, script_id: @unit.id, course_id: @course.id)
 
@@ -37,11 +36,11 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'perform calls AiLessonSummariesHelper for each lesson_id' do
     # Expect the helper to be called for each lesson
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, @user.id, false, false)
+      with(@lesson1.id, @user.id, false)
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson2.id, @user.id, false, false)
+      with(@lesson2.id, @user.id, false)
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson3.id, @user.id, false, false)
+      with(@lesson3.id, @user.id, false)
 
     AiLessonSummariesJob.perform_now(request: @request)
   end
@@ -50,12 +49,11 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     single_request = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, @user.id, false, false)
+      with(@lesson1.id, @user.id, false)
 
     AiLessonSummariesJob.perform_now(request: single_request)
   end
@@ -64,8 +62,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     empty_request = {
       user_id: @user.id,
       lesson_ids: [],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     # Should not call the helper at all
@@ -145,15 +142,14 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     string_request = {
       user_id: @user.id.to_s,
       lesson_ids: [@lesson1.id.to_s, @lesson2.id.to_s],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     # Should convert strings to integers when calling helper
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id.to_s, @user.id.to_s, false, false)
+      with(@lesson1.id.to_s, @user.id.to_s, false)
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson2.id.to_s, @user.id.to_s, false, false)
+      with(@lesson2.id.to_s, @user.id.to_s, false)
 
     AiLessonSummariesJob.perform_now(request: string_request)
   end
@@ -162,8 +158,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     malformed_request = {
       user_id: @user.id,
       lesson_ids: nil,
-      unit_id: nil,
-      credits_available: nil
+      unit_id: nil
     }
 
     # Should raise an error when trying to iterate over nil
@@ -175,12 +170,11 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'job handles missing user_id in request' do
     request_without_user = {
       lesson_ids: [@lesson1.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
-      with(@lesson1.id, nil, false, false)
+      with(@lesson1.id, nil, false)
 
     AiLessonSummariesJob.perform_now(request: request_without_user)
   end
@@ -213,7 +207,6 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     complex_request = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id, @lesson2.id],
-      credits_available: false,
       metadata: {
         source: 'unit_generation',
         timestamp: Time.now.to_i
@@ -248,8 +241,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     lesson_ids = (1..10).map {create(:lesson).id}
     large_request = {
       user_id: @user.id,
-      lesson_ids: lesson_ids,
-      credits_available: false
+      lesson_ids: lesson_ids
     }
 
     # Mock helper to avoid actual API calls
@@ -269,8 +261,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     request_with_unit = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
@@ -294,8 +285,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     request_with_unit = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
@@ -311,8 +301,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'after_perform uses first section when unit_id not provided' do
     request_without_unit = {
       user_id: @user.id,
-      lesson_ids: [@lesson1.id, @lesson2.id],
-      credits_available: false
+      lesson_ids: [@lesson1.id, @lesson2.id]
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
@@ -330,8 +319,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     request_with_nonmatching_unit = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id],
-      unit_id: other_unit.id,
-      credits_available: false
+      unit_id: other_unit.id
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
@@ -348,8 +336,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     user_without_sections = create(:teacher)
     request_for_user_without_sections = {
       user_id: user_without_sections.id,
-      lesson_ids: [@lesson1.id, @lesson2.id],
-      credits_available: false
+      lesson_ids: [@lesson1.id, @lesson2.id]
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
@@ -363,8 +350,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     request_with_unit = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id, @lesson2.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
@@ -383,8 +369,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     request_with_unit = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
-      unit_id: @unit.id,
-      credits_available: false
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)

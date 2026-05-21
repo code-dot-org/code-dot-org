@@ -50,7 +50,7 @@ class AiLessonSummariesJob < ApplicationJob
 
   def perform(request:)
     request[:lesson_ids].each do |lesson_id|
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], false, request[:credits_available])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], false)
     end
   end
 end
