@@ -1,5 +1,7 @@
 // Fullscreen dimmer behind the centered card. Lives in document.body so
-// it's not clipped by the teacher dashboard's overflow.
+// it's not clipped by the teacher dashboard's overflow. Starts at opacity
+// 0 (via .backdropOpening on first paint) and fades in over 300ms; later
+// fades out over 700ms in lockstep with the card morph.
 .backdrop {
   position: fixed;
   inset: 0;
@@ -7,11 +9,16 @@
   opacity: 1;
   z-index: 9998;
   pointer-events: none;
-  transition: opacity 700ms ease;
+  transition: opacity 300ms ease;
+}
+
+.backdropOpening {
+  opacity: 0;
 }
 
 .backdropFading {
   opacity: 0;
+  transition: opacity 700ms ease;
 }
 
 // The card is portaled to document.body to escape stacking contexts on
@@ -30,7 +37,9 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
+  opacity: 1;
   transition:
+    opacity 300ms ease,
     top 700ms cubic-bezier(0.4, 0, 0.2, 1),
     left 700ms cubic-bezier(0.4, 0, 0.2, 1),
     width 700ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -40,6 +49,10 @@
     box-shadow 700ms ease;
   pointer-events: none;
   overflow: hidden;
+}
+
+.cardOpening {
+  opacity: 0;
 }
 
 .cardLanded {

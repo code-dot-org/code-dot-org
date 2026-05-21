@@ -11,6 +11,7 @@ interface LogoTransitionProps {
 
 // Calibrated to the GIF asset's runtime; GIFs do not fire an "ended" event,
 // so without the ?logo-mp4=true override we wait on a fixed timer.
+const OPEN_FADE_MS = 300;
 const GIF_DURATION_MS = 8000;
 const CROSSFADE_MS = 500;
 const MORPH_MS = 700;
@@ -23,7 +24,7 @@ const HEADER_LOGO_SELECTOR = '#header_logo_container';
 // before React mounts.
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
-type Phase = 'gif' | 'crossfade' | 'morphing' | 'done';
+type Phase = 'opening' | 'gif' | 'crossfade' | 'morphing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
 
@@ -35,7 +36,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const targetRectRef = useRef<Rect | null>(null);
-  const [phase, setPhase] = useState<Phase>('gif');
+  const [phase, setPhase] = useState<Phase>('opening');
 
   // Honor ?logo-mp4=true: play the MP4 once and advance phase on the
   // actual 'ended' event instead of a timer.
@@ -116,6 +117,15 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     };
   }, [mountTarget]);
 
+  // Hold in the opening phase long enough for the backdrop + card fade-in
+  // to finish, then advance to 'gif' so the <img>/<video> is mounted and
+  // starts loading/playing.
+  useEffect(() => {
+    if (phase !== 'opening') return;
+    const t = window.setTimeout(() => setPhase('gif'), OPEN_FADE_MS);
+    return () => window.clearTimeout(t);
+  }, [phase]);
+
   // Drive the play phase. With ?logo-mp4=true we wait on the <video>'s
   // 'ended' event; otherwise on a calibrated timer for the looping GIF.
   useEffect(() => {
@@ -155,52 +165,61 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
 
   if (!mountTarget) return null;
 
+  const showMedia = phase !== 'opening';
   const gifHidden = phase !== 'gif' && phase !== 'crossfade';
-  // Hold the SVG hidden through the GIF fade-out; it only starts fading
-  // in once the card begins shrinking, so the final logo appears together
-  // with the morph rather than overlapping the GIF mid-modal.
-  const svgHidden = phase === 'gif' || phase === 'crossfade';
+  // Hold the SVG hidden through the opening, GIF play, and GIF fade-out;
+  // it only starts fading in once the card begins shrinking, so the final
+  // logo appears together with the morph rather than overlapping the GIF
+  // mid-modal.
+  const svgHidden =
+    phase === 'opening' || phase === 'gif' || phase === 'crossfade';
   const backdropFading = phase === 'morphing' || phase === 'done';
   const cardLanded = phase === 'morphing' || phase === 'done';
 
+  const backdropClassName = [
+    styles.backdrop,
+    !transitionsEnabled && styles.backdropOpening,
+    backdropFading && styles.backdropFading,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  const cardClassName = [
+    styles.card,
+    !transitionsEnabled && styles.cardNoTransition,
+    !transitionsEnabled && styles.cardOpening,
+    cardLanded && styles.cardLanded,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <>
+      {createPortal(<div className={backdropClassName} />, document.body)}
       {createPortal(
-        <div
-          className={`${styles.backdrop} ${
-            backdropFading ? styles.backdropFading : ''
-          }`}
-        />,
-        document.body
-      )}
-      {createPortal(
-        <div
-          ref={cardRef}
-          className={`${styles.card} ${
-            transitionsEnabled ? '' : styles.cardNoTransition
-          } ${cardLanded ? styles.cardLanded : ''}`}
-        >
-          {useVideo && mp4Src ? (
-            <video
-              ref={videoRef}
-              src={mp4Src}
-              autoPlay
-              muted
-              playsInline
-              onEnded={handleVideoEnded}
-              className={`${styles.image} ${
-                gifHidden ? styles.imageHidden : ''
-              }`}
-            />
-          ) : (
-            <img
-              src={gifSrc}
-              alt=""
-              className={`${styles.image} ${
-                gifHidden ? styles.imageHidden : ''
-              }`}
-            />
-          )}
+        <div ref={cardRef} className={cardClassName}>
+          {showMedia &&
+            (useVideo && mp4Src ? (
+              <video
+                ref={videoRef}
+                src={mp4Src}
+                autoPlay
+                muted
+                playsInline
+                onEnded={handleVideoEnded}
+                className={`${styles.image} ${
+                  gifHidden ? styles.imageHidden : ''
+                }`}
+              />
+            ) : (
+              <img
+                src={gifSrc}
+                alt=""
+                className={`${styles.image} ${
+                  gifHidden ? styles.imageHidden : ''
+                }`}
+              />
+            ))}
           <img
             src={svgSrc}
             alt=""
