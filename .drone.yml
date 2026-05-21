@@ -291,8 +291,7 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      # - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
-      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -338,14 +337,13 @@ volumes:
 
 trigger:
   branch:
-    exclude:
-      - "production"
-      - "levelbuilder"
+    - "staging"
+    - "staging-next"
   event:
-    - pull_request
+    - push
 
 ---
 kind: signature
-hmac: 1232b3f73bcef6bf1cce7c0136a564305b18c3fe5ad985d2f15266482cb03645
+hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
 
 ...
