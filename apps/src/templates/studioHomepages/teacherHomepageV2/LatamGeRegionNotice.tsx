@@ -13,6 +13,7 @@ import styles from './teacherHomepage.module.scss';
 
 const TARGET_LOCALE = 'es-MX';
 const NOTICE_STATE_KEY = 'LatamGeRegionNotice';
+const NOTICE_SHOWN_STATE = 'shown';
 const NOTICE_CLOSED_STATE = 'closed';
 
 export const LatamGeRegionNotice: FC = () => {
@@ -31,8 +32,13 @@ export const LatamGeRegionNotice: FC = () => {
   }, [locale]);
 
   useEffect(() => {
-    isVisible &&
+    if (
+      isVisible &&
+      tryGetLocalStorage(NOTICE_STATE_KEY, '') !== NOTICE_SHOWN_STATE
+    ) {
       analyticsReporter.sendEvent(EVENTS.LATAM_GE_REGION_NOTICE_SHOWN);
+      trySetLocalStorage(NOTICE_STATE_KEY, NOTICE_SHOWN_STATE);
+    }
   }, [isVisible]);
 
   if (!isVisible) return <></>;
