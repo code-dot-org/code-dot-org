@@ -57,30 +57,33 @@
 }
 
 // 10px of breathing room around the GIF/SVG/video in the centered modal.
-// The insets transition back to 0 in lockstep with the card morph so the
-// padding doesn't survive into the landed (177x30) state and crush the
-// logo to a few pixels of usable area.
+// Width/height are explicit (calc-based, not derived from right/bottom
+// insets) because <video> won't auto-size off those insets the way <img>
+// does — without an explicit width it falls back to the media's intrinsic
+// resolution and blows past the modal. The padding transitions back to 0
+// in lockstep with the card morph so it doesn't survive into the landed
+// (177x30) state and crush the logo.
 .image {
   position: absolute;
   top: 10px;
-  right: 10px;
-  bottom: 10px;
   left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
   object-fit: contain;
   opacity: 1;
   transition:
     opacity 500ms ease,
     top 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    right 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    bottom 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    left 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    left 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cardLanded .image {
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .imageHidden {
