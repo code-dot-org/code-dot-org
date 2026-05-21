@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -158,11 +158,6 @@ steps:
   # Restore the staging build we created in the `cache-staging-build` pipeline
   - name: get-cached-staging-build
     image: plugins/s3-cache
-    volumes:
-      # Even files cached with absolute paths will be restored into the
-      # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: mysql
-        path: /drone/src/var/lib/mysql
     settings:
       filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
@@ -214,9 +209,6 @@ steps:
     # see: docker/ci/Dockerfile
     image: codedotorg/cdo-ci:internal-mysql
     pull: always
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -238,7 +230,8 @@ steps:
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      - sudo chown -R mysql:mysql /var/lib/mysql
+        # Restore cached database
+      - mysql --user=root < mysql_databases.sql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -248,10 +241,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-volumes:
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
@@ -291,7 +280,8 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      # - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -305,12 +295,10 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
+      - mysqldump --user=root --all-databases > mysql_databases.sql
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
@@ -318,9 +306,6 @@ steps:
 
   - name: cache-staging-ci-build-internal-mysql
     image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     settings:
       filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
@@ -329,18 +314,14 @@ steps:
       pull: true
       mount:
         - .
-        - /var/lib/mysql
-
-volumes:
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 
 ---
 kind: signature
