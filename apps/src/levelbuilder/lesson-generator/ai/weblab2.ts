@@ -5,8 +5,13 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {LevelContext} from './context';
-import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
+import {LevelContext} from '../../curriculum-generator/ai/context';
+import {
+  getTextModel,
+  logPrompt,
+  logResponse,
+  PROMPT_TAGS,
+} from '../../curriculum-generator/ai/shared';
 
 const weblabPlanSchema = Output.object({
   schema: z.object({

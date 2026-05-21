@@ -1,15 +1,16 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
+import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
+import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 import {loadLessonLevelProperties} from '../lesson-generator/levelApi';
 
 import {generateSlide} from './ai/slide';
 import {generateSlidesOutline} from './ai/slidesOutline';
 import SlideCard from './components/SlideCard';
-import SlidesOutlineBlock from './components/SlidesOutlineBlock';
 import SlidesProgressDialog from './components/SlidesProgressDialog';
 import SlidesSummaryDialog from './components/SlidesSummaryDialog';
 import {buildInitialState, newSlideSpec} from './helpers/buildInitialState';
@@ -23,7 +24,7 @@ import {
   SlideSpec,
 } from './types';
 
-import moduleStyles from './lesson-slides-generator.module.scss';
+import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
 interface LessonSlidesGeneratorProps {
   lesson: ExistingLessonData;
@@ -33,7 +34,31 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
   lesson,
 }) => {
   const initial = useMemo(() => buildInitialState(lesson), [lesson]);
-  const [slideSpecs, setSlideSpecs] = useState<SlideSpec[]>(initial);
+  const {
+    specs: slideSpecs,
+    setSpecs: setSlideSpecs,
+    updateSpec,
+    removeSpec,
+    moveSpec,
+    addSpec,
+  } = useReorderableList<SlideSpec>({
+    initial,
+    getKey: s => s.key,
+    newSpec: newSlideSpec,
+    // Same logic as the lesson generator: editing the description
+    // re-derives the `generate` checkbox from whether the description
+    // still matches what we last generated for. The user can still
+    // override manually after.
+    onAfterPatch: (_prev, next, patch) => {
+      if (!('description' in patch)) return next;
+      return {
+        ...next,
+        generate:
+          next.lastGeneratedDescription === undefined ||
+          next.description.trim() !== next.lastGeneratedDescription,
+      };
+    },
+  });
   const [outline, setOutline] = useState<string>(
     lesson.generateSlidesOutline || ''
   );
@@ -45,67 +70,8 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
   const [summary, setSummary] = useState<SlidesGenerationSummary | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
 
-  // Borrow the AI_CHAT_LAB context so generateText passes its access
-  // check, same as the lesson generator on the parent branch.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId: lesson.id,
-    });
-  }, [lesson.id]);
-
-  // Block accidental navigation while generation is in progress.
-  useEffect(() => {
-    if (!isGenerating) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [isGenerating]);
-
-  const updateSpec = useCallback((key: string, patch: Partial<SlideSpec>) => {
-    setSlideSpecs(specs =>
-      specs.map(s => {
-        if (s.key !== key) return s;
-        const next = {...s, ...patch};
-        // Same logic as the parent branch's lesson generator: editing a
-        // description re-derives the `generate` checkbox from whether
-        // the description still matches what we last generated for. The
-        // user can still override manually after.
-        if ('description' in patch) {
-          next.generate =
-            next.lastGeneratedDescription === undefined ||
-            next.description.trim() !== next.lastGeneratedDescription;
-        }
-        return next;
-      })
-    );
-  }, []);
-
-  const removeSpec = useCallback((key: string) => {
-    setSlideSpecs(specs => specs.filter(s => s.key !== key));
-  }, []);
-
-  const moveSpec = useCallback((key: string, direction: 'up' | 'down') => {
-    setSlideSpecs(specs => {
-      const i = specs.findIndex(s => s.key === key);
-      if (i === -1) return specs;
-      const t = direction === 'up' ? i - 1 : i + 1;
-      if (t < 0 || t >= specs.length) return specs;
-      const next = [...specs];
-      [next[i], next[t]] = [next[t], next[i]];
-      return next;
-    });
-  }, []);
-
-  const addSpec = useCallback(() => {
-    setSlideSpecs(specs => [...specs, newSlideSpec()]);
-  }, []);
+  useAichatContext({lessonId: lesson.id});
+  useBeforeUnloadWhile(isGenerating);
 
   const appendLog = useCallback((line: string) => {
     setProgressLog(log => [...log, line]);
@@ -160,6 +126,7 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
     lesson.unitOutline,
     lesson.generateOutline,
     outline,
+    setSlideSpecs,
   ]);
 
   const handleGenerateSlides = useCallback(async () => {
@@ -293,21 +260,26 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
     lesson.generateOutline,
     outline,
     appendLog,
+    setSlideSpecs,
   ]);
 
   return (
-    <div className={moduleStyles.container}>
-      <h1 className={moduleStyles.heading}>
+    <div className={sharedStyles.container}>
+      <h1 className={sharedStyles.heading}>
         Generate slides for "{lesson.name}"
       </h1>
-      <p className={moduleStyles.subheading}>
+      <p className={sharedStyles.subheading}>
         Plan a sequence of intro slides shown to students before they start this
         lesson. Each card describes what should be on a slide; clicking Generate
         Slides turns each one into a Panels-app panel (image + overlay text) and
         writes them all to <code>{lesson.slidesFilePath}</code>.
       </p>
 
-      <SlidesOutlineBlock
+      <OutlineBlock
+        heading="Optional: describe what these intro slides should cover"
+        helpText="These slides play before the lesson, to set context for the student. Describe what you want them to cover — themes, mood, concepts to set up — and the AI will read your existing lesson content and propose a sequence of slide cards. You can edit, reorder, or delete any of them before generating the actual panels."
+        placeholder="e.g. Three slides that introduce HTML as the backbone of every webpage, motivate why structure matters, and hint at what the student will build today — without giving away the steps."
+        buttonLabel="Generate slide outlines"
         value={outline}
         onChange={setOutline}
         onGenerate={handleGenerateOutline}
@@ -316,7 +288,7 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
         error={outlineError}
       />
 
-      <div className={moduleStyles.slideList}>
+      <div className={sharedStyles.cardList}>
         {slideSpecs.map((spec, index) => (
           <SlideCard
             key={spec.key}
@@ -331,10 +303,10 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
         ))}
       </div>
 
-      <div className={moduleStyles.addButtonRow}>
+      <div className={sharedStyles.addButtonRow}>
         <button
           type="button"
-          className={moduleStyles.secondaryButton}
+          className={sharedStyles.secondaryButton}
           onClick={addSpec}
           disabled={isGenerating}
         >
@@ -343,21 +315,21 @@ const LessonSlidesGenerator: React.FC<LessonSlidesGeneratorProps> = ({
       </div>
 
       {topLevelError && (
-        <p className={moduleStyles.summaryBad} role="alert">
+        <p className={sharedStyles.summaryBad} role="alert">
           {topLevelError}
         </p>
       )}
 
-      <footer className={moduleStyles.footer}>
-        <a href={lesson.editLessonUrl} className={moduleStyles.secondaryButton}>
+      <footer className={sharedStyles.footer}>
+        <a href={lesson.editLessonUrl} className={sharedStyles.secondaryButton}>
           Back to lesson edit
         </a>
-        <a href={lesson.slidesUrl} className={moduleStyles.secondaryButton}>
+        <a href={lesson.slidesUrl} className={sharedStyles.secondaryButton}>
           View slides
         </a>
         <button
           type="button"
-          className={moduleStyles.primaryButton}
+          className={sharedStyles.primaryButton}
           onClick={handleGenerateSlides}
           disabled={isGenerating}
         >

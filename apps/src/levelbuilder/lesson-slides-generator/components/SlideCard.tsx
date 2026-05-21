@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
 import {SlideSpec} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-slides-generator.module.scss';
 
 interface SlideCardProps {
@@ -26,8 +27,8 @@ const SlideCard: React.FC<SlideCardProps> = ({
 }) => {
   const hasPanel = !!spec.panel;
   return (
-    <div className={moduleStyles.slideCard}>
-      <div className={moduleStyles.slideCardHeader}>
+    <ReorderableCard
+      title={
         <h3>
           Slide {index + 1}
           {hasPanel && (
@@ -39,39 +40,18 @@ const SlideCard: React.FC<SlideCardProps> = ({
             </span>
           )}
         </h3>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.key, 'up')}
-          disabled={disabled || index === 0}
-          aria-label="Move up"
-          title="Move up"
-        >
-          <FontAwesomeV6Icon iconName="arrow-up" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.key, 'down')}
-          disabled={disabled || index === total - 1}
-          aria-label="Move down"
-          title="Move down"
-        >
-          <FontAwesomeV6Icon iconName="arrow-down" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.deleteButton}
-          onClick={() => onRemove(spec.key)}
-          disabled={disabled}
-          aria-label="Remove slide"
-          title="Remove slide"
-        >
-          <FontAwesomeV6Icon iconName="trash" />
-        </button>
-      </div>
-      <div className={moduleStyles.cardBody}>
-        <div className={moduleStyles.cardSidebar}>
+      }
+      canMoveUp={index > 0}
+      canMoveDown={index < total - 1}
+      onMoveUp={() => onMove(spec.key, 'up')}
+      onMoveDown={() => onMove(spec.key, 'down')}
+      onRemove={() => onRemove(spec.key)}
+      removeAriaLabel="Remove slide"
+      removeTitle="Remove slide"
+      disabled={disabled}
+    >
+      <div className={sharedStyles.cardBody}>
+        <div className={sharedStyles.cardSidebar}>
           <label className={moduleStyles.skipLabel}>
             <input
               type="checkbox"
@@ -89,7 +69,7 @@ const SlideCard: React.FC<SlideCardProps> = ({
             />
           )}
         </div>
-        <div className={moduleStyles.cardMain}>
+        <div className={sharedStyles.cardMain}>
           <label htmlFor={`desc-${spec.key}`}>Description</label>
           <textarea
             id={`desc-${spec.key}`}
@@ -100,7 +80,7 @@ const SlideCard: React.FC<SlideCardProps> = ({
           />
         </div>
       </div>
-    </div>
+    </ReorderableCard>
   );
 };
 

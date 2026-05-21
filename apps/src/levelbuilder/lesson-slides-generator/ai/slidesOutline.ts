@@ -3,13 +3,13 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
-import {SlidesPageContext} from '../../lesson-generator/ai/context';
+import {SlidesPageContext} from '../../curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../lesson-generator/ai/shared';
+} from '../../curriculum-generator/ai/shared';
 
 // Bounds on the deck the outline AI is allowed to plan. Quoted both in
 // the prompt and in the zod schema so the limits stay in sync.

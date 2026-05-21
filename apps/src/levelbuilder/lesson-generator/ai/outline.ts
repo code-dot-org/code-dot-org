@@ -3,10 +3,14 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
+import {LessonContext} from '../../curriculum-generator/ai/context';
+import {
+  getTextModel,
+  logPrompt,
+  logResponse,
+  PROMPT_TAGS,
+} from '../../curriculum-generator/ai/shared';
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
-
-import {LessonContext} from './context';
-import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
 // a single-line change. zod's z.enum requires a non-empty tuple, so we

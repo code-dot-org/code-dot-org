@@ -2,6 +2,7 @@ import React from 'react';
 
 import {SlidesProgressUpdate} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-slides-generator.module.scss';
 
 const phaseLabel = (phase: SlidesProgressUpdate['phase']): string => {
@@ -33,8 +34,8 @@ const SlidesProgressDialog: React.FC<SlidesProgressDialogProps> = ({
         progress.totalSlides
       : 0;
   return (
-    <div className={moduleStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={moduleStyles.dialog}>
+    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
+      <div className={sharedStyles.dialog}>
         <h2>{isGenerating ? 'Generating…' : 'Done'}</h2>
         {progress && (
           <>

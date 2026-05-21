@@ -1,88 +1,11 @@
-.container {
-  padding: 24px 32px 96px 32px;
-  font-family: inherit;
-  max-width: 1080px;
-}
+// Page-specific styles for the slides generator. Everything generic
+// (page chrome, outline block, card shell, footer, dialog scaffolding)
+// lives in curriculum-generator.module.scss; this file holds only the
+// classes the slides page uniquely needs.
 
-.heading {
-  margin: 0 0 8px 0;
-}
-
-.subheading {
-  margin: 0 0 24px 0;
-  color: #555;
-}
-
-.outlineBlock {
-  border: 1px dashed #b0b0b0;
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin-bottom: 24px;
-  background: #fbfbfb;
-}
-
-.outlineHeading {
-  font-weight: 600;
-  font-size: 14px;
-  color: #444;
-}
-
-.outlineHelp {
-  margin: 8px 0;
-  font-size: 13px;
-  color: #555;
-}
-
-.outlineInput {
-  width: 100%;
-  min-height: 90px;
-  resize: vertical;
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.outlineActions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.slideList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.slideCard {
-  border: 1px solid #d6d6d6;
-  border-radius: 6px;
-  padding: 16px;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.slideCardHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.slideCardHeader h3 {
-  margin: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
+// "ready" pill that sits next to the slide number once a panel has been
+// generated for that slide. Distinct from the unit page's tag pills
+// because slides only ever has a single state (ready / not-ready).
 .tagPanel {
   display: inline-block;
   font-size: 10px;
@@ -97,42 +20,12 @@
   vertical-align: middle;
 }
 
-.slideCardHeader .iconButton {
-  background: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.slideCardHeader .iconButton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.slideCardHeader .deleteButton {
-  background: transparent;
-  border: 1px solid #c44;
-  color: #c44;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
-.cardBody {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.cardSidebar {
-  flex: 0 0 220px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
+// The slides page sets `line-height: 24px` on the Generate checkbox row
+// because the checkbox is a 24px-tall design-system icon while
+// "Generate" is a 13px-line-height label; align-items: center alone
+// leaves the text sitting slightly low. Matching line-height to the
+// checkbox makes the centers truly coincide. (The lesson generator's
+// row sits next to wider inputs and doesn't need this fix.)
 .skipLabel {
   display: inline-flex;
   align-items: center;
@@ -141,12 +34,6 @@
   font-weight: 600;
   user-select: none;
   cursor: pointer;
-  // The checkbox is a 24px-tall design-system icon while "Generate" is
-  // a 13px-line-height label; align-items: center alone leaves the text
-  // sitting slightly low because the label's line-height pushes its
-  // visual center below the cap line. Match the line-height to the
-  // checkbox so the two centers really do coincide, and zero out the
-  // input's default margins for good measure.
   line-height: 24px;
 
   input[type='checkbox'] {
@@ -155,136 +42,16 @@
   }
 }
 
+// Per-card thumbnail of the generated panel image, shown in the sidebar
+// once a panel has been produced.
 .thumb {
   width: 100%;
   border-radius: 4px;
   border: 1px solid #d6d6d6;
 }
 
-.cardMain {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.cardMain label {
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.cardMain textarea {
-  flex: 1;
-  width: 100%;
-  min-height: 110px;
-  resize: vertical;
-  padding: 6px 8px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-@media (max-width: 720px) {
-  .cardBody {
-    flex-direction: column;
-  }
-
-  .cardSidebar {
-    flex: initial;
-  }
-}
-
-.addButtonRow {
-  margin-top: 16px;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  border-top: 1px solid #d6d6d6;
-  padding: 12px 32px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  z-index: 10;
-  box-shadow: 0 -2px 6px rgb(0 0 0 / 6%);
-}
-
-.primaryButton,
-.secondaryButton {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 1.2;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.primaryButton {
-  background: #0094ca;
-  color: #fff;
-  font-weight: 600;
-}
-
-.primaryButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.secondaryButton {
-  background: #fff;
-  color: #333;
-  border-color: #ccc;
-}
-
-.dialogBackdrop {
-  position: fixed;
-  inset: 0;
-  background: rgb(0 0 0 / 40%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.dialog {
-  background: #fff;
-  border-radius: 6px;
-  padding: 18px 22px;
-  min-width: 440px;
-  max-width: 640px;
-  max-height: 80vh;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.dialog h2 {
-  margin: 0 0 2px;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.dialog p {
-  margin: 0;
-}
-
+// Compact failure list inside the success dialog. Tighter than the
+// shared .dialog ul; only used when summary.failed has entries.
 .summaryList {
   margin: 0;
   padding-left: 20px;
@@ -296,6 +63,8 @@
   margin-top: 2px;
 }
 
+// Progress-bar pieces for the per-slide generation dialog. Same shape
+// as the lesson generator's progress bar but kept page-local for now.
 .progressLine {
   font-family: monospace;
   font-size: 13px;
@@ -313,17 +82,6 @@
   background: #0094ca;
   height: 100%;
   transition: width 0.2s ease;
-}
-
-.summaryBad {
-  color: #c33;
-}
-
-.dialogActions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 8px;
 }
 
 .dialogNote {

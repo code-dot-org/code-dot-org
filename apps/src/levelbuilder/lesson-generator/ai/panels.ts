@@ -6,16 +6,15 @@ import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {uploadLevelAsset} from '../levelApi';
-
-import {LevelContext} from './context';
+import {LevelContext} from '../../curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from './shared';
+} from '../../curriculum-generator/ai/shared';
+import {uploadLevelAsset} from '../levelApi';
 
 // Exported so the slides generator (which also produces Panels-app
 // panels) can reuse the same enum values for its plan schema and

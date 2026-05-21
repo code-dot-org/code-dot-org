@@ -5,17 +5,17 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {SlideContext} from '../../lesson-generator/ai/context';
-import {
-  generateAndUploadPanelImage,
-  PANEL_LAYOUTS,
-} from '../../lesson-generator/ai/panels';
+import {SlideContext} from '../../curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../lesson-generator/ai/shared';
+} from '../../curriculum-generator/ai/shared';
+import {
+  generateAndUploadPanelImage,
+  PANEL_LAYOUTS,
+} from '../../lesson-generator/ai/panels';
 
 const slidePlanSchema = Output.object({
   schema: z.object({

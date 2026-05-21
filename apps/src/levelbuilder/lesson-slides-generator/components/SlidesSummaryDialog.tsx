@@ -2,6 +2,7 @@ import React from 'react';
 
 import {SlidesGenerationSummary} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-slides-generator.module.scss';
 
 interface SlidesSummaryDialogProps {
@@ -20,8 +21,8 @@ const SlidesSummaryDialog: React.FC<SlidesSummaryDialogProps> = ({
   const total = summary.generated.length + summary.failed.length;
   const anyGenerated = summary.generated.length > 0;
   return (
-    <div className={moduleStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={moduleStyles.dialog}>
+    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
+      <div className={sharedStyles.dialog}>
         <h2>Slides saved</h2>
         <p>
           Generated <strong>{summary.generated.length}</strong> of {total}{' '}
@@ -29,7 +30,7 @@ const SlidesSummaryDialog: React.FC<SlidesSummaryDialogProps> = ({
           {summary.failed.length > 0 && (
             <>
               {' '}
-              <span className={moduleStyles.summaryBad}>
+              <span className={sharedStyles.summaryBad}>
                 {summary.failed.length} failed.
               </span>
             </>
@@ -41,7 +42,7 @@ const SlidesSummaryDialog: React.FC<SlidesSummaryDialogProps> = ({
               <li key={i}>
                 <strong>slide:</strong>{' '}
                 {f.description.slice(0, 80) || '(blank)'} —{' '}
-                <span className={moduleStyles.summaryBad}>{f.error}</span>
+                <span className={sharedStyles.summaryBad}>{f.error}</span>
               </li>
             ))}
           </ul>
@@ -54,15 +55,15 @@ const SlidesSummaryDialog: React.FC<SlidesSummaryDialogProps> = ({
             to see how they look to a student.
           </p>
         )}
-        <div className={moduleStyles.dialogActions}>
+        <div className={sharedStyles.dialogActions}>
           <button
             type="button"
-            className={moduleStyles.secondaryButton}
+            className={sharedStyles.secondaryButton}
             onClick={onClose}
           >
             Stay here
           </button>
-          <a href={editLessonUrl} className={moduleStyles.secondaryButton}>
+          <a href={editLessonUrl} className={sharedStyles.secondaryButton}>
             Back to lesson editor
           </a>
         </div>

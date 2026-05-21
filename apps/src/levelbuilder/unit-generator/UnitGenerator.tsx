@@ -1,13 +1,15 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {createUuid} from '@cdo/apps/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
+import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
+import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
 import {generateUnitOutline} from './ai/unitOutline';
 import LessonCard from './components/LessonCard';
 import UnitGenerateDialog from './components/UnitGenerateDialog';
-import UnitOutlineBlock from './components/UnitOutlineBlock';
 import {
   buildInitialState,
   keyFromName,
@@ -16,7 +18,7 @@ import {
 import {ExistingUnitData, LessonSpec, UnitGenerationSummary} from './types';
 import {LessonOutlinePayload, saveLessonOutlines} from './unitApi';
 
-import moduleStyles from './unit-generator.module.scss';
+import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
 interface UnitGeneratorProps {
   unit: ExistingUnitData;
@@ -24,7 +26,27 @@ interface UnitGeneratorProps {
 
 const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
   const initial = useMemo(() => buildInitialState(unit), [unit]);
-  const [lessonSpecs, setLessonSpecs] = useState<LessonSpec[]>(initial);
+  const {
+    specs: lessonSpecs,
+    setSpecs: setLessonSpecs,
+    updateSpec,
+    removeSpec,
+    moveSpec,
+    addSpec,
+  } = useReorderableList<LessonSpec>({
+    initial,
+    getKey: s => s.reactKey,
+    newSpec: newLessonSpec,
+    // Auto-derive key from name on a new card while the key still looks
+    // auto-generated (or empty). Once the user edits the key explicitly,
+    // we stop overwriting it.
+    onAfterPatch: (prev, next, patch) => {
+      if (!('name' in patch)) return next;
+      if (prev.id !== undefined) return next;
+      if (prev.key !== '' && prev.key !== keyFromName(prev.name)) return next;
+      return {...next, key: keyFromName(next.name)};
+    },
+  });
   const [outline, setOutline] = useState<string>(unit.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
@@ -33,73 +55,8 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
 
-  // The aichat gateway expects a context on every access-token request.
-  // We're not actually inside an aichat lab, but the lesson generator
-  // page does the same thing: borrow the AI_CHAT_LAB context so the
-  // generateText path passes its access check.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: null,
-      scriptId: unit.id,
-      channelId: undefined,
-      lessonId: undefined,
-    });
-  }, [unit.id]);
-
-  // Block accidental navigation while a save is in flight.
-  useEffect(() => {
-    if (!isSaving) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [isSaving]);
-
-  const updateSpec = useCallback(
-    (reactKey: string, patch: Partial<LessonSpec>) => {
-      setLessonSpecs(specs =>
-        specs.map(s => {
-          if (s.reactKey !== reactKey) return s;
-          const next = {...s, ...patch};
-          // Auto-derive key from name on a new card while the key still
-          // looks auto-generated (or empty). Once the user edits the key
-          // explicitly, we stop overwriting it.
-          if (
-            'name' in patch &&
-            s.id === undefined &&
-            (s.key === '' || s.key === keyFromName(s.name))
-          ) {
-            next.key = keyFromName(next.name);
-          }
-          return next;
-        })
-      );
-    },
-    []
-  );
-
-  const removeSpec = useCallback((reactKey: string) => {
-    setLessonSpecs(specs => specs.filter(s => s.reactKey !== reactKey));
-  }, []);
-
-  const moveSpec = useCallback((reactKey: string, direction: 'up' | 'down') => {
-    setLessonSpecs(specs => {
-      const i = specs.findIndex(s => s.reactKey === reactKey);
-      if (i === -1) return specs;
-      const t = direction === 'up' ? i - 1 : i + 1;
-      if (t < 0 || t >= specs.length) return specs;
-      const next = [...specs];
-      [next[i], next[t]] = [next[t], next[i]];
-      return next;
-    });
-  }, []);
-
-  const addSpec = useCallback(() => {
-    setLessonSpecs(specs => [...specs, newLessonSpec()]);
-  }, []);
+  useAichatContext({scriptId: unit.id});
+  useBeforeUnloadWhile(isSaving);
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
@@ -134,7 +91,7 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline, unit.title]);
+  }, [outline, unit.title, setLessonSpecs]);
 
   const validationError = useMemo(() => {
     if (lessonSpecs.length === 0) return 'Add at least one lesson.';
@@ -224,11 +181,11 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
   const totalToSave = lessonSpecs.length;
 
   return (
-    <div className={moduleStyles.container}>
-      <h1 className={moduleStyles.heading}>
+    <div className={sharedStyles.container}>
+      <h1 className={sharedStyles.heading}>
         Generate lessons for "{unit.title}"
       </h1>
-      <p className={moduleStyles.subheading}>
+      <p className={sharedStyles.subheading}>
         Plan the lessons in this unit. Each lesson gets a name, a key, and a
         prompt that the per-lesson <code>/generate</code> page will later use to
         write its content. Existing lessons appear here too — edit their prompts
@@ -236,14 +193,18 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
       </p>
 
       {unit.multipleLessonGroups && (
-        <p className={moduleStyles.summaryBad} role="alert">
+        <p className={sharedStyles.summaryBad} role="alert">
           This unit has multiple lesson groups. Saving from this page is
           disabled — the bulk-edit path doesn't know which group new lessons
           belong in. Use the unit editor instead, or split the unit first.
         </p>
       )}
 
-      <UnitOutlineBlock
+      <OutlineBlock
+        heading="Optional: generate the lessons below from a unit outline"
+        helpText="Describe the unit as a whole — what it teaches, who it's for, what the student should be able to do by the end. The AI will turn that into a sequence of lessons with names, keys, and per-lesson prompts. You can edit, reorder, or remove any of them before saving."
+        placeholder="e.g. A 6-lesson intro to web development for middle schoolers. Start with HTML structure, then visual styling with CSS, then a small project where students build a personal homepage."
+        buttonLabel="Generate lesson outlines"
         value={outline}
         onChange={setOutline}
         onGenerate={handleGenerateOutline}
@@ -252,7 +213,7 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         error={outlineError}
       />
 
-      <div className={moduleStyles.lessonList}>
+      <div className={sharedStyles.cardList}>
         {lessonSpecs.map((spec, index) => (
           <LessonCard
             key={spec.reactKey}
@@ -267,10 +228,10 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         ))}
       </div>
 
-      <div className={moduleStyles.addButtonRow}>
+      <div className={sharedStyles.addButtonRow}>
         <button
           type="button"
-          className={moduleStyles.secondaryButton}
+          className={sharedStyles.secondaryButton}
           onClick={addSpec}
           disabled={isSaving}
         >
@@ -279,18 +240,18 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
       </div>
 
       {topLevelError && (
-        <p className={moduleStyles.summaryBad} role="alert">
+        <p className={sharedStyles.summaryBad} role="alert">
           {topLevelError}
         </p>
       )}
 
-      <footer className={moduleStyles.footer}>
-        <a href={unit.editUnitUrl} className={moduleStyles.secondaryButton}>
+      <footer className={sharedStyles.footer}>
+        <a href={unit.editUnitUrl} className={sharedStyles.secondaryButton}>
           Back to unit editor
         </a>
         <button
           type="button"
-          className={moduleStyles.primaryButton}
+          className={sharedStyles.primaryButton}
           onClick={handleGenerateLessons}
           // Don't gate the button on validation — empty/invalid cards
           // are common while the user is mid-typing, and the optional
