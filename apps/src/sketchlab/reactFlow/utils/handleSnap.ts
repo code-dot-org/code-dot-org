@@ -48,6 +48,48 @@ export function getEventClientPosition(
   return touch ? {x: touch.clientX, y: touch.clientY} : null;
 }
 
+// Returns the nearest handle on the given node matching the required type,
+// by screen distance. Unlike findNearestHandleInRadius, this is scoped to a
+// single node and has no radius cap — used when we already know the target
+// node (e.g. the node the user just dropped onto a free line endpoint) and
+// just want to pick which side of it to attach to.
+export function findNearestHandleOnNode(
+  targetNodeId: string,
+  screenPoint: XYPosition,
+  requiredType: 'source' | 'target'
+): SnapTarget | null {
+  const handles = document.querySelectorAll<HTMLElement>(
+    `.react-flow__handle[data-nodeid="${CSS.escape(targetNodeId)}"]`
+  );
+  let closest: SnapTarget | null = null;
+  let closestDistance = Infinity;
+
+  handles.forEach(handle => {
+    const handleType = getHandleType(handle);
+    if (handleType !== requiredType) {
+      return;
+    }
+    const rect = handle.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const distance = Math.hypot(
+      centerX - screenPoint.x,
+      centerY - screenPoint.y
+    );
+
+    if (distance < closestDistance) {
+      closest = {
+        nodeId: targetNodeId,
+        handleId: handle.dataset.handleid ?? null,
+        handleType,
+      };
+      closestDistance = distance;
+    }
+  });
+
+  return closest;
+}
+
 // Returns the nearest handle matching the criteria within the radius, or null if
 // none found.
 export function findNearestHandleInRadius(
