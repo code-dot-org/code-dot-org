@@ -770,14 +770,6 @@ module SharedConstants
     CONFIDENT: 'confident',
   }.freeze
 
-  PRACTICE_PROBLEM_TYPES = {
-    MULTIPLE_CHOICE_MULTI: 'multiple_choice_multi_select',
-    MULTIPLE_CHOICE_SINGLE: 'multiple_choice_single_select',
-    MATCH: 'match',
-    SORT: 'sort',
-    SCRAMBLE: 'scramble',
-  }.freeze
-
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
