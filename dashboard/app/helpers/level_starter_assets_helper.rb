@@ -56,6 +56,7 @@ module LevelStarterAssetsHelper
   end
 
   def self.prefix(key)
+    raise ArgumentError, 'key is required' if key.nil?
     S3_PREFIX + key
   end
 
