@@ -72,6 +72,10 @@ export interface ExistingLessonData {
   // Persisted outline that drove the last "Generate outline" run (if any).
   // Stored on the lesson so reopening /generate restores it.
   generateOutline?: string;
+  // Optional Weblab2 channel id whose project source describes the
+  // final app this lesson is building toward. When set, the per-level
+  // AI prompts get the project's MultiFileSource as additional context.
+  generateProjectChannelId?: string | null;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the
