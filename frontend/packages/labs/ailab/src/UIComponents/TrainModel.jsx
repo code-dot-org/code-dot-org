@@ -24,11 +24,16 @@ function TrainModel({ data, readyToTrain: ready, labelColumn, selectedFeatures, 
   const headOpenRef = useRef(false);
   const finishedRef = useRef(false);
   const instructionsOverlayActiveRef = useRef(instructionsOverlayActive);
+  const dataLengthRef = useRef(data.length);
 
   // Keep refs in sync
   useEffect(() => {
     instructionsOverlayActiveRef.current = instructionsOverlayActive;
   }, [instructionsOverlayActive]);
+
+  useEffect(() => {
+    dataLengthRef.current = data.length;
+  }, [data.length]);
 
   useEffect(() => {
     train.init(store);
@@ -43,7 +48,7 @@ function TrainModel({ data, readyToTrain: ready, labelColumn, selectedFeatures, 
       }
 
       const animationStep = Math.floor(currentFrame / framesPerCycle);
-      const numItems = Math.min(maxNumItems, data.length);
+      const numItems = Math.min(maxNumItems, dataLengthRef.current);
 
       if (animationStep >= numItems) {
         headOpenRef.current = false;
@@ -61,7 +66,7 @@ function TrainModel({ data, readyToTrain: ready, labelColumn, selectedFeatures, 
     return () => {
       clearInterval(animationTimer);
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const getAnimationProgress = () => {
     let amount = (frame % framesPerCycle) / framesPerCycle;
