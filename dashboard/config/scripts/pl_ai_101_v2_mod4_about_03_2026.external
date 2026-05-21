@@ -1,0 +1,53 @@
+name 'pl-ai-101-V2-mod4-about-03_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Curriculum Resources
+
+While you can develop your own curriculum for teaching about AI in your classroom, there are a lot of resources already developed. Take some time to check out lesson plans and see if there are any you'd like to try our, or if any spark ideas for lesson plans you can write yourself.
+
+👉 Click on an image to go to the curriculum webpage.
+
+<div style="column-count:2; column-gap:10px; margin-top:10px;">
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+
+</div>
+
+> 💬 **Quick Reflection:** Which of these did you like? What aspects appealed to you?
+MARKDOWN
