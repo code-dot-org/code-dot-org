@@ -97,8 +97,8 @@ module Geocoder
     segment = text[pos..].split('|').first || ''
     candidate = segment.split.first(MAX_ADDRESS_WORDS).join(' ')
 
-    return nil if candidate.length < MIN_ADDRESS_LENGTH
-    return nil if candidate.count(' ') < 2
+    return nil if candidate.length < MIN_ADDRESS_LENGTH # too short to be an address
+    return nil if candidate.count(' ') < 2 # too few words to be an address
 
     results = Geocoder.search(candidate)
 
