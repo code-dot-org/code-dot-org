@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:33.000Z",
   "level_num": "custom",
@@ -45,7 +46,7 @@
           "language": "css",
           "contents": "/* FIND AND FIX THE BUGS FOR THE ANCHOR TAG STATES */\n\na:active {\n  color:forestgreen;\n  background-color: yellow;\n  font-size: 26px;\n}\n\na:link {\n  color:#a200ff;\n  font-size: 18px;\n  font-style: italic;\n}\n\na:hover {\n  color: #e7ff07;\n  background-color: #a12fff;\n  font-size: 24px;\n  text-decoration-style: wavy;\n  border-radius: 7px;\n}\n\na:visited {\n  color: crimson;\n  font-size: 18px;\n}\n\n\nbody {\n  background-color: #d9ffd9;\n}\n\nh1 {\n  font-family: Arial;\n  font-size: 36px;\n  text-align: center;\n}\n\np {\n  font-family: Arial;\n  font-size: 18px;\n}\n\ndiv {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\nimg {\n  border-style: solid;\n  border-radius: 15px;\n  width: 300px;\n  margin: 15px;\n}\n\n.citation {\n  height: 300px;\n  display: flex;\n  align-items: flex-end;\n}\n\n.citation > p {\n  text-align: center;\n  font-style: italic;\n  font-size: 10px;\n}",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "3": {
           "id": "3",
@@ -65,14 +66,12 @@
           "folderId": "0",
           "url": "/level_starter_assets/CSD%20U2L18-L6a-2025/uuid/76bb5ace-0ef3-4d9c-845e-35588a94a8c1.png",
           "type": "starter",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
         "1",
-        "2",
-        "3",
-        "4"
+        "2"
       ]
     },
     "ai_tutor_prompt_settings": {
@@ -88,9 +87,11 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "encrypted_exemplar_sources": "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\naHTGXRvj637zfra0zH5uBjStoJLKeL/NL5/6AQfegd8FTocuBXhPkKpAKsis\nOSSv0isD6x+/oKYK182ojThz1pgVNJS6DatNbSoIWBRMUTON9wSF1mrxlOc2\nwnFC7Hxl/845aSbFJE0luaYwzDTkSzu0jm5ISP9keZa6auammEYohDRR0oRD\nX2gqnNY2RM0bbgHfpV+mhSpJkmWe0tA3348L877dXnYQs0VQNetqiIiU8I78\nM14O41ZV8J3eRLqFo3gW+tpOJa3XMe9s9RTKldmG+plK5JC0glJ8aAOrSMct\nuh9bncEtwR9hAEel64S4scanaf5Li7p7uIj/7h/q+FhLbfhrh6MvpNhNU4GB\nJtQRQ3YgtqPk9mB0t60lgcL46OjcAmzbCS1lIKsxAOKDjtYvzKGoCC1PPMaA\nVn78XMwWj7ERBt3xYdDlF1O2otYDzfPG0Q7esSQY8qPjy7jY6pLfk7rJt7b1\nJAQsUgbXaHZ9IETbCa7Oc9c+GnSt62+KA8udRlIZIzvrYgeN5+XH4T8TfNqI\nPPC4TFBIMLbxvuSSwMHqo6ijSP6ysZHaY6ssKM2On4J26ytXy3Uzi+EM76Oj\nHBW3RT+aVVJ43axVRtz81cS2yX5QFcur9zbvDNWdbChDZM4HRXinKc0AYIVO\nAgdY9LO7/z7CdN4IFUVkLn99wZS8y4htLbzxynImAtW0BPM4FD0y0inyafmy\nMM4y7aqkwV4vNm/vGBh0A+elGDR2ZT7b4EIaxJx5O2J60IrWG7w/ie5smllk\nLClxTa+hofaei1+vTbj6yiZup8SNn3gNTNfsJ4SB/M7aMnQ/jN5Aa69ldaFH\n7VnFVBjr5AkzX4nXP3uHWhlSm1snfyTsVswY8E0jgo+GQAx7AVmtgJqfMuuv\nr7L+RGaGxfG89daa4P+ysQh1jX2KRvmnO+hBqzQ+L+la3oYABq7yR776UQAR\nNI4nvFt5y0neneixWHke87YgOuaEb11YiYYMRM7OH9FK3ILUGignSkKKpoSi\nCeLt1cuN+Rv/ZbOeFQltPaguNJ9PQWyYDcGlqGvNiBJ4apq79RrJWrPYzT5m\nu7ETWnRD50aAgqXiztZfD04bOX7nQkBGSTIGwe7cBFw1O9TJuneAt2UVF7Q/\nyZb4wgSUTgGxGRKxUPsqQWON3WKEaNSkCRvfJEXiRecj8uAMKzgbDCF0kg1A\nLLP44NXrtl41+Mn3YpQRNjleGq1uIaLJI1CDC0xXVViBSOll6tYOaAgvvD5l\nzFQfwmK6fzEZIbwewB3yDW9B4h2OYAQd1UsL58pTUzJ4s/BTs52TnCrT/FOk\n+bKFxUJ9gbsd/qggtuajKjHulMyptJHAMqQf7Mx12EQhCdn6GxgbCjD7gj/e\nb3ls1mMwPMBC5eGK1iPXhfTAFxBbuWiP5GslVhcCUM0OTQO+iGQakBlXC2AE\n1eG30NywXLn15DpFH2S9QtH1fazUDrN/UkcwvXj00x2cBIM9HjlF+9NxPKJi\nni9KpYg0pWYtyH+PF3XdxaUmTyL7nl5003QmbeRgvZMwiPsWw9zzU5emM3mN\ngxKDEIn9RwpoI5gN5oC4BHmZkva8+uPUVJL/dGT16Ujts24yogOPdfdrqY7o\n89Fjb9DXN5VcqyntRx0ifFCcy8HWie3Pv4R3VaFC8gKUwPJdIPkbe8t4WmFh\ne69CW+CaW9wjkcLMPDAdTiOPzDppMrgyMydlqbYdlbDqX4JRH6EWkTMiQs6z\nvHqtEGWvLJ0ZXeu9Zo1jDJYkWm8BBFAJmeQtL/Ee2B97Ti+GGPsGJfaL70zQ\nIuWSZvxLiaiv/YPTm4ERgsDWB3euUSL3h4ssXV2KZPO84ZsE7eiQrhvCLNJQ\nFDQgE5wDepkmDoMLnVNdxEPJd7jz9FDkp4hdu0PRPh02GVTjCtvGdvgEQgd8\nKe69pcyt5K+i4cREsEBpTSiDD10Q7EBWByZzu8krf188A1WL37ex3z26VRHM\n+WVMd1wSNq2NxY7O9q1blfR+eOaIs1Jx4PFa81Ucu58D+mhPItj1EzjlMeSB\n+0CO8dCSvibsyzFjqIVKkfpHYywGvke4P6vGmvrARM5FOqJYOKIxiRw5UwXu\nYaZCaZx46GxV9zDz44DC0raAz6RDf+84LG87Dk9sz/ud\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:33.095+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L6a-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:33.095+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L6a-2025\"},{\"changed_at\":\"2026-05-19 21:16:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:18:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:18:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:18:50 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

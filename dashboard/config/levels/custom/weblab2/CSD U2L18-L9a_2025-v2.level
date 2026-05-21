@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:35.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Hidden Text",
-    "long_instructions": "# Simple Hidden Tip with Hover\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can code our CSS to have a \"tip\" appear when we hover over a `<div>` element.\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the following properties to the paragraph rule set:\r\n   - `display: none;`\r\n   - `background-color: yellow;`\r\n2. Add a rule set to style the paragraph child of the div tag with the \"hover\" pseudo-class. \r\n   - Your selector should look like this: `div:hover p`\r\n   - Add the following property: `display: block;`\r\n3. Hover over the `div` to see what happens!\r\n\r\n**Don't forget to click <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> to see if everything is working as expected.**",
+    "long_instructions": "# Simple Hidden Tip with Hover\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can code our CSS to have a \"tip\" appear when we hover over a `<div>` element.\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the following properties to the paragraph rule set:\r\n   - `display: none;`\r\n   - `background-color: yellow;`\r\n2. Add a rule set to style the paragraph child of the div tag with the \"hover\" pseudo-class. \r\n   - Your selector should look like this: `div:hover p`\r\n   - Add the following property: `display: block;`\r\n3. Hover over the `div` to see what happens!\r\n\r\n",
     "bubble_choice_description": "Learn how to use the \"hover\" pseudo-class to hide and reveal text!",
     "thumbnail_url": "https://images.code.org/459ed3ae9553a57efd4b9026db8f503d-magic.png",
     "submittable": "false",
@@ -67,9 +68,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:35.140+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9a-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9a-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:35.140+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9a-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9a-2025\"},{\"changed_at\":\"2026-05-20 17:25:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:26:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
