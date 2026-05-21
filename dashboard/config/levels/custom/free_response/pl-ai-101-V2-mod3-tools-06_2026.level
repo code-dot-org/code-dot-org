@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-05-20T21:18:16.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Other AI Tools\r\n\r\nWe've provided a sampling of some of the AI tools out there that can support your teaching practice, but there are many others.\r\n\r\nTake things further and spend your own time exploring AI tools. These can either be ones integrated into tools you already use (such as Google Docs) or stand-alone tools.\r\n\r\n## Reflection\r\n\r\n> In the reflection box below, share the following:\r\n> - What tool you found.\r\n> - One way you could use it to support your teaching practice.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:18:16.024+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod3-tools-06\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod3-tools-06\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

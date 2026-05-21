@@ -65,22 +65,64 @@ We can explain the backpack with descriptive properties.
 
 <div style="clear:both;"></div>
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 20px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Have students pick a real item from their backpack (like a water bottle, notebook, or snack) and list 3–5 facts about it (color, size, brand, whether it’s full or empty, etc). Then show how each fact becomes a property inside an object in code.
-</p>
+
+---
+
+## Quick Check: Build an Object
+
+Choose one object below. Before clicking, think of 3 properties it might have in a program. Then click to compare your ideas with one possible example.
+
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      🍕 Pizza
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+      <strong>Possible properties:</strong><br>
+      size → string<br>
+      toppings → string<br>
+      isDelivery → boolean
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      🎮 Video Game
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+      <strong>Possible properties:</strong><br>
+      title → string<br>
+      genre → string<br>
+      isMultiplayer → boolean
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      🐶 Pet
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+      <strong>Possible properties:</strong><br>
+      name → string<br>
+      age → number<br>
+      isAdopted → boolean
+    </div>
+  </details>
+
 </div>
 
-## Next Up
+<div style="background-color:#B7E0E5;border-radius:40px;color:#000000;width:95%;padding:20px 24px;margin:24px 0;">
 
-In the next level you will create an object. Think of an object with three properties like the backpack from above. 
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> Have students start with a real-world object, like a water bottle, backpack, or snack, and describe facts the program would need to know about it. This helps students distinguish between the object itself and its properties.
+</p>
 
-Example: 
-- **dessert:** type,flavor, temperature 
-- **pizza:** size, toppings, crust
-- **car:** make, color, year 
+</div>
 
-You will use your object idea in the next level. 
-
+<p style="font-size:17px;line-height:1.5;">
+In the next level, you will choose your own object idea and turn it into code.
+</p>
 
 MARKDOWN
