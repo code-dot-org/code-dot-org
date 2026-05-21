@@ -169,8 +169,7 @@ export async function loadLessonLevelProperties(
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],
-  generateOutline?: string,
-  generateProjectChannelId?: string
+  generateOutline?: string
 ): Promise<void> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
@@ -178,20 +177,8 @@ export async function saveLessonActivities(
   if (generateOutline !== undefined) {
     body.generate_outline = generateOutline;
   }
-  if (generateProjectChannelId !== undefined) {
-    // Sent on every save when the field is present in state; '' clears
-    // the persisted value, so a user can blank out the input and have
-    // it stick.
-    body.generate_project_channel_id = generateProjectChannelId;
-  }
   await HttpClient.put(`/lessons/${lessonId}`, JSON.stringify(body), true, {
     'Content-Type': 'application/json;charset=UTF-8',
     Accept: 'application/json',
   });
 }
-
-// Re-export the lab2 sources `get` helper under a clearer name. The
-// page uses the response as additional context for the AI, not state
-// it round-trips — formatTargetProject narrows the typed result down
-// to MultiFileSource files.
-export {get as loadProjectSources} from '@cdo/apps/lab2/projects/sourcesApi';
