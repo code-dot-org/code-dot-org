@@ -11554,7 +11554,7 @@ __metadata:
     jest-transform-stub: "npm:^2.0.0"
     jquery: "npm:1.12.1"
     jquery-ui: "npm:^1.12.1"
-    js-cookie: "npm:^2.1.2"
+    js-cookie: "npm:^3.0.7"
     js-file-download: "npm:^0.4.12"
     jshint: "npm:^2.13.6"
     json-parse-better-errors: "npm:^1.0.1"
@@ -20789,10 +20789,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"js-cookie@npm:^2.1.2":
-  version: 2.1.3
-  resolution: "js-cookie@npm:2.1.3"
-  checksum: 10/9c9ef2123f783de29e2f1f3866332f6f7a1d9edd64afd7f08499891b012eebeb36d562ad2ff33de7c404577e10584b1f406452af322bc117373c1d712800f633
+"js-cookie@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "js-cookie@npm:3.0.7"
+  checksum: 10/c0542acd416806182baaaecaae9a1dd7754b48699589c5c3a088495cee9fc2e44f81e66567b6e76e16d29c469655fdc9cd948edb2cfd9ece446f8817b9046ce9
   languageName: node
   linkType: hard
 
