@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import DemoChip from '@cdo/apps/templates/DemoChip';
@@ -43,11 +44,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({
 
   return (
     <li
-      className={
-        section.demoType
-          ? `${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`
-          : styles.sectionCardWrapper
-      }
+      className={classNames(styles.sectionCardWrapper, {
+        [styles.demoSectionCardWrapper]: Boolean(section.demoType),
+      })}
       ref={setNodeRef}
       style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${section.id}`}

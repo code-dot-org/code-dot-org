@@ -18,6 +18,7 @@ import {
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -183,17 +184,13 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
 
   const navigateToSectionPath = React.useCallback(
     (sectionId: number, path: string) => {
-      // Lesson-dropdown paths come back from the server with a literal
-      // ":sectionId" placeholder and the /teacher_dashboard prefix (see
-      // Policies::DemoSections handling in
-      // SectionsController#retrieve_lessons_for_dropdown), because the
-      // section doesn't exist when the URLs are built. Substitute the id
-      // and drop the prefix — the router is already mounted at
-      // /teacher_dashboard and would otherwise double it.
       const nextPath = path.startsWith('/')
         ? path
+            // Add the correct sectionId to the path.
             .replace(':sectionId', sectionId.toString())
-            .replace(/^\/teacher_dashboard/, '')
+            // Remove the TEACHER_NAVIGATION_BASE_URL prefix if present since
+            // navigate is relative to that base url.
+            .replace(new RegExp(`^${TEACHER_NAVIGATION_BASE_URL}`), '')
         : generatePath(
             `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
             {
