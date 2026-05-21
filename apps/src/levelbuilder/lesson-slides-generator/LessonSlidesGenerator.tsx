@@ -2,11 +2,11 @@ import React, {useCallback, useMemo, useState} from 'react';
 
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 
+import {loadLessonLevelProperties} from '../curriculum-generator/api/levelProperties';
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
 import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
-import {loadLessonLevelProperties} from '../lesson-generator/levelApi';
 
 import {generateSlide} from './ai/slide';
 import {generateSlidesOutline} from './ai/slidesOutline';
