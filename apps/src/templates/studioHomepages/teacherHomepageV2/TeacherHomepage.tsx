@@ -294,7 +294,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 />
               )
             ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={showHiddenOnly}

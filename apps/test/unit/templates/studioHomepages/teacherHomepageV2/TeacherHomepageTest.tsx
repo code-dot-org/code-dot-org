@@ -519,6 +519,52 @@ describe('TeacherHomepage', () => {
     screen.getByText('You haven’t created any class sections yet.');
   });
 
+  it('shows the archived empty state instead of the demo card on the archived tab with zero sections', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.resolve({
+          value: {
+            high: {
+              demo_type: 'high',
+              section_name: 'High School Practice Section',
+              avatar_color: 8,
+              avatar_emoji: 5,
+              login_type: 'email',
+              participant_type: 'student',
+              unit: {
+                name: 'aif2-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+              unit_group: {
+                name: 'artificial-intelligence-foundations-2025',
+                display_name: 'Artificial Intelligence Foundations',
+              },
+            },
+          },
+          response: new Response(),
+        });
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    renderComponent([]);
+    await act(async () => await new Promise(process.nextTick));
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    fireEvent.click(archivedButton);
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t archived any class sections yet.');
+  });
+
   it('displays coteacher invite notification', async () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
