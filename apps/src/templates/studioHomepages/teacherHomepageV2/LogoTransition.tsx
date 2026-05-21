@@ -156,7 +156,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   if (!mountTarget) return null;
 
   const gifHidden = phase !== 'gif' && phase !== 'crossfade';
-  const svgHidden = phase === 'gif';
+  // Hold the SVG hidden through the GIF fade-out; it only starts fading
+  // in once the card begins shrinking, so the final logo appears together
+  // with the morph rather than overlapping the GIF mid-modal.
+  const svgHidden = phase === 'gif' || phase === 'crossfade';
   const backdropFading = phase === 'morphing' || phase === 'done';
   const cardLanded = phase === 'morphing' || phase === 'done';
 
