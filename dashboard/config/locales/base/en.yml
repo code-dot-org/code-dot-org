@@ -1566,7 +1566,12 @@ en:
   not_applicable_abbreviation: "N/A"
   global_edition:
     regions:
+      ar: Arabic
+      cn: China
+      cz: Czech Republic
+      de: Germany
       fa: Farsi
+      fr: France
       in: India
   roster:
     sync:

@@ -1,12 +1,21 @@
 {
   "name": "ai-foundations-year1-2026",
   "script_names": [
-
+    "problem-solving-with-ai-2026",
+    "ai-and-the-systems-that-power-it-2026",
+    "the-fabric-of-the-internet-and-ai-2026",
+    "insights-from-data-and-ai-2026",
+    "ai-generated-design-2026",
+    "ai-and-algorithmic-decisions-2026",
+    "building-data-driven-systems-with-ai-2026",
+    "iterating-with-ai-2026",
+    "designing-reliable-apps-with-ai-and-apis-2026",
+    "web-apps-with-ai-capstone-project-2026"
   ],
   "original_script_names": [
 
   ],
-  "published_state": "in_development",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -17,7 +26,17 @@
     "version_year": "2026"
   },
   "resources": [
-
+    {
+      "name": "AI Foundations Syllabus",
+      "url": "https://docs.google.com/document/d/1CMpVVbfdObBVB19BTdi70x8wnN4rmen9bfSTQSqAJng/edit?usp=sharing",
+      "key": "ai_foundations_syllabus_1",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_syllabus_1"
+      }
+    }
   ],
   "student_resources": [
 

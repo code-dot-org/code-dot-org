@@ -3,13 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Practice
+# What is AI?
 
-#### Let's start by activating your current understanding of AI.
+Let's start by activating your current understanding of AI.
 
-#### Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. 
+Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. 
 
-#### 👉 Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
+👉 Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
 
 <br>
 
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Self-driving cars use artificial intelligence to interpret sensor data, recognize objects, predict the behavior of other road users, and make driving decisions in real time. These systems rely on machine learning models trained on large amounts of driving data to operate safely in changing environments.
+Self-driving cars use AI and machine learning to analyze sensor data, understand surroundings, and make safe driving decisions in real time.
 
 </p>
 </div>
@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### 3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
+3D printing builds objects layer by layer from a digital file and does not use AI because it follows preset models and instructions.
 
 </p></div>
 </div>
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Music recommendation systems use AI to analyze listening history, preferences, and patterns across many users. By learning from data, these systems predict which songs or artists a user is likely to enjoy and continuously improve their recommendations over time.
+Music recommendation systems use AI to analyze listening history and preferences to predict and improve song or artist suggestions.
 </p></div>
 </div>
 </div>
@@ -70,7 +70,7 @@ markdown <<MARKDOWN
 
 <!--Smart Home Devices-->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em"><strong>Smart Home Devices</strong> ⚠️ <i>This one’s tricky on purpose</i></summary>
+    <summary style="font-size: 1.5em"><strong>Smart Home Devices</strong></summary>
 
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
 
@@ -79,7 +79,9 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Some smart home devices use simple rules (for example, turning lights on when motion is detected), which is not AI. Others use AI to learn routines, adapt to user behavior, or recognize voices. Whether a smart home device uses AI depends on how it works internally.
+⚠️ <i>This one’s tricky on purpose</i>
+
+Some smart home devices follow simple rules, while others use AI to learn routines or recognize voices, so it depends on how they are designed.
 
 </p></div>
 </div>
@@ -88,7 +90,7 @@ markdown <<MARKDOWN
 
 <!--Digital Cameras-->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em;"><strong>Digital Cameras</strong> ⚠️ <i>This one’s tricky on purpose</i></summary>
+    <summary style="font-size: 1.5em;"><strong>Digital Cameras</strong></summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
 
 <div style="display:flex;gap:16px;align-items:flex-start;">
@@ -96,7 +98,9 @@ markdown <<MARKDOWN
 <div>
 <p>
 
-#### Digital cameras capture images using sensors and electronics, not artificial intelligence. While modern cameras may include AI-powered features like face detection or image enhancement, the core function of taking a photo does not rely on AI.
+⚠️ <i>This one’s tricky on purpose</i>
+
+Digital cameras use sensors and electronics to capture images, and while some features such as face-detection may use AI, the main photo-taking process does not.
 
 </p></div>
 </div>
@@ -105,20 +109,9 @@ markdown <<MARKDOWN
 
 <br>
 
->#### **💬 Quick Reflection:** Before you move on, think of a technology you use at school or at home. Classify your example as AI or Not. To help you decide, ask yourself whether the technology:
-> - #### Senses the environment?
-> - #### Learns from data?
-> - #### Makes predictions or decisions?
-
-<!-- progress bar -->
-<div style="float:left; display:flex; gap:20px; align-items:center; margin-right:20px; max-width:70%; flex-wrap:wrap;">
-<div style="font-size:13px; color:#6b6f75;">Opening</div>
-<div style="font-size:14px; font-weight:600; color:#292F36; border-bottom:3px solid #0093A4; padding-bottom:2px;">What is AI?</div>
-<div style="font-size:13px; color:#6b6f75;">Applications of AI</div>
-<div style="font-size:13px; color:#6b6f75;">Impact on Education</div>
-<div style="font-size:13px; color:#6b6f75;">AI Literacy</div>
-<div style="font-size:13px; color:#6b6f75;">Closing</div>
-</div>
-
+> **💬 Quick Reflection:** Before you move on, think of a technology you use at school or at home. Classify your example as AI or Not. To help you decide, ask yourself whether the technology:
+> - Senses the environment?
+> - Learns from data?
+> - Makes predictions or decisions?
 
 MARKDOWN

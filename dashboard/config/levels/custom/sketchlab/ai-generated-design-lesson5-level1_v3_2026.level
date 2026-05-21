@@ -123,12 +123,12 @@
             "id": "a_EOz32pq49R-ru81sxLC",
             "type": "text",
             "position": {
-              "x": 354.68328857421875,
-              "y": -373.59999389648436
+              "x": 381.35426318647234,
+              "y": -380.26773754954775
             },
             "data": {
               "text": "Nike",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -147,7 +147,7 @@
             },
             "data": {
               "text": "Adidas",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -190,7 +190,7 @@
             },
             "data": {
               "text": "The Nike brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -210,7 +210,7 @@
             },
             "data": {
               "text": "The Adidas brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -230,7 +230,7 @@
             },
             "data": {
               "text": "Who is Spotify's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -249,7 +249,7 @@
             },
             "data": {
               "text": "Who is SoundCloud's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -268,7 +268,7 @@
             },
             "data": {
               "text": "What do you notice about the Spotify brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -287,7 +287,7 @@
             },
             "data": {
               "text": "What do you notice about the SoundCloud brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -306,7 +306,7 @@
             },
             "data": {
               "text": "The Spotify brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -326,7 +326,7 @@
             },
             "data": {
               "text": "The SoundCloud brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -346,7 +346,7 @@
             },
             "data": {
               "text": "It seems like Spotify's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -366,7 +366,7 @@
             },
             "data": {
               "text": "It seems like SoundCloud's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -386,7 +386,7 @@
             },
             "data": {
               "text": "Spotify",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -404,7 +404,7 @@
             },
             "data": {
               "text": "SoundCloud",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -422,7 +422,7 @@
             },
             "data": {
               "text": "Netflix",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -440,7 +440,7 @@
             },
             "data": {
               "text": "Disney",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -482,7 +482,7 @@
             },
             "data": {
               "text": "Who is Netflix's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -501,7 +501,7 @@
             },
             "data": {
               "text": "Who is Disney's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -520,7 +520,7 @@
             },
             "data": {
               "text": "What do you notice about the Netflix brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -539,7 +539,7 @@
             },
             "data": {
               "text": "What do you notice about the Disney brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -558,7 +558,7 @@
             },
             "data": {
               "text": "The Netflix brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -577,7 +577,7 @@
             },
             "data": {
               "text": "The Disney brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -596,7 +596,7 @@
             },
             "data": {
               "text": "It seems like Netflix's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -615,7 +615,7 @@
             },
             "data": {
               "text": "It seems like Disney's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -634,7 +634,7 @@
             },
             "data": {
               "text": "Walmart",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -652,7 +652,7 @@
             },
             "data": {
               "text": "Target",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -694,7 +694,7 @@
             },
             "data": {
               "text": "Who is Target's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -713,7 +713,7 @@
             },
             "data": {
               "text": "Who is Walmart's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -732,7 +732,7 @@
             },
             "data": {
               "text": "What do you notice about the Target brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -751,7 +751,7 @@
             },
             "data": {
               "text": "What do you notice about the Walmart brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -770,7 +770,7 @@
             },
             "data": {
               "text": "The Target brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -789,7 +789,7 @@
             },
             "data": {
               "text": "The Walmart brand ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -808,7 +808,7 @@
             },
             "data": {
               "text": "It seems like Target's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -827,7 +827,7 @@
             },
             "data": {
               "text": "It seems like Walmart's target audience is ... \nbecause ... ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -1912,2928 +1912,1830 @@
           }
         ],
         "viewport": {
-          "x": 0.0030469141547655454,
-          "y": 247.9750273340403,
-          "zoom": 0.5999030868804118
+          "x": 31.061195236935475,
+          "y": 126.66067748077774,
+          "zoom": 0.3617953312675707
         }
       }
     },
     "exemplar_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "rectangle",
-            "version": 1397,
-            "versionNonce": 748651594,
-            "isDeleted": false,
             "id": "4oNh-C2N_P4lFiKtuWBSO",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": 344.4308311547877,
-            "y": -55.74609665467699,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 990.2067988092057,
-            "height": 401.7916062104527,
-            "seed": 1612783882,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 353.684151510231,
+              "y": -48.06028130794232
             },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 990.2067988092057,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 990,
+              "height": 402
+            },
+            "dragging": false
           },
           {
-            "type": "image",
-            "version": 384,
-            "versionNonce": 306265430,
-            "isDeleted": false,
             "id": "TzD1VrecN-CFxHJSueqlv",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -637.999554821623,
-            "y": -479.58599315766367,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 760.8888888888888,
-            "height": 428,
-            "seed": 1311535050,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "5dbf441b0986b0a789838a6feb86b336934ba65b",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": -637.999554821623,
+              "y": -479.58599315766367
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            }
           },
           {
-            "type": "image",
-            "version": 453,
-            "versionNonce": 461138698,
-            "isDeleted": false,
             "id": "3j3Fp3ZW0idfwsLOy4-Bd",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 441.7377440195969,
-            "y": -501.6431249703493,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 759.0147783251232,
-            "height": 428,
-            "seed": 1667229322,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "03a165a881326e55084ba496c979aafa6c4ca35f",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 441.7377440195969,
+              "y": -501.6431249703493
+            },
+            "style": {
+              "width": 759.0147783251232,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 759,
+              "height": 428
+            }
           },
           {
-            "type": "image",
-            "version": 376,
-            "versionNonce": 958079638,
-            "isDeleted": false,
             "id": "OOyNVdKGGs5JYLzOrEK2j",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -643.9124316779819,
-            "y": 455.51878531378395,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 762.7722772277228,
-            "height": 428,
-            "seed": 1484162378,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
-            "scale": [
-              1,
-              1
-            ]
-          },
-          {
             "type": "image",
-            "version": 589,
-            "versionNonce": 1401846218,
-            "isDeleted": false,
+            "position": {
+              "x": -643.9124316779819,
+              "y": 455.51878531378395
+            },
+            "style": {
+              "width": 762.7722772277228,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 763,
+              "height": 428
+            }
+          },
+          {
             "id": "uXykPAdmuDtb5s_zoLG4X",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 442.2483176672158,
-            "y": 458.1662186401428,
-            "strokeColor": "transparent",
-            "backgroundColor": "transparent",
-            "width": 760.8888888888888,
-            "height": 428,
-            "seed": 382422026,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "status": "pending",
-            "fileId": "5ab864d827d59efba1962913809a4f2ae4988ba0",
-            "scale": [
-              1,
-              1
-            ]
+            "type": "image",
+            "position": {
+              "x": 442.2483176672158,
+              "y": 458.1662186401428
+            },
+            "style": {
+              "width": 760.8888888888888,
+              "height": 428
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 761,
+              "height": 428
+            }
           },
           {
-            "type": "text",
-            "version": 85,
-            "versionNonce": 1309040598,
-            "isDeleted": false,
             "id": "-umSvFGXoIfwMBccPJS4s",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -503.5551103771786,
-            "y": -524.7860084164528,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 71.89583587646484,
-            "height": 41.4,
-            "seed": 609827530,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Nike",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Nike",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": -503.5551103771786,
+              "y": -524.7860084164528
+            },
+            "data": {
+              "text": "Nike",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 91,
+              "height": 65
+            }
           },
           {
-            "type": "text",
-            "version": 176,
-            "versionNonce": 1139847306,
-            "isDeleted": false,
             "id": "auZO7UEQ0SClT8DpRU1IW",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -80.50290624509853,
-            "y": -527.8860145199684,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 109.875,
-            "height": 41.4,
-            "seed": 263934346,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Adidas",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Adidas",
-            "lineHeight": 1.15,
-            "baseline": 33
-          },
-          {
-            "type": "line",
-            "version": 138,
-            "versionNonce": 890762518,
-            "isDeleted": false,
-            "id": "au6Z3rHdjIvxal9QOWEnt",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -249.03731426947775,
-            "y": -47.9932262596447,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 0,
-            "height": 381.71430315290183,
-            "seed": 1546424394,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                381.71430315290183
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 104,
-            "versionNonce": 1079906122,
-            "isDeleted": false,
-            "id": "R9QHnRij_b7OOMonnaXih",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -717.6087428409062,
-            "y": -10.27890566812681,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1837627146,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 196,
-            "versionNonce": 130343510,
-            "isDeleted": false,
-            "id": "w6eJ_GdRRjEdsdvb7jM6R",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -228.32423692388113,
-            "y": -5.424012589984727,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1950909898,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 150,
-            "versionNonce": 1831966218,
-            "isDeleted": false,
-            "id": "7SA-S886gCE2pxQEa3CHC",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -706.3242020466487,
-            "y": 173.43314770577422,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1502166154,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 164,
-            "versionNonce": 1759651734,
-            "isDeleted": false,
-            "id": "js10i9_ayX3fVew1eLPLj",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -219.46707662812196,
-            "y": 175.71882711425633,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 721754954,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
             "type": "text",
-            "version": 322,
-            "versionNonce": 728122570,
-            "isDeleted": false,
+            "position": {
+              "x": -80.50290624509853,
+              "y": -527.8860145199684
+            },
+            "data": {
+              "text": "Adidas",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 128,
+              "height": 65
+            }
+          },
+          {
             "id": "8vje3mG75SGT0bOgEVi77",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -648.2530408494163,
-            "y": 133.22111177048924,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 301.6875,
-            "height": 25,
-            "seed": 118956554,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Nike's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Nike's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -648.2530408494163,
+              "y": 133.22111177048924
+            },
+            "data": {
+              "text": "Who is Nike's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 294,
+              "height": 44
+            },
+            "zIndex": 3
           },
           {
-            "type": "text",
-            "version": 439,
-            "versionNonce": 1487193302,
-            "isDeleted": false,
             "id": "w3m3AwBiQ6Rl3sBSsxBVb",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -176.45245796367465,
-            "y": 135.79252290330174,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 328.1875,
-            "height": 25,
-            "seed": 146428106,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Adidas's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Adidas's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -176.45245796367465,
+              "y": 135.79252290330174
+            },
+            "data": {
+              "text": "Who is Adidas's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 314,
+              "height": 44
+            },
+            "zIndex": 4
           },
           {
-            "type": "text",
-            "version": 152,
-            "versionNonce": 77011850,
-            "isDeleted": false,
             "id": "3oIuTdex4qNvS536GnmBs",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -703.8944920038527,
-            "y": -43.364585076609046,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 420.1458435058594,
-            "height": 25,
-            "seed": 864659338,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Nike brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Nike brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -703.8944920038527,
+              "y": -43.364585076609046
+            },
+            "data": {
+              "text": "What do you notice about the Nike brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 398,
+              "height": 44
+            },
+            "zIndex": 1
           },
           {
-            "type": "text",
-            "version": 259,
-            "versionNonce": 144816662,
-            "isDeleted": false,
             "id": "62BhzLNmf-O6fEobbr2wN",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -240.25298853356844,
-            "y": -43.350281923707314,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 446.6458435058594,
-            "height": 25,
-            "seed": 1606428234,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Adidas brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Adidas brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -240.25298853356844,
+              "y": -43.350281923707314
+            },
+            "data": {
+              "text": "What do you notice about the Adidas brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 418,
+              "height": 44
+            },
+            "zIndex": 2
           },
           {
-            "type": "rectangle",
-            "version": 983,
-            "versionNonce": 385817162,
-            "isDeleted": false,
             "id": "aQoavinT8-kmUmjwVQQNR",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": -732.9980483560004,
-            "y": -54.317605153096395,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 970.7782622578663,
-            "height": 401.7916062104527,
-            "seed": 641256714,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": -745.6020275401427,
+              "y": -49.636630963215765
             },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 970.7782622578663,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 971,
+              "height": 402
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 229,
-            "versionNonce": 802031446,
-            "isDeleted": false,
             "id": "AadnWbe7M6rHHVGykvKZY",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -716.4659031366651,
-            "y": 6.639335927839781,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 469.3125,
-            "height": 71.99999128069196,
-            "seed": 1282317258,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 14.399998256138392,
-            "fontFamily": 1,
-            "text": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
-            "lineHeight": 1.25,
-            "baseline": 67
+            "type": "text",
+            "position": {
+              "x": -716.4659031366651,
+              "y": 6.639335927839781
+            },
+            "data": {
+              "text": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
+              "fontColor": "#e03131",
+              "fontSize": 14.399998256138392,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 439,
+              "height": 93
+            }
           },
           {
-            "type": "text",
-            "version": 161,
-            "versionNonce": 24723722,
-            "isDeleted": false,
             "id": "-5kjzrcIgvps80ww-5LLj",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -216.92570712662064,
-            "y": 16.32608077888575,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 505.9791564941406,
-            "height": 80,
-            "seed": 813470346,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": -243.18823476116896,
+              "y": 18.71358329111741
+            },
+            "data": {
+              "text": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 466,
+              "height": 101
+            },
+            "dragging": false
           },
           {
-            "type": "text",
-            "version": 228,
-            "versionNonce": 1442798666,
-            "isDeleted": false,
             "id": "l9aWkiCku0LGYK4vmH27l",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -706.9257071266206,
-            "y": 202.64964832182847,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 394.9583435058594,
-            "height": 80,
-            "seed": 891138378,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182722810,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": -706.9257071266206,
+              "y": 202.64964832182847
+            },
+            "data": {
+              "text": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 363,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 271,
-            "versionNonce": 192047050,
-            "isDeleted": false,
             "id": "jQG1PEfO0DYdKJ7PMpI2_",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -224.73815481077224,
-            "y": 205.93534516892674,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 442.5625,
-            "height": 80,
-            "seed": 766310410,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182770380,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
-            "lineHeight": 1.25,
-            "baseline": 74
-          },
-          {
-            "type": "line",
-            "version": 526,
-            "versionNonce": 1382590934,
-            "isDeleted": false,
-            "id": "Mmh3MXlaph9TXtPV1hJdt",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 827.2487255370693,
-            "y": -49.421717761225295,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 0,
-            "height": 381.71430315290183,
-            "seed": 1243965130,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                381.71430315290183
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 492,
-            "versionNonce": 1697646218,
-            "isDeleted": false,
-            "id": "VmhTb539vuzyGyMkuAX9F",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 358.67729696564083,
-            "y": -11.707397169707406,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 52559242,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 607,
-            "versionNonce": 1252065046,
-            "isDeleted": false,
-            "id": "0zhsJXzzmZRaMsGefNSza",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 847.9618028826658,
-            "y": -6.852504091565265,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 456.1438736867693,
-            "height": 0,
-            "seed": 98417738,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                456.1438736867693,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 538,
-            "versionNonce": 1799529802,
-            "isDeleted": false,
-            "id": "0IzCpxPPAttYdfieFbgG6",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 369.96183775989834,
-            "y": 172.00465620419357,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 540254986,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 552,
-            "versionNonce": 1536994390,
-            "isDeleted": false,
-            "id": "DRLQwkuLk-83GrTCUFuYd",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 856.8189631784248,
-            "y": 174.2903356126759,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 748597706,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
             "type": "text",
-            "version": 719,
-            "versionNonce": 991128586,
-            "isDeleted": false,
+            "position": {
+              "x": -224.73815481077224,
+              "y": 205.93534516892674
+            },
+            "data": {
+              "text": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 410,
+              "height": 101
+            }
+          },
+          {
             "id": "qQ8kjJ_AZHbQqKGJGa4kt",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 425.74723235556826,
-            "y": 131.79262026890876,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 331.625,
-            "height": 25,
-            "seed": 2117724298,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Spotify's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Spotify's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 425.74723235556826,
+              "y": 131.79262026890876
+            },
+            "data": {
+              "text": "Who is Spotify's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 319,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 837,
-            "versionNonce": 1127264662,
-            "isDeleted": false,
             "id": "ykZPol0WcxySurZ4SWcAp",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 899.8335818428723,
-            "y": 134.36403140172126,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 371,
-            "height": 25,
-            "seed": 1287669578,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is SoundCloud's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is SoundCloud's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 899.8335818428723,
+              "y": 134.36403140172126
+            },
+            "data": {
+              "text": "Who is SoundCloud's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 365,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 552,
-            "versionNonce": 1251826378,
-            "isDeleted": false,
             "id": "PVCNlpnxpZgHGmQxBOWhL",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 372.3915478026943,
-            "y": -44.7930765781897,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 450.0833435058594,
-            "height": 25,
-            "seed": 546098698,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Spotify brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Spotify brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 372.3915478026943,
+              "y": -44.7930765781897
+            },
+            "data": {
+              "text": "What do you notice about the Spotify brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 423,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 658,
-            "versionNonce": 1016205014,
-            "isDeleted": false,
             "id": "l8l-BQxTn4D0apGFccmxH",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 836.0330512729784,
-            "y": -44.778773425287795,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 489.4583435058594,
-            "height": 25,
-            "seed": 1050311882,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the SoundCloud brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the SoundCloud brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 836.0330512729784,
+              "y": -44.778773425287795
+            },
+            "data": {
+              "text": "What do you notice about the SoundCloud brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 469,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 563,
-            "versionNonce": 241096854,
-            "isDeleted": false,
             "id": "GY1VeoIzabITXrZwS3u4m",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 378.10583351698006,
-            "y": 16.47637405239858,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 432.4166564941406,
-            "height": 80,
-            "seed": 344216458,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182018242,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 378.10583351698006,
+              "y": 16.47637405239858
+            },
+            "data": {
+              "text": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 413,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 561,
-            "versionNonce": 775104662,
-            "isDeleted": false,
             "id": "lY7vgsdujsthf7z3SWIZm",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 858.2174057826048,
-            "y": 14.897589277305325,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 543.2083129882812,
-            "height": 80,
-            "seed": 612717130,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182081565,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 858.2174057826048,
+              "y": 14.897589277305325
+            },
+            "data": {
+              "text": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 486,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 600,
-            "versionNonce": 2068081686,
-            "isDeleted": false,
             "id": "M_urrXCbvN5XA-Ie4RlJV",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 369.3603326799264,
-            "y": 196.22115682024798,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 414.4166564941406,
-            "height": 80,
-            "seed": 1903720714,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182813073,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 369.3603326799264,
+              "y": 196.22115682024798
+            },
+            "data": {
+              "text": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 381,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 708,
-            "versionNonce": 407903830,
-            "isDeleted": false,
             "id": "gFzkrqZo7IzFgD1xBoIBz",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 850.4049580984533,
-            "y": 202.00685366734626,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 494.4166564941406,
-            "height": 80,
-            "seed": 1792591818,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182835258,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 850.4049580984533,
+              "y": 202.00685366734626
+            },
+            "data": {
+              "text": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 478,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 389,
-            "versionNonce": 482350858,
-            "isDeleted": false,
             "id": "Bszt2kPlXfCBRUyQ0DANT",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 580.1578807015153,
-            "y": -540.6931158150758,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 109.85416412353516,
-            "height": 41.4,
-            "seed": 1489059466,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Spotify",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Spotify",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": 580.1578807015153,
+              "y": -540.6931158150758
+            },
+            "data": {
+              "text": "Spotify",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 136,
+              "height": 65
+            }
           },
           {
-            "type": "text",
-            "version": 506,
-            "versionNonce": 540554902,
-            "isDeleted": false,
             "id": "zXrS5AICIc8e91kCS2-NX",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 930.8928976605696,
-            "y": -536.6932204467721,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 197.7708282470703,
-            "height": 41.4,
-            "seed": 1206705482,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "SoundCloud",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "SoundCloud",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": 930.8928976605696,
+              "y": -536.6932204467721
+            },
+            "data": {
+              "text": "SoundCloud",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 218,
+              "height": 65
+            }
           },
           {
-            "type": "text",
-            "version": 564,
-            "versionNonce": 1199351242,
-            "isDeleted": false,
             "id": "D_S4J4UCF0qinm4jGtDIF",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -494.20821597671795,
-            "y": 416.0687003005311,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 99.83333587646484,
-            "height": 41.4,
-            "seed": 1974903818,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Netflix",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Netflix",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": -494.20821597671795,
+              "y": 416.0687003005311
+            },
+            "data": {
+              "text": "Netflix",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 126,
+              "height": 65
+            }
           },
           {
-            "type": "text",
-            "version": 616,
-            "versionNonce": 2019619798,
-            "isDeleted": false,
             "id": "F0fvMCJ54T41yr-pdXBzP",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -130.38237925012083,
-            "y": 414.92590419282953,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 109.85416412353516,
-            "height": 41.4,
-            "seed": 1008308938,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Disney",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Disney",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": -130.38237925012083,
+              "y": 414.92590419282953
+            },
+            "data": {
+              "text": "Disney",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 126,
+              "height": 65
+            }
           },
           {
-            "type": "rectangle",
-            "version": 1346,
-            "versionNonce": 1899584650,
-            "isDeleted": false,
             "id": "owj9MdYH85tJmFTR0pVo6",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": -749.2383321218908,
-            "y": 889.3015035011073,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 1002.7782099420182,
-            "height": 401.7916062104527,
-            "seed": 2108729738,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": -743.4797579641051,
+              "y": 888.2897773157766
             },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1002.7782099420182,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1003,
+              "height": 402
+            },
+            "dragging": false
           },
           {
-            "type": "line",
-            "version": 453,
-            "versionNonce": 1593837846,
-            "isDeleted": false,
-            "id": "wrIHlnn3F2yFYixj4sMeI",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -253.84902660679666,
-            "y": 895.6258823945587,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 0,
-            "height": 381.71430315290183,
-            "seed": 297199690,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                381.71430315290183
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 419,
-            "versionNonce": 397491018,
-            "isDeleted": false,
-            "id": "PSNG91i6hSJrxmzBDgmsi",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -722.4204551782252,
-            "y": 933.3402029860769,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 805785354,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 534,
-            "versionNonce": 1670018646,
-            "isDeleted": false,
-            "id": "cwek6QbOAPZvR3Z805N5q",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -233.13594926120015,
-            "y": 938.195096064219,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 456.1438736867693,
-            "height": 0,
-            "seed": 1562172874,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                456.1438736867693,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 465,
-            "versionNonce": 1228882442,
-            "isDeleted": false,
-            "id": "MUAbJlaChmHPglJKRIlvB",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -711.1359143839677,
-            "y": 1117.0522563599775,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1444058250,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 479,
-            "versionNonce": 1591032726,
-            "isDeleted": false,
-            "id": "6_ntY3QtqFH4bpg9_j4B1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -224.2787889654411,
-            "y": 1119.3379357684603,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 2091086666,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "text",
-            "version": 653,
-            "versionNonce": 283013322,
-            "isDeleted": false,
             "id": "S6fyJacKFnplBRMiTy99X",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -655.3505197882978,
-            "y": 1076.8402204246927,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 329.4583435058594,
-            "height": 25,
-            "seed": 1126857226,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Netflix's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Netflix's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -655.3505197882978,
+              "y": 1076.8402204246927
+            },
+            "data": {
+              "text": "Who is Netflix's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 313,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 770,
-            "versionNonce": 1192581334,
-            "isDeleted": false,
             "id": "NBeLfrNmyRYGoNqJNonNj",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -181.26417030099367,
-            "y": 1079.4116315575052,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 324.2291564941406,
-            "height": 25,
-            "seed": 413313226,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Disney's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Disney's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -181.26417030099367,
+              "y": 1079.4116315575052
+            },
+            "data": {
+              "text": "Who is Disney's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 313,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 502,
-            "versionNonce": 1646905226,
-            "isDeleted": false,
             "id": "4nV3go7-yu6dHmw3d8rKk",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -725.849061484029,
-            "y": 901.397406878376,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 447.9166564941406,
-            "height": 25,
-            "seed": 1420230538,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Netflix brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Netflix brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -725.849061484029,
+              "y": 901.397406878376
+            },
+            "data": {
+              "text": "What do you notice about the Netflix brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 417,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 615,
-            "versionNonce": 64998934,
-            "isDeleted": false,
             "id": "r6qE-vSjnhwQPCgKWcEjy",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -222.2075580137447,
-            "y": 903.6973894397598,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 442.6875,
-            "height": 25,
-            "seed": 594705994,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Disney brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Disney brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": -222.2075580137447,
+              "y": 903.6973894397598
+            },
+            "data": {
+              "text": "What do you notice about the Disney brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 417,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 528,
-            "versionNonce": 637473738,
-            "isDeleted": false,
             "id": "kVmZCYZzoLEjDtkGxHrp7",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -734.9919535041182,
-            "y": 945.5239567695666,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 487.375,
-            "height": 80,
-            "seed": 1910514954,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181846674,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": -734.9919535041182,
+              "y": 945.5239567695666
+            },
+            "data": {
+              "text": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 458,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 496,
-            "versionNonce": 1298385482,
-            "isDeleted": false,
             "id": "2rfc_31gr3Lzcgy5CSDyT",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -219.4515656692971,
-            "y": 959.9451894330896,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 445.8333435058594,
-            "height": 80,
-            "seed": 1500181450,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181864896,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": -219.4515656692971,
+              "y": 959.9451894330896
+            },
+            "data": {
+              "text": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 415,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 591,
-            "versionNonce": 1120179146,
-            "isDeleted": false,
             "id": "CtXrOsQJY_d7i0BamMXpq",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -712.8802591681807,
-            "y": 1141.2687569760324,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 447.9791564941406,
-            "height": 80,
-            "seed": 204335754,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182858939,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": -712.8802591681807,
+              "y": 1141.2687569760324
+            },
+            "data": {
+              "text": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 412,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 602,
-            "versionNonce": 998394582,
-            "isDeleted": false,
             "id": "_lGvdRYhBlphJQowl69Mg",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -231.83572094273393,
-            "y": 1147.0544538231302,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 435.5208435058594,
-            "height": 60,
-            "seed": 1088686410,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182875290,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
-            "lineHeight": 1.25,
-            "baseline": 54
+            "type": "text",
+            "position": {
+              "x": -231.83572094273393,
+              "y": 1147.0544538231302
+            },
+            "data": {
+              "text": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 392,
+              "height": 80
+            }
           },
           {
-            "type": "text",
-            "version": 810,
-            "versionNonce": 293780426,
-            "isDeleted": false,
             "id": "2pEB-YinZcHRPMEjAT0MB",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 953.0835511436426,
-            "y": 421.40191592320537,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 132.3958282470703,
-            "height": 41.4,
-            "seed": 518541322,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Walmart",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Walmart",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": 953.0835511436426,
+              "y": 421.40191592320537
+            },
+            "data": {
+              "text": "Walmart",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 152,
+              "height": 65
+            }
           },
           {
-            "type": "text",
-            "version": 917,
-            "versionNonce": 1240415702,
-            "isDeleted": false,
             "id": "kB6MkAHqefTfZu_JAtuvn",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 576.3839907057591,
-            "y": 420.2589890258838,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 99.85416412353516,
-            "height": 41.4,
-            "seed": 708165322,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 2,
-            "text": "Target",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Target",
-            "lineHeight": 1.15,
-            "baseline": 33
+            "type": "text",
+            "position": {
+              "x": 576.3839907057591,
+              "y": 420.2589890258838
+            },
+            "data": {
+              "text": "Target",
+              "fontColor": "#1e1e1e",
+              "fontSize": 36,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 121,
+              "height": 65
+            }
           },
           {
-            "type": "rectangle",
-            "version": 1525,
-            "versionNonce": 1583176522,
-            "isDeleted": false,
             "id": "zJs7MwzEfhYfdkIVZ6-K-",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": 319.19298296375337,
-            "y": 886.3489350836045,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#a5d8ff",
-            "width": 1011.9210147690271,
-            "height": 401.7916062104527,
-            "seed": 795301258,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
+            "type": "shape",
+            "position": {
+              "x": 325.36145733422074,
+              "y": 888.2863032626162
             },
-            "boundElements": [
-
-            ],
-            "updated": 1773182153175,
-            "link": null,
-            "locked": false
+            "style": {
+              "width": 1011.9210147690271,
+              "height": 401.7916062104527
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 1012,
+              "height": 402
+            },
+            "dragging": false
           },
           {
-            "type": "line",
-            "version": 622,
-            "versionNonce": 1010111254,
-            "isDeleted": false,
-            "id": "aKNydPsEe8TQox5PS_kQ1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 824.8678458170175,
-            "y": 892.673313977056,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 0,
-            "height": 381.71430315290183,
-            "seed": 800592970,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                0,
-                381.71430315290183
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 588,
-            "versionNonce": 464113994,
-            "isDeleted": false,
-            "id": "PQrugAlOegB0jGp5kFquI",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 356.29641724558905,
-            "y": 930.3876345685741,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1292040970,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 703,
-            "versionNonce": 697188438,
-            "isDeleted": false,
-            "id": "KMrNFzNxpePGRlEHOZs6v",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 845.580923162614,
-            "y": 935.2425276467158,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 456.1438736867693,
-            "height": 0,
-            "seed": 901974474,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                456.1438736867693,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 634,
-            "versionNonce": 766842890,
-            "isDeleted": false,
-            "id": "ZwJsEK8SPuHjnriOL_N7p",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 367.58095803984634,
-            "y": 1114.0996879424747,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 286474378,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "line",
-            "version": 648,
-            "versionNonce": 97502614,
-            "isDeleted": false,
-            "id": "k9Px7MhNwCnbVgTorKlMi",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 854.4380834583731,
-            "y": 1116.3853673509575,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 430.8571079799107,
-            "height": 0,
-            "seed": 1789828938,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 2
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "startBinding": null,
-            "endBinding": null,
-            "lastCommittedPoint": null,
-            "startArrowhead": null,
-            "endArrowhead": null,
-            "points": [
-              [
-                0,
-                0
-              ],
-              [
-                430.8571079799107,
-                0
-              ]
-            ]
-          },
-          {
-            "type": "text",
-            "version": 828,
-            "versionNonce": 1412007626,
-            "isDeleted": false,
             "id": "Ln0xMO7J7WHG9wSvEsAvp",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 423.36635263551625,
-            "y": 1073.88765200719,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 334.0208435058594,
-            "height": 25,
-            "seed": 519054858,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Target's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Target's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 423.36635263551625,
+              "y": 1073.88765200719
+            },
+            "data": {
+              "text": "Who is Target's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 310,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 946,
-            "versionNonce": 36610774,
-            "isDeleted": false,
             "id": "KzkDjGo_QfUBynHAoGEtt",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 897.4527021228205,
-            "y": 1076.4590631400024,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 343.1458435058594,
-            "height": 25,
-            "seed": 1188222154,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "Who is Walmart's target audience?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Who is Walmart's target audience?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 897.4527021228205,
+              "y": 1076.4590631400024
+            },
+            "data": {
+              "text": "Who is Walmart's target audience?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 328,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 685,
-            "versionNonce": 2007113098,
-            "isDeleted": false,
             "id": "-IfLNj63pCDysaUgFN9cu",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 347.15361241857977,
-            "y": 898.4448384608733,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 452.4791564941406,
-            "height": 25,
-            "seed": 603040650,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Target brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Target brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 347.15361241857977,
+              "y": 898.4448384608733
+            },
+            "data": {
+              "text": "What do you notice about the Target brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 414,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 795,
-            "versionNonce": 1631574038,
-            "isDeleted": false,
             "id": "UJAuJIngPyOA8Ebhw9UgL",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": 849.6522761846231,
-            "y": 904.1733837315202,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 461.6041564941406,
-            "height": 25,
-            "seed": 210217546,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773181844022,
-            "link": null,
-            "locked": false,
-            "fontSize": 20,
-            "fontFamily": 1,
-            "text": "What do you notice about the Walmart brand?",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "What do you notice about the Walmart brand?",
-            "lineHeight": 1.25,
-            "baseline": 18
+            "type": "text",
+            "position": {
+              "x": 849.6522761846231,
+              "y": 904.1733837315202
+            },
+            "data": {
+              "text": "What do you notice about the Walmart brand?",
+              "fontColor": "#1e1e1e",
+              "fontSize": 20,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 432,
+              "height": 44
+            }
           },
           {
-            "type": "text",
-            "version": 713,
-            "versionNonce": 1838904650,
-            "isDeleted": false,
             "id": "c5HPB3dV0S3XfohmsPSF5",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 327.7249014810799,
-            "y": 942.571431948604,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 523.1041870117188,
-            "height": 80,
-            "seed": 1466945802,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182179984,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 327.7249014810799,
+              "y": 942.571431948604
+            },
+            "data": {
+              "text": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 489,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 675,
-            "versionNonce": 1707116374,
-            "isDeleted": false,
             "id": "fLds1FnECckzaU3LMf5vi",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 859.2651323683563,
-            "y": 956.9926210155868,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 436.1458435058594,
-            "height": 80,
-            "seed": 1210392522,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182239805,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 859.2651323683563,
+              "y": 956.9926210155868
+            },
+            "data": {
+              "text": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 407,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 699,
-            "versionNonce": 2122334026,
-            "isDeleted": false,
             "id": "45jqO3Yy0VFQ8EOC0E6jJ",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 340.69370379692793,
-            "y": 1130.316223435762,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 422.9375,
-            "height": 80,
-            "seed": 2059572874,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182895796,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
-            "lineHeight": 1.25,
-            "baseline": 74
+            "type": "text",
+            "position": {
+              "x": 340.69370379692793,
+              "y": 1130.316223435762
+            },
+            "data": {
+              "text": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 402,
+              "height": 101
+            }
           },
           {
-            "type": "text",
-            "version": 751,
-            "versionNonce": 1698617174,
-            "isDeleted": false,
             "id": "KEDSwHoEijdlol-1YiOe1",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": 850.3099321730442,
-            "y": 1142.9589585083058,
-            "strokeColor": "#e03131",
-            "backgroundColor": "#b2f2bb",
-            "width": 482.6666564941406,
-            "height": 60,
-            "seed": 1342387530,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1773182908116,
-            "link": null,
-            "locked": false,
-            "fontSize": 16,
-            "fontFamily": 1,
-            "text": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
-            "lineHeight": 1.25,
-            "baseline": 54
+            "type": "text",
+            "position": {
+              "x": 850.3099321730442,
+              "y": 1142.9589585083058
+            },
+            "data": {
+              "text": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
+              "fontColor": "#e03131",
+              "fontSize": 16,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 443,
+              "height": 80
+            }
+          },
+          {
+            "id": "f6a843ad-0468-43cc-b788-7e963fb6f59c",
+            "type": "lineAnchor",
+            "position": {
+              "x": -259.03731426947775,
+              "y": -52.9932262596447
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "6914ed8d-9ee1-4a78-8cd5-3260d9d990c6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -249.03731426947775,
+              "y": 328.72107689325713
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e85b360c-43d4-44f8-9cd6-491538cf4e1e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -727.6087428409062,
+              "y": -15.27890566812681
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "360d9049-d485-4184-a43e-11a043776b4d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -286.75163486099547,
+              "y": -15.27890566812681
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "465eae25-425e-4781-852f-a2eafa2ebe34",
+            "type": "lineAnchor",
+            "position": {
+              "x": -238.32423692388113,
+              "y": -10.424012589984727
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "02517653-d38a-4da5-a8f4-adfc5158e9b1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 202.5328710560296,
+              "y": -10.424012589984727
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "a8a4aff0-2225-4a0d-ba83-f5c2587433df",
+            "type": "lineAnchor",
+            "position": {
+              "x": -716.3242020466487,
+              "y": 168.43314770577422
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d1fedff3-2a1a-4a5b-971d-0cd97a5429a5",
+            "type": "lineAnchor",
+            "position": {
+              "x": -275.46709406673796,
+              "y": 168.43314770577422
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b11278a2-250d-4886-9d98-f45b438eed3e",
+            "type": "lineAnchor",
+            "position": {
+              "x": -229.46707662812196,
+              "y": 170.71882711425633
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "09336589-13e0-4aa9-8ef6-82c22e219308",
+            "type": "lineAnchor",
+            "position": {
+              "x": 211.39003135178876,
+              "y": 170.71882711425633
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "134a87ab-0d9e-4e33-95fd-c06898aab3d1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 817.2487255370693,
+              "y": -54.421717761225295
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b1c2bee9-5b84-4005-a91c-be0903b7efa3",
+            "type": "lineAnchor",
+            "position": {
+              "x": 827.2487255370693,
+              "y": 327.29258539167654
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f2186543-64a4-412b-a2a7-d89ca2c80653",
+            "type": "lineAnchor",
+            "position": {
+              "x": 348.67729696564083,
+              "y": -16.707397169707406
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "bdbed325-ad75-4c96-a9b7-7353625320b5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 789.5344049455516,
+              "y": -16.707397169707406
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e91373a5-ad61-4b61-8f5b-c782bf6db8f9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 837.9618028826658,
+              "y": -11.852504091565265
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9bd57a42-e346-4b4b-a53e-2d84c531e81f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1304.1056765694352,
+              "y": -11.852504091565265
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b6909edb-88bc-4264-b66e-4e2ede201f6f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 359.96183775989834,
+              "y": 167.00465620419357
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "79ad65fe-2c48-4711-b935-df51f15b48bb",
+            "type": "lineAnchor",
+            "position": {
+              "x": 800.8189457398091,
+              "y": 167.00465620419357
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ab7b578c-4370-4807-8eab-b1b9c185febb",
+            "type": "lineAnchor",
+            "position": {
+              "x": -263.84902660679666,
+              "y": 890.6258823945587
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ed4ff9c8-ff97-4da2-93d1-e201b174f004",
+            "type": "lineAnchor",
+            "position": {
+              "x": -253.84902660679666,
+              "y": 1272.3401855474606
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "50bc1cec-2931-4f73-b365-7fd885ab27c3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -732.4204551782252,
+              "y": 928.3402029860769
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "b8d227a2-ed5d-471e-a974-e03835d46fe5",
+            "type": "lineAnchor",
+            "position": {
+              "x": -291.5633471983145,
+              "y": 928.3402029860769
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "93386e57-86a0-4b18-aebd-bf0f47ce6fc3",
+            "type": "lineAnchor",
+            "position": {
+              "x": -243.13594926120015,
+              "y": 933.195096064219
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "f5993b91-6512-46d4-8a8a-13d96bb75366",
+            "type": "lineAnchor",
+            "position": {
+              "x": 223.00792442556917,
+              "y": 933.195096064219
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "21dd731e-f08f-4eb1-a436-56019e9a11e4",
+            "type": "lineAnchor",
+            "position": {
+              "x": -721.1359143839677,
+              "y": 1112.0522563599775
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2b5e38d6-abf4-4cf8-9447-ce7960509e7d",
+            "type": "lineAnchor",
+            "position": {
+              "x": -280.278806404057,
+              "y": 1112.0522563599775
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "cd09a4a8-fd9d-46b6-bb6e-ea627824efc6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -234.2787889654411,
+              "y": 1114.3379357684603
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "948d8494-51a2-41b1-b5b9-be75a5cd5ce6",
+            "type": "lineAnchor",
+            "position": {
+              "x": 206.57831901446963,
+              "y": 1114.3379357684603
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "ca119873-c854-4cb8-9bd5-d4a1d974c315",
+            "type": "lineAnchor",
+            "position": {
+              "x": 814.8678458170175,
+              "y": 887.673313977056
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9067680b-590d-499f-9ddb-3e27590dddd9",
+            "type": "lineAnchor",
+            "position": {
+              "x": 824.8678458170175,
+              "y": 1269.3876171299578
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "d0c8937c-5c83-4be0-a951-68298fa0df0f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 346.29641724558905,
+              "y": 925.3876345685741
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9f23f339-6a25-4c2f-a9e8-ed60aa0ce58c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 787.1535252254998,
+              "y": 925.3876345685741
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9e3a236f-f38d-4f7d-8c63-3d8a52384498",
+            "type": "lineAnchor",
+            "position": {
+              "x": 835.580923162614,
+              "y": 930.2425276467158
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "c6c0742b-3def-485f-a4d5-0a1cccfe1d8c",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1301.7247968493834,
+              "y": 930.2425276467158
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5f7b728d-da51-4f65-b1cf-e7cfd7b57c27",
+            "type": "lineAnchor",
+            "position": {
+              "x": 357.58095803984634,
+              "y": 1109.0996879424747
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "15b34f27-48cc-4c87-9cd9-ed61a2a30d05",
+            "type": "lineAnchor",
+            "position": {
+              "x": 798.4380660197571,
+              "y": 1109.0996879424747
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "5e02bf96-fe46-4be7-9f9f-f1d431a2a5ed",
+            "type": "lineAnchor",
+            "position": {
+              "x": 844.4380834583731,
+              "y": 1111.3853673509575
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "c354e824-1533-415a-9069-d25d147c8d75",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1285.2951914382838,
+              "y": 1111.3853673509575
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e9463e94-9dbe-44b9-9ba3-e23aabb8413f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 844.884603831499,
+              "y": 166.0018011940872
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "70bbd9b8-c7d2-4623-85fb-28db3c29e42a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1311.0284775182686,
+              "y": 166.0018011940872
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": 790.4182957240532,
-          "scrollY": 565.7253374372203,
-          "zoom": {
-            "value": 0.6000000000000001
+        "edges": [
+          {
+            "id": "04e38218-d850-4031-be18-e246cfea8f3f",
+            "source": "f6a843ad-0468-43cc-b788-7e963fb6f59c",
+            "target": "6914ed8d-9ee1-4a78-8cd5-3260d9d990c6",
+            "type": "straight",
+            "zIndex": 5
+          },
+          {
+            "id": "1f7f1858-d52b-4e3c-8855-d8a02006cec1",
+            "source": "e85b360c-43d4-44f8-9cd6-491538cf4e1e",
+            "target": "360d9049-d485-4184-a43e-11a043776b4d",
+            "type": "straight",
+            "zIndex": 9
+          },
+          {
+            "id": "2a7ac741-d80d-423b-87a3-7fadd68e8c27",
+            "source": "465eae25-425e-4781-852f-a2eafa2ebe34",
+            "target": "02517653-d38a-4da5-a8f4-adfc5158e9b1",
+            "type": "straight",
+            "zIndex": 7
+          },
+          {
+            "id": "9062ebdd-4c48-4fba-8270-73405b4796a3",
+            "source": "a8a4aff0-2225-4a0d-ba83-f5c2587433df",
+            "target": "d1fedff3-2a1a-4a5b-971d-0cd97a5429a5",
+            "type": "straight",
+            "zIndex": 8
+          },
+          {
+            "id": "70ddb6b3-d4cc-4334-a0b5-a030fa274a1a",
+            "source": "b11278a2-250d-4886-9d98-f45b438eed3e",
+            "target": "09336589-13e0-4aa9-8ef6-82c22e219308",
+            "type": "straight",
+            "zIndex": 6
+          },
+          {
+            "id": "9ce52008-dd33-4f89-bed5-7c11efaa1081",
+            "source": "134a87ab-0d9e-4e33-95fd-c06898aab3d1",
+            "target": "b1c2bee9-5b84-4005-a91c-be0903b7efa3",
+            "type": "straight",
+            "zIndex": 22
+          },
+          {
+            "id": "cb82fdc6-4c79-448e-958a-89b01c7c6514",
+            "source": "f2186543-64a4-412b-a2a7-d89ca2c80653",
+            "target": "bdbed325-ad75-4c96-a9b7-7353625320b5",
+            "type": "straight",
+            "zIndex": 20
+          },
+          {
+            "id": "8cf8c5a3-deda-40c5-b212-3b533d3287af",
+            "source": "e91373a5-ad61-4b61-8f5b-c782bf6db8f9",
+            "target": "9bd57a42-e346-4b4b-a53e-2d84c531e81f",
+            "type": "straight",
+            "zIndex": 23
+          },
+          {
+            "id": "3f978399-373b-4940-914b-cf6a618bb294",
+            "source": "b6909edb-88bc-4264-b66e-4e2ede201f6f",
+            "target": "79ad65fe-2c48-4711-b935-df51f15b48bb",
+            "type": "straight",
+            "zIndex": 21
+          },
+          {
+            "id": "23b95de1-1d3f-4b26-93f4-7552e3379587",
+            "source": "ab7b578c-4370-4807-8eab-b1b9c185febb",
+            "target": "ed4ff9c8-ff97-4da2-93d1-e201b174f004",
+            "type": "straight",
+            "zIndex": 12
+          },
+          {
+            "id": "b00ea9bb-3414-4b92-882f-a136a4a40090",
+            "source": "50bc1cec-2931-4f73-b365-7fd885ab27c3",
+            "target": "b8d227a2-ed5d-471e-a974-e03835d46fe5",
+            "type": "straight",
+            "zIndex": 10
+          },
+          {
+            "id": "3b824d71-d161-4979-a1db-86fe29d4e916",
+            "source": "93386e57-86a0-4b18-aebd-bf0f47ce6fc3",
+            "target": "f5993b91-6512-46d4-8a8a-13d96bb75366",
+            "type": "straight",
+            "zIndex": 13
+          },
+          {
+            "id": "eb360613-c29c-4149-be5b-39d51c09e1ae",
+            "source": "21dd731e-f08f-4eb1-a436-56019e9a11e4",
+            "target": "2b5e38d6-abf4-4cf8-9447-ce7960509e7d",
+            "type": "straight",
+            "zIndex": 11
+          },
+          {
+            "id": "2dd71745-2d03-4f9e-8404-46019398339a",
+            "source": "cd09a4a8-fd9d-46b6-bb6e-ea627824efc6",
+            "target": "948d8494-51a2-41b1-b5b9-be75a5cd5ce6",
+            "type": "straight",
+            "zIndex": 14
+          },
+          {
+            "id": "15d8fb8e-467a-464e-aae9-d0696261d974",
+            "source": "ca119873-c854-4cb8-9bd5-d4a1d974c315",
+            "target": "9067680b-590d-499f-9ddb-3e27590dddd9",
+            "type": "straight",
+            "zIndex": 17
+          },
+          {
+            "id": "f2504f0a-f9d1-473c-a6bf-822247dc7ee9",
+            "source": "d0c8937c-5c83-4be0-a951-68298fa0df0f",
+            "target": "9f23f339-6a25-4c2f-a9e8-ed60aa0ce58c",
+            "type": "straight",
+            "zIndex": 15
+          },
+          {
+            "id": "c8c72c17-441e-4c30-a976-321eff194f85",
+            "source": "9e3a236f-f38d-4f7d-8c63-3d8a52384498",
+            "target": "c6c0742b-3def-485f-a4d5-0a1cccfe1d8c",
+            "type": "straight",
+            "zIndex": 18
+          },
+          {
+            "id": "1d14fce1-2ce3-4345-8699-f27ae5d58460",
+            "source": "5f7b728d-da51-4f65-b1cf-e7cfd7b57c27",
+            "target": "15b34f27-48cc-4c87-9cd9-ed61a2a30d05",
+            "type": "straight",
+            "zIndex": 16
+          },
+          {
+            "id": "4cf51d56-11a5-4a36-8346-f6cdc76e176b",
+            "source": "5e02bf96-fe46-4be7-9f9f-f1d431a2a5ed",
+            "target": "c354e824-1533-415a-9069-d25d147c8d75",
+            "type": "straight",
+            "zIndex": 19
+          },
+          {
+            "id": "6f097eee-524f-4c8c-95d6-c419c34e3733",
+            "source": "e9463e94-9dbe-44b9-9ba3-e23aabb8413f",
+            "target": "70bbd9b8-c7d2-4623-85fb-28db3c29e42a",
+            "type": "straight",
+            "zIndex": 23,
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
           }
-        },
-        "files": {
-          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
-            "mimeType": "image/png",
-            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
-            "created": 1773179548070,
-            "lastRetrieved": 1773179548070
-          },
-          "03a165a881326e55084ba496c979aafa6c4ca35f": {
-            "mimeType": "image/png",
-            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
-            "created": 1773179560085,
-            "lastRetrieved": 1773179560085
-          },
-          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
-            "mimeType": "image/png",
-            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
-            "created": 1773179570690,
-            "lastRetrieved": 1773179570690
-          },
-          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
-            "mimeType": "image/png",
-            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
-            "created": 1773179586031,
-            "lastRetrieved": 1773179586031
-          }
-        },
-        "externalFiles": {
-          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
-            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
-            "starterAsset": true,
-            "filenameWithExtension": "5dbf441b0986b0a789838a6feb86b336934ba65b.png",
-            "uploaded": true
-          },
-          "03a165a881326e55084ba496c979aafa6c4ca35f": {
-            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
-            "starterAsset": true,
-            "filenameWithExtension": "03a165a881326e55084ba496c979aafa6c4ca35f.png",
-            "uploaded": true
-          },
-          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
-            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
-            "starterAsset": true,
-            "filenameWithExtension": "c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
-            "uploaded": true
-          },
-          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
-            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
-            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
-            "starterAsset": true,
-            "filenameWithExtension": "5ab864d827d59efba1962913809a4f2ae4988ba0.png",
-            "uploaded": true
-          }
+        ],
+        "viewport": {
+          "x": 388.16434082753125,
+          "y": 193.23059038372975,
+          "zoom": 0.36225992309448796
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-15 19:00:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-30 16:32:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:02 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-04-30 18:08:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 10:04:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 18:37:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 17:31:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:32:20 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:33:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:33:54 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:12 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:19 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:35:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 17:36:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

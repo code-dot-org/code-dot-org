@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Examples of AI Use
 
-#### Review the following scenarios where a teacher improved their teaching practice by using AI.
+Review the following scenarios where a teacher improved their teaching practice by using AI.
 
 <div style="padding:16px 20px 20px 20px;">
 <div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:2px solid #8C52BA;">
@@ -76,5 +76,5 @@ markdown <<MARKDOWN
 </div>
 </div>
 
->#### **💬 Quick Reflection:** Are there any parts of your teaching practice which you'd like to improve using AI integration?
+> **💬 Quick Reflection:** Are there any parts of your teaching practice which you'd like to improve using AI integration?
 MARKDOWN

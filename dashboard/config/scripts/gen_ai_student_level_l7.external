@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Understanding Neural Networks
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Construct a neural network to represent a situation and make decisions based on inputs
+* Construct a neural network to represent a situation and make decisions based on inputs
 
 ## **Key Terms**
 
-* #### **Neural Network** - An interconnected network that makes decisions using weights and hidden layers. They are used to represent the relationship between words
+* **Neural Network** - An interconnected network that makes decisions using weights and hidden layers. They are used to represent the relationship between words
 
 ## Resources
 

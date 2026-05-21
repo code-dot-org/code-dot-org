@@ -48,10 +48,10 @@ markdown <<MARKDOWN
 
 ## The student record holds information according to the following rules:
 
- * <h4>The first eight bits store the student's grade as a binary number.</h4>
- * <h4>The second eight store the student's age as a binary number.</h4>
- * <h4>The next eight store the student's first initial in ASCII.</h4>
- * <h4>The last eight store the student's last initial in ASCII.</h4>
+ * <p>The first eight bits store the student's grade as a binary number.</p>
+ * <p>The second eight store the student's age as a binary number.</p>
+ * <p>The next eight store the student's first initial in ASCII.</p>
+ * <p>The last eight store the student's last initial in ASCII.</p>
 
 <br />
 <br />

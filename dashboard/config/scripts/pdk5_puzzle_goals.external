@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 Throughout Courses 1, 2, and 3, you'll write programs using different characters to complete different goals. Here's an overview of the different goals of the puzzles you and your students will use throughout our courses:
 
-#### Maze
+Maze
 <br/>
 
 <img style="float:left; margin:0 20px" src="http:/blockly/media/mockup_birds.png" height="200" width="300">
@@ -34,7 +34,7 @@ You'll need to get the angry bird to the pig, and you'll need to get the zombie 
 
 <br/>
 
-#### Artist
+Artist
 <br/>
 
 <img style="float:left; margin:0 20px" src="/blockly/media/artist.png" height="200" width="300">
@@ -58,7 +58,7 @@ You have to make the artist draw over the grey lines by moving him around the ca
 <br/>
 <br/>
 
-#### Bee
+Bee
 <br/>
 
 <img style="float:left; margin:0 20px" src="/blockly/media/bee.png" height="200" width="300">
@@ -82,7 +82,7 @@ You'll need to move the bee around to collect all the nectar and make all the ho
 <br/>
 <br/>
 
-#### Playlab
+Playlab
 <br/>
 
 <img style="float:left; margin:0 20px" src="/blockly/media/playlab/guide.png" height="200" width="300">
@@ -110,7 +110,7 @@ In Playlab, you'll create games and stories. For the Playlab puzzles, the goals 
 <br/>
 <br/>
 
-#### Flappy
+Flappy
 <br/>
 
 <img style="float:left; margin:0 20px" src="/blockly/media/flappy/guide.png" height="200" width="300">
@@ -138,7 +138,7 @@ In Flappy, you'll create your very own Flappy bird game. The puzzles leading up 
 <br/>
 <br/>
 
-#### Bounce
+Bounce
 <br/>
 
 <img style="float:left; margin:0 20px" src="/blockly/media/bounce/guide.png" height="200" width="300">

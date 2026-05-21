@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Tips for Using LLMs in Class 
 
-#### Engaging students in coding through interaction with AI not only captivates their interest but also enhances their critical thinking skills.
+Engaging students in coding through interaction with AI not only captivates their interest but also enhances their critical thinking skills.
 
 
 
 ## Critical Thinking Integration
-#### Don't treat LLM outputs as the final word. Teach students to: 
+Don't treat LLM outputs as the final word. Teach students to: 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🎯 Evaluate Accuracy</summary>

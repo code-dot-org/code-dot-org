@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 21:37:11 UTC",
+    "serialized_at": "2026-05-19 22:36:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1165,7 +1165,7 @@
       "key": "193a9f05-bc81-4df2-b8fe-6532b2a8aba9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce data tables.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen or used data tables? Where were you? Where did the words or numbers in the data table come from? How did you use it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point of this discussion is just to get a few examples shared out loud that demonstrate the diversity of situations where data tables are found.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add ***spreadsheet*** to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce data tables.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen or used data tables? Where were you? Where did the words or numbers in the data table come from? How did you use it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point of this discussion is just to get a few examples shared out loud that demonstrate the diversity of situations where data tables are found.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Introduction to Data Science Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add ***spreadsheet*** to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "193a9f05-bc81-4df2-b8fe-6532b2a8aba9",
@@ -1188,7 +1188,7 @@
       "key": "841bd080-9173-487f-945b-c5fd9373f194",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart. Note that even though there are 517 rows in this spreadsheet, the sample size is 516 because row number 1 is not data but attribute labels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart and direct students to fill in their Unit 1 Guided Notes..\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart. Note that even though there are 517 rows in this spreadsheet, the sample size is 516 because row number 1 is not data but attribute labels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
         "progression_name": "Read 1: Context",
         "tips": [
           {
@@ -1228,7 +1228,7 @@
       "key": "5500dbf0-3fc1-455b-bb11-e616744eb795",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***range***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***average***. Explain how spreadsheets assist with calculating averages even when it might be hard to do this manually.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***range***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***average***. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how spreadsheets assist with calculating **averages** even when it might be hard to do this manually.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
         "progression_name": "Read 3: Questions"
       },
       "seeding_key": {
@@ -1423,7 +1423,7 @@
       "key": "a740b70e-7626-4e06-ae91-b3464d671036",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3. On each level, they'll read a scenario, choose the person they agree with most, and explain why in the free response box. These scenarios will help them prepare for a whole-class 4 Corners discussion about each scenario on ethical decision-making in data collection.\n* **Level 1:** Students read the scenario and decide which person they agree with regarding collecting data about food allergies. \n* **Level 2:** Students read the scenario and decide which person they agree with regarding collecting data about getting sponsorships.\n* **Level 3:** Students read the scenario and decide which person they agree with regarding collecting data about music choices. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Introduction to Data Science Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add data collection and data ethics to the Word Wall.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3. On each level, they'll read a scenario, choose the person they agree with most, and explain why in the free response box. These scenarios will help them prepare for a whole-class 4 Corners discussion about each scenario on ethical decision-making in data collection.\n* **Level 1:** Students read the scenario and decide which person they agree with regarding collecting data about food allergies. \n* **Level 2:** Students read the scenario and decide which person they agree with regarding collecting data about getting sponsorships.\n* **Level 3:** Students read the scenario and decide which person they agree with regarding collecting data about music choices. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, check responses or prompt with light questions to encourage deeper thinking. Focus on how they’re weighing trade-offs around privacy, consent, fairness, or inclusion.",
         "progression_name": "Party Planning",
         "tips": [
           {
@@ -1441,7 +1441,7 @@
       "key": "68b8a630-df4a-4a3e-93a1-d43793610de3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, check responses or prompt with light questions to encourage deeper thinking. Focus on how they’re weighing trade-offs around privacy, consent, fairness, or inclusion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students finish all three levels, facilitate a 4 Corners discussion about each scenario. Ask students to pick the person they most agreed with from each scenario and stand in that corner. If they didn’t agree with anyone fully, they can choose \"Other.\" \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After each corner shares, ask the class any of the follow-up questions listed below that would help push their thinking about ethical data collection based on what was shared by each corner: \n* What value did that person prioritize (e.g., privacy, consent, fairness)?\n* Could their choice unintentionally harm someone or leave someone out?\n* Was there a better way to collect or protect the data?\n",
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students finish all three levels, facilitate a 4 Corners discussion about each scenario. Ask students to pick the person they most agreed with from each scenario and stand in that corner. If they didn’t agree with anyone fully, they can choose \"Other.\" \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After each corner shares, ask the class any of the follow-up questions listed below that would help push their thinking about ethical data collection based on what was shared by each corner: \n* What value did that person prioritize (e.g., privacy, consent, fairness)?\n* Could their choice unintentionally harm someone or leave someone out?\n* Was there a better way to collect or protect the data?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1520,10 +1520,21 @@
       "key": "91207f19-380b-425e-8a6d-bff11586aeb1",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity. Ask students to come up with additional examples of data that could be collected using each of these methods to reinforce their understanding of how each collection method works.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity. Ask students to come up with additional examples of data that could be collected using each of these methods to reinforce their understanding of how each collection method works.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which data collection method raises the most privacy or ethical concerns? Which seems the least concerning? What reasoning supports your rankings?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to evaluate each method (automated collection, surveys, sensors) based on privacy, consent, control, and transparency. Emphasize that there is no single correct ranking — encourage students to share their reasoning and challenge assumptions.\n- Automated collection may raise concerns because it often happens without the user's knowledge.\n- Surveys can collect personal or sensitive information depending on the questions asked.\n- Sensors or measurements might seem neutral, but could raise concerns about surveillance or context.\n\nHelp students recognize that ethical complexity isn’t just about the method, but how and why it’s used.\n"
       },
       "seeding_key": {
         "activity_section.key": "91207f19-380b-425e-8a6d-bff11586aeb1",
+        "lesson_activity.key": "0bb5d482-986d-48c7-8f3a-74aa40360039"
+      }
+    },
+    {
+      "key": "360caefd-ebbe-44f3-ad19-dfc4ce0bbd0e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "360caefd-ebbe-44f3-ad19-dfc4ce0bbd0e",
         "lesson_activity.key": "0bb5d482-986d-48c7-8f3a-74aa40360039"
       }
     },
@@ -6317,7 +6328,8 @@
       "url": "https://docs.google.com/spreadsheets/d/12QRyg52oIdQHUuywa4xp-oVUDqzLGCkVOyGGYiUbm9w/edit?usp=drivesdk",
       "key": "_exemplar_data_visualizations",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6329,7 +6341,8 @@
       "url": "https://docs.google.com/document/d/1gPRJTpPtM7-o4KvKFTgKejShMpyuza37XzO1xsVbl-0/edit?usp=drivesdk",
       "key": "_key_activity_guide_-_data_interpretation",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -6495,7 +6508,8 @@
       "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "anchor_charts_in_data_science",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6520,7 +6534,7 @@
       "url": "https://docs.google.com/presentation/d/1-6K-naoslwsVFXmkZ6mHVZdky8r0yJoh-tETk-tE1hc/edit?usp=drive_link",
       "key": "cleaning_data",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
@@ -6533,7 +6547,7 @@
       "url": "https://docs.google.com/presentation/d/1FWavLks1hNcMKOGR8vgAhSS2NDP51BpL4RR_7VUHJpY/edit?usp=drive_link",
       "key": "crafting_stories_with_data_project",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
@@ -6573,7 +6587,8 @@
       "url": "https://docs.google.com/presentation/d/1RGFvlx8nTFw9b8EM7MD9QlbaZ50dr9UyhqDuyn3iEmo/edit?usp=drivesdk",
       "key": "data_interpretation",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6585,7 +6600,8 @@
       "url": "https://docs.google.com/presentation/d/1CWmz-VZuEvMXkJo8v3lXolSTjZ1UOenSjcOGcFaHJ1Q/edit?usp=drivesdk",
       "key": "data_rights",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6635,7 +6651,8 @@
       "url": "https://docs.google.com/presentation/d/1CWOZ7q12zw_EcwUFnidTU_UFg33mawkFlm7CDmmW41M/edit?usp=drivesdk",
       "key": "data_storytelling",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6660,7 +6677,7 @@
       "url": "https://docs.google.com/presentation/d/1Q6WTd7rz1FdchrLwUIrJ9xH_-rbALdxU_CBqjXoG5zA/edit?usp=drive_link",
       "key": "effective_data_questions",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
@@ -6673,7 +6690,8 @@
       "url": "https://docs.google.com/presentation/d/1O6KKdwFNCpWrkLYD9UixqvqocZB8gbb7p-gyjYFbEzY/edit?usp=drivesdk",
       "key": "ethical_data_collection",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6718,7 +6736,7 @@
       "url": "https://docs.google.com/presentation/d/1WeJHU2Bf42ZLw7OmBUyBk5X4mQG_46drhNgAYulPpwU/edit?usp=drive_link",
       "key": "introduction_to_data_science",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
@@ -6731,7 +6749,8 @@
       "url": "https://docs.google.com/presentation/d/140ALqMiulCvTSe_iiMQrHbVJEFgn3CW25VbQpC4hs0g/edit?usp=drivesdk",
       "key": "introduction_to_data_visualization",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6743,7 +6762,8 @@
       "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
       "key": "making_sense_of_data",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6767,7 +6787,8 @@
       "url": "https://docs.google.com/presentation/d/1hiSU7Esnmb-jjKjZZNlQY1vGPDpo9csuEip4q3xHt-A/edit?usp=drivesdk",
       "key": "more_visualization_techniques",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6829,7 +6850,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8179,6 +8201,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
