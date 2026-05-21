@@ -1,0 +1,54 @@
+// TODO(GEPW-34): Remove the component after July 30, 2026
+
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import React, {FC, useState, useEffect} from 'react';
+
+import DCDO from '@cdo/apps/dcdo';
+import {useLocalization} from '@cdo/apps/localization';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import styles from './teacherHomepage.module.scss';
+
+const TARGET_LOCALE = 'es-MX';
+const NOTICE_STATE_KEY = 'LatamGeRegionNotice';
+const NOTICE_CLOSED_STATE = 'closed';
+
+export const LatamGeRegionNotice: FC = () => {
+  const locale = useLocalization();
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(
+      locale === TARGET_LOCALE &&
+        tryGetLocalStorage(NOTICE_STATE_KEY, '') !== NOTICE_CLOSED_STATE &&
+        new Date(
+          String(DCDO.get('latam-ge-region-notice-enabled-until') || 0)
+        ) > new Date()
+    );
+  }, [locale]);
+
+  useEffect(() => {
+    isVisible &&
+      analyticsReporter.sendEvent(EVENTS.LATAM_GE_REGION_NOTICE_SHOWN);
+  }, [isVisible]);
+
+  if (!isVisible) return <></>;
+
+  return (
+    <Alert
+      className={styles.notificationBanner}
+      type={alertTypes.info}
+      text="Selecciona Español-EEUU si estás en EE. UU. o Español-LATAM si estás en Latinoamérica desde el selector de idioma al pie de página para tener una experiencia adaptada a tu región."
+      onClose={() => {
+        setIsVisible(false);
+        trySetLocalStorage(NOTICE_STATE_KEY, NOTICE_CLOSED_STATE);
+        analyticsReporter.sendEvent(EVENTS.LATAM_GE_REGION_NOTICE_CLOSED);
+      }}
+    />
+  );
+};
+
+export default LatamGeRegionNotice;
