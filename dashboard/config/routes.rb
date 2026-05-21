@@ -1206,6 +1206,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [:show] do
+      collection do
+        post :generate_podcast
+      end
+    end
+
     # AI Lesson Summary Podcasts routes
     resources :ai_lesson_summary_podcasts, only: [:show] do
       collection do

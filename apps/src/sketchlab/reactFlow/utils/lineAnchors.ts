@@ -7,6 +7,7 @@ import {
 import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
+import {NodeDataBase} from '../types';
 
 import {endpointPatch} from './handleSnap';
 
@@ -21,7 +22,8 @@ export function lineAnchorHandleId(role: 'source' | 'target'): string {
 // vertically centered, so we offset the node's top-left corner accordingly.
 export function createLineAnchorAtHandle(
   handleFlowPosition: XYPosition,
-  role: 'source' | 'target'
+  role: 'source' | 'target',
+  baseData?: Partial<NodeDataBase>
 ): SketchlabReactFlowNode {
   const position: XYPosition =
     role === 'source'
@@ -37,7 +39,7 @@ export function createLineAnchorAtHandle(
     id: createUuid(),
     type: 'lineAnchor',
     position,
-    data: {lineAnchorRole: role},
+    data: {...baseData, lineAnchorRole: role},
     style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
   };
 }
@@ -62,17 +64,30 @@ export function anchorHandleFlowPosition(
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
-// edge fields that point one side of an edge at it.
+// edge fields that point one side of an edge at it. `baseData` lets
+// callers carry across state (e.g. showHandles) from an existing
+// anchor on the edge so detach paths don't reset toolbar choices.
 export function attachEdgeToFreshAnchor(
   flowPosition: XYPosition,
-  side: 'source' | 'target'
+  side: 'source' | 'target',
+  baseData?: Partial<NodeDataBase>
 ): {
   anchor: SketchlabReactFlowNode;
   edgePatch: Partial<SketchlabReactFlowEdge>;
 } {
-  const anchor = createLineAnchorAtHandle(flowPosition, side);
+  const anchor = createLineAnchorAtHandle(flowPosition, side, baseData);
   const edgePatch = endpointPatch(side, anchor.id, lineAnchorHandleId(side));
   return {anchor, edgePatch};
+}
+
+// When one side of an edge is being detached, decide what data the new
+// anchor should carry. The edge-level `data.showHandles` is the
+// source of truth because it persists through attach-to-node cycles when
+// no anchor exists to carry the state.
+export function inheritedAnchorBaseData(edge: {
+  data?: {showHandles?: boolean} | undefined;
+}): Partial<NodeDataBase> {
+  return edge.data?.showHandles === false ? {showHandles: false} : {};
 }
 
 // Returns an object containing the current flow position of the

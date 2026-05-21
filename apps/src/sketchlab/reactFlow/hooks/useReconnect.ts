@@ -13,7 +13,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {getEventClientPosition} from '../utils/handleSnap';
-import {attachEdgeToFreshAnchor} from '../utils/lineAnchors';
+import {
+  attachEdgeToFreshAnchor,
+  inheritedAnchorBaseData,
+} from '../utils/lineAnchors';
 
 interface UseReconnectOptions {
   setNodes: (
@@ -102,7 +105,8 @@ export function useReconnect({
 
       const {anchor, edgePatch} = attachEdgeToFreshAnchor(
         dropPosition,
-        handleType
+        handleType,
+        inheritedAnchorBaseData(edge)
       );
       setNodes(currentNodes => [...currentNodes, anchor]);
       setEdges(currentEdges =>

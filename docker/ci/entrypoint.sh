@@ -16,5 +16,8 @@ fi
 
 eval "$(rbenv init -)"
 
+# start mysql
+sudo service mysql start && mysql -V
+
 # execute original command
 exec "$@"
