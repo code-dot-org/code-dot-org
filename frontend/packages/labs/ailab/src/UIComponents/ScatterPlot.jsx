@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getScatterPlotData } from "../selectors/visualizationSelectors.js";
 import { styles, colors } from "../constants.js";
@@ -55,46 +54,42 @@ const chartOptionsBase = {
   maintainAspectRatio: false
 };
 
-class ScatterPlot extends Component {
-  static propTypes = {
-    scatterPlotData: PropTypes.object
+function ScatterPlot({ scatterPlotData }) {
+  const scatterDataCombined = {
+    ...scatterDataBase
   };
 
-  render() {
-    const { scatterPlotData } = this.props;
+  const chartOptionsCombined = {
+    ...chartOptionsBase
+  };
 
-    const scatterDataCombined = {
-      ...scatterDataBase
-    };
+  if (scatterPlotData) {
+    scatterDataCombined.datasets[0].data = scatterPlotData.coordinates;
 
-    const chartOptionsCombined = {
-      ...chartOptionsBase
-    };
-
-    if (scatterPlotData) {
-      scatterDataCombined.datasets[0].data = scatterPlotData.coordinates;
-
-      chartOptionsCombined.scales.xAxes[0].scaleLabel.labelString =
-        scatterPlotData.feature;
-      chartOptionsCombined.scales.yAxes[0].scaleLabel.labelString =
-        scatterPlotData.label;
-    }
-
-    return (
-      scatterPlotData && (
-        <div id="scatter-plot">
-          <div style={styles.bold}>{I18n.t("scatterPlotLabel")}</div>
-          <div style={styles.scatterPlot}>
-            <Scatter
-              data={scatterDataCombined}
-              options={chartOptionsCombined}
-            />
-          </div>
-        </div>
-      )
-    );
+    chartOptionsCombined.scales.xAxes[0].scaleLabel.labelString =
+      scatterPlotData.feature;
+    chartOptionsCombined.scales.yAxes[0].scaleLabel.labelString =
+      scatterPlotData.label;
   }
+
+  return (
+    scatterPlotData && (
+      <div id="scatter-plot">
+        <div style={styles.bold}>{I18n.t("scatterPlotLabel")}</div>
+        <div style={styles.scatterPlot}>
+          <Scatter
+            data={scatterDataCombined}
+            options={chartOptionsCombined}
+          />
+        </div>
+      </div>
+    )
+  );
 }
+
+ScatterPlot.propTypes = {
+  scatterPlotData: PropTypes.object
+};
 
 export default connect(state => ({
   scatterPlotData: getScatterPlotData(state)

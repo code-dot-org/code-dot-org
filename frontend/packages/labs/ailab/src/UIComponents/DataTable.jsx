@@ -1,57 +1,54 @@
 /* React component to handle displaying imported data. */
 import PropTypes from "prop-types";
-import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
-class DataTable extends Component {
-  static propTypes = {
-    currentPanel: PropTypes.string,
-    data: PropTypes.array,
-    datasetId: PropTypes.string,
-    labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array,
-    setCurrentColumn: PropTypes.func,
-    setHighlightColumn: PropTypes.func,
-    currentColumn: PropTypes.string,
-    highlightColumn: PropTypes.string,
-    reducedColumns: PropTypes.bool,
-    singleRow: PropTypes.number,
-    startingRow: PropTypes.number,
-    noLabel: PropTypes.bool,
-    hideLabel: PropTypes.bool
-  };
-
-  getColumnHeaderStyle = key => {
+function DataTable({
+  currentPanel,
+  data,
+  datasetId,
+  labelColumn,
+  selectedFeatures,
+  setCurrentColumn: setCurrentColumnProp,
+  setHighlightColumn: setHighlightColumnProp,
+  currentColumn,
+  highlightColumn,
+  reducedColumns,
+  singleRow,
+  startingRow,
+  noLabel,
+  hideLabel
+}) {
+  const getColumnHeaderStyle = key => {
     let style;
 
-    if (key === this.props.labelColumn) {
+    if (key === labelColumn) {
       style = styles.dataDisplayHeaderLabel;
-    } else if (this.props.selectedFeatures.includes(key)) {
+    } else if (selectedFeatures.includes(key)) {
       style = styles.dataDisplayHeaderFeature;
     }
 
     const pointerStyle =
-      !this.props.reducedColumns && styles.dataDisplayHeaderClickable;
+      !reducedColumns && styles.dataDisplayHeaderClickable;
 
     return { ...styles.dataDisplayHeader, ...pointerStyle, ...style };
   };
 
-  getColumnCellStyle = key => {
+  const getColumnCellStyle = key => {
     let style;
 
-    if (this.props.hideLabel && this.props.labelColumn === key) {
+    if (hideLabel && labelColumn === key) {
       style = styles.dataDisplayCellHidden;
-    } else if (key === this.props.currentColumn) {
-      if (this.props.currentPanel === "dataDisplayLabel") {
+    } else if (key === currentColumn) {
+      if (currentPanel === "dataDisplayLabel") {
         style = styles.dataDisplayCellSelectedLabel;
       } else {
         style = styles.dataDisplayCellSelected;
       }
-    } else if (key === this.props.highlightColumn) {
-      if (this.props.currentPanel === "dataDisplayLabel") {
+    } else if (key === highlightColumn) {
+      if (currentPanel === "dataDisplayLabel") {
         style = styles.dataDisplayCellHighlightedLabel;
       } else {
         style = styles.dataDisplayCellHighlighted;
@@ -61,106 +58,119 @@ class DataTable extends Component {
     return { ...styles.dataDisplayCell, ...style };
   };
 
-  getColumns = () => {
-    if (this.props.reducedColumns) {
-      return Object.keys(this.props.data[0])
+  const getColumns = () => {
+    if (reducedColumns) {
+      return Object.keys(data[0])
         .filter(key => {
           return (
-            (!this.props.noLabel && this.props.labelColumn === key) ||
-            this.props.selectedFeatures.includes(key)
+            (!noLabel && labelColumn === key) ||
+            selectedFeatures.includes(key)
           );
         })
         .sort((key1, key2) => {
-          return this.props.labelColumn === key1 ? 1 : -1;
+          return labelColumn === key1 ? 1 : -1;
         });
     }
 
-    return Object.keys(this.props.data[0]);
+    return Object.keys(data[0]);
   };
 
-  getRows = () => {
-    if (this.props.singleRow !== undefined) {
+  const getRows = () => {
+    if (singleRow !== undefined) {
       return [
-        this.props.data[
-          Math.min(this.props.singleRow, this.props.data.length - 1)
+        data[
+          Math.min(singleRow, data.length - 1)
         ]
       ];
     } else {
-      return this.props.data.slice(0, 100);
+      return data.slice(0, 100);
     }
   };
 
-  setCurrentColumn = columnId => {
-    if (!this.props.reducedColumns) {
-      this.props.setCurrentColumn(columnId);
+  const handleSetCurrentColumn = columnId => {
+    if (!reducedColumns) {
+      setCurrentColumnProp(columnId);
     }
   };
 
-  setHighlightColumn = columnId => {
-    if (!this.props.reducedColumns) {
-      this.props.setHighlightColumn(columnId);
+  const handleSetHighlightColumn = columnId => {
+    if (!reducedColumns) {
+      setHighlightColumnProp(columnId);
     }
   };
 
-  render() {
-    const { data, startingRow } = this.props;
+  if (data.length === 0) {
+    return null;
+  }
 
-    if (data.length === 0) {
-      return null;
-    }
-
-    return (
-      <table style={styles.displayTable}>
-        <thead>
-          <tr>
-            {this.getColumns().map(columnId => {
-              return (
-                <th
-                  key={columnId}
-                  style={this.getColumnHeaderStyle(columnId)}
-                  onClick={() => this.setCurrentColumn(columnId)}
-                  onKeyDown={() => this.setCurrentColumn(columnId)}
-                  onMouseEnter={() => this.setHighlightColumn(columnId)}
-                  onMouseLeave={() => this.setHighlightColumn(undefined)}
-                >
-                  {getLocalizedColumnName(this.props.datasetId, columnId)}
-                </th>
-              );
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {this.getRows().map((row, index) => {
+  return (
+    <table style={styles.displayTable}>
+      <thead>
+        <tr>
+          {getColumns().map(columnId => {
             return (
-              <tr key={index}>
-                {this.getColumns().map(columnId => {
-                  return (
-                    <td
-                      key={columnId}
-                      className="uitest-data-table-column"
-                      style={this.getColumnCellStyle(columnId)}
-                      onClick={() => this.setCurrentColumn(columnId)}
-                      onKeyDown={() => this.setCurrentColumn(columnId)}
-                      onMouseEnter={() => this.setHighlightColumn(columnId)}
-                      onMouseLeave={() => this.setHighlightColumn(undefined)}
-                      role="presentation"
-                    >
-                      {startingRow !== undefined && index <= startingRow ? (
-                        <span>&nbsp;</span>
-                      ) : (
-                        row[columnId]
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
+              <th
+                key={columnId}
+                style={getColumnHeaderStyle(columnId)}
+                onClick={() => handleSetCurrentColumn(columnId)}
+                onKeyDown={() => handleSetCurrentColumn(columnId)}
+                onMouseEnter={() => handleSetHighlightColumn(columnId)}
+                onMouseLeave={() => handleSetHighlightColumn(undefined)}
+              >
+                {getLocalizedColumnName(datasetId, columnId)}
+              </th>
             );
           })}
-        </tbody>
-      </table>
-    );
-  }
+        </tr>
+      </thead>
+      <tbody>
+        {getRows().map((row, index) => {
+          return (
+            <tr key={index}>
+              {getColumns().map(columnId => {
+                return (
+                  <td
+                    key={columnId}
+                    className="uitest-data-table-column"
+                    style={getColumnCellStyle(columnId)}
+                    onClick={() => handleSetCurrentColumn(columnId)}
+                    onKeyDown={() => handleSetCurrentColumn(columnId)}
+                    onMouseEnter={() => handleSetHighlightColumn(columnId)}
+                    onMouseLeave={() => handleSetHighlightColumn(undefined)}
+                    role="gridcell"
+                  >
+                    {startingRow !== undefined && index <= startingRow ? (
+                      <span>&nbsp;</span>
+                    ) : (
+                      row[columnId]
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
 }
+
+DataTable.propTypes = {
+  currentPanel: PropTypes.string,
+  data: PropTypes.array,
+  datasetId: PropTypes.string,
+  labelColumn: PropTypes.string,
+  selectedFeatures: PropTypes.array,
+  setCurrentColumn: PropTypes.func,
+  setHighlightColumn: PropTypes.func,
+  currentColumn: PropTypes.string,
+  highlightColumn: PropTypes.string,
+  reducedColumns: PropTypes.bool,
+  singleRow: PropTypes.number,
+  startingRow: PropTypes.number,
+  noLabel: PropTypes.bool,
+  hideLabel: PropTypes.bool
+};
 
 export default connect(
   (state, props) => ({

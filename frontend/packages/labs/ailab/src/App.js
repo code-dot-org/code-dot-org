@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
@@ -25,39 +24,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import I18n from "./i18n";
 
-class PanelButtons extends Component {
-  static propTypes = {
-    panelButtons: PropTypes.object,
-    currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func,
-    onContinue: PropTypes.func,
-    startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object,
-    saveStatus: PropTypes.string,
-    saveResponseData: PropTypes.object,
-    isSaveComplete: PropTypes.func,
-    shouldDisplaySaveStatus: PropTypes.func
+function PanelButtons({
+  panelButtons,
+  currentPanel,
+  setCurrentPanel,
+  onContinue,
+  startSaveTrainedModel,
+  dataToSave,
+  saveStatus,
+  saveResponseData,
+  isSaveComplete: isSaveCompleteProp,
+  shouldDisplaySaveStatus: shouldDisplaySaveStatusProp
+}) {
+  const onClickPrev = () => {
+    setCurrentPanel(panelButtons.prev.panel);
   };
 
-  onClickPrev = () => {
-    this.props.setCurrentPanel(this.props.panelButtons.prev.panel);
-  };
-
-  onClickNext = () => {
-    if (["continue", "finish"].includes(this.props.panelButtons.next.panel)) {
-      this.props.onContinue();
-    } else if (this.props.currentPanel === "saveModel") {
-      this.props.startSaveTrainedModel(this.props.dataToSave);
+  const onClickNext = () => {
+    if (["continue", "finish"].includes(panelButtons.next.panel)) {
+      onContinue();
+    } else if (currentPanel === "saveModel") {
+      startSaveTrainedModel(dataToSave);
     } else {
-      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
+      setCurrentPanel(panelButtons.next.panel);
     }
   };
 
-  localizedSaveMessage = saveStatus => {
+  const localizedSaveMessage = saveStatus => {
     return I18n.t(`saveStatus_${saveStatus}`);
   };
 
-  saveResponseDataMessage = saveResponseData => {
+  const saveResponseDataMessage = saveResponseData => {
     // The list of known error types from share_filtering.rb.
     const errorTypes = ["email", "address", "phone", "profanity"];
 
@@ -73,73 +70,82 @@ class PanelButtons extends Component {
     }
   };
 
-  render() {
-    const { panelButtons, saveStatus, saveResponseData } = this.props;
+  let loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
+    localizedSaveMessage(saveStatus)
+  ) : (
+    <FontAwesomeIcon icon={faSpinner} />
+  );
 
-    let loadSaveStatus = this.props.isSaveComplete(saveStatus) ? (
-      this.localizedSaveMessage(saveStatus)
-    ) : (
-      <FontAwesomeIcon icon={faSpinner} />
-    );
+  let loadSaveResponseData = isSaveCompleteProp(saveStatus)
+    ? saveResponseDataMessage(saveResponseData)
+    : undefined;
 
-    let loadSaveResponseData = this.props.isSaveComplete(saveStatus)
-      ? this.saveResponseDataMessage(saveResponseData)
-      : undefined;
+  return (
+    <div style={styles.navigationButtonsContainer}>
+      {panelButtons.prev && (
+        <div style={styles.previousButton}>
+          <button
+            type="button"
+            style={{
+              ...styles.navButton,
+              ...(!panelButtons.prev.enabled
+                ? styles.disabledButton
+                : undefined)
+            }}
+            onClick={onClickPrev}
+            disabled={!panelButtons.prev.enabled}
+          >
+            {panelButtons.prev.text}
+          </button>
+        </div>
+      )}
 
-    return (
-      <div style={styles.navigationButtonsContainer}>
-        {panelButtons.prev && (
-          <div style={styles.previousButton}>
-            <button
-              type="button"
-              style={{
-                ...styles.navButton,
-                ...(!panelButtons.prev.enabled
-                  ? styles.disabledButton
-                  : undefined)
-              }}
-              onClick={this.onClickPrev}
-              disabled={!panelButtons.prev.enabled}
-            >
-              {panelButtons.prev.text}
-            </button>
+      {shouldDisplaySaveStatusProp(saveStatus) &&
+        currentPanel === "saveModel" && (
+          <div style={styles.modelSaveMessage}>
+            {loadSaveStatus}
+            {loadSaveResponseData && (
+              <div style={styles.modelSaveResponseDataMessage}>
+                {loadSaveResponseData}
+              </div>
+            )}
           </div>
         )}
 
-        {this.props.shouldDisplaySaveStatus(saveStatus) &&
-          this.props.currentPanel === "saveModel" && (
-            <div style={styles.modelSaveMessage}>
-              {loadSaveStatus}
-              {loadSaveResponseData && (
-                <div style={styles.modelSaveResponseDataMessage}>
-                  {loadSaveResponseData}
-                </div>
-              )}
-            </div>
-          )}
-
-        {panelButtons.next && (
-          <div style={styles.nextButton}>
-            <button
-              type="button"
-              id="uitest-continue-button"
-              style={{
-                ...styles.navButton,
-                ...(!panelButtons.next.enabled
-                  ? styles.disabledButton
-                  : undefined)
-              }}
-              onClick={this.onClickNext}
-              disabled={!panelButtons.next.enabled}
-            >
-              {panelButtons.next.text}
-            </button>
-          </div>
-        )}
-      </div>
-    );
-  }
+      {panelButtons.next && (
+        <div style={styles.nextButton}>
+          <button
+            type="button"
+            id="uitest-continue-button"
+            style={{
+              ...styles.navButton,
+              ...(!panelButtons.next.enabled
+                ? styles.disabledButton
+                : undefined)
+            }}
+            onClick={onClickNext}
+            disabled={!panelButtons.next.enabled}
+          >
+            {panelButtons.next.text}
+          </button>
+        </div>
+      )}
+    </div>
+  );
 }
+
+PanelButtons.propTypes = {
+  panelButtons: PropTypes.object,
+  currentPanel: PropTypes.string,
+  setCurrentPanel: PropTypes.func,
+  onContinue: PropTypes.func,
+  startSaveTrainedModel: PropTypes.func,
+  dataToSave: PropTypes.object,
+  saveStatus: PropTypes.string,
+  saveResponseData: PropTypes.object,
+  isSaveComplete: PropTypes.func,
+  shouldDisplaySaveStatus: PropTypes.func
+};
 
 const BodyContainer = props => (
   <div style={styles.bodyContainer}>{props.children}</div>
@@ -177,120 +183,116 @@ ContainerFullWidth.propTypes = {
   children: PropTypes.node
 };
 
-class App extends Component {
-  static propTypes = {
-    panelButtons: PropTypes.object,
-    currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func,
-    onContinue: PropTypes.func,
-    resultsPhase: PropTypes.number,
-    startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object,
-    saveStatus: PropTypes.string,
-    saveResponseData: PropTypes.object,
-    isSaveComplete: PropTypes.func,
-    shouldDisplaySaveStatus: PropTypes.func
-  };
+function App({
+  panelButtons,
+  currentPanel,
+  setCurrentPanel,
+  onContinue,
+  resultsPhase,
+  startSaveTrainedModel,
+  dataToSave,
+  saveStatus,
+  saveResponseData
+}) {
+  return (
+    <div style={styles.app}>
+      {currentPanel === "selectDataset" && (
+        <BodyContainer>
+          <ContainerLeft>
+            <SelectDataset />
+          </ContainerLeft>
+          <ContainerRight>
+            <DataCard />
+          </ContainerRight>
+        </BodyContainer>
+      )}
 
-  render() {
-    const {
-      panelButtons,
-      currentPanel,
-      setCurrentPanel,
-      onContinue,
-      resultsPhase,
-      dataToSave,
-      startSaveTrainedModel,
-      saveStatus,
-      saveResponseData
-    } = this.props;
+      {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
+        <BodyContainer>
+          <ContainerLeft>
+            <DataDisplay />
+          </ContainerLeft>
 
-    return (
-      <div style={styles.app}>
-        {currentPanel === "selectDataset" && (
-          <BodyContainer>
-            <ContainerLeft>
-              <SelectDataset />
-            </ContainerLeft>
+          <ContainerRight>
+            <ColumnInspector />
+          </ContainerRight>
+        </BodyContainer>
+      )}
+
+      {currentPanel === "trainModel" && (
+        <BodyContainer>
+          <ContainerFullWidth>
+            <TrainModel />
+          </ContainerFullWidth>
+        </BodyContainer>
+      )}
+
+      {currentPanel === "generateResults" && (
+        <BodyContainer>
+          <ContainerFullWidth>
+            <GenerateResults />
+          </ContainerFullWidth>
+        </BodyContainer>
+      )}
+
+      {currentPanel === "results" && (
+        <BodyContainer>
+          <ContainerLeft>
+            <Results />
+          </ContainerLeft>
+          {resultsPhase === 1 && (
             <ContainerRight>
-              <DataCard />
+              <Predict />
             </ContainerRight>
-          </BodyContainer>
-        )}
+          )}
+        </BodyContainer>
+      )}
 
-        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
-          <BodyContainer>
-            <ContainerLeft>
-              <DataDisplay />
-            </ContainerLeft>
+      {currentPanel === "saveModel" && (
+        <BodyContainer>
+          <ContainerFullWidth>
+            <SaveModel />
+          </ContainerFullWidth>
+        </BodyContainer>
+      )}
 
-            <ContainerRight>
-              <ColumnInspector />
-            </ContainerRight>
-          </BodyContainer>
-        )}
+      {currentPanel === "modelSummary" && (
+        <BodyContainer>
+          <ContainerFullWidth>
+            <ModelCard />
+          </ContainerFullWidth>
+        </BodyContainer>
+      )}
 
-        {currentPanel === "trainModel" && (
-          <BodyContainer>
-            <ContainerFullWidth>
-              <TrainModel />
-            </ContainerFullWidth>
-          </BodyContainer>
-        )}
-
-        {currentPanel === "generateResults" && (
-          <BodyContainer>
-            <ContainerFullWidth>
-              <GenerateResults />
-            </ContainerFullWidth>
-          </BodyContainer>
-        )}
-
-        {currentPanel === "results" && (
-          <BodyContainer>
-            <ContainerLeft>
-              <Results />
-            </ContainerLeft>
-            {resultsPhase === 1 && (
-              <ContainerRight>
-                <Predict />
-              </ContainerRight>
-            )}
-          </BodyContainer>
-        )}
-
-        {currentPanel === "saveModel" && (
-          <BodyContainer>
-            <ContainerFullWidth>
-              <SaveModel />
-            </ContainerFullWidth>
-          </BodyContainer>
-        )}
-
-        {currentPanel === "modelSummary" && (
-          <BodyContainer>
-            <ContainerFullWidth>
-              <ModelCard />
-            </ContainerFullWidth>
-          </BodyContainer>
-        )}
-
-        <PanelButtons
-          panelButtons={panelButtons}
-          currentPanel={currentPanel}
-          setCurrentPanel={setCurrentPanel}
-          onContinue={onContinue}
-          startSaveTrainedModel={startSaveTrainedModel}
-          dataToSave={dataToSave}
-          saveStatus={saveStatus}
-          saveResponseData={saveResponseData}
-          isSaveComplete={isSaveComplete}
-          shouldDisplaySaveStatus={shouldDisplaySaveStatus}
-        />
-      </div>
-    );
-  }
+      <PanelButtons
+        panelButtons={panelButtons}
+        currentPanel={currentPanel}
+        setCurrentPanel={setCurrentPanel}
+        onContinue={onContinue}
+        startSaveTrainedModel={startSaveTrainedModel}
+        dataToSave={dataToSave}
+        saveStatus={saveStatus}
+        saveResponseData={saveResponseData}
+        isSaveComplete={isSaveComplete}
+        shouldDisplaySaveStatus={shouldDisplaySaveStatus}
+      />
+    </div>
+  );
 }
+
+App.propTypes = {
+  panelButtons: PropTypes.object,
+  currentPanel: PropTypes.string,
+  setCurrentPanel: PropTypes.func,
+  onContinue: PropTypes.func,
+  resultsPhase: PropTypes.number,
+  startSaveTrainedModel: PropTypes.func,
+  dataToSave: PropTypes.object,
+  saveStatus: PropTypes.string,
+  saveResponseData: PropTypes.object,
+  isSaveComplete: PropTypes.func,
+  shouldDisplaySaveStatus: PropTypes.func
+};
 
 export default connect(
   state => ({

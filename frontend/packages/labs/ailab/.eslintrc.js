@@ -6,12 +6,14 @@ module.exports = {
   "globals": {
   },
   "plugins": [
-    "jsx-a11y"
+    "jsx-a11y",
+    "react-hooks"
   ],
   "extends": [
     'plugin:react/recommended',
     "eslint:recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "env": {
     "browser": true,
@@ -23,14 +25,11 @@ module.exports = {
       "version": "detect"
     }
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "ecmaVersion": 6,
-      "experimentalObjectRestSpread": true
+      "jsx": true
     }
   },
   "rules": {
@@ -58,6 +57,7 @@ module.exports = {
     "no-useless-escape": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
+    "react/react-in-jsx-scope": "off",
     "react/button-has-type": "error",
     "react/display-name": "off",
     "react/jsx-closing-bracket-location": "error", // autofixable

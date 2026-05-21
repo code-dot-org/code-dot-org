@@ -3,7 +3,6 @@
   for selected columns.
 */
 import PropTypes from "prop-types";
-import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getCurrentColumnDetails } from "../selectors/currentColumnSelectors";
 import { styles, ColumnTypes } from "../constants.js";
@@ -20,81 +19,77 @@ import { currentColumnInspectorShape } from "./shapes";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
-class ColumnInspector extends Component {
-  static propTypes = {
-    currentColumnDetails: currentColumnInspectorShape,
-    currentPanel: PropTypes.string,
-    datasetId: PropTypes.string
-  };
+function ColumnInspector({ currentColumnDetails, currentPanel, datasetId }) {
+  const selectingFeatures = currentPanel === "dataDisplayFeatures";
+  const selectingLabel = currentPanel === "dataDisplayLabel";
 
-  render() {
-    const { currentColumnDetails, currentPanel, datasetId } = this.props;
+  const isCategorical = currentColumnDetails && currentColumnDetails.dataType
+    === ColumnTypes.CATEGORICAL;
+  const isNumerical = currentColumnDetails && currentColumnDetails.dataType
+    === ColumnTypes.NUMERICAL;
 
-    const selectingFeatures = currentPanel === "dataDisplayFeatures";
-    const selectingLabel = currentPanel === "dataDisplayLabel";
-
-    const isCategorical = currentColumnDetails && currentColumnDetails.dataType
-      === ColumnTypes.CATEGORICAL;
-    const isNumerical = currentColumnDetails && currentColumnDetails.dataType
-      === ColumnTypes.NUMERICAL;
-
-    if (!currentColumnDetails) {
-      return null;
-    }
-
-    const localizedDataType = I18n.t(`columnType_${currentColumnDetails.dataType}`)
-    const localizedColumnName = getLocalizedColumnName(datasetId, currentColumnDetails.id);
-
-    return (
-      currentColumnDetails && (
-        <div
-          id="column-inspector"
-          style={{
-            ...styles.panel,
-            ...styles.rightPanel
-          }}
-        >
-          <div style={styles.largeText}>{localizedColumnName}</div>
-          <ScrollableContent>
-            <div style={styles.cardRow}>
-              <span style={styles.bold}>{I18n.t("columnInspectorDataType")}</span>
-              <br />
-              {currentColumnDetails.readOnly && localizedDataType}
-              {!currentColumnDetails.readOnly && (
-                <ColumnDataTypeDropdown
-                  columnId={currentColumnDetails.id}
-                  currentDataType={currentColumnDetails.dataType}
-                />
-              )}
-            </div>
-            {currentColumnDetails.description && (
-              <div style={styles.cardRow}>
-                <span style={styles.bold}>{I18n.t("columnInspectorDescription")}</span>
-                &nbsp;
-                <div>{currentColumnDetails.description}</div>
-              </div>
-            )}
-            {selectingFeatures && (
-              <div style={styles.cardRow}>
-                <ScatterPlot />
-                <CrossTab />
-              </div>
-            )}
-            {isCategorical && <ColumnDetailsCategorical /> }
-            {isNumerical && <ColumnDetailsNumerical /> }
-          </ScrollableContent>
-          {selectingLabel && currentColumnDetails.isSelectable && (
-            <SelectLabelButton column={currentColumnDetails.id} />
-          )}
-          {selectingFeatures && currentColumnDetails.isSelectable && (
-            <AddFeatureButton column={currentColumnDetails.id} />
-          )}
-          <UniqueOptionsWarning />
-        </div>
-      )
-    );
+  if (!currentColumnDetails) {
+    return null;
   }
+
+  const localizedDataType = I18n.t(`columnType_${currentColumnDetails.dataType}`)
+  const localizedColumnName = getLocalizedColumnName(datasetId, currentColumnDetails.id);
+
+  return (
+    currentColumnDetails && (
+      <div
+        id="column-inspector"
+        style={{
+          ...styles.panel,
+          ...styles.rightPanel
+        }}
+      >
+        <div style={styles.largeText}>{localizedColumnName}</div>
+        <ScrollableContent>
+          <div style={styles.cardRow}>
+            <span style={styles.bold}>{I18n.t("columnInspectorDataType")}</span>
+            <br />
+            {currentColumnDetails.readOnly && localizedDataType}
+            {!currentColumnDetails.readOnly && (
+              <ColumnDataTypeDropdown
+                columnId={currentColumnDetails.id}
+                currentDataType={currentColumnDetails.dataType}
+              />
+            )}
+          </div>
+          {currentColumnDetails.description && (
+            <div style={styles.cardRow}>
+              <span style={styles.bold}>{I18n.t("columnInspectorDescription")}</span>
+              &nbsp;
+              <div>{currentColumnDetails.description}</div>
+            </div>
+          )}
+          {selectingFeatures && (
+            <div style={styles.cardRow}>
+              <ScatterPlot />
+              <CrossTab />
+            </div>
+          )}
+          {isCategorical && <ColumnDetailsCategorical /> }
+          {isNumerical && <ColumnDetailsNumerical /> }
+        </ScrollableContent>
+        {selectingLabel && currentColumnDetails.isSelectable && (
+          <SelectLabelButton column={currentColumnDetails.id} />
+        )}
+        {selectingFeatures && currentColumnDetails.isSelectable && (
+          <AddFeatureButton column={currentColumnDetails.id} />
+        )}
+        <UniqueOptionsWarning />
+      </div>
+    )
+  );
 }
+
+ColumnInspector.propTypes = {
+  currentColumnDetails: currentColumnInspectorShape,
+  currentPanel: PropTypes.string,
+  datasetId: PropTypes.string
+};
 
 export default connect(
   state => ({

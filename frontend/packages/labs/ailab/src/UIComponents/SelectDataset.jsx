@@ -1,6 +1,6 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import {
   setSelectedName,
@@ -17,46 +17,34 @@ import { styles } from "../constants";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
 
-class SelectDataset extends Component {
-  static propTypes = {
-    setSelectedName: PropTypes.func.isRequired,
-    setSelectedCSV: PropTypes.func.isRequired,
-    setSelectedJSON: PropTypes.func.isRequired,
-    setHighlightDataset: PropTypes.func.isRequired,
-    csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    resetState: PropTypes.func.isRequired,
-    specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
-    name: PropTypes.string,
-    highlightDataset: PropTypes.string,
-    invalidData: PropTypes.string
-  };
+function SelectDataset({
+  setSelectedName,
+  setSelectedCSV,
+  setSelectedJSON,
+  setHighlightDataset,
+  resetState,
+  specifiedDatasets,
+  name,
+  highlightDataset,
+  invalidData
+}) {
+  const [, setDownload] = useState(false);
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      download: false
-    };
-  }
-
-  handleDatasetClick = id => {
+  const handleDatasetClick = id => {
     const assetPath = global.__ml_playground_asset_public_path__;
     const dataset = getDatasets().find(dataset => dataset.id === id);
 
     // Don't process the click if we're just clicking the current
     // dataset again.
-    if (dataset.name !== this.props.name) {
+    if (dataset.name !== name) {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
-      this.props.resetState();
-      this.props.setSelectedName(dataset.name);
-      this.props.setSelectedCSV(csvPath);
-      this.props.setSelectedJSON(jsonPath);
-      this.setState({
-        download: true
-      });
+      resetState();
+      setSelectedName(dataset.name);
+      setSelectedCSV(csvPath);
+      setSelectedJSON(jsonPath);
+      setDownload(true);
 
       parseCSV(csvPath, true, false);
 
@@ -64,21 +52,19 @@ class SelectDataset extends Component {
     }
   };
 
-  handleUploadSelect = event => {
-    this.props.resetState();
-    this.props.setSelectedCSV(event.target.files[0]);
-    this.setState({
-      download: false
-    });
+  const handleUploadSelect = event => {
+    resetState();
+    setSelectedCSV(event.target.files[0]);
+    setDownload(false);
     parseCSV(event.target.files[0], false, true);
   };
 
-  getInvalidDataMessage = () => {
-    if (this.props.invalidData === "tooFewRows") {
+  const getInvalidDataMessage = () => {
+    if (invalidData === "tooFewRows") {
       return I18n.t(
         "selectDatasetErrorTooFewRows",
         {"count": MIN_CSV_ROWS, "fileType": "CSV"});
-    } else if (this.props.invalidData === "tooFewColumns") {
+    } else if (invalidData === "tooFewColumns") {
       return I18n.t(
         "selectDatasetErrorTooFewColumns",
         {"count": MIN_CSV_COLUMNS, "fileType": "CSV"});
@@ -87,78 +73,89 @@ class SelectDataset extends Component {
     }
   };
 
-  render() {
-    const specifiedDatasets = this.props.specifiedDatasets;
-    const datasets = getAvailableDatasets(specifiedDatasets);
+  const datasets = getAvailableDatasets(specifiedDatasets);
 
-    const assetPath = global.__ml_playground_asset_public_path__;
+  const assetPath = global.__ml_playground_asset_public_path__;
 
-    return (
-      <div id="select-dataset" style={styles.panel}>
-        <ScrollableContent tinted={true}>
-          {datasets.map((dataset, index) => {
-            return (
-              <div
-                style={{
-                  ...styles.selectDatasetItem,
-                  ...(this.props.highlightDataset === dataset.name &&
-                    styles.selectDatasetItemHighlighted),
-                  ...(this.props.name === dataset.name &&
-                    styles.selectDatasetItemSelected),
-                  ...(index % 3 === 0 && { clear: "both" })
-                }}
-                key={dataset.id}
-                onClick={() => this.handleDatasetClick(dataset.id)}
-                onKeyDown={() => this.handleDatasetClick(dataset.id)}
-                onMouseEnter={() =>
-                  this.props.setHighlightDataset(dataset.name)
-                }
-                onMouseLeave={() => this.props.setHighlightDataset(undefined)}
-                role="button"
-                tabIndex={0}
-              >
-                <div style={styles.selectDatasetItemContainer}>
-                  <img
-                    src={assetPath + dataset.imagePath}
-                    style={styles.selectDatasetImage}
-                    draggable={false}
-                    className="uitest-ailab-dataset-image ailab-image-hover"
-                    alt={`Select ${dataset.name} dataset`}
-                  />
-                  <div style={styles.selectDatasetText}>{dataset.name}</div>
-                </div>
+  return (
+    <div id="select-dataset" style={styles.panel}>
+      <ScrollableContent tinted={true}>
+        {datasets.map((dataset, index) => {
+          return (
+            <div
+              style={{
+                ...styles.selectDatasetItem,
+                ...(highlightDataset === dataset.name &&
+                  styles.selectDatasetItemHighlighted),
+                ...(name === dataset.name &&
+                  styles.selectDatasetItemSelected),
+                ...(index % 3 === 0 && { clear: "both" })
+              }}
+              key={dataset.id}
+              onClick={() => handleDatasetClick(dataset.id)}
+              onKeyDown={() => handleDatasetClick(dataset.id)}
+              onMouseEnter={() =>
+                setHighlightDataset(dataset.name)
+              }
+              onMouseLeave={() => setHighlightDataset(undefined)}
+              role="button"
+              tabIndex={0}
+            >
+              <div style={styles.selectDatasetItemContainer}>
+                <img
+                  src={assetPath + dataset.imagePath}
+                  style={styles.selectDatasetImage}
+                  draggable={false}
+                  className="uitest-ailab-dataset-image ailab-image-hover"
+                  alt={`Select ${dataset.name} dataset`}
+                />
+                <div style={styles.selectDatasetText}>{dataset.name}</div>
               </div>
-            );
-          })}
-        </ScrollableContent>
-        {!specifiedDatasets && (
-          <div style={styles.contentsCsvButton}>
-            <label style={styles.uploadCsvButton}>
-              {I18n.t("selectDatasetUploadFileButton", {"fileType": "CSV"})}
-              {/* Setting value to empty here allows us to receive an
-                  onChange event for the same file as previously selected,
-                  which allows the user to upload a file, then choose an
-                  existing dataset, and then reupload the same file. */}
-              <input
-                className="csv-input"
-                type="file"
-                accept=".csv,text/csv,application/vnd.ms-excel"
-                name="file"
-                placeholder={null}
-                onChange={this.handleUploadSelect}
-                style={styles.csvInput}
-                value=""
-              />
-            </label>
-            <span style={styles.invalidDataMessageContainer}>
-              {this.getInvalidDataMessage()}
-            </span>
-          </div>
-        )}
-      </div>
-    );
-  }
+            </div>
+          );
+        })}
+      </ScrollableContent>
+      {!specifiedDatasets && (
+        <div style={styles.contentsCsvButton}>
+          <label style={styles.uploadCsvButton}>
+            {I18n.t("selectDatasetUploadFileButton", {"fileType": "CSV"})}
+            {/* Setting value to empty here allows us to receive an
+                onChange event for the same file as previously selected,
+                which allows the user to upload a file, then choose an
+                existing dataset, and then reupload the same file. */}
+            <input
+              className="csv-input"
+              type="file"
+              accept=".csv,text/csv,application/vnd.ms-excel"
+              name="file"
+              placeholder={null}
+              onChange={handleUploadSelect}
+              style={styles.csvInput}
+              value=""
+            />
+          </label>
+          <span style={styles.invalidDataMessageContainer}>
+            {getInvalidDataMessage()}
+          </span>
+        </div>
+      )}
+    </div>
+  );
 }
+
+SelectDataset.propTypes = {
+  setSelectedName: PropTypes.func.isRequired,
+  setSelectedCSV: PropTypes.func.isRequired,
+  setSelectedJSON: PropTypes.func.isRequired,
+  setHighlightDataset: PropTypes.func.isRequired,
+  csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  resetState: PropTypes.func.isRequired,
+  specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
+  name: PropTypes.string,
+  highlightDataset: PropTypes.string,
+  invalidData: PropTypes.string
+};
 
 export default connect(
   state => ({
