@@ -37,11 +37,32 @@ import styles from './aiLessons.module.scss';
 // First (preferred) theme for each lab type, mirroring `themes[0]` in
 // lab2EntryPoints.ts.  Hardcoded here so we don't have to import the whole
 // entrypoints map just to read a string.
-const LAB_DEFAULT_THEME: Record<string, 'Light' | 'Dark'> = {
+// Per-lab theme overrides for the embedded surface. Labs not listed
+// here keep whatever theme the surrounding /ai_lessons page is in
+// (set by forceTheme on mount; see pageInit.ts).
+const LAB_DEFAULT_THEME: Partial<Record<string, 'Light' | 'Dark'>> = {
   music: 'Dark',
+  panels: 'Dark',
   weblab2: 'Dark',
-  panels: 'Light',
 };
+
+// Apply the per-lab theme override (if any) to the design-system
+// theme context, the document <body> background-* class, and the
+// data-theme attribute. Called both from useLabSetup (the Lab2-mounted
+// path) and from PanelsCheckpointLab (which bypasses useLabSetup).
+function applyLabTheme(
+  appName: string,
+  setTheme: (t: 'Light' | 'Dark') => void
+) {
+  const theme = LAB_DEFAULT_THEME[appName];
+  if (!theme) return;
+  setTheme(theme);
+  const lower = theme.toLowerCase();
+  const opposite = lower === 'light' ? 'dark' : 'light';
+  document.body.classList.remove(`background-${opposite}`);
+  document.body.classList.add(`background-${lower}`);
+  document.documentElement.setAttribute('data-theme', theme);
+}
 
 interface EmbeddedLabProps {
   checkpoint: Checkpoint;
@@ -101,7 +122,10 @@ function defaultWeblab2Sources(): ProjectSources {
           name: 'index.html',
           contents: `<!DOCTYPE html>
 <html>
-  <head><title>My page</title></head>
+  <head>
+    <title>My page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
     <h1>Hello!</h1>
     <p>Edit this page on the left.</p>
@@ -143,6 +167,13 @@ const PanelsCheckpointLab: React.FC<{
   lessonId: string;
   onLabComplete?: () => void;
 }> = ({checkpoint, lessonId, onLabComplete}) => {
+  // Panels skips useLabSetup (no Lab2 view to mount), so apply the
+  // theme override here on each (lessonId, checkpoint) change.
+  const {setTheme} = useTheme();
+  useEffect(() => {
+    applyLabTheme('panels', setTheme);
+  }, [lessonId, checkpoint.id, setTheme]);
+
   // Always render the real PanelsView.  If the AI didn't generate explicit
   // slide captions for this checkpoint, fall back to a single panel built
   // from the instruction text so the student still gets the same Continue
@@ -222,13 +253,7 @@ function useLabSetup(
     }
     setManager(asPM);
 
-    const theme = LAB_DEFAULT_THEME[appName] || 'Light';
-    setTheme(theme);
-    const lower = theme.toLowerCase();
-    const opposite = lower === 'light' ? 'dark' : 'light';
-    document.body.classList.remove(`background-${opposite}`);
-    document.body.classList.add(`background-${lower}`);
-    document.documentElement.setAttribute('data-theme', theme);
+    applyLabTheme(appName, setTheme);
 
     return () => {
       // Force-flush any pending save before leaving this lab type.

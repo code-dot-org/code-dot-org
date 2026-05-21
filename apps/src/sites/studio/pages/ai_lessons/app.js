@@ -3,13 +3,13 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiLessonsApp from '@cdo/apps/aiLessons/AiLessonsApp';
-import {forceLightTheme} from '@cdo/apps/aiLessons/pageInit';
+import {forceTheme} from '@cdo/apps/aiLessons/pageInit';
 import {RouterProvider} from '@cdo/apps/aiLessons/router';
 import {getStore} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  forceLightTheme();
+  forceTheme();
   createReactRoot(
     <Provider store={getStore()}>
       <ThemeProvider>

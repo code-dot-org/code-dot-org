@@ -37,3 +37,15 @@ export async function loadLesson(id: string): Promise<LessonPlan> {
 export async function deleteLesson(id: string): Promise<void> {
   await HttpClient.delete(`/ai_lessons/${id}`, true);
 }
+
+// Wipes saved sources + per-user progress for a lesson; the lesson
+// itself (and its panel images) stays. Used as a demo affordance from
+// the lessons list.
+export async function resetLessonProgress(id: string): Promise<void> {
+  await HttpClient.post(
+    `/ai_lessons/${id}/reset_progress`,
+    '',
+    true,
+    JSON_HEADERS
+  );
+}

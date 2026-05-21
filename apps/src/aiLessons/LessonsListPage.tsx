@@ -6,7 +6,7 @@ import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {deleteLesson} from './api';
+import {deleteLesson, resetLessonProgress} from './api';
 import {Link} from './router';
 import {LessonIndexEntry} from './types';
 
@@ -15,6 +15,7 @@ import styles from './aiLessons.module.scss';
 const LessonsListPage: React.FunctionComponent = () => {
   const [lessons, setLessons] = useState<LessonIndexEntry[] | undefined>();
   const [deletingId, setDeletingId] = useState<string | undefined>();
+  const [resettingId, setResettingId] = useState<string | undefined>();
   const [error, setError] = useState<string | undefined>();
 
   useEffect(() => {
@@ -31,6 +32,23 @@ const LessonsListPage: React.FunctionComponent = () => {
       cancelled = true;
     };
   }, []);
+
+  const handleReset = async (lesson: LessonIndexEntry) => {
+    const label = lesson.title || '(untitled)';
+    const ok = window.confirm(
+      `Reset progress for "${label}"? This wipes every student's saved code and progress for this lesson. The lesson itself stays.`
+    );
+    if (!ok) return;
+    setResettingId(lesson.id);
+    setError(undefined);
+    try {
+      await resetLessonProgress(lesson.id);
+    } catch (e) {
+      setError(`Could not reset ${label}: ${(e as Error).message}`);
+    } finally {
+      setResettingId(undefined);
+    }
+  };
 
   const handleDelete = async (lesson: LessonIndexEntry) => {
     const label = lesson.title || '(untitled)';
@@ -85,6 +103,17 @@ const LessonsListPage: React.FunctionComponent = () => {
                 <Link href={`/ai_lessons/${l.id}`}>Open as student</Link>
                 {' · '}
                 <Link href={`/ai_lessons/${l.id}/edit`}>Edit</Link>
+                {' · '}
+                <button
+                  type="button"
+                  className={styles.linkButton}
+                  onClick={() => handleReset(l)}
+                  disabled={resettingId === l.id}
+                  aria-label={`Reset progress for ${l.title || 'lesson'}`}
+                  title="Wipe saved code + progress for this lesson (demo)"
+                >
+                  {resettingId === l.id ? 'Resetting…' : 'Reset progress'}
+                </button>
                 {' · '}
                 <button
                   type="button"

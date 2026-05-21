@@ -59,6 +59,20 @@ class AiLessonsController < ApplicationController
     head :bad_request
   end
 
+  # Wipes per-lesson student state — saved sources for every lab type
+  # and every user's progress — while leaving the lesson JSON and its
+  # generated panel images intact. Intended as a demo affordance so a
+  # presenter can return to a fresh playthrough without re-authoring.
+  def reset_progress
+    id = params[:id]
+    return head :not_found unless load_lesson_json(id)
+    FileUtils.rm_rf(File.join(storage_dir, 'sources', id))
+    FileUtils.rm_rf(File.join(storage_dir, 'progress', id))
+    render json: {id: id}
+  rescue ArgumentError
+    head :bad_request
+  end
+
   # Stores an uploaded image under `dashboard/tmp/ai_lessons/images/:id/`
   # and returns the URL the served `image` action will respond to.
   def upload_image

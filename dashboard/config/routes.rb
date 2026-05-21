@@ -1327,6 +1327,7 @@ Dashboard::Application.routes.draw do
     patch '/ai_lessons/:id', to: 'ai_lessons#update'
     put '/ai_lessons/:id', to: 'ai_lessons#update'
     delete '/ai_lessons/:id', to: 'ai_lessons#destroy'
+    post '/ai_lessons/:id/reset_progress', to: 'ai_lessons#reset_progress'
     post '/ai_lessons/:id/images', to: 'ai_lessons#upload_image'
     get '/ai_lessons/:id/images/:filename', to: 'ai_lessons#image',
       constraints: {filename: /[a-zA-Z0-9_.-]+/}
