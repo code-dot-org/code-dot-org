@@ -1,0 +1,7 @@
+name 'self-paced-TCaAI-L3-Placeholder'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+Sample Project Placeholder
+MARKDOWN

@@ -1,21 +1,23 @@
 {
   "key": "thinking-critically-about-ai",
-  "display_name": "thinking-critically-about-ai",
+  "display_name": "Thinking Critically About AI",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
-  "image": null,
-  "cs_topic": null,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": "AID",
+  "grade_levels": "6,7,8",
+  "header": "teacher_led",
+  "image": "https://images.code.org/0a3d194020742579340cdb52f21ef489-csaif-unit-1.avif",
+  "cs_topic": "artificial_intelligence",
   "school_subject": null,
-  "device_compatibility": null,
-  "description": null,
-  "professional_learning_program": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"not_recommended\"}",
+  "description": "Students build a durable lens for thinking critically about AI: how it works, why it fails, and how to use it responsibly.",
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
-  "published_date": null,
+  "published_date": "2026-05-22 04:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

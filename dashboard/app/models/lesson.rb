@@ -75,6 +75,8 @@ class Lesson < ApplicationRecord
     preparation
     announcements
     assessment_opportunities
+    generate_outline
+    generate_project_channel_id
   )
 
   # A lesson has an absolute position and a relative position. The difference
@@ -474,6 +476,8 @@ class Lesson < ApplicationRecord
       allJitPlConcepts: JitPlConcept.order(:name).map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
       lessonPath: get_uncached_show_path,
       rubric: rubric,
+      generateOutline: generate_outline,
+      generateProjectChannelId: generate_project_channel_id,
     }
   end
 

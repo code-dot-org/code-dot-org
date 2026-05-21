@@ -1,0 +1,41 @@
+name 'self-paced-TCaAI-L1-Opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Thinking Critically About AI
+
+Let’s dive into the first section of this professional learning module. This section introduces the structure, goals, tools, and instructional approaches that students experience throughout the unit.
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px; margin-bottom:0px">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 16px;">
+            In this section, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5; font-size: 16px;">
+                Describe the structure and goals of the Thinking Critically About AI unit
+            </li>
+            <li style="line-height: 1.5; font-size: 16px;">
+                Explain how students investigate AI systems through testing, evidence collection, and reflection
+            </li>
+            <li style="line-height: 1.5; font-size: 16px;">
+                Identify the major concepts students explore, including prompting, bias, verification, privacy, and responsible AI use
+            </li>
+            <li style="line-height: 1.5; font-size: 16px;">
+                Explore the digital tools students use to build and revise their Generate and Judge Guide
+            </li>
+        </ul>
+    </div>
+    <!-- Image on the right -->
+    <img 
+    src="https://images.code.org/e0b85e9217a47fe3fb0ddb30df78545a-HS29.png" 
+    alt="" 
+    style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+<br>
+
+<p style="font-size:16px;">
+<strong>Suggested time for this section:</strong> 20 minutes
+</p>
+MARKDOWN
