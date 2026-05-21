@@ -17,9 +17,10 @@ import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
 import ScrollableContent from './ScrollableContent';
 import I18n from '../i18n';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
 
 interface PredictProps {
-  labelColumn: string | undefined;
+  labelColumn: string;
   selectedCategoricalFeatures: string[];
   selectedNumericalFeatures: string[];
   uniqueOptionsByColumn: Record<string, string[]>;
@@ -28,7 +29,7 @@ interface PredictProps {
   predictedLabel: string | number;
   getPredictAvailable: boolean;
   extremaByColumn: Record<string, {min: number; max: number}>;
-  datasetId: string | undefined;
+  datasetId: string;
 }
 
 const Predict = ({
@@ -66,7 +67,7 @@ const Predict = ({
             return (
               <div style={styles.cardRow} key={index}>
                 <label>
-                  {getLocalizedColumnName(datasetId!, feature)}
+                  {getLocalizedColumnName(datasetId, feature)}
                   &nbsp;
                   <input
                     type="number"
@@ -86,7 +87,7 @@ const Predict = ({
           {selectedCategoricalFeatures.map((feature, index) => {
             return (
               <div style={styles.cardRow} key={index}>
-                <div>{getLocalizedColumnName(datasetId!, feature)}&nbsp;</div>
+                <div>{getLocalizedColumnName(datasetId, feature)}&nbsp;</div>
                 <div>
                   <select
                     onChange={event => handleChange(event, feature)}
@@ -98,7 +99,7 @@ const Predict = ({
                       .map((option, index) => {
                         return (
                           <option key={index} value={option}>
-                            {option}
+                            {getLocalizedValue(option, datasetId)}
                           </option>
                         );
                       })}
@@ -132,10 +133,8 @@ const Predict = ({
           </div>
           <div style={styles.predictBotRight}>
             <div style={styles.statement}>{I18n.t('predictAIBotPredicts')}</div>
-            <div>{getLocalizedColumnName(datasetId!, labelColumn!)}</div>
-            <div>
-              {getLocalizedColumnName(datasetId!, String(predictedLabel))}
-            </div>
+            <div>{getLocalizedColumnName(datasetId, labelColumn)}</div>
+            <div>{getLocalizedValue(predictedLabel, datasetId)}</div>
           </div>
         </div>
       )}
@@ -147,13 +146,13 @@ export default connect(
   (state: RootState) => ({
     testData: state.testData,
     predictedLabel: getConvertedPredictedLabel(state),
-    labelColumn: state.labelColumn,
+    labelColumn: state.labelColumn || 'unknown',
     selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
     extremaByColumn: getExtremaByColumn(state),
-    datasetId: state.metadata && state.metadata.name,
+    datasetId: state.metadata?.name || 'unknown',
   }),
   (dispatch: Dispatch) => ({
     setTestData(feature: string, value: string | number) {

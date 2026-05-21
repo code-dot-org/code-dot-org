@@ -9,14 +9,16 @@ import {RootState} from '../redux';
 import {getCrossTabData} from '../selectors/visualizationSelectors';
 import {styles} from '../constants';
 import ScrollableContent from './ScrollableContent';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
 import {CrossTabData} from '../types';
 
 interface CrossTabProps {
   crossTabData: CrossTabData | null;
+  datasetId: string;
 }
 
-const CrossTab = ({crossTabData}: CrossTabProps) => {
+const CrossTab = ({crossTabData, datasetId}: CrossTabProps) => {
   const getCellStyle = useCallback((percent: number) => {
     return {
       ...(styles as Record<string, React.CSSProperties>)[
@@ -91,7 +93,7 @@ const CrossTab = ({crossTabData}: CrossTabProps) => {
                     (uniqueLabelValue, index) => {
                       return (
                         <td key={index} style={styles.tableCell}>
-                          {uniqueLabelValue}
+                          {getLocalizedValue(uniqueLabelValue, datasetId)}
                         </td>
                       );
                     },
@@ -104,7 +106,7 @@ const CrossTab = ({crossTabData}: CrossTabProps) => {
                         (featureValue, featureIndex) => {
                           return (
                             <td key={featureIndex} style={styles.tableCell}>
-                              {featureValue}
+                              {getLocalizedValue(featureValue, datasetId)}
                             </td>
                           );
                         },
@@ -137,4 +139,5 @@ const CrossTab = ({crossTabData}: CrossTabProps) => {
 
 export default connect((state: RootState) => ({
   crossTabData: getCrossTabData(state),
+  datasetId: state.metadata?.name || 'unknown',
 }))(CrossTab);

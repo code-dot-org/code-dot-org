@@ -3,6 +3,7 @@ import {
   isColumnNumerical,
   filterColumnsByType,
   getUniqueOptions,
+  getLocalizedColumnName,
   tooManyUniqueOptions,
   isColumnReadOnly,
   getExtrema,
@@ -14,6 +15,7 @@ import {
   allNumericalState,
   regressionState,
   premadeDatasetState,
+  premadeDatasetColumnNameLocalized,
   mosquitoCountMax,
   mosquitoCountMin,
   mosquitoDescription,
@@ -149,5 +151,19 @@ describe('getColumnDescription', () => {
   test('no description', async () => {
     const result = getColumnDescription('play', {}, {});
     expect(result).toEqual(null);
+  });
+});
+
+describe('getLocalizedColumnName', () => {
+  test('returns the fallback column name', async () => {
+    const result = getLocalizedColumnName('dataset-id', 'column-id');
+    expect(result).toEqual('column-id');
+  });
+
+  test('returns the localized column name', async () => {
+    I18n.reset();
+    I18n.initI18n(premadeDatasetTranslations);
+    const result = getLocalizedColumnName('bats_eat_mozzies', 'mosquitoCount');
+    expect(result).toEqual(premadeDatasetColumnNameLocalized);
   });
 });

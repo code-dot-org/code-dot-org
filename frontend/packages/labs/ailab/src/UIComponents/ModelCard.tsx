@@ -8,6 +8,7 @@ import Statement from './Statement';
 import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
 import I18n from '../i18n';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import {
   ModelCardColumn,
   TrainedModelDetailsSave,
@@ -21,6 +22,7 @@ interface ModelCardProps {
   label: ModelCardColumn;
   features: ModelCardColumn[];
   datasetDetails: DatasetDetails;
+  datasetId: string;
 }
 
 const ModelCard = ({
@@ -30,6 +32,7 @@ const ModelCard = ({
   label,
   features,
   datasetDetails,
+  datasetId,
 }: ModelCardProps) => {
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
   const localizedFeatures = selectedFeatures.map(feature =>
@@ -131,7 +134,7 @@ const ModelCard = ({
               <p style={styles.modelCardDetails}>
                 {I18n.t('modelCardPossibleValues')}
                 <br />
-                {label.values.join(' ')}
+                {label.values.map((value) => getLocalizedValue(value, datasetId)).join(' ')}
               </p>
             )}
           </div>
@@ -158,7 +161,7 @@ const ModelCard = ({
                       <p>
                         {I18n.t('modelCardPossibleValues')}
                         <br />
-                        {feature.values.join(' ')}
+                        {feature.values.map((value) => getLocalizedValue(value, datasetId)).join(' ')}
                       </p>
                     )}
                   </div>
@@ -178,4 +181,5 @@ export default connect((state: RootState) => ({
   label: getLabelToSave(state),
   features: getFeaturesToSave(state),
   datasetDetails: getDatasetDetails(state),
+  datasetId: state.metadata?.name || 'unknown',
 }))(ModelCard);

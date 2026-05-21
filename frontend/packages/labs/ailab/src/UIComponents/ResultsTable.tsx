@@ -6,16 +6,17 @@ import {Dispatch} from 'redux';
 import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
 import I18n from '../i18n';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import {ResultsData} from '../types';
 
 interface ResultsTableProps {
   selectedFeatures: string[];
-  labelColumn: string | undefined;
+  labelColumn: string;
   results: ResultsData;
   isRegression: boolean;
   setResultsHighlightRow: (row: number | undefined) => void;
   resultsHighlightRow: number | undefined;
-  datasetId: string | undefined;
+  datasetId: string;
 }
 
 const ResultsTable = ({
@@ -90,7 +91,7 @@ const ResultsTable = ({
                     }}
                     key={index}
                   >
-                    {getLocalizedColumnName(datasetId!, feature)}
+                    {getLocalizedColumnName(datasetId, feature)}
                   </th>
                 );
               })}
@@ -101,7 +102,7 @@ const ResultsTable = ({
                   ...styles.resultsTableSecondHeader,
                 }}
               >
-                {getLocalizedColumnName(datasetId!, labelColumn!)}
+                {getLocalizedColumnName(datasetId, labelColumn)}
               </th>
               <th
                 style={{
@@ -110,7 +111,7 @@ const ResultsTable = ({
                   ...styles.resultsTableSecondHeader,
                 }}
               >
-                {getLocalizedColumnName(datasetId!, labelColumn!)}
+                {getLocalizedColumnName(datasetId, labelColumn)}
               </th>
             </tr>
           </thead>
@@ -125,15 +126,18 @@ const ResultsTable = ({
                   {examples.map((example, i) => {
                     return (
                       <td style={getRowCellStyle(index)} key={i}>
-                        {example}
+                        {getLocalizedValue(example, datasetId)}
                       </td>
                     );
                   })}
                   <td style={getRowCellStyle(index)}>
-                    {results.labels[index]}
+                    {getLocalizedValue(results.labels[index], datasetId)}
                   </td>
                   <td style={getRowCellStyle(index)}>
-                    {results.predictedLabels[index]}
+                    {getLocalizedValue(
+                      results.predictedLabels[index],
+                      datasetId,
+                    )}
                   </td>
                 </tr>
               );
@@ -148,10 +152,10 @@ const ResultsTable = ({
 export default connect(
   (state: RootState) => ({
     selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn,
+    labelColumn: state.labelColumn || 'unknown',
     isRegression: isRegression(state),
     resultsHighlightRow: state.resultsHighlightRow,
-    datasetId: state.metadata && state.metadata.name,
+    datasetId: state.metadata?.name || 'unknown',
   }),
   (dispatch: Dispatch) => ({
     setResultsHighlightRow(column: number | undefined) {

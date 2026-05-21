@@ -9,13 +9,14 @@ import {
 import {Dispatch} from 'redux';
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import {DataRow} from '../types';
 
 interface DataTableProps {
   currentPanel: string;
   data: DataRow[];
-  datasetId?: string;
-  labelColumn?: string;
+  datasetId: string;
+  labelColumn: string;
   selectedFeatures: string[];
   setCurrentColumn: (column?: string) => void;
   setHighlightColumn: (column?: string) => void;
@@ -143,7 +144,7 @@ const DataTable = ({
                 onMouseEnter={() => handleSetHighlightColumn(columnId)}
                 onMouseLeave={() => handleSetHighlightColumn(undefined)}
               >
-                {getLocalizedColumnName(datasetId!, columnId)}
+                {getLocalizedColumnName(datasetId, columnId)}
               </th>
             );
           })}
@@ -168,7 +169,7 @@ const DataTable = ({
                     {startingRow !== undefined && index <= startingRow ? (
                       <span>&nbsp;</span>
                     ) : (
-                      row[columnId]
+                      getLocalizedValue(row[columnId], datasetId)
                     )}
                   </td>
                 );
@@ -184,8 +185,8 @@ const DataTable = ({
 export default connect(
   (state: RootState, props: {useResultsData?: boolean}) => ({
     data: getTableData(state, !!props.useResultsData),
-    datasetId: state.metadata && state.metadata.name,
-    labelColumn: state.labelColumn,
+    datasetId: state.metadata?.name || 'unknown',
+    labelColumn: state.labelColumn || 'unknown',
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
     highlightColumn: state.highlightColumn,

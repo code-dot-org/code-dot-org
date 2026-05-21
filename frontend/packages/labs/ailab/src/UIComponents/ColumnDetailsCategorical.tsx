@@ -3,12 +3,14 @@ import {connect} from 'react-redux';
 import {RootState} from '../redux';
 import {colors, styles} from '../constants';
 import {Bar} from 'react-chartjs-2';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
 import I18n from '../i18n';
 import {CategoricalColumnDetails} from '../types';
 
 interface ColumnDetailsCategoricalProps {
   columnDetails: CategoricalColumnDetails;
+  datasetId: string;
 }
 
 const chartOptions = {
@@ -27,11 +29,15 @@ const chartOptions = {
 
 const ColumnDetailsCategorical = ({
   columnDetails,
+  datasetId,
 }: ColumnDetailsCategoricalProps) => {
   const {id, uniqueOptions, frequencies} = columnDetails;
   const labels = uniqueOptions && Object.values(uniqueOptions);
+  const localizedLabels = labels.map(option =>
+    getLocalizedValue(option, datasetId),
+  );
   const barData = {
-    labels,
+    localizedLabels,
     datasets: [
       {
         label: id,
@@ -70,6 +76,7 @@ const ColumnDetailsCategorical = ({
 export default connect(
   (state: RootState) => ({
     columnDetails: getCategoricalColumnDetails(state),
+    datasetId: state.metadata?.name || 'unknown',
   }),
   {},
 )(ColumnDetailsCategorical);

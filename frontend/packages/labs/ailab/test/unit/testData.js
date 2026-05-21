@@ -164,6 +164,8 @@ export const allNumericalState = {
 export const premadeDatasetId = 'bats_eat_mozzies';
 export const premadeDatasetName = 'Bats Eat Mozzies';
 export const premadeDatasetNameLocalized = 'Localized Bats Eat Mozzies';
+export const premadeDatasetColumnNameLocalized = 'Localized Mosquito Count';
+export const premadeDatasetValueLocalized = 'Localized Value';
 export const batDatasetDescription = 'Count of bats and mosquitios';
 export const batDatasetDescriptionLocalized =
   'Localized How many mosquitoes there are.';
@@ -210,8 +212,12 @@ export const premadeDatasetTranslations = new MessageFormat('en').compile({
       name: premadeDatasetNameLocalized,
       fields: {
         mosquitoCount: {
+          id: premadeDatasetColumnNameLocalized,
           description: 'mosquitoCount description',
         },
+      },
+      values: {
+        value: premadeDatasetValueLocalized,
       },
       card: {
         description: batDatasetDescriptionLocalized,
