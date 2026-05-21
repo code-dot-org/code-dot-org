@@ -59,11 +59,13 @@ module ShareFiltering
     texts = extract_text_blockly(program)
     program_text = texts.join(" ")
 
-    # Email and phone: check joined text — these patterns can't be created by concatenation.
+    # Email and phone: check concatenated text.
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
     return failure if failure
 
-    # Address: join digit-containing elements with " | " as a non-whitespace separator.
+    # Address: join digit-containing elements with " | " as a non-whitespace separator
+    # so that we check only block text entries and avoid checking potential street
+    # address strings that combine text from one block and another block.
     digit_text = texts.grep(/\d/).join(' | ')
     address = Geocoder.find_potential_street_address(digit_text)
     if address
