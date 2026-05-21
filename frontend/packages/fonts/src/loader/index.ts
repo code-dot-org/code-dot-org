@@ -15,14 +15,14 @@ export function injectFont(locale: InternationalFontLocale) {
 
 export function injectFontAwesome() {
   const stylesheets = [
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/fontawesome.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/brands.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/solid.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/regular.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/v4-font-face.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/v4-shims.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/duotone.min.css',
-    'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/custom-icons.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/fontawesome.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/brands.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/solid.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/regular.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/v4-font-face.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/v4-shims.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/duotone.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1779401026/css/custom-icons.min.css',
   ];
 
   stylesheets.forEach(stylesheetHref => {

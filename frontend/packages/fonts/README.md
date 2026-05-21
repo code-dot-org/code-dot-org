@@ -53,6 +53,10 @@ If you are looking to update the FontAwesome files in the `injectFontAwesome` fu
 <img width="1674" height="408" alt="image" src="https://github.com/user-attachments/assets/da1ea1c6-18ac-4fc2-ba5c-c3be697f140a" />
 
 4. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
+5. Update the URLs referencing the font files to use the new timestamped url. The files that must be updated are:
+ - [frontend/packages/component-library-styles/font.scss](/frontend/packages/component-library-styles/font.scss)
+ - [frontend/packages/fonts/src/loader/index.ts](/frontend/packages/fonts/src/loader/index.ts)
+ - [shared/css/font.scss](/shared/css/font.scss)
 
 If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
 
