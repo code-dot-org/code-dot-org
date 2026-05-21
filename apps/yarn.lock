@@ -3965,6 +3965,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/demo-mini-app@portal:../frontend/packages/mini-apps/demo/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/demo-mini-app@portal:../frontend/packages/mini-apps/demo/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
+  peerDependencies:
+    "@code-dot-org/component-library": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/fonts@portal:../frontend/packages/fonts/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/fonts@portal:../frontend/packages/fonts/::locator=blockly-mooc%40workspace%3A."
@@ -4023,6 +4037,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/mini-app-base@portal:../frontend/packages/mini-apps/base/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/mini-app-base@portal:../frontend/packages/mini-apps/base/::locator=blockly-mooc%40workspace%3A."
+  peerDependencies:
+    canvg: ^4.0.0
+    react: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    canvg:
+      optional: true
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/ml-activities@npm:0.1.3":
   version: 0.1.3
   resolution: "@code-dot-org/ml-activities@npm:0.1.3"
@@ -4054,6 +4080,20 @@ __metadata:
   checksum: 10/79a3aa73f29c468422f2e08e232c6ec56480689987a6d6eb33d8b82de228bd7c3a788778a86a06ddd57202bdaf8e0d3c3868db3468457986d4e820f18f0c1f28
   languageName: node
   linkType: hard
+
+"@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/neighborhood-mini-app@portal:../frontend/packages/mini-apps/neighborhood/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
+  peerDependencies:
+    "@code-dot-org/component-library": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
 
 "@code-dot-org/p5.play@npm:1.3.21-cdo":
   version: 1.3.21-cdo
@@ -4599,9 +4639,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.14.0":
-  version: 11.14.0
-  resolution: "@emotion/styled@npm:11.14.0"
+"@emotion/styled@npm:^11.14.1":
+  version: 11.14.1
+  resolution: "@emotion/styled@npm:11.14.1"
   dependencies:
     "@babel/runtime": "npm:^7.18.3"
     "@emotion/babel-plugin": "npm:^11.13.5"
@@ -4615,7 +4655,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/64bb3fd8c5d3042ba803eb2052fddf8e057b927682677f8fc41ecfe2b1abcc0da03944fde79fac8f2f55a56383d5c9547b93d4641bb51452cf59415c02dd9b10
+  checksum: 10/b20ffaaac76e16538051da8d417f1da75f47f0974000edf0999f39f309b23ee0a91ba7dc1d5f60c4017d29fadfed48631ae4a8f697e3662a88318c667d072117
   languageName: node
   linkType: hard
 
@@ -11381,13 +11421,16 @@ __metadata:
     "@code-dot-org/core": "portal:../frontend/packages/core/"
     "@code-dot-org/craft": "npm:0.2.2"
     "@code-dot-org/dance-party": "npm:2.0.4"
+    "@code-dot-org/demo-mini-app": "portal:../frontend/packages/mini-apps/demo/"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
+    "@code-dot-org/mini-app-base": "portal:../frontend/packages/mini-apps/base/"
     "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.47"
+    "@code-dot-org/neighborhood-mini-app": "portal:../frontend/packages/mini-apps/neighborhood/"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
@@ -11414,7 +11457,7 @@ __metadata:
     "@dnd-kit/utilities": "npm:^3.2.2"
     "@dsco_/link": "npm:^1.1.2"
     "@emotion/react": "npm:^11.14.0"
-    "@emotion/styled": "npm:^11.14.0"
+    "@emotion/styled": "npm:^11.14.1"
     "@eslint/js": "npm:^9.31.0"
     "@excalidraw/excalidraw": "npm:^0.17.6"
     "@lezer/highlight": "npm:^1.2.0"

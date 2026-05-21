@@ -14,7 +14,8 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "packages/labs/*"
+    "packages/labs/*",
+    "packages/mini-apps/*"
   ],
   "scripts": {
     "build": "turbo build",

@@ -3,8 +3,6 @@
  * of code studio apps.
  */
 
-import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import project from '../code-studio/initApp/project';
@@ -81,47 +79,17 @@ export function captureThumbnailFromSvg(svg) {
 }
 
 /**
- * Crops the given canvas to a smaller portion from the top-left corner.
- * The resulting canvas will have its width and height scaled by neighborhoodThumbnailScale
- * stored in Codebridge Registry. For now, this is only used by Python Lab neighborhood projects.
+ * Convert a mini-app's pre-rasterized canvas into a thumbnail blob.
+ * Used by codebridge (pythonlab) after a run completes. The canvas
+ * comes from the active MiniApp's `captureThumbnail()`; the mini-app
+ * owns whatever rendering technique produced it (canvg for SVG-based
+ * mini-apps, native draws for canvas-native mini-apps).
  *
- * @param {HTMLCanvasElement} canvas - The original canvas to crop from.
+ * @param {HTMLCanvasElement | undefined} canvas Pre-rendered canvas.
  */
-function cropNeighborhoodCanvasFromTopLeft(canvas) {
-  const scale =
-    CodebridgeRegistry.getInstance().getNeighborhoodThumbnailScale();
-  const croppedCanvas = document.createElement('canvas');
-  croppedCanvas.width = canvas.width * scale;
-  croppedCanvas.height = canvas.height * scale;
-
-  const context = croppedCanvas.getContext('2d');
-  if (context) {
-    context.drawImage(
-      canvas,
-      0,
-      0, // Source x,y
-      canvas.width * scale,
-      canvas.height * scale, // Source width, height
-      0,
-      0, // Destination x,y
-      croppedCanvas.width,
-      croppedCanvas.height // Destination width, height
-    );
-
-    return croppedCanvas;
-  }
-}
-
-/**
- * Converts the contents of an SVG element into an image, shrinks it to a
- * width equal to THUMBNAIL_WIDTH preserving aspect ratio, and saves it to
- * the server.
- * This version is to generate thumbnail image for Python Lab projects using Neighborhood mini-app.
- * @param {SVGElement | undefined} svg SVG element to capture the contents of.
- */
-export function captureThumbnailFromSvgPythonlabNeighborhood(svg) {
-  if (!svg) {
-    console.warn(`Thumbnail capture failed: svg element not found.`);
+export function captureMiniAppThumbnail(canvas) {
+  if (!canvas) {
+    console.warn(`Thumbnail capture failed: canvas not produced.`);
     return;
   }
 
@@ -138,11 +106,7 @@ export function captureThumbnailFromSvgPythonlabNeighborhood(svg) {
 
   lastCaptureTimeMs = Date.now();
 
-  return svgToDataURI(svg)
-    .then(toCanvas)
-    .then(canvas => cropNeighborhoodCanvasFromTopLeft(canvas))
-    .then(createThumbnail)
-    .then(canvasToBlob);
+  return Promise.resolve(canvas).then(createThumbnail).then(canvasToBlob);
 }
 
 /**

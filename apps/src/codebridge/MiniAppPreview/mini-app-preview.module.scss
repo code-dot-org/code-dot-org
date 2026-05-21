@@ -12,7 +12,9 @@
 }
 
 .miniAppContainer {
-  height: 100%;
-  width: 100%;
   box-sizing: border-box;
+  flex: 1 1 0%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
 }

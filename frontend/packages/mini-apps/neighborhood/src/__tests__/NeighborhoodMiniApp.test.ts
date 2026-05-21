@@ -1,0 +1,182 @@
+import {beforeEach, describe, expect, it, vi} from 'vitest';
+
+// Mock the inner Neighborhood class entirely — it pulls in MazeController
+// and DOM-heavy maze state we don't want to exercise here. The MiniApp
+// wrapper's job is only to delegate, and that's what we're asserting.
+//
+// `vi.hoisted` keeps the shared spies usable from both the mock factory
+// (which vitest hoists above the imports) and the test body.
+const {ctorSpy, inner, svgToCanvasSpy} = vi.hoisted(() => {
+  const innerStub = {
+    handleSignal: vi.fn(),
+    onRun: vi.fn(),
+    onStop: vi.fn(),
+    onClose: vi.fn(),
+    reset: vi.fn(),
+    waitUntilDone: vi.fn().mockResolvedValue(undefined),
+    afterInject: vi.fn(),
+  };
+  return {
+    ctorSpy: vi.fn(),
+    inner: innerStub,
+    svgToCanvasSpy: vi.fn(),
+  };
+});
+
+vi.mock('../Neighborhood', () => ({
+  default: class FakeNeighborhood {
+    handleSignal = inner.handleSignal;
+    onRun = inner.onRun;
+    onStop = inner.onStop;
+    onClose = inner.onClose;
+    reset = inner.reset;
+    waitUntilDone = inner.waitUntilDone;
+    afterInject = inner.afterInject;
+    constructor(...args: unknown[]) {
+      ctorSpy(...args);
+    }
+  },
+}));
+
+// Mock the base/svg helper so the test doesn't pull canvg into jsdom
+// (canvg's renderer relies on canvas 2d primitives jsdom doesn't
+// implement). We're testing the wrapper's delegation, not the helper.
+vi.mock('@code-dot-org/mini-app-base/svg', () => ({
+  svgToCanvas: svgToCanvasSpy,
+}));
+
+import {NEIGHBORHOOD_NAME, NEIGHBORHOOD_SIGNAL_TAG} from '../constants';
+import {NeighborhoodMiniApp} from '../NeighborhoodMiniApp';
+import NeighborhoodPreview from '../NeighborhoodPreview';
+
+const stubDeps = () => ({
+  onOutputMessage: vi.fn(),
+  onNewlineMessage: vi.fn(),
+  onPartialOutputMessage: vi.fn(),
+  setIsRunning: vi.fn(),
+});
+
+describe('NeighborhoodMiniApp', () => {
+  beforeEach(() => {
+    ctorSpy.mockClear();
+    svgToCanvasSpy.mockClear();
+    Object.values(inner).forEach(m => m.mockClear());
+  });
+
+  it('exposes the static identity required by the MiniApp contract', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    expect(app.name).toBe(NEIGHBORHOOD_NAME);
+    expect(app.signalTag).toBe(NEIGHBORHOOD_SIGNAL_TAG);
+    expect(app.PreviewComponent).toBe(NeighborhoodPreview);
+  });
+
+  it('forwards deps to the inner Neighborhood in the expected order', () => {
+    // The inner constructor pre-dates MiniAppDeps and still uses a
+    // positional signature; the wrapper has to translate. Pin the order
+    // here so a future inner refactor that swaps args (or the wrapper
+    // misordering them) fails this test rather than silently breaking.
+    const deps = stubDeps();
+    new NeighborhoodMiniApp(deps);
+    expect(ctorSpy).toHaveBeenCalledWith(
+      deps.onOutputMessage,
+      deps.onNewlineMessage,
+      deps.setIsRunning,
+      deps.onPartialOutputMessage,
+    );
+  });
+
+  it('delegates lifecycle methods to the inner Neighborhood', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    app.onRun();
+    app.onStop();
+    app.onClose();
+    app.reset();
+    expect(inner.onRun).toHaveBeenCalledTimes(1);
+    expect(inner.onStop).toHaveBeenCalledTimes(1);
+    expect(inner.onClose).toHaveBeenCalledTimes(1);
+    expect(inner.reset).toHaveBeenCalledTimes(1);
+  });
+
+  it('delegates handleSignal and waitUntilDone', async () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    const signal = {value: 'MOVE'} as never;
+    app.handleSignal(signal);
+    expect(inner.handleSignal).toHaveBeenCalledWith(signal);
+
+    await expect(app.waitUntilDone()).resolves.toBeUndefined();
+    expect(inner.waitUntilDone).toHaveBeenCalledTimes(1);
+  });
+
+  it('parseSignal delegates to parseNeighborhoodSignal (real impl)', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    expect(app.parseSignal('[NEIGHBORHOOD] TURN_LEFT')).toEqual({
+      value: 'TURN_LEFT',
+      detail: undefined,
+    });
+    expect(app.parseSignal('not a signal')).toBeNull();
+  });
+
+  it('parseException delegates to parseNeighborhoodException (real impl)', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    expect(app.parseException('plain traceback with no marker')).toBeNull();
+    const out = app.parseException(
+      'NeighborhoodRuntimeException: INVALID_MOVE',
+    );
+    expect(typeof out).toBe('string');
+  });
+
+  it('forwards afterInject through to the inner Neighborhood', () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    const level = {id: 7} as Parameters<typeof app.afterInject>[0];
+    const skin = {} as Parameters<typeof app.afterInject>[1];
+    const config = {
+      skinId: 'neighborhood',
+      level,
+      skin,
+    } as Parameters<typeof app.afterInject>[2];
+    const playAudio = vi.fn();
+    const playAudioOnFailure = vi.fn();
+    const loadAudio = vi.fn();
+    const getTestResults = vi.fn();
+    app.afterInject(
+      level,
+      skin,
+      config,
+      playAudio,
+      playAudioOnFailure,
+      loadAudio,
+      getTestResults,
+    );
+    expect(inner.afterInject).toHaveBeenCalledWith(
+      level,
+      skin,
+      config,
+      playAudio,
+      playAudioOnFailure,
+      loadAudio,
+      getTestResults,
+    );
+  });
+
+  it('captureThumbnail resolves to null when the SVG is not mounted', async () => {
+    const app = new NeighborhoodMiniApp(stubDeps());
+    await expect(app.captureThumbnail()).resolves.toBeNull();
+    expect(svgToCanvasSpy).not.toHaveBeenCalled();
+  });
+
+  it('captureThumbnail delegates to svgToCanvas when the SVG is mounted', async () => {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.id = 'svgMaze';
+    document.body.appendChild(svg);
+    const fakeCanvas = {} as HTMLCanvasElement;
+    svgToCanvasSpy.mockResolvedValueOnce(fakeCanvas);
+
+    try {
+      const app = new NeighborhoodMiniApp(stubDeps());
+      await expect(app.captureThumbnail()).resolves.toBe(fakeCanvas);
+      expect(svgToCanvasSpy).toHaveBeenCalledWith(svg);
+    } finally {
+      svg.remove();
+    }
+  });
+});

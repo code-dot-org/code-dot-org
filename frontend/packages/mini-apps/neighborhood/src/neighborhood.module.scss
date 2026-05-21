@@ -1,0 +1,78 @@
+.container {
+  background: var(--background-neutral-black-fixed);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.neighborhoodPreviewBackground {
+  background: var(--background-neutral-black-fixed);
+  flex: 1 1;
+  overflow: hidden;
+}
+
+.visualization {
+  height: 100%;
+  position: relative;
+
+  .fitted {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.sliderContainer {
+  display: flex;
+  flex: 0 0;
+  justify-content: center;
+  margin-top: 2px;
+
+  // Nested under .sliderContainer to raise specificity above the
+  // component-library's standalone `.slider { width: 300px }` rule.
+  // Both classes apply to the Slider's outer div (via the `className`
+  // prop), so without the extra specificity, whichever stylesheet
+  // loads later wins. Before the externalization fix that was
+  // neighborhood (single bundled CSS file); after externalization
+  // component-library's CSS loads later via apps's portal, so this
+  // nesting restores the override.
+  .slider {
+    width: 200px;
+  }
+}
+
+.buttons {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.queue {
+  background: var(--background-neutral-tertiary);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 2rem;
+  padding: 0.5rem;
+}
+
+.queueItem {
+  padding: 0.125rem 0;
+}
+
+.queueItemConsumed {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.queueItemPending {
+  font-weight: bold;
+}
+
+.queueEmpty {
+  font-style: italic;
+  opacity: 0.6;
+}

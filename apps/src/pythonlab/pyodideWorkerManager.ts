@@ -1,3 +1,4 @@
+import type {MiniApp} from '@code-dot-org/mini-app-base';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 import {
@@ -14,17 +15,12 @@ import {
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
-import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
-import {
-  parseMessageToNeighborhoodSignal,
-  parseErrorMessage,
-} from './pythonHelpers/messageHelpers';
+import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
@@ -33,28 +29,29 @@ const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
-let outputToNeighborhood = false;
+let outputToMiniApp = false;
 let directLogsToDevConsole = false;
 let loadedMessageHandlers = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
-  neighborhood: Neighborhood | null,
-  outputToNeighborhood: boolean
+  miniApp: MiniApp | null,
+  outputToMiniApp: boolean
 ) => {
-  if (outputToNeighborhood && neighborhood) {
+  if (outputToMiniApp && miniApp) {
+    // Route console output through the mini-app's signal queue so it
+    // interleaves with movement/animation signals in submission order.
+    // The signal-value strings are part of the wire protocol —
+    // `CONSOLE_LOG` and `PARTIAL_LOG` are the values the Python
+    // `neighborhood` package emits — and we keep them as literals here
+    // rather than importing a mini-app's constant, since this code is
+    // mini-app-agnostic and the values are fixed by the protocol.
     loadedMessageHandlers = true;
     return {
       writeConsoleMessage: (line: string) =>
-        neighborhood.handleSignal({
-          value: ConsoleSignalType.CONSOLE_LOG,
-          detail: line,
-        }),
+        miniApp.handleSignal({value: 'CONSOLE_LOG', detail: line}),
       writePartialLine: (partialLine: string) =>
-        neighborhood.handleSignal({
-          value: ConsoleSignalType.PARTIAL_LOG,
-          detail: partialLine,
-        }),
+        miniApp.handleSignal({value: 'PARTIAL_LOG', detail: partialLine}),
     };
   } else if (consoleManager) {
     loadedMessageHandlers = true;
@@ -74,7 +71,7 @@ const getMessageHandlers = (
 
 let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
   CodebridgeRegistry.getInstance().getConsoleManager(),
-  CodebridgeRegistry.getInstance().getNeighborhood(),
+  CodebridgeRegistry.getInstance().getMiniApp(),
   false
 );
 
@@ -95,11 +92,11 @@ const setUpPyodideWorker = () => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
 
-    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
     if (!loadedMessageHandlers) {
       const messageHandlers = getMessageHandlers(
         CodebridgeRegistry.getInstance().getConsoleManager(),
-        neighborhood,
+        miniApp,
         false
       );
       writeConsoleMessage = messageHandlers.writeConsoleMessage;
@@ -124,12 +121,10 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getImageMessage(image));
           break;
         }
-        if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          if (neighborhood) {
-            // Parse message string to NeighborhoodSignal.
-            const data = parseMessageToNeighborhoodSignal(message);
-            neighborhood.handleSignal(data);
-          }
+        if (miniApp && message.startsWith(miniApp.signalTag)) {
+          // Mini-app signal envelope (i.e. `[NEIGHBORHOOD]`).
+          const data = miniApp.parseSignal(message);
+          if (data) miniApp.handleSignal(data);
           break;
         }
         if (message.includes(MessageTag.INPUT_PROMPT)) {
@@ -140,9 +135,9 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(message);
         break;
       case 'run_complete': {
-        // Write a blank line to the console if we are not on a neighborhood level (which handles
-        // this for us).
-        if (!outputToNeighborhood) {
+        // Mini-app levels handle their own blank line as part of the
+        // signal drain; non-mini-app levels need it written here.
+        if (!outputToMiniApp) {
           writeConsoleMessage('');
         }
         delete callbacks[id];
@@ -158,12 +153,27 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getErrorMessage(pythonlabI18n.inputFailed()));
           break;
         }
-        writeConsoleMessage(getErrorMessage(parseErrorMessage(message, false)));
+        writeConsoleMessage(
+          getErrorMessage(
+            parseErrorMessage(
+              message,
+              false,
+              miniApp?.parseException?.(message)
+            )
+          )
+        );
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
         writeConsoleMessage(
-          getSystemError(parseErrorMessage(message, true), appName)
+          getSystemError(
+            parseErrorMessage(
+              message,
+              true,
+              miniApp?.parseException?.(message)
+            ),
+            appName
+          )
         );
         Lab2Registry.getInstance()
           .getMetricsReporter()
@@ -284,7 +294,7 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    shouldOutputToNeighborhood?: boolean
+    shouldOutputToMiniApp?: boolean
   ) => {
     id = createUuid();
 
@@ -292,13 +302,13 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
-    outputToNeighborhood = !!shouldOutputToNeighborhood;
+    outputToMiniApp = !!shouldOutputToMiniApp;
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
     const messageHandlers = getMessageHandlers(
       consoleManager,
-      neighborhood,
-      outputToNeighborhood
+      miniApp,
+      outputToMiniApp
     );
     writeConsoleMessage = messageHandlers.writeConsoleMessage;
     writePartialLine = messageHandlers.writePartialLine;

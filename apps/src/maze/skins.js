@@ -7,7 +7,7 @@
 // specified, otherwise, use background.png.
 // look: Colour of sonar-like look icon.
 
-import neighborhoodSprites from './neighborhoodSprites.json';
+import {loadNeighborhoodSkin} from '@code-dot-org/neighborhood-mini-app';
 
 var skinsBase = require('../skins');
 var randomValue = require('../utils').randomValue;
@@ -186,26 +186,6 @@ var CONFIGS = {
     pegmanYOffset: -30,
     turnAfterVictory: true,
   },
-
-  neighborhood: {
-    spriteMap: neighborhoodSprites,
-    sheetRows: {
-      'other.png': 3,
-      'vehicles.png': 7,
-      'buildings.png': 26,
-      'sidewalk.png': 4,
-      'wall.png': 4,
-    },
-    pegmanHeight: 80,
-    pegmanWidth: 80,
-    pegmanYOffset: 0,
-    pegmanXOffset: 0,
-    pegmanSheetWidth: 1280,
-    squareSize: 80,
-    svgHeight: 800,
-    svgWidth: 800,
-    paintCan: 'paint_can.png',
-  },
 };
 
 // night skins are effectively the same, but will have some different assets
@@ -226,6 +206,16 @@ function soundAssetUrls(skin, mp3Sound) {
 }
 
 const load = function (assetUrl, id) {
+  // Neighborhood owns its own skin loader in
+  // `@code-dot-org/neighborhood-mini-app`. Delegate so codebridge,
+  // javalab, and MazeThumbnail all share one canonical
+  // implementation; the rest of this function handles the legacy
+  // maze variants (`bee`, `farmer`, `harvester`, etc.) that still
+  // live here.
+  if (id === 'neighborhood') {
+    return loadNeighborhoodSkin(assetUrl);
+  }
+
   // The skin has properties from three locations
   // (1) skinBase - properties common across Blockly apps
   // (2) here - properties common across all maze skins

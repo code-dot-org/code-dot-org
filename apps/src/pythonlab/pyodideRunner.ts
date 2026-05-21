@@ -4,7 +4,6 @@ import {
   getSystemMessage,
   getTimestampMessage,
 } from '@codebridge/Console/MessageHelpers';
-import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -12,10 +11,9 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {SVG_ID} from '@cdo/apps/maze/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
-import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumbnail';
+import {captureMiniAppThumbnail} from '@cdo/apps/util/thumbnail';
 
 import {getValidationFromSource, RunType} from '../codebridge';
 
@@ -63,7 +61,7 @@ export async function handleRunClick(
       return;
     }
     await runPythonCode(code, source);
-    if (isNeighborhoodLevel()) {
+    if (isMiniAppLevel()) {
       setProjectThumbnail();
     }
   }
@@ -75,20 +73,17 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    const isNeighborhoodRun = isNeighborhoodLevel();
-    if (isNeighborhoodRun) {
-      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    const isMiniAppRun = isMiniAppLevel();
+    if (isMiniAppRun) {
+      const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+      miniApp?.reset();
+      miniApp?.onRun();
     }
-    // We only send all output to the neighborhood if this is a neighborhood level and
-    // we are not running validation, as validation does not render to the neighborhood.
-    const outputToNeighborhood = isNeighborhoodRun && !validationFile;
-    return await asyncRun(
-      mainFile,
-      source,
-      validationFile,
-      outputToNeighborhood
-    );
+    // Route console output through the mini-app's signal queue when
+    // this is a mini-app run that isn't validation. Validation output
+    // bypasses the mini-app and goes straight to the console manager.
+    const outputToMiniApp = isMiniAppRun && !validationFile;
+    return await asyncRun(mainFile, source, validationFile, outputToMiniApp);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -98,8 +93,8 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
-  if (isNeighborhoodLevel()) {
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  if (isMiniAppLevel()) {
+    CodebridgeRegistry.getInstance().getMiniApp()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -155,11 +150,15 @@ export async function runAllTests(
   }
 }
 
-function isNeighborhoodLevel() {
-  return (
-    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
-      ?.name === MiniApps.Neighborhood
-  );
+/**
+ * True when the current level binds a mini-app. The runner uses this to
+ * gate mini-app lifecycle calls and to decide whether console output
+ * should route into the mini-app's signal queue (so it interleaves with
+ * movement signals) rather than going straight to the console manager.
+ */
+function isMiniAppLevel() {
+  return !!getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+    ?.name;
 }
 
 function handleRunEndedUnexpectedly(
@@ -167,29 +166,31 @@ function handleRunEndedUnexpectedly(
   message: string
 ) {
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
-  if (isNeighborhoodLevel()) {
-    // We reset, run, and close the neighborhood to ensure that the neighborhood
-    // properly resets the run button back to run (from stop), and to reset the
-    // neighborhood to its original state.
-    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+  if (isMiniAppLevel()) {
+    // Reset/run/close on crash so the mini-app's run button is back in
+    // the Run state and the visualization is reset.
+    const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+    miniApp?.reset();
+    miniApp?.onRun();
+    miniApp?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
   }
 }
 
 async function setProjectThumbnail() {
-  const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-  neighborhood?.onClose();
+  const miniApp = CodebridgeRegistry.getInstance().getMiniApp();
+  miniApp?.onClose();
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shouldCapture = projectManager?.getShouldCaptureThumbnail();
   if (!shouldCapture) return;
-  await neighborhood?.waitUntilDone(); // Wait for neighborhood signal processing to be completed.
-  const svg = document.getElementById(SVG_ID);
-  const svgArg = svg instanceof SVGSVGElement ? svg : null;
-  if (svgArg) {
-    const pngBlob = await captureThumbnailFromSvgPythonlabNeighborhood(svgArg);
+  await miniApp?.waitUntilDone(); // Wait for signal processing to be completed.
+  // The mini-app rasterizes its own visualization into a canvas;
+  // codebridge owns the universal post-processing (crop by preview
+  // scale, downsize, encode PNG) and the save call.
+  const canvas = await miniApp?.captureThumbnail?.();
+  if (canvas) {
+    const pngBlob = await captureMiniAppThumbnail(canvas);
     projectManager?.setThumbnail(pngBlob);
   }
 }

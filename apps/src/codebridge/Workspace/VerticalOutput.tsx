@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {MiniApps} from '@codebridge/constants';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -15,7 +14,6 @@ import {
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
 } from './constants';
-import {scaleMiniApp} from './outputHelpers';
 
 interface VerticalOutputProps {
   className?: string;
@@ -84,11 +82,9 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
         ?.getTerminalFitAddon()
         ?.fit();
 
-      // If this is a neighborhood level, also resize the visualization.
-      if (
-        miniAppName === MiniApps.Neighborhood &&
-        (desiredWidth !== undefined || miniAppHeight)
-      ) {
+      // Mini-app levels also resize the visualization. Any registered
+      // mini-app participates; non-mini-app levels skip this branch.
+      if (miniAppName && (desiredWidth !== undefined || miniAppHeight)) {
         const outputHeight = resizeContainerRef.current?.clientHeight;
         const newConsoleHeight = Math.max(
           MIN_CONSOLE_SIZE,
@@ -103,12 +99,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
           );
         }
         setAdjustedMiniAppHeight(newMiniAppHeight);
-
-        const newHeight = newMiniAppHeight;
-        const newWidth = desiredWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
 
         setWaitingForResize(false);
       }

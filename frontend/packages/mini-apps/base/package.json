@@ -1,0 +1,61 @@
+{
+  "name": "@code-dot-org/mini-app-base",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared interface and protocol helpers for code.org mini-apps.",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/mini-apps/base/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/mini-apps/base"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./svg": {
+      "types": "./dist/svg/index.d.ts",
+      "import": "./dist/svg/index.mjs",
+      "require": "./dist/svg/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "canvg": "^4.0.3",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "canvg": "^4.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "canvg": {
+      "optional": true
+    }
+  }
+}
