@@ -22,6 +22,8 @@ class ShowSecret extends Component {
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     secretLoginDisabled: PropTypes.bool,
+    resetDisabled: PropTypes.bool,
+    isDemoStudent: PropTypes.bool,
 
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
@@ -45,6 +47,11 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
+    // Demo students intentionally cannot be mutated; the reset button is
+    // disabled in render but guard the network call as a safety belt.
+    if (this.props.isDemoStudent) {
+      return;
+    }
     const dataToUpdate = {
       secrets: 'reset_secrets',
       student: {id: this.props.id},
@@ -72,8 +79,12 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const {secretLoginDisabled} = this.props;
+    const {secretLoginDisabled, resetDisabled, isDemoStudent} = this.props;
     const tooltipId = secretLoginDisabled ? _.uniqueId() : '';
+    const resetTooltipId = resetDisabled ? _.uniqueId() : '';
+    const tooltipText = isDemoStudent
+      ? 'Password actions are not available for demo section students.'
+      : i18n.disabledForTeacherAccountsTooltip();
     const showButtonText =
       this.props.loginType === SectionLoginType.word
         ? i18n.showWords()
@@ -99,7 +110,7 @@ class ShowSecret extends Component {
               {showButtonText}
             </MuiButton>
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+              <div>{tooltipText}</div>
             </ReactTooltip>
           </span>
         )}
@@ -117,16 +128,24 @@ class ShowSecret extends Component {
                 alt=""
               />
             )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="small"
-              onClick={this.reset}
-              className="uitest-reset-password"
-              type="button"
-            >
-              {i18n.reset()}
-            </MuiButton>
+            <span data-for={resetTooltipId} data-tip>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                onClick={this.reset}
+                disabled={resetDisabled}
+                className="uitest-reset-password"
+                type="button"
+              >
+                {i18n.reset()}
+              </MuiButton>
+              {resetDisabled && (
+                <ReactTooltip id={resetTooltipId} role="tooltip" effect="solid">
+                  <div>{tooltipText}</div>
+                </ReactTooltip>
+              )}
+            </span>
             <MuiButton
               variant="outlined"
               color="tertiary"

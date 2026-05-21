@@ -18,6 +18,7 @@ class PasswordReset extends Component {
     sectionId: PropTypes.number,
     studentId: PropTypes.number,
     resetDisabled: PropTypes.bool,
+    isDemoStudent: PropTypes.bool,
     setPasswordLengthFailure: PropTypes.func,
   };
 
@@ -94,8 +95,11 @@ class PasswordReset extends Component {
   };
 
   render() {
-    const {resetDisabled} = this.props;
+    const {resetDisabled, isDemoStudent} = this.props;
     const tooltipId = resetDisabled && _.uniqueId();
+    const tooltipText = isDemoStudent
+      ? 'Password actions are not available for demo section students.'
+      : i18n.resetTeacherPasswordTooltip();
 
     return (
       <div className={moduleStyles.passwordResetContainer}>
@@ -113,7 +117,7 @@ class PasswordReset extends Component {
             </MuiButton>
             {resetDisabled && (
               <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-                <div>{i18n.resetTeacherPasswordTooltip()}</div>
+                <div>{tooltipText}</div>
               </ReactTooltip>
             )}
           </span>

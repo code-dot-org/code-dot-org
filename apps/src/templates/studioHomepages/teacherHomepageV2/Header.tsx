@@ -9,14 +9,19 @@ import {FlashHandler, Flash} from '@cdo/apps/flashes/FlashHandler';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {rosterProvider as rosterProviderSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {DemoType} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
 import RosterDialog from '../../teacherDashboard/RosterDialog';
-import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
+import {
+  beginEditingSection,
+  createDemoSection,
+} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
 import {ArchivedToggleOption} from './TeacherHomepage';
@@ -51,6 +56,18 @@ export const Header: React.FC<HeaderProps> = ({
   const onSectionCreateButtonClick = () => {
     analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_STARTED, {});
     dispatch(beginEditingSection());
+  };
+
+  const createDemo = async (demoType: DemoType) => {
+    try {
+      await dispatch(createDemoSection(demoType));
+      setFlash([['notice', `Created ${demoType} demo section`]]);
+    } catch (e) {
+      const message = e instanceof Error ? e.message : String(e);
+      setFlash([
+        ['alert', `Could not create ${demoType} demo section: ${message}`],
+      ]);
+    }
   };
 
   const syncCleverSections = async () => {
@@ -138,6 +155,19 @@ export const Header: React.FC<HeaderProps> = ({
                       onClick: syncCleverSections,
                     },
                   ]
+                : []),
+              // Testing-only: surface direct demo-section creation for each
+              // preset so a developer can force creation without juggling the
+              // grades_teaching-based DemoSectionCard logic. Hidden in prod.
+              ...(!isProductionEnvironment()
+                ? (['elementary', 'middle', 'high'] as DemoType[]).map(
+                    demoType => ({
+                      label: `Create ${demoType} demo section`,
+                      icon: {iconName: 'flask', iconStyle: 'solid' as const},
+                      value: `createDemo-${demoType}`,
+                      onClick: () => createDemo(demoType),
+                    })
+                  )
                 : []),
             ]}
             useIconButton
