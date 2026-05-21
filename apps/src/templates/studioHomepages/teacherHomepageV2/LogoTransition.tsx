@@ -34,46 +34,49 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({gifSrc, svgSrc}) => {
       : null
   );
 
-  // Keep the Rails-rendered <img> hidden for as long as LogoTransition is
-  // mounted: the React card IS the visible logo from the moment the page
-  // loads (the pre-hide <style> in show.html.haml suppresses the initial
-  // flash) through the end of the morph (the card lands in place). On
-  // unmount (user navigates away from /home), clear the inline hide and
-  // remove the pre-hide style tag so the native logo takes over again.
-  useEffect(() => {
+  // Synchronously (before first paint): take over visibility management
+  // from Rails and position the card at the viewport center.
+  //
+  // The Rails-injected <style#logo-transition-pre-hide> uses the selector
+  // `#header_logo_container img` to hide the native logo before React
+  // mounts. That selector matches the React card's <img>s too, so we
+  // must remove the style tag as soon as React has rendered — otherwise
+  // the GIF and final SVG render hidden. We replace it with an inline
+  // visibility:hidden on the native <img> only, then clear that inline
+  // style on unmount so other routes show the native logo again.
+  //
+  // Non-uniform scale gives the centered modal a friendlier aspect ratio
+  // than the narrow header slot would; the <img>s use object-fit:contain
+  // so they stay undistorted while the white card background morphs.
+  useLayoutEffect(() => {
     if (!mountTarget) return;
+
     const nativeImg = mountTarget.querySelector<HTMLImageElement>('img');
     if (nativeImg) {
       nativeImg.style.visibility = 'hidden';
     }
+    document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
+
+    if (cardRef.current) {
+      const rect = mountTarget.getBoundingClientRect();
+      if (rect.width && rect.height) {
+        const modalWidth = Math.min(window.innerWidth * 0.6, 600);
+        const modalHeight = Math.min(window.innerHeight * 0.4, 300);
+        const scaleX = modalWidth / rect.width;
+        const scaleY = modalHeight / rect.height;
+        const sourceCx = rect.left + rect.width / 2;
+        const sourceCy = rect.top + rect.height / 2;
+        const tx = window.innerWidth / 2 - sourceCx;
+        const ty = window.innerHeight / 2 - sourceCy;
+        cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
+      }
+    }
+
     return () => {
       if (nativeImg) {
         nativeImg.style.visibility = '';
       }
-      document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
     };
-  }, [mountTarget]);
-
-  // Before first paint, displace and scale the card from its natural rect
-  // inside .header_logo out to a centered modal-sized rect in the viewport.
-  // Non-uniform scale gives the modal a friendlier aspect ratio than the
-  // narrow header slot would imply; the image inside uses object-fit:contain
-  // so it stays undistorted while the white card background morphs.
-  useLayoutEffect(() => {
-    if (!mountTarget || !cardRef.current) return;
-    const rect = mountTarget.getBoundingClientRect();
-    if (!rect.width || !rect.height) return;
-
-    const modalWidth = Math.min(window.innerWidth * 0.6, 600);
-    const modalHeight = Math.min(window.innerHeight * 0.4, 300);
-    const scaleX = modalWidth / rect.width;
-    const scaleY = modalHeight / rect.height;
-    const sourceCx = rect.left + rect.width / 2;
-    const sourceCy = rect.top + rect.height / 2;
-    const tx = window.innerWidth / 2 - sourceCx;
-    const ty = window.innerHeight / 2 - sourceCy;
-
-    cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
   }, [mountTarget]);
 
   useEffect(() => {
