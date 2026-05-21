@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-05-20T21:17:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# AI for Oceans Reflection\r\n\r\nCongratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> In the reflection box below, answer **one or more** of the following questions:\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<br>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:15.036+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-introducing-08b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-introducing-08b\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
