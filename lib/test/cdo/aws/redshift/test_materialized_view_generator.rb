@@ -54,9 +54,9 @@ module Cdo
             assert_includes ddl, '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
-          it 'uses the primary key as the distkey' do
+          it 'uses the primary key as the distkey (double-quoted)' do
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'DISTKEY (id)'
+            assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("id")'
           end
 
           it 'disables backup and automated refresh' do
@@ -281,6 +281,22 @@ module Cdo
             assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
             assert_equal ['dashboard_production_pii.zeroetl_users'], result
           end
+
+          it 'appends a COMMENT ON COLUMN statement with the DDL hash on the view first column' do
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+
+            generator.create_or_replace_views(client: client, environment_type: :production)
+
+            # PII view: first column is 'id' (first entry in all_columns).
+            # Non-PII view: first column is also 'id' (first non-text column).
+            batches.each do |sqls|
+              create_sql = sqls[1]
+              comment_sql = sqls[2]
+              expected_hash = Digest::SHA256.hexdigest(create_sql)
+              assert_match(/\ACOMMENT ON COLUMN \S+\.id IS '#{expected_hash}'\z/, comment_sql)
+            end
+          end
         end
 
         describe '#refresh_views' do
@@ -328,23 +344,53 @@ module Cdo
           end
         end
 
-        describe '#distkey_column (via generated DDL)' do
-          it 'uses the first element of a composite primary key' do
+        describe '#distkey_clause (via generated DDL)' do
+          it 'uses the first element of a composite primary key (double-quoted)' do
             model.stubs(:primary_key).returns(%w[user_id activity_id])
+            model.stubs(:columns).returns([mock_column('user_id', :integer), mock_column('activity_id', :integer)])
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'DISTKEY (user_id)'
+            assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("user_id")'
           end
 
-          it 'falls back to id when primary_key is nil' do
+          it 'falls back to DISTSTYLE AUTO when primary_key is nil' do
             model.stubs(:primary_key).returns(nil)
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'DISTKEY (id)'
+            assert_includes ddl, 'DISTSTYLE AUTO'
+            refute_includes ddl, 'DISTKEY'
           end
 
-          it 'falls back to id when primary_key is blank' do
+          it 'falls back to DISTSTYLE AUTO when primary_key is blank' do
             model.stubs(:primary_key).returns('')
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'DISTKEY (id)'
+            assert_includes ddl, 'DISTSTYLE AUTO'
+            refute_includes ddl, 'DISTKEY'
+          end
+
+          it 'falls back to DISTSTYLE AUTO when distkey column is filtered out of the projection' do
+            # Mirrors school_stats_by_years: composite PK whose leading column
+            # is a string and so is dropped from the non-PII view.
+            string_pk_col = mock_column('school_id', :string)
+            year_col = mock_column('school_year', :string)
+            int_col = mock_column('students_total', :integer)
+            model.stubs(:primary_key).returns(%w[school_id school_year])
+            model.stubs(:columns).returns([string_pk_col, year_col, int_col])
+
+            non_pii = MaterializedViewGenerator.new(model).generate_non_pii_ddl
+            assert_includes non_pii, 'DISTSTYLE AUTO'
+            refute_includes non_pii, 'DISTKEY'
+          end
+        end
+
+        describe 'reserved-word column names' do
+          it 'double-quotes column identifiers in the SELECT list' do
+            group_col = mock_column('group', :integer)
+            end_col   = mock_column('end', :datetime)
+            model.stubs(:columns).returns([id_col, group_col, end_col])
+
+            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            assert_includes ddl, '"id"'
+            assert_includes ddl, '"group"'
+            assert_includes ddl, '"end"'
           end
         end
 
@@ -634,6 +680,74 @@ module Cdo
             )
 
             assert_empty plan[:failed]
+          end
+
+          it 'skips models whose existing comment hash matches the desired DDL' do
+            generator = MaterializedViewGenerator.new(model)
+            desired = generator.rendered_ddls(environment_type: :production)
+
+            client.stubs(:execute).returns(
+              desired.map do |fqn, info|
+                schema, name = fqn.split('.', 2)
+                {'schema' => schema, 'name' => name, 'comment' => Digest::SHA256.hexdigest(info[:sql])}
+              end
+            )
+            client.expects(:batch_execute).never
+
+            events = []
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            ) {|event, payload, _extra| events << [event, payload]}
+
+            assert_includes events, [:skipped, 'users']
+            refute_empty plan[:unchanged]
+            assert_empty plan[:to_add]
+            assert_empty plan[:to_update]
+          end
+
+          it 'recreates models whose existing comment hash differs from the desired DDL' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users', 'comment' => 'stale-hash'},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => 'also-stale'}
+              ]
+            )
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            refute(batches.empty?, 'expected at least one batch_execute call when DDL hash differs')
+            refute_empty plan[:to_update]
+            assert_empty plan[:unchanged]
+          end
+
+          it 'recreates models whose existing views have no comment' do
+            # Views created before this change shipped have no COMMENT stored;
+            # the catalog query reports comment=nil. Treat as "unknown" and rebuild.
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => nil}
+              ]
+            )
+            batches = []
+            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client,
+              environment_type: :production,
+              models: [model]
+            )
+
+            refute(batches.empty?)
+            assert_empty plan[:unchanged]
           end
 
           it 'handles empty model set' do

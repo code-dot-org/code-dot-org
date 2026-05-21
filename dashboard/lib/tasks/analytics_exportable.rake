@@ -72,6 +72,10 @@ namespace :redshift do
       plan[:to_update].each {|v| puts "  ~ #{v}"}
     end
 
+    if plan[:unchanged].any?
+      puts "Unchanged (#{plan[:unchanged].length}): DDL hash matches; will be skipped."
+    end
+
     if plan[:to_drop].any?
       puts "Drop (#{plan[:to_drop].length}):"
       plan[:to_drop].each {|v| puts "  - #{v}"}
@@ -106,6 +110,8 @@ namespace :redshift do
         $stdout.flush
       when :applied
         puts " done"
+      when :skipped
+        puts "  skipping #{payload} (unchanged)"
       when :error
         puts " FAILED"
         warn "    #{extra.class}: #{extra.message.lines.first&.strip}"
