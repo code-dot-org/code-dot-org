@@ -124,6 +124,7 @@ function JourneyInner({
         seatColor={seatColor}
         lang={lang}
         onToggleLanguage={onToggleLanguage}
+        onTapLogo={() => void navigate({to: '/m/home'})}
         onTapSeat={() => void navigate({to: '/m/seats'})}
       />
       {/*

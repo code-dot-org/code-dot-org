@@ -30,6 +30,8 @@ export interface JourneyChomeProps {
   lang: Language;
   /** Called when the learner taps a language segment. */
   onToggleLanguage: (lang: Language) => void;
+  /** Called when the learner taps the CDO logo — returns to /m/home. */
+  onTapLogo?: () => void;
   /** Called when the learner taps the seat indicator — used to navigate
    * to the seat picker for seat-switching. */
   onTapSeat?: () => void;
@@ -80,6 +82,7 @@ export function JourneyChrome({
   seatColor,
   lang,
   onToggleLanguage,
+  onTapLogo,
   onTapSeat,
 }: JourneyChomeProps) {
   return (
@@ -95,11 +98,25 @@ export function JourneyChrome({
           sx={{display: 'flex', alignItems: 'center', gap: 0.75, flexShrink: 0}}
         >
           <Box
-            component="img"
-            src={CdoLogo}
-            alt="Code.org"
-            sx={{height: 28, width: 'auto', display: 'block'}}
-          />
+            component={onTapLogo ? 'button' : 'div'}
+            onClick={onTapLogo}
+            aria-label={onTapLogo ? 'Home' : undefined}
+            sx={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: onTapLogo ? 'pointer' : 'default',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <Box
+              component="img"
+              src={CdoLogo}
+              alt="Code.org"
+              sx={{height: 28, width: 'auto', display: 'block'}}
+            />
+          </Box>
           {seatColor !== null && (
             <SeatIndicator color={seatColor} onTap={onTapSeat} />
           )}

@@ -34,8 +34,10 @@ function RootLayout() {
   // real estate on a phone, pushing the actual activity below the fold.
   const hideChrome = useRouterState({
     select: state =>
-      state.location.pathname.includes('/projects/') ||
-      state.location.pathname.includes('/m/'),
+      // Notebook wants site chrome; all other /projects/ labs are full-bleed.
+      (state.location.pathname.startsWith('/projects/') &&
+        !state.location.pathname.startsWith('/projects/notebook/')) ||
+      state.location.pathname.startsWith('/m/'),
   });
 
   return (
