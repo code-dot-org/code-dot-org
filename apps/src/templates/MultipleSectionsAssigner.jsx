@@ -1,6 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
@@ -8,6 +7,8 @@ import {connect} from 'react-redux';
 import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
 import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
@@ -202,21 +203,20 @@ const MultipleSectionsAssigner = ({
   };
 
   return (
-    <Modal
-      onClose={onClose}
-      closeLabel={i18n.closeDialog()}
-      title={i18n.chooseSectionsPrompt({assignmentName})}
-      description={sectionDirections}
-      primaryButtonProps={{
-        id: 'confirm-assign',
-        children: i18n.confirmAssignment(),
-        onClick: reassignSections,
-      }}
-      secondaryButtonProps={{
-        children: i18n.dialogCancel(),
-        onClick: onClose,
-      }}
-      customContent={
+    <AccessibleDialog className={moduleStyle.popUpContainer} onClose={onClose}>
+      <div
+        role="region"
+        aria-label={i18n.directionsForAssigningSections()}
+        className={moduleStyle.information}
+      >
+        <div className={moduleStyle.modalHeader}>
+          <Typography variant="h3">
+            {i18n.chooseSectionsPrompt({assignmentName})}
+          </Typography>
+        </div>
+        <div className={moduleStyle.sectionsDirections}>
+          <Typography variant="body2">{sectionDirections}</Typography>
+        </div>
         <div className={moduleStyle.sectionList}>
           <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
@@ -231,22 +231,20 @@ const MultipleSectionsAssigner = ({
                           s => s.code === section.code
                         )
                       }
-                      onChange={() => handleChangedCheckbox(section)}
+                      onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
                       name={section.id}
                       label={section.name}
                     />
                   )
               )}
           </div>
-          <MuiButton
+          <Button
             id="select-all-sections"
-            variant="text"
-            color="primary"
+            text={i18n.selectAll()}
             onClick={selectAllHandler}
-            className={moduleStyle.selectAll}
-          >
-            {i18n.selectAll()}
-          </MuiButton>
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
           {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
             <AssigningEssentialAiChatToolsAlert />
           )}
@@ -254,8 +252,21 @@ const MultipleSectionsAssigner = ({
             <AssigningAvailableAiChatToolsAlert />
           )}
         </div>
-      }
-    />
+      </div>
+      <div className={moduleStyle.buttonContainer}>
+        <Button
+          text={i18n.dialogCancel()}
+          onClick={onClose}
+          color={Button.ButtonColor.neutralDark}
+        />
+        <Button
+          id="confirm-assign"
+          text={i18n.confirmAssignment()}
+          onClick={reassignSections}
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
+    </AccessibleDialog>
   );
 };
 
