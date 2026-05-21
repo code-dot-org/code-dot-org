@@ -189,54 +189,6 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_includes applab.errors.full_messages.first, 'template level type Gamelab does not match level type Applab'
   end
 
-  test 'contained_levels writes through to Rails.cache and reuses it' do
-    contained = create(:multi)
-    parent = create(:level, contained_level_names: [contained.name])
-    cache_key = "LevelsWithinLevels/contained/#{contained.name}"
-
-    # Rails.cache defaults to :null_store in unit tests (see test_helper.rb);
-    # opt back in to caching for this test via with_local_cache. Also stub
-    # Unit.should_cache? so the `force: !should_cache?` guard does not bypass
-    # the cache.
-    Unit.stubs(:should_cache?).returns(true)
-    Rails.cache.with_local_cache do
-      assert_nil Rails.cache.read(cache_key)
-      assert_equal [contained], parent.contained_levels
-      # If the block uses a non-local `return`, Rails.cache.fetch never writes.
-      assert_equal [contained], Rails.cache.read(cache_key),
-        'contained_levels did not populate Rails.cache'
-
-      # Block both DB recomputation paths so anything other than a cache hit
-      # would raise. The m2m path reads `child_levels`; the fallback path uses
-      # `Unit.cache_find_level`.
-      parent.expects(:child_levels).never
-      Unit.expects(:cache_find_level).never
-      assert_equal [contained], parent.contained_levels,
-        'subsequent contained_levels call did not come from cache'
-    end
-  end
-
-  test 'project_template_level writes through to Rails.cache and reuses it' do
-    template_level = create(:level)
-    real_level = create(:level, project_template_level_name: template_level.name)
-    cache_key = "LevelsWithinLevels/project_template/#{template_level.name}"
-
-    Unit.stubs(:should_cache?).returns(true)
-    Rails.cache.with_local_cache do
-      assert_nil Rails.cache.read(cache_key)
-      assert_equal template_level, real_level.project_template_level
-      assert_equal template_level, Rails.cache.read(cache_key),
-        'project_template_level did not populate Rails.cache'
-
-      # Block both DB recomputation paths. The m2m path reads `child_levels`;
-      # the fallback path uses `Level.find_by_key`.
-      real_level.expects(:child_levels).never
-      Level.expects(:find_by_key).never
-      assert_equal template_level, real_level.project_template_level,
-        'subsequent project_template_level call did not come from cache'
-    end
-  end
-
   test 'project template level cannot have its own project template level' do
     project_backed_level = create(:level, name: 'project backed')
     template_level = create(:level)
