@@ -80,7 +80,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     isViewingAiTutorVersionFileUpdates
   );
   const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
+    state => state.lab2Project?.viewingOldVersion
   );
 
   // TODO: Remove dependency on aichatLab redux slice.
