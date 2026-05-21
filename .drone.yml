@@ -96,7 +96,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.23
+    image: codedotorg/cdo-ci:1.24
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -219,7 +219,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.23
+    image: codedotorg/cdo-ci:1.24
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -306,7 +306,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.23
+    image: codedotorg/cdo-ci:1.24
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -343,6 +343,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8ce0696793d089921698e95d95e86db7a96597b52547e86c5f0553bcd7c66df0
+hmac: 6274c7d1a5f1f167d5eaba3971a6f45729471db44dbb2b1b85092c98fc95ad23
 
 ...
