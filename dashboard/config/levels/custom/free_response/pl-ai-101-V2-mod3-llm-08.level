@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Writing Your Own Prompts\r\n\r\n#### Think of a task you’d like to use AI for that wasn’t included in the prompt library—or revise one of the prompts you’ve already explored.\r\n\r\n#### Write a prompt for that task. \r\n\r\n\r\n#### Approach prompt writing as an iterative process: start with a simple version, then adjust the level of detail, clarity, or structure to improve the response. Try adding more context about your students, your goals, or the specific task, and notice how the output changes. If the response isn’t quite what you need, revise your prompt and try again—small changes can lead to more useful and relevant results.\r\n\r\n#### Use the **TaCo FoRT** framework to guide your thinking, and return to the Prompt Library as needed for ideas and inspiration.\r\n\r\n<p align=\"center\">\r\n<img src=\"https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png\" alt=\"lesson plan diagram\" width=\"70%\" style=\"border-radius:10px; border: 5px solid black;\">\r\n</p>\r\n\r\n## Reflection\r\n\r\n> #### In the reflection box below, share the prompt you wrote along with a few sentences about the development process.\r\n",
+    "long_instructions": "# Writing Your Own Prompts\r\n\r\nThink of a task you’d like to use AI for that wasn’t included in the prompt library—or revise one of the prompts you’ve already explored.\r\n\r\nWrite a prompt for that task. \r\n\r\nApproach prompt writing as an iterative process: start with a simple version, then adjust the level of detail, clarity, or structure to improve the response. Try adding more context about your students, your goals, or the specific task, and notice how the output changes. If the response isn’t quite what you need, revise your prompt and try again—small changes can lead to more useful and relevant results.\r\n\r\nUse the **TaCo FoRT** framework to guide your thinking, and return to the Prompt Library as needed for ideas and inspiration.\r\n\r\n<p align=\"center\">\r\n<img src=\"https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png\" alt=\"lesson plan diagram\" width=\"70%\" style=\"border-radius:10px; border: 5px solid black;\">\r\n</p>\r\n\r\n## Reflection\r\n\r\n> In the reflection box below, share the prompt you wrote along with a few sentences about the development process.\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -21,7 +21,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-04-14T15:33:01.857+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-closing-00\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-closing-00\"},{\"changed_at\":\"2026-04-14 15:38:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-04-14T15:33:01.857+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-closing-00\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-closing-00\"},{\"changed_at\":\"2026-04-14 15:38:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-20 17:25:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

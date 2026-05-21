@@ -101,6 +101,11 @@ const VersionHistoryPanel: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const viewingOldVersionRef = useRef(viewingOldVersion);
+  useEffect(() => {
+    viewingOldVersionRef.current = viewingOldVersion;
+  }, [viewingOldVersion]);
+
   const hasRestoredOldVersion = useAppSelector(
     state => state.lab2Project.restoredOldVersion
   );
@@ -200,12 +205,15 @@ const VersionHistoryPanel: React.FunctionComponent<
     previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
 
-  // Reload version history list when tab becomes active.
+  // Reload version history list when tab becomes active. If the user is
+  // viewing an old version, preserve their selection across tab switches;
+  // otherwise reset to the latest version. viewingOldVersion is read via a
+  // ref so this effect only fires on the tab transition.
   useEffect(() => {
     if (isOpen) {
-      loadVersionList(true);
+      loadVersionList(!viewingOldVersionRef.current);
     }
-  }, [isOpen, loadVersionList, dispatch]);
+  }, [isOpen, loadVersionList]);
 
   useEffect(() => {
     if (selectedVersion === '') {

@@ -484,7 +484,10 @@ export default function ReactFlowCanvas({
       }
       pushSnapshot();
       setEdges(currentEdges =>
-        addEdge({...connection, ...defaultLineEdgeFields()}, currentEdges)
+        addEdge(
+          {id: createUuid(), ...connection, ...defaultLineEdgeFields()},
+          currentEdges
+        )
       );
     },
     [nodes, pushSnapshot, setEdges]
