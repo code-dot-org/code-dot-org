@@ -25,6 +25,8 @@ const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
 type Phase = 'gif' | 'crossfade' | 'morphing' | 'done';
 
+type Rect = {top: number; left: number; width: number; height: number};
+
 const LogoTransition: React.FC<LogoTransitionProps> = ({
   gifSrc,
   mp4Src,
@@ -32,6 +34,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('gif');
 
   // Honor ?logo-mp4=true: play the MP4 once and advance phase on the
@@ -56,8 +59,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   );
 
   // Synchronously (before first paint): take over visibility management
-  // from Rails, size the card to exactly overlay the native <img>, and
-  // displace it to the viewport center.
+  // from Rails, capture the native <img>'s viewport rect as the morph
+  // target, and place the card as a modal-sized rect centered in the
+  // viewport.
   //
   // The Rails-injected <style#logo-transition-pre-hide> uses the selector
   // `#header_logo_container img` to hide the native logo before React
@@ -65,10 +69,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   // we remove the style tag as soon as React has rendered and replace it
   // with an inline visibility:hidden on the native <img> only.
   //
-  // The card's natural rect is set from the native <img>'s bounding rect
-  // (relative to the container), so when the morph transform clears, the
-  // card lands precisely on the hidden native logo. A uniform scale to a
-  // modal-sized width keeps the media undistorted throughout.
+  // We animate top/left/width/height directly (rather than via transform
+  // scale) so the modal can be a different aspect than the header slot
+  // without distorting the media inside.
   useLayoutEffect(() => {
     if (!mountTarget) return;
 
@@ -79,24 +82,23 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
 
     if (cardRef.current && nativeImg) {
-      // Card is portaled to document.body and uses position: fixed, so
-      // top/left are viewport coords. Use the native <img>'s viewport
-      // rect directly as the card's natural rect; on morph the cleared
-      // transform lands the card precisely on the hidden native logo.
       const nativeRect = nativeImg.getBoundingClientRect();
       if (nativeRect.width && nativeRect.height) {
-        cardRef.current.style.top = `${nativeRect.top}px`;
-        cardRef.current.style.left = `${nativeRect.left}px`;
-        cardRef.current.style.width = `${nativeRect.width}px`;
-        cardRef.current.style.height = `${nativeRect.height}px`;
+        targetRectRef.current = {
+          top: nativeRect.top,
+          left: nativeRect.left,
+          width: nativeRect.width,
+          height: nativeRect.height,
+        };
 
-        const modalWidth = Math.min(window.innerWidth * 0.6, 600);
-        const scale = modalWidth / nativeRect.width;
-        const sourceCx = nativeRect.left + nativeRect.width / 2;
-        const sourceCy = nativeRect.top + nativeRect.height / 2;
-        const tx = window.innerWidth / 2 - sourceCx;
-        const ty = window.innerHeight / 2 - sourceCy;
-        cardRef.current.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+        const modalWidth = Math.min(window.innerWidth * 0.6, 700);
+        const modalHeight = Math.min(window.innerHeight * 0.6, 500);
+        const modalTop = (window.innerHeight - modalHeight) / 2;
+        const modalLeft = (window.innerWidth - modalWidth) / 2;
+        cardRef.current.style.top = `${modalTop}px`;
+        cardRef.current.style.left = `${modalLeft}px`;
+        cardRef.current.style.width = `${modalWidth}px`;
+        cardRef.current.style.height = `${modalHeight}px`;
       }
     }
 
@@ -136,8 +138,12 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
 
   useEffect(() => {
     if (phase !== 'morphing') return;
-    if (cardRef.current) {
-      cardRef.current.style.transform = '';
+    if (cardRef.current && targetRectRef.current) {
+      const r = targetRectRef.current;
+      cardRef.current.style.top = `${r.top}px`;
+      cardRef.current.style.left = `${r.left}px`;
+      cardRef.current.style.width = `${r.width}px`;
+      cardRef.current.style.height = `${r.height}px`;
     }
     const t = window.setTimeout(() => setPhase('done'), MORPH_MS);
     return () => window.clearTimeout(t);

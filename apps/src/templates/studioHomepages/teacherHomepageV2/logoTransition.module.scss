@@ -16,27 +16,29 @@
 
 // The card is portaled to document.body to escape stacking contexts on
 // .header_left and .header_logo that would otherwise sit it below the
-// backdrop. JS sets its natural top, left, width, and height to match the
-// Rails-rendered <img>'s viewport rect, so when the morph transform
-// clears the card lands exactly on top of the hidden native logo. The
-// layout-effect-applied transform displaces and scales it to the viewport
-// center; clearing the transform animates it home. The white fill,
-// rounded corners, and shadow fade out during the morph so the card
-// resolves into the in-header logo with no visible frame.
+// backdrop. JS sets its initial top/left/width/height to a modal-sized
+// rect centered in the viewport; the morph effect rewrites those four
+// properties to the native <img>'s viewport rect so the card slides and
+// resizes home in one tween. Animating size directly (rather than via
+// transform scale) keeps the modal a different aspect from the header
+// slot without distorting the media inside (object-fit: contain refits
+// every frame). The white fill, rounded corners, and shadow fade out in
+// lockstep so the card resolves into the in-header logo with no frame.
 .card {
   position: fixed;
   z-index: 9999;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
-  transform-origin: center center;
   transition:
-    transform 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    top 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    left 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 700ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 700ms ease,
     border-radius 700ms ease,
     box-shadow 700ms ease;
   pointer-events: none;
-  will-change: transform;
   overflow: hidden;
 }
 
