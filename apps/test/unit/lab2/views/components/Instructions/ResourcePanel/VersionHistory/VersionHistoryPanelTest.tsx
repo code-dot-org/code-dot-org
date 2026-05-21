@@ -324,7 +324,28 @@ describe('VersionHistoryPanel', () => {
 
   it('preserves selected version across tab reopen when viewing an old version', async () => {
     store.dispatch(setViewingOldVersion(true));
-    const {rerender} = renderDefault({selectedVersion: '2', isOpen: false});
+
+    // Wire selectedVersion through real state so the rendered selection
+    // reflects whatever the panel asks for, not the static prop.
+    const TestHarness = ({isOpen}: {isOpen: boolean}) => {
+      const [selected, setSelected] = React.useState('2');
+      return (
+        <ThemeProvider>
+          <Provider store={store}>
+            <VersionHistoryPanel
+              startSources={{source: ''}}
+              selectedVersion={selected}
+              setSelectedVersion={setSelected}
+              levelId={123}
+              disabled={false}
+              isOpen={isOpen}
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+    };
+
+    const {rerender} = render(<TestHarness isOpen={false} />);
 
     await waitFor(
       () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
@@ -332,23 +353,9 @@ describe('VersionHistoryPanel', () => {
     );
     const initialCallCount =
       mockedProjectManager.getVersionList.mock.calls.length;
-    setSelectedVersion.mockClear();
 
     // Simulate the tab becoming active again.
-    rerender(
-      <ThemeProvider>
-        <Provider store={store}>
-          <VersionHistoryPanel
-            startSources={{source: ''}}
-            selectedVersion="2"
-            setSelectedVersion={setSelectedVersion}
-            levelId={123}
-            disabled={false}
-            isOpen={true}
-          />
-        </Provider>
-      </ThemeProvider>
-    );
+    rerender(<TestHarness isOpen={true} />);
 
     // Wait for the reopen effect to fire and the version list to refetch.
     await waitFor(
@@ -359,11 +366,17 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    // The reopen path must not clear the selection — clearing would let the
-    // panel fall back to the latest version even though an old version is
-    // still being viewed.
-    expect(setSelectedVersion).not.toHaveBeenCalledWith('');
-    expect(setSelectedVersion).not.toHaveBeenCalledWith('3');
+    // Expand the auto-save group so version 2's radio is rendered.
+    const expandButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(expandButton);
+
+    // Version 2 should still be the selected radio — the reopen path must
+    // not fall back to the latest version while an old version is being viewed.
+    const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
+    expect(versionInput.checked).toBe(true);
   });
 
   it('hides restore button when viewing as another user', async () => {
