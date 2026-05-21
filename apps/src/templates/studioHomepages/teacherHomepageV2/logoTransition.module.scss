@@ -1,7 +1,7 @@
 // Fullscreen dimmer behind the centered card. Lives in document.body so
 // it's not clipped by the teacher dashboard's overflow. Starts at opacity
 // 0 (via .backdropOpening on first paint) and fades in over 300ms; later
-// fades out over 700ms in lockstep with the card morph.
+// fades out over 700ms in lockstep with the card slide into the header.
 .backdrop {
   position: fixed;
   inset: 0;
@@ -24,7 +24,7 @@
 // The card is portaled to document.body to escape stacking contexts on
 // .header_left and .header_logo that would otherwise sit it below the
 // backdrop. JS sets its initial top/left/width/height to a modal-sized
-// rect centered in the viewport; the morph effect rewrites those four
+// rect centered in the viewport; the landing effect rewrites those four
 // properties to the native <img>'s viewport rect so the card slides and
 // resizes home in one tween. Animating size directly (rather than via
 // transform scale) keeps the modal a different aspect from the header
@@ -67,7 +67,7 @@
 // until JS sizes it, which would otherwise animate the image's
 // calc(100% - 60px) width/height from ~0 to their final values — that's
 // the squish-then-correct on the first frame. Removed after the first
-// paint, restoring the regular transitions that drive the morph back to
+// paint, restoring the regular transitions that drive the slide into
 // the header slot.
 .cardNoTransition,
 .cardNoTransition .image {
@@ -79,7 +79,7 @@
 // insets) because <video> won't auto-size off those insets the way <img>
 // does — without an explicit width it falls back to the media's intrinsic
 // resolution and blows past the modal. The padding transitions back to 0
-// in lockstep with the card morph so it doesn't survive into the landed
+// in lockstep with the card slide so it doesn't survive into the landed
 // (177x30) state and crush the logo.
 .image {
   position: absolute;

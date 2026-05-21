@@ -9,22 +9,34 @@ interface LogoTransitionProps {
   svgSrc: string;
 }
 
+// Note on terminology: the "morph" the codeai brand reveal performs — the
+// old logo transforming into the new wordmark — lives entirely inside the
+// GIF/MP4 asset. This component just plays that asset in a centered modal,
+// then lands the resulting static SVG into the empty header slot. The
+// modal-to-header motion is a slide, not a morph.
+
 // Calibrated to the GIF asset's runtime; GIFs do not fire an "ended" event,
 // so without the ?logo-mp4=true override we wait on a fixed timer.
 const OPEN_FADE_MS = 300;
 const GIF_DURATION_MS = 8000;
-const CROSSFADE_MS = 500;
-const MORPH_MS = 700;
+const HOLD_MS = 500;
+const LAND_MS = 700;
 
 // The .header_logo container in the Rails-rendered site header; also where
-// the morphed card lands.
+// the slide ends.
 const HEADER_LOGO_SELECTOR = '#header_logo_container';
 
 // Style tag id used by show.html.haml to pre-hide the native logo <img>
 // before React mounts.
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
-type Phase = 'opening' | 'gif' | 'crossfade' | 'morphing' | 'done';
+// opening: backdrop + white card fade in; media not yet rendered.
+// gif:     GIF loops (or MP4 plays once).
+// hold:    GIF/video stays on its last frame for HOLD_MS.
+// landing: card slides from viewport center to the header slot while the
+//          GIF/video fades out and the SVG fades in.
+// done:    card has landed; SVG sits where the native logo would.
+type Phase = 'opening' | 'gif' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
 
@@ -47,11 +59,12 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     );
   });
 
-  // Render the card with transitions disabled on the very first frame so
-  // the initial transform that places it at viewport center doesn't
-  // animate from the natural rect. After paint we flip transitions on,
-  // so subsequent style changes (the morph clear) do animate.
-  const [transitionsEnabled, setTransitionsEnabled] = useState(false);
+  // Flipped on after the first paint. While false: CSS transitions on the
+  // card are suppressed (so the initial size jump doesn't animate) and the
+  // backdrop + card render at opacity 0 (so the fade-in has somewhere to
+  // start from). After raf: transitions enabled, opacity targets reach 1,
+  // and the open fade-in plays.
+  const [entered, setEntered] = useState(false);
 
   const [mountTarget] = useState<HTMLElement | null>(() =>
     typeof document !== 'undefined'
@@ -60,7 +73,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   );
 
   // Synchronously (before first paint): take over visibility management
-  // from Rails, capture the native <img>'s viewport rect as the morph
+  // from Rails, capture the native <img>'s viewport rect as the landing
   // target, and place the card as a modal-sized rect centered in the
   // viewport.
   //
@@ -103,11 +116,8 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       }
     }
 
-    // Enable transitions on the next frame so the modal renders fully
-    // open without an opening animation.
-    const rafId = window.requestAnimationFrame(() =>
-      setTransitionsEnabled(true)
-    );
+    // Enable transitions and trigger the open fade-in on the next frame.
+    const rafId = window.requestAnimationFrame(() => setEntered(true));
 
     return () => {
       window.cancelAnimationFrame(rafId);
@@ -136,18 +146,18 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       videoRef.current?.play().catch(() => {});
       return;
     }
-    const t = window.setTimeout(() => setPhase('crossfade'), GIF_DURATION_MS);
+    const t = window.setTimeout(() => setPhase('hold'), GIF_DURATION_MS);
     return () => window.clearTimeout(t);
   }, [phase, useVideo]);
 
   useEffect(() => {
-    if (phase !== 'crossfade') return;
-    const t = window.setTimeout(() => setPhase('morphing'), CROSSFADE_MS);
+    if (phase !== 'hold') return;
+    const t = window.setTimeout(() => setPhase('landing'), HOLD_MS);
     return () => window.clearTimeout(t);
   }, [phase]);
 
   useEffect(() => {
-    if (phase !== 'morphing') return;
+    if (phase !== 'landing') return;
     if (cardRef.current && targetRectRef.current) {
       const r = targetRectRef.current;
       cardRef.current.style.top = `${r.top}px`;
@@ -155,30 +165,29 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       cardRef.current.style.width = `${r.width}px`;
       cardRef.current.style.height = `${r.height}px`;
     }
-    const t = window.setTimeout(() => setPhase('done'), MORPH_MS);
+    const t = window.setTimeout(() => setPhase('done'), LAND_MS);
     return () => window.clearTimeout(t);
   }, [phase]);
 
   const handleVideoEnded = () => {
-    setPhase('crossfade');
+    setPhase('hold');
   };
 
   if (!mountTarget) return null;
 
   const showMedia = phase !== 'opening';
-  const gifHidden = phase !== 'gif' && phase !== 'crossfade';
-  // Hold the SVG hidden through the opening, GIF play, and GIF fade-out;
-  // it only starts fading in once the card begins shrinking, so the final
-  // logo appears together with the morph rather than overlapping the GIF
-  // mid-modal.
-  const svgHidden =
-    phase === 'opening' || phase === 'gif' || phase === 'crossfade';
-  const backdropFading = phase === 'morphing' || phase === 'done';
-  const cardLanded = phase === 'morphing' || phase === 'done';
+  const gifHidden = phase !== 'gif' && phase !== 'hold';
+  // Hold the SVG hidden through the opening, play, and end-of-play hold;
+  // it only starts fading in once the card begins sliding, so the final
+  // logo appears together with the slide rather than blooming inside the
+  // still-modal-sized card.
+  const svgHidden = phase === 'opening' || phase === 'gif' || phase === 'hold';
+  const backdropFading = phase === 'landing' || phase === 'done';
+  const cardLanded = phase === 'landing' || phase === 'done';
 
   const backdropClassName = [
     styles.backdrop,
-    !transitionsEnabled && styles.backdropOpening,
+    !entered && styles.backdropOpening,
     backdropFading && styles.backdropFading,
   ]
     .filter(Boolean)
@@ -186,8 +195,8 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
 
   const cardClassName = [
     styles.card,
-    !transitionsEnabled && styles.cardNoTransition,
-    !transitionsEnabled && styles.cardOpening,
+    !entered && styles.cardNoTransition,
+    !entered && styles.cardOpening,
     cardLanded && styles.cardLanded,
   ]
     .filter(Boolean)
