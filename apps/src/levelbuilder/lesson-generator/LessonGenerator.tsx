@@ -20,9 +20,11 @@ import {
   priorOutputFromLevelProperties,
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
+import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
   loadLessonLevelProperties,
+  loadProjectSources,
   saveLessonActivities,
   updateLevelProperty,
   updatePanelsLevel,
@@ -71,6 +73,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
+  // Optional Weblab2 channel id. When set, the lesson is generated as
+  // progressing toward the app stored at that channel; the source files
+  // (MultiFileSource) get fetched once and fed to the per-level AI
+  // prompts as "final goal" context.
+  const [projectChannelId, setProjectChannelId] = useState<string>(
+    lesson.generateProjectChannelId || ''
+  );
 
   // The AI gateway expects an AichatContext on every access-token request.
   // We're not actually inside an aichat lab here, but setting the context
@@ -139,6 +148,39 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setLevelSpecs(specs => [...specs, newLevelSpec()]);
   }, []);
 
+  // Fetch + format the target project's source for the current channel
+  // id. Returns the formatted "=== path ===\n..." string suitable for a
+  // prompt, or undefined when the field is blank, the fetch fails, or
+  // the channel doesn't carry a MultiFileSource. Both the outline AI
+  // call and the per-level AI calls use this; we don't memoize because
+  // a fetch per click is cheap and avoids stale data after the user
+  // changes the channel id mid-session.
+  const loadTargetProject = useCallback(
+    async (onLog: (line: string) => void): Promise<string | undefined> => {
+      const id = projectChannelId.trim();
+      if (!id) return undefined;
+      try {
+        const {value} = await loadProjectSources(id);
+        const formatted = formatTargetProject(value);
+        if (formatted) {
+          onLog(`Loaded target project source from channel ${id}.`);
+          return formatted;
+        }
+        onLog(
+          `Channel ${id} returned no MultiFileSource; continuing without target context.`
+        );
+        return undefined;
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        onLog(
+          `Warning: couldn't load target project ${id}: ${message}. Continuing.`
+        );
+        return undefined;
+      }
+    },
+    [projectChannelId]
+  );
+
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
       setOutlineError('Type an outline first.');
@@ -147,14 +189,21 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      // Build the lesson-scope context once. Outer unit-scope fields are
-      // piped down via lesson.unitName / lesson.unitOutline so the
+      // Outline-phase fetch errors surface in outlineError too, since
+      // the user is right there watching the outline button. Non-fatal
+      // results just produce no target context for this run.
+      const targetProject = await loadTargetProject(line => {
+        if (line.startsWith('Warning:')) setOutlineError(line);
+      });
+      // Build the lesson-scope context once. Outer unit-scope fields
+      // are piped down via lesson.unitName / lesson.unitOutline so the
       // outline AI can frame this lesson against the broader unit.
       const lessonCtx = {
         unitName: lesson.unitName,
         unitOutline: lesson.unitOutline,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
+        targetProject,
       };
       const planned = await generateLessonOutline(lessonCtx);
       const newSpecs: LevelSpec[] = planned.map(level => ({
@@ -180,7 +229,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline, lesson.name, lesson.unitName, lesson.unitOutline]);
+  }, [
+    outline,
+    lesson.name,
+    lesson.unitName,
+    lesson.unitOutline,
+    loadTargetProject,
+  ]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -249,6 +304,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         `Warning: couldn't load existing level content for context: ${message}`
       );
     }
+
+    // Fetch the target project's source files (if a channel id was given)
+    // once for this run and pass the formatted text to each per-level AI
+    // call as "final goal" context. Soft-fail: if the fetch or format
+    // doesn't yield anything usable, every level just runs without the
+    // extra context — same as if the field were blank.
+    const targetProject = await loadTargetProject(appendLog);
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -326,6 +388,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             unitOutline: lesson.unitOutline,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
+            targetProject,
             levelName,
             levelDescription: spec.description.trim(),
             precedingLevels: precedingLevelsText || undefined,
@@ -456,9 +519,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           lesson.activities || [],
           placements
         );
-        // Persist the outline so reopening /generate restores it. Sending
-        // an empty string clears any previously-saved value.
-        await saveLessonActivities(lesson.id, newActivities, outline.trim());
+        // Persist the outline + target-project channel id so reopening
+        // /generate restores them. Sending '' for either clears the
+        // previously-saved value.
+        await saveLessonActivities(
+          lesson.id,
+          newActivities,
+          outline.trim(),
+          projectChannelId.trim()
+        );
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -491,7 +560,16 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
+  }, [
+    validationError,
+    lesson,
+    levelSpecs,
+    fullName,
+    appendLog,
+    outline,
+    projectChannelId,
+    loadTargetProject,
+  ]);
 
   return (
     <div className={moduleStyles.container}>
@@ -510,6 +588,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         isOutlining={isOutlining}
         disabled={isGenerating}
         error={outlineError}
+        projectChannelId={projectChannelId}
+        onProjectChannelIdChange={setProjectChannelId}
       />
 
       <div className={moduleStyles.fieldRow}>

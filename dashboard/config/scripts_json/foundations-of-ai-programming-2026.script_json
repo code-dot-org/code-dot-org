@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-06 17:12:21 UTC",
+    "serialized_at": "2026-05-19 22:36:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10409,7 +10409,8 @@
       "url": "https://docs.google.com/document/d/1kKHncTCPJla5z4O_Id1aqS7UVuWv_0bPN7Ga0j90e84/edit?usp=drivesdk",
       "key": "_key_unit_guide_-_interests_and_skills",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -10443,7 +10444,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10598,7 +10600,8 @@
       "url": "https://docs.google.com/presentation/d/1uJEmy8iKPWuVCVBjXphp1KVyr9NWaQ_SBiSTe5K4OzQ/edit?usp=drivesdk",
       "key": "digital_manipulative_support_-_decomposing_a_pixel_image",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10835,7 +10838,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {

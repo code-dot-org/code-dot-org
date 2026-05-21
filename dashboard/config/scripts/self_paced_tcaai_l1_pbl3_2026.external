@@ -3,55 +3,134 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Types
+# The Generate and Judge Project
 
-In **Thinking Critically with AI**, Milestone 1 is the project launch, while Milestone 5 is the project shareout.
+Throughout Thinking Critically About AI, students continuously build and revise a project called the **Generate and Judge Guide**. 
 
-Milestones 2, 3, and 4 follow a consistent two-lesson structure. In each milestone, students first build knowledge about a key AI concept, then apply that learning to create or refine a section of their final project.
+Rather than completing one final project at the end of the unit, students add evidence, examples, reflections, and recommendations as they investigate AI systems across multiple lessons.
 
-* The first lesson in each milestone is a **Build Knowledge** lesson.  
-* The second lesson is a **Develop & Critique** lesson..
+This structure helps students develop more thoughtful and evidence-based conclusions over time.
 
-<div style="text-align: center; margin: 20px auto;">
-  <img src="https://images.code.org/4559dffca35fd2e13ed96b3f1979ed6c-image-1772838094454.01.21 PM.png" 
-    alt="" 
-    style="width: 80%; border-radius: 10px;">
-  <p style="font-size: 10pt; margin-top: 8px;">
-    Image by PBLWorks
-  </p>
+## Project Development
+
+The Generate and Judge Guide develops across the unit as students add evidence, examples, tips, and reflections from their AI investigations. This timeline focuses only on the moments when students add directly to the guide.
+
+<div style="width: 85%; margin: 40px auto; position: relative; padding-left: 35px;">
+
+<!-- Timeline Line -->
+<div style="position: absolute; left: 12px; top: 0; bottom: 0; width: 4px; background-color: #048899; border-radius: 10px;"></div>
+
+<!-- Lesson 2 -->
+<details style="margin-bottom:35px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 2: Plan the Guide</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students choose a theme, audience, and initial design direction for their Generate and Judge Guide.
+</p>
+</div>
+</details>
+
+<!-- Lesson 3 -->
+<details style="margin-bottom:35px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 3: Add AI Chat Evidence</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students test AI chat tools for their chosen purpose, save examples of what worked and did not work, and import evidence into their guide.
+</p>
+</div>
+</details>
+
+<!-- Lesson 4 -->
+<details style="margin-bottom:35px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 4: Add Image + Audience Tip</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students generate an image for their guide and add a tip about image generation that applies to their audience.
+</p>
+</div>
+</details>
+
+<!-- Lesson 6 -->
+<details style="margin-bottom:35px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 6: Revise with Feedback</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students import evidence from their custom chatbot, add guidance based on that experience, and revise their guide using feedback from AI Reviewers.
+</p>
+</div>
+</details>
+
+<!-- Lesson 7 -->
+<details style="margin-bottom:35px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 7: Add Verification Guidance</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students add specific advice for how their audience can verify AI output and avoid trusting confident but incorrect information.
+</p>
+</div>
+</details>
+
+<!-- Lesson 9 -->
+<details style="margin-bottom:0px; position: relative;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:18px; font-weight:bold; color:#048899;">▸</div>
+<div style="width:18px; height:18px; background:#048899; border-radius:50%; position:absolute; left:-32px;"></div>
+<div style="font-size:1.2em; font-weight:700;">Lesson 9: Finalize the Guide</div>
+</div>
+</summary>
+
+<div style="background:#F5F7F8; margin-top:10px; padding:16px; border-radius:8px;">
+<p style="font-size:16px;">
+Students review their evidence, revise their project, and add a final statement: <strong>“AI can ___ as long as ___, because ___.”</strong>
+</p>
+</div>
+</details>
+
 </div>
 
-## Build Knowledge Lessons
-**Lessons 3, 5, and 7**
+## Instructional Focus
 
-During Build Knowledge lessons, students investigate key concepts and skills. They will have the opportunity to choose from one of three explorations related to the milestone's theme. Students gather insights that will directly inform their evolving project work. They will also engage with mini-lessons to deepen their understanding of milestone concepts.
+The Generate and Judge Guide is designed to help students continuously revise and strengthen their thinking rather than treating learning as a one-time activity.
 
-<!-- Voice & Choice -->
-<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
-  <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
-  <div>
-    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Voice &amp; Choice</p>
-    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
-      Students make meaningful decisions about how they learn, what they explore, and how they demonstrate understanding.
-    </p>
-  </div>
-</div>
-
-
-## Develop & Critique Lessons 
-**Lessons 4, 6, and 8**
-
-In the Develop & Critique lessons, students synthesize their learning into a tangible artifact that ladders up to the final project. This work unfolds over multiple cycles of feedback and revision. Structured peer discussions, self-assessment tools, and teacher feedback make revision intentional.
-
-<!-- Critique & Revision -->
-<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
-  <img src="https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
-  <div>
-    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Critique &amp; Revision</p>
-    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
-      Structured feedback cycles help students strengthen their work through revision and collaboration.
-    </p>
-  </div>
-</div>
-
+As students revisit the project throughout the unit, look for opportunities to:
+* Push students toward more specific evidence and examples
+* Encourage conditional thinking instead of simple “AI is good/bad” conclusions
+* Ask students to explain why they trust or distrust an AI output
+* Help students connect individual investigations to broader conclusions about responsible AI use
 MARKDOWN
