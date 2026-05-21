@@ -85,6 +85,20 @@ export async function generateWeblab2Level(
           ctx.precedingLevels,
         ]
       : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final state the lesson is building toward.',
+          'The student will reach something like this by the last weblab2',
+          'level. Use it as a destination: pick file structure, library',
+          'choices, naming, and idiom from it so the lesson reads as one',
+          'coherent build. But DO NOT just emit this verbatim — this level',
+          'should be a step along the way, partial relative to the final',
+          'goal. Where the description and target disagree, the description',
+          'wins (it scopes this specific level).',
+          ctx.targetProject,
+        ]
+      : []),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
