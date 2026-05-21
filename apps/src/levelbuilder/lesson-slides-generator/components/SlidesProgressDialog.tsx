@@ -1,9 +1,7 @@
 import React from 'react';
 
+import GenerationProgressDialog from '../../curriculum-generator/components/GenerationProgressDialog';
 import {SlidesProgressUpdate} from '../types';
-
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
-import moduleStyles from '../lesson-slides-generator.module.scss';
 
 const phaseLabel = (phase: SlidesProgressUpdate['phase']): string => {
   switch (phase) {
@@ -34,34 +32,22 @@ const SlidesProgressDialog: React.FC<SlidesProgressDialogProps> = ({
         progress.totalSlides
       : 0;
   return (
-    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={sharedStyles.dialog}>
-        <h2>{isGenerating ? 'Generating…' : 'Done'}</h2>
-        {progress && (
-          <>
-            <div>
-              Slide {progress.slideIndex + 1} of {progress.totalSlides}
-            </div>
-            <div>
-              <strong>{phaseLabel(progress.phase)}</strong>
-            </div>
-          </>
-        )}
-        <div className={moduleStyles.progressBarOuter}>
-          <div
-            className={moduleStyles.progressBarInner}
-            style={{width: `${Math.min(100, fraction * 100)}%`}}
-          />
-        </div>
-        <div>
-          {log.slice(-10).map((line, i) => (
-            <div className={moduleStyles.progressLine} key={i}>
-              {line}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <GenerationProgressDialog
+      isBusy={isGenerating}
+      fraction={fraction}
+      log={log}
+    >
+      {progress && (
+        <>
+          <div>
+            Slide {progress.slideIndex + 1} of {progress.totalSlides}
+          </div>
+          <div>
+            <strong>{phaseLabel(progress.phase)}</strong>
+          </div>
+        </>
+      )}
+    </GenerationProgressDialog>
   );
 };
 

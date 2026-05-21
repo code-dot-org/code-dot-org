@@ -63,29 +63,3 @@
   margin-top: 2px;
 }
 
-// Progress-bar pieces for the per-slide generation dialog. Same shape
-// as the lesson generator's progress bar but kept page-local for now.
-.progressLine {
-  font-family: monospace;
-  font-size: 13px;
-  margin: 4px 0;
-}
-
-.progressBarOuter {
-  background: #eee;
-  border-radius: 4px;
-  height: 12px;
-  overflow: hidden;
-}
-
-.progressBarInner {
-  background: #0094ca;
-  height: 100%;
-  transition: width 0.2s ease;
-}
-
-.dialogNote {
-  font-size: 13px;
-  color: #555;
-  margin-top: 4px;
-}
