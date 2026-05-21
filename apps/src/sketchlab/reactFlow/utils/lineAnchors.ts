@@ -8,7 +8,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
 
-import {endpointPatch, findNearestHandleOnNode} from './handleSnap';
+import {endpointPatch, findNearestHandleAmong} from './handleSnap';
 
 // The Handle id rendered by LineAnchorNode for a given role.
 export function lineAnchorHandleId(role: 'source' | 'target'): string {
@@ -123,6 +123,11 @@ export function snapEdgesIntoDraggedNode({
   ) => void;
   radiusPx: number;
 }): void {
+  const draggedNodeHandles = document.querySelectorAll<HTMLElement>(
+    `.react-flow__handle[data-nodeid="${CSS.escape(draggedNodeId)}"]`
+  );
+  if (draggedNodeHandles.length === 0) return;
+
   const patchByEdgeId = new Map<string, Partial<SketchlabReactFlowEdge>>();
   edges.forEach(edge => {
     (['source', 'target'] as const).forEach(side => {
@@ -132,11 +137,12 @@ export function snapEdgesIntoDraggedNode({
       const handleScreenPosition = flowToScreenPosition(
         anchorHandleFlowPosition(anchor.position, side)
       );
-      const snap = findNearestHandleOnNode(
-        draggedNodeId,
+      const snap = findNearestHandleAmong(
+        draggedNodeHandles,
         handleScreenPosition,
         side,
-        radiusPx
+        radiusPx,
+        () => draggedNodeId
       );
       if (!snap) return;
       patchByEdgeId.set(edge.id, {

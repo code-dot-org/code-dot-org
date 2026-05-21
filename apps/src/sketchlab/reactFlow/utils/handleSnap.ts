@@ -52,8 +52,10 @@ export function getEventClientPosition(
 // keeping only those of the requested type and within radiusPx. resolveNodeId
 // returns the node id to record for a candidate, or null to skip it — this
 // is where callers express their inclusion rules (e.g. exclude a specific
-// node, skip lineAnchor handles).
-function pickClosestHandle(
+// node, skip lineAnchor handles). Call sites that evaluate many screen
+// points against the same handle set should query the NodeList once and
+// pass it in here to avoid repeated DOM lookups.
+export function findNearestHandleAmong(
   handles: NodeListOf<HTMLElement>,
   screenPoint: XYPosition,
   requiredType: 'source' | 'target',
@@ -93,27 +95,6 @@ function pickClosestHandle(
   return closest;
 }
 
-// Returns the nearest handle on the given node matching the required type,
-// within the given screen-pixel radius. Mirrors findNearestHandleInRadius
-// but scoped to one node.
-export function findNearestHandleOnNode(
-  targetNodeId: string,
-  screenPoint: XYPosition,
-  requiredType: 'source' | 'target',
-  radiusPx: number
-): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>(
-    `.react-flow__handle[data-nodeid="${CSS.escape(targetNodeId)}"]`
-  );
-  return pickClosestHandle(
-    handles,
-    screenPoint,
-    requiredType,
-    radiusPx,
-    () => targetNodeId
-  );
-}
-
 // Returns the nearest handle matching the criteria within the radius, or null if
 // none found.
 export function findNearestHandleInRadius(
@@ -123,7 +104,7 @@ export function findNearestHandleInRadius(
   radiusPx: number
 ): SnapTarget | null {
   const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
-  return pickClosestHandle(
+  return findNearestHandleAmong(
     handles,
     screenPoint,
     requiredType,
