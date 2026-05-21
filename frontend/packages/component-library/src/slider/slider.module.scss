@@ -213,6 +213,7 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-moz-range-track {
@@ -221,9 +222,13 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }
@@ -323,6 +328,7 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-moz-range-track {
@@ -331,9 +337,13 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }
@@ -527,6 +537,7 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-moz-range-track {
@@ -535,9 +546,13 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
         background-image: var(--slider-background),
           var(--slider-border-gradient);
         background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
       }
 
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }
