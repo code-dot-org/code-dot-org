@@ -48,20 +48,18 @@ export function getEventClientPosition(
   return touch ? {x: touch.clientX, y: touch.clientY} : null;
 }
 
-// Returns the nearest handle on the given node matching the required type,
-// within the given screen-pixel radius. Mirrors findNearestHandleInRadius
-// but scoped to one node — used when a real node is dropped near a free
-// line endpoint and we just need to pick which side of that node to snap
-// onto.
-export function findNearestHandleOnNode(
-  targetNodeId: string,
+// Picks the nearest handle to screenPoint among the given candidates,
+// keeping only those of the requested type and within radiusPx. resolveNodeId
+// returns the node id to record for a candidate, or null to skip it — this
+// is where callers express their inclusion rules (e.g. exclude a specific
+// node, skip lineAnchor handles).
+function pickClosestHandle(
+  handles: NodeListOf<HTMLElement>,
   screenPoint: XYPosition,
   requiredType: 'source' | 'target',
-  radiusPx: number
+  radiusPx: number,
+  resolveNodeId: (handle: HTMLElement) => string | null
 ): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>(
-    `.react-flow__handle[data-nodeid="${CSS.escape(targetNodeId)}"]`
-  );
   let closest: SnapTarget | null = null;
   let closestDistance = radiusPx;
 
@@ -70,57 +68,10 @@ export function findNearestHandleOnNode(
     if (handleType !== requiredType) {
       return;
     }
-    const rect = handle.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const distance = Math.hypot(
-      centerX - screenPoint.x,
-      centerY - screenPoint.y
-    );
-
-    if (distance < closestDistance) {
-      closest = {
-        nodeId: targetNodeId,
-        handleId: handle.dataset.handleid ?? null,
-        handleType,
-      };
-      closestDistance = distance;
-    }
-  });
-
-  return closest;
-}
-
-// Returns the nearest handle matching the criteria within the radius, or null if
-// none found.
-export function findNearestHandleInRadius(
-  screenPoint: XYPosition,
-  excludeNodeId: string,
-  requiredType: 'source' | 'target',
-  radiusPx: number
-): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
-  let closest: SnapTarget | null = null;
-  let closestDistance = radiusPx;
-
-  handles.forEach(handle => {
-    const nodeId = handle.dataset.nodeid;
-    if (!nodeId || nodeId === excludeNodeId) {
+    const nodeId = resolveNodeId(handle);
+    if (nodeId === null) {
       return;
     }
-    // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
-    if (
-      handle
-        .closest('.react-flow__node')
-        ?.classList.contains('react-flow__node-lineAnchor')
-    ) {
-      return;
-    }
-    const handleType = getHandleType(handle);
-    if (handleType !== requiredType) {
-      return;
-    }
-
     const rect = handle.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -140,6 +91,59 @@ export function findNearestHandleInRadius(
   });
 
   return closest;
+}
+
+// Returns the nearest handle on the given node matching the required type,
+// within the given screen-pixel radius. Mirrors findNearestHandleInRadius
+// but scoped to one node.
+export function findNearestHandleOnNode(
+  targetNodeId: string,
+  screenPoint: XYPosition,
+  requiredType: 'source' | 'target',
+  radiusPx: number
+): SnapTarget | null {
+  const handles = document.querySelectorAll<HTMLElement>(
+    `.react-flow__handle[data-nodeid="${CSS.escape(targetNodeId)}"]`
+  );
+  return pickClosestHandle(
+    handles,
+    screenPoint,
+    requiredType,
+    radiusPx,
+    () => targetNodeId
+  );
+}
+
+// Returns the nearest handle matching the criteria within the radius, or null if
+// none found.
+export function findNearestHandleInRadius(
+  screenPoint: XYPosition,
+  excludeNodeId: string,
+  requiredType: 'source' | 'target',
+  radiusPx: number
+): SnapTarget | null {
+  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
+  return pickClosestHandle(
+    handles,
+    screenPoint,
+    requiredType,
+    radiusPx,
+    handle => {
+      const nodeId = handle.dataset.nodeid;
+      if (!nodeId || nodeId === excludeNodeId) {
+        return null;
+      }
+      // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
+      if (
+        handle
+          .closest('.react-flow__node')
+          ?.classList.contains('react-flow__node-lineAnchor')
+      ) {
+        return null;
+      }
+      return nodeId;
+    }
+  );
 }
 
 // Handles snapping an edge endpoint onto a real node handle.
