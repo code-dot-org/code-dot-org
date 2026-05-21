@@ -467,76 +467,6 @@ class Lesson < ApplicationRecord
   #
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
-  # ---- Slides storage ----
-  # Slides are persisted on disk in a per-lesson JSON file outside the
-  # script_json seed system, since they aren't part of the lesson's
-  # canonical curriculum-graph identity. The file lives at
-  # config/slides/<unit-name>/<lesson-key>/slides.json relative to the
-  # dashboard root, mirroring the unit/lesson hierarchy so the directory
-  # tree reads like the curriculum it describes. Shape:
-  #
-  #   {
-  #     "lessonId": <int>,
-  #     "slides": [
-  #       {"key": "<uuid>", "description": "<prompt>", "panel": <Panel|null>},
-  #       ...
-  #     ]
-  #   }
-  #
-  # `panel` is the panels-app Panel record (text + imageUrl + layout +
-  # key). `description` is the prompt the user typed (or that the AI
-  # produced) for the slide; we keep it alongside the panel so the user
-  # can tell why a slide was generated and can decide whether to
-  # regenerate. `null` panel means the slide hasn't been generated yet.
-
-  SLIDES_FILENAME = 'slides.json'.freeze
-
-  # Relative path under config/slides/, suitable both for the on-disk
-  # file (joined with Rails.root) and for displaying back to the user
-  # as a stable label. Sanitizes the unit name + lesson key against the
-  # path separator since both come from user-supplied identifiers and
-  # legacy data has been seen with unusual characters in keys (e.g. the
-  # space in "Web Design"). Falls back to numeric ids if the lesson is
-  # somehow detached from a script.
-  def slides_relative_path
-    unit_part = script&.name&.gsub('/', '_').presence || "unit-#{script_id || 'orphan'}"
-    lesson_part = key&.gsub('/', '_').presence || "lesson-#{id}"
-    File.join('config', 'slides', unit_part, lesson_part, SLIDES_FILENAME)
-  end
-
-  def slides_file_path
-    Rails.root.join(slides_relative_path)
-  end
-
-  # Returns the parsed slides.json contents, or an empty {slides: []} skeleton
-  # if no file exists yet. The file is the source of truth — we deliberately
-  # don't seed any DB table for slides.
-  #
-  # Pass `include_teacher_notes: false` (the default for student-facing
-  # callers) to strip every panel's teacherNote field before returning.
-  # Notes never reach a student's browser that way, even via DevTools on
-  # the page payload.
-  def read_slides(include_teacher_notes: true)
-    path = slides_file_path
-    return {'lessonId' => id, 'slides' => []} unless File.exist?(path)
-    parsed = JSON.parse(File.read(path))
-    return parsed if include_teacher_notes
-    (parsed['slides'] || []).each do |slide|
-      slide['panel']&.delete('teacherNote')
-    end
-    parsed
-  end
-
-  # Overwrites slides.json on disk. Creates the per-lesson directory if
-  # needed. Always writes a `lessonId` field so the file can be matched
-  # back to a lesson if the directory is moved or copied.
-  def write_slides(slides)
-    path = slides_file_path
-    FileUtils.mkdir_p(File.dirname(path))
-    payload = {'lessonId' => id, 'slides' => slides}
-    File.write(path, JSON.pretty_generate(payload))
-  end
-
   def summarize_for_lesson_edit
     lesson_standards = standards.sort_by {|s| [s.framework.name, s.shortcode]}
     {
@@ -573,6 +503,22 @@ class Lesson < ApplicationRecord
     }
   end
 
+  # A lesson can own a deck of intro slides (panels-app panels played
+  # to students before the lesson begins). The actual on-disk JSON
+  # file and its read/write operations live in the Slides class so the
+  # slides feature isn't bound to Lesson — units, courses, or levels
+  # could grow their own decks the same way.
+  def slides
+    Slides.new(
+      owner_kind: :lesson,
+      owner_id: id,
+      path_segments: [
+        script&.name.presence || "unit-#{script_id || 'orphan'}",
+        key.presence || "lesson-#{id}",
+      ]
+    )
+  end
+
   # Compact payload for the /slides/generate page. Includes the saved
   # outline prompt (generate_slides_outline) and the persisted slides JSON
   # so the page can restore both on reload. Keeps the AI's lesson-context
@@ -583,8 +529,8 @@ class Lesson < ApplicationRecord
       id: id,
       name: name,
       generateSlidesOutline: generate_slides_outline,
-      slides: read_slides['slides'] || [],
-      slidesFilePath: slides_relative_path,
+      slides: slides.read['slides'] || [],
+      slidesFilePath: slides.relative_path,
       generateOutline: generate_outline,
       unitName: script&.localized_title,
       unitOutline: script&.generate_outline,

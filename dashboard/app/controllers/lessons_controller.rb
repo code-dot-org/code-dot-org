@@ -164,8 +164,8 @@ class LessonsController < ApplicationController
 
   # GET /lessons/:id/slides/generate
   # Levelbuilder UI for AI-generating a deck of intro slides for this
-  # lesson. Slides are panels-app panels stored in a per-lesson JSON file
-  # (see Lesson#slides_file_path), distinct from the lesson's level set.
+  # lesson. Slides are panels-app panels stored on disk via the Slides
+  # class, distinct from the lesson's level set.
   def generate_slides
     setup_generate_slides
   end
@@ -240,7 +240,7 @@ class LessonsController < ApplicationController
           end
         end
       end
-    @lesson.write_slides(slides)
+    @lesson.slides.write(slides)
 
     if params.key?(:generateSlidesOutline)
       @lesson.generate_slides_outline = params[:generateSlidesOutline].to_s
@@ -443,14 +443,14 @@ class LessonsController < ApplicationController
     # users so the field never lands in a student's DOM. Levelbuilders and
     # teachers (whether on the viewer or the editor) see them.
     show_teacher_notes = !!(current_user&.teacher? || current_user&.levelbuilder?)
-    saved = @lesson.read_slides(include_teacher_notes: show_teacher_notes)
+    saved = @lesson.slides.read(include_teacher_notes: show_teacher_notes)
     panels = (saved['slides'] || []).map {|s| s['panel']}.compact
     @slides_data = {
       lessonId: @lesson.id,
       lessonName: @lesson.name,
       panels: panels,
       slides: saved['slides'] || [],
-      slidesFilePath: @lesson.slides_relative_path,
+      slidesFilePath: @lesson.slides.relative_path,
       showTeacherNotes: show_teacher_notes,
     }
     view_options(full_width: true)
