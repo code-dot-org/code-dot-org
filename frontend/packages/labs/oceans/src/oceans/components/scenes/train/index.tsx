@@ -1,6 +1,5 @@
 import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Radium from 'radium';
 import * as React from 'react';
 
 import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
@@ -13,16 +12,12 @@ import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import train from '@/oceans/models/train';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
 
 interface TrainState {
   headOpen: boolean;
 }
 
-const UnwrappedTrain = class Train extends React.Component<
-  Record<string, never>,
-  TrainState
-> {
+class Train extends React.Component<Record<string, never>, TrainState> {
   state: TrainState = {
     headOpen: false,
   };
@@ -40,30 +35,26 @@ const UnwrappedTrain = class Train extends React.Component<
       setState({showConfirmationDialog: false});
     };
 
+    const botHeadClassName = this.state.headOpen
+      ? 'ocean-train__bot-head ocean-train__bot-head--open'
+      : 'ocean-train__bot-head';
+
     return (
       <Body>
-        <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
-        <div style={styles.trainBot}>
-          <img
-            src={aiBotHead}
-            style={
-              this.state.headOpen
-                ? {...styles.trainBotHead, ...styles.trainBotOpen}
-                : styles.trainBotHead
-            }
-            alt=""
-          />
-          <img src={aiBotBody} style={styles.trainBotBody} alt="" />
+        <div className="ocean-train__question">{state.trainingQuestion}</div>
+        <div className="ocean-train__bot">
+          <img src={aiBotHead} className={botHeadClassName} alt="" />
+          <img src={aiBotBody} className="ocean-train__bot-body" alt="" />
         </div>
-        <div style={styles.counter}>
-          <img src={counterIcon} style={styles.counterImg} alt="" />
-          <span style={styles.counterNum} id="uitest-train-count">
+        <div className="ocean-counter">
+          <img src={counterIcon} className="ocean-counter__img" alt="" />
+          <span className="ocean-counter__num" id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
         <button
           type="button"
-          style={styles.eraseButtonContainer}
+          className="ocean-erase-button"
           aria-label={I18n.t('erase')}
           onClick={() => {
             setState({
@@ -72,11 +63,14 @@ const UnwrappedTrain = class Train extends React.Component<
             });
           }}
         >
-          <FontAwesomeIcon icon={faTrash} style={styles.eraseButton} />
+          <FontAwesomeIcon
+            icon={faTrash}
+            className="ocean-erase-button__icon"
+          />
         </button>
-        <div style={styles.trainButtons}>
+        <div className="ocean-train__buttons">
           <Button
-            style={styles.trainButtonNo}
+            className="ocean-train__button-no"
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(false);
@@ -88,7 +82,7 @@ const UnwrappedTrain = class Train extends React.Component<
             {noButtonText}
           </Button>
           <Button
-            style={styles.trainButtonYes}
+            className="ocean-train__button-yes"
             onClick={() => {
               this.setState({headOpen: true});
               return train.onClassifyFish(true);
@@ -101,7 +95,7 @@ const UnwrappedTrain = class Train extends React.Component<
           </Button>
         </div>
         <Button
-          style={styles.continueButton}
+          className="ocean-button--continue"
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           {I18n.t('continue')}
@@ -109,6 +103,6 @@ const UnwrappedTrain = class Train extends React.Component<
       </Body>
     );
   }
-};
+}
 
-export default Radium(UnwrappedTrain);
+export default Train;

@@ -14,10 +14,8 @@ Consumed by:
   responsive shell classes).
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
-ESLint flat config, Prettier, Stylelint. The lab still uses Radium for
-inline styles and class components — these are inherited from the original
-ml-activities source and intentionally preserved verbatim; see "Style
-conventions" below.
+ESLint flat config, Prettier, Stylelint. Scene components are class
+components styled via CSS classes (`scenes.css`).
 
 ## Setup
 
