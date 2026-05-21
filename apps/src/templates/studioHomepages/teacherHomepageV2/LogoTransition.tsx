@@ -79,13 +79,14 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
 
     if (cardRef.current && nativeImg) {
-      const containerRect = mountTarget.getBoundingClientRect();
+      // Card is portaled to document.body and uses position: fixed, so
+      // top/left are viewport coords. Use the native <img>'s viewport
+      // rect directly as the card's natural rect; on morph the cleared
+      // transform lands the card precisely on the hidden native logo.
       const nativeRect = nativeImg.getBoundingClientRect();
       if (nativeRect.width && nativeRect.height) {
-        const naturalTop = nativeRect.top - containerRect.top;
-        const naturalLeft = nativeRect.left - containerRect.left;
-        cardRef.current.style.top = `${naturalTop}px`;
-        cardRef.current.style.left = `${naturalLeft}px`;
+        cardRef.current.style.top = `${nativeRect.top}px`;
+        cardRef.current.style.left = `${nativeRect.left}px`;
         cardRef.current.style.width = `${nativeRect.width}px`;
         cardRef.current.style.height = `${nativeRect.height}px`;
 
@@ -197,7 +198,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
             className={`${styles.image} ${svgHidden ? styles.imageHidden : ''}`}
           />
         </div>,
-        mountTarget
+        document.body
       )}
     </>
   );

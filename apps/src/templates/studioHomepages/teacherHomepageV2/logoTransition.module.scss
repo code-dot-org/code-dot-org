@@ -14,15 +14,17 @@
   opacity: 0;
 }
 
-// The card lives inside .header_logo via portal. JS sets its natural top,
-// left, width, and height to match the Rails-rendered <img>'s bounding rect
-// inside the container, so the morphed card lands exactly on top of the
-// hidden native logo. A layout-effect-applied transform displaces and
-// scales it to the viewport center; clearing the transform animates it
-// home. The white fill, rounded corners, and shadow fade out during the
-// morph so the card resolves into the in-header logo with no visible frame.
+// The card is portaled to document.body to escape stacking contexts on
+// .header_left and .header_logo that would otherwise sit it below the
+// backdrop. JS sets its natural top, left, width, and height to match the
+// Rails-rendered <img>'s viewport rect, so when the morph transform
+// clears the card lands exactly on top of the hidden native logo. The
+// layout-effect-applied transform displaces and scales it to the viewport
+// center; clearing the transform animates it home. The white fill,
+// rounded corners, and shadow fade out during the morph so the card
+// resolves into the in-header logo with no visible frame.
 .card {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   background-color: #fff;
   border-radius: 8px;
