@@ -22,6 +22,10 @@ interface SectionCardProps {
   id: number;
 }
 
+// NOTE: DemoSectionCard mirrors this component's layout for the
+// pre-creation practice card. When changing this card's structure,
+// styles, or actions, mirror the change in DemoSectionCard.tsx so the
+// two stay visually and behaviorally consistent.
 export const SectionCard: React.FC<SectionCardProps> = ({
   studioUrlPrefix,
   section,
@@ -39,7 +43,11 @@ export const SectionCard: React.FC<SectionCardProps> = ({
 
   return (
     <li
-      className={styles.sectionCardWrapper}
+      className={
+        section.demoType
+          ? `${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`
+          : styles.sectionCardWrapper
+      }
       ref={setNodeRef}
       style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${section.id}`}

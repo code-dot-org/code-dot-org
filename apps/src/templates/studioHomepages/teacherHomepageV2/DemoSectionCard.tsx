@@ -183,8 +183,17 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
 
   const navigateToSectionPath = React.useCallback(
     (sectionId: number, path: string) => {
+      // Lesson-dropdown paths come back from the server with a literal
+      // ":sectionId" placeholder and the /teacher_dashboard prefix (see
+      // Policies::DemoSections handling in
+      // SectionsController#retrieve_lessons_for_dropdown), because the
+      // section doesn't exist when the URLs are built. Substitute the id
+      // and drop the prefix — the router is already mounted at
+      // /teacher_dashboard and would otherwise double it.
       const nextPath = path.startsWith('/')
         ? path
+            .replace(':sectionId', sectionId.toString())
+            .replace(/^\/teacher_dashboard/, '')
         : generatePath(
             `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
             {
@@ -238,7 +247,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       <ul className={styles.sectionList}>
         <li
           id="ui-test-demo-section-card"
-          className={styles.sectionCardWrapper}
+          className={`${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`}
           aria-labelledby="demo-section-card-title"
         >
           <div className={styles.sectionCardHeader}>
