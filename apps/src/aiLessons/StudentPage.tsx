@@ -11,11 +11,14 @@
 // gated on `action === 'advance'` returned by the tutor's structured JSON
 // output, so the student cannot skip past a checkpoint they haven't met.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
 import EmbeddedLab from './EmbeddedLab';
@@ -30,6 +33,7 @@ import {
   generateTutorReply,
   TutorAction,
   TutorMessage,
+  TutorOpening,
 } from './tutor';
 import {LessonPlan} from './types';
 import {useStudentWork} from './useStudentWork';
@@ -41,6 +45,15 @@ interface StudentPageProps {
 }
 
 type Phase = 'in-progress' | 'celebrate';
+
+// SafeMarkdown uses CommonMark, which collapses single newlines into
+// spaces. Chat UIs typically want single newlines to render as line
+// breaks; rewrite single newlines as markdown hard breaks (two trailing
+// spaces + newline). Leave paragraph breaks (\n\n) and lines that
+// already end in two spaces alone.
+function preserveLineBreaks(text: string): string {
+  return text.replace(/([^\n ])\n(?!\n)/g, '$1  \n');
+}
 
 const StudentPage: React.FunctionComponent<StudentPageProps> = ({lessonId}) => {
   // The lesson JSON is fetched on mount; until it lands we show a tiny
@@ -96,6 +109,20 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const [phase, setPhase] = useState<Phase>('in-progress');
   const [history, setHistory] = useState<TutorMessage[]>([]);
   const [busy, setBusy] = useState(false);
+  // When the tutor judges the current checkpoint complete (`advance` or
+  // `celebrate`), we don't navigate immediately — we surface a Continue
+  // button instead so the student can read the celebratory message and
+  // move on at their own pace. Cleared on checkpoint change or when a
+  // subsequent tutor turn returns `stay` (e.g. the student kept tweaking
+  // after passing and broke something).
+  const [pendingAdvance, setPendingAdvance] = useState<TutorAction | null>(
+    null
+  );
+  // The structured opening (welcome + instruction) for the active
+  // checkpoint. Rendered in the pinned region above the chat; also
+  // stitched into the LLM transcript as the first tutor turn so reply
+  // turns see the same framing.
+  const [opening, setOpening] = useState<TutorOpening | undefined>();
   // Most-recently-persisted progress snapshot for this (lesson, user).
   // Kept in a ref so background save calls can append events to the
   // server-side history without race-prone state batching.
@@ -191,13 +218,22 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     if (progressLoading) return;
     let cancelled = false;
     setHistory([]);
+    setOpening(undefined);
     setError(undefined);
     setBusy(true);
     (async () => {
       try {
         const reply = await generateTutorOpening(lesson, currentIndex);
         if (cancelled) return;
-        setHistory([{role: 'tutor', text: reply.message}]);
+        setOpening(reply);
+        // Stitch the structured opening into the LLM transcript so reply
+        // turns see the same framing the student saw.
+        setHistory([
+          {
+            role: 'tutor',
+            text: `${reply.welcome}\n\nDo this: ${reply.instruction}`,
+          },
+        ]);
       } catch (e) {
         if (cancelled) return;
         setError((e as Error).message);
@@ -217,43 +253,66 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     }
   }, [history, busy]);
 
-  const handleAdvance = (action: TutorAction) => {
-    if (action === 'advance' || action === 'celebrate') {
-      // Record completion before navigating so the saved snapshot points
-      // at the checkpoint the student just finished.
-      persistProgressEvent('checkpoint-completed', currentIndex, liveWork);
-    }
-    if (action === 'advance' && currentIndex < lesson.checkpoints.length - 1) {
+  // The tutor decided this turn — record completion if the student
+  // passed, but don't navigate.  The student moves on by pressing
+  // Continue.  A subsequent `stay` (re-check after tweaking) clears
+  // the pending state.
+  const handleAdvance = useCallback(
+    (action: TutorAction) => {
+      if (action === 'advance' || action === 'celebrate') {
+        persistProgressEvent('checkpoint-completed', currentIndex, liveWork);
+        setPendingAdvance(action);
+      } else {
+        setPendingAdvance(null);
+      }
+    },
+    [currentIndex, liveWork, persistProgressEvent]
+  );
+
+  // Clear any pending Continue when the active checkpoint changes.
+  useEffect(() => {
+    setPendingAdvance(null);
+  }, [currentIndex]);
+
+  const handleContinue = useCallback(() => {
+    if (
+      pendingAdvance === 'advance' &&
+      currentIndex < lesson.checkpoints.length - 1
+    ) {
       setCurrentIndex(i => i + 1);
-    } else if (action === 'celebrate' || action === 'advance') {
+    } else {
       setPhase('celebrate');
     }
-  };
+    setPendingAdvance(null);
+  }, [pendingAdvance, currentIndex, lesson.checkpoints.length]);
 
-  const requestTutorTurn = async (
-    nextHistory: TutorMessage[],
-    options: {evaluating?: boolean} = {}
-  ) => {
-    setHistory(nextHistory);
-    setBusy(true);
-    setEvaluating(!!options.evaluating);
-    setError(undefined);
-    try {
-      const reply = await generateTutorReply(
-        lesson,
-        currentIndex,
-        nextHistory,
-        liveWork
-      );
-      setHistory(h => [...h, {role: 'tutor' as const, text: reply.message}]);
-      handleAdvance(reply.action);
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setBusy(false);
-      setEvaluating(false);
-    }
-  };
+  const requestTutorTurn = useCallback(
+    async (
+      nextHistory: TutorMessage[],
+      options: {evaluating?: boolean} = {}
+    ) => {
+      setHistory(nextHistory);
+      setBusy(true);
+      setEvaluating(!!options.evaluating);
+      setError(undefined);
+      try {
+        const reply = await generateTutorReply(
+          lesson,
+          currentIndex,
+          nextHistory,
+          liveWork
+        );
+        setHistory(h => [...h, {role: 'tutor' as const, text: reply.message}]);
+        handleAdvance(reply.action);
+      } catch (e) {
+        setError((e as Error).message);
+      } finally {
+        setBusy(false);
+        setEvaluating(false);
+      }
+    },
+    [lesson, currentIndex, liveWork, handleAdvance]
+  );
 
   // Trigger the tutor's check without injecting a synthetic student
   // chat message — the work snapshot is what the tutor actually grades.
@@ -263,8 +322,28 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     if (busy) return;
     persistProgressEvent('run', currentIndex, liveWork);
     requestTutorTurn(history, {evaluating: true});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [busy, history, currentIndex, lesson, liveWork, persistProgressEvent]);
+  }, [
+    busy,
+    history,
+    currentIndex,
+    liveWork,
+    persistProgressEvent,
+    requestTutorTurn,
+  ]);
+
+  // Student-typed question / comment: append to history and ask the tutor
+  // to reply. The tutor sees the live source too so it can answer
+  // questions about the student's current code.
+  const [draft, setDraft] = useState('');
+  const handleSendStudentMessage = useCallback(
+    (text: string) => {
+      const trimmed = text.trim();
+      if (!trimmed || busy) return;
+      setDraft('');
+      requestTutorTurn([...history, {role: 'student', text: trimmed}]);
+    },
+    [busy, history, requestTutorTurn]
+  );
 
   // Panels checkpoints have no source to evaluate; when the student presses
   // Continue on the last slide we just advance.  If this is the final
@@ -308,23 +387,23 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         <header className={styles.tutorHeader}>
           <div className={styles.lessonTitle}>{lesson.title}</div>
           <div className={styles.checkpointMeta}>
-            Step {currentIndex + 1} of {lesson.checkpoints.length} ·{' '}
-            {checkpoint.title}
-          </div>
-          <div className={styles.demoNav}>
             <button
               type="button"
-              className={styles.linkButton}
+              className={styles.demoNavArrow}
               onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
               disabled={currentIndex === 0}
               aria-label="Go to previous checkpoint"
               title="Demo: jump back one checkpoint"
             >
-              ← Back
+              ←
             </button>
+            <span>
+              Step {currentIndex + 1} of {lesson.checkpoints.length} ·{' '}
+              {checkpoint.title}
+            </span>
             <button
               type="button"
-              className={styles.linkButton}
+              className={styles.demoNavArrow}
               onClick={() => {
                 if (currentIndex < lesson.checkpoints.length - 1) {
                   setCurrentIndex(i => i + 1);
@@ -335,17 +414,36 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
               aria-label="Skip to next checkpoint"
               title="Demo: skip the tutor check and jump to the next checkpoint"
             >
-              Skip to next →
+              →
             </button>
           </div>
         </header>
 
-        {/* Pin the tutor's opening "Do this:" message at the top so it
-            stays visible as the rest of the conversation grows.  Falls
-            through to nothing while the opening is still being fetched. */}
-        {history[0]?.role === 'tutor' && (
+        {/* Pin the tutor's opening (welcome + instruction) at the top so
+            it stays visible as the rest of the conversation grows.
+            Rendered as instructional content (not a chat bubble) so the
+            student reads it as the brief for this checkpoint. */}
+        {opening && (
           <div className={styles.pinnedOpening}>
-            <ChatMessage text={history[0].text} role={Role.ASSISTANT} />
+            <div className={styles.pinnedOpeningWelcome}>
+              <SafeMarkdown
+                markdown={opening.welcome}
+                openExternalLinksInNewTab
+                unwrapped
+              />
+            </div>
+            <div className={styles.pinnedOpeningInstruction}>
+              <FontAwesomeV6Icon
+                iconName="square-arrow-right"
+                iconStyle="solid"
+                className={styles.pinnedOpeningIcon}
+              />
+              <SafeMarkdown
+                markdown={opening.instruction}
+                openExternalLinksInNewTab
+                unwrapped
+              />
+            </div>
           </div>
         )}
 
@@ -353,7 +451,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           {history.slice(1).map((m, i) => (
             <ChatMessage
               key={i + 1}
-              text={m.text}
+              text={m.role === 'tutor' ? preserveLineBreaks(m.text) : m.text}
               role={m.role === 'tutor' ? Role.ASSISTANT : Role.USER}
             />
           ))}
@@ -367,21 +465,47 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
 
         {checkpoint.labType !== 'panels' && (
           <div className={styles.composer}>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              type="button"
-              onClick={handleCheck}
+            <UserMessageEditor
+              userMessage={draft}
+              onChange={setDraft}
+              onSubmit={handleSendStudentMessage}
               disabled={busy}
-              fullWidth
+              customPlaceholder="Ask the tutor a question…"
             >
-              Check my work
-            </MuiButton>
-            <div className={styles.muted} style={{fontSize: 12, marginTop: 8}}>
-              {checkpoint.labType === 'music'
-                ? 'Pressing Play in the lab also asks the tutor to check your work.'
-                : 'Tap Check my work whenever you want the tutor to evaluate what you have so far.'}
-            </div>
+              {/* The primary action lives next to the editor's submit
+                  arrow. While the student is typing a question, the
+                  arrow takes over and we hide the Check/Continue
+                  button so it doesn't compete for attention. */}
+              {draft.trim() === '' &&
+                (pendingAdvance ? (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    type="button"
+                    size="small"
+                    onClick={handleContinue}
+                    disabled={busy}
+                    className={styles.continueButton}
+                  >
+                    <span className={styles.shimmerText}>
+                      {pendingAdvance === 'celebrate'
+                        ? 'Finish lesson →'
+                        : 'Continue →'}
+                    </span>
+                  </MuiButton>
+                ) : (
+                  <MuiButton
+                    variant="outlined"
+                    color="primary"
+                    type="button"
+                    size="small"
+                    onClick={handleCheck}
+                    disabled={busy}
+                  >
+                    Check my work
+                  </MuiButton>
+                ))}
+            </UserMessageEditor>
           </div>
         )}
       </aside>

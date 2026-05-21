@@ -479,26 +479,69 @@ textarea {
 }
 
 .checkpointMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
   color: var(--text-neutral-tertiary);
   margin-top: 4px;
+
+  & > span {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
 
-.demoNav {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 8px;
-  font-size: 12px;
+.demoNavArrow {
+  background: none;
+  border: none;
+  color: var(--text-neutral-tertiary);
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 16px;
+  line-height: 1;
+  flex: 0 0 auto;
+
+  &:hover:not(:disabled) {
+    color: var(--text-brand-teal-primary);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 }
 
-// The tutor's opening "Do this:" message — pinned above the scrolling
-// transcript so the student always sees the current call-to-action.
+// The tutor's opening (welcome + instruction) — pinned above the
+// scrolling transcript so the student always sees the current
+// call-to-action. Styled as instructional content (not a chat bubble),
+// distinct from the back-and-forth chat below.
 .pinnedOpening {
   flex: 0 0 auto;
-  padding: 12px 18px;
+  padding: 18px 20px;
   border-bottom: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pinnedOpeningWelcome {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-neutral-secondary);
+}
+
+.pinnedOpeningInstruction {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
+
+.pinnedOpeningIcon {
+  color: var(--text-brand-teal-primary);
+  font-size: 15px;
+  margin-right: 8px;
+  vertical-align: -1px;
 }
 
 .transcript {
@@ -549,6 +592,47 @@ textarea {
   flex-direction: column;
   gap: 8px;
   background: var(--background-neutral-primary);
+}
+
+// "Continue" CTA shown once the tutor has greenlit the checkpoint.
+// Pulses subtly and shimmers its text to draw the student's eye.
+.continueButton {
+  animation: continue-pulse 2.4s ease-in-out infinite;
+}
+
+.shimmerText {
+  // A moving light-coloured highlight sweeps across the text.
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 65%) 0%,
+    rgb(255 255 255 / 100%) 50%,
+    rgb(255 255 255 / 65%) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 2.4s linear infinite;
+  font-weight: 600;
+}
+
+@keyframes continue-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(var(--brand-teal-rgb, 0 173 188) / 35%);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(var(--brand-teal-rgb, 0 173 188) / 0%);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .composerActions {

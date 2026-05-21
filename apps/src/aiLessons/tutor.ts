@@ -53,6 +53,30 @@ const tutorReplySchema = Output.object({
   }),
 });
 
+// Openings are split into two discrete pieces so the UI can style them
+// differently (small welcome line, larger call-to-action). Markdown is
+// still allowed within each (e.g. inline `code`), but the welcome and
+// instruction live in separate fields.
+export interface TutorOpening {
+  welcome: string;
+  instruction: string;
+}
+
+const tutorOpeningSchema = Output.object({
+  schema: z.object({
+    welcome: z
+      .string()
+      .describe(
+        'One friendly sentence framing what the student is about to do. ≤12 words. No "Do this:" prefix.'
+      ),
+    instruction: z
+      .string()
+      .describe(
+        'ONE concrete sentence describing the single action the student should take right now. ≤15 words. Plain text — no "Do this:" prefix, no bullet, no preamble.'
+      ),
+  }),
+});
+
 const SYSTEM_PROMPT_TEMPLATE = (lesson: LessonPlan, currentIndex: number) => {
   const totalCheckpoints = lesson.checkpoints.length;
   const current = lesson.checkpoints[currentIndex];
@@ -170,40 +194,36 @@ async function callTutorModel(
 export async function generateTutorOpening(
   lesson: LessonPlan,
   currentIndex: number
-): Promise<TutorReply> {
+): Promise<TutorOpening> {
   initAiLessonsGatewayContext();
   const isFirst = currentIndex === 0;
-  return callTutorModel(
-    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex),
-    `The student has just arrived at this checkpoint.  Write a short
-opening message in markdown that gets them moving.  Focus on the
-objective; cut every word that isn't earning its keep.
+  const response = await generateText({
+    model: getModel(MODEL_ID),
+    system: SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex),
+    prompt: `The student has just arrived at this checkpoint.  Return:
 
-Structure (in this order):
-${
-  isFirst
-    ? `1. ONE short, friendly welcome sentence framing what they're about
-   to do.  Examples: "Welcome! Today we're making a beat in Music
-   Lab." / "Hey! Let's build a tiny webpage together."  Single
-   sentence, ≤15 words.  Don't summarise the whole lesson — just
-   set the tone.`
-    : `1. ONE short, friendly transition sentence acknowledging the previous
-   checkpoint and naming what's next.  Examples: "Nice work! Next up:
-   loops." / "Great — now let's add sound effects."  Keep it to a
-   single sentence, ≤12 words.  Skip it entirely if no natural
-   transition exists.`
-}
-2. The next line MUST start with **Do this:** in bold, followed by a
-   single-sentence call-to-action — the one concrete thing they should
-   do RIGHT NOW.  ≤15 words.  No preamble.
-3. Optionally one (just one!) follow-up line of supporting detail —
-   a tip, a pointer to a block/file/API, or a hint.  Use bullets only
-   if you have multiple discrete tips.
+welcome:  ONE friendly ${
+      isFirst ? 'welcome' : 'transition'
+    } sentence, ≤12 words.  ${
+      isFirst
+        ? `Examples: "Welcome! Today we're making a beat in Music Lab." / "Hey! Let's build a tiny webpage."`
+        : `Examples: "Nice work! Next up: loops." / "Great — now let's add sound effects."`
+    }
 
-Do not greet the student by name.  This is NOT an evaluation; set
-action="stay".`,
-    0.5
-  );
+instruction:  ONE concrete sentence describing the single action the
+student should take right now.  ≤15 words.  No "Do this:" prefix —
+the UI renders that for you.  No preamble, no follow-up tips, no
+bullets.
+
+Do not greet the student by name.  This is NOT an evaluation.`,
+    temperature: 0.5,
+    output: tutorOpeningSchema,
+  });
+  const raw = response.output;
+  return {
+    welcome: String(raw.welcome || '').trim(),
+    instruction: String(raw.instruction || '').trim(),
+  };
 }
 
 export async function generateTutorReply(
