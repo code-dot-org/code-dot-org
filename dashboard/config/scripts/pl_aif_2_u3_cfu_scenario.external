@@ -70,7 +70,7 @@ D) Tell them to skip the task if they are confused
 </details>
 
 ---
----
+
 
 ## Question 2: Jumping to AI Without a Plan
 
@@ -121,7 +121,7 @@ C) Tell them to skip the TODO and move on
 <strong>Incorrect Answer:</strong> TODO comments are there to guide students toward the specific place where code needs to be added or changed.
 </div>
 </details>
-
+<br>
 <details>
 <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
 D) Ask them to describe the behavior in their own words first
@@ -135,7 +135,7 @@ D) Ask them to describe the behavior in their own words first
 <br>
 
 ---
----
+
 
 ## Question 3: Weak Prompting
 
@@ -150,7 +150,6 @@ The AI returns code, but it doesn’t match what the student needs. The student 
 
 What is the best facilitation move?
 
-<div style="clear:both;"></div>
 
 
 
@@ -200,7 +199,7 @@ D) Have them keep submitting the same prompt again
 </div>
 </details>
 
----
+
 ---
 
 
