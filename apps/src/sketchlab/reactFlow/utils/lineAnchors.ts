@@ -100,10 +100,7 @@ export function resolveEdgeEndpoint(
 
 // Inverse of snapAnchorIfNearby: when a real node is dropped, any free
 // (lineAnchor) edge endpoint whose visible handle lies within radiusPx of
-// one of the dropped node's matching handles is re-routed onto that
-// handle. This matches the magnetic radius the user already feels when
-// dragging an edge endpoint near a node. Orphaned anchors are pruned by
-// the canvas's anchor-cleanup effect.
+// one of the dropped node's matching handles is connected to that node.
 export function snapEdgesIntoDraggedNode({
   draggedNodeId,
   edges,

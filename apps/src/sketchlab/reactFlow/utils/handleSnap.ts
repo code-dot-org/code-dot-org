@@ -52,9 +52,7 @@ export function getEventClientPosition(
 // keeping only those of the requested type and within radiusPx. resolveNodeId
 // returns the node id to record for a candidate, or null to skip it — this
 // is where callers express their inclusion rules (e.g. exclude a specific
-// node, skip lineAnchor handles). Call sites that evaluate many screen
-// points against the same handle set should query the NodeList once and
-// pass it in here to avoid repeated DOM lookups.
+// node, skip lineAnchor handles).
 export function findNearestHandleAmong(
   handles: NodeListOf<HTMLElement>,
   screenPoint: XYPosition,
