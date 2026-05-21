@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app(/*path)", to: "app#index"
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -1203,6 +1203,13 @@ Dashboard::Application.routes.draw do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
         get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
         get :request_ai_lesson_summaries, controller: :ai_lesson_summaries, action: :request_ai_lesson_summaries # GET ai_lesson_summaries/request_ai_lesson_summaries?unit_id=1 [optional: &lesson_id=1]
+      end
+    end
+
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [:show] do
+      collection do
+        post :generate_podcast
       end
     end
 

@@ -5,9 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Alternatives for Restricted Environments
 
+Not all students will have equal access to AI tools. Some districts block tools entirely, while others allow limited use.
+- Check school/district policies before planning AI-integrated activities
+- Be aware of age restrictions (many tools require users to be 13+)
+- Ensure access does not depend on personal devices or accounts
+
 If students cannot directly access AI tools, there are still effective ways to teach with AI. Review the strategies below. Regardless of your classroom context, some of these strategies may be helpful for introducing your students to AI.
 
->#### 💬 **Quick Reflection:** Which, if any, of these would you try in your classroom?
+> 💬 **Quick Reflection:** Which, if any, of these would you try in your classroom?
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
   

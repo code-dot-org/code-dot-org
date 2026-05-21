@@ -60,6 +60,31 @@
   margin-top: 8px;
 }
 
+// Nested input row inside the outline block for the target Web Lab 2
+// channel id. Tighter than the page's main fieldRow since we're inside
+// a detail panel — label sits above the input, help text below.
+.outlineProjectRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.outlineProjectRow label {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.outlineProjectInput {
+  max-width: 360px;
+  padding: 6px 8px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .fieldRow label {
   font-weight: 600;
 }
