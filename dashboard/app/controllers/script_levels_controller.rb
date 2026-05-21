@@ -592,7 +592,7 @@ class ScriptLevelsController < ApplicationController
       full_width: true,
       no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
-      has_i18n: @game.has_i18n?,
+      has_i18n: @game&.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
       azure_speech_service_voices: azure_speech_service_options[:voices],
