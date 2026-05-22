@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Wrap Up",
-    "long_instructions": "#### Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?",
+    "long_instructions": "Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

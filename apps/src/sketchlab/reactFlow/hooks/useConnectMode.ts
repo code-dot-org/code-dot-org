@@ -5,10 +5,11 @@ import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {createUuid} from '@cdo/apps/utils';
 
 import {canCreateConnection} from '../utils/connectionRules';
+import {getNodeLabel} from '../utils/elementLabel';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
-import {getNodeLabel} from '../utils/nodeLabel';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
@@ -107,6 +108,7 @@ export function useConnectMode({
         }
         return addEdge(
           {
+            id: createUuid(),
             source: connectingFrom,
             target: targetNodeId,
             ...handles,

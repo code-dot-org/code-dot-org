@@ -18,10 +18,11 @@ export default class ProjectManagerFactory {
   static getProjectManager(
     projectId: string,
     isStandaloneProjectLevel: boolean,
-    isShareView: boolean = false
+    isShareView: boolean = false,
+    sourcesStore: SourcesStore = new SourcesStore()
   ): ProjectManager {
     return new ProjectManager({
-      sourcesStore: new SourcesStore(),
+      sourcesStore,
       channelsStore: new ChannelsStore(),
       channelId: projectId,
       reduceChannelUpdates: false,
@@ -43,7 +44,8 @@ export default class ProjectManagerFactory {
     levelId: number,
     isStandaloneProjectLevel: boolean,
     userId?: number,
-    scriptId?: number
+    scriptId?: number,
+    sourcesStore: SourcesStore = new SourcesStore()
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;
@@ -67,7 +69,7 @@ export default class ProjectManagerFactory {
       throw new Error('Could not load channel for level');
     }
     return new ProjectManager({
-      sourcesStore: new SourcesStore(),
+      sourcesStore,
       channelsStore,
       channelId,
       reduceChannelUpdates,

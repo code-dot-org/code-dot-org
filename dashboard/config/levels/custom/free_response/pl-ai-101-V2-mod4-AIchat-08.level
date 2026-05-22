@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Lesson Plan: Final Touches\r\n\r\n#### Now that we're almost done with this module, put the final touches on your lesson plan. You may want to consider: how are students using AI, how are you supporting them in their use of AI, and what sort of assessment are you going to have?\r\n\r\n> #### In the reflection box below, describe the updates to your lesson.\r\n\r\n#### Share out what you did!",
+    "long_instructions": "# Lesson Plan: Final Touches\r\n\r\nNow that we're almost done with this module, put the final touches on your lesson plan. You may want to consider: how are students using AI, how are you supporting them in their use of AI, and what sort of assessment are you going to have?\r\n\r\n> In the reflection box below, describe the updates to your lesson.\r\n\r\nShare out what you did!",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

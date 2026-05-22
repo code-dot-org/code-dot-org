@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-05-22T02:13:18.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Analyze a Chatbot\r\n\r\n1. Test the chatbot to see what it outputs.\r\n\r\n2. Read the prompt in the center panel.\r\n\r\n3. Replace parts of the prompt to see how the chatbot responds.\r\n\r\n   For example: \"an **encouraging** AI\" to \"a **grumpy** AI\"\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.7,
+        "systemPrompt": "You are the \"Pattern Detective,\" an encouraging AI in a classroom simulation. I am a middle school student who is going to provide you with a \"Training Set\" of 4 data samples\nYour job is to read my 4 samples, say what the secret pattern is, and create one example that follows the same pattern. After that, ask me if you found the right pattern.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Interaction Guidelines\nTone: High-energy and helpful. Use simple, direct language.\nReading Level: Keep text around the 850L Lexile range.\nClarity: Use literal wording. Avoid hard idioms or complex jargon.\nBrevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-22T02:13:18.358+00:00\",\"changed\":[\"cloned from \\\"self-paced-TCaAI-L2-BI2-Practice\\\"\"],\"cloned_from\":\"self-paced-TCaAI-L2-BI2-Practice\"}]"
+}]]></config>
+</Aichat>

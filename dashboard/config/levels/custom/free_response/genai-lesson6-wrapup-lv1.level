@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "####Think of a phrase where each word means something individually that is different from when the phrase is combined together.#### \r\n####Using what we’ve learned today, **describe how a neural network could be used to represent these different meanings.**####",
+    "long_instructions": "Think of a phrase where each word means something individually that is different from when the phrase is combined together.\r\nUsing what we’ve learned today, **describe how a neural network could be used to represent these different meanings.**",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

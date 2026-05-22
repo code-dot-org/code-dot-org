@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Project Planning and Scope\r\n\r\n#### What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Project Planning and Scope\r\n\r\nWhat does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

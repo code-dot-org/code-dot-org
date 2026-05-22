@@ -3,6 +3,7 @@ import type {
   ObservabilityConfig,
   ObservabilityLogger,
   ObservabilityMetrics,
+  TagValue,
 } from '../types';
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 import {getOrCreateObservabilitySessionId, isSampled} from '../sampling';
@@ -18,6 +19,8 @@ export abstract class BaseAdapter implements ObservabilityClient {
   protected sessionStorageUnavailable = false;
   private consentedUserId: string | null = null;
   private pendingConsentedUserId: string | null | undefined;
+  private pendingTags = new Map<string, TagValue>();
+  private pendingContexts = new Map<string, Record<string, unknown> | null>();
 
   logger: ObservabilityLogger = NOOP_LOGGER;
   metrics: ObservabilityMetrics = NOOP_METRICS;
@@ -47,6 +50,16 @@ export abstract class BaseAdapter implements ObservabilityClient {
       this.initialized = true;
       this.initLogger();
       this.initMetrics();
+
+      for (const [key, value] of this.pendingTags) {
+        this.applyTagToProvider(key, value);
+      }
+      this.pendingTags.clear();
+
+      for (const [name, ctx] of this.pendingContexts) {
+        this.applyContextToProvider(name, ctx);
+      }
+      this.pendingContexts.clear();
 
       if (this.pendingConsentedUserId !== undefined) {
         this.applyConsentToProvider(this.pendingConsentedUserId);
@@ -91,6 +104,45 @@ export abstract class BaseAdapter implements ObservabilityClient {
   }
 
   /**
+   * Set or replace a session-scoped tag on the active provider.
+   * Buffers the value until init() if the provider is not yet ready.
+   * @param key Tag name (low-cardinality, indexed by the provider).
+   * @param value Primitive tag value.
+   */
+  setTag(key: string, value: TagValue): void {
+    if (!this.initialized) {
+      this.pendingTags.set(key, value);
+      return;
+    }
+
+    try {
+      this.applyTagToProvider(key, value);
+    } catch (error) {
+      console.warn('[observability] failed to set tag:', error);
+    }
+  }
+
+  /**
+   * Attach a structured context blob to subsequent events on the active provider.
+   * Buffers the value until init() if the provider is not yet ready. Pass `null`
+   * to clear a previously-set context.
+   * @param name Context name (used as the key in the provider event payload).
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  setContext(name: string, ctx: Record<string, unknown> | null): void {
+    if (!this.initialized) {
+      this.pendingContexts.set(name, ctx);
+      return;
+    }
+
+    try {
+      this.applyContextToProvider(name, ctx);
+    } catch (error) {
+      console.warn('[observability] failed to set context:', error);
+    }
+  }
+
+  /**
    * Subclasses replace the default no-op logger after provider initialization.
    */
   protected initLogger(): void {}
@@ -106,6 +158,29 @@ export abstract class BaseAdapter implements ObservabilityClient {
    */
   protected applyConsentToProvider(userId: string | null): void {
     void userId;
+  }
+
+  /**
+   * Subclasses apply a tag to the underlying provider when supported.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  protected applyTagToProvider(key: string, value: TagValue): void {
+    void key;
+    void value;
+  }
+
+  /**
+   * Subclasses apply a structured context to the underlying provider when supported.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  protected applyContextToProvider(
+    name: string,
+    ctx: Record<string, unknown> | null,
+  ): void {
+    void name;
+    void ctx;
   }
 
   /**
