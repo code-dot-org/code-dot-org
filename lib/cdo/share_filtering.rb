@@ -63,11 +63,14 @@ module ShareFiltering
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
     return failure if failure
 
-    # Address: join digit-containing elements with " | " as a non-whitespace separator
-    # so that we check only block text entries and avoid checking potential street
-    # address strings that combine text from one block and another block.
-    digit_text = texts.grep(/\d/).join(' | ')
-    address = Geocoder.find_potential_street_address(digit_text)
+    # Address: check each text block independently to prevent cross-block bleeding.
+    candidate = nil
+    texts.each do |text|
+      candidate = extract_address_candidate(text)
+      break if candidate
+    end
+    return nil unless candidate
+    address = Geocoder.find_potential_street_address(candidate)
     if address
       failure = ShareFailure.new(FailureType::ADDRESS, address)
       raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
@@ -192,7 +195,9 @@ module ShareFiltering
     failure = find_email_or_phone_failure(text, exceptions: exceptions)
     return failure if failure
 
-    street_address = Geocoder.find_potential_street_address(text)
+    candidate = extract_address_candidate(text)
+    return nil unless candidate
+    street_address = Geocoder.find_potential_street_address(candidate)
     if street_address
       failure = ShareFailure.new(FailureType::ADDRESS, street_address)
       raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
@@ -344,6 +349,20 @@ module ShareFiltering
     return profanity_failure if profanity_failure
 
     nil
+  end
+
+  # Extracts a plausible street address candidate from a text string.
+  # Returns the candidate string if found, nil otherwise.
+  # A candidate starts at the first multi-digit number and spans up to
+  # MAX_ADDRESS_WORDS words; it must meet minimum length and word-count thresholds.
+  private_class_method def self.extract_address_candidate(text)
+    return nil unless text
+    match = text.match(/\b\d{2,}\b/)
+    return nil unless match
+    candidate = text[match.begin(0)..].split.first(Geocoder::MAX_ADDRESS_WORDS).join(' ')
+    return nil if candidate.length < Geocoder::MIN_ADDRESS_LENGTH
+    return nil if candidate.count(' ') < 2
+    candidate
   end
 
   # Checks text for email or phone number PII.

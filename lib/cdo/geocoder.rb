@@ -83,22 +83,13 @@ module Geocoder
   MIN_ADDRESS_LENGTH = 10
   MAX_ADDRESS_WORDS = 8
 
-  def self.find_potential_street_address(text)
-    return nil unless text
-
-    # Find the first multi-digit number as a potential house number.
-    # Single-digit numbers ("level 3", "score 5") are almost never house numbers.
-    # '|' separates concatenated text block fields — split on it so the candidate
-    # doesn't bleed across block boundaries. No-op when text contains no '|'.
-    match = text.match(/\b\d{2,}\b/)
-    return nil unless match
-
-    pos = match.begin(0)
-    segment = text[pos..].split('|').first || ''
-    candidate = segment.split.first(MAX_ADDRESS_WORDS).join(' ')
-
-    return nil if candidate.length < MIN_ADDRESS_LENGTH # too short to be an address
-    return nil if candidate.count(' ') < 2 # too few words to be an address
+  # Geocodes a pre-validated candidate string and returns it if Mapbox confirms
+  # a street-level address match, nil otherwise.
+  #
+  # Callers are responsible for extracting and validating the candidate before
+  # calling this method (see ShareFiltering.extract_address_candidate).
+  def self.find_potential_street_address(candidate)
+    return nil if candidate.nil? || candidate.empty?
 
     results = Geocoder.search(candidate)
 
