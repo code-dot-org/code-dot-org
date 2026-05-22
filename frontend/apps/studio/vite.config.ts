@@ -3,6 +3,7 @@ import {defineConfig, searchForWorkspaceRoot} from 'vite';
 import {VitePWA} from 'vite-plugin-pwa';
 import ViteRails from 'vite-plugin-rails';
 import path from 'node:path';
+import fs from 'node:fs';
 import {tanstackRouter} from '@tanstack/router-plugin/vite';
 
 // https://vite.dev/config/
@@ -44,12 +45,96 @@ export default defineConfig(({mode}) => {
         allow: [searchForWorkspaceRoot(process.cwd())],
       },
     },
+    optimizeDeps: {
+      // notebook-lab's pre-built dist has several unbundled external imports
+      // (qrcode, @codemirror/commands, …) that are not in this workspace.
+      // Excluding the package prevents Vite's import-analysis from walking
+      // those imports and failing.  The dist is then served via /@fs/ URLs,
+      // which also preserves the relative dynamic chunk import
+      // (./index-BJSx5Ove.mjs) that esbuild would otherwise flatten.
+      exclude: ['@code-dot-org/notebook-lab'],
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
       },
     },
     plugins: [
+      // Serve pyodide binaries from the notebook package's public dir during
+      // dev so the notebook lab can load Pyodide without a separate static
+      // server.  Only active in dev mode (apply: 'serve').
+      {
+        name: 'pyodide-dev-static',
+        apply: 'serve' as const,
+        configureServer(server) {
+          const pyodideDir = path.resolve(
+            __dirname,
+            '../../packages/labs/notebook/public/pyodide',
+          );
+          // Match any URL that contains /pyodide/ regardless of prefix.
+          // The worker's self.location.href picks up the Vite base path, so
+          // its relative import resolves to e.g.
+          // /frontend-studio/public/pyodide/pyodide.mjs rather than
+          // /pyodide/pyodide.mjs.  Matching on the segment handles both.
+          server.middlewares.use((req, res, next) => {
+            const urlPath = (req.url ?? '').split('?')[0];
+            const idx = urlPath.indexOf('/pyodide/');
+            if (idx === -1) return next();
+            const relPath = urlPath.slice(idx + '/pyodide'.length);
+            const filePath = path.join(pyodideDir, relPath);
+            fs.stat(filePath, (err, stat) => {
+              if (err || !stat.isFile()) return next();
+              const ext = path.extname(filePath);
+              const contentType =
+                ext === '.mjs' || ext === '.js'
+                  ? 'application/javascript'
+                  : ext === '.wasm'
+                    ? 'application/wasm'
+                    : ext === '.zip'
+                      ? 'application/zip'
+                      : ext === '.json'
+                        ? 'application/json'
+                        : 'application/octet-stream';
+              res.setHeader('Content-Type', contentType);
+              fs.createReadStream(filePath).pipe(res);
+            });
+          });
+        },
+      },
+      // Serve notebook-lab's pre-built worker and split-chunk assets so they
+      // are reachable in dev.  The dist embeds absolute URLs like
+      // `/assets/PyodideWorker-<hash>.js`; without this middleware Vite's SPA
+      // fallback returns text/html, causing a MIME-type rejection.
+      {
+        name: 'notebook-assets-dev-static',
+        apply: 'serve' as const,
+        configureServer(server) {
+          const notebookAssetsDir = path.resolve(
+            __dirname,
+            '../../packages/labs/notebook/dist/assets',
+          );
+          server.middlewares.use((req, res, next) => {
+            const urlPath = req.url?.split('?')[0] ?? '';
+            const fileName = path.basename(urlPath);
+            if (!fileName || !fileName.endsWith('.js')) return next();
+            const filePath = path.join(notebookAssetsDir, fileName);
+            fs.stat(filePath, (err, stat) => {
+              if (err || !stat.isFile()) return next();
+              res.setHeader('Content-Type', 'application/javascript');
+              fs.createReadStream(filePath).pipe(res);
+            });
+          });
+        },
+      },
+      // Transform .ipynb files (JSON) so Vite resolves them as ES module
+      // default exports rather than failing with a syntax error.
+      {
+        name: 'ipynb-json',
+        transform(src: string, id: string) {
+          if (!id.endsWith('.ipynb')) return;
+          return {code: `export default ${src}`, map: null};
+        },
+      },
       // Rails plugin is omitted for Capacitor builds because its `config()`
       // hook unconditionally sets `base` from vite.json's publicOutputDir
       // and beats both userConfig and the `--base` CLI flag. The mobile

@@ -1,0 +1,148 @@
+{
+  "samples": [
+    {
+      "file": "hello_world.ipynb",
+      "folder": "/getting-started",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567801",
+      "seedVersion": 1,
+      "goal": "Run your first Python program"
+    },
+    {
+      "file": "cfu.ipynb",
+      "folder": "/getting-started",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+      "seedVersion": 1,
+      "goal": "Check your understanding with Python"
+    },
+    {
+      "file": "chess.ipynb",
+      "folder": "/projects",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
+      "seedVersion": 1,
+      "goal": "Play chess with Python"
+    },
+    {
+      "file": "folder_lesson4.ipynb",
+      "folder": "/lessons",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567804",
+      "seedVersion": 1,
+      "goal": "Practice Python concepts"
+    },
+    {
+      "file": "folder2_lesson4.ipynb",
+      "folder": "/lessons",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567805",
+      "seedVersion": 1,
+      "goal": "Practice Python concepts"
+    },
+    {
+      "file": "lesson4.ipynb",
+      "folder": "/lessons",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
+      "seedVersion": 1,
+      "goal": "Practice Python concepts"
+    },
+    {
+      "file": "lesson4_chat.ipynb",
+      "folder": "/lessons",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567807",
+      "seedVersion": 1,
+      "goal": "Practice Python concepts"
+    },
+    {
+      "file": "lesson20.ipynb",
+      "folder": "/lessons",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567808",
+      "seedVersion": 1,
+      "goal": "Practice Python concepts"
+    },
+    {
+      "file": "matplotlib_tutorial.ipynb",
+      "folder": "/data-science",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567809",
+      "seedVersion": 1,
+      "goal": "Create charts with matplotlib"
+    },
+    {
+      "file": "pandas.ipynb",
+      "folder": "/data-science",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567810",
+      "seedVersion": 1,
+      "goal": "Analyze data with pandas"
+    },
+    {
+      "file": "sklearn_test.ipynb",
+      "folder": "/data-science",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567811",
+      "seedVersion": 1,
+      "goal": "Try machine learning with scikit-learn"
+    },
+    {
+      "file": "india_states_explorer.ipynb",
+      "folder": "/hour-of-code",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567812",
+      "seedVersion": 1,
+      "goal": "Explore with Python"
+    },
+    {
+      "file": "india_hoc_videos.ipynb",
+      "folder": "/hour-of-code",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567813",
+      "seedVersion": 1,
+      "goal": "Explore with Python"
+    },
+    {
+      "file": "kitchen_sink.ipynb",
+      "folder": "/examples",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567814",
+      "seedVersion": 1,
+      "goal": "See all notebook features"
+    },
+    {
+      "file": "parameters_test.ipynb",
+      "folder": "/examples",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567815",
+      "seedVersion": 1,
+      "goal": "Try notebook parameters"
+    },
+    {
+      "file": "chat_test.ipynb",
+      "folder": "/examples",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567816",
+      "seedVersion": 1,
+      "goal": "Test chat cell type"
+    },
+    {
+      "file": "video_test.ipynb",
+      "folder": "/examples",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567817",
+      "seedVersion": 1,
+      "goal": "Test video cell type"
+    },
+    {
+      "file": "pygame.ipynb",
+      "folder": "/projects",
+      "author": "Code.org",
+      "seedId": "a1b2c3d4-e5f6-7890-abcd-ef1234567818",
+      "seedVersion": 1,
+      "goal": "Make a game with pygame"
+    }
+  ]
+}

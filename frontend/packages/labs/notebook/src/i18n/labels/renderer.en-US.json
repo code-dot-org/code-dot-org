@@ -1,0 +1,9 @@
+{
+  "empathy.showDetails": "Show details",
+  "empathy.hideDetails": "Hide details",
+  "empathy.tryAgain": "Try again",
+  "empathy.lineLabel": "Line {{line}}",
+  "empathy.errorTitle": "Something went wrong",
+  "output.stdout.label": "Output",
+  "output.result.label": "Result"
+}

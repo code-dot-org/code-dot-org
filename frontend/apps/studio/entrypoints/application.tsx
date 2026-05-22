@@ -9,6 +9,7 @@ import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
+import {initCapacitorStart} from '@/modules/ai-decisions-mobile/capacitorStart';
 import router from '@/modules/router';
 
 // This root element is added to the page in dashboard/views/app/index.html.haml via rails_vite
@@ -17,6 +18,7 @@ const mount = document.getElementById('vite-root');
 if (typeof window !== 'undefined') {
   initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
   injectFontAwesome();
+  initCapacitorStart(router);
   registerServiceWorker();
 }
 

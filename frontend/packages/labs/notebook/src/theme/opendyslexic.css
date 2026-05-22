@@ -1,0 +1,27 @@
+/*
+ * OpenDyslexic font-face declaration.
+ *
+ * OpenDyslexic is licensed under the SIL Open Font License 1.1.
+ * The font file itself is NOT included in this repository and must be sourced
+ * separately from https://opendyslexic.org/ or another authorised mirror
+ * before this rule takes effect.
+ *
+ * Expected file location: public/fonts/opendyslexic.woff2
+ *
+ * The font is applied to the entire lab subtree when the root element carries
+ * data-font="opendyslexic" (set by LabInner in response to the accessibility
+ * toggle in AccessibilityPanel).
+ */
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/opendyslexic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[data-font='opendyslexic'],
+[data-font='opendyslexic'] * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}

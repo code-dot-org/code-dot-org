@@ -27,12 +27,17 @@ const SIGNED_OUT_MENU_ITEMS = [
 
 /** Root layout: flex column so the main content area fills the remaining viewport height. */
 function RootLayout() {
-  // Hide the footer inside a lab/project (the bottom chrome competes with
-  // limited mobile viewport space for interactive activities). Match the
-  // route by pathname rather than route-id so any future
-  // `/projects/...` subtree is covered uniformly.
-  const inLab = useRouterState({
-    select: state => state.location.pathname.includes('/projects/'),
+  // Hide the studio header AND footer inside a lab/project OR inside the
+  // mobile AI Decisions experience (`/m/...`).  Both surfaces are
+  // intended to own their own full-bleed chrome — the desktop header
+  // (Learn/Teach/Districts/...) and the legal footer eat scarce vertical
+  // real estate on a phone, pushing the actual activity below the fold.
+  const hideChrome = useRouterState({
+    select: state =>
+      // Notebook wants site chrome; all other /projects/ labs are full-bleed.
+      (state.location.pathname.startsWith('/projects/') &&
+        !state.location.pathname.startsWith('/projects/notebook/')) ||
+      state.location.pathname.startsWith('/m/'),
   });
 
   return (
@@ -57,18 +62,20 @@ function RootLayout() {
         }}
       >
         <Bootstrap locale="en-US" />
-        <Header
-          logoImageUrl={CdoLogo}
-          brandName="Code.org"
-          menuItems={SIGNED_OUT_MENU_ITEMS}
-        />
+        {!hideChrome && (
+          <Header
+            logoImageUrl={CdoLogo}
+            brandName="Code.org"
+            menuItems={SIGNED_OUT_MENU_ITEMS}
+          />
+        )}
         <Box
           component="main"
           sx={{flex: 1, display: 'flex', flexDirection: 'column'}}
         >
           <Outlet />
         </Box>
-        {!inLab && <StudioFooter />}
+        {!hideChrome && <StudioFooter />}
         <TanStackRouterDevtools />
       </Box>
     </ThemeProvider>

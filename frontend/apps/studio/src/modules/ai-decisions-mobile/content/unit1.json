@@ -1,0 +1,863 @@
+{
+  "_generated": "// AUTO-GENERATED FROM dashboard/config — run scripts/generate-mobile-content.mjs to refresh.",
+  "_source": "dashboard/config/scripts_json/k5-ai-data-2024.script_json",
+  "id": "k5-ai-data-2024",
+  "name": {
+    "en": "How AI Makes Decisions",
+    "hi": "[HI-TODO] How AI Makes Decisions"
+  },
+  "units": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Unit 1",
+        "hi": "[HI-TODO] Unit 1"
+      },
+      "lessons": [
+        {
+          "id": 1,
+          "name": {
+            "en": "Making Predictions",
+            "hi": "[HI-TODO] Making Predictions"
+          },
+          "pathIndex": 0,
+          "sectionTint": "neutral.sand",
+          "levels": [
+            {
+              "id": "sorting_items_wings",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "How is it Sorted?",
+                "hi": "[HI-TODO] How is it Sorted?"
+              },
+              "payload": {
+                "promptKey": "sorting_items_wings.prompt",
+                "bins": [
+                  {
+                    "key": "wings",
+                    "labelKey": "sorting_items_wings.bin.wings"
+                  },
+                  {
+                    "key": "noWings",
+                    "labelKey": "sorting_items_wings.bin.noWings"
+                  }
+                ],
+                "items": [
+                  {
+                    "key": "elephant",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/spritelab/sYt9h2Jn6zT5Af7RVVwfIzBcBW.9ZaqU/category_animals/elephant_1.png",
+                    "binKey": "noWings"
+                  },
+                  {
+                    "key": "duck",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/spritelab/JwUTdBccgUnE9CYFr9YqFalkytzvnmAI/category_animals/cuteanimals_duckling_hello.png",
+                    "binKey": "wings"
+                  },
+                  {
+                    "key": "horse",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/spritelab/ntmYko4Bb6PIqgj2wEI7XnAjH3F9XxeY/category_animals/horse.png",
+                    "binKey": "noWings"
+                  },
+                  {
+                    "key": "bluejay",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/spritelab/l2omFNj5BRBSnrWTi8D9Zdgn6HedUUGB/category_animals/bluejay.png",
+                    "binKey": "wings"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "sorting_items_prediction",
+              "kind": "multi",
+              "variant": "activity",
+              "title": {
+                "en": "Sort It Out",
+                "hi": "[HI-TODO] Sort It Out"
+              },
+              "payload": {
+                "questionKey": "sorting_items_prediction.q",
+                "options": [
+                  {
+                    "key": "sorting_items_prediction.opt.0",
+                    "correct": false
+                  },
+                  {
+                    "key": "sorting_items_prediction.opt.1",
+                    "correct": false
+                  },
+                  {
+                    "key": "sorting_items_prediction.opt.2",
+                    "correct": true
+                  },
+                  {
+                    "key": "sorting_items_prediction.opt.3",
+                    "correct": false
+                  }
+                ],
+                "evidence": {
+                  "type": "sorted-bins",
+                  "bins": [
+                    {
+                      "key": "a",
+                      "labelKey": "sorting_items_prediction.evidence.a",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/spritelab/n68Mm_iZajtKGMo9B99AREwPvis0QrRR/category_food/red_apple.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/Ok7O4m3kA4UMf6OKf6HN2zaLWgb7EDyW/category_animals/ladybug2.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/aUGoWCStMRK1HP3USAg5q8WMQ4.SFSCb/category_animals/crab.png"
+                      ]
+                    },
+                    {
+                      "key": "b",
+                      "labelKey": "sorting_items_prediction.evidence.b",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/spritelab/UuhhfD7HZOrlOzFyu1V_StEDAawpMRxi/category_food/face_broc.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/Pl3PQABiISN6c4AijHmQX7NuHiYf5Eh4/category_animals/frog_adult_csc.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/xwiz_SqVZ8jGaLK6TPJ8iXPrSvGvvf9o/category_video_games/cactus.png"
+                      ]
+                    },
+                    {
+                      "key": "c",
+                      "labelKey": "sorting_items_prediction.evidence.c",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/level_animations/vd4vLDvezkF4ZAWjcRkBrQv1KkqPBIxj/blue_monster.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/l2omFNj5BRBSnrWTi8D9Zdgn6HedUUGB/category_animals/bluejay.png",
+                        "https://studio.code.org/api/v1/animation-library/spritelab/cHLxyFtxN360bKiFE3JTx8wlVix.48O6/category_video_games/gameplay_bluestar.png"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "sorting_items_prediction_2",
+              "kind": "multi",
+              "variant": "activity",
+              "title": {
+                "en": "Sorting Items",
+                "hi": "[HI-TODO] Sorting Items"
+              },
+              "payload": {
+                "questionKey": "sorting_items_prediction_2.q",
+                "options": [
+                  {
+                    "key": "sorting_items_prediction_2.opt.0",
+                    "correct": false
+                  },
+                  {
+                    "key": "sorting_items_prediction_2.opt.1",
+                    "correct": false
+                  },
+                  {
+                    "key": "sorting_items_prediction_2.opt.2",
+                    "correct": false
+                  },
+                  {
+                    "key": "sorting_items_prediction_2.opt.3",
+                    "correct": true
+                  }
+                ],
+                "evidence": {
+                  "type": "sorted-bins",
+                  "bins": [
+                    {
+                      "key": "a",
+                      "labelKey": "sorting_items_prediction_2.evidence.a",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/level_animations/H9tlDarmXdp2mcamaqFWQi0tkxCOqmRU/circle_red_blue_outline.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/Y74nmDDWWOOZ_bX.CDnNPlyBddm.EBSL/circle_white_blue_outline.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/42Pgh0UHTPy2N2gFJ6AQpvjdUY4C5yJ_/circle_white_red_outline.png"
+                      ]
+                    },
+                    {
+                      "key": "b",
+                      "labelKey": "sorting_items_prediction_2.evidence.b",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/level_animations/srfrvvDOXCrGsBxi60VqRAzpDd_8Ca1D/circle_red.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/Lx.kKhL8_KhvzijvUwKCe8UPAeHY1vfF/square_red.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/r8yLH1pRgxZknLXY6POJ5vi8sV3XHjCM/triangle_red_black_outline.png"
+                      ]
+                    },
+                    {
+                      "key": "c",
+                      "labelKey": "sorting_items_prediction_2.evidence.c",
+                      "itemImageUrls": [
+                        "https://studio.code.org/api/v1/animation-library/level_animations/PhijYCmIL91z7Cjsgc6tjTiJgHK69vwn/triangle_yellow_blue_outline.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/nSr6KWfjZgIHxHKWDlGB0D6SsBS9u7ON/triangle_yellow_red_outline.png",
+                        "https://studio.code.org/api/v1/animation-library/level_animations/z7ONRb7zXgIjAIj3WKFAvFdrFx1Grva3/square_yellow.png"
+                      ]
+                    }
+                  ],
+                  "subject": {
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/srfrvvDOXCrGsBxi60VqRAzpDd_8Ca1D/circle_red.png",
+                    "labelKey": "sorting_items_prediction_2.subject.label"
+                  }
+                }
+              }
+            },
+            {
+              "id": "sorting_items_by_fill_color",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "Sorting Items",
+                "hi": "[HI-TODO] Sorting Items"
+              },
+              "payload": {
+                "promptKey": "sorting_items_by_fill_color.prompt",
+                "bins": [
+                  {
+                    "key": "shape",
+                    "labelKey": "sorting_items_by_fill_color.bin.shape"
+                  },
+                  {
+                    "key": "inside",
+                    "labelKey": "sorting_items_by_fill_color.bin.inside"
+                  },
+                  {
+                    "key": "border",
+                    "labelKey": "sorting_items_by_fill_color.bin.border"
+                  }
+                ],
+                "items": [
+                  {
+                    "key": "circle_white_blue_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/Y74nmDDWWOOZ_bX.CDnNPlyBddm.EBSL/circle_white_blue_outline.png",
+                    "binKey": "shape"
+                  },
+                  {
+                    "key": "circle_red_blue_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/H9tlDarmXdp2mcamaqFWQi0tkxCOqmRU/circle_red_blue_outline.png",
+                    "binKey": "shape"
+                  },
+                  {
+                    "key": "square_red",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/Lx.kKhL8_KhvzijvUwKCe8UPAeHY1vfF/square_red.png",
+                    "binKey": "inside"
+                  },
+                  {
+                    "key": "triangle_red_black_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/r8yLH1pRgxZknLXY6POJ5vi8sV3XHjCM/triangle_red_black_outline.png",
+                    "binKey": "inside"
+                  },
+                  {
+                    "key": "square_yellow",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/z7ONRb7zXgIjAIj3WKFAvFdrFx1Grva3/square_yellow.png",
+                    "binKey": "border"
+                  },
+                  {
+                    "key": "triangle_yellow_red_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/nSr6KWfjZgIHxHKWDlGB0D6SsBS9u7ON/triangle_yellow_red_outline.png",
+                    "binKey": "border"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "sorting_items_new",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "Sorting Items",
+                "hi": "[HI-TODO] Sorting Items"
+              },
+              "payload": {
+                "promptKey": "sorting_items_new.prompt",
+                "bins": [
+                  {
+                    "key": "circle",
+                    "labelKey": "sorting_items_new.bin.circle"
+                  },
+                  {
+                    "key": "square",
+                    "labelKey": "sorting_items_new.bin.square"
+                  },
+                  {
+                    "key": "triangle",
+                    "labelKey": "sorting_items_new.bin.triangle"
+                  }
+                ],
+                "items": [
+                  {
+                    "key": "circle_red",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/srfrvvDOXCrGsBxi60VqRAzpDd_8Ca1D/circle_red.png",
+                    "binKey": "circle"
+                  },
+                  {
+                    "key": "circle_white_blue_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/Y74nmDDWWOOZ_bX.CDnNPlyBddm.EBSL/circle_white_blue_outline.png",
+                    "binKey": "circle"
+                  },
+                  {
+                    "key": "square_red",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/Lx.kKhL8_KhvzijvUwKCe8UPAeHY1vfF/square_red.png",
+                    "binKey": "square"
+                  },
+                  {
+                    "key": "square_yellow",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/z7ONRb7zXgIjAIj3WKFAvFdrFx1Grva3/square_yellow.png",
+                    "binKey": "square"
+                  },
+                  {
+                    "key": "triangle_red_black_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/r8yLH1pRgxZknLXY6POJ5vi8sV3XHjCM/triangle_red_black_outline.png",
+                    "binKey": "triangle"
+                  },
+                  {
+                    "key": "triangle_yellow_blue_outline",
+                    "imageUrl": "https://studio.code.org/api/v1/animation-library/level_animations/PhijYCmIL91z7Cjsgc6tjTiJgHK69vwn/triangle_yellow_blue_outline.png",
+                    "binKey": "triangle"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "k5_ai_matching_sort_data",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "How are these items sorted?",
+                "hi": "[HI-TODO] How are these items sorted?"
+              },
+              "payload": {
+                "promptKey": "k5_ai_matching_sort_data.prompt",
+                "bins": [
+                  {
+                    "key": "bin0",
+                    "labelKey": "k5_ai_matching_sort_data.bin.0"
+                  },
+                  {
+                    "key": "bin1",
+                    "labelKey": "k5_ai_matching_sort_data.bin.1"
+                  },
+                  {
+                    "key": "bin2",
+                    "labelKey": "k5_ai_matching_sort_data.bin.2"
+                  }
+                ],
+                "items": [
+                  {
+                    "key": "item0",
+                    "imageUrl": "https://images.code.org/4e35f670bc113a6a647a8575d7887dbd-image-1715898341945.png",
+                    "binKey": "bin0"
+                  },
+                  {
+                    "key": "item1",
+                    "imageUrl": "https://images.code.org/034ca31e19d9e0aa72f6b5355c6a7168-image-1715898395425.png",
+                    "binKey": "bin1"
+                  },
+                  {
+                    "key": "item2",
+                    "imageUrl": "https://images.code.org/8d4b0514fee6879b9e7a2fa2b0d7248f-image-1715898407377.png",
+                    "binKey": "bin2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "k5_ai_sorting_choice_level",
+              "kind": "bubble-choice",
+              "variant": "capstone",
+              "title": {
+                "en": "Pick a level to sort!",
+                "hi": "[HI-TODO] Pick a level to sort!"
+              },
+              "payload": {
+                "options": [
+                  {
+                    "key": "k5_ai_sorting_choice_level.opt.sorting_items_free_play",
+                    "sourceKey": "sorting_items_free_play"
+                  },
+                  {
+                    "key": "k5_ai_sorting_choice_level.opt.sorting_items_free_play_2",
+                    "sourceKey": "sorting_items_free_play_2"
+                  },
+                  {
+                    "key": "k5_ai_sorting_choice_level.opt.sorting_items_free_play_3",
+                    "sourceKey": "sorting_items_free_play_3"
+                  },
+                  {
+                    "key": "k5_ai_sorting_choice_level.opt.sorting_items_free_play_4",
+                    "sourceKey": "sorting_items_free_play_4"
+                  }
+                ],
+                "descriptionRaw": "####Pick a level and sort the items on screen. Then, find a partner who will act as the computer. Your partner will have to guess how you sorted your items."
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": {
+            "en": "Training AI",
+            "hi": "[HI-TODO] Training AI"
+          },
+          "pathIndex": 1,
+          "sectionTint": "blue.light",
+          "levels": [
+            {
+              "id": "oceans_video_elementary_machine_learning_2024",
+              "kind": "oceans-video",
+              "variant": "concept",
+              "title": {
+                "en": "Machine Learning Video",
+                "hi": "[HI-TODO] Machine Learning Video"
+              },
+              "payload": {
+                "youtubeId": "mrJeRNOPBTU",
+                "mp4Url": "https://videos.code.org/levelbuilder/elementary_machine_learning-mp4.mp4",
+                "titleKey": "level.oceans_video_elementary_machine_learning_2024.title",
+                "thumbnailId": "oceans_video_elementary_machine_learning_2024",
+                "durationSec": 120
+              }
+            },
+            {
+              "id": "oceans_fishvtrash_2024",
+              "kind": "oceans-labeling",
+              "variant": "headline",
+              "title": {
+                "en": "Train AI on Fish",
+                "hi": "[HI-TODO] Train AI on Fish"
+              },
+              "payload": {
+                "appMode": "fishvtrash"
+              }
+            },
+            {
+              "id": "oceans_creaturesvtrashdemo_2024",
+              "kind": "oceans-labeling",
+              "variant": "headline",
+              "title": {
+                "en": "Train AI on Sea Creatures",
+                "hi": "[HI-TODO] Train AI on Sea Creatures"
+              },
+              "payload": {
+                "appMode": "creaturesvtrashdemo"
+              }
+            },
+            {
+              "id": "oceans_creaturesvtrash_2024",
+              "kind": "oceans-labeling",
+              "variant": "headline",
+              "title": {
+                "en": "Train AI on Sea Creatures",
+                "hi": "[HI-TODO] Train AI on Sea Creatures"
+              },
+              "payload": {
+                "appMode": "creaturesvtrash"
+              }
+            },
+            {
+              "id": "oceans_long_2024",
+              "kind": "oceans-labeling",
+              "variant": "headline",
+              "title": {
+                "en": "Teach AI a New Word",
+                "hi": "[HI-TODO] Teach AI a New Word"
+              },
+              "payload": {
+                "appMode": "long"
+              }
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": {
+            "en": "Using AI Bot",
+            "hi": "[HI-TODO] Using AI Bot"
+          },
+          "pathIndex": 2,
+          "sectionTint": "purple.light",
+          "levels": [
+            {
+              "id": "k5_ai_pilot_sorting_foods_2024",
+              "kind": "multi",
+              "variant": "activity",
+              "title": {
+                "en": "Food Feature Vector",
+                "hi": "[HI-TODO] Food Feature Vector"
+              },
+              "payload": {
+                "questionKey": "k5_ai_pilot_sorting_foods_2024.q",
+                "evidence": {
+                  "type": "feature-grid",
+                  "xAxis": {
+                    "low": "k5_ai_pilot_sorting_foods_2024.x.low",
+                    "high": "k5_ai_pilot_sorting_foods_2024.x.high"
+                  },
+                  "yAxis": {
+                    "low": "k5_ai_pilot_sorting_foods_2024.y.low",
+                    "high": "k5_ai_pilot_sorting_foods_2024.y.high"
+                  },
+                  "items": [
+                    {
+                      "emoji": "🥦",
+                      "x": 0.1,
+                      "y": 0.2
+                    },
+                    {
+                      "emoji": "🍎",
+                      "x": 0.5,
+                      "y": 0.7
+                    },
+                    {
+                      "emoji": "🍦",
+                      "x": 0.85,
+                      "y": 0.9
+                    },
+                    {
+                      "emoji": "🍕",
+                      "x": 0.4,
+                      "y": 0.85
+                    }
+                  ]
+                },
+                "options": []
+              }
+            },
+            {
+              "id": "k5_ai_pilot_sorting_fruit_vegetables_2024",
+              "kind": "multi",
+              "variant": "activity",
+              "title": {
+                "en": "Check For Understanding: Food",
+                "hi": "[HI-TODO] Check For Understanding: Food"
+              },
+              "payload": {
+                "questionKey": "k5_ai_pilot_sorting_fruit_vegetables_2024.q",
+                "options": [
+                  {
+                    "key": "k5_ai_pilot_sorting_fruit_vegetables_2024.opt.0",
+                    "correct": false
+                  },
+                  {
+                    "key": "k5_ai_pilot_sorting_fruit_vegetables_2024.opt.1",
+                    "correct": false
+                  },
+                  {
+                    "key": "k5_ai_pilot_sorting_fruit_vegetables_2024.opt.2",
+                    "correct": true
+                  },
+                  {
+                    "key": "k5_ai_pilot_sorting_fruit_vegetables_2024.opt.3",
+                    "correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": "sorting_items_emoji",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "Emoji Feature Vector",
+                "hi": "[HI-TODO] Emoji Feature Vector"
+              },
+              "payload": {
+                "sourceKey": "sorting_items_emoji",
+                "promptRaw": "Click Run. Then click and drag the items on screen. 1. Start by choosing a spot on the horizontal axis from Not happy to Very happy. 2. Then, move the emoji up the vertical axis based on how colorful you think it is from Not colorful to Very colorful",
+                "bins": [],
+                "items": []
+              }
+            },
+            {
+              "id": "k5_ai_matching_background_emoji",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "Using the training data",
+                "hi": "[HI-TODO] Using the training data"
+              },
+              "payload": {
+                "promptKey": "k5_ai_matching_background_emoji.prompt",
+                "bins": [
+                  {
+                    "key": "bin0",
+                    "labelKey": "k5_ai_matching_background_emoji.bin.0"
+                  },
+                  {
+                    "key": "bin1",
+                    "labelKey": "k5_ai_matching_background_emoji.bin.1"
+                  },
+                  {
+                    "key": "bin2",
+                    "labelKey": "k5_ai_matching_background_emoji.bin.2"
+                  }
+                ],
+                "items": [
+                  {
+                    "key": "item0",
+                    "imageUrl": "https://images.code.org/dc3f45485921e1a83735d44ca656c02b-image-1716564593233.jpg",
+                    "binKey": "bin0"
+                  },
+                  {
+                    "key": "item1",
+                    "imageUrl": "https://images.code.org/998a2f603ecb1c65677b2b8fc3345e4d-image-1716504922992.jpg",
+                    "binKey": "bin1"
+                  },
+                  {
+                    "key": "item2",
+                    "imageUrl": "https://images.code.org/c8187188cd1bd2c180bcf98433dc6012-image-1716564684133.jpg",
+                    "binKey": "bin2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ai_data_dance_party_video_level",
+              "kind": "dance-intro-video",
+              "variant": "concept",
+              "title": {
+                "en": "Video: How AI Works",
+                "hi": "[HI-TODO] Video: How AI Works"
+              },
+              "payload": {
+                "youtubeId": "_5azj0S5zc8",
+                "mp4Url": "https://videos.code.org/levelbuilder/level-6-ai-edit-code-small-v2-mp4.mp4",
+                "titleKey": "level.ai_data_dance_party_video_level.title",
+                "thumbnailId": "ai_data_dance_party_video_level",
+                "durationSec": 120
+              }
+            },
+            {
+              "id": "dance_ai_customize_effect_2024",
+              "kind": "match",
+              "variant": "activity",
+              "title": {
+                "en": "Coding with AI ",
+                "hi": "[HI-TODO] Coding with AI "
+              },
+              "payload": {
+                "sourceKey": "dance_ai_customize_effect_2024",
+                "promptRaw": "",
+                "bins": [],
+                "items": []
+              }
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": {
+            "en": "AI Tools in School",
+            "hi": "[HI-TODO] AI Tools in School"
+          },
+          "pathIndex": 3,
+          "sectionTint": "green.light",
+          "levels": [
+            {
+              "id": "k5_ai_data_survey_level",
+              "kind": "survey",
+              "variant": "activity",
+              "title": {
+                "en": "Let\\'s collect some data!",
+                "hi": "[HI-TODO] Let\\'s collect some data!"
+              },
+              "payload": {
+                "pages": [
+                  {
+                    "kind": "multi",
+                    "questionKey": "k5_ai_data_survey_level.page0.q",
+                    "options": [
+                      {
+                        "key": "k5_ai_data_survey_level.page0.opt.0",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page0.opt.1",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page0.opt.2",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page0.opt.3",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page0.opt.4",
+                        "correct": true
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "multi",
+                    "questionKey": "k5_ai_data_survey_level.page1.q",
+                    "options": [
+                      {
+                        "key": "k5_ai_data_survey_level.page1.opt.0",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page1.opt.1",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page1.opt.2",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page1.opt.3",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page1.opt.4",
+                        "correct": true
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "multi",
+                    "questionKey": "k5_ai_data_survey_level.page2.q",
+                    "options": [
+                      {
+                        "key": "k5_ai_data_survey_level.page2.opt.0",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page2.opt.1",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page2.opt.2",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page2.opt.3",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page2.opt.4",
+                        "correct": true
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "multi",
+                    "questionKey": "k5_ai_data_survey_level.page3.q",
+                    "options": [
+                      {
+                        "key": "k5_ai_data_survey_level.page3.opt.0",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page3.opt.1",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page3.opt.2",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page3.opt.3",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_survey_level.page3.opt.4",
+                        "correct": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "k5_ai_data_student_data_questions_level",
+              "kind": "survey",
+              "variant": "activity",
+              "title": {
+                "en": "Let\\'s Explore the Data!",
+                "hi": "[HI-TODO] Let\\'s Explore the Data!"
+              },
+              "payload": {
+                "pages": [
+                  {
+                    "kind": "text",
+                    "bodyKey": "k5_ai_data_student_data_questions_level.page0.body"
+                  },
+                  {
+                    "kind": "multi",
+                    "questionKey": "k5_ai_data_student_data_questions_level.page1.q",
+                    "options": [
+                      {
+                        "key": "k5_ai_data_student_data_questions_level.page1.opt.0",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_student_data_questions_level.page1.opt.1",
+                        "correct": true
+                      },
+                      {
+                        "key": "k5_ai_data_student_data_questions_level.page1.opt.2",
+                        "correct": true
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "text",
+                    "bodyKey": "k5_ai_data_student_data_questions_level.page2.body"
+                  },
+                  {
+                    "kind": "text",
+                    "bodyKey": "k5_ai_data_student_data_questions_level.page3.body"
+                  },
+                  {
+                    "kind": "text",
+                    "bodyKey": "k5_ai_data_student_data_questions_level.page4.body"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": {
+            "en": "Share Your Voice",
+            "hi": "[HI-TODO] Share Your Voice"
+          },
+          "pathIndex": 4,
+          "sectionTint": "orange.light",
+          "levels": [
+            {
+              "id": "k5_ai_final_choice_level",
+              "kind": "bubble-choice",
+              "variant": "capstone",
+              "title": {
+                "en": "End of Module Project",
+                "hi": "[HI-TODO] End of Module Project"
+              },
+              "payload": {
+                "options": [
+                  {
+                    "key": "k5_ai_final_choice_level.opt.k5_ai_final_choice_level_letter_to_principal",
+                    "sourceKey": "k5_ai_final_choice_level_letter_to_principal"
+                  },
+                  {
+                    "key": "k5_ai_final_choice_level.opt.k5_ai_final_choice_level_make_a_poster",
+                    "sourceKey": "k5_ai_final_choice_level_make_a_poster"
+                  },
+                  {
+                    "key": "k5_ai_final_choice_level.opt.k5_ai_final_choice_level_share_your_voice",
+                    "sourceKey": "k5_ai_final_choice_level_share_your_voice"
+                  },
+                  {
+                    "key": "k5_ai_final_choice_level.opt.k5_ai_final_choice_level_sprite_lab",
+                    "sourceKey": "k5_ai_final_choice_level_sprite_lab"
+                  },
+                  {
+                    "key": "k5_ai_final_choice_level.opt.k5_ai_final_choice_level_poetry_lab",
+                    "sourceKey": "k5_ai_final_choice_level_poetry_lab"
+                  }
+                ],
+                "descriptionRaw": "You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

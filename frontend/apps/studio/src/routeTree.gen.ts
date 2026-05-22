@@ -10,7 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MSeatsRouteImport } from './routes/m/seats'
+import { Route as MNotebookRouteImport } from './routes/m/notebook'
+import { Route as MJourneyRouteImport } from './routes/m/journey'
+import { Route as MHomeRouteImport } from './routes/m/home'
 import { Route as CoursesSlugRouteImport } from './routes/courses/$slug'
+import { Route as MLessonLessonIdRouteImport } from './routes/m/lesson.$lessonId'
+import { Route as MJourneyJourneyIdRouteImport } from './routes/m/journey/$journeyId'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
@@ -18,10 +24,40 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MSeatsRoute = MSeatsRouteImport.update({
+  id: '/m/seats',
+  path: '/m/seats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MNotebookRoute = MNotebookRouteImport.update({
+  id: '/m/notebook',
+  path: '/m/notebook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MJourneyRoute = MJourneyRouteImport.update({
+  id: '/m/journey',
+  path: '/m/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MHomeRoute = MHomeRouteImport.update({
+  id: '/m/home',
+  path: '/m/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoursesSlugRoute = CoursesSlugRouteImport.update({
   id: '/courses/$slug',
   path: '/courses/$slug',
   getParentRoute: () => rootRouteImport,
+} as any)
+const MLessonLessonIdRoute = MLessonLessonIdRouteImport.update({
+  id: '/m/lesson/$lessonId',
+  path: '/m/lesson/$lessonId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MJourneyJourneyIdRoute = MJourneyJourneyIdRouteImport.update({
+  id: '/$journeyId',
+  path: '/$journeyId',
+  getParentRoute: () => MJourneyRoute,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
   ProjectsLabTypeChannelIdEditRouteImport.update({
@@ -33,30 +69,81 @@ const ProjectsLabTypeChannelIdEditRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/home': typeof MHomeRoute
+  '/m/journey': typeof MJourneyRouteWithChildren
+  '/m/notebook': typeof MNotebookRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/journey/$journeyId': typeof MJourneyJourneyIdRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/home': typeof MHomeRoute
+  '/m/journey': typeof MJourneyRouteWithChildren
+  '/m/notebook': typeof MNotebookRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/journey/$journeyId': typeof MJourneyJourneyIdRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/courses/$slug': typeof CoursesSlugRoute
+  '/m/home': typeof MHomeRoute
+  '/m/journey': typeof MJourneyRouteWithChildren
+  '/m/notebook': typeof MNotebookRoute
+  '/m/seats': typeof MSeatsRoute
+  '/m/journey/$journeyId': typeof MJourneyJourneyIdRoute
+  '/m/lesson/$lessonId': typeof MLessonLessonIdRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
+  fullPaths:
+    | '/'
+    | '/courses/$slug'
+    | '/m/home'
+    | '/m/journey'
+    | '/m/notebook'
+    | '/m/seats'
+    | '/m/journey/$journeyId'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
-  id: '__root__' | '/' | '/courses/$slug' | '/projects/$labType/$channelId/edit'
+  to:
+    | '/'
+    | '/courses/$slug'
+    | '/m/home'
+    | '/m/journey'
+    | '/m/notebook'
+    | '/m/seats'
+    | '/m/journey/$journeyId'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
+  id:
+    | '__root__'
+    | '/'
+    | '/courses/$slug'
+    | '/m/home'
+    | '/m/journey'
+    | '/m/notebook'
+    | '/m/seats'
+    | '/m/journey/$journeyId'
+    | '/m/lesson/$lessonId'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CoursesSlugRoute: typeof CoursesSlugRoute
+  MHomeRoute: typeof MHomeRoute
+  MJourneyRoute: typeof MJourneyRouteWithChildren
+  MNotebookRoute: typeof MNotebookRoute
+  MSeatsRoute: typeof MSeatsRoute
+  MLessonLessonIdRoute: typeof MLessonLessonIdRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
@@ -69,12 +156,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/m/seats': {
+      id: '/m/seats'
+      path: '/m/seats'
+      fullPath: '/m/seats'
+      preLoaderRoute: typeof MSeatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/notebook': {
+      id: '/m/notebook'
+      path: '/m/notebook'
+      fullPath: '/m/notebook'
+      preLoaderRoute: typeof MNotebookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/journey': {
+      id: '/m/journey'
+      path: '/m/journey'
+      fullPath: '/m/journey'
+      preLoaderRoute: typeof MJourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/home': {
+      id: '/m/home'
+      path: '/m/home'
+      fullPath: '/m/home'
+      preLoaderRoute: typeof MHomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/courses/$slug': {
       id: '/courses/$slug'
       path: '/courses/$slug'
       fullPath: '/courses/$slug'
       preLoaderRoute: typeof CoursesSlugRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/m/lesson/$lessonId': {
+      id: '/m/lesson/$lessonId'
+      path: '/m/lesson/$lessonId'
+      fullPath: '/m/lesson/$lessonId'
+      preLoaderRoute: typeof MLessonLessonIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/m/journey/$journeyId': {
+      id: '/m/journey/$journeyId'
+      path: '/$journeyId'
+      fullPath: '/m/journey/$journeyId'
+      preLoaderRoute: typeof MJourneyJourneyIdRouteImport
+      parentRoute: typeof MJourneyRoute
     }
     '/projects/$labType/$channelId/edit': {
       id: '/projects/$labType/$channelId/edit'
@@ -86,9 +215,26 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface MJourneyRouteChildren {
+  MJourneyJourneyIdRoute: typeof MJourneyJourneyIdRoute
+}
+
+const MJourneyRouteChildren: MJourneyRouteChildren = {
+  MJourneyJourneyIdRoute: MJourneyJourneyIdRoute,
+}
+
+const MJourneyRouteWithChildren = MJourneyRoute._addFileChildren(
+  MJourneyRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CoursesSlugRoute: CoursesSlugRoute,
+  MHomeRoute: MHomeRoute,
+  MJourneyRoute: MJourneyRouteWithChildren,
+  MNotebookRoute: MNotebookRoute,
+  MSeatsRoute: MSeatsRoute,
+  MLessonLessonIdRoute: MLessonLessonIdRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
 }
 export const routeTree = rootRouteImport

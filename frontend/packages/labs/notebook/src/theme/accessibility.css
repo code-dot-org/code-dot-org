@@ -1,0 +1,49 @@
+/*
+ * Accessibility CSS custom properties and data-attribute overrides.
+ *
+ * Two features are controlled via data-* attributes on the lab root element
+ * (set by LabInner when the AccessibilityPanel toggles change):
+ *
+ *   data-line-spacing="increased"
+ *     Applies --nblab-line-height: 2 to all content; default is 1.5.
+ *
+ *   data-focus-mode="on"
+ *     Lowers opacity on cells that do not have :focus-within so the active
+ *     cell stands out.  --nblab-focus-opacity controls the dimmed value;
+ *     default keeps all cells fully visible.
+ *
+ * Both custom properties are consumed by component stylesheets.  Setting them
+ * at the root means individual cell components need no direct knowledge of the
+ * accessibility toggle state.
+ */
+
+:root {
+  --nblab-line-height: 1.5;
+  --nblab-focus-opacity: 1;
+}
+
+[data-line-spacing='increased'] {
+  --nblab-line-height: 2;
+}
+
+[data-focus-mode='on'] {
+  --nblab-focus-opacity: 0.4;
+}
+
+/* Apply line-height to all prose text inside the lab root. */
+[data-line-spacing='increased'] p,
+[data-line-spacing='increased'] li,
+[data-line-spacing='increased'] td,
+[data-line-spacing='increased'] .MuiTypography-root {
+  line-height: var(--nblab-line-height);
+}
+
+/*
+ * Focus mode: dim all direct cell wrappers that do not contain focus, then
+ * restore the active one.  The selector targets the Box elements rendered by
+ * CellList's flex container.
+ */
+[data-focus-mode='on'] > * > [data-cell-id]:not(:focus-within) {
+  opacity: var(--nblab-focus-opacity);
+  transition: opacity 0.15s ease;
+}
