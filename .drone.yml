@@ -140,15 +140,6 @@ services:
     image: redis
     ports:
       - 6379
-  - name: ci-tests-mysql
-    image: mysql:8.0
-    ports:
-      - 3306
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -184,6 +175,19 @@ steps:
       restore: true
       debug: true
       pull: true
+
+  # Implement mysql db as a detached step rather than a service, so that we can
+  # wait to start it up until we've finished restoring the cache.
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    detach: true
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
   - name: checkout
     image: bitnamilegacy/git
