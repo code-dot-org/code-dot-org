@@ -25,11 +25,11 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
 
 /**
  * Aria label for an edge, describing its endpoints in human-readable terms.
- * For a free-floating line (both endpoints are internal line anchors) the
+ * For a free-floating line (both endpoints are node anchors) the
  * label is simply "Line". When one or both endpoints are real nodes the
  * source and target are described using getNodeLabel.
  */
-export function getEdgeAriaLabel(
+export function getEdgeLabel(
   edge: SketchlabReactFlowEdge,
   nodes: SketchlabReactFlowNode[]
 ): string {

@@ -64,7 +64,7 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
-import {getEdgeAriaLabel} from '../utils/elementLabel';
+import {getEdgeLabel} from '../utils/elementLabel';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
@@ -425,7 +425,7 @@ export default function ReactFlowCanvas({
           ...edge,
           selected,
           ...(locked && {deletable: false}),
-          ariaLabel: getEdgeAriaLabel(edge, nodes),
+          ariaLabel: getEdgeLabel(edge, nodes),
           className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
