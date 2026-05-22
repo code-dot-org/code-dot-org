@@ -235,8 +235,10 @@ steps:
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
+      - service mysql start
+      - mysql --user=root < mysql_databases.sql
       - EXIT_CODE=0
-      - /entrypoint.sh mysql --user=root < mysql_databases.sql && docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
+      - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
