@@ -70,6 +70,7 @@ import {
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
+import {getEdgeAriaLabel} from '../utils/nodeLabel';
 
 import Toolbar from './Toolbar';
 
@@ -413,8 +414,6 @@ export default function ReactFlowCanvas({
           },
         };
       }),
-      // TODO: Add meaningful ariaLabel to edges using node labels instead of
-      // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
@@ -422,6 +421,7 @@ export default function ReactFlowCanvas({
           ...edge,
           selected,
           ...(locked && {deletable: false}),
+          ariaLabel: getEdgeAriaLabel(edge, nodes),
           className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
