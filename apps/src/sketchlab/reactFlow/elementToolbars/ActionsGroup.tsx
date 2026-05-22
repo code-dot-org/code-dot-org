@@ -108,8 +108,9 @@ export default function ActionsGroup({
               >
                 <FontAwesomeV6Icon
                   iconName={
-                    handlesToggle.visible ? 'handles-visible' : 'handles-hidden'
+                    handlesToggle.visible ? 'handles-hidden' : 'handles-visible'
                   }
+                  iconFamily="kit"
                 />
               </IconButton>
             </Tooltip>

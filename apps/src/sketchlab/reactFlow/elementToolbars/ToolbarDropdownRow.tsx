@@ -1,6 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {useId, useState} from 'react';
+
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 
 import styles from './element-toolbar.module.scss';
 
@@ -68,8 +71,19 @@ export default function ToolbarDropdownRow({
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
+          // Tag both the modal root (which hosts the click-catching
+          // Backdrop) and the Paper with the toolbar panel class. The
+          // canvas' outside-click listener walks up from event.target;
+          // without the root tag, clicks on the Backdrop look
+          // like outside-toolbar clicks and dismiss the toolbar.
+          root: {
+            className: SKETCHLAB_TOOLBAR_PANEL_CLASS,
+          },
           paper: {
-            className: styles.popoverPaper,
+            className: classNames(
+              styles.popoverPaper,
+              SKETCHLAB_TOOLBAR_PANEL_CLASS
+            ),
             'aria-label': popoverAriaLabel ?? label,
           },
         }}
