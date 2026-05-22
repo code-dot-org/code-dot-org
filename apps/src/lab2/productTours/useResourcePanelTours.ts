@@ -78,27 +78,22 @@ const useResourcePanelTours = ({
     );
   }, [isWeblab2, levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
-  const [weblab2OnboardingTourSeen, setWeblab2OnboardingTourSeen] = useState(
+  // Snapshot at mount so Web Lab 2 resource panel onboarding only auto-starts
+  // on a later page view, not immediately after completing Web Lab onboarding.
+  const [weblab2OnboardingTourSeenAtPageLoad] = useState(
     () => tryGetLocalStorage(WEBLAB2_ONBOARDING_TOUR_SEEN, 'no') === 'yes'
   );
-  useEffect(() => {
-    setWeblab2OnboardingTourSeen(
-      tryGetLocalStorage(WEBLAB2_ONBOARDING_TOUR_SEEN, 'no') === 'yes'
-    );
-  }, []);
 
   const onWeblab2OnboardingTourComplete = useCallback(() => {
     onTourComplete(
       ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName
     )();
-    setWeblab2OnboardingTourSeen(true);
   }, []);
 
   const onWeblab2OnboardingTourCancel = useCallback((stepIndex: number) => {
     onTourCancel(
       ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName
     )(stepIndex);
-    setWeblab2OnboardingTourSeen(true);
   }, []);
 
   const {tour: weblab2OnboardingTour} = useLab2ProductTour({
@@ -124,12 +119,17 @@ const useResourcePanelTours = ({
   }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
   // For Web Lab 2, wait for the Web Lab onboarding tour before showing the
-  // resource panel onboarding tour. Other labs should show this tour normally.
+  // resource panel onboarding tour on a later page view. Other labs should
+  // show this tour normally.
   const showResourcePanelOnboardingTour = useMemo(
     () =>
       isResourcePanelOnboardingEnabled &&
-      (!isWeblab2 || weblab2OnboardingTourSeen),
-    [isResourcePanelOnboardingEnabled, isWeblab2, weblab2OnboardingTourSeen]
+      (!isWeblab2 || weblab2OnboardingTourSeenAtPageLoad),
+    [
+      isResourcePanelOnboardingEnabled,
+      isWeblab2,
+      weblab2OnboardingTourSeenAtPageLoad,
+    ]
   );
 
   const [resourcePanelOnboardingTourSeen, setResourcePanelOnboardingTourSeen] =
