@@ -419,6 +419,17 @@ Resources:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig: <%= cloudfront_config('Dashboard') %>
+
+  # Per-stack clone of the AcceptLanguage CloudFront function defined in lambda.yml.erb.
+  # The Name property is account-global, so prefix with stack_name to avoid collision.
+  AcceptLanguageFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: <%= stack_name %>-AcceptLanguage
+      FunctionCode: <%= js_erb 'accept-language.js.erb', max: FUNCTION_MAX %>
+      FunctionConfig:
+        Comment: "Normalizes Accept-Language header from viewer requests"
+        Runtime: cloudfront-js-1.0
 <% end -%>
 
 <% if cdn_enabled -%>
