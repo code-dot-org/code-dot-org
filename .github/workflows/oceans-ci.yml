@@ -98,8 +98,10 @@ jobs:
         run: yarn turbo run build --filter=@code-dot-org/oceans-lab
         working-directory: ./frontend
       - name: Eyes
+        # HOME=/root is Playwright's documented Firefox-in-container fix.
         env:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
           VISUAL_PROVIDER: applitools
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
           APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
