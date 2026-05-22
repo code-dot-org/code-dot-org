@@ -25,6 +25,8 @@ jobs:
         working-directory: ./frontend
 
   e2e:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     container:
@@ -50,20 +52,61 @@ jobs:
         working-directory: ./frontend
 
       - name: E2E Tests
-        # Step-level env so GHA passes PLAYWRIGHT_BROWSERS_PATH directly to this
-        # shell process. Job-level env is not reliably forwarded through turbo to
-        # the playwright subprocess; step-level env is. Use yarn workspace (not
-        # turbo) to match the pattern in marketing-sites/storybook-test.
+        # HOME=/root is Playwright's documented Firefox-in-container fix.
         env:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
         run: yarn workspace @code-dot-org/oceans-lab test:ui:ci
         working-directory: ./frontend
 
       - name: Upload Playwright Report
-        if: failure()
+        # Upload on flakes too (passing-on-retry leaves the job green).
+        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
+          path: |
+            frontend/packages/labs/oceans/playwright-report/
+            frontend/packages/labs/oceans/test-results/
+          retention-days: 7
+
+  eyes:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      # Must match the `playwright` catalog version in frontend/.yarnrc.yml.
+      # When upgrading Playwright, bump both the catalog semver and this image tag together.
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+      - name: Eyes
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          VISUAL_PROVIDER: applitools
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+          APPLITOOLS_BRANCH: ${{ github.head_ref }}
+        run: yarn workspace @code-dot-org/oceans-lab test:visual
+        working-directory: ./frontend
+      - name: Upload Playwright Report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-eyes-report
           path: |
             frontend/packages/labs/oceans/playwright-report/
             frontend/packages/labs/oceans/test-results/

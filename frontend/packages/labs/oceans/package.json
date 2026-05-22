@@ -32,6 +32,8 @@
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
+    "test:visual": "playwright test --project=visual",
+    "test:visual:prove": "tsx scripts/prove-visual.ts",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -52,6 +54,7 @@
     "remark-rehype": "^5.0.0"
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.34.0",
     "@code-dot-org/lint-config": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -69,6 +72,7 @@
     "query-string": "4.1.0",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "tsx": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",

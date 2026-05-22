@@ -23,6 +23,12 @@ export default defineConfig({
   workers: process.env.CI ? '100%' : undefined,
   reporter: process.env.CI ? 'github' : 'list',
   timeout: 60_000,
+  expect: {
+    toHaveScreenshot: {
+      animations: 'disabled',
+      maxDiffPixelRatio: 0.01,
+    },
+  },
   use: {
     baseURL: BASE_URL,
     trace: 'on-first-retry',
@@ -32,7 +38,33 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {...devices['Desktop Chrome']},
+      grepInvert: /@visual/,
     },
+    {
+      name: 'firefox',
+      use: {...devices['Desktop Firefox']},
+      grepInvert: /@visual/,
+    },
+    {
+      name: 'webkit',
+      use: {...devices['Desktop Safari']},
+      grepInvert: /@visual/,
+    },
+    // Visual project registers only when VISUAL_PROVIDER is set; `playwright
+    // test` (no args) runs the 3 e2e projects only.
+    ...(process.env.VISUAL_PROVIDER
+      ? [
+          {
+            name: 'visual',
+            use: {...devices['Desktop Chrome']},
+            grep: /@visual/,
+            retries: 0,
+            fullyParallel: false,
+            snapshotPathTemplate:
+              '{testDir}/tmp/baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',
+          },
+        ]
+      : []),
   ],
   webServer: {
     command: 'yarn dev --port 5173',
