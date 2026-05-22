@@ -11,10 +11,7 @@ import {
 } from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {
-  fetchTurnstileTokenIfEnabled,
-  turnstileHeaders,
-} from './turnstile';
+import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 import {LOG} from './turnstile/constants';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
@@ -51,7 +48,8 @@ async function transcribeThroughGateway(
     );
 
     const rawResponse = await response.json();
-    const parseResult = GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+    const parseResult =
+      GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
     if (!parseResult.success) {
       console.error(
         `${LOG} transcribe response schema mismatch:`,

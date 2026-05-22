@@ -8,10 +8,7 @@ import {
 } from './gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {
-  fetchTurnstileTokenIfEnabled,
-  turnstileHeaders,
-} from './turnstile';
+import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 import {LOG} from './turnstile/constants';
 
 type SDKOptions = Parameters<typeof generateText>[0];
