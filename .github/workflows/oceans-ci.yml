@@ -21,8 +21,16 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Build, Lint, Typecheck, Test
-        run: yarn turbo run release:dryrun --filter=@code-dot-org/oceans-lab
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/oceans-lab --summarize
         working-directory: ./frontend
+
+      - name: Upload turbo summary (debug)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: turbo-summary-build
+          path: frontend/.turbo/runs/
+          retention-days: 7
 
   e2e:
     # Sequence after build so the turbo cache is warm.
@@ -48,8 +56,16 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Build
-        run: yarn turbo run build --filter=@code-dot-org/oceans-lab
+        run: yarn turbo run build --filter=@code-dot-org/oceans-lab --summarize
         working-directory: ./frontend
+
+      - name: Upload turbo summary (debug)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: turbo-summary-e2e
+          path: frontend/.turbo/runs/
+          retention-days: 7
 
       - name: E2E Tests
         # HOME=/root is Playwright's documented Firefox-in-container fix.
