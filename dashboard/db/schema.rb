@@ -646,7 +646,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_20_204057) do
     t.string "demo_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["demo_type"], name: "index_demo_students_on_demo_type"
+    t.index ["demo_type", "user_id"], name: "index_demo_students_on_demo_type_and_user_id"
     t.index ["user_id", "demo_type"], name: "index_demo_students_on_user_id_and_demo_type", unique: true
   end
 

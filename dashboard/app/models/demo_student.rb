@@ -10,7 +10,7 @@
 #
 # Indexes
 #
-#  index_demo_students_on_demo_type              (demo_type)
+#  index_demo_students_on_demo_type_and_user_id  (demo_type,user_id)
 #  index_demo_students_on_user_id_and_demo_type  (user_id,demo_type) UNIQUE
 #
 class DemoStudent < ApplicationRecord

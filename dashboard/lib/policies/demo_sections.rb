@@ -92,7 +92,7 @@ class Policies::DemoSections
   end
 
   def self.all_demo_student_ids
-    @all_demo_student_ids ||= DemoStudent.pluck(:user_id).to_set
+    @all_demo_student_ids ||= DemoStudent.distinct.pluck(:user_id).to_set
   end
 
   def self.demo_student?(user_id)

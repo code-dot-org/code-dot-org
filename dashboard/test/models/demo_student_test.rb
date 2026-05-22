@@ -44,19 +44,29 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert other_type.valid?
   end
 
-  test 'invalidates Policies::DemoSections cache on commit' do
+  # Tests below exercise the after_commit cache-reset hook by invoking the
+  # callbacks directly. Transactional tests roll back, so real :commit hooks
+  # never fire on their own here.
+
+  test 'after_commit hook clears Policies::DemoSections cache' do
     student = create(:student)
-    Policies::DemoSections.all_demo_student_ids # warm cache
-    DemoStudent.create!(user: student, demo_type: 'high')
+    record = DemoStudent.new(user: student, demo_type: 'high')
+    Policies::DemoSections.all_demo_student_ids # warm cache (does not include student)
+
+    record.save!
+    record.run_callbacks(:commit)
 
     assert_includes Policies::DemoSections.all_demo_student_ids, student.id
   end
 
-  test 'invalidates Policies::DemoSections cache on destroy' do
+  test 'after_commit hook clears Policies::DemoSections cache on destroy' do
     student = create(:student)
     record = DemoStudent.create!(user: student, demo_type: 'high')
-    Policies::DemoSections.all_demo_student_ids # warm cache (now contains student)
+    record.run_callbacks(:commit) # ensure post-create cache is fresh
+    Policies::DemoSections.all_demo_student_ids # warm cache (includes student)
+
     record.destroy!
+    record.run_callbacks(:commit)
 
     refute_includes Policies::DemoSections.all_demo_student_ids, student.id
   end

@@ -10,6 +10,6 @@ class CreateDemoStudents < ActiveRecord::Migration[7.0]
       t.timestamps
     end
     add_index :demo_students, [:user_id, :demo_type], unique: true
-    add_index :demo_students, :demo_type
+    add_index :demo_students, [:demo_type, :user_id]
   end
 end
