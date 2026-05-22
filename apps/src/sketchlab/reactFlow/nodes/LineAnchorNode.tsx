@@ -21,7 +21,7 @@ function LineAnchorNode({data}: LineAnchorNodeProps) {
   const isConnectable = connections.length === 0;
 
   return (
-    <div className={styles.anchorNode} aria-label="Line endpoint">
+    <div className={styles.anchorNode}>
       <Handle
         type={handleType}
         id={lineAnchorHandleId(handleType)}

@@ -394,6 +394,9 @@ export default function ReactFlowCanvas({
             connectable: false,
             deletable: false,
           }),
+          // Override React Flow's default "{type} node" aria-label on the
+          // wrapper element so screenreaders hear a human-readable description.
+          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,
