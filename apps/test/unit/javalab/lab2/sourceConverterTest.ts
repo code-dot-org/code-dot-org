@@ -12,9 +12,10 @@ function flatFile(
   text: string,
   tabOrder: number,
   isVisible = true,
-  isValidation = false
+  isValidation = false,
+  extras: {isOpen?: boolean; isActive?: boolean} = {}
 ) {
-  return {text, tabOrder, isVisible, isValidation};
+  return {text, tabOrder, isVisible, isValidation, ...extras};
 }
 
 describe('javalab2 sourceConverter', () => {
@@ -110,6 +111,62 @@ describe('javalab2 sourceConverter', () => {
         expect(f.type).toBe(ProjectFileType.STARTER);
       });
     });
+
+    it('excludes visible files with isOpen=false from openFiles', () => {
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1, true, false, {isOpen: false}),
+        'C.java': flatFile('c', 2),
+      });
+      const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
+      expect(openNames).toEqual(['A.java', 'C.java']);
+      // The closed file is still present in files and still a STARTER.
+      const closed = Object.values(mf.files).find(f => f.name === 'B.java')!;
+      expect(closed.type).toBe(ProjectFileType.STARTER);
+    });
+
+    it('treats missing isOpen as true', () => {
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1),
+      });
+      const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
+      expect(openNames).toEqual(['A.java', 'B.java']);
+    });
+
+    it('sets ProjectFile.active for the file with isActive=true', () => {
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1, true, false, {isActive: true}),
+        'C.java': flatFile('c', 2),
+      });
+      const byName: Record<string, boolean | undefined> = {};
+      Object.values(mf.files).forEach(f => (byName[f.name] = f.active));
+      expect(byName['A.java']).toBeUndefined();
+      expect(byName['B.java']).toBe(true);
+      expect(byName['C.java']).toBeUndefined();
+    });
+
+    it('marks no file active when isActive is absent everywhere', () => {
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1),
+      });
+      Object.values(mf.files).forEach(f => {
+        expect(f.active).toBeUndefined();
+      });
+    });
+
+    it('honors only the lowest-tabOrder file when isActive=true is duplicated', () => {
+      const mf = flatToMultiFile({
+        'B.java': flatFile('b', 1, true, false, {isActive: true}),
+        'A.java': flatFile('a', 0, true, false, {isActive: true}),
+        'C.java': flatFile('c', 2, true, false, {isActive: true}),
+      });
+      const active = Object.values(mf.files).filter(f => f.active === true);
+      expect(active).toHaveLength(1);
+      expect(active[0].name).toBe('A.java');
+    });
   });
 
   describe('multiFileToFlat', () => {
@@ -176,6 +233,94 @@ describe('javalab2 sourceConverter', () => {
       expect(flat['A.java'].isValidation).toBe(false);
       expect(flat['B.java'].isVisible).toBe(false);
       expect(flat['B.java'].isValidation).toBe(true);
+    });
+
+    it('emits isOpen and isActive explicitly on every file', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'A.java',
+            contents: '',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+            active: true,
+          },
+          b: {
+            id: 'b',
+            name: 'B.java',
+            contents: '',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+          c: {
+            id: 'c',
+            name: 'C.java',
+            contents: '',
+            folderId: 'root',
+            type: ProjectFileType.SUPPORT,
+          },
+          d: {
+            id: 'd',
+            name: 'D.java',
+            contents: '',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+        },
+        openFiles: ['a'],
+      };
+      const flat = multiFileToFlat(source);
+      // A is open (in openFiles) and active.
+      expect(flat['A.java'].isOpen).toBe(true);
+      expect(flat['A.java'].isActive).toBe(true);
+      // B is visible but not in openFiles -> closed, not active.
+      expect(flat['B.java'].isOpen).toBe(false);
+      expect(flat['B.java'].isActive).toBe(false);
+      // Support and validation files emit isOpen:false explicitly.
+      expect(flat['C.java'].isOpen).toBe(false);
+      expect(flat['C.java'].isActive).toBe(false);
+      expect(flat['D.java'].isOpen).toBe(false);
+      expect(flat['D.java'].isActive).toBe(false);
+    });
+
+    it('round-trips open/closed/active state through multiFile -> flat -> multiFile', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'A.java',
+            contents: 'a',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+          '1': {
+            id: '1',
+            name: 'B.java',
+            contents: 'b',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+            active: true,
+          },
+          '2': {
+            id: '2',
+            name: 'C.java',
+            contents: 'c',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+        },
+        // C is closed (not in openFiles); B is the active tab.
+        openFiles: ['0', '1'],
+      };
+      const round = flatToMultiFile(multiFileToFlat(source));
+      const openNames = (round.openFiles ?? []).map(id => round.files[id].name);
+      expect(openNames).toEqual(['A.java', 'B.java']);
+      const active = Object.values(round.files).filter(f => f.active === true);
+      expect(active).toHaveLength(1);
+      expect(active[0].name).toBe('B.java');
     });
   });
 });

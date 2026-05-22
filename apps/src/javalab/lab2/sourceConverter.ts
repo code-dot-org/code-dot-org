@@ -4,9 +4,9 @@
 // MultiFileSource. Conversion happens at exactly two boundaries:
 // JavalabSourcesStore (S3 round-trip) and Javalab2View (start_sources at
 // mount). These functions are pure.
-// Known issue: we don't persist which files are 'open' when converting,
-// because legacy Java Lab did not have a concept of closing files.
-// This will be handled in a future phase.
+//
+// Open/active tab state lives on the flat shape as optional `isOpen` and
+// `isActive` fields. Both are unknown extras to Javabuilder, which will safely ignore them.
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
@@ -52,8 +52,10 @@ export function flatToMultiFile(
     };
   });
 
-  // Visible, non-validation files become tabs, ordered by legacy tabOrder.
-  // Ties and missing tabOrders fall back to original key order.
+  // Visible, non-validation files are potential open tabs, ordered by legacy
+  // tabOrder. Ties and missing tabOrders fall back to original key order.
+  // Within that set, only files with isOpen !== false make it into openFiles
+  // (missing isOpen defaults to true).
   const visible = entries
     .map(([name, props], i) => ({name, props, i}))
     .filter(e => e.props.isVisible && !e.props.isValidation);
@@ -64,8 +66,16 @@ export function flatToMultiFile(
     return a.i - b.i;
   });
   const openFiles = visible
+    .filter(e => e.props.isOpen !== false)
     .map(e => idByName.get(e.name))
     .filter((id): id is FileId => !!id);
+
+  // Honor isActive on the first claiming file in tab order.
+  const activeEntry = visible.find(e => e.props.isActive === true);
+  if (activeEntry) {
+    const activeId = idByName.get(activeEntry.name);
+    if (activeId) files[activeId].active = true;
+  }
 
   return {folders: {}, files, openFiles};
 }
@@ -112,11 +122,16 @@ export function multiFileToFlat(
     const tabOrder = openIndex.has(file.id)
       ? (openIndex.get(file.id) as number)
       : nextClosedTab++;
+    // isOpen is meaningful only for visible non-validation files. For
+    // support/validation files we emit false to be explicit.
+    const isOpen = isVisible && !isValidation && openIndex.has(file.id);
     flat[file.name] = {
       text: file.contents ?? '',
       tabOrder,
       isVisible,
       isValidation,
+      isOpen,
+      isActive: file.active === true,
     };
   }
 
