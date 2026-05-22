@@ -7,9 +7,6 @@
 # be deleted.
 
 app_name = 'pegasus'
-home = node[:home]
-root = File.join(home, node.chef_environment)
-app_root = File.join(root, app_name)
 unit_file = "/lib/systemd/system/#{app_name}.service"
 
 # Stop and disable the Pegasus service.
@@ -40,10 +37,4 @@ end
 
 file "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners" do
   action :delete
-end
-
-# Remove Pegasus NewRelic configuration, if it exists.
-file "#{app_root}/config/newrelic.yml" do
-  action :delete
-  only_if {File.exist?("#{app_root}/config/newrelic.yml")}
 end

@@ -3,7 +3,7 @@ import {flatten} from 'flat';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '../../../index';
 import type {Environment} from '../../../environment';
-import type {ObservabilityConfig} from '../types';
+import type {ObservabilityConfig, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
@@ -60,6 +60,27 @@ export class SentryAdapter extends BaseAdapter {
    */
   protected applyConsentToProvider(userId: string | null): void {
     Sentry.setUser(userId ? {id: userId} : null);
+  }
+
+  /**
+   * Apply a low-cardinality tag to the global Sentry scope.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  protected applyTagToProvider(key: string, value: TagValue): void {
+    Sentry.setTag(key, value);
+  }
+
+  /**
+   * Attach a structured context blob to subsequent events.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  protected applyContextToProvider(
+    name: string,
+    ctx: Record<string, unknown> | null,
+  ): void {
+    Sentry.setContext(name, ctx);
   }
 
   /**
