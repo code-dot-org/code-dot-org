@@ -31,7 +31,8 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
  */
 export function getEdgeLabel(
   edge: SketchlabReactFlowEdge,
-  nodes: SketchlabReactFlowNode[]
+  nodes: SketchlabReactFlowNode[],
+  lineIndex?: number
 ): string {
   const sourceNode = nodes.find(node => node.id === edge.source);
   const targetNode = nodes.find(node => node.id === edge.target);
@@ -40,15 +41,9 @@ export function getEdgeLabel(
   const targetIsAnchor = !targetNode || targetNode.type === 'lineAnchor';
 
   if (sourceIsAnchor && targetIsAnchor) {
-    return 'Line';
+    return lineIndex !== undefined ? `Line ${lineIndex}` : 'Line';
   }
-
-  const sourceLabel = sourceIsAnchor
-    ? 'line endpoint'
-    : getNodeLabel(sourceNode!);
-  const targetLabel = targetIsAnchor
-    ? 'line endpoint'
-    : getNodeLabel(targetNode!);
-
-  return `Line from ${sourceLabel} to ${targetLabel}`;
+  return `Line from ${getNodeLabel(sourceNode!)} to ${getNodeLabel(
+    targetNode!
+  )}`;
 }
