@@ -4,17 +4,9 @@
  * actually used in this codebase are declared.
  */
 
-declare module 'radium' {
-  /**
-   * Radium HOC.  We use it for the inline-style features (array styles,
-   * `:hover` / `:focus` keys); the typing here is intentionally permissive —
-   * Radium passes the wrapped component through with no useful type
-   * narrowing of its own.
-   */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function Radium<T = any>(component: T): T;
-  export default Radium;
-}
+// Opt in to React's experimental types, which add `inert` to HTMLAttributes.
+// Remove when upgrading to React 19 (@types/react 19 includes it in index.d.ts).
+/// <reference types="react/experimental" />
 
 declare module 'react-typist' {
   import type {Component, ReactNode} from 'react';
