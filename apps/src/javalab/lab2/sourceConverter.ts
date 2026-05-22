@@ -65,17 +65,21 @@ export function flatToMultiFile(
     if (tabA !== tabB) return tabA - tabB;
     return a.i - b.i;
   });
-  const openFiles = visible
-    .filter(e => e.props.isOpen !== false)
-    .map(e => idByName.get(e.name))
-    .filter((id): id is FileId => !!id);
-
   // Honor isActive on the first claiming file in tab order.
   const activeEntry = visible.find(e => e.props.isActive === true);
   if (activeEntry) {
     const activeId = idByName.get(activeEntry.name);
     if (activeId) files[activeId].active = true;
   }
+
+  // openFiles = visible files where isOpen !== false. isActive=true
+  // implies open: codebridge's editing helpers assume active ⇒ open
+  // (see activateFileHelper / closeFileHelper), so we'd hand codebridge
+  // an inconsistent state otherwise.
+  const openFiles = visible
+    .filter(e => e.props.isOpen !== false || e.props.isActive === true)
+    .map(e => idByName.get(e.name))
+    .filter((id): id is FileId => !!id);
 
   return {folders: {}, files, openFiles};
 }
@@ -113,26 +117,22 @@ export function multiFileToFlat(
   const openIndex = new Map<FileId, number>();
   openFiles.forEach((id, idx) => openIndex.set(id, idx));
 
-  // Open files take tabOrder 0..N-1; closed files get monotonically
-  // increasing tabOrders starting at openFiles.length.
-  let nextClosedTab = openFiles.length;
+  // tabOrder is set on open files (0..N-1) and omitted on everything
+  // else — closed tabs, support, and validation.
   for (const file of Object.values(source.files)) {
     const isVisible = isVisibleForFlatShape(file);
     const isValidation = file.type === ProjectFileType.VALIDATION;
-    const tabOrder = openIndex.has(file.id)
-      ? (openIndex.get(file.id) as number)
-      : nextClosedTab++;
-    // isOpen is meaningful only for visible non-validation files. For
-    // support/validation files we emit false to be explicit.
     const isOpen = isVisible && !isValidation && openIndex.has(file.id);
     flat[file.name] = {
       text: file.contents ?? '',
-      tabOrder,
       isVisible,
       isValidation,
       isOpen,
       isActive: file.active === true,
     };
+    if (openIndex.has(file.id)) {
+      flat[file.name].tabOrder = openIndex.get(file.id);
+    }
   }
 
   return flat;

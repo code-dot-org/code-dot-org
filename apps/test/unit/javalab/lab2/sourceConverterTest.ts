@@ -157,6 +157,23 @@ describe('javalab2 sourceConverter', () => {
       });
     });
 
+    it('isActive=true forces a file into openFiles even when isOpen=false', () => {
+      // Codebridge's editing helpers assume the active file is always
+      // open. flatToMultiFile must not hand off an inconsistent state.
+      const mf = flatToMultiFile({
+        'A.java': flatFile('a', 0),
+        'B.java': flatFile('b', 1, true, false, {
+          isOpen: false,
+          isActive: true,
+        }),
+        'C.java': flatFile('c', 2),
+      });
+      const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
+      expect(openNames).toEqual(['A.java', 'B.java', 'C.java']);
+      const active = Object.values(mf.files).find(f => f.active === true);
+      expect(active?.name).toBe('B.java');
+    });
+
     it('honors only the lowest-tabOrder file when isActive=true is duplicated', () => {
       const mf = flatToMultiFile({
         'B.java': flatFile('b', 1, true, false, {isActive: true}),
@@ -194,17 +211,14 @@ describe('javalab2 sourceConverter', () => {
         expect(round[name].isValidation).toBe(original[name].isValidation);
       });
 
-      // multiFileToFlat always assigns a tabOrder, even though the type
-      // field is optional on the wire.
+      // Open visible files keep their relative order in tabOrder.
+      // Closed/hidden/validation files have no tab position, so
+      // tabOrder is omitted.
       const mainTab = round['Main.java'].tabOrder!;
       const helperTab = round['Helper.java'].tabOrder!;
-      const hiddenTab = round['Hidden.java'].tabOrder!;
-      const testTab = round['Test.java'].tabOrder!;
-      // Visible files keep their relative order in tabOrder
       expect(mainTab).toBeLessThan(helperTab);
-      // Hidden / validation files get a tabOrder >= count of visible files
-      expect(hiddenTab).toBeGreaterThanOrEqual(2);
-      expect(testTab).toBeGreaterThanOrEqual(2);
+      expect(round['Hidden.java'].tabOrder).toBeUndefined();
+      expect(round['Test.java'].tabOrder).toBeUndefined();
     });
 
     it('SUPPORT and VALIDATION files report isVisible=false', () => {
@@ -272,17 +286,23 @@ describe('javalab2 sourceConverter', () => {
         openFiles: ['a'],
       };
       const flat = multiFileToFlat(source);
-      // A is open (in openFiles) and active.
+      // A is open (in openFiles) and active; tabOrder is set.
       expect(flat['A.java'].isOpen).toBe(true);
       expect(flat['A.java'].isActive).toBe(true);
-      // B is visible but not in openFiles -> closed, not active.
+      expect(flat['A.java'].tabOrder).toBe(0);
+      // B is visible but not in openFiles -> closed, not active,
+      // no tabOrder.
       expect(flat['B.java'].isOpen).toBe(false);
       expect(flat['B.java'].isActive).toBe(false);
-      // Support and validation files emit isOpen:false explicitly.
+      expect(flat['B.java'].tabOrder).toBeUndefined();
+      // Support and validation files emit isOpen:false explicitly and
+      // have no tabOrder either (they aren't tabs).
       expect(flat['C.java'].isOpen).toBe(false);
       expect(flat['C.java'].isActive).toBe(false);
+      expect(flat['C.java'].tabOrder).toBeUndefined();
       expect(flat['D.java'].isOpen).toBe(false);
       expect(flat['D.java'].isActive).toBe(false);
+      expect(flat['D.java'].tabOrder).toBeUndefined();
     });
 
     it('round-trips open/closed/active state through multiFile -> flat -> multiFile', () => {
