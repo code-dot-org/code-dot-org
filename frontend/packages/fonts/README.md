@@ -28,14 +28,13 @@ Font Awesome allows us to include a wide variety of icon types such as:
 
 ## Updating FontAwesome Files
 
-If you are looking to update the FontAwesome files in the `injectFontAwesome` function in `loader/index.ts`, you'll need to do the following:
+If you are looking to update the FontAwesome files in the `injectFontAwesome` function in `loader/index.ts`, you'll need to do the following steps.
+If you want more information on how FontAwesome expects us to set things up, see the "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts), and supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
 
 1. **Download css and webfont files from FontAwesome.**
-   Sign in with our shared dev account, find our "Code.org Kit", then click "Download Web Files" from the "Self-Host on the Web" option.
+   Sign in with our shared dev account, find our "Code.org Kit" (as of May 2026 we are using the kit 'Code.org FontAwesome Kit v6 (Current)'), then click "Download Web Files" from the "Self-Host on the Web" option.
    This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
-2. **Use "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts).
-   Supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
-3. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files listed in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
+2. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files referenced in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
 
 **Example CSS with absolute paths**
 
