@@ -123,10 +123,8 @@ export default function ActionsGroup({
               onClick={handlesToggle.onToggle}
             >
               <FontAwesomeV6Icon
-                iconName={
-                  handlesToggle.visible ? 'handles-hidden' : 'handles-visible'
-                }
-                iconStyle={'regular'}
+                iconName={handlesToggle.visible ? 'empty-set' : 'circle'}
+                iconStyle={handlesToggle.visible ? 'solid' : 'regular'}
                 iconFamily={'kit'}
               />
             </IconButton>
