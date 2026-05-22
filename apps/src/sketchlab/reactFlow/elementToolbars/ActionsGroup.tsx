@@ -125,7 +125,6 @@ export default function ActionsGroup({
               <FontAwesomeV6Icon
                 iconName={handlesToggle.visible ? 'empty-set' : 'circle'}
                 iconStyle={handlesToggle.visible ? 'solid' : 'regular'}
-                iconFamily={'kit'}
               />
             </IconButton>
           </Tooltip>
