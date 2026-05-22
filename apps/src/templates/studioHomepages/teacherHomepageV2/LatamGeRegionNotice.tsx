@@ -37,7 +37,7 @@ export const LatamGeRegionNotice: FC = () => {
       className={styles.notificationBanner}
       type={alertTypes.info}
       isImmediateImportance={false}
-      text="Selecciona Español-EEUU si estás en EE. UU. o Español-LATAM si estás en Latinoamérica desde el selector de idioma al pie de página para tener una experiencia adaptada a tu región."
+      text="Selecciona español de EE. UU. si estás en EE. UU. o español latinoamericano si estás en Latinoamérica para una experiencia adaptada a tu región."
       link={{
         text: '¡Cámbiate a Español-LATAM!',
         href: (() => {
