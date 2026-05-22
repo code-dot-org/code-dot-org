@@ -49,7 +49,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-external-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -96,7 +96,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:external-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -170,7 +170,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-external-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -231,7 +231,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:external-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'ui_tests'
@@ -324,7 +324,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:external-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -346,7 +346,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-external-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -358,6 +358,13 @@ steps:
 volumes:
   - name: mysql
     temp: {}
+
+# trigger:
+#   branch:
+#     - "staging"
+#     - "staging-next"
+#   event:
+#     - push
 
 trigger:
   branch:
