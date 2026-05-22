@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-05-20T21:20:07.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Lesson Plan: Final Touches\r\n\r\nNow that we're almost done with this module, put the final touches on your lesson plan. You may want to consider: how are students using AI, how are you supporting them in their use of AI, and what sort of assessment are you going to have?\r\n\r\n> In the reflection box below, describe the updates to your lesson.\r\n\r\nShare out what you did!",
+    "long_instructions": "# Lesson Plan: Final Touches\r\n\r\n#### Now that we're almost done with this module, put the final touches on your lesson plan. You may want to consider: how are students using AI, how are you supporting them in their use of AI, and what sort of assessment are you going to have?\r\n\r\n> #### In the reflection box below, provide a final summary of your lesson plan.\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n</div>\r\n</div>",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -21,9 +22,8 @@
     "display_name": "Step 2, Reflection",
     "thumbnail_url": "https://images.code.org/c18a28cf07e6ad4b13c5440600bbbcef-Screenshot 2026-03-18 at 10.56.25 AM.png"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:20:07.982+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod4-AIchat-08\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod4-AIchat-08\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:20:07.982+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod4-AIchat-08\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod4-AIchat-08\"},{\"changed_at\":\"2026-05-21 14:00:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

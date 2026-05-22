@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI Literacy
+# AI Fluency
 
-You, your students, or fellow educators may have some misconceptions around AI literacy.
+You, your students, or fellow educators may have some misconceptions around AI fluency.
 
 > 💬 **Quick Reflection:** As you review the chart below try to identify any misconceptions you have heard about AI literacy. Where did these misconceptions come from?
 
@@ -16,7 +16,7 @@ You, your students, or fellow educators may have some misconceptions around AI l
 <div style="display:flex; flex-wrap:wrap; gap:16px;">
 
 <div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is</div>
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Fluency Is</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">
@@ -63,7 +63,7 @@ You, your students, or fellow educators may have some misconceptions around AI l
 </div>
 
 <div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is NOT</div>
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Fluency Is NOT</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">

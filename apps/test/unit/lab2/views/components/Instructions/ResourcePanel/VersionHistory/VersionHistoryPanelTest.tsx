@@ -322,6 +322,63 @@ describe('VersionHistoryPanel', () => {
     expect(versionInput.checked).toBe(true);
   });
 
+  it('preserves selected version across tab reopen when viewing an old version', async () => {
+    store.dispatch(setViewingOldVersion(true));
+
+    // Wire selectedVersion through real state so the rendered selection
+    // reflects whatever the panel asks for, not the static prop.
+    const TestHarness = ({isOpen}: {isOpen: boolean}) => {
+      const [selected, setSelected] = React.useState('2');
+      return (
+        <ThemeProvider>
+          <Provider store={store}>
+            <VersionHistoryPanel
+              startSources={{source: ''}}
+              selectedVersion={selected}
+              setSelectedVersion={setSelected}
+              levelId={123}
+              disabled={false}
+              isOpen={isOpen}
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+    };
+
+    const {rerender} = render(<TestHarness isOpen={false} />);
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+    const initialCallCount =
+      mockedProjectManager.getVersionList.mock.calls.length;
+
+    // Simulate the tab becoming active again.
+    rerender(<TestHarness isOpen={true} />);
+
+    // Wait for the reopen effect to fire and the version list to refetch.
+    await waitFor(
+      () =>
+        expect(
+          mockedProjectManager.getVersionList.mock.calls.length
+        ).toBeGreaterThan(initialCallCount),
+      {timeout: 2000}
+    );
+
+    // Expand the auto-save group so version 2's radio is rendered.
+    const expandButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(expandButton);
+
+    // Version 2 should still be the selected radio — the reopen path must
+    // not fall back to the latest version while an old version is being viewed.
+    const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
+    expect(versionInput.checked).toBe(true);
+  });
+
   it('hides restore button when viewing as another user', async () => {
     // Set viewAsUserId to simulate a teacher viewing a student's project
     store = getStore();

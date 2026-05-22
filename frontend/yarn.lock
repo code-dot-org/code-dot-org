@@ -1553,7 +1553,6 @@ __metadata:
     prettier: "catalog:"
     prop-types: "npm:^15.8.1"
     query-string: "npm:4.1.0"
-    radium: "npm:^0.25.2"
     react: "catalog:"
     react-dom: "catalog:"
     react-typist: "npm:^2.0.5"
@@ -8349,13 +8348,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bowser@npm:^1.7.3":
-  version: 1.9.4
-  resolution: "bowser@npm:1.9.4"
-  checksum: 10c0/72504ebb20eed2143ed22715e13bd48d51bde31de113beb500bd17e86009a28cd6b32436b5e001e4c7cdf89c8c06249275cc219ce82c1be28558b32ae61472a1
-  languageName: node
-  linkType: hard
-
 "boxen@npm:4.2.0":
   version: 4.2.0
   resolution: "boxen@npm:4.2.0"
@@ -9513,16 +9505,6 @@ __metadata:
   version: 3.2.3
   resolution: "css-functions-list@npm:3.2.3"
   checksum: 10c0/03f9ed34eeed310d2b1cf0e524eea02bc5f87854a4de85f8957ea432ab1036841a3fb00879590519f7bb8fda40d992ce7a72fa9b61696ca1dc53b90064858f96
-  languageName: node
-  linkType: hard
-
-"css-in-js-utils@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "css-in-js-utils@npm:2.0.1"
-  dependencies:
-    hyphenate-style-name: "npm:^1.0.2"
-    isobject: "npm:^3.0.1"
-  checksum: 10c0/6696cda3ebd596fc42ff40059546786936a8cf709e00bc8dedce6cd42c2b3edb19333a5d5bba6ac35b75b58cf55c021cee7ab3ec0f13fb2cf59fbb024ba0894f
   languageName: node
   linkType: hard
 
@@ -11286,13 +11268,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exenv@npm:^1.2.1":
-  version: 1.2.2
-  resolution: "exenv@npm:1.2.2"
-  checksum: 10c0/4e96b355a6b9b9547237288ca779dd673b2e698458b409e88b50df09feb7c85ef94c07354b6b87bc3ed0193a94009a6f7a3c71956da12f45911c0d0f5aa3caa0
-  languageName: node
-  linkType: hard
-
 "exit-x@npm:^0.2.2":
   version: 0.2.2
   resolution: "exit-x@npm:0.2.2"
@@ -12845,13 +12820,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hyphenate-style-name@npm:^1.0.2":
-  version: 1.1.0
-  resolution: "hyphenate-style-name@npm:1.1.0"
-  checksum: 10c0/bfe88deac2414a41a0d08811e277c8c098f23993d6a1eb17f14a0f11b54c4d42865a63d3cfe1914668eefb9a188e2de58f38b55a179a238fd1fef606893e194f
-  languageName: node
-  linkType: hard
-
 "iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -13040,16 +13008,6 @@ __metadata:
   version: 0.1.1
   resolution: "inline-style-parser@npm:0.1.1"
   checksum: 10c0/08832a533f51a1e17619f2eabf2f5ec5e956d6dcba1896351285c65df022c9420de61d73256e1dca8015a52abf96cc84ddc3b73b898b22de6589d3962b5e501b
-  languageName: node
-  linkType: hard
-
-"inline-style-prefixer@npm:^4.0.0":
-  version: 4.0.2
-  resolution: "inline-style-prefixer@npm:4.0.2"
-  dependencies:
-    bowser: "npm:^1.7.3"
-    css-in-js-utils: "npm:^2.0.0"
-  checksum: 10c0/c802cf66b78b9bb6e01530fb17c5fafad783c7c813e8365280b8498d5f55e31dc61a187857b04a1d097e616e9f80bd61a8d66a86baafec53524ce2d79c0e633c
   languageName: node
   linkType: hard
 
@@ -17592,7 +17550,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.10, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -17802,19 +17760,6 @@ __metadata:
   version: 7.3.0
   resolution: "quick-lru@npm:7.3.0"
   checksum: 10c0/28dc8eaadcd489d26917f238ad27a6b09f8fe3a609152b0a4f399d5805094e07b56fe1e8c0d7ade0c11463c31bef329803672effc559601daf160a85f578fd05
-  languageName: node
-  linkType: hard
-
-"radium@npm:^0.25.2":
-  version: 0.25.2
-  resolution: "radium@npm:0.25.2"
-  dependencies:
-    exenv: "npm:^1.2.1"
-    inline-style-prefixer: "npm:^4.0.0"
-    prop-types: "npm:^15.5.8"
-  peerDependencies:
-    react: ^15.3.0 || ^16.0.0
-  checksum: 10c0/852a0676acaa13a1c54a1b94ee10e60aede8424ab58c713cd265aa56d864e753811ea53541e1563df4ccf930d0c405e1f023cdc9ca3781f0b34ff04504e26b08
   languageName: node
   linkType: hard
 
