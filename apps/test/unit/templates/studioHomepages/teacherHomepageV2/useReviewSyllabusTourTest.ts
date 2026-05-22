@@ -71,6 +71,20 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
     expect(mockCreateShepherdTour).not.toHaveBeenCalled();
   });
 
+  it('clears the step key and does not show when no steps are built for the demoType', () => {
+    mockTryGetSessionStorage
+      .mockReturnValueOnce('unit-breadcrumb-step')
+      .mockReturnValueOnce('middle'); // unsupported demoType — returns []
+
+    resumeReviewSyllabusOnboardingTour();
+
+    expect(mockTour.show).not.toHaveBeenCalled();
+    expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
+      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+      ''
+    );
+  });
+
   it('builds a tour and shows the saved step when both keys are present', () => {
     const savedStepId = 'unit-breadcrumb-step';
     (mockTour.steps as {id: string}[]).push({id: savedStepId});

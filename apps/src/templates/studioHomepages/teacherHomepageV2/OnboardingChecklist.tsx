@@ -30,7 +30,10 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     if (id === 'create-section') {
       createSectionTour?.start();
     } else if (id === 'review-syllabus') {
-      reviewSyllabusTour?.start();
+      // Only start the review syllabus tour for high school teachers, since the onboarding steps are specific to the high school experience for now
+      if (demoType === 'high') {
+        reviewSyllabusTour?.start();
+      }
     }
   };
 

@@ -35,6 +35,11 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   });
   tour.addSteps(createReviewSyllabusUnitOverviewSteps(tour, demoType));
 
+  if (tour.steps.length === 0) {
+    trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
+    return;
+  }
+
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
   tour.on('complete', clearStep);
