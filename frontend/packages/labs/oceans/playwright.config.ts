@@ -50,20 +50,24 @@ export default defineConfig({
       use: {...devices['Desktop Safari']},
       grepInvert: /@visual/,
     },
-    // Visual project registers only when VISUAL_PROVIDER is set; `playwright
+    // Visual projects register only when VISUAL_PROVIDER is set; `playwright
     // test` (no args) runs the 3 e2e projects only.
     ...(process.env.VISUAL_PROVIDER
-      ? [
-          {
-            name: 'visual',
-            use: {...devices['Desktop Chrome']},
-            grep: /@visual/,
-            retries: 0,
-            fullyParallel: false,
-            snapshotPathTemplate:
-              '{testDir}/tmp/baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',
-          },
-        ]
+      ? (
+          [
+            ['visual-chromium', 'Desktop Chrome'],
+            ['visual-firefox', 'Desktop Firefox'],
+            ['visual-webkit', 'Desktop Safari'],
+          ] as const
+        ).map(([name, device]) => ({
+          name,
+          use: {...devices[device]},
+          grep: /@visual/,
+          retries: 0,
+          fullyParallel: false,
+          snapshotPathTemplate:
+            '{testDir}/tmp/baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',
+        }))
       : []),
   ],
   webServer: {
