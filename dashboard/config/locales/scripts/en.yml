@@ -27584,10 +27584,12 @@ en:
             lessonGroup-5:
               display_name: End of Unit Survey
           title: 'AI and Machine Learning '
-          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-aiml-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-ai-ml-2026/units/1). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description_audience: ''
+          lessons: {}
+          name: ai-and-machine-learning-2026
         interactive-animations-and-games-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28240,23 +28242,27 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            ## Welcome!
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
 
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+            In this professional learning module, you will be able to:
 
-            ##### Find the learning that works for you:
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
-            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+            **Suggested time:** 70 minutes
           student_description: |-
-            ## Welcome!
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
 
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+            In this professional learning module, you will be able to:
 
-            ##### Find the learning that works for you:
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
-            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+            **Suggested time:** 70 minutes
         intro-to-web-lab:
           lessons: {}
           lesson_groups: {}
@@ -28306,9 +28312,9 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach Web Development.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to Web Development.
             * Practice key concepts included in the unit.
@@ -28317,9 +28323,9 @@ en:
 
             **Suggested time**: 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach Web Development.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to Web Development.
             * Practice key concepts included in the unit.
@@ -28334,8 +28340,28 @@ en:
           title: Preparing to Teach Programming with Music Lab
           description_audience: ''
           description_short: ''
-          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
-          student_description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
         self-paced-pl-teaching-data-and-society-2026:
           lessons: {}
           lesson_groups: {}
@@ -28343,8 +28369,26 @@ en:
           title: Preparing to Teach Data and Society
           description_audience: "'26-'27"
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          description: |-
+            This professional learning module is designed to help you prepare to teach Data and Society.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Data and Society.
+            * Practice key concepts included in the unit.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 70 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Data and Society.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Data and Society.
+            * Practice key concepts included in the unit.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 70 minutes
         self-paced-pl-teaching-design-process-2026:
           lessons: {}
           lesson_groups: {}
@@ -28353,9 +28397,9 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach the Design Process.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to The Design Process.
             * Practice key concepts included in the unit.
@@ -28364,9 +28408,9 @@ en:
 
             **Suggested time:** 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach the Design Process.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to The Design Process.
             * Practice key concepts included in the unit.
@@ -28381,8 +28425,28 @@ en:
           title: Preparing to Teach Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description: |-
+            This professional learning module is designed to help you prepare to teach Interactive Animations and Games.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Interactive Animations and Games.
+            * Practice key concepts included in the unit.
+            * Engage with Game Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Interactive Animations and Games.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Interactive Animations and Games.
+            * Practice key concepts included in the unit.
+            * Engage with Game Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
         self-paced-pl-teaching-creating-apps-with-devices-circuit-2026:
           lessons: {}
           lesson_groups: {}
@@ -28390,8 +28454,8 @@ en:
           title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-creating-apps-with-devices-microbit-2026:
           lessons: {}
           lesson_groups: {}
@@ -28399,8 +28463,8 @@ en:
           title: Preparing to Teach Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-ai-and-ml-2026:
           lessons:
             lesson-6:
@@ -28411,22 +28475,26 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            **In this professional learning module, you will:**
+            This professional learning module is designed to help you prepare to teach AI and Machine Learning.
+
+            In this professional learning module, you will:
 
             * Get an introduction to artificial intelligence and machine learning.
             * Practice key concepts included in the unit.
             * Engage with AI Lab and App Lab.
-            * Explore end of chapter projects.
+            * Explore end-of-chapter projects.
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
           student_description: |-
-            **In this professional learning module, you will:**
+            This professional learning module is designed to help you prepare to teach AI and Machine Learning.
+
+            In this professional learning module, you will:
 
             * Get an introduction to artificial intelligence and machine learning.
             * Practice key concepts included in the unit.
             * Engage with AI Lab and App Lab.
-            * Explore end of chapter projects.
+            * Explore end-of-chapter projects.
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
@@ -29103,8 +29171,8 @@ en:
           title: Introducing AI for Educators
           description_audience: ''
           description_short: ''
-          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI Literacy and explain the benefits of AI literacy for both educators and students.\n\n\n**Suggested time:** 60 minutes"
-          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI Literacy and explain the benefits of AI literacy for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
         self-paced-pl-ai-101-mod2-2026:
           lessons: {}
           lesson_groups: {}
@@ -29126,9 +29194,10 @@ en:
 
             **You will:**
 
-            * Learn guiding principles when using AI in an educational context.
-            * Practice how to effectively use AI tools to support various educational tasks.
-            * Assess the suitability of different AI tools and platforms for their specific teaching contexts.
+            * Explain key principles for using AI effectively and responsibly in an educational context.
+            * Identify ways AI can support teaching practice across planning, communication, and reflection.
+            * Develop and refine prompts to improve the quality and usefulness of AI outputs.
+            * Practice using AI tools to support common instructional tasks.
 
             **Suggested time:** 60 minutes
           student_description: |-
@@ -29136,9 +29205,10 @@ en:
 
             **You will:**
 
-            * Learn guiding principles when using AI in an educational context.
-            * Practice how to effectively use AI tools to support various educational tasks.
-            * Assess the suitability of different AI tools and platforms for their specific teaching contexts.
+            * Explain key principles for using AI effectively and responsibly in an educational context.
+            * Identify ways AI can support teaching practice across planning, communication, and reflection.
+            * Develop and refine prompts to improve the quality and usefulness of AI outputs.
+            * Practice using AI tools to support common instructional tasks.
 
             **Suggested time:** 60 minutes
         self-paced-pl-ai-101-mod5-2026:
@@ -29152,9 +29222,10 @@ en:
             This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
 
             **You will:**
-            * Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
-            * Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
-            * Revisit the benefits and address the risks of AI in an educational setting.
+            * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
+            * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
+            * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
+            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -29162,9 +29233,10 @@ en:
             This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
 
             **You will:**
-            * Recognize and discuss the ethical considerations and potential biases in AI, especially as they relate to education.
-            * Develop and implement responsible AI practices in your teaching, ensuring student safety and data privacy.
-            * Revisit the benefits and address the risks of AI in an educational setting.
+            * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
+            * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
+            * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
+            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -29180,10 +29252,10 @@ en:
 
             **You will:**
 
-            * Critically evaluate AI tools and resources for their applicability and effectiveness in the classroom.
-            * Reflect on AI implementation strategies through the lens of Universal Design for Learning and Culturally Responsive Teaching.
-            * Explore how you could introduce and integrate AI technologies into your own classroom settings, taking into consideration your specific educational contexts and student needs.
-            * Learn about the resources available to teach about AI in your classroom.
+            * Explore the AI Literacy Framework.
+            * Plan ways to integrate AI into your teaching practice that support diverse learners and instructional goals.
+            * Identify strategies for using AI with students while maintaining academic integrity and supporting meaningful assessment.
+            * Explore the resources available to teach with and about AI in your classroom.
 
             **Suggested time:** 60 minutes
           student_description: |-
@@ -29191,10 +29263,10 @@ en:
 
             **You will:**
 
-            * Critically evaluate AI tools and resources for their applicability and effectiveness in the classroom.
-            * Reflect on AI implementation strategies through the lens of Universal Design for Learning and Culturally Responsive Teaching.
-            * Explore how you could introduce and integrate AI technologies into your own classroom settings, taking into consideration your specific educational contexts and student needs.
-            * Learn about the resources available to teach about AI in your classroom.
+            * Explore the AI Literacy Framework.
+            * Plan ways to integrate AI into your teaching practice that support diverse learners and instructional goals.
+            * Identify strategies for using AI with students while maintaining academic integrity and supporting meaningful assessment.
+            * Explore the resources available to teach with and about AI in your classroom.
 
             **Suggested time:** 60 minutes
         aif-year2-semester1-unit3:
@@ -29233,3 +29305,34 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-teaching-thinking-critically-about-ai-2026:
+          lessons:
+            lesson-3:
+              name: Big Ideas in Thinking Critically About AI
+          lesson_groups: {}
+          name: self-paced-pl-teaching-thinking-critically-about-ai-2026
+          title: Preparing to Teach Thinking Critically about AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes

@@ -11,6 +11,9 @@ markdown <<MARKDOWN
 </div>
 <br>
 
+
+---
+
 ## Conditionals in flowcharts
 
 Let's take a look at the flowchart below. 
@@ -20,14 +23,81 @@ This flowchart simulates a simple program that checks the value of the score to 
 <img src="https://images.code.org/3beb270ece0b218a2c2753df93083649-image-1762364855399.png" alt="icon of hand pressing a button" width="350px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
 
 
-- Is `score > 100` is the decision point?
-- If it’s **true**, the program displays “You win!”
-- If it’s **false**, it displays “Keep trying!”
+## Trace the Decision
+
+Before looking at the code, use the flowchart logic to predict what the program will display.
+
+<div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin:24px 0;">
+
+  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer; font-size:18pt; font-weight:700; list-style:none;">
+      Score = 120
+    </summary>
+    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
+      ✅ <strong>Displays:</strong> “You win!”<br><br>
+      The condition <code>score > 100</code> is true because 120 is greater than 100.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer; font-size:18pt; font-weight:700; list-style:none;">
+      Score = 75
+    </summary>
+    <div style="margin-top:14px; font-size:14pt; line-height:1.5;">
+      ✅ <strong>Displays:</strong> “Keep trying!”<br><br>
+      The condition <code>score > 100</code> is false because 75 is not greater than 100.
+    </div>
+  </details>
+
+</div>
 
 <div style="clear:both;"></div>
 
+---
 
-## From flowchart to code
+## Match the Flowchart to the Code
+
+Click each part of the code to see what part of the flowchart it connects to.
+
+<div style="background:#F5F7F8; border-radius:14px; padding:18px; margin:24px 0;">
+
+  <details style="margin-bottom:12px;">
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        if (score > 100)
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🔷This matches the decision diamond in the flowchart. It asks the question: “Is the score greater than 100?”
+    </div>
+  </details>
+
+  <details style="margin-bottom:12px;">
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        display "You win!"
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🟦 This happens when the condition is true.
+    </div>
+  </details>
+
+  <details>
+    <summary style="cursor:pointer; list-style:none;">
+      <code style="font-size:16pt; background:#ffffff; padding:8px 12px; border-radius:8px; display:inline-block;">
+        else display "Keep trying!"
+      </code>
+    </summary>
+    <div style="margin-top:10px; font-size:14pt; line-height:1.5;">
+      🟦 This happens when the condition is false.
+    </div>
+  </details>
+
+</div>
+
+</div>
+
 Flowcharts help students see how a program makes decisions **step by step**. 
 
 In JavaScript, the logic from the flowchart is written with an **if/else statement**.
@@ -41,14 +111,10 @@ In JavaScript, the logic from the flowchart is written with an **if/else stateme
 
 <div style="clear:both;"></div>
 
----
-
-</div>
-
 <div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-<b> 💡Teacher Tip: </b>Each shape in the flowchart connects directly to part of the code — the question becomes the condition, and the arrows become the paths the program can take. Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
+<b> 💡Teacher Tip: </b>Each shape in the flowchart connects directly to part of the code. The question becomes the condition, and the arrows become the paths the program can take. Encourage students to trace the code back to the flowchart to check their logic. This helps students see that their code is following the exact plan they created, building confidence and accuracy in their thinking.
 </p>
 
 </div>
@@ -56,9 +122,13 @@ In JavaScript, the logic from the flowchart is written with an **if/else stateme
 
 
 
-## What's Next?
+## Let's practice!
 
-You will create a flowchart, and the upload the flowchart and work with AI to create an if/else statement. 
+
+
+
+
+
 
 
 MARKDOWN

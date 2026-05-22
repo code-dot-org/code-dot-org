@@ -45,11 +45,5 @@ Below are a few examples of guidance or structure you could integrate into your 
     </div>
   </div>
 
-  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
-    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
-    </div>
-  </div>
-
 </div>
 MARKDOWN
