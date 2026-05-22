@@ -1,0 +1,58 @@
+/**
+ * print.css — basic print stylesheet for the CompletionArtifact view.
+ *
+ * Hides navigation elements and formats the artifact cleanly for printing
+ * or saving to PDF.
+ */
+
+@media print {
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Hide navigation, bottom nav, dialogs, and share actions when printing. */
+  nav,
+  [role="navigation"],
+  .MuiBottomNavigation-root,
+  .MuiDialog-root,
+  .no-print,
+  [data-no-print] {
+    display: none !important;
+  }
+
+  /* Remove shadows and decorative borders from MUI cards. */
+  .MuiPaper-root,
+  .MuiCard-root {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  /* Prevent page breaks inside cell rows. */
+  tr,
+  li,
+  [data-artifact-cell] {
+    page-break-inside: avoid;
+  }
+
+  /* Keep headings with their following content. */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Remove link underline noise. */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Print full URLs for external links. */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #555;
+  }
+}
