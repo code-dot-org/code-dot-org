@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -5,7 +6,6 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 import Spinner from '../../../../../sharedComponents/Spinner';
 
@@ -85,17 +85,15 @@ class FoormEntityEditorHeader extends Component {
         {this.props.headerTitle}
         <div style={styles.helperButtons}>
           <div style={styles.livePreview}>
-            <ToggleGroup
+            <SegmentedButtons
               onChange={this.props.livePreviewToggled}
-              selected={this.props.livePreviewStatus}
-            >
-              <button type="button" value={PREVIEW_ON}>
-                Live Preview On
-              </button>
-              <button type="button" value={PREVIEW_OFF}>
-                Live Preview Off
-              </button>
-            </ToggleGroup>
+              selectedButtonValue={this.props.livePreviewStatus}
+              size="xs"
+              buttons={[
+                {value: PREVIEW_ON, label: 'Live Preview On'},
+                {value: PREVIEW_OFF, label: 'Live Preview Off'},
+              ]}
+            />
           </div>
           <div style={styles.validation}>
             <Button
@@ -112,7 +110,7 @@ class FoormEntityEditorHeader extends Component {
               this.state.lastValidated && (
                 <div style={styles.validationInfo}>
                   {this.state.validationError && (
-                    <FontAwesome icon="triangle-exclamation" />
+                    <FontAwesome icon="exclamation-triangle" />
                   )}
                   {`Last validated at ${
                     this.state.lastValidated
