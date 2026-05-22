@@ -1,0 +1,81 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Popover, Typography} from '@mui/material';
+import React, {useId, useState} from 'react';
+
+import styles from './element-toolbar.module.scss';
+
+interface ToolbarDropdownRowProps {
+  label: string;
+  triggerPreview?: React.ReactNode;
+  triggerLabel: string;
+  popoverAriaLabel?: string;
+  popoverRole?: 'menu' | 'dialog';
+  renderPopoverContent: (closePopover: () => void) => React.ReactNode;
+}
+
+// Form row: label-left, dropdown-trigger-right. Owns the open/anchor state
+// for its popover so each row's submenu is independent. Trigger renders
+// "[preview] {triggerLabel} [chevron]" — preview is e.g. a color swatch or
+// FA icon supplied by the parent.
+export default function ToolbarDropdownRow({
+  label,
+  triggerPreview,
+  triggerLabel,
+  popoverAriaLabel,
+  popoverRole = 'menu',
+  renderPopoverContent,
+}: ToolbarDropdownRowProps) {
+  const labelId = useId();
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const open = Boolean(anchorEl);
+  const closePopover = () => setAnchorEl(null);
+
+  return (
+    <div className={styles.dropdownRow}>
+      <Typography
+        id={labelId}
+        variant="body3"
+        className={styles.dropdownRowLabel}
+      >
+        {label}
+      </Typography>
+      <Button
+        className={styles.dropdownTrigger}
+        variant="outlined"
+        color="secondary"
+        size="small"
+        disableRipple
+        aria-labelledby={labelId}
+        aria-haspopup={popoverRole === 'menu' ? 'menu' : 'dialog'}
+        aria-expanded={open}
+        onClick={event => setAnchorEl(event.currentTarget)}
+      >
+        <span className={styles.dropdownTriggerContent}>
+          {triggerPreview}
+          <span className={styles.dropdownTriggerLabel}>{triggerLabel}</span>
+        </span>
+        <FontAwesomeV6Icon
+          iconName="chevron-down"
+          iconStyle="solid"
+          className={styles.dropdownChevron}
+          aria-hidden="true"
+        />
+      </Button>
+      <Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={closePopover}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        slotProps={{
+          paper: {
+            className: styles.popoverPaper,
+            'aria-label': popoverAriaLabel ?? label,
+          },
+        }}
+      >
+        {renderPopoverContent(closePopover)}
+      </Popover>
+    </div>
+  );
+}

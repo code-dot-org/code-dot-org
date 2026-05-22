@@ -95,11 +95,11 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   );
 
   return (
-    <div className={styles.group} role="group" aria-labelledby={groupLabelId}>
+    <div className={styles.section} role="group" aria-labelledby={groupLabelId}>
       <Typography
         id={groupLabelId}
         variant="overline3"
-        className={styles.groupLabel}
+        className={styles.sectionTitle}
       >
         Rotation
       </Typography>

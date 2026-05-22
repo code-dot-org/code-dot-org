@@ -3,6 +3,7 @@ import React from 'react';
 import {DEFAULT_ROTATION} from '../constants';
 import {ImageNodeType} from '../types';
 
+import AltTextRow from './AltTextRow';
 import LockedNotice from './LockedNotice';
 import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
@@ -18,11 +19,19 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Image options">
+    <ToolbarShell
+      target={{type: 'node', id: nodeId}}
+      title="Image"
+      ariaLabel="Image options"
+    >
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
+          <AltTextRow
+            value={data.altText ?? ''}
+            onChange={next => patchNodeData({altText: next})}
+          />
           <RotationGroup
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}

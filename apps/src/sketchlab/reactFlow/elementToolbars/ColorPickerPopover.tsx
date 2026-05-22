@@ -1,0 +1,96 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip} from '@mui/material';
+import classNames from 'classnames';
+import React from 'react';
+
+import {ColorSwatch} from './toolbarPalettes';
+
+import styles from './element-toolbar.module.scss';
+
+const CUSTOM_COLOR_DEFAULT = '#000000';
+
+export function isCustomHex(value: string | undefined): value is string {
+  return typeof value === 'string' && value.startsWith('#');
+}
+
+export interface ColorPickerPopoverProps {
+  groupLabel: string;
+  swatches: ColorSwatch[];
+  selectedValue: string | undefined;
+  onSelect: (value: string) => void;
+  onClose: () => void;
+}
+
+export default function ColorPickerPopover({
+  groupLabel,
+  swatches,
+  selectedValue,
+  onSelect,
+  onClose,
+}: ColorPickerPopoverProps) {
+  const {theme} = useTheme();
+  const isDarkMode = theme === 'Dark';
+  const customSelected = isCustomHex(selectedValue);
+  const customValue = customSelected ? selectedValue : CUSTOM_COLOR_DEFAULT;
+  const customLabel = `${groupLabel}: Custom color`;
+
+  return (
+    <div className={styles.swatchGrid} role="group" aria-label={groupLabel}>
+      {swatches.map(swatch => {
+        const isSelected = selectedValue === swatch.value;
+        const label =
+          isDarkMode && swatch.darkModeLabel
+            ? swatch.darkModeLabel
+            : swatch.label;
+        const ariaLabel = `${groupLabel}: ${label}`;
+        return (
+          <Tooltip key={swatch.value} title={label} placement="top">
+            <IconButton
+              size="small"
+              className={classNames(styles.swatch, {
+                [styles.swatchSelected]: isSelected,
+                [styles.swatchTransparent]: swatch.transparent,
+              })}
+              style={
+                swatch.transparent ? undefined : {backgroundColor: swatch.value}
+              }
+              aria-label={ariaLabel}
+              aria-pressed={isSelected}
+              onClick={() => {
+                onSelect(swatch.value);
+                onClose();
+              }}
+            />
+          </Tooltip>
+        );
+      })}
+      <Tooltip title="Custom color" placement="top">
+        {/* If the user has a custom color selected, show it as the background color, otherwise show the palette icon. */}
+        <label
+          className={classNames(styles.swatch, styles.customSwatch, {
+            [styles.swatchSelected]: customSelected,
+          })}
+          style={customSelected ? {backgroundColor: customValue} : undefined}
+        >
+          {!customSelected && (
+            <FontAwesomeV6Icon
+              iconName="palette"
+              className={styles.customSwatchIcon}
+            />
+          )}
+          <input
+            type="color"
+            value={customValue}
+            // Don't close on every change — the native picker fires
+            // continuously as the user moves their cursor. They will
+            // commit by clicking outside the popover.
+            onChange={event => onSelect(event.target.value)}
+            className={styles.customSwatchInput}
+            aria-label={customLabel}
+          />
+        </label>
+      </Tooltip>
+    </div>
+  );
+}

@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip} from '@mui/material';
+import {IconButton, Paper, Tooltip, Typography} from '@mui/material';
 import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useLayoutEffect, useRef, useState} from 'react';
 
@@ -17,12 +17,15 @@ const TOOLBAR_MIN_HEIGHT_PX = 120;
 interface ToolbarShellProps {
   target: {type: 'node' | 'edge'; id: string};
   ariaLabel: string;
+  // Short uppercase label shown in the toolbar header (e.g. "SHAPE").
+  title: string;
   children: React.ReactNode;
 }
 
 export default function ToolbarShell({
   target,
   ariaLabel,
+  title,
   children,
 }: ToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
@@ -135,6 +138,13 @@ export default function ToolbarShell({
         onMouseDown={preventAutoClose}
       >
         <div className={styles.header}>
+          <Typography
+            variant="overline3"
+            className={styles.headerTitle}
+            aria-hidden="true"
+          >
+            {title}
+          </Typography>
           <Tooltip title="Close toolbar" placement="top">
             <IconButton
               size="small"

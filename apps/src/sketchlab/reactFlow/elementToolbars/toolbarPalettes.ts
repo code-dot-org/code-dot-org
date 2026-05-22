@@ -89,6 +89,48 @@ export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
 export const DEFAULT_EDGE_TYPE: EdgeTypeValue = 'straight';
 
+// Look up the human-readable label for a color value, accounting for the
+// dark-mode label override (the default stroke is "Black" in light mode
+// and "White" in dark mode). Returns "Custom" for raw hex values and the
+// passed value as a fallback for unrecognized strings.
+export function colorLabel(
+  value: string | undefined,
+  swatches: ColorSwatch[],
+  isDarkMode: boolean
+): string {
+  if (value === undefined) {
+    return '';
+  }
+  const match = swatches.find(swatch => swatch.value === value);
+  if (match) {
+    return isDarkMode && match.darkModeLabel
+      ? match.darkModeLabel
+      : match.label;
+  }
+  if (value.startsWith('#')) {
+    return 'Custom';
+  }
+  return value;
+}
+
+export function fontSizeLabel(value: FontSize | undefined): string {
+  if (typeof value === 'number') {
+    return `${value} px`;
+  }
+  const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
+  return (
+    match?.label ??
+    FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)
+      ?.label ??
+    ''
+  );
+}
+
+export function textAlignLabel(value: TextAlignValue | undefined): string {
+  const match = TEXT_ALIGN_OPTIONS.find(option => option.value === value);
+  return match?.label ?? '';
+}
+
 export function fontSizePx(value: FontSize | undefined): number | undefined {
   if (typeof value === 'number') {
     return value;

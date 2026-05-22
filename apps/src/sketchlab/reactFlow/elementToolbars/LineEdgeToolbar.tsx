@@ -1,7 +1,6 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useNodesData, useReactFlow} from '@xyflow/react';
-import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
@@ -11,9 +10,13 @@ import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
+import ColorPickerPopover from './ColorPickerPopover';
+import ColorPreviewSwatch from './ColorPreviewSwatch';
 import LockedNotice from './LockedNotice';
-import SwatchGroup from './SwatchGroup';
+import OptionListPopover from './OptionListPopover';
+import ToolbarDropdownRow from './ToolbarDropdownRow';
 import {
+  colorLabel,
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_STROKE_STYLE,
   DEFAULT_LINE_WIDTH,
@@ -23,67 +26,64 @@ import {
   LineStrokeStyleValue,
   LINE_STROKE_STYLE_OPTIONS,
   LINE_WIDTH_OPTIONS,
+  LineWidthValue,
   strokeStyleFromDasharray,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
+import ToolbarSection from './ToolbarSection';
 import ToolbarShell from './ToolbarShell';
 
 import styles from './element-toolbar.module.scss';
 
-interface LineOption {
-  value: string | number;
-  label: string;
-}
-
 type LinePreviewStyle = 'solid' | 'dashed' | 'dotted';
 
-interface LineOptionGroupProps {
-  groupLabel: string;
-  options: readonly LineOption[];
-  selectedValue: string | number;
-  onSelect: (value: string | number) => void;
-  ariaLabelPrefix: string;
-  getButtonContent?: (option: LineOption) => React.ReactNode;
-}
+const ARROW_HEAD_OPTIONS = [
+  {value: 'none', label: 'None', icon: 'minus'},
+  {value: 'start', label: 'Start', icon: 'arrow-left-long'},
+  {value: 'end', label: 'End', icon: 'arrow-right-long'},
+  {value: 'both', label: 'Both', icon: 'arrows-left-right'},
+] as const;
 
-function LineOptionGroup({
-  groupLabel,
-  options,
-  selectedValue,
-  onSelect,
-  ariaLabelPrefix,
-  getButtonContent,
-}: LineOptionGroupProps) {
+const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
+  straight: 'minus',
+  default: 'line-curve',
+  smoothstep: 'line-step-round',
+  step: 'line-step-sharp',
+};
+
+const STROKE_STYLE_LABELS: Record<LineStrokeStyleValue, string> =
+  LINE_STROKE_STYLE_OPTIONS.reduce((acc, option) => {
+    acc[option.value] = option.label;
+    return acc;
+  }, {} as Record<LineStrokeStyleValue, string>);
+
+const WIDTH_LABELS: Record<LineWidthValue, string> = LINE_WIDTH_OPTIONS.reduce(
+  (acc, option) => {
+    acc[option.value] = option.label;
+    return acc;
+  },
+  {} as Record<LineWidthValue, string>
+);
+
+const EDGE_TYPE_LABELS: Record<EdgeTypeValue, string> =
+  EDGE_TYPE_OPTIONS.reduce((acc, option) => {
+    acc[option.value] = option.label;
+    return acc;
+  }, {} as Record<EdgeTypeValue, string>);
+
+function renderLinePreview(
+  width: number,
+  lineStyle: LinePreviewStyle
+): React.ReactNode {
   return (
-    <div className={styles.group} role="group" aria-label={groupLabel}>
-      <Typography
-        variant="overline3"
-        className={styles.groupLabel}
-        aria-hidden="true"
-      >
-        {groupLabel}
-      </Typography>
-      <div className={styles.lineStyleButtons}>
-        {options.map(option => {
-          const isSelected = selectedValue === option.value;
-          return (
-            <Tooltip key={option.value} title={option.label} placement="top">
-              <IconButton
-                size="small"
-                className={classNames(styles.lineStyleButton, {
-                  [styles.lineStyleButtonSelected]: isSelected,
-                })}
-                aria-label={`${ariaLabelPrefix}: ${option.label}`}
-                aria-pressed={isSelected}
-                onClick={() => onSelect(option.value)}
-              >
-                {getButtonContent ? getButtonContent(option) : option.label}
-              </IconButton>
-            </Tooltip>
-          );
-        })}
-      </div>
-    </div>
+    <span
+      aria-hidden="true"
+      className={styles.linePreview}
+      style={{
+        borderTopWidth: width,
+        borderTopStyle: lineStyle,
+      }}
+    />
   );
 }
 
@@ -97,27 +97,6 @@ interface LineEdgeToolbarProps {
   onSetLocked: (value: boolean) => void;
 }
 
-const ARROW_HEAD_OPTIONS: readonly LineOption[] = [
-  {value: 'none', label: 'None'},
-  {value: 'start', label: 'Start'},
-  {value: 'end', label: 'End'},
-  {value: 'both', label: 'Both'},
-] as const;
-
-const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
-  none: 'minus',
-  start: 'arrow-left-long',
-  end: 'arrow-right-long',
-  both: 'arrows-left-right',
-};
-
-const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
-  straight: 'minus',
-  default: 'wave-sine',
-  smoothstep: 'corner',
-  step: 'wave-square',
-};
-
 export default function LineEdgeToolbar({
   edge,
   onSelectColor,
@@ -130,6 +109,8 @@ export default function LineEdgeToolbar({
   const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
     useReactFlow();
   const pushSnapshot = usePushSnapshot();
+  const {theme} = useTheme();
+  const isDarkMode = theme === 'Dark';
 
   const isLocked = edge.data?.locked === true;
 
@@ -151,14 +132,14 @@ export default function LineEdgeToolbar({
     anchorEndpoints.forEach(n => updateNodeData(n.id, {showHandles: next}));
   };
 
-  const selectedValue =
+  const selectedColor =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
   const selectedWidth = Number(edge.style?.strokeWidth);
   const selectedWidthValue = LINE_WIDTH_OPTIONS.some(
     option => option.value === selectedWidth
   )
-    ? selectedWidth
+    ? (selectedWidth as LineWidthValue)
     : DEFAULT_LINE_WIDTH;
   const selectedStrokeStyle = strokeStyleFromDasharray(
     edge.style?.strokeDasharray
@@ -190,78 +171,130 @@ export default function LineEdgeToolbar({
 
   const {duplicateLine} = useClipboard();
 
-  const renderLinePreview = (
-    width: number,
-    lineStyle: LinePreviewStyle
-  ): React.ReactNode => (
-    <span
-      aria-hidden="true"
-      className={styles.linePreview}
-      style={{
-        borderTopWidth: width,
-        borderTopStyle: lineStyle,
-      }}
-    />
-  );
+  const widthOptionItems = LINE_WIDTH_OPTIONS.map(option => ({
+    value: option.value,
+    label: option.label,
+    preview: renderLinePreview(option.value, 'solid'),
+  }));
+  const strokeStyleOptionItems = LINE_STROKE_STYLE_OPTIONS.map(option => ({
+    value: option.value,
+    label: option.label,
+    preview: renderLinePreview(2, option.value),
+  }));
+  const edgeTypeOptionItems = EDGE_TYPE_OPTIONS.map(option => ({
+    value: option.value,
+    label: option.label,
+    icon: EDGE_TYPE_ICONS[option.value],
+  }));
+  const arrowHeadOptionItems = ARROW_HEAD_OPTIONS.map(option => ({
+    value: option.value,
+    label: option.label,
+    icon: option.icon,
+  }));
+
+  const arrowHeadIcon =
+    ARROW_HEAD_OPTIONS.find(option => option.value === selectedArrowHeads)
+      ?.icon ?? 'minus';
+  const arrowHeadLabel =
+    ARROW_HEAD_OPTIONS.find(option => option.value === selectedArrowHeads)
+      ?.label ?? 'None';
 
   return (
-    <ToolbarShell target={{type: 'edge', id: edge.id}} ariaLabel="Line style">
+    <ToolbarShell
+      target={{type: 'edge', id: edge.id}}
+      title="Line"
+      ariaLabel="Line style"
+    >
       {isLocked ? (
         <LockedNotice onUnlock={() => onSetLocked(false)} />
       ) : (
         <>
-          <SwatchGroup
-            groupLabel="Line color"
-            swatches={STROKE_FONT_PALETTE}
-            selectedValue={selectedValue}
-            onSelect={onSelectColor}
-          />
-          <LineOptionGroup
-            groupLabel="Line width"
-            options={LINE_WIDTH_OPTIONS}
-            selectedValue={selectedWidthValue}
-            onSelect={value => onSelectWidth(value as number)}
-            ariaLabelPrefix="Line width"
-            getButtonContent={option =>
-              renderLinePreview(option.value as number, 'solid')
-            }
-          />
-          <LineOptionGroup
-            groupLabel="Stroke style"
-            options={LINE_STROKE_STYLE_OPTIONS}
-            selectedValue={selectedStrokeStyleValue}
-            onSelect={value =>
-              onSelectStrokeStyle(value as LineStrokeStyleValue)
-            }
-            ariaLabelPrefix="Stroke style"
-            getButtonContent={option =>
-              renderLinePreview(2, option.value as LinePreviewStyle)
-            }
-          />
-          <LineOptionGroup
-            groupLabel="Line shape"
-            options={EDGE_TYPE_OPTIONS}
-            selectedValue={selectedEdgeTypeValue}
-            onSelect={value => onSelectEdgeType(value as EdgeTypeValue)}
-            ariaLabelPrefix="Line shape"
-            getButtonContent={option => (
-              <FontAwesomeV6Icon
-                iconName={EDGE_TYPE_ICONS[option.value as EdgeTypeValue]}
-              />
-            )}
-          />
-          <LineOptionGroup
-            groupLabel="Arrow heads"
-            options={ARROW_HEAD_OPTIONS}
-            selectedValue={selectedArrowHeads}
-            onSelect={value => onSelectArrowHeads(value as ArrowHeadValue)}
-            ariaLabelPrefix="Arrow heads"
-            getButtonContent={option => (
-              <FontAwesomeV6Icon
-                iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
-              />
-            )}
-          />
+          <ToolbarSection title="Appearance">
+            <ToolbarDropdownRow
+              label="Color"
+              popoverRole="dialog"
+              triggerPreview={
+                <ColorPreviewSwatch
+                  value={selectedColor}
+                  swatches={STROKE_FONT_PALETTE}
+                />
+              }
+              triggerLabel={colorLabel(
+                selectedColor,
+                STROKE_FONT_PALETTE,
+                isDarkMode
+              )}
+              renderPopoverContent={closePopover => (
+                <ColorPickerPopover
+                  groupLabel="Color"
+                  swatches={STROKE_FONT_PALETTE}
+                  selectedValue={selectedColor}
+                  onSelect={onSelectColor}
+                  onClose={closePopover}
+                />
+              )}
+            />
+            <ToolbarDropdownRow
+              label="Thickness"
+              triggerPreview={renderLinePreview(selectedWidthValue, 'solid')}
+              triggerLabel={WIDTH_LABELS[selectedWidthValue]}
+              renderPopoverContent={closePopover => (
+                <OptionListPopover<LineWidthValue>
+                  ariaLabel="Thickness"
+                  options={widthOptionItems}
+                  selectedValue={selectedWidthValue}
+                  onSelect={value => onSelectWidth(value)}
+                  onClose={closePopover}
+                />
+              )}
+            />
+            <ToolbarDropdownRow
+              label="Style"
+              triggerPreview={renderLinePreview(2, selectedStrokeStyleValue)}
+              triggerLabel={STROKE_STYLE_LABELS[selectedStrokeStyleValue]}
+              renderPopoverContent={closePopover => (
+                <OptionListPopover<LineStrokeStyleValue>
+                  ariaLabel="Style"
+                  options={strokeStyleOptionItems}
+                  selectedValue={selectedStrokeStyleValue}
+                  onSelect={value => onSelectStrokeStyle(value)}
+                  onClose={closePopover}
+                />
+              )}
+            />
+            <ToolbarDropdownRow
+              label="Shape"
+              triggerPreview={
+                <FontAwesomeV6Icon
+                  iconName={EDGE_TYPE_ICONS[selectedEdgeTypeValue]}
+                />
+              }
+              triggerLabel={EDGE_TYPE_LABELS[selectedEdgeTypeValue]}
+              renderPopoverContent={closePopover => (
+                <OptionListPopover<EdgeTypeValue>
+                  ariaLabel="Shape"
+                  options={edgeTypeOptionItems}
+                  selectedValue={selectedEdgeTypeValue}
+                  onSelect={value => onSelectEdgeType(value)}
+                  onClose={closePopover}
+                />
+              )}
+            />
+            <ToolbarDropdownRow
+              label="Arrowheads"
+              triggerPreview={<FontAwesomeV6Icon iconName={arrowHeadIcon} />}
+              triggerLabel={arrowHeadLabel}
+              renderPopoverContent={closePopover => (
+                <OptionListPopover<ArrowHeadValue>
+                  ariaLabel="Arrowheads"
+                  options={arrowHeadOptionItems}
+                  selectedValue={selectedArrowHeads}
+                  onSelect={value => onSelectArrowHeads(value)}
+                  onClose={closePopover}
+                />
+              )}
+            />
+          </ToolbarSection>
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}
             onLock={() => onSetLocked(true)}

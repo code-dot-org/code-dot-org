@@ -37,33 +37,30 @@
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
-  padding: 8px;
+  padding: 8px 8px 12px;
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
   pointer-events: all;
+  min-width: 240px;
 }
 
 .header {
   display: flex;
-  justify-content: flex-end;
-  // Pull into the Paper's 8px padding so the X sits in the corner
-  // rather than inside its own row of whitespace. Bottom -10px
-  // offset makes it so the header (just a close button)
-  // doesn't have a massive gap to the toolbar content.
-  margin: -4px -4px -10px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  // Pull the close button into the toolbar's padding so it sits in the
+  // corner rather than inside its own row of whitespace.
+  margin: -4px -4px -4px 0;
 }
 
-.scrollContent {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-gutter: stable;
-  padding: 0 6px;
+.headerTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-neutral-secondary);
+  font-weight: 600;
+  padding-left: 2px;
 }
 
 .closeButton {
@@ -71,25 +68,114 @@
   color: var(--text-neutral-primary);
 }
 
-.group {
+.scrollContent {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-
-  & + & {
-    padding-top: 8px;
-    border-top: 1px solid var(--borders-neutral-primary);
-  }
+  align-items: stretch;
+  gap: 12px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 0 2px;
 }
 
-.groupLabel {
+// Every section/standalone row after the first gets a divider above it.
+.scrollContent > * + * {
+  padding-top: 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectionTitle {
+  color: var(--text-neutral-secondary);
+  font-weight: 600;
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+// Form row: label-left, dropdown-trigger-right.
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdownRowLabel {
+  flex: 0 0 76px;
   color: var(--text-neutral-secondary);
 }
 
-.swatches {
+// MUI Button overrides: bordered, neutral surface, content-justified
+// between the preview/label cluster and the chevron.
+.dropdownTrigger:global(.MuiButtonBase-root) {
+  flex: 1 1 auto;
+  justify-content: space-between;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 2px 8px;
+  min-height: 28px;
+  font-weight: 400;
+  text-transform: none;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+    border-color: var(--borders-neutral-secondary);
+  }
+}
+
+.dropdownTriggerContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dropdownTriggerLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdownChevron {
+  font-size: 10px;
+  margin-left: 4px;
+  color: var(--text-neutral-secondary);
+}
+
+// Small color/line preview inside the trigger button.
+.dropdownPreviewSwatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  flex-shrink: 0;
+}
+
+// Popover body.
+.popoverPaper:global(.MuiPaper-root) {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  margin-top: 4px;
+}
+
+.swatchGrid {
   display: flex;
-  flex-direction: row;
-  gap: 4px;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  max-width: 232px;
 }
 
 .swatch {
@@ -170,28 +256,61 @@
   );
 }
 
-.fontSizeButtons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-}
-
-.fontSizeButton {
-  border: 1px solid var(--borders-neutral-primary);
+// Transparent variant for the small swatch preview in dropdown triggers.
+.dropdownPreviewSwatch.swatchTransparent {
   background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-size: 12px;
-  font-weight: 600;
-
-  &:hover {
-    background-color: var(--background-neutral-secondary);
-  }
 }
 
-.fontSizeButtonSelected {
-  background-color: var(--background-neutral-secondary);
-  border-color: var(--text-neutral-primary);
+// Option-list popover.
+.optionList:global(.MuiList-root) {
+  padding: 4px 0;
+  min-width: 200px;
+}
+
+.optionListItem:global(.MuiMenuItem-root) {
+  padding: 6px 12px;
+  gap: 8px;
+  min-height: 32px;
+}
+
+.optionListIcon:global(.MuiListItemIcon-root) {
+  min-width: 0;
+  color: var(--text-neutral-primary);
+}
+
+.optionListLabel:global(.MuiListItemText-root) {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.optionListCheck {
+  font-size: 12px;
+  color: var(--text-neutral-primary);
+  margin-left: 8px;
+}
+
+// Custom row at the bottom of the Size popover (label + numeric input).
+.customOptionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  margin-top: 4px;
+}
+
+.customOptionLabel {
+  color: var(--text-neutral-primary);
+}
+
+// Line previews (used in popovers + dropdown triggers).
+.linePreview {
+  display: inline-block;
+  width: 20px;
+  border-top-color: currentColor;
+  border-top-style: solid;
+  vertical-align: middle;
 }
 
 .rotationRow {
@@ -201,10 +320,16 @@
   gap: 8px;
 }
 
+.rotationLabel {
+  flex: 0 0 76px;
+  color: var(--text-neutral-secondary);
+}
+
 .rotationSlider {
-  min-width: 100px;
+  flex: 1 1 auto;
+  min-width: 80px;
   color: var(--text-neutral-primary);
-  margin: 0 8px;
+  margin: 0 4px;
 }
 
 // The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
@@ -226,6 +351,29 @@
   }
 }
 
+// Alt-text row uses the same label gutter as dropdown rows so the
+// TextField lines up with the dropdown triggers above/below.
+.altTextRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.altTextField {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  & > label {
+    min-width: 0;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 .lockedNotice {
   display: flex;
   flex-direction: column;
@@ -236,34 +384,43 @@
   text-align: center;
 }
 
-.lineStyleButtons {
+// Actions: neutral icon row on the left, destructive delete on the right.
+.actionsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionsButtons {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
 
-.lineStyleButton {
+.actionButton:global(.MuiIconButton-root) {
   border: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  border-radius: 6px;
-  min-width: 36px;
-  height: 24px;
-  padding: 0 8px;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
 
   &:hover {
     background-color: var(--background-neutral-secondary);
   }
 }
 
-.lineStyleButtonSelected {
-  background-color: var(--background-neutral-secondary);
-  border-color: var(--text-neutral-primary);
-}
+.deleteButton:global(.MuiIconButton-root) {
+  margin-left: auto;
+  border: 1px solid var(--sketchlab-stroke-red);
+  background-color: var(--background-neutral-primary);
+  color: var(--sketchlab-stroke-red);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
 
-.linePreview {
-  display: inline-block;
-  width: 16px;
-  border-top-color: currentColor;
-  border-top-style: solid;
+  &:hover {
+    background-color: var(--sketchlab-bg-red);
+  }
 }
