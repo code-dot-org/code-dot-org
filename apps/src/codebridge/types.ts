@@ -39,6 +39,7 @@ export type ConfigType = {
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
   validMimeTypes?: string[];
+  hideNewFolderButton?: boolean;
   layoutComponents: {
     horizontal?: React.FunctionComponent<LayoutProps>;
     vertical: React.FunctionComponent<LayoutProps>;
