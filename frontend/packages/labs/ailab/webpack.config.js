@@ -85,6 +85,10 @@ const defaultConfig = [
     ...commonConfig,
     ...firstConfigOnly,
     ...externalConfig,
+    output: {
+      ...commonConfig.output,
+      ...firstConfigOnly.output,
+    },
   },
   {
     entry: {

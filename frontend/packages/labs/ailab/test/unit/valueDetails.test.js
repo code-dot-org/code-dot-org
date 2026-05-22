@@ -1,6 +1,4 @@
-import {
-  getLocalizedValue,
-} from '../../src/helpers/valueDetails';
+import {getLocalizedValue} from '../../src/helpers/valueDetails';
 import {
   premadeDatasetValueLocalized,
   premadeDatasetTranslations,

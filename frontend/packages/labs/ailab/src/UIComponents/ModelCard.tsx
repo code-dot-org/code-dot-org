@@ -134,7 +134,9 @@ const ModelCard = ({
               <p style={styles.modelCardDetails}>
                 {I18n.t('modelCardPossibleValues')}
                 <br />
-                {label.values.map((value) => getLocalizedValue(value, datasetId)).join(' ')}
+                {label.values
+                  .map(value => getLocalizedValue(value, datasetId))
+                  .join(' ')}
               </p>
             )}
           </div>
@@ -161,7 +163,9 @@ const ModelCard = ({
                       <p>
                         {I18n.t('modelCardPossibleValues')}
                         <br />
-                        {feature.values.map((value) => getLocalizedValue(value, datasetId)).join(' ')}
+                        {feature.values
+                          .map(value => getLocalizedValue(value, datasetId))
+                          .join(' ')}
                       </p>
                     )}
                   </div>
