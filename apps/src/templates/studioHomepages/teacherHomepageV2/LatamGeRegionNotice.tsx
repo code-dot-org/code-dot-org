@@ -48,6 +48,16 @@ export const LatamGeRegionNotice: FC = () => {
       className={styles.notificationBanner}
       type={alertTypes.info}
       text="Selecciona Español-EEUU si estás en EE. UU. o Español-LATAM si estás en Latinoamérica desde el selector de idioma al pie de página para tener una experiencia adaptada a tu región."
+      link={{
+        text: '¡Cámbiate a Español-LATAM!',
+        href: (() => {
+          const url = new URL(window.location.href);
+          url.searchParams.set('ge_region', 'la');
+          return url.toString();
+        })(),
+        onClick: () =>
+          analyticsReporter.sendEvent(EVENTS.LATAM_GE_REGION_NOTICE_CLICKED),
+      }}
       onClose={() => {
         setIsVisible(false);
         trySetLocalStorage(NOTICE_STATE_KEY, NOTICE_CLOSED_STATE);
