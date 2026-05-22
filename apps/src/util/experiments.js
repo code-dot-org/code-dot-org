@@ -71,6 +71,8 @@ experiments.ONBOARDING = 'onboarding';
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
 // Route all Gemini model traffic through the AI gateway instead of the Rails backend
 experiments.USE_AI_GATEWAY = 'useAiGateway';
+// Enable speech-to-text input in AI chat lab and AI tutor for all models
+experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 // Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
 experiments.EXCALIDRAW = 'excalidraw';
 

@@ -1,0 +1,12 @@
+name 'self-paced-TCaAI-L2-BI1-PracticeLevel_26'
+display_name 'AI-Assisted Creation'
+description 'Test AI to see what does and doesn\'t work well for your purposes.'
+
+sublevels
+level 'thinking_critically_lesson4_level4a_26'
+level 'thinking_critically_lesson4_level4b_26'
+level 'thinking_critically_lesson4_level4c_26'
+level 'thinking_critically_lesson4_level4e_26'
+level 'thinking_critically_lesson4_level4d_26'
+
+uses_lab2

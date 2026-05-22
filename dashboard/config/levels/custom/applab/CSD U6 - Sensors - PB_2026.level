@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2026-04-01T21:17:22.000Z",
   "level_num": "custom",
@@ -45,7 +46,8 @@
       "intensity": null,
       "buzzer.frequency": null,
       "onBoardEvent": null,
-      "hideElement": null
+      "hideElement": null,
+      "mathAbs": null
     },
     "edit_code": true,
     "embed": "false",
@@ -108,13 +110,12 @@
     "display_name": "Interactive Birthday Card",
     "bubble_choice_description": "Use the temperature sensor to detect when someone blows out the candles of a card",
     "thumbnail_url": "https://images.code.org/a4c512a9fff8dbf6d75995a1b26f7115-image-1648852629293.png",
-    "encrypted_examples": "7fKoh7CUXE9pMZ3n1zQ8/y8t9vPRWjTSekLhr6BfbHm+gXD+u03dX7sL+oxw\n+SFClnjbKgT7EFk8wOllWst3Yg==\n",
+    "encrypted_examples": "Y8Mw6wIt2fsqFnIp9oNS8MZACgp+GF9XjsS9Pnu2R1DxiVJwcWFhpsebi+Dr\njIy2zrakZoWdvl7A1sMWhsWDAIjNAAQqOrqByYQEHpxesTLv62BIslC2Dcim\nVsOUhIzu82mIcPI5Z+/tX2HP4SsK/A==\n",
     "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:17:22.676+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PB_2025\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PB_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:17:22.676+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PB_2025\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PB_2025\"},{\"changed_at\":\"2026-05-21 18:20:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

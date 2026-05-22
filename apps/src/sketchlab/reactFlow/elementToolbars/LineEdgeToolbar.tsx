@@ -1,13 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import {useReactFlow} from '@xyflow/react';
+import {useNodesData, useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {useClipboard} from '../context';
-import {ArrowHeadValue} from '../types';
+import {useClipboard, usePushSnapshot} from '../context';
+import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
@@ -127,9 +127,29 @@ export default function LineEdgeToolbar({
   onSelectArrowHeads,
   onSetLocked,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+  const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
+    useReactFlow();
+  const pushSnapshot = usePushSnapshot();
 
   const isLocked = edge.data?.locked === true;
+
+  const endpointInfo = useNodesData<LineAnchorNodeType>([
+    edge.source,
+    edge.target,
+  ]);
+  const anchorEndpoints = endpointInfo.filter(
+    (n): n is LineAnchorNodeType => !!n && n.type === 'lineAnchor'
+  );
+
+  // The edge holds the handle visibility preference so it survives attach/detach cycles.
+  const handlesVisible = edge.data?.showHandles ?? true;
+  const hasAnchors = anchorEndpoints.length > 0;
+  const onToggleHandles = () => {
+    const next = !handlesVisible;
+    pushSnapshot();
+    updateEdge(edge.id, {data: {...edge.data, showHandles: next}});
+    anchorEndpoints.forEach(n => updateNodeData(n.id, {showHandles: next}));
+  };
 
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -254,6 +274,11 @@ export default function LineEdgeToolbar({
               const items = [...getNodes(), ...getEdges()];
               updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
             }}
+            handlesToggle={
+              hasAnchors
+                ? {visible: handlesVisible, onToggle: onToggleHandles}
+                : undefined
+            }
           />
         </>
       )}

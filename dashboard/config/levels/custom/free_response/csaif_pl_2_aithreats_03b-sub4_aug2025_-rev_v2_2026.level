@@ -6,7 +6,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#### **Does**\r\n#### What does Jordan do?\r\n",
+    "long_instructions": "**Does**\r\nWhat does Jordan do?\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

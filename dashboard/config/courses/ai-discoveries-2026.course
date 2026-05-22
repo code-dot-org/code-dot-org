@@ -23,6 +23,7 @@
     "7b"
   ],
   "original_script_names": [
+    "programming-with-music-lab-2026",
     "web-development-2026",
     "thinking-critically-about-ai-2026",
     "ai-and-machine-learning-2026",
@@ -30,8 +31,7 @@
     "the-design-process-2026",
     "data-and-society-2026",
     "creating-apps-with-devices-circuit-2026",
-    "creating-apps-with-devices-microbit-2026",
-    "programming-with-music-lab-2026"
+    "creating-apps-with-devices-microbit-2026"
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
