@@ -29,7 +29,7 @@ Font Awesome allows us to include a wide variety of icon types such as:
 ## Updating FontAwesome Files
 
 If you are looking to update the FontAwesome files in the `injectFontAwesome` function in `loader/index.ts`, you'll need to do the following steps.
-If you want more information on how FontAwesome expects us to set things up, see the "Host Yourself - Webfonts" instructions** [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts), and supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
+If you want more information on how FontAwesome expects us to set things up, see the "Host Yourself - Webfonts" instructions [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts), and supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
 
 1. **Download css and webfont files from FontAwesome.**
    Sign in with our shared dev account, find our "Code.org Kit" (as of May 2026 we are using the kit 'Code.org FontAwesome Kit v6 (Current)'), then click "Download Web Files" from the "Self-Host on the Web" option.
@@ -52,11 +52,12 @@ If you want more information on how FontAwesome expects us to set things up, see
 <img width="1674" height="408" alt="image" src="https://github.com/user-attachments/assets/da1ea1c6-18ac-4fc2-ba5c-c3be697f140a" />
 
 4. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date. The FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` pulls from this list, so you
-can verify the new icons appear correctly. If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
+   can verify the new icons appear correctly. If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
 5. Update the URLs referencing the font files to use the new timestamped url. The files that must be updated are:
- - [frontend/packages/component-library-styles/font.scss](/frontend/packages/component-library-styles/font.scss)
- - [frontend/packages/fonts/src/loader/index.ts](/frontend/packages/fonts/src/loader/index.ts)
- - [shared/css/font.scss](/shared/css/font.scss)
+
+- [frontend/packages/component-library-styles/font.scss](/frontend/packages/component-library-styles/font.scss)
+- [frontend/packages/fonts/src/loader/index.ts](/frontend/packages/fonts/src/loader/index.ts)
+- [shared/css/font.scss](/shared/css/font.scss)
 
 If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
 
