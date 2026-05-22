@@ -272,12 +272,10 @@ module AWS
           Forward: behavior_config[:cookies]
         }
 
-      # Callers of distribution_config must define an `AcceptLanguageFunction`
-      # AWS::CloudFront::Function resource in the same stack.
       function_associations = {
         accept_language: {
           EventType: 'viewer-request',
-          FunctionARN: {'Fn::GetAtt': ['AcceptLanguageFunction', 'FunctionARN']}
+          FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
         },
         marketing_router: {
           EventType: 'origin-request',
