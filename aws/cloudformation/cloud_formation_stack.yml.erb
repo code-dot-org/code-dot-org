@@ -429,7 +429,7 @@ Resources:
       FunctionCode: <%= js_erb 'accept-language.js.erb', max: FUNCTION_MAX %>
       FunctionConfig:
         Comment: "Normalizes Accept-Language header from viewer requests"
-        Runtime: cloudfront-js-1.0
+        Runtime: cloudfront-js-2.0
 <% end -%>
 
 <% if cdn_enabled -%>
