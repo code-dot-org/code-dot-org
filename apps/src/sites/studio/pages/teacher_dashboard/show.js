@@ -24,7 +24,6 @@ import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAs
 import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import LanguageDeprecationWarning from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LanguageDeprecationWarning';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
-import {resumeReviewSyllabusOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
   setAuthProviders,
@@ -115,6 +114,5 @@ $(document).ready(function () {
       legacyReactDomRender: true,
     }
   );
-  resumeReviewSyllabusOnboardingTour();
   displayDifferentiationChat();
 });
