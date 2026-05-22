@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "### When you buy a new appliance or tool or new device or even a children’s toy, what different kinds of material does it come with? List as many things as you can think of.\r\n- ####For example: an instructions manual\r\n",
+    "long_instructions": "### When you buy a new appliance or tool or new device or even a children’s toy, what different kinds of material does it come with? List as many things as you can think of.\r\n- For example: an instructions manual\r\n",
     "teacher_markdown": "Have students discuss in small groups, then ask folks to share out in a popcorn style. This can be a quick moment before continuing to the next slide.\r\n\r\n Discussion Goal: Try to generate a wide variety of items, such as:\r\n- Instructions manual\r\n- Safety sheet\r\n- Contact information\r\n- Warranty card\r\n- Similar products card",
     "allow_user_uploads": "false",
     "submittable": "false",

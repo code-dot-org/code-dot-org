@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Reflection\r\n\r\n#### What did you learn in your exploration during the previous level?",
+    "long_instructions": "# Reflection\r\n\r\nWhat did you learn in your exploration during the previous level?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

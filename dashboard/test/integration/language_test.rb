@@ -43,7 +43,6 @@ class LanguageTest < ActionDispatch::IntegrationTest
   describe 'fallbacks' do
     Cdo::I18n::LOCALE_FALLBACKS.each do |locale, fallback|
       it "from #{locale.inspect} to #{fallback.inspect}" do
-        skip '[Artem] investigate flaky test'
         i18n_string_key = :"i18n_string_key_#{locale}"
 
         _(I18n.fallbacks[locale].first).must_equal locale.to_sym

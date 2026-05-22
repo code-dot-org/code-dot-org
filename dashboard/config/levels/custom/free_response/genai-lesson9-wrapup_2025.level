@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "#### Imagine you have a friend who isn't taking this class and they say \"The really incredible thing about chatbots is they can generate entirely new ideas that no one has ever thought of before! I can't wait until AI is inventing or discovering brand new things!\". \r\n\r\n#### What would you say in response?",
+    "long_instructions": "Imagine you have a friend who isn't taking this class and they say \"The really incredible thing about chatbots is they can generate entirely new ideas that no one has ever thought of before! I can't wait until AI is inventing or discovering brand new things!\". \r\n\r\nWhat would you say in response?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

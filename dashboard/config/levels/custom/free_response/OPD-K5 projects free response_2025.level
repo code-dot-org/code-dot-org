@@ -10,7 +10,7 @@
     "tts_short_instructions_override": "How would you use end-of-course proejcts in your classroom? What is the benefit of having students complete a project?",
     "tts_long_instructions_override": "Take a moment to reflect. How would you use end-of-course proejcts in your classroom? What is the benefit of having students complete a project?",
     "instructions_important": "false",
-    "long_instructions": "# Review: End of Course Projects\r\n\r\n## Prompts\r\n\r\n* #### What are some benefits for students completing an end of course project?\r\n* #### How do curriculum resources support students in completing end of course projects?",
+    "long_instructions": "# Review: End of Course Projects\r\n\r\n## Prompts\r\n\r\n* What are some benefits for students completing an end of course project?\r\n* How do curriculum resources support students in completing end of course projects?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

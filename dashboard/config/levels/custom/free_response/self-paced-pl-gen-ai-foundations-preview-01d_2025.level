@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# How Smart Is It, Really?\r\n\r\n#### **Share what worked, what did not work, and what you learned** in the reflection box at the bottom of this level.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n## Reflection",
+    "long_instructions": "# How Smart Is It, Really?\r\n\r\n**Share what worked, what did not work, and what you learned** in the reflection box at the bottom of this level.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n## Reflection",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

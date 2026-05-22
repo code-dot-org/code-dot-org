@@ -8,6 +8,8 @@ vi.mock('@sentry/browser', () => ({
   init: vi.fn(),
   captureException: vi.fn(),
   setUser: vi.fn(),
+  setTag: vi.fn(),
+  setContext: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
   browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
   consoleLoggingIntegration: vi.fn().mockReturnValue({name: 'ConsoleLogging'}),
@@ -41,8 +43,10 @@ import {
   metrics,
   observabilityPlugin,
   recordError,
-  shutdown,
   setConsented,
+  setContext,
+  setTag,
+  shutdown,
 } from '../index';
 import type {ObservabilityConfig} from '../types';
 import {isSampled} from '../sampling';
@@ -283,6 +287,73 @@ describe('observability plugin', () => {
     ).pendingOperations;
 
     expect(pendingOperations).toHaveLength(1000);
+  });
+
+  it('forwards setTag through the module-level API after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    setTag('appType', 'applab');
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('appType', 'applab');
+  });
+
+  it('forwards setContext through the module-level API after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    setContext('channel', {id: 'abc123'});
+
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'abc123'});
+  });
+
+  it('replays pre-init setTag and setContext calls once the provider is ready', () => {
+    const adapter = new SentryAdapter();
+
+    adapter.setTag('appType', 'maze');
+    adapter.setContext('channel', {id: 'pre-init'});
+    expect(Sentry.setTag).not.toHaveBeenCalled();
+    expect(Sentry.setContext).not.toHaveBeenCalled();
+
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+    });
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('appType', 'maze');
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'pre-init'});
+  });
+
+  it('queues setTag and setContext through the deferred adapter until the real client is installed', () => {
+    const deferredClient = new DeferredAdapter();
+    _initializeSingleton(deferredClient);
+
+    setTag('locale', 'en');
+    setContext('channel', {id: 'queued'});
+
+    expect(Sentry.setTag).not.toHaveBeenCalled();
+    expect(Sentry.setContext).not.toHaveBeenCalled();
+
+    const client = new SentryAdapter();
+    client.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+    });
+    deferredClient.flushTo(client);
+    _initializeSingleton(client);
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('locale', 'en');
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'queued'});
   });
 
   it('tracks consent through the module-level API', async () => {
