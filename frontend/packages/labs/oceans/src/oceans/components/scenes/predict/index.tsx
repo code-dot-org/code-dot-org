@@ -5,6 +5,7 @@ import {
   faPlay,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Box, IconButton, Typography} from '@mui/material';
 import * as React from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
@@ -21,6 +22,19 @@ const MediaControl = Object.freeze({
   Play: 'play',
   FastForward: 'fast-forward',
 });
+
+/** Base sx for every media-control icon button. */
+const mediaControlSx = {
+  cursor: 'pointer',
+  margin: '0 20px',
+  fontSize: '180%',
+  color: 'var(--ocean-color-white)',
+  display: 'flex',
+  alignItems: 'center',
+  borderRadius: 0,
+  padding: 0,
+  '&:hover, &:active': {color: 'var(--ocean-color-orange)'},
+};
 
 interface PredictState {
   displayControls: boolean;
@@ -101,64 +115,80 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
       selectedControl = MediaControl.FastForward;
     }
 
-    const rewindClassName =
-      selectedControl === MediaControl.Rewind
-        ? 'ocean-media-control ocean-media-control--selected'
-        : 'ocean-media-control';
-    const fastForwardClassName =
-      selectedControl === MediaControl.FastForward
-        ? 'ocean-media-control ocean-media-control--selected'
-        : 'ocean-media-control';
+    const selectedSx = {color: 'var(--ocean-color-orange)'};
 
     return (
       <Body>
         {this.state.displayControls && (
-          <div className="ocean-media-controls" id="uitest-media-ctrl">
-            <button
-              type="button"
+          <Box
+            id="uitest-media-ctrl"
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              bottom: '3.5%',
+              display: 'flex',
+              justifyContent: 'center',
+              direction: 'ltr',
+            }}
+          >
+            <IconButton
               aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
-              className={rewindClassName}
-              key={MediaControl.Rewind}
+              sx={[
+                mediaControlSx,
+                selectedControl === MediaControl.Rewind ? selectedSx : {},
+              ]}
             >
-              <span className="ocean-media-control__time-scale">
+              <Typography
+                component="span"
+                sx={{width: '40px', fontSize: '80%', textAlign: 'center'}}
+              >
                 {selectedControl === MediaControl.Rewind &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
-              </span>
+              </Typography>
               <FontAwesomeIcon icon={faBackward} aria-hidden />
-            </button>
-            <button
-              type="button"
+            </IconButton>
+            <IconButton
               aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
-              className="ocean-media-control"
-              key={MediaControl.Play}
+              sx={mediaControlSx}
             >
               <FontAwesomeIcon
                 icon={state.isRunning ? faPause : faPlay}
                 aria-hidden
               />
-            </button>
-            <button
-              type="button"
+            </IconButton>
+            <IconButton
               aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
-              className={fastForwardClassName}
-              key={MediaControl.FastForward}
+              sx={[
+                mediaControlSx,
+                selectedControl === MediaControl.FastForward ? selectedSx : {},
+              ]}
             >
               <FontAwesomeIcon icon={faForward} aria-hidden />
-              <span className="ocean-media-control__time-scale">
+              <Typography
+                component="span"
+                sx={{width: '40px', fontSize: '80%', textAlign: 'center'}}
+              >
                 {selectedControl === MediaControl.FastForward &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
-              </span>
-            </button>
-          </div>
+              </Typography>
+            </IconButton>
+          </Box>
         )}
         {!state.isRunning && !state.isPaused && (
           <Button
-            className="ocean-button--continue"
+            sx={{
+              position: 'absolute',
+              bottom: '2%',
+              right: '1.2%',
+              backgroundColor: 'var(--ocean-color-orange)',
+              color: 'var(--ocean-color-white)',
+              '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
+            }}
             onClick={this.onRun}
             id="uitest-run-btn"
           >
@@ -168,7 +198,14 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
           <Button
-            className="ocean-button--continue"
+            sx={{
+              position: 'absolute',
+              bottom: '2%',
+              right: '1.2%',
+              backgroundColor: 'var(--ocean-color-orange)',
+              color: 'var(--ocean-color-white)',
+              '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
+            }}
             onClick={this.onContinue}
             id="uitest-continue-btn"
           >

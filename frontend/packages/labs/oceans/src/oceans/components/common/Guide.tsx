@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
+import {Box, Typography} from '@mui/material';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -27,24 +27,52 @@ export const stopTypingSounds = () => {
 };
 
 /**
- * Map a `GuideEntry.style` value to its modifier class name.  The
- * registry's keys are typed as strings ("Info" / "Center" / etc.); we
- * mirror them here to a small registry so the lookup is type-safe.
+ * sx overrides for the guide dialog box keyed by GuideEntry.style.
+ * Default (no style) renders a dark scrim anchored at the bottom.
  */
-const GUIDE_STYLE_CLASS: Record<string, string> = {
-  Info: 'ocean-guide--info',
-  Center: 'ocean-guide--center',
+const GUIDE_STYLE_SX: Record<string, object> = {
+  Info: {
+    backgroundColor: 'var(--ocean-color-white)',
+    color: 'var(--ocean-color-dark-grey)',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: '2%',
+  },
+  Center: {
+    top: '50%',
+    left: '50%',
+    bottom: 'initial',
+    maxWidth: '47%',
+    transform: 'translate(-50%, -50%)',
+  },
 };
 
-/** Map a `GuideEntry.arrow` value to its modifier class name. */
-const GUIDE_ARROW_CLASS: Record<string, string> = {
-  BotRight: 'ocean-guide__arrow--bot-right',
-  LowerLeft: 'ocean-guide__arrow--lower-left',
-  LowerRight: 'ocean-guide__arrow--lower-right',
-  LowishRight: 'ocean-guide__arrow--lowish-right',
-  LowerCenter: 'ocean-guide__arrow--lower-center',
-  UpperRight: 'ocean-guide__arrow--upper-right',
-  UpperFarRight: 'ocean-guide__arrow--upper-far-right',
+/**
+ * sx overrides for the arrow image keyed by GuideEntry.arrow.
+ * All arrows share position:absolute + width:8% base.
+ */
+const GUIDE_ARROW_SX: Record<string, object> = {
+  BotRight: {top: '15%', right: '12.5%', transform: 'translateX(-50%)'},
+  LowerLeft: {bottom: '17%', left: '8.5%', transform: 'translateX(-50%)'},
+  LowerRight: {bottom: '17%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowishRight: {bottom: '28%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowerCenter: {
+    bottom: '22%',
+    left: '50.5%',
+    transform: 'translateX(-50%)',
+  },
+  UpperRight: {
+    top: '13%',
+    right: '-2%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
+  UpperFarRight: {
+    top: '15%',
+    right: '-4.6%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
 };
 
 class Guide extends React.Component<Record<string, never>> {
@@ -70,6 +98,7 @@ class Guide extends React.Component<Record<string, never>> {
       this.lastFocusedGuideId = null;
     }
   }
+
   onTypingDone() {
     clearInterval(
       getState().guideTypingTimer as ReturnType<typeof setInterval>,
@@ -89,7 +118,6 @@ class Guide extends React.Component<Record<string, never>> {
     const currentGuide = guide.getCurrentGuide();
 
     if (this.attemptTextToSpeechTextToSpeech(true)) {
-      // This click started text to speech.
       setState(
         {
           hasTextToSpeechStartedByClick: true,
@@ -98,11 +126,7 @@ class Guide extends React.Component<Record<string, never>> {
         {skipCallback: true},
       );
     } else {
-      // Make sure we don't try and dismiss a guide if it's
-      // not modal.
       if (currentGuide && !currentGuide.noDimBackground) {
-        // This click did not start text to speech, so attempt
-        // to dismiss the guide.
         const dismissed = guide.dismissCurrentGuide();
         if (dismissed) {
           if (state.textToSpeechLocale) {
@@ -121,32 +145,19 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Do nothing if text to speech is not desired or yet available.
     if (!state.textToSpeechLocale || !hasTextToSpeechVoices()) {
       return false;
     }
 
-    // Do nothing if there is no current guide, or if we've already started
-    // text to speech for the current guide (which might have finished
-    // playing by now).
     if (!currentGuide || state.textToSpeechCurrentGuide === currentGuide) {
       return false;
     }
 
-    // In this implementation, we want to start the first play of text to
-    // speech from a click handler, but all subsequent plays when we first
-    // render a new piece of text, rather than from a click handler.
-    // Therefore:
-    // If we are in a click handler, do nothing if we've already started
-    // text to speech from a click handler.
-    // If we are not in a click handler, do nothing if we've never started
-    // from a click handler before.
+    // Start first play from a click handler; all subsequent plays on render.
     if (inClickHandler === state.hasTextToSpeechStartedByClick) {
       return false;
     }
 
-    // Make an attempt to play text to speech, and return whether we
-    // believe it has started.
     return startTextToSpeech(
       currentGuide.textFn(getState()),
       state.textToSpeechLocale,
@@ -157,15 +168,18 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Background variant: hidden, info-darkened, or the default scrim.
-    let bgClassName = 'ocean-guide__bg';
-    if (currentGuide) {
-      if (currentGuide.noDimBackground) {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--hidden';
-      } else if (currentGuide.style === 'Info') {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--info';
-      }
-    }
+    // Background overlay sx: hidden, info-darkened, or default scrim.
+    const bgSx: React.ComponentProps<typeof Box>['sx'] = currentGuide
+      ? currentGuide.noDimBackground
+        ? {
+            backgroundColor: 'transparent',
+            pointerEvents: 'none',
+            borderRadius: 0,
+          }
+        : currentGuide.style === 'Info'
+          ? {backgroundColor: 'var(--ocean-color-transparent-black)'}
+          : {backgroundColor: 'rgb(0 0 0 / 30%)'}
+      : {backgroundColor: 'rgb(0 0 0 / 30%)'};
 
     // Start playing the typing sounds.
     if (
@@ -181,7 +195,6 @@ class Guide extends React.Component<Record<string, never>> {
     }
 
     if (this.attemptTextToSpeechTextToSpeech(false)) {
-      // This call started text to speech.
       setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
 
@@ -192,56 +205,95 @@ class Guide extends React.Component<Record<string, never>> {
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
-    const guideClassName =
-      currentGuide &&
-      currentGuide.style &&
-      GUIDE_STYLE_CLASS[currentGuide.style]
-        ? `ocean-guide ${GUIDE_STYLE_CLASS[currentGuide.style]}`
-        : 'ocean-guide';
+    // Dialog box sx: base + optional style override.
+    const styleOverrideSx =
+      currentGuide?.style && GUIDE_STYLE_SX[currentGuide.style]
+        ? GUIDE_STYLE_SX[currentGuide.style]
+        : {};
 
-    const arrowClassName =
-      currentGuide &&
-      currentGuide.arrow &&
-      GUIDE_ARROW_CLASS[currentGuide.arrow]
-        ? `ocean-guide__arrow ${GUIDE_ARROW_CLASS[currentGuide.arrow]}`
-        : 'ocean-guide__arrow';
+    const arrowSx =
+      currentGuide?.arrow && GUIDE_ARROW_SX[currentGuide.arrow]
+        ? GUIDE_ARROW_SX[currentGuide.arrow]
+        : {};
 
     // imageStyle on a GuideEntry is one of two opaque {top,left} object
     // literals from guidesHoc / guidesK5; pass through verbatim.
     const imageStyle = currentGuide?.imageStyle;
 
     return (
-      <div>
+      <Box>
         {currentGuide && currentGuide.image && (
-          <img
+          <Box
+            component="img"
             src={currentGuide.image}
-            className="ocean-guide__image"
-            style={imageStyle}
             alt=""
+            style={imageStyle}
+            sx={{
+              position: 'absolute',
+              bottom: '1%',
+              left: '15%',
+              zIndex: 2,
+              maxHeight: '45%',
+              maxWidth: '35%',
+            }}
           />
         )}
         {!!currentGuide && (
-          <div>
-            <div
+          <Box>
+            <Box
               key={currentGuide.id}
-              className={bgClassName}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
+              sx={[
+                {
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '10px',
+                },
+                bgSx,
+              ]}
             >
-              <div
+              <Box
                 aria-labelledby="guide-heading"
                 tabIndex={-1}
-                className={`guide-dialog ${guideClassName}`}
+                className="guide-dialog"
+                sx={[
+                  {
+                    position: 'absolute',
+                    backgroundColor: 'var(--ocean-color-transparent-black)',
+                    color: 'var(--ocean-color-white)',
+                    borderRadius: '5px',
+                    maxWidth: '80%',
+                    bottom: '2%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                  },
+                  styleOverrideSx,
+                ]}
               >
-                <div>
+                <Box>
                   {currentGuide.style === 'Info' && (
-                    <div id="guide-heading" className="ocean-guide__heading">
+                    <Typography
+                      id="guide-heading"
+                      sx={{
+                        fontSize: '220%',
+                        color: 'var(--ocean-color-dark-grey)',
+                        paddingBottom: '5%',
+                        textAlign: 'center',
+                      }}
+                    >
                       {I18n.t('didYouKnow')}
-                    </div>
+                    </Typography>
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <div className="ocean-guide__typing-text" aria-hidden="true">
+                  <Box
+                    sx={{position: 'absolute', padding: '20px'}}
+                    aria-hidden="true"
+                  >
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -250,57 +302,99 @@ class Guide extends React.Component<Record<string, never>> {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                  </div>
+                  </Box>
 
-                  <div
-                    className={
+                  <Box
+                    sx={
                       currentGuide.style === 'Info'
-                        ? 'ocean-guide__final-text-container--info'
+                        ? {
+                            backgroundColor: 'var(--ocean-color-light-grey)',
+                            borderRadius: '10px',
+                          }
                         : undefined
                     }
                   >
-                    <div
+                    <Box
                       ref={this.guideDialogRef}
                       aria-live="polite"
                       tabIndex={0}
                       onKeyDown={this.onGuideKeyDown}
-                      className="ocean-guide__final-text"
+                      sx={{
+                        padding: '20px',
+                        color: 'rgb(0 0 0 / 0%)',
+                      }}
                     >
                       {currentGuide.textFn(getState())}
-                    </div>
-                  </div>
+                    </Box>
+                  </Box>
+
                   {renderClickToContinueReminder && (
-                    <div className="ocean-guide__continue-reminder">
-                      <img
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        right: '1%',
+                        bottom: 0,
+                        width: '5%',
+                        minWidth: '25px',
+                        height: '15px',
+                        animation:
+                          '0.25s ease-in 4s 1 normal backwards running fadein',
+                      }}
+                    >
+                      <Box
+                        component="img"
                         src={fingerClickIcon1}
                         alt=""
-                        className="ocean-guide__continue-reminder-1"
+                        sx={{width: '100%', position: 'absolute'}}
                       />
-                      <img
+                      <Box
+                        component="img"
                         src={fingerClickIcon2}
                         alt=""
-                        className="ocean-guide__continue-reminder-2"
+                        sx={{
+                          animation:
+                            '1s linear 0.5s infinite normal none running blink',
+                          width: '100%',
+                          position: 'absolute',
+                        }}
                       />
-                    </div>
+                    </Box>
                   )}
+
                   {currentGuide.style === 'Info' && (
                     <Button
-                      className="ocean-guide__info-button"
+                      sx={{
+                        backgroundColor: 'var(--ocean-color-orange)',
+                        color: 'var(--ocean-color-white)',
+                        transform: 'translate(-50%)',
+                        marginLeft: '50%',
+                        marginTop: '2%',
+                        padding: '3% 7%',
+                        '&:hover': {
+                          backgroundColor: 'var(--ocean-color-orange)',
+                        },
+                      }}
                       onClick={() => {}}
                     >
                       {I18n.t('continue')}
                     </Button>
                   )}
-                </div>
-              </div>
-            </div>
+                </Box>
+              </Box>
+            </Box>
             {currentGuide.arrow && (
-              <img src={arrowDownImage} className={arrowClassName} alt="" />
+              <Box
+                component="img"
+                src={arrowDownImage}
+                alt=""
+                sx={[{position: 'absolute', width: '8%'}, arrowSx]}
+              />
             )}
-          </div>
+          </Box>
         )}
-      </div>
+      </Box>
     );
   }
 }
+
 export default Guide;

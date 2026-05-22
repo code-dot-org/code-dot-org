@@ -1,6 +1,8 @@
+import {ThemeProvider} from '@mui/material';
 import {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
@@ -117,4 +119,8 @@ function DemoShell() {
   );
 }
 
-createRoot(document.getElementById('root')!).render(<DemoShell />);
+createRoot(document.getElementById('root')!).render(
+  <ThemeProvider theme={CdoTheme}>
+    <DemoShell />
+  </ThemeProvider>,
+);

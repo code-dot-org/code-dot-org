@@ -1,3 +1,7 @@
+import {
+  Button as MuiButton,
+  type ButtonProps as MuiButtonProps,
+} from '@mui/material';
 import * as React from 'react';
 
 import guide from '@/oceans/models/guide';
@@ -11,12 +15,19 @@ interface ButtonProps
   > {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
+  /** MUI sx overrides forwarded directly to MuiButton. */
+  sx?: MuiButtonProps['sx'];
 }
 
 /**
- * Shared button used across scenes.  Dismisses any active guide and plays
- * the configured sound (`sound` prop, default `'other'`) unless the click
- * handler explicitly returns `false`.
+ * Shared button used across scenes.  Wraps MUI Button to stay idiomatic with
+ * the design system while preserving the lab-specific side effects: dismiss
+ * any active guide and play the configured sound unless the click handler
+ * returns `false`.
+ *
+ * Visual styling is intentionally ocean-specific (white bg, grey text, 8 px
+ * radius, em-based padding) via sx — the CdoTheme defaults are overridden here
+ * because the oceans lab has its own visual language.
  */
 class Button extends React.Component<ButtonProps> {
   onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -30,19 +41,37 @@ class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const className = this.props.className
-      ? `ocean-button ${this.props.className}`
-      : 'ocean-button';
+    const {className, style, id, children, sx} = this.props;
     return (
-      <button
+      <MuiButton
         type="button"
-        id={this.props.id}
+        id={id}
         className={className}
-        style={this.props.style}
+        style={style}
         onClick={this.onClick}
+        disableRipple
+        sx={[
+          {
+            cursor: 'pointer',
+            backgroundColor: 'var(--ocean-color-white)',
+            color: 'var(--ocean-color-grey)',
+            fontSize: '100%',
+            padding: '0.75em 1.5em',
+            borderRadius: '8px',
+            minWidth: '15%',
+            border: 'none',
+            whiteSpace: 'nowrap',
+            lineHeight: 1.3,
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: 'var(--ocean-color-white)',
+            },
+          },
+          ...(Array.isArray(sx) ? sx : sx ? [sx] : []),
+        ]}
       >
-        {this.props.children}
-      </button>
+        {children}
+      </MuiButton>
     );
   }
 }

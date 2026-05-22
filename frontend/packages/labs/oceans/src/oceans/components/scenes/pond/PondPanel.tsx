@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+import {Box, Typography} from '@mui/material';
 import * as React from 'react';
 
 import I18n from '@/oceans/i18n';
@@ -6,16 +6,27 @@ import {getState, setState} from '@/oceans/state';
 import Markdown from '@/utils/Markdown';
 
 /**
- * Inline style object that drives one of the explanation bars via the
- * --ocean-bar-width custom property.  This is the one place where the
- * width genuinely depends on a per-render computed value; the CSS class
- * reads `width: var(--ocean-bar-width)`.
+ * Inline style that drives one explanation bar via the --ocean-bar-width CSS
+ * custom property.  The width genuinely depends on a per-render computed
+ * value so it must remain an inline CSS variable rather than a static sx.
  */
 function barWidthStyle(percent: number): React.CSSProperties {
   return {
     ['--ocean-bar-width' as keyof React.CSSProperties]: `${percent}%`,
   } as React.CSSProperties;
 }
+
+/** sx shared by both panel variants (left and right). */
+const panelBaseSx = {
+  position: 'absolute',
+  width: '30%',
+  backgroundColor: 'var(--ocean-color-transparent-black)',
+  color: 'var(--ocean-color-white)',
+  borderRadius: '10px',
+  top: '16%',
+  padding: '2%',
+  pointerEvents: 'none',
+} as const;
 
 class PondPanel extends React.Component {
   onPondPanelClick = (e: React.MouseEvent) => {
@@ -31,61 +42,69 @@ class PondPanel extends React.Component {
       : state.pondFishMaxExplainValue;
 
     return (
-      <div>
+      <Box>
         {!state.pondClickedFish && (
-          <div
-            className="ocean-pond-panel--left"
-            onClick={this.onPondPanelClick}
-          >
+          <Box onClick={this.onPondPanelClick} sx={[panelBaseSx, {left: '3%'}]}>
             {state.pondExplainGeneralSummary && (
-              <div>
-                <div className="ocean-pond-panel__pre-text">
+              <Box>
+                <Typography sx={{marginBottom: '5%'}}>
                   {I18n.t('mostImportantParts')}
-                </div>
+                </Typography>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
-                  <div key={i}>
+                  <Box key={i}>
                     {f.importance > 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
                         &nbsp;
-                        <div
-                          className="ocean-pond-panel__bar--general"
+                        {/* Width driven by --ocean-bar-width CSS variable */}
+                        <Box
                           style={barWidthStyle(
                             (Math.abs(f.importance) /
                               state.pondExplainGeneralSummary![0].importance) *
                               100,
                           )}
+                          sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: '0%',
+                            height: '150%',
+                            backgroundColor: 'var(--ocean-color-teal)',
+                            width: 'var(--ocean-bar-width, 0%)',
+                          }}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--general">
+                        </Box>
+                        <Box
+                          sx={{
+                            position: 'absolute',
+                            top: '30%',
+                            left: '3%',
+                            textAlign: 'right',
+                          }}
+                        >
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
-                  </div>
+                  </Box>
                 ))}
-                <div className="ocean-pond-panel__post-text">
+                <Typography sx={{marginTop: '3%'}}>
                   {I18n.t('clickIndividualFish')}
-                </div>
-              </div>
+                </Typography>
+              </Box>
             )}
-          </div>
+          </Box>
         )}
         {state.pondClickedFish && (
-          <div
-            className={
-              state.pondPanelSide === 'left'
-                ? 'ocean-pond-panel--left'
-                : 'ocean-pond-panel--right'
-            }
+          <Box
             onClick={e => this.onPondPanelClick(e)}
+            sx={[
+              panelBaseSx,
+              state.pondPanelSide === 'left' ? {left: '3%'} : {right: '3%'},
+            ]}
           >
             {state.pondExplainFishSummary && (
-              <div>
-                <div
-                  className="ocean-pond-panel__pre-text"
-                  id="pondTextMarkdown"
-                >
+              <Box>
+                <Box id="pondTextMarkdown" sx={{marginBottom: '5%'}}>
                   <Markdown
                     markdown={I18n.t('mostImportantPartsDescription', {
                       word: state.word!.toLowerCase(),
@@ -94,48 +113,75 @@ class PondPanel extends React.Component {
                       }).toLowerCase(),
                     })}
                   />
-                </div>
+                </Box>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
-                  <div key={i}>
+                  <Box key={i}>
                     {f.impact < 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
                         &nbsp;
-                        <div
-                          className="ocean-pond-panel__bar--green"
+                        <Box
                           style={barWidthStyle(
                             ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
                           )}
+                          sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: '50%',
+                            height: '150%',
+                            backgroundColor: 'var(--ocean-color-green)',
+                            width: 'var(--ocean-bar-width, 0%)',
+                          }}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--green">
+                        </Box>
+                        <Box
+                          sx={{
+                            position: 'absolute',
+                            top: '30%',
+                            left: '53%',
+                          }}
+                        >
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
                     {f.impact > 0 && (
-                      <div className="ocean-pond-panel__row">
+                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
                         &nbsp;
-                        <div
-                          className="ocean-pond-panel__bar--red"
+                        <Box
                           style={barWidthStyle(
                             ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
                           )}
+                          sx={{
+                            position: 'absolute',
+                            top: 0,
+                            right: '50%',
+                            height: '150%',
+                            backgroundColor: 'var(--ocean-color-red)',
+                            width: 'var(--ocean-bar-width, 0%)',
+                          }}
                         >
                           &nbsp;
-                        </div>
-                        <div className="ocean-pond-panel__bar-text--red">
+                        </Box>
+                        <Box
+                          sx={{
+                            position: 'absolute',
+                            top: '30%',
+                            width: '47%',
+                            textAlign: 'right',
+                          }}
+                        >
                           {I18n.t(f.partType)}
-                        </div>
-                      </div>
+                        </Box>
+                      </Box>
                     )}
-                  </div>
+                  </Box>
                 ))}
-              </div>
+              </Box>
             )}
-          </div>
+          </Box>
         )}
-      </div>
+      </Box>
     );
   }
 }

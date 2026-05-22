@@ -15,7 +15,12 @@ Consumed by:
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
 ESLint flat config, Prettier, Stylelint. Scene components are class
-components styled via CSS classes (`scenes.css`).
+components styled with MUI `Box`/`Typography`/`IconButton` (`sx` prop).
+Color tokens live in `scenes.css` (`:root` custom properties); all other
+per-component rules have moved to `sx`. Use MUI components per the
+`design-system` skill; DSCO `Dialog` is intentionally not used here —
+the `ConfirmationDialog` requires snail-image overflow that conflicts with
+DSCO Dialog chrome.
 
 ## Setup
 

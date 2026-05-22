@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+import {Box} from '@mui/material';
 import * as React from 'react';
 
 import loadingGif from '@/assets/images/loading.gif';
@@ -23,12 +23,24 @@ class Body extends React.Component<BodyProps> {
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
 
     return (
-      <div className="ocean-body" onClick={this.props.onClick}>
-        <div className="ocean-body__children" inert={!!modalGuide || undefined}>
+      <Box
+        onClick={this.props.onClick}
+        sx={{position: 'relative', width: '100%', paddingTop: '56.25%'}}
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          inert={!!modalGuide || undefined}
+        >
           {this.props.children}
-        </div>
+        </Box>
         <Guide />
-      </div>
+      </Box>
     );
   }
 }
@@ -39,13 +51,26 @@ interface ContentProps {
 
 /** Top-aligned absolute content container used by the Words scene. */
 const Content = ({children}: ContentProps) => (
-  <div className="ocean-content">{children}</div>
+  <Box sx={{position: 'absolute', top: 0, left: 0, width: '100%'}}>
+    {children}
+  </Box>
 );
 
 /** Centered loading spinner.  Used while assets / models warm up. */
 const Loading = () => (
   <Body>
-    <img src={loadingGif} className="ocean-loading" alt="Loading" />
+    <Box
+      component="img"
+      src={loadingGif}
+      alt="Loading"
+      sx={{
+        position: 'absolute',
+        transform: 'translate(-50%, -50%)',
+        top: '50%',
+        left: '50%',
+        maxWidth: '30%',
+      }}
+    />
   </Body>
 );
 

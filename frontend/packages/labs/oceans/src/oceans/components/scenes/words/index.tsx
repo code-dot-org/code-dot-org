@@ -1,3 +1,4 @@
+import {Box, Typography} from '@mui/material';
 import _ from 'lodash';
 import * as React from 'react';
 
@@ -10,7 +11,7 @@ import {getState, setState} from '@/oceans/state';
 interface WordSetEntry {
   textKey: string;
   choices: string[][];
-  /** Class name for the word-button modifier (column layout). */
+  /** Layout variant used to derive button sx (column spacing). */
   buttonClass: string;
 }
 
@@ -54,6 +55,34 @@ export const wordSet: Record<string, WordSetEntry> = {
     buttonClass: 'ocean-word-button--3col',
   },
 };
+
+/** Derives MUI sx layout from the word-button CSS class identifier. */
+function wordButtonSx(
+  buttonClass: string,
+): React.ComponentProps<typeof Button>['sx'] {
+  if (buttonClass === 'ocean-word-button--2col') {
+    return {
+      width: '20%',
+      marginLeft: '14%',
+      marginRight: '14%',
+      marginTop: '2%',
+      '&:hover, &:focus': {
+        backgroundColor: 'var(--ocean-color-orange)',
+        color: 'var(--ocean-color-white)',
+      },
+    };
+  }
+  return {
+    width: '20%',
+    marginLeft: '6%',
+    marginRight: '6%',
+    marginTop: '2%',
+    '&:hover, &:focus': {
+      backgroundColor: 'var(--ocean-color-orange)',
+      color: 'var(--ocean-color-white)',
+    },
+  };
+}
 
 interface WordsState {
   choices: string[];
@@ -121,22 +150,35 @@ class Words extends React.Component<Record<string, never>, WordsState> {
     const state = getState();
     const appMode = state.appMode as string;
     const entry = wordSet[appMode];
+    const btnSx = wordButtonSx(entry.buttonClass);
 
     return (
       <Body>
         <Content>
           {entry.textKey && (
-            <div className="ocean-words__text">{I18n.t(entry.textKey)} </div>
-          )}
-          {this.state.choices.map((item, itemIndex) => (
-            <Button
-              key={itemIndex}
-              className={`words-button ocean-word-button ${entry.buttonClass}`}
-              onClick={() => this.onChangeWord(itemIndex)}
+            <Typography
+              sx={{
+                textAlign: 'center',
+                marginTop: '20px',
+                fontSize: '120%',
+                color: 'var(--ocean-color-white)',
+              }}
             >
-              {I18n.t(item)}
-            </Button>
-          ))}
+              {I18n.t(entry.textKey)}{' '}
+            </Typography>
+          )}
+          <Box>
+            {this.state.choices.map((item, itemIndex) => (
+              <Button
+                key={itemIndex}
+                className="words-button"
+                sx={btnSx}
+                onClick={() => this.onChangeWord(itemIndex)}
+              >
+                {I18n.t(item)}
+              </Button>
+            ))}
+          </Box>
         </Content>
       </Body>
     );
