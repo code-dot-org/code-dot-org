@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {useSketchLabReadOnly} from '../context';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -17,8 +17,10 @@ import styles from './text-node.module.scss';
 function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
+  const pushSnapshot = usePushSnapshot();
   const [isEditing, setIsEditing] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
+  const textAtEditStart = useRef<string>('');
 
   const {text} = data;
   const showHandles = data.showHandles !== false;
@@ -43,6 +45,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
     if (isEditing || readOnly || data.locked) {
       return;
     }
+    textAtEditStart.current = text;
     setIsEditing(true);
     setTimeout(() => {
       if (textRef.current) {
@@ -55,7 +58,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly, data.locked]);
+  }, [isEditing, readOnly, data.locked, text]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
@@ -63,8 +66,11 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
     // boundaries that contentEditable inserts on Shift+Enter; textContent
     // would flatten them.
     const newText = textRef.current?.innerText ?? '';
+    if (newText !== textAtEditStart.current) {
+      pushSnapshot();
+    }
     updateNodeData(id, {text: newText});
-  }, [id, updateNodeData]);
+  }, [id, pushSnapshot, updateNodeData]);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {

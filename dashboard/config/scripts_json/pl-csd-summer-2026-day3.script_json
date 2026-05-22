@@ -2,13 +2,16 @@
   "script": {
     "name": "pl-csd-summer-2026-day3",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_verified_resources": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 05:59:58 UTC",
+    "serialized_at": "2026-05-19 13:50:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -19,28 +22,2212 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "Introduction to Day 3",
+      "name": "Introduction to Day 3",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get oriented to the day"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Day 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "Classroom Culture",
+      "name": "Classroom Culture",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is designed to create a space for participants to reflect on the culture they hope to create in their classrooms. Participants will describe a positive classroom culture and collaborate with other teachers to share strategies for creating that culture. \n\n\n**Objectives:**\n* Participants have collaborated with their peers about ways to create a positive classroom culture that supports practices such as teamwork, debugging, pair programming, and peer collaboration\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n* Participants have reflected on and defined what a positive classroom culture looks like\n\n**Suggested Time:** 50 minutes",
+        "student_overview": "**You will:**\n* Collaborate with your peers about ways to create a positive classroom culture that supports practices such as teamwork, debugging, pair programming, and peer collaboration\n* Understand the importance of modeling as a lead learner in the CS classroom.\n* Reflect on and define what a positive classroom culture looks like\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Classroom Culture",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "TLO 1 - U3L6 Random Numbers",
+      "name": "TLO 1 - U3L6 Random Numbers",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Essential Practice:** Students have strategies for debugging\n\n**Potential Teaching Group Decisions:**\n* The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n* Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n* Teacher has participants document bugs in their journals\nIn the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n**Objectives:**\nParticipants have brainstormed ways to support students in the process of debugging\nParticipants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2025/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
+        "preparation": "- Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "TLO 2 - U3L8 Sprites",
+      "name": "TLO 2 - U3L8 Sprites",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n**Potential Teaching Group Decisions:**\n* Have participants respond to prompts using a journal\n* Have participants add key vocabulary to their journal\n* Facilitate discussion by providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2025/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "Unit 3 Curriculum Investigation: Sprites",
+      "name": "Unit 3 Curriculum Investigation: Sprites",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThis curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants know how to utilize randomness in Game Lab using random numbers.\n* Participants know what sprites are in Game Lab.\n\n**Suggested Time:** 50 minutes",
+        "student_overview": "**You will:**\n* Know how to utilize randomness in Game Lab using random numbers.\n* Know what sprites are in Game Lab.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "Unit 3 Connections",
+      "name": "Unit 3 Connections",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nOn Days 2 and 3, participants engaged in four Unit 3 - Interactive Animations and Games lessons. This session provides participants with space to review what they’ve learned and ask questions about the unit.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 3 that has not been covered in the workshop\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 3 that has not been covered in the workshop"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "Understanding Context",
+      "name": "Understanding Context",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is designed for participants to begin to understand their context related to equity in CS education. Participants will use data to explore who has access to CS both nationally and within their home state. They will then discuss systemic barriers that limit access, diversity, and inclusion in CS education.\n\n\n**Objectives:**\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Participants identify systemic barriers that limit access, diversity, and inclusion in CS education\n* Participants list strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)\n\n**Suggessted Time:** 45 minutes ",
+        "student_overview": "**You will:**\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of CS education\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education\n* List strategies to gather data (quantitative and qualitative) about access, diversity, and inclusion in CS courses locally (within school and classroom)"
+      },
+      "seeding_key": {
+        "lesson.key": "Understanding Context",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+      "name": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n**Potential Teaching Group Decisions:**\n* Group students and allow them to work together while circulating around the entire class.\n* Encourage students to discuss questions with a partner before asking for help from the teacher\n* When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum.\n\n**Suggested time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2025/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a>",
+        "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\n* Set up groups with preferably 3 students each\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+        "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "Day 3 Wrap Up",
+      "name": "Day 3 Wrap Up",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\n* Wrap up the themes of the day\n* Pulse check on teachers through gots and needs/survey\n\n\n**Objectives:**\n* Share gots and needs for the day.\n* Take the daily survey\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Share gots and needs for the day\n* Take the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 3 Survey</a> \n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Day 3 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d5b565e0-591f-49f7-9a74-7af6d9ac35e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5b565e0-591f-49f7-9a74-7af6d9ac35e5",
+        "lesson.key": "Introduction to Day 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "3cfe031a-a76e-4f47-95b7-6e58be7aed42",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3cfe031a-a76e-4f47-95b7-6e58be7aed42",
+        "lesson.key": "Classroom Culture",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "41a329c5-ef96-4d58-b414-4066376259b9",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41a329c5-ef96-4d58-b414-4066376259b9",
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "fc5124da-3aa2-425f-bb7e-64a868c49545",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545",
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "f0982949-9311-48f3-89de-a5294be56b6a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0982949-9311-48f3-89de-a5294be56b6a",
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e",
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5",
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "d39e7433-c9ab-4fe0-86f0-5eba82d5eaa5",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d39e7433-c9ab-4fe0-86f0-5eba82d5eaa5",
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "fa4a5b9c-de6a-4355-8399-1207bdb2f9ea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa4a5b9c-de6a-4355-8399-1207bdb2f9ea",
+        "lesson.key": "Unit 3 Curriculum Investigation: Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8",
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "5d0ea947-6c75-40c4-bce4-d5ed1964d780",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d0ea947-6c75-40c4-bce4-d5ed1964d780",
+        "lesson.key": "Understanding Context",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "f848b59e-2aef-4dce-ae96-a804a4ade6be",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f848b59e-2aef-4dce-ae96-a804a4ade6be",
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b",
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "89f897ac-5fcc-4815-8366-32511b467cdf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89f897ac-5fcc-4815-8366-32511b467cdf",
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    },
+    {
+      "key": "37079a89-528c-496f-b6b2-ace3c59ea022",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37079a89-528c-496f-b6b2-ace3c59ea022",
+        "lesson.key": "Day 3 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "426274f6-e008-40e8-a565-a4826c2ee187",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "426274f6-e008-40e8-a565-a4826c2ee187",
+        "lesson_activity.key": "d5b565e0-591f-49f7-9a74-7af6d9ac35e5"
+      }
+    },
+    {
+      "key": "36997909-4a45-4409-b9a8-2b58caf4092f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36997909-4a45-4409-b9a8-2b58caf4092f",
+        "lesson_activity.key": "3cfe031a-a76e-4f47-95b7-6e58be7aed42"
+      }
+    },
+    {
+      "key": "136fc39b-d834-49ba-9d6b-43a37d80dcdc",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:**  So far, our programs have done the same thing every time that we run them.  Are there any times that you'd want a program to do something differently each time it was run?"
+      },
+      "seeding_key": {
+        "activity_section.key": "136fc39b-d834-49ba-9d6b-43a37d80dcdc",
+        "lesson_activity.key": "41a329c5-ef96-4d58-b414-4066376259b9"
+      }
+    },
+    {
+      "key": "ad867eb9-e2d4-40d4-bb92-b809f86a80a6",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Allow students time to write down some ideas, then discuss them as a group.\n\n**Discussion goal:** The goal of this discussion is to set the context for the introduction of random numbers. Students may come up with various ideas related to user interaction or gathering input from other sources. Allow them to discuss the different ideas that they have, but eventually, turn the conversation to the idea of randomness.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad867eb9-e2d4-40d4-bb92-b809f86a80a6",
+        "lesson_activity.key": "41a329c5-ef96-4d58-b414-4066376259b9"
+      }
+    },
+    {
+      "key": "c4fe4eb2-03e0-4814-935e-f6dd122cc76b",
+      "position": 3,
+      "properties": {
+        "description": "So far, we've wanted our programs to do exactly as we've coded, and most of our surprises have been bugs.  Today we're going to look at how we can code random behaviors into our programs so that we can get some good surprises.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4fe4eb2-03e0-4814-935e-f6dd122cc76b",
+        "lesson_activity.key": "41a329c5-ef96-4d58-b414-4066376259b9"
+      }
+    },
+    {
+      "key": "ffd03968-086c-47af-91c8-6c61fcf47206",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can we make our programs behave differently each time they are run?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffd03968-086c-47af-91c8-6c61fcf47206",
+        "lesson_activity.key": "41a329c5-ef96-4d58-b414-4066376259b9"
+      }
+    },
+    {
+      "key": "0ef2c4de-5345-47cd-8ce9-058258ad43ba",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Move students onto Code Studio",
+        "name": "Programming Images\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ef2c4de-5345-47cd-8ce9-058258ad43ba",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "7c3af384-cb73-45cf-9e50-674125e3d93d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3af384-cb73-45cf-9e50-674125e3d93d",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "5b28d801-0fe6-45a7-86b0-6fcae0cd27e6",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should predict that _something_ will happen with the x-coordiante of the ellipse, even if they are unsure what will happen. Students may say that the value will be either 200 or 400, or they may say the value will be between 200 and 400. This creates the effect of drawing an ellipse somewhere on the right side of the screen.\n\nWhen facilitating the class discussion, ensure that students look at their neighbors screen and compare - this helps them see that different behaviors are occuring for different people. Also encourage students to run the code multiple times to see the result."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b28d801-0fe6-45a7-86b0-6fcae0cd27e6",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "203b95fa-493d-45bc-8b7f-839bef789289",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "829ada6e-2031-4bd3-967d-46c5cc9fdd27",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "829ada6e-2031-4bd3-967d-46c5cc9fdd27",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "a8d1891c-eb90-4fea-b159-52a5219f8725",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a8d1891c-eb90-4fea-b159-52a5219f8725",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "26e6874b-4051-48fe-b130-c0b091266e5a",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "26e6874b-4051-48fe-b130-c0b091266e5a",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "b5f30c85-e441-4a95-be95-63c79438e9d3",
+      "position": 8,
+      "properties": {
+        "description": "**Share:** If some students have taken extra time to work on their projects, give them a chance to share their more complex rainbow snakes. Focus conversation on which parameters students are manipulating or randomizing to create their drawings."
+      },
+      "seeding_key": {
+        "activity_section.key": "b5f30c85-e441-4a95-be95-63c79438e9d3",
+        "lesson_activity.key": "fc5124da-3aa2-425f-bb7e-64a868c49545"
+      }
+    },
+    {
+      "key": "4db0f05a-6239-4564-af50-253430da6786",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we make our programs behave differently each time they are run?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "4db0f05a-6239-4564-af50-253430da6786",
+        "lesson_activity.key": "f0982949-9311-48f3-89de-a5294be56b6a"
+      }
+    },
+    {
+      "key": "4f4ab0c0-c9ea-45e1-8e13-30a48f14ef14",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:**  So far, we've only looked at random numbers.  Are there any other things that you might like to be random in your program?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f4ab0c0-c9ea-45e1-8e13-30a48f14ef14",
+        "lesson_activity.key": "f0982949-9311-48f3-89de-a5294be56b6a"
+      }
+    },
+    {
+      "key": "8afdeab9-a7a7-4cf1-83b3-3a8f7aa43698",
+      "position": 3,
+      "properties": {
+        "description": "**Share:** Allow students to share out what sorts of random things they might like in their programs.\n\n**Discussion Goal:** The discussion is intended to have students think about the wider implications of randomness in games and other programs. Although there is no block to generate random data other than numbers, in later lessons students will learn techniques that will allow them to use random numbers to randomly choose from a variety of behaviors.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8afdeab9-a7a7-4cf1-83b3-3a8f7aa43698",
+        "lesson_activity.key": "f0982949-9311-48f3-89de-a5294be56b6a"
+      }
+    },
+    {
+      "key": "1559e240-0c21-4d1a-9de5-5575b0b24c8e",
+      "position": 1,
+      "properties": {
+        "description": "**Review:** So far we've written programs that put simple shapes on the screen. List of all of the different pieces of information that you have used to control _how_ these shapes are drawn.  \r\n\r\n\r\n**Prompt:**If you wanted to create programs with more detailed images, maybe even characters that you could interact with, what other pieces of information might you need in your code?",
+        "name": "How Much Information?\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "1559e240-0c21-4d1a-9de5-5575b0b24c8e",
+        "lesson_activity.key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e"
+      }
+    },
+    {
+      "key": "073d4837-d877-4321-8cfb-e54c11a90e36",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their lists.\n\n**Discussion Goal:** The goal here is to get students thinking about all of the different values that go into drawing a single shape on the screen, and how many more values they may need to control a more detailed character in a program. If students are struggling to come up with ideas, you might use some of the following prompts:\n\n* How do you tell a shape where to go on the screen?\n* How do you tell a shape what size it needs to be?\n* How do you tell a shape what color it should be? What about its outline?\n* What if you wanted to change any of those values during your program, or control other things like rotation?"
+      },
+      "seeding_key": {
+        "activity_section.key": "073d4837-d877-4321-8cfb-e54c11a90e36",
+        "lesson_activity.key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e"
+      }
+    },
+    {
+      "key": "b2c780e9-b3fb-45ae-8a3e-28878671b927",
+      "position": 3,
+      "properties": {
+        "description": "Today we'll learn how to create characters in our animations called **sprites**. These sprites will help us keep track of all of the information that we need in our programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b2c780e9-b3fb-45ae-8a3e-28878671b927",
+        "lesson_activity.key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e"
+      }
+    },
+    {
+      "key": "cc028b11-ada5-4237-a7ba-b9e941955ddb",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc028b11-ada5-4237-a7ba-b9e941955ddb",
+        "lesson_activity.key": "9dfcb65e-0c89-4676-8f79-9bfb31b8c40e"
+      }
+    },
+    {
+      "key": "be3a7c5e-e9c2-4d12-b73c-c615b1237946",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:**  Send students to Code Studio",
+        "name": "Introduction to Sprites\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be3a7c5e-e9c2-4d12-b73c-c615b1237946",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "5ff240b7-cc4d-4a5f-bec8-e642ad0fe740",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ff240b7-cc4d-4a5f-bec8-e642ad0fe740",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "f3c9b892-71b6-4c53-965a-14e87dbf1127",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/pl-csd-summer/2026] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f3c9b892-71b6-4c53-965a-14e87dbf1127",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "b567776a-d3e6-4f72-80ff-6939ec77e64c",
+      "position": 4,
+      "properties": {
+        "description": "Keeping track of many shapes and the different variables that control characteristics of those shapes can get very complex. Computer scientists created something called an object which allows for one variable name to control both the shape and all its additional characteristics. In Game Lab, students will use a certain type of object called a sprite. A sprite is just a rectangle with properties for controlling its look.",
+        "progression_name": "Video: Introduction to Sprites",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Sprites and Objects**: Behind the scenes, a sprite is a type of data called an object. Objects are programming structures that encapsulate data and behaviors into a single item. We don't need to introduce the formal idea of an object in this unit, but sprites are a good example of an object and students will learn to manipulate their properties throughout the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b567776a-d3e6-4f72-80ff-6939ec77e64c",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "4a1798de-47d2-4aaa-a0a0-8e2abdc74668",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look."
+      },
+      "seeding_key": {
+        "activity_section.key": "4a1798de-47d2-4aaa-a0a0-8e2abdc74668",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "9017723c-96e4-4d49-8f79-3262c03e5501",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "9017723c-96e4-4d49-8f79-3262c03e5501",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "866c2f87-1b99-4837-832f-f07261dcfd0f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/pl-csd-summer/2026] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
+        "progression_name": "Video: The Animation Tab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert!** Many students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, and that two or more sprites might share the same animation."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "866c2f87-1b99-4837-832f-f07261dcfd0f",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "265054d3-02af-4900-bc33-babc136fc8a7",
+      "position": 8,
+      "properties": {
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "13b7ff8b-8de8-4b5b-985c-d53723393d21",
+      "position": 9,
+      "properties": {
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "13b7ff8b-8de8-4b5b-985c-d53723393d21",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "9c3aad83-b0e5-48bc-887d-090d5826e6e4",
+      "position": 10,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c3aad83-b0e5-48bc-887d-090d5826e6e4",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "ba3f3b1f-6020-4c54-b8e6-ee02118b1ea1",
+      "position": 11,
+      "properties": {
+        "name": "Assessment",
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ba3f3b1f-6020-4c54-b8e6-ee02118b1ea1",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "987dcbc2-78e0-483b-8e43-156e5bdd7c72",
+      "position": 12,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "987dcbc2-78e0-483b-8e43-156e5bdd7c72",
+        "lesson_activity.key": "f3c0f33e-ab2b-43fe-b8d1-be76108461a5"
+      }
+    },
+    {
+      "key": "bf7096d8-8ebf-44f6-9dd0-ca9c88818ecd",
+      "position": 1,
+      "properties": {
+        "description": "**Key Vocabulary:**\n\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7096d8-8ebf-44f6-9dd0-ca9c88818ecd",
+        "lesson_activity.key": "d39e7433-c9ab-4fe0-86f0-5eba82d5eaa5"
+      }
+    },
+    {
+      "key": "9ce6ee3e-f012-4296-ab55-ec26f19a246d",
+      "position": 2,
+      "properties": {
+        "description": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\n\n**Prompt:**  So far we've been able to change a sprite's location and image. What else might you want to change about your sprites?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ce6ee3e-f012-4296-ab55-ec26f19a246d",
+        "lesson_activity.key": "d39e7433-c9ab-4fe0-86f0-5eba82d5eaa5"
+      }
+    },
+    {
+      "key": "ba9ef29c-415c-488a-9ec6-9861a7982019",
+      "position": 3,
+      "properties": {
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** This discussion prompts students to think about the different properties that a sprite might have, and prepares them for the next lesson, which explicitly covers sprite properties.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba9ef29c-415c-488a-9ec6-9861a7982019",
+        "lesson_activity.key": "d39e7433-c9ab-4fe0-86f0-5eba82d5eaa5"
+      }
+    },
+    {
+      "key": "b38ea413-e618-424f-9997-e5239de22d7c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b38ea413-e618-424f-9997-e5239de22d7c",
+        "lesson_activity.key": "fa4a5b9c-de6a-4355-8399-1207bdb2f9ea"
+      }
+    },
+    {
+      "key": "039f0fce-3856-442f-a933-22d36444f1f1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 7: Mini-Project - Robot Faces"
+      },
+      "seeding_key": {
+        "activity_section.key": "039f0fce-3856-442f-a933-22d36444f1f1",
+        "lesson_activity.key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8"
+      }
+    },
+    {
+      "key": "a1f4ce69-28ce-4da6-adb4-55e2616d47ef",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson 11: Mini-Project - Captioned Scenes"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1f4ce69-28ce-4da6-adb4-55e2616d47ef",
+        "lesson_activity.key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8"
+      }
+    },
+    {
+      "key": "d6fb97ad-0ada-49b0-adb3-ac6ec750f82e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 14: Mini-Project - Animation"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6fb97ad-0ada-49b0-adb3-ac6ec750f82e",
+        "lesson_activity.key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8"
+      }
+    },
+    {
+      "key": "001e0bcb-fd61-4c68-8e26-1e8968a31df5",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson 18: Project - Interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "001e0bcb-fd61-4c68-8e26-1e8968a31df5",
+        "lesson_activity.key": "f8bd040b-30b7-435b-bf3c-c5ca991ea3a8"
+      }
+    },
+    {
+      "key": "0d8a191b-aba2-469d-89a8-23b48cbd8f87",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d8a191b-aba2-469d-89a8-23b48cbd8f87",
+        "lesson_activity.key": "5d0ea947-6c75-40c4-bce4-d5ed1964d780"
+      }
+    },
+    {
+      "key": "0910b11e-73f6-42a3-9777-2f906e3bcbb4",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** In the last two lessons we've seen that products are designed with a purpose and that different designs are more useful or pleasing to different people. Since different people have different needs or interests, what might be some of the challenges if you're trying to design a product for someone else?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "0910b11e-73f6-42a3-9777-2f906e3bcbb4",
+        "lesson_activity.key": "f848b59e-2aef-4dce-ae96-a804a4ade6be"
+      }
+    },
+    {
+      "key": "450d07ca-a0e6-4534-9f97-f4dfc7b3d413",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have students think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: This should be a very quick introduction to the lesson. You are looking to call out that designing for other people requires you to consider their needs instead of your own, which can often be challenging. This discussion will lead into the video introduced just after the warm-up."
+      },
+      "seeding_key": {
+        "activity_section.key": "450d07ca-a0e6-4534-9f97-f4dfc7b3d413",
+        "lesson_activity.key": "f848b59e-2aef-4dce-ae96-a804a4ade6be"
+      }
+    },
+    {
+      "key": "6f4f0aba-4fbf-425e-b023-5c190b6a745f",
+      "position": 3,
+      "properties": {
+        "description": "Designing for other people can be challenging for a lot of reasons, but one of the most important is that it challenges us to consider what another person values, likes, or is concerned about. In other words we need to have empathy for someone else. Today we're going to do a mini design activity to help us practice the entire process ourselves.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6f4f0aba-4fbf-425e-b023-5c190b6a745f",
+        "lesson_activity.key": "f848b59e-2aef-4dce-ae96-a804a4ade6be"
+      }
+    },
+    {
+      "key": "acff0e17-66a5-4a36-85d0-1611edafcac9",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can we design for people other than ourselves?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "acff0e17-66a5-4a36-85d0-1611edafcac9",
+        "lesson_activity.key": "f848b59e-2aef-4dce-ae96-a804a4ade6be"
+      }
+    },
+    {
+      "key": "947ec4c8-b1ab-4e9e-8e20-98684351cd14",
+      "position": 1,
+      "properties": {
+        "description": "**Video:** Show students the [r the_design_thinking_process/pl-csd-summer/2026] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
+        "name": "Introduce Design Thinking\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "947ec4c8-b1ab-4e9e-8e20-98684351cd14",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "6f0e3e6a-4e77-4dd5-a338-692bd2e574cf",
+      "position": 2,
+      "properties": {
+        "description": "**Display:** Display the steps from the Design Thinking Process. As you talk about this process, click the animation on the slide to have these steps fade out and the Problem Solving Process fade in."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f0e3e6a-4e77-4dd5-a338-692bd2e574cf",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "0ffa9dd2-174d-41ff-b665-38a80c6585c5",
+      "position": 3,
+      "properties": {
+        "description": "The Design Thinking Process is very similar to our Problem Solving Process - both are centered around empathy, and both have a similar cycle for defining, preparing, trying, and reflecting. Over the next few weeks, we’re going to practice this process so we can design products and apps for people in our communities and around the world. Today and tomorrow, we’re going to practice a shorter version of this process by brainstorming different groups of people and their needs, then designing smart clothing products to meet those needs.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \n\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ffa9dd2-174d-41ff-b665-38a80c6585c5",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "d01005d3-39df-4629-a4fb-ec70977b1234",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Students should be in teams of 3 to 5.",
+        "name": "Introduce the Activity\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d01005d3-39df-4629-a4fb-ec70977b1234",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "025f330c-aa5a-4215-a9dd-ed4d4e5e7a47",
+      "position": 5,
+      "properties": {
+        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each team.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Reducing Printed Materials**\r\n\r\n**Online Option:** The Activity Guide can be completed online.  For the drawing, students can either draw their product online or submit a paper version of their product separately.\r\n\r\n**Journal Option:** This activity can be completed as a journal entry.  Students can use a digital version of the Activity Guide as a prompt, copying the headers or prompts into their journals.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "025f330c-aa5a-4215-a9dd-ed4d4e5e7a47",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "6d7f97a6-9a52-4b61-9661-c12d4be27da3",
+      "position": 6,
+      "properties": {
+        "description": "#### User-Centered Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d7f97a6-9a52-4b61-9661-c12d4be27da3",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "3ebceb76-8011-4b6f-817d-0889c53d0a15",
+      "position": 7,
+      "properties": {
+        "description": "**Overview:** As a class read through the \"Overview\" section to make sure groups understand the goal of the activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Smart Clothes?:** This type of product was chosen because there are broad applications for combining computing technology with clothing that could benefit many types of users. An additional benefit is that the field is not yet well-defined and so it provides students more leeway to develop ideas for how to solve people's problems rather than rely on more established solutions. \r\n\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ebceb76-8011-4b6f-817d-0889c53d0a15",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "2d4a24e4-8e49-433b-ba4b-0f02a60e1862",
+      "position": 8,
+      "properties": {
+        "description": "**Brainstorm User Groups:** Ask students to list on their activity guides as many different potential user groups of smart clothing as they can think of. The video gave an example of elderly people, but students can come up with different groups of people. Give students a couple of minutes to brainstorm independently. Once they're done, ask each student to create a post-it for the two or three user groups they think are most interesting.",
+        "name": "Define\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Brainstorming User Groups:** In this first brainstorming activity, try to model this process carefully. Encourage students to consider different identifying factors when brainstorming users - for example, identifying users by age or occupation or living situation. These should be broad, one or two word responses that identify large groups of people in the population. Some examples may include: young students, military, doctors, pet owners, live on a farm, etc. \r\n\r\nEncourage students to draw from people they know in their lives to help generalize to a certain type of user. Emphasize the fact that there are no right or wrong ideas, and students will have a chance to narrow down their choices later. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d4a24e4-8e49-433b-ba4b-0f02a60e1862",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "56a3ba4f-63fc-4bc3-bba6-1416fe445f6d",
+      "position": 9,
+      "properties": {
+        "description": "**Categorize Users:** Have students group together post-its of their users into similar categories on their poster board, such as by age or occupation. It is okay if some post-its don’t fit into any similar groups and are left by themselves.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Categorizing Users:** The larger goal is for students to notice any patterns or similarities between the groups that each person brainstormed independently. The categories may continue to generalize user groups - for example, post-its like “police” and “firefighter” and “EMTs” might get grouped together because they are all “first responders”.\r\n\r\nWhen creating categories, emphasize that again there are no \"right\" categories - instead, remind students that the goal here is to Define the problem they will try to solve and this process is a useful way to begin focusing on a specific problem.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "56a3ba4f-63fc-4bc3-bba6-1416fe445f6d",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "4439a53d-2aba-4be1-8f80-9f39f6556067",
+      "position": 10,
+      "properties": {
+        "description": "**Choose Specific User:** Ask teams to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some teams choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
+      },
+      "seeding_key": {
+        "activity_section.key": "4439a53d-2aba-4be1-8f80-9f39f6556067",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "9f94c9e9-7895-49dd-a8e6-a8f90983d2f9",
+      "position": 11,
+      "properties": {
+        "description": "**Circulate:** Students should repeat the same process of creating scraps of paper for each need, interest, or concern of their user and then grouping them. Students can use the markers and poster paper to do this step if you have provided those materials.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As you circulate the room, check that students are grouping ideas into meaningful categories.  Categories should be broad enough that several related ideas fall into them, but not so broad that there are only one or two categories for the entire group.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f94c9e9-7895-49dd-a8e6-a8f90983d2f9",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "e20637e1-f12d-433a-9e61-2c0852b982aa",
+      "position": 12,
+      "properties": {
+        "description": "**Choose Specific Need:** Ask teams to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each team should have settled on a specific user group and a need or interest that group has. Ask teams to share their user group and need with the rest of the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "e20637e1-f12d-433a-9e61-2c0852b982aa",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "472ba367-d666-4779-bea5-0a2279e9adc0",
+      "position": 13,
+      "properties": {
+        "description": "**Brainstorm Solutions:** Ask students to brainstorm potential ways smart clothing could be used to address the problem they've decided to solve. Record their thoughts on the second page of their activity guide.",
+        "name": "Prepare\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "472ba367-d666-4779-bea5-0a2279e9adc0",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "0e5a6c65-6844-43c9-b11b-5efa8ed6fb3b",
+      "position": 14,
+      "properties": {
+        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their team and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Discussing Pros and Cons:** Students should speak from the standpoint of their user, imagining any intended or unintended benefits and harms for each proposed solution. They are not judging ideas as “good” or “bad”, but instead discussing whether or not the solution addresses the needs & interests of their user. Some useful phrases during the discussion are saying “Yes, and…” when they hear a pro, and saying “No, but…” when they hear a con.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0e5a6c65-6844-43c9-b11b-5efa8ed6fb3b",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "eb03e8b6-91d0-4e6c-bf2b-70a6ab92c221",
+      "position": 15,
+      "properties": {
+        "description": "**Choose Specific Solution:** Have the teams choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "eb03e8b6-91d0-4e6c-bf2b-70a6ab92c221",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "d7b5f809-22b7-4d37-9aed-f03fa09664b7",
+      "position": 16,
+      "properties": {
+        "description": "Today we’ve completed the Define and Prepare stages of our design process - we’ve determined our users and brainstormed their needs, and are now ready to design a solution using smart clothing. Tomorrow we’ll complete the Try and Reflect stages, where you’ll create your own smart clothing design and share your ideas with the class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d7b5f809-22b7-4d37-9aed-f03fa09664b7",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "eeae9032-5d90-4ed8-9b6d-37aa8ebab982",
+      "position": 17,
+      "properties": {
+        "description": "**Collect:** Either collect the activity guides from each student or ask them to store them in a safe place - they will be used in tomorrow's activity.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the top of page 2 of the Activity Guide to check that students have generated multiple relevant ideas for meeting the user's needs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eeae9032-5d90-4ed8-9b6d-37aa8ebab982",
+        "lesson_activity.key": "ae0f1d5b-1cf3-486e-8dbe-b53a238a220b"
+      }
+    },
+    {
+      "key": "c7fc5f19-92ee-4064-a2e1-43fbae282d97",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Today's activity involved a lot of brainstorming with your team. What is one example from today where a team member had an idea that you hadn't considered before? How did that idea affect some of the decisions you made?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7fc5f19-92ee-4064-a2e1-43fbae282d97",
+        "lesson_activity.key": "89f897ac-5fcc-4815-8366-32511b467cdf"
+      }
+    },
+    {
+      "key": "eb80c889-704f-4e46-b436-21f385dfff7c",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the team had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb80c889-704f-4e46-b436-21f385dfff7c",
+        "lesson_activity.key": "89f897ac-5fcc-4815-8366-32511b467cdf"
+      }
+    },
+    {
+      "key": "016dd017-2319-4dbd-9488-d06bda6294b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "016dd017-2319-4dbd-9488-d06bda6294b1",
+        "lesson_activity.key": "37079a89-528c-496f-b6b2-ace3c59ea022"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L6 - Predict_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "7c3af384-cb73-45cf-9e50-674125e3d93d"
+      },
+      "level_keys": [
+        "CSD U3L6 - Predict_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Random random ellipse_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      },
+      "level_keys": [
+        "CSD U3 Random random ellipse_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Random random ellipse2_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      },
+      "level_keys": [
+        "CSD U3 Random random ellipse2_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables random with assignment_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      },
+      "level_keys": [
+        "CSD U3 Variables random with assignment_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables random reassign_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      },
+      "level_keys": [
+        "CSD U3 Variables random reassign_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games random practice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "829ada6e-2031-4bd3-967d-46c5cc9fdd27"
+      },
+      "level_keys": [
+        "CSD games random practice_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Random rainbow snake_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "a8d1891c-eb90-4fea-b159-52a5219f8725"
+      },
+      "level_keys": [
+        "CSD U3 Random rainbow snake_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games random challenge_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "26e6874b-4051-48fe-b130-c0b091266e5a"
+      },
+      "level_keys": [
+        "CSD games random challenge_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L7 - Predict_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "5ff240b7-cc4d-4a5f-bec8-e642ad0fe740"
+      },
+      "level_keys": [
+        "CSD U3L7 - Predict_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9017723c-96e4-4d49-8f79-3262c03e5501"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro debug_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9017723c-96e4-4d49-8f79-3262c03e5501"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro debug_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites test intro sprites CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      },
+      "level_keys": [
+        "CSD U3 Sprites test intro sprites CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites anitab 1_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      },
+      "level_keys": [
+        "CSD U3 Sprites anitab 1_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites sequencing_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      },
+      "level_keys": [
+        "CSD U3 Sprites sequencing_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "13b7ff8b-8de8-4b5b-985c-d53723393d21"
+      },
+      "level_keys": [
+        "CSD U3 drawSprites placement match_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games Sprites practice_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9c3aad83-b0e5-48bc-887d-090d5826e6e4"
+      },
+      "level_keys": [
+        "CSD Games Sprites practice_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites assessment_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "ba3f3b1f-6020-4c54-b8e6-ee02118b1ea1"
+      },
+      "level_keys": [
+        "CSD U3 Sprites assessment_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games Sprites Challenges_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "987dcbc2-78e0-483b-8e43-156e5bdd7c72"
+      },
+      "level_keys": [
+        "CSD Games Sprites Challenges_CSD-PL-24_1-25_2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 7: Mini-Project - Robot Faces"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL-summer- CSD U3 L7 mini project_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "039f0fce-3856-442f-a933-22d36444f1f1"
+      },
+      "level_keys": [
+        "PL-summer- CSD U3 L7 mini project_25_2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 11: Mini-Project - Captioned Scenes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL summer - CSD U3 Scene Example_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "a1f4ce69-28ce-4da6-adb4-55e2616d47ef"
+      },
+      "level_keys": [
+        "PL summer - CSD U3 Scene Example_25_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 14: Mini-Project - Animation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL Summer - CSD web project animated example_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "d6fb97ad-0ada-49b0-adb3-ac6ec750f82e"
+      },
+      "level_keys": [
+        "PL Summer - CSD web project animated example_25_2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 18: Project - Interactive Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "001e0bcb-fd61-4c68-8e26-1e8968a31df5"
+      },
+      "level_keys": [
+        "PL Summer CSD U3 - Interactive Card - ExampleChoice_25_2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L6 - Predict_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3L6 - Predict_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "7c3af384-cb73-45cf-9e50-674125e3d93d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Random random ellipse_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Random random ellipse_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Random random ellipse2_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Random random ellipse2_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables random with assignment_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables random with assignment_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables random reassign_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables random reassign_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "203b95fa-493d-45bc-8b7f-839bef789289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games random practice_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD games random practice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "829ada6e-2031-4bd3-967d-46c5cc9fdd27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Random rainbow snake_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Random rainbow snake_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "a8d1891c-eb90-4fea-b159-52a5219f8725"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games random challenge_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD games random challenge_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "26e6874b-4051-48fe-b130-c0b091266e5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L7 - Predict_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3L7 - Predict_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "5ff240b7-cc4d-4a5f-bec8-e642ad0fe740"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9017723c-96e4-4d49-8f79-3262c03e5501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro debug_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro debug_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9017723c-96e4-4d49-8f79-3262c03e5501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites test intro sprites CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites test intro sprites CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites anitab 1_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites anitab 1_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites sequencing_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites sequencing_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "265054d3-02af-4900-bc33-babc136fc8a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawSprites placement match_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "13b7ff8b-8de8-4b5b-985c-d53723393d21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games Sprites practice_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD Games Sprites practice_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "9c3aad83-b0e5-48bc-887d-090d5826e6e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites assessment_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Sprites assessment_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "ba3f3b1f-6020-4c54-b8e6-ee02118b1ea1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games Sprites Challenges_CSD-PL-24_1-25_2026",
+        "script_level.level_keys": [
+          "CSD Games Sprites Challenges_CSD-PL-24_1-25_2026"
+        ],
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "987dcbc2-78e0-483b-8e43-156e5bdd7c72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL-summer- CSD U3 L7 mini project_25_2026",
+        "script_level.level_keys": [
+          "PL-summer- CSD U3 L7 mini project_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "039f0fce-3856-442f-a933-22d36444f1f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL summer - CSD U3 Scene Example_25_2026",
+        "script_level.level_keys": [
+          "PL summer - CSD U3 Scene Example_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "a1f4ce69-28ce-4da6-adb4-55e2616d47ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL Summer - CSD web project animated example_25_2026",
+        "script_level.level_keys": [
+          "PL Summer - CSD web project animated example_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "d6fb97ad-0ada-49b0-adb3-ac6ec750f82e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL Summer CSD U3 - Interactive Card - ExampleChoice_25_2026",
+        "script_level.level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_25_2026"
+        ],
+        "lesson.key": "Unit 3 Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day3",
+        "activity_section.key": "001e0bcb-fd61-4c68-8e26-1e8968a31df5"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Animation Tab",
+      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+      "key": "animation_tab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "Introduction to Sprites",
+      "url": "https://www.youtube.com/watch?v=96iGNtAp9J4",
+      "key": "introduction_to_sprites",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/introduction-to-sprites-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://docs.google.com/presentation/d/1wGEmc5Le7yplEoDzGSvWeaNxSxXCLUgu3f9DPZIwzF0/template/preview",
+      "key": "random_numbers_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+      "key": "sprites",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sprites"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://docs.google.com/presentation/d/1ONvRNfx1y9rfvRV7Y68nb9oo3v7tvsHt4OwJ4cUK9HE/template/preview",
+      "key": "sprites_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "name": "The Animation Tab",
+      "url": "https://youtu.be/BrkREtPb0J4",
+      "key": "the_animation_tab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/sprite-animations-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "name": "The Design Thinking Process",
+      "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
+      "key": "the_design_thinking_process",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "name": "User Centered Design - Define and Prepare",
+      "url": "https://docs.google.com/presentation/d/1uuFzndkmhpgptbh6WMcZMhHjBcOFaonwJPzwa89Zkco/template/preview",
+      "key": "user_centered_design_-_define_and_prepare",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "name": "User Centered Design (Define & Prepare)",
+      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
+      "key": "user_centered_design_define_prepare_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "name": "User Centered Design (Define & Prepare) 2021",
+      "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
+      "key": "user_centered_design_define_prepare_2021",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_define_prepare_2021"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_2021"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -49,19 +2236,185 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A character on the screen with properties that describe its location, movement, and look.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "createSprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setAnimation"
+      }
+    }
   ],
   "objectives": [
-
+    {
+      "key": "3fa36914-83d0-429b-a448-ed467b4cae8a",
+      "properties": {
+        "description": "Generate multiple strategies for meeting user needs."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "objective.key": "3fa36914-83d0-429b-a448-ed467b4cae8a"
+      }
+    },
+    {
+      "key": "478debd2-392b-434d-9df7-e50a23fc1f8f",
+      "properties": {
+        "description": "Update a value stored in a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "objective.key": "478debd2-392b-434d-9df7-e50a23fc1f8f"
+      }
+    },
+    {
+      "key": "53dd1912-2d3c-41a1-9ac9-d4d42c720a57",
+      "properties": {
+        "description": "Organize ideas and strategies into meaningful categories."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "objective.key": "53dd1912-2d3c-41a1-9ac9-d4d42c720a57"
+      }
+    },
+    {
+      "key": "6206a715-f93d-401c-a5d8-75e06b4189d4",
+      "properties": {
+        "description": "Generate and use random numbers in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "objective.key": "6206a715-f93d-401c-a5d8-75e06b4189d4"
+      }
+    },
+    {
+      "key": "cb071dd0-45f1-4449-bfd4-667772df0550",
+      "properties": {
+        "description": "Create and use a sprite"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "objective.key": "cb071dd0-45f1-4449-bfd4-667772df0550"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

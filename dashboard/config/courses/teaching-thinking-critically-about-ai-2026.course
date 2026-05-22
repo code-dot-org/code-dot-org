@@ -1,0 +1,24 @@
+{
+  "name": "teaching-thinking-critically-about-ai-2026",
+  "script_names": [
+    "self-paced-pl-teaching-thinking-critically-about-ai-2026"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-thinking-critically-about-ai-2026"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-thinking-critically-about-ai",
+    "has_verified_resources": true,
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

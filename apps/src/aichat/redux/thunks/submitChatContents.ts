@@ -28,7 +28,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
-import supportsClientApi from '../../api/supportsClientApi';
+import shouldUseAiGateway from '../../api/shouldUseAiGateway';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -180,7 +180,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (supportsClientApi(modelParameters.selectedModelId)) {
+      if (shouldUseAiGateway(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =

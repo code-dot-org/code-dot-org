@@ -5,6 +5,7 @@ import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {createUuid} from '@cdo/apps/utils';
 
 import {canCreateConnection} from '../utils/connectionRules';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -36,6 +37,7 @@ interface UseConnectModeOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   announce: (message: string) => void;
+  pushSnapshot: () => void;
 }
 
 /**
@@ -48,6 +50,7 @@ export function useConnectMode({
   nodes,
   setEdges,
   announce,
+  pushSnapshot,
 }: UseConnectModeOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -98,12 +101,14 @@ export function useConnectMode({
         return;
       }
       const handles = pickHandles(sourceNode, targetNode);
+      pushSnapshot();
       setEdges(currentEdges => {
         if (!canCreateConnection(connectingFrom, targetNodeId, nodes)) {
           return currentEdges;
         }
         return addEdge(
           {
+            id: createUuid(),
             source: connectingFrom,
             target: targetNodeId,
             ...handles,
@@ -115,7 +120,7 @@ export function useConnectMode({
       announce(`Edge created to ${getNodeLabel(targetNode)}.`);
       setConnectingFrom(null);
     },
-    [connectingFrom, getNode, nodes, setEdges, announce]
+    [connectingFrom, getNode, nodes, pushSnapshot, setEdges, announce]
   );
 
   return {

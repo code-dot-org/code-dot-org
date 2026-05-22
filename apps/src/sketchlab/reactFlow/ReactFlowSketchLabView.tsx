@@ -17,6 +17,7 @@ import {
   ProjectSources,
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
+import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -279,6 +280,7 @@ function ReactFlowSketchLabViewInner({
             {teacherViewingStudent && (
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
             )}
+            <PreviousVersionAlert />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}

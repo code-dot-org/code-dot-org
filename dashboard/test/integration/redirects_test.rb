@@ -46,11 +46,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/flappy/1?lang=ar-SA'
     assert_equal 'ar-SA', cookies[:language_]
 
+    cookies.delete('language_')
+    cookies.delete('ge_region')
+
     get '/playlab/lang/ar'
     assert_redirected_to '/s/playlab/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
     assert_equal 'ar-SA', cookies[:language_]
+
+    cookies.delete('language_')
+    cookies.delete('ge_region')
 
     get '/artist/lang/ar'
     assert_redirected_to '/s/artist/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
