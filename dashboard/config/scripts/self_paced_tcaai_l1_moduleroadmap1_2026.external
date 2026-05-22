@@ -5,72 +5,42 @@ description 'description here'
 markdown <<MARKDOWN
 # Module Overview 
 
-Thinking Critically About AI is split into **five milestones**, each containing **two lessons** and centering around a **theme**. This structure helps students break complex ideas into manageable phases while building toward a final product.
+Thinking Critically About AI is organized around a set of **core ideas about how AI works and how humans should interact with it responsibly**. Rather than walking through every lesson individually, this professional learning module focuses on the most important concepts, instructional moves, and project structures that support student learning across the unit.
 
-<div style="text-align: center; margin: 40px auto;"> <img src="https://images.code.org/84f21d55ad8a972bba224bf43dcca03b-image-1773419936950.jpg" alt="A diagram showing the layout of the unit, with two lessons per milestone. Five milestones and ten lessons total." style="width: 95%; height: auto; border-radius: 10px;"> </div>
+## What's Included in This Module? 
 
-## What's included in this module? 
-
-This professional learning module mirrors the structure of the Thinking Critically About AI Unit. There are six sections total:
+This professional learning module is organized into **three sections**:
 
 <div style="background-color: #FAFBFC; padding: 20px; border-radius: 10px; width: 88%; margin: 20px auto;">
 
-  <p style="font-size: 13pt; font-weight: bold; margin-top: 0;">
-    ⭐ Introduction to Thinking Critically About AI (You're here!)
+  <p style="font-size: 17px; font-weight: bold; margin-top: 0;">
+    💻 Lesson 1: Introduction to Thinking Critically About AI
   </p>
-  <p style="font-size: 13pt;">
-    This section orients you to the learning you will do in this module. It introduces the overarching
-    structures of the unit and the key concepts students will learn.
-  </p>
-
-  <br>
-
-  <p style="font-size: 13pt; font-weight: bold;">
-    🌏 Milestone 1: AI in My World (Lessons 1–2)
-  </p>
-  <p style="font-size: 13pt;">
-    You’ll learn how to launch the driving question of the unit and establish norms for questioning AI outputs.
+  <p style="font-size: 16px;">
+    This section orients you to the unit, including its structure, student experience, learning tools, computational thinking practices, and instructional goals.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
-    🔨 Milestone 2: Responsible Creation & Impact (Lessons 3–4)
+  <p style="font-size: 17px; font-weight: bold;">
+    🧠 Lesson 2: Big Ideas in Thinking Critically About AI
   </p>
-  <p style="font-size: 13pt;">
-  You’ll explore how to facilitate ethical discussions and guide students in turning analysis into actionable recommendations.
-  </p>
-
-  <br>
-
-  <p style="font-size: 13pt; font-weight: bold;">
-    💻 Milestone 3: Truth & Credibility (Lessons 5–6)
-  </p>
-  <p style="font-size: 13pt;">
-    You’ll learn how to support fact-checking investigations and critical analysis of AI outputs.
+  <p style="font-size: 16px;">
+    This section explores the major concepts students investigate throughout the unit, including how AI generates outputs, why AI can be unreliable, how testing and evidence support responsible use, why context matters, and how students examine risks related to bias, privacy, and misinformation.
   </p>
 
   <br>
 
-  <p style="font-size: 13pt; font-weight: bold;">
-    🦺 Milestone 4: Safety & Privacy (Lessons 7–8)
+  <p style="font-size: 17px; font-weight: bold;">
+    📑 Lesson 3: The Generate and Judge Project
   </p>
-  <p style="font-size: 13pt;">
-    You’ll explore how to guide structured risk analysis and synthesis into clearsafety guidance.
-  </p>
-
-  <br>
-
-  <p style="font-size: 13pt; font-weight: bold;">
-    🗣️ Milestone 5: Synthesis & Sharing (Lessons 9–10)
-  </p>
-  <p style="font-size: 13pt; margin-bottom: 0;">
-    You’ll examine strategies for supporting revision, peer critique, and meaningful reflection.
+  <p style="font-size: 16px; margin-bottom: 0;">
+    This section focuses on the Generate and Judge Guide, including how the project develops across the unit, how students collect and organize evidence, and how teachers can support revision, reflection, and evidence-based conclusions about responsible AI use.
   </p>
 
 </div>
 
-___
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
 
-This professional learning module is designed to prepare you to teach two lessons in Thinking Critically About AI at a time. Feel free to use this module to prepare for a chunk of the curriculum as you see fit - you can always pick up where you left off when you're ready.
+This professional learning module is designed to prepare you to teach **Thinking Critically About AI** through its most important ideas and instructional moments. You can revisit sections throughout your planning and teaching as needed.
 MARKDOWN

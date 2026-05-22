@@ -6,12 +6,20 @@ import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
 import styles from './element-toolbar.module.scss';
 
+interface HandlesToggle {
+  visible: boolean;
+  onToggle: () => void;
+}
+
 interface ActionsGroupProps {
   onDelete?: () => void;
   onLock?: () => void;
   onBringToFront?: () => void;
   onSendToBack?: () => void;
   onDuplicate?: () => void;
+  // Bundled so the `visible` boolean can't be supplied without an
+  // `onToggle` handler (which previously left aria-pressed undefined).
+  handlesToggle?: HandlesToggle;
 }
 
 export default function ActionsGroup({
@@ -20,6 +28,7 @@ export default function ActionsGroup({
   onBringToFront,
   onSendToBack,
   onDuplicate,
+  handlesToggle,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
@@ -90,6 +99,33 @@ export default function ActionsGroup({
               onClick={onSendToBack}
             >
               <FontAwesomeV6Icon iconName="send-back" />
+            </IconButton>
+          </Tooltip>
+        )}
+        {handlesToggle && (
+          <Tooltip
+            title={
+              handlesToggle.visible
+                ? 'Hide connection handles'
+                : 'Show connection handles'
+            }
+            placement="top"
+          >
+            <IconButton
+              size="small"
+              className={styles.fontSizeButton}
+              aria-label={
+                handlesToggle.visible
+                  ? 'Hide connection handles'
+                  : 'Show connection handles'
+              }
+              aria-pressed={handlesToggle.visible}
+              onClick={handlesToggle.onToggle}
+            >
+              <FontAwesomeV6Icon
+                iconName={handlesToggle.visible ? 'empty-set' : 'circle'}
+                iconStyle={handlesToggle.visible ? 'solid' : 'regular'}
+              />
             </IconButton>
           </Tooltip>
         )}

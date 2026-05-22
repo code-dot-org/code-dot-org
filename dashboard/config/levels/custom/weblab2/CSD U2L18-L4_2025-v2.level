@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:32.000Z",
   "level_num": "custom",
@@ -63,9 +64,11 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryaqm3/cBEzt\no21qPGUs2QLndxhpZP9fMo/u+8xaPyo+NoU7U+ZDb2uocuA/t7gerRxpOtoP\n9hpwrbqMxBfuKSnvkCXVht/BBwYlSFKmvRyt0kN519lrK5OsC6A34KmbZRFr\nlLnsKYHFKqWGbr9X0t6eZEMyT0AXDwYT3gqdXUQiVyFTykz5/flJiUJcq+nK\nlXOzMOPBP1ZtVyWLgpi9KfCqGZ2Qp+rPriQtGmDTHcxim8jIfr+IMPsBnDaB\ncBnkM3Chyc1cDYE1cbnyZmRb8rmSWuxhN9JXDOs/HcEUSZgIaF6Lu/FbsZOu\nMqkHXlLQcbGc33Iv9/ddR+TEYFZHaNEKGgi6ggrOdGW5wMalTWY4CnNjwC54\ntvw1Ut3GUEQreefHLmeprbcSl3B7C2+CzpO+ZTnV9UwxMnCroXU+v953Gxv/\nAtX9cp8+tiJT1fBCw1bywCpqdKGeor0edxrHYVxKY9Evy/i60O9tW/6tFSeq\nuVvjJru6RzweEmISPPVHxapdUC77XS42rl/f7T7UsQQRS67W/DUEtVpA0SpI\nirh7oBvy0YpkES5lkXjK/IfiC9cN7ldMCuUbjKvrrgiX+1432SNwETAwvD0a\ns4oU5hLPVb8WI3/z+U+ynAZ6JRacPcG37Z5DQdkjvxxZJw/HpbmF08aocEGd\nc/iR62A+Apihi81r15rEzalkjcpdSOgBjKeMev5z9BTq7+bkRL/q+elS2vbV\nleIyJfPDp+ZLJt5ZBMxT8Jzs+VLzfG2edb2TGYpiiyYriLDE9Eyvx6vLecUC\nddj2IqHlNKlHtbEMO5xZMJpt34XbuF9Gv+F9A9eegXw7IwiwbLPr22X6US22\nnQ4p8HBByhtnL1upZhwSgPaYjIBvAX94xlqr/0KtGiZkZRaowIts9s/TAoT+\n+6qKvIjstAZ769irZ8V4BGRmclA1u7DdQR84aYOpgiwusAPR5Tn90GwPM2Pg\njd6iVtgUeDEErB3dpdvuZ9xrqaN2UnwPcM2NQlBI7Iu7k4qsqBtwn/nv3rlx\n+z/F1JOZzA0WnF4CCvBxWOoanGuvEjVsUlgfhGSNCDpMDZcH6QoaXly/kDG6\nQm95NSZa7wYMOt3lJya1pQ9fFvUeSPKP6MfiCaidFWPQDfaMEVsUji6ZmoRQ\nL65/C6QKzw0w7ljWpCqXujzM5cRxgNb60sMZDIKyJ3ocqxGbV01sxTmMC9z0\n6cJzbNo0JcCV/6yb+41X96joCyhJRYS2Q3DAJs7K8pXYG/v+TiIhhqtEDK0X\nbYuoX6a6KQ1vrFMQuM6W/A9YNzCKdDlCWaV7f0Gvqj21+RFNKDCuPbdmQrWo\nDJIDdoVQ6qSxCeYwaSv6LqZDBMFhTdU6c2IR4h5gigmo+aP2myTEmZLbHr/T\nejCEZ6IX2usYYSDt9Fotx3dfut8cszdHVJnigpjj0zhJfJjraUEbfQPN068r\n0pYK/sf22khu550qe0JP4fI=\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:32.179+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L4-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:32.179+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L4-2025\"},{\"changed_at\":\"2026-05-19 21:05:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:05:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

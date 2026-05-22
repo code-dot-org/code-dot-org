@@ -19,7 +19,7 @@ export default function LockedNotice({onUnlock}: LockedNoticeProps) {
 
   return (
     <div
-      className={styles['locked-notice']}
+      className={styles.lockedNotice}
       role="group"
       aria-label="Locked element"
     >

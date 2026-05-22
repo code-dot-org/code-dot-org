@@ -29,6 +29,7 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  inheritedAnchorBaseData,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 import {getNodeLabel} from '../utils/nodeLabel';
@@ -121,6 +122,9 @@ interface UseKeyboardNavigationOptions {
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
   paste: () => void;
+  undo: () => void;
+  redo: () => void;
+  pushSnapshot: () => void;
   // Fallback for Ctrl/Cmd shortcuts: DOM focus may be inside a NodeToolbar
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
@@ -166,6 +170,9 @@ export function useKeyboardNavigation({
   copyEntry,
   cutEntry,
   paste,
+  undo,
+  redo,
+  pushSnapshot,
   lastFocusedEntry,
 }: UseKeyboardNavigationOptions) {
   const {
@@ -178,7 +185,7 @@ export function useKeyboardNavigation({
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
-    useConnectMode({nodes, setEdges, announce});
+    useConnectMode({nodes, setEdges, announce, pushSnapshot});
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
@@ -280,6 +287,40 @@ export function useKeyboardNavigation({
     [paste]
   );
 
+  // Undo: Ctrl/Cmd+Z.
+  const handleUndo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      // Exclude Shift so Cmd+Shift+Z routes to redo, not undo.
+      if (event.shiftKey || !(event.ctrlKey || event.metaKey)) return false;
+      if (event.key !== 'z' && event.key !== 'Z') return false;
+      undo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [undo]
+  );
+
+  // Redo: Ctrl/Cmd+Y, or Ctrl/Cmd+Shift+Z.
+  // Accept both 'z' and 'Z' with Shift to handle platforms where event.key
+  // doesn't capitalize on Shift, and to survive Shift-before-Z release order.
+  const handleRedo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (!(event.ctrlKey || event.metaKey)) return false;
+      const isRedoZ =
+        event.shiftKey && (event.key === 'z' || event.key === 'Z');
+      const isRedoY = event.key === 'y' || event.key === 'Y';
+      if (!isRedoZ && !isRedoY) return false;
+      redo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [redo]
+  );
+
   const handleOpenToolbar = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedEntry} = keyContext;
@@ -373,6 +414,7 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
       }
@@ -381,7 +423,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [setNodes, snapAnchorIfNearHandle]
+    [pushSnapshot, setNodes, snapAnchorIfNearHandle]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
@@ -437,7 +479,8 @@ export function useKeyboardNavigation({
         // Otherwise, spawn an anchor at the post-move position.
         const {anchor, edgePatch: patch} = attachEdgeToFreshAnchor(
           postMovePosition,
-          side
+          side,
+          inheritedAnchorBaseData(focusedEdge)
         );
         newAnchors.push(anchor);
         Object.assign(edgePatch, patch);
@@ -493,11 +536,12 @@ export function useKeyboardNavigation({
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
       if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
+      if (!event.repeat) pushSnapshot();
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [moveEdgeByDelta]
+    [pushSnapshot, moveEdgeByDelta]
   );
 
   /**
@@ -526,6 +570,7 @@ export function useKeyboardNavigation({
 
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       setNodes(currentNodes =>
         resizeNodeByDelta(currentNodes, focusedNodeId, deltaWidth, deltaHeight)
       );
@@ -536,7 +581,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [nodes, getNode, setNodes, announce]
+    [nodes, getNode, pushSnapshot, setNodes, announce]
   );
 
   /**
@@ -619,6 +664,8 @@ export function useKeyboardNavigation({
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
       if (handlePaste(keyContext)) return;
+      if (handleUndo(keyContext)) return;
+      if (handleRedo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
@@ -651,6 +698,8 @@ export function useKeyboardNavigation({
       handleCopy,
       handleCut,
       handlePaste,
+      handleUndo,
+      handleRedo,
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,
@@ -681,13 +730,14 @@ export function useKeyboardNavigation({
       }
       const target = nativeEvent.target as HTMLElement;
       if (isTargetEditable(target)) return;
+      if (!nativeEvent.repeat) pushSnapshot();
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
         nativeEvent.preventDefault();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta]);
+  }, [moveEdgeByDelta, pushSnapshot]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }
