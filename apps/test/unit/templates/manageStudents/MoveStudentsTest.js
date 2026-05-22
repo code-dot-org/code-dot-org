@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import {
   blankStudentTransfer,
@@ -51,7 +52,7 @@ describe('MoveStudents', () => {
     expect(dropdownOptions[1].name).toBe('Other teacher');
   });
 
-  it('renders additional inputs if other teacher is selected', () => {
+  it('renders additional inputs if other teacher is selected', async () => {
     const transferData = {
       ...blankStudentTransfer,
       otherTeacher: true,
@@ -60,7 +61,9 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    wrapper.instance().openDialog();
+    await act(async () => {
+      wrapper.instance().openDialog();
+    });
     wrapper.update();
     expect(wrapper.find('#uitest-other-teacher').exists()).toBe(true);
   });
@@ -88,7 +91,7 @@ describe('MoveStudents', () => {
     expect(cancelStudentTransfer).toHaveBeenCalledTimes(1);
   });
 
-  it('renders an error message if the transfer status is fail', () => {
+  it('renders an error message if the transfer status is fail', async () => {
     const transferStatus = {
       status: TransferStatus.FAIL,
       error: 'failed to transfer students!',
@@ -97,8 +100,11 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
     );
 
-    wrapper.find('Button').simulate('click');
-    const errorElement = wrapper.find('#uitest-error');
+    await act(async () => {
+      wrapper.instance().openDialog();
+    });
+    wrapper.update();
+    const errorElement = wrapper.find('#uitest-error').hostNodes();
     expect(errorElement.exists()).toBe(true);
     expect(errorElement.text()).toBe(transferStatus.error);
   });

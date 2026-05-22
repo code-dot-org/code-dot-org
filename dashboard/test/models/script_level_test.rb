@@ -5,8 +5,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
   include SharedConstants
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
@@ -37,9 +35,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'counts puzzle position and total in lesson' do
-    # default script
-    sl = Unit.twenty_hour_unit.script_levels[1]
-    assert_equal 1, sl.position
+    # Create a test script with known structure
+    test_unit = create(:unit, :with_levels, lessons_count: 1, levels_count: 20)
+    sl = test_unit.script_levels[1]
+    assert_equal 2, sl.position
     assert_equal 20, sl.lesson_total
 
     # new script
@@ -51,6 +50,26 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     assert_equal 2, sl2.position
     assert_equal 2, sl2.lesson_total
+  end
+
+  test 'summarize_for_lesson_edit includes per-level type and generateOutline' do
+    # The /generate page reads `type` and `generateOutline` for each level
+    # to decide whether the lab type is supported and to pre-populate the
+    # description box. Pin the shape.
+    panels_level = create(:panels, name: 'panels-summary')
+    panels_level.update!(properties: panels_level.properties.merge('generate_outline' => 'tell the story'))
+    weblab2_level = create(:weblab2, name: 'weblab2-summary')
+    sl = create_script_level_with_ancestors(levels: [panels_level])
+    other = create(:script_level, lesson: sl.lesson, script: sl.script, levels: [weblab2_level])
+
+    panels_summary = sl.summarize_for_lesson_edit[:levels].first
+    assert_equal panels_level.id.to_s, panels_summary[:id]
+    assert_equal 'Panels', panels_summary[:type]
+    assert_equal 'tell the story', panels_summary[:generateOutline]
+
+    weblab2_summary = other.summarize_for_lesson_edit[:levels].first
+    assert_equal 'Weblab2', weblab2_summary[:type]
+    assert_nil weblab2_summary[:generateOutline]
   end
 
   class InstructorInTrainingTests < ActiveSupport::TestCase
@@ -752,10 +771,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson_group = create(:lesson_group, script: script)
 
-    levels = [
-      create(:level),
-      create(:level)
-    ]
+    levels = create_list(:level, 2)
 
     script_levels = levels.map.with_index(1) do |level, pos|
       lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
@@ -777,10 +793,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     unit1.stubs(:next_unit).returns(unit2)
 
     lesson_group = create(:lesson_group, script: unit1)
-    levels = [
-      create(:level),
-      create(:level)
-    ]
+    levels = create_list(:level, 2)
 
     script_levels = levels.map.with_index(1) do |level, pos|
       lesson = create(:lesson, script: unit1, absolute_position: pos, lesson_group: lesson_group)
@@ -822,8 +835,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    script_level = ScriptLevel.cache_find(Unit.twenty_hour_unit.script_levels[0].id)
-    assert_equal(Unit.twenty_hour_unit.script_levels[0], script_level)
+    script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
+    assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)

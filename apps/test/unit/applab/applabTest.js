@@ -33,6 +33,11 @@ jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
   hasPrivacyProfanityViolation: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/util/createReactRoot', () => ({
+  __esModule: true,
+  createReactRoot: jest.fn().mockImplementation(element => element),
+}));
+
 function setupVizDom() {
   // Create a sample DOM to test against
   var sampleDom =

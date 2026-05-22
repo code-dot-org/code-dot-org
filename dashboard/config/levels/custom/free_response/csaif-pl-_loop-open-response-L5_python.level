@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Predicting Conditional Statements",
-    "long_instructions": "\r\n#### Look at the following code. \r\n\r\n- #### What do you notice?\r\n- #### What do you predict will happen? \r\n\r\n![](https://images.code.org/bbe985c95a447aa15076789a1a912e6b-image-1741628911673.png)",
+    "long_instructions": "\r\nLook at the following code. \r\n\r\n- What do you notice?\r\n- What do you predict will happen? \r\n\r\n![](https://images.code.org/bbe985c95a447aa15076789a1a912e6b-image-1741628911673.png)",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

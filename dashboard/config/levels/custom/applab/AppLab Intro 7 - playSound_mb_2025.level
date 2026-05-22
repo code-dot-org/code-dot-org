@@ -67,6 +67,7 @@
     "start_blocks": "setProperty(\"button1\", \"image\", \"https://studio.code.org/blockly/media/applab/monkey.jpg\");\r\nsetProperty(\"button2\", \"image\", \"https://studio.code.org/blockly/media/applab/tiger.jpg\");\r\nsetProperty(\"button3\", \"image\", \"https://studio.code.org/blockly/media/applab/horse.jpg\");\r\nonEvent(\"button1\", \"click\", function() {\r\n  playSound(\"sound://category_animals/monkey.mp3\");\r\n});\r\nonEvent(\"button2\", \"click\", function() {\r\n  playSound(\"sound://category_animals/tiger.mp3\");\r\n});\r\nonEvent(\"button3\", \"click\", function() {\r\n  playSound(\"sound://category_animals/horse.mp3\");\r\n});",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

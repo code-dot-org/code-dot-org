@@ -1,0 +1,27 @@
+name 'iterating-with-ai-postassessment_2025'
+title 'Iterating with AI Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'iterating-with-ai-postassessment-intro_2025'
+level 'iterating-with-ai-postassessment-q1_2025'
+level 'iterating-with-ai-postassessment-q2_2025'
+level 'iterating-with-ai-postassessment-q3_2025'
+level 'iterating-with-ai-postassessment-q4_2025'
+level 'iterating-with-ai-postassessment-q5_2025'
+
+page
+level 'iterating-with-ai-postassessment-q6_2025'
+level 'iterating-with-ai-postassessment-q7_2025'
+level 'iterating-with-ai-postassessment-q8_2025'
+level 'iterating-with-ai-postassessment-q9_2025'
+level 'iterating-with-ai-postassessment-q10_2025'
+
+page
+level 'iterating-with-ai-postassessment-q11_2025'
+level 'iterating-with-ai-postassessment-q12_2025'
+level 'iterating-with-ai-postassessment-q13_2025'
+level 'iterating-with-ai-postassessment-q14_2025'
+level 'iterating-with-ai-postassessment-q15_2025'

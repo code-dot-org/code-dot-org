@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class RedirectsTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
   setup_all do
     @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
     @multi_lesson_unit_group = create(:single_unit_course, :stable, unit: @multi_lesson_unit)
@@ -48,11 +46,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/flappy/1?lang=ar-SA'
     assert_equal 'ar-SA', cookies[:language_]
 
+    cookies.delete('language_')
+    cookies.delete('ge_region')
+
     get '/playlab/lang/ar'
     assert_redirected_to '/s/playlab/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
     assert_equal 'ar-SA', cookies[:language_]
+
+    cookies.delete('language_')
+    cookies.delete('ge_region')
 
     get '/artist/lang/ar'
     assert_redirected_to '/s/artist/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'

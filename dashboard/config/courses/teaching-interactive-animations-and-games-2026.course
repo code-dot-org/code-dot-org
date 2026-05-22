@@ -1,0 +1,23 @@
+{
+  "name": "teaching-interactive-animations-and-games-2026",
+  "script_names": [
+    "self-paced-pl-teaching-interactive-animations-and-games-2026"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-interactive-animations-and-games-2026"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "teaching-interactive-animations-and-games",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

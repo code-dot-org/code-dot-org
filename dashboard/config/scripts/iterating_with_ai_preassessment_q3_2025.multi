@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q3_2025'
+
+question 'Which type of loop is best when you know exactly how many times you need to repeat an action (e.g., repeat 10 times)?'
+
+wrong 'A `while` loop'
+right 'A `for` loop'
+wrong 'A `filter` loop'
+wrong 'An `if` statement'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+`for` loops (count-controlled loops) are specifically designed for situations where the number of iterations is known in advance using a start, stop, and step value.
+MARKDOWN

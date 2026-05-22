@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SelfPacedPLCatalog from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
@@ -11,11 +11,14 @@ $(() => {
   );
   const studentsCourseOfferings = getScriptData('studentsCourseOfferings');
 
-  ReactDOM.render(
+  createReactRoot(
     <SelfPacedPLCatalog
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
       studentsCourseOfferings={studentsCourseOfferings}
     />,
-    document.getElementById('self-paced-pl-catalog')
+    document.getElementById('self-paced-pl-catalog'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

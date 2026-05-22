@@ -1,6 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -19,7 +18,7 @@ import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import {setPackId, setAiGenerateState} from '../redux/musicRedux';
+import {setPackId} from '../redux/musicRedux';
 
 import styles from './PackDialog.module.scss';
 
@@ -62,6 +61,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   return (
     <div
       className={classNames(
+        'pack-dialog-entry',
         styles.pack,
         !isSelected && folderIndex % 2 === 1 && styles.packAlternate,
         isSelected && styles.packSelected
@@ -75,6 +75,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
       aria-label={folder.name}
       tabIndex={0}
       role="button"
+      data-notranslate
       ref={isSelected ? currentFolderRefCallback : null}
     >
       {imageSrc && (
@@ -176,7 +177,6 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
 
       player.cancelPreviews();
       dispatch(setPackId(packId));
-      dispatch(setAiGenerateState('none'));
       library.setCurrentPackId(packId);
       setSelectedFolderId(null);
       analyticsReporter?.onPackSelected(packId);
@@ -259,9 +259,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
-            semanticTag="h1"
-            visualAppearance="heading-lg"
             className={styles.heading}
+            component="h1"
+            variant="h3"
+            gutterBottom
           >
             {musicI18n.packDialogTitle()}
           </Typography>
@@ -311,24 +312,29 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
               {!forcePackSelect && (
-                <Button
-                  ariaLabel={musicI18n.skip()}
-                  text={musicI18n.skip()}
-                  type="secondary"
-                  color="black"
-                  size="s"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
                   onClick={setPackToDefault}
-                />
+                  aria-label={musicI18n.skip()}
+                  type="button"
+                >
+                  {musicI18n.skip()}
+                </MuiButton>
               )}
-              <Button
-                ariaLabel={musicI18n.select()}
-                text={musicI18n.select()}
-                type="primary"
-                color="purple"
-                size="s"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
                 disabled={!selectedFolderId}
+                id="pack-dialog-select-button"
                 onClick={setPackToSelectedFolder}
-              />
+                aria-label={musicI18n.select()}
+                type="button"
+              >
+                {musicI18n.select()}
+              </MuiButton>
             </div>
           </div>
         </div>

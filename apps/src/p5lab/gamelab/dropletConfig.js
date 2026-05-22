@@ -698,14 +698,6 @@ module.exports.blocks = [
     type: 'value',
   },
   {
-    func: 'getFrame',
-    blockPrefix: spriteBlockPrefix,
-    category: 'Sprites',
-    tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.getFrame',
-    type: 'value',
-  },
-  {
     func: 'getSpeed',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',

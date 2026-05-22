@@ -1,10 +1,10 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
-
-import aichatI18n from '@cdo/apps/aichat/locale';
 
 import styles from './staged-files-preview.module.scss';
 
@@ -13,6 +13,7 @@ const FilePreview: React.FC<{
   filename: string;
   fileDetail?: string | number;
   url?: string;
+  timestamp?: string;
   isUploading?: boolean;
   onRemove?: () => void;
   onLoadError?: () => void;
@@ -21,6 +22,7 @@ const FilePreview: React.FC<{
   filename,
   fileDetail,
   url,
+  timestamp,
   isUploading,
   onRemove,
   onLoadError,
@@ -61,6 +63,35 @@ const FilePreview: React.FC<{
     const extension = filename.split('.').pop();
     return filename.includes('.') && extension ? extension : 'TEXT';
   };
+  const fileExtension = getFileExtension(filename);
+
+  const getFileIconName = (extension: string): string => {
+    switch (extension) {
+      case 'css':
+        return 'css';
+      case 'csv':
+        return 'file-csv';
+      case 'html':
+        return 'file-code';
+      case 'js':
+        return 'js';
+      case 'md':
+        return 'markdown';
+      case 'pdf':
+        return 'file-pdf';
+      case 'txt':
+      case 'TEXT':
+        return 'file-lines';
+      default:
+        return 'file';
+    }
+  };
+
+  const getFileIconFamily = (
+    extension: string
+  ): FontAwesomeV6IconProps['iconFamily'] => {
+    return ['css', 'js', 'md'].includes(extension) ? 'brands' : undefined;
+  };
 
   return (
     <div className={styles[`preview-${previewType}`]} title={filename}>
@@ -77,7 +108,7 @@ const FilePreview: React.FC<{
               tooltipId: 'close-button',
               direction: 'onTop',
               size: 'xs',
-              text: aichatI18n.remove(),
+              text: 'Remove',
               className: styles.closeTooltip,
             }}
             tooltipOverlayClassName={styles.closeTooltipOverlay}
@@ -112,27 +143,21 @@ const FilePreview: React.FC<{
         <>
           <div className={styles.fileIcon}>
             <FontAwesomeV6Icon
-              iconName={
-                {
-                  pdf: 'file-pdf',
-                  text: 'file-code',
-                }[type] || 'file'
-              }
+              iconName={getFileIconName(fileExtension)}
+              iconFamily={getFileIconFamily(fileExtension)}
             />
           </div>
           <div className={styles.filenameContainer}>
-            <StrongText>{filename}</StrongText>
-            <span className={styles.fileDetail}>
-              {[
-                type === 'pdf' ? 'PDF' : null,
-                type === 'text'
-                  ? getFileExtension(filename).toUpperCase()
-                  : null,
-                fileDetail ? fileDetail : null,
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            </span>
+            <div className={styles.filenameRow}>
+              <Typography variant="body4" className={styles.filenameText}>
+                {fileDetail ? `${filename} ${fileDetail}` : filename}
+              </Typography>
+              {timestamp && (
+                <Typography variant="body4" className={styles.timestamp}>
+                  {timestamp}
+                </Typography>
+              )}
+            </div>
           </div>
         </>
       )}

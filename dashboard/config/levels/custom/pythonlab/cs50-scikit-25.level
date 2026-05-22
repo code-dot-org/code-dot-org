@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:00:31.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.11\n# Standard Description: Explain the k-means clustering algorithm starting values.\n#\n# Rationale: K-Means is a \"Greedy\" algorithm. It starts by picking random \n# locations (starting values) for the centers of its groups. But if it \n# picks \"bad\" starting spots, it might get stuck and find a poor solution! \n# This tutorial shows how different starting values lead to different results.\n\n\"\"\"\nWelcome! Imagine you and a friend are told to \"find the two biggest groups \nof people\" in a park. \n- You start at the north end.\n- Your friend starts at the south end.\n\nYou might end up finding different groups because of where you STARTED! \nThis is exactly what happens in K-Means clustering.\n\"\"\"\n\nimport matplotlib.pyplot as plt\nfrom sklearn.cluster import KMeans\nfrom sklearn.datasets import make_blobs\nimport numpy as np\n\n# --- PART 1: THE DATA ---\nX, y = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)\n\n# --- PART 2: COMPARING STARTING VALUES ---\nprint(\"--- Part 2: Running K-Means with different 'Starts' ---\")\n\n# Experiment 1: Good initialization (k-means++)\n# 'k-means++' is a smart way to pick starting values far apart from each other.\nmodel_smart = KMeans(n_clusters=4, init='k-means++', n_init=1, random_state=0)\nclusters_smart = model_smart.fit_predict(X)\n\n# Experiment 2: Bad initialization (Randomly picking points that might be too close)\n# We force it to use specific \"bad\" starting values\nbad_init = np.array([[0,0], [0.1,0.1], [0.2,0.2], [10,10]])\nmodel_bad = KMeans(n_clusters=4, init=bad_init, n_init=1)\nclusters_bad = model_bad.fit_predict(X)\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(12, 5))\n\nplt.subplot(1, 2, 1)\nplt.scatter(X[:, 0], X[:, 1], c=clusters_smart, cmap='viridis', edgecolors='k')\nplt.scatter(model_smart.cluster_centers_[:, 0], model_smart.cluster_centers_[:, 1], s=200, c='red', marker='X')\nplt.title(\"Smart Start (k-means++)\\nFound 4 clear groups!\")\n\nplt.subplot(1, 2, 2)\nplt.scatter(X[:, 0], X[:, 1], c=clusters_bad, cmap='viridis', edgecolors='k')\nplt.scatter(model_bad.cluster_centers_[:, 0], model_bad.cluster_centers_[:, 1], s=200, c='red', marker='X')\nplt.title(\"Random/Bad Start\\nGot stuck with overlapping groups!\")\n\nplt.show()\n\nprint(\"The red X's are the 'Starting Values' (Centroids).\")\nprint(\"Notice how the bad start failed to separate the groups on the left correctly.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe used 'n_init=1' to force the AI to only try ONCE. \nIn the real world, we usually set 'n_init=10'. \n\n1. What do you think 'n_init=10' does?\n2. If you try 10 different random starts, are you MORE or LESS likely \n   to find the best groups?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Experiment with n_init\n# my_model = KMeans(n_clusters=4, n_init=10)\n# my_model.fit(X)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWZiotWR7mCu/QpXbLUK9wNoSTnN8r39t\naWTbCeK0urVTOOYJZ9m9elwc85hj846uN0mblfwf/OKRnl92rspqMwD2/e1R\nuhEizcy5GoAr0q10QDP8bwdgqK9k9W7CRcXCk/4a3kGPLBwdmN4AQF6J6GkK\nUvpK0Q8kYKu9v5AEIQUWZuLZRIWK7+VXE/Zy4rsAkU/7yJPt+PuGcLiPm+ff\nQNazsoxptNPNRraduESJpGSpUDJdz+i5Agh/9uNuc8kiyRzMe8KOLkHKUc4w\nnj3FZ3HnhTZfWJCL3VioUrt6l7lZDv9U0a0PmbQPaZkcvGKyAGCwKDLEKgzD\n1MlgeZlsUm4aol5aDW+UjZLAts1H1l6jTNS6qhX4gFBAgozWxcuEEUZH8doK\nKFz7jbsDcuZ54XzdxY2Yltwino5aVNGazxxsxqxTV7GGvVkf4MIuFg/ESpJB\n2vhLTd9JO/GcIGkuOSidYhzBY6ydDM2LtO2/KOwhNdiDpm9dFc2We+WWoxW4\nshmHbWZRpKk47WfHX523dbsOM6IpCjsfNcK7pu8TeXO0tp582OSgRqFPpV3G\nbDND2z2razy4h55I2GM2f2S1M6z6sjWkN1XOcDVSdQbtyQ69qX+2Q8b62r1O\na92vXV48KcVp0+KkVFIZ63U2dGSyK7BVUyZq6UTTsA4tebXQOQJknWtzjOFv\nJSJ/qlmV5eHBxpqyRdBzzGfSXbXEEWyF1bjnQKxEdzWNZ8kgTVBaPkk3Ne1t\na9xp0Gvhhk8DOeukKU0q3g9o2wJqzb93ZI951hhVuCNsh/nvDFd6SdYVtEgM\nNNHdhR145XuOXnIhg8CTzIa14Mmxt3DQxoZ9568spKSQhAzZM8BVUD2qytc2\n+73lNVG8CqHi9PAgiKv1BTGjKaN1bOmdsbvGRzD9vQ4TpYbgYpKj0tB8cOmM\nN/IwliBiWbulZkJoL3AJvs3quEyE6D3O5lRHFlB4/Fk+7+tJyNrD4kxCTAI+\nkmZ0MFwAIXkL+oBUMniS0gLOsK53I7pzg6+4cb4QSHZdkirAF8vGw2vbJdbE\nydzPRmLa6CiS78pQsyI9Xze9+wawtFYr79gw1b8GEKXJlPjOKNMAgTW6OGn/\nqjB+dE0FNK+lnQwc6B8i\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:00:31.823+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-24\\\"\"],\"cloned_from\":\"cs50-scikit-24\"},{\"changed_at\":\"2026-02-18 17:00:34 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:44:06 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:44:13 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,5 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#version_history_area"}}
+  Version History
+
+#version_history_area.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_version_history, description: "Hide Version History panel for students"} if @level.uses_lab2?

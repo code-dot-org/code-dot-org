@@ -47,7 +47,7 @@ class RubricsControllerTest < ActionController::TestCase
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
     stub_project_source_data(@channel_id)
-    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    _, @project_id = get_storage_id_and_project_id(@channel_id)
     @version_id = "fake-version-id"
   end
 
@@ -73,6 +73,7 @@ class RubricsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
+        s3_config_dir: 'fake-lesson-s3-name',
         learning_goals_attributes: [
           {learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 1},
           {learning_goal: 'ai-configured learning goal 2', ai_enabled: false, position: 2}
@@ -104,6 +105,7 @@ class RubricsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
+        s3_config_dir: 'fake-lesson-s3-name',
         learning_goals_attributes: [
           {learning_goal: 'non-ai learning goal', ai_enabled: true, position: 1},
         ]
@@ -111,7 +113,7 @@ class RubricsControllerTest < ActionController::TestCase
     end
     assert_response :bad_request
     errors = JSON.parse(response.body)
-    assert_equal "no valid AI config in S3 for ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+    assert_equal 'Missing AI config in S3 for lesson fake-lesson-s3-name learning goals: ["non-ai learning goal"]', errors['base'].first
   end
 
   test 'updates rubric and learning goals with valid params' do
@@ -150,7 +152,7 @@ class RubricsControllerTest < ActionController::TestCase
     lesson = create(:lesson, :with_lesson_group)
     level = create(:level)
     create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
-    rubric = create(:rubric, lesson: lesson, level: level)
+    rubric = create(:rubric, lesson: lesson, level: level, s3_config_dir: 'fake-lesson-s3-name')
     learning_goal = create(:learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0)
     File.stubs(:write).never
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -175,7 +177,7 @@ class RubricsControllerTest < ActionController::TestCase
     lesson = create(:lesson, :with_lesson_group)
     level = create(:level)
     create(:script_level, script: lesson.script, lesson: lesson, levels: [level])
-    rubric = create(:rubric, lesson: lesson, level: level)
+    rubric = create(:rubric, lesson: lesson, level: level, s3_config_dir: 'fake-lesson-s3-name')
     learning_goal = create(:learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0)
     File.stubs(:write).never
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1077,6 +1079,8 @@ class RubricsControllerTest < ActionController::TestCase
     path_prefix = AiRubricConfig::S3_AI_RELEASE_PATH
     bucket = {
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => fake_rubric_csv,
+      "#{path_prefix}fake-lesson-s3-name/params.json" => '{"response-type": "tsv"}',
+      "#{path_prefix}fake-lesson-s3-name/system_prompt.txt" => 'fake system prompt',
     }
 
     s3_client.stub_responses(
@@ -1088,5 +1092,7 @@ class RubricsControllerTest < ActionController::TestCase
         {body: StringIO.new(obj)}
       end
     )
+
+    s3_client.stub_responses(:list_objects_v2, {contents: []})
   end
 end

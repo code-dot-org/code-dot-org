@@ -73,6 +73,7 @@
     "ai_enabled": "false",
     "thumbnail_url": "https://images.code.org/4f684cb99f08802d9ca502667291d779-image-1648658688010.png",
     "encrypted_examples": "Xn6/1yWTSUVJsRvjqsfoVvDz1EqkutMTu3deXskPYuSLOaMJqE1JW0wdsjhc\nvcphXmflKAmpGarTUJ943L9Wug==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

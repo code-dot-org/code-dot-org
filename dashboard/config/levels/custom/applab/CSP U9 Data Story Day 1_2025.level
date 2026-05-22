@@ -78,6 +78,7 @@
     "widget_mode": "false",
     "project_template_level_name": "CSP U9 Data Story Template_2025",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

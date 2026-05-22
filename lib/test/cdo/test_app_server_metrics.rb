@@ -1,103 +1,104 @@
 require_relative '../test_helper'
 require 'cdo/app_server_metrics'
 
-class AppServerMetricsTest < Minitest::Test
-  include Rack::Test::Methods
-  TCP_LISTENER = '0.0.0.0:0000'.freeze
-  SOCKET_LISTENER = '/tmp/sock'.freeze
+# Define Puma module if it doesn't exist so we can stub it without loading the full gem.
+module Puma; end unless defined?(Puma)
 
-  # Make sure we don't leak metrics to other tests.
+class AppServerMetricsTest < Minitest::Test
+  def setup
+    @metrics = Cdo::AppServerMetrics.new(
+      interval: 0.1,
+      namespace: 'App Server',
+      dimensions: {
+        Environment: 'test',
+        Host: 'test.example.net'
+      }
+    )
+  end
+
   def teardown
+    @metrics.shutdown
     Cdo::Metrics.flush!
   end
 
-  def app
-    ok = lambda do |_|
-      @app.collect_metrics
-      [200, {'Content-Type' => 'text/plain'}, ['OK']]
-    end
+  def test_collect_puma_stats
+    AWS::EC2.stubs(:instance_id).returns('i-12345678')
 
-    @app = Rack::Builder.app do
-      use Cdo::AppServerMetrics,
-        interval: 0,
-        listeners: [TCP_LISTENER, SOCKET_LISTENER]
-      run ok
-    end
-  end
+    # Simulate a cluster where:
+    # Worker 0: 1 thread busy, 4 capacity remaining.
+    # Worker 1: 5 threads busy (full), 2 requests in backlog.
+    fake_puma_stats = {
+      worker_status: [
+        {last_status: {backlog: 0, running: 1, pool_capacity: 4, busy_threads: 1, max_threads: 5}},
+        {last_status: {backlog: 2, running: 5, pool_capacity: 0, busy_threads: 5, max_threads: 5}}
+      ],
+      booted_workers: 2
+    }
+    Puma.stubs(:stats_hash).returns(fake_puma_stats)
 
-  def expect_metrics(*metrics)
-    @sequence ||= sequence('metrics')
-    metrics.each do |name, value|
+    # Summed values across both workers.
+    expected_metrics = {
+      'backlog' => 2,
+      'running' => 6,
+      'pool_capacity' => 4,
+      'busy_threads' => 6,
+      'max_threads' => 10,
+      'booted_workers' => 2
+    }
+
+    sequence = sequence('metrics')
+
+    expected_metrics.each do |name, value|
+      # Expect Deployment-level metric (no InstanceId).
       Cdo::Metrics.expects(:put).with(
-        "App Server", name, value, {}, {storage_resolution: 1, unit: 'Count'}
-      ).in_sequence(@sequence)
+        'App Server',
+        name,
+        value,
+        {Environment: 'test', Host: 'test.example.net'},
+        {storage_resolution: 1, unit: 'Count'}
+      ).in_sequence(sequence)
+
+      # Expect Instance-level metric (with InstanceId).
+      Cdo::Metrics.expects(:put).with(
+        'App Server',
+        name,
+        value,
+        {Environment: 'test', Host: 'test.example.net', InstanceId: 'i-12345678'},
+        {storage_resolution: 1, unit: 'Count'}
+      ).in_sequence(sequence)
     end
+
+    @metrics.collect_puma_stats
   end
 
-  def test_app_server_metrics
-    Raindrops::Linux.expects(:tcp_listener_stats).
-      with([TCP_LISTENER]).times(2).
-      returns(
-        {TCP_LISTENER => Raindrops::ListenStats.new(1, 2)},
-        {TCP_LISTENER => Raindrops::ListenStats.new(3, 4)},
-      )
-    Raindrops::Linux.expects(:unix_listener_stats).
-      with([SOCKET_LISTENER]).times(2).
-      returns({SOCKET_LISTENER => Raindrops::ListenStats.new(0, 0)})
+  def test_start_puma_reporting_is_idempotent
+    task = Concurrent::TimerTask.new(execution_interval: 0.1) {}
+    task.stubs(:with_observer).returns(task)
+    task.stubs(:execute).returns(task)
+    task.stubs(:running?).returns(true)
 
-    expect_metrics(
-      [:active, 1],
-      [:queued, 2],
-      [:calling, 1],
-      [:active, 3],
-      [:queued, 4],
-      [:calling, 1]
-    )
+    Concurrent::TimerTask.stubs(:new).returns(task)
 
-    get '/'
-    get '/'
+    task1 = @metrics.start_puma_reporting
+    assert_kind_of Concurrent::TimerTask, task1
+
+    # Verify that we don't spawn a second task during phased restarts.
+    task2 = @metrics.start_puma_reporting
+    assert_same task1, task2
   end
 
-  # We want to test functionality within AppServerMetrics that depends on a
-  # concurrent task. This simple Observer class will let us block until that
-  # task has executed at least once.
-  #
-  # See https://www.rubydoc.info/gems/concurrent-ruby/1.2.3/Concurrent/Concern/Observable
-  class TaskExecutionObserver
-    def initialize
-      @task_executed = Concurrent::Event.new
-    end
+  def test_dynamic_resolution
+    # Verify that resolution can be tuned for adhoc/cost management.
+    adhoc_metrics = Cdo::AppServerMetrics.new(resolution: 60, interval: 60)
 
-    def update(time, result, ex)
-      @task_executed.set
-    end
+    Puma.stubs(:stats_hash).returns({worker_status: [], booted_workers: 0})
+    AWS::EC2.stubs(:instance_id).returns('i-adhoc')
 
-    def wait_until_task_executed
-      @task_executed.wait(1)
-    end
-  end
+    Cdo::Metrics.expects(:put).with(
+      anything, anything, anything, anything,
+      has_entry(storage_resolution: 60)
+    ).at_least_once
 
-  def test_reporting_task
-    # Note: this test only passes on Linux systems, since it relies on Raindrops reading from /proc/net/unix.
-    skip "Skip on non-Linux system" unless File.file? Raindrops::Linux::PROC_NET_UNIX_ARGS.first
-
-    listener = Cdo::AppServerMetrics.new(nil,
-      interval: 0.01,
-      listeners: [TCP_LISTENER, SOCKET_LISTENER]
-    )
-    observer = TaskExecutionObserver.new
-    task = listener.spawn_reporting_task
-    task.add_observer(observer)
-    Cdo::Metrics.expects(:put).at_least(1)
-    observer.wait_until_task_executed
-  ensure
-    listener&.shutdown
-    task.wait_for_termination(1)
-
-    # Because it's possible for a thread spawned by the task prior to
-    # termination to execute even after wait_for_termination has returned, we
-    # delay for a couple extra intervals to ensure that this test's threads
-    # will not interefere with test_app_server_metrics
-    sleep 0.02
+    adhoc_metrics.collect_puma_stats
   end
 end

@@ -1,6 +1,9 @@
 Feature: Certificate page features
 
-  Scenario: Pegasus share page preserves certificate when redirecting
+  Background:
+    Given I am on "http://studio.code.org/reset_session"
+
+  Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
     Given I am on "http://studio.code.org/courses/mc/units/1/reset"
@@ -8,7 +11,7 @@ Feature: Certificate page features
     Then I wait until the Minecraft game is loaded
 
   # Set up a customized certificate
-    Given I am on "http://code.org/api/hour/finish/mc"
+    Given I am on "http://studio.code.org/api/hour/finish/mc"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And I type "Robo Coder" into "#name"
@@ -17,7 +20,7 @@ Feature: Certificate page features
 
   # Verify that the old certificate share url will redirect to the new one,
   # preserving the custom certificate image
-    When I navigate to the pegasus certificate share page
+    When I navigate to the certificate share page
     And I wait until current URL contains "http://studio.code.org/certificates"
     And I wait to see an image "/certificate_images/"
     And I see custom certificate image with name "Robo Coder" and course "mc"

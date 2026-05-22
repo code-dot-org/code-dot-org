@@ -33,7 +33,7 @@
       }
     },
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-19T20:09:58.686+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8a_modular\\\"\"],\"cloned_from\":\"CSA U4L2-L8a_modular\"}]"

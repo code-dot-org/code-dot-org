@@ -359,7 +359,7 @@
       }
     },
     "name_suffix": "_pl",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:04.505+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-file-practice-4\\\"\"],\"cloned_from\":\"pl-java-class-design-file-practice-4\"}]"

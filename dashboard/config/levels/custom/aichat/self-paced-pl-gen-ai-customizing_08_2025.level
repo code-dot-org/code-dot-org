@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-29T11:51:08.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##  🔍Teacher Tip\r\nCheck out the **system prompt** for this chatbot.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This Level is from Lesson 3. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Driving Chatbot\r\n\r\n### Do This\r\n\r\n1) **Predict:** What do you notice? What do you wonder? How do you expect the chatbot to respond?\r\n2) **Investigate:** Test the chatbot with at least 4 different messages\r\n3) **Reflect:** What worked like you expected? What surprised you?\r\n\r\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "##  🔍Teacher Tip\r\nCheck out the **system prompt** for this chatbot.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This Level is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Driving Chatbot\r\n\r\n### Do This\r\n\r\n1) **Predict:** What do you notice? What do you wonder? How do you expect the chatbot to respond?\r\n2) **Investigate:** Test the chatbot with at least 4 different messages\r\n3) **Reflect:** What worked like you expected? What surprised you?\r\n\r\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -44,9 +45,11 @@
       ],
       "multimodalEnabled": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-29T11:51:08.958+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_08\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_08\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:51:08.958+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_08\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_08\"},{\"changed_at\":\"2026-03-05 16:32:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

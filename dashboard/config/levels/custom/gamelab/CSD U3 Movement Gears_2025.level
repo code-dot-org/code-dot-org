@@ -101,6 +101,7 @@
     "thumbnail_url": "https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif",
     "libraries_enabled": "false",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -4,7 +4,10 @@ Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
+  draw :api
   draw :marketing
+
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -23,25 +26,26 @@ Dashboard::Application.routes.draw do
   get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
   get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
-  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
-  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
-
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: CDO.preview_codeprojects_hostname do
+  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on preview.codeprojects.org to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for codeprojects preview
+    get '*path', to: 'codeprojects_preview#not_found'
   end
+
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
+      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -99,8 +103,6 @@ Dashboard::Application.routes.draw do
 
     get "/home", to: "home#home"
 
-    get "/congrats", to: "congrats#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -116,6 +118,15 @@ Dashboard::Application.routes.draw do
 
     resources :puzzle_ratings, only: [:create]
     resources :callouts
+    resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [:create] do
+      member do
+        get 'content'
+      end
+      collection do
+        get 'search'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -162,6 +173,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Custom route to get lesson feedback for current student
+    get 'lesson_feedbacks/by_student', to: 'lesson_feedbacks#show_by_student'
+
     # Data docs are off of curriculum builder as of fall 2022.
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
@@ -200,17 +214,20 @@ Dashboard::Application.routes.draw do
         member do
           post 'join'
           post 'leave'
-          post 'update_sharing_disabled'
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
-          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
+          post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          get 'suggested_lesson'
         end
         collection do
           get 'membership'
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          get 'demo/presets', action: 'presets', as: 'presets'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
+          get 'assigned_essential_ai_dependency'
         end
       end
     end
@@ -274,7 +291,6 @@ Dashboard::Application.routes.draw do
       get '/users/cancel', to: 'registrations#cancel'
       post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
-      get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
@@ -362,8 +378,7 @@ Dashboard::Application.routes.draw do
     # can include script_id to get or create a project for the level and script.
     # Optionally, the request can include user_id to get a project for another user,
     # like a teacher viewing a student's work.
-    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
-    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -400,6 +415,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
@@ -461,18 +477,19 @@ Dashboard::Application.routes.draw do
         get 'get_rollup_resources'
       end
 
-      resources :lessons, only: [:show], param: 'position', format: false do
+      resources :lessons, only: [:show, :index], param: 'position', format: false do
         get 'student', to: 'lessons#student_lesson_plan'
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'level_properties', to: 'lessons#level_properties', format: false
+        get 'tutor', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -550,9 +567,22 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
+      resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
+        resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      end
+      resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      resources :jit_pl_teaching_tips, only: [:create, :update, :destroy]
+      collection do
+        get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
+      end
+    end
+
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
+        get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :generate
         post :clone
       end
     end
@@ -563,7 +593,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :vocabularies, only: [:create, :update] do
+    resources :vocabularies, only: [:create, :update, :destroy] do
       collection do
         get :search
       end
@@ -727,9 +757,14 @@ Dashboard::Application.routes.draw do
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
+        get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
+        post :convert_usernames_to_ids
+        post :delete_user_progress
       end
 
       get :styleguide, to: redirect('/styleguide/'), as: 'admin_styleguide'
@@ -745,7 +780,6 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resources :integrations, only: [:new, :create]
-        resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
           post 'dynamic_registration', action: :create_registration
@@ -754,6 +788,9 @@ Dashboard::Application.routes.draw do
           collection do
             patch :bulk_update_owners
           end
+        end
+        resource :deep_linking, controller: :deep_linking, only: :show do
+          post :submit, on: :collection
         end
         namespace :account_linking do
           get :landing
@@ -992,7 +1029,6 @@ Dashboard::Application.routes.draw do
     end
 
     get '/dashboardapi/section/:section_id', to: 'api#section'
-    get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
     get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
     scope 'dashboardapi', module: 'api/v1' do
@@ -1026,7 +1062,6 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/api/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
-    get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
     get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
     get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
@@ -1040,6 +1075,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Utility routes not intended for use in production
     if rack_env?(:development, :test)
       scope '/api' do
         namespace :test, defaults: {format: 'json'} do
@@ -1049,6 +1085,12 @@ Dashboard::Application.routes.draw do
           end
         end
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
+      end
+    end
+    if rack_env?(:staging, :test)
+      scope path: '/api/dev', controller: :dev do
+        post 'check-dts', action: 'check_dts'
+        post 'start-build', action: 'start_build'
       end
     end
 
@@ -1062,15 +1104,10 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
-        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
-        post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
-        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
-        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
         post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
@@ -1110,6 +1147,10 @@ Dashboard::Application.routes.draw do
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
+
+        # Routes used by personalization alert
+        post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
+        get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
 
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
@@ -1159,7 +1200,49 @@ Dashboard::Application.routes.draw do
     # AI Lesson Summaries routes
     resources :ai_lesson_summaries, only: [:show] do
       collection do
-        get :show # GET /ai_lesson_summaries/show?user_id=1&lesson_id=2
+        get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
+        get :request_ai_lesson_summaries, controller: :ai_lesson_summaries, action: :request_ai_lesson_summaries # GET ai_lesson_summaries/request_ai_lesson_summaries?unit_id=1 [optional: &lesson_id=1]
+      end
+    end
+
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [:show] do
+      collection do
+        post :generate_podcast
+      end
+    end
+
+    # AI Lesson Summary Podcasts routes
+    resources :ai_lesson_summary_podcasts, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summary_podcasts/show?lesson_id=2
+        get :generate_podcasts_by_unit, controller: :ai_lesson_summary_podcasts, action: :generate_podcasts_by_unit # GET ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=1
+      end
+    end
+
+    # Routes used for the Student Snapshot page on the teacher dashboard
+    resources :student_snapshots, only: [] do
+      collection do
+        get 'lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get 'cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get 'cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
+        get 'exemplar_code/:lesson_id', action: :exemplar_code # GET /student_snapshots/exemplar_code/{lesson_id}
+        get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+        get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
+        get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
+        get 'student_has_work_in_lesson', controller: :student_snapshots, action: :student_has_work_in_lesson # GET /student_snapshots/student_has_work_in_lesson
+      end
+    end
+
+    get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
+    resources :lesson_feedbacks, only: [:create, :update]
+    resources :user_lesson_reflections, only: [:create]
+    resources :user_lesson_objective_reflections, only: [:create]
+
+    resources :ai_lesson_summary_podcasts do
+      collection do
+        get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
       end
     end
 
@@ -1171,6 +1254,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
@@ -1178,9 +1262,6 @@ Dashboard::Application.routes.draw do
 
     # Routes used by donor teacher banner
     post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
-
-    # Routes used by standards info dialog
-    post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
     # Routes used by teacher scores
     post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
@@ -1215,6 +1296,8 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'
@@ -1230,6 +1313,10 @@ Dashboard::Application.routes.draw do
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
     get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
+    get 'widget2', to: 'widget2#index'
+    post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
+    post 'widget2/new', to: 'widget2#new'
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]
@@ -1263,6 +1350,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :rubrics, only: [:create, :edit, :new, :update, :show] do
+      collection do
+        get 'find' # GET /rubrics/find?lesson_id=X&level_id=Y
+      end
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
@@ -1305,6 +1395,10 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
+    get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
+    post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
+
+    resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
@@ -1312,7 +1406,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
-    get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
@@ -1326,6 +1419,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index, :create]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 
     resources :aidiff_messages, only: [] do
       member do

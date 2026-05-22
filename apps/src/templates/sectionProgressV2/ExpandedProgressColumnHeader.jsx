@@ -1,15 +1,14 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import {removeExpandedLesson} from '../sectionProgress/sectionProgressRedux';
-
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 import {getLessonColumnHeaderId} from './LevelDataCell';
 import LevelProgressHeader from './LevelProgressHeader';
+import {removeExpandedLesson} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -67,8 +66,9 @@ function ExpandedProgressColumnHeader({
             className={styles.expandedHeaderLessonCellButton}
           >
             <LessonTitleTooltip lesson={lesson} />
-            <FontAwesome
-              icon="caret-down"
+            <FontAwesomeV6Icon
+              iconName="caret-down"
+              iconStyle="solid"
               className={styles.expandedHeaderCaret}
               title={i18n.unexpand()}
             />

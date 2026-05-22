@@ -90,6 +90,7 @@
     "name_suffix": "_2025",
     "ai_enabled": "false",
     "video_key": "csp_applab_processing_lists",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

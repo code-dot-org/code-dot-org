@@ -21,17 +21,23 @@
   .codeContentBody {
     position: relative;
     width: 100%;
+    height: auto;
     padding-bottom: 0.5rem;
-    max-height: 400px;
-    overflow: auto;
+
 
     > .codeContent {
-      margin: 0;
-      padding-bottom: 0;
-      border-radius: 0;
-      border: none;
-      background-color: var(--background-neutral-primary);
-      color: var(--text-neutral-primary);
+      max-height: 400px;
+      width: 100%;
+      overflow: auto;
+
+      > pre {
+        margin: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+        border: none;
+        background-color: var(--background-neutral-primary);
+        color: var(--text-neutral-primary);
+      }
     }
 
     > .codeContentOverlay {

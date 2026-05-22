@@ -17,7 +17,7 @@
         "isVisible": true
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-14T13:35:30.593+00:00\",\"changed\":[\"cloned from \\\"CSA Consumer Review Lab L4-L3\\\"\"],\"cloned_from\":\"CSA Consumer Review Lab L4-L3\"},{\"changed_at\":\"2022-09-14 13:37:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-14 14:26:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-14 15:17:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -4,8 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import SafeMarkdown from '../SafeMarkdown';
 import {videoDataShape} from '../types';
@@ -37,17 +35,6 @@ class InlineHint extends React.Component {
     }
   }
 
-  onVideoClick = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'hint-videos',
-        event: 'click',
-        data_string: this.props.video.key,
-      },
-      {includeUserId: true}
-    );
-  };
-
   render() {
     return (
       <ChatBubble
@@ -66,12 +53,7 @@ class InlineHint extends React.Component {
             isRtl={this.props.isRtl}
           />
         )}
-        {this.props.video && (
-          <VideoThumbnail
-            onClick={this.onVideoClick}
-            video={this.props.video}
-          />
-        )}
+        {this.props.video && <VideoThumbnail video={this.props.video} />}
       </ChatBubble>
     );
   }

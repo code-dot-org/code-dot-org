@@ -53,9 +53,17 @@ yarn link @code-dot-org/component-library-styles
 To use it in your project:
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
+```
+
+For CSS variables (colors and fonts), import them globally in your application root:
+
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 ```
 
 ## Development
@@ -74,9 +82,9 @@ You can import styles directly into your components:
 
 ### Example with Colors
 
-```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
+Colors are defined as CSS variables in `colors.css` and `primitiveColors.css`. These files should be imported globally in your application root (see [Installation](#installation)). Once imported, you can use the CSS variables directly in your SCSS or CSS files:
 
+```scss
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -97,15 +105,25 @@ h1 {
 
 ### Colors
 
-The `colors.scss` file defines semantic colors, which adapt to different themes (light and dark).
+The `colors.css` file defines semantic colors as CSS variables, which adapt to different themes (light and dark).
 Semantic colors map to underlying **primitive colors** and are intended to remain consistent across the design system.
 To view the latest color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33933&m=dev).
 
+**Important:** `colors.css` depends on `primitiveColors.css`, so make sure to import `primitiveColors.css` before `colors.css` in your application root.
+
 #### ✅ Example:
 
-```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
+First, import the CSS files globally in your application root:
 
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+```
+
+Then use the CSS variables in your SCSS or CSS files:
+
+```scss
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -140,11 +158,9 @@ The dark theme is defined using `[data-theme="Dark"]`.
 
 #### ✅ Usage Example:
 
-You can use semantic colors directly in your SCSS files:
+You can use semantic colors directly in your SCSS or CSS files (after importing the CSS files globally):
 
 ```scss
-@use '@code-dot-org/component-library-styles/colors.scss';
-
 .myComponent {
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
@@ -185,18 +201,27 @@ Example SCSS:
 
 ### Primitive Colors
 
-The `primitiveColors.scss` file defines the **base colors** used throughout the design system. Unlike semantic colors,
+The `primitiveColors.css` file defines the **base colors** as CSS variables used throughout the design system. Unlike semantic colors,
 primitive colors are **fixed** and do **not change** across light and dark themes.
 
 Primitive colors are meant to be used as the foundation for building semantic colors. They define a consistent color.
 To view the latest primitive color variables, refer to our [DSCO Variables Figma page](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-10156&m=dev).
 palette and ensure a unified visual language across all Code.org components.
 
+**Important:** `primitiveColors.css` should be imported before `colors.css` in your application root, as semantic colors depend on primitive colors.
+
 #### ✅ Example:
 
-```scss
-@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+First, import the CSS file globally in your application root:
 
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+```
+
+Then use the CSS variables in your SCSS or CSS files:
+
+```scss
 .myComponent {
   background-color: var(--brand-aqua-50);
   color: var(--neutral-gray-90);
@@ -233,15 +258,26 @@ palette and ensure a unified visual language across all Code.org components.
 
 ### Fonts
 
-The `fonts.scss` file defines the fonts used throughout the Code.org design system.
+The `font.scss` file provides SCSS mixins for fonts, while `fontVariables.css` defines CSS variables for font families and weights used throughout the Code.org design system.
 We use a combination of **Figtree** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
 
+**Important:** `fontVariables.css` should be imported globally in your application root to make font CSS variables available throughout your application.
+
 We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.
-All fonts are available globally through CSS variables and SCSS mixins.
+All fonts are available globally through CSS variables (defined in `fontVariables.css`) and SCSS mixins (defined in `font.scss`).
 
 ---
 
 #### ✅ Example:
+
+First, import the font CSS variables globally in your application root:
+
+```javascript
+// In your main application entry point (e.g., __root.tsx or App.tsx)
+import '@code-dot-org/component-library-styles/fontVariables.css';
+```
+
+Then use font mixins in your SCSS files:
 
 ```scss
 @use '@code-dot-org/component-library-styles/font.scss';
@@ -251,31 +287,48 @@ All fonts are available globally through CSS variables and SCSS mixins.
 }
 ```
 
+Or use CSS variables directly in your SCSS or CSS files:
+
+```scss
+.myComponent {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+}
+```
+
+Or in JSX/TSX inline styles:
+
+```jsx
+<div
+  style={{
+    fontFamily: 'var(--font-family-main)',
+    fontWeight: 'var(--font-weight-bold)',
+  }}
+>
+  Text content
+</div>
+```
+
 ---
 
-#### ✅ Available Fonts
+#### ✅ Available Font CSS Variables
 
-| Variable           | Description                               | Value                                                    |
-| ------------------ | ----------------------------------------- | -------------------------------------------------------- |
-| `$figtree-font`    | Primary font for headings and body text   | `'Figtree'`                                              |
-| `$noto-sans-fonts` | Fallback fonts for multi-language support | `'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', ...` |
-| `$main-font`       | Combined main font (Figtree + Noto Sans)  | `$figtree-font, $noto-sans-fonts, sans-serif`            |
+Font families and weights are available as CSS variables (defined in `fontVariables.css`):
 
----
-
-#### ✅ Font Weights
-
-| Variable                   | Description             | Value |
-| -------------------------- | ----------------------- | ----- |
-| `$thin-font-weight`        | Thin font weight        | `100` |
-| `$extra-light-font-weight` | Extra light font weight | `200` |
-| `$light-font-weight`       | Light font weight       | `300` |
-| `$regular-font-weight`     | Regular font weight     | `400` |
-| `$medium-font-weight`      | Medium font weight      | `500` |
-| `$semi-bold-font-weight`   | Semi-bold font weight   | `600` |
-| `$bold-font-weight`        | Bold font weight        | `700` |
-| `$extra-bold-font-weight`  | Extra bold font weight  | `800` |
-| `$black-font-weight`       | Black font weight       | `900` |
+| CSS Variable                                   | Description                              | Value                                                            |
+| ---------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
+| `--font-family-main`                           | Combined main font (Figtree + Noto Sans) | `'Figtree', 'Noto Sans', 'Noto Sans Math', ..., sans-serif`      |
+| `--font-family-barlow-semi-condensed-semibold` | Barlow Semi Condensed Semibold font      | `'Barlow Semi Condensed Semibold', 'Noto Sans', ..., sans-serif` |
+| `--font-family-barlow-semi-condensed-medium`   | Barlow Semi Condensed Medium font        | `'Barlow Semi Condensed Medium', 'Noto Sans', ..., sans-serif`   |
+| `--font-weight-thin`                           | Thin font weight                         | `100`                                                            |
+| `--font-weight-extra-light`                    | Extra light font weight                  | `200`                                                            |
+| `--font-weight-light`                          | Light font weight                        | `300`                                                            |
+| `--font-weight-regular`                        | Regular font weight                      | `400`                                                            |
+| `--font-weight-medium`                         | Medium font weight                       | `500`                                                            |
+| `--font-weight-semi-bold`                      | Semi-bold font weight                    | `600`                                                            |
+| `--font-weight-bold`                           | Bold font weight                         | `700`                                                            |
+| `--font-weight-extra-bold`                     | Extra bold font weight                   | `800`                                                            |
+| `--font-weight-black`                          | Black font weight                        | `900`                                                            |
 
 ---
 
@@ -320,10 +373,11 @@ You can override or extend font styles by combining mixins and custom properties
 
 #### 💡 Best Practices for Fonts:
 
-- ✅ Use `main-font` mixins instead of direct font-family definitions.
-- ✅ Use the provided mixins for font weights instead of hard-coded values.
+- ✅ Import `fontVariables.css` globally in your application root to make font CSS variables available.
+- ✅ Use `main-font` mixins (from `font.scss`) or CSS variables (from `fontVariables.css`) instead of direct font-family definitions.
+- ✅ Use the provided CSS variables or mixins for font weights instead of hard-coded values.
 - ✅ Figtree should be the primary font; Noto Sans is used for fallback and internationalization.
-- ⛔️ Avoid using inline styles for font definitions.
+- ✅ CSS variables can be used in inline styles (JSX/TSX) when needed, but prefer SCSS mixins when possible.
 
 ---
 
@@ -606,8 +660,9 @@ They allow you to define a set of styles that can be reused throughout your proj
 
 ## Best Practices
 
-- ✅ Use **semantic colors** from `colors.scss`, unless it's necessary to use `primitiveColors.scss`
+- ✅ Use **semantic colors** from `colors.css`, unless it's necessary to use `primitiveColors.css`
   or any other colors.
+- ✅ Import `primitiveColors.css` before `colors.css` in your application root to ensure proper variable resolution.
 - ✅ Keep typography and spacing consistent with design tokens.
 - ⛔️ Avoid defining hard-coded colors — rely on CSS variables.
 

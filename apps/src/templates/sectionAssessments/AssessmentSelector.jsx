@@ -1,7 +1,11 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import styles from '../sectionProgress/unit-selector.module.scss';
+import i18n from '@cdo/locale';
+
+import styles from './assessmentSelector.module.scss';
+
 export default class AssessmentSelector extends Component {
   static propTypes = {
     assessmentList: PropTypes.array.isRequired,
@@ -12,22 +16,26 @@ export default class AssessmentSelector extends Component {
   render() {
     const {assessmentList, assessmentId, onChange} = this.props;
 
+    // Convert assessmentList to SimpleDropdown format
+    const dropdownItems = Object.values(assessmentList).map(assessment => ({
+      value: assessment.id.toString(),
+      text: assessment.name,
+    }));
+
     return (
-      <div>
-        <select
-          id="assessment-selector"
-          value={assessmentId}
-          onChange={event => onChange(parseInt(event.target.value))}
-          className={styles.dropdown}
-          style={{width: 350}}
-        >
-          {Object.values(assessmentList).map((assessment, index) => (
-            <option key={assessment.id} value={assessment.id}>
-              {assessment.name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <SimpleDropdown
+        id="assessment-selector"
+        name="assessment-selector"
+        labelText={i18n.selectAssessment()}
+        isLabelVisible={false}
+        selectedValue={assessmentId?.toString()}
+        onChange={event => onChange(parseInt(event.target.value))}
+        items={dropdownItems}
+        size="s"
+        className={styles.assessmentSelector}
+        dropdownTextThickness="thin"
+        color="gray"
+      />
     );
   }
 }

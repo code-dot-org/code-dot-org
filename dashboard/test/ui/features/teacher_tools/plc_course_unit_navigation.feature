@@ -3,7 +3,7 @@ Feature: Basic navigation for PLC stuff
 
 Background:
   Given I create a teacher named "Test Deeper Learning Participant"
-  And I sign in as "Test Deeper Learning Participant"
+  And I sign in as "Test Deeper Learning Participant" and go home
   And I get facilitator access
   And I am enrolled in a plc course
   Given I am on "http://studio.code.org/courses/All%20The%20PLC%20Things"

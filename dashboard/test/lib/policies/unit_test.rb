@@ -6,7 +6,6 @@ require 'policies/unit'
 # takes a dependency on.
 class Policies::UnitTest < ActiveSupport::TestCase
   include Curriculum::SharedCourseConstants
-  self.use_transactional_test_case = true
 
   setup do
     UnitGroup.clear_cache

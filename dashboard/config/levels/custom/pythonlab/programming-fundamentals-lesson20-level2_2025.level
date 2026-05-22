@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### More Nested Loops\r\n- Read the code. \r\n- What do you think will happen if the user inputs 3?\r\n- What if the user inputs 4?\r\n- Why might you need to nest conditionals in an escape room game?",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

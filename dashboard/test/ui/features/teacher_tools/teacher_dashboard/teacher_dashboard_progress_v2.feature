@@ -2,8 +2,8 @@
 Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
+@no_device_farm
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
@@ -28,7 +28,7 @@ Scenario: Teacher can open and close Icon Key and details
   # Teacher can open the more details of the icon key and close it
   Then I click selector "a:contains('More Details')"
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
-  And I click selector "#ui-close-dialog"
+  And I click selector "button:contains('OK')"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
 @properties_encryption_key
@@ -55,14 +55,14 @@ Scenario: Viewing student metadata
   And I wait until element "div:contains(Collapse all student rows)" is visible
 
   # Can click on more options and it responds appropriately
-  Then I click selector "#ui-test-expand-all"
+  Then I click selector "button:contains(Expand all student rows)"
   And I wait until element "div:contains(Last Updated)" is visible
   And I wait until element "div:contains(Time Spent)" is visible
   And I wait until element "#ui-test-lesson-header-44" is visible
   And I scroll to "#ui-test-lesson-header-44"
   And I wait until ".ui-test-time-spent-44" contains one or more integers
   Then I click selector "#ui-see-more-options-dropdown"
-  Then I click selector "#ui-test-collapse-all"
+  Then I click selector "button:contains(Collapse all student rows)"
   And element "div:contains(Time Spent)" does not exist
   And element "div:contains(Last Updated)" does not exist
 

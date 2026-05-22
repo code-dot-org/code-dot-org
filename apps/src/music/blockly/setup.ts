@@ -1,3 +1,11 @@
+import * as BlockUtils from '@cdo/apps/block_utils';
+import localization from '@cdo/apps/localization';
+
+import {
+  getBlockDefinitionsForUpdatedLocale,
+  localizeBlockDefinition,
+  refreshWorkspacesForUpdatedLocale,
+} from '../../blockly/utils';
 import {Triggers} from '../constants';
 import musicI18n from '../locale';
 
@@ -5,23 +13,23 @@ import {backupFunctionDefinitons} from './blockUtils';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   FIELD_CHORD_TYPE,
-  FIELD_PATTERN_TYPE,
-  FIELD_PATTERN_AI_TYPE,
-  FIELD_TUNE_TYPE,
-  FIELD_SOUNDS_TYPE,
-  PLAY_MULTI_MUTATOR,
   FIELD_EFFECTS_EXTENSION,
-  FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERN_AI_TYPE,
+  FIELD_PATTERN_TYPE,
   FIELD_PATTERNS_VALIDATOR,
+  FIELD_SOUNDS_TYPE,
+  FIELD_SOUNDS_VALIDATOR,
+  FIELD_TUNE_TYPE,
   NEXT_CONNECTION_MUTATOR,
+  PLAY_MULTI_MUTATOR,
 } from './constants';
 import {
-  getDefaultTrackNameExtension,
-  playMultiMutator,
   effectsFieldExtension,
-  fieldSoundsValidator,
   fieldPatternsValidator,
+  fieldSoundsValidator,
+  getDefaultTrackNameExtension,
   nextConnectionMutator,
+  playMultiMutator,
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
@@ -53,16 +61,37 @@ export function setUpBlocklyForMusicLab() {
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.
   const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: MusicBlockConfig};
-  for (const blockType of Object.keys(typedMusicBlocks)) {
-    const blockConfig = typedMusicBlocks[blockType] as MusicBlockConfig;
-    Blockly.Blocks[blockType] = {
-      init: function () {
-        this.jsonInit(blockConfig.definition);
-      },
-    };
 
-    Blockly.getGenerator().forBlock[blockType] = blockConfig.generator;
-  }
+  const initializeBlocks = () => {
+    for (const blockType of Object.keys(typedMusicBlocks)) {
+      const blockConfig = typedMusicBlocks[blockType] as MusicBlockConfig;
+
+      // Localize the block and add it to the blocks list
+      const localized = localizeBlockDefinition(blockConfig.definition);
+      Blockly.Blocks[blockType] = {
+        init: function () {
+          this.jsonInit(localized);
+        },
+      };
+
+      Blockly.getGenerator().forBlock[blockType] = blockConfig.generator;
+    }
+  };
+
+  // Ensure that Blockly localizes when the locale changes
+  localization.on('change', info => {
+    initializeBlocks();
+    const blockDefinitions = getBlockDefinitionsForUpdatedLocale(
+      localization.rtl
+    );
+    BlockUtils.installCustomBlocks({
+      blockly: Blockly,
+      blockDefinitions,
+      customInputTypes: Blockly.SourceCustomInputTypes,
+    });
+    refreshWorkspacesForUpdatedLocale(localization.rtl);
+  });
+  initializeBlocks();
 
   Blockly.JavaScript.addReservedWords(
     ['Sequencer', 'when_run', ...Triggers.map(trigger => trigger.id)].join(',')

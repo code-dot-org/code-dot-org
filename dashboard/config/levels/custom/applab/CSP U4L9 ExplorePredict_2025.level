@@ -238,6 +238,7 @@
     "ai_enabled": "false",
     "start_blocks": "singChorus();\r\nsingChorus();\r\nfunction singChorus(){\r\n  console.log(\"So wake me up when it's all over\");\r\n  console.log(\"When I'm wiser and I'm older\");\r\n  console.log(\"All this time I was finding myself\");\r\n  console.log(\"And I didn't know I was lost\");\r\n}",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

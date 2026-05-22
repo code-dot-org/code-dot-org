@@ -95,6 +95,7 @@
     "display_name": "LED Counter",
     "bubble_choice_description": "Create an app that lights up each LED individually in order",
     "thumbnail_url": "https://images.code.org/89a9c660849cfcd40de22f9e6f2cdad0-image-1648762877958.8.b-preview.gif",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

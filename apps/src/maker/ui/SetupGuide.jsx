@@ -46,7 +46,7 @@ export default class SetupGuide extends React.Component {
         <Alert
           text={applabI18n.chrome133PlusBugCallout()}
           link={{
-            href: 'https://status.code.org',
+            href: 'https://support.code.org/hc/en-us/articles/23490873779853-Installing-the-Circuit-Playground-Firmata-Application-for-Code-org',
             text: i18n.learnMore(),
           }}
           type={'warning'}

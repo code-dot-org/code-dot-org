@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-19T16:14:13.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!",
+    "thumbnail_url": "https://images.code.org/77178a10c55323291580372729976d6d-bubblechoice-3b.png",
+    "bubble_choice_description": "This is a Weblab2 sublevel.",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:14:13.084+00:00\",\"changed\":[\"cloned from \\\"Weblab2 Sublevel\\\"\"],\"cloned_from\":\"Weblab2 Sublevel\"}]"
+}]]></config>
+</Weblab2>

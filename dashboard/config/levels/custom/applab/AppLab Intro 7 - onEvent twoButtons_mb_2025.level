@@ -65,6 +65,7 @@
     "start_blocks": "onEvent(\"onButton\",\"click\",function(){\r\n  setProperty(\"screen1\",\"background-color\",\"white\");\r\n  setProperty(\"label1\", \"text-color\",\"black\");\r\n});\r\nonEvent(\"offButton\",\"click\",function(){\r\n  \r\n});",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

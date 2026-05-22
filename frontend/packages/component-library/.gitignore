@@ -1,3 +1,2 @@
 dist
-# tsup generated files
-tsup.config.bundled_*.mjs
+tmp

@@ -36,7 +36,10 @@
     }
   },
   "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
-    "short_instructions": "Move me East to get me to the pig!"
+    "short_instructions": "Move me East to get me to the pig!",
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "Click here to see the code for the program you're making"
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
     "short_instructions": "Draw the foot of the man with one line"
@@ -87,6 +90,11 @@
           "length": "length"
         }
       }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/7": {
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "You have all the same blocks but they've now been arranged in categories"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
@@ -396,6 +404,40 @@
         },
         {
           "text": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        }
+      ],
+      "title": "Matching"
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "**Set Player 1 score to 0**"
+        },
+        {
+          "text": "**Player 1 rolls die**"
+        },
+        {
+          "text": "**Add Player 1 roll to total score**"
+        },
+        {
+          "text": "**Compare player scores to see who wins**"
+        }
+      ],
+      "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
+      "questions": [
+        {
+          "text": "**1)**"
+        },
+        {
+          "text": "**2)**"
+        },
+        {
+          "text": "**3)**"
+        },
+        {
+          "text": "**4)**"
         }
       ],
       "title": "Matching"
@@ -2977,6 +3019,9 @@
   "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
     "long_instructions": "Try everything!"
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/5": {
+    "long_instructions": "This is an advanced music level. Try everything!"
+  },
   "https://studio.code.org/s/allthethings/lessons/46/levels/6": {
     "long_instructions": "This level shares a project with the next level in the progression."
   },
@@ -3298,5 +3343,16 @@
   },
   "https://studio.code.org/s/allthethings/lessons/54/levels/2": {
     "long_instructions": "This level has some starter \"code\" (ie, an image, text, and a shape) as well as an exemplar solution."
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/3": {
+    "long_instructions": "This is a template-backed level, and it shares a template with the fourth level in this progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/4": {
+    "long_instructions": "This is a template-backed level, and it shares a template with the third level in this progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/55/levels/1": {
+    "dsls": {
+      "markdown": "# My Online Neighborhood\n\n## How do you go places safely online?\n"
+    }
   }
 }

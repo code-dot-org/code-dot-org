@@ -143,13 +143,15 @@ export const getHighestPriorityCollision = (
   const dragType = active.data.current?.type;
   const activeId = active.data.current?.id;
   if (dragType === DragType.FOLDER) {
-    // Filter out any attempts to move into a folder that is a child of this folder.
+    // Filter out any attempts to move into a folder that is a child of this folder or into itself.
     const allChildren = getFolderChildren(
       activeId as string,
       Object.values(folders)
     );
     rectangleCollisions = rectangleCollisions.filter(
-      collision => !allChildren.includes(collision.id as string)
+      collision =>
+        !allChildren.includes(collision.id as string) &&
+        collision.id !== activeId
     );
   }
 
@@ -229,4 +231,12 @@ export const dragAndDropKeyboardCodes = {
   start: ['KeyM'],
   cancel: ['Escape'],
   end: ['KeyM', 'Enter', 'Space'],
+};
+
+// Helper function to get the name of a file by its ID
+export const getFileNameById = (
+  fileId: string,
+  files: Record<string, {name: string}>
+): string => {
+  return files[fileId]?.name || fileId;
 };

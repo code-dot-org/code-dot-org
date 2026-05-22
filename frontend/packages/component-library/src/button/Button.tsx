@@ -1,4 +1,4 @@
-import {memo} from 'react';
+import {forwardRef, memo} from 'react';
 
 import GenericButton, {
   CoreButtonProps,
@@ -16,17 +16,16 @@ export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
 
 export interface ButtonProps extends CoreButtonProps, ButtonSpecificProps {}
 
-const Button: React.FunctionComponent<ButtonProps> = props => (
-  <GenericButton {...props} />
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  (props, ref) => <GenericButton ref={ref} {...props} />,
 );
 
 /**
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: Link Button Component.
- *
- * Alias for ***GenericButton*** Component. Renders a Button with ```<button>``` html tag.
- *
- * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
+ * @deprecated Use MUI `Button` from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
+ * Codemod available: `yarn codemod:buttons`.
  */
 export default memo(Button);

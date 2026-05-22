@@ -21,7 +21,6 @@ const LoadingSectionsSetUpContainer: React.FC<
     restrictSection: false,
     ttsAutoplayEnabled: false,
     lessonExtras: true,
-    aiTutorEnabled: false,
     sharing_disabled: false,
     sharingDisabled: false,
     primaryInstructor: {
@@ -42,7 +41,6 @@ const LoadingSectionsSetUpContainer: React.FC<
     <SectionsSetUpContainer
       isUsersFirstSection={false}
       sectionToBeEdited={defaultSection}
-      canEnableAITutor={false}
       defaultRedirectUrl={defaultRedirectUrl}
       setIsEditInProgress={() => {}}
       isLoading={true}

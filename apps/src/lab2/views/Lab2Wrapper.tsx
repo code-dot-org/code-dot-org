@@ -12,30 +12,41 @@ import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   getAppOptionsLevelId,
   getAppOptionsTheme,
   getIsShareView,
+  getPublicCaching,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  isLabLoading,
   hasPageError,
+  isLabLoading,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
+import {
+  CourseRoles,
+  setUserRoleInCourse,
+} from '@cdo/apps/templates/currentUserRedux';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
+import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
 import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
+import {PartialUserAppOptions} from '../types';
 import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
 import {ProjectBlockedUI} from './ProjectBlockedUI';
+import ScreenAnalyticsOverlay from './ScreenAnalyticsOverlay';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -44,7 +55,8 @@ export interface Lab2WrapperProps {
 }
 
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
-  const isLoading: boolean = useSelector(isLabLoading);
+  const levelPropertiesMap = useLoadLevelProperties();
+  const isLoading: boolean = useSelector(isLabLoading) || !levelPropertiesMap;
   const isPageError: boolean = useSelector(hasPageError);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
@@ -54,8 +66,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
-
-  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
 
   useEffect(() => {
     fetchPermissions().then(data => {
@@ -116,6 +126,23 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     }
   }, [isShareView, dispatch]);
 
+  // If we are cached, and there is a user app options path because we are in a script
+  // level, then make an async call to the server to find out whether the user is an
+  // instructor, and if they are, then update the user role.  This is needed for the
+  // teacher panel to appear in cached levels.
+  const userAppOptionsPath = useSelector(getUserAppOptionsPath);
+  useEffect(() => {
+    if (getPublicCaching() && userAppOptionsPath) {
+      HttpClient.fetchJson<PartialUserAppOptions>(userAppOptionsPath).then(
+        ({value}) => {
+          if (value.isInstructor) {
+            dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+          }
+        }
+      );
+    }
+  }, [dispatch, userAppOptionsPath]);
+
   // Add listeners to cancel in any-progress text to speech on level change or reload.
   useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, cancel);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, cancel);
@@ -142,11 +169,15 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         className={classNames(
           moduleStyles.labContainer,
           isLoading && moduleStyles.labContainerLoading,
-          isShareView && moduleStyles.labContainerShareView,
-          isFullScreenView && moduleStyles.labContainerFullScreenView
+          isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {children}
+        {levelPropertiesMap && (
+          // Don't display children (including lab views) until we have loaded level properties.
+          <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+            {children}
+          </LevelPropertiesWrapper>
+        )}
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
@@ -156,6 +187,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
             isProjectValidator={isProjectValidator}
           />
         )}
+        <ScreenAnalyticsOverlay />
       </div>
     </ErrorBoundary>
   );

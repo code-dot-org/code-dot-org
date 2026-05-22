@@ -35,7 +35,8 @@
     "bubble_choice_description": "Jamila would like you to style her page about endangered species awareness.",
     "thumbnail_url": "https://images.code.org/08d2dc6fab12ce4a4e766f21a5a1ad97-risk.png",
     "encrypted_examples": "zgPxpuyHYYlsYtcNX+el63eF60lViug8PAZwm66ZXEEeGV7SpsCorvdqH79a\n8Nd5OJYGHcPtsaq/xXiZF/pfSA==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:54.464+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14 Option 1-\\\"\"],\"cloned_from\":\"CSD U2L14 Option 1-\"}]"

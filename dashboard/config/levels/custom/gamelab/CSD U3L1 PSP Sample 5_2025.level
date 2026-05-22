@@ -204,6 +204,7 @@
     "bubble_choice_description": "Interactive greeting card animation template.",
     "thumbnail_url": "https://images.code.org/c43d4403aa2a934fede400adc93ab5f5-template5-1.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

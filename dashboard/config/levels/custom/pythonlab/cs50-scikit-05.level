@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:56:02.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standards: 5.2 (Model Complexity) & 5.9 (Ensemble Methods)\n# Standard Descriptions: \n#   5.2: Compare the model complexity of a decision tree alone versus one with a Random Forest.\n#   5.9: Explain how ensemble methods work (e.g., Bagging, Boosting, Random Forests).\n#\n# Rationale: Why use one model when you can use a hundred? This tutorial introduces \n# \"Ensemble Methods\"—the idea that a group of weak models (like small trees) \n# can work together to make a much stronger prediction. \n\n\"\"\"\nWelcome to the power of teamwork! \nImagine you have to guess how many jellybeans are in a jar. If you ask one person, \nthey might be way off. but if you ask 100 people and take their AVERAGE, you \nwill likely be very close.\n\nIn AI, we call this an \"Ensemble\". A Random Forest is just a \"team\" of \nmany Decision Trees working together.\n\"\"\"\n\nfrom sklearn.datasets import make_moons\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# --- CREATE \"NOISY\" DATA ---\n# We'll create data in a \"moon\" shape with some noise (randomness) to make it hard.\nX, y = make_moons(n_samples=500, noise=0.3, random_state=42)\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# --- PART 1: THE LONE TREE ---\nprint(\"--- Part 1: The Single Decision Tree ---\")\ntree = DecisionTreeClassifier(random_state=42)\ntree.fit(X_train, y_train)\ntree_score = tree.score(X_test, y_test)\nprint(f\"Single Tree Accuracy: {tree_score:.2%}\")\n\n# --- PART 2: THE RANDOM FOREST (The Team) ---\nprint(\"--- Part 2: The Random Forest ---\")\n# This forest will have 100 trees working together!\nforest = RandomForestClassifier(n_estimators=100, random_state=42)\nforest.fit(X_train, y_train)\nforest_score = forest.score(X_test, y_test)\nprint(f\"Random Forest Accuracy: {forest_score:.2%}\")\n\n# --- VISUALIZATION ---\n# This helper function draws the \"Decision Boundary\" (the line the AI draws)\ndef plot_boundary(clf, X, y, title):\n    h = .02\n    x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5\n    y_min, y_max = X[:, 1].min() - .5, X[:, 1].max() + .5\n    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))\n    Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])\n    Z = Z.reshape(xx.shape)\n    plt.contourf(xx, yy, Z, alpha=0.8, cmap='coolwarm')\n    plt.scatter(X[:, 0], X[:, 1], c=y, edgecolors='k', cmap='coolwarm')\n    plt.title(title)\n\nplt.figure(figsize=(12, 5))\nplt.subplot(1, 2, 1)\nplot_boundary(tree, X, y, f\"Single Tree\\n(Score: {tree_score:.2%})\")\n\nplt.subplot(1, 2, 2)\nplot_boundary(forest, X, y, f\"Random Forest (100 Trees)\\n(Score: {forest_score:.2%})\")\n\nprint(\"\\nNotice how the Forest's boundary is 'smoother' and more accurate!\")\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nA Random Forest is stronger when it has more trees. \n1. We've set up a small forest for you. \n2. Try changing 'n_estimators' from 2 to 10, and then to 100.\n3. How does the accuracy change as the \"team\" gets bigger?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Experiment with n_estimators (number of trees)\nmy_forest = RandomForestClassifier(n_estimators=2, random_state=42)\nmy_forest.fit(X_train, y_train)\n\nprint(f\"\\nMy Forest Accuracy: {my_forest.score(X_test, y_test):.2%}\")\n\"\"\"\nWhy do you think 100 trees might be better than 2?\n\"\"\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWW5SsGV3txO0HZ2KDC3XaPSYq63ZT8eM\njoEPGWT5cHCwspI9EjNe7rRje8sQdy27qtwCTmeN3v6PnWXQgrlyG/Fo4gS2\ng75c/DC6ve8iJDmpG77B/LARiAwzh8CisD6ZoSGL2cgOcYLvcXJ9hZyA2+LN\n1tI8Ssq8DQIpqa3W66YlvrAglVVSELgAaG1W1QyzH/gWfo+xOzs9/ABVlkzF\nuVlZTfhrgqWTbPjFO81nbir6k0l7Y/9mgsbAsywhJNHy8xrI4bQwQMJ7VTZY\nyyriwZ6cixnyPSuYq59GKxsRW6C2QADb0nYcF4tBamw6oAmUcyNbJgmxwqOk\nzOHloQrJ/gw7eGjLUO3I1bARLAQn2tZCR+6fr9pKpd3w/V7GGuQOgZL1QUxX\ndkoSMGJ6wzHcah4+sPWGVWAoHZHgUT3e2n5qjbwwYMeR3iwDrr0TnyZJfpsO\nKvwelTv+wwPXzMxQtlXRKnhuTpYKdQcNjWo0EuaqBYPIq3ol/QewcacT6Lvr\n96J7Dk3d0KbWpzgWgkJ+B2Zl97qw2AMVotTkbY48eUozJTlngsezCp+BLuvH\nC3f3AsaU+OGmWfhK8JbLMZFWEo7D9VijV8psHfdMq0vLwUBKwQz8LIgONyP5\nojF4ayOFvRzKI7gVuutRmnVPlbfKWMPzKftqGdn+SC7RbFHVT+RupsXlRx8R\nNkFoSQDVF8K4F6xgT8WISDGsRskwRNunf2VpTais8B2KWXD/LbF6+8OuJU2x\nnAhKnvdb7aAgz2KwUbAKnMw8/D3HC/SuhSMXFiYe3e1BsPY5YU9lYz5NXYOH\nPHu5NE8gQFoaAca2ykHwYP5IfbQLlRyf5txlnqNQxsijiriOEyVK48ssLGsL\nlzkp24pI1kpQnmKdza/5yhbJVSWawY827+vep/KezS0f32kCYZRsOycZnj3L\naBa3DiMxPYgukaorRaad4OvyBDKgwlU3bhdEgHZqRX5X/hX8EbkilvRjN0Jc\nx8KvpKbhF+V9oycTXe9BjwnQu8bwApvdLp/2Bux0WbHbUz6N+4AcJ+FxrXjC\nUU8a7p6MNK6iGyVddSOlCpctZroLBgC30PIWB3eNboCNBUSFKYDiYRwqPNU8\nkOd6o4/eM9pAKAudZka5SKHOS7TcgQjDmY+HhV4ZPmEZJ+mUePBpapj6M2dD\nTCZ4nmcwi/m69C1B7fLvz41THLwlwEXseoUApPovXvcqhKZOFEqzgyCbs79K\nWxYtZ3Taj+6Fi06kdEnp2Lg4GBgsezge4Y0qY7GXhRKufJJCNMgSVZePr2cz\nbDuSGcYB6IQZs1bwWtcVPvy/5VKUQ6EDImohjmCi6+GvAv6lv/mDe41iAuPA\nna9ZYqGiKSn3QIy+uUQEVJw2jyfcB3x84IBp9Q7tfGnFnJnluKHDLoqSMJ0Y\niZ6jFHJIgYTCbyBbp0Rxsn9VMQAcanv+xY7SdpygknnGqTwy5PzQW5XmQ7S5\nYdbbbU/b1vx67Wki6akQZ+I=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:56:02.638+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-02\\\"\"],\"cloned_from\":\"cs50-scikit-02\"},{\"changed_at\":\"2026-02-18 16:56:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:22:44 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:22:52 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

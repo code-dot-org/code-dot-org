@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import FinishStudentAccount from '@cdo/apps/signUpFlow/FinishStudentAccount';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -11,13 +11,16 @@ $(document).ready(() => {
   const usStateOptions = getScriptData('usStateOptions');
   const countryCode = getScriptData('countryCode');
 
-  ReactDOM.render(
+  createReactRoot(
     <FinishStudentAccount
       ageOptions={ageOptions}
       usIp={usIp}
       countryCode={countryCode}
       usStateOptions={usStateOptions}
     />,
-    document.getElementById('finish-student-account-root')
+    document.getElementById('finish-student-account-root'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

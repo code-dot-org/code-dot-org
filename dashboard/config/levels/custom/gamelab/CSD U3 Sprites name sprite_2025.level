@@ -93,6 +93,7 @@
     "bubble_choice_description": "Fix the sprite name so that all three cherries appear.",
     "libraries_enabled": "false",
     "encrypted_examples": "s5Dzdm7PSSjq/YyCYUwdqACPcTM5aecXH5dP3/9sYigPT+Nfm84iOLaWqyEt\nGo+HrVgVYA/MMFPr5/z2nveIlw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

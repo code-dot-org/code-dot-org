@@ -50,6 +50,7 @@ Scenario: Teacher can view own versions
 
   And I wait for 1.5 seconds
   And I ensure droplet is in text mode
+  And I wait until element "#resetButton" is visible
   And I add another version to the project
   And element ".project_updated_at" eventually contains text "Saved"
 

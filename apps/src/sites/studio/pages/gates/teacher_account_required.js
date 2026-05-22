@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import TeacherAccountRequiredPage from '@cdo/apps/templates/gates/TeacherAccountRequiredPage';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReactDOM.render(
+  createReactRoot(
     <TeacherAccountRequiredPage />,
-    document.getElementById('teacher-account-required-page')
+    document.getElementById('teacher-account-required-page'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

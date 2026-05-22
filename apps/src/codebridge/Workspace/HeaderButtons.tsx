@@ -1,4 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -17,7 +18,7 @@ import moduleStyles from './workspace.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {levelProperties, projectPickerSettings} = useCodebridgeContext();
-  const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const {enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -31,13 +32,13 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT);
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [appName, dialogControl, skipUrl]);
+  }, [dialogControl, skipUrl]);
 
   const onClickFlash = async () => {
     let pythonCode = '';
@@ -59,38 +60,49 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.rightHeaderButtons}>
       {projectPickerSettings && (
-        <Button
-          iconRight={{iconName: 'rotate'}}
-          size={'xs'}
-          text={projectPickerSettings.currentType}
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="extraSmall"
           onClick={projectPickerSettings.showProjectTypePicker}
-          type={'primary'}
           aria-label={codebridgeI18n.projectPickerAriaLabel()}
-          color={'black'}
-        />
+          type="button"
+          endIcon={<FontAwesomeV6Icon iconName="rotate" />}
+        >
+          {projectPickerSettings.currentType}
+        </MuiButton>
       )}
       {enableMicroBit && (
-        <Button
-          iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onClickFlash}
-          size={'xs'}
-          type={'tertiary'}
-          text={codebridgeI18n.sendToMicroBit()}
-          color={'black'}
-        />
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName="arrow-right-from-arc"
+            />
+          }
+        >
+          {codebridgeI18n.sendToMicroBit()}
+        </MuiButton>
       )}
       {skipUrl && (
-        <Button
-          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
-          onClick={onClickSkip}
-          size={'xs'}
-          type={'tertiary'}
-          text={commonI18n.skipToProject()}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           className={moduleStyles.buttonSkip}
-          color={'black'}
+          onClick={onClickSkip}
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="arrow-right" />
+          }
         >
-          <span>{commonI18n.skipToProject()}</span>
-        </Button>
+          {commonI18n.skipToProject()}
+        </MuiButton>
       )}
     </div>
   );

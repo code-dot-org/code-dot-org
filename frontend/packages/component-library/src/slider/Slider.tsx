@@ -1,3 +1,8 @@
+import {
+  IconButton as MuiIconButton,
+  IconButtonProps as MuiIconButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {
   ChangeEvent,
@@ -6,8 +11,6 @@ import {
   useEffect,
   useState,
 } from 'react';
-
-import {Button, ButtonProps} from '@/button';
 
 import moduleStyles from './slider.module.scss';
 
@@ -54,19 +57,18 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   /** Maximum value for the slider
    * @default 100 */
   maxValue?: number;
-  /** Props for the left control button */
-  leftButtonProps?: ButtonProps;
-  /** Props for the right control button */
-  rightButtonProps?: ButtonProps;
+  /** Props for the left control button (MUI IconButton) */
+  leftButtonProps?: MuiIconButtonProps;
+  /** Props for the right control button (MUI IconButton) */
+  rightButtonProps?: MuiIconButtonProps;
   /** Custom class name */
   className?: string;
 }
 
-const defaultSliderButtonProps: ButtonProps = {
-  type: 'tertiary',
-  color: 'black',
-  isIconOnly: true,
-  size: 'xs',
+const defaultSliderButtonProps: Partial<MuiIconButtonProps> = {
+  variant: 'text',
+  color: 'secondary',
+  size: 'extraSmall',
 };
 
 const sliderTrackColorsMap = {
@@ -133,6 +135,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const gradientDirection = isRtl ? 'left' : 'right';
 
   const [backgroundStyle, setBackgroundStyle] = useState('');
+  const [borderGradientStyle, setBorderGradientStyle] = useState('');
 
   // Override min and max values for percent mode
   const minSliderValue = isPercentMode && minValue === undefined ? 0 : minValue;
@@ -233,6 +236,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         `linear-gradient(to ${gradientDirection}, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`,
       );
     }
+    setBorderGradientStyle(
+      `linear-gradient(to ${gradientDirection}, ${fillColor} ${fillPercent}%, var(--background-neutral-septenary) ${fillPercent}%)`,
+    );
   }, [
     value,
     fillColor,
@@ -247,7 +253,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
 
   const showLabelSection = label || !hideValue;
 
-  const buttonColor = color === 'white' || color === 'aqua' ? 'white' : 'black';
+  const iconButtonColor =
+    color === 'white' || color === 'aqua' ? 'white' : 'secondary';
 
   return (
     <div
@@ -261,21 +268,30 @@ const Slider: React.FunctionComponent<SliderProps> = ({
       {showLabelSection && (
         <div className={moduleStyles.sliderLabelSection}>
           {label && (
-            <label id={labelId} className={moduleStyles.sliderLabel}>
+            <MuiTypography
+              variant="label2"
+              component="label"
+              id={labelId}
+              className={moduleStyles.sliderLabel}
+            >
               {label}
-            </label>
+            </MuiTypography>
           )}
 
           {/* Display the value with a % sign if percentMode is true */}
-          {!hideValue && <span>{isPercentMode ? `${value}%` : value}</span>}
+          {!hideValue && (
+            <MuiTypography component="span" variant="body3">
+              {isPercentMode ? `${value}%` : value}
+            </MuiTypography>
+          )}
         </div>
       )}
 
       <div className={moduleStyles.sliderMainContainer}>
         {leftButtonProps && (
-          <Button
+          <MuiIconButton
             {...defaultSliderButtonProps}
-            color={buttonColor}
+            color={iconButtonColor}
             onClick={() => handleControlButtonClick('subtract')}
             disabled={disabled}
             {...leftButtonProps}
@@ -292,7 +308,13 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             disabled={disabled}
             onChange={handleChange}
             aria-labelledby={labelId}
-            style={{background: backgroundStyle}} // Apply dynamic background gradient style
+            style={
+              {
+                background: backgroundStyle,
+                '--slider-background': backgroundStyle,
+                '--slider-border-gradient': borderGradientStyle,
+              } as React.CSSProperties
+            } // Apply dynamic background gradient style
             {...HTMLInputAttributes}
           />
           {/* // TODO: Uncomment when working on adding steps support OR working on adding center mark*/}
@@ -326,9 +348,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           {/*/!*)}*!/*/}
         </div>
         {rightButtonProps && (
-          <Button
+          <MuiIconButton
             {...defaultSliderButtonProps}
-            color={buttonColor}
+            color={iconButtonColor}
             onClick={() => handleControlButtonClick('add')}
             disabled={disabled}
             {...rightButtonProps}

@@ -7,10 +7,6 @@
    Updating styles in this file will require a manual sync of the that file.
 */
 
-html {
-  font-size: 100%;
-}
-
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -71,13 +67,6 @@ html {
     }
 */
 
-:root {
-  --font-size-body-xs: 0.813rem;
-  --font-size-body-sm: 0.875rem;
-  --font-size-body-md: 1rem;
-  --font-size-body-lg: 1.25rem;
-}
-
 @mixin heading-common {
   color: var(--text-neutral-primary);
   margin: 0 0 0.5em 0;
@@ -85,32 +74,32 @@ html {
 
 @mixin heading-xxl {
   @include heading-common;
-  font-family: font.$barlowSemiCondensed-semibold;
-  font-weight: font.$semi-bold-font-weight;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-weight: var(--font-weight-semi-bold);
   font-size: 3rem;
   line-height: 1.16;
 }
 
 @mixin heading-xl {
   @include heading-common;
-  font-family: font.$barlowSemiCondensed-semibold;
-  font-weight: font.$semi-bold-font-weight;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-weight: var(--font-weight-semi-bold);
   font-size: 2.125rem;
   line-height: 1.24;
 }
 
 @mixin heading-lg {
   @include heading-common;
-  font-family: font.$barlowSemiCondensed-semibold;
-  font-weight: font.$semi-bold-font-weight;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-weight: var(--font-weight-semi-bold);
   font-size: 1.75rem;
   line-height: 1.28;
 }
 
 @mixin heading-md {
   @include heading-common;
-  font-family: font.$barlowSemiCondensed-semibold;
-  font-weight: font.$semi-bold-font-weight;
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-weight: var(--font-weight-semi-bold);
   font-size: 1.5rem;
   line-height: 1.32;
 }
@@ -188,7 +177,7 @@ html {
 
 // Strong and Em styles
 @mixin strong {
-  font-weight: font.$semi-bold-font-weight;
+  font-weight: var(--font-weight-semi-bold);
 }
 
 @mixin em {

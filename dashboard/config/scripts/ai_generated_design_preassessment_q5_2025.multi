@@ -7,7 +7,7 @@ wrong 'The café\’s menu prices and location'
 wrong 'The café\’s website loading speed'
 wrong 'The café\’s security and privacy features'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 4, 5, 6

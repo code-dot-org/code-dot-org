@@ -30,7 +30,8 @@
     "display_name": "Debug the missing image 2",
     "bubble_choice_description": "Use your debugging skills to figure out why the alt text, but not the image, is appearing.",
     "thumbnail_url": "https://images.code.org/f2fe825e0da85448a0d7fd1bf69dc33d-image-1564089788394.JPG",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

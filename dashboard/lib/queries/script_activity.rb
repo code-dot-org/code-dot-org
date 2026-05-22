@@ -24,7 +24,9 @@ class Queries::ScriptActivity
   #
   # return [UserScript]
   def self.working_on_user_scripts(user)
-    user.user_scripts.where(user_scripts: {completed_at: nil})
+    user.user_scripts.
+      joins(:script).
+      where(user_scripts: {completed_at: nil})
   end
 
   # Retrieve all UserScripts for scripts this user has completed
@@ -56,7 +58,7 @@ class Queries::ScriptActivity
   def self.in_progress_and_completed_scripts(user)
     user.user_scripts.compact.reject do |user_script|
       user_script.script.nil?
-    rescue
+    rescue ActiveRecord::RecordNotFound
       # Getting user_script.script can raise if the script does not exist
       # In that case we should also reject this user_script.
       true

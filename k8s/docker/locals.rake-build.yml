@@ -21,6 +21,11 @@ skip_seed_all: true
 # files match staging.
 use_my_apps: true
 
+# If this is not set to true, package:studio will attempt to download a studio
+# package build from S3 for the current file checksums.
+build_studio: true
+use_my_studio: true
+
 # If daemon is true (default in dev), then `rake build` will attempt
 # to run DB migrations, but we are running without a DB during docker build.
 daemon: false

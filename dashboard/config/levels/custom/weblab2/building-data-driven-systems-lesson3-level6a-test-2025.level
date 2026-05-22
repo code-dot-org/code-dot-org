@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-20T20:53:09.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "building-data-driven-systems-lesson3-templateA-test-2025",
+    "long_instructions": "Use PAIR Programming with AI to  help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n### ☁️ Humidity Spike!\r\n**Status:** Urgent Update\r\n\r\n\r\n**Details:** The humidity just hit 90%! Your followers need help *today*. You need to post an emergency \"Anti-Frizz Tip\" in the first slot (Monday).\r\n\r\n**Action Required:** Add this post to the very **start** of your feed using *unshift()*. This will bump all other posts to the next day.\r\n\r\n* **Title:** \"Anti-Frizz Tip\"\r\n* **Content:** \"Use a silk scarf to save your hair!\"\r\n* **Image:** \"frizz.jpg\"\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Hair Stylist",
+    "bubble_choice_description": "You need to get out a last minute update today. Can you insert it right at the beginning of your feed?",
+    "thumbnail_url": "https://images.code.org/8586fac101b075b5570e743fa7c213d6-stylist.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T20:53:09.077+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level5a-test-2025\"},{\"changed_at\":\"2025-11-20 20:54:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 21:12:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

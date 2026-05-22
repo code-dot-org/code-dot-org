@@ -1,10 +1,18 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  MutableRefObject,
+} from 'react';
 import Typist from 'react-typist';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import localization from '@cdo/apps/localization';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -12,7 +20,7 @@ import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWra
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
-import {Panel} from './types';
+import {DEFAULT_PANEL_LINK_WIDTH, Panel, PanelLink} from './types';
 
 import styles from './panelsView.module.scss';
 
@@ -37,6 +45,9 @@ interface PanelsProps {
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
+  // Enables link-based navigation: bubbles are hidden, and the Continue
+  // button appears only on panels whose `showContinueButton` is set.
+  useLinks?: boolean;
   onChangePanel?: (
     source: 'button' | 'bubble',
     currentPanel: number,
@@ -61,6 +72,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   offerBrowserTts,
   levelId,
   resetOnChange = true,
+  useLinks = false,
   onChangePanel,
   onClickContinue,
 }) => {
@@ -71,7 +83,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
   const lastPanelStartTime = useRef<number>(Date.now());
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -109,7 +124,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   );
 
   const handleButtonClick = useCallback(() => {
-    if (currentPanelIndex < panels.length - 1) {
+    // In link mode the button leaves the level; between-panel navigation
+    // goes through links only.
+    if (!useLinks && currentPanelIndex < panels.length - 1) {
       changePanel(currentPanelIndex + 1, 'button');
     } else {
       if (onClickContinue) {
@@ -120,13 +137,30 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       }
       onContinue(panels[currentPanelIndex].nextUrl);
     }
-  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
+  }, [
+    useLinks,
+    changePanel,
+    panels,
+    currentPanelIndex,
+    onContinue,
+    onClickContinue,
+  ]);
 
   const handleBubbleClick = useCallback(
     (index: number) => {
       changePanel(index, 'bubble');
     },
     [changePanel]
+  );
+
+  const handleLinkClick = useCallback(
+    (link: PanelLink) => {
+      const targetIndex = panels.findIndex(p => p.key === link.targetKey);
+      if (targetIndex !== -1) {
+        changePanel(targetIndex, 'bubble');
+      }
+    },
+    [panels, changePanel]
   );
 
   // Reset to first panel whenever panels content changes if specified.
@@ -159,6 +193,21 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [currentPanelIndex, setTypingDone]);
 
   const panel = panels[currentPanelIndex];
+  const showTyping =
+    panel?.typing || queryParams('panels-show-typing') === 'true';
+
+  // Legacy mode always shows the button; link mode requires opt-in per panel.
+  const buttonEligible = useLinks ? !!panel?.showContinueButton : true;
+
+  // When typing, only show the button when the typing is done.
+  const showButton = (!showTyping || typingDone) && buttonEligible;
+
+  useEffect(() => {
+    if (showButton) {
+      nextButtonRef.current?.focus();
+    }
+  }, [showButton, currentPanelIndex]);
+
   if (!panel) {
     return null;
   }
@@ -185,17 +234,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     : styles.textTopRight;
 
   const buttonText =
-    currentPanelIndex < panels.length - 1
+    !useLinks && currentPanelIndex < panels.length - 1
       ? commonI18n.next()
       : commonI18n.continue();
 
   const plainText = markdownToTxt(panel.text);
-
-  const showTyping =
-    panel.typing || queryParams('panels-show-typing') === 'true';
-
-  // When typing, only show the button when the typing is done.
-  const showButton = !showTyping || typingDone;
 
   return (
     <div
@@ -208,26 +251,51 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           <div
             className={styles.image}
             style={{
-              backgroundImage: `url("${previousPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(
+                previousPanel.imageUrl,
+                ['lz-image']
+              )}")`,
             }}
           />
         )}
         <div
           className={classNames(styles.image, styles.imageCurrent)}
           style={{
-            backgroundImage: `url("${panel.imageUrl}")`,
+            backgroundImage: `url("${localization.translate(panel.imageUrl, [
+              'lz-image',
+            ])}")`,
           }}
         />
         {nextPanel && (
           <div
             className={classNames(styles.image, styles.imageInvisible)}
             style={{
-              backgroundImage: `url("${nextPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(
+                nextPanel.imageUrl,
+                ['lz-image']
+              )}")`,
             }}
           />
         )}
+        {useLinks &&
+          panel.links?.map((link, index) => (
+            <button
+              type="button"
+              key={`link-${index}`}
+              className={classNames(styles.link, panel.dark && styles.linkDark)}
+              style={{
+                left: `${link.x}%`,
+                top: `${link.y}%`,
+                width: `${link.width ?? DEFAULT_PANEL_LINK_WIDTH}%`,
+              }}
+              onClick={() => handleLinkClick(link)}
+            >
+              <EnhancedSafeMarkdown markdown={link.text} />
+            </button>
+          ))}
         {panel.text && (
           <div
+            ref={contentRef}
             className={classNames(
               styles.text,
               panel.dark && styles.textDark,
@@ -237,7 +305,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             {offerBrowserTts && (
               // Override the theme since the text container is always white.
               <div className={styles.ttsContainer} data-theme="Light">
-                <TextToSpeech text={panel.text} />
+                <TextToSpeech contentRef={contentRef} />
               </div>
             )}
             {showTyping ? (
@@ -267,19 +335,25 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         style={{width: width, height: childrenAreaHeight}}
       >
         {showButton && (
-          <Button
-            key={`button-${currentPanelIndex}`}
-            id="panels-button"
-            onClick={handleButtonClick}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={classNames(
               styles.button,
               showTyping ? styles.buttonReady : styles.buttonDelay
             )}
-            text={buttonText}
-          />
+            id="panels-button"
+            onClick={handleButtonClick}
+            type="button"
+            ref={nextButtonRef}
+            key={`button-${currentPanelIndex}`}
+          >
+            {buttonText}
+          </MuiButton>
         )}
 
-        {panels.length > 1 && (
+        {panels.length > 1 && !useLinks && (
           <div id="panels-bubbles">
             {Array.from(Array(panels.length).keys()).map(index => {
               return (

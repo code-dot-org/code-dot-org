@@ -196,10 +196,10 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/users/sign_in'
   end
 
-  test "language is determined from cdo.locale" do
+  test "language is determined from I18n.locale" do
     skip 'TODO: get :home, and look for a div that still exists'
 
-    @request.env['cdo.locale'] = "es-ES"
+    I18n.locale = "es-ES"
 
     get :index
 
@@ -530,5 +530,21 @@ class HomeControllerTest < ActionController::TestCase
     # Verify the links use the script path (not course path) when there's no unit_group_unit
     assert_equal "/s/#{script.name}", top_course[:linkToOverview]
     assert_equal "/s/#{script.name}/next", top_course[:linkToLesson]
+  end
+
+  test "home does not 404 for users with deleted unit references" do
+    student = create(:student)
+    current_script = create(:script, :with_levels)
+    deleted_script = create(:script, :with_levels)
+
+    create(:user_script, user: student, script: current_script, started_at: 2.days.ago)
+    create(:user_script, user: student, script: deleted_script, started_at: 1.day.ago)
+
+    deleted_script.destroy!
+
+    sign_in student
+    get :home
+
+    assert_response :success
   end
 end

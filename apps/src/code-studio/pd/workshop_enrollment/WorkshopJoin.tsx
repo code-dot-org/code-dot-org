@@ -1,11 +1,7 @@
+import {Typography, Button as MuiButton} from '@mui/material';
 /**
  * Join workshop page
  */
-import {Button} from '@code-dot-org/component-library/button';
-import {
-  Heading3,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
 import UserPassport, {
@@ -87,23 +83,29 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
     return (
       <div className={style.unsubmittedContainer}>
         <div className={style.unsupportedStatusTextContainer}>
-          <Heading3>Review your information</Heading3>
-          <BodyThreeText>
+          <Typography variant="h3" gutterBottom>
+            Review your information
+          </Typography>
+          <Typography variant="body3" gutterBottom>
             This is your current Code.org account info. Make sure it matches
             what you shared during registration — any updates you make here will
             also update your account. You can update your account info at any
             time in your account settings.
-          </BodyThreeText>
-          <Button
-            id="joinWorkshop"
-            name="joinWorkshop"
-            text="Join this workshop"
-            color="purple"
-            className={style.joinWorkshopButton}
-            onClick={handleSubmitEnrollment}
-            isPending={isSubmitting}
+          </Typography>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
             disabled={isMissingUserInfo(userInfo) || !!error}
-          />
+            className={style.joinWorkshopButton}
+            id="joinWorkshop"
+            onClick={handleSubmitEnrollment}
+            type="button"
+            name="joinWorkshop"
+          >
+            {'Join this workshop'}
+          </MuiButton>
         </div>
         {userInfo && (
           <UserPassport
@@ -125,12 +127,14 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
   const RenderBasicResponse = (heading: string, body: string) => {
     return (
       <div className={style.statusTextContainer}>
-        <Heading3>{heading}</Heading3>
-        <BodyThreeText>
+        <Typography variant="h3" gutterBottom>
+          {heading}
+        </Typography>
+        <Typography variant="body3" gutterBottom>
           {`${body} If this seems like a mistake, please reach out to `}
           <a href="mailto:support@code.org">support@code.org</a>
           {'.'}
-        </BodyThreeText>
+        </Typography>
       </div>
     );
   };

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q7_2026'
+
+question 'A weather app displays today''s temperature for several cities on one page. The developer notices the same lines of code are repeated for each city, just with different names. What''s the best reason to put those steps into a function?'
+
+wrong 'Functions make the page look more colorful.'
+right 'A function lets the developer write the steps once and reuse them for every city without rewriting.'
+wrong 'Functions automatically detect errors.'
+wrong 'Functions speed up the user''s internet connection.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

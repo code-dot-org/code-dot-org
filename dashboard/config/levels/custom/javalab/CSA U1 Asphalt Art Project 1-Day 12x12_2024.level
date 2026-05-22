@@ -768,7 +768,7 @@
       }
     },
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:44:44.992+00:00\",\"changed\":[\"cloned from \\\"CSA U1 Asphalt Art Project 1-Day 12x12_2023\\\"\"],\"cloned_from\":\"CSA U1 Asphalt Art Project 1-Day 12x12_2023\"},{\"changed_at\":\"2025-03-10 21:42:25 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"

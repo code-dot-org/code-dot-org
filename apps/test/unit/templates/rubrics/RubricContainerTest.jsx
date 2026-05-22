@@ -397,8 +397,7 @@ describe('RubricContainer', () => {
       {
         rubricId: defaultRubric.id,
         studentId: defaultStudentInfo.user_id,
-      },
-      'Both'
+      }
     );
 
     // Wait for fetches and re-render

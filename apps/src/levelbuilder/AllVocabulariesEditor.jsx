@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addVocabulary,
   updateVocabulary,
@@ -12,6 +11,7 @@ import {
 import {vocabularyShape} from '@cdo/apps/levelbuilder/shapes';
 
 import AddVocabularyDialog from './lesson-editor/AddVocabularyDialog';
+import DeleteVocabularyDialog from './lesson-editor/DeleteVocabularyDialog';
 import {lessonEditorTableStyles} from './lesson-editor/TableConstants';
 
 class AllVocabulariesEditor extends Component {
@@ -90,14 +90,14 @@ class AllVocabulariesEditor extends Component {
     return (
       <div style={styles.actionsColumn}>
         <div onMouseDown={() => this.handleEdit(rowData)} style={styles.edit}>
-          <i className="fa fa-edit" />
+          <i className="fa-solid fa-pen-to-square" />
         </div>
         <div
           onMouseDown={() => this.setState({vocabularyForDeletion: rowData})}
           style={styles.remove}
           className={'unit-test-destroy-vocabulary'}
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -137,8 +137,9 @@ class AllVocabulariesEditor extends Component {
             onClick={this.handleAddVocabularyClick}
             style={styles.addButton}
             type="button"
+            className="unit-test-add-vocabulary"
           >
-            <i className="fa fa-plus" style={{marginRight: 7}} />
+            <i className="fa-solid fa-plus" style={{marginRight: 7}} />
             Create New Vocabulary
           </a>
         </div>
@@ -157,18 +158,14 @@ class AllVocabulariesEditor extends Component {
           />
         )}
         {this.state.vocabularyForDeletion && (
-          <Dialog
-            body={`Are you sure you want to permanently delete vocabulary "${this.state.vocabularyForDeletion.word}"?`}
-            cancelText="Cancel"
-            confirmText="Delete"
-            confirmType="danger"
-            isOpen={true}
-            handleClose={this.handleDeleteVocabularyDialogClose}
-            onCancel={this.handleDeleteVocabularyDialogClose}
-            onConfirm={this.handleDeleteVocabularyConfirm}
+          <DeleteVocabularyDialog
+            vocabularyForDeletion={this.state.vocabularyForDeletion}
+            handleDeleteVocabularyConfirm={this.handleDeleteVocabularyConfirm}
+            handleDeleteVocabularyDialogClose={
+              this.handleDeleteVocabularyDialogClose
+            }
           />
         )}
-
         <Table.Provider columns={columns} style={{width: '100%'}}>
           <Table.Header />
           <Table.Body rows={this.props.vocabularies} rowKey="key" />

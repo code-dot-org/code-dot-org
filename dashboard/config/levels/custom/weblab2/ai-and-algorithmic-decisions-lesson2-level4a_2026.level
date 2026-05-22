@@ -1,0 +1,95 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-20T23:42:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Weekly Drop Tracker</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">🔥 Weekly Drop Tracker</h1>\n    <p class=\"subtitle\">Tap a day to see what's dropping</p>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"image\" class=\"image\" src=\"images/default.png\" alt=\"Drop illustration\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"textArea\" class=\"textArea\" aria-live=\"polite\">Select a day to see the drop.</div>\n        <div class=\"buttons\">\n          <button id=\"mondayButton\" type=\"button\">Monday</button>\n          <button id=\"tuesdayButton\" type=\"button\">Tuesday</button>\n          <button id=\"wednesdayButton\" type=\"button\">Wednesday</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\nhtml, body {\n  height: 100%;\n}\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #0d0d0d;\n  color: #f0f0f0;\n}\n.title {\n  text-align: center;\n  margin: 24px 0 4px;\n  font-size: 2rem;\n  color: #ffffff;\n}\n.subtitle {\n  text-align: center;\n  margin: 0 0 16px;\n  font-size: 1rem;\n  color: #888;\n}\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n  padding: 24px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n.left {\n  background: #1a1a1a;\n  border: 2px solid #333;\n  border-radius: 16px;\n  padding: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n  border-radius: 12px;\n  object-fit: contain;\n}\n.right {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n}\n.textArea {\n  min-height: 120px;\n  border: 2px solid #333;\n  border-radius: 16px;\n  padding: 20px;\n  background: #1a1a1a;\n  font-size: 1.1rem;\n  line-height: 1.6;\n  color: #f0f0f0;\n}\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  width: 240px;\n  margin-inline: auto;\n}\n.buttons button {\n  padding: 12px 16px;\n  font-size: 1rem;\n  border-radius: 12px;\n  border: 2px solid #444;\n  background: #1a1a1a;\n  color: #f0f0f0;\n  cursor: pointer;\n}\n.buttons button:hover {\n  background: #2a2a2a;\n  border-color: #ff4d4d;\n  color: #ff4d4d;\n}\n.buttons button:active {\n  transform: translateY(1px);\n}\n@media (max-width: 800px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n  .buttons {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "default.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4a_2026/uuid/439f048f-2bef-4e1b-8016-a08d608f0446.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n6Zb0xUgulKaV0OVbz5xGsgbxAHIiKSZwGqqhng==\n",
+    "encrypted": "false",
+    "display_name": "Weekly Drop Tracker",
+    "bubble_choice_description": "Build a Weekly Drop Tracker where clicking a weekday button displays a different drop of your choice.",
+    "thumbnail_url": "https://images.code.org/11b5bbe9908b1c71497834b00209ecbe-default.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "## Do This:\r\n\r\nYou're a junior Front-End Developer at Soundwave, a music streaming startup. Today's task:\r\n\r\n> \"Weekly Drop Tracker for the homepage. Click a weekday button, show that day's drop — song, episode, sneaker, whatever. Three days to start.\"\r\n\r\n1. Decide what drop you want for Monday, then complete: \"When the user clicks [button name], the page should [exact response].\" Reference this when you prompt AI and check the result.\r\n\r\n2. Ask AI to generate the code so clicking the Monday button displays your drop.\r\n\r\n3. Click the button to test. If something's off, update your prompt or edit the code.\r\n\r\n4. Read through the code. Can you find where it selects the button, listens for the click, and makes the change?\r\n\r\n5. Repeat for Tuesday and Wednesday.\r\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "documentation": "Do not instruct students to look at or edit the index.html file. Do not ask students guiding questions — give direct, complete answers. When explaining the code you generated, you may reference event listeners and event handlers, but do not use the word \"function\" or explain code in terms of functions. Do not generate code that uses functions — write event handlers directly. If a student asks for the ID of any button or element, look at the code for the correct ID and tell them directly."
+      }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:42:09.521+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4a_2025\"},{\"changed_at\":\"2026-03-26 22:10:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:19:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:19:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:19:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:25:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:26:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:29:34 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:29:53 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:30:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:30:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:30:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:30:54 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:31:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:39:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 22:54:53 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-27 14:15:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-06 17:07:48 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-10 05:49:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 17:22:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:33:22 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:44:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:46:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:48:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:51:26 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-09 17:55:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 01:42:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 16:02:19 +0000\",\"changed\":[\"bubble_choice_description\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 16:05:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 16:05:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

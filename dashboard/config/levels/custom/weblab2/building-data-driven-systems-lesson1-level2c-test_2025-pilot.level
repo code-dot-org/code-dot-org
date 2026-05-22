@@ -1,0 +1,108 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:06:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Food Magazine\r\n\r\n###Do This:\r\n\r\n1. Fill your Arrays: Create 2 arrays (`headlines`, `taglines`) with 3 items each. Ensure index 0 in all lists matches the same story.\r\n\r\n2. Pick Index: Create a variable `let index = 0;` to track the current cover.\r\n\r\n3. Update Page: Use document.querySelector and your index variable to:\r\n\t* Set `#headline` text to `headlines[index]`.\r\n    * Set `#coverImage` src to `images[index]`.\r\n    * Set `#tagline` text to `taglines[index]`.\r\n\r\n4. Show Count: Update `#count` text to display the total number of covers using `.length.`\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Foodie Focus Magazine</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"magazine-wrapper\">\n    <header class=\"masthead\">\n      <h1 id=\"magTitle\">Foodie Focus</h1>\n      <div class=\"issue-details\">Winter Issue • $5.99</div>\n    </header>\n\n    <main class=\"cover-body\">\n      <div class=\"image-frame\">\n        <img id=\"coverImage\" src=\"/images/cover1c.png\" alt=\"Food Cover Image\">\n      </div>\n      \n      <div class=\"text-overlay\">\n        <h2 id=\"headline\"></h2>\n        <p id=\"tagline\"></p>\n      </div>\n    </main>\n\n    <footer>\n      <p id=\"count\"></p>\n    </footer>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// FOOD MAGAZINE: Parallel Arrays\n\n// Data Arrays\nconst coverImages = [\n  \"/images/cover1c.png\",\n  \"/images/cover2c.png\",\n  \"/images/cover3c.png\"\n];\nconst headlines = [];\nconst taglines = [];\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background-color: #f4e1d2;\n  font-family: 'Georgia', serif;\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n}\n\n.magazine-wrapper {\n  background: white;\n  width: 380px;\n  padding: 20px;\n  border: 1px solid #d4a373;\n  box-shadow: 0 10px 20px rgba(0,0,0,0.1);\n  text-align: center;\n}\n\n.masthead {\n  border-bottom: 2px solid #8a2be2; /* Creative accent */\n  border-bottom: 4px double #a52a2a; /* Brown/Red */\n  padding-bottom: 10px;\n  margin-bottom: 15px;\n}\n\nh1 {\n  font-family: 'Playfair Display', serif; /* Elegant header font */\n  font-size: 3rem;\n  margin: 0;\n  color: #a52a2a;\n  letter-spacing: -1px;\n}\n\n.issue-details {\n  font-style: italic;\n  color: #666;\n  margin-top: 5px;\n}\n\n.cover-body {\n  position: relative;\n}\n\n.image-frame {\n  border: 1px solid #ddd;\n  padding: 5px;\n  background: #fff;\n}\n\n#coverImage {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n\n.text-overlay {\n  margin-top: 15px;\n}\n\n#headline {\n  font-family: 'Helvetica', sans-serif;\n  font-size: 2rem;\n  color: #333;\n  margin: 10px 0 5px 0;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n\n#tagline {\n  font-size: 1.2rem;\n  font-style: italic;\n  color: #a52a2a;\n  margin: 0;\n}\n\nfooter {\n  margin-top: 20px;\n  border-top: 1px solid #eee;\n  padding-top: 10px;\n  font-size: 0.9rem;\n  color: #888;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cover3c.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2c-test-2025/uuid/61e66e5e-2a0d-4b93-a5fb-c693a9a58c4a.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "cover1c.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2c-test-2025/uuid/51231ba3-6c0b-4c4f-bd71-d7efec135547.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "cover2c.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2c-test-2025/uuid/608d8103-cab0-4cb2-a5da-473a6139ac4e.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nKDFRfPOpP4EfRbzR6AONkas2/jYXbgFdk9w=\n",
+    "display_name": "Food Magazine Cover",
+    "bubble_choice_description": "Create the cover for a food magazine using 3 parallel arrays to change the style quickly",
+    "thumbnail_url": "https://images.code.org/c30b15421f5b52833dccd28ca06d0d18-cover1c.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:23.822+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2c-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2c-test-2025\"}]"
+}]]></config>
+</Weblab2>

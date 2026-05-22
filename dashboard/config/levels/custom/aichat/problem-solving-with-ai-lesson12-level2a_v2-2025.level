@@ -49,7 +49,8 @@
       "AI, Energy, and the Environment.pdf": "13ac0ec7-f1e0-4be4-977b-45eb005a9108.pdf"
     },
     "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Grocery Stores\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click **Add** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:21.996+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2a_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2a_2025\"}]"

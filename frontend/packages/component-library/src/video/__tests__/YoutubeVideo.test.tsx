@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 
 import YouTubeVideo from '../YoutubeVideo';
 
-jest.mock('react-player/youtube', () => ({
+jest.mock('react-player', () => ({
   __esModule: true,
   default: () => <div>YouTube Player</div>,
   canPlay: jest.fn(),

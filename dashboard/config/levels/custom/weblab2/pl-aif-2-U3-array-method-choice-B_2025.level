@@ -1,0 +1,38 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sweet Bytes Bakery",
+    "project_template_level_name": "building-data-driven-systems-lesson3-templateB-test_2025",
+    "long_instructions": "You are the owner of **Sweet Bytes Bakery**. To keep your hungry customers updated on what's fresh out of the oven, you use a Social Media Scheduler.\r\n\r\nBased on the updates that you receive over the next four levels, use **PAIR Programming with AI** to  help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n\r\n### 🍩 Surprise Pop-up!\r\n**Status:** New Event Added\r\n\r\n**Details:** You decided to host a \"Donut Pop-up\" this Friday to celebrate the weekend!\r\n\r\n**Action Required:** Add this special event to the end of your schedule by writing a helper function that will push() the event to the end of the schedule.\r\n\r\n* **Title:** \"Donut Friday\"\r\n* **Content:** \"Hot glazed donuts until sold out!\"\r\n* **Image:** \"donut.jpg\"\r\n\r\n---\r\n\r\n::: details [**🔎 Hint**]\r\n- Helper functions will need to be added to the `JS` file to `push()` each element of the new event (title, content, and image.)\r\n\r\n- The `HTML` file will need to be updated to include new elements to hold the new event. \r\n\r\n- Ask AI to help you with each one separately. \r\n:::\r\n",
+    "bubble_choice_description": "Surprise Pop-up! You decided to host a \"Donut Pop-up\" this Friday to celebrate the weekend.",
+    "thumbnail_url": "https://images.code.org/3fe52237c8ffbc1cbad46d9f78e09ffa-baker.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "level_system_prompt": "In this level, students will be using the PAIR Programming with AI framework--\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n* **Integrate:** Implement and test in the display.\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\nTherefore, you should propose two different methods to create the code that the user prompts you for so that they can compare, contrast, and test.",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:20.600+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-array-method-choice-B\\\"\"],\"cloned_from\":\"pl-aif-2-U3-array-method-choice-B\"}]"
+}]]></config>
+</Weblab2>

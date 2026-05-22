@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_musiclab"
+    "name_suffix": "_musiclab",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-06-03T19:27:25.120+00:00\",\"changed\":[\"cloned from \\\"student-end-of-unit-survey-q33_-problemsolving_2025\\\"\"],\"cloned_from\":\"student-end-of-unit-survey-q33_-problemsolving_2025\"}]",

@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-15T17:11:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection: Usability, Inclusion, and Trust",
+    "long_instructions": "Imagine a new user trying your app for the first time. What would be easy for them? What might still be confusing or hard? Name one future improvement you would make for usability or accessibility.",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Reflection",
+    "bubble_choice_description": "Evaluate your app’s usability, inclusion, and trust. Consider what works well for new users and what future improvements you would make ***(supports completing Milestone 4 tasks)***.",
+    "thumbnail_url": "https://images.code.org/197fb95fc9d1446b8faf8f06c09f58e7-thought-leadership.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:11:04.704+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level7-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level7-test-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

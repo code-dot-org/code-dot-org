@@ -87,6 +87,7 @@
     "bubble_choice_description": "Create a program that prints out a countdown based on user input.",
     "thumbnail_url": "https://images.code.org/82d45909668d5b4c70faa51f955eede9-image-1649915049750.png",
     "encrypted_examples": "ZVjX7dlUrzUcZ7cCyw6bkDPU75h15xn3RpP/iTkR1lcY936CRkBeAowCzjmn\neE4ZhKO3sPjEpzQtd7KZqacZeQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -39,29 +39,6 @@ $container-width: 960px;
   display: flex;
   justify-content: end;
   line-height: normal;
-
-  button.closeButton {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    height: auto;
-  }
-
-  button:active {
-    border: none !important;
-  }
-
-  button:hover {
-    background-color: transparent;
-  }
-
-  i {
-    text-decoration: none;
-    color: $neutral_dark80;
-    font-size: 20px;
-  }
 }
 
 .compatibilityContainer {
@@ -94,23 +71,23 @@ $container-width: 960px;
 
 .expandedCardContainer {
   position: relative;
-  background-color: $neutral_white;
-  border: 1px solid $neutral_dark;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-solid);
   border-radius: 4px;
   width: $container-width;
   box-sizing: border-box;
 }
 
 .circleCheck {
-  color: $product_affirmative_default !important;
+  color: var(--text-success-primary) !important;
 }
 
 .circleXmark {
-  color: $product_negative_default !important;
+  color: var(--text-error-primary) !important;
 }
 
 .triangleExclamation {
-  color: $product_caution_default !important;
+  color: var(--text-warning-primary) !important;
 }
 
 .flexDivider {
@@ -118,7 +95,7 @@ $container-width: 960px;
 }
 
 .horizontalDivider {
-  border-top: 1px solid $neutral_dark20;
+  border-top: 1px solid var(--borders-neutral-primary);
 }
 
 .iconStyle {
@@ -131,21 +108,26 @@ $container-width: 960px;
 
 .iconWithDescription {
   display: flex;
+  align-items: center;
   column-gap: 8px;
   white-space: nowrap;
 
   > p {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     margin: 0;
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
   }
 
   i {
-    font-size: 0.875em;
-    color: $neutral_dark80;
-    align-self: flex-start;
-    padding-top: 4px;
+    font-size: 0.875rem;
+    color: var(--text-neutral-secondary);
+    line-height: 1.48;
   }
+}
+
+.aiBotIcon.aiBotIcon {
+  color: var(--text-brand-aqua-primary);
+  font-size: 1rem;
 }
 
 p.subjectsText {
@@ -169,14 +151,15 @@ p.subjectsText {
   }
 }
 
-.professionalLearningContainer, .relatedContainer {
+.professionalLearningContainer,
+.relatedContainer {
   a {
-    color: $brand_secondary_default !important;
+    color: var(--text-brand-purple-primary) !important;
     text-decoration: underline !important;
   }
 
   a:hover {
-    color: $brand_secondary_dark !important;
+    color: var(--text-brand-purple-secondary) !important;
     text-decoration: none !important;
   }
 }
@@ -188,14 +171,14 @@ p.subjectsText {
     width: 100%;
     text-wrap: wrap;
     margin-top: 8px;
-    color: $brand_secondary_default;
+    color: var(--text-brand-purple-primary);
     text-decoration: none !important;
     font-size: 12px;
     text-align: center;
   }
 
   .relatedCurriculaLink:hover {
-    color: $brand_secondary_dark
+    color: var(--text-brand-purple-secondary);
   }
 
   h4 {
@@ -213,7 +196,7 @@ p.subjectsText {
 }
 
 .relatedCurriculaContainer {
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
   width: 224px;
   padding: 16px;
   border-radius: 0 4px 4px 0;
@@ -232,11 +215,11 @@ p.subjectsText {
 
   a {
     text-decoration: none;
-    color: $neutral_dark !important;
+    color: var(--text-neutral-primary) !important;
   }
 
   a:hover {
-    color: $brand_secondary_default !important;
+    color: var(--text-brand-purple-primary) !important;
   }
 
   p {
@@ -246,7 +229,7 @@ p.subjectsText {
 }
 
 .thickDivider {
-  border-top: 2px solid $neutral_dark20;
+  border-top: 2px solid var(--borders-neutral-primary);
 }
 
 .videoContainer {
@@ -258,7 +241,7 @@ p.subjectsText {
   position: relative;
   max-width: 600px;
   height: auto;
-  border: 1px solid $neutral_white;
+  border: 1px solid transparent;
   padding-top: 16px;
   box-sizing: border-box;
 }
@@ -267,15 +250,15 @@ p.subjectsText {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-top: 1px solid $neutral_dark;
-  border-left: 1px solid $neutral_dark;
+  border-top: 1px solid var(--borders-neutral-solid);
+  border-left: 1px solid var(--borders-neutral-solid);
   top: 100%;
   left: 54.5%;
   margin-left: -25px;
   content: '';
   transform: rotate(45deg);
   margin-top: -9px;
-  background: $neutral_white;
+  background: var(--background-neutral-primary);
   z-index: 1;
 }
 

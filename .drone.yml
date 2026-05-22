@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -60,8 +60,19 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      # Validate cache restore, since the restore step will pass even if it only downloaded a
+      # partial copy of the cached build. First, ensure the .git directory is present and valid.
+      - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      # Then, count the number of files outside of the .git directory and compare to how many were
+      # present in the cache. This is not a perfect check, but is much cheaper than computing a
+      # checksum of all files and is likely to catch most instances of incomplete downloads.
+      - |
+        if [ -f .cached-staging-build-file-count ]; then
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          diff=$((actual - expected))
+          [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
+        fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
@@ -79,16 +90,17 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -152,7 +164,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -169,8 +181,19 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      # Validate cache restore, since the restore step will pass even if it only downloaded a
+      # partial copy of the cached build. First, ensure the .git directory is present and valid.
+      - "git rev-parse --git-dir >/dev/null 2>&1 || { echo 'ERROR: Cache restore failed: .git dir is missing or invalid'; exit 1; }"
+      # Then, count the number of files outside of the .git directory and compare to how many were
+      # present in the cache. This is not a perfect check, but is much cheaper than computing a
+      # checksum of all files and is likely to catch most instances of incomplete downloads.
+      - |
+        if [ -f .cached-staging-build-file-count ]; then
+          expected=$(cat .cached-staging-build-file-count)
+          actual=$(find . -type f -not -path './.git/*' | wc -l)
+          diff=$((actual - expected))
+          [ "$expected" = "$actual" ] || printf 'WARN: File count mismatch. Expected: %s Actual: %s Diff: %s\n' "$expected" "$actual" "$diff"
+        fi
       # Update the remote URL to use authentication
       - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
@@ -189,25 +212,28 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.16
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     volumes:
       - name: mysql
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_tests.sh
+      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      DEVICE_FARM_DESKTOP_PROJECT_ARN:
+        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
@@ -270,11 +296,13 @@ steps:
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
-  - name: prepare-ci-tests
-    image: codedotorg/code-dot-org:1.16
+  - name: prepare-cacheable-build
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     environment:
-      CI_JOB: 'ui_tests'
+      CI_JOB: 'prepare_cacheable_build'
+      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
+        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
@@ -282,17 +310,19 @@ steps:
         path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/install_ci_tests.sh
-      - /entrypoint.sh docker/ci/scripts/build_ci_tests.sh
+      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
+      # Generate baseline file count for validation
+      - touch .cached-staging-build-file-count
+      - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
+      - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build
+  - name: cache-staging-ci-build-internal-mysql
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -314,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 925c21602c339f772dc42252cdd352841ca442fdb9f4ca96a8a4b93b9add0c2b
+hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
 
 ...

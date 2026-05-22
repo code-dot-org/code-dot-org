@@ -28,7 +28,7 @@ class ToggleButton extends Component {
         aria-selected={String(this.props.active)}
         id={this.props.id}
         style={this.getStyle()}
-        className={'no-outline ' + (this.props.className || '')}
+        className={this.props.className || ''}
         title={this.props.title}
         onClick={this.props.onClick}
       >
@@ -40,11 +40,6 @@ class ToggleButton extends Component {
   getStyle() {
     return Object.assign(
       {},
-      {
-        ':focus': {
-          outline: 'none',
-        },
-      },
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,

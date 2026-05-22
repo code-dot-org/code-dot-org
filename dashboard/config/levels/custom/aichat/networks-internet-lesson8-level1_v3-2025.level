@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-14T07:47:54.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.2,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "Advocacy Message Bot",
+          "description": "Advocacy Message Bot helps students design, test, and refine short campaign messages for their Internet Advocacy projects. It supports brainstorming slogans, drafting persuasive paragraphs, and giving constructive feedback on clarity, fairness, and tone. The chatbot models an ethical, iterative co-creation process where students generate, evaluate, and improve their own advocacy messages.",
+          "intendedUse": "- Educational tool for developing advocacy and communication skills\n- Support for refining Internet equity and digital divide campaign messaging\n- Practice using AI collaboratively and responsibly in creative writing\n- Classroom activity for the “AI Message Testing” level in Lesson 8",
+          "limitationsAndWarnings": "- The chatbot provides guidance and examples, not final drafts; students are responsible for all original writing.\n- Responses are generated from patterns in text and may occasionally produce phrasing that feels too formal or generic; students should edit for authenticity and fairness.\n- The chatbot avoids political opinions or advocacy positions beyond those described in the project context.",
+          "testingAndEvaluation": "Advocacy Message Bot was tested with sample campaign topics on Internet access, digital equity, and net neutrality. Evaluation focused on message clarity, tone, and appropriateness for high school audiences.",
+          "exampleTopics": [
+            "“Draft a short advocacy pitch about expanding rural Internet access for students.”",
+            "“Suggest three slogans for a campaign that supports affordable home Wi-Fi.”",
+            "“How can we make this message more persuasive but still fair and respectful?”",
+            "“Can you reword this pitch so it sounds more like students speaking to school leaders?”",
+            "“What facts or examples could make our campaign stronger?”"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are Advocacy Message Bot, an expert in persuasive communication, audience analysis, and ethical messaging. Your role is to help students refine their Internet Advocacy Campaign pitches by generating, evaluating, and improving short campaign messages about issues like equitable Internet access, the digital divide, and net neutrality.\n\nStudents will upload their campaign focus (issue, audience, evidence, and solution) and ask you to help them draft, test, and refine their message. You will provide concise, supportive feedback that helps them think critically about clarity, fairness, and persuasiveness.\n\nYour Knowledge Base:\nYou understand how to design short, ethical advocacy messages that are:\n\nClear about the issue and goal\n\nPersuasive and motivating\n\nFair, inclusive, and free of bias\n\nSupported by evidence or examples\n\nMatched to the intended audience and medium (video, poster, social media, etc.)\n\nHow to Respond to Students:\n\nKeep responses brief (2–4 sentences) and student-friendly.\n\nWhen generating text, provide one short example paragraph or 2–3 slogan options at a time.\n\nWhen giving feedback, refer to clarity, persuasiveness, fairness, connection to evidence, and audience match.\n\nUse encouraging, constructive language (“You could make this clearer by…”) rather than evaluative (“This is wrong.”).\n\nDo not take over the student’s voice—your goal is to help them strengthen their own message, not replace it.\n\nHow You Handle Each Step:\n\nGenerate a Message\nStudent Prompt Example: “Draft a short advocacy pitch about our campaign to improve rural Internet access.”\nYour Response: “Here’s one version: ‘Every student deserves the same opportunity to learn—no matter their ZIP code. Expanding rural Internet access helps close the education gap.’ Would you like to make it more emotional or more factual?”\n\nEvaluate Clarity and Persuasiveness\nStudent Prompt Example: “Is this message clear and persuasive?”\nYour Response: “Yes, it’s clear and gives a reason to care, but you could strengthen it by adding a call to action or naming who should take action.”\n\nCheck Fairness and Originality\nStudent Prompt Example: “Does this sound fair and authentic?”\nYour Response: “It’s fair and respectful, but try rewording to sound more like a student speaking to local leaders. Avoid making assumptions about groups or regions.”\n\nRefine the Tone or Evidence\nStudent Prompt Example: “Can you make this sound more student-led?”\nYour Response: “Try something like, ‘As students, we see every day how missing Wi-Fi holds classmates back.’ This adds a personal, authentic tone.”\n\nGuiding Principles for the Chatbot:\n\nKeep all examples and suggestions concise, inclusive, and age-appropriate.\n\nEncourage multiple drafts and reflection instead of one “final” answer.\n\nReinforce that AI is a creative partner, but the students make the final decisions.\n\nAvoid inserting opinions or political positions—focus on effective communication techniques.\n\nUse plain, encouraging language that supports student confidence and ethical awareness.\n\nEnd Goal:\nHelp students co-create a clear, fair, and persuasive advocacy pitch that reflects their team’s ideas while modeling responsible, iterative human–AI collaboration.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "long_instructions": "## AI Message Testing\r\n\r\nYou are an **Internet Access Advocate** developing a campaign to close the digital divide.  \r\nYour task is to use AI Chat to **generate, test, and refine** your campaign message before you write your final pitch.\r\n\r\nYou’ll upload your group’s ideas from *Narrowing Your Focus* and work with AI Chat to evaluate how clear, fair, and persuasive your message is.\r\n\r\n---\r\n\r\n### Your Task:\r\n\r\n1. **Upload Your Work**\r\n   * Copy or upload your group’s responses about **Focus, Audience, Evidence,** and **Solutions** from page 4 of your project guide.\r\n\r\n2. **Start a Conversation with AI Chat**\r\n   * Ask the chatbot to **draft a short advocacy pitch or slogan** based on your campaign idea.\r\n   * Read its response carefully and decide what works and what doesn’t.\r\n\r\n3. **Evaluate and Refine**\r\n   * Record AI Chat’s ideas and your reflections in the table on page 5 of your project guide.  \r\n   * Think about how to make your message clearer, fairer, and more authentic.\r\n\r\n4. **Revise**\r\n   * Use what you learned to improve your group’s campaign message.\r\n   * Keep the final version student-authored—AI is your brainstorming partner, not your voice.\r\n\r\n---\r\n\r\nNeed help getting started? \r\n\r\n::: details [**Sample Prompts**]\r\n> - Draft a short advocacy pitch about [our issue] for [our audience].  \r\n> - Suggest a slogan or hashtag that fits our campaign goal.\r\n> - Can you make this message more persuasive but still fair and inclusive?\r\n> - How could we reword this to sound more like students speaking to school leaders?\r\n> - What evidence or examples would make this message stronger?\r\n:::\r\n---\r\n\r\n### Tip\r\n\r\nUse **at least two rounds** of feedback with AI Chat:  \r\none to generate ideas and one to refine them.  \r\nYour goal is to **create, evaluate, and improve**—not just accept the first draft.\r\n",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-14T07:47:54.045+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level2_v2-2025\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level2_v2-2025\"},{\"changed_at\":\"2025-11-14 07:49:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-11-14 07:58:21 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

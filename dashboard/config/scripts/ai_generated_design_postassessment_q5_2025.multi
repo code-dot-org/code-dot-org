@@ -7,7 +7,7 @@ wrong 'Making the site load faster on mobile devices'
 wrong 'Adding complexity to make the brand seem high-tech'
 right 'Expressing the company\'s brand identity and values'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 4, 5, 6

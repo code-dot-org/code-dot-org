@@ -10,7 +10,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   PERFORMANCE3 = 'performanceLevel4'
   REVIEW_STATE = TeacherFeedback::REVIEW_STATES.keepWorking
 
-  self.use_transactional_test_case = true
   setup_all do
     #create student, teacher, and level and register student in teacher's section
     @teacher = create(:authorized_teacher)
@@ -20,6 +19,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     @section = create(:section, user: @teacher)
     create(:section_instructor, section: @section, instructor: @coteacher, status: :active)
     @section.add_student(@student)
+    @not_authorized_section = create(:section, user: @not_authorized_teacher)
+    @not_authorized_section.add_student(@student)
     @level = create(:level)
     @script_level = create(:script_level)
     @script = @script_level.script
@@ -34,6 +35,29 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @level.id, teacher_feedback.level_id
     assert_equal @teacher.id, teacher_feedback.teacher_id
     assert_equal @section.id, teacher_feedback.analytics_section_id
+  end
+
+  test 'cannot be created by teacher for student not in their sections' do
+    other_teacher = create(:teacher)
+    other_student = create(:student)
+    other_section = create(:section, user: other_teacher)
+    other_section.add_student(other_student)
+
+    sign_in @teacher
+    params = {
+      student_id: other_student.id,
+      script_id: @script.id,
+      level_id: @level.id,
+      script_level_id: @script_level.id,
+      comment: COMMENT1,
+      performance: PERFORMANCE1,
+      analytics_section_id: other_section.id
+    }
+
+    assert_does_not_create(TeacherFeedback) do
+      post API, params: {teacher_feedback: params}
+      assert_response :forbidden
+    end
   end
 
   test 'create - when review state is keepWorking, calls update_best_result with expected params' do
@@ -234,7 +258,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'count does not include feedback from a not authorized teacher' do
-    teacher_sign_in_and_give_feedback(@not_authorized_teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@not_authorized_teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, nil, @not_authorized_section)
     sign_out @not_authorized_teacher
 
     sign_in @student

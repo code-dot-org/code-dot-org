@@ -1,4 +1,5 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
 import React from 'react';
 
@@ -8,10 +9,9 @@ import {getStore} from '@cdo/apps/redux';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import i18n from '@cdo/locale';
 
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-
 import {ITEM_TYPE} from './ItemType';
 import {getLevelCellValue} from './LevelDataCell';
+import {getCurrentUnitData} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -237,19 +237,15 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = ({
       labelText={i18n.downloadProgressCsv()}
       size="s"
       disabled={isLoading}
-      useDSCOButtonAsTrigger
+      useMuiIconButtonAsTrigger
       triggerButtonProps={{
-        isIconOnly: true,
-        icon: {
-          iconName: 'download',
-          iconStyle: 'solid',
-        },
-        color: 'gray',
-        type: 'secondary',
-        size: 's',
-        ariaLabel: i18n.downloadProgressCsv(),
+        children: <FontAwesomeV6Icon iconName="download" iconStyle="solid" />,
+        color: 'tertiary',
+        variant: 'outlined',
+        size: 'small',
+        'aria-label': i18n.downloadProgressCsv(),
         className: styles.downloadCsvDropdown,
-        isPending: isLoading,
+        loading: isLoading,
       }}
       menuPlacement="right"
     >

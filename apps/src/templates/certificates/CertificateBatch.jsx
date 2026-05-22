@@ -1,8 +1,4 @@
-import {
-  Heading1,
-  Heading3,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -97,9 +93,9 @@ export default function CertificateBatch({
   return (
     <div className={style.wrapper}>
       <div className={style.headerContainer}>
-        <Heading1 className={style.header}>
+        <Typography className={style.header} variant="h1" gutterBottom>
           {i18n.printBatchCertificates()}
-        </Heading1>
+        </Typography>
       </div>
       <div className={style.certificateContainer}>
         <div className={style.imageWrapper}>
@@ -108,7 +104,9 @@ export default function CertificateBatch({
         </div>
         <div className={style.entryContainer}>
           <span className={style.instructions}>
-            <Heading3>{i18n.createYourCertificate()}</Heading3>
+            <Typography variant="h3" gutterBottom>
+              {i18n.createYourCertificate()}
+            </Typography>
             <SafeMarkdown
               markdown={i18n.enterCertificateNames({courseTitle})}
             />
@@ -143,11 +141,10 @@ export default function CertificateBatch({
           </form>
         </div>
       </div>
-
       <div className={style.continueBeyond}>
-        <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
-        </Heading3>
+        <Typography className={style.textCenter} variant="h3" gutterBottom>
+          Continue Beyond an Hour of AI
+        </Typography>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
         >
@@ -158,7 +155,9 @@ export default function CertificateBatch({
             >
               <div className={style.contentWrapper}>
                 <p className={style.overline}>{item.grade}</p>
-                <Heading3>{item.title}</Heading3>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
                 <img src={item.image} alt="" />
                 <p>{item.description}</p>
               </div>
@@ -173,7 +172,9 @@ export default function CertificateBatch({
         <hr />
 
         <div className={style.textCenter}>
-          <Heading4>{i18n.discoverMore()}</Heading4>
+          <Typography variant="h4" gutterBottom>
+            {i18n.discoverMore()}
+          </Typography>
           <p>{i18n.discoverMoreCatalogText()}</p>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
@@ -188,7 +189,6 @@ export default function CertificateBatch({
           </a>
         </div>
       </div>
-
       <div className={style.professionalLearning}>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
@@ -204,7 +204,9 @@ export default function CertificateBatch({
                   alt=""
                   className={style.professionalLearningImage}
                 />
-                <Heading3>{item.title}</Heading3>
+                <Typography variant="h3" gutterBottom>
+                  {item.title}
+                </Typography>
                 <p>{item.description}</p>
               </div>
               <div className={style.contentFooter}>

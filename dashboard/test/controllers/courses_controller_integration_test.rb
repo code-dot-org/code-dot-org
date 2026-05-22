@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CoursesControllerIntegrationTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
   test "show: plc courses get sent to user_course_enrollments_controller" do
     sign_in create :teacher
     # Note: We intentionally use a complex-ish course name here, similar to what

@@ -66,6 +66,7 @@
     "mini_rubric": "false",
     "tts_short_instructions_override": "Explore the Internet Simulator. How does it work? What can you do with it?",
     "tts_long_instructions_override": "Explore the Internet Simulator. How does it work? What can you do with it?",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

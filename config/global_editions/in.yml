@@ -1,0 +1,177 @@
+# India Global Edition Region
+
+# The structure of a global configuration is to start with the page context and
+# then list the page name, then list components within that page.
+#
+# The component can then specify a value that overrides component properties
+# with the ones given here, or, if the value is 'false', it removes the
+# component from the page.
+
+locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN]
+locale_lock: true
+countries: [IN]
+
+# The list of available project types
+project_types: &project_types
+
+# The top bar on the site consisting of dropdown menus and navigation links
+header:
+  # The topbar (which is collapsed into the hamburger in certain contexts)
+  top:
+    signed_out:
+      - title: about
+        id: header-about
+        domain: code.org
+        url: /global
+      - title: hour_of_ai
+        id: header-hoa
+        url: https://csforall.org/hour-of-ai
+
+    student:
+      - title: my_dashboard
+        url: /in/en/home
+        domain: studio.code.org
+        id: header-student-home
+      - title: course_catalog
+        url: /in/en/catalog
+        domain: studio.code.org
+        id: header-student-courses
+
+    teacher:
+      - title: my_dashboard
+        url: /in/en/home
+        domain: studio.code.org
+        id: header-teacher-home
+      - title: course_catalog
+        url: /in/en/catalog
+        domain: studio.code.org
+        id: header-teacher-courses
+      - title: professional_learning
+        url: /in/en/my-professional-learning
+        domain: studio.code.org
+        id: header-teacher-professional-learning
+
+  # The three-bar "hamburger" menu
+  hamburger:
+    student:
+      - title: learn
+        domain: studio.code.org
+        url: /in/en/catalog
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /privacy/cookies
+          - title: legal_tos
+            domain: code.org
+            url: /terms-of-service
+
+    teacher:
+      - title: learn
+        domain: studio.code.org
+        url: /in/en/catalog
+        id: learn
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /privacy/cookies
+          - title: legal_tos
+            domain: code.org
+            url: /terms-of-service
+
+  # Help button (?)
+  help:
+    # The report_bug item is special in that it only appears when appropriate
+    - title: report_bug
+      url: https://support.code.org/hc/en-us/requests/new
+      id: report-bug
+
+# The navigation region found at the bottom of each page
+footer:
+  links:
+    studio:
+      - title: privacy
+        domain: code.org
+        url: /privacy
+        style: "color: #ffa400;"
+      - title: cookie_notice
+        domain: code.org
+        url: /privacy/cookies
+      - title: tos_short
+        domain: code.org
+        url: /terms-of-service
+
+# Route matching to influence properties of components
+pages:
+  # All pages
+  - path: /
+    components:
+      CurriculumCatalog:
+        # Do not allow switching away from showing ONLY translated courses
+        forceTranslated: true
+      StartNewProject:
+        # Show only available project options
+        availableProjectTypes: *project_types
+      CurriculumQuickAssign:
+        # For section setup, truncate the 'quick access' course listing to
+        # only items that are translated to the current locale
+        courseFilters:
+          currentLocale: true
+      AssignmentVersionSelector:
+        # When viewing a course, only populate the version selector with
+        # versions that are translated
+        courseFilters:
+          currentLocale: true
+      # Hide the right panel with "New Features", "Announcements", etc.
+      TeacherPromotions: false
+  # Teacher dashboard
+  - path: /teacher_dashboard
+    components:
+      DownloadParentLetterButton: false
+      ManageStudentsLoginInfo:
+        providePrivacyLetter: false
+  # Home dashboards
+  - path: /home
+    components:
+      MarketingAnnouncementBanner: false
+      TeacherResources: false
+      IncubatorBanner: false
+  # Account Settings
+  - path: /users/edit
+    components:
+      # Do not allow LTI use
+      LtiRosterSyncSettings: false
+      # Do not provide parental links to information about how to create accounts when deleting sections / accounts
+      PersonalLoginDialog:
+        hideInstructions: true
+      TeacherWarning:
+        hideInstructions: true
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global

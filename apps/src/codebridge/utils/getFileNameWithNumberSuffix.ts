@@ -3,22 +3,28 @@
  * includes file extension.
  * If the original filename ends with a number (e.g., "file_1.py"), the function
  * increments the number (e.g., "file_2.py").
- * If there is no number suffix is present, it appends "_1" before the file extension.
+ * If there is no number suffix present, it appends "_1" before the file extension.
  * (e.g., "file.py" -> "file_1.py").
  * @param filename - the original filename which includes the file extension
+ * @param separator - the character used to delimit the number suffix (default "_")
  * @returns new file name with number suffix
  */
-export const getFileNameWithNumberSuffix = (filename: string) => {
+export const getFileNameWithNumberSuffix = (
+  filename: string,
+  separator: string = '_'
+) => {
   const parts = filename.split('.');
-  const originalName = parts[0];
-  const fileExtension = parts[1];
-  const nameParts = originalName.split('_');
+  const fileExtension = parts.pop();
+  const originalName = parts.join('.');
+  const nameParts = originalName.split(separator);
   const lastPart = nameParts[nameParts.length - 1];
-  const numberSuffix = parseInt(lastPart, 10); // NaN if not a number.
+  // Check strictly for a number suffix.
+  const numberSuffix = /^\d+$/.test(lastPart) ? parseInt(lastPart, 10) : NaN;
   let newNumber = 1;
   if (Number.isInteger(numberSuffix)) {
     newNumber = numberSuffix + 1;
     nameParts.pop(); // Remove the existing number suffix before adding new number suffix.
   }
-  return `${nameParts.join('_')}_${newNumber}.${fileExtension}`;
+  const newName = `${nameParts.join(separator)}${separator}${newNumber}`;
+  return `${newName}.${fileExtension}`;
 };

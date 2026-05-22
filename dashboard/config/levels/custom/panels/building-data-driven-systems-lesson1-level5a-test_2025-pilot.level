@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-15T17:06:24.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Array\n\nAn **array** is a special kind of variable that stores an ordered list of related values (*such as numbers, words, or images*). \n\nEach value has a position number called an *index*",
+        "imageUrl": "https://images.code.org/acf8fe644edb2d5bb9ceb20aab2a9b8a-array-vocab.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:24.570+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level5a-test-2025\"}]"
+}]]></config>
+</Panels>

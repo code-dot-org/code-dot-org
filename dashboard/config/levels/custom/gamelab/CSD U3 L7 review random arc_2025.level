@@ -75,6 +75,7 @@
     ],
     "bubble_choice_description": "Review how to randomize the properties of the arcs. How can you use this feature with your robot face?",
     "validation_enabled": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

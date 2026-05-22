@@ -2,11 +2,12 @@
 #
 # Table name: rubrics
 #
-#  id         :bigint           not null, primary key
-#  lesson_id  :integer          not null
-#  level_id   :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  lesson_id     :integer          not null
+#  level_id      :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  s3_config_dir :string(255)
 #
 # Indexes
 #
@@ -16,6 +17,14 @@ class Rubric < ApplicationRecord
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy, inverse_of: :rubric
   belongs_to :level
   belongs_to :lesson
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_rubrics
+
+  validate :validate_ai_config
+  def validate_ai_config
+    AiRubricConfig.validate_ai_config_for_rubric(self)
+  rescue => exception
+    errors.add(:base, exception.message)
+  end
 
   def get_script_level
     lesson.script_levels.find {|sl| sl.levels.include?(level)}
@@ -55,6 +64,7 @@ class Rubric < ApplicationRecord
       id: id,
       lessonId: lesson_id,
       levelId: level_id,
+      s3ConfigDir: s3_config_dir,
       learningGoals: learning_goals.map(&:summarize_for_rubric_edit),
     }
   end

@@ -30,7 +30,7 @@ describe('ColumnMenu', () => {
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(0);
-      let menuLink = menuItem.find('a');
+      let menuLink = menuItem.find('button');
       expect(menuLink.text()).toContain('i18n-rename');
     });
 
@@ -43,7 +43,7 @@ describe('ColumnMenu', () => {
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(1);
-      let menuLink = menuItem.find('a');
+      let menuLink = menuItem.find('button');
       expect(menuLink.text()).toContain('i18n-delete');
     });
 
@@ -56,7 +56,7 @@ describe('ColumnMenu', () => {
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(2);
-      let menuLink = menuItem.find('a');
+      let menuLink = menuItem.find('button');
       expect(menuLink.text()).toContain('i18n-ctos');
     });
 
@@ -69,7 +69,7 @@ describe('ColumnMenu', () => {
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(3);
-      let menuLink = menuItem.find('a');
+      let menuLink = menuItem.find('button');
       expect(menuLink.text()).toContain('i18n-cton');
     });
 
@@ -82,7 +82,7 @@ describe('ColumnMenu', () => {
       const wrapper = createColumn();
 
       let menuItem = wrapper.find('li').at(4);
-      let menuLink = menuItem.find('a');
+      let menuLink = menuItem.find('button');
       expect(menuLink.text()).toContain('i18n-ctob');
     });
   });

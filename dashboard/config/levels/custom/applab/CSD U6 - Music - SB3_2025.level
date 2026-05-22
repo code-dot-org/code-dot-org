@@ -73,6 +73,7 @@
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L13.6 - sharp_notes\",\r\n  \"callout_text\": \"These events are for the sharp notes\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"sharp_notes\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Sharp note events\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "encrypted_examples": "JKJUe6GVa3V1eZ6i3lapUvggJGObtXK6+/71Od05O6a/p+0645MXkQl4yS25\nr5+yh1S7Bta1ZOj9QICUNjZ1ZQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

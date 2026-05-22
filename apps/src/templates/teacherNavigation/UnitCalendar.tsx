@@ -22,7 +22,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import UnitSelectorV2 from '../UnitSelectorV2';
+import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import {CalendarEmptyState} from './CalendarEmptyState';
 
@@ -177,27 +177,23 @@ const UnitCalendar: React.FC = () => {
           <div>
             <div className={styles.calendarDropdowns}>
               <div className={styles.calendarDropdown}>
-                <div className={styles.calendarDropdownDescription}>
-                  {i18n.lessonsFor()}
-                </div>
                 <UnitSelectorV2
                   className={styles.calendarUnitDropdown}
                   filterToSelectedCourse={true}
+                  labelText={i18n.lessonsFor()}
+                  isLabelVisible
                 />
               </div>
               <div className={styles.calendarDropdown}>
-                <div className={styles.calendarDropdownDescription}>
-                  {i18n.instructionalMinutesPerWeek()}
-                </div>
                 <SimpleDropdown
                   name="minutesPerWeek"
+                  className={styles.calendarMinutesPerWeekDropdown}
                   onChange={event => handleDropdownChange(event.target.value)}
                   items={weeklyMinutesOptions}
                   selectedValue={weeklyInstructionalMinutes}
                   size="s"
                   dropdownTextThickness="thin"
-                  labelText="minutes per week dropdown"
-                  isLabelVisible={false}
+                  labelText={i18n.instructionalMinutesPerWeek()}
                   color="gray"
                 />
               </div>

@@ -64,7 +64,8 @@
       "How to play piano_ 21 days challenge for beginner learners _[2025]-compressed.pdf": "f4f1d50c-cefb-4960-be7b-d7a86fd994e9.pdf",
       "Piano Lessons.pdf": "30699d24-703c-48d1-a1e4-3d4dcefb36d5.pdf"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:05.124+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level7_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level7_2025\"}]"

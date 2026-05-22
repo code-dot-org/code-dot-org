@@ -60,6 +60,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "long_instructions": "<img src=\"https://images.code.org/6e9f49c2df2ce6b236f8330365b04994-image-1665666667311.png\" style=\"float: right; width: 20%; margin-left: 10px; margin-right: 10px\" />\r\n\r\n# Changing Variables\r\n\r\nUpdate the values of the variables below so the ellipse is drawn in the bottom center of the screen\r\n\r\n# Do This\r\n\r\n1) Change the values of the variables to update the position of the ellipse\r\n\t- You do _not_ need to add any new blocks to your code! Just update the blocks that are already in the code area!\r\n\r\n**Run Your Code!** The result should match the example image on the right",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

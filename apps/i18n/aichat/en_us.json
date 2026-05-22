@@ -69,7 +69,7 @@
   "modelCustomizationHeader": "Model Customization",
   "modelCustomization_comparisonHeader": "Selected model",
   "modelCustomization_compareButtonText": "Compare Models",
-  "modelCustomization_comparisonTooltipText": "This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models.",
+  "modelCustomization_comparisonTooltipText": "This is the underlying language model being used by the chatbot.",
   "modelCustomization_temperatureTooltipText": "Temperature affects which words are generated as a response. Use the slider to change the temperature.",
   "modelCustomization_systemPromptTooltipText": "The system prompt controls how the chatbot behaves. Type your instructions into the text box.",
   "modelCustomization_updateButtonText": "Update",

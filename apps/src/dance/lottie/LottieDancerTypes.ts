@@ -1,6 +1,8 @@
 // Minimal types for the subset of Lottie JSON we mutate. These are intentionally
 // partial: we only model the fields this renderer reads/writes.
 
+import {GeneratedDancerMetadata} from '../types';
+
 export type CanvasAnimConfig = {
   renderer: 'canvas';
   loop?: boolean;
@@ -130,6 +132,7 @@ export type Palette = {
   primary: RGBA | null;
   secondary: RGBA | null;
   tertiary: RGBA | null;
+  lock?: boolean;
 };
 
 export type Canvas2D =
@@ -167,6 +170,7 @@ export interface DancerMetadata {
   body_color?: string;
   secondary_color?: string;
   tertiary_color?: string;
+  lock_palette?: boolean;
   [k: string]: unknown;
 }
 
@@ -180,15 +184,7 @@ export type ResolvedDancerAssets = {
 export type ResolveDancerAssetsOpts = {
   /** Tag appended to headUrl as `?src=...` to avoid CORS errors */
   sourceTag?: string; // e.g., 'blockly' | 'canvas'
-  getLocalStorage?: (key: string) => string | null;
+  getSessionStorage?: (key: string) => string | null;
 };
 
-export type LocalStoragePayload = {
-  adlibOption: string;
-  path?: string;
-  choices: string[];
-  choicesExtra?: string[];
-  variant: number | string;
-  bodyVariant?: number; // Deprecated in favor of extraVariant
-  extraVariant?: number;
-} | null;
+export type SessionStoragePayload = GeneratedDancerMetadata | null;

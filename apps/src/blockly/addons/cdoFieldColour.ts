@@ -1,9 +1,9 @@
 import {FieldColour} from '@blockly/field-colour';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {COLOURS} from '../constants';
 
-interface FieldColourConfig extends GoogleBlockly.FieldConfig {
+interface FieldColourConfig extends BlocklyCore.FieldConfig {
   colourOptions?: string[];
   colourTitles?: string[];
   columns?: number;
@@ -39,8 +39,8 @@ export default class CdoFieldColour extends FieldColour {
    * for a list of properties this parameter supports.
    */
   constructor(
-    value?: string | typeof GoogleBlockly.Field.SKIP_SETUP,
-    validator?: GoogleBlockly.FieldValidator,
+    value?: string | typeof BlocklyCore.Field.SKIP_SETUP,
+    validator?: BlocklyCore.FieldValidator,
     config?: FieldColourConfig,
     isK1?: boolean
   ) {
@@ -55,7 +55,7 @@ export default class CdoFieldColour extends FieldColour {
 
   /**
    * Create and show the colour field's editor.
-   * Artist modifies blockly.FieldColour.COLOURS and blockly.FieldColour.COLUMNS directly.
+   * Artist modifies CdoFieldColour.COLOURS and CdoFieldColour.COLUMNS directly.
    * Therefore, wait to read these values until we need to create the field dropdown.
    * For pre-reader blocks (CSF Course A-B, Course 1 and Pre-Reader Express), we add a
    * class to manually increase the size of the field.
@@ -91,7 +91,7 @@ export default class CdoFieldColour extends FieldColour {
     this.positionBorderRect_();
   }
 
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as FieldColourFromJsonConfig;
     return new CdoFieldColour(options.colour, undefined, options);
   }

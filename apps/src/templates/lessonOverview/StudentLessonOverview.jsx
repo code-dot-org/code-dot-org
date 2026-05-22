@@ -6,7 +6,6 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
@@ -56,7 +55,7 @@ class StudentLessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div>
+            <div style={{display: 'flex', alignItems: 'center'}}>
               {lesson.studentLessonPlanPdfUrl && (
                 <Button
                   __useDeprecatedTag
@@ -78,7 +77,6 @@ class StudentLessonOverview extends Component {
         {isSignedIn && (
           <Announcements
             announcements={announcements}
-            width={styleConstants['content-width']}
             viewAs={ViewType.Participant}
           />
         )}

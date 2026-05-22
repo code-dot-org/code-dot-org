@@ -4,57 +4,78 @@ on:
   workflow_call:
 
 jobs:
-    build:
-        runs-on: ubuntu-24.04
+  build:
+    runs-on: ubuntu-24.04
 
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                sparse-checkout: |
-                  frontend
-                  shared/fonts
-                  .github
-                lfs: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
 
-            - name: Setup Frontend
-              uses: ./.github/actions/frontend/setup
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
 
-            - name: Install Playwright for Design System Storybook
-              run: npx playwright install --with-deps
-              working-directory: ./frontend/apps/design-system-storybook
+      - name: Install Playwright for Design System Storybook
+        run: npx playwright install --with-deps
+        working-directory: ./frontend/apps/design-system-storybook
 
-            - name: Build
-              run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
-              working-directory: ./frontend
+      - name: Build
+        run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+        working-directory: ./frontend
 
-            - name: Lint
-              run: yarn lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
-              working-directory: ./frontend
+      - name: Lint
+        run: yarn lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+        working-directory: ./frontend
 
-            - name: Unit Tests
-              run: yarn test --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
-              working-directory: ./frontend
+      - name: Upload static files as pages artifact
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call'
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/apps/design-system-storybook/dist
+          name: component-library-storybook
 
-            - name: UI Tests
-              run: yarn test:ui:ci --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
-              working-directory: ./frontend
+  ui-test:
+    runs-on: ubuntu-24.04
+    container:
+      # Ensure the Playwright version matches in frontend/apps/design-system-storybook/package.json
+      image: mcr.microsoft.com/playwright:v1.57.0-noble
 
-            - name: Upload static files as pages artifact
-              if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call'
-              id: deployment
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: frontend/apps/design-system-storybook/dist
-                name: component-library-storybook
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
 
-    eyes:
-      runs-on: ubuntu-24.04
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            shared/fonts
+            .github
+          lfs: true
 
-      permissions:
-        pull-requests: write
-        issues: write
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
 
-      steps:
+      - name: Build
+        run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+        working-directory: ./frontend
+
+      - name: UI Tests
+        run: yarn workspace @code-dot-org/design-system-storybook test-storybook
+        working-directory: ./frontend
+
+  eyes:
+    runs-on: ubuntu-24.04
+
+    permissions:
+      pull-requests: write
+      issues: write
+
+    steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |
@@ -97,8 +118,8 @@ jobs:
         id: eyes-report-comment
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: 'Visual Comparison Report'
+          comment-author: "github-actions[bot]"
+          body-includes: "Visual Comparison Report"
 
       - name: Create comment (if not exists)
         if: github.event.pull_request.number && steps.eyes-report-comment.outputs.comment-id == ''

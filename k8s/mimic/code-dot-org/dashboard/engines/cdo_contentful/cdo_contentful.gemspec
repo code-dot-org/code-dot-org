@@ -1,0 +1,1 @@
+../../../../../../dashboard/engines/cdo_contentful/cdo_contentful.gemspec

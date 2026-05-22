@@ -73,7 +73,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
           id,
         }) => (
           <SegmentedButton
-            key={label}
+            key={value}
             selected={selectedButtonValue === value}
             label={label}
             ariaLabel={ariaLabel}

@@ -139,6 +139,7 @@
     "bubble_choice_description": "Improve collisions for sprites with angled animations.",
     "thumbnail_url": "https://images.code.org/4a5e2648d2e054660278c6f33bb2173d-image-1589907616573.png",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

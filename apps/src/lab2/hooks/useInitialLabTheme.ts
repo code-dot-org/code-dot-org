@@ -24,6 +24,7 @@ interface UseInitialLabThemeProps {
 const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
   'pythonlab',
   'weblab2',
+  'sketchlab',
 ];
 
 // Determine and set the theme for the lab that is currently being loaded.
@@ -37,8 +38,6 @@ export const useInitialLabTheme = ({
   const initialTheme = getAppOptionsTheme();
   const lesson = useAppSelector(state => getCurrentLesson(state));
 
-  // We only use the global user preference for theme if the current lesson has
-  // at least one python lab level or the current level is a python lab level.
   const useThemeUserPreference = useMemo(
     () =>
       LABS_WITH_THEME_PREFERENCE.includes(levelProperties?.appName) ||

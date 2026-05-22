@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check For Understanding",
-    "long_instructions": "Think about one specific change would make to help your user have a better experience. Write 1-2 sentences explaining how your change supports that user's needs using this sentence frame:\r\n\r\n> If I designed with [insert name of user here], I would change . . .",
+    "long_instructions": "Think about one specific change you would make to help your user have a better experience. Write 1-2 sentences explaining how your change supports that user's needs using this sentence frame:\r\n\r\n> If I designed with [insert name of user here], I would change . . .",
     "stay_on_level_after_submit": "false",
     "height": "300",
     "allow_user_uploads": "false",

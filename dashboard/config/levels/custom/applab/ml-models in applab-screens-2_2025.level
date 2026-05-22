@@ -63,6 +63,7 @@
     "ai_model_id": "fEbMbo2S3bqe",
     "ai_model_name": "Quiz - Where Should You Take a Vacation",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,17 +1,24 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {
+  AiChatDisabledState,
   ChatButtonClickHandler,
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './AiTutorChat.module.scss';
@@ -28,8 +35,13 @@ interface AiTutorChatProps {
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  hasInstructionsDrawer?: boolean;
+  tutorVideos?: JsonVideoFileMetadata[];
+  isLessonDeepDive?: boolean;
+  lessonId?: number;
+  disabledState?: AiChatDisabledState;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -39,40 +51,82 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   levelName,
   channelId,
   aiTutorChatButtonData,
-  aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  hasInstructionsDrawer,
+  tutorVideos,
+  isLessonDeepDive = false,
+  lessonId,
+  disabledState,
 }) => {
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+  const versionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project?.viewingOldVersion
+  );
+
   const {modelParameters, loading} = useAiTutorModelParameters({
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
+    tutorVideos,
   });
 
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
-      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-        <Button
+      ChatButton: ({
+        onClick,
+        disabled,
+      }: {
+        onClick: ChatButtonClickHandler;
+        disabled?: boolean;
+      }) => (
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           className={moduleStyles.chatButton}
-          aria-label={button.label}
-          iconLeft={
-            {
-              ...button.icon,
-              className: classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
+          disabled={disabled}
           onClick={() => onClick(button.value, button.analyticsProperties)}
-          text={button.label}
-          size="s"
-          type="secondary"
-          color="black"
-        />
+          aria-label={button.label}
+          startIcon={
+            button.icon ? (
+              <FontAwesomeV6Icon
+                {...(button.icon as FontAwesomeV6IconProps)}
+                className={classNames({
+                  [moduleStyles['icon']]: true,
+                  [moduleStyles[`icon-${button.icon.iconName}`]]: true,
+                })}
+              />
+            ) : undefined
+          }
+          type="button"
+        >
+          {button.label}
+        </MuiButton>
       ),
       key: button.label,
     }));
   }, [aiTutorChatButtonData]);
+
+  const renderAiTutorVersionActions = useCallback(
+    (onRequestScrollToBottom: () => void) => (
+      <AiTutorVersionActions
+        files={versionFiles!}
+        onRequestScrollToBottom={onRequestScrollToBottom}
+      />
+    ),
+    [versionFiles]
+  );
+
+  const renderLastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles
+      ? renderAiTutorVersionActions
+      : undefined;
 
   if (loading || !modelParameters) {
     return (
@@ -85,7 +139,11 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
-        clientType={AiChatClientTypes.AI_TUTOR}
+        clientType={
+          isLessonDeepDive
+            ? AiChatClientTypes.LESSON_DEEP_DIVE
+            : AiChatClientTypes.AI_TUTOR
+        }
         modelParameters={modelParameters}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
@@ -94,6 +152,11 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         channelId={channelId}
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
+        hasInstructionsDrawer={hasInstructionsDrawer}
+        lessonId={lessonId}
+        disabledState={disabledState}
+        renderLastMessagePostText={renderLastMessagePostText}
+        disableSendingMessages={viewingOldVersion}
       />
     </div>
   );

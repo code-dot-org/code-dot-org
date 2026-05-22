@@ -33,9 +33,9 @@ class Policies::ChildAccount
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
 
-  # The maximum number of days a student should be age-gated before
-  # a teacher stops receiving warnings about the sections the student is following.
-  TEACHER_WARNING_PERIOD = 30.days
+  # Cutoff date when `us_state` capture began during sign-up and is considered trusted.
+  # @note This date matches the initial CPA launch (for the state of Colorado).
+  US_STATE_TRUST_CUTOFF_AT = DateTime.parse('2023-07-05T23:15:00+00:00').freeze
 
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
@@ -46,15 +46,6 @@ class Policies::ChildAccount
   def self.compliant?(user, future: false)
     return true unless parent_permission_required?(user, future: future)
     ComplianceState.permission_granted?(user)
-  end
-
-  # Checks if a user predates the us_state collection that occurs during the sign up
-  # flow. We want to make sure we retrieve the state for those older accounts which have their
-  # state missing
-  # We use Colorado as it is the only start date we have for now
-  def self.user_predates_state_collection?(user)
-    # The date is the same as when CPA first started.
-    user.created_at < StatePolicies.state_policies['CO'][:start_date]
   end
 
   # Checks if a user is affected by a state policy but was created prior to the
@@ -71,7 +62,7 @@ class Policies::ChildAccount
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
-    user.created_at < user_state_policy[:start_date]
+    user.created_at < user_state_policy[:lockout_date]
   end
 
   # The date on which the student's grace period ends.
@@ -103,7 +94,7 @@ class Policies::ChildAccount
     return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
     # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
-    StatePolicies.state_policy(user)&.dig(:start_date)
+    StatePolicies.state_policy(user)&.dig(:lockout_date)
   end
 
   # Checks if the user is partially locked out due to current non-compliance with CAP, even
@@ -112,38 +103,6 @@ class Policies::ChildAccount
     # They are in the 'almost' locked out phase by predating the policy and
     # not pre-emptively getting parent permission. (They may be temporarily compliant.)
     user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
-  end
-
-  # Authentication option types which we always consider to be "owned" by the school
-  # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = Set[AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
-
-  # Login types that are always considered personal logins.
-  PERSONAL_LOGIN_TYPES = Set[AuthenticationOption::EMAIL, AuthenticationOption::FACEBOOK].freeze
-
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  def self.personal_account?(user)
-    # Sponsored accounts are always managed by the teacher.
-    return false if user.sponsored?
-
-    # Any account is considered school owned for users who are in sections and/or
-    # if the user was created via a roster sync.
-    return false if conditionally_school_managed?(user)
-
-    # Email + password logins are personal logins.
-    return true if user.encrypted_password.present?
-
-    providers = user.migrated? ? Set.new(user.authentication_options.pluck(:credential_type)) : Set.new([user.provider])
-    return true if providers.empty?
-
-    # Email and Facebook are personal logins.
-    return true if providers.intersect?(PERSONAL_LOGIN_TYPES)
-
-    # Clever and LTI are never personal logins if no other login types are present.
-    return false if providers.subset?(SCHOOL_OWNED_TYPES)
-
-    return true
   end
 
   # Checks if the user will not be old enough by the lockout date
@@ -167,11 +126,9 @@ class Policies::ChildAccount
     student_birthday = user.birthday.in_time_zone('UTC').in_time_zone(lockout_date.utc_offset)
     return false unless student_birthday.since(min_required_age) > lockout_date
 
-    # Check to see if they are old enough at the current date
-    # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = DateTime.now.in_time_zone(lockout_date.utc_offset)
-    student_age = today.year - student_birthday.year
-    ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
+    # Check to see if they are old enough at the current date using precise_age
+    student_age = user.precise_age(timezone: lockout_date.utc_offset)
+    student_age <= policy[:max_age]
   end
 
   # Whether or not the user can create/link new personal logins
@@ -208,16 +165,12 @@ class Policies::ChildAccount
     # Parental permission is not required until the policy is in effect.
     # Skip the date check if we want to know if the student will need parent
     # permission in the future.
-    return false if !future && policy[:start_date] > DateTime.now
+    return false if !future && policy[:lockout_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
     return false unless underage?(user)
 
-    personal_account?(user)
-  end
-
-  def self.conditionally_school_managed?(user)
-    user.sections_as_student.exists? || user.roster_synced
+    Policies::User.personal_account?(user)
   end
 end

@@ -4,6 +4,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -25,13 +26,12 @@ jest.mock('@react-pdf/renderer', () => {
 
 const DEFAULT_PROPS = {
   closeTutor: () => {},
-  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
   },
-  scriptName: 'test_lesson',
   curriculumCourses: [],
+  scriptName: 'test_lesson',
 };
 
 const defaultThreadListResponse = [
@@ -68,6 +68,7 @@ describe('AiDiffContainer', () => {
     registerReducers({
       currentUser,
       teacherSections,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -88,7 +89,7 @@ describe('AiDiffContainer', () => {
   it('visible when open', async () => {
     renderDefault();
     await waitFor(() => {
-      expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+      screen.getByText('AI Teaching Assistant');
       screen.getByText('Experiment');
     });
   });
@@ -166,9 +167,11 @@ describe('AiDiffContainer', () => {
     });
   });
 
-  it('Shows the welcome experience when user property is false', () => {
-    renderDefault({disableWelcome: false}, false);
+  // Was asked to disable the AITA welcome experience without removing any code.
+  // Commenting out this test until further notice.
+  // it('Shows the welcome experience when user property is false', () => {
+  //   renderDefault({disableWelcome: false}, false);
 
-    screen.getByText('Empowering teachers. Enhancing learning.');
-  });
+  //   screen.getByText('Empowering teachers. Enhancing learning.');
+  // });
 });

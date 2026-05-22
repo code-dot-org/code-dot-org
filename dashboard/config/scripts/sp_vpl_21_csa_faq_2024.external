@@ -5,18 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Frequently asked questions
 
-#### We know you have some questions about CSA! Many of these questions can be answered on our website or during our facilitator-led workshops. Other questions might be answered in the next two Modules.  We have also put together a list of some questions and answers below. Click on the question below to show the answer. 
+We know you have some questions about CSA! Many of these questions can be answered on our website or during our facilitator-led workshops. Other questions might be answered in the next two Modules.  We have also put together a list of some questions and answers below. Click on the question below to show the answer. 
 
 <hr style="clear:both"/>
 
 <details>
 <summary> <strong style="font-size: 14pt;">What prerequisites are recommended for students before they take CSA?</strong></summary>
 
-#### The Code.org CSA curriculum is recommended for any high school student who wishes to continue their computer science education after completing an introductory course such as Computer Science Principles (CSP) or Computer Science Discoveries (CSD).
+The Code.org CSA curriculum is recommended for any high school student who wishes to continue their computer science education after completing an introductory course such as Computer Science Principles (CSP) or Computer Science Discoveries (CSD).
 
-#### Additionally, the College Board makes the following recommendation:
+Additionally, the College Board makes the following recommendation:
 
-#### *It is recommended that a student in the AP Computer Science A course has successfully completed a first-year high school algebra course with a strong foundation of basic linear functions, composition of functions, and problem-solving strategies that require multiple approaches and collaborative efforts. In addition, students should be able to use a Cartesian (x, y) coordinate system to represent points on a plane. It is important that students and their advisers understand that any significant computer science course builds upon a foundation of mathematical reasoning that should be acquired before attempting such a course.*
+*It is recommended that a student in the AP Computer Science A course has successfully completed a first-year high school algebra course with a strong foundation of basic linear functions, composition of functions, and problem-solving strategies that require multiple approaches and collaborative efforts. In addition, students should be able to use a Cartesian (x, y) coordinate system to represent points on a plane. It is important that students and their advisers understand that any significant computer science course builds upon a foundation of mathematical reasoning that should be acquired before attempting such a course.*
 
 </details>
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong style="font-size: 14pt;">What experience do teachers need to have prior to teaching CSA?</strong></summary>
 
-#### Each state might have different requirements for teaching CSA.  Here at Code.org, we believe any teacher who is experienced with programming concepts in CS Principles will be well equipped to start teaching CSA. This means, we recommend that teachers are able to independently write and debug an error-free function (or procedure) with one or more parameters and that uses conditional logic, loops, and an array (or list). 
+Each state might have different requirements for teaching CSA.  Here at Code.org, we believe any teacher who is experienced with programming concepts in CS Principles will be well equipped to start teaching CSA. This means, we recommend that teachers are able to independently write and debug an error-free function (or procedure) with one or more parameters and that uses conditional logic, loops, and an array (or list). 
 </details>
 
 <div style="clear:both"/>
@@ -33,7 +33,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong style="font-size: 14pt;">Can I teach CSA as a non-AP course?</strong></summary>
 
-#### Yes! Our curriculum is written with the AP test in mind. So, in the curriculum you will see reference to the Free-response questions and Multiple Choice questions that are on the AP exam.  That content might not be relevant for your students if they are not taking the AP exam. That being said, you can still teach this course not as an AP course. 
+Yes! Our curriculum is written with the AP test in mind. So, in the curriculum you will see reference to the Free-response questions and Multiple Choice questions that are on the AP exam.  That content might not be relevant for your students if they are not taking the AP exam. That being said, you can still teach this course not as an AP course. 
 </details>
 
 <div style="clear:both"/>
@@ -41,9 +41,9 @@ markdown <<MARKDOWN
 <details>
 <summary><strong style="font-size: 14pt;">What are the College Board specific Curricular and Resource Requirements?</strong></summary>
 
-#### The College Board names specific Curricular and Resource Requirements for each course.  Code.org’s curriculum meets the College Board’s curricular requirements.  For CSA, The College Board has named the following requirements. 
+The College Board names specific Curricular and Resource Requirements for each course.  Code.org’s curriculum meets the College Board’s curricular requirements.  For CSA, The College Board has named the following requirements. 
 
-#### **AP Computer Science A curricular requirements:**
+**AP Computer Science A curricular requirements:**
 
 <ul><li style="font-size: 12pt;">The students and teacher have access to a college-level computer science textbook, in print or electronic format. (Note: Code.org doesn’t use a single textbook but rather provides teachers with slides, videos, and other written resources that meet this requirement)</li>
 
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
 <li style="font-size: 12pt;">The course teaches students to recognize the ethical and social implications of computer use.</li>
 </ul>
 
-#### **AP Computer Science A resource requirements:**
+**AP Computer Science A resource requirements:**
 <ul>
 <li style="font-size: 12pt;">The school ensures that each student has a college-level textbook (in print or electronic format) for individual use inside and outside the classroom. The textbook is supplemented when necessary to meet the curricular requirements.</li>
 <li style="font-size: 12pt;">The school ensures that the teacher has a copy of the most recent edition of a college-level computer science textbook or other appropriate materials to support instruction.</li>
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong style="font-size: 14pt;">How do I submit the course audit?</strong></summary>
 
-#### Teachers can submit the AP Course Audit for AP CSA on the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/course-audit" target="_blank">College Board Website</a>. If you are using Code.org’s materials for AP CSA, the audit process will be streamlined because our syllabus for AP CSA has already been approved by the College Board.  You will be able to select Code.org as your resource and/or textbook and adopt our “Endorsed Provider Syllabus” when you complete the audit. 
+Teachers can submit the AP Course Audit for AP CSA on the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/course-audit" target="_blank">College Board Website</a>. If you are using Code.org’s materials for AP CSA, the audit process will be streamlined because our syllabus for AP CSA has already been approved by the College Board.  You will be able to select Code.org as your resource and/or textbook and adopt our “Endorsed Provider Syllabus” when you complete the audit. 
 </details>
 
 <div style="clear:both"/>

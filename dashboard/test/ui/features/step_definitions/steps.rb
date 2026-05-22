@@ -1198,7 +1198,7 @@ Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |s
   browser_request(
     url: '/api/test/assign_section_to_course_and_unit',
     method: 'POST',
-    body: {section_position: section_position-1, course_name: course_name, unit_position: unit_position}
+    body: {section_position: section_position - 1, course_name: course_name, unit_position: unit_position}
   )
 end
 
@@ -1658,10 +1658,10 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   GHERKIN
 end
 
-And(/^I navigate to the pegasus certificate share page$/) do
+And(/^I navigate to the certificate share page$/) do
   query_params = @browser.execute_script("return window.location.search;")
   session_id = query_params.match(/\?i=([^&]+)/)[1]
-  url = "http://code.org/certificates/#{session_id}"
+  url = "http://studio.code.org/api/hour/certificates/#{session_id}"
   navigate_to replace_hostname(url)
 end
 

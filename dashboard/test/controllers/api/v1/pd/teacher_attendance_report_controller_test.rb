@@ -23,13 +23,9 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     days
   ).freeze
 
-  self.use_transactional_test_case = true
-
-  setup_all do
-    travel_to Time.zone.parse('2025-01-15 12:00:00')
-  end
-
   setup do
+    travel_to Time.zone.parse('2025-01-15 12:00:00')
+
     @workshop_admin = create(:workshop_admin)
     @organizer = create(:workshop_organizer)
     @program_manager = create(:program_manager)

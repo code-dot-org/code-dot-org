@@ -79,6 +79,7 @@
     "start_blocks": "//This is an app that simulates a virtual monster pet\r\n\r\n//This code is for the Happy button\r\nonEvent(\"happyButton\", \"click\", function( ) {\r\n  ledScreen.clear();\r\n  ledScreen.on(1, 1);\r\n  ledScreen.on(3, 1);\r\n  ledScreen.on(0, 3);\r\n  ledScreen.on(1, 4);\r\n  ledScreen.on(2, 4);\r\n  ledScreen.on(3, 4);\r\n  ledScreen.on(4, 3);\r\n});\r\n\r\n//Add your code for the Sad button here\r\n\r\n\r\n\r\n//Add your code for the Name button here\r\n\r\n\r\n\r\n//Add your code for the Number button here\r\n\r\n\r\n",
     "encrypted_examples": "wa1d37jR4lZGH7uZ89pjCbHlAU8aHpYSs5qccKUrrXcZ+k2yjslPOxCirszL\nwiMioe5T/6K+U9+WBAbuXCNI7g==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

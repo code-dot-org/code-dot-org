@@ -1,4 +1,8 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {
+  registerCustomAdvancedProcedureBlocks,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
 
 import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
 
@@ -71,14 +75,14 @@ export const isBlockInsideWhenRun = block => {
 // Override default function block implementation for the current block mode.
 export function installFunctionBlocks(blockMode) {
   if (blockMode === BlockMode.ADVANCED) {
-    Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
+    registerCustomAdvancedProcedureBlocks();
     // Re-define blocks from core, in case they were deleted for Simple2 mode.
     restoreBlockDefinitions();
     // Copies the generator function for variables to our function argument reporters.
     Blockly.JavaScript.forBlock.argument_reporter =
       Blockly.JavaScript.forBlock.variables_get;
   } else {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Remove two advanced blocks in the toolbox's Functions category that
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import color from '@cdo/apps/util/color';
@@ -53,13 +52,6 @@ class P5LabVisualizationHeader extends React.Component {
         Blockly.WidgetDiv.hide();
         Blockly.DropDownDiv?.hide();
       }
-
-      firehoseClient.putRecord({
-        study: 'animation-library',
-        study_group: 'control-2020',
-        event: 'tab-click',
-        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab',
-      });
     }
 
     this.props.onInterfaceModeChange(mode);

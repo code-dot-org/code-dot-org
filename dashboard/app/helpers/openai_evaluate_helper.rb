@@ -1,7 +1,6 @@
 module OpenaiEvaluateHelper
   include LevelsHelper
 
-  API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
   # There are a few special cases where we want skip sending the student work to AI
@@ -64,8 +63,8 @@ module OpenaiEvaluateHelper
     levels = unit.levels
 
     user_levels = UserLevel.joins(:user, :level).
-                          where(user: students, level: levels, script: unit).
-                          includes(:user, :level, :level_source)
+      where(user: students, level: levels, script: unit).
+      includes(:user, :level, :level_source)
 
     user_levels.each do |user_level|
       if user_level.level_source && user_level.level_source.data.present?
@@ -151,7 +150,7 @@ module OpenaiEvaluateHelper
   end
 
   def self.client
-    AiEvaluationOpenaiHelper::Client.new(API_KEY, MODEL)
+    AiEvaluationOpenaiHelper::Client.new(CDO.openai_measures_of_learning_api_key, MODEL)
   end
 
   def self.prepend_system_prompt(system_prompt, messages)

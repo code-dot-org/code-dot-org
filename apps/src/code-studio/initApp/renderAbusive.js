@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import AbuseExclamation from '../components/AbuseExclamation';
@@ -12,7 +12,7 @@ import showProjectAdmin from '../showProjectAdmin';
  * @param {string} tosText
  */
 export default (project, tosText) => {
-  ReactDOM.render(
+  createReactRoot(
     React.createElement(AbuseExclamation, {
       i18n: {
         tos: tosText,
@@ -28,7 +28,10 @@ export default (project, tosText) => {
       isOwner: project.isOwner(),
       canViewFlaggedProject: project.canViewFlaggedProject(),
     }),
-    document.getElementById('codeApp')
+    document.getElementById('codeApp'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   // update admin box (if it exists) with abuse info

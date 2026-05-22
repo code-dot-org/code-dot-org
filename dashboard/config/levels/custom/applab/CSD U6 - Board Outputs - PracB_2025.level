@@ -79,6 +79,7 @@
     "bubble_choice_description": "Help fix the bug in the code!",
     "thumbnail_url": "https://images.code.org/32eb687cf9a74c1c5e7ac5a5d66a7214-image-1650058384531.png",
     "encrypted_examples": "0DCME/nFJ4JOqPyreavqU+PrNIp2p6uhByNFeNRfIz13lJcnsjoqTfN16adM\n3bpemv55MB40uHeF/T/11f24WQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

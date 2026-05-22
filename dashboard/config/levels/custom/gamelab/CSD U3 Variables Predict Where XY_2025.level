@@ -64,6 +64,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "teacher_markdown": "During this discussion, encourage students to use the vocabulary they saw in the previous video, referring to `xPosition` and `whatsTheY` as variables and describing the equal sign as \"gets the value of\". The concept is the same as the first predict level, with the added emphasis on using correct vocabulary. For example: \"I see that the variable `xPosition` gets the value of 300, so I know it will be drawn on the right side of the screen\"",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

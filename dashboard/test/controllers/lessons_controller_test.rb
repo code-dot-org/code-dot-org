@@ -121,6 +121,11 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :student_lesson_plan, params: -> {{course_course_name: @pl_login_req_course.name, unit_position: 1, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :facilitator, response: :success, name: 'facilitator can view student lesson plan on pl script where login is required'
   test_user_gets_response_for :student_lesson_plan, params: -> {{course_course_name: @pl_login_req_course.name, unit_position: 1, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on pl script where login is required'
 
+  # signed out users are redirected to sign in for tutor
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor'
+
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
@@ -239,6 +244,18 @@ class LessonsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
                               params: -> {{course_course_name: @in_development_course.name, unit_position: 1, lesson_position: @in_development_unit.lessons[0].relative_position}}, name: 'levelbuilder can view in-development student lesson plan'
+
+  # anyone can fetch lesson level properties
+  test_user_gets_response_for :level_properties, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: nil, response: :success
+
+  test_user_gets_response_for :level_properties, user: nil, response: :success,
+                              params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson2.relative_position}},
+                              name: 'anyone can fetch lesson level properties on a lesson without a lesson plan'
+
+  # anyone can fetch lesson level properties by ID
+  test_user_gets_response_for :level_properties_by_id, params: -> {{id: @lesson.id}}, user: nil, response: :success
+
+  test_user_gets_response_for :level_properties_by_id, user: nil, response: :success, params: -> {{id: @lesson2.id}}, name: 'anyone can fetch lesson level properties by ID on a lesson without a lesson plan'
 
   test 'show includes correct SEO data' do
     get :show, params: {
@@ -476,6 +493,56 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response 404
   end
 
+  # only levelbuilders can use the generate page (id form)
+  test_user_gets_response_for :generate, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :generate, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :generate, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :generate, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+
+  # only levelbuilders can use the generate page (lesson position form)
+  test_user_gets_response_for :generate_with_lesson_position, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'sign out user cannot use generate page using lesson position url'
+  test_user_gets_response_for :generate_with_lesson_position, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :forbidden, name: 'student cannot use generate page using lesson position url'
+  test_user_gets_response_for :generate_with_lesson_position, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :forbidden, name: 'teacher cannot use generate page using lesson position url'
+  test_user_gets_response_for :generate_with_lesson_position, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can use generate page using lesson position url'
+
+  test 'generate page renders lesson data with edit URL pointing at the id-form edit page' do
+    sign_in @levelbuilder
+    @lesson.update!(properties: @lesson.properties.merge('generate_outline' => 'a saved outline'))
+
+    get :generate, params: {id: @lesson.id}
+    assert_response :ok
+
+    lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
+    assert_equal 'a saved outline', lesson_data['generateOutline']
+    assert_equal "/lessons/#{@lesson.id}/edit", lesson_data['editLessonUrl']
+  end
+
+  test 'generate page rendered via lesson position URL points editLessonUrl back at the lesson position edit URL' do
+    sign_in @levelbuilder
+
+    get :generate_with_lesson_position, params: {
+      course_course_name: @course.name,
+      unit_position: 1,
+      lesson_position: @lesson.relative_position
+    }
+    assert_response :ok
+
+    lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
+    assert_equal "/courses/#{@course.name}/units/1/lessons/#{@lesson.relative_position}/edit", lesson_data['editLessonUrl']
+  end
+
+  test 'cannot use generate page when lesson has legacy script levels' do
+    create(:script_level, lesson: @lesson, script: @lesson.script)
+    sign_in @levelbuilder
+
+    get :generate_with_lesson_position, params: {
+      course_course_name: @course.name,
+      unit_position: 1,
+      lesson_position: @lesson.relative_position
+    }
+    assert_response 404
+  end
+
   # only levelbuilders can update
   test_user_gets_response_for :update, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
@@ -489,6 +556,22 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_equal 'new overview', JSON.parse(@response.body)['overview']
     assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
+  end
+
+  test 'update persists generate_outline and surfaces it as generateOutline' do
+    sign_in @levelbuilder
+
+    put :update, params: @update_params.merge(generate_outline: 'first take')
+    assert_equal 'first take', JSON.parse(@response.body)['generateOutline']
+
+    @lesson.reload
+    assert_equal 'first take', @lesson.generate_outline
+
+    # An empty string clears the value (consistent with how before_save
+    # filters out blank serialized properties).
+    put :update, params: @update_params.merge(generate_outline: '')
+    @lesson.reload
+    assert_nil @lesson.generate_outline
   end
 
   test 'cannot update lockable if last level is not a levelgroup and an assessment' do

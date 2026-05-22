@@ -1,21 +1,19 @@
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   getExportableFeedbackData,
   isCurrentScriptCSD,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import moduleStyles from '@cdo/apps/legacySharedComponents/button.module.scss';
+import moduleStyles from './feedback-download.module.scss';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
@@ -51,7 +49,6 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
-    onClickDownload: PropTypes.func.isRequired,
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -73,20 +70,14 @@ class FeedbackDownload extends Component {
   }
 
   render() {
-    const {sectionName, exportableFeedbackData, scriptName, onClickDownload} =
-      this.props;
-
-    // These allow the CSVLink to be styled as a button
-    let className = classNames(
-      moduleStyles.main,
-      moduleStyles[Button.ButtonColor.gray],
-      moduleStyles['default']
-    );
+    const {sectionName, exportableFeedbackData, scriptName} = this.props;
 
     return (
-      <div>
-        <CSVLink
-          role="button"
+      <div className={moduleStyles.feedbackDownloadContainer}>
+        <MuiButton
+          component={CSVLink}
+          variant="outlined"
+          startIcon={<FontAwesomeV6Icon iconName="download" />}
           filename={i18n.feedbackDownloadFileName({
             sectionName: sectionName,
             scriptName: scriptName,
@@ -94,12 +85,9 @@ class FeedbackDownload extends Component {
           })}
           data={exportableFeedbackData}
           headers={this.headers}
-          onClick={onClickDownload}
-          style={styles.buttonContainer}
-          className={className}
         >
           {i18n.downloadFeedbackCSV()}
-        </CSVLink>
+        </MuiButton>
         <div>
           <SafeMarkdown
             markdown={i18n.feedbackDownloadOverview({
@@ -108,7 +96,10 @@ class FeedbackDownload extends Component {
             })}
           />
           <p>
-            <FontAwesome icon="check-circle" style={styles.icon} />
+            <FontAwesomeV6Icon
+              iconName="check-circle"
+              className={moduleStyles.checkIcon}
+            />
             {i18n.feedbackDownloadRecommendation()}
           </p>
         </div>
@@ -116,17 +107,6 @@ class FeedbackDownload extends Component {
     );
   }
 }
-
-const styles = {
-  icon: {
-    color: color.purple,
-    paddingRight: 5,
-  },
-  buttonContainer: {
-    padding: '12px 24px',
-    lineHeight: '10px',
-  },
-};
 
 export const UnconnectedFeedbackDownload = FeedbackDownload;
 

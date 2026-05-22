@@ -35,6 +35,7 @@ class ScaryChangeDetector
     detect_special_files
     detect_dropbox_conflicts
     detect_changed_feature_files
+    detect_ai_release_path_change
   end
 
   private def detect_new_models
@@ -52,7 +53,7 @@ class ScaryChangeDetector
     changes = @all.grep(/^dashboard\/test\/ui\/features\//)
     return if changes.empty?
 
-    puts red <<-EOS
+    puts red <<-WARNING
 
         Looks like you added or edited UI tests:
 
@@ -65,27 +66,27 @@ class ScaryChangeDetector
         Note that (as of January 2021) CI will not successfully run all tests across all browsers,
         so you may need another commit without the [test all browsers] tag
         if you'd like to see all tests (in Chrome) passing in CI without manual inspection.
-    EOS
+    WARNING
   end
 
   private def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("create_table"))
 
-    puts red <<-EOS
+    puts red <<-WARNING
 
         Looks like you are creating a table or adding a column in this migration:
         #{changes.join("\n")}
         Do you have all the indexes needed for this change?
 
-    EOS
+    WARNING
   end
 
   private def detect_column_rename
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !@changed_lines.include?("rename_column")
 
-    puts red <<-EOS
+    puts red <<-WARNING
 
         Looks like you are renaming a column in this migration:
         #{changes.join("\n")}
@@ -93,14 +94,14 @@ class ScaryChangeDetector
         Have you verified that the updated database schema works with the previously deployed application version?
         For more information on this issue see https://docs.google.com/document/d/1QHCjUdLz7D7fE-Cy4HrrtJ5FOSnSth7sNHfSemwNSfw.
 
-    EOS
+    WARNING
   end
 
   private def detect_migration_causing_db_performance_risk
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("add_index") || @changed_lines.include?("change_column"))
 
-    puts red <<-EOS
+    puts red <<-WARNING
 
         Looks like you are adding a column, changing a column or adding an index in this migration:
         #{changes.join("\n")}
@@ -109,7 +110,7 @@ class ScaryChangeDetector
         The may cause MySQL to rebuild the entire table.
         For more information see https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html#online-ddl-column-operations-table
 
-    EOS
+    WARNING
   end
 
   private def detect_missing_yarn_lock
@@ -128,14 +129,14 @@ class ScaryChangeDetector
   private def detect_special_files
     changes = @all.grep(/locals.yml$/)
     unless changes.empty?
-      puts red <<-EOS
+      puts red <<-ERROR
 
         Looks like you are changing locals.yml. This is probably a mistake.
         If this change is intentional, you can bypass this message with the
           --no-verify
         flag.
 
-      EOS
+      ERROR
       raise "Commit blocked."
     end
   end
@@ -143,7 +144,7 @@ class ScaryChangeDetector
   private def detect_dropbox_conflicts
     changes = @added.grep(/'s conflicted copy/)
     unless changes.empty?
-      puts red <<~EOS
+      puts red <<~ERROR
 
                 Looks like you are adding dropbox conflicted copy files.
                 This is probably a mistake.
@@ -161,9 +162,29 @@ class ScaryChangeDetector
                   --no-verify
                 flag.
 
-      EOS
+      ERROR
       raise "Commit blocked."
     end
+  end
+
+  private def detect_ai_release_path_change
+    changes = @all.grep(/ai_rubric_config\.rb$/)
+    return if changes.empty?
+    return unless @changed_lines.include?('S3_AI_RELEASE_PATH')
+
+    puts red <<-WARNING
+
+        You changed S3_AI_RELEASE_PATH. Before merging, please validate
+        the new release path against all AI-enabled rubrics:
+
+          1. Seed production courses:  cd dashboard && bundle exec rake seed:all
+          2. Validate AI config:       cd dashboard && bin/rails runner 'puts AiRubricConfig.validate_ai_config'
+
+        This ensures that the S3 release directory contains valid config
+        (params.json, system_prompt.txt, standard_rubric.csv) for every
+        rubric with an s3_config_dir or AI-enabled learning goals.
+
+    WARNING
   end
 end
 

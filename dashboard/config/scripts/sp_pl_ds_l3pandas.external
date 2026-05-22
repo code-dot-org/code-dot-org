@@ -10,8 +10,8 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/2dc957c2a7eb6f263cc69a2e73c71919-image-1724772489222.png" alt="farmwise robot and crops" width="230px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
 
-#### In this lesson, students are introduced to the pandas library and learn how to read CSV files into DataFrames.
-#### They explore key functions such as len(), shape, head(), and tail() to understand the structure and size of datasets. 
+In this lesson, students are introduced to the pandas library and learn how to read CSV files into DataFrames.
+They explore key functions such as len(), shape, head(), and tail() to understand the structure and size of datasets. 
 
 
 ### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>

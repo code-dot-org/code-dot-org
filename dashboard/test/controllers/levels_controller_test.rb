@@ -121,6 +121,51 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "by_name returns the matching level summary" do
+    level = create(:panels, name: 'unique-panel-level')
+    get :by_name, params: {name: level.name}
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal level.id.to_s, body['id']
+    assert_equal level.name, body['name']
+    assert_equal 'Panels', body['type']
+  end
+
+  test "by_name narrows by Rails STI type" do
+    create(:panels, name: 'collision-name')
+    weblab = create(:weblab2, name: 'collision-name-2')
+    # type filter excludes the Panels level
+    get :by_name, params: {name: weblab.name, type: 'Weblab2'}
+    assert_response :success
+    assert_equal 'Weblab2', JSON.parse(@response.body)['type']
+  end
+
+  test "by_name returns 200 with empty body on a name with no level" do
+    get :by_name, params: {name: 'no-such-level-exists'}
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test "by_name returns 200 with empty body when type filter excludes the match" do
+    panels = create(:panels, name: 'panels-by-name')
+    get :by_name, params: {name: panels.name, type: 'Weblab2'}
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test "by_name forbids non-levelbuilders" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    get :by_name, params: {name: 'anything'}
+    assert_response :forbidden
+  end
+
+  test "by_name redirects signed-out users" do
+    sign_out @levelbuilder
+    get :by_name, params: {name: 'anything'}
+    assert_response :redirect
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
@@ -1311,6 +1356,25 @@ class LevelsControllerTest < ActionController::TestCase
     level.reload
     assert level.skills.empty?
     refute level.skill_keys
+  end
+
+  test "level_properties returns map of ID to properties" do
+    level = create(:level)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+  end
+
+  test "level_properties includes sublevels if present" do
+    level = create(:bubble_choice_level, :with_sublevels)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+    level.sublevels.each do |sublevel|
+      assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
+    end
   end
 
   # Assert that the url is a real S3 url, and not a placeholder.

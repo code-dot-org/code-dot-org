@@ -14,6 +14,7 @@ export const chatCompletionHighBrowserFailureRateConfiguration: PutMetricAlarmIn
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
 - Check [browser logs](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/production-browser-events/log-events/production) in Cloudwatch (filter by **appName: 'aichat'**)
 - If chat completion job failure rates and/or OpenAI failure rates are also elevated, check HoneyBadger for **AichatRequestChatCompletionJob** errors.
+- You can set the DCDO flag \`aichat_verbose_honeybadger_reporting\` to true to get more detailed error reports in HoneyBadger, which may help with debugging.
 - If not, this is likely a browser-specific and/or ActiveJob related issue. Check the [ActiveJob dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/ActiveJob_DelayedJob).
 - Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
         ActionsEnabled: true,

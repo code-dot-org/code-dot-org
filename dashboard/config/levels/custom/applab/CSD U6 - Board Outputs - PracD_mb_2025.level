@@ -78,6 +78,7 @@
     "bubble_choice_description": "Design an accessible app that communicates with both audio and visuals.",
     "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

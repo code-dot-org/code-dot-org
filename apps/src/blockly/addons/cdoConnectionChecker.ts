@@ -1,6 +1,7 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-import {BLOCK_TYPES} from '../constants';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {isFunctionBlock} from '@cdo/apps/blockly/utils';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
@@ -18,7 +19,7 @@ import {customConnectionBlockTypes} from './cdoConstants';
  * @implements {Blockly.IConnectionChecker}
  */
 
-export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecker {
+export default class CdoConnectionChecker extends BlocklyCore.ConnectionChecker {
   /**
    * Check whether this connection is compatible with another connection with
    * respect to the value type system.  E.g. square_root("Hello") is not
@@ -28,7 +29,7 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
    * @param b Connection to compare against.
    * @returns True if the connections share a type.
    */
-  doTypeChecks(a: GoogleBlockly.Connection, b: GoogleBlockly.Connection) {
+  doTypeChecks(a: BlocklyCore.Connection, b: BlocklyCore.Connection) {
     const checkArrayOne = a.getCheck(); // An array of strings or null
     const checkArrayTwo = b.getCheck(); // An array of strings or null
 
@@ -50,7 +51,7 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
     // the value input of a function definition block. This connection represents
     // a function parameter, which should not be displaced by another block.
     if (
-      Blockly.cdoUtils.isFunctionBlock(b.getSourceBlock()) &&
+      isFunctionBlock(b.getSourceBlock()) &&
       b.type === Blockly.ConnectionType.INPUT_VALUE &&
       b.isConnected() &&
       b.targetConnection?.getSourceBlock().isShadow() &&

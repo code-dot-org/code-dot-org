@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
   NotificationType,
@@ -41,11 +41,7 @@ export default class StudentHomepage extends Component {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
 
-    analyticsReporter.sendEvent(
-      EVENTS.STUDENT_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.STUDENT_HOMEPAGE_VISITED, {});
   }
 
   render() {
@@ -70,11 +66,7 @@ export default class StudentHomepage extends Component {
     ) {
       trySetSessionStorage(LOGGED_STUDENT_SESSION, 'true');
 
-      analyticsReporter.sendEvent(
-        EVENTS.STUDENT_LOGIN_EVENT,
-        {},
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.STUDENT_LOGIN_EVENT, {});
     }
 
     return (

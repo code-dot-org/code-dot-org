@@ -12,7 +12,7 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-06 20:01:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -5,9 +5,10 @@ class AidiffThreadsControllerTest < ActionController::TestCase
 
   setup do
     @unit_group = create(:unit_group, family_name: 'beepboop')
+    @unit_group2 = create(:unit_group, family_name: 'dootdoot')
     @course_offering = create(:course_offering, display_name: 'Course Name')
     @course_version = create(:course_version, content_root: @unit_group, course_offering: @course_offering)
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
+    @unit_in_course = create(:script)
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @lesson_group = create(:lesson_group, script: @unit_in_course)
     @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
@@ -16,9 +17,12 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
 
+    @section = create(:section, user: @teacher, unit_group: @unit_group)
+    @section2 = create(:section, user: @teacher, unit_group: @unit_group2)
+
     create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
 
-    @session_id = "1234"
+    @session_id = 'fake_session_id'
     @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
     @bedrock_client.stub_responses(
       :retrieve_and_generate, {
@@ -504,6 +508,22 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_response :success
       assert_equal 2, json_response["courses"].count
       assert_includes(json_response["courses"], "beepboop")
+    end
+
+    test "returns success for curriculum_courses in general context" do
+      sign_in @teacher
+
+      post :curriculum_courses, params: {
+        context: {
+          type: "general"
+        },
+      }
+
+      json_response = JSON.parse(response.body)
+      assert_response :success
+      assert_equal 4, json_response["courses"].count
+      assert_includes(json_response["courses"], "beepboop")
+      assert_includes(json_response["courses"], "dootdoot")
     end
   end
 

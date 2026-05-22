@@ -85,6 +85,7 @@
     "encrypted_examples": "rrAmQn/a/yHrXqTxs/WYMGDdydFbStDAlIeHzHG0HaEmNj/t83UYXfHyOlRi\nPDEniclD2D3M9xVhoJDZiSaJtQ==\n",
     "libraries_enabled": "false",
     "bubble_choice_description": "Create a sprite animation from scratch.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -25,7 +25,8 @@
     ],
     "name_suffix": "_2025",
     "map_reference": "/courses/csd-2022/guides/web-lab",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(initPage);
 
@@ -15,10 +15,13 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CourseRollup objectToRollUp={'Standards'} course={courseSummary} />
     </Provider>,
-    document.getElementById('roll_up')
+    document.getElementById('roll_up'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

@@ -7,7 +7,7 @@ wrong 'Pattern recognition, by repeating the same page layout.'
 wrong 'Accessibility, by making the website easier to read.'
 right 'Decomposition, by breaking the project into smaller, manageable parts.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 9

@@ -13,7 +13,8 @@
     "name_suffix": "_2025",
     "instructions_important": "false",
     "display_name": "Widget: Text Compression",
-    "encrypted": "false"
+    "encrypted": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

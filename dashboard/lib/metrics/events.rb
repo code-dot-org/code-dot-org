@@ -33,12 +33,11 @@ module Metrics
       def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, session: nil)
         event_value = event_name if event_value.nil?
         enabled_experiments = get_enabled_experiments && user.present? ? Queries::User::EnabledExperiments.call(user) : nil
-        managed_test_environment = CDO.running_web_application? && CDO.test_system?
         statsig_stable_id = session&.dig(:statsig_stable_id)
 
         if CDO.rack_env?(:development) && !ALWAYS_SEND
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
-        elsif CDO.rack_env?(:production) || managed_test_environment || ALWAYS_SEND
+        elsif CDO.rack_env?(:production) || CDO.managed_test_server? || ALWAYS_SEND
           log_statsig_event_with_cdo_user(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
         else
           # We don't want to log in other environments, just return silently

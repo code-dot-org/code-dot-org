@@ -7,7 +7,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
     @organizer = create(:program_manager)
     @workshop = create(:workshop, organizer: @organizer)
@@ -603,22 +602,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal ids.reverse, Pd::Workshop.where(id: ids).order_by_state(desc: true).pluck(:id)
   end
 
-  test 'effective_num_hours with no max_hours constraint returns the total session hours' do
+  test 'num_scheduled_session_hours returns the total session hours' do
     @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
-    @workshop.expects(:time_constraint).with(:max_hours).returns(nil)
-    assert_equal 20, @workshop.effective_num_hours
+    assert_equal 20, @workshop.num_scheduled_session_hours
   end
 
-  test 'effective_num_hours with max_hours constraint lower than the session hours returns the constraint' do
-    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
-    @workshop.expects(:time_constraint).with(:max_hours).returns(15)
-    assert_equal 15, @workshop.effective_num_hours
-  end
-
-  test 'effective_num_hours with max_hours constraint greater than the session hours returns the session hours' do
-    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
-    @workshop.expects(:time_constraint).with(:max_hours).returns(50)
-    assert_equal 20, @workshop.effective_num_hours
+  test 'num_scheduled_session_hours returns 0 if no sessions present' do
+    workshop = create(:workshop, num_sessions: 0)
+    assert_equal 0, workshop.num_scheduled_session_hours
   end
 
   test 'time constraint lookup' do
@@ -633,44 +624,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil workshop_bad_subject.time_constraint(:max_days)
     assert_equal 5, workshop_ambiguous_subject_ecs.time_constraint(:max_days)
     assert_equal 3, workshop_ambiguous_subject_cs_in_a.time_constraint(:max_days)
-  end
-
-  test 'teacherCon workshops are capped at 33.5 hours' do
-    workshop_csd_teachercon = build(:workshop,
-      course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
-      num_sessions: 5,
-      each_session_hours: 8
-)
-    # workshop subject is deprecated so validation must be skipped
-    workshop_csd_teachercon.save(validate: false)
-
-    workshop_csp_teachercon = build(:workshop,
-      course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
-      num_sessions: 5,
-      each_session_hours: 8
-)
-    # workshop subject is deprecated so validation must be skipped
-    workshop_csp_teachercon.save(validate: false)
-
-    assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
-    assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
-  end
-
-  test 'csp summer workshops are capped at 33.5 hours' do
-    workshop = create(:csp_summer_workshop, num_sessions: 5, each_session_hours: 8)
-    assert_equal 33.5, workshop.effective_num_hours
-  end
-
-  test 'CSF 101 workshops are capped at 7 hours' do
-    workshop = build(:csf_intro_workshop, each_session_hours: 8)
-    assert_equal 7, workshop.effective_num_hours
-  end
-
-  test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = build(:csf_deep_dive_workshop, each_session_hours: 7)
-    assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
   test 'does not send teacher_enrollment_reminder if suppress_reminders? is true' do
@@ -705,7 +658,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
+    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -774,7 +727,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
+    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -798,7 +751,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     user1 = create(:teacher)
     user2 = create(:teacher)
     user3 = create(:teacher)
-    workshop = create(:workshop, facilitators: [create(:facilitator), create(:facilitator)])
+    workshop = create(:workshop, facilitators: create_list(:facilitator, 2))
     create(:pd_enrollment, workshop: workshop, user: user1)
     create(:pd_enrollment, workshop: workshop, user: user2)
     create(:pd_enrollment, workshop: workshop, user: user3)
@@ -928,9 +881,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     # 2 enrollments without attendance
-    enrollments = Array.new(2) do
-      create(:pd_enrollment, workshop: @workshop)
-    end
+    enrollments = create_list(:pd_enrollment, 2, workshop: @workshop)
 
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
@@ -1385,7 +1336,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'subject_must_be_valid_for_course validation passes if workshop has valid subject in course' do
-    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_WORKSHOP_1)
+    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_WORKSHOP_3)
     assert workshop.valid?
   end
 

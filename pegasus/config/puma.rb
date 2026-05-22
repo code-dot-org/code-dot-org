@@ -6,7 +6,7 @@ else
   bind "tcp://#{CDO.pegasus_host}:#{CDO.pegasus_port}"
 end
 
-workers CDO.pegasus_workers
+workers 2
 threads 1, 5
 
 drain_on_shutdown
@@ -26,6 +26,6 @@ before_fork do
   Cdo::AppServerHooks.before_fork
 end
 
-on_worker_boot do |_index|
+before_worker_boot do |_index|
   Cdo::AppServerHooks.after_fork(host: CDO.pegasus_hostname)
 end

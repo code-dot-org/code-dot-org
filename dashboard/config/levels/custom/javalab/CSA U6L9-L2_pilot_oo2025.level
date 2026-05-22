@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L9-NLP PBT_pilot_oo2025",
     "teacher_markdown": "Students notice that the overall sentiment is now `-0.02063829787234043` instead of `-0.004490740740740741`. While the overall sentiment is still negative, excluding words with a sentiment of `0.0` does change the overall result.\r\n\r\nThe `count` variable is used to keep track of the number of words that are not `0.0`. Otherwise, if the size of the list is used, the average would be inaccurate since the list includes words with a sentiment of `0.0`.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:53:32.776+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L9-L2_pilot-2025\"}]"

@@ -1,0 +1,57 @@
+/*
+ * Sizing for the AI for Oceans lab.  Mirrors apps/src/fish/FishView.jsx:
+ *   - 16:9 aspect ratio
+ *   - clamped between 320 px and 1280 px wide
+ *   - base font-size scales proportionally so the lab's %-relative
+ *     scene styles cascade identically to the curriculum path
+ *
+ * Sizing uses cqi/cqb so the lab tracks any nearest container's size.
+ * Where no ancestor has container-type set, cqi/cqb fall back to small
+ * viewport units (svw/svb) per spec, which is fine for the studio's
+ * flex-column main area.  No JS measurement required.
+ */
+
+/* The host opts in to this file; the lab itself ships its own styles. */
+
+.oceans-lab-shell {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+
+  /* Match the curriculum-path body background. */
+  background-color: rgb(2 0 28);
+}
+
+.oceans-lab-frame {
+  --oceans-lab-min-width: 320px;
+  --oceans-lab-max-width: 1280px;
+
+  /*
+   * Pre-computed font scale: 18 / 930 (FishView baseline 18 px at 930 px
+   * width).  Keeping it as a constant keeps `font-size` to one line and
+   * sidesteps the SCSS lint rule about newlines around `/`.
+   */
+  --oceans-lab-font-scale: 0.0194;
+  --oceans-lab-width: min(
+    100cqi,
+    calc(100cqb * 16 / 9),
+    var(--oceans-lab-max-width)
+  );
+
+  position: relative;
+  width: var(--oceans-lab-width);
+  min-width: var(--oceans-lab-min-width);
+
+  /*
+   * Lock against flex-shrink so a narrower flex parent overflows/scrolls
+   * rather than squishing the lab below its 320 px minimum.
+   */
+  flex-shrink: 0;
+  font-size: calc(var(--oceans-lab-width) * var(--oceans-lab-font-scale));
+}
+
+/* The box-sizing reset for #container-react lives in scenes.css so it
+ * ships with the lab itself; this file no longer carries it. */

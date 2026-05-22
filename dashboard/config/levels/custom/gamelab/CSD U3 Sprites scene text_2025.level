@@ -98,6 +98,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "encrypted_examples": "hNgydpyqRElQ9oERcIS0zpe6cu/vC/UgxkWA+0Nz7+HoXb6foO+vAbK+rHKq\nBpW78Ra5gxNfMhKTZQjq+4RFVg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

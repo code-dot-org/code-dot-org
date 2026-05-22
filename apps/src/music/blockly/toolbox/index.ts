@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 
@@ -55,7 +55,7 @@ export function getToolbox(
   const allowList = levelToolbox?.blocks;
   const type = levelToolbox?.type;
 
-  const toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+  const toolbox: BlocklyCore.utils.toolbox.ToolboxInfo = {
     kind: type === 'flyout' ? 'flyoutToolbox' : 'categoryToolbox',
     contents: [],
   };
@@ -80,7 +80,7 @@ export function getToolbox(
       continue;
     }
 
-    const categoryContents: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
+    const categoryContents: BlocklyCore.utils.toolbox.ToolboxItemInfo[] = [];
 
     for (const blockName of categoryBlocksMap[category] || []) {
       // Skip if we aren't allowing this block.
@@ -126,14 +126,14 @@ export function getToolbox(
  * levelbuilder's toolbox mode.
  */
 export function prepareToolboxCategories(
-  toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo
-): GoogleBlockly.utils.toolbox.ToolboxInfo {
+  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo
+): BlocklyCore.utils.toolbox.ToolboxInfo {
   return {
     ...toolbox,
     contents: toolbox.contents.map(toolboxItem => {
       if (toolboxItem.kind === 'category') {
         const staticCategory =
-          toolboxItem as GoogleBlockly.utils.toolbox.StaticCategoryInfo;
+          toolboxItem as BlocklyCore.utils.toolbox.StaticCategoryInfo;
         const localizedName =
           categoryTypeToLocalizedName[staticCategory.id as Category];
 
@@ -168,8 +168,8 @@ export const toolboxModeCategory = {
  * toolbox mode.
  */
 export function addToolboxBlocksToWorkspace(
-  contents: GoogleBlockly.utils.toolbox.ToolboxItemInfo[],
-  workspace: GoogleBlockly.WorkspaceSvg,
+  contents: BlocklyCore.utils.toolbox.ToolboxItemInfo[],
+  workspace: BlocklyCore.WorkspaceSvg,
   clearWorkspace: boolean = true
 ) {
   if (clearWorkspace) {
@@ -179,13 +179,13 @@ export function addToolboxBlocksToWorkspace(
     if (toolboxItem.kind === 'block') {
       // Add toolbox blocks directly to the workspace.
       Blockly.serialization.blocks.append(
-        toolboxItem as GoogleBlockly.serialization.blocks.State,
+        toolboxItem as BlocklyCore.serialization.blocks.State,
         workspace
       );
     } else if (toolboxItem.kind === 'category' && 'custom' in toolboxItem) {
       // For dynamic categories, create a custom category block..
       const dynamicCategoryName = (
-        toolboxItem as GoogleBlockly.utils.toolbox.DynamicCategoryInfo
+        toolboxItem as BlocklyCore.utils.toolbox.DynamicCategoryInfo
       ).id;
       Blockly.serialization.blocks.append(
         {
@@ -198,7 +198,7 @@ export function addToolboxBlocksToWorkspace(
       );
     } else if (toolboxItem.kind === 'category') {
       const categoryInfo =
-        toolboxItem as GoogleBlockly.utils.toolbox.StaticCategoryInfo;
+        toolboxItem as BlocklyCore.utils.toolbox.StaticCategoryInfo;
       // For a localized category, like "Sounds", get the category type, like "Play".
       const categoryName = categoryInfo.id;
       // 'DEFAULT' categories are intentionally skipped.
@@ -220,8 +220,7 @@ export function addToolboxBlocksToWorkspace(
       }
       // Recursively process the contents of the static category
       addToolboxBlocksToWorkspace(
-        (toolboxItem as GoogleBlockly.utils.toolbox.StaticCategoryInfo)
-          .contents,
+        (toolboxItem as BlocklyCore.utils.toolbox.StaticCategoryInfo).contents,
         workspace,
         false
       );
@@ -238,7 +237,7 @@ export function addToolboxBlocksToWorkspace(
  */
 export function getNewStaticCategory(
   name: string = DEFAULT_CATEGORY_NAME
-): GoogleBlockly.utils.toolbox.StaticCategoryInfo {
+): BlocklyCore.utils.toolbox.StaticCategoryInfo {
   return {
     kind: 'category',
     // name is not localized upon saving, because levelbuilder is English only.
@@ -246,7 +245,7 @@ export function getNewStaticCategory(
     // See prepareToolboxCategories().
     name,
     cssconfig: undefined,
-    contents: [] as GoogleBlockly.utils.toolbox.ToolboxItemInfo[],
+    contents: [] as BlocklyCore.utils.toolbox.ToolboxItemInfo[],
     id: name,
     categorystyle: undefined,
     colour: undefined,
@@ -261,7 +260,7 @@ export function getNewStaticCategory(
  */
 export function getNewDynamicCategory(
   name: string
-): GoogleBlockly.utils.toolbox.ToolboxItemInfo {
+): BlocklyCore.utils.toolbox.ToolboxItemInfo {
   return {
     kind: 'category',
     custom: dynamicCategoryLabels[name as Category],
@@ -283,7 +282,7 @@ export function getNewDynamicCategory(
  * @param category
  */
 export function isValidCategory(
-  category: GoogleBlockly.utils.toolbox.StaticCategoryInfo
+  category: BlocklyCore.utils.toolbox.StaticCategoryInfo
 ): boolean {
   return !!(
     category.contents.length || category.name !== DEFAULT_CATEGORY_NAME

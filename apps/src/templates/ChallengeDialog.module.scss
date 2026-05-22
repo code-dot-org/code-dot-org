@@ -1,0 +1,57 @@
+.dialogBody {
+  border: 5px solid #8c52ba;
+}
+
+.banner {
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -85px;
+  height: 135px;
+}
+
+.bannerComplete {
+  margin-top: -99px;
+  height: 149px;
+}
+
+.content {
+  color: #8c52ba;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text {
+  margin: 0 40px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.title {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background-color: #8c52ba;
+  border: 3px solid #fff;
+  min-width: 50%;
+  left: 25%;
+  font-size: 150%;
+  height: 30px;
+  line-height: 30px;
+}
+
+.primaryButton {
+  float: right;
+}
+
+.primaryButtonRtl {
+  float: left;
+}
+
+.footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}

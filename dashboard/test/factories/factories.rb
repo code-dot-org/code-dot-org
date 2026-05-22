@@ -132,7 +132,7 @@ FactoryBot.define do
 
     trait :with_units do
       transient do
-        units {[create(:unit), create(:unit)]}
+        units {create_list(:unit, 2)}
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
@@ -207,6 +207,10 @@ FactoryBot.define do
     # TODO elijah
     trait :demigrated do
       after(:create, &:demigrate_from_multi_auth)
+    end
+
+    transient do
+      auth_option_version {nil}
     end
 
     factory :teacher, class: Teacher do
@@ -460,26 +464,6 @@ FactoryBot.define do
         end
       end
 
-      factory :student_with_ai_tutor_access do
-        after(:create) do |user|
-          teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
-          create(:follower, student_user: user, section: section)
-          user.reload
-        end
-      end
-
-      factory :student_without_ai_tutor_access do
-        after(:create) do |user|
-          teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
-          create(:follower, student_user: user, section: section)
-          user.reload
-        end
-      end
-
       trait :migrated_imported_from_google_classroom do
         google_sso_provider
         without_email
@@ -550,7 +534,7 @@ FactoryBot.define do
 
       factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
         trait :predates_policy do
-          created_at {Policies::ChildAccount::StatePolicies.state_policies.dig('CO', :start_date).ago(1.second)}
+          created_at {Policies::ChildAccount::StatePolicies.state_policies.dig('CO', :lockout_date).ago(1.second)}
         end
 
         trait :in_grace_period do
@@ -625,6 +609,11 @@ FactoryBot.define do
           user.save!
         end
       end
+    end
+
+    trait :classlink_sso_provider do
+      sso_provider_with_token
+      provider {'classlink'}
     end
 
     trait :clever_sso_provider do
@@ -715,7 +704,7 @@ FactoryBot.define do
     end
 
     trait :with_clever_authentication_option do
-      after(:create) do |user|
+      after(:create) do |user, evaluator|
         create(
           :authentication_option,
           user: user,
@@ -723,6 +712,7 @@ FactoryBot.define do
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
           authentication_id: SecureRandom.uuid,
+          version: evaluator.auth_option_version,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -817,6 +807,19 @@ FactoryBot.define do
       if section.script_id && section.course_id.nil?
         section.course_id = section.script.original_unit_group_id
       end
+    end
+
+    trait :hidden do
+      hidden {true}
+    end
+
+    trait :archived do
+      hidden
+    end
+
+    trait :from_clever do
+      login_type {Section::LOGIN_TYPE_CLEVER}
+      code {"#{CleverSection::CODE_PREFIX}#{Faker::Alphanumeric.unique.alphanumeric(number: 24)}"}
     end
 
     trait :teacher_participants do
@@ -1086,6 +1089,17 @@ FactoryBot.define do
   factory :weblab2, parent: :level, class: Weblab2 do
     game {Game.weblab2}
     level_num {'custom'}
+  end
+
+  factory :music_dance_ai, parent: :bubble_choice_level do
+    sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    sublevels do
+      [
+        create(:dance),
+        create(:music),
+        create(:dance)
+      ]
+    end
   end
 
   factory :block do
@@ -1418,6 +1432,28 @@ FactoryBot.define do
     description {'fake description'}
   end
 
+  factory :json_video do
+    sequence(:key) {|n| "json-video-#{n}"}
+    description {'fake description'}
+    s3_uri {'s3://fake-bucket/fake-path/video.json'}
+    json_schema_version {1}
+    audience {'Student'}
+  end
+
+  factory :practice_problem do
+    sequence(:key) {|n| "practice_problem-#{n}"}
+    active {false}
+    problem_text {'fake problem text'}
+    problem_type {'multiple_choice_single_select'}
+    solution {{}}
+  end
+
+  factory :user_lesson_objective_reflection do
+    association(:student, factory: :student)
+    objective
+    reflection {"confident"}
+  end
+
   factory :vocabulary do
     association :course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
@@ -1464,6 +1500,31 @@ FactoryBot.define do
     sequence(:key) {|n| "lesson-activity-#{n}"}
     sequence(:position)
     lesson
+  end
+
+  factory :user_lesson_reflection do
+    association(:student, factory: :student)
+    lesson
+    success {"It went well"}
+    struggle {"This was hard"}
+  end
+
+  factory :lesson_feedback do
+    association(:teacher, factory: :teacher)
+    association(:student, factory: :student)
+    lesson
+    saved_feedback {"Generic saved feedback"}
+    submitted_feedback {nil}
+    submitted_at {nil}
+    resources {nil}
+  end
+
+  factory :lesson_insight do
+    lesson
+    association(:student, factory: :student)
+    section
+    teacher_id {nil}
+    insight_response {'{"progress":"test","misconceptions":"none","assessment":"good","next_steps":"continue"}'}
   end
 
   factory :activity_section do
@@ -1593,7 +1654,7 @@ FactoryBot.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        levels_and_texts_by_page = [create_list(:sublevel, 2), [create(:sublevel)]]
         lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end
@@ -2044,13 +2105,6 @@ FactoryBot.define do
     data_synced_at {Time.now.utc}
   end
 
-  factory :lti_feedback, class: 'Lti::Feedback' do
-    association :user, factory: :teacher
-
-    locale {I18n.locale.to_s}
-    satisfied {true}
-  end
-
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}
@@ -2099,8 +2153,8 @@ FactoryBot.define do
   end
 
   factory :lti_course do
-    lti_integration {create(:lti_integration)}
-    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
+    association :lti_integration
+    lti_deployment {build(:lti_deployment, lti_integration:)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}
@@ -2308,6 +2362,30 @@ FactoryBot.define do
     is_preset {false}
   end
 
+  factory :aidiff_exit_ticket do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffExitTicket"}
+  end
+
+  factory :aidiff_lesson_hook do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffLessonHook"}
+  end
+
+  factory :aidiff_artifact_association do
+    association :aidiff_artifact
+    association :unit
+    association :unit_group
+    association :lesson
+    association :section
+  end
+
   factory :modular_course_context, class: Hash do
     skip_create
     initialize_with do
@@ -2362,5 +2440,19 @@ FactoryBot.define do
   factory :misc_survey, class: 'Pd::MiscSurvey' do
     association :user
     form_id {1}
+  end
+
+  factory :teacher_notification do
+    association :user
+    title {"Test Teacher Notification"}
+    description {"Test teacher notification description"}
+    icon_name {"notification_icon"}
+    icon_color {"blue"}
+    href_links {[{'url' => 'https://example.com', 'text' => 'Test Link'}]}
+    ai_prompts {[{'text' => 'Test Prompt', 'prompt' => 'Test prompt text'}]}
+    priority {0}
+    expires_at {1.day.from_now}
+    read_at {nil}
+    is_dismissed {false}
   end
 end

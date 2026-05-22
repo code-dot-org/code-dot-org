@@ -57,8 +57,6 @@ cron-pii:
 - dashboard.learning_goal_ai_evaluations
 - dashboard.learning_goal_teacher_evaluations
 - dashboard.learning_goal_ai_evaluation_feedbacks
-- dashboard.ai_tutor_interactions
-- dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_requests
 - dashboard.aichat_events
 - dashboard.aidiff_messages
@@ -66,15 +64,12 @@ cron-pii:
 - dashboard.lti_deployments_user_identities
 - dashboard.student_work_evaluations
 - dashboard.ai_interaction_feedbacks
+- dashboard.teaching_profile_data
 
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.
 cron:
-- dashboard.ai_tutor_interactions:
-    remove_column:
-      - prompt
-      - ai_response
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
 - dashboard.hint_view_requests
@@ -151,15 +146,14 @@ cron:
     remove_column: [admin_email]
 - dashboard.lti_deployments
 - dashboard.lti_courses
-- dashboard.lti_feedbacks
 - dashboard.lti_sections
 - dashboard.lti_user_identities
 - dashboard.lti_deployments_user_identities
 - dashboard.new_feature_feedbacks
 - dashboard.cap_user_events
-- dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_sessions
 - dashboard.aidiff_message_feedbacks
+- dashboard.user_data_retention_statuses
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.

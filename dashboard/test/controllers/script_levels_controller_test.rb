@@ -8,8 +8,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include ScriptLevelsHelper
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @student = create(:student)
     @young_student = create(:young_student)
@@ -717,7 +715,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -726,7 +724,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
@@ -867,15 +865,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
-  test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by script: Unit.twenty_hour_unit, chapter: 3
-    assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
-    assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}#{build_script_level_path(sl)}"},
-      {controller: "script_levels", action: "show", script_id: Unit::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
-    )
-  end
-
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
@@ -1224,22 +1213,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1287,7 +1276,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -1303,7 +1292,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 2,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do
@@ -2622,5 +2611,50 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                                   params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
                                   name: 'pilot teacher can view pilot modular course'
     end
+  end
+
+  # iframe embed gating: data-allow-embeds is set based on participant_audience
+  IFRAME_MARKDOWN = '<iframe src="https://padlet.com/embed/test123" title="Padlet"></iframe>'.freeze
+
+  test 'does not set allow_embeds for student-audience course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'student', instructor_audience: 'teacher')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    refute_includes @response.body, "data-allow-embeds='true'"
+  end
+
+  test 'sets allow_embeds for teacher-audience (PL) course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'teacher', instructor_audience: 'facilitator')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, "data-allow-embeds='true'"
   end
 end

@@ -22,7 +22,7 @@ export const FinishButton = () => (
 export const RunButton = Radium(props => (
   <button
     type="button"
-    id="runButton"
+    id={props.id || 'runButton'}
     className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
     style={props.style}
   >
@@ -31,6 +31,7 @@ export const RunButton = Radium(props => (
   </button>
 ));
 RunButton.propTypes = {
+  id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
@@ -44,7 +45,7 @@ RunButton.displayName = 'RunButton';
 export const ResetButton = Radium(props => (
   <button
     type="button"
-    id="resetButton"
+    id={props.id || 'resetButton'}
     // See apps/style/common.scss for these class definitions
     className={classNames([
       'launch',
@@ -59,6 +60,7 @@ export const ResetButton = Radium(props => (
   </button>
 ));
 ResetButton.propTypes = {
+  id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool,

@@ -19,7 +19,8 @@
     "encrypted_solution": "jzn1qL1wOuIas0Vb0C0nu8JSvd/NL4FIMFdMIP04kC6dCKvqneutBDiZwR2B\nxG/ZhaSUu6wyEHiAP/6GMkGWqJBzSilOwMSg4WQg4DvwUuq2J9lg/V54IfH7\nB6Rx//NtBIFu+4W5BPAp3Qh0NEaGjlynGZRFcBqqHOx1taUhBHUbyDIhXlZ1\n5v2Rkl8PA957YyAmfuII1d3I90sy+H+3RuEX4lxYWMS9FACUuYbZQ212kx9j\n2h8t3sh/nb3wzw8mY62GcORvtplPW09mOMDVzXZkjz6Q1xr3+Djp+DE0tcA+\nk9Xx6Jls3Xg13kFiY8NbPBvLan9ApGnztBjJoDCPvfpL/LvuToI5lF2Wmyx2\nXXYy+T/4JXEF2t7uEFgvxiAcRDWw9GVxx8Lwi8fwoRccrDifJg7vBEn8mhlN\ne73xvGsfL6zixdgzFu/+Z99r6VfEsnAvQ5QaSjf4Pv1n0sFQNGi2gPR4wNhl\nVNCUlpN1lEiNC+Nwld+8QkZDUjL1X3rY7sjLekJPQxOtNMDrYdWXkw==\n",
     "encrypted": "false",
     "optional": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

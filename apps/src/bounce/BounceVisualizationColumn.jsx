@@ -21,7 +21,7 @@ var BounceVisualizationColumn = function () {
     <span>
       <ProtectedVisualizationDiv>
         <SwipePrompt />
-        <svg version="1.1" id="svgBounce" />
+        <svg id="svgBounce" />
       </ProtectedVisualizationDiv>
       <GameButtons>
         <ArrowButtons />

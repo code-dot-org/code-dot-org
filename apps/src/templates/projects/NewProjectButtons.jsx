@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -22,31 +21,23 @@ const PROJECT_INFO = {
   },
   artist: {
     label: i18n.projectTypeArtist(),
-    thumbnail: studio('/shared/images/courses/logo_artist.png'),
+    thumbnail: studio('/shared/images/courses/artist-icon.png'),
   },
   artist_k1: {
     label: i18n.projectTypeArtistPreReader(),
-    thumbnail: studio('/shared/images/courses/logo_artist.png'),
+    thumbnail: studio('/shared/images/courses/artist-icon.png'),
   },
   applab: {
     label: i18n.projectTypeApplab(),
-    thumbnail: studio('/shared/images/courses/logo_applab_square.png'),
+    thumbnail: studio('/shared/images/courses/app-lab-icon.png'),
   },
   gamelab: {
     label: i18n.projectTypeGamelab(),
-    thumbnail: studio('/shared/images/courses/logo_gamelab_square.png'),
+    thumbnail: studio('/shared/images/courses/game-lab-icon.png'),
   },
-  weblab: {
-    label: i18n.projectTypeWeblab(),
-    thumbnail: studio('/shared/images/courses/logo_weblab.png'),
-  },
-  calc: {
-    label: i18n.projectTypeCalc(),
-    thumbnail: studio('/shared/images/courses/logo_calc.png'),
-  },
-  eval: {
-    label: i18n.projectTypeEval(),
-    thumbnail: studio('/shared/images/courses/logo_eval.png'),
+  weblab2: {
+    label: 'Web Lab (new)',
+    thumbnail: studio('/shared/images/courses/logo_weblab2.png'),
   },
   frozen: {
     label: i18n.projectTypeFrozen(),
@@ -108,24 +99,37 @@ const PROJECT_INFO = {
   },
   spritelab: {
     label: i18n.projectTypeSpriteLab(),
-    thumbnail: studio('/shared/images/courses/logo_spritelab.png'),
+    thumbnail: studio('/shared/images/courses/sprite-lab-icon.png'),
+  },
+  game_design: {
+    label: i18n.projectTypeGameDesign(),
+    thumbnail: studio('/shared/images/courses/game-design-icon.png'),
   },
   dance: {
     label: i18n.projectTypeDance(),
-    thumbnail: studio('/shared/images/courses/logo_dance.png'),
+    thumbnail: studio('/shared/images/courses/dance-party-icon.png'),
   },
   poetry: {
     label: i18n.projectTypePoetry(),
     thumbnail: studio('/shared/images/courses/logo_poetry.png'),
   },
+  poetry_hoc: {
+    label: i18n.projectTypePoetryHoc(),
+    thumbnail: studio('/shared/images/courses/logo_poetry.png'),
+  },
   music: {
     label: i18n.projectTypeMusic(),
-    thumbnail: studio('/shared/images/courses/logo_music.png'),
-    urlOverride: '/s/music-intro-2024/reset',
+    thumbnail: studio('/shared/images/courses/music-lab-icon.png'),
+    urlOverride: pegasus('/music'),
   },
   pythonlab: {
     label: i18n.projectTypePythonlab(),
-    thumbnail: studio('/shared/images/courses/logo_pythonlab.png'),
+    thumbnail: studio('/shared/images/courses/python-lab-icon.png'),
+  },
+  music_dance_ai: {
+    label: 'Mix & Move with AI',
+    thumbnail: studio('/shared/images/courses/music-dance-ai-icon.png'),
+    urlOverride: pegasus('/mix-move-ai'),
   },
 };
 
@@ -148,34 +152,35 @@ class NewProjectButtons extends React.Component {
         {_.chunk(projectTypes, TILES_PER_ROW).map(
           (projectTypesRow, rowIndex) => (
             <div style={styles.row} key={rowIndex}>
-              {projectTypesRow.map((projectType, index) => (
-                <a
-                  key={index}
-                  href={
-                    PROJECT_INFO[projectType].urlOverride ||
-                    '/projects/' + projectType + '/new'
-                  }
-                >
-                  <div
-                    className="newProject-button-tile"
-                    style={[
-                      styles.tile,
-                      index < TILES_PER_ROW - 1 && styles.tilePadding,
-                    ]}
+              {projectTypesRow.map((projectType, index) => {
+                const tileStyle =
+                  index < TILES_PER_ROW - 1
+                    ? {...styles.tile, ...styles.tilePadding}
+                    : styles.tile;
+
+                return (
+                  <a
+                    key={index}
+                    href={
+                      PROJECT_INFO[projectType].urlOverride ||
+                      '/projects/' + projectType + '/new'
+                    }
                   >
-                    <img
-                      style={thumbnailStyle}
-                      src={PROJECT_INFO[projectType].thumbnail}
-                      alt=""
-                      width="70"
-                      height="70"
-                    />
-                    <div style={styles.label}>
-                      {PROJECT_INFO[projectType].label}
+                    <div className="newProject-button-tile" style={tileStyle}>
+                      <img
+                        style={thumbnailStyle}
+                        src={PROJECT_INFO[projectType].thumbnail}
+                        alt=""
+                        width="70"
+                        height="70"
+                      />
+                      <div style={styles.label}>
+                        {PROJECT_INFO[projectType].label}
+                      </div>
                     </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                );
+              })}
               <div style={{clear: 'both'}} />
             </div>
           )
@@ -233,4 +238,4 @@ const styles = {
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(NewProjectButtons));
+}))(NewProjectButtons);

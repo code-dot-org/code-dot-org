@@ -1,4 +1,4 @@
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -59,13 +59,14 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
             {leftHeaderContent}
           </div>
           <Typography
-            semanticTag="h2"
-            visualAppearance="overline-two"
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
               moduleStyles.panelContainerHeaderItemCenter
             )}
+            component="h2"
+            variant="overline2"
+            gutterBottom
           >
             <span
               className={classNames(moduleStyles.panelContainerHeaderItemText)}

@@ -113,6 +113,20 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal unit_group_2, context[:unit_group_unit].unit_group
   end
 
+  test 'primary_student_unit_context skips deleted scripts' do
+    current_script = create(:script)
+    deleted_script = create(:script)
+
+    create(:user_script, user: @user, script: current_script, started_at: 3.days.ago)
+    create(:user_script, user: @user, script: deleted_script, started_at: 1.day.ago)
+
+    deleted_script.destroy!
+
+    context = Queries::ScriptActivity.primary_student_unit_context(@user)
+    refute_nil context
+    assert_equal current_script, context[:unit]
+  end
+
   test 'user is working on pl scripts' do
     teacher = create(:teacher)
     script1 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
@@ -149,19 +163,6 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
     assert_equal [s1.script, course_script, a.script, s2.script], Queries::ScriptActivity.working_on_pl_units(teacher)
     assert_equal s1.script, Queries::ScriptActivity.primary_pl_unit(teacher)
-  end
-
-  test 'user should prefer working on 20hour instead of hoc' do
-    create_hourofcode_unit_and_levels
-    twenty_hour = Unit.twenty_hour_unit
-    hoc = Unit.find_by(name: 'hourofcode')
-
-    # do a level that is both in script 1 and hoc
-    [twenty_hour, hoc].each do |script|
-      UserScript.create! user: @user, script: script
-    end
-
-    assert_equal [twenty_hour, hoc], Queries::ScriptActivity.working_on_units(@user)
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q2_2026'
+
+question 'A clothing store adds a "Try It On" feature where a shirt color updates the moment you tap a swatch. Why is this a good example of user-centered design?'
+
+wrong 'It uses the newest framework available.'
+wrong 'It hides complexity from developers so they can code faster.'
+right 'It gives users instant feedback so they can see the result of their choice without waiting.'
+wrong 'It saves the user from typing the color name.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+MARKDOWN

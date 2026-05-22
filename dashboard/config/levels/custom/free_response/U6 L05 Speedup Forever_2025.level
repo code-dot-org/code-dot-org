@@ -18,7 +18,8 @@
     "encrypted_solution": "DqBHBKvkTpt+RLGe0pjtENZY2SZc9GhZATpWS+rvaML45hTPE0UtZ+8mShSU\nXi2dMdRXovz06mvupW+u9kOUx63TnNG36FhQmUcD4pl0NKJ4PCHWmk9mGvZg\nS+antBW8mFqdX+hKLTsr1K3iEta39iTNXDokOU0L9p8fiwQ2BBdm0PgAtTRN\nlQAIUNdOKE+YvKL5t0KiQuZSzOYr+fuThcXuiK+j7IjabbSDc5wz8d8turxT\nW3lVZgHpJfl3Jp6TjBuWPM+rVbtOojG3H5CK0SUH/5A3FiAAbyONOVhZTjN9\nBrubHBVD2z4bFTNgqHbEs80NhHtqyjK6a/FW3hJeRKhY6RqeOZ4PTYxUgwQp\ni9gNEGEWrFiLWGXZVchFpRgu9YsRvEyJGxmEU0HTJ15H7TSx7Iq+2jqAUkzn\nU8cRTgbIQ1W2ZLLB2vMyFtZNVLLppf87JIgHmDKsG9xvCLFn21GmkkU/cAZ3\nF0kANm6iZyNMVhjSmOHL6AfgWuAfSM/a\n",
     "optional": "false",
     "encrypted": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

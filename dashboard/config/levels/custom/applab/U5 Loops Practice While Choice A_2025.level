@@ -88,6 +88,7 @@
     "bubble_choice_description": "Create a program that simulates rolling a pair of dice and keeps track of how many times doubles are rolled.",
     "thumbnail_url": "https://images.code.org/550df13ca5eb7e3d0e9b5e574cf2a1f9-image-1649913172694.png",
     "encrypted_examples": "PSMnFZC1WGyvZKXrXvEXkZmsIhh2i7YGelKabFMnsm9rja9oHYu0hjPs/Mxl\nAfrOI713kvkZ4OUqhyE6K/KxEA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:48.000Z",
   "level_num": "custom",
@@ -162,8 +161,10 @@
     "teacher_markdown": "💡 **Teacher Tip**: Emphasize the task goal over musicality on this level.\r\n\r\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3).",
     "submittable": "true",
     "disable_edit_run_for_submission": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.960+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-summative\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-summative\"},{\"changed_at\":\"2025-06-26 20:03:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 21:02:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 21:20:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 23:01:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 17:53:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-09-05 20:16:20 +0000\",\"changed\":[\"predict_settings\",\"submittable\",\"disable_edit_run_for_submission\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-17 20:05:25 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-17 20:07:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 03:01:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 03:55:17 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>

@@ -3,12 +3,20 @@
   "script_names": [
     "pl-sandbox-aif-sem-2-pre-learning",
     "pl-sandbox-aif-sem-2-unit-1",
-    "pl-sandbox-aif-sem-2-unit-2"
+    "pl-sandbox-aif-sem-2-unit-2",
+    "pl-sandbox-aif-sem-2-unit-3",
+    "pl-sandbox-aif-sem-2-unit-4",
+    "pl-sandbox-aif-sem-2-unit-5",
+    "pl-sandbox-aif-sem-2-unit-6"
   ],
   "original_script_names": [
     "pl-sandbox-aif-sem-2-pre-learning",
     "pl-sandbox-aif-sem-2-unit-1",
-    "pl-sandbox-aif-sem-2-unit-2"
+    "pl-sandbox-aif-sem-2-unit-2",
+    "pl-sandbox-aif-sem-2-unit-3",
+    "pl-sandbox-aif-sem-2-unit-4",
+    "pl-sandbox-aif-sem-2-unit-5",
+    "pl-sandbox-aif-sem-2-unit-6"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

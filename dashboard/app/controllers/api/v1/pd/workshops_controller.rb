@@ -36,7 +36,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def workshops_user_enrolled_in
     authorize! :workshops_user_enrolled_in, Pd::Workshop
 
-    enrollments = ::Pd::Enrollment.for_user(current_user).all.reject do |enrollment|
+    enrollments = ::Pd::Enrollment.for_user(current_user).includes(:workshop).reject do |enrollment|
       enrollment.workshop&.future_or_current_teachercon_or_fit?
     end
 
@@ -227,7 +227,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
         Pd::Workshop.all
       else
         Pd::Workshop.managed_by(current_user)
-      end
+      end.includes(:sessions, :organizer, :facilitators, :course_offerings, :enrollments, :regional_partner)
   end
 
   # Returns recent updates to @workshop as an array of hashes tracking each updated field's name, old value, and new value.
@@ -285,7 +285,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   end
 
   private def notify(general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
-    @workshop.enrollments.each do |enrollment|
+    @workshop.enrollments.includes(:user, :workshop).each do |enrollment|
       user = enrollment.user
 
       Pd::WorkshopMailjetMailer.send_teacher_workshop_detail_change_notification(enrollment, user, false, general_detail_changes, sessions_have_changed, pre_update_session_info, post_update_session_info)
@@ -317,7 +317,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   private def adjust_course_offerings
     ws_params = params[:pd_workshop]
 
-    return unless ws_params.key?(:course_offerings) ||  ws_params.key?("course_offerings")
+    return unless ws_params.key?(:course_offerings) || ws_params.key?("course_offerings")
     supplied_course_offering_ids = ws_params.delete(:course_offerings) || ws_params.delete("course_offerings")
     supplied_course_offering_ids = [] if supplied_course_offering_ids.blank?
     @workshop.course_offerings = CourseOffering.where(id: supplied_course_offering_ids)

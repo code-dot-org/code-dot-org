@@ -1,0 +1,23 @@
+{
+  "key": "teaching-design-process",
+  "display_name": "Preparing to Teach The Design Process",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "AID",
+  "grade_levels": "6,7,8,9,10",
+  "header": "self_paced",
+  "image": "https://images.code.org/df76d7dca1b4f56a6252985fd385e942-csd-unit-design-process.avif",
+  "cs_topic": "art_and_design,app_design,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries - The Design Process with your students.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

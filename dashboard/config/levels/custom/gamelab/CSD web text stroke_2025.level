@@ -100,6 +100,7 @@
     "thumbnail_url": "https://images.code.org/395fee499c8efe7d00705de4ee64f683-image-1585822720395.18.00 AM.png",
     "start_animations": "{\n  \"orderedKeys\": [\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\n  ],\n  \"propsByKey\": {\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\n      \"name\": \"rainbow\",\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/XOb9nAbwxhu1xYfW5zmQV1VPr0qlpB4I/levelbuilder-image-52.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 4,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"LWFM.7dRXLe87X1hfuo6V9Fp40WnVcw7\"\n    }\n  }\n}",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

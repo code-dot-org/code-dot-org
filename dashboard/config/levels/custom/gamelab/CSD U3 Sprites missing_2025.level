@@ -93,6 +93,7 @@
     "bubble_choice_description": "The sprites are being created, but you need to change the code to make the sprites appear.",
     "libraries_enabled": "false",
     "encrypted_examples": "tuld4CmTDxVZcYj3ShaYvQ96gc6OJZMQ5oIMU/okZRkC1QOvQt92zjEu3SWg\nKVMruLPku6bqq5aIWXqg4vtn5w==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -28,7 +28,8 @@
     "parent_level_id": 18854,
     "thumbnail_url": "https://images.code.org/6e8ee18a5b343bde265e2ef03793e96a-image-1563293765020.JPG",
     "name_suffix": "_2025",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

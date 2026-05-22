@@ -16,7 +16,7 @@
     "skip_sound": true,
     "encrypted_solution": "WDBqOfQBPpHNODXPuinguQrfqch/+ZKVG6LjRJ2xtcFHxRuP0WzmBn9Gdw8w\ns29xaoPRAtkb0p02q2Deeu6QVA==\n",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-12 15:44:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-12 15:44:27 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",

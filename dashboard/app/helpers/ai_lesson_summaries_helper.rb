@@ -1,24 +1,85 @@
+class OpenaiLessonSummaryTimeout < StandardError; end
+
 module AiLessonSummariesHelper
-  # API_KEY = CDO.openai_lesson_summaries_api_key
-  API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
-  def self.get_ai_lesson_summary(lesson_id)
-    system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id)
+  def self.generate_lesson_summary(lesson_id, user_id = nil, response_format = AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, user_id, response_format)
 
-    client = Client.new(API_KEY, MODEL)
-    response = client.request_lesson_summary(system_prompt)
-
-    response_body = JSON.parse(response.body)
-    response_body = response_body['choices'][0]['message']['content'] if response.code == 200
-    evaluation =  {status: response.code, json: response_body}
-    return {status: evaluation[:status], json: evaluation[:json]}
+    begin
+      response = client.request_lesson_summary(system_prompt, response_format)
+    rescue Net::ReadTimeout
+      raise OpenaiLessonSummaryTimeout.new("Timeout waiting for AI client to return lesson summary")
+    rescue StandardError => exception
+      raise StandardError.new("Error processing AI lesson summary: #{exception.message}")
+    end
+    if response.code == 200
+      response_body = JSON.parse(response.body)
+      response_body = response_body['choices'][0]['message']['content']
+      evaluation =  {status: response.code, json: response_body}
+      return {status: evaluation[:status], json: evaluation[:json]}
+    else
+      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary: #{response.body}")
+    end
   end
 
-  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id)
-    ai_lesson_summary = get_ai_lesson_summary(lesson_id)
-    if ai_lesson_summary[:status] == 200
-      AiLessonSummary.create!({user_id: user_id, lesson_id: lesson_id, lesson_summary: ai_lesson_summary[:json]})
+  # Retrieves existing AiLessonSummary with the desired response_format if it exists, otherwise generates and saves it it.
+  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, generate_script, credits_available)
+    summary_record = AiLessonSummary.find_or_create_by(
+      user_id: user_id,
+      lesson_id: lesson_id
+      )
+
+    if (!summary_record.lesson_summary.nil? && !generate_script) || (!summary_record.script.nil? && generate_script)
+      return summary_record
+    end
+
+    new_lesson_summary = if summary_record.lesson_summary.nil?
+                           generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])[:json]
+                         else
+                           summary_record.lesson_summary
+                         end
+
+    new_script = nil
+    if generate_script
+      existing_script = AiLessonSummary.where(
+        lesson_id: lesson_id
+      ).where.not(script: nil)&.first
+      new_script = if existing_script
+                     existing_script.script
+                   elsif credits_available
+                     JSON.parse(generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json])['podcast_script']
+                   end
+    end
+    summary_record.update!(lesson_summary: new_lesson_summary, script: new_script)
+    return summary_record
+  end
+
+  def self.perform_ai_lesson_summaries_by_unit(unit, user_id)
+    lesson_ids = []
+    unit.lessons.each do |lesson|
+      if lesson.has_lesson_plan
+        lesson_ids << lesson.id
+      end
+    end
+    request = {
+      user_id: user_id,
+      lesson_ids: lesson_ids,
+      unit_id: unit.id,
+      credits_available: false,
+    }
+    AiLessonSummariesJob.perform_later(request: request)
+  end
+
+  def self.perform_ai_lesson_summary_by_lesson(lesson, unit, user_id)
+    if lesson.has_lesson_plan
+      request = {
+        user_id: user_id,
+        lesson_ids: [lesson.id],
+        unit_id: unit.id,
+        credits_available: false,
+      }
+      AiLessonSummariesJob.perform_later(request: request)
     end
   end
 
@@ -32,34 +93,35 @@ module AiLessonSummariesHelper
       @model = model
     end
 
-    def request_lesson_summary(prompt)
+    def request_lesson_summary(prompt, response_format)
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"
       }
 
+      response_props = response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+        {
+          learning_objective: {type: "string"},
+          lesson_beats: {type: "array", items: {type: "string"}},
+          misconceptions: {type: "array", items: {type: "string"}},
+          tips: {type: "array", items: {type: "string"}}
+        } : {
+          podcast_script: {type: "string"}
+        }
+
       data = {
         model: model,
         messages: [{
           role: "system",
-          content: "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
-        },
-                   {
-                     role: "user",
-                     content: prompt
-                   }],
+          content: prompt
+        }],
         response_format: {
           type: "json_schema",
           json_schema: {
             name: "lesson_summary",
             schema: {
               type: "object",
-              properties: {
-                learning_objective: {type: "string"},
-                lesson_beats: {type: "array", items: {type: "string"}},
-                misconceptions: {type: "array", items: {type: "string"}},
-                tips: {type: "array", items: {type: "string"}}
-              },
+              properties: response_props,
             }
           }
         }
@@ -73,5 +135,9 @@ module AiLessonSummariesHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+  end
+
+  def self.client
+    Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
 end

@@ -116,6 +116,7 @@
     },
     "name_suffix": "_v2",
     "bubble_choice_description": "Use what you know about sequencing to create this portion of Henry Moodie's \"Pick Up the Phone\".",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

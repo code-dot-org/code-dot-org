@@ -14,15 +14,10 @@ import {
 
 import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@cdo/apps/constants';
 import {
-  getPublicCaching,
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {
-  setUserRoleInCourse,
-  CourseRoles,
-} from '@cdo/apps/templates/currentUserRedux';
 
 import {
   setProjectUpdatedAt,
@@ -32,7 +27,7 @@ import {
 } from '../code-studio/projectRedux';
 import {queryParams, updateQueryParam} from '../code-studio/utils';
 import {RootState} from '../types/redux';
-import HttpClient, {NetworkError} from '../util/HttpClient';
+import {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
 import Lab2Registry from './Lab2Registry';
@@ -42,18 +37,11 @@ import {
 } from './progress/ProgressManager';
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {getSourcesStoreForApp} from './projects/sourcesStoreForApp';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
-import {LevelPropertiesValidator} from './responseValidators';
-import {
-  Channel,
-  LevelProperties,
-  ProjectSources,
-  PartialUserAppOptions,
-  Validation,
-} from './types';
-import LevelPropertiesCache from './utils/LevelPropertiesCache';
+import {Channel, LevelProperties, ProjectSources, Validation} from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -129,11 +117,9 @@ export const setUpWithLevel = createAsyncThunk<
   {
     levelId: number;
     scriptId?: number;
-    levelPropertiesPath: string;
-    userAppOptionsPath?: string;
+    levelProperties: LevelProperties;
     channelId?: string;
     userId?: number;
-    scriptLevelId?: string;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -141,42 +127,22 @@ export const setUpWithLevel = createAsyncThunk<
     .getLifecycleNotifier()
     .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
   try {
-    // Update properties for reporting as early as possible in case of errors.
-    Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-      currentLevelId: payload.levelId,
-      scriptId: payload.scriptId,
-      channelId: payload.channelId,
-    });
+    // Update standalone channel ID early if we have one.
+    if (payload.channelId) {
+      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
+        channelId: payload.channelId,
+      });
+    }
 
     await cleanUpProjectManager();
     const isViewingExemplar = getAppOptionsViewingExemplar();
     const isEditingExemplar = getAppOptionsEditingExemplar();
 
-    // Load level properties if we have a levelPropertiesPath.
-    const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath
-    );
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .updateProperties({appName: levelProperties.appName});
+    const levelProperties = payload.levelProperties;
 
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
-
-    // If we are cached, and there is a user app options path because we are in a script
-    // level, then make an async call to the server to find out whether the user is an
-    // instructor, and if they are, then update the user role.  This is needed for the
-    // teacher panel to appear in cached levels.
-    if (getPublicCaching()) {
-      if (payload.userAppOptionsPath) {
-        loadUserAppOptions(payload.userAppOptionsPath).then(result => {
-          if (result.isInstructor) {
-            thunkAPI.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
-          }
-        });
-      }
-    }
 
     if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -218,16 +184,20 @@ export const setUpWithLevel = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
+    const sourcesStore = getSourcesStoreForApp(levelProperties.appName);
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.channelId,
-          thunkAPI.getState().lab.isShareView
+          levelProperties.isProjectLevel || false,
+          thunkAPI.getState().lab.isShareView,
+          sourcesStore
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
+          levelProperties.isProjectLevel || false,
           payload.userId,
           payload.scriptId,
-          payload.scriptLevelId
+          sourcesStore
         );
 
     // Only set the project manager and initiate load
@@ -505,31 +475,6 @@ function setProjectAndLevelData(
       data.sharingDisabled,
       data.isTeacherOfProjectOwner
     );
-}
-
-async function loadLevelProperties(
-  levelPropertiesPath: string
-): Promise<LevelProperties> {
-  const cached = LevelPropertiesCache.get(levelPropertiesPath);
-  if (cached) {
-    return cached;
-  }
-  const response = await HttpClient.fetchJson<LevelProperties>(
-    levelPropertiesPath,
-    {},
-    LevelPropertiesValidator
-  );
-  LevelPropertiesCache.set(levelPropertiesPath, response.value);
-  return response.value;
-}
-
-async function loadUserAppOptions(
-  userAppOptionsPath: string
-): Promise<PartialUserAppOptions> {
-  const response = await HttpClient.fetchJson<PartialUserAppOptions>(
-    userAppOptionsPath
-  );
-  return response.value;
 }
 
 async function cleanUpProjectManager() {

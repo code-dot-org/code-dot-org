@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
+
   setup_all do
     @student = create(:student)
     @teacher = create(:teacher)
@@ -78,18 +78,6 @@ class SectionTest < ActiveSupport::TestCase
       section = create(:section)
       assert_match letters_without_vowels_regex, section.code
     end
-  end
-
-  test 'update_student_sharing updates user settings' do
-    student = create(:student, sharing_disabled: false)
-    section = create(:section, sharing_disabled: false)
-    section.add_student student
-    section.update_student_sharing(true)
-    student.reload
-    assert student.sharing_disabled?
-    section.update_student_sharing(false)
-    student.reload
-    refute student.sharing_disabled?
   end
 
   test 'adding student updates their share setting when section share is disabled' do
@@ -535,9 +523,9 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -583,9 +571,9 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -637,9 +625,9 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -690,9 +678,9 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -735,9 +723,9 @@ class SectionTest < ActiveSupport::TestCase
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -776,6 +764,14 @@ class SectionTest < ActiveSupport::TestCase
     assert summarized_section[:sharing_disabled]
   end
 
+  test 'summaries include demo type' do
+    section = create(:section, demo_type: 'high')
+
+    assert_equal 'high', section.concise_summarize[:demo_type]
+    assert_equal 'high', section.selected_section_summarize[:demo_type]
+    assert_equal 'high', section.summarize[:demo_type]
+  end
+
   test 'selected_section_summarize: section with no script' do
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     CourseOffering.add_course_offering(unit_group)
@@ -801,6 +797,9 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -834,6 +833,9 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -905,6 +907,7 @@ class SectionTest < ActiveSupport::TestCase
       currentUnitTitle: '',
       linkToCurrentUnit: '',
       code: section.code,
+      hidden: false,
       login_type: "email",
       grades: nil,
       is_assigned_single_unit_course: false,
@@ -960,11 +963,13 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1020,11 +1025,13 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1086,11 +1093,13 @@ class SectionTest < ActiveSupport::TestCase
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1152,11 +1161,13 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1209,11 +1220,13 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
-        ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        demo_type: nil,
+        assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1414,6 +1427,67 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 2, new_groups.first.members.count
   end
 
+  test 'reset_code_review_groups enables sharing for assigned students' do
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 3 students with sharing disabled
+    followers = []
+    3.times do |i|
+      student = create(:student, name: "student_#{i}")
+      follower = create(:follower, section: code_review_group_section, student_user: student)
+      # Set sharing disabled after adding to section to prevent before_validation callback from overriding
+      student.sharing_disabled = true
+      student.save!
+      followers << follower
+    end
+
+    # Verify all students have sharing disabled initially
+    followers.each do |follower|
+      assert follower.student_user.sharing_disabled?
+    end
+
+    # Assign students 0 and 1 to code review group (student 2 remains unassigned)
+    new_groups = [
+      {name: 'test_group', members: [{follower_id: followers[0].id}, {follower_id: followers[1].id}]},
+      {unassigned: true, members: [{follower_id: followers[2].id}]}
+    ]
+
+    students_with_sharing_enabled = code_review_group_section.reset_code_review_groups(new_groups)
+
+    # Students 0 and 1 should now have sharing enabled
+    refute followers[0].student_user.reload.sharing_disabled?
+    refute followers[1].student_user.reload.sharing_disabled?
+    # Student 2 should still have sharing disabled (unassigned)
+    assert followers[2].student_user.reload.sharing_disabled?
+
+    # Should return the names of students who had sharing enabled
+    assert_equal 2, students_with_sharing_enabled.length
+    assert_includes students_with_sharing_enabled, 'student_0'
+    assert_includes students_with_sharing_enabled, 'student_1'
+  end
+
+  test 'reset_code_review_groups returns empty array when no students need sharing enabled' do
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 2 students with sharing already enabled
+    followers = []
+    2.times do |i|
+      student = create(:student, name: "student_#{i}")
+      follower = create(:follower, section: code_review_group_section, student_user: student)
+      # Sharing is enabled by default for students over 13, but set explicitly to be clear
+      student.sharing_disabled = false
+      student.save!
+      followers << follower
+    end
+
+    new_groups = [
+      {name: 'test_group', members: [{follower_id: followers[0].id}, {follower_id: followers[1].id}]}
+    ]
+
+    students_with_sharing_enabled = code_review_group_section.reset_code_review_groups(new_groups)
+
+    # Should return empty array since no students needed sharing enabled
+    assert_equal [], students_with_sharing_enabled
+  end
+
   test 'update_code_review_expiration resets expiration time when enabling code review' do
     @section.update_code_review_expiration(true)
     @section.save
@@ -1612,5 +1686,102 @@ class SectionTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called when matching course is assigned' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    section.update!(course_id: unit_group.id)
+  end
+
+  test 'add_teacher_to_mailjet_course_list is not called when course_id does not change' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+    section = create(:section, teacher: @teacher, course_id: unit_group.id)
+
+    MailJet.expects(:create_contact_and_add_to_course_list).never
+
+    section.update!(name: 'new-name')
+  end
+
+  test 'add_teacher_to_mailjet_course_list is called on section create with matching course' do
+    unit_group = create(:unit_group, name: 'hoai-web-design-pilot-v2')
+
+    MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
+
+    create(:section, teacher: @teacher, course_id: unit_group.id)
+  end
+
+  # suggested_lesson
+
+  test 'suggested_lesson_stale? returns true when suggested_lesson is nil' do
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true when timestamp is missing' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601})
+    refute @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true for a stale timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'compute_suggested_lesson does nothing when section has no students' do
+    unit = create(:script, :in_single_unit_course)
+    section = create(:section, teacher: @teacher, script: unit)
+    section.compute_suggested_lesson
+    assert_nil section.reload.suggested_lesson
+  end
+
+  test 'compute_suggested_lesson suggests first lesson when no students have passed any level' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson suggests next lesson after majority completes one' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson sets completed_unit when all lessons are completed' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    data = section.reload.suggested_lesson
+    assert data['completed_unit']
+    assert_nil data['lesson_id']
+  end
+
+  test 'compute_suggested_lesson writes a timestamp' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert section.reload.suggested_lesson['timestamp'].present?
+  end
+
+  private def build_suggested_lesson_section
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    sl2 = create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    [unit, lesson1, lesson2, sl1, sl2, section, student]
   end
 end

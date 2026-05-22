@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:56:24.000Z",
   "level_num": "custom",
@@ -19,7 +20,8 @@
       "noStroke": null,
       "point": null,
       "shape": null,
-      "regularPolygon": null
+      "regularPolygon": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -71,11 +73,11 @@
     "bubble_choice_description": "Now that you have some new blocks, decide what you'd like to draw with them.",
     "thumbnail_url": "https://images.code.org/3cb9633d3a1ec7c35440ec2a08291014-image-1593529043865.2020-06-30 10_57_17.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:24.798+00:00\",\"changed\":[\"cloned from \\\"CSD U3 parameters shape scene_2024\\\"\"],\"cloned_from\":\"CSD U3 parameters shape scene_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:24.798+00:00\",\"changed\":[\"cloned from \\\"CSD U3 parameters shape scene_2024\\\"\"],\"cloned_from\":\"CSD U3 parameters shape scene_2024\"},{\"changed_at\":\"2026-03-06 15:40:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

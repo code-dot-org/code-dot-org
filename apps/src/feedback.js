@@ -4,18 +4,23 @@
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {
+  blockLimitExceeded,
+  getAllBlocks,
+  getBlockLimit,
+  getBlockFields,
+} from '@cdo/apps/blockly/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
-import {getAllBlocks} from './blockly/utils';
 import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -267,7 +272,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       };
     }
 
-    ReactDOM.render(
+    createReactRoot(
       <ChallengeDialog
         title={
           isPerfect
@@ -284,7 +289,10 @@ FeedbackUtils.prototype.displayFeedback = function (
       >
         {displayShowCode && this.getShowCodeComponent_(options, true)}
       </ChallengeDialog>,
-      container
+      container,
+      {
+        legacyReactDomRender: true,
+      }
     );
     return;
   }
@@ -397,10 +405,6 @@ FeedbackUtils.prototype.displayFeedback = function (
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
-      recordFinishShare(
-        'FINISH_BUTTON_CERTIFICATE',
-        project.getStandaloneApp()
-      );
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
@@ -553,7 +557,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <DialogButtons
       tryAgain={tryAgainText}
       continueText={
@@ -566,7 +570,10 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
       assetUrl={this.studioApp_.assetUrl}
       freePlay={options.freePlay}
     />,
-    buttons
+    buttons,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   return buttons;
@@ -661,7 +668,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         var hasWhenRun = Blockly.mainBlockSpace
           .getTopBlocks()
           .some(function (block) {
-            return block.type === 'when_run' && block.isUserVisible();
+            return (
+              block.type === 'when_run' &&
+              // Ignore blocks on the hidden workspace (unlikely but possible?)
+              block.workspace === Blockly.getMainWorkspace()
+            );
           });
 
         var defaultMessage = hasWhenRun
@@ -692,7 +703,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
+        var limit = getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -929,7 +940,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
       var annotatedShareLink = options.shareLink + '?qr=true';
-      ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
+      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode, {
+        legacyReactDomRender: true,
+      });
 
       if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
@@ -979,11 +992,14 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (downloadReplayVideoContainer) {
     const onDownloadError = () => $('#download-replay-video-error').show();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <DownloadReplayVideoButton onError={onDownloadError} />
       </Provider>,
-      downloadReplayVideoContainer
+      downloadReplayVideoContainer,
+      {
+        legacyReactDomRender: true,
+      }
     );
   }
 
@@ -993,7 +1009,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
+  createReactRoot(this.getShowCodeComponent_(options), showCodeDiv, {
+    legacyReactDomRender: true,
+  });
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1145,7 +1163,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <div>
       <GeneratedCode
         message={generatedCodeProperties.message}
@@ -1153,7 +1171,10 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
       />
       <DialogButtons ok={true} />
     </div>,
-    codeDiv
+    codeDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   var dialog = this.createModalDialog({
@@ -1225,7 +1246,8 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10,
   };
-  var contentDiv = ReactDOM.render(
+  var contentDiv = document.createElement('div');
+  createReactRoot(
     <div>
       {options.headerText && (
         <h5 className="dialog-title">{options.headerText}</h5>
@@ -1240,7 +1262,10 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
         isDangerCancel={!!options.isDangerCancel}
       />
     </div>,
-    document.createElement('div')
+    contentDiv,
+    {
+      legacyReactDomRender: true,
+    }
   );
 
   var dialog = this.createModalDialog({
@@ -1290,7 +1315,9 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  ReactDOM.render(<DialogButtons ok={true} />, buttons);
+  createReactRoot(<DialogButtons ok={true} />, buttons, {
+    legacyReactDomRender: true,
+  });
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
@@ -1314,7 +1341,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
-  var blocks = Blockly.mainBlockSpace.getAllUsedBlocks();
+  var blocks = getAllBlocks();
   return Blockly.findEmptyContainerBlock(blocks);
 };
 
@@ -1338,7 +1365,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
       block.type === emptyBlockInfo.callType &&
       block.getFieldValue('NAME') === emptyBlockInfo.name;
 
-    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+    if (getAllBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     } else {
       return TestResults.ALL_PASS;
@@ -1397,7 +1424,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1415,7 +1442,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
  */
 FeedbackUtils.blockShouldBeCounted_ = function (block) {
   // disabled blocks are not counted
-  if (block.disabled) {
+  if (!block.isEnabled()) {
     return false;
   }
 
@@ -1498,7 +1525,8 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
       for (var testId = 0; testId < block.length; testId++) {
         var test = block[testId].test;
         if (typeof test === 'string') {
-          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
+          code =
+            code || Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedBlock = true;
@@ -1750,8 +1778,8 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
  * Check for '???' instead of a value in block fields.
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
-    return Blockly.cdoUtils.getBlockFields(block).some(function (field) {
+  return getAllBlocks().some(function (block) {
+    return getBlockFields(block).some(function (field) {
       return field.value_ === '???' || field.text_ === '???';
     });
   });
@@ -1763,9 +1791,14 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
  */
 FeedbackUtils.prototype.hasUnusedParam_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
+  return getAllBlocks().some(function (userBlock) {
+    var params =
+      // Only search procedure definitions
+      /^procedures_def/.test(userBlock.type) &&
+      userBlock
+        .getProcedureModel?.()
+        .getParameters()
+        .map(param => param.variable.name);
     return (
       params &&
       params.some(function (paramName) {
@@ -1774,7 +1807,11 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
           return (
             (block.type === 'parameters_get' ||
               block.type === 'variables_get') &&
-            block.getFieldValue('VAR') === paramName
+            block.workspace
+              .getVariableMap()
+              .getAllVariables()
+              // Field values point to variable IDs, not names
+              .find(variable => variable.id === block.getFieldValue('VAR'))
           );
         });
       })
@@ -1786,7 +1823,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
  * Ensure that all procedure calls have each parameter input connected.
  */
 FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
+  return getAllBlocks().some(function (userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
       return false;
@@ -1808,7 +1845,7 @@ FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
 FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
-  Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function (block) {
+  getAllBlocks().forEach(function (block) {
     var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
@@ -1827,9 +1864,12 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function () {
  */
 FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
+  return getAllBlocks().some(function (userBlock) {
     // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
+    if (
+      !/^procedures_def/.test(userBlock.type) ||
+      !userBlock.getProcedureModel?.().getParameters()
+    ) {
       return false;
     }
     return self.hasMatchingDescendant_(userBlock, function (block) {
@@ -1862,7 +1902,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
-  return Blockly.cdoUtils.blockLimitExceeded();
+  return blockLimitExceeded();
 };
 
 /**

@@ -1,0 +1,14 @@
+.anchorNode {
+  width: 100%;
+  height: 100%;
+}
+
+.anchorHandle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

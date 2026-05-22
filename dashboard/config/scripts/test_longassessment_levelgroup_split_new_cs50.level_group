@@ -1,0 +1,19 @@
+name 'Test longassessment levelgroup split new_cs50'
+submittable 'true'
+
+page
+level 'K-1 Happy Maps Multi 1_copy1_cs50'
+level 'Multi Horizontal Scroll Test_copy1_cs50'
+level 'Choose 2 Test_copy1_cs50'
+
+page
+level 'K-1 Plant a Seed Multi 1_cs50'
+level 'K-1 Plant a Seed Multi 2_cs50'
+level 'K-1 Artist 1 Multi 1_cs50'
+level 'ECSPD1 computational thinker_cs50'
+text 'sample external 2_cs50'
+level 'ECSPD your goals_test_cs50'
+
+page
+level 'K-1 Maze Loops Multi 1_cs50'
+level 'K-1 Maze Loops Multi 2_cs50'

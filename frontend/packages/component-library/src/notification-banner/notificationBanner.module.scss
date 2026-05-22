@@ -1,0 +1,179 @@
+/**
+ * NotificationBanner styles
+ * Uses CSS Modules for scoped styling of the composite MUI component.
+ */
+
+// Base banner styles
+.banner {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: none;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &:not(.fullWidth) {
+    width: auto;
+  }
+}
+
+// Style variations: subtle and filled
+.subtle {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.filled {
+  // Border color is set per-variant below
+  border-width: 1px;
+  border-style: solid;
+}
+
+// Variant backgrounds for filled style
+.filled.primary {
+  background-color: var(--background-brand-purple-extra-light);
+  border-color: var(--borders-brand-purple-primary);
+}
+
+.filled.brand {
+  background-color: var(--background-brand-teal-extra-light);
+  border-color: var(--borders-brand-teal-primary);
+}
+
+.filled.info {
+  background-color: var(--background-info-extra-light);
+  border-color: var(--borders-info-primary);
+}
+
+.filled.success {
+  background-color: var(--background-success-extra-light);
+  border-color: var(--borders-success-primary);
+}
+
+.filled.warning {
+  background-color: var(--background-warning-extra-light);
+  border-color: var(--borders-warning-primary);
+}
+
+.filled.error {
+  background-color: var(--background-error-extra-light);
+  border-color: var(--borders-error-primary);
+}
+
+.filled.ai {
+  background-color: var(--background-brand-aqua-extra-light);
+  border-color: var(--borders-brand-aqua-primary);
+}
+
+.filled.gray {
+  background-color: var(--background-neutral-extra-light);
+  border-color: var(--borders-neutral-primary);
+}
+
+// Icon container styles
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  background-color: var(--background-neutral-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i {
+    font-size: 1.375rem;
+  }
+}
+
+// Icon container border and icon colors per variant
+.iconContainer.primary {
+  border-color: var(--borders-brand-purple-primary);
+
+  i {
+    color: var(--text-brand-purple-primary-fixed);
+  }
+}
+
+.iconContainer.brand {
+  border-color: var(--borders-brand-teal-primary);
+
+  i {
+    color: var(--text-brand-teal-primary-fixed);
+  }
+}
+
+.iconContainer.info {
+  border-color: var(--borders-info-primary);
+
+  i {
+    color: var(--text-info-primary-fixed);
+  }
+}
+
+.iconContainer.success {
+  border-color: var(--borders-success-primary);
+
+  i {
+    color: var(--text-success-primary-fixed);
+  }
+}
+
+.iconContainer.warning {
+  border-color: var(--borders-warning-primary);
+
+  i {
+    color: var(--text-warning-primary-fixed);
+  }
+}
+
+.iconContainer.error {
+  border-color: var(--borders-error-primary);
+
+  i {
+    color: var(--text-error-primary-fixed);
+  }
+}
+
+.iconContainer.ai {
+  border-color: var(--borders-brand-aqua-primary);
+
+  i {
+    color: var(--text-brand-aqua-primary-fixed);
+  }
+}
+
+.iconContainer.gray {
+  border-color: var(--borders-neutral-primary);
+
+  i {
+    color: var(--text-neutral-primary);
+  }
+}
+
+// Content area styles
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+// Title styles
+.title {
+  font-weight: 600;
+}
+
+// Actions container styles
+.actions {
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+// Close button styles
+.closeButton {
+  flex-shrink: 0;
+}

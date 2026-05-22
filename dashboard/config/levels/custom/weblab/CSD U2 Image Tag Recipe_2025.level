@@ -28,7 +28,8 @@
     "display_name": "Challenge: Make a Recipe",
     "bubble_choice_description": "Create a recipe for your favorite food.",
     "thumbnail_url": "https://images.code.org/097a8d80fafddafa327bb5bc45ab3ca5-image-1564771882198.JPG",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

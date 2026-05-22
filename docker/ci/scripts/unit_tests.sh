@@ -5,15 +5,15 @@
 # you can use docker-compose to run locally using
 # `docker/unit-tests-compose.yml`. See instructions in that file.
 
-source docker/ci/scripts/prepare_ci_tests.sh
+source docker/ci/scripts/prepare_ci_env.sh
 
-# The install step is currently needed for unit (but not ui) because the database needed
-# by ui tests is prepopulated by the cache-staging-build step.
-# TODO: remove this line once cache-staging-build prepopulates dashboard unit test databases.
-source docker/ci/scripts/install_ci_tests.sh
+bundle exec rake install
 
-source docker/ci/scripts/build_ci_tests.sh
-
-
+# Run lint only in unit pipeline. Run before rake build in order to ensure
+# that we give a clear error message for any zeitwerk issues that would block
+# application load.
+bundle exec rake lint:zeitwerk
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
-bundle exec rake ci:run_tests
+
+bundle exec rake build
+bundle exec rake ci:run_unit_tests

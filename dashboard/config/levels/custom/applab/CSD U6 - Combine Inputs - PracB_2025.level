@@ -107,6 +107,7 @@
     "starter_assets": {
       "Anonymous-Sleeping-bear-under-the-stars.png": "58fce7bb-3cf9-423f-8366-fa763cbfb44e.png"
     },
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

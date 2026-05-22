@@ -139,6 +139,9 @@
     "display_name": "AI Foundations",
     "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
   },
+  "artificial-intelligence-foundations-semester2": {
+    "display_name": "AIF Semester 2 2025 Pilot"
+  },
   "artificial-intelligence-foundations-v2": {
     "display_name": "artificial-intelligence-foundations-v2"
   },
@@ -1140,6 +1143,9 @@
     "display_name": "Foundations of AI Programming",
     "description": "Build your Python programming skills while exploring how ethics, inclusivity, and human-centered design shape real-world computing and career pathways."
   },
+  "foundations-of-ai-programming-tutor-pilot": {
+    "display_name": "foundations-of-ai-programming-tutor-pilot"
+  },
   "foundations-of-cs-beta": {
     "display_name": "Foundations of Computer Science (Beta)",
     "description": "Foundations of Computer Science is a comprehensive course aimed to align with CSTA and state standards and to fulfill graduation requirements. The beta version of this one-semester curriculum integrates key aspects of AP CSP and CSD."
@@ -1290,6 +1296,12 @@
   },
   "hoai-dance-pilot4": {
     "display_name": "hoai-dance-pilot4"
+  },
+  "hoai-pilot-6": {
+    "display_name": "hoai-pilot-6"
+  },
+  "hoai-pilot-7": {
+    "display_name": "hoai-pilot-7"
   },
   "hoai2025-dev": {
     "display_name": "hoai2025-dev"
@@ -1466,6 +1478,13 @@
   "minecraft": {
     "display_name": "Minecraft Designer",
     "description": "YOU make the rules in this activity, where you can learn basic computer science skills to create your own Minecraft game to share with others! "
+  },
+  "mix-move-ai": {
+    "display_name": "Mix & Move with AI",
+    "description": "Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat."
+  },
+  "mix-move-ai-educators": {
+    "display_name": "mix-move-ai-educators"
   },
   "ml-playground": {
     "display_name": "ml-playground"
@@ -1951,6 +1970,9 @@
   "teaching-ai-foundations": {
     "display_name": "Teaching AI Foundations",
     "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI."
+  },
+  "teaching-ai-foundations-semester2": {
+    "display_name": "[PILOT] Teaching AI Foundations Semester 2"
   },
   "teaching-ai-powered-theats-and-defenses": {
     "display_name": "Teaching AI-Powered Threats and Defenses [PL Pilot]"

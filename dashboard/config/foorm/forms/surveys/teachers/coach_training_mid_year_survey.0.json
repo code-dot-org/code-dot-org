@@ -1,0 +1,233 @@
+{
+  "title": "Code.org Coach Training: Mid-Year Check-in Survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Code.org Professional Learning for Coaches</h1><h2><strong>Thank you for being part of the Code.org Coach Network pilot!</h2><p><h3>Mid-Year Check-in Survey</strong></h3>\n\n<p>This short survey will help us understand how we can better support Code.org Coaches and strengthen the Coach Network moving forward.</p>\n<p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Post-Workshop Survey</h2>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "number_teachers_supported",
+          "title": "Approximately how many individual teachers have you supported through coaching activities this school year?",
+          "description": "Please count teachers you have directly supported through workshops, PLCs, 1:1 coaching, modeling, or other CS or AI-related implementation support.",
+          "choices": [
+            {
+              "value": "none",
+              "text": "0 - None"
+            },
+            {
+              "value": "1_5",
+              "text": "1 - 5"
+            },
+            {
+              "value": "6_20",
+              "text": "6 - 20"
+            },
+            {
+              "value": "21_50",
+              "text": "21 - 50"
+            },
+            {
+              "value": "51_100",
+              "text": "51 - 100"
+            },
+            {
+              "value": "100plus",
+              "text": "100+"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "coaching_support_methods",
+          "visibleIf": "{number_teachers_supported} <> 'none'",
+          "title": "How have you provided coaching support?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "pl_workshops",
+              "text": "Large-group professional development sessions or workshops"
+            },
+            {
+              "value": "individual_conversations",
+              "text": "1:1 coaching conversations"
+            },
+            {
+              "value": "plcs",
+              "text": "Professional Learning Communities (PLCs)"
+            },
+            {
+              "value": "classroom_modeling_coteaching",
+              "text": "Classroom modeling and/or co-teaching"
+            },
+            {
+              "value": "informal_jit_support",
+              "text": " Informal “just-in-time” support (e.g., quick check-ins, planning support)"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "content_areas",
+          "visibleIf": "{number_teachers_supported} <> 'none'",
+          "title": "What content areas or initiatives have your coaching sessions focused on?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "cdo_k5",
+              "text": "K–5 Code.org courses (e.g., Computer Science Fundamentals, Computer Science Connections)"
+            },
+            {
+              "value": "cdo_6_8",
+              "text": "6–8 Code.org courses (e.g., Computer Science Discoveries)"
+            },
+            {
+              "value": "hoc",
+              "text": "Hour of Code / Hour of AI"
+            },
+            {
+              "value": "ai_for_teachers",
+              "text": "AI for Teachers"
+            },
+            {
+              "value": "intro_cs_new_teachers",
+              "text": "Introductory computer science concepts for teachers new to CS"
+            },
+            {
+              "value": "implementation_planning",
+              "text": "Supporting implementation planning (e.g., scheduling, materials, pacing)"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "supports",
+          "title": "What has been most helpful to enable your coaching work so far?",
+          "description": "(Select up to three)",
+          "choices": [
+            {
+              "value": "district_admin_support",
+              "text": "Strong district-level administrator support"
+            },
+            {
+              "value": "school_admin_support",
+              "text": "Strong school-level administrator support"
+            },
+            {
+              "value": "teacher_interest",
+              "text": "Teacher enthusiasm and buy-in"
+            },
+            {
+              "value": "district_initiative_cs_ai",
+              "text": "A district-wide computer science and/or AI initiative"
+            },
+            {
+              "value": "state_mandate_cs_ai",
+              "text": "A state-wide computer science and/or AI mandate"
+            },
+            {
+              "value": "dedicated_pd_time",
+              "text": "Dedicated time for coaching or professional development"
+            }
+          ],
+          "hasOther": true,
+          "maxSelectedChoices": 3
+        },
+        {
+          "type": "checkbox",
+          "name": "barriers",
+          "title": "What have been the biggest obstacles to implementing a Coach Program in your district/region?",
+          "description": "(Select up to three)",
+          "choices": [
+            {
+              "value": "district_admin_support_limited",
+              "text": "Lack of district-level administrator support or buy-in"
+            },
+            {
+              "value": "school_admin_support_limited",
+              "text": "Lack of school-level administrator support or buy-in"
+            },
+            {
+              "value": "teacher_interest_limited",
+              "text": "Lack of teacher buy-in or confidence"
+            },
+            {
+              "value": "competing_initiatives",
+              "text": "Competing district initiatives or priorities"
+            },
+            {
+              "value": "limited_resources",
+              "text": "Limited funding or resources"
+            }
+          ],
+          "hasOther": true,
+          "maxSelectedChoices": 3
+        },
+        {
+          "type": "comment",
+          "name": "additional_support",
+          "title": "What additional support would help you most in the second half of the year?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback",
+          "title": "Is there anything else you’d like to share about your experience as a Code.org Coach so far?",
+          "description": "You might consider sharing a short success story or a challenge you are navigating"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_to_quote",
+          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give the workshop organizer my permission."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up discussion to provide direct feedback about your experience as a Code.org coach so far?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "email_focus_group",
+          "visibleIf": "{participate_focus_group}='yes'",
+          "title": "Great! Please share an email address where we may contact you."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for education.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

@@ -95,13 +95,20 @@ module Cdo
       # @yieldreturn [Float] number of seconds to wait for before executing the task.
       #   Passed as a block instead of an argument for thread-safety.
       def reschedule
-        synchronize do
-          delay = yield
-          if compare_and_set_state(:pending, :fulfilled, :rejected, :unscheduled)
-            event.reset
-            ns_schedule(delay)
-          else
-            super(delay)
+        # Lock TimerSet.synchronize before ScheduledTask.synchronize to avoid deadlock
+        # this makes it match the order that TimerSet#process_tasks background thread uses
+        # the locks so there's no risk of lock inversion.
+        #
+        # See: https://github.com/ruby-concurrency/concurrent-ruby/issues/1099
+        Concurrent.global_timer_set.send(:synchronize) do
+          synchronize do
+            delay = yield
+            if compare_and_set_state(:pending, :fulfilled, :rejected, :unscheduled)
+              event.reset
+              ns_schedule(delay)
+            else
+              super(delay)
+            end
           end
         end
       end

@@ -1,0 +1,10 @@
+name 'iterating-with-ai-lesson3-level1-test-2025'
+display_name 'Debugging a While Loop Flowchart'
+description 'Choose one of the flowcharts below. Identify and fix the buggy while loop.'
+
+sublevels
+level 'iterating-with-ai-lesson3-level1a-test-2025'
+level 'iterating-with-ai-lesson3-level1b-test-2025'
+level 'iterating-with-ai-lesson3-level1c-test-2025'
+
+uses_lab2

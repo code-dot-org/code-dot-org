@@ -64,6 +64,7 @@
     "mini_rubric": "false",
     "show_type_hints": "false",
     "long_instructions": "This version of the Internet Simulator looks a little different than the previous one. See if you can figure out the changes!\r\n\r\nYour challenge is to make arrangements to hang out after school with three different classmates, but without talking! Your only communication can be through the Internet Simulator. You may only meet with one student during each time slot.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

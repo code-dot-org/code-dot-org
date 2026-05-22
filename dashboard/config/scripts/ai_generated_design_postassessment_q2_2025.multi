@@ -7,7 +7,7 @@ right 'Use HTML to add headings and structure, and CSS to style and separate con
 wrong 'Use HTML to fill the page with images instead of text.'
 wrong 'Use CSS to make all the text the same size and color.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 1, 6

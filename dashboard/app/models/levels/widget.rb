@@ -58,40 +58,27 @@ class Widget < Level
     return app_options
   end
 
-  # Determines the location of the widget template.
-  #
-  # This will negotiate templates even if the href does not explicitly specify
-  # them. For instance, an href of 'pixelation.html' will use
-  # 'pixelation.html.haml' if it exists.
-  #
-  # Otherwise, it will return the href intact. If this is an HTML file, it would
-  # then have to be rendered inline.
-  def template
-    # Determine the template from the level and try to find it within the views
-    # path for the application.
-    href = properties['href']
-    path = Rails.root.join('app', 'views', 'levels', File.basename(href))
-
-    # Ensure we are looking for a 'haml' template, if it isn't already one.
-    if File.extname(path)[1..] == "html"
-      path = "#{path}.haml"
-    end
-
-    # Add an underscore, as it is expecting.
-    path = File.join(File.dirname(path), "_" + File.basename(path))
-
-    # If it exists, then the haml file should be preferred, so return it without
-    # the underscore.
-    if File.exist?(path)
-      return "levels/" + File.basename(path)[1..]
-    end
-
-    # Otherwise, we assume the widget exists within the public path.
-    Rails.root.join('public', href).to_s
+  # Identify the ActionView template associated with this level type. Currently
+  # only Pixelation levels have such a template; all others will have to fall
+  # back to `inline_template`.
+  def partial_template
+    File.join('levels', game.app)
   end
 
-  # Determines the type of template being rendered for this widget.
-  def template_type
-    File.extname(template)[1..].to_sym
+  # Identify the static HTML/HAML file associated with this level. Note that
+  # despite us in theory allowing each individual level to specify a custom
+  # href, in practice each model assigns a static value in a
+  # `before_validation` block based on the specific type of level.
+  #
+  # TODO: update this logic so that all levels of a given type work the same,
+  # rather than supporting per-level customization. Or just update all level
+  # types to use `partial_template` instead, at which point we can remove both
+  # this method and the `href` property.
+  def inline_template
+    File.read(Rails.root.join('public', properties['href']))
+  end
+
+  def inline_template_type
+    File.extname(properties['href'])[1..].to_sym
   end
 end

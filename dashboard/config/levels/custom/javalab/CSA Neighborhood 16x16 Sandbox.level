@@ -1328,7 +1328,7 @@
     "submittable": "false",
     "display_name": "16x16 Neighborhood",
     "thumbnail_url": "https://images.code.org/54aded237e95e65fb38f098c75321d6f-image-1628005050635.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-23T17:45:59.517+00:00\",\"changed\":[\"cloned from \\\"Neighborhood 16x16 Practice Level\\\"\"],\"cloned_from\":\"Neighborhood 16x16 Practice Level\"},{\"changed_at\":\"2021-09-23 17:46:53 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-23 17:50:29 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

@@ -72,6 +72,7 @@
     "thumbnail_url": "https://images.code.org/b1e2547f7633d983ad4e405990f5665f-image-1645805592400.png",
     "start_blocks": "//Create a rainbow using the labels on the app screen\r\n",
     "encrypted_examples": "p7IcZ7MaP/nDxr8X9XCQWebNEGOStavdG1DGXkjZ68jNQ2vLKhrWdtZM2AvL\nUxjYbc7Hfts0BYCZF5F+QKrEAg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

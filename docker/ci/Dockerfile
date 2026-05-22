@@ -1,5 +1,4 @@
-# Pushed to Docker Hub at codedotorg/code-dot-org:<version>
-# TODO: Switch to pushing this to codedotorg/cdo-ci:<version> and update .drone.yml
+# Pushed to Docker Hub at codedotorg/cdo-ci:<version>
 #
 # This Dockerfile builds the image used on DroneCI
 # and is referenced by version in .drone.yml
@@ -59,9 +58,9 @@ USER ${USER}
 
 RUN mkdir -p "$(rbenv root)"/plugins && \
     git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-    rbenv install 3.1.0 && \
+    rbenv install 3.2.11 && \
     eval "$(rbenv init -)" && \
-    rbenv shell 3.1.0 && \
+    rbenv shell 3.2.11 && \
     rbenv rehash && \
     gem install bundler -v 2.5.17
 
@@ -73,7 +72,8 @@ FROM base AS primary-layer
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     enscript \
@@ -81,6 +81,7 @@ RUN apt-get install -y --no-install-recommends \
     gnupg \
     gzip \
     imagemagick \
+    libjemalloc2 \
     jq \
     libicu-dev \
     libmagickwand-dev \
@@ -91,7 +92,6 @@ RUN apt-get install -y --no-install-recommends \
     python \
     python-dev \
     python3-pip \
-    software-properties-common \
     sudo \
     tar \
     tzdata \
@@ -136,11 +136,6 @@ RUN usermod -d /var/lib/mysql/ mysql
 #  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
 RUN sudo chmod -R 755 /run/mysqld
 
-# we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
-RUN add-apt-repository ppa:git-core/ppa && \
-    apt-get update && \
-    apt-get install -y git>=2.15
-
 # we need git-lfs >= 3.0 to use SSH authentication with git-lfs
 RUN curl -sS https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
     apt-get install -y git-lfs
@@ -166,8 +161,8 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
         "/opt/google/chrome/google-chrome"
 
 # install chromedriver
-RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
-    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chromedriver-linux64.zip" && \
+RUN export INSTALLED_CHROME_VERSION=$(google-chrome --version | awk '{print $NF}') && \
+    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$INSTALLED_CHROME_VERSION/linux64/chromedriver-linux64.zip" && \
     unzip chromedriver-linux64.zip && \
     mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
     chmod +x /usr/local/bin/chromedriver && \

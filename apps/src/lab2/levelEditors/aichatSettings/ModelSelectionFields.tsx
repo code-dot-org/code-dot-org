@@ -1,10 +1,10 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import {Visibility} from '@cdo/apps/aichat/types';
+import {Visibility} from '@cdo/apps/aichatLab/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
@@ -58,7 +58,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
   );
 
-  const multimodalIncluded = useMemo(() => {
+  const supportsMultimodalInput = useMemo(() => {
     return aichatSettings.availableModelIds.some(
       id => modelDescriptions.find(model => model.id === id)?.multimodal
     );
@@ -81,14 +81,14 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             size="s"
           />
           <br />
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             <i>
               Models available to the student to select from and compare to each
               other. If making this setting editable, it's best practice to
               select at least 2 models so students have something to compare -
               otherwise, consider making this read only or hidden.
             </i>
-          </BodyFourText>
+          </Typography>
           {modelDescriptions.map(model => {
             return (
               <div key={model.id} className={moduleStyles.fieldRow}>
@@ -110,21 +110,21 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             );
           })}
           <br />
-          {multimodalIncluded && (
+          {supportsMultimodalInput && (
             <>
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <i>
-                  Enables multimodal chat. Note that the list of models must
-                  include a multimodal model for this feature to be available to
-                  students (currently only GPT 4o-mini).
+                  Enables multimodal inputs (images and file uploads). Only
+                  available if the list of models includes a model that supports
+                  multimodal inputs.
                 </i>
-              </BodyFourText>
+              </Typography>
               <div className={moduleStyles.fieldRow}>
                 <label
                   htmlFor="multimodalEnabled"
                   className={moduleStyles.inlineLabel}
                 >
-                  Enable Multimodal Chat
+                  Enable Multimodal Inputs (File Uploads)
                 </label>
                 <Checkbox
                   name="multimodalEnabled"

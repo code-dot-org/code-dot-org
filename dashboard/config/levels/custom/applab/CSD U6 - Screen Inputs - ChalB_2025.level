@@ -90,6 +90,7 @@
     "start_blocks": "var redValue = 255;\r\nvar greenValue = 255;\r\nvar blueValue = 255;\r\n\r\n// Create an onEvent block for the redSlider\r\n// Update the redValue variable to the slider's value\r\n// Use setProperty and the rgb() block to update the background color of the screen\r\n\r\n// Create an onEvent block for the greenSlider\r\n// Update the greenValue variable to the slider's value\r\n// Use setProperty and the rgb() block to update the background color of the screen\r\n\r\n// Create an onEvent block for the blueSlider\r\n// Update the blueValue variable to the slider's value\r\n// Use setProperty and the rgb() block to update the background color of the screen",
     "bubble_choice_description": "Create an app that lets you adjust the background color of an app using 3 sliders for red, green, and blue color values",
     "encrypted_examples": "RYGBVpuiAyF6UpGq54V7g21fmn/nc7iYSIpCcEn4D91uDFGZUkdDU//p8a3E\nHFaKr4tdMdcbhFcmLFnXcC2x/Q==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

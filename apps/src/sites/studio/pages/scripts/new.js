@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import NewUnitForm from '@cdo/apps/levelbuilder/unit-editor/NewUnitForm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  ReactDOM.render(<NewUnitForm />, document.getElementById('form'));
+  createReactRoot(<NewUnitForm />, document.getElementById('form'), {
+    legacyReactDomRender: true,
+  });
 });

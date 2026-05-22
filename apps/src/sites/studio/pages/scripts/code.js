@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
   prepareBlocklyForEmbeddingAllEnvironments();
@@ -19,10 +19,13 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <UnitRollup objectToRollUp={'Code'} unit={unitSummary} />
     </Provider>,
-    document.getElementById('roll_up')
+    document.getElementById('roll_up'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }

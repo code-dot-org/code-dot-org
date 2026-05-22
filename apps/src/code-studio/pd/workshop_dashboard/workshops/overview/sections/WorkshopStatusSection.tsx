@@ -1,11 +1,18 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {Card, CardContent, CardHeader, Box, Typography} from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Box,
+  Typography,
+  Button as MuiButton,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -32,7 +39,7 @@ const dialogs = [
     description:
       'Ending this workshop will close the attendance. Are you sure you want to end this workshop now?',
     primaryButtonProps: {
-      color: buttonColors.destructive,
+      color: 'error' as const,
     },
   },
   {
@@ -68,6 +75,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const inProgress = workshop.state === 'In Progress';
   const ended = workshop.state === 'Ended';
   const cannotEndWorkshop = !workshop.readyToClose;
+  const navigate = useNavigate();
 
   const handleClick = (stateKey: WorkshopActions) => {
     setError(null);
@@ -148,22 +156,26 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                 />
               </Box>
               {isWorkshopAdmin && inProgress && (
-                <Button
-                  text="Unstart (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('unstart')}
-                />
+                  type="button"
+                >
+                  Unstart (admin)
+                </MuiButton>
               )}
               {isWorkshopAdmin && ended && (
-                <Button
-                  text="Reopen (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('reopen')}
-                />
+                  type="button"
+                >
+                  Reopen (admin)
+                </MuiButton>
               )}
             </Box>
           }
@@ -210,19 +222,23 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                   </Typography>
                   <Typography variant="body4">
                     After workshop attendees have signed into their Code Studio
-                    accounts, use the attendance links below to take attendance.
-                    Note: Workshop attendees need to have enrolled in the
-                    workshop in order to take attendance. They can enroll in the
-                    workshop using{' '}
+                    accounts, share the attendance link(s) from the{' '}
                     <Link
                       className={styles.workshopLink}
                       size="xs"
-                      openInNewTab
-                      aria-label="Open enrollment page in new tab"
-                      href={`/professional-learning/workshops/${workshop.id}`}
+                      aria-label="Open attendance link"
+                      href={`/pd/workshop_dashboard/workshops/${workshop.id}/attendance`}
+                      onClick={e => {
+                        // preventing native link behavior to navigate client side using react-router
+                        e.preventDefault();
+                        navigate(`/workshops/${workshop.id}/attendance`);
+                      }}
                     >
-                      {`${window.origin}/professional-learning/workshops/${workshop.id}`}
+                      attendance tab
                     </Link>
+                    . Note: if a teacher has not already enrolled in the
+                    workshop, they will be prompted to do so before completing
+                    attendance.
                   </Typography>
                 </>
               )}
@@ -298,23 +314,29 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
 
               <Box>
                 {notStarted && (
-                  <Button
-                    size="s"
-                    text="Start Workshop"
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="small"
                     onClick={() => handleClick('start')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    Start Workshop
+                  </MuiButton>
                 )}
 
                 {inProgress && (
-                  <Button
-                    size="s"
-                    text="End workshop"
-                    type="secondary"
-                    color={buttonColors.destructive}
+                  <MuiButton
+                    variant="outlined"
+                    color="error"
+                    size="small"
                     onClick={() => handleClick('end')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    End workshop
+                  </MuiButton>
                 )}
               </Box>
             </Box>
@@ -329,17 +351,17 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
             title={`${label} Workshop?`}
             description={description}
             primaryButtonProps={{
-              text: `${label} Workshop`,
-              size: 's',
+              children: `${label} Workshop`,
+              size: 'small',
               disabled: isUpdating,
               onClick: generateHandler(stateKey),
               ...primaryButtonProps,
             }}
             secondaryButtonProps={{
-              size: 's',
-              text: 'Cancel',
-              type: 'secondary',
-              color: buttonColors.gray,
+              size: 'small',
+              children: 'Cancel',
+              color: 'tertiary',
+              variant: 'outlined',
               onClick: () => setActiveDialog(null),
               disabled: isUpdating,
             }}

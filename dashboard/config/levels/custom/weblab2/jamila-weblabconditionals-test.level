@@ -1,0 +1,87 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-13T19:23:24.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>CineStream | Logic Lab Edition</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <nav class=\"navbar\">\n        <div class=\"logo\">CINE<span>STREAM</span></div>\n        <div class=\"nav-links\">\n            <span id=\"userBadge\" class=\"badge\">Guest Mode</span>\n        </div>\n    </nav>\n\n    <header class=\"hero\">\n        <div class=\"hero-overlay\"></div>\n        <div class=\"hero-content\">\n            <span class=\"trending-tag\">#1 Trending</span>\n            <h1>The Midnight Sky</h1>\n            <p class=\"metadata\">2024 • Sci-Fi • 2h 12m</p>\n            <p class=\"description\">A lonely scientist in the Arctic races to stop a group of astronauts from returning home to a mysterious global catastrophe.</p>\n            <div class=\"hero-buttons\">\n                <button class=\"btn-main\" onclick=\"handleWatchNow()\">▶ Watch Now</button>\n            </div>\n        </div>\n    </header>\n\n    <main class=\"container\">\n        <h2 class=\"section-title\">Continue Watching</h2>\n        <div class=\"movie-grid\">\n            <div class=\"movie-card\"><img src=\"https://picsum.photos/seed/movie1/200/300\" alt=\"Movie\"></div>\n            <div class=\"movie-card\"><img src=\"https://picsum.photos/seed/movie2/200/300\" alt=\"Movie\"></div>\n            <div class=\"movie-card\"><img src=\"https://picsum.photos/seed/movie3/200/300\" alt=\"Movie\"></div>\n            <div class=\"movie-card\"><img src=\"https://picsum.photos/seed/movie4/200/300\" alt=\"Movie\"></div>\n        </div>\n    </main>\n\n    <div class=\"logic-lab\">\n        <h3>🛠 Logic Lab</h3>\n        <p>Toggle these to change the <code>if/else</code> outcome:</p>\n        \n        <div class=\"control-row\">\n            <label>isLoggedIn</label>\n            <button id=\"toggleLogin\" class=\"lab-btn\">FALSE</button>\n        </div>\n\n        <div class=\"control-row\">\n            <label>isPremium</label>\n            <button id=\"togglePremium\" class=\"lab-btn\">FALSE</button>\n        </div>\n\n        <div class=\"outcome-box\">\n            <strong>Current State:</strong>\n            <div id=\"logicStatus\">User is logged out.</div>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n  <script src=\"app.js\"></script> <script src=\"lab-overlay.js\"></script> \n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": ":root {\n    --primary: #e50914;\n    --dark-bg: #0f0f0f;\n    --card-bg: #1a1a1a;\n    --text: #ffffff;\n}\n\n* { box-sizing: border-box; margin: 0; padding: 0; }\n\nbody {\n    background-color: var(--dark-bg);\n    color: var(--text);\n    font-family: 'Helvetica Neue', Arial, sans-serif;\n}\n\n/* Navbar */\n.navbar {\n    padding: 20px 5%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);\n    position: fixed;\n    width: 100%;\n    z-index: 100;\n}\n\n.logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }\n.logo span { color: var(--primary); }\n\n.badge {\n    background: #444;\n    padding: 5px 12px;\n    border-radius: 20px;\n    font-size: 0.8rem;\n}\n\n/* Hero */\n.hero {\n    height: 75vh;\n    display: flex;\n    align-items: center;\n    padding: 0 5%;\n    background: url('https://picsum.photos/seed/hero/1200/800') center/cover;\n    position: relative;\n}\n\n.hero-overlay {\n    position: absolute;\n    top: 0; left: 0; width: 100%; height: 100%;\n    background: linear-gradient(to right, var(--dark-bg) 20%, transparent);\n}\n\n.hero-content { position: relative; z-index: 2; max-width: 600px; }\n\n.trending-tag { color: var(--primary); font-weight: bold; font-size: 0.9rem; }\n\nh1 { font-size: 3.5rem; margin: 10px 0; }\n\n.description { margin: 20px 0; color: #ccc; line-height: 1.5; }\n\n.btn-main {\n    background: var(--primary);\n    color: white;\n    border: none;\n    padding: 12px 30px;\n    font-size: 1rem;\n    font-weight: bold;\n    cursor: pointer;\n    border-radius: 4px;\n}\n\n/* Movie Grid */\n.container { padding: 40px 5%; }\n\n.movie-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n    gap: 20px;\n}\n\n.movie-card img {\n    width: 100%;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n    cursor: pointer;\n}\n\n.movie-card:hover img { transform: scale(1.05); }\n\n/* Logic Lab Styles */\n.logic-lab {\n    position: fixed;\n    bottom: 25px;\n    right: 25px;\n    background: white;\n    color: #222;\n    padding: 20px;\n    border-radius: 12px;\n    width: 280px;\n    box-shadow: 0 10px 40px rgba(0,0,0,0.5);\n    z-index: 1000;\n    border: 3px solid var(--primary);\n}\n\n.logic-lab h3 { margin-bottom: 15px; font-size: 1.1rem; }\n\n.control-row {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 12px;\n}\n\n.lab-btn {\n    padding: 6px 12px;\n    cursor: pointer;\n    background: #eee;\n    border: 1px solid #ccc;\n    font-weight: bold;\n    width: 90px;\n}\n\n.lab-btn.active { background: #2ecc71; color: white; border-color: #27ae60; }\n\n.outcome-box {\n    margin-top: 15px;\n    padding-top: 10px;\n    border-top: 1px solid #ddd;\n    font-size: 0.9rem;\n}\n\n#logicStatus { margin-top: 5px; font-weight: bold; color: var(--primary); }",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "// Central state shared across the app\nlet isLoggedIn = false;\nlet isPremium = false;\n\n// The core function that students are testing\nfunction handleWatchNow() {\n    if (!isLoggedIn) {\n        alert(\"Action Blocked! Reason: isLoggedIn is FALSE.\");\n    } else if (isLoggedIn && !isPremium) {\n        alert(\"Playing in SD. Note: Upgrade to Premium for 4K!\");\n    } else {\n        alert(\"Success! Playing in Ultra HD.\");\n    }\n}\n\n// Function to update UI elements in the main app\nfunction updateAppUI() {\n    const userBadge = document.getElementById('userBadge');\n    \n    if (isLoggedIn) {\n        userBadge.innerText = isPremium ? \"Premium Member\" : \"Standard Member\";\n        userBadge.style.background = isPremium ? \"gold\" : \"#444\";\n        userBadge.style.color = isPremium ? \"black\" : \"white\";\n    } else {\n        userBadge.innerText = \"Guest Mode\";\n        userBadge.style.background = \"#444\";\n        userBadge.style.color = \"white\";\n    }\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "lab-overlay.js",
+          "contents": "// Select Lab Elements\nconst loginLabBtn = document.getElementById('toggleLogin');\nconst premiumLabBtn = document.getElementById('togglePremium');\nconst statusDisplay = document.getElementById('logicStatus');\n\n// 1. Logic for Login Toggle\nloginLabBtn.addEventListener('click', () => {\n    // Modify the variable in app.js\n    isLoggedIn = !isLoggedIn; \n    \n    // Update Lab Button UI\n    loginLabBtn.innerText = isLoggedIn ? \"TRUE\" : \"FALSE\";\n    loginLabBtn.classList.toggle('active');\n    \n    // Sync with the rest of the app\n    updateAppUI();\n    updateLabStatus();\n});\n\n// 2. Logic for Premium Toggle\npremiumLabBtn.addEventListener('click', () => {\n    isPremium = !isPremium;\n    \n    premiumLabBtn.innerText = isPremium ? \"TRUE\" : \"FALSE\";\n    premiumLabBtn.classList.toggle('active');\n    \n    updateAppUI();\n    updateLabStatus();\n});\n\n// 3. Update the Lab's internal status message\nfunction updateLabStatus() {\n    if (isLoggedIn) {\n        statusDisplay.innerText = isPremium \n            ? \"Condition: Both True (Premium Access)\" \n            : \"Condition: Logged In (Standard Access)\";\n    } else {\n        statusDisplay.innerText = \"Condition: Logged Out (Access Denied)\";\n    }\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-13 19:23:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-13 19:28:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

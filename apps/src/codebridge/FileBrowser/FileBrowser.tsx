@@ -6,39 +6,37 @@ import {
   dragAndDropKeyboardCodes,
   fileBrowserCollisionDetector,
   fileBrowserKeyboardCoordinateGetter,
+  getFileNameById,
 } from '@codebridge/utils/dragAndDropUtils';
 import {
   DndContext,
   DragStartEvent,
   DragOverEvent,
   DragEndEvent,
+  DragCancelEvent,
+  KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
-  KeyboardSensor,
 } from '@dnd-kit/core';
 import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
 import {Droppable} from './Droppable';
-import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {useHandleDragEnd} from './hooks';
 import InnerFileBrowser from './InnerFileBrowser';
-import {DragDataType, DropDataType} from './types';
+import {DragDataType, DragType, DropDataType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 
 export const FileBrowser = React.memo(() => {
   const {levelProperties} = useCodebridgeContext();
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const appName = levelProperties.appName;
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -91,14 +89,99 @@ export const FileBrowser = React.memo(() => {
     [projectFolders]
   );
 
+  const announcements = useMemo(() => {
+    const getItemName = (itemId: string, itemType: DragType) =>
+      itemType === DragType.FILE
+        ? getFileNameById(itemId, source.files)
+        : source.folders[itemId]?.name || itemId;
+
+    const getItemPosition = (itemId: string, parentId: string) => {
+      const foldersInParent = Object.values(source.folders)
+        .filter(f => f.parentId === parentId)
+        .sort((a, b) => a.name.localeCompare(b.name));
+      const filesInParent = Object.values(source.files)
+        .filter(f => f.folderId === parentId)
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      const folderIndex = foldersInParent.findIndex(f => f.id === itemId);
+      if (folderIndex !== -1)
+        return {
+          position: folderIndex + 1,
+          total: foldersInParent.length + filesInParent.length,
+        };
+
+      const fileIndex = filesInParent.findIndex(f => f.id === itemId);
+      if (fileIndex !== -1)
+        return {
+          position: foldersInParent.length + fileIndex + 1,
+          total: foldersInParent.length + filesInParent.length,
+        };
+
+      return {position: 0, total: 0};
+    };
+
+    const getFolderName = (folderId: string) =>
+      folderId === DEFAULT_FOLDER_ID
+        ? 'root folder'
+        : projectFolders[folderId]?.name || 'folder';
+
+    const getTypeLabel = (type: DragType) =>
+      type === DragType.FILE ? 'file' : 'folder';
+
+    return {
+      onDragStart({active}: DragStartEvent) {
+        const data = active.data.current as DragDataType;
+        const {position, total} = getItemPosition(data.id, data.parentId);
+        return `Picked up ${getTypeLabel(data.type)} ${getItemName(
+          data.id,
+          data.type
+        )}. Item is in position ${position} of ${total}`;
+      },
+      onDragOver({active, over}: DragOverEvent) {
+        const data = active.data.current as DragDataType;
+        const itemName = getItemName(data.id, data.type);
+        const typeLabel = getTypeLabel(data.type);
+        return over
+          ? `${
+              typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1)
+            } ${itemName} is over ${getFolderName(
+              (over.data.current as DropDataType).id
+            )}`
+          : `${
+              typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1)
+            } ${itemName} is not over a drop zone`;
+      },
+      onDragEnd({active, over}: DragEndEvent) {
+        const data = active.data.current as DragDataType;
+        const itemName = getItemName(data.id, data.type);
+        const typeLabel = getTypeLabel(data.type);
+        if (over) {
+          const {position, total} = getItemPosition(
+            data.id,
+            (over.data.current as DropDataType).id
+          );
+          return `${
+            typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1)
+          } ${itemName} was moved to ${getFolderName(
+            (over.data.current as DropDataType).id
+          )}. New position is ${position} of ${total}`;
+        }
+        return `${
+          typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1)
+        } ${itemName} was dropped`;
+      },
+      onDragCancel({active}: DragCancelEvent) {
+        const data = active.data.current as DragDataType;
+        return `Dragging was cancelled. ${getItemName(
+          data.id,
+          data.type
+        )} was dropped`;
+      },
+    };
+  }, [source.folders, source.files, projectFolders]);
+
   return (
-    <PanelContainer
-      id="file-browser"
-      headerContent={codebridgeI18n.filesHeader()}
-      headerClassName={moduleStyles.fileBrowserHeader}
-      className={moduleStyles['file-browser']}
-      rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
-    >
+    <div id="file-browser" className={moduleStyles.fileBrowser}>
       <div className={moduleStyles.fileBrowserContents}>
         {isEmpty ? (
           <CodebridgeEmptyState
@@ -112,8 +195,10 @@ export const FileBrowser = React.memo(() => {
             modifiers={[restrictToVerticalAxis]}
             collisionDetection={collisionDetector}
             accessibility={{
+              announcements,
               screenReaderInstructions: {
-                draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
+                draggable:
+                  'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
               },
             }}
           >
@@ -132,19 +217,26 @@ export const FileBrowser = React.memo(() => {
                   }
                 )}
               >
-                <div id="uitest-files-list" className={moduleStyles.folder}>
+                {/* role="list" needed: list-style:none strips VoiceOver semantics */}
+                {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+                <ol
+                  id="uitest-files-list"
+                  className={moduleStyles.folder}
+                  role="list"
+                  aria-label={codebridgeI18n.filesHeader()}
+                >
                   <InnerFileBrowser
                     parentId={DEFAULT_FOLDER_ID}
                     folders={source.folders}
                     files={source.files}
                     appName={appName}
                   />
-                </div>
+                </ol>
               </Droppable>
             </DndDataContextProvider>
           </DndContext>
         )}
       </div>
-    </PanelContainer>
+    </div>
   );
 });

@@ -112,6 +112,7 @@
     "project_template_level_name": "CSD U3 Movement Fish_2020_template_2025",
     "validation_enabled": "false",
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 2;\r\n  greenFish.x = greenFish.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

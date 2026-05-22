@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:00:21.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.10\n# Standard Description: Explain the effect of computational complexity on solving algorithms.\n#\n# Rationale: Not all algorithms are created equal! Some are \"fast\" and can \n# handle millions of rows. Others are \"slow\" and get exponentially slower \n# as the data grows. This tutorial compares how long it takes to train \n# a simple model (Linear Regression) versus a complex model (SVM) on \n# different amounts of data.\n\n\"\"\"\nWelcome! Have you ever tried to find a name in a phone book? \nIf there are 10 names, it's instant. If there are 10 million names, it takes \nlonger. This is \"Computational Complexity\".\n\nIn AI, we have to choose algorithms that are fast enough for our data. \nIf an algorithm is too complex, it might take WEEKS to train on a large \ndataset!\n\"\"\"\n\nimport time\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.svm import SVC\nfrom sklearn.datasets import make_classification\n\n# --- PART 1: THE EXPERIMENT ---\nprint(\"--- Part 1: Timing Different Algorithms ---\")\n\n# We will test sizes from 100 to 5,000 rows\nsizes = [100, 500, 1000, 2500, 5000]\nlr_times = []\nsvc_times = []\n\nfor size in sizes:\n    # Generate some random data\n    X, y = make_classification(n_samples=size, n_features=20, random_state=42)\n    \n    # Time the Linear Model (Fast)\n    start = time.time()\n    LinearRegression().fit(X, y)\n    lr_times.append(time.time() - start)\n    \n    # Time the Support Vector Machine (Slower/More Complex)\n    start = time.time()\n    SVC().fit(X, y)\n    svc_times.append(time.time() - start)\n    \n    print(f\"Finished size {size}...\")\n\n# --- VISUALIZATION ---\nplt.plot(sizes, lr_times, label=\"Linear Regression (Low Complexity)\", marker='o')\nplt.plot(sizes, svc_times, label=\"SVC (Higher Complexity)\", marker='o')\nplt.title(\"Computational Complexity: Time vs. Data Size\")\nplt.xlabel(\"Number of Rows (Data Size)\")\nplt.ylabel(\"Training Time (Seconds)\")\nplt.legend()\nplt.show()\n\nprint(\"\\nNotice how the blue line (Linear) stays nearly flat.\")\nprint(\"The orange line (SVC) starts to curve upwards as it gets harder.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've seen that SVC gets slower as data grows. \n1. If you had 1,000,000 rows of data, which model would you choose to \n   get a result quickly?\n2. What happens to the SVC time if you DOUBLE the number of rows? \n   Does it double, or does it increase by MORE than double?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Answer the questions based on the graph!\n# Best_for_Big_Data = \"___\"\n# Growth_Rate = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWd6xnd0oTV+7mYDCCdHZwR6DCUwz3R8b\nx3eR27++AsqcUyhw3lIAJHVZFHggWGZp8ZNXHhT4DdAQf7LgeFTT1vsI8jE+\nR4twymQZGzXvhGSO2XPR+5SG1PLBqKogxoAx1nbPYC5QrHlN+WURHrmsXFXA\nI+Ty4C4xByq8kj9e1t+j+WeCg87KAQJorARRXgcAFN36GYbft7oIN3blZKPj\nItUMr6pMTZxTyusWhnmvQNdzjdSD5bynUG264BhmSHo0iFFUmoLqz+gXKG2l\nMojgw7QWj2oNbjNC8wy9QpgS4NWBv8/91ogr5BgUn8gq2ZsT7PityT359dhx\n1g5vSsvng/cdV2so8SrcjNbDUYwDe2HmEkPBUeLA0u9PuF5tFem/9nWfp311\n0VqzAFpu9QJ7RRHYR5U8RRR7qAb7hZFypF9u5zVnuwc4idKZhSGOq7pUZ3yf\nCEaEMwU9dLttZ5bkFp3nQ48Jl8hcVXqlZBU/5KbAKBmrab4tZ340Ci5ryuXv\n2Bf4ufjEulDOSfD+UycITW9TFrE5k9M57zMDUNQHwXKiAELoXjmkIclBrnPy\nbgEQ73oK+b+GphpoaCJ7j7Rnu2M19K4szTsZa4kzkqsYgIq52OepSOVAejz/\nKIA350CKV80Qgxa0LLxR5yy6wzX/JAvATM6xBgLsiliBEDBxFOMRNQwWs1Ow\nk3Tfkypgfu/IR8ai8+FhNzNYFPjWfBAbbrfu4QkRALbybnZNyS7lsMKXNq9r\n6jEEDkAEKe2tlu2KYphaACqfw8dpDWV5RXODNr0ri6ZOhOc3NUM9ckdXubmx\ndvl7sb1EIRH7ttUPjh1uD0FDcefV4X8GJzHwELProhm4MLukqIAlFquTRIaW\nH92ewp7hVhMasFKxfU9odBwU1eQV0RzJ/hiTwzRRN8MKudaHUAD/10w3badD\naE0bQLxhxps6SP4yZKzZavUpWB5tvOje6+TO6/ueZWIxuuyp7V++POLyfSFU\nOAsX1v/Bn83I3EzYkRP/vroVbNxlNcZoFeaXOnvhIjeAbkNxuCyBpjp+bbiR\nAMNyGxj3Z1AZkpCi3H5+OiE3cvHX89hF5dhPyfLx0MMVdO02ItkKSbC8a3g5\nNOFLnDeIyqtel4hwIs3C49VHpHd419KoFssrlWSqJtu7bqVQZ0aub+9tvX2r\nBIk39j6nrgZ0KnoVRkFPYkz9\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:00:21.983+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-23\\\"\"],\"cloned_from\":\"cs50-scikit-23\"},{\"changed_at\":\"2026-02-18 17:00:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:42:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:43:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

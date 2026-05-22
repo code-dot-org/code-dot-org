@@ -1,7 +1,13 @@
-import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
-import {LinkWithText} from '@code-dot-org/component-library/link';
-import {Heading1} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Breadcrumbs as MUIBreadcrumbs,
+  Link as MUILink,
+  Typography,
+} from '@mui/material';
+import React, {useEffect} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
@@ -14,17 +20,6 @@ import {
 } from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
-
-const workshopMarketingBreadcrumbs: LinkWithText[] = [
-  {
-    text: 'Explore workshops',
-    href: '/professional-learning/workshops/',
-  },
-  {
-    text: 'Workshop information',
-    href: window.location.pathname,
-  },
-];
 
 interface WorkshopMarketingPageProps extends WorkshopInfo, UserInfoForWorkshop {
   userEnrollment?: UserWorkshopEnrollment;
@@ -47,7 +42,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
     fee,
     prereq,
     description,
-    notes,
     customRegistrationLink,
     regionalPartnerName,
     organizer,
@@ -58,20 +52,48 @@ const WorkshopMarketingPage: React.FunctionComponent<
 
   const isUserEnrolled = !!userEnrollment;
 
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      isUserEnrolled
+        ? EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT
+        : EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {
+        'workshop id': id,
+      }
+    );
+  }, [id, isUserEnrolled]);
+
   return (
     <div className={moduleStyles.workshopMarketingPage}>
       <section className={moduleStyles.header}>
-        <Breadcrumbs
-          name="workShopMarketingPage-HeaderBreadcrumbs"
-          size="l"
-          showHomeIcon={true}
-          homeIconHref="/my-professional-learning"
-          breadcrumbs={workshopMarketingBreadcrumbs}
+        <MUIBreadcrumbs
           className={moduleStyles.headerBreadcrumbs}
-        />
-        <Heading1>
+          aria-label="Breadcrumb navigation: workShopMarketingPage-HeaderBreadcrumbs"
+          separator={<FontAwesomeV6Icon iconName="chevron-right" />}
+          size="m"
+        >
+          <MUILink
+            key="home"
+            href="/my-professional-learning"
+            color="inherit"
+            underline="none"
+          >
+            <FontAwesomeV6Icon iconName="house" title="Home" />
+          </MUILink>
+          <MUILink
+            href="/professional-learning/workshops/"
+            color="inherit"
+            underline="none"
+          >
+            Explore workshops
+          </MUILink>
+          <Typography component="span" variant="label2">
+            Workshop information
+          </Typography>
+        </MUIBreadcrumbs>
+        <Typography variant="h1" gutterBottom>
           {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
-        </Heading1>
+        </Typography>
       </section>
       <div className={moduleStyles.bodyWrapper}>
         <div className={moduleStyles.bodyContainer}>
@@ -83,7 +105,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
             fee={fee}
             prereq={prereq}
             description={description}
-            notes={notes}
             courseOfferings={courseOfferings}
             facilitators={facilitators}
           />
@@ -112,7 +133,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
           </aside>
         </div>
       </div>
-
       <WorkshopEventJsonLdData {...props} />
     </div>
   );

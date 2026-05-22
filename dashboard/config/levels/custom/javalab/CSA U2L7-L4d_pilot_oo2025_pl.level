@@ -33,7 +33,7 @@
     },
     "video_key": "csa_accessor_methods",
     "name_suffix": "_pl",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:22.040+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L4d_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L7-L4d_pilot_oo2025\"}]"

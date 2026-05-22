@@ -112,6 +112,7 @@
     "bubble_choice_description": "Create an app prototype that simulates a Mood Ring, which changes the design of the LEDs based on the mood of the user",
     "encrypted_examples": "N0p+H/i4cltEiAwO0WSuiytKI/7fLqCjoYg9fScZ3Fli6i7qG316gsZDdvrc\nRRJM+w2gGGgSp+OZBfXhB7Vt6A==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

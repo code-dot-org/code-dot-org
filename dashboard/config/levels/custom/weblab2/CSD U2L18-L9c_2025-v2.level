@@ -1,0 +1,77 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:35.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Revealed Secret",
+    "long_instructions": "# Reveal The Cracked Message\r\n\r\nNot only can we use the `hover` pseudo-class to draw a user's attention to a hyperlink on our page, but we can also it to **style other elements too**!\r\n\r\nLet's see how we can style a `<div>` element to change the font and background color to make text appear!\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add a rule set to style the `div`with the \"hover\" pseudo-class. \r\n   - Add the following properties to the rule set:\r\n      - Set the color of the tex to \"black\"\r\n      - Set the background color to \"yellow\"\r\n3. Hover over the `div` to see what happens!\r\n\r\n**Don't forget to click <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> to see if everything is working as expected.**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Pseudo Classes](https://studio.code.org/courses/csd-2024/guides/pseudo-classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn another way to use the \"hover\" pseudo-class with a `div` tag to reveal text!",
+    "thumbnail_url": "https://images.code.org/c191bef9878247350465ca783d4b0897-top-secret.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Cracking the Code: The Caesar Cipher</h1>\n    \n    <!-- info -->\n    <p>Step into the world of ancient cryptography with the Caesar Cipher, a simple yet powerful tool used by Julius Caesar to protect messages of military importance. This method shifts the letters in the alphabet by a set number to create a secret message that can only be decoded with the right key. Discover how this ancient technique laid the groundwork for modern-day encryption and try your hand at encoding and decoding messages just like a Roman spy!</p>\n    \n    <!-- subtitle -->\n    <h2>Decrypting a Message with the Caesar Cipher:</h2>\n    \n    <!-- Caesar Cipher info -->\n    <p>The Caesar cipher shifts each letter in the plaintext (the original message) by a certain number of positions to create the ciphertext (the encrypted message). To decrypt a message, you need to know the number of positions each letter was shifted or the \"key.\"</p>\n    \n    <h3>Example:</h3>\n\n    <p>Ciphertext: \"KHOOR\" <br>\n      Key: 3 <br>\n      Decryption Process: Shift each letter 3 positions back. <br>\n      Decrypted Message: \" HELLO\"</p>\n\n    <p>Remember, the Caesar cipher wraps around the alphabet, so if your backward shift goes past \"A\", you continue from \"Z\".</p>\n\n    <!-- Cracking a cipher challenge -->\n    <h2>Can you crack this secret message:</h2>\n    \n    <h3>Inxhtajw ymj xjhwjyx tk hwduytlwfumd!</h3>\n    \n    <!-- container with answer -->\n    <div>Decrypted Message:<br>\n      Discover the secrets of cryptography!</div>\n\n    <!-- Tips for cracking a caesar cipher -->\n    <h3>Here's how to CRACK a Caesar Cipher:</h3>\n\n    <ol>\n      <li><strong>Look for Patterns:</strong> In English, certain letters and combinations appear more frequently than others. For example, 'E' is the most common letter, and 'TH', 'HE', 'IN', 'ER' are common pairs.</li>\n      <li><strong>Guess Common Words:</strong> Try to identify small words in the ciphertext that might be common English words like \"AND\", \"THE\", or \"IS\". If the ciphertext is short, this might be tricky, but in longer texts, common words can give you clues.</li>\n      <li><strong>Shift and Check:</strong> Start by shifting the ciphertext by 1 position and see if it makes sense. If not, shift by 2, then 3, until you find a shift that reveals intelligible text.</li>\n    </ol>\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule set to style the div with the hover pseudo-class to reveal the cracked message */\n\n\n\n\n/* styled div content to hide text */\ndiv{\n  color: #dde9ff; /* color of text is the same as the color of the page */\n  font-size: 24px;\n}\n\n/* basic style for all text */\nbody {\n  font-family: Verdana;\n  text-align: center;\n  background-color: #dde9ff;\n}\n\n/* paragraph style */\np {\n  font-size: 18px;\n}\n\n/* list item style */\nli {\n  text-align: left;\n  margin:5px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2",
+    "encrypted_exemplar_sources": "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\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:35.597+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L9c-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L9c-2025\"},{\"changed_at\":\"2026-05-20 17:29:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-20 17:29:35 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

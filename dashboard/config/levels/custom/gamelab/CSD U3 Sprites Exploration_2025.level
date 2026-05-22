@@ -67,6 +67,7 @@
     "libraries_enabled": "false",
     "video_key": "csd_gamelab_animation_tab",
     "encrypted_examples": "JQwgQZWLCuWNBd78cU17bTc/PFLd04Y7NfsRjU+m+jLPSoSpgEp4U/fNmZ4t\nogCCdtDx7WgjOa+y6GEc/WHrug==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

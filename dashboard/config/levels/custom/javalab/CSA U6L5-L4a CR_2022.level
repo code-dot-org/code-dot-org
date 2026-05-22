@@ -15,7 +15,7 @@
     "display_name": "Lines in a Poem",
     "bubble_choice_description": "Find the longest line in a poem.",
     "thumbnail_url": "https://images.code.org/89067a86f9bbe90697b785e0a21d7633-image-1651752933769.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:28:36.037+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L4a CR_2022\"},{\"changed_at\":\"2022-04-14 19:28:51 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:12:21 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:16:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:18:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:08:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

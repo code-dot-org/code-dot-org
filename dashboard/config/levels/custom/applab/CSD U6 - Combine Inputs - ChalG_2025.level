@@ -100,6 +100,7 @@
     "start_blocks": "var redValue = 255;\r\nvar greenValue = 255;\r\nvar blueValue = 255;\r\n\r\n// 1) Create an onEvent block for the redSlider\r\n// 2) Update the redValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs\r\n\r\n// 1) Create an onEvent block for the greenSlider\r\n// 2) Update the greenValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs\r\n\r\n// 1) Create an onEvent block for the blueSlider\r\n// 2) Update the blueValue variable to the slider's value\r\n// 3) Use color() and the rgb() block to update the color of the LEDs",
     "bubble_choice_description": "Create an app that lets you adjust the LED colors of an app using 3 sliders for red, green, and blue color values",
     "makerlab_enabled": "circuitPlayground",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

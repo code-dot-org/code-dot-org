@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-13T03:32:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# NOT (`!`)\n\n**NOT (`!`)** is a logical operator that *reverses* the truth value of a Boolean expression.\n\nIf an expression is true, **NOT** makes it *false*. \n\nIf an expression is false, **NOT** makes it *true*. \n\n| A | !A |\n|:---:|:---:|\n| T | F |\n| F | T |\n",
+        "imageUrl": "https://images.code.org/cb6387fe98c37ccd05a541a7df518097-Screenshot 2025-10-29 094236.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:32:10.721+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-panel-NOT-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-panel-NOT-test-2025\"},{\"changed_at\":\"2025-11-13 03:37:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

@@ -34,14 +34,14 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "guide_mode": "aiDancerGenerate",
-    "ai_dancer_generate_adlib": "adjective-animal-attire-02",
+    "ai_dancer_generate_adlib": "creature-attire-mood-style-05",
+    "long_instructions": "#### Create Your Dancer\r\nModify the prompt to generate a new dancer with AI.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "long_instructions": "#### Create Your Dancer\r\nModify the prompt to generate a new dancer with AI."
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 01:30:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:00 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-25 21:48:56 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 01:30:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:00 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-25 21:48:56 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-29 18:05:58 +0000\",\"changed\":[\"ai_dancer_generate_adlib\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

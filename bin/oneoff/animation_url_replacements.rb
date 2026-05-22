@@ -15,7 +15,7 @@ require_relative '../../dashboard/config/environment'
 require 'json'
 require 'csv'
 
-DRY_RUN  = true
+DRY_RUN  = false
 CSV_PATH = 'bin/oneoff/animation_url_replacements.csv'
 
 def load_mapping_from_csv(path)

@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson3-level1_2026-test_2026-pilot'
+display_name 'Co-Creation with AI'
+description 'Choose one of the Exploration options below to uncover ways to co-create with AI in supportive ways'
+
+sublevels
+level 'aid-thinking-critically-lesson3-level1a_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson3-level1b_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson3-level1c_2026-test_2026-pilot'
+
+uses_lab2

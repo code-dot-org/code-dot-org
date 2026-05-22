@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q6_2026'
+
+question 'A quiz app calls the same set of steps every time a user submits an answer: check the answer, update the score, show feedback, load the next question. Why would a developer put those steps inside a function?'
+
+wrong 'Functions make the page load images faster.'
+right 'A function lets the developer write the steps once, give them a name, and reuse them by calling the function every time an answer is submitted.'
+wrong 'Functions are required for any app with more than one question.'
+wrong 'Functions automatically detect when a user is cheating.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+MARKDOWN

@@ -16,6 +16,7 @@ import {
   MultiFileSource,
   FileId,
   FolderId,
+  ProjectVersion,
 } from '@cdo/apps/lab2/types';
 import {
   deleteFileHelper,
@@ -91,7 +92,11 @@ export const setAndSaveSource = (
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
   async (
-    payload: {versionId: string; startSources: ProjectSources},
+    payload: {
+      startSources: ProjectSources;
+      version?: ProjectVersion;
+      onLoadVersion?: (sources: ProjectSources) => void;
+    },
     thunkAPI
   ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -100,9 +105,15 @@ export const loadVersion = createAsyncThunk(
       await projectManager.flushSave();
       // Fall back to start source if we can't load the version.
       const sources =
-        (await projectManager.loadSources(payload.versionId)) ||
+        (await projectManager.loadSources(payload.version?.versionId)) ||
         payload.startSources;
-      thunkAPI.dispatch(setPreviousVersionSource(sources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({
+          sources,
+          version: payload.version,
+        })
+      );
+      if (payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   }
 );
@@ -110,12 +121,21 @@ export const loadVersion = createAsyncThunk(
 // Load the start sources for the project and set them as the previous version source.
 export const previewStartSources = createAsyncThunk(
   'lab2Project/previewStartSources',
-  async (payload: {startSources: ProjectSources}, thunkAPI) => {
+  async (
+    payload: {
+      startSources: ProjectSources;
+      onLoadVersion?: (sources: ProjectSources) => void;
+    },
+    thunkAPI
+  ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
       // We need to ensure we save the existing project before loading the start source.
       await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({sources: payload.startSources})
+      );
+      if (payload.onLoadVersion) payload.onLoadVersion(payload.startSources);
     }
   }
 );
@@ -123,12 +143,16 @@ export const previewStartSources = createAsyncThunk(
 // Reset the project to the current version, loading the sources from the project manager.
 export const resetToCurrentVersion = createAsyncThunk(
   'lab2Project/resetToActiveVersion',
-  async (_, thunkAPI) => {
+  async (
+    payload: {onLoadVersion?: (sources: ProjectSources) => void},
+    thunkAPI
+  ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
       const sources = await projectManager.loadSources();
       thunkAPI.dispatch(setProjectSource(sources));
       thunkAPI.dispatch(setViewingOldVersion(false));
+      if (sources && payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   }
 );

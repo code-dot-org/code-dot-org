@@ -1,30 +1,33 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import {uniqueFileName} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogType,
   DialogControlInterface,
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: BackpackContextType;
+  backpackApi: BackpackClientApi;
   file: ProjectFile;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   file,
+  sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -49,10 +52,7 @@ export const openSaveToBackpackPrompt = async ({
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
 
-      let fileNameCopy = file.name;
-      while (filenames.includes(fileNameCopy)) {
-        fileNameCopy = getFileNameWithNumberSuffix(fileNameCopy);
-      }
+      const fileNameCopy = uniqueFileName(file.name, filenames);
 
       const dialog = isDuplicateFileName
         ? {
@@ -83,34 +83,41 @@ export const openSaveToBackpackPrompt = async ({
       const selectedFileName =
         results.type === 'confirm' ? file.name : fileNameCopy;
 
-      let successMetric = EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_NEW;
+      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
       if (isDuplicateFileName) {
         successMetric =
           selectedFileName === file.name
-            ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
+            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendLab2AnalyticsEvent(successMetric);
+      const successCallback = () =>
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+        });
 
-      const fileContents = {
-        name: selectedFileName,
-        contents: file.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: 'py',
-        active: false,
-      } as ProjectFile;
-      backpackApi.savePythonlabFile(
-        selectedFileName,
-        fileContents,
-        handleError(
-          codebridgeI18n.saveToBackpackTitle(),
-          codebridgeI18n.saveToBackpackError({selectedFileName}) +
-            ' ' +
-            codebridgeI18n.closeWindowTryAgain(),
-          'Save to backpack error'
-        ),
-        successCallback
+      const errorCallback = handleError(
+        codebridgeI18n.saveToBackpackTitle(),
+        codebridgeI18n.saveToBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Save to backpack error'
       );
+
+      if (file.url) {
+        backpackApi.saveCodebridgeFileFromUrl(
+          selectedFileName,
+          file.url,
+          errorCallback,
+          successCallback
+        );
+      } else {
+        backpackApi.saveCodebridgeFile(
+          selectedFileName,
+          file.contents,
+          errorCallback,
+          successCallback
+        );
+      }
     }
   );
 };

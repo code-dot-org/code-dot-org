@@ -2,9 +2,24 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {
+  getJsonVideoPrompt,
+  type JsonVideoFileMetadata,
+} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+const fetchLangfusePrompt = async (promptName: string) => {
+  const url = `/ai_prompt_management/get_prompt?name=${encodeURIComponent(
+    promptName
+  )}`;
+  const response = await HttpClient.get(url);
+  const prompt = await response.json();
+  const promptText = prompt.prompt;
+  return promptText;
+};
 
 export const fetchCustomPrompt = async (promptName: string) => {
   const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
@@ -32,8 +47,9 @@ export const baseModelParameters: ModelParameters = {
 } as const;
 
 interface UseAiTutorModelParametersOptions {
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorJsonSchema?: object;
+  tutorVideos?: JsonVideoFileMetadata[];
 }
 
 export const useAiTutorModelParameters = (
@@ -42,49 +58,81 @@ export const useAiTutorModelParameters = (
   const [systemPrompt, setSystemPrompt] = useState<string | undefined>();
 
   useEffect(() => {
+    const promptString =
+      (options?.aiTutorSystemPrompt ?? defaultSystemPrompt) +
+      getJsonVideoPrompt(options?.tutorVideos, !!options?.aiTutorJsonSchema);
+
     let mounted = true;
 
-    const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
+    const promptName = customPromptName;
 
     const fetchPrompt = async () => {
       if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
+        setSystemPrompt(promptString);
         return;
       }
 
       try {
         const prompt = await fetchCustomPrompt(promptName);
         if (mounted) {
-          setSystemPrompt(prompt || defaultSystemPrompt);
+          setSystemPrompt(prompt || promptString);
         }
       } catch (error) {
         console.error('Error fetching custom prompt', error);
         if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
+          setSystemPrompt(promptString);
         }
       }
     };
 
-    fetchPrompt();
+    const fetchLangfusePromptAndSet = async () => {
+      if (!promptName) {
+        setSystemPrompt(promptString);
+        return;
+      }
+
+      try {
+        const langfusePrompt = await fetchLangfusePrompt(promptName);
+        if (mounted && langfusePrompt) {
+          setSystemPrompt(langfusePrompt);
+        }
+      } catch (error) {
+        console.error('Error fetching Langfuse prompt:', error);
+        if (mounted) {
+          setSystemPrompt(promptString);
+        }
+      }
+    };
+
+    if (
+      experiments.isEnabledAllowingQueryString(experiments.USE_LANGFUSE_PROMPT)
+    ) {
+      fetchLangfusePromptAndSet();
+    } else {
+      fetchPrompt();
+    }
 
     return () => {
       mounted = false;
     };
-  }, [options?.aiTutorSystemPromptName]);
+  }, [
+    options?.aiTutorSystemPrompt,
+    options?.tutorVideos,
+    options?.aiTutorJsonSchema,
+  ]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else if (options?.aiTutorSystemPromptName) {
-      console.log(
-        `🤖: systemPrompt: ${options?.aiTutorSystemPromptName}`,
-        systemPrompt
-      );
     } else if (systemPrompt !== undefined) {
-      console.log(`🤖: systemPrompt: default`);
+      if (systemPrompt === defaultSystemPrompt) {
+        console.log(`🤖: systemPrompt: default`);
+      } else {
+        console.log(`🤖: provided systemPrompt: ${systemPrompt}`);
+      }
     }
-  }, [systemPrompt, options?.aiTutorSystemPromptName]);
+  }, [systemPrompt]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user

@@ -6,25 +6,38 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
-const NOTIFICATION_1 = {
+const EXTERNAL_NOTIFICATION_1 = {
   id: 'notification-1',
   externalId: 'ext-notif-1',
-  title: 'First Notification',
-  description: 'This is the first notification',
+  title: 'First External Notification',
+  description: 'This is the first external notification',
   readAt: null,
   iconName: 'bell',
   publishedAt: '2023-01-01T12:00:00Z',
 };
-const NOTIFICATION_2 = {
+const EXTERNAL_NOTIFICATION_2 = {
   id: 'notification-2',
   externalId: 'ext-notif-2',
-  title: 'Second Notification',
-  description: 'This is the second notification',
-  readAt: '2023-01-02T10:00:00Z',
+  title: 'Second External Notification',
+  description: 'This is the second external notification',
+  readAt: '2023-01-04T10:00:00Z',
   iconName: 'info',
-  publishedAt: '2023-01-01T10:00:00Z',
+  publishedAt: '2023-01-03T10:00:00Z',
 };
-const mockNotifications = [NOTIFICATION_1, NOTIFICATION_2];
+const NOTIFICATION_1 = {
+  id: 'notification-1',
+  externalId: null,
+  title: 'First Notification',
+  description: 'This is the first notification',
+  readAt: null,
+  iconName: 'info',
+  publishedAt: '2023-01-02T10:00:00Z',
+};
+const mockNotifications = [
+  EXTERNAL_NOTIFICATION_1,
+  EXTERNAL_NOTIFICATION_2,
+  NOTIFICATION_1,
+];
 
 describe('AiDiffNotificationList', () => {
   beforeEach(() => {
@@ -54,19 +67,27 @@ describe('AiDiffNotificationList', () => {
     });
 
     it('handles notifications with null readAt dates', async () => {
-      HttpClient.fetchJson.mockResolvedValue({value: [NOTIFICATION_1]});
+      HttpClient.fetchJson.mockResolvedValue({
+        value: [
+          EXTERNAL_NOTIFICATION_1,
+          EXTERNAL_NOTIFICATION_2,
+          NOTIFICATION_1,
+        ],
+      });
 
       render(<AiDiffNotificationList />);
 
       await waitFor(() => {
+        screen.getByText('First External Notification:');
         screen.getByText('First Notification:');
       });
 
-      screen.getByLabelText('Unread');
+      // Ignores already read notification
+      expect(screen.getAllByLabelText('Unread')).toHaveLength(2);
 
       expect(markAsReadMock).toHaveBeenCalledWith(
         '/notifications/mark_as_read',
-        '{"external_notification_ids":["ext-notif-1"]}',
+        '{"external_notification_ids":["ext-notif-1"],"teacher_notification_ids":["notification-1"]}',
         true,
         {
           'Content-Type': 'application/json; charset=UTF-8',
@@ -75,15 +96,17 @@ describe('AiDiffNotificationList', () => {
     });
 
     it('handles notifications with readAt dates', async () => {
-      HttpClient.fetchJson.mockResolvedValue({value: [NOTIFICATION_2]});
+      HttpClient.fetchJson.mockResolvedValue({
+        value: [EXTERNAL_NOTIFICATION_2],
+      });
 
       render(<AiDiffNotificationList />);
 
       await waitFor(() => {
-        screen.getByText('Second Notification:');
+        screen.getByText('Second External Notification:');
       });
 
-      screen.getByText('This is the second notification');
+      screen.getByText('This is the second external notification');
       expect(screen.queryByLabelText('Unread')).toBeNull();
       expect(markAsReadMock).toHaveBeenCalledTimes(0);
     });
@@ -127,14 +150,22 @@ describe('AiDiffNotificationList', () => {
     });
   });
 
-  it('renders correct number of notifications', async () => {
+  it('sorts notifications by most recent publishedAt date', async () => {
     HttpClient.fetchJson.mockResolvedValue({value: mockNotifications});
 
     render(<AiDiffNotificationList />);
 
     await waitFor(() => {
       screen.getByText('First Notification:');
-      screen.getByText('Second Notification:');
+      screen.getByText('First External Notification:');
+      screen.getByText('Second External Notification:');
     });
+
+    const notifications = screen.getAllByText(/:$/).map(el => el.textContent);
+    expect(notifications).toEqual([
+      'Second External Notification: ',
+      'First Notification: ',
+      'First External Notification: ',
+    ]);
   });
 });

@@ -30,7 +30,7 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:52:38.547+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L7b_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L8-L7b_pilot-2025\"},{\"changed_at\":\"2025-04-23 08:39:43 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-23 08:46:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-23 08:46:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-05-23 17:01:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

@@ -105,6 +105,7 @@
     "bubble_choice_description": "The app is supposed to move an arrow across the screen and keep scrolling to the other side, but there are bugs!",
     "encrypted_examples": "3YBI2paHZm3sXvi3rGVc20x5lNzYqZaCWNpmZJfKdV+yq+OqogNb+5N+9AIQ\nx9/1aRvWLEjrVqRmOHbKYAM6Vg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

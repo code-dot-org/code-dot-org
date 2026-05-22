@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Api::V1::Pd
   class WorkshopSurveyFoormReportControllerTest < ::ActionController::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       @summer_post_survey = create(:foorm_form_summer_post_survey)
       @summer_pre_survey = create(:foorm_form_summer_pre_survey)
@@ -209,7 +207,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            facilitators: [create(:facilitator), create(:facilitator)]
+                            facilitators: create_list(:facilitator, 2)
 )
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
@@ -237,7 +235,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
-        facilitators: [create(:facilitator), create(:facilitator)]
+        facilitators: create_list(:facilitator, 2)
 )
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]
@@ -275,7 +273,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            facilitators: [create(:facilitator), create(:facilitator)]
+                            facilitators: create_list(:facilitator, 2)
 )
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
@@ -490,7 +488,7 @@ module Api::V1::Pd
       csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
-        facilitators: [create(:facilitator), create(:facilitator)]
+        facilitators: create_list(:facilitator, 2)
       )
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]

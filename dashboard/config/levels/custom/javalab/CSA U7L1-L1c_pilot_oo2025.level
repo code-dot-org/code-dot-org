@@ -75,7 +75,7 @@
       "tomatoes.png": "93a1bae8-cba9-4bd5-97ca-c8ee3c9379e1.png"
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T01:00:23.007+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L1-L1c_pilot-2025\"}]"

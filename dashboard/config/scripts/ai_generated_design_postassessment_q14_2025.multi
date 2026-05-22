@@ -7,7 +7,7 @@ wrong 'They help the shelter collect data faster from users.'
 wrong 'They reduce the time it takes for the website to load.'
 right 'They help visitors feel emotionally connected to the shelter\'s mission and values.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 5, 7

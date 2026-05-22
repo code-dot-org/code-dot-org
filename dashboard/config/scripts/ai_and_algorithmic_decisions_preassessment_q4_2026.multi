@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q4_2026'
+
+question 'A student asks AI to wire up a "Like" button. The AI confidently returns code that uses `document.getElementById("likeBtn")`. The page actually has a button with id `like-btn`. What kind of AI failure is this?'
+
+right 'Context blindness — AI guessed an id based on patterns from similar pages, not from this page.'
+wrong 'A syntax error AI should have caught.'
+wrong 'A browser compatibility bug.'
+wrong 'A network issue with the AI service.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

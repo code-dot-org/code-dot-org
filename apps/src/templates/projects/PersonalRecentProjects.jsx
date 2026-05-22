@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
@@ -26,17 +25,19 @@ class PersonalRecentProjects extends Component {
         <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
         <div>
           {this.props.projectList &&
-            this.props.projectList.slice(0, 4).map((project, index) => (
-              <div
-                key={index}
-                style={[styles.card, index < 3 && cardPaddingStyle]}
-              >
-                <ProjectCard
-                  projectData={project}
-                  currentGallery={'personal'}
-                />
-              </div>
-            ))}
+            this.props.projectList.slice(0, 4).map((project, index) => {
+              const cardStyle =
+                index < 3 ? {...styles.card, ...cardPaddingStyle} : styles.card;
+
+              return (
+                <div key={index} style={cardStyle}>
+                  <ProjectCard
+                    projectData={project}
+                    currentGallery={'personal'}
+                  />
+                </div>
+              );
+            })}
         </div>
       </div>
     );
@@ -74,4 +75,4 @@ const styles = {
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(PersonalRecentProjects));
+}))(PersonalRecentProjects);

@@ -17,14 +17,17 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectId: string,
-    isShareView: boolean = false
+    isStandaloneProjectLevel: boolean,
+    isShareView: boolean = false,
+    sourcesStore: SourcesStore = new SourcesStore()
   ): ProjectManager {
     return new ProjectManager({
-      sourcesStore: new SourcesStore(),
+      sourcesStore,
       channelsStore: new ChannelsStore(),
       channelId: projectId,
       reduceChannelUpdates: false,
       isShareView,
+      isStandaloneProjectLevel,
     });
   }
 
@@ -35,14 +38,14 @@ export default class ProjectManagerFactory {
    * @param levelId The identifier for the level.
    * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
-   * @param scriptLevelId the ID of the script level (if different from the level ID). Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     levelId: number,
+    isStandaloneProjectLevel: boolean,
     userId?: number,
     scriptId?: number,
-    scriptLevelId?: string
+    sourcesStore: SourcesStore = new SourcesStore()
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;
@@ -50,7 +53,6 @@ export default class ProjectManagerFactory {
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
-      scriptLevelId,
       userId
     );
     if (response.ok) {
@@ -67,10 +69,11 @@ export default class ProjectManagerFactory {
       throw new Error('Could not load channel for level');
     }
     return new ProjectManager({
-      sourcesStore: new SourcesStore(),
+      sourcesStore,
       channelsStore,
       channelId,
       reduceChannelUpdates,
+      isStandaloneProjectLevel,
     });
   }
 }

@@ -1,14 +1,17 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import AccountType from '@cdo/apps/signUpFlow/AccountType';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const isSignedOut = getScriptData('isSignedOut');
-  ReactDOM.render(
+  createReactRoot(
     <AccountType isSignedOut={isSignedOut} />,
-    document.getElementById('account-type')
+    document.getElementById('account-type'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

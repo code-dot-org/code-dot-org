@@ -24,7 +24,7 @@ ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 ENV['TZ'] = 'UTC'
 
-# deal with some ordering issues -- sometimes environment is loaded
+# Deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
@@ -35,6 +35,26 @@ CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
+
+# ... then, we apply some unit-test-specific configuration. We cannot target
+# the config layer from this file because Spring may have already loaded the
+# Rails application, applying all config options to the relevant components.
+# Set the runtime attributes directly instead.
+
+# Disable CSRF protection.
+ActionController::Base.allow_forgery_protection = false
+# Avoid using an actual cache, to prevent state leakage.
+Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
+
+if CDO.test_system? && !ENV.fetch('TEST_ENV_NUMBER', nil)
+  # Raise rather than silently correcting the error, because it's possible that the data in
+  # dashboard_test has already been corrupted by the time we get here. If we find that we're
+  # hitting this error without any data corruption, we can consider silently setting
+  # TEST_ENV_NUMBER=1 here instead.
+  raise 'Do not run unit tests against dashboard_test DB on the chef-managed test system. ' \
+      'Instead, specify TEST_ENV_NUMBER=1 to run against the dashboard_test1 database.'
+end
+
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
@@ -58,6 +78,7 @@ require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
 require 'testing/cdo_contentful'
+require 'testing/honeybadger'
 require 'testing/rspec_mocks'
 require 'testing/vcr_cassettes'
 
@@ -65,6 +86,8 @@ require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
+
+  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
@@ -76,11 +99,6 @@ class ActiveSupport::TestCase
     CDO.stubs(override_dashboard: nil)
 
     set_env :test
-
-    # how come this doesn't work:
-    Dashboard::Application.config.action_controller.perform_caching = false
-    # as in, I still need to clear the cache even though we are not 'performing' caching
-    Rails.cache.clear
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -98,10 +116,12 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    # Test class specific VCR configs
+    VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
   end
 
   teardown do
-    Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
   end
@@ -264,15 +284,15 @@ class ActiveSupport::TestCase
   end
 
   def set_request_locale(locale)
-    request.env['cdo.locale'] = locale
+    I18n.locale = locale
   end
 
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    request.env['cdo.locale'] = I18n.default_locale = locale
+    I18n.locale = I18n.default_locale = locale
     yield
   ensure
-    request.env['cdo.locale'] = I18n.default_locale = original_locale
+    I18n.locale = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -391,14 +411,12 @@ class ActiveSupport::TestCase
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 
+  # Units use some bespoke in-memory caches instead of the Rails cache, so when
+  # we exercise them in tests we need to manually clear them to avoid
+  # inheriting any state from previous tests.
   def setup_script_cache
     Unit.stubs(:should_cache?).returns true
     Unit.clear_cache
-    # turn on the cache (off by default in test env so tests don't confuse each other)
-    Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
-
-    Rails.cache.clear
   end
 end
 
@@ -409,7 +427,7 @@ class ActionController::TestCase
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
-    request.env['cdo.locale'] = 'en-US'
+    I18n.locale = 'en-US'
   end
 
   # As `current_user` is not accessible from controller tests (only from within the controller),

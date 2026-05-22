@@ -104,6 +104,7 @@
     "rubric_performance_level_4": "No sprites are created.",
     "libraries_enabled": "false",
     "encrypted_examples": "P/8extejJamXGsVppOCOLJaYjcmpf3kbPwZBNWOmUikRVMvniVKhrdSlsyCr\nmMqOueOvtaQCXz64JlhpwA62qA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -8,8 +8,15 @@ on:
       - staging
       - staging-next
     paths:
-      - 'frontend/**'
-      - '.github/**'
+      - "frontend/**"
+      - ".github/**"
+  push:
+    branches:
+      - staging
+      - staging-next
+    paths:
+      - "frontend/**"
+      - ".github/**"
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -20,6 +27,8 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
+      studio-changed: ${{ steps.changes.outputs.studio }}
+      oceans-changed: ${{ steps.changes.outputs.oceans }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -35,14 +44,23 @@ jobs:
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
+              - '.github/**'
+            studio:
+              - 'frontend/apps/studio/**'
+              - 'frontend/*'
+              - '.github/**'
+            oceans:
+              - 'frontend/packages/labs/oceans/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/*'
+              - '.github/**'
 
-  # Start the marketing app CI workflow
-  marketing:
+  # Start the studio app CI workflow
+  studio:
+    if: ${{ needs.setup.outputs.studio-changed == 'true' }}
     needs: setup
-    uses: ./.github/workflows/marketing-app-ci.yml
-    with:
-      BRANCHED_TESTING_ENABLED: ${{ contains( github.event.pull_request.labels.*.name, 'All The Things') }}
-      PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+    uses: ./.github/workflows/studio-ci.yml
     secrets: inherit
 
   # Start the component library CI workflow
@@ -52,10 +70,17 @@ jobs:
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
 
+  # Start the oceans lab CI workflow
+  oceans:
+    if: ${{ needs.setup.outputs.oceans-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/oceans-ci.yml
+    secrets: inherit
+
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, marketing, component-library]
+    needs: [setup, component-library, oceans]
     if: always()
     runs-on: ubuntu-24.04
     steps:

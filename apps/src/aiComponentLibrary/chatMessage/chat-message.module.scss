@@ -8,6 +8,7 @@ $assistant-color: $brand_primary_light;
 $bot-container-size: 32px;
 $icon-message-gap: 8px;
 $icon-overlay-padding-right: 8px;
+$vertical-gap: 0.375rem;
 
 %message {
   @extend %markdown-styles;
@@ -23,6 +24,17 @@ $icon-overlay-padding-right: 8px;
   code {
     word-break: break-word;
     white-space: unset;
+  }
+
+  p a {
+    color: var(--text-brand-purple-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -58,12 +70,6 @@ $icon-overlay-padding-right: 8px;
   }
 }
 
-.messageWithChildren {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-
 .message-user {
   @extend %message;
   background-color: var(--background-neutral-secondary);
@@ -72,6 +78,14 @@ $icon-overlay-padding-right: 8px;
 }
 
 .message-assistant {
+  @extend %message;
+  background-color: var(--background-brand-aqua-extra-light);
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
+  overflow-x: auto;
+}
+
+.aiTutorVersion {
   @extend %message;
   background-color: var(--background-brand-aqua-extra-light);
   border-end-start-radius: 0;
@@ -94,21 +108,13 @@ $icon-overlay-padding-right: 8px;
   justify-content: flex-end;
 }
 
-%container {
+.botIconTAOverlayContainer {
+  grid-column: 1;
+  align-self: end;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  gap: $icon-message-gap;
-}
-
-.container-assistant {
-  @extend %container;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-
-.container-user {
-  @extend %container;
-  justify-content: flex-end;
+  padding-right: $icon-overlay-padding-right;
+  padding-top: 3px;
 }
 
 .botIconContainer {
@@ -123,20 +129,13 @@ $icon-overlay-padding-right: 8px;
   margin-bottom: 0;
 }
 
-.botIconContainerWithOverlay {
-  position: relative;
-  display: flex;
-  padding-right: $icon-overlay-padding-right;
-  padding-top: 3px;
+.assistantFooterBotIcon {
+  grid-column: 2;
 }
 
-.footer {
-  margin-inline-start: $bot-container-size + $icon-message-gap;
-}
-
-
-.footerWithOverlay {
-  margin-inline-start: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
+// Without the bot column, align footer with the message (column 1), not column 2.
+.assistantFooterNoBotIcon {
+  grid-column: 1;
 }
 
 .botIcon {
@@ -178,4 +177,35 @@ $icon-overlay-padding-right: 8px;
 
 .warning {
   background-color: var(--background-warning-light);
+}
+
+.assistantMessageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+json-video {
+  margin: 15px 0;
+}
+
+%message-and-header {
+  display: flex;
+  flex-direction: column;
+  gap: $vertical-gap;
+}
+
+.message-and-header-assistant {
+  @extend %message-and-header;
+  align-items: flex-start;
+}
+
+.message-and-header-user {
+  @extend %message-and-header;
+  align-items: flex-end;
+}
+
+.grid {
+  display: grid;
+  gap: $vertical-gap $icon-message-gap;
 }

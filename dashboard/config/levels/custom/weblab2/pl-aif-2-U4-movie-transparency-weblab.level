@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-16T17:49:31.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Movie Showtimes",
+    "thumbnail_url": "https://images.code.org/1209dbfcf1c0e878cb40ca663dec644f-showtime.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "bubble_choice_description": "Add a count message, a filter summary label, and a friendly empty state to a showtimes list.",
+    "long_instructions": "## Movie Showtime\r\n\r\n**Goal:**\r\nEnhance the movie showtimes view with clear **transparency cues** so users always know what they're seeing, what filters are active, and what happens when nothing matches.\r\n\r\n---\r\n\r\n1. **Open `script.js`.**\r\n   Find the `render()` function. This is where the movie list is built.\r\n\r\n2. **Add three messages to improve clarity:**\r\n\r\n   * **Count message:**\r\n     Update `#countMessage` to show how many results are displayed out of the total.\r\n     Example: `Showing 3 of 6 results`\r\n   * **Filter label:**\r\n     Update `#filterLabel` to summarize the rule being used.\r\n     Example: `Filter: showtimes after 6 PM`\r\n   * **Empty-state message:**\r\n     If no results match, show a friendly message in `#emptyMessage`, such as:\r\n\r\n     > “No showtimes found for this selection.”\r\n     > Otherwise, hide it.\r\n\r\n3. **Test your work.**\r\n\r\n4. **Use AI to check your reasoning:**\r\n\r\n   * \"Explain what my loop is doing each time it runs.\"\r\n   * \"Check if my count message still works when there are no results.\"\r\n   * \"Suggest a friendlier way to say 'No results found.'\"\r\n   \r\n---\r\n\r\n::: details [**🔎 Show me how: Part 1**]\r\nFirst, create variables to hold the new information using the HTML elements.\r\n![](https://images.code.org/150eb2be7e36eb07c553603bbff7aecd-image-1768925279256.png)\r\n\r\n*Drag the instruction box panel out to enlarge the image.*\r\n:::\r\n\r\n\r\n::: details [**🔎 Show me how: Part 2**]\r\nNext, go through the steps to show count message and filter label.\r\n![](https://images.code.org/efcbe9ddc82a1e414c8d00c0cb7c18e7-image-1768925225425.png)\r\n\r\n*Drag the instruction box panel out to enlarge the image.*\r\n:::\r\n\r\n\r\n\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Movie Showtimes — Adding Transparency</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <h2>Movie Showtimes</h2>\n\n  <p id=\"countMessage\"></p>\n  <p id=\"filterLabel\"></p>\n\n  <ul id=\"movieList\"></ul>\n  <p id=\"emptyMessage\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  background-color: #f9f9f9;\n  color: #222;\n  margin: 40px;\n}\n\nh2 {\n  color: #333;\n}\n\n#movieList {\n  list-style: none;\n  padding: 0;\n}\n\n#movieList li {\n  background: #fff;\n  margin: 8px 0;\n  padding: 8px 12px;\n  border-radius: 6px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);\n}\n\np {\n  margin: 6px 0;\n}\n\n#emptyMessage {\n  color: #666;\n  font-style: italic;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Sample data (toggle to test) ---\nconst movies = [\n  { title: \"Moon Harbor\", time: \"6:15 PM\" },\n  { title: \"Granite Peak\", time: \"7:00 PM\" },\n  { title: \"Neon River\", time: \"9:10 PM\" }\n];\n\nfunction render() {\n  const list = document.getElementById(\"movieList\");\n  list.innerHTML = \"\";\n\n  // show only movies after 6 PM\n  const results = [];\n  for (let i = 0; i < movies.length; i++) {\n    \n    const movie = movies[i];\n    if (movie.time >= \"6:00 PM\") {\n      results.push(movie);\n      const li = document.createElement(\"li\");\n      li.textContent = movie.title + \" — \" + movie.time;\n      list.appendChild(li);\n    }\n  }\n\n\n  \n}\n\nrender();\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTD61zkK18V5\n8uwA+wz8unp8DhdTXYP1K88HWDH+d0LvezQ8iFhoV6yVTS3fux2C18VAMOc5\nfQfrv0FMCVmbCK6jl4VLXZIe41L6uIc9G0i1ORoiFgYv6gMp+qzHVhUR888l\nLp8L6VF/aQNZ3TNz7/a9mydtGG7MZiQZBpoHo08GKFCqzkdOdEDphNKKeUyP\n69pRRaHirEOXk1f1w5CGMDTUHR45Yk3o9nlb2lP1g1N77U20y9RQzbEvgppp\nZ3UD3g8izTxIO0IRGX6Kh6HFb/jzkvg8ihNtzlGYhFLH5WQpJhrdYpR879k8\ndN6voebOvSz1bHeOM+5VwURyYJ5Sr6Mc7oY4ZbdyggbdFqKglojsT7ulsRy6\nWpYr0QU9ISz/Y+v089JaFoyW+rRaFSKf2XChyO5049zFS8AUbqAvEI5oWsbo\nRI20OgTk4Q7CnTtsy6cKj9EQgDDdh2r5uzPCoslUrAET0Jr8M6cSiaTCQJw4\nxWpE5EXjkhJgShGIYFbPGDYTalZKAnIAoAdiAZOjVhVxAY2S5PtxaRJsyMvM\nq6u8Uw9+/89damn0wTaUJlD6KHxLXHXwtz7NHBxrz/ohRjA9HuBmn5Sfofil\nPz3fp/MjzbmdN/OpJDbVgPQR2SWObFScouNlFn98KRNFSG69Y/tO/5uEaeWo\nPfXThcl6Mhq9PG8bvF6dsYzkpTGC5geU9fj1ihUeIM613iQSo6kfeblHvJan\nyAu6CzMT7LD6P9aS6rhBcSu+aJclAwhKspP+4oiFD86QMogWG19xlCQDI30A\nmLDYXMVFgDZz3tuHI6+p39r/jv9206tEilP+1PjKhInR4e+O/cgdKuibqShY\nmslFV8pEmCIdnOdvYu6dTqk7COCyrpPGTXLVFvlZSw8TY02T/TYVNmQ0ZlPD\n/GBBZEaEFeL9bNsuyqA9NEn+ybjutH7FobUgHi+OLJ5FlJssxHaAQo2Z0Z5P\nd9YSBEFP53N8dvcCbJeSbFKrGy9MZa/CEOwWqtcmo2+Xd2pNLRYQpqwqQ5+I\nZ9lD9Q/tEdPItkG+bPi2ccj7qRksawYnCiaqU0p3KrbZ0SFQTJhWixBwwdgl\nH70BGnyixP/Dmvoqlzkcru959B7dwy+rh/CqzdxpqvMSMZye/ejxnH3ASQQe\n9ZJQ6I3oaANtc9NLMw5ovsGXYtARkvP+Wu5wo0zq6P0WralefQM5wkTTHNDF\nOSylALUjkAgtA6JChrUUFV9kUsVvP/GXlAfJUNlhvSQnoPAtFKZ9TlcE+tou\n+/vzLZ4SsqNLx4s5Y3JPjWlgRFOflm2AYPo5nv3CJKeCe21gZWHx/oWCtI3F\nFUCIggy20A5wIYOBsUeDmotrhnqtXj68GFgKt6bq+hPQbUJc7qdOAJjeZ6fg\nnTmOFsR89BjTrBqLho931NeYsKMpGblxQobJNqr0Le2/ReXG1QXJZ3KJqCBJ\nq3h0NUkxWSQrhYsaccYDsh3rEKVsgZg7i1djDjTxfJx2BLBEO+St4NaPHwan\nAKa5VCKa0tuRMbS11zOZTVzSiWPT6zWvuG88yZyuv7g6E880BofPWBF2yrMq\n0PwQllhEMX0ETLEyiSt1CGlW+SurOWiViF/Nip17Clx9hytXhVjVKJwgpHLH\nKsWbWGc86th7yXxor0t8zW9zhPzz+MBCiKgweLHRU1NMIMSKKInp8pcvajJD\nJnE+P6xQNn8ZvNlY5e74Wl5CrWKpYFt3aNIs7jz7ezsMYJuX+FI10KJ0uVvP\nM8NeXZQ9s+UzLHLZpFWiHW43zB4o4LEhZ3NYwbIXb/+K3RS4zpKqU/6pSjyK\n3Xo1tXe9vEN/fYctz8fOE7utFSblmgsSkWIYyCWDs+DCY36fKnZhoWU4cG4c\n3GTKeB6qwJPwLZFPHqTIBsbPLwnGnNHiTXJPee9wtRmbw9R5mhnux+rKnKUe\nESMAG4eFabxiI7deqmZ2QCg4J4CzTBCoT4eVndIwsKtCRECNyj93ObBKotjd\nVXgRzhgEcj97v8ry1XgBZt0UfEwcNwdk26Tu/u+iIYdmofSMQnjUG7pPAzjj\nJmE1gfEQKN2f0KsZzmS4fxjJhmfC7jechhxvAlXHG69JNJrvk12Zjt5DfR+o\nJbsaRVcOpaJhxigSPOBSTY2YjYGJa161PZvrs94AAceScQpbHZ0JW5XTxsWi\ncLwt2OixPCby1vSOPM8ZuuRYsxQqMhiPrWOaR/aaPQODWntsguk+4+WC2mCE\n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\n",
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-16T17:49:31.821+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-level3a-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-level3a-test_2025-pilot\"},{\"changed_at\":\"2026-01-20 16:08:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-20 16:15:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

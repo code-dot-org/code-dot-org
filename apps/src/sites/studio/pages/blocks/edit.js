@@ -3,9 +3,9 @@ import jsonic from 'jsonic';
 
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import animationList, {
   setInitialAnimationList,
@@ -65,14 +65,18 @@ function initializeEditPage(defaultSprites) {
   );
 
   const helperCodeElement = document.getElementById('block_helper_code');
-  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
+  configEditor = initializeCodeMirror6(blockConfigElement, 'json', {
     callback: validateBlockConfig,
     onUpdateLinting: onUpdateLinting,
   });
 
-  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+  helperEditor = initializeCodeMirror6(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting,
+    lintConfig: {
+      es5: true,
+      disableRecommendedJsConfig: true,
+    },
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -85,7 +89,7 @@ function initializeEditPage(defaultSprites) {
   $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
-function onUpdateLinting(_, errors) {
+function onUpdateLinting(errors) {
   if (errors.length) {
     hasLintingErrors = true;
   } else {
@@ -153,12 +157,8 @@ function validateTextFieldNames(json) {
   }
 }
 
-// Only apply this validation to pools being rendered in Google Blockly,
-// as those are the pools where we have UI tests and want to prevent
-// levelbuilder changes from causing them to fail
 function validateBlockRenders() {
   if (
-    Blockly.version === BlocklyVersion.GOOGLE &&
     Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
   ) {
     throw 'Blockly is unable to render a block with the given configuration.';
@@ -204,8 +204,8 @@ function updateBlockPreview() {
   });
   const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
-  Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
+  Blockly.mainBlockSpace.addChangeListener(onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {

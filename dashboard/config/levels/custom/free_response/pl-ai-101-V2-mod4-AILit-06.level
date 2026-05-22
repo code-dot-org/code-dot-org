@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-03-30T15:35:59.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Step 2, Reflection\r\n\r\nNow that you've modified your lesson to include teaching with AI, take a moment to reflect on the process.\r\n\r\n> In the reflection box below:\r\n> 1. Describe the original lesson and the change(s) you made to the lesson to integrate AI.\r\n> 2. Describe one way working with AI Chat Lab strengthed your lesson.\r\n> <br><br>**Bonus!** Align your lesson plan to the AILit Framework Knowledge, Skills, Attitudes, and Domains.\r\n\r\nWe'll retun to this lesson throughout the Module for future revision and reflection.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false",
+    "display_name": "Step 2, Reflection",
+    "thumbnail_url": "https://images.code.org/c18a28cf07e6ad4b13c5440600bbbcef-Screenshot 2026-03-18 at 10.56.25 AM.png"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-30T15:35:59.666+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-closing-00\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-closing-00\"},{\"changed_at\":\"2026-03-30 15:38:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-01 17:16:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-04-08 15:58:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-20 17:37:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-20 17:39:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

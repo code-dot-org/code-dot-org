@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-01T20:47:33.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug - Pseudo-classes",
+    "long_instructions": "# Debugging Pseudo-classes\r\n\r\nHelp! Gloria is trying to style the hyperlink so that the font gets larger and has a different color when you hover over it. But it isn't working. Please help her by finding and fixing the bugs!\r\n\r\nWhat I expected to happen  |\t What happened instead\r\n----------|----------------\r\n**The link has a different style when you hover over and click on it.** | _Nothing_\r\n\r\n\r\n# Do This\r\n\r\n1. Find and fix any bugs so that the hover and active pseudo-classes will work appropriately!\r\n\r\n**Don't forget to click \"Refresh and Save\" to see if everything is working as expected.**",
+    "bubble_choice_description": "Debug the selectors when styling links with pseudo-classes",
+    "thumbnail_url": "https://images.code.org/abda76a0c7802d5308b94fcc6b939aa5-debug3.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>Becoming Super: The Science Behind Superhero Abilities</h1>\n    \n    <!-- informational paragraph -->\n    <p>Imagine leaping over skyscrapers, running faster than the speed of sound, or even manipulating matter with your mind. While these abilities are the hallmarks of our favorite superheroes, many of them can be explained by science! This page dips into the science behind some famous superhero powers.</p> \n    \n    <!-- gallery for image and link -->\n    <div class=\"gallery\">\n      <div class=\"link-card\">\n        <div>\n          <img src=\"superman.png\" alt=\"Superman\">\n        </div>\n        <div>\n          <p>To understand how Superman defies gravity, we have to understand lift and aerodynamics! By understanding <a href=\"https://www.youtube.com/watch?v=3b9xCC_vaZQ\">Bernoullis' principle,</a> which states that an increase in speed of a fluid (or air) results in a decrease in pressure, we can unravel the mystery behind Superman's ability to fly.</p>\n        </div>\n      </div>\n      \n      <div class=\"link-card\">\n        <div>\n          <img src=\"invisibleWoman.png\" alt=\"The Invisible Woman\">\n        </div>\n        <div>\n          <p>The Invisible Woman takes us on a fun journey into the realm of optics. By manipulating light waves and bending them around her body, she can render herself invisble to the naked eye. Explore concepts like <a href=\"https://www.youtube.com/watch?v=Yrc5qgN6FBg\">refraction and diffraction </a> to unravel the scientific principles the lie behind the Invisible Woman's ability to vanish from plain sight!</p>\n        </div>\n      </div>\n    \n      <div class=\"link-card\">\n        <div>\n          <img src=\"flash.png\" alt=\"The Flash\">\n        </div>\n        <div>\n          <p>The Flash introduces us to the concept of time dilation. According to <a href=\"https://www.youtube.com/watch?v=s9hkK7NOAD0\"> Einstein's theory of relativity</a>, as an object approaches the speed of light, time slows down for that object relative to an oberserver at rest.</p>\n        </div>\n      </div>  \n\n    </div>\n    \n    <div class=\"citation\">\n      <p>All images CC-BY-SA from fandom.com</p>\n    </div>\n\n\n\n\n\n\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* FIND AND FIX THE BUGS FOR THE ANCHOR TAG STATES */\n\na:link {\n  font-family:Arial;\n  color:#0014ff;\n  font-size: 18px;\n}\n\na:visited {\n  font-family: Arial;\n  color: blueviolet;\n  font-size: 18px;\n}\n\na.hover {\n  color: #f7f8fd;\n  background-color: #2f35ff;\n  font-size: 24px;\n  text-decoration-style: wavy;\n  border-radius: 7px;\n}\n\na.active {\n  color: red;\n  background-color:#d1fcff;\n  font-size: 24px;\n  text-decoration-style: wavy;\n  border-radius: 7px;\n}\n\n/* body style */\nbody {\n  background-color: #d9e7ff;\n  text-align: center;\n}\n\nh1 {\n  font-family: Arial;\n  font-size: 36px;\n  text-align: center;\n}\n\np {\n  font-family: Arial;\n  font-size: 18px;\n}\n\n.gallery {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n}\n\n.link-card {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n}\n\n\nimg {\n  border-style: solid;\n  border-radius: 15px;\n  width: 300px;\n  margin: 15px;\n}\n\n.citation {\n  height:300px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n}\n\n.citation > p {\n  font-size: 12px;\n  font-style: italic;\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "invisibleWoman.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6b-2025/uuid/6562968c-3c57-4857-aaf5-fa4ab7169596.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "superman.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6b-2025/uuid/2a032fdf-b500-488f-9521-c948594048eb.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "flash.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L18-L6b-2025/uuid/aabdbcd2-6380-4604-b641-671f74a164ed.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqSqAs/iIcTJvipkm4x\nH4xypmSaXdOnMfojz2Um+kozKMAUqEik3y04yVOQVFBH9RXgt69q6638J9vs\nG2xaL6zbtO4bu95cEWtCgFbg1IiBtP+ekcW/DM832KTVmpMah46sB8K58X3c\n38TvmVury79b4BukDoqC8n5qluRki9SANnA4fLgrsd9Mdx11z0k4RbHXQ1IE\neV71SvPpUHoeQFD+W+f9Q9W50GmYbFtm+cdzNN0nE9KkigSTnuDW1Kf66TyS\nBLNUe85P0QqrDGABcHlOXQl8vOno+YoZZCtVN5zuVKKCGNAG89g7mZGmIg6V\nRJgM19ew/+KYbrI1tLl+4kndnsmb7EWs36RAZJKRmUNgHeDHo8yH4YIDHhog\ncXPTI8ZHXxfnwGh2nJKeZgyXMs1Zez835mSmxu3SXqwogp5eaH7MA1FfC1fh\nw6/uvMa3B/B4/AC2D+GmdzAABQ8nchD5r1isozst+EVwtst7lYk5CDTwhjGG\nnKRCASiadTwZ269xmpdf7hauDpNqh/X/2qRMCcB1X3PXrbGN7nYVUO2haxQA\nn8Pt7ZtoDwtecxSNOExfHxfq9Brr4QlkHm8oJiGuRmPXBZ9wt9MRmgmrCsxr\nrLGiqb0Z/Iz4Zw0sPJI4yksfGPtrNNBAi5w8sSYY4oOzxPP6ZeN0dyKfMUYT\n/DXx3rWmU0gXYJgt20NmUAvIcuURoIlFsYcyqrNjeeqA+K693O+M2SvVi5x/\nJVd+Erz49jdLrVWIRA/N5mtutqqbZ40lezfllXG2lzpomJKZHB25vkl0E6qF\nqJDMeu+DQlHxgqxvyo8yZz1y2cQpC47QJ8a7ysJg9NJLbdQOV00/GCYrbnXz\nBKyJa35OR24DqtbgQMYKKMjVH3Rpd15MI0rD1tXIeLEyZFyYciomuGXReISL\n4AM1Xhr6MQ4T8dXZZ6AZXPwG+8679NgGfCROp0umRKjhH+5608PyhXSmUwUk\nfF+fMNbUSZZhSp731D9m4yyF0eXxJGkzjfIkEV3GnTdrfMHbJEAUwqEtxVHj\nJ3B1G84KpsNQGmfy03Aibdo8Dc9mQ3Erq2y7POm9lDQx9onV61FRwoQpYnGa\nKPGTLCgdjxul7+x1nBYBEMzMAonC60WZktw4hbVjzVN294+Xeeih72PfyHk8\noKQKRwC69z3LgwFPZcL+HK3HYYudbnBaj7fZC32cmKspXp/ASn8HRivju6P3\nDTBCZwgZ618XggT3QdQHTVMLUcMcn8L86pgNQR/MMSjNFGNoN21bx6duO+48\nsNIZ363nF3B4ZtJmcW9xxQQqD1UFwbWOtyBcjANjVXBT8xpFnlqmhovUzbUi\nWO9IYWEEAFsxkMmKvueIh2JVZjif3TtBSt+ne0sa2WD6YuMWeu2V744w18rX\nD71kRkj6L7S4lBqgcPvR1YaT5EfzbzZZBVb3KZmkFxFJXkoyuepVrB7xNcjw\nIVQ8UHfDFcXWMSWquy10KIe4u3LnOS3WB2/mY+4NrQMOc7UGsJ5VAQOdZ9DN\noijeOD9mXuS9Zj1v2+jlRGLPQ7CPq8x8futzcirtKiGnvH+L+fJgQXL7IUkH\nvT9bIU4JHPyJBJ75F6D8D5DViVPJgJYwJBclSfcNr2PB9/4Uv8CbltMXQTY/\n0VKcYnt12k25/AkRpBPS+qatc8cAmLbUg5Vdm3tMrppY3xkXYXq2WKgpgLxA\nH2p3R5cvU/tp5KbspysCCDLmzv3CzXOI2VcCcD0JEDsic5renSYkbQ4uumzM\nrk9E2V1l1h0tuHLD7QLbTu++S48EKGkmNcIdHto/KBdxj17dvbm/4+lqrHJp\nEu+GlLGVMlLxm7HXGC6CE7AndKPP4gQqRcXNuaRk9HUaHIKrz2zSk9uOQQq0\n/w+LZCp7LRU5xFN84ntABN5Yi+bCx9YKQBuNCeYYkWKHSBAmRPZmnkWc01bT\nO2UfGwa+vzbCyOX9O9rmAHhDQsZlUx60fOKuVyXqmxdwl47q0LTw5z4B/b4d\ndvRlSjU2ZQ7zehiKgCjFWzaew+g1iiUI83/U9//UiQa2TQwuExQixUbxQae5\nCo9Os5p0zajMZgrnj6HzSHLRR6B4TyX1dyt85+WFLVxWOw8oTlmlERJkZ4ee\n1Z+Sqxil19ZiVFdXuaXfLPk8keRVTYCzVftW97GFxcuT42vfaHfFR1aS62je\nDODAgC3O3XjfSkekIO6LAzL5rmp0JEq+TWUB+MyvaMwWNwOv530el4MmSKgc\n7bHbjk3mqVi6FjUpLXGt+zsy3jSgrMrObllyGYobjH5MK2GsfKWPTQKrDnCX\nIzyON0/Ep80AAa6FaaqaQlA6xS2/ZtNNy6/AAu0DvXKgEpmaHba8o32Bcjai\ndOsbcTEObE+3J5vtASshUfGeqCnWyTnJlY4WaSU6VGNIKPoG9Ec9xoJ2Rdn/\nykWKphBkE3R0rSwT1rbnQa/Rt7SQ+TVAzPyJxLMuif2x4NSr/Vjq2aJV9m0g\nIeQdUqQJtnrdjm8ADjIKBi/i3lW6HxLBRQQ3dwiJRJve+b9GiZVougoy5svl\nP2fD/wIMujMS5LIXyTbNUYOUek3rn33CWoEQa9uVZiyVXyt289GueOvoLPMa\nC5stPoNeP4/io2cJa63PQmQ1zI0/llRLJMIsBvIeCDL4sw7uGo6wcoRKos2a\nEbd4ndeLzLAzFaetdtaowEZ4vyZv4lN6CxOXb8D0iKHJc2VAn0anr8JH8Sca\npdCGP1+C5SU5z+Lq2gAyo4Iz7BLkoGLns2hTzCZIPOMpDwoGqtGpuUClqoz5\nUIqUiiJcX3vHfR2NQA6iBqJxoPk36hyCzQdZA3zD8ulNzta/hfjiiTD8Bqxf\nnmzrZIZCYrpwRMGk99rwU/jtqrkOAzAf4uPsCl02ndvrDsZRdHI2PbH9KfQT\nxQZLSobzSZA8weiDhNtQnQEjJd5XFU5EbUf8makfBlBWsICLBOUFPO+PHOzJ\nHNLO6aWal77MhU575Qzc8EvA1sUI9LwBn7zCe2ZLrl5K8PQaWDx6PAw2EAid\nykvdyb1TsFHruyTxSpaCyu8+PnSWOjktfOVbiJQ+nkfmUPp7PpvIV99297Yc\nECCgmCo0sj5nJCWSdaIykHay3w+UxixhNkR8eiOxDN8QhM3rcp53eJfZg93z\nCt4wr1i/1VhgVMz2pTW5oej1wj6Y1DeQ7UpMk2n6kqP0594fM93Ey6O2Mqfu\nNMpPiSOEp+5nlQ8BNqxCdm61nEc3VTGCsNTAdyjGIBdfJQLGj6zegyeXqTpH\ncdn6pxgYTjvQFwZxkbENpUaFgRGkp89wQvXZH9Yl3ptiYGfhbAW4LwYhyHBe\n9/uLfdF5cYEPhKVq7OoHh556xt4tivVSiLg2LcynmRSJB6voZ4xmclqwdeBA\nr/1bR2LVKIbncPGpqdfBfuzP+8NpUYqGDVRbuf2W8GJumB9JkEyZ/+0y35DI\nIbnPDAEdqWoCjUd7ypOWELVJL0S9DdroQ2OmrrXb+snomssdR6FPE1pF8Lcg\nZI2/w0IST25WaALLYPX4IEadX3O7gFtsEjlglIV5KSAt/Apr60eZqQiwUQw1\nU1zGMfApYdYEkd3zDKHkKA1p0aG/YphFDQRrvEqROZHlH8Hgz1WYYxLQ5RBd\nCJhnEA5trbEmHPfG1Mf08qd0+nleuQfDKGkNlB7b6fIaz0Pz19f12Zw+y266\n6Ku3rxMjX9QE6nAH0e8Nt/YGs8sxLkcfIvfgGU2l5Da/OPhn9LnnFz87wMpP\nmpWhv5tPpgRyqhwg/Ypv7U3I5oKovd1COSE87FJ/OjIJHT1FL3zyJgfkLOuJ\nn0w1fiS1EJb9BkxQD2OjLQCPj50vBbbmjLn6lxAQxOXocbCGXfGT1Lfewyrw\nnen2pAoyJaKZGrlAJzUcqhbizevOXWWagM4aim4x/hR27AprfvhGz7LL3Wbh\nrqIFWVSSWVG1F0wrbRvpnnQ9XCu11MSXn+ovoTmTXiN8SeKAvkpuvLDgCAMl\nK/gDJKDIbx2E8QJn1iRd5Zaauwka+aMpl7uwxCuBYoruwSrjyYfDVo6GJGIM\nq569+R7TVuSA8354ecrGDlPQUblbP2sKk8JofMXZaXwg3QnoE/UzBN3iHxBK\n/TGodNm+rSxHu2J6EPRi6H6mxbj8nd63wNQYR2DH5AhNEbwzILPF4mfVubrD\n8uvxjOZUXxPKjjNd/n34SjLvRVrqH1yf5oHw3kv7l78IiMxixckF1A9ORzz3\nu9oJtDcaJ3yHRg2Yv9nkyU4FFXHJbOEsY+8/NoXkF4wss1GNjKX/ALHYIe+h\nKgxAEwkwKc7cf3sCKNgRYR51vIfSh3+eWkCwEpJHGHi6gjAQ0rqjrs4RRKRh\nkHMRD7KcMLoyL/+h4Ngvc/3fEZiPELCz7fgfgf/a3/wFFJl+gB7rbheYGpo+\nUI78Z/DGWWcMW8jS1yfeogTdtsDaqCz/9ct8MtwYrtfevyg8neEcpHAdWo9e\n1fiKiEA9KI5bnWAMgs68+xzicRnfQCd3Mcbr4AAEGobRxsaPlkYCP9T/ugZ/\nVU+bQn5ZjKNDy6/uqKnGMj5KE06GZBJE+AplDuINjNGpbyhk+dr9fHQxuTTT\n7zxj3+d/ZDSFhGMzE2V1XyHwteDnCFGxICHF/edsvbhsDroMeigalD469hCh\nUbkH95GkBv2KpEY7PQEWPN7UYKJ8+7ZBYoupYSkm7U7GmD0dFBg0x1JQP0Ch\nv0HnnVi3FsI/hpBQ3nvssKLT+gMDDAX3eZs3wXF24iXn9nEUu4W1oFyXBSZE\n+ao9T2lSZnRODq4eqcEYmnZA80pHZ3n0S6bQ0fblLydju0qHCEf1dgjELe5E\nlhSMY7upGqFAZQzKcj1IwX0xIaCcy1Q0D/x4NOg2FcfTBcmJBmE3dBDkisPS\ndXVMfo+zDmCxR4GundPeN/r8E2KnRJ157DUpv4cWsm8JmCotmwxYq861QlTi\n8cBrEAIXogqEpT8t0MY9qOOkjYChk8LVckAniMwFDxJp/l1ZRTRPLtgbYD9R\nplqHWWlwUprEfHtYLG3THfVa+hk6X2CXAaPTmBJyI+I3cfQAarQ9+Ly9qUSD\nCoSOq4VfbjbjoTAAE+zdVnZbGrILH9GwmjR5DhYBC95ScOC0vK9vIGRtLdCg\nb3Kd0YdJExA7k8JjgIt6wHjVLKhsM01WR3uPjqxZCOqasXZYCL/mw4MhrdmS\nFrksfW8wVqNyWJ6VjoVt5ev3l1ZyXiKAqrqh1gDnx97mnlrhcS3w5iOr3s0B\nU/27vMWR76CrpmTDz+5U8g5bGy05Z8/35WZx47o6XGSo18xof5FYUPbHJydC\nWRLlPGvhspsRXR3Hk2TwXvQYbi6Ze1zo++sb3a5uiyHqu+XqD7lh0Xbbwvhl\nVjQsZh8NoaLDlA0jN8lXhg7dKgac4T5xaJ6E4ebFol668j/ptzVObZcuL84/\nZAW5jqNb4aGK70n7un6ysA/07tLCzbMxJJlHpHTk1dAnZRs7L/foCqzgwuwV\npYCChmUehRUo2mIANnY273Yi5ZIT58qgQkXiAA60xMFUN9nIXGPgcAWE6Z85\nLDnY4jUOl7+m2T+Q4gGGR9J+vZHZtmldBBdS24hKy4aws7GC2JCRkKxE10HH\nzZPOmU5AeTbc0W2ZUqutoeUjQxwKra0U7H2P6dWvslHxlQMeSVnjZuv71I9+\nxgXz3mr6Uqq7gd4ooCeyZ4DK0SmXdsAISEgwazGZ9ALh4cC2KsHsKr/vcPyu\npK06u/I8W4QQ59N9rYALYOjXSb73tj6+lR3CbcIZQSXeClrPV0cRkp7T9pAw\nesgQOccpvSw2wkDPUInvFfk/1XKL0sa7Hz6cU9uX5oEi1u/1iUhtXnNxLGnP\n2VgczHGIpscqucusPHIWYOGQF+Iks2B9WTzG0XyTALlctyCggwRORkjKwwhf\nREXQlg7JJUyzL+uyJRxfCRV65qWcWkPSPzYl8d8bqzvk8oclVQ2pFKjn/VHV\nEoP+FXLASr3/YnZxmwrhUTY73WgfCMJAwcn/N+PW9Hk+3//twchbWwI5E+RG\nFk1b3sq+mzXqTngKdP4BmM1LTzyOHjcLIhu95KklqhIkmTHea++lNB42EPgW\nLcizHIO6W19+1whve0IGjgbW0cyVuN88jrOueqOmepzSYWqOGn12wari12Z/\nHC3e5/5LzsUvSw/RzEyo8xKh31Sboj1yoNRzxn06EQgEWB14aJM0grNC2wSW\nD/sh2VZLObXHpZP5lIqqlBTznArXUNZz\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:33.328+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L6b-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L6b-2025\"},{\"changed_at\":\"2026-05-19 21:19:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:20:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:20:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:21:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:21:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

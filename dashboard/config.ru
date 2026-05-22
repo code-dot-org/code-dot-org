@@ -6,17 +6,6 @@ CDO.cdo_secrets&.required! unless rack_env?(:development)
 
 require File.expand_path('../config/environment',  __FILE__)
 
-unless rack_env?(:development)
-  require 'cdo/app_server_metrics'
-  listener = CDO.dashboard_sock || "0.0.0.0:#{CDO.dashboard_port}"
-  use Cdo::AppServerMetrics,
-    listeners: [listener],
-    dimensions: {
-      Environment: CDO.rack_env,
-      Host: CDO.dashboard_hostname
-    }
-end
-
 use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,

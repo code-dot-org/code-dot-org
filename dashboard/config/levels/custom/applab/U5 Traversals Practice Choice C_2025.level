@@ -93,6 +93,7 @@
     "thumbnail_url": "https://images.code.org/935f8462eace2eef4fa1a6dd60042b1b-image-1649966398315.png",
     "bubble_choice_description": "Update this program so that it shows average gas prices for multiple cities across the USA.",
     "encrypted_examples": "NlIH2W7AmnJsQIqDXGQ+ZBidjQfzEYbLfzpeTPWV+AfBv13Hql3CW8e5/fHu\n8k7AJJc+ocjMlZESp7TGfzCgzQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

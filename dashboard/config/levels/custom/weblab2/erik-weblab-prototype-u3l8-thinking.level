@@ -1,0 +1,76 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-12T19:51:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Searching\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <title>Lesson 8 · Film Festival Organizer</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <link rel=\"stylesheet\" href=\"style.css\" />\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n  <header class=\"wrap\">\n    <h1>Film Festival Organizer</h1>\n    <div class=\"row\">\n      <input id=\"search\" type=\"text\" placeholder=\"Search title, genre, or vibe... try: quiet comedy\" aria-label=\"Search films\" />\n      <label class=\"inline\">Block\n        <input id=\"block\" type=\"number\" min=\"10\" step=\"5\" value=\"60\" aria-label=\"Screening block minutes\" />\n        <span class=\"unit\">min</span>\n      </label>\n      <button id=\"clear\">Clear</button>\n    </div>\n    <p id=\"status\" class=\"status\" aria-live=\"polite\"></p>\n  </header>\n\n  <main class=\"wrap\">\n    <section id=\"cards\" class=\"cards\" aria-label=\"Film results\">\n      <!-- cards injected -->\n    </section>\n  </main>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root {\n  --bg:#f7f8fb; --ink:#111; --muted:#67707c; --panel:#fff;\n  --border:#e5e7eb; --accent:#4b6bfb; --good:#17a34a; --bad:#b91c1c;\n}\n\n* { box-sizing: border-box; }\nhtml,body { margin:0; height:100%; background:var(--bg); color:var(--ink);\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }\n\n.wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }\n\nheader h1 { margin: 0 0 .5rem; font-size: 1.35rem; }\n.row { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }\n\ninput[type=\"text\"], input[type=\"number\"] {\n  padding: .55rem .7rem; border:1px solid #cfd3da; border-radius: 10px; font:inherit; background:#fff;\n}\n#search { flex:1 1 420px; }\n\nlabel.inline { display:inline-flex; gap:.35rem; align-items:center; color:var(--muted); }\n.unit { color:var(--muted); font-size:.9rem; }\n\nbutton {\n  appearance:none; border:0; border-radius:10px; padding:.55rem .8rem;\n  background:var(--accent); color:#fff; font-weight:700; cursor:pointer;\n}\nbutton#clear{ background:#e9ecf7; color:#1c2a62; }\n\n.status { margin:.5rem 0 0; color:var(--muted); }\n\n.cards {\n  display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));\n  gap:.75rem;\n}\n.card {\n  background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:.6rem .65rem;\n}\n.card h3 { margin:.1rem 0 .25rem; font-size:1rem; }\n.meta { display:flex; gap:.35rem; flex-wrap:wrap; color:var(--muted); font-size:.85rem; }\n.meta .tag { border:1px solid var(--border); border-radius:999px; padding:.05rem .45rem; }\n\n.badge { font-size:.85rem; font-weight:700; padding:.15rem .5rem; border-radius:999px; }\n.badge.good { background:#ecfdf5; color:var(--good); border:1px solid #bbf7d0; }\n.badge.bad  { background:#fef2f2; color:var(--bad);  border:1px solid #fecaca; }\n\n@media (max-width:560px){\n  #search { f\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Dataset (keep it small and readable)\nconst films = [\n  { title:\"Paper Planes\",   minutes:4,  genre:\"animation\",    vibes:[\"uplifting\",\"quiet\",\"hand-drawn\"] },\n  { title:\"Streetlight\",    minutes:7,  genre:\"documentary\",  vibes:[\"gritty\",\"reflective\",\"urban\"] },\n  { title:\"Loop\",           minutes:12, genre:\"experimental\", vibes:[\"abstract\",\"sound-driven\"] },\n  { title:\"Lunch Line\",     minutes:5,  genre:\"comedy\",       vibes:[\"light\",\"snappy\",\"school\"] },\n  { title:\"Tidepool\",       minutes:9,  genre:\"documentary\",  vibes:[\"calm\",\"nature\"] },\n  { title:\"Pencil Test\",    minutes:3,  genre:\"animation\",    vibes:[\"playful\",\"weird\"] },\n  { title:\"Echo Park\",      minutes:14, genre:\"narrative\",    vibes:[\"moody\",\"slice-of-life\"] },\n  { title:\"Orbit\",          minutes:16, genre:\"narrative\",    vibes:[\"mystery\",\"tense\",\"space\"] },\n  { title:\"Spiral Stair\",   minutes:6,  genre:\"experimental\", vibes:[\"quiet\",\"surreal\"] },\n  { title:\"Open Mic\",       minutes:8,  genre:\"comedy\",       vibes:[\"crowd\",\"feel-good\"] }\n];\n\n// Simple grouping; students can tweak in code if needed\nconst SHORT_MAX = 5;   // < 5  → short\nconst MED_MAX   = 15;  // ≤ 15 → medium; else long\n\n// DOM\nconst cardsEl = document.getElementById(\"cards\");\nconst searchEl = document.getElementById(\"search\");\nconst blockEl = document.getElementById(\"block\");\nconst statusEl = document.getElementById(\"status\");\nconst clearBtn = document.getElementById(\"clear\");\n\n// Core search: AND across tokens; supports optional genre: and len:\nfunction searchFilms(items, query) {\n  const tokens = (query || \"\")\n    .toLowerCase()\n    .split(/[, ]+/)\n    .map(t => t.trim())\n    .filter(Boolean);\n\n  let genreFilter = null;\n  let lenFilter = null;\n\n  // Pull out lightweight operators; keep the rest as keywords\n  const keywords = [];\n  for (const t of tokens) {\n    if (t.startsWith(\"genre:\")) genreFilter = t.split(\":\")[1];\n    else if (t.startsWith(\"len:\")) lenFilter = t.split(\":\")[1];   // short|medium|long\n    else keywords.push(t);\n  }\n\n  return items.filter(f => {\n    if (genreFilter && f.genre.toLowerCase() !== genreFilter) return false;\n\n    if (lenFilter) {\n      const g = groupFor(f.minutes);\n      if (g !== lenFilter) return false;\n    }\n\n    // AND semantics: every keyword must appear in title, genre, or vibes\n    return keywords.every(k => {\n      const inTitle = f.title.toLowerCase().includes(k);\n      const inGenre = f.genre.toLowerCase().includes(k);\n      const inVibes = f.vibes.some(v => v.toLowerCase().includes(k));\n      return inTitle || inGenre || inVibes;\n    });\n  });\n}\n\nfunction groupFor(min) {\n  if (min < SHORT_MAX) return \"short\";\n  if (min <= MED_MAX)  return \"medium\";\n  return \"long\";\n}\n\nfunction render(list) {\n  const block = parseInt(blockEl.value, 10) || 60;\n  const total = list.reduce((s, f) => s + f.minutes, 0);\n  const fits  = total <= block;\n\n  statusEl.innerHTML = `\n    <span>${list.length} film${list.length !== 1 ? \"s\" : \"\"}</span> |\n    <span>${total} min total</span> |\n    <span class=\"badge ${fits ? \"good\" : \"bad\"}\">${fits ? \"Fits block\" : \"Too long\"}</span>\n  `;\n\n  cardsEl.innerHTML = list.map(f => `\n    <article class=\"card\" aria-labelledby=\"t-${slug(f.title)}\">\n      <h3 id=\"t-${slug(f.title)}\">${f.title}</h3>\n      <div class=\"meta\">\n        <span class=\"tag\">${f.genre}</span>\n        <span class=\"tag\">${f.minutes} min</span>\n        <span class=\"tag\">${groupFor(f.minutes)}</span>\n      </div>\n      <p class=\"meta\">${f.vibes.join(\", \")}</p>\n    </article>\n  `).join(\"\");\n}\n\nfunction slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,\"-\"); }\n\nfunction update(){\n  const q = searchEl.value;\n  const list = searchFilms(films, q);\n  render(list);\n}\n\n// Wire up\nsearchEl.addEventListener(\"input\", update);\nblockEl.addEventListener(\"input\", update);\nclearBtn.addEventListener(\"click\", () => { searchEl.value = \"\"; update(); });\n\n// First paint\nupdate();\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "progression.md",
+          "language": "md",
+          "contents": "# Lesson 8 · Student Film Festival Organizer\nGoal: build and check a simple search for short films, then validate it.\n\n## App basics\n- Search box matches **title**, **genre**, and **vibes**.\n- Optional operators inside the box:\n  - `genre:comedy` filters to a single genre.\n  - `len:short` or `len:medium` or `len:long` filters by length group.\n- The status line shows **match count**, **total minutes**, and whether it **fits** the block.\n\n---\n\n## Part A · Implement & explain\n1. Read the search code: `searchFilms(items, query)` splits the query into tokens and uses AND logic.\n2. In your own words, explain where a token can match: title, genre, or vibes.\n3. Try three queries and record totals:\n   - `quiet`  \n   - `genre:documentary calm`  \n   - `len:short`\n\n---\n\n## Part B · Debug\n1. Break it on purpose: search with `len:SHORT` and notice it fails.  \n   Fix: the app expects lowercase; note how you would handle case-insensitive values.\n2. Try a query with an extra comma: `quiet, , comedy`.  \n   Check that empty tokens are ignored. If not, patch the split/trim logic.\n3. Confirm that every keyword must match somewhere (AND).  \n   Example: `quiet space` likely narrows the list a lot. Is that expected?\n\n---\n\n## Part C · Validate with AI test cases\nAsk an AI to propose compact tests.\n\n**Prompt**\n> Create five queries for a student film list that uses: title, genre, vibes; operators genre: and len: (short|medium|long). For each, give the expected **count** and the expected **total minutes** based on the data I describe next. Output as a table with columns: query | expected_count | expected_minutes. Keep queries short.\n\nThen paste the dataset (title, minutes, genre, vibes) and run the tests in the app. If a result disagrees, note why and fix the search if needed.\n\n---\n\n## Part D · Edge cases & refinements\n- Add case-insensitive handling for `genre:` and `len:` values.\n- Allow `OR` with a vertical bar in one token: `quiet|calm` (treat it as either word).\n- Prevent negative numbers in the block field.  \n- Optional: show a tiny warning when a single film is longer than the block.\n\n---\n\n## Exit ticket\nWrite two lines:\n1) What change made your search more reliable?  \n2) One query where AND logic helped and one where it felt too strict.\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:51:49.034+00:00\",\"changed\":[\"cloned from \\\"erik-weblab-prototype-u3l8-pro\\\"\"],\"cloned_from\":\"erik-weblab-prototype-u3l8-pro\"},{\"changed_at\":\"2025-11-12 19:51:54 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 20:08:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 20:08:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

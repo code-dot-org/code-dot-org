@@ -1,10 +1,11 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -12,6 +13,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import {codebridgeLabsWithConsole} from '../constants';
 
 import moduleStyles from './right-buttons.module.scss';
 
@@ -68,29 +70,30 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   return (
     <div className={moduleStyles.buttonContainer}>
       {isWidgetView && widgetViewAllowShowCode && (
-        <Button
-          text={
-            widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()
-          }
-          type="tertiary"
-          color="black"
-          size="xs"
-          iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onViewCodeToggle}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
+        >
+          {widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()}
+        </MuiButton>
       )}
-      {appName === 'pythonlab' && (
+      {codebridgeLabsWithConsole.includes(appName) && (
         <WithTooltip tooltipProps={tooltipProps}>
-          <Button
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'eraser'}}
-            ariaLabel={codebridgeI18n.clearConsole()}
-            onClick={clearOutput}
-            size={'xs'}
-            type={'tertiary'}
+          <MuiIconButton
+            variant="text"
+            color="secondary"
+            size="extraSmall"
             disabled={isClearButtonDisabled}
-            color={'black'}
-          />
+            onClick={clearOutput}
+            aria-label={codebridgeI18n.clearConsole()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconStyle="solid" iconName="eraser" />
+          </MuiIconButton>
         </WithTooltip>
       )}
     </div>

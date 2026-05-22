@@ -16,7 +16,6 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCas
     legal_opt_in: true
   }
 
-  self.use_transactional_test_case = true
   setup_all do
     @teacher = create(:teacher)
   end

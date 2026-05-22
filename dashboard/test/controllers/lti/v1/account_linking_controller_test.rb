@@ -17,7 +17,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
     )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes session, partial_lti_teacher
@@ -51,7 +51,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
       )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     roster_synced_teacher.authentication_options = [ao]
     Services::Lti.create_lti_user_identity(roster_synced_teacher)
@@ -101,54 +101,104 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     post :link_email, params: {email: @user.email, password: 'password'}
   end
 
-  test 'returns bad request if not logged in' do
-    post :new_account
+  test 'returns bad request when partial registration is not in progress' do
+    PartialRegistration.stubs(:in_progress?).returns(false)
+
+    post :link_email, params: {
+      email: @user.email,
+      password: 'password',
+      lti_provider: 'test-provider',
+      lms_name: 'test-lms',
+    }
 
     assert_response :bad_request
   end
 
-  test 'opts out of lms landing for a signed in user' do
-    lti_user = create(:student)
-    sign_in lti_user
+  describe '#new_account' do
+    subject(:new_account_request) {post :new_account}
+    let(:user) {create(:teacher, :with_lti_authentication_option)}
 
-    post :new_account
+    context 'when user is not logged and not in-progress with registration' do
+      it 'returns bad request' do
+        new_account_request
+        assert_response :bad_request
+      end
+    end
 
-    lti_user.reload
+    context 'when signed in' do
+      before do
+        sign_in user
+        PartialRegistration.persist_attributes(session, user)
+      end
 
-    assert_equal true, lti_user.lms_landing_opted_out
-  end
+      it 'opts the user out of lms landing' do
+        new_account_request
 
-  test 'opts out of lms landing for a partial registration user' do
-    lti_user = create(:student)
-    PartialRegistration.persist_attributes(session, lti_user)
+        user.reload
+        _(user.lms_landing_opted_out).must_equal true
+      end
 
-    post :new_account
+      it 'clears partial registration from the session' do
+        new_account_request
 
-    partial_user = User.new_with_session(ActionController::Parameters.new, session)
+        _(PartialRegistration.in_progress?(session)).must_be_nil
+      end
 
-    assert_equal true, partial_user.lms_landing_opted_out
-  end
+      it 'verifies the teacher' do
+        new_account_request
 
-  test 'verifies roster-synced teacher if they are not already verified' do
-    lti_user = create(:teacher)
-    sign_in lti_user
+        user.reload
+        _(user.verified_teacher?).must_equal true
+      end
+    end
 
-    post :new_account
+    context 'when partial registration' do
+      it 'opts the user out of lms landing' do
+        PartialRegistration.persist_attributes(session, user)
+        new_account_request
 
-    lti_user.reload
+        partial_user = User.new_with_session(ActionController::Parameters.new, session)
+        _(partial_user.lms_landing_opted_out).must_equal true
+      end
 
-    assert lti_user.verified_teacher?
-  end
+      it 'keeps partial registration in the session' do
+        PartialRegistration.persist_attributes(session, user)
+        new_account_request
 
-  test 'do not verify roster-synced student' do
-    lti_user = create(:student)
-    sign_in lti_user
+        _(PartialRegistration.in_progress?(session)).must_equal true
+      end
+    end
 
-    post :new_account
+    context 'when student' do
+      let(:user) {create(:student, :with_lti_authentication_option)}
 
-    lti_user.reload
+      it 'does not verify the student' do
+        sign_in user
+        new_account_request
 
-    refute lti_user.verified_teacher?
+        _(user.verified_teacher?).must_equal false
+      end
+    end
+
+    context 'when non-LTI user' do
+      let(:user) {create(:teacher)}
+
+      before do
+        sign_in user
+      end
+
+      it 'does not opt the user out of lms landing' do
+        new_account_request
+
+        _(user.lms_landing_opted_out).must_be_nil
+      end
+
+      it 'does not verify the teacher' do
+        new_account_request
+
+        _(user.verified_teacher?).must_equal false
+      end
+    end
   end
 
   describe '#unlink' do

@@ -76,7 +76,9 @@ export default function VersionUnitDropdowns({
           orderedUnits &&
           Object.entries(orderedUnits).length > 1 && (
             <span className={moduleStyles.unitDropdown}>
-              <div>{i18n.startWithUnit()}</div>
+              <div className={moduleStyles.unitDropdownLabel}>
+                {i18n.startWithUnit()}
+              </div>
               <select
                 id="uitest-secondary-assignment"
                 value={selectedUnitId}

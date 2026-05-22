@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # End-of-Unit Project: Design an AI App
 
-#### To conclude this unit, students develop an AI app that addresses a social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. 
+To conclude this unit, students develop an AI app that addresses a social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. 
 
-#### After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
 
 <hr style="clear:both">
 
@@ -19,9 +19,9 @@ markdown <<MARKDOWN
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">
 
-#### The AI unit allows students to be creative. When they actually have to create their apps, they have to think of ways in which they can solve problems in their society, and in the community, and in the world.
+The AI unit allows students to be creative. When they actually have to create their apps, they have to think of ways in which they can solve problems in their society, and in the community, and in the world.
 
-#### My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!
+My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!
 </p>
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
@@ -34,8 +34,8 @@ markdown <<MARKDOWN
 
 ## Project Resources
 
-* #### <a href="https://studio.code.org/s/csd7-2024/lessons/22" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* #### <a href="https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project Guide</a> 
-* #### <a href="https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+* <a href="https://studio.code.org/s/csd7-2024/lessons/22" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* <a href="https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* <a href="https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 MARKDOWN

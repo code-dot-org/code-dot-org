@@ -92,6 +92,7 @@
     "rubric_performance_level_2": "The text block is used, and it appears on the screen in a reasonable place.",
     "rubric_performance_level_3": "The text block is used, but the text does not appear completely on the screen.",
     "rubric_performance_level_4": "No text blocks are used, or it contains so many errors that the program cannot run.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

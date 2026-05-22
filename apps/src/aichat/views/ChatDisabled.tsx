@@ -1,13 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import Link, {LinkProps} from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import React, {FC} from 'react';
-
-import aichatI18n from '../locale';
 
 import styles from './chatWorkspace.module.scss';
 
-export const ChatDisabled: FC<{message?: string}> = ({
-  message = aichatI18n.aiChatDisabled(),
+export const ChatDisabled: FC<{message?: string; link?: LinkProps}> = ({
+  message = 'AI chat is currently disabled',
+  link,
 }) => {
   return (
     <div className={styles.chatDisabledContainer}>
@@ -16,7 +16,19 @@ export const ChatDisabled: FC<{message?: string}> = ({
         iconName="ai-locked"
         iconFamily="kit"
       />
-      <BodyThreeText>{message}</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        {message}
+        {link && (
+          <>
+            {' '}
+            <Link
+              {...link}
+              size={link.size ?? 's'}
+              type={link.type ?? 'secondary'}
+            />
+          </>
+        )}
+      </Typography>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q14_2026'
+
+question 'A news website plays a moving headline marquee across the top of the page. Some users say it\'s eye-catching; others find it distracting and hard to read. What does this scenario most directly illustrate?'
+
+wrong 'Marquees are always bad design.'
+wrong 'Users should not visit websites with animation.'
+right 'Design choices involve trade-offs — what helps one user can frustrate another, so interactive features need to be evaluated for accessibility.'
+wrong 'JavaScript animations are slow on most devices.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

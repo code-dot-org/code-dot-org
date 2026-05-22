@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U4L8-Logical PBT_pilot_oo2025",
     "teacher_markdown": "The condition `!(score >= 50)` is the same as saying `score < 50`. The only values that will satisfy this condition as well as the condition `score <= 100` are values that are `49` or less.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:33:16.979+00:00\",\"changed\":[\"cloned from \\\"CSA U4L8-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L8-L4_pilot-2025\"}]"

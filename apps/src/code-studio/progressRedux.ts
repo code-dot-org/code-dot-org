@@ -36,7 +36,7 @@ import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
 
-import {mergeActivityResult} from './activityUtils';
+import {activityCssClass, mergeActivityResult} from './activityUtils';
 import {
   canChangeLevelInPage,
   updateBrowserForLevelNavigation,
@@ -44,7 +44,6 @@ import {
 import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
-  getCurrentScriptLevelId,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -223,6 +222,33 @@ const progressSlice = createSlice({
       });
       state.levelResults = newLevelResults;
     },
+    mergeUnitProgress(
+      state,
+      action: PayloadAction<{levelId: number; result: number}>
+    ) {
+      const {levelId, result} = action.payload;
+      const status = activityCssClass(result);
+      const existing = state.unitProgress[levelId];
+      if (existing) {
+        state.unitProgress[levelId] = {
+          ...existing,
+          result: mergeActivityResult(existing.result, result),
+          status,
+        };
+      } else {
+        state.unitProgress[levelId] = {
+          lastTimestamp: undefined,
+          locked: false,
+          pages: null,
+          paired: false,
+          result,
+          status,
+          teacherFeedbackReviewState: undefined,
+          teacherFeedbackNew: false,
+          timeSpent: undefined,
+        };
+      }
+    },
     overwriteResults(state, action: PayloadAction<LevelResults>) {
       state.levelResults = action.payload;
     },
@@ -335,6 +361,11 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     }
 
     const currentLevel = getCurrentLevel(getState());
+    const levelNavigationConfirmation =
+      Lab2Registry.getInstance().getLevelNavigationConfirmation();
+    if (levelNavigationConfirmation && !(await levelNavigationConfirmation())) {
+      return;
+    }
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       // If the requested level is the same as the current level, don't do anything.
@@ -437,6 +468,21 @@ export const sendSubmitReport = createAsyncThunk<
   );
 });
 
+export function sendSuccessReportForLevel(
+  levelId: string,
+  appType: string
+): AsyncProgressThunkAction {
+  return (dispatch, getState) => {
+    return sendReportForLevel(
+      levelId,
+      appType,
+      TestResults.ALL_PASS,
+      dispatch,
+      getState
+    );
+  };
+}
+
 // Helpers
 
 function sendReportHelper(
@@ -451,7 +497,30 @@ function sendReportHelper(
   if (!state.currentLessonId || !levelId) {
     return Promise.resolve();
   }
-  const scriptLevelId = getCurrentScriptLevelId(getState());
+  return sendReportForLevel(
+    levelId,
+    appType,
+    result,
+    dispatch,
+    getState,
+    extraData
+  );
+}
+
+function sendReportForLevel(
+  levelId: string,
+  appType: string,
+  result: number,
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  getState: () => RootState,
+  extraData?: OptionalMilestoneData
+) {
+  const state = getState().progress;
+  const currentLevel = levelById(state, state.currentLessonId, levelId);
+  const scriptLevelId = currentLevel.parentLevelId
+    ? levelById(state, state.currentLessonId, currentLevel.parentLevelId)
+        ?.scriptLevelId
+    : currentLevel.scriptLevelId;
   if (!scriptLevelId) {
     return Promise.resolve();
   }
@@ -486,11 +555,13 @@ function sendReportHelper(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
       // If the level is the sublevel of a bubble level,
       // also update the status of the parent level.
-      const currentLevel = getCurrentLevel(getState());
       if (currentLevel.parentLevelId) {
         dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+        const parentId = parseInt(currentLevel.parentLevelId);
+        dispatch(mergeUnitProgress({levelId: parentId, result}));
       }
 
       // After we log the reported time we should update the start time of the milestone
@@ -611,6 +682,7 @@ export const {
   clearResults,
   useDbProgress,
   mergeResults,
+  mergeUnitProgress,
   overwriteResults,
   mergePeerReviewProgress,
   updateFocusArea,

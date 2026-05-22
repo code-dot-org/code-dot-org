@@ -2,7 +2,6 @@
 Feature: Using Modular Courses
   Background:
     Given I am on "http://studio.code.org/home"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   Scenario: Navigating within modular courses
     Given I create a teacher named "Teacher_Sally"

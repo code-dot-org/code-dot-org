@@ -2,20 +2,12 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import i18n from '@cdo/locale';
 
 import style from './sections-refresh.module.scss';
 
-export default function AdvancedSettingToggles({
-  updateSection,
-  section,
-  // aiTutorAvailable refers to whether the selected assignment has AI Tutor available,
-  // i.e. have we trained AI to answer questions about that specific course or unit.
-  aiTutorAvailable,
-}) {
+export default function AdvancedSettingToggles({updateSection, section}) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
     updateSection('pairingAllowed', updatedValue);
@@ -34,18 +26,6 @@ export default function AdvancedSettingToggles({
   const handleTtsAutoplayEnabledToggle = e => {
     const updatedValue = !section.ttsAutoplayEnabled;
     updateSection('ttsAutoplayEnabled', updatedValue);
-  };
-
-  const handleAITutorEnabledToggle = e => {
-    const updatedValue = !section.aiTutorEnabled;
-    const event = section.aiTutorEnabled
-      ? EVENTS.AI_TUTOR_DISABLED
-      : EVENTS.AI_TUTOR_ENABLED;
-    analyticsReporter.sendEvent(event, {
-      sectionId: section.id,
-      uiLocation: 'sectionEditAdvancedSettings',
-    });
-    updateSection('aiTutorEnabled', updatedValue);
   };
 
   return (
@@ -106,20 +86,6 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
-      {aiTutorAvailable && (
-        <div className={style.toolTipContainer}>
-          <Toggle
-            id={'uitest-ai-tutor-toggle'}
-            checked={section.aiTutorEnabled}
-            onChange={e => handleAITutorEnabledToggle(e)}
-            label={i18n.enableAITutor()}
-          />
-          <InfoHelpTip
-            id={'ai-tutor-toggle-info'}
-            content={i18n.enableAITutorTooltip()}
-          />
-        </div>
-      )}
     </div>
   );
 }
@@ -127,5 +93,4 @@ export default function AdvancedSettingToggles({
 AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
-  aiTutorAvailable: PropTypes.bool,
 };

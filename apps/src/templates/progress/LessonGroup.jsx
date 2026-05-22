@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
@@ -25,6 +24,7 @@ class LessonGroup extends React.Component {
     groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -52,18 +52,6 @@ class LessonGroup extends React.Component {
       collapsed: !this.state.collapsed,
       lessonGroupInfoDialogOpen: true,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'unit_overview_page',
-        study_group: 'lesson_group',
-        event: 'view_lesson_group_info',
-        data_json: JSON.stringify({
-          script_id: this.props.scriptId,
-          lesson_group_id: this.props.groupedLesson.lessonGroup.id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeLessonGroupInfoDialog = () => {
@@ -106,7 +94,7 @@ class LessonGroup extends React.Component {
           {hasLessonGroupInfo && (
             <span>
               <FontAwesome
-                icon="info-circle"
+                icon="circle-info"
                 style={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />
@@ -134,7 +122,10 @@ class LessonGroup extends React.Component {
               styles.bottom,
             ]}
           >
-            <TableType groupedLesson={this.props.groupedLesson} />
+            <TableType
+              groupedLesson={this.props.groupedLesson}
+              isOnLevelView={this.props.isOnLevelView}
+            />
           </div>
         )}
       </div>
@@ -148,7 +139,7 @@ const styles = {
   },
   header: {
     padding: 20,
-    backgroundColor: color.purple,
+    backgroundColor: color.dark_charcoal,
     fontSize: 18,
     ...fontConstants['main-font-semi-bold'],
     color: 'white',
@@ -166,7 +157,7 @@ const styles = {
     marginRight: 10,
   },
   contents: {
-    backgroundColor: color.lighter_purple,
+    backgroundColor: color.lighter_gray,
     padding: 20,
   },
   contentsBlue: {

@@ -11,13 +11,12 @@ const API_ENDPOINT = '/teaching_profile_data';
  */
 export const saveTeachingProfileData = async personalizationData => {
   try {
-    // Create a clean copy of the data with proper serialization for dates
-    const dataToSave = {
-      ...personalizationData,
-      dateYearsTeachingSet: personalizationData.dateYearsTeachingSet
-        ? personalizationData.dateYearsTeachingSet.toISOString()
-        : null,
-    };
+    // Only serialize dates if they exist and are Date objects
+    const dataToSave = {...personalizationData};
+    if (dataToSave.dateYearsTeachingSet instanceof Date) {
+      dataToSave.dateYearsTeachingSet =
+        dataToSave.dateYearsTeachingSet.toISOString();
+    }
 
     const requestBody = JSON.stringify({
       teaching_profile_data: {
@@ -33,25 +32,21 @@ export const saveTeachingProfileData = async personalizationData => {
       'X-CSRF-Token': csrfToken,
     };
 
-    // First check if a record exists
-    const checkResponse = await fetch(API_ENDPOINT, {
-      method: 'GET',
-      headers: {'X-CSRF-Token': csrfToken},
-    });
-
-    if (!checkResponse.ok) {
-      throw new Error('Failed to check existing teaching profile data');
-    }
-
-    const existingRecord = await checkResponse.json();
-    const method = existingRecord.exists ? 'PATCH' : 'POST';
-
-    // Create or update based on existence
-    const response = await fetch(API_ENDPOINT, {
-      method: method,
+    // Try PATCH first, fallback to POST if record doesn't exist
+    let response = await fetch(API_ENDPOINT, {
+      method: 'PATCH',
       headers: headers,
       body: requestBody,
     });
+
+    // If PATCH fails because record doesn't exist, try POST
+    if (!response.ok && response.status === 404) {
+      response = await fetch(API_ENDPOINT, {
+        method: 'POST',
+        headers: headers,
+        body: requestBody,
+      });
+    }
 
     if (!response.ok) {
       const errorData = await response.json();

@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U3L8-Comparing Strings PBT_2023",
     "teacher_markdown": "Students should notice that the method is returning the last match found in the 1D array `answers`. In this case, it returns the element at the last index.\r\n\r\nWhen students modify the method, they should notice that this changes which element is returned. Instead of the last match found, it now returns the first match found.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T22:15:44.208+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L2_2023\\\"\"],\"cloned_from\":\"CSA U3L8-L2_2023\"},{\"changed_at\":\"2023-01-12 22:15:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-29 15:52:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-29 15:53:57 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 21:16:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

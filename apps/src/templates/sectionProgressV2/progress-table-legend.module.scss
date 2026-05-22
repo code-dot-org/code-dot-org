@@ -1,6 +1,4 @@
-@import 'color';
-@import '@code-dot-org/component-library-styles/font';
-@import '@code-dot-org/component-library-styles/colors';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 .iconKey {
   margin-bottom: 24px;
@@ -18,6 +16,10 @@
   cursor: pointer;
   width: fit-content;
   margin-inline-end: 8px;
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+  }
 }
 
 .iconKeyMoreDetailsLink {
@@ -26,14 +28,14 @@
 
 .legend {
   align-items: flex-start;
-  border: 1px solid $light_gray_200;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   display: inline-flex;
   flex-direction: column;
   white-space: nowrap;
   margin-right: 16px;
   margin-bottom: 16px;
-  background-color: white;
+  background-color: var(--background-neutral-primary);
 
   .fontAwesomeIcon {
     font-size: 16px;
@@ -45,9 +47,9 @@
 .legend .headerContainer {
   width: 100%;
   padding: 8px 16px;
-  border-bottom: 1px solid $light_gray_200;
+  border-bottom: 1px solid var(--borders-neutral-primary);
   box-sizing: border-box;
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
 }
 
 .legend.levelTypes {
@@ -101,7 +103,7 @@
   height: 20px;
   border-top: 1px solid;
   border-right: 1px solid;
-  border-color: $neutral_dark40;
+  border-color: var(--borders-neutral-strong);
 }
 
 .needsFeedback {
@@ -164,13 +166,13 @@
 }
 
 .icon-green {
-  color: var(--sentiment-success-60);
+  color: var(--text-success-primary);
 }
 
 .icon-black {
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
 }
 
 .icon-gray {
-  color: var(--neutral-gray-60);
+  color: var(--text-neutral-quaternary);
 }

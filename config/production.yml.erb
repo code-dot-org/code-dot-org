@@ -1,11 +1,14 @@
-azure_content_moderation_key: !Secret
 discourse_sso_secret: !Secret
 pardot_password: !Secret
 pardot_user_key: !Secret
 pardot_username: !Secret
 pardot_private_key: !Secret
+pardot_client_id: !Secret
+pardot_client_secret: !Secret
 pd_teacher_application_list_secret_key: !Secret
 pledge_map_table_id: !Secret
+
+redshift_cluster_id: !Secret
 redshift_host: !Secret
 redshift_password: !Secret
 redshift_username: !Secret
@@ -16,7 +19,6 @@ sinatra_session_secret: !Secret
 db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"}
 <% end %>
 
-newrelic_logging: true
 stack_name: autoscale-prod
 solr_server:                            solr.code.org
 use_pusher:                             true
@@ -32,9 +34,6 @@ afe_pardot_form_handler_url: !Secret
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_client_id:     '06d74083-9d25-43e4-acf6-0377f381a1e5'
 imm_reader_subdomain:     'cdo-immersive-reader-prod'
-
-# General CDO Amplitude key
-cdo_amplitude_api_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy.code.org
@@ -66,3 +65,9 @@ jwks_data:
       alg: "RS256"
       kid: "Rc2LLhn9Qto98Yx63mDk--ZuS3LnjP5RPHteCorZzgE"
 jwk_private_key_data: !Secret
+
+# Enables OpenTelemetry instrumentation
+enable_opentelemetry: true
+
+# Enables Sentry error reporting and tracing.
+enable_sentry: true

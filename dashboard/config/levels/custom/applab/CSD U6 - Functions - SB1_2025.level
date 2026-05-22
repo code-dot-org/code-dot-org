@@ -86,6 +86,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - functions\",\r\n  \"callout_text\": \"This section defines two functions\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"functions\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// Functions\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - examples\",\r\n  \"callout_text\": \"This event has already been completed\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"examples\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"greenLEDs();\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "encrypted_examples": "VaYyRjySCIzpcGGKoCy7TFP/g/5RnDYPwyY7rSOJJl50Q6y0i4O5KqBbflqT\nvglWtOj6EYTtAity2BzSLwr1Ow==\n",
     "video_key": "csd_u6_call_define_functions",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

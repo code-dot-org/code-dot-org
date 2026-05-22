@@ -14,7 +14,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\n✅ **TO DO:** Experiment with the program and answer the questions on the <a href=\"https://docs.google.com/document/d/1O2zdaXF33IlsRcnUS91MKyXOMVbuiA7jtirM4FT58WE/edit?usp=sharing\" target=\"_blank\">**Investigate: Variables**</a> activity guide.",
     "video_key": "csa_creating_variables",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:56:25.763+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L6-L2_pilot-2025\"}]"

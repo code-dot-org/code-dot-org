@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q9_2025'
+
+question 'Which of the following describes a pure function?'
+
+wrong 'A function that changes a global variable every time it runs.'
+right 'A function that produces the same output every time it is given the same input and has no "side effects."'
+wrong 'A function that was written entirely by an AI without human help.'
+wrong 'A function that only works with numbers and never with strings.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+
+Pure functions are predictable and safer because they don't modify anything outside of themselves (no side effects), making them easier to test and reuse.
+MARKDOWN

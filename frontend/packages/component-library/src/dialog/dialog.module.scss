@@ -10,6 +10,8 @@
   gap: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
 
   &:has(.dialogIcon) {
     padding-top: 3.5rem;
@@ -40,6 +42,9 @@
   gap: 8px;
 }
 
+// TODO: Make this selector higher specificity, as font awesome icons might get display from font awesome styles right
+// now, which breaks the styling. Once done - remove inline styles display flex from icon
+// in apps/src/templates/manageStudents/ConfirmRemoveStudentDialog.jsx
 .dialogIcon {
   position: absolute;
   inset-block-start: -32px;
@@ -51,11 +56,11 @@
   align-items: center;
   flex-shrink: 0;
   border-radius: 100px;
-  background: var(--brand-teal-50);
+  background: var(--background-brand-teal-primary);
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.2);
 
   &::before {
-    color: var(--neutral-base-white);
+    color: var(--background-neutral-primary);
     text-align: center;
     font-size: 32px;
     width: 40px;
@@ -67,20 +72,4 @@
   position: absolute;
   inset-block-start: 9px;
   inset-inline-end: 9px;
-}
-
-// Dialog colors
-.dialog-light {
-  background-color: var(--neutral-base-white);
-}
-
-.dialog-dark {
-  background-color: var(--neutral-gray-90);
-
-  .dialogTextSection {
-    h2,
-    p {
-      color: var(--neutral-base-white);
-    }
-  }
 }

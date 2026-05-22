@@ -5,6 +5,8 @@ export enum Tabs {
   StudentRubric = 'studentRubric',
   VersionHistory = 'versionHistory',
   Validation = 'validation',
+  Backpack = 'backpack',
+  StudentResources = 'studentResources',
 }
 
 export interface Setting {

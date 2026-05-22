@@ -9,13 +9,15 @@ markdown <<MARKDOWN
 
 <br>
 
-#### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect computational thinking, human-centered design, and responsible AI use. They learn to think critically, design with empathy, and take ownership of their AI-assisted work—building a foundation that mirrors real-world roles in technology and design.
+As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect computational thinking, human-centered design, and responsible AI use.
 
-<div style="clear:both;"></div>
+They learn to think critically, design with empathy, and take ownership of their AI-assisted work.
+
+<br>
 
 ## Computational Thinking
 
-#### Foundational computational thinking practices are introduced through the design process, allowing students to apply these skills before writing any code.
+Foundational computational thinking practices are introduced through the design process, allowing students to apply these skills before writing any code.
 
 <!-- Grid container -->
 <div
@@ -104,7 +106,7 @@ markdown <<MARKDOWN
 
 ## Human-Centered Design and Systems Thinking
 
-#### A “human-centered first” philosophy anchors the course, guiding students to prioritize people in every stage of design.
+A “human-centered first” philosophy anchors the course, guiding students to prioritize people in every stage of design.
 
 <!-- Grid container -->
 <div
@@ -192,7 +194,7 @@ markdown <<MARKDOWN
 <hr>
 
 ## AI Ethics and Safety 
-#### Students are introduced to the concept of responsible AI collaboration, with an emphasis on their accountability for the outputs produced by AI tools.
+Students are introduced to the concept of responsible AI collaboration, with an emphasis on their accountability for the outputs produced by AI tools.
 <!-- AI Ethics and Safety Cards -->
 <div
   style="
@@ -276,7 +278,7 @@ markdown <<MARKDOWN
 <hr>
 
 ## Career Journeys
-#### Activities are framed around real-world professional roles, helping students see design as a meaningful and practical career skill.
+Activities are framed around real-world professional roles, helping students see design as a meaningful and practical career skill.
 
 <!-- Career Journeys Cards -->
 <div
@@ -336,8 +338,9 @@ markdown <<MARKDOWN
 </div>
 
 <hr>
+---
 
-
-
-
+>#### Before you move on, take a moment to think about:
+>- #### How these ideas will shape the way students design, build, and collaborate with AI in their web apps.
+>- #### Which practices you want to intentionally highlight or reinforce as students work through this unit?
 MARKDOWN

@@ -40,11 +40,14 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
   has_and_belongs_to_many :programming_expressions, join_table: :lessons_programming_expressions
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_lessons
   has_many :objectives, dependent: :destroy
+  has_many :rubrics, dependent: :destroy
 
   # join tables needed for seeding logic
   has_many :lessons_resources
   has_many :lessons_vocabularies
+  has_many :jit_pl_concepts_lessons
   has_many :lessons_programming_expressions
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
@@ -72,6 +75,8 @@ class Lesson < ApplicationRecord
     preparation
     announcements
     assessment_opportunities
+    generate_outline
+    generate_project_channel_id
   )
 
   # A lesson has an absolute position and a relative position. The difference
@@ -311,6 +316,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
+        lessonTutorPath: "#{get_uncached_show_path}/tutor",
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -466,8 +472,12 @@ class Lesson < ApplicationRecord
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
+      jitPlConcepts: jit_pl_concepts.map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
+      allJitPlConcepts: JitPlConcept.order(:name).map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
       lessonPath: get_uncached_show_path,
       rubric: rubric,
+      generateOutline: generate_outline,
+      generateProjectChannelId: generate_project_channel_id,
     }
   end
 
@@ -587,12 +597,30 @@ class Lesson < ApplicationRecord
   end
 
   def summarize_for_rubric_edit
+    level_summary = levels.map do |level|
+      if level.type == 'BubbleChoice'
+        level.attributes.symbolize_keys.merge(
+          sublevels: level.sublevels.map do |sublevel|
+            {
+              id: sublevel.id,
+              name: sublevel.name,
+              type: sublevel.type,
+            }
+          end,
+          isSubmittable: level.sublevels.any? {|sublevel| sublevel.properties['submittable'] == 'true'}
+        )
+      else
+        level.attributes.symbolize_keys.merge(
+          isSubmittable: level.properties['submittable'] == 'true'
+        )
+      end
+    end
     {
       id: id,
       unitName: script.title_for_display,
       lessonNumber: relative_position,
       lessonName: name,
-      levels: levels
+      levels: level_summary,
     }
   end
 
@@ -620,6 +648,28 @@ class Lesson < ApplicationRecord
         level_json
       end
     }
+  end
+
+  def summarize_for_special_level_types
+    {
+      name: name,
+      rubric_id: rubric&.id,
+      script_name: script&.name,
+      id: id
+    }
+  end
+
+  def summarize_for_lab2_properties(current_user = nil, unit_group_unit: nil)
+    properties = {}
+    script_levels.each do |script_level|
+      level = script_level.level
+      properties[level.id] = level.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
+      next unless level.is_a?(BubbleChoice)
+      level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
+      end
+    end
+    properties
   end
 
   # For a given set of students, determine when the given lesson is locked for
@@ -655,7 +705,8 @@ class Lesson < ApplicationRecord
         },
         name: student.name,
         locked: locked,
-        readonly_answers: readonly
+        readonly_answers: readonly,
+        is_demo_student: Policies::DemoSections.demo_student?(student.id)
       }
     end
   end

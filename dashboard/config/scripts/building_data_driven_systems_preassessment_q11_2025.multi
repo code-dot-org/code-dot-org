@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q11_2025'
+
+question 'Which of the following is a primary goal of "Accessibility" in data-driven systems?'
+
+wrong 'Ensuring the website loads in under one second on all devices.'
+wrong 'Making sure the data is encrypted so that only the developer can see it.'
+right 'Ensuring that users with screen readers can understand the data through proper labels and alt text.'
+wrong 'Using the most advanced AI models to generate the user interface automatically.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+
+Accessibility is about removing barriers. In data systems, this means using clear labels, high contrast, and semantic HTML so that assistive technology can interpret the data.
+MARKDOWN

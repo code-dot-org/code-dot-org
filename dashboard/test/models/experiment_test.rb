@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ExperimentTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @teacher = create(:teacher)
     @section = create(:section, first_activity_at: DateTime.now, teacher: @teacher)
@@ -218,9 +217,7 @@ class ExperimentTest < ActiveSupport::TestCase
   test 'can only create up to max_count single section experiments' do
     SingleSectionExperiment.any_instance.stubs(:max_count).returns(3)
 
-    3.times do
-      create(:single_section_experiment)
-    end
+    create_list(:single_section_experiment, 3)
 
     # creating a 4th experiment should fail
     assert_raises ActiveRecord::RecordInvalid do

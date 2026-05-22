@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!\r\n\r\n1. Look at the original value stored in `favorite_snack`\r\n\r\n2. Change the value to a **different** snack.\r\n\r\n3. Run the program to see the **before** and **after**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

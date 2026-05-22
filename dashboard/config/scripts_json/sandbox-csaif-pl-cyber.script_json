@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-26 16:32:05 UTC",
+    "serialized_at": "2025-11-12 19:40:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -218,6 +218,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_support"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -915,6 +918,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_15"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -937,6 +943,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_16"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,

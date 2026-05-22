@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CodeReviewCommentsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = false
-
   setup_all do
     @student_1 = create(:student)
     @student_2 = create(:student)

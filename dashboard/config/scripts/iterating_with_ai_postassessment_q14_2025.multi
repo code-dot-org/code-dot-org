@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q14_2025'
+
+question 'In an interactive dashboard, why is a "Reset" button considered a user control feature?'
+
+wrong 'It allows the developer to track what the user is doing.'
+wrong 'It prevents the user from using any AI tools within the app.'
+wrong 'It is the only way to save the data to the cloud.'
+right 'It gives the user the power to quickly recover from complex filtering or mistakes and return to a known state.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11
+
+User control is a key principle of design. A reset button ensures users feel safe exploring the data because they can always return to the original view.
+MARKDOWN

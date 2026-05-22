@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -18,6 +17,7 @@ import {
 } from '@cdo/apps/StudioApp';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 import * as utils from '@cdo/apps/utils';
 import {
   changeMaxProjectCapacity,
@@ -31,9 +31,17 @@ import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-re
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
 
+const CONTAINER_ID = 'container-id';
+
 describe('WebLab', () => {
   let weblab;
   let config;
+
+  beforeAll(() => {
+    const rootContainer = document.createElement('div');
+    rootContainer.setAttribute('id', CONTAINER_ID);
+    document.getElementsByTagName('body')[0].appendChild(rootContainer);
+  });
 
   beforeEach(() => {
     weblab = new WebLab();
@@ -44,17 +52,18 @@ describe('WebLab', () => {
     registerReducers(reducers);
     registerReducers({currentUser});
     config = {
+      containerId: CONTAINER_ID,
       skin: {},
       level: {},
     };
-    sinon.stub(ReactDOM, 'render');
+    sinon.stub(createReactRootModule, 'createReactRoot');
     sinon.stub(getStore(), 'dispatch');
   });
 
   afterEach(() => {
     restoreRedux();
     restoreStudioApp();
-    ReactDOM.render.restore();
+    createReactRootModule.createReactRoot.restore();
   });
 
   describe('init', () => {
@@ -155,6 +164,7 @@ describe('WebLab', () => {
 
   describe('onMount', () => {
     let config;
+
     beforeEach(() => {
       config = {
         containerId: 'container-id',

@@ -1,8 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
@@ -10,7 +11,10 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import styles from './multipleAssignButton.module.scss';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {
@@ -23,6 +27,8 @@ class MultipleAssignButton extends React.Component {
     isAssigningCourseOnly: PropTypes.bool,
     isSingleUnitCourse: PropTypes.bool,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
@@ -58,17 +64,21 @@ class MultipleAssignButton extends React.Component {
       participantAudience,
       isAssigningCourseOnly,
       reassignConfirm,
+      aiChatToolsDependency,
     } = this.props;
 
     return (
-      <div>
+      <div className={styles.container}>
         <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          text={i18n.assignToMultipleSections()}
-          icon="plus"
+          variant="contained"
+          color="primary"
+          startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
           onClick={this.handleClick}
           id="uitest-multi-assign-button"
-        />
+          size="small"
+        >
+          {i18n.assignToMultipleSections()}
+        </Button>
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner
             assignmentName={assignmentName}
@@ -82,6 +92,7 @@ class MultipleAssignButton extends React.Component {
             isAssigningCourseOnly={isAssigningCourseOnly}
             isSingleUnitCourse={isSingleUnitCourse}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         )}
       </div>

@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-04-15T15:05:01.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Revisiting the Final Project",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "## The Culmination of Semester 2\r\n\r\nThe AI Foundations Semester 2 course intentionally builds toward this capstone experience.\r\n\r\nRather than a single linear build or a race to add the most features, this capstone is a **multi-day, iterative project** focused on:\r\n\r\n<img src=\"https://images.code.org/436ec779170699d51054fc96d2650526-image-1777045091328.png\" alt=\"sample project Mars website\" width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px 20px;\">\r\n\r\n* Decision-making  \r\n* Testing  \r\n* Refinement  \r\n\r\nIt serves as the ultimate showcase of student learning, challenging students to:\r\n\r\n* Design a meaningful app for a real audience  \r\n* Decide what to build in each version, and why  \r\n* Explain how their app works as a system  \r\n* Build, test, and iterate using feedback and AI  \r\n* Share their final product and learning clearly  \r\n\r\n---\r\n\r\n## Reviewing Our Journey\r\n\r\nThroughout this professional learning module, you have explored the essential components and strategies needed to facilitate this project.\r\n\r\n### **The Workflow**\r\n\r\nHow to guide students through:\r\n\r\n* Milestones to define evidence of learning  \r\n* Benchmarks to pause, review progress, and rotate the Project Leader role  \r\n\r\n### **The Tools**\r\n\r\nHow to use:\r\n\r\n* The **Kanban Project Planning Board** to make daily work visible  \r\n* The **Project Guide** to capture the *how* and *why* behind decisions  \r\n\r\n### Grading Strategies\r\n\r\nHow to evaluate **holistic student growth** by:\r\n\r\n* Looking across multiple artifacts  \r\n* Valuing reasoning and clarity over feature count\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ Explore the full  <a href='https://studio.code.org/courses/artificial-intelligence-foundations-semester2-2025/units/6/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a> here.\r\n</p>\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n\r\n>In an era where AI tools can easily generate code or suggest features, this capstone requires us to assess student judgment rather than just their final product.\r\n>\r\n> Knowing that a polished app without clear reasoning may score lower than a simpler app with strong explanations and intentional scope, how will you shift your classroom culture so that students value clear reasoning, intentional trade-offs, and process over simply racing to finish the project?\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\" alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">\r\nShare your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n</div>\r\n</div>\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-04-15T15:05:01.520+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-reflect-wrap-3\\\"\"],\"cloned_from\":\"pl-aif-2-U4-reflect-wrap-3\"},{\"changed_at\":\"2026-04-24 15:34:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-24 15:47:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-24 15:49:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-24 15:50:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-27 15:48:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-27 15:49:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

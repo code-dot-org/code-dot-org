@@ -82,8 +82,8 @@ export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
 export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
   [projectType: string]: string;
 } = {
-  music: studio('/shared/images/courses/logo_music.png'),
-  pythonlab: studio('/shared/images/courses/logo_pythonlab.png'),
-  // Temporary placeholder
-  music_dance_ai: '/blockly/media/dance/placeholder.png',
+  music: studio('/shared/images/courses/music-lab-icon.png'),
+  pythonlab: studio('/shared/images/courses/python-lab-icon.png'),
+  music_dance_ai: studio('/blockly/media/dance/mix-move-ai-banner-square.png'),
+  weblab2: studio('/shared/images/courses/logo_weblab2.png'),
 };

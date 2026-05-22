@@ -16,11 +16,11 @@ module AichatAiClientTypes
   FileMessagePartType = string("file")
   MessagePartType = TextMessagePartType | FileMessagePartType
 
-  # type FileMessageImageMimeType = "image/jpeg" | "image/png";
+  # type FileMessageImageMimeType = "image/jpeg" | "image/png" | "image/gif"
   # type FileMessagePdfMimeType =  "application/pdf";
   # type FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType;
-  FileMessageImageMimeType = string("image/jpeg") | string("image/png")
-  FileMessagePdfMimeType =  string("application/pdf")
+  FileMessageImageMimeType = string("image/jpeg") | string("image/png") | string("image/gif")
+  FileMessagePdfMimeType = string("application/pdf")
   FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType
 
   # type MessageRole = "model" | "user";
@@ -239,7 +239,7 @@ module AichatAiClientTypes
   #   temperature: number;
 
   #   // Client type.
-  #   clientType: number
+  #   clientType: string
 
   #   // Configure the response. Optional, defaults to TextResponse.
   #   response?: TextResponseConfig | JsonResponseConfig
@@ -250,7 +250,7 @@ module AichatAiClientTypes
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
     :temperature, number,
-    :clientType, number,
+    :clientType, string,
     :response,  Optional(TextResponseConfig | JsonResponseConfig)
   )
 

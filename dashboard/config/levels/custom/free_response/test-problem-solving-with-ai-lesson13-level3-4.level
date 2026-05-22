@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Formative Assessment - Free Response",
-    "long_instructions": "#### How would you revise your prompt to **decrease bias** in AI's output?\r\n\r\n\r\n",
+    "long_instructions": "How would you revise your prompt to **decrease bias** in AI's output?\r\n\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

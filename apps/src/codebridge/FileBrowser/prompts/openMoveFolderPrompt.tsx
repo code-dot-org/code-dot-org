@@ -51,6 +51,7 @@ export const openMoveFolderPrompt = async ({
     selectedValue: possibleDestinationFolders[0].value,
     items: possibleDestinationFolders,
     dropdownLabel: '',
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {

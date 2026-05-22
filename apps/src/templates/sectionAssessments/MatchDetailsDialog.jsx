@@ -1,15 +1,15 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
 
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
+
+import moduleStyles from './details-dialog.module.scss';
 
 class MatchDetailsDialog extends Component {
   static propTypes = {
@@ -18,82 +18,66 @@ class MatchDetailsDialog extends Component {
     questionAndAnswers: matchDetailsQuestionPropType,
   };
 
-  render() {
+  renderContent() {
     const {questionAndAnswers} = this.props;
 
+    if (questionAndAnswers.questionType !== QuestionType.MATCH) {
+      return null;
+    }
+
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.props.isDialogOpen}
-        style={styles.dialog}
-        handleClose={this.props.closeDialog}
-      >
-        {questionAndAnswers.questionType === QuestionType.MATCH && (
-          <div>
-            <h2>{i18n.questionDetails()}</h2>
-            <div style={styles.instructions}>
-              <SafeMarkdown markdown={questionAndAnswers.question} />
-            </div>
-            {questionAndAnswers.answers &&
-              questionAndAnswers.options &&
-              questionAndAnswers.answers.length > 0 && (
-                <table>
-                  <thead>
-                    <tr>
-                      <th>{i18n.option()}</th>
-                      <th>{i18n.answer()}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {questionAndAnswers.answers.map((answer, index) => {
-                      return (
-                        <tr key={index}>
-                          <td>
-                            <div style={styles.answers}>
-                              <SafeMarkdown
-                                markdown={questionAndAnswers.options[index]}
-                              />
-                            </div>
-                          </td>
-                          <td>
-                            <div style={styles.answers}>
-                              <SafeMarkdown markdown={answer} />
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              )}
-          </div>
-        )}
-        <DialogFooter>
-          <Button
-            text={i18n.done()}
-            onClick={this.props.closeDialog}
-            color={Button.ButtonColor.gray}
-          />
-        </DialogFooter>
-      </BaseDialog>
+      <div id="dsco-dialog-description">
+        <SafeMarkdown markdown={questionAndAnswers.question} />
+        {questionAndAnswers.answers &&
+          questionAndAnswers.options &&
+          questionAndAnswers.answers.length > 0 && (
+            <table className={moduleStyles.matchTable}>
+              <thead>
+                <tr>
+                  <th>{i18n.option()}</th>
+                  <th>{i18n.answer()}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {questionAndAnswers.answers.map((answer, index) => (
+                  <tr key={index}>
+                    <td>
+                      <SafeMarkdown
+                        markdown={questionAndAnswers.options[index]}
+                      />
+                    </td>
+                    <td>
+                      <SafeMarkdown markdown={answer} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+      </div>
+    );
+  }
+
+  render() {
+    const {isDialogOpen, closeDialog} = this.props;
+
+    if (!isDialogOpen) return null;
+
+    return (
+      <Dialog
+        title={i18n.questionDetails()}
+        customContent={this.renderContent()}
+        onClose={closeDialog}
+        primaryButtonProps={{
+          onClick: closeDialog,
+          variant: 'contained',
+          color: 'primary',
+          children: i18n.done(),
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  instructions: {
-    marginTop: 20,
-  },
-  answers: {
-    float: 'left',
-    width: 250,
-  },
-};
 
 export const UnconnectedMatchDetailsDialog = MatchDetailsDialog;
 

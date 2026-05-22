@@ -1,4 +1,10 @@
-import React, {AriaAttributes} from 'react';
+import {
+  AriaAttributes,
+  SetStateAction,
+  Dispatch,
+  RefObject,
+  CSSProperties,
+} from 'react';
 
 import {ComponentPlacementDirection} from '@/common/types';
 
@@ -42,12 +48,12 @@ export const calculatePositionedElementStyles = ({
   tailLength,
 }: {
   nodePosition: HTMLElement | null;
-  positionedElementRef: React.RefObject<HTMLDivElement | null>;
+  positionedElementRef: RefObject<HTMLDivElement | null>;
   direction: ComponentPlacementDirection;
   tailOffset: number;
   tailLength: number;
 }) => {
-  const styles: React.CSSProperties = {
+  const styles: CSSProperties = {
     position: 'absolute',
     inset: '0px auto auto 0px',
   };
@@ -170,8 +176,8 @@ export const updatePositionedElementStyles = ({
   setPositionedElementStyles: React.Dispatch<
     React.SetStateAction<React.CSSProperties>
   >;
-  setPositionedElementDirection: React.Dispatch<
-    React.SetStateAction<ComponentPlacementDirection>
+  setPositionedElementDirection: Dispatch<
+    SetStateAction<ComponentPlacementDirection>
   >;
   tailOffset: number;
   tailLength: number;

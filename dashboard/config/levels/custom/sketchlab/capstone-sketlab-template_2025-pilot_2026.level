@@ -1,0 +1,1154 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-04-01T21:45:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "VMyJecaL48mfs5sSGxsLH",
+            "type": "shape",
+            "position": {
+              "x": -1564.8010696726374,
+              "y": -1621.3533452720671
+            },
+            "style": {
+              "width": 449.2295912489633,
+              "height": 139.55262003096945
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "page /state",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 174,
+              "height": 88
+            },
+            "dragging": false,
+            "width": 174,
+            "height": 88,
+            "resizing": false
+          },
+          {
+            "id": "NX3gDLvNNOZJyPfP5t0Q5",
+            "type": "text",
+            "position": {
+              "x": -1572.8223116852855,
+              "y": -1613.2152028934104
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "oteAYGOvPAzOD6Z6qN-ZD",
+            "type": "text",
+            "position": {
+              "x": -1818.5667207609504,
+              "y": -1854.780611214163
+            },
+            "data": {
+              "text": "Take your information from Milestone 1 above and map out the flow of your app system\n\nFocus on one user interaction at a time. If your app has multiple important interactions, you can add more flow rows..",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 850,
+              "height": 80
+            },
+            "dragging": false
+          },
+          {
+            "id": "AwlcXIu4rh8QHhfiJyp3y",
+            "type": "text",
+            "position": {
+              "x": -1837.7072345064462,
+              "y": -2783.2773795891962
+            },
+            "data": {
+              "text": "MILESTONE 1: INTENT & SCOPE",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 340,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "CFHtvjIDcykJ0Z-IDKBWl",
+            "type": "shape",
+            "position": {
+              "x": -1825.6690881997542,
+              "y": -2679.658900330227
+            },
+            "style": {
+              "width": 1115.1593657734911,
+              "height": 1384.812770886093
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 669,
+              "height": 675
+            },
+            "width": 669,
+            "height": 675,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "N7bZsmkNhFit8rQ5uaF2g",
+            "type": "text",
+            "position": {
+              "x": -1809.2116511491956,
+              "y": -2658.8181193242553
+            },
+            "data": {
+              "text": "Audience & Goal",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 182,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "HiW5LsIgKVnVCggl7yz3Q",
+            "type": "text",
+            "position": {
+              "x": -1808.9162925115938,
+              "y": -2600.844537921137
+            },
+            "data": {
+              "text": "My app is for ... ",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 128,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "27Luo7ynZbhs3GiKvv1sK",
+            "type": "text",
+            "position": {
+              "x": -1813.6192556062842,
+              "y": -2338.0035251007084
+            },
+            "data": {
+              "text": "It helps users ... ",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 130,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "Y2cbAWfz6gnZf_YXWvSYx",
+            "type": "shape",
+            "position": {
+              "x": -1105.4128324056064,
+              "y": -2680.3900230484496
+            },
+            "style": {
+              "width": 1115.1593657734911,
+              "height": 1384.812770886093
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 721,
+              "height": 677
+            },
+            "dragging": false,
+            "width": 721,
+            "height": 677,
+            "resizing": false
+          },
+          {
+            "id": "sXBg-4POOTJsfmeIbm1hu",
+            "type": "text",
+            "position": {
+              "x": -1091.512871384749,
+              "y": -2662.3745289329436
+            },
+            "data": {
+              "text": "Pages / States List",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 200,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "n8O8qIDlx1IoZqMZPYASY",
+            "type": "text",
+            "position": {
+              "x": -1095.0867154672892,
+              "y": -2600.836602870603
+            },
+            "data": {
+              "text": "Page Example:\n- Home\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "width": 160,
+            "height": 60,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "02lhqplOmZST0nfDAxbEZ",
+            "type": "text",
+            "position": {
+              "x": -676.5424401296314,
+              "y": -2607.25585336907
+            },
+            "data": {
+              "text": "State Example:\n- Empty / Error\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 127,
+              "height": 76
+            },
+            "width": 127,
+            "height": 76,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "WMQck_BV8rSmWIJgMGG6D",
+            "type": "shape",
+            "position": {
+              "x": -332.54331677642995,
+              "y": -2677.9163512575087
+            },
+            "style": {
+              "width": 1115.1593657734911,
+              "height": 1384.812770886093
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 765,
+              "height": 677
+            },
+            "dragging": false,
+            "width": 765,
+            "height": 677,
+            "resizing": false
+          },
+          {
+            "id": "VNKIxjQMi-sroxvwPSeT7",
+            "type": "text",
+            "position": {
+              "x": -316.1648590293835,
+              "y": -2665.479537385956
+            },
+            "data": {
+              "text": "User Actions List",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 185,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "5W9bUwRmMxNY5rU6syWH0",
+            "type": "text",
+            "position": {
+              "x": -323.03593206907317,
+              "y": -2539.052814314714
+            },
+            "data": {
+              "text": "Example:\n- When the user selects a category, the app should filter\nby that category\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 418,
+              "height": 80
+            },
+            "dragging": false
+          },
+          {
+            "id": "pOwmH-8Wg5tlOX5Z9YQCp",
+            "type": "text",
+            "position": {
+              "x": -1837.0848896857312,
+              "y": -2734.959663734472
+            },
+            "data": {
+              "text": "What exists at a high level — who is it for, what pages or states exist, and what do users do?",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 676,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "oiO7g7fkTebCDiF7Qj7Uk",
+            "type": "text",
+            "position": {
+              "x": -1825.6616386141313,
+              "y": -1947.468868755309
+            },
+            "data": {
+              "text": "MILESTONE 2: SYSTEM EXPLANATION",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 408,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "f6ogYF336kmk_X76Iy-Sw",
+            "type": "text",
+            "position": {
+              "x": -1828.8043209980074,
+              "y": -1896.2359824735836
+            },
+            "data": {
+              "text": "What will exist at a high level - who is it for, what screens/states exist, what do users do?",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 650,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "acqNTQTIGgy4PXizbVis3",
+            "type": "text",
+            "position": {
+              "x": -325.87340210452874,
+              "y": -2602.638867992505
+            },
+            "data": {
+              "text": "When the user __, the app should __.",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 275,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "m8ZK4Sftxip7Fg4pNKgaO",
+            "type": "shape",
+            "position": {
+              "x": -1740.639906151031,
+              "y": -1745.7942629444005
+            },
+            "style": {
+              "width": 895.2155756289173,
+              "height": 1384.812770886093
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 523,
+              "height": 673
+            },
+            "dragging": false,
+            "width": 523,
+            "height": 673,
+            "resizing": false,
+            "zIndex": -1
+          },
+          {
+            "id": "f9j5s0s_dizHVlcuVu1_1",
+            "type": "shape",
+            "position": {
+              "x": -1739.4672821114343,
+              "y": -1742.0948966557626
+            },
+            "style": {
+              "width": 891.3513261688472,
+              "height": 152.80301887858934
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "1. App Pages / States",
+              "backgroundColor": "#b2f2bb",
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 524,
+              "height": 87
+            },
+            "dragging": false,
+            "width": 524,
+            "height": 87,
+            "resizing": false
+          },
+          {
+            "id": "uBJh9croV2xnz7QVfHV02",
+            "type": "text",
+            "position": {
+              "x": -1631.561274253986,
+              "y": -1735.4835739873365
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "q9b2kh8G-kj1btR80n6q8",
+            "type": "shape",
+            "position": {
+              "x": -1163.816602206822,
+              "y": -1743.9089726260904
+            },
+            "style": {
+              "width": 895.4350285454555,
+              "height": 1390.3630783784213
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 524,
+              "height": 670
+            },
+            "width": 524,
+            "height": 670,
+            "resizing": false,
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "Ka5Ek13_5-ESL05z9UqvM",
+            "type": "shape",
+            "position": {
+              "x": -1159.516533405149,
+              "y": -1743.1245485947381
+            },
+            "style": {
+              "width": 891.3513261688472,
+              "height": 152.80301887858934
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "2. User Actions",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 519,
+              "height": 93
+            },
+            "dragging": false,
+            "width": 519,
+            "height": 93,
+            "resizing": false
+          },
+          {
+            "id": "PtQPveZfseoDi4uG7TgwC",
+            "type": "text",
+            "position": {
+              "x": -992.7498593121243,
+              "y": -1728.7493321465631
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "MNgfrlo7WW_bx9rxGSzMm",
+            "type": "shape",
+            "position": {
+              "x": -1134.8316568018663,
+              "y": -1616.0834585818432
+            },
+            "style": {
+              "width": 699.2706700595606,
+              "height": 139.55262003096945
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User does what?",
+              "backgroundColor": "#a5d8ff",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 473,
+              "height": 87
+            },
+            "dragging": false,
+            "width": 473,
+            "height": 87,
+            "resizing": false
+          },
+          {
+            "id": "QTU_0AZxr9Jm2Yc_q_BY_",
+            "type": "text",
+            "position": {
+              "x": -1014.8828132477748,
+              "y": -1628.5512414647585
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "32H-cL9KQMPuBcYbXKPXa",
+            "type": "shape",
+            "position": {
+              "x": -581.8846347573051,
+              "y": -1739.8592359329289
+            },
+            "style": {
+              "width": 900.0653534732162,
+              "height": 1390.3630783784215
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 545,
+              "height": 664
+            },
+            "width": 545,
+            "height": 664,
+            "resizing": false,
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "Fwi4N5JseiHukYwlcjNjL",
+            "type": "shape",
+            "position": {
+              "x": -581.9696862202811,
+              "y": -1739.849254972813
+            },
+            "style": {
+              "width": 891.3513261688472,
+              "height": 152.80301887858934
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "3. What App Checks/Decides\n(logic or rules)",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 548,
+              "height": 99
+            },
+            "width": 548,
+            "height": 99,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "uhO1-_AhfJbp5wjgo5J3y",
+            "type": "shape",
+            "position": {
+              "x": -559.2793311810774,
+              "y": -1607.4672577841473
+            },
+            "style": {
+              "width": 699.2706700595606,
+              "height": 139.55262003096945
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 497,
+              "height": 76
+            },
+            "dragging": false,
+            "width": 497,
+            "height": 76,
+            "resizing": false
+          },
+          {
+            "id": "o8cuwpFKljfsXznLkowF9",
+            "type": "shape",
+            "position": {
+              "x": -413.6936438692487,
+              "y": -1644.875447316438
+            },
+            "style": {
+              "width": 333.04326527428253,
+              "height": 223.02933682331854
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "?",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#f08c00",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 203,
+              "height": 155
+            },
+            "dragging": false,
+            "width": 203,
+            "height": 155,
+            "resizing": false
+          },
+          {
+            "id": "o32MBsiAlIqWBPgq0-RHa",
+            "type": "shape",
+            "position": {
+              "x": 17.845191663036402,
+              "y": -1741.121285565264
+            },
+            "style": {
+              "width": 890.8045269821212,
+              "height": 1381.1022518873242
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 608,
+              "height": 667
+            },
+            "width": 608,
+            "height": 667,
+            "resizing": false,
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "rtRnNR5xQruNJGa3p3A5T",
+            "type": "shape",
+            "position": {
+              "x": 18.975299320053182,
+              "y": -1738.66074308327
+            },
+            "style": {
+              "width": 891.3513261688472,
+              "height": 152.80301887858934
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "4. What the User Sees",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 604,
+              "height": 93
+            },
+            "width": 604,
+            "height": 93,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "0BAxfAGKHQQ9p_z90R8-U",
+            "type": "text",
+            "position": {
+              "x": 198.110068983887,
+              "y": -1718.4125097788478
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "c9_avT9Cx1PyHA0aHTzq-",
+            "type": "shape",
+            "position": {
+              "x": 178.1613246020421,
+              "y": -1614.422804358284
+            },
+            "style": {
+              "width": 699.2706700595606,
+              "height": 139.55262003096945
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User sees what?",
+              "backgroundColor": "#ffc9c9",
+              "strokeColor": "#495057"
+            },
+            "measured": {
+              "width": 285,
+              "height": 112
+            },
+            "dragging": false,
+            "width": 285,
+            "height": 112,
+            "resizing": false
+          },
+          {
+            "id": "YV-aHLV4cOd6cK1RF5WSB",
+            "type": "text",
+            "position": {
+              "x": 233.52285277619256,
+              "y": -1589.9303329104384
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "WjkfmMb4gtxReof85bx_3",
+            "type": "shape",
+            "position": {
+              "x": -1159.594976784431,
+              "y": -680.4169804291612
+            },
+            "style": {
+              "width": 1807.4800416846551,
+              "height": 1355.4899347626904
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 735,
+              "height": 691
+            },
+            "dragging": false,
+            "width": 735,
+            "height": 691,
+            "resizing": false
+          },
+          {
+            "id": "mnhVqeHyJi21jeJFpCUuU",
+            "type": "shape",
+            "position": {
+              "x": -1159.014660326845,
+              "y": -682.2767209568084
+            },
+            "style": {
+              "width": 1803.616040796926,
+              "height": 230.99691711120917
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 736,
+              "height": 123
+            },
+            "dragging": false,
+            "width": 736,
+            "height": 123,
+            "resizing": false
+          },
+          {
+            "id": "KEPtPDTdkWLFYdx6K1sHq",
+            "type": "text",
+            "position": {
+              "x": -1152.4839844107041,
+              "y": -669.0020609466718
+            },
+            "data": {
+              "text": "Optional: Local Data (already in app)",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 374,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "u3wivnd9qVnBADM8Y6ZGS",
+            "type": "shape",
+            "position": {
+              "x": -338.2265322887723,
+              "y": -675.9433032053072
+            },
+            "style": {
+              "width": 1807.4800416846551,
+              "height": 1355.4899347626904
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 831,
+              "height": 693
+            },
+            "dragging": false,
+            "width": 831,
+            "height": 693,
+            "resizing": false
+          },
+          {
+            "id": "_NrTLDQPAqzhAbjhhjbSy",
+            "type": "shape",
+            "position": {
+              "x": -335.30400587968325,
+              "y": -675.0428805416632
+            },
+            "style": {
+              "width": 1803.616040796926,
+              "height": 244.02931634075884
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffec99",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 830,
+              "height": 122
+            },
+            "dragging": false,
+            "width": 830,
+            "height": 122,
+            "resizing": false
+          },
+          {
+            "id": "uc_3Jupdh1LZIDtfxOkr3",
+            "type": "text",
+            "position": {
+              "x": -329.0933115953816,
+              "y": -671.1131363708391
+            },
+            "data": {
+              "text": "Optional: External Data",
+              "fontColor": "#000000",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 244,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "sgaK78qdjbBHvfDzJzE2w",
+            "type": "text",
+            "position": {
+              "x": -1159.7930601966095,
+              "y": -621.4887980231167
+            },
+            "data": {
+              "text": "What data does your app already have at this moment?",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 412,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "Yd2dg6Grl6LRhRx4SKElK",
+            "type": "text",
+            "position": {
+              "x": -1144.2159873923836,
+              "y": -535.2971426867905
+            },
+            "data": {
+              "text": "Example:\n- list of items\n- user selection stored in variables",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 262,
+              "height": 80
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "12he6eB3-dTObYKNAhTqB",
+            "type": "text",
+            "position": {
+              "x": -331.90413151323537,
+              "y": -623.7707575383536
+            },
+            "data": {
+              "text": "Do any actions above require data from outside your app?",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 432,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "pL5n_mGBI_BVoM4mM-lL9",
+            "type": "text",
+            "position": {
+              "x": -299.1051365339266,
+              "y": -476.37108105544803
+            },
+            "data": {
+              "text": "Example:\n- API request",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 112,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "Ra7WF6FbbGsY5Qmj3W3LV",
+            "type": "text",
+            "position": {
+              "x": -125.26796008469842,
+              "y": -549.0147566470234
+            },
+            "data": {
+              "text": "Note: This is only needed if your project includes an API",
+              "fontColor": "#1e1e1e",
+              "fontSize": "medium",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 416,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "1sWx0p3a4HYVRhc6_4NXy",
+            "type": "text",
+            "position": {
+              "x": -917.2738396699347,
+              "y": 52.3391685135615
+            },
+            "data": {
+              "text": "Coding tip: Each flow you sketch in this Milestone workspace \ncan become a piece of logic you implement in Milestone 3 (for example, an event handler or conditional).",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 1043,
+              "height": 75
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "0fc2b3b9-f3e4-4d17-860f-dc9418803c03",
+            "source": "VMyJecaL48mfs5sSGxsLH",
+            "target": "MNgfrlo7WW_bx9rxGSzMm",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "zIndex": 1
+          },
+          {
+            "id": "7c23f560-0e26-4759-afa7-ba38f889e42c",
+            "source": "MNgfrlo7WW_bx9rxGSzMm",
+            "target": "uhO1-_AhfJbp5wjgo5J3y",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "d8d7dfa7-e1aa-4d56-9f16-bf61dcea3ff5",
+            "source": "uhO1-_AhfJbp5wjgo5J3y",
+            "target": "c9_avT9Cx1PyHA0aHTzq-",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "2b324bc6-cae6-40dc-a96a-92b6fb2237d0",
+            "source": "32H-cL9KQMPuBcYbXKPXa",
+            "target": "mnhVqeHyJi21jeJFpCUuU",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "1a9133d0-aac6-434c-bc68-3033e2ecd5e8",
+            "source": "32H-cL9KQMPuBcYbXKPXa",
+            "target": "_NrTLDQPAqzhAbjhhjbSy",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          }
+        ],
+        "viewport": {
+          "x": 989.2833624993436,
+          "y": 1412.5963502222003,
+          "zoom": 0.5
+        }
+      }
+    },
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:30.310+00:00\",\"changed\":[\"cloned from \\\"capstone-sketlab-template_2025-pilot\\\"\"],\"cloned_from\":\"capstone-sketlab-template_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:58:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:40:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 13:42:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

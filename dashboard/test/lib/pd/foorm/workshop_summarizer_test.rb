@@ -2,7 +2,6 @@ require 'test_helper'
 
 module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
     setup_all do
       @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
       @daily_survey_day_5 = create(:foorm_form_summer_post_survey)

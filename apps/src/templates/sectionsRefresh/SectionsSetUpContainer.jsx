@@ -1,16 +1,14 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
@@ -26,6 +24,11 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {
+  COLORS,
+  EMOJIS,
+} from '../studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
@@ -54,8 +57,9 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
-            aiTutorEnabled: false,
             course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+            avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
+            avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
           },
         ]
   );
@@ -91,7 +95,6 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
-  canEnableAITutor,
   userCountry,
   defaultRedirectUrl,
   setIsEditInProgress = value => {},
@@ -120,20 +123,12 @@ export default function SectionsSetUpContainer({
   const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
 
   const toggleIsCoteacherOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setIsCoteacherOpen(!isCoteacherOpen);
-    },
+    () => setIsCoteacherOpen(!isCoteacherOpen),
     [isCoteacherOpen]
   );
 
   const toggleAdvancedSettingsOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setAdvancedSettingsOpen(!advancedSettingsOpen);
-    },
+    () => setAdvancedSettingsOpen(!advancedSettingsOpen),
     [advancedSettingsOpen]
   );
 
@@ -145,22 +140,18 @@ export default function SectionsSetUpContainer({
     course offerings controller function to populate previousVersionYear and newVersionYear.
     */
     if (isNewSection) {
-      analyticsReporter.sendEvent(
-        EVENTS.SECTION_SETUP_COMPLETED,
-        {
-          sectionUnitId: section.course?.unitId,
-          sectionCurriculumLocalizedName: section.course?.displayName,
-          sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
-          sectionCurriculumVersionYear: section.course?.versionYear,
-          sectionGrade: section.grade ? section.grade[0] : null,
-          sectionLockSelection: section.restrictSection,
-          sectionName: section.name,
-          sectionPairProgramSelection: section.pairingAllowed,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_COMPLETED, {
+        sectionUnitId: section.course?.unitId,
+        sectionCurriculumLocalizedName: section.course?.displayName,
+        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course?.versionYear,
+        sectionGrade: section.grade ? section.grade[0] : null,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
     /*
     We want to send a 'curriculum assigned' event if this is not a new section
@@ -176,25 +167,21 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId: section.id,
-          sectionLoginType: section.loginType,
-          previousUnitId: initialSection.course?.unitId,
-          previousCourseId: initialSection.course?.courseOfferingId,
-          previousCourseVersionId: initialSection.course?.versionId,
-          previousVersionYear: null,
-          newUnitId: section.course?.unitId,
-          newCourseId: section.course?.courseOfferingId,
-          newCourseVersionId: section.course?.courseVersionId,
-          newVersionYear: null,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialSection.course?.unitId,
+        previousCourseId: initialSection.course?.courseOfferingId,
+        previousCourseVersionId: initialSection.course?.versionId,
+        previousVersionYear: null,
+        newUnitId: section.course?.unitId,
+        newCourseId: section.course?.courseOfferingId,
+        newCourseVersionId: section.course?.courseVersionId,
+        newVersionYear: null,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
   };
 
@@ -243,7 +230,6 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
@@ -353,33 +339,25 @@ export default function SectionsSetUpContainer({
   ) => {
     return (
       <div className={moduleStyles.withBorderBottom}>
-        <Button
+        <MuiButton
           id={sectionId}
           className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret(isOpen)}
+          variant="text"
+          color="tertiary"
+          startIcon={<FontAwesomeV6Icon iconName={caret(isOpen)} />}
           onClick={toggleIsOpen}
+          type="button"
         >
-          <Heading3>{sectionTitle()}</Heading3>
-        </Button>
+          <Typography variant="h3" gutterBottom>
+            {sectionTitle()}
+          </Typography>
+        </MuiButton>
         <div>{isOpen && sectionContent()}</div>
       </div>
     );
   };
 
-  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
-  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
-  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
-  const aiTutorAllowedForCourse = section =>
-    [
-      '[PILOT] Programming Fundamentals (AI Tutor)',
-      'Computer Science A',
-    ].includes(section?.course?.displayName);
-
   const renderAdvancedSettings = () => {
-    const aiTutorAvailable =
-      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
-
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
@@ -389,7 +367,6 @@ export default function SectionsSetUpContainer({
             updateSectionAndSetEditInProgress(0, key, val)
           }
           section={sections[0]}
-          aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
       ),
@@ -439,19 +416,21 @@ export default function SectionsSetUpContainer({
     <form id={FORM_ID}>
       {isNewSection && (
         <>
-          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+          <Typography
+            className={moduleStyles.noMarginBottomParagraph}
+            variant="body2"
+            gutterBottom
+          >
             {i18n.setUpClassSectionsSubheader()}
-          </BodyTwoText>
-          <BodyTwoText>
+          </Typography>
+          <Typography variant="body2" gutterBottom>
             <a onClick={onURLClick} className={moduleStyles.textPopUp}>
               {i18n.setUpClassSectionsSubheaderLink()}
             </a>
-          </BodyTwoText>
+          </Typography>
         </>
       )}
-
       {renderChildAccountPolicyNotification()}
-
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -464,10 +443,11 @@ export default function SectionsSetUpContainer({
         isNewSection={isNewSection}
         isLoading={isLoading}
       />
-
       {isLoading ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>
@@ -504,35 +484,35 @@ export default function SectionsSetUpContainer({
             )}
           >
             {isNewSection && ( // Only show 'save and add another' button when creating a new section
-              <Button
+              <MuiButton
                 className={moduleStyles.buttonLeft}
-                icon="plus"
-                text={i18n.addAnotherClassSection()}
-                color={Button.ButtonColor.neutralDark}
-                onClick={e => {
-                  e.preventDefault();
-                  saveSection(sections[0], true, coteachersToAdd);
-                }}
-              />
+                variant="outlined"
+                color="tertiary"
+                startIcon={<FontAwesomeV6Icon iconName="plus" />}
+                onClick={() => saveSection(sections[0], true, coteachersToAdd)}
+                type="button"
+              >
+                {i18n.addAnotherClassSection()}
+              </MuiButton>
             )}
-            <Button
+            <MuiButton
               className={moduleStyles.buttonRight}
               id="uitest-save-section-changes"
-              text={
-                isSaveInProgress
-                  ? i18n.saving()
-                  : isNewSection
-                  ? i18n.finishCreatingSections()
-                  : i18n.save()
-              }
-              color={Button.ButtonColor.brandSecondaryDefault}
+              variant="contained"
+              color="primary"
               disabled={isSaveInProgress}
-              onClick={e => {
-                e.preventDefault();
+              onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
-            />
+              type="button"
+            >
+              {isSaveInProgress
+                ? i18n.saving()
+                : isNewSection
+                ? i18n.finishCreatingSections()
+                : i18n.save()}
+            </MuiButton>
           </div>
         </>
       )}
@@ -543,7 +523,6 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
-  canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
   setIsEditInProgress: PropTypes.func,

@@ -301,6 +301,14 @@ Devise.setup do |config|
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
 
+  # ClassLink initiates the OAuth flow (IDP-initiated) so it won't return our
+  # state param; ignore state to avoid CSRF errors in the callback.
+  config.omniauth :classlink,
+    CDO.dashboard_classlink_key,
+    CDO.dashboard_classlink_secret,
+    strategy_class: OmniAuth::Strategies::ClassLink,
+    provider_ignores_state: true
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -309,10 +317,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-  require 'devise/custom_failure'
-  config.warden do |manager|
-    manager.failure_app = Devise::CustomFailure
-  end
 
   require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
@@ -339,6 +343,10 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    # statsig_stable_id is set in the application controller so it's available for
+    # all users, both signed-in and signed-out. When the user logs out, we remove
+    # this cookie because it is user-specific.
+    auth.cookies[:statsig_stable_id] = {value: "", expires: Time.at(0), domain: :all}
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
@@ -346,14 +354,6 @@ Devise.setup do |config|
     User.marketing_segment_data_keys.each do |key|
       auth.cookies[environment_specific_cookie_name("_teacher_#{key}")] = {value: "", expires: Time.at(0), domain: :all}
     end
-  end
-
-  OmniAuth.config.before_request_phase do |env|
-    session = env['rack.session']
-    Metrics::Events.log_event(
-      session: session,
-      event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
-    )
   end
 
   # ==> Mountable engine configurations

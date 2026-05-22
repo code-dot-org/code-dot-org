@@ -9,8 +9,6 @@ module Pd
 
     FAKE_SUBMISSION_ID = 987654
 
-    self.use_transactional_test_case = true
-
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher

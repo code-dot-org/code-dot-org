@@ -31,7 +31,7 @@
     "display_name": "Soda Machine",
     "bubble_choice_description": "Use private and public methods to calculate the total inventory and cost of sodas in a soda machine.",
     "thumbnail_url": "https://images.code.org/319c312eaf8840bd4732686d7696b1a8-vending-machine.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:39.167+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2a_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L2a_2022\"}]"

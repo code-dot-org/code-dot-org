@@ -86,6 +86,7 @@
     "start_blocks": "var peopleList = [\"You\",\"Me\",\"Another Person\"];\r\n\r\nupdateScreen();\r\n\r\nfunction updateScreen(){\r\n  setProperty(\"peopleLabel\",\"text\",peopleList.join(\"\\n\"));\r\n  setProperty(\"peopleDropdown\",\"options\",peopleList);\r\n}\r\n\r\nonEvent(\"addPersonButton\",\"click\",function(){\r\n  var newPerson = getText(\"personInput\");\r\n  insertItem(peopleList,0,newPerson);\r\n  setProperty(\"personInput\",\"text\",\"\");\r\n  updateScreen();\r\n});\r\n\r\nonEvent(\"removePersonButton\",\"click\",function(){\r\n  var personIndex = getProperty(\"peopleDropdown\",\"index\");\r\n  removeItem(peopleList,personIndex);\r\n  updateScreen();\r\n});\r\n\r\nonEvent(\"randomAssignButton\",\"click\",function(){\r\n  if((peopleList.length >= 2)){\r\n    var randomIndex1 = randomNumber(0,peopleList.length-1);\r\n    var randomPerson1 = peopleList[randomIndex1];\r\n    removeItem(peopleList,randomIndex1);\r\n    \r\n    var randomIndex2  = randomNumber(0,peopleList.length-1);\r\n    var randomPerson2 = peopleList[randomIndex2];\r\n    removeItem(peopleList,randomIndex2);\r\n    \r\n    setProperty(\"pairLabel\",\"text\",randomPerson1 + \" and \" + randomPerson2);\r\n\r\n  } else {\r\n    setProperty(\"pairLabel\",\"text\",\"Add more people to make a pair\");\r\n  }\r\n  updateScreen();\r\n});\r\n",
     "video_key": "csp_applab_lists_3",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

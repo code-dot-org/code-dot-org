@@ -1,8 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
@@ -16,40 +16,21 @@ export default class PrintLoginCards extends Component {
   };
 
   onClick = () => {
-    const {sectionId, entryPointForMetrics} = this.props;
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'print-login-cards-button-click',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          entryPoint: entryPointForMetrics,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.props.onPrintLoginCards();
   };
 
   render() {
     return (
-      <Button
-        style={styles.button}
+      <MuiButton
+        variant="outlined"
+        color="tertiary"
+        size="small"
         onClick={this.onClick}
-        target="_blank"
-        color={Button.ButtonColor.gray}
-        text={i18n.printLoginCards_button()}
-        icon="print"
-      />
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="print" />}
+      >
+        {i18n.printLoginCards_button()}
+      </MuiButton>
     );
   }
 }
-
-const styles = {
-  button: {
-    margin: 0,
-    marginLeft: 5,
-    marginBottom: 5,
-  },
-};

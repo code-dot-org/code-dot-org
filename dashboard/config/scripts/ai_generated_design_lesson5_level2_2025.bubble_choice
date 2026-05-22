@@ -1,6 +1,7 @@
 name 'ai-generated-design-lesson5-level2_2025'
 display_name 'Create a Mini Brand Kit'
 description 'Design a mini brand kit for a fictional product that reflects user needs. Select a color palette, fonts, and style words, tying brand identity decisions to audience.'
+uses_lab2
 
 sublevels
 level 'ai-generated-design-lesson5-level2a_2025'

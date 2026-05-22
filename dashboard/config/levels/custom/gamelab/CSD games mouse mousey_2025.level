@@ -132,6 +132,7 @@
     "thumbnail_url": "https://images.code.org/f3af303ba5de68ccdf184ee17b7e1ed0-image-1585832244629.gif",
     "bubble_choice_description": "Move the ladybug only when the mouse is near the bottom of the screen.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

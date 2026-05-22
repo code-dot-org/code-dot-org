@@ -1,0 +1,10 @@
+name 'ai-generated-design-lesson3-sketch-lab-choice_2026'
+display_name 'Build Your Web Page with AI'
+description 'Choose from one of the personas below and design a web page to meet their needs.'
+
+sublevels
+level 'ai-generated-design-lesson3-level1-prompting_2026'
+level 'ai-generated-design-lesson3-level1b-prompting_2026'
+level 'ai-generated-design-lesson3-level1c-prompting_2026'
+
+uses_lab2

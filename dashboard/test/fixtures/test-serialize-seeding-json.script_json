@@ -1055,9 +1055,13 @@
       }
     }
   ],
+  "jit_pl_concepts_lessons": [
+
+  ],
   "rubrics": [
     {
       "level_name": "test-serialize-seeding-json_blockly_8",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
@@ -1066,6 +1070,7 @@
     },
     {
       "level_name": "test-serialize-seeding-json_blockly_16",
+      "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",

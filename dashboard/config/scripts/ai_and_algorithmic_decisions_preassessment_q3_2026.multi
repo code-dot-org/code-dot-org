@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q3_2026'
+
+question 'On a video site, clicking the Play button starts a video. Which of these is the event handler?'
+
+wrong 'The Play button itself.'
+wrong 'The user tapping the screen.'
+wrong 'The video file stored on the server.'
+right 'The code that runs when the click is detected and starts playback.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+MARKDOWN

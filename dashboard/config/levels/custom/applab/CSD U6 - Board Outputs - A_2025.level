@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:06:56.000Z",
   "level_num": "custom",
@@ -13,7 +14,8 @@
       "led.toggle": null,
       "led.blink": null,
       "led.pulse": null,
-      "buzzer.frequency": null
+      "buzzer.frequency": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -81,11 +83,11 @@
     },
     "start_blocks": "//This is an app that simulates a virtual monster pet\r\n//You control the emotions of the monster with the LEDs and buzzer sound\r\n\r\n//This code is for the Happy button\r\nonEvent(\"happyButton\", \"click\", function() {\r\n  led.on();\r\n  buzzer.frequency(500, 500);\r\n});\r\n\r\n\r\n//Add your code for the Nervous button here\r\n\r\n\r\n\r\n//Add your code for the Sleepy button here\r\n\r\n",
     "encrypted_examples": "xXAnjCnxWGvKmZc76biMJY8icPcHR9BSYAKl0svXdc0gMBKlM7J+ol6w6p8N\ndTot2hEs/+SnxJDSQWjCI5/DtQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:06:56.531+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:06:56.531+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - A_2024\"},{\"changed_at\":\"2026-03-23 19:40:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

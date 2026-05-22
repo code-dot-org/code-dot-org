@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -151,9 +152,11 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('BodyThreeText')).toHaveLength(0);
-    expect(wrapper.find('EmText')).toHaveLength(1);
-    expect(wrapper.html().includes(i18n.aiCannotAssess())).toBe(true);
+    const emNodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'em');
+    expect(emNodes).toHaveLength(1);
+    expect(emNodes.at(0).text()).toBe(i18n.aiCannotAssess());
   });
 
   it('renders no evidence if none is given', () => {

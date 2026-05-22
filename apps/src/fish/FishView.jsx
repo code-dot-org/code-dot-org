@@ -9,6 +9,8 @@ import fontConstants from '@cdo/apps/fontConstants';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 
+import './fish.scss';
+
 /**
  * Top-level React wrapper for Fish
  */

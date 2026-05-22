@@ -149,8 +149,8 @@ class ScriptLevelsController < ApplicationController
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, unit_group: @unit_group, locale: request.locale)
-    elsif !override_redirect && (redirect_info = get_redirect_info(@script_level&.script, request.locale, unit_group: @unit_group))
+      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, unit_group: @unit_group, locale: I18n.locale.to_s)
+    elsif !override_redirect && (redirect_info = get_redirect_info(@script_level&.script, I18n.locale.to_s, unit_group: @unit_group))
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       if redirect_info[:redirect_ugu]
         redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
@@ -216,6 +216,8 @@ class ScriptLevelsController < ApplicationController
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?(@script_level.lesson)
+      @rubric_data[:parentLevelName] = @level.get_parent_level_for_script(@script_level&.script&.id)&.name
+      @rubric_data[:levelType] = @level.type
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
@@ -241,23 +243,6 @@ class ScriptLevelsController < ApplicationController
     else
       script.get_script_level_by_id(params[:id])
     end
-  end
-
-  # Get a JSON summary of a level's information, used in modern labs that don't
-  # reload the page between level views.  Note that this can be cached for a relatively
-  # long amount of time, including by the CDN, and does not vary per user.
-  def level_properties
-    authorize! :read, ScriptLevel
-
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
-    raise ActiveRecord::RecordNotFound unless @script_level
-
-    @level = select_level
-
-    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user, unit_group_unit: unit_group_unit)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -610,18 +595,13 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
-      disallowed_html_tags: disallowed_html_tags
+      disallowed_html_tags: disallowed_html_tags,
+      disallowed_html_attrs: disallowed_html_attrs
     )
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
-
-    # Add video generation URL for only the last level of Dance
-    # If we eventually want to add video generation for other levels or level
-    # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

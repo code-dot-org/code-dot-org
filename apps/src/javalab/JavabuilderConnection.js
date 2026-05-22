@@ -1,7 +1,5 @@
 import project from '@cdo/apps/code-studio/initApp/project';
 import logToCloud from '@cdo/apps/logToCloud';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
@@ -14,7 +12,6 @@ import {
   AuthorizerSignalType,
   CsaViewMode,
   JavabuilderLockoutType,
-  JavabuilderExceptionType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import {onTestResult} from './testResultHandler';
@@ -41,9 +38,13 @@ export default class JavabuilderConnection {
     onValidationPassed,
     onValidationFailed,
     onConnectDone,
-    setIsCaptchaDialogOpen
+    setIsCaptchaDialogOpen,
+    // Optional. Callers (e.g. Lab2-based labs) that don't initialize the
+    // legacy `project` singleton can pass the channel id explicitly. Legacy
+    // callers omit it and fall back to project.getCurrentId().
+    channelId
   ) {
-    this.channelId = project.getCurrentId();
+    this.channelId = channelId ?? project.getCurrentId();
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -158,7 +159,7 @@ export default class JavabuilderConnection {
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (checkProjectEdited && project.getCurrentId() === undefined) {
+    if (checkProjectEdited && !this.channelId) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
@@ -255,9 +256,6 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
-        analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_SUCCESS, {
-          levelId: this.levelId,
-        });
         message = javalabMsg.compilationSuccess();
         lineBreakCount = 1;
         break;
@@ -354,11 +352,6 @@ export default class JavabuilderConnection {
         }
         break;
       case WebSocketMessageType.EXCEPTION:
-        if (data.value === JavabuilderExceptionType.COMPILER_ERROR) {
-          analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_ERROR, {
-            levelId: this.levelId,
-          });
-        }
         this.onNewlineMessage();
         handleException(data, this.onOutputMessage, this.miniAppType);
         this.onNewlineMessage();

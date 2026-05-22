@@ -1,5 +1,4 @@
 $header-height: 31px;
-$bot-icon-size: $header-height - 5px;
 
 .container {
   width: 325px;
@@ -11,19 +10,21 @@ $bot-icon-size: $header-height - 5px;
   .header {
     width: 100%;
     height: $header-height;
-    background-color: aqua;
+    background-color: var(--background-brand-aqua-primary);
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
 
     button {
       position: absolute;
-      right: 0;
+      right: 4px;
     }
 
     .mini-bot-icon {
-      width: $bot-icon-size;
-      height: $bot-icon-size;
+      height: 1.5rem;
       object-fit: contain;
     }
 
@@ -32,7 +33,15 @@ $bot-icon-size: $header-height - 5px;
     }
   }
 
-  &.displayNone {
-    display: none;
+  :global(.src-aichat-views-chatWorkspace-module__chatWorkspace) {
+    border-radius: 0;
+
+    :global(.src-aichat-views-chatWorkspace-module__footer) {
+      background-color: var(--background-neutral-primary);
+    }
   }
+}
+
+.displayNone {
+  display: none;
 }

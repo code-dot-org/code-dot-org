@@ -203,6 +203,7 @@
     "libraries_enabled": "false",
     "long_instructions": "# Interactive Card Example\r\n\r\nIn the next few levels, you'll be completing your own interactive card. Here are some examples to give you some ideas.",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

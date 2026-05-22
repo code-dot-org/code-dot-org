@@ -1,0 +1,10 @@
+name 'csaif_pl_ai_01-rev-02_v2_2026'
+title 'Ethics of AI Collaboration'
+description ''
+question 'Your students are debating the question: **Who should own AI-generated content—the AI creator, the user, the company, or shared ownership? And what happens if AI is trained on copyrighted material?** During the discussion, several students strongly assert their opinions, while others stay quiet or seem unsure. You want students to explore multiple perspectives, consider trade-offs, and understand that ethical questions can have many valid viewpoints. Which teacher move would best support a productive classroom discussion that surfaces diverse viewpoints and encourages thoughtful reasoning?'
+
+wrong 'Tell the class the correct answer so students know the official ethical position and can move on.'
+wrong  'Allow students to continue to opt in or out of the discussion, since this is a topic that might make some students uncomfortable.'
+right 'Invite students to articulate different stakeholder perspectives (e.g., artists, companies, users, lawmakers), and ask follow-up questions that prompt them to explain the values behind each viewpoint.'
+wrong 'Redirect the conversation to a different topic to avoid potential disagreements or discomfort.'
+allow_multiple_attempts true

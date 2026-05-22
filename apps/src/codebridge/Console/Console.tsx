@@ -45,17 +45,12 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
 
-  const clearOutput = useCallback(
-    (sendAnalytics: boolean) => {
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.clearTerminalLines();
-      if (sendAnalytics) {
-        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
-      }
-    },
-    [appName]
-  );
+  const clearOutput = useCallback((sendAnalytics: boolean) => {
+    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
+    if (sendAnalytics) {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
+    }
+  }, []);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
@@ -129,6 +124,11 @@ const Console: React.FunctionComponent = () => {
       screenReaderMode: true,
       minimumContrastRatio: 4.5,
       tabStopWidth: 2,
+      // Translate bare \n in program output to \r\n so the cursor returns
+      // to column 0 on each newline. Without this, output like
+      // "What's your name?\n" leaves the cursor mid-line, and subsequent
+      // user-typed input renders indented.
+      convertEol: true,
     });
     const fitAddon = new FitAddon();
     terminal.loadAddon(fitAddon);

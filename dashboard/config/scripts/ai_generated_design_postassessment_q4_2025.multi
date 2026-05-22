@@ -7,7 +7,7 @@ wrong 'Abstraction – removing unnecessary details from the project'
 wrong 'Debugging – fixing problems in the website\'s code'
 wrong 'Accessibility – making the site usable for all audiences'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 9

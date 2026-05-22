@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const sampleValidationCodeMap = getScriptData('map');
@@ -17,7 +17,7 @@ function initPage() {
     widgetMode.on('click', () => syncValidateWithElements(embed, widgetMode));
   }
   if ($('#level_validation_code').length > 0) {
-    validationEditor = initializeCodeMirror(
+    validationEditor = initializeCodeMirror6(
       'level_validation_code',
       'javascript'
     );
@@ -27,9 +27,7 @@ function initPage() {
     const element = $('#generateValidation' + name);
     element.on(
       'click',
-      () =>
-        validationEditor &&
-        validationEditor.getDoc().setValue(sampleValidationCode)
+      () => validationEditor && validationEditor.setValue(sampleValidationCode)
     );
   }
 }

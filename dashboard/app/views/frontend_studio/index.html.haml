@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    = csrf_meta_tags
+    = csp_meta_tag
+    %meta{name: 'app-config', content: observability_config(CDO.frontend_studio_sentry_dsn)}
+    = vite_client_tag
+    = vite_react_refresh_tag
+
+    = vite_typescript_tag 'application.tsx'
+  %body
+    %div{id: 'vite-root'}

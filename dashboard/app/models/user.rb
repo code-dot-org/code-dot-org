@@ -173,7 +173,6 @@ class User < ApplicationRecord
     display_theme
     mute_music
     last_seen_school_info_interstitial
-    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -199,19 +198,12 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
-    ai_tutor_access_denied
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
     sort_by_family_name
-    show_progress_table_v2
     has_seen_homepage_welcome
-    progress_table_v2_closed_beta
     lti_roster_sync_enabled
-    progress_table_v2_timestamp
-    progress_table_v1_timestamp
-    has_seen_progress_table_v2_invitation
-    date_progress_table_invitation_last_delayed
     user_provided_us_state
     lms_landing_opted_out
     failed_attempts
@@ -220,6 +212,8 @@ class User < ApplicationRecord
     roster_synced
     educator_role
     signup_sources_tracking
+    has_dismissed_personalization_alert
+    grades_teaching
   )
 
   attr_accessor(
@@ -252,6 +246,7 @@ class User < ApplicationRecord
   has_many :hint_view_requests
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   has_many :ai_lesson_summaries, dependent: :destroy
+  has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -313,6 +308,7 @@ class User < ApplicationRecord
   has_many :lti_user_identities, dependent: :destroy
 
   has_many :external_notifications, dependent: :destroy
+  has_many :teacher_notifications, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
@@ -354,12 +350,16 @@ class User < ApplicationRecord
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+      user.primary_contact_info.errors.each do |error|
+        user.errors.add(error.attribute, error.message)
+      end
     end
 
     user.authentication_options.each do |ao|
       unless ao.valid?
-        ao.errors.each {|k, v| user.errors.add k, v}
+        ao.errors.each do |error|
+          user.errors.add(error.attribute, error.message)
+        end
       end
     end
   end
@@ -384,8 +384,6 @@ class User < ApplicationRecord
   end
 
   before_create :update_default_share_setting
-
-  before_create :save_show_progress_table_v2
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
@@ -447,13 +445,6 @@ class User < ApplicationRecord
   include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  # Puts teachers directly into the progress table v2 view when new account is created.
-  def save_show_progress_table_v2
-    if teacher?
-      self.show_progress_table_v2 = true
-    end
-  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -652,7 +643,7 @@ class User < ApplicationRecord
     # For this step, we only care about email, password, and password confirmation.
     # Remove any other validation errors for now.
     required_fields = [:email, :password, :password_confirmation]
-    errors.each do |attribute, _|
+    errors.attribute_names.each do |attribute|
       errors.delete(attribute) unless required_fields.include?(attribute)
     end
 
@@ -1001,11 +992,11 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
-      ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated_date: at_risk_age_gated_date,
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
+      is_demo_student: Policies::DemoSections.demo_student?(id),
     }
   end
 
@@ -1080,8 +1071,13 @@ class User < ApplicationRecord
   def can_change_own_user_type?
     if student? # upgrading to teacher
       # Requires ability to edit email because upgrade requires adding a cleartext email address.
-      # Students in sections cannot edit user type because teacher/school owns the student's data.
-      can_edit_email? && sections_as_student.none? {|section| section.participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
+      return false unless can_edit_email?
+
+      if Policies::User.personal_account?(self)
+        true
+      else
+        over_21?
+      end
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
       # to be taught by teachers.
@@ -1233,7 +1229,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro', locale: nil)
     # applab-intro is not seeded in our minimal test env used on test/CI. We
     # should be able to handle this gracefully
     script = begin
@@ -1279,6 +1275,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
+            locale:,
             unit_group: unit_group
           )
         end
@@ -1409,11 +1406,6 @@ class User < ApplicationRecord
 
   def code_review_groups
     followeds.filter_map(&:code_review_group)
-  end
-
-  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
-  def uuid
-    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
@@ -1695,7 +1687,7 @@ class User < ApplicationRecord
       end
 
       script = Unit.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
+      script_valid = script.csf?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
           new_result >= ActivityConstants::BEST_PASS_RESULT &&
           script_valid &&
@@ -1725,10 +1717,7 @@ class User < ApplicationRecord
       total_time_spent = user_level.calculate_total_time_spent(time_spent)
       user_level.time_spent = total_time_spent if total_time_spent
 
-      if locale
-        user_level.locale = locale
-        user_level.locale_supported = script.supported_locale?(locale)
-      end
+      user_level.assign_locale_data(locale) if locale
 
       if unit_group && user_level.new_record?
         user_level.unit_group_id = unit_group.id
@@ -1918,7 +1907,7 @@ class User < ApplicationRecord
   end
 
   def self.find_channel_owner(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound

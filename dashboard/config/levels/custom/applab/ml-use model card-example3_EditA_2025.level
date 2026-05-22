@@ -56,6 +56,7 @@
     "encrypted_examples": "iL3Y079OVv/Z4rNRLCxwJvJWpkpLdSZxyzfzs4UglUyX0iax+tvGOSWY6vKI\nzxW/kJRUhuJx7F07Ix/VMWhKkw==\n",
     "teacher_markdown": "**Deleting Screen 1:** Another way to accomplish the goals of this level is to delete `screen1` entirely. This has the added effect of deleting all of the elements as well. You can choose to show students how to do this, or let them discover it themselves. In either case: the ultimate goal is to remove the pre-generated elements that are created when you first import a model, so that students can instead work with the newly created UI elements in their app.",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

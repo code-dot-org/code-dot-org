@@ -1,9 +1,4 @@
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-  Heading6,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef} from 'react';
@@ -224,7 +219,9 @@ export default function LearningGoal({
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {/*TODO: [DES-321] Label-two styles here*/}
-          <Heading6>{learningGoal.learningGoal}</Heading6>
+          <Typography variant="h6" gutterBottom>
+            {learningGoal.learningGoal}
+          </Typography>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && displayUnderstanding === invalidUnderstanding && (
@@ -234,28 +231,32 @@ export default function LearningGoal({
           {canProvideFeedback &&
             aiEnabled &&
             displayUnderstanding === invalidUnderstanding && (
-              <BodyThreeText>{i18n.approve()}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {i18n.approve()}
+              </Typography>
             )}
           {canProvideFeedback &&
             !aiEnabled &&
             displayUnderstanding === invalidUnderstanding && (
-              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {i18n.evaluate()}
+              </Typography>
             )}
           {displayUnderstanding >= 0 && (
-            <BodyThreeText>
+            <Typography variant="body3" gutterBottom>
               {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
-            </BodyThreeText>
+            </Typography>
           )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
               {submittedEvaluation.understanding !== null && (
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {
                     UNDERSTANDING_LEVEL_STRINGS[
                       submittedEvaluation.understanding
                     ]
                   }
-                </BodyThreeText>
+                </Typography>
               )}
               {submittedEvaluation.feedback && (
                 <FontAwesome
@@ -268,7 +269,6 @@ export default function LearningGoal({
           )}
         </div>
       </summary>
-
       {/*TODO: Pass through data to child component*/}
       <div>
         <AiAssessmentFeedbackContext.Provider
@@ -305,7 +305,9 @@ export default function LearningGoal({
           />
           {learningGoal.tips && !isStudent && (
             <div>
-              <Heading6>{i18n.tipsForEvaluation()}</Heading6>
+              <Typography variant="h6" gutterBottom>
+                {i18n.tipsForEvaluation()}
+              </Typography>
               <div className={style.learningGoalTips}>
                 <SafeMarkdown markdown={learningGoal.tips} />
               </div>
@@ -337,9 +339,13 @@ const AiToken = () => {
   return (
     <div className="uitest-uses-ai">
       {' '}
-      <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <StrongText>{i18n.usesAi()}</StrongText>
-      </BodyFourText>
+      <Typography
+        className={classnames(style.aiToken, style.aiTokenText)}
+        variant="body4"
+        gutterBottom
+      >
+        <Typography variant="strong">{i18n.usesAi()}</Typography>
+      </Typography>
     </div>
   );
 };

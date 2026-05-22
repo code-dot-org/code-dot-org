@@ -28,7 +28,7 @@
       }
     },
     "name_suffix": "_pl",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:23.571+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-Mutators PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L9-Mutators PBT_pilot-2025\"}]"

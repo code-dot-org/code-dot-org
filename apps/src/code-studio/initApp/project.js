@@ -4,6 +4,7 @@ import {
   OPEN_ENDED_LEGACY_PROJECT_TYPES,
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
@@ -22,6 +23,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
+  refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
@@ -905,6 +907,12 @@ var projects = (module.exports = {
     }
   },
 
+  // Metrics logging requires a non-null value, so we return 'unknown' if
+  // there is no known standalone app for this project.
+  getStandaloneAppForMetrics() {
+    return this.getStandaloneApp() || 'unknown';
+  },
+
   isWebLab() {
     return this.getStandaloneApp() === 'weblab';
   },
@@ -967,16 +975,6 @@ var projects = (module.exports = {
 
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
-        // Adding error logging for retrieval of current sources for debugging/monitoring purposes.
-        if (newSources.error) {
-          MetricsReporter.logError({
-            event:
-              'Error from getUpdatedSourceAndHtml_ in saveIfSourcesChanged',
-            error: newSources.error,
-            appType: this.getStandaloneApp(),
-            channelId: this.getCurrentId(),
-          });
-        }
         const sourcesChanged =
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
@@ -1133,18 +1131,48 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              this.logError_(
-                'unauthorized-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'unauthorized-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'unauthorized'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
-              this.logError_(
-                'conflict-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'conflict-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'conflict'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();
@@ -1153,6 +1181,10 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+                {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+                {name: 'SaveType', value: 'sources'},
+              ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
@@ -1327,7 +1359,15 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
+        .catch(error => {
+          MetricsReporter.logError({
+            event: 'Error in getUpdatedSourceAndHtml_',
+            error: repackageError(error),
+            appType: this.getStandaloneAppForMetrics(),
+            channelId: this.getCurrentId(),
+          });
+          callback({error});
+        })
     );
   },
 
@@ -1404,15 +1444,20 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    MetricsReporter.logError({
-      event: errorType,
-      errorMessage: errorText,
-      errorCount: errorCount,
-      appType: this.getStandaloneApp(),
-      channelId: this.getCurrentId(),
-    });
+    // Log to CloudWatch via MetricsReporter. This is the primary logging system for project saving.
+    const metricsPromise = Promise.resolve(
+      MetricsReporter.logError({
+        event: errorType,
+        errorMessage: errorText,
+        errorCount: errorCount,
+        appType: this.getStandaloneAppForMetrics(),
+        channelId: this.getCurrentId(),
+      })
+    );
 
-    return firehoseClient.putRecord(
+    // Although Firehose is being deprecated, we continue to log for project data integrity errors so that
+    // we can still search for project saving errors over multiple years and compare with MetricsReporter.
+    const firehosePromise = firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1434,6 +1479,15 @@ var projects = (module.exports = {
       },
       {includeUserId: true}
     );
+
+    // Wait for both logging systems to complete before allowing page reload.
+    return Promise.all([metricsPromise, firehosePromise]).catch(err => {
+      // Log the error but don't throw - we don't want to break the user flow.
+      MetricsReporter.logError({
+        event: 'Error logging to metrics and/or firehose systems',
+        error: repackageError(err),
+      });
+    });
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;
@@ -1444,6 +1498,10 @@ var projects = (module.exports = {
       if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
         header.showTryAgainDialog();
       }
+      MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+        {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+        {name: 'SaveType', value: 'channel'},
+      ]);
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1472,6 +1530,9 @@ var projects = (module.exports = {
 
     current = current || {};
     Object.assign(current, data);
+    MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
+      {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+    ]);
 
     if (shouldNavigate) {
       // If we are at a /projects/<appname> link, we can display the project
@@ -1987,6 +2048,9 @@ function fetchPrivacyProfanityViolations(resolve) {
     // data.has_violation is 0 or true, coerce to a boolean.
     currentHasPrivacyProfanityViolation =
       (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
+    if (currentHasPrivacyProfanityViolation) {
+      getStore().dispatch(refreshHasPrivacyProfanityViolation());
+    }
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
@@ -2131,7 +2195,9 @@ function parsePath() {
 
   const geRegion = getGlobalEditionRegion();
   if (geRegion) {
-    pathname = pathname.replace(`/global/${geRegion}/`, '/');
+    pathname =
+      pathname.replace(new RegExp(`^/${geRegion}(?:/[a-z]{2})?(?=/|$)`), '') ||
+      '/';
   }
 
   // We have a hash based route. Replace the hash with a slash, and append to

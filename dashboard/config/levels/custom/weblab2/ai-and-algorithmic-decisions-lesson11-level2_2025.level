@@ -1,0 +1,34 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:16:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build Your App Framework\r\n### What to do:\r\nStart building the foundation of your web app. Create your HTML and CSS structure and connect your JavaScript file. Your goal in this level is to make your app come alive with its first interactive feature.\r\n\r\n**Focus On:**\r\n- Setting up your main layout and linking files.\r\n- Coding your first user interaction (like a button or input).\r\n- Making something on the page change in response.\r\n- Save versions as you see necessary with at least saving a **Version 1**\r\n\r\n**Ask AI for help if you get stuck.** Possible stems:\r\n- How can I link my JavaScript file so it runs when I click a button?\r\n- Why isn’t my event listener working?\r\n- What’s one way I could make my first interaction more interesting?\r\n\r\n**Your goal:**\r\nA working scaffold with at least one successful interaction between user input and page response.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025",
+    "level_system_prompt": "The student is beginning to build the foundational version of their interactive web app using HTML, CSS, and JavaScript.\r\nYour role is to act as a coding coach, helping them translate their planned logic into an initial, working prototype.\r\n\t•\tEmphasize understanding how and why code works rather than simply fixing errors.\r\n\t•\tEncourage the student to test ideas and explain their reasoning.\r\n\t•\tOffer guidance on linking files, using event listeners, and setting up one interactive feature that updates the page.\r\n\t•\tWhen providing code examples, keep them short and framed as illustrations rather than full solutions.\r\n\t•\tReinforce persistence, curiosity, and debugging as core developer habits."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:15.033+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level2-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level2-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:47:48 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -5,20 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # What is JavaScript?
 
-#### JavaScript (JS) is the language that makes a webpage interactive.
+JavaScript (JS) is the language that makes a webpage interactive.
 
-#### If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
+If HTML is the structure and CSS is the style, then JavaScript is the brain. It controls behavior, logic, and actions.
 
-#### **Key things JavaScript does:**
-- #### Responds to user actions (like clicks, typing, or scrolling)
-- #### Updates the page without reloading (dynamic content)
-- #### Connects to and uses data (e.g., updating a shopping cart)
-- #### Adds interactivity, like pop-ups, animations, or calculators
+**Key things JavaScript does:**
+- Responds to user actions (like clicks, typing, or scrolling)
+- Updates the page without reloading (dynamic content)
+- Connects to and uses data (e.g., updating a shopping cart)
+- Adds interactivity, like pop-ups, animations, or calculators
 
 
 ## Sample Code with HTML + CSS + JavaScript
 
-#### Notice the addition of the interactive button. CSS is used to style the button and an interacitve event function makes a 
+Notice the addition of the interactive button. CSS is used to style the button and an interactive event function makes a 
 
  <div style="text-align: center;">
     <img src="https://images.code.org/46d435908ac369aad8e1b10f86aff0e9-image-1759503682492.png" 
@@ -43,19 +43,19 @@ markdown <<MARKDOWN
 
 ## What’s happening here:
 
-* #### HTML layer → added a <button> with onclick="makeDogBark()".
+* HTML layer → added a <button> with onclick="makeDogBark()".
 
-* #### CSS layer → styled the button so it looks nice.
+* CSS layer → styled the button so it looks nice.
 
-* #### JavaScript layer → function makeDogBark() shows an alert popup saying "Woof! Woof! 🐶".
+* JavaScript layer → function makeDogBark() shows an alert popup saying "Woof! Woof! 🐶".
 
 
 ## In other words:
-* #### HTML = button exists
+* HTML = button exists
 
-* #### CSS = button looks good
+* CSS = button looks good
 
-* #### JavaScript = button does something
+* JavaScript = button does something
 
 
 <div style="text-align: left;">

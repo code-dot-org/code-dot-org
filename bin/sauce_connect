@@ -5,7 +5,7 @@ require 'cdo/sauce_connect'
 
 # Start sc, the Sauce Connect Proxy, and keep it running in the background.
 begin
-  Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+  Cdo::SauceConnect.start_sauce_connect
 rescue
   exit 1
 end

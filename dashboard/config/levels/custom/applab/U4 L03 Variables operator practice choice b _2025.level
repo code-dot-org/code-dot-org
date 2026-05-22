@@ -62,6 +62,7 @@
     "thumbnail_url": "https://images.code.org/739f829a067b18a3ec875d34f502cabd-image-1647378025746.png",
     "bubble_choice_description": "Add code to update variables keeping track of total water, cups of water drank, and workouts completed.",
     "watchers_prepopulated": "[\"totalWater\", \"cupsConsumed\", \"workouts\"]",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're programming a smart speaker to remind people to do their daily tasks. Right now, it reminds someone named \"Chris\", but it needs to be able to remind *any* household member.\r\n\r\n1. Add **two parameters** to the function: one for the person's name, and one for the task.\r\n\r\n2. Update the print statement so the reminder includes both the name and the task.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA **parameter** is a placeholder in the function definition. When you call the function, you pass in an argument that fills that placeholder.\r\n\r\nTo include a variable like a name in your message, you can combine strings using the `+` operator. Here's an example:\r\n\r\n```\r\nprint(\"Hi, \" + name + \"!\")\r\n```\r\n\r\nMake sure to include spaces **inside the quotes**, like `\"Hi, \"` and `\"!\"`, or the message will get squished together.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

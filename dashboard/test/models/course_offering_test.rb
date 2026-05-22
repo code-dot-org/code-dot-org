@@ -730,7 +730,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'query count for assignable_course_offerings' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@teacher)
@@ -739,8 +739,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
-
-    Unit.clear_cache
   end
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
@@ -907,7 +905,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, script: unit)
 
     lesson = create(:lesson, script: unit, lesson_group: lesson_group)
-    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+    create_list(:lesson_activity, 6, lesson: lesson, duration: 1000)
 
     # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)
@@ -973,6 +971,30 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
     new_course_offering = CourseOffering.find_by(key: course_offering.key)
     assert new_course_offering.ai_teaching_assistant_available
+  end
+
+  test "seed_all does not destroy ui-test- offerings" do
+    create(:course_offering, key: 'ui-test-example')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The ui-test- offering should still exist
+      assert CourseOffering.exists?(key: 'ui-test-example'), "ui-test- offerings should not be destroyed by seed_all"
+    end
+  end
+
+  test "seed_all destroys regular offerings without JSON files" do
+    create(:course_offering, key: 'regular-offering')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The regular offering should be destroyed
+      refute CourseOffering.exists?(key: 'regular-offering'), "regular offerings without JSON files should be destroyed by seed_all"
+    end
   end
 
   test "validates grade_levels" do
@@ -1084,7 +1106,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'finds corresponding offerings for pl course' do
-    pl_course_offering =create(:course_offering)
+    pl_course_offering = create(:course_offering)
     pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
@@ -1119,6 +1141,33 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     refute non_pl_course_offering.elementary_school_level?
     refute pl_course_offering.pl_for_elementary_school?
+  end
+
+  test 'file_path returns UI test directory for ui-test- prefixed course offerings' do
+    expected = Rails.root.join('test/ui/config/course_offerings/ui-test-example.json')
+    assert_equal expected, CourseOffering.file_path('ui-test-example')
+  end
+
+  test 'file_path returns normal directory for non-ui-test course offerings' do
+    expected = Rails.root.join('config/course_offerings/regular-offering.json')
+    assert_equal expected, CourseOffering.file_path('regular-offering')
+  end
+
+  test 'file_path returns normal directory when ui-test is not a prefix' do
+    expected = Rails.root.join('config/course_offerings/my-ui-test-offering.json')
+    assert_equal expected, CourseOffering.file_path('my-ui-test-offering')
+  end
+
+  test 'file_path respects custom root_path for UI test course offerings' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('test/ui/config/course_offerings/ui-test-example.json')
+    assert_equal expected, CourseOffering.file_path('ui-test-example', custom_root)
+  end
+
+  test 'file_path respects custom root_path for normal course offerings' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('config/course_offerings/regular-offering.json')
+    assert_equal expected, CourseOffering.file_path('regular-offering', custom_root)
   end
 
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)

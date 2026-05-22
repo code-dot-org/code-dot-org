@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import CourseOfferingsFilters from '@cdo/apps/templates/courseOfferings/filters/CourseOfferingsFilters';
@@ -188,17 +188,18 @@ const CurriculumCatalogFilters = ({
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
           <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyTwoText>
+            <Typography variant="body2" gutterBottom>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-              <FontAwesome
-                icon="language"
-                className={`fa-solid ${style.iconVerticalCenter}`}
+              <FontAwesomeV6Icon
+                iconName="language"
+                iconStyle="solid"
+                className={style.iconVerticalCenter}
                 title={i18n.courseInYourLanguage()}
               />
-            </BodyTwoText>
+            </Typography>
           </div>
           {!forceTranslated && (
             <Toggle

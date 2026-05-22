@@ -105,6 +105,7 @@
     "bubble_choice_description": "Create a game that uses the left and right buttons to move characters down the screen. The first person to reach the bottom of the screen is the winner!",
     "encrypted_examples": "a5OD7qdlsqj+P1wE45nWRQBv65+VUrdrNU9IgtS0XGk6KjyW+Fl1VMEgC8rJ\nkejHvKVafdCnmRa0n17/bvAifA==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

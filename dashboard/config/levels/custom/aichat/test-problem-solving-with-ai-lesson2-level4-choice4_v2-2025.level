@@ -61,7 +61,8 @@
     "name_suffix": "_v2-2025",
     "offer_browser_tts": "false",
     "submittable": "false",
-    "disable_edit_run_for_submission": "false"
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:38.300+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice4_2025\"}]"

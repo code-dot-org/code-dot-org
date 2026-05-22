@@ -7,7 +7,7 @@ wrong 'Removing the checkout process entirely to speed up ordering.'
 wrong 'Hiding extra options in more menus to make the interface simpler.'
 right 'Making the "Add to Cart" button larger and easier to find on every product page.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 2, 7

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserLevelTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
+  include Minitest::RSpecMocks
 
   setup_all do
     @user = create(:user)
@@ -459,5 +459,194 @@ class UserLevelTest < ActiveSupport::TestCase
     )
 
     assert_equal 4000, ul.calculate_total_time_spent(2000)
+  end
+
+  describe 'on creation' do
+    subject(:create_record) {described_instance.save!}
+
+    let(:described_instance) {build(:user_level)}
+    let(:system_locale) {'es-ES'}
+    let!(:original_locale) {I18n.locale.to_s}
+
+    before do
+      I18n.locale = system_locale
+    end
+
+    after do
+      I18n.locale = original_locale
+    end
+
+    it 'assigns #locale using system locale' do
+      expect(described_instance).to receive(:assign_locale_data).and_call_original
+      _ {create_record}.must_change -> {described_instance.locale}, from: nil, to: system_locale
+    end
+
+    it 'assigns #locale_supported to null' do
+      expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+      _ {create_record}.wont_change -> {described_instance.locale_supported}
+      _(described_instance.reload.locale_supported).must_be_nil
+    end
+
+    context 'when #locale attribute is already set' do
+      let(:user_level_locale) {'uk-UA'}
+
+      before do
+        described_instance.locale = user_level_locale
+      end
+
+      it 'does not change original #locale' do
+        expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+
+        _ {create_record}.wont_change -> {described_instance.locale}
+        _(described_instance.reload.locale).must_equal user_level_locale
+      end
+
+      it 'assigns #locale_supported to null' do
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+        _ {create_record}.wont_change -> {described_instance.locale_supported}
+        _(described_instance.reload.locale_supported).must_be_nil
+      end
+    end
+
+    context 'with script that does not support system locale' do
+      let(:script) {create(:unit)}
+
+      before do
+        described_instance.script = script
+      end
+
+      it 'assigns #locale_supported to false' do
+        expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+        _ {create_record}.must_change -> {described_instance.locale_supported}, from: nil, to: false
+      end
+    end
+
+    context 'with script that supports system locale' do
+      let(:script) {create(:unit, supported_locales: [system_locale])}
+
+      before do
+        described_instance.script = script
+      end
+
+      it 'assigns #locale_supported to true' do
+        expect(described_instance).to receive(:refresh_locale_supported).twice.and_call_original
+        _ {create_record}.must_change -> {described_instance.locale_supported}, from: nil, to: true
+      end
+    end
+  end
+
+  describe 'on updating' do
+    subject(:update_record) {described_instance.update!(user_level_args)}
+
+    let!(:described_instance) {create(:user_level, script: original_script, locale: user_level_locale)}
+    let(:user_level_args) {{}}
+
+    let(:original_script) {create(:unit, supported_locales: [user_level_locale])}
+    let(:user_level_locale) {'uk-UA'}
+    let(:system_locale) {'es-ES'}
+
+    let!(:original_locale) {I18n.locale.to_s}
+
+    before do
+      I18n.locale = system_locale
+    end
+
+    after do
+      I18n.locale = original_locale
+    end
+
+    it 'does not change original #locale' do
+      expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+      _ {update_record}.wont_change -> {described_instance.locale}
+      _(described_instance.reload.locale).must_equal user_level_locale
+    end
+
+    it 'does not change original #locale_supported' do
+      expect(described_instance).not_to receive(:refresh_locale_supported).and_call_original
+      _ {update_record}.wont_change -> {described_instance.locale_supported}
+    end
+
+    context 'when #locale is changed' do
+      let(:new_locale) {'pt-PT'}
+
+      let(:user_level_args) {{locale: new_locale}}
+
+      it 'changes original #locale' do
+        expect(described_instance).not_to receive(:assign_locale_data).and_call_original
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+
+        _ {update_record}.must_change -> {described_instance.locale}, from: user_level_locale, to: new_locale
+        _(described_instance.reload.locale).must_equal new_locale
+      end
+    end
+
+    context 'when #scrip is changed' do
+      let(:new_script) {create(:unit)}
+
+      let(:user_level_args) {{script: new_script}}
+
+      it 'refreshes #locale_supported' do
+        expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+        _ {update_record}.must_change -> {described_instance.locale_supported}, from: true, to: false
+      end
+
+      context 'and it supports #locale' do
+        before do
+          new_script.update!(supported_locales: [user_level_locale])
+        end
+
+        it 'does not change #locale_supported' do
+          expect(described_instance).to receive(:refresh_locale_supported).and_call_original
+          _ {update_record}.wont_change -> {described_instance.locale_supported}
+        end
+      end
+    end
+  end
+
+  describe '#assign_locale_data' do
+    subject(:assign_locale_data) {described_instance.assign_locale_data(locale)}
+
+    let(:locale) {'es-ES'}
+    let(:script) {build(:unit, supported_locales: [locale])}
+    let(:described_instance) {build(:user_level, script:)}
+
+    shared_examples_for 'assigns #locale attribute' do
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.must_change -> {described_instance.locale}, from: nil, to: locale
+      end
+    end
+
+    shared_examples_for 'assigns #locale_supported attribute' do |expected_value: true|
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.must_change -> {described_instance.locale_supported}, from: nil, to: expected_value
+      end
+    end
+
+    shared_examples_for 'does not assign #locale_supported attribute' do
+      it 'assigns #locale attribute' do
+        _ {assign_locale_data}.wont_change -> {described_instance.locale_supported}
+        _(described_instance.locale_supported).must_be_nil
+      end
+    end
+
+    it_behaves_like 'assigns #locale attribute'
+    it_behaves_like 'assigns #locale_supported attribute'
+
+    context 'when locale is not supported by script' do
+      before do
+        script.supported_locales.delete(locale)
+      end
+
+      it_behaves_like 'assigns #locale attribute'
+      it_behaves_like 'assigns #locale_supported attribute', expected_value: false
+    end
+
+    context 'when no script' do
+      let(:script) {nil}
+
+      it_behaves_like 'assigns #locale attribute'
+      it_behaves_like 'does not assign #locale_supported attribute'
+    end
   end
 end

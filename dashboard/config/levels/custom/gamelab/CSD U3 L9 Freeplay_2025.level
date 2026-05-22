@@ -109,6 +109,7 @@
     "bubble_choice_description": "Create an animated scene of your favorite dance moves!",
     "validation_enabled": "false",
     "start_blocks": "//1) Add or draw sprites in the Animation Tab.\r\n//2) Create your sprites and set their animations.\r\n\r\n//3) Add a draw loop with the appropriate properties needed to create the animation of your favorite dance moves.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

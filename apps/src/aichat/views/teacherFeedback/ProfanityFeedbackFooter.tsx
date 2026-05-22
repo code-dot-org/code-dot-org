@@ -1,13 +1,12 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {EmText} from '@code-dot-org/component-library/typography';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import aichatI18n from '../../locale';
 import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
@@ -51,36 +50,33 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
 
   const text =
     teacherFeedback === undefined
-      ? aichatI18n.chatMessage_wasContentFlaggedCorrectly()
+      ? 'Was this content flagged correctly?'
       : thumbsUpSelected
-      ? aichatI18n.chatMessage_contentWasFlaggedCorrectly()
-      : aichatI18n.chatMessage_contentWasNotFlaggedCorrectly();
+      ? 'This content was flagged correctly.'
+      : 'This content was not flagged correctly.';
 
   const ThumbButton = (props: {type: 'up' | 'down'; selected: boolean}) => {
     const {type, selected} = props;
     return (
-      <Button
-        color={buttonColors.black}
-        icon={{
-          iconName: `thumbs-${type}`,
-          iconStyle: selected ? 'solid' : 'regular',
-        }}
-        isIconOnly={true}
-        onClick={() => handleThumbClick(type)}
-        size="xs"
-        type={'tertiary'}
-        ariaLabel={
-          type === 'up'
-            ? aichatI18n.aria_thumbsUp()
-            : aichatI18n.aria_thumbsDown()
-        }
+      <MuiIconButton
+        variant="text"
+        color="secondary"
+        size="extraSmall"
         className={classNames(
           moduleStyles[
             `icon-button-${type === 'up' ? 'affirmative' : 'negative'}`
           ],
           selected && moduleStyles.selected
         )}
-      />
+        onClick={() => handleThumbClick(type)}
+        aria-label={type === 'up' ? 'thumbs up' : 'thumbs down'}
+        type="button"
+      >
+        <FontAwesomeV6Icon
+          iconName={`thumbs-${type}`}
+          iconStyle={selected ? 'solid' : 'regular'}
+        />
+      </MuiIconButton>
     );
   };
 
@@ -93,7 +89,9 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
     >
       {profaneMessageVisible && (
         <>
-          <EmText className={moduleStyles.flaggedText}>{text}</EmText>
+          <Typography className={moduleStyles.flaggedText} variant="em">
+            {text}
+          </Typography>
           <ThumbButton type="up" selected={thumbsUpSelected} />
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>
@@ -105,31 +103,28 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           direction: 'onLeft',
           size: 'xs',
           text: profaneMessageVisible
-            ? aichatI18n.chatMessage_hideMessage()
-            : aichatI18n.chatMessage_showMessage(),
+            ? 'Hide flagged message'
+            : 'Show flagged message',
           className: moduleStyles.tooltip,
         }}
       >
-        <Button
-          color={buttonColors.black}
-          icon={{
-            iconName: profaneMessageVisible ? 'eye-slash' : 'eye',
-            iconStyle: profaneMessageVisible ? 'solid' : 'regular',
-          }}
-          isIconOnly={true}
-          onClick={toggleProfaneMessageVisibility}
-          size="xs"
-          type={'tertiary'}
-          ariaLabel={
-            profaneMessageVisible
-              ? aichatI18n.aria_hideMessage()
-              : aichatI18n.aria_showMessage()
-          }
+        <MuiIconButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           className={classNames(
             moduleStyles[`icon-button-gray`],
             profaneMessageVisible && moduleStyles.selected
           )}
-        />
+          onClick={toggleProfaneMessageVisibility}
+          aria-label={profaneMessageVisible ? 'hide message' : 'show message'}
+          type="button"
+        >
+          <FontAwesomeV6Icon
+            iconName={profaneMessageVisible ? 'eye-slash' : 'eye'}
+            iconStyle={profaneMessageVisible ? 'solid' : 'regular'}
+          />
+        </MuiIconButton>
       </WithTooltip>
     </div>
   );

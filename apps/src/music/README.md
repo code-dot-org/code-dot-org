@@ -8,7 +8,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 
 **Music Lab** is a powerful lab for creating music using code. It includes the following features:
 
-- Uses Google Blockly for editing user code.
+- Uses Blockly for editing user code.
 - The user code generates a timeline of audio events, which is rendered.
 - Uses WebAudio to play back the audio events.
 - The rendered timeline of audio events reflects code changes instantly.

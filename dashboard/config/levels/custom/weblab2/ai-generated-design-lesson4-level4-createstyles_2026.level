@@ -1,0 +1,82 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T01:41:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nLet's see if AI can style the page using the mood board!\r\n\r\n1. Add your mood board from your Backpack to the project.\r\n\r\n   You can also use one of the samples in the `sample_mood_board` folder if you don't have one!\r\n\r\n2. Attach the mood board to the AI Tutor chat.\r\n3. Ask the AI to style the page based on your mood board.\r\n4. If it's not quite right, iterate with the AI to improve the styling.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "sample_mood_boards",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Welcome</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n\n    <header>\n      <h1>Brand Name</h1>\n      <nav>\n        <a href=\"#about\">About</a>\n        <a href=\"#offerings\">What We Offer</a>\n        <a href=\"#visit\">Visit Us</a>\n      </nav>\n    </header>\n\n    <main>\n\n      <section id=\"hero\">\n        <h2>A tagline goes here</h2>\n        <p>A short description of what makes this place special and who it's for.</p>\n        <a href=\"#offerings\">Learn more</a>\n      </section>\n\n      <section id=\"about\">\n        <h2>About Us</h2>\n        <p>\n          This is where the brand story goes. What is this place? Who started it\n          and why? What values or ideas drive everything here? This paragraph\n          gives visitors a sense of the people and purpose behind the brand.\n        </p>\n        <p>\n          A second paragraph can add more detail — the history, the community,\n          or what sets this brand apart from others like it.\n        </p>\n      </section>\n\n      <section id=\"offerings\">\n        <h2>What We Offer</h2>\n\n        <article>\n          <h3>Item One</h3>\n          <p>A short description of the first offering, product, or feature.</p>\n        </article>\n\n        <article>\n          <h3>Item Two</h3>\n          <p>A short description of the second offering, product, or feature.</p>\n        </article>\n\n        <article>\n          <h3>Item Three</h3>\n          <p>A short description of the third offering, product, or feature.</p>\n        </article>\n\n      </section>\n\n      <section id=\"visit\">\n        <h2>Visit Us</h2>\n        <ul>\n          <li><strong>Location:</strong> 123 Main Street</li>\n          <li><strong>Hours:</strong> Mon–Fri, 9am–6pm</li>\n          <li><strong>Contact:</strong> <a href=\"mailto:hello@brand.com\">hello@brand.com</a></li>\n        </ul>\n      </section>\n\n    </main>\n\n    <footer>\n      <p>&copy; 2025 Brand Name. All rights reserved.</p>\n    </footer>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "mood_board_1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson4-level4-createstyles_2026/uuid/1d3c5894-c40e-4512-934e-a2a1142946eb.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "mood_board_2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson4-level4-createstyles_2026/uuid/ad967888-3ecf-4659-a21c-90d326b99429.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-16 01:41:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:48:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:48:47 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:50:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:51:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-16 01:52:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

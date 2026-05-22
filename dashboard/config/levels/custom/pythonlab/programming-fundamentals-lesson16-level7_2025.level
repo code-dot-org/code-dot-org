@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- **Investigate**: Run the program and observe the output. Use the debug print statements to identify what is missing or incorrect.\r\n- **Modify**: Fix the function call by ensuring it provides both required parameters (name and age).\r\n- **Document Results**: Explain how the debug print statements helped you identify the issue.\r\n\r\nHints: \r\n- Check the number of arguments provided in the function call.\r\n- Ensure all required parameters are included.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

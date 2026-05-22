@@ -38,7 +38,8 @@
     "encrypted_examples": "BV8lQR1iJY64JmS+vXI1BD5Bsb9+pMOyvCUUdcLmhIrkX7ymF67y8lJSXkKC\nOBa1X+RbhA4TXrSpBu95kHouSg==\n",
     "display_name": "Navigation Bar",
     "bubble_choice_description": "Add a navigation bar to all of the web pages.",
-    "thumbnail_url": "https://images.code.org/019391a6ee2a5fda8ae6f21e3f513a3e-lists.png"
+    "thumbnail_url": "https://images.code.org/019391a6ee2a5fda8ae6f21e3f513a3e-lists.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

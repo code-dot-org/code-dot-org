@@ -1,4 +1,5 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -9,6 +10,20 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './social_share.module.scss';
+
+// Avoids setting state on unmounted components in tests, which produce console.error messsages from React.
+function testAvailability(url, setAvailability) {
+  let isMounted = true;
+  testImageAccess(url, () => {
+    if (isMounted) {
+      setAvailability(true);
+    }
+  });
+
+  return () => {
+    isMounted = false;
+  };
+}
 
 export default function SocialShare({
   facebook,
@@ -24,20 +39,21 @@ export default function SocialShare({
   const [isLinkedinAvailable, setIsLinkedinAvailable] = useState(false);
 
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
-      () => setIsFacebookAvailable(true)
+      setIsFacebookAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess('https://x.com/favicon.ico' + '?' + Math.random(), () =>
-      setIsTwitterAvailable(true)
+    return testAvailability(
+      'https://x.com/favicon.ico' + '?' + Math.random(),
+      setIsTwitterAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://www.linkedin.com/favicon.ico' + '?' + Math.random(),
-      () => setIsLinkedinAvailable(true)
+      setIsLinkedinAvailable
     );
   }, []);
 
@@ -56,67 +72,74 @@ export default function SocialShare({
     <div className={moduleStyles.social_share_container}>
       {/* note that linkedin share doesn't work with localhost urls */}
       {!under13 && isPlCourse && isLinkedinAvailable && (
-        <LinkButton
-          useAsLink
-          size="s"
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToLinkedIn()}
+          onClick={e => onShare(e, 'linkedin')}
+          style={{backgroundColor: color.linkedin_blue}}
           href={linkedShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          analyticsCallback={e => onShare(e, 'linkedin')}
-          isIconOnly
-          icon={{
-            iconName: 'linkedin',
-            iconFamily: 'brands',
-            title: i18n.shareToLinkedIn(),
-          }}
-          style={{backgroundColor: color.linkedin_blue}}
-        />
+        >
+          <FontAwesomeV6Icon
+            iconName="linkedin"
+            iconFamily="brands"
+            title={i18n.shareToLinkedIn()}
+          />
+        </MuiIconButton>
       )}
 
       {!under13 && isFacebookAvailable && (
-        <LinkButton
-          useAsLink
-          size="s"
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToFacebook()}
+          onClick={e => onShare(e, 'facebook')}
+          style={{backgroundColor: color.facebook_blue}}
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          analyticsCallback={e => onShare(e, 'facebook')}
-          isIconOnly
-          icon={{
-            iconName: 'facebook',
-            iconFamily: 'brands',
-            title: i18n.shareToFacebook(),
-          }}
-          style={{backgroundColor: color.facebook_blue}}
-        />
+        >
+          <FontAwesomeV6Icon
+            iconName="facebook"
+            iconFamily="brands"
+            title={i18n.shareToFacebook()}
+          />
+        </MuiIconButton>
       )}
       {!under13 && isTwitterAvailable && (
-        <LinkButton
-          useAsLink
-          size="s"
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
+          aria-label={i18n.shareToTwitter()}
+          onClick={e => onShare(e, 'twitter')}
+          style={{backgroundColor: color.x_black}}
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          analyticsCallback={e => onShare(e, 'twitter')}
-          isIconOnly
-          icon={{
-            iconName: 'x-twitter',
-            iconFamily: 'brands',
-            title: i18n.shareToTwitter(),
-          }}
-          style={{backgroundColor: color.x_black}}
-        />
+        >
+          <FontAwesomeV6Icon
+            iconName="x-twitter"
+            iconFamily="brands"
+            title={i18n.shareToTwitter()}
+          />
+        </MuiIconButton>
       )}
-      <LinkButton
-        useAsLink
-        href={print}
-        type="secondary"
-        size="s"
-        color="gray"
+      <MuiButton
+        variant="outlined"
+        color="tertiary"
+        size="small"
+        loadingPosition="start"
         className="social-print-link"
-        iconLeft={{iconName: 'print'}}
-        text={i18n.print()}
-      />
+        href={print}
+        startIcon={<FontAwesomeV6Icon iconName="print" />}
+      >
+        {i18n.print()}
+      </MuiButton>
     </div>
   );
 }

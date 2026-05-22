@@ -1,4 +1,4 @@
-import React from 'react';
+import {CSSProperties, ReactNode} from 'react';
 
 type SemanticTag =
   | 'h1'
@@ -38,9 +38,9 @@ interface TypographyElementProps {
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   // Text or other elements to render inside the typography element
-  children: React.ReactNode;
+  children: ReactNode;
   id?: string;
   // Removes the typography element margins
   noMargin?: boolean;

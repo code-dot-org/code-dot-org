@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're setting up your morning playlist with two songs: one to get you pumped up and one to help you relax while getting ready. Two functions have already been written for the songs, but something isn't working. When you run your playlist, nothing happens . . . or there's an error!\r\n\r\nFix the code so that both songs play when you call `morning_playlist()`.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

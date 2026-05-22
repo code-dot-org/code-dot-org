@@ -72,6 +72,7 @@
     "bubble_choice_description": "Build an app that helps a user to create a playlist of Top 5 tunes.",
     "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

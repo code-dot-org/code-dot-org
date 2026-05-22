@@ -2,7 +2,6 @@
 Feature: Views the pages on the teacher dashboard that are untested elsewhere
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 
   @properties_encryption_key
@@ -21,9 +20,6 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     Then I click selector "#task-button-View-progress-Test-Section" once I see it
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
-    Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Stats')" once I see it
@@ -41,15 +37,15 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
 
     # Text responses tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Text Responses')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
     Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"

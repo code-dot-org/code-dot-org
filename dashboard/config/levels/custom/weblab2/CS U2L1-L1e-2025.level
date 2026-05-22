@@ -1,0 +1,115 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-31T20:54:25.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Template D",
+    "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
+    "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
+    "thumbnail_url": "https://images.code.org/e53aaca3962f75b7279cb8f39b2b8237-image-1677194195497.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1>\n      Top 5 Cutest Dogs\n    </h1>\n    \n    <h2>1. Huskies</h2>\n    <img src=\"husky.jpg\">\n    <p>Huskies have soft fur and wolf-life features that make them adorable</p>\n    \n    <hr />\n    \n    <h2>2. Dalmatian</h2>\n    <img src=\"dalmatian.jpg\">\n    <p>Dalmatians have black and white spots which create cool patterns</p>\n\n    <hr />\n    \n    <h2>3. Bulldog</h2>\n    <img src=\"bulldog.jpg\">\n    <p>Bulldogs have pinched noses which some people don't like but I think looks adorable</p>\n\n    <hr />\n    \n    <h2>4. Corgi</h2>\n    <img src=\"corgi.png\">\n    <p>Their bodies are like little sausages and their paws are tiny and cute</p>\n\n    <hr />\n    \n    <h2>5. King Charles</h2>\n    <img src=\"kingcharles.jpg\">\n    <p>This one is a little odd, but their ears are really floppy and soft and make their eyes look so big!</p>\n\n    <hr />\n    \n    <p class=\"disclaimer\">All images from Pixabay and provided under a Pixabay license</p\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: DarkGreen;\n  color: floralwhite;\n  font-family: monospace\n}\n\nh1 {\n  font-weight: bold;\n  text-align: center;\n}\n\nh2 {\n  text-align: center;\n}\n\np {\n  text-align: center;\n}\n\nimg {\n  width: 40%;\n  margin-left: 30%;\n}\n\n.disclaimer {\n  font-family: Consolas;\n  color: white;\n  font-size: 10px;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "kingcharles.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1d-2025/uuid/e20a4d5d-1715-4937-8332-9c047f2124c9.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "husky.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1d-2025/uuid/58802550-d14a-4723-bdd9-0071e0d9003a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "dalmatian.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1d-2025/uuid/a866d00b-bfdf-464e-9276-461a0d58b803.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "bulldog.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1d-2025/uuid/ea11bd2b-c139-4e72-9fab-16a3c4efcd1a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "corgi.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1d-2025/uuid/4991c81c-e6ca-4b5d-981d-f05d87829914.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-31T20:54:25.584+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1d-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1d-2025\"}]"
+}]]></config>
+</Weblab2>

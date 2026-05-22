@@ -100,6 +100,7 @@
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

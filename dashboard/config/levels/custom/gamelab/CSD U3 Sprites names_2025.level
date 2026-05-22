@@ -93,6 +93,7 @@
     "bubble_choice_description": "Fix the names of the animations so that the errors go away.",
     "libraries_enabled": "false",
     "encrypted_examples": "07DtdmjtsELvUnUXEUk4er9d7U4u3r/Io02suGip7JrAmZVXjTTDA0egPI0G\nBsVxgbNk70Ch2nQQwj13594N6A==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

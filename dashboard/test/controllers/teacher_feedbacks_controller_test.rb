@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class TeacherFeedbacksControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   test 'index: returns forbidden if no logged in user' do
     get :index
     assert_redirected_to_sign_in

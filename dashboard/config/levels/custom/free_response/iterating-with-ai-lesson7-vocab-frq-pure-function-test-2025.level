@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-24T16:10:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Pure Function",
+    "display_name": "HTML",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "thumbnail_url": "https://images.code.org/2090bb70949e5ba75ac26877ecb140ed-html-icon.png",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "Students know that a pure function always gives the same output for the same input and does not change existing data or cause side effects; it only returns a value."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:10:07.999+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025\"},{\"changed_at\":\"2025-11-24 16:10:38 +0000\",\"changed\":[\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

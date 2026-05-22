@@ -20,7 +20,8 @@
     "map_reference": "/courses/csd-2024/guides/web-lab",
     "reference_links": [
       "/courses/csd-2024/guides/html-tags"
-    ]
+    ],
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

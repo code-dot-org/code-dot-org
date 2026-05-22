@@ -3,8 +3,8 @@
  *           current shard.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/netsim/locale';
 
 import NetSimGlobals from './NetSimGlobals';
@@ -243,7 +243,7 @@ NetSimRouterLogModal.prototype.render = function () {
       message: entry.getMessageAscii(),
     })
   );
-  ReactDOM.render(
+  createReactRoot(
     <NetSimLogBrowser
       isOpen={this.isVisible()}
       handleClose={this.hide.bind(this)}
@@ -260,7 +260,10 @@ NetSimRouterLogModal.prototype.render = function () {
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
       teacherView={this.teacherView_}
     />,
-    this.rootDiv_[0]
+    this.rootDiv_[0],
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

@@ -8,13 +8,27 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
-import type * as GoogleBlockly from 'blockly/core';
-import {ComponentType, LazyExoticComponent} from 'react';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawInitialDataState,
+  BinaryFileData,
+  DataURL,
+} from '@excalidraw/excalidraw/types/types';
+import type {EdgeMarkerType} from '@xyflow/system';
+import type * as BlocklyCore from 'blockly/core';
+import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
+import type {
+  ImageNodeData,
+  LineAnchorNodeData,
+  ShapeNodeData,
+  TextNodeData,
+} from '../sketchlab/reactFlow/types';
 
 export {Theme};
 
@@ -41,7 +55,7 @@ export interface Channel {
   thumbnailUrl?: string;
   frozen?: boolean;
   // Certain project types (like bubble choice standalone projects) can have subprojects.
-  subprojects?: {level_id: number; project_id: string}[];
+  subprojects?: {level_id: number; channel_id: string}[];
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -73,7 +87,59 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source = BlocklySource | MultiFileSource;
+export type Source =
+  | BlocklySource
+  | MultiFileSource
+  | ExcalidrawSourceWithExternalFiles
+  | SketchlabReactFlowSource;
+
+// -- REACT FLOW SKETCH LAB -- //
+
+// Serializable node/edge types for project storage. These mirror the
+// @xyflow/react Node/Edge fields we persist, without the complex DOM
+// types that are incompatible with Immer's WritableDraft. Cast to/from
+// the full React Flow types at the read/write boundary.
+interface SketchlabReactFlowNodeBase {
+  id: string;
+  position: {x: number; y: number};
+  // width and height are set by NodeResizer when the user drags a handle
+  // (or by keyboard resize) and are persisted so the node restores at the
+  // correct size on reload.
+  width?: number;
+  height?: number;
+  style?: CSSProperties;
+}
+
+export type SketchlabReactFlowNode =
+  | (SketchlabReactFlowNodeBase & {type: 'shape'; data: ShapeNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'text'; data: TextNodeData})
+  | (SketchlabReactFlowNodeBase & {type: 'image'; data: ImageNodeData})
+  | (SketchlabReactFlowNodeBase & {
+      type: 'lineAnchor';
+      data: LineAnchorNodeData;
+    });
+
+export interface SketchlabReactFlowEdge {
+  id: string;
+  source: string;
+  target: string;
+  style?: CSSProperties;
+  data?: {
+    locked?: boolean;
+    showHandles?: boolean;
+  };
+  sourceHandle?: string;
+  targetHandle?: string;
+  type?: string;
+  markerStart?: EdgeMarkerType;
+  markerEnd?: EdgeMarkerType;
+}
+
+export interface SketchlabReactFlowSource {
+  nodes: SketchlabReactFlowNode[];
+  edges: SketchlabReactFlowEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -90,6 +156,40 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
 
 // Blockly JSON is currently typed as a generic object
 export type BlocklySource = {[key: string]: unknown};
+
+// -- SKETCH LAB -- //
+
+export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
+
+// By default, Excalidraw file entries require a dataURL field that has a
+// base64 encoding of the file. As we move to store images in S3, this field
+// is now optional.
+type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
+  dataURL?: DataURL;
+};
+
+export type ExcalidrawFilesWithOptionalData = Record<
+  ExcalidrawElement['id'],
+  ExcalidrawFileWithOptionalData
+>;
+
+// We add the externalFiles property to Excalidraw's default state
+// to map each file to an external URL (a location in S3) where we store the image.
+// We override the files property with a version of their file type where the dataURL
+// is not required (ie, since we're storing the image in S3 instead of as a base64 encoded string).
+export type ExcalidrawSourceWithExternalFiles = Omit<
+  ExcalidrawInitialDataState,
+  'files'
+> & {
+  files?: ExcalidrawFilesWithOptionalData;
+  externalFiles?: SketchlabExternalFiles;
+};
+
+export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
+  uploaded?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
+};
 
 // -- MULTI-FILE -- //
 
@@ -110,13 +210,14 @@ export interface MultiFileSource {
 export interface ProjectFile {
   id: FileId;
   name: string;
-  language: string;
   contents: string;
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
   url?: string;
   flagged?: boolean;
+  isAiTutorVersionUpdated?: boolean;
+  isAiTutorVersionCreated?: boolean;
 }
 
 /**
@@ -183,16 +284,17 @@ export interface LevelProperties {
   referenceLinks?: string[];
   helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
+  showExemplarLink?: boolean;
   exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  productTours?: string[];
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
-  finishDialog?: string;
+  finishDialog?: ShareDialogId;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
   // Python Lab/Codebridge specific properties
@@ -203,6 +305,9 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  aiTutorMode?: string;
+  aiTutorPromptSettings?: AiTutorPromptSettings;
+  levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -211,10 +316,15 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
+  parentLevelName?: string;
+  requireEditToContinue?: boolean;
 }
 
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
+
 export interface BlocklyLevelProperties extends LevelProperties {
-  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   sharedBlocks?: BlockDefinition[];
 }
 
@@ -313,7 +423,8 @@ export type ProjectType =
   | 'playlab'
   | 'playlab_k1'
   | 'sports'
-  | 'basketball';
+  | 'basketball'
+  | 'music_dance_ai';
 
 export type AppName = keyof typeof lab2EntryPoints;
 
@@ -403,4 +514,9 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+  channel?: Channel;
 }
+
+export type ShareDialogId = 'hoc2024' | 'hoai2025';
+
+export type LevelNavigationConfirmation = () => boolean | Promise<boolean>;

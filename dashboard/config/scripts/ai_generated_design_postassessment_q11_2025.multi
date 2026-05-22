@@ -7,7 +7,7 @@ wrong 'It adds extra features that make the site more advanced.'
 wrong 'It improves the site\'s loading speed and performance.'
 right 'It creates a familiar structure that helps users navigate easily.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 12

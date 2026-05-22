@@ -66,6 +66,7 @@ describe('TeacherNavigationBar', () => {
     {
       id: 12,
       name: 'Period 2',
+      demo_type: 'middle',
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
@@ -116,7 +117,7 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false,
+    showAiChatSettings = false,
     aiDiffEnabled = true
   ) => {
     store = getStore();
@@ -153,7 +154,9 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                    <TeacherNavigationBar
+                      showAiChatSettings={showAiChatSettings}
+                    />
                     <Outlet />
                   </div>
                 }
@@ -227,13 +230,22 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText(i18n.classSections());
     screen.getByRole('combobox');
     const p1 = await screen.findByText('Period 1');
-    const p2 = screen.getByText('Period 2');
+    const p2 = screen.getByText('Period 2 (demo)');
     expect(p1.compareDocumentPosition(p2)).toBe(
       Node.DOCUMENT_POSITION_PRECEDING
     );
     screen.getByText('Period 3');
     expect(screen.queryByText('hidden')).toBeNull();
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test('renders demo marker in section dropdown options', async () => {
+    renderDefault(12);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown.selectedOptions[0].textContent).toBe('Period 2 (demo)');
+    screen.getByRole('option', {name: 'Period 2 (demo)'});
+    screen.getByRole('option', {name: 'Period 1'});
   });
 
   test('renders all navbarComponents', async () => {
@@ -318,18 +330,27 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
-  test('AI Tutor tab diplayed when teacher has access', async () => {
+  test('hidden section not in sectionOrder is shown when selected', async () => {
+    renderDefault(15);
+    const dropdown = await screen.findByRole('combobox');
+
+    expect(dropdown).toHaveValue('15');
+    screen.getByText('hidden');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('15');
+  });
+
+  test('AI settings tab displayed when teacher has access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
-    screen.getByText('AI Tutor');
+    screen.getByText(i18n.aiSettings());
   });
 
-  test('AI Tutor tab not diplayed when teacher does not have access', async () => {
+  test('AI settings tab not displayed when teacher does not have access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, false);
     await screen.findByText('Course Content');
 
-    expect(screen.queryByText('AI Tutor')).toBeNull();
+    expect(screen.queryByText(i18n.aiSettings())).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {

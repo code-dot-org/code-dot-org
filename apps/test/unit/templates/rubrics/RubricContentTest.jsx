@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -138,18 +139,18 @@ describe('RubricContent', () => {
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading3').at(0).props().children).toBe(
-      'Data Structures'
-    );
+    const title = wrapper.find(Typography).at(0);
+    expect(title.props().variant).toBe('h3');
+    expect(title.props().children).toBe('Data Structures');
   });
 
   it('shows level title when teacher is not viewing student work', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading3').at(0).props().children).toBe(
-      'Data Structures'
-    );
+    const title = wrapper.find(Typography).at(0);
+    expect(title.props().variant).toBe('h3');
+    expect(title.props().children).toBe('Data Structures');
   });
 
   it('shows student data if provided', () => {

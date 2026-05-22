@@ -274,11 +274,11 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'fetch_updated_library_channels returns channel_ids of libraries that have been updated' do
-    updated_channel_id = storage_encrypt_channel_id(1, 1)
+    updated_channel_id = get_project_channel_id(1, 1)
     libraries = [
       {'channel_id' => updated_channel_id, 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 2), 'version' => '1'},
-      {'channel_id' => storage_encrypt_channel_id(1, 3), 'version' => '1'}
+      {'channel_id' => get_project_channel_id(1, 2), 'version' => '1'},
+      {'channel_id' => get_project_channel_id(1, 3), 'version' => '1'}
     ]
     stub_projects = [
       {
@@ -310,7 +310,7 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   private def library_db_result(result)
-    stub(where: stub(where: stub(where: result)))
+    stub(where: stub(where: stub(where: result, first: result.first), first: result.first))
   end
 
   private def db_result(result)

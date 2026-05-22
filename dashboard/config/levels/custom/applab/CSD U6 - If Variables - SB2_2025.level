@@ -68,6 +68,7 @@
     "slider_speed": "0.5",
     "encrypted_examples": "BGVzHkrXuxPDdplRjFtFhgIr0JOyerPUp4C+twCJJr+RL0fu1Jpuj8CcllTA\nXLVehdvuws50USMj147C1pz1FA==\n",
     "video_key": "csd_u6_variables_part2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

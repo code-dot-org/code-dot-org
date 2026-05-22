@@ -21,7 +21,7 @@
         "isVisible": true
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-07-19T19:31:05.629+00:00\",\"changed\":[\"cloned from \\\"SA CB_Lab Magpie L5 PTL_2022\\\"\"],\"cloned_from\":\"SA CB_Lab Magpie L5 PTL_2022\"},{\"changed_at\":\"2022-07-19 19:31:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-19 19:36:07 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-19 19:37:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

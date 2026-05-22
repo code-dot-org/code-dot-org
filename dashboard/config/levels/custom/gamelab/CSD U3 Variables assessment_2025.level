@@ -74,6 +74,7 @@
     "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
     "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to variables, or variables are used in a way that prevents the program from running.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

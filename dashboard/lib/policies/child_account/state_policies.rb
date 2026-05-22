@@ -6,49 +6,42 @@ module Policies::ChildAccount::StatePolicies
     # max_age: the oldest age of the child at which this policy applies.
     # lockout_date: the date at which we will begin to lockout all CPA users who
     # are not in compliance with the policy.
-    # start_date: the date on which this policy first went into effect.
     policies = {
       'CO' => {
         name: 'CPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2024-07-01T00:00:00MDT'),
-        start_date: DateTime.parse('2023-07-05T23:15:00+00:00'),
       },
       'DE' => {
         name: 'DPDPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
-        start_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
       },
       'NY' => {
         name: 'NYCDPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2025-06-20T00:00:00-04:00'),
-        start_date: DateTime.parse('2025-06-20T00:00:00-04:00'),
       },
       'OR' => {
         name: 'OCPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2025-07-01T00:00:00-07:00'),
-        start_date: DateTime.parse('2025-07-01T00:00:00-07:00'),
       },
       'MN' => {
         name: 'MCDPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2025-07-31T00:00:00-05:00'),
-        start_date: DateTime.parse('2025-07-31T00:00:00-05:00'),
       },
       'MD' => {
         name: 'MODPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
         lockout_date: DateTime.parse('2025-10-01T00:00:00-04:00'),
-        start_date: DateTime.parse('2025-10-01T00:00:00-04:00'),
       },
     }
 
@@ -57,8 +50,6 @@ module Policies::ChildAccount::StatePolicies
       policy = policies[state_code]
       lockout_date_override = DCDO.get("cap_#{state_code}_lockout_date_override", nil)
       policy[:lockout_date] = DateTime.parse(lockout_date_override) if lockout_date_override
-      start_date_override = DCDO.get("cap_#{state_code}_start_date_override", nil)
-      policy[:start_date] = DateTime.parse(start_date_override) if start_date_override
     end
   end
 

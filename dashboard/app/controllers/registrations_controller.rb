@@ -15,7 +15,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth, :demigrate_from_multi_auth
+    :migrate_to_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
@@ -167,7 +167,7 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
-          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, I18n.locale.to_s)
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
@@ -175,7 +175,7 @@ class RegistrationsController < Devise::RegistrationsController
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {
-              locale: request.locale,
+              locale: I18n.locale.to_s,
             }
           )
         end
@@ -183,10 +183,10 @@ class RegistrationsController < Devise::RegistrationsController
       ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
 
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
-      current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      current_user.generate_progress_from_storage_id(storage_id, locale: I18n.locale) if storage_id
       PartialRegistration.delete session
+      auto_verify_teacher! current_user
       if Policies::Lti.lti? current_user
-        current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         if session[:lti_deployment_id] && current_user.lti_user_identities.any?
           deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
           lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
@@ -204,6 +204,7 @@ class RegistrationsController < Devise::RegistrationsController
           user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
+          session: session,
         )
       end
       has_school = current_user.school_info&.school_id.present?
@@ -215,6 +216,7 @@ class RegistrationsController < Devise::RegistrationsController
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
+        session: session,
       )
     end
   end
@@ -386,6 +388,8 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
 
+    previous_user_type = current_user.user_type
+
     successfully_updated =
       if current_user.migrated?
         if forbidden_change?(current_user, params)
@@ -409,6 +413,18 @@ class RegistrationsController < Devise::RegistrationsController
         end
       end
 
+    if successfully_updated && (previous_user_type != current_user.user_type)
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'user_type_changed',
+        metadata: {
+          from_user_type: previous_user_type,
+          to_user_type: current_user.user_type
+        },
+        session: session
+      )
+    end
+
     if successfully_updated
       head :no_content
     else
@@ -425,15 +441,6 @@ class RegistrationsController < Devise::RegistrationsController
     current_user.migrate_to_multi_auth
     redirect_to edit_registration_path(current_user),
       notice: I18n.t('auth.migration_success')
-  end
-
-  #
-  # GET /users/demigrate_from_multi_auth
-  #
-  def demigrate_from_multi_auth
-    current_user.demigrate_from_multi_auth
-    redirect_to edit_registration_path(current_user),
-      notice: I18n.t('auth.demigration_success')
   end
 
   def existing_account
@@ -693,5 +700,18 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def assign_redirect_url
     @redirect_url = session[:user_return_to] || @redirect_url
+  end
+
+  # Auto-verify teachers who sign up using a school-owned login type: Clever, Classlink or LTI.
+  # Google Classroom teachers are not auto-verified at sign-up, but will be after they sync
+  # their first section. This proves they are a roster-bearing user, which is evidence of them being a real teacher.
+  private def auto_verify_teacher!(user)
+    return unless user.teacher? && !user.verified_teacher?
+
+    is_school_owned = user.authentication_options.any? do |auth_option|
+      Policies::User::SCHOOL_OWNED_TYPES.include?(auth_option.credential_type)
+    end
+
+    user.verify_teacher! if is_school_owned
   end
 end

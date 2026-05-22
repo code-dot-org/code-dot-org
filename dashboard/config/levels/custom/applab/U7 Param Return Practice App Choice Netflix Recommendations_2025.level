@@ -91,6 +91,7 @@
     "bubble_choice_description": "Rewrite a function so that it uses parameters and reduces the number of global variables necessary.",
     "thumbnail_url": "https://images.code.org/ce14142a95d86c27a38c7b411af32c20-image-1649450062452.png",
     "encrypted_examples": "ai/O42LBNbqUq1kHCrIlAoygnVUzUz8Ema6Ev+RfrCzFlMpEsbRejhjz6hj2\nbUu52bKo2pWMnzCA/j8vP4OPzg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

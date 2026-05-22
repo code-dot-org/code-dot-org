@@ -1,5 +1,5 @@
 import imageFile from '@public/images/image-component.png';
-import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 import {useState} from 'react';
 import {within, expect} from 'storybook/test';
 

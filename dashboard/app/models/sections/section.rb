@@ -24,21 +24,24 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
-#  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
+#  demo_type            :string(255)
 #
 # Indexes
 #
-#  fk_rails_20b1e5de46          (course_id)
-#  fk_rails_f0d4df9901          (lti_integration_id)
-#  index_sections_on_code       (code) UNIQUE
-#  index_sections_on_script_id  (script_id)
-#  index_sections_on_user_id    (user_id)
+#  fk_rails_20b1e5de46                      (course_id)
+#  fk_rails_f0d4df9901                      (lti_integration_id)
+#  index_sections_on_code                   (code) UNIQUE
+#  index_sections_on_script_id              (script_id)
+#  index_sections_on_user_id                (user_id)
+#  index_sections_on_user_id_and_demo_type  (user_id,demo_type,deleted_at) UNIQUE
 #
 
 require 'full-name-splitter'
 require 'cdo/code_generation'
+require 'cdo/mailjet'
 require 'cdo/safe_names'
 require 'policies/lti'
 
@@ -85,6 +88,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
   validates :course_id, presence: true, if: -> {script_id.present?}
+  validates :demo_type, uniqueness: {scope: [:user_id, :deleted_at]}, allow_nil: true
 
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
@@ -92,6 +96,9 @@ class Section < ApplicationRecord
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
   has_many :code_review_groups
+
+  has_many :aidiff_artifact_associations, dependent: :destroy
+  has_many :aidiff_artifacts, through: :aidiff_artifact_associations
 
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
@@ -111,6 +118,8 @@ class Section < ApplicationRecord
   validate :participant_type_not_changed
 
   scope :visible, -> {where(hidden: false)}
+
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -157,7 +166,73 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at)
+  serialized_attrs %w(code_review_expires_at suggested_lesson)
+
+  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+
+  def suggested_lesson_stale?
+    data = suggested_lesson
+    return true if data.nil?
+    timestamp = data['timestamp']
+    return true if timestamp.blank?
+    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+  rescue ArgumentError
+    true
+  end
+
+  def compute_suggested_lesson
+    unit = script
+    section_students = students.to_a
+    return if section_students.empty? || unit.nil?
+
+    passing_level_ids_by_student = UserLevel.
+      where(user: section_students, script: unit).
+      where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true).
+      group_by(&:user_id).
+      transform_values {|uls| uls.to_set(&:level_id)}
+
+    last_completed_lesson = nil
+    finished_unit = true
+    unit.lessons.each do |lesson|
+      required_sls = lesson.script_levels.reject(&:bonus)
+      next if required_sls.empty?
+
+      completed_count = section_students.count do |student|
+        passing_ids = passing_level_ids_by_student[student.id] || Set.new
+        required_sls.all? do |sl|
+          level = sl.oldest_active_level
+          if level.is_a?(BubbleChoice)
+            level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
+          else
+            passing_ids.include?(level.id)
+          end
+        end
+      end
+
+      if completed_count >= section_students.size / 2.0
+        last_completed_lesson = lesson
+        finished_unit = true
+      else
+        finished_unit = false
+      end
+    end
+
+    lessons = unit.lessons.to_a
+    next_lesson = if last_completed_lesson
+                    lessons[lessons.index(last_completed_lesson) + 1]
+                  else
+                    lessons.first
+                  end
+
+    update!(
+      suggested_lesson: if finished_unit
+                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                        else
+                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                        end
+    )
+  end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -246,17 +321,20 @@ class Section < ApplicationRecord
     self.code = unused_random_code unless code
   end
 
-  def update_student_sharing(sharing_disabled)
-    students.each do |student|
-      student.update!(sharing_disabled: sharing_disabled)
-    end
-  end
-
   after_save :ensure_owner_is_active_instructor
   def ensure_owner_is_active_instructor
-    return if user.blank?
+    return if user.blank? || user.deleted?
 
     add_instructor(user)
+  end
+
+  after_save :add_teacher_to_mailjet_course_list
+  def add_teacher_to_mailjet_course_list
+    return unless saved_change_to_course_id? && course_id.present? && teacher.present?
+    return unless unit_group
+    MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
+  rescue => exception
+    Honeybadger.notify(exception)
   end
 
   # return a version of self.students in which all students' names are
@@ -346,14 +424,14 @@ class Section < ApplicationRecord
     if follower
       if follower.deleted?
         follower.restore
-        student.update!(sharing_disabled: sharing_disabled) unless student.sharing_disabled
+        student.update!(sharing_disabled: sharing_disabled) unless student.sharing_disabled || Policies::DemoSections.demo_student?(student.id)
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
-    student.update!(sharing_disabled: true) if sharing_disabled?
+    student.update!(sharing_disabled: true) if sharing_disabled? && !Policies::DemoSections.demo_student?(student.id)
     return ADD_STUDENT_SUCCESS
   end
 
@@ -363,7 +441,7 @@ class Section < ApplicationRecord
   def remove_student(student, follower, options)
     follower.destroy
 
-    if student.sections_as_student.empty?
+    if student.sections_as_student.empty? && !Policies::DemoSections.demo_student?(student.id)
       if student.under_13?
         student.update!(sharing_disabled: true)
       else
@@ -427,9 +505,9 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
         at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
       }
@@ -458,7 +536,7 @@ class Section < ApplicationRecord
       {
         id: id,
         name: name,
-        students: students.distinct(&:id).map(&:summarize),
+        students: students.includes(:primary_contact_info, :latest_parental_permission_request).distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
         script: {
           id: selected_unit&.id,
@@ -477,6 +555,9 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        demo_type: demo_type,
+        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        ai_chat_access_level: ai_chat_access_level,
       }
     end
   end
@@ -558,11 +639,13 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          ai_tutor_enabled: ai_tutor_enabled,
           at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          demo_type: demo_type,
+          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          ai_chat_access_level: ai_chat_access_level,
         }
       )
     end
@@ -608,6 +691,7 @@ class Section < ApplicationRecord
         currentUnitTitle: title_of_current_unit,
         linkToCurrentUnit: link_to_current_unit,
         code: code,
+        hidden: hidden,
         login_type: login_type,
         grades: grades,
         is_assigned_single_unit_course: unit_group&.single_unit_course?,
@@ -691,6 +775,12 @@ class Section < ApplicationRecord
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
+  def assigned_ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+  end
+
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
@@ -759,8 +849,10 @@ class Section < ApplicationRecord
   end
 
   def reset_code_review_groups(new_groups)
+    students_with_sharing_enabled = []
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
+      assigned_follower_ids = []
       new_groups.each do |group|
         # skip any unassigned members
         next if group[:unassigned]
@@ -768,9 +860,37 @@ class Section < ApplicationRecord
         next unless group[:members]
         group[:members].each do |member|
           CodeReviewGroupMember.create!(follower_id: member[:follower_id], code_review_group_id: new_group.id)
+          assigned_follower_ids << member[:follower_id]
         end
       end
+      # Enable sharing for all students assigned to code review groups
+      students_with_sharing_enabled = enable_sharing_for_followers(assigned_follower_ids)
     end
+    students_with_sharing_enabled
+  end
+
+  # Enable sharing for students in code review groups
+  # Students need sharing enabled to participate in code review
+  # Returns array of student names who had sharing enabled
+  def enable_sharing_for_followers(follower_ids)
+    return [] if follower_ids.empty?
+
+    # Get all students for the followers
+    students_to_check = followers.where(id: follower_ids).includes(:student_user).map(&:student_user)
+
+    # Filter to only those with sharing disabled, excluding demo students
+    students_needing_sharing = students_to_check.
+      reject {|s| Policies::DemoSections.demo_student?(s.id)}.
+      select(&:sharing_disabled?)
+    return [] if students_needing_sharing.empty?
+
+    student_names = []
+    students_needing_sharing.each do |student|
+      student.update!(sharing_disabled: false)
+      student_names << student.name
+    end
+
+    student_names
   end
 
   def update_code_review_expiration(enable_code_review)

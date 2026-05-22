@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-24 23:33:34 UTC",
+    "serialized_at": "2026-03-11 18:32:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2614,21 +2614,20 @@
       }
     },
     {
-      "key": "4d94c164-9f83-4d8f-b207-d562074942f0",
+      "key": "8ca20204-3807-454e-90cb-4c16316ac879",
       "position": 3,
       "properties": {
-        "progression_name": "Apply a Stylesheet"
       },
       "seeding_key": {
-        "activity_section.key": "4d94c164-9f83-4d8f-b207-d562074942f0",
+        "activity_section.key": "8ca20204-3807-454e-90cb-4c16316ac879",
         "lesson_activity.key": "fce35dea-78f3-4a9b-90b6-8d47f361ada0"
       }
     },
     {
-      "key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f",
+      "key": "4d94c164-9f83-4d8f-b207-d562074942f0",
       "position": 4,
       "properties": {
-        "progression_name": "Vocab: Stylesheet",
+        "progression_name": "Apply a Stylesheet",
         "tips": [
           {
             "type": "teachingTip",
@@ -2637,18 +2636,19 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f",
+        "activity_section.key": "4d94c164-9f83-4d8f-b207-d562074942f0",
         "lesson_activity.key": "fce35dea-78f3-4a9b-90b6-8d47f361ada0"
       }
     },
     {
-      "key": "521cf3db-bb82-4790-8f95-3a6617e7f44d",
+      "key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent.",
+        "progression_name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "521cf3db-bb82-4790-8f95-3a6617e7f44d",
+        "activity_section.key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1",
         "lesson_activity.key": "fce35dea-78f3-4a9b-90b6-8d47f361ada0"
       }
     },
@@ -2668,18 +2668,18 @@
       "key": "1a76d342-9d86-48f7-ac39-ee6be14ce529",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 8 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, consistent, or accessible?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Understand what their AI-generated CSS is doing before changing it.\n- Test updates across multiple elements (e.g., headers, buttons, cards).\n- Document changes and explain their reasoning",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 8 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, consistent, or accessible?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Understand what their AI-generated CSS is doing before changing it.\n- Test updates across multiple elements (e.g., headers, buttons, cards).\n- Document changes and explain their reasoning\n",
         "duration": "15",
         "name": "Style Choice Challenge",
         "progression_name": "Styling Challenge",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "- If students finish early, invite them to complete an additional challenge or revisit earlier CSS for readability improvements.\n- Encourage students to use before-and-after comparisons to visualize their improvements — either by commenting changes in their code or using screenshots. This helps them see the impact of refining CSS and builds professional documentation habits."
-          },
-          {
             "type": "assessmentOpportunity",
             "markdown": "Use this challenge to formatively assess whether students can:\n- Apply CSS intentionally to maintain brand consistency.\n- Identify and correct AI-generated errors (e.g., low contrast, inconsistent margins, wrong font).\n- Explain changes clearly using plain, professional language."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "- If students finish early, invite them to complete an additional challenge or revisit earlier CSS for readability improvements.\n- Encourage students to use before-and-after comparisons to visualize their improvements — either by commenting changes in their code or using screenshots. This helps them see the impact of refining CSS and builds professional documentation habits."
           }
         ]
       },
@@ -4341,6 +4341,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4363,6 +4366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level1_2025"
+        ],
         "progression": "Producing HTML and CSS"
       },
       "bonus": false,
@@ -4385,6 +4391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level2_2025"
+        ],
         "progression": "Producing HTML and CSS"
       },
       "bonus": false,
@@ -4407,6 +4416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level3_2025"
+        ],
         "progression": "Vocab: HTML"
       },
       "bonus": false,
@@ -4429,6 +4441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level4_2025"
+        ],
         "progression": "Vocab: HTML"
       },
       "bonus": false,
@@ -4451,6 +4466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level5_2025"
+        ],
         "progression": "Vocab: CSS"
       },
       "bonus": false,
@@ -4473,6 +4491,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level6_2025"
+        ],
         "progression": "Vocab: CSS"
       },
       "bonus": false,
@@ -4495,6 +4516,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4517,6 +4541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level8_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4539,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level1_2025"
+        ],
         "progression": "Vocab: User Experience"
       },
       "bonus": false,
@@ -4561,6 +4591,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level2_2025"
+        ],
         "progression": "Vocab: User Experience"
       },
       "bonus": false,
@@ -4583,6 +4616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level3_2025"
+        ],
         "progression": "Vocab: User Profile"
       },
       "bonus": false,
@@ -4605,6 +4641,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level4_2025"
+        ],
         "progression": "Vocab: User Profile"
       },
       "bonus": false,
@@ -4627,6 +4666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level5_2025"
+        ],
         "progression": "Vocab: Human-Centered Design"
       },
       "bonus": false,
@@ -4649,6 +4691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level6_2025"
+        ],
         "progression": "Vocab: Human-Centered Design"
       },
       "bonus": false,
@@ -4671,6 +4716,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4693,6 +4741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level8_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4715,6 +4766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level1_2025"
+        ],
         "progression": "Web Page Features"
       },
       "bonus": false,
@@ -4737,6 +4791,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level2_2025"
+        ],
         "progression": "Web Page Features"
       },
       "bonus": false,
@@ -4759,6 +4816,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level3_2025"
+        ],
         "progression": "Web Page Features"
       },
       "bonus": false,
@@ -4781,6 +4841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-leve4_2025"
+        ],
         "progression": "Vocab: Prompt Engineering"
       },
       "bonus": false,
@@ -4803,6 +4866,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level5_2025"
+        ],
         "progression": "Vocab: Prompt Engineering"
       },
       "bonus": false,
@@ -4825,6 +4891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level6_2025"
+        ],
         "progression": "Vocab: Versioning"
       },
       "bonus": false,
@@ -4847,6 +4916,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level7_2025"
+        ],
         "progression": "Vocab: Versioning"
       },
       "bonus": false,
@@ -4869,6 +4941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level8_2025"
+        ],
         "progression": "My First Web Page"
       },
       "bonus": false,
@@ -4891,6 +4966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level9_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4913,6 +4991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level1_2025"
+        ],
         "progression": "Mood Board Design"
       },
       "bonus": false,
@@ -4935,6 +5016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level2_2025"
+        ],
         "progression": "Vocab: Mood Boarding"
       },
       "bonus": false,
@@ -4957,6 +5041,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level3_2025"
+        ],
         "progression": "Vocab: Mood Boarding"
       },
       "bonus": false,
@@ -4979,6 +5066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level4_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5001,6 +5091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level1_2025"
+        ],
         "progression": "Web App Comparisons"
       },
       "bonus": false,
@@ -5023,6 +5116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level2_2025"
+        ],
         "progression": "Create a Brand Kit"
       },
       "bonus": false,
@@ -5045,6 +5141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level3_2025"
+        ],
         "progression": "Vocab: Brand Kit"
       },
       "bonus": false,
@@ -5067,6 +5166,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level4_2025"
+        ],
         "progression": "Vocab: Brand Kit"
       },
       "bonus": false,
@@ -5089,6 +5191,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5111,6 +5216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level6_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5133,6 +5241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level1_2025"
+        ],
         "progression": "How To: Adding Context and Saving Prompts"
       },
       "bonus": false,
@@ -5155,6 +5266,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level2_2025"
+        ],
         "progression": "How To: Adding Context and Saving Prompts"
       },
       "bonus": false,
@@ -5177,6 +5291,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level3_2025"
+        ],
         "progression": "How To: Adding Context and Saving Prompts"
       },
       "bonus": false,
@@ -5243,20 +5360,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Stylesheet"
+        "progression": "Vocabulary"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2025"
+          "ai-generated-design-lesson6-level6_2026"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-pilot-2025",
-        "activity_section.key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f"
+        "activity_section.key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level6_2025"
+        "ai-generated-design-lesson6-level6_2026"
       ]
     },
     {
@@ -5265,20 +5382,20 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Stylesheet"
+        "progression": "Vocabulary"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2025"
+          "ai-generated-design-lesson6-level7_2026"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-pilot-2025",
-        "activity_section.key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f"
+        "activity_section.key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level7_2025"
+        "ai-generated-design-lesson6-level7_2026"
       ]
     },
     {
@@ -5309,6 +5426,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level9_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5331,6 +5451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level1_2025"
+        ],
         "progression": "User Personas and Problem Statements"
       },
       "bonus": false,
@@ -5353,6 +5476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level2_2025"
+        ],
         "progression": "User Persona Analysis: Alex"
       },
       "bonus": false,
@@ -5375,6 +5501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level3_2025"
+        ],
         "progression": "Create a User Persona and Problem Statement"
       },
       "bonus": false,
@@ -5397,6 +5526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level4_2025"
+        ],
         "progression": "Vocab: Problem Statement"
       },
       "bonus": false,
@@ -5419,6 +5551,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level5_2025"
+        ],
         "progression": "Vocab: Problem Statement"
       },
       "bonus": false,
@@ -5441,6 +5576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level6_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5463,6 +5601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level1_2025"
+        ],
         "progression": "Create a Site Map and User Flow"
       },
       "bonus": false,
@@ -5485,6 +5626,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level2_2025"
+        ],
         "progression": "Create a Site Map and User Flow"
       },
       "bonus": false,
@@ -5507,6 +5651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level3_2025"
+        ],
         "progression": "Vocab: Site Map"
       },
       "bonus": false,
@@ -5529,6 +5676,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level4_2025"
+        ],
         "progression": "Vocab: Site Map"
       },
       "bonus": false,
@@ -5551,6 +5701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level5_2025"
+        ],
         "progression": "Vocab: User Flow"
       },
       "bonus": false,
@@ -5573,6 +5726,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level6_2025"
+        ],
         "progression": "Vocab: User Flow"
       },
       "bonus": false,
@@ -5595,6 +5751,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5617,6 +5776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level8_2025"
+        ],
         "progression": "Build Your Web App with AI"
       },
       "bonus": false,
@@ -5639,6 +5801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level9_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5661,6 +5826,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level1_2025"
+        ],
         "progression": "Vocab: POUR Principles"
       },
       "bonus": false,
@@ -5683,6 +5851,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level2_2025"
+        ],
         "progression": "Vocab: POUR Principles"
       },
       "bonus": false,
@@ -5705,6 +5876,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level3_2025"
+        ],
         "progression": "Fix Accessibility Issues"
       },
       "bonus": false,
@@ -5727,6 +5901,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level4_2025"
+        ],
         "progression": "Apply Accessibility Principles"
       },
       "bonus": false,
@@ -5749,6 +5926,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5771,6 +5951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level6_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5793,6 +5976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-level1_2025"
+        ],
         "progression": "Wireframe an App Idea"
       },
       "bonus": false,
@@ -5815,6 +6001,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-level2_2025"
+        ],
         "progression": "Vocab: Wireframe"
       },
       "bonus": false,
@@ -5837,6 +6026,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-level3_2025"
+        ],
         "progression": "Vocab: Wireframe"
       },
       "bonus": false,
@@ -5859,6 +6051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-level4_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5881,6 +6076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-level1_2025"
+        ],
         "progression": "Generate from a Wireframe"
       },
       "bonus": false,
@@ -5903,6 +6101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-level2_2025"
+        ],
         "progression": "Refine, Debug, Iterate"
       },
       "bonus": false,
@@ -5925,6 +6126,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-level3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5947,6 +6151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-level4_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5969,6 +6176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level1_2025"
+        ],
         "progression": "Web App Responsiveness"
       },
       "bonus": false,
@@ -5991,6 +6201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level2_2025"
+        ],
         "progression": "Vocab: Responsiveness"
       },
       "bonus": false,
@@ -6013,6 +6226,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level3_2025"
+        ],
         "progression": "Vocab: Responsiveness"
       },
       "bonus": false,
@@ -6035,6 +6251,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6057,6 +6276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level5_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -6079,6 +6301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level1_2025"
+        ],
         "progression": "Milestone 1: Define Your Magazine"
       },
       "bonus": false,
@@ -6101,6 +6326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level2_2025"
+        ],
         "progression": "Milestone 2: Build Your First Draft"
       },
       "bonus": false,
@@ -6123,6 +6351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level3_2025"
+        ],
         "progression": "Milestone 3: Refine and Align"
       },
       "bonus": false,
@@ -6145,6 +6376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level4_2025"
+        ],
         "progression": "Milestone 4: Test and Finalize"
       },
       "bonus": false,
@@ -6167,6 +6401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level5_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -6189,6 +6426,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6701,26 +6941,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level6_2025",
+        "level.key": "ai-generated-design-lesson6-level6_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2025"
+          "ai-generated-design-lesson6-level6_2026"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-pilot-2025",
-        "activity_section.key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f"
+        "activity_section.key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level7_2025",
+        "level.key": "ai-generated-design-lesson6-level7_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2025"
+          "ai-generated-design-lesson6-level7_2026"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-pilot-2025",
-        "activity_section.key": "fbd9cf5e-0823-4872-93f8-6d86ed9d443f"
+        "activity_section.key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1"
       }
     },
     {
@@ -8370,6 +8610,16 @@
       }
     },
     {
+      "key": "1dfd41b6-4740-4379-bec9-33e70896cddb",
+      "properties": {
+        "description": "Identify accessibility issues in AI-generated layouts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "1dfd41b6-4740-4379-bec9-33e70896cddb"
+      }
+    },
+    {
       "key": "22fe9553-04c0-40b9-a843-535ab20df802",
       "properties": {
         "description": "Present their final web app and provide peer feedback."
@@ -8557,6 +8807,16 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "874715a6-948d-4a4d-b20b-6b581045edf4"
+      }
+    },
+    {
+      "key": "877a6c48-0c32-41a0-9f4a-a9b008042f0e",
+      "properties": {
+        "description": "Articulate accessibility needs in prompts to fix issues."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "877a6c48-0c32-41a0-9f4a-a9b008042f0e"
       }
     },
     {

@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {
+  createNewFileThunk,
+  saveFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   setIsValidating,
   setHasValidated,
@@ -16,7 +20,9 @@ import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
+import {DEFAULT_FOLDER_ID} from '../constants';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
+import {validateBackpackFileName} from '../utils';
 
 import moduleStyles from './styles/info-panel.module.scss';
 interface InfoPanelProps {
@@ -32,13 +38,15 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     levelProperties,
     onRun,
     onStop,
-    AiTutorResponseView,
     hiddenContextCallback,
     startSources,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    tutorVideos,
+    config,
+    onImageFlagged,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -56,11 +64,41 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
+  const backpackProps = useMemo(() => {
+    const projectFiles = source?.files || {};
+    return {
+      validateFileName: (fileName: string) =>
+        validateBackpackFileName(
+          fileName,
+          projectFiles,
+          levelProperties.validationFile
+        ),
+      saveFileToProject: (fileId: string, contents: string, url?: string) =>
+        dispatch(saveFileThunk({fileId, contents, url})),
+      createNewProjectFile: (
+        fileName: string,
+        contents: string,
+        url?: string
+      ) => dispatch(createNewFileThunk({fileName, contents, url})),
+      findIdForFileName: (fileName: string) =>
+        Object.keys(projectFiles).find(
+          id =>
+            projectFiles[id].name === fileName &&
+            projectFiles[id].folderId === DEFAULT_FOLDER_ID
+        ),
+      supportedFileTypes: config.supportedFileTypes,
+    };
+  }, [
+    source?.files,
+    config.supportedFileTypes,
+    levelProperties.validationFile,
+    dispatch,
+  ]);
 
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -93,6 +131,15 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
+  const documentationUrl = useMemo(() => {
+    if (appName === 'pythonlab') {
+      return '/docs/ide/pythonlab';
+    } else if (appName === 'weblab2') {
+      return '/docs/ide/weblab2';
+    }
+    return undefined;
+  }, [appName]);
+
   return (
     <div style={style} className={className}>
       <ResourcePanel
@@ -105,23 +152,22 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isValidating,
           isValidateDisabled: !hasLoadedEnvironment || isRunning,
         }}
-        AiTutorResponseView={AiTutorResponseView}
         className={moduleStyles.instructionsContainer}
         headerClassName={moduleStyles.infoPanelHeader}
         levelProperties={levelProperties}
         requireRun={appName === 'pythonlab'}
         hiddenContextCallback={hiddenContextCallback}
         settings={settings}
+        aiTutorSystemPrompt={aiTutorSystemPrompt}
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
-        isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
-        aiTutorSystemPromptName={aiTutorSystemPromptName}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        documentationUrl={
-          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
-        }
+        tutorVideos={tutorVideos}
+        documentationUrl={documentationUrl}
+        backpackProps={backpackProps}
+        onImageFlagged={onImageFlagged}
+        hasInstructionsDrawer={appName === 'weblab2'}
       />
     </div>
   );

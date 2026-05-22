@@ -7,7 +7,7 @@ wrong 'It loads too slowly on public computers.'
 wrong 'It doesn\'t use enough animation or images.'
 right 'It\'s not accessible for all users.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 2, 11

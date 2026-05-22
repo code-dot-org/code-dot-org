@@ -7,7 +7,7 @@ wrong 'It ensures the website uses the correct color scheme for branding.'
 right 'It helps the team focus on layout and structure before adding visual details.'
 wrong 'It allows the AI tool to automatically write the site\'s content.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 9

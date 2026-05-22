@@ -52,23 +52,28 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the preference to show v1 or v2 progress table.
-   * @param {string} showProgressTableV2: 'v2' if showing progress table v2, 'legacy' if showing v1.
+   * Save whether the user has already seen and dismissed the Personalization Alert.
+   * @param {boolean} hasDismissedPersonalizationAlert: True if the user has dismissed the alert, false otherwise.
    */
-  setShowProgressTableV2(showProgressTableV2) {
-    return $.post(`/api/v1/users/show_progress_table_v2`, {
-      show_progress_table_v2: showProgressTableV2,
+  setHasDismissedPersonalizationAlert(hasDismissedPersonalizationAlert) {
+    return $.post(`/api/v1/users/has_dismissed_personalization_alert`, {
+      has_dismissed_personalization_alert: hasDismissedPersonalizationAlert,
     });
   }
 
-  /**
-   * Save whether the user has already seen the Welcome Popup for teacher homepage v2.
-   * @param {boolean} hasSeenHomepageWelcome: True if the user has seen the welcome, false otherwise.
-   */
-  setHasSeenProgressTableInvite(hasSeenHomepageWelcome) {
-    return $.post(`/api/v1/users/has_seen_homepage_welcome`, {
-      has_seen_homepage_welcome: hasSeenHomepageWelcome,
-    });
+  async getHasDismissedPersonalizationAlert() {
+    try {
+      const response = await HttpClient.fetchJson(
+        '/api/v1/users/has_dismissed_personalization_alert'
+      );
+      return response.value.has_dismissed_personalization_alert;
+    } catch (error) {
+      console.error(
+        'Error fetching personalization alert dismissal status:',
+        error
+      );
+      return false;
+    }
   }
 
   /**

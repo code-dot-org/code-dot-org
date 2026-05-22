@@ -52,7 +52,7 @@ if (typeof window === 'undefined' || !window.TextEncoder) {
 
 class MicrobitFirmataClient {
   constructor(port) {
-    serialport = port ? port : require('serialport');
+    serialport = port;
     this.addConstants();
     this.myPort = null;
     this.inbuf = new Uint8Array(1000);

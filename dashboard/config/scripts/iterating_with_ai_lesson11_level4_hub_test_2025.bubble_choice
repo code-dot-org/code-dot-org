@@ -1,0 +1,10 @@
+name 'iterating-with-ai-lesson11-level4-hub-test-2025'
+display_name 'Milestone Four Hub'
+description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is testing edge cases, polishing your UI, reviewing your logic with AI, or reflecting on how your dashboard evolved. You are in control of how and when to use these levels to meet the project goals.'
+uses_lab2
+
+sublevels
+level 'iterating-with-ai-lesson11-milestone4-test-2025'
+level 'iterating-with-ai-lesson11-level5-test-2025'
+
+

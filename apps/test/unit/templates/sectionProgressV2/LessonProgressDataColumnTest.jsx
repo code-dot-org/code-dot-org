@@ -13,10 +13,10 @@ import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
 import sectionProgress, {
   addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
@@ -28,7 +28,6 @@ const LESSON_PROGRESS = {
   [STUDENT_1.id]: {
     [LESSON.id]: {
       incompletePercent: 20,
-      imperfectPercent: 20,
       completedPercent: 60,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4
@@ -37,7 +36,6 @@ const LESSON_PROGRESS = {
   [STUDENT_2.id]: {
     [LESSON.id]: {
       incompletePercent: 0,
-      imperfectPercent: 0,
       completedPercent: 100,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4

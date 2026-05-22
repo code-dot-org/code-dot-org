@@ -1,0 +1,8 @@
+name 'aid-thinking-critically-lesson7-level2_2026-test_2026-pilot'
+display_name 'AI Chat - Safety and Privacy Explorations'
+description 'Use one of the AI Chat levels below in order to test safety and privacy'
+
+sublevels
+level 'aid-thinking-critically-lesson7-level2a_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson7-level2b_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson7-level2c_2026-test_2026-pilot'

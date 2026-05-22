@@ -223,6 +223,7 @@
     "validation_enabled": "false",
     "bubble_choice_description": "Animated scene template.",
     "thumbnail_url": "https://images.code.org/f2c70d785e9aaa6a153cc402bdaffbee-template1.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

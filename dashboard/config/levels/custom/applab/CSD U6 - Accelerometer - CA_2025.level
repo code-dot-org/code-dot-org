@@ -107,6 +107,7 @@
       "/courses/csd-2022/guides/board-events",
       "/maker/setup"
     ],
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

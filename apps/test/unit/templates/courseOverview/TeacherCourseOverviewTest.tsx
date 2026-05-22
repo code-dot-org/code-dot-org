@@ -90,6 +90,7 @@ const COURSE_SUMMARY = {
   course_versions: {},
   announcements: [fakeTeacherAnnouncement],
   has_verified_resources: false,
+  ai_chat_tools_dependency: 'none',
 };
 
 const sections = [

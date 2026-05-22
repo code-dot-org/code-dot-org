@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-preassessment-q11_2026'
+
+question 'A weather app needs to display the forecast for any city the user types in. A developer writes `getForecast(city)`. What is `city` in this function?'
+
+wrong 'The name of the function.'
+wrong 'A condition that must be true for the forecast to display.'
+wrong 'A separate function that runs inside getForecast.'
+right 'A parameter — a placeholder that gets replaced with the actual city name when the function is called.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

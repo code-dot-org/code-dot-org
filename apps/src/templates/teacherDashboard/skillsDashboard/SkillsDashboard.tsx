@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -86,8 +86,24 @@ const SkillsDashboard: React.FC<SkillsDashboardProps> = () => {
   return (
     <div>
       <h1>Skills Dashboard</h1>
-      <Button onClick={evaluateSkills} text="Evaluate Skills" />
-      <Button onClick={loadSkillEvaluations} text="Load Skill Evaluations" />
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
+        onClick={evaluateSkills}
+        type="button"
+      >
+        {'Evaluate Skills'}
+      </MuiButton>
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
+        onClick={loadSkillEvaluations}
+        type="button"
+      >
+        {'Load Skill Evaluations'}
+      </MuiButton>
       {masteryData && skillsData ? (
         <div>
           {Object.entries(masteryData).map(([studentId, skills]) => (

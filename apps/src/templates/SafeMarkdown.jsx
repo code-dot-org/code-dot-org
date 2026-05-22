@@ -44,6 +44,13 @@ class SafeMarkdown extends React.Component {
      * https://github.com/facebook/prop-types/blob/main/CHANGELOG.md#1570
      **/
     rehypeMap: PropTypes.objectOf(PropTypes.func),
+    /*
+     * Allow <iframe> embeds in the rendered markdown. Only set this for
+     * curriculum content targeted at non-student audiences (professional
+     * learning, facilitator-facing courses). Never enable for student-facing
+     * levels — the server gates this via participant_audience.
+     */
+    allowEmbeds: PropTypes.bool,
   };
 
   render() {
@@ -51,9 +58,17 @@ class SafeMarkdown extends React.Component {
     // that we do so; this is absolutely not something we want to do as a
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
-    const processor = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks(this.props.rehypeMap)
-      : markdownToReact(this.props.rehypeMap);
+    let getProcessor;
+    if (this.props.allowEmbeds && this.props.openExternalLinksInNewTab) {
+      getProcessor = markdownToReactWithEmbedsAndExternalLinks;
+    } else if (this.props.allowEmbeds) {
+      getProcessor = markdownToReactWithEmbeds;
+    } else if (this.props.openExternalLinksInNewTab) {
+      getProcessor = markdownToReactExternalLinks;
+    } else {
+      getProcessor = markdownToReact;
+    }
+    const processor = getProcessor(this.props.rehypeMap);
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
@@ -66,7 +81,7 @@ class SafeMarkdown extends React.Component {
     }
 
     if (this.props.unwrapped) {
-      return rendered.props.children;
+      return rendered.props.children ?? null;
     }
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
@@ -146,11 +161,53 @@ const localizationComponentWrappers = {
   },
 };
 
+// Extends the base schema to allow <iframe> embeds for professional learning
+// content. Only used when allowEmbeds=true, which the server gates on
+// participant_audience !== 'student'.
+const schemaWithEmbeds = {
+  ...schema,
+  tagNames: [...schema.tagNames, 'iframe'],
+  attributes: {
+    ...schema.attributes,
+    iframe: [
+      'src',
+      'width',
+      'height',
+      'frameBorder',
+      'allowFullScreen',
+      'allow',
+      'title',
+    ],
+  },
+};
+
 /*
  * Map to cache markdown processors based on the rehypeMap as key. Use `WeakMapPlus` as normal
  * WeakMap does not support `undefined` as a key.
  **/
 const markdownProcessorCache = new WeakMapPlus();
+
+const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
+  unified()
+    .use(Processor.getParser())
+    .use([
+      clickableText,
+      expandableImages,
+      visualCodeBlock,
+      xmlAsTopLevelBlock,
+      details,
+    ])
+    .use(remarkRehype, {allowDangerousHtml: true})
+    .use(rehypeRaw)
+    .use(rehypeSanitize, processorSchema)
+    .use(rehypeReact, {
+      createElement: React.createElement,
+      components: {
+        ...blocklyComponentWrappers,
+        ...localizationComponentWrappers,
+        ...rehypeMap,
+      },
+    });
 
 /*
  * Create a markdown to react processor cached based on the value of rehypeMap. This ensures
@@ -164,39 +221,25 @@ const markdownProcessorCache = new WeakMapPlus();
  */
 const markdownToReact = rehypeMap => {
   if (!markdownProcessorCache.has(rehypeMap)) {
-    const processor = unified()
-      .use(Processor.getParser())
-      // include custom plugins
-      .use([
-        clickableText,
-        expandableImages,
-        visualCodeBlock,
-        xmlAsTopLevelBlock,
-        details,
-      ])
-      // convert markdown to an HTML Abstract Syntax Tree (HAST)
-      .use(remarkRehype, {
-        // include any raw HTML in the markdown as raw HTML nodes in the HAST
-        allowDangerousHtml: true,
-      })
-      // parse the raw HTML nodes in the HAST to actual HAST nodes
-      .use(rehypeRaw)
-      // sanitize the HAST
-      .use(rehypeSanitize, schema)
-      // convert the HAST to React
-      .use(rehypeReact, {
-        createElement: React.createElement,
-        // Use React component wrappers for Blockly XML elements to prevent
-        // React from warning us about invalid components.
-        components: {
-          ...blocklyComponentWrappers,
-          ...localizationComponentWrappers,
-          ...rehypeMap,
-        },
-      });
-    markdownProcessorCache.set(rehypeMap, processor);
+    markdownProcessorCache.set(
+      rehypeMap,
+      buildMarkdownProcessor(rehypeMap, schema)
+    );
   }
   return markdownProcessorCache.get(rehypeMap);
+};
+
+/* Cache for processors that allow iframe embeds (non-student PL content). */
+const markdownProcessorWithEmbedsCache = new WeakMapPlus();
+
+const markdownToReactWithEmbeds = rehypeMap => {
+  if (!markdownProcessorWithEmbedsCache.has(rehypeMap)) {
+    markdownProcessorWithEmbedsCache.set(
+      rehypeMap,
+      buildMarkdownProcessor(rehypeMap, schemaWithEmbeds)
+    );
+  }
+  return markdownProcessorWithEmbedsCache.get(rehypeMap);
 };
 
 /* Map to cache markdown to react processors w/ externalLinks plugin. */
@@ -217,6 +260,22 @@ const markdownToReactExternalLinks = rehypeMap => {
     markdownProcessorExternalLinksCache.set(rehypeMap, processor);
   }
   return markdownProcessorExternalLinksCache.get(rehypeMap);
+};
+
+/* Map to cache processors with both iframe embeds and external-links-in-new-tab. */
+const markdownProcessorWithEmbedsAndExternalLinksCache = new WeakMapPlus();
+
+const markdownToReactWithEmbedsAndExternalLinks = rehypeMap => {
+  if (!markdownProcessorWithEmbedsAndExternalLinksCache.has(rehypeMap)) {
+    const processor = markdownToReactWithEmbeds(rehypeMap)().use(
+      externalLinks,
+      {
+        links: 'all',
+      }
+    );
+    markdownProcessorWithEmbedsAndExternalLinksCache.set(rehypeMap, processor);
+  }
+  return markdownProcessorWithEmbedsAndExternalLinksCache.get(rehypeMap);
 };
 
 export default SafeMarkdown;

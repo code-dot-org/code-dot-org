@@ -67,6 +67,7 @@
     "rubric_performance_level_2": "Most elements in the paper prototype have been recreated in the digital prototype, but there may be some inconsistencies with layout, sizing, or a few minor missing elements.  Inconsistencies would not affect the functionality of the prototype.",
     "rubric_performance_level_3": "Some elements of the paper prototype have been recreated in the digital prototype, but there are enough inconsistencies to affect the functionality of the prototype.",
     "rubric_performance_level_4": "There are no elements in the digital prototype, or the elements are not consistent with the paper prototype.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

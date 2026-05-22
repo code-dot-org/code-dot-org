@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 /**
  * View shown to an instructor if they can create sections with different participant types
  * (students, teachers, facilitators). Allows user to pick participant type for this section
@@ -5,15 +6,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-
-import {Heading3} from '../../legacySharedComponents/Headings';
-import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
+
+import styles from './sectionSetup.module.scss';
 
 const cardInfoByAudience = {
   student: {
@@ -36,40 +34,31 @@ const cardInfoByAudience = {
  */
 export default class ParticipantTypePicker extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
     setParticipantType: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired,
     availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
-    const {title, setParticipantType, handleCancel} = this.props;
+    const {setParticipantType} = this.props;
 
     return (
-      <div style={style.container} className="uitest-participant-type-picker">
-        <Heading3 isRebranded>{title}</Heading3>
-        <p style={style.bodyText}>
+      <div className={`${styles.screen} uitest-participant-type-picker`}>
+        <Typography
+          id="dsco-dialog-description"
+          className={styles.bodyText}
+          variant="body2"
+        >
           {i18n.professionalLearningParticipantQuestion()}
-        </p>
-        <div style={style.scroll}>
-          <CardContainer>
-            {this.props.availableParticipantTypes.map(type => (
-              <ParticipantTypeCard
-                onClick={setParticipantType}
-                key={type}
-                type={type}
-              />
-            ))}
-          </CardContainer>
-        </div>
-        <div style={style.footer}>
-          <Button
-            onClick={handleCancel}
-            text={i18n.dialogCancel()}
-            color={Button.ButtonColor.neutralDark}
-            style={{margin: 0}}
-          />
-        </div>
+        </Typography>
+        <CardContainer>
+          {this.props.availableParticipantTypes.map(type => (
+            <ParticipantTypeCard
+              onClick={setParticipantType}
+              key={type}
+              type={type}
+            />
+          ))}
+        </CardContainer>
       </div>
     );
   }
@@ -86,32 +75,4 @@ const ParticipantTypeCard = props => (
 ParticipantTypeCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   type: PropTypes.string,
-};
-
-const style = {
-  container: {
-    width: styleConstants['content-width'],
-    color: color.neutral_dark,
-    height: '300px',
-    left: '20px',
-    right: '20px',
-  },
-  bodyText: {
-    fontSize: '1em',
-  },
-  scroll: {
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    height: 'calc(80vh - 200px)',
-  },
-  footer: {
-    position: 'absolute',
-    width: styleConstants['content-width'],
-    height: '50px',
-    left: 0,
-    bottom: '-23px',
-    padding: '0px 20px 20px 20px',
-    backgroundColor: '#fff',
-    borderRadius: '5px',
-  },
 };

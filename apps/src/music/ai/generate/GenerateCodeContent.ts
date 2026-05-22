@@ -14,7 +14,9 @@ Indenting is important.  In this example, when the code is run, it plays "song_o
 
 Don't include any comments in the generated pseudocode.
 
-The valid sounds to use are: {sounds}.  You can also use any of the following additional drum sounds: "{drumSounds}". (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode.
+The valid sounds to use are: {sounds}.  (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode. DO NOT include the sound length in the pseudocode.
+
+If asked to generate a song of a certain length, short is around 10 measures, medium is around 20 measures, and long is around 30 measures.
 
 You should only use repeat in one specific scenario: within a play together, to multiply a shorter sound to equal a longer, non-repeated sound. For example:
 

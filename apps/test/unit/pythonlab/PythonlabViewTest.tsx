@@ -4,7 +4,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -18,6 +17,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 jest.mock('@codebridge/Codebridge', () => {
   return {
@@ -48,6 +48,7 @@ describe('PythonLabView', () => {
       lab2Project,
       lab,
       lab2System,
+      currentUser,
     });
 
     store = getStore();
@@ -64,12 +65,10 @@ describe('PythonLabView', () => {
     return render(
       <Provider store={store}>
         <ThemeProvider>
-          <AiChatDisabledProvider>
-            <PythonlabView
-              levelProperties={levelProperties}
-              initialSources={initialSources}
-            />
-          </AiChatDisabledProvider>
+          <PythonlabView
+            levelProperties={levelProperties}
+            initialSources={initialSources}
+          />
         </ThemeProvider>
       </Provider>
     );

@@ -58,6 +58,8 @@ const defaultProps = {
   currentLevelName: 'test_level',
   studentLevelInfo: null,
   aiEnabled: true,
+  parentLevelName: null,
+  levelType: 'Gamelab',
 };
 
 describe('RubricFloatingActionButton', () => {

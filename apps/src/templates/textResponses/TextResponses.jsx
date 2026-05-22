@@ -5,8 +5,11 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {setUnit, getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
@@ -25,7 +28,7 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
+function TextResponses({sectionId, scriptId, courseVersionName, unitPosition}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -37,6 +40,7 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
       setTextResponsesByScript({});
       prevSectionId.current = sectionId;
     }
+    setFilterByLessonName(null);
     asyncLoadTextResponses(sectionId, scriptId);
   }, [scriptId, sectionId, asyncLoadTextResponses]);
 
@@ -73,11 +77,6 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
     [textResponsesByScript]
   );
 
-  const onChangeScript = (scriptId, courseVersionId) => {
-    setUnit(scriptId, courseVersionId);
-    setFilterByLessonName(null);
-  };
-
   const responsesForCurrentScript = textResponsesByScript[scriptId] || [];
 
   let filteredResponses = [...responsesForCurrentScript];
@@ -94,7 +93,7 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
     <div>
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
-        <UnitSelector scriptId={scriptId} onChange={onChangeScript} />
+        <UnitSelectorV2 v1Styles />
       </div>
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
@@ -122,7 +121,8 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
           responses={filteredResponses}
           sectionId={sectionId}
           isLoading={isLoadingResponses}
-          scriptName={scriptName}
+          courseVersionName={courseVersionName}
+          unitPosition={unitPosition}
         />
       </div>
     </div>
@@ -133,8 +133,8 @@ TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
-  scriptName: PropTypes.string,
-  setUnit: PropTypes.func.isRequired,
+  courseVersionName: PropTypes.string,
+  unitPosition: PropTypes.number,
 };
 
 const styles = {
@@ -142,12 +142,12 @@ const styles = {
     marginBottom: 0,
   },
   unitSelection: {
-    marginTop: 30,
+    marginTop: 0,
   },
   actionRow: {
     height: 47,
     padding: PADDING,
-    marginTop: 20,
+    marginTop: 10,
     backgroundColor: color.table_header,
     display: 'flex',
     alignItems: 'center',
@@ -164,16 +164,9 @@ const styles = {
 
 export const UnconnectedTextResponses = TextResponses;
 
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseVersionId,
-    scriptName: getSelectedUnitName(state),
-  }),
-  dispatch => ({
-    setUnit(scriptId, courseVersionId) {
-      dispatch(setUnit(scriptId, courseVersionId));
-    },
-  })
-)(TextResponses);
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  scriptId: state.unitSelection.scriptId,
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
+}))(TextResponses);

@@ -56,12 +56,14 @@ describe('Code Review Comment', () => {
 
   it('displays check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('FontAwesome').props().icon).toBe('check-circle');
+    expect(wrapper.find('.resolved-checkmark').first().props().iconName).toBe(
+      'circle-check'
+    );
   });
 
   it('displays show option for hidden resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('.fa-eye')).toHaveLength(1);
+    expect(wrapper.find('[iconName="eye"]')).toHaveLength(1);
   });
 
   it('displays hide option for visible resolved comment', () => {
@@ -70,22 +72,22 @@ describe('Code Review Comment', () => {
     const wrapper = renderWrapper({isResolved: true});
     const onClickPromise = wrapper.find('a').first().invoke('onClick')();
     return onClickPromise.then(() =>
-      expect(wrapper.find('.fa-eye-slash')).toHaveLength(1)
+      expect(wrapper.find('[iconName="eye-slash"]')).toHaveLength(1)
     );
   });
 
   it('displays resolve option for code owner', () => {
     const wrapper = renderWrapper({}, {viewingAsOwner: true});
-    expect(wrapper.find('.fa-check-circle')).toHaveLength(1);
+    expect(wrapper.find('[iconName="circle-check"]')).toHaveLength(1);
   });
 
   it('displays unresolve option for code owner', () => {
     const wrapper = renderWrapper({isResolved: true}, {viewingAsOwner: true});
-    expect(wrapper.find('.fa-circle-o')).toHaveLength(1);
+    expect(wrapper.find('[iconName="circle"]')).toHaveLength(1);
   });
 
   it('displays delete option for instructor', () => {
     const wrapper = renderWrapper({}, {viewAsTeacher: true});
-    expect(wrapper.find('.fa-trash')).toHaveLength(1);
+    expect(wrapper.find('[iconName="trash"]')).toHaveLength(1);
   });
 });

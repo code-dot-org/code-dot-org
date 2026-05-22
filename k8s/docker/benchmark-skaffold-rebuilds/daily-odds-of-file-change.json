@@ -1,0 +1,62 @@
+[
+  {
+    "dockerfile": "code-dot-org.dockerfile",
+    "copy_path": ".",
+    "path_to_modify_to_trigger_cache_miss": "change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.789041
+  },
+  {
+    "dockerfile": "code-dot-org-static.dockerfile",
+    "copy_path": "dashboard/app/assets",
+    "path_to_modify_to_trigger_cache_miss": "dashboard/app/assets/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.065753
+  },
+  {
+    "dockerfile": "code-dot-org-static.dockerfile",
+    "copy_path": "dashboard/public",
+    "path_to_modify_to_trigger_cache_miss": "dashboard/public/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.052055
+  },
+  {
+    "dockerfile": "code-dot-org-static.dockerfile",
+    "copy_path": "apps/static",
+    "path_to_modify_to_trigger_cache_miss": "apps/static/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.145205
+  },
+  {
+    "dockerfile": "code-dot-org-static.dockerfile",
+    "copy_path": "shared/images",
+    "path_to_modify_to_trigger_cache_miss": "shared/images/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.024658
+  },
+  {
+    "dockerfile": "code-dot-org-static.dockerfile",
+    "copy_path": "apps/i18n",
+    "path_to_modify_to_trigger_cache_miss": "apps/i18n/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.380822
+  },
+  {
+    "dockerfile": "code-dot-org-db-seed.dockerfile",
+    "copy_path": "dashboard/config/scripts",
+    "path_to_modify_to_trigger_cache_miss": "dashboard/config/scripts/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.610959
+  },
+  {
+    "dockerfile": "code-dot-org-db-seed.dockerfile",
+    "copy_path": "dashboard/config/scripts_json",
+    "path_to_modify_to_trigger_cache_miss": "dashboard/config/scripts_json/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.643836
+  },
+  {
+    "dockerfile": "code-dot-org-db-seed.dockerfile",
+    "copy_path": "dashboard/config/levels",
+    "path_to_modify_to_trigger_cache_miss": "dashboard/config/levels/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.69863
+  },
+  {
+    "dockerfile": "code-dot-org-pegasus.dockerfile",
+    "copy_path": "pegasus",
+    "path_to_modify_to_trigger_cache_miss": "pegasus/change-me-to-trigger-dockerfile-copy-cache-miss.txt",
+    "odds_of_a_cache_miss": 0.334247
+  }
+]

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:09:08.000Z",
   "level_num": "custom",
@@ -10,7 +11,8 @@
       "pinMode": null,
       "var myButton = createButton": null,
       "onBoardEvent": null,
-      "hideElement": null
+      "hideElement": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -75,11 +77,11 @@
     "rubric_performance_level_4": "The app has not been started or there are no buttons hooked up to the circuit playground",
     "teacher_markdown": "**Assessing Student Work:** It may be appropriate to assess students on this level by having them physically show you the working prototype, since this app involves physical components to be wired together. You could also consider having students record a video of their app working and submitting it in addition to submitting their code.",
     "encrypted_examples": "h2buxBycnfCE99w63jzlrn0MidFX6EH2EWNZmIgqOT6FRNc8WoPHggOThg4a\nYaPafB2ggihJmz+2OEef4s/btg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:09:08.185+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:09:08.185+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - A_2024\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - A_2024\"},{\"changed_at\":\"2026-03-23 19:47:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -79,6 +79,7 @@ class Blockly < Level
     skip_autosave
     skip_run_save
     goal_override
+    hide_version_history
   )
 
   before_save :update_ideal_level_source
@@ -111,7 +112,7 @@ class Blockly < Level
   end
 
   def to_xml(options = {})
-    xml_node = Nokogiri::XML(super(options))
+    xml_node = Nokogiri::XML(super)
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
@@ -124,7 +125,7 @@ class Blockly < Level
 
   def load_level_xml(xml_node)
     block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
-    level_properties = super(xml_node)
+    level_properties = super
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
@@ -907,7 +908,7 @@ class Blockly < Level
 
   # Clear 'is_project_level' from cloned levels
   def clone_with_name(name, editor_experiment: nil)
-    level = super(name, editor_experiment: editor_experiment)
+    level = super
     level.update!(is_project_level: false)
     level
   end

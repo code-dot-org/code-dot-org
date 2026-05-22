@@ -110,6 +110,7 @@
     "bubble_choice_description": "Use functions to create and organize this paddle game!",
     "thumbnail_url": "https://images.code.org/6b4d0e5722ef50d6873ebc36a2a6a617-gamelab-level.gif",
     "encrypted_examples": "DTlmI2Tdb+x3ABrKyzNOXDgllB/cPaDx68cTXyyqruBs//RAAjYxY3FYO+Tr\nVplWADVDhjnfDmnhSpKgXV2ryA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

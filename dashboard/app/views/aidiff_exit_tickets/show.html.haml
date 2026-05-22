@@ -1,0 +1,7 @@
+%link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
+%script{src: webpack_asset_path('js/aidiff_exit_tickets/show.js'),
+        data: {artifact: @aidiff_exit_ticket.summarize.to_json}}
+
+= render partial: 'shared/emulate_print_media'
+
+#show-container

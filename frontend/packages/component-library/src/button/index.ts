@@ -1,8 +1,5 @@
-// Auto-import SASS generated CSS
-import './index.css';
-
 // Types
-export {ButtonType, ButtonColor} from './types';
+export type {ButtonType, ButtonColor} from './types';
 
 // Component Props Types
 export type {ButtonProps} from './Button';
@@ -11,6 +8,11 @@ export type {GenericButtonProps} from './GenericButton';
 
 // Constants
 export {buttonColors} from './Button';
+export {
+  colorMap as buttonColorToMuiColorMap,
+  variantMap as buttonTypeToMuiVariantMap,
+  sizeMap as buttonSizeToMuiSizeMap,
+} from './buttonPropsToMuiCore';
 
 // Components
 export {default as GenericButton} from './GenericButton';

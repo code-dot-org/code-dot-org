@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState, useRef, useEffect} from 'react';
 
@@ -8,9 +8,14 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from './copyable-code-block.module.scss';
 
-const CopyableCodeBlock: React.FunctionComponent = (
-  props: React.HTMLAttributes<HTMLPreElement>
-) => {
+interface CopyableCodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
+  onCopy?: () => void;
+}
+
+const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
+  onCopy,
+  ...props
+}) => {
   const [visible, setVisible] = useState(false);
   const [, setVisibleCount] = useState(0);
   const [ariaCopyMessage, setAriaCopyMessage] = useState('');
@@ -42,6 +47,7 @@ const CopyableCodeBlock: React.FunctionComponent = (
   const handleCopy = () => {
     if (preRef.current?.textContent) {
       copyToClipboard(preRef.current.textContent);
+      onCopy?.();
 
       setVisible(true);
 
@@ -59,21 +65,22 @@ const CopyableCodeBlock: React.FunctionComponent = (
   return (
     <article className={classNames(moduleStyles.codeBlock)}>
       <header className={moduleStyles['header']}>
-        <Button
-          onClick={handleCopy}
-          text={i18n.copyCode()}
-          size="xs"
-          color="black"
-          iconLeft={{
-            iconStyle: 'regular',
-            iconName: 'copy',
-          }}
-          type="secondary"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
           className={moduleStyles.copyButton}
-        />
+          onClick={handleCopy}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="regular" iconName="copy" />}
+        >
+          {i18n.copyCode()}
+        </MuiButton>
       </header>
       <div className={moduleStyles.codeContentBody}>
-        <pre ref={preRef} className={moduleStyles.codeContent} {...props} />
+        <div className={moduleStyles.codeContent}>
+          <pre ref={preRef} {...props} />
+        </div>
         <div
           className={`${moduleStyles.codeContentOverlay}${
             visible ? ' ' + moduleStyles.showOverlay : ''

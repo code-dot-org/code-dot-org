@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
@@ -41,11 +41,9 @@ const LinkAccountPage: React.FunctionComponent = () => {
     : 'default';
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
-      {source: sourcePage},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT, {
+      source: sourcePage,
+    });
   }, [sourcePage]);
 
   return (
@@ -63,7 +61,7 @@ const LinkAccountPage: React.FunctionComponent = () => {
             title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].newAccountDesc}
             buttonText={i18n.createAccount()}
-            buttonType="secondary"
+            variant="outlined"
             href={`/users/sign_up/account_type${returnToUrlParam}`}
           />
           <AccountCard
@@ -72,7 +70,7 @@ const LinkAccountPage: React.FunctionComponent = () => {
             title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].existingAccountDesc}
             buttonText={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-            buttonType="primary"
+            variant="contained"
             href={`/users/sign_in${returnToUrlParam}`}
           />
         </div>

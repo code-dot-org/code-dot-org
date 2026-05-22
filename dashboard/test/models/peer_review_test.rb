@@ -4,8 +4,6 @@ require 'cdo/shared_constants'
 class PeerReviewTest < ActiveSupport::TestCase
   include SharedConstants
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,

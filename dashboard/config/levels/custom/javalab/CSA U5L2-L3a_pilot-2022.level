@@ -29,7 +29,7 @@
         "tabOrder": 1
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:55.980+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L2-L3a_2022\"},{\"changed_at\":\"2022-10-09 00:07:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 00:07:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

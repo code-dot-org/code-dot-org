@@ -72,6 +72,7 @@
     "contained_level_names": [
       "CSD_U3L11 Predict L1_2025"
     ],
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,8 +1,8 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 
-export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
+export default class VerticalFlyout extends BlocklyCore.VerticalFlyout {
   /**
    * @override
    * This is copied almost entirely from

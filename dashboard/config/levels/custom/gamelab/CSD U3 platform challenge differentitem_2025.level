@@ -70,6 +70,7 @@
     "bubble_choice_description": "Add a different type of item for the player to collect or avoid.",
     "thumbnail_url": "https://images.code.org/4f0a09041c80aeb187842dc9aa264537-image-1589997097793.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

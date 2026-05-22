@@ -9,7 +9,6 @@
       "library": "launch2024",
       "aiCodeGenerate": "true",
       "aiCodeGenerateText": "true",
-      "danceMove": "dab",
       "toolbox": {
         "blocks": {
           "Play": [

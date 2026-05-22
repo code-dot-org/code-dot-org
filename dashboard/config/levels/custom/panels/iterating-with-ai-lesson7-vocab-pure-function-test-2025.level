@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-24T16:07:22.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Pure Function\n\nA **pure function** is a function that always returns the same output for the same input and does not change anything outside itself (like its parameters or global variables). It just computes and returns a result.\n\nIn other words, when a **pure function** runs, the original array within it, never changes. The function only returns a *new* value.",
+        "imageUrl": "https://images.code.org/47fa3c6e0bf3b8e1d844544a7b99a290-Screenshot 2025-11-24 124750.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:07:22.396+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-vocab-active-filter-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-vocab-active-filter-test-2025\"},{\"changed_at\":\"2025-11-24 16:09:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:47:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

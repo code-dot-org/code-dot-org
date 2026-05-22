@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:29.000Z",
   "level_num": "custom",
@@ -236,8 +235,10 @@
     },
     "bubble_choice_description": "Recreate a song that your friend Gemma heard online",
     "name_suffix": "_v2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:29.474+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-06-06 20:52:32 +0000\",\"changed\":[\"exemplar_settings\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:55:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:58:53 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 20:58:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-06 21:00:16 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:07:36 +0000\",\"changed\":[\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>

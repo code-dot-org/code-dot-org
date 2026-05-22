@@ -27,7 +27,7 @@
       "cricket.jpg": "3ba0ef8e-c1eb-4f10-b9de-2cf910a1c742.jpg"
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T18:21:53.265+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative Project_2025\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative Project_2025\"}]"

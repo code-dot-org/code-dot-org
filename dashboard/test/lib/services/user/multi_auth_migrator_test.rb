@@ -73,6 +73,7 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
         migrate
         _(user.authentication_options.first.credential_type).must_equal AuthenticationOption::CLEVER
         _(user.authentication_options.first.data).wont_be_nil
+        _(user.authentication_options.first.version).must_equal AuthenticationOption::Clever::VERSION[:v3]
       end
     end
 

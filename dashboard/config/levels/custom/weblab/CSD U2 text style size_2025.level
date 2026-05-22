@@ -25,7 +25,8 @@
     "long_instructions": "# Changing text size\r\n\r\nYou can control other things besides colors by using other properties.\r\n\r\n# Do This\r\n\r\n1) Find the CSS rule-set in the style sheet that determines the style for the paragraph tag.\r\n* Change the text size of the paragraphs and the headings.\r\n\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/434c688b4a14001191f2b0b4ca1a3427-image-1677100717309.gif\" style=\"width:500px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "encrypted": "false",
     "validation_enabled": "true",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

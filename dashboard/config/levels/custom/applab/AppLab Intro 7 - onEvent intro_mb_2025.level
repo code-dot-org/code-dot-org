@@ -65,6 +65,7 @@
     "start_blocks": "setProperty(\"screen1\", \"background-color\", \"blue\");\r\nonEvent(\"bigButton\", \"click\", function() {\r\n\r\n});",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

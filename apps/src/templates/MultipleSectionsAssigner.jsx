@@ -1,22 +1,20 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -27,6 +25,7 @@ const MultipleSectionsAssigner = ({
   onClose,
   courseOfferingId,
   courseVersionId,
+  aiChatToolsDependency,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
@@ -203,20 +202,23 @@ const MultipleSectionsAssigner = ({
   };
 
   return (
-    <AccessibleDialog className={moduleStyle.popUpContainer} onClose={onClose}>
-      <div
-        role="region"
-        aria-label={i18n.directionsForAssigningSections()}
-        className={moduleStyle.information}
-      >
-        <div className={moduleStyle.modalHeader}>
-          <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
-        </div>
-        <div className={moduleStyle.sectionsDirections}>
-          <BodyTwoText>{sectionDirections}</BodyTwoText>
-        </div>
+    <Modal
+      onClose={onClose}
+      closeLabel={i18n.closeDialog()}
+      title={i18n.chooseSectionsPrompt({assignmentName})}
+      description={sectionDirections}
+      primaryButtonProps={{
+        id: 'confirm-assign',
+        children: i18n.confirmAssignment(),
+        onClick: reassignSections,
+      }}
+      secondaryButtonProps={{
+        children: i18n.dialogCancel(),
+        onClick: onClose,
+      }}
+      customContent={
         <div className={moduleStyle.sectionList}>
-          <Heading5>{i18n.yourSectionsList()}</Heading5>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(
@@ -229,36 +231,31 @@ const MultipleSectionsAssigner = ({
                           s => s.code === section.code
                         )
                       }
-                      onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                      onChange={() => handleChangedCheckbox(section)}
                       name={section.id}
                       label={section.name}
                     />
                   )
               )}
           </div>
-          <Button
+          <MuiButton
             id="select-all-sections"
-            text={i18n.selectAll()}
+            variant="text"
+            color="primary"
             onClick={selectAllHandler}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
+            className={moduleStyle.selectAll}
+          >
+            {i18n.selectAll()}
+          </MuiButton>
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </div>
-      </div>
-      <div className={moduleStyle.buttonContainer}>
-        <Button
-          text={i18n.dialogCancel()}
-          onClick={onClose}
-          color={Button.ButtonColor.neutralDark}
-        />
-        <Button
-          id="confirm-assign"
-          text={i18n.confirmAssignment()}
-          onClick={reassignSections}
-          color={Button.ButtonColor.brandSecondaryDefault}
-        />
-      </div>
-    </AccessibleDialog>
+      }
+    />
   );
 };
 
@@ -275,6 +272,8 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,

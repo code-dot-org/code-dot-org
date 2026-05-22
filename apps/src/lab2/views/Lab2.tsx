@@ -7,11 +7,11 @@ import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {getStore} from '@cdo/apps/redux';
 import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
-import MultiProjectContainer from '../projects/MultiProjectContainer';
+import ProjectContainer from '../projects/ProjectContainer';
+import {getStandaloneProjectId} from '../projects/utils';
 
 import RubricFABContainer from './components/rubrics/RubricFABContainer';
 import RubricWrapper from './components/rubrics/RubricWrapper';
@@ -25,22 +25,20 @@ const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
       <BrowserTextToSpeechWrapper>
-        <RubricWrapper>
-          <ThemeProvider>
+        <Lab2IdleTimer />
+        <ThemeProvider>
+          <DialogManager>
             <Lab2Wrapper>
-              <DialogManager>
+              <RubricWrapper>
                 <MetricsAdapter />
-                <Lab2IdleTimer />
-                <MultiProjectContainer>
-                  <AiChatDisabledProvider>
-                    <LabViewsRenderer />
-                  </AiChatDisabledProvider>
-                </MultiProjectContainer>
+                <ProjectContainer channelId={getStandaloneProjectId()}>
+                  <LabViewsRenderer />
+                </ProjectContainer>
                 <RubricFABContainer />
-              </DialogManager>
+              </RubricWrapper>
             </Lab2Wrapper>
-          </ThemeProvider>
-        </RubricWrapper>
+          </DialogManager>
+        </ThemeProvider>
       </BrowserTextToSpeechWrapper>
     </Provider>
   );

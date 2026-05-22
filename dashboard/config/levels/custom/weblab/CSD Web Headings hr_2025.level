@@ -22,7 +22,8 @@
     "parent_level_id": 18842,
     "thumbnail_url": "https://images.code.org/767c14f424c86a59c29d856a5ff71f4e-image-1562868795377.JPG",
     "name_suffix": "_2025",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

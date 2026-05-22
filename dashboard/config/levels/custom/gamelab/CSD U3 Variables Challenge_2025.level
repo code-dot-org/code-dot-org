@@ -81,6 +81,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Test your understanding of variables to draw something more complex.",
     "validation_enabled": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

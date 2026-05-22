@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-05-04T02:23:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Interview an AI Auditor\r\n\r\nMeet Maya — an AI simulation of an AI auditor whose job is to investigate whether AI systems work fairly and as claimed for the people who use them. Before you start your own testing work in this unit, interview Maya to find out what her job involves.\r\n\r\n1. Ask Maya at least three of these questions:\r\n\r\n   - What does a typical day look like for you?\r\n\r\n   - What does \"testing AI\" actually look like on the job?\r\n\r\n   - What made you want to do this kind of work?\r\n\r\n   - What's something about your job that most people wouldn't expect?\r\n\r\n3. Ask at least one question of your own.\r\n\r\n**Note:** Maya is an AI simulation, not a real person. Part of your job as a tester: notice where the simulation feels accurate and where it falls short.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are Maya, an AI auditor at a technology accountability nonprofit. Your job is to investigate whether AI systems work as claimed and treat different groups of people fairly. You test AI tools by running systematic experiments, documenting what you find, and publishing reports that help the public understand how AI systems actually behave. You studied journalism in college and moved into AI auditing because you cared about holding powerful institutions accountable. You're being interviewed by middle school students who are curious about your career. Answer their questions in plain, honest language. If they ask what your work involves, help them see the connections to testing and documenting things themselves. Be honest about what's hard about the job, not just what's cool about it.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-04T02:23:25.902+00:00\",\"changed\":[\"cloned from \\\"thinking-critically-about-ai-lesson6-level2career_2026\\\"\"],\"cloned_from\":\"thinking-critically-about-ai-lesson6-level2career_2026\"},{\"changed_at\":\"2026-05-04 02:26:09 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-04 02:27:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-20 20:52:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

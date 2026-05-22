@@ -1,4 +1,4 @@
-import React from 'react';
+import {FunctionComponent} from 'react';
 
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 import Typography from './Typography';
@@ -90,12 +90,12 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
 const generateComponents = (
   componentsToGenerate: TypographyElementToGenerateTemplate[],
-): {[key: string]: React.FunctionComponent<TypographyElementProps>} =>
+): {[key: string]: FunctionComponent<TypographyElementProps>} =>
   componentsToGenerate.reduce((acc, componentTemplateData) => {
     const {displayName, semanticTag, defaultVisualAppearance} =
       componentTemplateData;
 
-    const TypographyElement: React.FunctionComponent<
+    const TypographyElement: FunctionComponent<
       TypographyElementProps
     > = componentProps => {
       const {visualAppearance, children, className, style, id, noMargin} =
@@ -118,6 +118,9 @@ const generateComponents = (
     return {...acc, [displayName]: TypographyElement};
   }, {});
 
+/**
+ * @deprecated Use MUI `Typography` from `@mui/material` instead.
+ */
 export const {
   Heading1,
   Heading2,

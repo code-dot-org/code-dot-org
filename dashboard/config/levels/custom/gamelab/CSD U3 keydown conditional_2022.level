@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:19.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -61,11 +66,10 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"897a12c1-6690-4138-bf7e-8962577a6a46\",\r\n    \"2b067348-e96c-47bf-a74c-b8b678ce4021\",\r\n    \"47780453-1d30-43ea-9328-6ba99cfc0473\",\r\n    \"99f9f364-0216-4b54-9c4c-9b4cfd318996\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"897a12c1-6690-4138-bf7e-8962577a6a46\": {\r\n      \"name\": \"hippo\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/8rUjWmTfZgNMo7JX4rMGxsoJssk_QHuj_2CV5lGyLQo/897a12c1-6690-4138-bf7e-8962577a6a46.png?version=WvlOov4Tk8fEg8dJtqWsAH9bPhwVkYvE\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"WvlOov4Tk8fEg8dJtqWsAH9bPhwVkYvE\"\r\n    },\r\n    \"2b067348-e96c-47bf-a74c-b8b678ce4021\": {\r\n      \"name\": \"giraffe\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/8rUjWmTfZgNMo7JX4rMGxsoJssk_QHuj_2CV5lGyLQo/2b067348-e96c-47bf-a74c-b8b678ce4021.png?version=F4w6_PSv_dEPeBYbkgEBZdh7hq3HqjcU\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 74\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"F4w6_PSv_dEPeBYbkgEBZdh7hq3HqjcU\"\r\n    },\r\n    \"47780453-1d30-43ea-9328-6ba99cfc0473\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/8rUjWmTfZgNMo7JX4rMGxsoJssk_QHuj_2CV5lGyLQo/47780453-1d30-43ea-9328-6ba99cfc0473.png?version=3r4I2dZvMNSPLiF0WlsXbMSRpb8JS8Fi\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 62\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"3r4I2dZvMNSPLiF0WlsXbMSRpb8JS8Fi\"\r\n    },\r\n    \"99f9f364-0216-4b54-9c4c-9b4cfd318996\": {\r\n      \"name\": \"rabbit\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/8rUjWmTfZgNMo7JX4rMGxsoJssk_QHuj_2CV5lGyLQo/99f9f364-0216-4b54-9c4c-9b4cfd318996.png?version=sjQ9X50YR9ap4A0go6KG82gSyzOZLzvL\",\r\n      \"frameSize\": {\r\n        \"x\": 70,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"sjQ9X50YR9ap4A0go6KG82gSyzOZLzvL\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"e0b6a8e5-b38a-435e-9f63-f06b7e4e9860\",\r\n    \"57ccf693-36ba-4bb0-b111-9d2a69d11da4\",\r\n    \"f16faed6-fa88-4236-8050-adecd9faf0ea\",\r\n    \"201a86bf-5f04-4bce-8917-7a6c3bb2c08f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"e0b6a8e5-b38a-435e-9f63-f06b7e4e9860\": {\r\n      \"name\": \"giraffe\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/wXO_PEs4dTB28viQaNdvGa2zoCvkxzIP/category_animals/giraffe.png\",\r\n      \"frameSize\": {\r\n        \"x\": 306,\r\n        \"y\": 322\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"wXO_PEs4dTB28viQaNdvGa2zoCvkxzIP\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"57ccf693-36ba-4bb0-b111-9d2a69d11da4\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/YyANBqVtWQ1LqZFVLXZD41aNsEXZwR1M/category_animals/pig.png\",\r\n      \"frameSize\": {\r\n        \"x\": 288,\r\n        \"y\": 257\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"YyANBqVtWQ1LqZFVLXZD41aNsEXZwR1M\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"f16faed6-fa88-4236-8050-adecd9faf0ea\": {\r\n      \"name\": \"rabbit\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/Deb3cPeD4R52Pl5UAZlBet96hDXo8tRv/category_animals/rabbit.png\",\r\n      \"frameSize\": {\r\n        \"x\": 256,\r\n        \"y\": 341\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Deb3cPeD4R52Pl5UAZlBet96hDXo8tRv\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"201a86bf-5f04-4bce-8917-7a6c3bb2c08f\": {\r\n      \"name\": \"hippo\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/T19KFYfrvdDlgs42j8IBxrF8Ry1Vpnkl/category_animals/hippo.png\",\r\n      \"frameSize\": {\r\n        \"x\": 264,\r\n        \"y\": 264\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"T19KFYfrvdDlgs42j8IBxrF8Ry1Vpnkl\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "encrypted_examples": "KtMajv1MTk5VycDn4k4SCP5TNgtEATk+qDb+1Dse6jWb1soE4unkPxBK4QLe\nZOX0DlhHpq6XjasCCotrShuSTQ==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"giraffe\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  if(keyDown(\"h\")) {\r\n     sprite.setAnimation(\"hippo\");\r\n  }\r\n  if(keyDown(\"p\")) {\r\n     sprite.setAnimation(\"pig\");\r\n  }\r\n  if(keyDown(\"r\")) {\r\n    \r\n  }\r\n  drawSprites();\r\n}\r\n",
     "parent_level_id": 20760,
     "reference_links": [
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
@@ -85,15 +89,11 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "ai_tutor_available": "false"
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:19.000Z",
-  "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:19.148+00:00\",\"changed\":[\"cloned from \\\"CSD U3 keydown conditional_2021\\\"\"],\"cloned_from\":\"CSD U3 keydown conditional_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:19.148+00:00\",\"changed\":[\"cloned from \\\"CSD U3 keydown conditional_2021\\\"\"],\"cloned_from\":\"CSD U3 keydown conditional_2021\"},{\"changed_at\":\"2025-12-03 16:49:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 16:49:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 16:49:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 16:50:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 16:51:56 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 require 'user'
 require 'authentication_option'
 
 class Policies::Lti
   module AccessTokenScopes
-    LINE_ITEM = 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem'.freeze
-    CONTEXT_MEMBERSHIP = 'https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'.freeze
+    LINE_ITEM = 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem'
+    CONTEXT_MEMBERSHIP = 'https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'
   end
 
   module MessageType
     CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
-    SUPPORTED = [
-      RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'.freeze,
-    ].freeze
+    RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'
+    DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'
+    DEEP_LINKING_RESPONSE = 'LtiDeepLinkingResponse'
   end
 
   module DeploymentConfiguration
@@ -24,15 +26,22 @@ class Policies::Lti
     AccessTokenScopes.const_get(scope)
   end
 
-  NAMESPACE = 'lti_v1_controller'.freeze
-  JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
+  NAMESPACE = 'lti_v1_controller'
+  JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
+  # For security reasons, we only allow target_link_uris that are on domains we control.
+  # This is to prevent abuse of our LTI integration to launch unexpected URLs.
+  ALLOWED_TARGET_LINK_URI_DOMAINS = Set.new(
+    [
+      'code.org',
+      'csforall.org',
+    ]
+).freeze
 
-  MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
+  MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
-                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
-                           'Teacher']
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
 ).freeze
   STAFF_ROLES = Set.new(
     [
@@ -42,18 +51,21 @@ class Policies::Lti
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
     ]
 ).freeze
-  CONTEXT_LEARNER_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Learner'.freeze
-  CONTEXT_MENTOR_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Mentor'.freeze
-  LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'.freeze
-  LTI_CUSTOM_CLAIMS = "https://purl.imsglobal.org/spec/lti/claim/custom".freeze
-  LTI_CONTEXT_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/context".freeze
-  LTI_RESOURCE_LINK_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/resource_link".freeze
-  LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id".freeze
-  LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform".freeze
-  LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
-  LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration".freeze
-  CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name".freeze
-  CLASSLINK_ROLE_KEY = 'classLink_role'.freeze
+  CONTEXT_LEARNER_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Learner'
+  CONTEXT_MENTOR_ROLE = 'http://purl.imsglobal.org/vocab/lis/v2/membership#Mentor'
+  LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'
+  LTI_CUSTOM_CLAIMS = "https://purl.imsglobal.org/spec/lti/claim/custom"
+  LTI_CONTEXT_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/context"
+  LTI_RESOURCE_LINK_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/resource_link"
+  LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id"
+  LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform"
+  LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice"
+  DEEP_LINKING_SETTINGS_CLAIM = "https://purl.imsglobal.org/spec/lti-dl/claim/deep_linking_settings"
+  DEEP_LINKING_DATA_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/data'
+  DEEP_LINKING_CONTENT_ITEMS_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/content_items'
+  LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration"
+  CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name"
+  VERSION_CLAIM = 'https://purl.imsglobal.org/spec/lti/claim/version'
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
@@ -61,40 +73,45 @@ class Policies::Lti
 
   LMS_PLATFORMS = {
     canvas_cloud: {
-      name: 'Canvas'.freeze,
-      issuer: 'https://canvas.instructure.com'.freeze,
-      auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
-      jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
-      access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
+      name: 'Canvas',
+      issuer: 'https://canvas.instructure.com',
+      auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect',
+      jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks',
+      access_token_url: 'https://sso.canvaslms.com/login/oauth2/token',
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     canvas_beta_cloud: {
-      name: 'Canvas - Beta'.freeze,
-      issuer: 'https://canvas.beta.instructure.com'.freeze,
-      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
-      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
-      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+      name: 'Canvas - Beta',
+      issuer: 'https://canvas.beta.instructure.com',
+      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect',
+      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks',
+      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token',
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     canvas_test_cloud: {
-      name: 'Canvas - Test'.freeze,
-      issuer: 'https://canvas.test.instructure.com'.freeze,
-      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
-      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
-      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+      name: 'Canvas - Test',
+      issuer: 'https://canvas.test.instructure.com',
+      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect',
+      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks',
+      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token',
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+      ],
     },
     schoology: {
-      name: 'Schoology'.freeze,
-      issuer: 'https://schoology.schoology.com'.freeze,
-      auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
-      jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
-      access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
-    },
-    # https://launchpad.classlink.com/.well-known/openid-configuration
-    classlink: {
-      name: 'ClassLink'.freeze,
-      issuer: "https://launchpad.classlink.com".freeze,
-      auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth".freeze,
-      jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks".freeze,
-      access_token_url: "https://launchpad.classlink.com/oauth2/v2/token".freeze,
+      name: 'Schoology',
+      issuer: 'https://schoology.schoology.com',
+      auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect',
+      jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks',
+      access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token',
+      supported_message_types: [
+        MessageType::RESOURCE_LINK_REQUEST,
+        MessageType::DEEP_LINKING_REQUEST,
+      ],
     },
   }
 
@@ -140,13 +157,9 @@ class Policies::Lti
     }
   }.freeze
 
-  MAX_COURSE_MEMBERSHIP = 650
+  MAX_COURSE_MEMBERSHIP = 1000
 
   def self.get_account_type(roles)
-    # ClassLink includes a non-standard role as a string instead of an array of strings
-    if roles.is_a?(String)
-      return STAFF_ROLES.include?(roles) ? User::TYPE_TEACHER : User::TYPE_STUDENT
-    end
     roles.each do |role|
       return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
@@ -196,6 +209,21 @@ class Policies::Lti
     platform_name.to_s
   end
 
+  def self.allowed_target_link_uri?(target_link_uri)
+    uri = URI.parse(target_link_uri.to_s)
+    return false unless uri.is_a?(URI::HTTP)
+
+    host = uri.host.to_s.downcase
+    return false if host.blank?
+
+    ALLOWED_TARGET_LINK_URI_DOMAINS.any? do |domain|
+      normalized_domain = domain.downcase
+      host == normalized_domain || host.end_with?(".#{normalized_domain}")
+    end
+  rescue URI::InvalidURIError
+    false
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
@@ -223,10 +251,6 @@ class Policies::Lti
     %w[Schoology Canvas].include?(issuer_name(issuer))
   end
 
-  def self.feedback_available?(user)
-    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
-  end
-
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
     ::PartialRegistration.in_progress?(session) && ::PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
@@ -241,5 +265,17 @@ class Policies::Lti
     user.lti_user_identities.any? do |identity|
       identity.lti_deployments.any?(&:restricted?)
     end
+  end
+
+  def self.supported_message_type?(issuer:, message_type:)
+    platform = find_platform_by_issuer(issuer)
+    return false unless platform
+
+    # TODO: Remove when Schoology deep linking is live
+    if (platform[:name] == 'Schoology') && (DCDO.get('schoology_deep_linking_enabled', false) == false) && message_type == (MessageType::DEEP_LINKING_REQUEST)
+      return false
+    end
+
+    platform[:supported_message_types].include?(message_type)
   end
 end

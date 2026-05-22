@@ -1,0 +1,14 @@
+name 'ai-and-algorithmic-decisions-postassessment-q14_2026'
+
+question 'A student rewrites an eligibility rule to be more fair. Their teacher asks: "In a real product, who would have to approve a change like this before it ships?" Which answer best captures the idea that accountability is shared?'
+
+wrong 'Only the engineer who wrote the code.'
+wrong 'Only the AI tool that suggested the rule.'
+wrong 'Only the user, after they complain.'
+right 'A combination of people — engineers, designers, legal review, and often the community affected by the rule.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+MARKDOWN

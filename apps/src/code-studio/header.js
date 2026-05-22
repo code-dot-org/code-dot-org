@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -10,6 +9,7 @@ import {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
@@ -115,7 +115,7 @@ header.build = function (
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
   $(document).ready(function () {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <HeaderMiddle
           scriptNameData={scriptNameData}
@@ -123,7 +123,10 @@ header.build = function (
           scriptData={scriptData}
         />
       </Provider>,
-      document.querySelector('.header_level')
+      document.querySelector('.header_level'),
+      {
+        legacyReactDomRender: true,
+      }
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
@@ -143,9 +146,12 @@ header.build = function (
         }
       });
 
-      ReactDOM.render(
+      createReactRoot(
         <SignInCalloutWrapper />,
-        document.querySelector('.signin_callout_wrapper')
+        document.querySelector('.signin_callout_wrapper'),
+        {
+          legacyReactDomRender: true,
+        }
       );
     }
   });
@@ -157,22 +163,28 @@ header.buildProjectInfoOnly = function (currentLevelId) {
   // Store the current level ID in the progressRedux store.
   store.dispatch(setCurrentLevelId(currentLevelId));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
-    document.querySelector('.header_level')
+    document.querySelector('.header_level'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
 header.buildScriptNameOnly = function (scriptNameData) {
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
     </Provider>,
-    document.querySelector('.header_level')
+    document.querySelector('.header_level'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 };
 

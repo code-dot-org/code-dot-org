@@ -1,15 +1,15 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
-
 import {addMultipleAddRows} from './manageStudentsRedux';
+
+import moduleStyles from './addMultipleStudents.module.scss';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
@@ -22,19 +22,10 @@ class AddMultipleStudents extends Component {
     isDialogOpen: false,
   };
 
+  textareaRef = React.createRef();
+
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'add-students-button-click',
-        data_json: JSON.stringify({
-          sectionId: this.props.sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeDialog = () => {
@@ -42,7 +33,7 @@ class AddMultipleStudents extends Component {
   };
 
   add = () => {
-    const value = this.refs.studentsTextBox.value;
+    const value = this.textareaRef.current.value;
     const studentDataArray = value.split('\n').map(line => {
       const parts = line.split(',');
       const name = parts[0].trim();
@@ -50,79 +41,50 @@ class AddMultipleStudents extends Component {
       return {name, familyName};
     });
     this.props.addMultipleStudents(studentDataArray);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'add-students-confirm',
-        data_json: JSON.stringify({
-          sectionId: this.props.sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.closeDialog();
   };
 
   render() {
     return (
-      <div>
-        <Button
-          style={styles.button}
+      <>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
           onClick={this.openDialog}
-          color={Button.ButtonColor.gray}
-          text={i18n.addStudentsMultiple()}
-          icon="plus"
-        />
-        <BaseDialog
-          useUpdatedStyles
-          isOpen={this.state.isDialogOpen}
-          style={styles.dialog}
-          handleClose={this.closeDialog}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
         >
-          <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
-          <textarea
-            rows="15"
-            cols="70"
-            ref="studentsTextBox"
-            style={styles.textarea}
-            aria-label={i18n.addStudentsMultiple()}
+          {i18n.addStudentsMultiple()}
+        </MuiButton>
+        {this.state.isDialogOpen && (
+          <Modal
+            title={i18n.addStudentsMultiple()}
+            description={i18n.addStudentsMultipleWithFamilyNameInstructions()}
+            onClose={this.closeDialog}
+            customContent={
+              <textarea
+                rows="15"
+                cols="70"
+                ref={this.textareaRef}
+                className={moduleStyles.textarea}
+                aria-label={i18n.addStudentsMultiple()}
+              />
+            }
+            primaryButtonProps={{
+              children: i18n.done(),
+              onClick: this.add,
+            }}
+            secondaryButtonProps={{
+              children: i18n.dialogCancel(),
+              onClick: this.closeDialog,
+            }}
           />
-          <DialogFooter>
-            <Button
-              style={styles.button}
-              text={i18n.dialogCancel()}
-              onClick={this.closeDialog}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              style={styles.button}
-              text={i18n.done()}
-              onClick={this.add}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-          </DialogFooter>
-        </BaseDialog>
-      </div>
+        )}
+      </>
     );
   }
 }
-
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  textarea: {
-    width: '75%',
-  },
-  button: {
-    margin: 0,
-    marginBottom: 5,
-  },
-};
 
 export default connect(
   state => ({}),

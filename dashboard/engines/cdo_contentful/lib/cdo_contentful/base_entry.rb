@@ -25,14 +25,16 @@ module CdoContentful
 
       # Fetch entries of this content type matching the given fields
       #
+      # @param locale [String] locale of the entries to fetch (default: 'en-US')
+      # @param order [String, Array<String>, nil] field to order entries by (default: nil)
       # @param limit [Integer] maximum number of entries to return (default: 100, max: 1000)
       # @param skip [Integer] number of entries to skip, acting as an offset (default: 0)
       # @param fields [Hash] field-value pairs to filter entries by, e.g. `where(tutorialID: 'my-id')`
       #
       # @return [Contentful::Array] of entries matching the given fields
-      def where(locale: self::DEFAULT_LOCALE, limit: self::DEFAULT_LIMIT, skip: 0, **fields)
+      def where(locale: self::DEFAULT_LOCALE, order: nil, limit: self::DEFAULT_LIMIT, skip: 0, **fields)
         entry_fields = fields.transform_keys {"fields.#{_1}"}
-        client.entries(**entry_fields, content_type:, locale:, limit:, skip:)
+        client.entries(**entry_fields, content_type:, locale:, order:, limit:, skip:)
       end
 
       # Fetch a single entry of this content type matching the given fields
@@ -44,19 +46,22 @@ module CdoContentful
 
       # Iterate over all entries of this content type matching the given fields
       #
-      # @param limit [Integer] maximum number of entries to fetch per request (default: 100, max: 1000)
+      # @param order [String] field to order entries by (default: 'sys.createdAt')
       # @param fields [Hash] field-value pairs to filter entries by, e.g. `find_each(tutorialID: 'my-id')`
       #
       # @yield [Contentful::Entry] gives each entry to the block
       # @return [Integer] the total number of entries yielded
-      def find_each(limit: self::DEFAULT_LIMIT, **fields)
+      def find_each(order: nil, **fields, &block)
+        return enum_for(:find_each, order:, **fields) unless block
+
+        order = [*Array(order), 'sys.createdAt']
         skip = 0
 
         loop do
-          entries = where(**fields, limit:, skip:)
+          entries = where(**fields, order:, skip:)
           break if entries.empty?
 
-          entries.each {yield _1}
+          entries.each(&block)
 
           skip += entries.size
           break if skip >= entries.total

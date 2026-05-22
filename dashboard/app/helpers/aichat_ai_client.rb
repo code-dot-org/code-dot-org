@@ -29,6 +29,7 @@ class AichatAiClient
 
     response_body = JSON.parse(http_response.body)
 
+    raise AichatAiHelper::ModelRateLimitedError if http_response.code == 429
     raise_possible_response_errors_from_body(response_body)
 
     response_text = extract_text_response_from_body(response_body)
@@ -89,7 +90,14 @@ class AichatAiClient
   private def headers
     {
       "Content-Type" => "application/json",
+      "Authorization" => "Bearer #{bearer_token}",
     }
+  end
+
+  # Bearer token defaults to the api_key instance variable.
+  # The derived class can optionally override this.
+  private def bearer_token
+    api_key
   end
 
   private def raise_not_implemented_error

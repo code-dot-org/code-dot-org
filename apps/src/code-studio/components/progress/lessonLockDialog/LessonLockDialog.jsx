@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
+import {flushSync} from 'react-dom';
 import {connect} from 'react-redux';
 
 import {
@@ -53,7 +54,9 @@ function LessonLockDialog({
   //
   const setAllLockStatus = lockStatus => {
     setClientLockState(clientLockState =>
-      clientLockState.map(item => ({...item, lockStatus}))
+      clientLockState.map(item =>
+        item.isDemoStudent ? item : {...item, lockStatus}
+      )
     );
   };
 
@@ -107,15 +110,23 @@ function LessonLockDialog({
       handleClose();
     } else {
       saveLockStateResponse.json().then(json => {
-        setSaving(false);
+        // opt out of automatic batching due to conflict with useEffect
+        // see: https://github.com/reactwg/react-18/discussions/21
+        flushSync(() => {
+          setSaving(false);
+        });
         if (json.error) {
-          setError(
-            i18n.errorSavingLockStatusWithMessage({
-              errorMessage: json.error,
-            })
-          );
+          flushSync(() => {
+            setError(
+              i18n.errorSavingLockStatusWithMessage({
+                errorMessage: json.error,
+              })
+            );
+          });
         } else {
-          setError(i18n.errorSavingLockStatus());
+          flushSync(() => {
+            setError(i18n.errorSavingLockStatus());
+          });
         }
       });
     }
@@ -227,12 +238,13 @@ function LessonLockDialog({
           {loading ? (
             <SkeletonRows numRows={5} numCols={4} />
           ) : (
-            clientLockState.map(({name, lockStatus}, index) => (
+            clientLockState.map(({name, lockStatus, isDemoStudent}, index) => (
               <StudentRow
                 key={index}
                 index={index}
                 name={name}
                 lockStatus={lockStatus}
+                isDemoStudent={isDemoStudent}
                 handleRadioChange={handleRadioChange}
               />
             ))

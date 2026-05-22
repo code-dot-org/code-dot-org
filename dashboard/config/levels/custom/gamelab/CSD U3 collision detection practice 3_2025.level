@@ -84,6 +84,7 @@
     "validation_enabled": "false",
     "start_blocks": "var kitchen = createSprite(200, 200);\r\nkitchen.setAnimation(\"kitchen\");\r\nvar cat = createSprite(350, 125);\r\ncat.setAnimation(\"cat\");\r\ncat.scale = 0.50;\r\nvar mouse = createSprite(0, 175);\r\nmouse.setAnimation(\"mouse_right\");\r\nmouse.velocityX = 4;\r\n\r\n\r\nfunction draw() {\r\n\r\n  //1) Program the mouse to run the other way \r\n  // and the cat to look down and meow if the mouse is touching the cat\r\n\r\n\r\n  drawSprites();\r\n}",
     "encrypted_examples": "iM9aVgSUlO0rzbx49uJf/bp40nuHsGIrYgzzHIa/eKcg9wtnHS8lAJahsExW\nmjVGUU8D+SDnsjyft9LC5/Jm1w==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

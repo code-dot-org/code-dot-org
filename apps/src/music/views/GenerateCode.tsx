@@ -1,16 +1,24 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
+import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
   AdlibType,
+  AdlibChoices,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -28,6 +36,8 @@ import {MusicLevelData} from '../types';
 import styles from './GenerateCode.module.scss';
 
 const adlibs = adlibsUntyped as AdlibsType;
+
+const GENERATE_DELAY_DURATION = 5000;
 
 interface GenerateCodeProps {
   adlibOption?: string;
@@ -57,21 +67,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     state => state.music.currentPlayheadPosition
   );
 
-  const useCache = appConfig.getValue('ai-generate-cache') === 'true';
+  const useCache = true;
   const showFullContext =
     appConfig.getValue('ai-generate-full-context') === 'true';
 
-  // The array of user choices in the adlib.
-  const [choices, setChoices] = useState<string[] | undefined>(undefined);
-
-  const [contextText, setContextText] = useState(DefaultContext);
-
-  const [promptText, setPromptText] = useState(
-    adlibOption ? '' : DefaultPrompt
-  );
-
   const useText = !!(levelProperties.levelData as MusicLevelData)
     .aiCodeGenerateText;
+
+  const hasParent = !!useParentLevelProperties();
 
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
@@ -84,6 +87,98 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       ? adlibs[adlibOption]
       : undefined);
 
+  const getInitialChoices = () => {
+    if (!useAdlib) return {};
+    const initial: AdlibChoices = {};
+    Object.keys(useAdlib.options).forEach(key => {
+      const opts = useAdlib.options[key];
+      initial[key] = sample(opts)?.id || '';
+    });
+    return initial;
+  };
+
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>(
+    getInitialChoices()
+  );
+
+  const [contextText, setContextText] = useState(DefaultContext);
+
+  const [promptText, setPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
+
+  const [localizedPromptText, setLocalizedPromptText] = useState(
+    adlibOption ? '' : DefaultPrompt
+  );
+
+  const generateSong = useCallback(
+    async (regenerate = false) => {
+      const startTime = Date.now();
+
+      dispatch(setAiGenerateState('generating'));
+
+      analyticsReporter.sendEvent(
+        EVENTS[
+          `MUSIC_LAB_${regenerate ? 'REGENERATE' : 'GENERATE'}_CODE_CLICKED`
+        ],
+        {
+          adlibChoices,
+          packId,
+          levelPath: window.location.pathname,
+        }
+      );
+      const pseudocode = await (useCache && useAdlib
+        ? generateSongCache(adlibOption || '', useAdlib, packId, adlibChoices)
+        : generateSongAi(
+            contextText,
+            packId,
+            promptText || '',
+            (levelProperties.levelData as MusicLevelData)
+              .aiCodeGenerateExtraPrompt
+          ));
+
+      const elapsedTime = Date.now() - startTime;
+      const remainingDelayDuration = Math.max(
+        GENERATE_DELAY_DURATION - elapsedTime,
+        0
+      );
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      if (pseudocode) {
+        const resultBlockly = generateBlocklyJson(pseudocode);
+        dispatch(setCodeToLoad(resultBlockly));
+      }
+
+      setPlaying(true);
+      dispatch(setAiGenerateState('generated'));
+    },
+    [
+      adlibChoices,
+      adlibOption,
+      contextText,
+      dispatch,
+      levelProperties.levelData,
+      packId,
+      promptText,
+      setPlaying,
+      useAdlib,
+      useCache,
+    ]
+  );
+
+  useEffect(() => {
+    // If we are clearing, make sure we are called with the new
+    // block count before deciding what to do next.
+    if (aiGenerateState === 'clearing-before-none' && blockCount <= 1) {
+      dispatch(setAiGenerateState('none'));
+    } else if (
+      aiGenerateState === 'clearing-before-generating' &&
+      blockCount <= 1
+    ) {
+      generateSong(true);
+    }
+  }, [aiGenerateState, blockCount, dispatch, generateSong]);
+
   useEffect(() => {
     // If there is already generated music when we begin, presumably
     // because the user is returning to a level they've previously worked
@@ -95,47 +190,21 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
+    setAdlibChoices(getInitialChoices());
     setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
 
-  const generateSong = useCallback(async () => {
-    dispatch(setAiGenerateState('generating'));
-
-    const pseudocode = await (useCache
-      ? generateSongCache(adlibs, adlibOption || 'complex', packId, choices)
-      : generateSongAi(
-          contextText,
-          packId,
-          promptText || '',
-          (levelProperties.levelData as MusicLevelData)
-            .aiCodeGenerateExtraPrompt
-        ));
-
-    if (pseudocode) {
-      const resultBlockly = generateBlocklyJson(pseudocode);
-      dispatch(setCodeToLoad(resultBlockly));
-    }
-
-    setPlaying(true);
-    dispatch(setAiGenerateState('generated'));
-  }, [
-    adlibOption,
-    choices,
-    contextText,
-    dispatch,
-    levelProperties.levelData,
-    packId,
-    promptText,
-    setPlaying,
-    useCache,
-  ]);
-
   useEffect(() => {
-    // There can be a delay before we're playing, so wait for it explicitly.
+    // There can be a delay before we're playing (often due to sample loading),
+    // so wait for it explicitly.
     if (aiGenerateState === 'generated' && isPlaying) {
-      dispatch(setAiGenerateState('listening'));
+      if (hasParent) {
+        dispatch(setAiGenerateState('edited'));
+      } else {
+        dispatch(setAiGenerateState('listening'));
+      }
     }
-  }, [aiGenerateState, dispatch, isPlaying]);
+  }, [aiGenerateState, dispatch, hasParent, isPlaying]);
 
   useEffect(() => {
     if (
@@ -152,27 +221,60 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState, dispatch, hasEdited, isPlaying]);
 
+  const onAdlibChoicesChange = useCallback((adlibChoices: AdlibChoices) => {
+    setAdlibChoices({...adlibChoices});
+  }, []);
+
+  const onAdlibTextChange = useCallback((text: string, localized: string) => {
+    setPromptText(text);
+    setLocalizedPromptText(localized);
+  }, []);
+
   const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
-  const modal = [
-    'none',
-    'generating',
-    'generated',
-    'listening',
-    'listened',
-  ].includes(aiGenerateState);
+  const modal = ['none', 'listened'].includes(aiGenerateState)
+    ? 'gap'
+    : [
+        'generating',
+        'generated',
+        'listening',
+        'clearing-before-none',
+        'clearing-before-generating',
+      ].includes(aiGenerateState)
+    ? 'full'
+    : undefined;
 
+  const sublevelOnContinue = useCallback(() => {
+    dispatch(
+      sendSuccessReportForLevel(
+        levelProperties.id.toString(),
+        levelProperties.appName
+      )
+    );
+  }, [dispatch, levelProperties.appName, levelProperties.id]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  if (isReadOnly) {
+    return null;
+  }
+
+  const levelSpecificId = `generate-panel-${levelProperties.id}`;
   if (!packId) {
     return null;
   }
 
+  const showTts =
+    levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+
   return (
-    <Guide id="generate-panel" modal={modal}>
-      {['none', 'generating'].includes(aiGenerateState) &&
+    <Guide key={levelSpecificId} id={levelSpecificId} modal={modal}>
+      {aiGenerateState === 'none' &&
         useAdlib &&
         levelProperties.longInstructions && (
           <MainInstructionsContent
             instructionsText={levelProperties.longInstructions}
+            markdownClassName={styles.markdown}
+            showTts={showTts}
           />
         )}
 
@@ -186,119 +288,222 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         />
       )}
 
-      {['none', 'generating'].includes(aiGenerateState) && useAdlib && (
-        <Adlib
-          adlib={useAdlib}
-          readOnly={aiGenerateState !== 'none'}
-          glowSpeed={glowSpeed}
-          onChange={(text, choices) => {
-            setPromptText(text);
-            setChoices(choices);
-          }}
+      {['generating', 'generated'].includes(aiGenerateState) && (
+        <MainInstructionsContent
+          heading="Generating..."
+          content="AI is generating code based on your prompt."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
         />
       )}
 
-      {aiGenerateState === 'none' && (
-        <>
-          {!useAdlib && (
-            <>
-              <div>Describe the song you'd like AI to make.</div>
-              <textarea
-                id="generate-description"
-                onChange={evt => {
-                  setPromptText(evt.target.value);
-                }}
-                value={promptText}
-                rows={4}
-                className={styles.textArea}
-              />
-            </>
-          )}
+      {['none', 'generating', 'generated'].includes(aiGenerateState) &&
+        useAdlib && (
+          <Adlib
+            adlib={useAdlib}
+            adlibChoices={adlibChoices}
+            readOnly={aiGenerateState !== 'none'}
+            glowSpeed={glowSpeed}
+            onChoicesChange={onAdlibChoicesChange}
+            onTextChange={onAdlibTextChange}
+          />
+        )}
 
-          <Button
-            ariaLabel={'Generate code'}
-            text={'Generate code'}
-            type="primary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
-            onClick={() => {
-              generateSong();
-              analyticsReporter.sendEvent('hoai2025-music-prompt', {
-                promptText,
-              });
+      {aiGenerateState === 'none' && !useAdlib && (
+        <>
+          <div>Describe the song you'd like AI to make.</div>
+          <textarea
+            id="generate-description"
+            onChange={evt => {
+              setPromptText(evt.target.value);
             }}
+            value={promptText}
+            rows={4}
+            className={styles.textArea}
           />
         </>
       )}
 
-      {['generating', 'generated'].includes(aiGenerateState)
-        ? 'Generating code.'
-        : ''}
-
-      {aiGenerateState === 'listening' && <div>Take a listen.</div>}
-
-      {aiGenerateState === 'listened' && (
-        <>
-          <div>Do you want to keep what AI generated?</div>
-
-          <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Try prompting again'}
-              text={'Try prompting again'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => {
-                setPlaying(false);
-                clearCode(true);
-                dispatch(setAiGenerateState('none'));
-              }}
-              className={styles.buttonWide}
-            />
-
-            <Button
-              ariaLabel={'Keep this'}
-              text={'Keep this'}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => {
-                dispatch(setAiGenerateState('editing'));
-                setPlaying(false);
-              }}
-              className={styles.buttonWide}
-            />
-          </div>
-        </>
+      {['none', 'generating', 'generated'].includes(aiGenerateState) && (
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="small"
+          loading={aiGenerateState !== 'none'}
+          loadingPosition="start"
+          disabled={aiGenerateState !== 'none'}
+          id="generate-code-button"
+          onClick={() => {
+            generateSong();
+            analyticsReporter.sendEvent('hoai2025-music-prompt', {
+              promptText,
+            });
+          }}
+          aria-label={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+        >
+          {aiGenerateState === 'none' ? 'Generate code' : 'Generating code'}
+        </MuiButton>
       )}
 
-      {aiGenerateState === 'editing' && !isPlaying && (
-        <div>
-          AI helped you get started. Now, edit the code to make it your own.
+      {['listening', 'listened'].includes(aiGenerateState) && (
+        <MainInstructionsContent
+          heading={
+            aiGenerateState === 'listening'
+              ? 'Take a listen...'
+              : aiGenerateState === 'listened'
+              ? 'Decide what to do next'
+              : ''
+          }
+          content={`AI generated code based on your prompt, "${localizedPromptText}"`}
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
+      )}
+
+      {aiGenerateState === 'listened' && (
+        <div className={styles.buttonRow}>
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            className={styles.buttonWide}
+            id="back-to-prompt-button"
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing-before-none'));
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                {levelPath: window.location.pathname, packId}
+              );
+            }}
+            aria-label="Back to prompt"
+            type="button"
+          >
+            {'Back to prompt'}
+          </MuiButton>
+
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            loadingPosition="start"
+            className={styles.buttonWide}
+            id="regenerate-button"
+            onClick={() => {
+              setPlaying(false);
+              clearCode(true);
+              dispatch(setAiGenerateState('clearing-before-generating'));
+              analyticsReporter.sendEvent('hoai2025-music-prompt', {
+                promptText,
+              });
+            }}
+            aria-label="Regenerate"
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+          >
+            {'Regenerate'}
+          </MuiButton>
+
+          <MuiButton
+            variant="contained"
+            color="secondary"
+            size="small"
+            className={styles.buttonWide}
+            id="use-code-button"
+            onClick={() => {
+              // Skip the 'editing' state when showing the three tabs.
+              dispatch(setAiGenerateState(hasParent ? 'edited' : 'editing'));
+              analyticsReporter.sendEvent(
+                EVENTS.MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED,
+                {levelPath: window.location.pathname, packId, adlibChoices}
+              );
+            }}
+            aria-label="Use code"
+            type="button"
+          >
+            {'Use code'}
+          </MuiButton>
         </div>
       )}
 
+      {aiGenerateState === 'editing' && !isPlaying && (
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="AI helped you get started. Make your own changes, then press Run."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
+      )}
+
       {aiGenerateState === 'editing' && isPlaying && (
-        <div>Try changing the code. </div>
+        <MainInstructionsContent
+          heading="Modify the code"
+          content="Try changing the code."
+          markdownClassName={styles.markdown}
+          showTts={showTts}
+        />
       )}
 
       {aiGenerateState === 'edited' && (
         <>
-          <div>That's a great mix!</div>
+          <MainInstructionsContent
+            heading="Modify the code"
+            content={
+              hasParent
+                ? 'Keep editing, or use the tabs at the top.'
+                : "That's a great mix!"
+            }
+            markdownClassName={styles.markdown}
+            showTts={showTts}
+          />
+
           <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              className={styles.buttonWide}
+              id="back-to-prompt-button"
+              onClick={() => {
+                setPlaying(false);
+                clearCode(true);
+                dispatch(setAiGenerateState('clearing-before-none'));
+                analyticsReporter.sendEvent(
+                  EVENTS.MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED,
+                  {levelPath: window.location.pathname, packId}
+                );
+              }}
+              aria-label="Back to prompt"
+              type="button"
+            >
+              {'Back to prompt'}
+            </MuiButton>
+            {!hasParent && (
+              <NavigationArea
+                levelProperties={levelProperties}
+                // The following props don't really matter as we don't have a Submit button or validation here.
+                hasRun={true}
+                hasEdited={true}
+                isRunning={false}
+                className={styles.buttonWide}
+                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
+                onContinue={sublevelOnContinue}
+                textVariant={'simple'}
+              />
+            )}
           </div>
         </>
       )}
+
+      {/* Retain focus with a hidden button. */}
+      {['generating', 'generated', 'listening', 'editing'].includes(
+        aiGenerateState
+      ) && <div tabIndex={0} role="button" className={styles.hiddenButton} />}
     </Guide>
   );
 };

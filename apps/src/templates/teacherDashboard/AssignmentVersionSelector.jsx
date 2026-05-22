@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import {useLocalization} from '@cdo/apps/localization';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import {
+  LocaleFallbacks,
+  LocalizeToI18nLocales,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
@@ -26,6 +31,7 @@ export function AssignmentVersionSelector({
   disabled,
   rightJustifiedPopupMenu,
 }) {
+  const locale = useLocalization();
   const selectRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [targetPoint, setTargetPoint] = useState({top: 0, left: 0});
@@ -33,20 +39,38 @@ export function AssignmentVersionSelector({
 
   // Filter the offerings based on the filters provided
   useEffect(() => {
-    const languageFilter = courseFilters?.language;
-
     const data = courseVersions;
+    if (!data) return;
 
-    if (languageFilter) {
+    const filterLocales = [];
+
+    if (courseFilters?.currentLocale) {
+      filterLocales.push(LocalizeToI18nLocales[locale] || locale);
+    } else if (courseFilters?.language) {
+      filterLocales.push(courseFilters?.language);
+    }
+
+    if (filterLocales.length) {
+      filterLocales.push(
+        ...filterLocales.map(locale => LocaleFallbacks[locale]).filter(Boolean)
+      );
+
       for (const [key, versionInfo] of Object.entries(data)) {
-        if (!versionInfo.locale_codes.includes(languageFilter)) {
-          delete data[key];
-        }
+        const includeLocale = filterLocales.some(locale =>
+          versionInfo.locale_codes.includes(locale)
+        );
+
+        if (!includeLocale) delete data[key];
       }
     }
 
     setFilteredVersions(data);
-  }, [courseVersions, courseFilters?.language]);
+  }, [
+    courseVersions,
+    locale,
+    courseFilters?.currentLocale,
+    courseFilters?.language,
+  ]);
 
   const handleMouseDown = e => {
     // Prevent the native dropdown menu from opening.
@@ -177,7 +201,6 @@ const styles = {
  *   # All pages
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       AssignmentVersionSelector:
  *         courseFilters:
  *           language: fa-IR

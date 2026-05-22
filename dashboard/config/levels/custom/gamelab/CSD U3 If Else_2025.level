@@ -131,6 +131,7 @@
     "libraries_enabled": "false",
     "display_name": "Mix it up with if/else",
     "thumbnail_url": "https://images.code.org/6b0df2eb4a2b61ae12ded3249a4ed1ab-image-1585766972590.gif",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

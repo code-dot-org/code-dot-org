@@ -1,0 +1,85 @@
+name 'pl-aif-2-U6-Intro-1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/222e5669c70d4acd893e757c0b693a0d-image-1776266362760.png" alt="Banner image that says, Welcome to Teaching Web Apps and AI Capstone Project" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+This professional learning module prepares you to teach a **Unit 6: Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience. 
+
+They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. 
+
+
+
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+**By the end of this professional learning module, you will be able to:**
+
+* Explain the process-oriented approach, emphasizing iteration, testing, and intentional decision-making over just adding features
+* Use project tools like the Kanban Board and Project Guide to manage workflow, scope, and team roles
+* Facilitate daily spot-checks to monitor progress, prompt reflection, and keep teams aligned
+* Assess and celebrate student growth based on process, reasoning, and iteration, not just the final product
+
+
+
+
+
+---
+
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
+
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey — it takes fewer than five minutes to complete.
+    </div>
+  </div>
+</div>
+
+---
+
+### **Suggested total time for this module:** 30 minutes
+
+![]()
+MARKDOWN

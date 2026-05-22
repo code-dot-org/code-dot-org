@@ -1,0 +1,7 @@
+name 'CSD U6 - Physical Input - Chal_2026'
+display_name 'Challenge Levels'
+
+sublevels
+level 'CSD U6 - Physical Input - ChalA_2026'
+level 'CSD U6 - Physical Input - ChalB_2026'
+level 'CSD U6 - Physical Input - ChalC_2026'

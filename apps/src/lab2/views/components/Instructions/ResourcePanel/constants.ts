@@ -20,3 +20,11 @@ export const resourcePanelValidateButtonElementId =
 
 export const resourcePanelValidationTableElementId =
   'resource-panel-validation-table';
+
+export const instructionsValidateButtonElementId =
+  'instructions-validate-button';
+
+export const resourcePanelValidationTabButtonElementId =
+  'resource-panel-tab-button-validation';
+
+export const VALIDATION_COMPLETE_EVENT = 'validation-complete';

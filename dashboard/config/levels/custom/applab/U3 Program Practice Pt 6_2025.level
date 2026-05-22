@@ -52,6 +52,7 @@
     "name_suffix": "_2025",
     "ai_enabled": "false",
     "video_key": "csd_debugging",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import AddPasswordForm from './AddPasswordForm';
 
@@ -14,14 +15,17 @@ export default class AddPasswordController {
   }
 
   renderAddPasswordForm = () => {
-    ReactDOM.render(
+    createReactRoot(
       <AddPasswordForm
         handleSubmit={this.submitAddPassword}
         disabled={this.disabled}
         userAge={this.userAge}
         userUsState={this.userUsState}
       />,
-      this.mountPoint
+      this.mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
     );
   };
 

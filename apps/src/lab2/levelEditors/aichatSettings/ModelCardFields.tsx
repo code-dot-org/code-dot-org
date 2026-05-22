@@ -3,7 +3,7 @@ import React, {useContext} from 'react';
 import {
   MAX_ASK_ABOUT_TOPICS,
   MODEL_CARD_FIELDS_LABELS_ICONS,
-} from '@cdo/apps/aichat/views/modelCustomization/constants';
+} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 
 import {UpdateContext} from './UpdateContext';
@@ -34,7 +34,7 @@ const ModelCardFields: React.FunctionComponent = () => {
           </div>
         );
       })}
-      <label>Example Prompts and Topics</label>
+      <p className={moduleStyles.marginBottom}>Example Prompts and Topics</p>
       <MultiItemInput
         items={exampleTopics || []}
         onAdd={() => {

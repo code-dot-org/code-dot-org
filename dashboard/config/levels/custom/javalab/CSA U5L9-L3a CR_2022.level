@@ -15,7 +15,7 @@
     "display_name": "Employee Schedules",
     "bubble_choice_description": "A manager is creating the work schedule for several weeks for their employees. They want to make sure each employee is only working one day each week.",
     "thumbnail_url": "https://images.code.org/903bd4f8b03900ba266ab13a6efedd8a-image-1651274994650.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:36:33.074+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L5d CR_2022\\\"\"],\"cloned_from\":\"CSA U5L8-L5d CR_2022\"},{\"changed_at\":\"2022-04-12 19:36:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 20:42:07 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 23:30:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 15:51:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:07:05 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

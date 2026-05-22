@@ -1,21 +1,22 @@
-/**
- * "Pointer Events Polyfill" to support pointer events on Safari.
- * This polyfill is used only for the Location Picker in Sprite Lab.
- * Google Blockly breaks on some browsers if this polyfill is present
- * as it uses the presence of window.PointerEvent to decide what types
- * of touch events to listen for.
- * Loading the polyfill here guarantees it will be present for Sprite Lab
- * (which uses Cdo Blockly) and it will not be present for any lab loaded
- * with Google Blockly.
- */
-import 'pepjs';
+import * as BlocklyCore from 'blockly/core';
+import 'blockly/blocks';
+import cookies from 'js-cookie';
 
-import CDOBlockly from '@code-dot-org/blockly';
+import initializeBlocklyWrapper from '@cdo/apps/blockly/blocklyWrapper';
 
-import initializeCdoBlocklyWrapper from '@cdo/apps/blockly/cdoBlocklyWrapper';
-import trackBlocklyStrings from '@cdo/apps/util/i18nBlockyStringTracker';
+import {blocklyLocaleMap} from './blocklyLocaleImports';
 
-window.Blockly = initializeCdoBlocklyWrapper(CDOBlockly);
+// Blockly provides "messages" files, which are JSON-format files containing human-translated
+// strings that are needed by Blockly.
+// These files map closely, but not exactly, to our supported locales.
+// After importing the desired message set, we need to set the locale in Blockly.
+// More information at:
+// https://developers.google.com/blockly/guides/configure/web/translations
+// https://github.com/RaspberryPiFoundation/blockly/blob/master/msg/json/README.md
+const localeFromCookies = cookies.get('language_') || 'en-US';
+const messages =
+  blocklyLocaleMap[localeFromCookies.toLocaleLowerCase()] ||
+  blocklyLocaleMap['en-us'];
+BlocklyCore.setLocale(messages);
 
-// Track the strings used by the Blockly code.
-trackBlocklyStrings();
+window.Blockly = initializeBlocklyWrapper(BlocklyCore);

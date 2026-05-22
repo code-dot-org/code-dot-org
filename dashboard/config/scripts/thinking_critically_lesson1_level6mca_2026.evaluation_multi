@@ -1,0 +1,8 @@
+name 'thinking_critically_lesson1_level6MCa_2026'
+question 'How much have you used AI?'
+answer 'Never', weight: 1, lesson_name: 'lesson_name'
+answer 'Sometimes', weight: 1, lesson_name: 'lesson_name'
+answer 'Several Times', weight: 1, lesson_name: 'lesson_name'
+answer 'Every Day', weight: 1, lesson_name: 'lesson_name'
+
+allow_multiple_attempts true

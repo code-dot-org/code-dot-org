@@ -30,6 +30,7 @@
       "curriculum_path": "https://code.org/curriculum/course1/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [

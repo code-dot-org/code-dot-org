@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:14:09.000Z",
   "level_num": "custom",
@@ -8,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Look at the function `take_or_turn()` in `custom.py`. It uses a `while` loop to move the `Painter` forward while it's facing east.\r\n\r\n   * Inside the loop, the `Painter` moves and checks if it's on a paint bucket.\r\n   \r\n   * If it *is* on a bucket, it takes all the paint.\r\n   \r\n   * But if it's **not** on a bucket, nothing happens!\r\n\r\n2. Add an `else` statement so the `Painter` turns right when it's *not* on a paint bucket.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/e025b324ee29d7dab8fd6c5c911729ac-choiceC.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse `else` to give the `Painter` a backup plan. Think of it as: *\"If not this, then that.\"*",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -583,6 +582,7 @@
       "type": "validation"
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-14T23:14:09.302+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson12-level2c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson12-level2c_2025-launch\"},{\"changed_at\":\"2025-04-19 23:29:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 23:34:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 00:00:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 03:07:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 15:19:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 15:20:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 15:20:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 15:20:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-20 15:24:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 14:19:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 14:29:41 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 18:55:10 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 18:35:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 19:40:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -57,6 +57,7 @@
       "CSD U3L3 - PredictEmbed_2025"
     ],
     "project_template_level_name": "CSD U3L4 - PredicTemplate_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

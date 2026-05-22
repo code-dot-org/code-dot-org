@@ -1,0 +1,93 @@
+name 'pl-aif-2-U3-lists-of-objects-5_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# List of Objects
+
+To get comfortable working with data in JavaScript, it helps to understand how information is organized when we store multiple related items. This is done with an **array of objects**.
+
+In the example below, **supplies is an array**, meaning it’s a list that holds multiple items.
+
+Each of those items is an **object**, and every object represents one record. In this case, one classroom supply.
+
+---
+
+<img src="https://images.code.org/6423ab0ee4f839ab61af6813222fa1ed-image-1779378607236.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+### **How to interpret this structure:**
+
+- The array (`supplies`) is the entire dataset — a list of all supply records.
+
+- Each object inside the array represents a single supply item.
+
+- The object’s properties (`id`, `name`, `location`) describe different pieces of information about that item.
+
+- For example,
+
+	- `{ id: 103, name: "Stapler", location: "Desk 1" }` tells us that the item with ID 3 is a Stapler, stored in Desk 1.
+
+This structure is extremely common in real-world data: a dataset (the array) made up of many individual records (the objects), each with fields that describe them.
+
+
+---
+
+
+## 🔍 Check for Understanding: Read the Structure
+
+Look at the array of objects below. Then use the questions to check whether you can identify the main parts of the structure.
+
+<img src="https://images.code.org/006df5661ce3cdff8a7710c36f530456-image-1779291695656.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Which part is the array?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+The array is <code>pets</code>. It holds the full list of pet objects.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Which part is one object?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+One object is <code>{ id: 201, name: "Milo", type: "Dog" }</code>. It represents one pet record.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Which part is one property?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+One property is <code>name</code>. A property stores one specific piece of information inside an object.
+</div>
+</details>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> Students may understand the words array, object, and property separately, but still struggle to see how they fit together in code. Have them point to each part in the example before asking them to explain it in words.
+</p>
+
+</div>
+
+
+---
+
+## Next up
+
+We will use AI to generate an array with 5 objects and practice updating an app. 
+
+
+
+MARKDOWN

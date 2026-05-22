@@ -1,14 +1,14 @@
+import {Typography} from '@mui/material';
 import image1 from '@public/images/action-block-01.png';
 import image2 from '@public/images/action-block-02.png';
 import image3 from '@public/images/action-block-03.png';
 import image4 from '@public/images/action-block-04.png';
 import image5 from '@public/images/action-block-05.png';
 import image6 from '@public/images/action-block-06.png';
-import type {Meta, StoryFn} from '@storybook/react-webpack5';
+import type {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect, userEvent} from 'storybook/test';
 
 import ActionBlock from '@/actionBlock';
-import {Heading2} from '@/typography';
 import Video from '@/video';
 
 import Carousel, {CarouselProps} from '../index';
@@ -47,7 +47,9 @@ const createBasicSlide = (index: number) => (
     key={index}
   >
     <div style={{margin: '0 auto'}}>
-      <Heading2>This is slide {index.toString()}</Heading2>
+      <Typography variant="h2" gutterBottom>
+        This is slide {index.toString()}
+      </Typography>
     </div>
   </div>
 );
@@ -267,7 +269,7 @@ ActionBlockCarousel.args = {
           image={{src: image1}}
           overline={'Overline 1'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -282,7 +284,7 @@ ActionBlockCarousel.args = {
           image={{src: image2}}
           overline={'Overline 2'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -297,7 +299,7 @@ ActionBlockCarousel.args = {
           image={{src: image3}}
           overline={'Overline 3'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -312,7 +314,7 @@ ActionBlockCarousel.args = {
           image={{src: image4}}
           overline={'Overline 4'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -327,7 +329,7 @@ ActionBlockCarousel.args = {
           image={{src: image5}}
           overline={'Overline 5'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -342,7 +344,7 @@ ActionBlockCarousel.args = {
           image={{src: image6}}
           overline={'Overline 6'}
           primaryButton={{
-            text: 'Primary Button',
+            children: 'Primary Button',
             href: '#',
           }}
         />
@@ -532,43 +534,19 @@ ImageCarousel.args = {
   slides: [
     {
       id: 'image-slide-1',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
-          style={{width: '100%'}}
-          alt="Slide 1"
-        />
-      ),
+      slide: <img src={image1} style={{width: '100%'}} alt="Slide 1" />,
     },
     {
       id: 'image-slide-2',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 2"
-        />
-      ),
+      slide: <img src={image2} style={{width: '100%'}} alt="Slide 2" />,
     },
     {
       id: 'image-slide-3',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 3"
-        />
-      ),
+      slide: <img src={image3} style={{width: '100%'}} alt="Slide 3" />,
     },
     {
       id: 'image-slide-4',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
-          style={{width: '100%'}}
-          alt="Slide 4"
-        />
-      ),
+      slide: <img src={image4} style={{width: '100%'}} alt="Slide 4" />,
     },
   ],
 };

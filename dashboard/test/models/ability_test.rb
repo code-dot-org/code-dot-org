@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class AbilityTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
@@ -998,6 +997,53 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   # other :aichat_request and aichat_event actions are tested via respective controller tests.
+
+  test 'teachers cannot manage demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    section.add_student student
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
+
+    refute Ability.new(teacher).can?(:manage, student)
+  end
+
+  test 'teachers can manage non-demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    section.add_student student
+
+    refute Policies::DemoSections.demo_student?(student.id)
+    assert Ability.new(teacher).can?(:manage, student)
+  end
+
+  test 'teachers cannot manage UserLevel for demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    section.add_student student
+    user_level = create(:user_level, user: student)
+
+    Policies::DemoSections.stubs(:demo_student?).with(student.id).returns(true)
+
+    refute Ability.new(teacher).can?(:manage, user_level)
+  end
+
+  test 'teachers can manage UserLevel for non-demo students' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    Policies::DemoSections.stubs(:demo_student?).returns(false)
+    section.add_student student
+    user_level = create(:user_level, user: student)
+
+    assert Ability.new(teacher).can?(:manage, user_level)
+  end
 
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create(:code_review_group, section: section)

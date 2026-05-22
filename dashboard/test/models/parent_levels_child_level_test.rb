@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class ParentLevelsChildLevelTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   test 'validate child level kind' do
     parent = create(:level)
     child = create(:free_response)

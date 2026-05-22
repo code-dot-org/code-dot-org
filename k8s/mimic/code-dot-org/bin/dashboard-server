@@ -1,4 +1,8 @@
 #!/bin/bash
+set -euo pipefail
 
-cd $(dirname "$0")/../dashboard-server-mimic
-npm start
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+export BUNDLE_GEMFILE="${ROOT_DIR}/Gemfile"
+
+cd "${ROOT_DIR}/dashboard-server-mimic"
+exec bundle exec rails server -b 0.0.0.0 -p 3000

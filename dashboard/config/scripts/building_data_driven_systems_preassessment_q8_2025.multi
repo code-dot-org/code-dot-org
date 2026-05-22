@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q8_2025'
+
+question 'An AI generates a dataset of "Doctors" that only includes male names and photos. This is an example of:'
+
+wrong 'Algorithmic efficiency'
+wrong 'Data schema optimization'
+right 'Training data bias'
+wrong 'A rendering error in the DOM'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+If an AI is trained on data that lacks diversity or reflects societal stereotypes, its output will reinforce those biases, such as associating a specific profession with only one gender.
+MARKDOWN

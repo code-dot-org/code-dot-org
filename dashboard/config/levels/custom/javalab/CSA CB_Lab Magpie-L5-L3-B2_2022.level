@@ -14,7 +14,7 @@
     "csa_view_mode": "console",
     "display_name": "Adding Elements- Advanced",
     "thumbnail_url": "https://images.code.org/0898a6c13e18ace16ed77a8d05f0c8be-sugar-cube (1).png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-07-19T20:03:47.915+00:00\",\"changed\":[\"cloned from \\\"CSA CB_Lab Magpie-L5-L3-B1_2022\\\"\"],\"cloned_from\":\"CSA CB_Lab Magpie-L5-L3-B1_2022\"},{\"changed_at\":\"2022-07-19 20:03:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-19 20:14:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-19 20:24:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-22 16:10:50 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

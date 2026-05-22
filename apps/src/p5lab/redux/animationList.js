@@ -6,17 +6,12 @@ import {combineReducers} from 'redux';
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import {
-  projectChanged,
-  isOwner,
-  getCurrentId,
-} from '@cdo/apps/code-studio/initApp/project';
+import {projectChanged, isOwner} from '@cdo/apps/code-studio/initApp/project';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {createUuid} from '@cdo/apps/utils';
 
 import {P5LabInterfaceMode} from '../constants';
@@ -731,26 +726,6 @@ function loadAnimationFromSource(key, callback) {
         console.log('Failed to load animation ' + key, err);
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
-
-        // Log data about when this scenario occurs
-        firehoseClient.putRecord(
-          {
-            study: 'animation_no_load',
-            study_group: 'animation_no_load_v4',
-            event: isOwner()
-              ? 'animation_not_loaded_owner'
-              : 'animation_not_loaded_viewer',
-            project_id: getCurrentId(),
-            data_json: JSON.stringify({
-              sourceUrl: sourceUrl,
-              mainJsonSourceUrl: state.animationList.propsByKey[key].sourceUrl,
-              version: state.animationList.propsByKey[key].version,
-              animationName: state.animationList.propsByKey[key].name,
-              error: err.message,
-            }),
-          },
-          {includeUserId: true}
-        );
 
         if (isOwner()) {
           // Display error dialog

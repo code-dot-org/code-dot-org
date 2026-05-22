@@ -15,7 +15,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "stay_on_level_after_submit": "false",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-22T01:51:53.517+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson3-level2a-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson3-level2a-2024\"}]",

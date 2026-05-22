@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -36,23 +36,6 @@ const VALID_LIBRARIES = [
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
-
-const NO_DANCER_MOVE = 'none';
-const SUPPORTED_DANCE_MOVES = [
-  {value: NO_DANCER_MOVE, text: '(no dancer)'},
-  {value: 'rest', text: 'None (Rest)'},
-  {value: 'roll', text: 'Body Roll'},
-  {value: 'clap_high', text: 'Clap High'},
-  {value: 'dab', text: 'Dab'},
-  {value: 'double_jam', text: 'Double Down'},
-  {value: 'drop', text: 'Drop'},
-  {value: 'floss', text: 'Floss'},
-  {value: 'fresh', text: 'Fresh'},
-  {value: 'clown', text: 'Gangnam'},
-  {value: 'kick', text: 'Star'},
-  {value: 'this_or_that', text: 'This or That'},
-  {value: 'thriller', text: 'Zombie'},
-];
 
 interface EditMusicLevelDataProps {
   initialLevelData: MusicLevelData;
@@ -207,9 +190,9 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   setLevelData({...levelData, packId, sounds});
                 }}
               />
-              <BodyFourText>
+              <Typography variant="body4" gutterBottom>
                 <i>Numbers in square brackets indicate the pack tempo (BPM).</i>
-              </BodyFourText>
+              </Typography>
             </div>
           )}
           {levelData.library && loadedLibraries[levelData.library] ? (
@@ -311,11 +294,15 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             <label htmlFor="validationTimeout" className={moduleStyles.label}>
               Validation Timeout:
             </label>
-            <BodyFourText className={moduleStyles.helperText}>
+            <Typography
+              className={moduleStyles.helperText}
+              variant="body4"
+              gutterBottom
+            >
               This value determines when (in measures) non-success validation
               messages should start appearing. If the timeout is reached or the
               last measure has completed, messages will be shown.
-            </BodyFourText>
+            </Typography>
 
             <input
               type="number"
@@ -334,29 +321,6 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 });
               }}
               className={moduleStyles.input}
-            />
-          </div>
-          <div className={moduleStyles.inputRow}>
-            <label htmlFor="danceMove" className={moduleStyles.label}>
-              Hour of AI Settings:
-            </label>
-            <BodyFourText className={moduleStyles.helperText}>
-              If a dance move is set, the selected dance move will be used to
-              animate an AI generated Lottie Dancer over the timeline.
-            </BodyFourText>
-            <SimpleDropdown
-              labelText="Dance Move"
-              name="danceMove"
-              size="s"
-              items={SUPPORTED_DANCE_MOVES}
-              selectedValue={levelData.danceMove}
-              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-                let danceMove: string | undefined = event.target.value;
-                if (danceMove === NO_DANCER_MOVE) {
-                  danceMove = undefined;
-                }
-                setLevelData({...levelData, danceMove});
-              }}
             />
           </div>
         </div>

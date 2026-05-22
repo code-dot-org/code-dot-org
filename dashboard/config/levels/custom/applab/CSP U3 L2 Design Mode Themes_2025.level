@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:20:23.000Z",
   "level_num": "custom",
@@ -40,11 +39,10 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:20:23.497+00:00\",\"changed\":[\"cloned from \\\"CSP U3 L2 Design Mode Themes_2024\\\"\"],\"cloned_from\":\"CSP U3 L2 Design Mode Themes_2024\"},{\"changed_at\":\"2025-08-04 21:25:10 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-04 21:26:16 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>

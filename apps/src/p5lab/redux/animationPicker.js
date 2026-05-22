@@ -2,7 +2,6 @@
 import _ from 'lodash';
 
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {makeEnum} from '@cdo/apps/utils';
 
 import {changeInterfaceMode} from '../actions';
@@ -210,15 +209,6 @@ export function exitedUploadWarning() {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
-  firehoseClient.putRecord({
-    study: 'animation-library',
-    study_group: 'control-2020',
-    event: 'upload',
-    data_json: JSON.stringify({
-      size: result.size,
-    }),
-  });
-
   return function (dispatch, getState) {
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
@@ -341,15 +331,6 @@ export function pickNewAnimation() {
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
-  firehoseClient.putRecord({
-    study: 'sprite-use',
-    study_group: 'before-update-v2',
-    event: 'select-sprite',
-    data_json: JSON.stringify({
-      name: animation.name,
-      sourceUrl: animation.sourceUrl,
-    }),
-  });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     const selectedAnimations = getState().animationPicker.selectedAnimations;

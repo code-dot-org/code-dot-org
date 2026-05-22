@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson9-level1_2026-test'
+display_name 'The AI Stress Test'
+description 'Stress test your Responsible AI Guide by choosing one of these purpose-built AI Chatbots designed to challenge your thinking'
+
+sublevels
+level 'aid-thinking-critically-lesson9-level1a_2026-test'
+level 'aid-thinking-critically-lesson9-level1b_2026-test'
+level 'aid-thinking-critically-lesson9-level1c_2026-test'
+
+uses_lab2

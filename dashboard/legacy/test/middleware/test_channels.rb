@@ -204,15 +204,15 @@ class ChannelsTest < Minitest::Test
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 456, response['def']
 
-    _, storage_app_id = storage_decrypt_channel_id(response['id'])
-    _, parent_storage_app_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
+    _, storage_app_id = get_storage_id_and_project_id(response['id'])
+    _, parent_storage_app_id = get_storage_id_and_project_id(encrypted_parent_channel_id)
     assert_equal parent_storage_app_id, Projects.table.where(id: storage_app_id).first[:remix_parent_id]
   end
 
   def test_update_project_type
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     encrypted_channel_id = last_response.location.split('/').last
-    _, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    _, storage_app_id = get_storage_id_and_project_id(encrypted_channel_id)
     assert_nil Projects.table.where(id: storage_app_id).first[:project_type]
 
     post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -244,6 +244,38 @@ class ChannelsTest < Minitest::Test
   def test_create_with_bad_thumbnail_fails
     post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert_equal 400, last_response.status
+  end
+
+  def test_update_channel_truncates_subprojects_for_music_dance_ai
+    project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    max_subprojects = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS
+
+    post '/v3/channels', {projectType: project_type}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    subprojects = Array.new(max_subprojects + 2) {|i| {"channel_id" => "sub_#{i}", "level_id" => "level_#{i}"}}
+    post "/v3/channels/#{channel_id}", {projectType: project_type, subprojects: subprojects}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_equal max_subprojects, result['subprojects'].length
+    assert_equal subprojects.first(max_subprojects), result['subprojects']
+  end
+
+  def test_update_channel_removes_subprojects_for_non_music_dance_ai
+    post '/v3/channels', {projectType: 'applab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    subprojects = [{"channel_id" => "sub_0", "level_id" => "level_0"}]
+    post "/v3/channels/#{channel_id}", {projectType: 'applab', subprojects: subprojects}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_nil result['subprojects']
   end
 
   private def timestamp(time)

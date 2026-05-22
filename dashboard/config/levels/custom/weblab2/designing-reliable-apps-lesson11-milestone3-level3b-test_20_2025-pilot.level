@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:56.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Implement Try Catch Error",
+    "long_instructions": "# Implement Try Catch Error Handling\r\n\r\n**Goal:** Prevent your app from breaking when the API fails or returns an error.\r\n\r\n1. **Wrap Your Fetch in Try Catch:** Place your async fetch logic inside a try block.\r\n2. **Catch Errors Safely:** Use a catch block to handle any errors that occur.\r\n3. **Show a Helpful Message:** Display a clear, user-friendly error message such as \"Could not load data. Please try again.\"\r\n4. **Avoid Silent Failures:** Make sure the app does not freeze or stay blank if the fetch fails.\r\n5. **Test It:** Temporarily break your API URL to confirm your error message appears.\r\n",
+    "bubble_choice_description": "Protect your app from crashing by wrapping your fetch logic in try catch and displaying a helpful error message if something goes wrong. ***(supports completing Milestone 3 tasks)***",
+    "thumbnail_url": "https://images.code.org/bc42afd8f1e38db4b3bdee1dc18a3899-shield.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:56.319+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone3-level3b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone3-level3b-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-25 20:09:28 UTC",
+    "serialized_at": "2026-05-19 18:32:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1127,6 +1127,23 @@
       }
     },
     {
+      "key": "011cf4da-8618-43d0-94a7-b2767d21b20e",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students answer the quick reflection on which parts of the data scientist role AI could do and which parts need people.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time, you might consider using the [“View Student Responses” feature](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) to look at all our students responses to this question and facilitate a discussion based on what your students submitted. You can pin and hide responses to help moderate in-class discussions, which are a great tool for encouraging equitable learning outcomes for all students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "011cf4da-8618-43d0-94a7-b2767d21b20e",
+        "lesson_activity.key": "727f2853-5d14-488c-9e76-3fe78db69ec1"
+      }
+    },
+    {
       "key": "9eeda234-451e-4e8b-bb6d-edee4cf2928a",
       "position": 1,
       "properties": {
@@ -1148,7 +1165,7 @@
       "key": "9784ecc2-789f-4123-a6ed-05d46016cae4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce data tables.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen or used data tables? Where were you? Where did the words or numbers in the data table come from? How did you use it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point of this discussion is just to get a few examples shared out loud that demonstrate the diversity of situations where data tables are found.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add ***spreadsheet*** to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce data tables.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen or used data tables? Where were you? Where did the words or numbers in the data table come from? How did you use it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point of this discussion is just to get a few examples shared out loud that demonstrate the diversity of situations where data tables are found.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Introduction to Data Science Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add ***spreadsheet*** to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9784ecc2-789f-4123-a6ed-05d46016cae4",
@@ -1171,7 +1188,7 @@
       "key": "0165b81f-e12b-4f98-804e-3737f4e0c49b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart. Note that even though there are 517 rows in this spreadsheet, the sample size is 516 because row number 1 is not data but attribute labels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart and direct students to fill in their Unit 1 Guided Notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart. Note that even though there are 517 rows in this spreadsheet, the sample size is 516 because row number 1 is not data but attribute labels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
         "progression_name": "Read 1: Context",
         "tips": [
           {
@@ -1211,7 +1228,7 @@
       "key": "22743e5b-3434-41e3-8433-30b33deb0aec",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***range***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***average***. Explain how spreadsheets assist with calculating averages even when it might be hard to do this manually.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***range***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***average***. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how spreadsheets assist with calculating averages even when it might be hard to do this manually.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
         "progression_name": "Read 3: Questions"
       },
       "seeding_key": {
@@ -1406,7 +1423,7 @@
       "key": "fa106787-9487-4349-804d-be8198ec37e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3. On each level, they'll read a scenario, choose the person they agree with most, and explain why in the free response box. These scenarios will help them prepare for a whole-class 4 Corners discussion about each scenario on ethical decision-making in data collection.\n* **Level 1:** Students read the scenario and decide which person they agree with regarding collecting data about food allergies. \n* **Level 2:** Students read the scenario and decide which person they agree with regarding collecting data about getting sponsorships.\n* **Level 3:** Students read the scenario and decide which person they agree with regarding collecting data about music choices. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Introduction to Data Science Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3. On each level, they'll read a scenario, choose the person they agree with most, and explain why in the free response box. These scenarios will help them prepare for a whole-class 4 Corners discussion about each scenario on ethical decision-making in data collection.\n* **Level 1:** Students read the scenario and decide which person they agree with regarding collecting data about food allergies. \n* **Level 2:** Students read the scenario and decide which person they agree with regarding collecting data about getting sponsorships.\n* **Level 3:** Students read the scenario and decide which person they agree with regarding collecting data about music choices. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, check responses or prompt with light questions to encourage deeper thinking. Focus on how they’re weighing trade-offs around privacy, consent, fairness, or inclusion.",
         "progression_name": "Party Planning",
         "tips": [
           {
@@ -1424,7 +1441,7 @@
       "key": "d99f8db6-2d33-4b3a-992f-a07a531f596b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, check responses or prompt with light questions to encourage deeper thinking. Focus on how they’re weighing trade-offs around privacy, consent, fairness, or inclusion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students finish all three levels, facilitate a 4 Corners discussion about each scenario. Ask students to pick the person they most agreed with from each scenario and stand in that corner. If they didn’t agree with anyone fully, they can choose \"Other.\" \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After each corner shares, ask the class any of the follow-up questions listed below that would help push their thinking about ethical data collection based on what was shared by each corner: \n* What value did that person prioritize (e.g., privacy, consent, fairness)?\n* Could their choice unintentionally harm someone or leave someone out?\n* Was there a better way to collect or protect the data?\n",
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students finish all three levels, facilitate a 4 Corners discussion about each scenario. Ask students to pick the person they most agreed with from each scenario and stand in that corner. If they didn’t agree with anyone fully, they can choose \"Other.\" \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After each corner shares, ask the class any of the follow-up questions listed below that would help push their thinking about ethical data collection based on what was shared by each corner: \n* What value did that person prioritize (e.g., privacy, consent, fairness)?\n* Could their choice unintentionally harm someone or leave someone out?\n* Was there a better way to collect or protect the data?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1503,10 +1520,21 @@
       "key": "b0b0b5c3-97b0-4732-98f8-e8ef02ef9437",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity. Ask students to come up with additional examples of data that could be collected using each of these methods to reinforce their understanding of how each collection method works.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity. Ask students to come up with additional examples of data that could be collected using each of these methods to reinforce their understanding of how each collection method works.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which data collection method raises the most privacy or ethical concerns? Which seems the least concerning? What reasoning supports your rankings?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to evaluate each method (automated collection, surveys, sensors) based on privacy, consent, control, and transparency. Emphasize that there is no single correct ranking — encourage students to share their reasoning and challenge assumptions.\n- Automated collection may raise concerns because it often happens without the user's knowledge.\n- Surveys can collect personal or sensitive information depending on the questions asked.\n- Sensors or measurements might seem neutral, but could raise concerns about surveillance or context.\n\nHelp students recognize that ethical complexity isn’t just about the method, but how and why it’s used.\n"
       },
       "seeding_key": {
         "activity_section.key": "b0b0b5c3-97b0-4732-98f8-e8ef02ef9437",
+        "lesson_activity.key": "a42469fa-dc78-41e2-971e-f8bc612c22a6"
+      }
+    },
+    {
+      "key": "05999250-5d7d-40c6-b5d7-f959b9de6366",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
+      },
+      "seeding_key": {
+        "activity_section.key": "05999250-5d7d-40c6-b5d7-f959b9de6366",
         "lesson_activity.key": "a42469fa-dc78-41e2-971e-f8bc612c22a6"
       }
     },
@@ -2699,7 +2727,7 @@
       "key": "b86cd471-6e0e-4f00-9203-2de63d34268c",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which approach feels more accurate or respectful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say revising the entry preserves the intent, while deleting it removes a valid opinion. The goal is for students to recognize that respectful data cleaning means balancing clarity with the original meaning of the response.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What assumptions did AI make that you didn’t?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The goal is to prompt students to reflect on how AI may have interpreted the tone, intent, or meaning differently than they did.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which approach feels more accurate or respectful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say revising the entry preserves the intent, while deleting it removes a valid opinion. The goal is for students to recognize that respectful data cleaning means balancing clarity with the original meaning of the response.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What assumptions did AI make that you didn’t?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The goal is to prompt students to reflect on how AI may have interpreted the tone, intent, or meaning differently than they did.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What costs might come with relying on AI for cleaning—time, money, energy?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will analyze the potential costs of using AI to clean datasets, considering how computing time, financial expense, and energy use contribute to the environmental impact of AI systems. They will discuss how choices in implementing and utilizing AI affect its long-term sustainability and resource consumption."
       },
       "seeding_key": {
         "activity_section.key": "b86cd471-6e0e-4f00-9203-2de63d34268c",
@@ -3983,6 +4011,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-preassessment_v2-2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4005,6 +4036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level1_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4027,6 +4061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level2_v2-2025"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -4047,8 +4084,36 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level3_v3-2025"
+        ],
+        "progression": "Data Scientists"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level3_v3-2025"
+        ],
+        "lesson.key": "Lesson 1: Introduction to Data Science",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-v2-2025",
+        "activity_section.key": "426ff5de-5790-4794-93c1-029c06beb091"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson1-level3_v3-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level4_v2-2025"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -4066,11 +4131,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level1_v2-2025"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -4088,11 +4156,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level2_v2-2025"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -4110,11 +4181,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level3_v2-2025"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -4132,11 +4206,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson2_ai_chat_v2-2025"
+        ],
         "progression": "Analyze Data with AI"
       },
       "bonus": false,
@@ -4154,11 +4231,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level4_v2-2025"
+        ],
         "progression": "Pizza Slice Data Set"
       },
       "bonus": false,
@@ -4176,11 +4256,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level1_v2-2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -4198,11 +4281,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level2_v2-2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -4220,11 +4306,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level3_v2-2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -4242,11 +4331,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level4_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4264,11 +4356,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson4-level1-choice_v2-2025"
+        ],
         "progression": "Choose a Stakeholder"
       },
       "bonus": false,
@@ -4286,11 +4381,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level1-v2_v2-2025"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -4308,11 +4406,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level2-v2_v2-2025"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -4330,11 +4431,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level3-v2_v2-2025"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -4352,11 +4456,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4374,11 +4481,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson5_aichat_v2-2025"
+        ],
         "progression": "Evaluate Data Questions with AI"
       },
       "bonus": false,
@@ -4396,11 +4506,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level1_v2-2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4418,11 +4531,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_v2-2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4440,11 +4556,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level2_v2-2025"
+        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -4462,11 +4581,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_2_v2-2025"
+        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -4484,11 +4606,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level3_v2-2025"
+        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -4506,11 +4631,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_3_v2-2025"
+        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -4528,11 +4656,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-level1_2025_launch_v2-2025"
+        ],
         "progression": "Creating Bar Charts"
       },
       "bonus": false,
@@ -4550,11 +4681,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level3_v2-2025"
+        ],
         "progression": "Creating Bar Charts"
       },
       "bonus": false,
@@ -4572,11 +4706,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel3_2025_launch_v2-2025"
+        ],
         "progression": "Creating Pie Charts"
       },
       "bonus": false,
@@ -4594,11 +4731,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level4_v2-2025"
+        ],
         "progression": "Creating Pie Charts"
       },
       "bonus": false,
@@ -4616,11 +4756,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel6-2025-launch_v2-2025"
+        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4638,11 +4781,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level6_v2-2025"
+        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4660,11 +4806,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson7_ai_chat_v2-2025"
+        ],
         "progression": "AI Chat: Data Visualizations"
       },
       "bonus": false,
@@ -4682,11 +4831,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-Free_Response-2025-launch_v2-2025"
+        ],
         "progression": "AI Reflection"
       },
       "bonus": false,
@@ -4704,11 +4856,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level1_v2-2025"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4726,11 +4881,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-cleaning-data-panel_2025_launch_v2-2025"
+        ],
         "progression": "Cleaning Data Panel"
       },
       "bonus": false,
@@ -4748,11 +4906,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level3_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4770,11 +4931,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson8_aichat_v2-2025"
+        ],
         "progression": "Ask AI for Cleaning Tips"
       },
       "bonus": false,
@@ -4792,11 +4956,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level1_v2-2025"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4814,11 +4981,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level2-choice_v2-2025"
+        ],
         "progression": "Data Interpretation"
       },
       "bonus": false,
@@ -4836,11 +5006,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3_v2-2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4858,11 +5031,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4880,11 +5056,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level1-v2_v2-2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4902,11 +5081,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level2_v2-2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4924,11 +5106,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level3_v2-2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4946,11 +5131,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level4_v2-2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4968,11 +5156,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-histogram-panel_2025_launch_v2-2025"
+        ],
         "progression": "Creating Histograms"
       },
       "bonus": false,
@@ -4990,11 +5181,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level6_v2-2025"
+        ],
         "progression": "Creating Histograms"
       },
       "bonus": false,
@@ -5012,11 +5206,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-scatter-plot-panel_2025_launch_v2-2025"
+        ],
         "progression": "Creating Scatterplots"
       },
       "bonus": false,
@@ -5034,11 +5231,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level7_v2-2025"
+        ],
         "progression": "Creating Scatterplots"
       },
       "bonus": false,
@@ -5056,11 +5256,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-formulas-panel_2025_launch_v2-2025"
+        ],
         "progression": "Using Formulas with Datasets"
       },
       "bonus": false,
@@ -5078,11 +5281,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-formulas-free-response_v2-2025"
+        ],
         "progression": "Using Formulas with Datasets"
       },
       "bonus": false,
@@ -5100,11 +5306,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level10_v2-2025"
+        ],
         "progression": "Independent Practice"
       },
       "bonus": false,
@@ -5122,11 +5331,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datasci-U1L12-projectL1_pilot2024_v2-2025"
+        ],
         "progression": "Data Set Choices"
       },
       "bonus": false,
@@ -5144,11 +5356,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level2_v2-2025"
+        ],
         "progression": "Data Decisions and Visualizations"
       },
       "bonus": false,
@@ -5166,11 +5381,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level3_v2-2025"
+        ],
         "progression": "Your Data Story"
       },
       "bonus": false,
@@ -5188,11 +5406,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level4fr_v2-2025"
+        ],
         "progression": "The Data Cycle"
       },
       "bonus": false,
@@ -5210,11 +5431,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_aichat_datacoach_v2-2025"
+        ],
         "progression": "AI Data Coach"
       },
       "bonus": false,
@@ -5232,11 +5456,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_datascience_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -5254,11 +5481,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-postassessment_v2-2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -5276,11 +5506,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_2025-launch_v2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -5328,6 +5561,18 @@
         "level.key": "data-science-ch1-lesson1-level2_v2-2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson1-level2_v2-2025"
+        ],
+        "lesson.key": "Lesson 1: Introduction to Data Science",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-v2-2025",
+        "activity_section.key": "426ff5de-5790-4794-93c1-029c06beb091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson1-level3_v3-2025",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level3_v3-2025"
         ],
         "lesson.key": "Lesson 1: Introduction to Data Science",
         "lesson_group.key": "lessonGroup-3",
@@ -6452,24 +6697,12 @@
       }
     },
     {
-      "name": "Answering a Data Question",
-      "url": "https://docs.google.com/document/d/1VQdAbsIQbaOy10GuB8Bz0cOIwyDdQxcC36ToJh6ji20/edit?usp=drivesdk",
-      "key": "answering_a_data_question",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "answering_a_data_question"
-      }
-    },
-    {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1-6K-naoslwsVFXmkZ6mHVZdky8r0yJoh-tETk-tE1hc/edit?usp=drive_link",
       "key": "cleaning_data",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6478,10 +6711,11 @@
     },
     {
       "name": "Crafting Stories with Data Project",
-      "url": "https://docs.google.com/presentation/d/1GZLjmW5SsR9TzUAka208QpABs-3zSoK8Z58CqYcDupo/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1FWavLks1hNcMKOGR8vgAhSS2NDP51BpL4RR_7VUHJpY/edit?usp=drive_link",
       "key": "crafting_stories_with_data_project",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6490,28 +6724,16 @@
     },
     {
       "name": "Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1JSShLxB5I7LzttGOn375gzDWGF3MEvRB87jC9eiK0Kw/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1NpJ6bp6kJRzVUBgkoH5gSZVQR-mkHLdxJNkyrLeWDqw/edit?usp=sharing",
       "key": "crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "crafting_stories_with_data_project_planning_guide"
-      }
-    },
-    {
-      "name": "Data Collection Methods",
-      "url": "https://docs.google.com/document/d/1893CI_1yVODybg1RhjUWWLGbbgTUQdGA4Cc7W7mZMcg/edit?usp=drivesdk",
-      "key": "data_collection_methods",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "data_collection_methods"
       }
     },
     {
@@ -6603,26 +6825,15 @@
     },
     {
       "name": "Effective Data Questions",
-      "url": "https://docs.google.com/presentation/d/14QcGIQEK2tu4yqurjXU5dSCpdwFdKS7Sfv2s3VMbJqU/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1Q6WTd7rz1FdchrLwUIrJ9xH_-rbALdxU_CBqjXoG5zA/edit?usp=drive_link",
       "key": "effective_data_questions",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "effective_data_questions"
-      }
-    },
-    {
-      "name": "Ethical Data Collection",
-      "url": "https://docs.google.com/presentation/d/1O6KKdwFNCpWrkLYD9UixqvqocZB8gbb7p-gyjYFbEzY/edit?usp=drivesdk",
-      "key": "ethical_data_collection",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "ethical_data_collection"
       }
     },
     {
@@ -6660,10 +6871,11 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1pQYxYQZlE9Kl7H_a8yxVp7Y2H3W5gDAETPWR7PGa1u4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1WeJHU2Bf42ZLw7OmBUyBk5X4mQG_46drhNgAYulPpwU/edit?usp=drive_link",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6680,30 +6892,6 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_data_visualization"
-      }
-    },
-    {
-      "name": "Making Sense of Data",
-      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
-      "key": "making_sense_of_data",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "making_sense_of_data"
-      }
-    },
-    {
-      "name": "Making Sense of Data - Pizza Dataset",
-      "url": "https://docs.google.com/spreadsheets/d/1uoWX9N6D4q3nAGHUVoHY2ejHJH2WUVA9fFFtfdHUxJU/edit?usp=drivesdk",
-      "key": "making_sense_of_data_-_pizza_dataset",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "making_sense_of_data_-_pizza_dataset"
       }
     },
     {
@@ -6952,54 +7140,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "resource.key": "anchor_charts_in_data_science"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "resource.key": "answering_a_data_question"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "resource.key": "insights_from_data_and_ai_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "resource.key": "making_sense_of_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "resource.key": "making_sense_of_data_-_pizza_dataset"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "resource.key": "data_collection_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "resource.key": "ethical_data_collection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "resource.key": "insights_from_data_and_ai_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 4: Data Rights",
         "resource.key": "data_rights"
       }
@@ -7240,16 +7380,6 @@
   ],
   "vocabularies": [
     {
-      "key": "attribute",
-      "word": "attribute",
-      "definition": "a column in a spreadsheet",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
       "key": "bar_chart",
       "word": "bar chart",
       "definition": "a graph that uses rectangular bars to represent frequency or count",
@@ -7270,16 +7400,6 @@
       }
     },
     {
-      "key": "bias",
-      "word": "bias",
-      "definition": "when our data or the way we analyze it favors certain outcomes over others",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
       "key": "bimodal_curve",
       "word": "bimodal curve",
       "definition": "shows a distribution with two distinct peaks",
@@ -7287,26 +7407,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "bimodal_curve"
-      }
-    },
-    {
-      "key": "case",
-      "word": "case",
-      "definition": "a row of data in a spreadsheet",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "case"
-      }
-    },
-    {
-      "key": "cells",
-      "word": "cells",
-      "definition": "data in a spreadsheet is organized in boxes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "cells"
       }
     },
     {
@@ -7327,36 +7427,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "data_cleaning"
-      }
-    },
-    {
-      "key": "data_collection",
-      "word": "data collection",
-      "definition": "the process of gathering and recording information from different sources",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_collection"
-      }
-    },
-    {
-      "key": "data_ethics",
-      "word": "data ethics",
-      "definition": "the set of guidelines that ensure the responsible use, collection, and sharing of data while respecting privacy, consent, and fairness",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_ethics"
-      }
-    },
-    {
-      "key": "data_question",
-      "word": "data question",
-      "definition": "a question that can be answered by the data",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_question"
       }
     },
     {
@@ -7480,16 +7550,6 @@
       }
     },
     {
-      "key": "sample_size",
-      "word": "sample size",
-      "definition": "the total number of cases",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sample_size"
-      }
-    },
-    {
       "key": "scatter_plot",
       "word": "scatter plot",
       "definition": "a graph that uses dots to represent the values of two different variables",
@@ -7517,16 +7577,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "skewed_distribution"
-      }
-    },
-    {
-      "key": "spreadsheet",
-      "word": "spreadsheet",
-      "definition": "a large data table on a computer",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "spreadsheet"
       }
     },
     {
@@ -7563,60 +7613,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Data Science",
         "vocabulary.key": "data_science"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "cells"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "data_question"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "sample_size"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: Making Sense of Data",
-        "vocabulary.key": "spreadsheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "vocabulary.key": "data_collection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Ethical Data Collection",
-        "vocabulary.key": "data_ethics"
       }
     },
     {
@@ -8123,6 +8119,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -12,7 +12,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_pl",
     "encrypted": "false",
-    "long_instructions": "## Mutator Methods\r\n\r\n#### A **mutator method** lets you change or \"mutate\" the value assigned to an instance variable.\r\n\r\n#### Watch the video below to learn more about mutator methods."
+    "long_instructions": "## Mutator Methods\r\n\r\nA **mutator method** lets you change or \"mutate\" the value assigned to an instance variable.\r\n\r\nWatch the video below to learn more about mutator methods."
   },
   "published": true,
   "notes": "",

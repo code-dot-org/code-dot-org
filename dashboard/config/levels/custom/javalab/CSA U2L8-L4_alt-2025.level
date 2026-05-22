@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T21:57:58.000Z",
   "level_num": "custom",
@@ -22,11 +21,9 @@
     "project_template_level_name": "CSA U2L8-Operators PBT_alt-2025",
     "teacher_markdown": "The `while loop` is configured to print the `%10` (modulo 10) of the last digit and then remove it. Adding in the code snippet will print the following to the console:\r\n\r\n```\r\nOriginal number: 12345\r\nExtracted Digit: 5\r\nExtracted Digit: 4\r\nExtracted Digit: 3\r\nExtracted Digit: 2\r\nExtracted Digit: 1\r\n```",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:57:58.418+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L8-L4_pilot-2025\"},{\"changed_at\":\"2025-03-26 21:02:32 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-06-25 15:53:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 19:40:14 +0000\",\"changed\":[\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

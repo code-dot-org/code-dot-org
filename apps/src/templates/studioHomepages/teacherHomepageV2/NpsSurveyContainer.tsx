@@ -1,6 +1,11 @@
 import React, {useMemo} from 'react';
 
-import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
+import loadable from '@cdo/apps/util/loadable';
+
+const LoadableFoorm = loadable(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('@cdo/apps/code-studio/pd/foorm/Foorm' as any)
+);
 
 const customCssClasses = {
   root: 'nps-survey-root',
@@ -108,7 +113,7 @@ const NpsSurveyContainer: React.FC<NpsSurveyContainerProps> = ({
   return (
     <div>
       {surveyProps && (
-        <Foorm
+        <LoadableFoorm
           {...surveyProps}
           customCssClasses={customCssClasses}
           onComplete={onComplete}

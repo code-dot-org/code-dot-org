@@ -4,8 +4,6 @@ module Pd::Foorm
   class HelperTest < ActiveSupport::TestCase
     include Helper
 
-    self.use_transactional_test_case = true
-
     test 'get_survey_key gets correct survey key' do
       ws_submission_day_0 = create(:pd_workshop_foorm_submission, day: 0)
       ws_submission_day_0_module = create(:pd_workshop_foorm_submission, day: 0, workshop_agenda: 'module1')

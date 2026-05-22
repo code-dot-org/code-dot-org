@@ -93,6 +93,7 @@
     "bubble_choice_description": "Create an app that lets you customize a digital cafe menu",
     "thumbnail_url": "https://images.code.org/39f01938ced03ef94f30e86edd2b4a47-image-1648831845901.gif",
     "encrypted_examples": "HITcDKIbfTH0fcGa+cwVx/k2wnrNqzenplfbLxny72RUCwyEnCajUAkCWeFa\nTysbU64T1jUcFS6A2A5EDWitDA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

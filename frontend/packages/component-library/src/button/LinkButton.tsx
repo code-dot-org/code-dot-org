@@ -14,12 +14,11 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
 );
 
 /**
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: Link Button Component.
- *
- * Alias for ***GenericButton*** Component. Renders a Button with ```<a>``` html tag.
- *
- * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
+ * @deprecated Use MUI `Button` with `href` prop from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
+ * Codemod available: `yarn codemod:buttons`.
  */
 export default memo(LinkButton);

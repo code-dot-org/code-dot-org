@@ -1,10 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -16,11 +17,8 @@ import {
   setStudentId,
   ASSESSMENT_FEEDBACK_OPTION_ID,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import i18n from '@cdo/locale';
-
-import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../metrics/firehose';
 
 import AssessmentSelector from './AssessmentSelector';
 import FeedbackDownload from './FeedbackDownload';
@@ -36,6 +34,8 @@ import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import StudentSelector from './StudentSelector';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
+
+import moduleStyles from './section-assessments.module.scss';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -64,7 +64,6 @@ class SectionAssessments extends Component {
     scriptId: PropTypes.number,
     courseVersionId: PropTypes.number,
     assessmentId: PropTypes.number,
-    setUnit: PropTypes.func.isRequired,
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
@@ -88,61 +87,30 @@ class SectionAssessments extends Component {
     asyncLoadAssessments(sectionId, scriptId, courseVersionId);
   }
 
-  onSelectScript = (newScriptId, newCourseVersionId) => {
-    const {setUnit, asyncLoadAssessments, scriptId, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, newScriptId, newCourseVersionId);
-    setUnit(newScriptId, newCourseVersionId);
+  componentDidUpdate(prevProps) {
+    const {scriptId, courseVersionId, asyncLoadAssessments, sectionId} =
+      this.props;
 
-    this.logEvent('select_script', {
-      old_script_id: scriptId,
-      new_script_id: newScriptId,
-    });
-  };
+    // If the unit selection changed, reload assessments
+    if (
+      (prevProps.scriptId !== scriptId ||
+        prevProps.courseVersionId !== courseVersionId) &&
+      scriptId &&
+      courseVersionId
+    ) {
+      asyncLoadAssessments(sectionId, scriptId, courseVersionId);
+    }
+  }
 
   onSelectAssessment = newAssessmentId => {
-    const {setAssessmentId, assessmentId, scriptId} = this.props;
+    const {setAssessmentId} = this.props;
     setAssessmentId(newAssessmentId);
-
-    this.logEvent('select_assessment', {
-      script_id: scriptId,
-      old_level_group_id: assessmentId,
-      new_level_group_id: newAssessmentId,
-    });
   };
 
   onSelectStudent = studentId => {
-    const {setStudentId, assessmentId, scriptId} = this.props;
+    const {setStudentId} = this.props;
     setStudentId(studentId);
-
-    this.logEvent('select_student', {
-      student_id: studentId,
-      script_id: scriptId,
-      level_group_id: assessmentId,
-    });
   };
-
-  onClickDownload(dataType) {
-    const {assessmentId, scriptId} = this.props;
-    this.logEvent(`download_${dataType}`, {
-      script_id: scriptId,
-      level_group_id: assessmentId,
-    });
-  }
-
-  logEvent(event, data) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'assessments_surveys',
-        event: event,
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          ...data,
-        }),
-      },
-      {includeUserId: true}
-    );
-  }
 
   showFreeResponseDetailDialog = () => {
     this.setState({
@@ -183,8 +151,6 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      scriptId,
-      courseVersionId,
       assessmentList,
       assessmentId,
       isLoading,
@@ -201,22 +167,18 @@ class SectionAssessments extends Component {
     return (
       // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'assessments-tab'}>
-        <div style={styles.selectors}>
-          <div style={styles.unitSelection}>
-            <div style={{...h3Style, ...styles.header}}>
+        <div className={moduleStyles.selectors}>
+          <div className={moduleStyles.unitSelection}>
+            <Typography variant="h4" className={moduleStyles.header}>
               {i18n.selectACourse()}
-            </div>
-            <UnitSelector
-              scriptId={scriptId}
-              courseVersionId={courseVersionId}
-              onChange={this.onSelectScript}
-            />
+            </Typography>
+            <UnitSelectorV2 v1Styles />
           </div>
           {!isLoading && assessmentList.length > 0 && (
-            <div style={styles.assessmentSelection}>
-              <div style={{...h3Style, ...styles.header}}>
+            <div className={moduleStyles.assessmentSelection}>
+              <Typography variant="h4" className={moduleStyles.header}>
                 {i18n.selectAssessment()}
-              </div>
+              </Typography>
               <AssessmentSelector
                 assessmentList={assessmentList}
                 assessmentId={assessmentId}
@@ -226,39 +188,41 @@ class SectionAssessments extends Component {
           )}
         </div>
         {!isLoading && assessmentList.length > 0 && (
-          <div style={styles.tableContent}>
+          <div className={moduleStyles.tableContent}>
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               !isCurrentAssessmentFeedbackOption && (
                 <div>
-                  <div style={{...h3Style, ...styles.header}}>
+                  <Typography variant="h4" className={moduleStyles.header}>
                     {i18n.selectStudent()}
-                  </div>
+                  </Typography>
                   <StudentSelector
                     studentList={studentList}
                     studentId={studentId}
                     onChange={this.onSelectStudent}
                   />
                   {totalStudentSubmissions > 0 && (
-                    <div style={styles.download}>
-                      <CSVLink
+                    <div className={moduleStyles.download}>
+                      <MuiButton
+                        component={CSVLink}
+                        size="small"
+                        variant="text"
+                        color="secondary"
+                        startIcon={<FontAwesomeV6Icon iconName="download" />}
                         filename="assessments.csv"
                         data={exportableData}
                         headers={CSV_ASSESSMENT_HEADERS}
-                        onClick={() => this.onClickDownload('assessments')}
                       >
-                        <div>{i18n.downloadAssessmentCSV()}</div>
-                      </CSVLink>
+                        {i18n.downloadAssessmentCSV()}
+                      </MuiButton>
                     </div>
                   )}
                   {totalStudentSubmissions <= 0 && (
-                    <div>{i18n.emptyAssessmentSubmissions()}</div>
+                    <Typography variant="body3" gutterBottom>
+                      {i18n.emptyAssessmentSubmissions()}
+                    </Typography>
                   )}
-                  <SubmissionStatusAssessmentsContainer
-                    onClickDownload={() =>
-                      this.onClickDownload('submission_stats')
-                    }
-                  />
+                  <SubmissionStatusAssessmentsContainer />
                   {totalStudentSubmissions > 0 && (
                     <div>
                       <MultipleChoiceAssessmentsOverviewContainer
@@ -280,24 +244,25 @@ class SectionAssessments extends Component {
               )}
             {/* Feedback Download */}
             {isCurrentAssessmentFeedbackOption && (
-              <FeedbackDownload
-                sectionName={sectionName}
-                onClickDownload={() => this.onClickDownload('feedback')}
-              />
+              <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
               <div>
                 {totalStudentSubmissions > 0 && (
                   <div>
-                    <CSVLink
-                      filename="surveys.csv"
-                      data={exportableData}
-                      headers={CSV_SURVEY_HEADERS}
-                      onClick={() => this.onClickDownload('surveys')}
-                    >
-                      <div>{i18n.downloadAssessmentCSV()}</div>
-                    </CSVLink>
+                    <div className={moduleStyles.download}>
+                      <MuiButton
+                        component={CSVLink}
+                        variant="text"
+                        startIcon={<FontAwesomeV6Icon iconName="download" />}
+                        filename="surveys.csv"
+                        data={exportableData}
+                        headers={CSV_SURVEY_HEADERS}
+                      >
+                        {i18n.downloadAssessmentCSV()}
+                      </MuiButton>
+                    </div>
                     <MultipleChoiceSurveyOverviewContainer />
                     <FreeResponsesSurveyContainer
                       openDialog={this.showFreeResponseDetailDialog}
@@ -324,47 +289,17 @@ class SectionAssessments extends Component {
           </div>
         )}
         {isLoading && (
-          <div style={styles.loading}>
-            <FontAwesome icon="spinner" className="fa-pulse fa-3x" />
+          <div>
+            <Spinner size="large" />
           </div>
         )}
         {!isLoading && assessmentList.length === 0 && (
-          <div style={styles.empty}>{i18n.noAssessments()}</div>
+          <Typography variant="body3">{i18n.noAssessments()}</Typography>
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  header: {
-    marginBottom: 0,
-  },
-  tableContent: {
-    marginTop: 10,
-    clear: 'both',
-  },
-  selectors: {
-    clear: 'both',
-  },
-  unitSelection: {
-    float: 'left',
-    marginRight: 20,
-  },
-  assessmentSelection: {
-    float: 'left',
-    marginBottom: 10,
-  },
-  download: {
-    marginTop: 10,
-  },
-  loading: {
-    clear: 'both',
-  },
-  empty: {
-    clear: 'both',
-  },
-};
 
 export const UnconnectedSectionAssessments = SectionAssessments;
 
@@ -383,9 +318,6 @@ export default connect(
     studentList: state.teacherSections.selectedStudents,
   }),
   dispatch => ({
-    setUnit(scriptId, courseVersionId) {
-      dispatch(setUnit(scriptId, courseVersionId));
-    },
     asyncLoadAssessments(sectionId, scriptId, courseVersionId) {
       return dispatch(
         asyncLoadAssessments(sectionId, scriptId, courseVersionId)

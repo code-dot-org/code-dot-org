@@ -1,0 +1,36 @@
+{
+  "name": "teaching-designing-and-building-with-ai-2026",
+  "script_names": [
+    "self-paced-pl-intro-to-designing-and-building-with-ai-2026",
+    "self-paced-pl-teaching-ai-generated-design-2026",
+    "self-paced-pl-teaching-ai-algorithmic-decisions-2026",
+    "self-paced-pl-teaching-data-driven-systems-2026",
+    "self-paced-pl-teaching-iterating-with-ai-2026",
+    "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+    "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-ai-generated-design-2026",
+    "self-paced-pl-teaching-data-driven-systems-2026",
+    "self-paced-pl-teaching-iterating-with-ai-2026",
+    "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+    "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+    "self-paced-pl-intro-to-designing-and-building-with-ai-2026",
+    "self-paced-pl-teaching-ai-algorithmic-decisions-2026"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-designing-and-building-with-ai",
+    "has_verified_resources": true,
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -59,6 +59,7 @@
     "video_key": "csp_global_vs_local",
     "ai_enabled": "false",
     "watchers_prepopulated": "[\"clicks\"]",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

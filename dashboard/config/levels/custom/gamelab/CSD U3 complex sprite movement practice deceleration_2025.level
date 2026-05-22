@@ -139,6 +139,7 @@
     "bubble_choice_description": "Make the car slow to a halt before it goes past the top of the screen.",
     "encrypted_examples": "XSqS29a/sW5F/O+01J31VeRnM/vrBT9i9Rl8bR3Py14ePbH0+qYpJwjgSCXr\nGx2+JlIRo45LUJhePMnSUHAcjQ==\n",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

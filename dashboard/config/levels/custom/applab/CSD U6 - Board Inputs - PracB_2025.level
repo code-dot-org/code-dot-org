@@ -80,6 +80,7 @@
     "thumbnail_url": "https://images.code.org/e6810d27a28507057d9963cd0f8f6cbe-image-1650057342115.gif",
     "start_blocks": "//1) When the user presses the left button, show a happy face\r\n\r\n//2) When the user presses the right button, show a sad face\r\n\r\n//3) When a user releases the left button, show a neutral face\r\n\r\n//4) When the user releases the right button, show a neutral face\r\n",
     "encrypted_examples": "owkPmDO9tP+Vb6Omfu2R1GLYgrFFJBvUwYB7UXKIW8E21cPdA7R2j32PR/X1\n5jLlgd7kPQpndtM+PXnwAap5xg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

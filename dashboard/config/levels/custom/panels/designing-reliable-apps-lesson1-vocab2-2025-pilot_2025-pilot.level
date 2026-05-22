@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-03-13T12:07:25.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# JSON\n\n**JSON (JavaScript Object Notation)** is a lightweight format for storing and transporting data, often returned by APIs.  \n\nIt is designed to be easy for humans to read and write, and easy for machines to generate.",
+        "imageUrl": "https://images.code.org/af69c67e9c7183f9e1b353379c7c75e2-Screenshot 2026-02-03 at 12.50.33 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:07:25.864+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-vocab2-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-vocab2-2025-pilot\"}]"
+}]]></config>
+</Panels>

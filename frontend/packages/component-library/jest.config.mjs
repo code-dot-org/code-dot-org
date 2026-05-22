@@ -1,6 +1,8 @@
 import {dirname} from 'path';
 import {fileURLToPath} from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 export default {
   testEnvironment: 'jsdom',
@@ -11,7 +13,7 @@ export default {
         jsc: {
           baseUrl: '.',
           paths: {
-            '@/*': [`${dirname(fileURLToPath(import.meta.url))}/src/*`],
+            '@/*': [`${__dirname}/src/*`],
           },
           transform: {
             react: {

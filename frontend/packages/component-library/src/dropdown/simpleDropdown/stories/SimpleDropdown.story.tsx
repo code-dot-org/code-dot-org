@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
 
 import SimpleDropdown, {SimpleDropdownProps} from './../index';

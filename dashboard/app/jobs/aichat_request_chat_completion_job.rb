@@ -24,18 +24,10 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
-    if rack_env?(:development)
-      puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
-    end
-
     request = arguments.first[:request]
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
-    Honeybadger.notify(
-      "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
-      context: {
-        request: request.to_json
-      }
-    )
+    locale = arguments.first[:locale]
+
+    AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception, request, locale)
 
     # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
@@ -63,7 +55,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id)
+    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
@@ -75,6 +67,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
+      rescue AichatAiHelper::ModelRateLimitedError => exception
+        Honeybadger.notify(exception, context: {request_id: request.id, model: request.model_customizations['selectedModelId'], client_type: request.model_customizations['clientType'], level_id: request.level_id})
+        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], nil]
       end
     else
       begin
@@ -90,7 +85,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     # Moderate model output for toxicity.
-    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id)
+    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)

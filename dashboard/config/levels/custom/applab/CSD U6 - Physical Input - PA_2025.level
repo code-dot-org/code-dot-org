@@ -92,6 +92,7 @@
     "bubble_choice_description": "Create an app that simulates a whack-a-mole game, where you press 3 external buttons to earn points",
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "encrypted_examples": "vO22JaALwU73KAF13xb9TaoHQtaNGhh+YhBNIS0XmXJje+n3J0Ga4n+G5MCX\nc2s9Tf9CEdqdAhEHHwoHcWJ6rQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

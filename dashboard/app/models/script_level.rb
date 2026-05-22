@@ -198,7 +198,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
       end
-    elsif bubble_choice? && !bubble_choice_parent
+    elsif bubble_choice? && !bubble_choice_parent && level.try(:navigation_type) != SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:NEXT_LEVEL]
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus
@@ -399,7 +399,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       if bubble_choice?
-        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
+        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end
 
       if for_edit
@@ -460,7 +460,11 @@ class ScriptLevel < ApplicationRecord
       {
         id: level.id.to_s,
         name: level.name,
-        url: edit_level_path(id: level.id)
+        url: edit_level_path(id: level.id),
+        type: level.type,
+        # Recorded by the AI lesson generator; surfaced here so the
+        # /generate page can re-populate the prompt for an existing level.
+        generateOutline: level.try(:generate_outline),
       }
     end
 
@@ -738,7 +742,9 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions.
+    # This should not be used for modular script levels, as it will always return the exemplar link for the
+    # "home course". This can lead to confusing permissions issues.
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -782,7 +788,8 @@ class ScriptLevel < ApplicationRecord
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
       unless ScriptConfig.allows_public_caching_for_script(script.name)
-        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {}), unit_group_unit: unit_group_unit))
+        sublevel_position = (oldest_active_level.is_a? BubbleChoice) ? oldest_active_level.sublevel_position(level) : nil
+        level_example_links.push(build_script_level_url(self, **{sublevel_position: sublevel_position, solution: true}.merge(section_id ? {section_id: section_id} : {}), unit_group_unit: unit_group_unit))
       end
     end
 

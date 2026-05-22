@@ -9,9 +9,7 @@ require 'metrics/events'
 module Services
   module Lti
     def self.initialize_lti_user(id_token)
-      # ClassLink uses a non-standard role claim key
-      role_key = id_token[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
-      user_type = Policies::Lti.get_account_type(id_token[role_key])
+      user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
       user.user_type = user_type
@@ -251,7 +249,7 @@ module Services
       end
 
       # Prune teachers who have been removed from the section in the LMS
-      section.section_instructors.each do |section_instructor|
+      section.section_instructors.includes(:instructor).each do |section_instructor|
         instructor = section_instructor.instructor
         unless current_teachers.include?(instructor.id)
           section.remove_instructor(instructor)

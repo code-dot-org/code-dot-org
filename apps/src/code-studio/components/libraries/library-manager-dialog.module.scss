@@ -1,0 +1,89 @@
+@import 'color';
+
+.dialog {
+  padding: 0 15px;
+  cursor: default;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.marginSides {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.header {
+  text-align: left;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.subHeader {
+  text-align: left;
+  font-size: 18px;
+  margin: 7px;
+}
+
+.libraryList {
+  max-height: 200px;
+  overflow-y: auto;
+  border-bottom: 2px solid $purple;
+}
+
+.message {
+  color: $dark_charcoal;
+  text-align: left;
+  margin: 7px;
+  overflow: hidden;
+  line-height: 15px;
+  white-space: pre-wrap;
+}
+
+.messageInline {
+  display: inline;
+}
+
+.inputParent {
+  display: flex;
+  align-items: baseline;
+}
+
+.linkBox {
+  cursor: auto;
+  height: 22px;
+  margin-bottom: 0;
+  flex: 1;
+  max-width: 400px;
+}
+
+.addButton {
+  margin: 7px;
+  font-size: 16px;
+  padding: 7px;
+  color: $dark_charcoal;
+  border: 1px solid $dark_charcoal;
+  cursor: pointer;
+
+  &:disabled {
+    color: $light_gray;
+    border-color: $light_gray;
+    background-color: $lightest_gray;
+    cursor: default;
+  }
+}
+
+.error {
+  color: $red;
+  text-align: left;
+  margin: 7px;
+  min-height: 18px;
+  white-space: pre-wrap;
+  line-height: 1;
+}
+
+.updateButtons {
+  display: flex;
+  justify-content: space-between;
+}

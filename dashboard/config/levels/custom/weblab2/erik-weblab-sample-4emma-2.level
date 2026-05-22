@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-20T23:39:51.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "1. **Analyze the Variables:** Look at the `cargoQueue` array (the crates waiting) and `maxCapacity` (the safety limit).\r\n2. **Consult your AI Tutor:** Use the prompt below to ask how to write a `while` loop that checks *two* conditions at once (weight limit AND array length).\r\n3. **Write the Loop:** Implement the loop so it adds `cargoQueue[i]` to `currentWeight`. **Crucial:** You must include `i++` inside the loop or the page will freeze!\r\n4. **Verify Safety:** Run the code. Does the final weight stop near 500kg? If it goes way over or crashes, check your loop condition.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Cargo Loader Challenge</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"dashboard\">\n    <h2>🚀 Cargo Bay Controls</h2>\n    \n    <div id=\"status-screen\">\n      <p>Status: <span id=\"status-text\">Ready to Load</span></p>\n      <p>Current Weight: <span id=\"weight-display\">0</span> / 500 kg</p>\n      <hr>\n      <ul id=\"log-list\">\n        </ul>\n    </div>\n\n    <button id=\"start-loading-btn\">Start Loading Sequence</button>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Incoming cargo crates (weights in kg)\nconst cargoQueue = [50, 120, 80, 200, 40, 90, 150, 60];\nconst maxCapacity = 500;\n\n// DOM Elements\nconst startBtn = document.querySelector(\"#start-loading-btn\");\nconst weightDisplay = document.querySelector(\"#weight-display\");\nconst logList = document.querySelector(\"#log-list\");\nconst statusText = document.querySelector(\"#status-text\");\n\nstartBtn.addEventListener(\"click\", () => {\n  // Reset state\n  logList.innerHTML = \"\";\n  let currentWeight = 0;\n  let i = 0; // index for the cargoQueue array\n\n  // Write a while loop below.\n\n\n  \n  // Update Screen after loop\n  weightDisplay.textContent = currentWeight;\n  statusText.textContent = \"Loading Complete\";\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Space Dashboard Theme */\n:root {\n  --bg-color: #121212;\n  --panel-color: #1e1e24;\n  --accent-color: #00d4ff; /* Cyan */\n  --alert-color: #ff4757;\n  --text-color: #ffffff;\n  --screen-bg: #000000;\n  --screen-text: #33ff00; /* Retro terminal green */\n}\n\nbody {\n  font-family: 'Courier New', Courier, monospace;\n  background-color: var(--bg-color);\n  color: var(--text-color);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.dashboard {\n  background-color: var(--panel-color);\n  padding: 20px;\n  border: 2px solid var(--accent-color);\n  border-radius: 10px;\n  width: 400px;\n  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);\n}\n\nh2 {\n  text-align: center;\n  color: var(--accent-color);\n  margin-top: 0;\n}\n\n#status-screen {\n  background-color: var(--screen-bg);\n  color: var(--screen-text);\n  padding: 15px;\n  border-radius: 5px;\n  border: 1px solid #333;\n  font-family: 'Consolas', monospace;\n  margin-bottom: 20px;\n  min-height: 150px;\n}\n\n#log-list {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n  font-size: 0.9rem;\n  max-height: 100px;\n  overflow-y: auto;\n}\n\n#log-list li {\n  margin-bottom: 5px;\n  border-bottom: 1px dashed #333;\n}\n\nbutton {\n  width: 100%;\n  padding: 12px;\n  background-color: var(--accent-color);\n  color: #000;\n  border: none;\n  border-radius: 5px;\n  font-weight: bold;\n  cursor: pointer;\n  font-size: 1rem;\n  transition: background 0.2s;\n}\n\nbutton:hover {\n  background-color: #fff;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "3",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\njFoUoDMj/E3uz8y2\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-20T23:39:51.861+00:00\",\"changed\":[\"cloned from \\\"erik-weblab-sample-4emma\\\"\"],\"cloned_from\":\"erik-weblab-sample-4emma\"}]"
+}]]></config>
+</Weblab2>

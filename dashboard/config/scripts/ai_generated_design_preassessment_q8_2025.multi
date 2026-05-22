@@ -7,7 +7,7 @@ wrong 'Choose bright colors to make the app look exciting.'
 wrong 'Create random advertisements to attract attention.'
 right 'Write a problem statement explaining what Taylor needs and why.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7

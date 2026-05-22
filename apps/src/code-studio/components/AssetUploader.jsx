@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
@@ -30,11 +28,6 @@ export default class AssetUploader extends React.Component {
    */
   fileUploadClicked = () => {
     this.refs.uploader.openFileChooser();
-    analyticsReporter.sendEvent(
-      EVENTS.UPLOAD_CUSTOM_IMAGE,
-      {UploaderType: 'Asset Uploader', ProjectType: this.props.projectType},
-      PLATFORMS.STATSIG
-    );
   };
 
   render() {

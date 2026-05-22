@@ -10,9 +10,9 @@ class Queries::Lti
   # Returns the LTI user id for a particular code.org user and LTI integration
   def self.lti_user_ids(user, lti_integration)
     user.lti_user_identities.
-        where(lti_integration_id: lti_integration.id).
-        pluck(:subject).
-        presence
+      where(lti_integration_id: lti_integration.id).
+      pluck(:subject).
+      presence
   end
 
   def self.lti_user_identity(user, lti_integration)
@@ -47,21 +47,5 @@ class Queries::Lti
 
   def self.get_lti_course_from_section_code(section_code)
     Section.find_by(code: section_code)&.lti_course
-  end
-
-  def self.find_or_create_lti_course(lti_integration_id:, context_id:, deployment_id:, nrps_url:, resource_link_id:)
-    lti_course = LtiCourse.find_or_create_by(lti_integration_id: lti_integration_id, context_id: context_id) do |c|
-      c.lti_deployment_id = deployment_id
-      c.nrps_url = nrps_url
-      c.resource_link_id = resource_link_id
-    end
-
-    # Update the resource link id if the resource link has changed
-    unless lti_course.resource_link_id == resource_link_id
-      lti_course.resource_link_id = resource_link_id
-      lti_course.save!
-    end
-
-    lti_course
   end
 end

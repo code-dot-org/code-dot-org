@@ -15,7 +15,7 @@
     "display_name": "Text Messages",
     "bubble_choice_description": "Find the total number of text messages to be sent based on the length of each message.",
     "thumbnail_url": "https://images.code.org/930bccebdbdc575b6f514b6567773196-message.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:29:24.525+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L4c CR_2022\"},{\"changed_at\":\"2022-04-14 19:29:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:09:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:34:28 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:06 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

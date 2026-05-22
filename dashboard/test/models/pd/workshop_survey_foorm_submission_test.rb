@@ -2,7 +2,6 @@ require 'test_helper'
 
 module Pd
   class WorkshopSurveyFoormSubmissionTest < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
     setup_all do
       @user = create(:user)
       @pd_summer_workshop = create(:csp_summer_workshop)

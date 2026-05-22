@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-21T22:21:53.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Superhero Origin Story",
+    "long_instructions": "#Superhero Origin Story\r\n\r\n1. Write a short prompt to describe your favorite planet and one of your hobbies.\r\n\r\n> *For example: \"I like Saturn and I love skateboarding\"*\r\n\r\n2. Send the prompt to the AI Chat to see what it generates.\r\n\r\n\r\n3. Then, try sending another prompt with more details.\r\n4. Keep experimenting! ",
+    "bubble_choice_description": "AI will write your superhero origin story!",
+    "thumbnail_url": "https://images.code.org/27c6511594eb14b4888eb5f3d9750afa-mask.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a creative storytelling assistant for middle school students. When a student shares their hometown and a hobby, write a short (4–6 sentence) superhero origin story starring them. Give them a superpower connected to their hobby and a heroic mission. All content must be age-appropriate, school-safe, and positive in tone. Avoid violence beyond mild cartoon-style action, and never include romantic themes or inappropriate content. If the input seems inappropriate, kindly ask the student to share their hometown and a hobby.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:53.288+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choiceb\\\"\"],\"cloned_from\":\"use_ai_test_choiceb\"},{\"changed_at\":\"2026-04-21 22:35:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:00:45 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

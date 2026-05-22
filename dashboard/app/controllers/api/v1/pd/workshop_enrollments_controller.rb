@@ -15,18 +15,25 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     OWN: "own".freeze,
     CLOSED: "closed".freeze,
     FULL: "full".freeze,
+    NO_SCHOOL: "no school".freeze,
+    NOT_USA: "not usa".freeze,
     NOT_FOUND: "not found".freeze,
     ERROR: "error".freeze
   }
 
   # GET /api/v1/pd/workshops/1/enrollments
   def index
+    enrollments = @workshop.enrollments.includes(
+      :attendances, :pre_workshop_survey,
+      user: {school_info: [:school, :school_district]},
+      school_info: [:school, :school_district]
+    )
     respond_to do |format|
       format.json do
-        render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
+        render json: enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
       end
       format.csv do
-        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
+        response = render_to_json enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
         send_as_csv_attachment response, 'workshop_enrollments.csv'
       end
     end
@@ -38,7 +45,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
         status: :not_found
-    elsif params[:user_id].nil? || !User.exists?(params[:user_id])
+    elsif params[:user_id].nil? || !User.exists?(id: params[:user_id])
       return render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'User cannot be found.'}
     end
 
@@ -58,6 +65,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       render_unsuccessful RESPONSE_MESSAGES[:CLOSED]
     elsif workshop_full?
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
+    elsif user.school_info.nil?
+      render_unsuccessful RESPONSE_MESSAGES[:NO_SCHOOL]
+    elsif !user.school_info&.usa?
+      render_unsuccessful RESPONSE_MESSAGES[:NOT_USA]
     else
       ActiveRecord::Base.transaction do
         school_info = user.school_info

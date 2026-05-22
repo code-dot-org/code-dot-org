@@ -9,7 +9,8 @@
     "guides": "K5",
     "background": "oceans-blue",
     "parent_level_id": 19642,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

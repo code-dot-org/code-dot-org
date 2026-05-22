@@ -64,7 +64,7 @@ const ImageAttributions: React.FunctionComponent<ImageAttributionsProps> = ({
   };
 
   return (
-    <div>
+    <div className={moduleStyles.imageAttributions}>
       <b>{musicI18n.imageAttributionHeading()}</b>
       {attributions.map((attribution, index) => (
         <div key={index}>

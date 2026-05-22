@@ -61,6 +61,7 @@ export const darkTheme = EditorView.theme(
       backgroundColor: darkBackground,
       color: stone,
       border: 'none',
+      paddingInline: '0.25rem',
     },
     '.cm-lintRange-error': {
       backgroundImage: 'none !important',
@@ -173,6 +174,8 @@ export const lightTheme = EditorView.theme(
     // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
       backgroundColor: color.white,
+      border: 'none',
+      paddingInline: '0.25rem',
     },
     // Use the same wavy underline style for errors as the dark theme
     '.cm-lintRange-error': {

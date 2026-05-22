@@ -88,6 +88,12 @@ module Services
         # PD data
         scrub_pd_surveys
         scrub_pd_enrollments
+
+        # Project IP addresses (but no other project data)
+        scrub_project_ips
+
+        # Sections
+        scrub_sections
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -102,6 +108,12 @@ module Services
 
       private def pd_enrollments
         @pd_enrollments ||= user.pd_enrollments.with_deleted
+      end
+
+      private def scrub_project_ips
+        DASHBOARD_DB[:projects].
+          where(storage_id: user.user_storage_id).
+          update(updated_ip: '', updated_at: Time.now)
       end
 
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
@@ -145,6 +157,14 @@ module Services
       # other methods since it is not reversible.
       private def scrub_external_data
         MailJet.delete_contact(email) if email.present? && !::User.exists?(email: email)
+      end
+
+      private def scrub_sections
+        if user.teacher?
+          user.sections_owned.with_deleted.find_each do |section|
+            section.update!(name: REDACTED_STRING)
+          end
+        end
       end
 
       private def mark_scrubbed

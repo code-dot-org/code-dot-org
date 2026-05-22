@@ -15,3 +15,6 @@ $default-border-radius: 4px;
 $z-index-floating-ui: 60;
 // Full screen overlays (e.g. loading screen)
 $z-index-overlay: 72;
+// Full screen overlays that need to be above everything else
+// (e.g. file preview in full screen) — got value from MUI
+$z-index-fullscreen: 1300;

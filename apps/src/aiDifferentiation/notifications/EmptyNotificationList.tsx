@@ -1,4 +1,4 @@
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -11,7 +11,9 @@ const EmptyNotificationList: React.FC = () => {
     <div className={styles.emptyNotificationListContainer}>
       <div className={styles.emptyNotificationList}>
         <img alt="AI bot - unread notifications" src={emptyPng} />
-        <BodyTwoText>{i18n.noNotifications()}</BodyTwoText>
+        <Typography variant="body2" gutterBottom>
+          {i18n.noNotifications()}
+        </Typography>
       </div>
     </div>
   );

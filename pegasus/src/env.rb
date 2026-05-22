@@ -45,14 +45,6 @@ end
 
 def load_pegasus_settings
   $log = Pegasus.logger
-
-  I18n.backend = CDO.i18n_backend
-  I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
-  I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
-  I18n.load_path += Dir[cache_dir('i18n/*.json')]
-  I18n.load_path += Dir[hoc_dir('i18n/*.yml')]
-  I18n.enforce_available_locales = false
-  I18n.backend.load_translations
 end
 
 load_pegasus_settings

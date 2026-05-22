@@ -91,6 +91,7 @@
     "display_name": "Longest Word",
     "bubble_choice_description": "Write a function that returns the longest word from a list of strings.",
     "thumbnail_url": "https://images.code.org/99fd7e543cdcc66ec8c25bbcdf832629-image-1649368790366.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

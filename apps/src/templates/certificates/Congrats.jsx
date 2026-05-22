@@ -1,8 +1,4 @@
-import {
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -300,9 +296,9 @@ export default function Congrats(props) {
       return (
         <div>
           <div className={style.continueBeyond}>
-            <Heading3 className={style.textCenter}>
-              {i18n.continueBeyondHourOfCode()}
-            </Heading3>
+            <Typography className={style.textCenter} variant="h3" gutterBottom>
+              Continue Beyond an Hour of AI
+            </Typography>
             <div
               className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
             >
@@ -312,12 +308,20 @@ export default function Congrats(props) {
                   key={index}
                 >
                   <div className={style.contentWrapper}>
-                    <BodyTwoText className={style.overline}>
+                    <Typography
+                      className={style.overline}
+                      variant="body2"
+                      gutterBottom
+                    >
                       {item.grade}
-                    </BodyTwoText>
-                    <Heading3>{item.title}</Heading3>
+                    </Typography>
+                    <Typography variant="h3" gutterBottom>
+                      {item.title}
+                    </Typography>
                     <img src={item.image} alt="" />
-                    <BodyTwoText>{item.description}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {item.description}
+                    </Typography>
                   </div>
                   <div className={style.contentFooter}>
                     <a className={style.linkButton} href={item.link}>
@@ -330,8 +334,12 @@ export default function Congrats(props) {
             <hr />
 
             <div className={style.textCenter}>
-              <Heading4>{i18n.discoverMore()}</Heading4>
-              <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
+              <Typography variant="h4" gutterBottom>
+                {i18n.discoverMore()}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {i18n.discoverMoreCatalogText()}
+              </Typography>
               <div className={style.imageContainer}>
                 {curriculumCatalogImages.map((item, index) => (
                   <img key={index} src={item} alt="" />
@@ -365,7 +373,6 @@ export default function Congrats(props) {
               )}
             </div>
           </div>
-
           {userType !== 'student' && (
             <div className={style.professionalLearning}>
               <div
@@ -382,8 +389,12 @@ export default function Congrats(props) {
                         alt=""
                         className={style.professionalLearningImage}
                       />
-                      <Heading3>{item.title}</Heading3>
-                      <BodyTwoText>{item.description}</BodyTwoText>
+                      <Typography variant="h3" gutterBottom>
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body2" gutterBottom>
+                        {item.description}
+                      </Typography>
                     </div>
                     <div className={style.contentFooter}>
                       <a className={style.linkButton} href={item.link}>
@@ -414,8 +425,12 @@ export default function Congrats(props) {
                     alt=""
                     className={style.professionalLearningNextStepsImage}
                   />
-                  <Heading3>{item.title}</Heading3>
-                  <BodyTwoText>{item.description}</BodyTwoText>
+                  <Typography variant="h3" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {item.description}
+                  </Typography>
                 </div>
                 <div className={style.contentFooter}>
                   <a className={style.linkButton} href={item.link}>
@@ -471,11 +486,11 @@ export default function Congrats(props) {
       )}
       {certificateData.length === 0 && (
         <div>
-          <Heading3>
+          <Typography variant="h3" gutterBottom>
             <InlineMarkdown
               markdown={i18n.noCertificateReturnToCourse({curriculumUrl})}
             />
-          </Heading3>
+          </Typography>
         </div>
       )}
     </div>

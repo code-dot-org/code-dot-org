@@ -1,0 +1,142 @@
+name 'pl-aif-2-U3-pipeline-4_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Putting It All Together: Pipelines in JavaScript
+
+Once you understand **searching**, **filtering**, and **sorting** on their own, the real computational thinking comes from deciding **which tool to use, and in what order, to meet the needs of an app.**
+
+<br>
+
+<img src="https://images.code.org/deddc7c635ac7943dfbede2357acd6c1-image-1767807594173.png" alt="visual diagram showing a data pipeline with filter, sort, and map steps" width="200px" style="border-radius:10px; float:left; margin: 0 20px 10px 40px;">
+
+Most real apps don’t use just one algorithm.  
+They use a **pipeline**, or a sequence of steps that transform data bit by bit.
+
+<div style="clear:both;"></div>
+
+---
+
+## What is a pipeline?
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Pipeline</strong> is a series of steps that run in order, where the output from one step becomes the input to the next.</p>
+</div>
+
+In programming, pipelines help manage complex tasks by breaking them into **clear, logical stages**.
+
+---
+
+## Why pipelines matter
+
+Each function solves a different kind of problem:
+
+- **Search** answers: *What matches what the user asked for?*
+- **Filter** answers: *What should be included or excluded based on rules?*
+- **Sort** answers: *What order should the results appear in?*
+
+A pipeline lets you combine these answers into one smooth process.
+
+---
+
+
+
+## Example: A Video Website Pipeline
+
+Imagine a video website deciding what to show on its homepage.
+
+The site has hundreds of videos. It needs to show users a small set of recommended videos.
+
+<img src="https://images.code.org/9a5c317fbbd6adc78797529f76a1890f-image-1767808999144.png" alt="visual diagram showing a data pipeline with filter, sort, and map steps" width="400px" style="border-radius:10px; float:right; margin: 0 10px 10px 20px;">
+
+### Build the Pipeline
+
+**Before clicking, think about which step should happen first, second, and third.**
+
+<div style="clear:both;"></div>
+
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      Step 1
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.5;">
+      <strong>Filter</strong><br>
+      Remove videos that are too old or do not meet the homepage rules.
+      <br><br>
+      This narrows the full dataset to only the videos that should be considered.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      Step 2
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.5;">
+      <strong>Sort</strong><br>
+      Put the remaining videos in order by score, views, or popularity.
+      <br><br>
+      This decides which videos rise to the top.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;text-align:center;">
+      Step 3
+    </summary>
+    <div style="margin-top:14px;font-size:16px;line-height:1.5;">
+      <strong>Map</strong><br>
+      Turn the top videos into cards that can be displayed on the page.
+      <br><br>
+      This changes the data into something the user can see.
+    </div>
+  </details>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Key Idea:</strong> A pipeline works step by step. Each step changes the data and passes the result to the next step.
+</p>
+
+</div>
+
+---
+
+## Quick Check
+
+Think about the order of the pipeline.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Why filter before sorting?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+Filtering first removes videos that should not be considered. Then sorting can focus only on the videos that are still eligible.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Why map at the end?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+Mapping happens at the end because the app first needs to know which videos are included and what order they should appear in. Then it can turn those results into display cards.
+</div>
+</details>
+
+
+
+
+
+
+
+
+MARKDOWN

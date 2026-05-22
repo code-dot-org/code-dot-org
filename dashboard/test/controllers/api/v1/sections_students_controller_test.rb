@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
     @other_teacher = create(:teacher)
@@ -36,6 +34,18 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
       @student.summarize.merge(depends_on_this_section_for_login: true)
     ].to_json
     assert_equal expected_summary, @response.body
+  end
+
+  test 'is_demo_student is true for demo students' do
+    sign_in @teacher
+
+    Policies::DemoSections.stubs(:demo_student?).with(@student.id).returns(true)
+
+    get :index, params: {section_id: @section.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    assert response[0]['is_demo_student']
   end
 
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
@@ -308,9 +318,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'teacher can not add students to a section at capacity' do
     sign_in @teacher
     @section = create(:section, user: @teacher, login_type: 'word')
-    500.times do
-      create(:follower, section: @section)
-    end
+    create_list(:follower, 500, section: @section) # rubocop:disable FactoryBot/ExcessiveCreateList
     post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :forbidden
     assert_equal(

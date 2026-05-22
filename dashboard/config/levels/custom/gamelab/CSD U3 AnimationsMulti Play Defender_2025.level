@@ -51,6 +51,7 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "encrypted_examples": "lSkSI2heIBkuveq6aO/EkBGZyJQXK0smuzkKtSJTSGx1ajuJyuxE07EzQ1mE\nTJbO\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

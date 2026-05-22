@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../deployment'
+require 'cdo/aws/redshift'
+require 'cdo/chat_client'
+
+NOTIFY_CHANNEL = 'data-alerts'
+ENVIRONMENT_TYPE = CDO.rack_env.to_s
+TARGET_DB = "#{ENVIRONMENT_TYPE}_learningplatform_mysql_zeroetl"
+REDSHIFT_SQL_USER = 'etl_client'
+
+# @param message [String] the (base) error message to log.
+def alert(message)
+  CDO.log.warn message
+  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red') if ENVIRONMENT_TYPE == 'production'
+end
+
+def main
+  redshift = Cdo::Redshift.new(db_user: REDSHIFT_SQL_USER)
+
+  # Check Integration-level status.
+  # Expected healthy states are `PendingDbConnectState`, `SchemaDiscoveryState`, and `CdcRefreshState`
+  # Unhealthy state: `ErrorState`
+  integration_query = <<~SQL
+    SELECT *
+    FROM SVV_INTEGRATION
+    WHERE target_database = '#{TARGET_DB}';
+  SQL
+
+  integrations = redshift.execute(integration_query)
+  integrations.each do |integration|
+    alert("Zero-ETL Integration Alert (#{ENVIRONMENT_TYPE})*\nIntegration `#{integration['integration_id']}` is in state `#{integration['state']}`. #{integration.to_json}") if integration['state'] == 'ErrorState'
+  end
+
+  # Check Table-level sync status.
+  # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
+  # Possible values: `Synced`, `Failed`, `Deleted`, `ResyncRequired`, `ResyncInitiated`, and `DroppedSource`.
+  table_sync_status_query = <<~SQL
+    SELECT *
+    FROM SVV_INTEGRATION_TABLE_STATE
+    WHERE target_database = '#{TARGET_DB}'
+      AND table_state != 'Synced'
+      AND table_state != 'ResyncInitiated';
+  SQL
+
+  error_tables = redshift.execute(table_sync_status_query)
+  if error_tables.any?
+    summary_lines = error_tables.map {|table| "• `#{table['schema_name']}.#{table['table_name']}` (#{table['table_state']})\n"}
+
+    header = "Zero-ETL Sync Failure Summary (#{ENVIRONMENT_TYPE})*\n"
+    header += "#{error_tables.size} tables are failing to synchronize:\n"
+    header += summary_lines.join("\n")
+    header += "Details for up to 3 randomly selected error tables:\n"
+
+    alert(header)
+
+    # Output details about up to 3 randomly selected tables that are failing to sync via Zero ETL.
+    error_tables.sample(3).each do |table|
+      message = <<~MSG
+        *Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*
+        *Table:* `#{table['schema_name']}.#{table['table_name']}`
+        *State:* `#{table['table_state']}`
+
+        *Error Reason:*
+        > #{table['reason']}
+
+        _Last Updated: #{table['last_updated_timestamp']}_
+        _Integration ID: #{table['integration_id']}_
+      MSG
+      alert(message)
+    end
+  end
+rescue => exception
+  alert("Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
+  raise exception
+end
+
+main

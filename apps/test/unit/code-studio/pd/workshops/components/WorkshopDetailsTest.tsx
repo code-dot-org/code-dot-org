@@ -23,7 +23,6 @@ const baseProps = {
   fee: '0',
   prereq: 'Some workshop A, Some workshop B',
   description: 'Workshop description goes here.',
-  notes: 'Bring your device. Stay hydrated!',
   courseOfferings: ['AI and Machine Learning', 'Apps with Devices'],
   facilitators: [
     {
@@ -54,24 +53,12 @@ describe('WorkshopDetails', () => {
     expect(screen.getByText(/free/i)).toBeInTheDocument();
   });
 
-  it('renders description and notes', () => {
+  it('renders description', () => {
     render(<WorkshopDetails {...baseProps} />);
     expect(
       screen.getByRole('heading', {name: /description/i})
     ).toBeInTheDocument();
     expect(screen.getByText(baseProps.description)).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', {name: /attendee notes/i})
-    ).toBeInTheDocument();
-    expect(screen.getByText(baseProps.notes)).toBeInTheDocument();
-  });
-
-  it('does not render notes if none provided', () => {
-    render(<WorkshopDetails {...baseProps} notes="" />);
-    expect(
-      screen.queryByRole('heading', {name: /attendee notes/i})
-    ).not.toBeInTheDocument();
-    expect(screen.queryByText(baseProps.notes)).not.toBeInTheDocument();
   });
 
   it('renders course offering tags if provided', () => {

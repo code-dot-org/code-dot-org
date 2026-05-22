@@ -12,6 +12,9 @@ import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project, {
+  createNewFile,
+  resetHasEditedSinceLastVersionSave,
+  setProjectSource,
   setViewingOldVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
@@ -29,6 +32,44 @@ const SAMPLE_VERSION_LIST: ProjectVersion[] = [
   {versionId: '1', lastModified: '2024-12-25T18:11:10.000Z', isLatest: false},
   {versionId: '2', lastModified: '2025-01-25T18:11:10.000Z', isLatest: false},
   {versionId: '3', lastModified: '2025-02-25T18:11:10.000Z', isLatest: true},
+];
+
+// Create a version list with multiple auto-saves between committed versions
+const SAMPLE_VERSION_LIST_WITH_AUTOSAVES: ProjectVersion[] = [
+  {
+    versionId: '0',
+    lastModified: '2024-11-25T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '1',
+    lastModified: '2024-12-25T18:11:10.000Z',
+    isLatest: false,
+    comment: 'First committed version',
+  },
+  // Three auto-saves in a group
+  {
+    versionId: '2',
+    lastModified: '2025-01-25T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '3',
+    lastModified: '2025-01-26T18:11:10.000Z',
+    isLatest: false,
+  },
+  {
+    versionId: '4',
+    lastModified: '2025-01-27T18:11:10.000Z',
+    isLatest: false,
+  },
+  // Latest committed version
+  {
+    versionId: '5',
+    lastModified: '2025-02-25T18:11:10.000Z',
+    isLatest: true,
+    comment: 'Latest committed version',
+  },
 ];
 
 const ownedChannel: Channel = {
@@ -162,10 +203,16 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
     const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(false);
 
-    const user = userEvent.setup();
     await user.click(versionInput);
 
     await waitFor(() => {
@@ -183,8 +230,14 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    const restoreButton = screen.getByRole('button', {name: 'Restore'});
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
     const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    const restoreButton = screen.getByRole('button', {name: 'Restore'});
     await user.click(restoreButton);
 
     await waitFor(
@@ -192,24 +245,6 @@ describe('VersionHistoryPanel', () => {
         expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('0'),
       {timeout: 2000}
     );
-  });
-
-  it('resets project on cancel', async () => {
-    renderDefault({selectedVersion: '0'});
-
-    await waitFor(
-      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
-      {timeout: 2000}
-    );
-
-    const cancelButton = screen.getByRole('button', {name: 'Cancel'});
-    const user = userEvent.setup();
-    await user.click(cancelButton);
-
-    expect(mockedProjectManager.loadSources).toHaveBeenCalled();
-    await waitFor(() => {
-      expect(setSelectedVersion).toHaveBeenCalledWith('3'); // Reset to latest version
-    });
   });
 
   it('disables restore button when initial version is latest', async () => {
@@ -255,6 +290,13 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
     const restoreButton = screen.getByRole('button', {name: 'Restore'});
     expect(restoreButton).not.toBeDisabled();
   });
@@ -269,6 +311,70 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
+    // Click to expand auto-saved version group if necessary
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
+    expect(versionInput.checked).toBe(true);
+  });
+
+  it('preserves selected version across tab reopen when viewing an old version', async () => {
+    store.dispatch(setViewingOldVersion(true));
+
+    // Wire selectedVersion through real state so the rendered selection
+    // reflects whatever the panel asks for, not the static prop.
+    const TestHarness = ({isOpen}: {isOpen: boolean}) => {
+      const [selected, setSelected] = React.useState('2');
+      return (
+        <ThemeProvider>
+          <Provider store={store}>
+            <VersionHistoryPanel
+              startSources={{source: ''}}
+              selectedVersion={selected}
+              setSelectedVersion={setSelected}
+              levelId={123}
+              disabled={false}
+              isOpen={isOpen}
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+    };
+
+    const {rerender} = render(<TestHarness isOpen={false} />);
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+    const initialCallCount =
+      mockedProjectManager.getVersionList.mock.calls.length;
+
+    // Simulate the tab becoming active again.
+    rerender(<TestHarness isOpen={true} />);
+
+    // Wait for the reopen effect to fire and the version list to refetch.
+    await waitFor(
+      () =>
+        expect(
+          mockedProjectManager.getVersionList.mock.calls.length
+        ).toBeGreaterThan(initialCallCount),
+      {timeout: 2000}
+    );
+
+    // Expand the auto-save group so version 2's radio is rendered.
+    const expandButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    const user = userEvent.setup();
+    await user.click(expandButton);
+
+    // Version 2 should still be the selected radio — the reopen path must
+    // not fall back to the latest version while an old version is being viewed.
     const versionInput = screen.getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(true);
   });
@@ -289,8 +395,6 @@ describe('VersionHistoryPanel', () => {
     expect(
       screen.queryByRole('button', {name: 'Restore'})
     ).not.toBeInTheDocument();
-    // Cancel button should still be available
-    expect(screen.getByRole('button', {name: 'Cancel'})).toBeInTheDocument();
   });
 
   it('shows loading state while loading version list', () => {
@@ -315,10 +419,156 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    const restoreButton = screen.getByRole('button', {name: 'Restore'});
-    const cancelButton = screen.getByRole('button', {name: 'Cancel'});
+    // Collapse/expand control itself should be disabled
+    const collapseButton = screen.getByRole('button', {
+      name: /Show \d+ auto-saves/,
+    });
+    expect(collapseButton).toBeDisabled();
 
-    expect(restoreButton).toBeDisabled();
-    expect(cancelButton).toBeDisabled();
+    const restoreButton = screen.queryByRole('button', {name: 'Restore'});
+    if (restoreButton) {
+      expect(restoreButton).toBeDisabled();
+    }
+  });
+
+  describe('save version panel', () => {
+    const SOURCE_WITH_FILE = {
+      source: {
+        files: {
+          file1: {id: 'file1', name: 'index.html', contents: '<p>hi</p>'},
+        },
+        folders: {},
+        openFiles: ['file1'],
+      },
+    };
+
+    it('does not show save version panel when hasEdited is true but hasEditedSinceLastVersionSave is false', async () => {
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+      store.dispatch(resetHasEditedSinceLastVersionSave());
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      expect(
+        screen.queryByPlaceholderText('Describe your changes')
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows save version panel after an edit action sets hasEditedSinceLastVersionSave', async () => {
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      // createNewFile sets both hasEdited and hasEditedSinceLastVersionSave
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      expect(
+        screen.getByPlaceholderText('Describe your changes')
+      ).toBeInTheDocument();
+    });
+
+    it('hides save version panel after saving a version but keeps hasEdited true', async () => {
+      mockedProjectManager = {
+        ...mockedProjectManager,
+        save: jest.fn(() => Promise.resolve()),
+        getCurrentVersionId: jest.fn(() => null),
+      } as unknown as jest.Mocked<ProjectManager>;
+      Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+
+      store.dispatch(setProjectSource(SOURCE_WITH_FILE));
+      store.dispatch(createNewFile({fileName: 'style.css'}));
+
+      renderDefault();
+
+      await waitFor(
+        () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+        {timeout: 2000}
+      );
+
+      const textarea = screen.getByPlaceholderText('Describe your changes');
+      const user = userEvent.setup();
+      await user.type(textarea, 'my changes');
+
+      const saveButton = screen.getByRole('button', {
+        name: /save current version/i,
+      });
+      await user.click(saveButton);
+
+      await waitFor(() => {
+        expect(
+          screen.queryByPlaceholderText('Describe your changes')
+        ).not.toBeInTheDocument();
+      });
+
+      // hasEdited must remain true — it tracks edits for the whole session
+      expect(store.getState().lab2Project.hasEdited).toBe(true);
+    });
+  });
+
+  it('collapses and expands auto-save groups when collapse button is clicked', async () => {
+    mockedProjectManager = {
+      getVersionList: jest.fn(() =>
+        Promise.resolve(SAMPLE_VERSION_LIST_WITH_AUTOSAVES)
+      ),
+      loadSources: jest.fn(() => Promise.resolve({source: 'loaded'})),
+      flushSave: jest.fn(),
+    } as unknown as jest.Mocked<ProjectManager>;
+    Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+
+    renderDefault({selectedVersion: '5'});
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+
+    // The collapse button should be present for the auto-save group
+    const collapseButton = screen.getByRole('button', {
+      name: 'Show 3 auto-saves',
+    });
+    expect(collapseButton).toBeInTheDocument();
+    expect(collapseButton).toHaveAttribute('aria-expanded', 'false');
+
+    // Auto-save versions should be hidden initially
+    expect(screen.queryByDisplayValue('2')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('3')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('4')).not.toBeInTheDocument();
+
+    // Click to expand the group
+    const user = userEvent.setup();
+    await user.click(collapseButton);
+
+    // After expanding, the button text should change
+    const expandedButton = screen.getByRole('button', {
+      name: 'Hide 3 auto-saves',
+    });
+    expect(expandedButton).toHaveAttribute('aria-expanded', 'true');
+
+    // Auto-save versions should now be visible
+    expect(screen.getByDisplayValue('2')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('3')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('4')).toBeInTheDocument();
+
+    // Click again to collapse
+    await user.click(expandedButton);
+
+    // Button should show "Show" again
+    const collapsedButton = screen.getByRole('button', {
+      name: 'Show 3 auto-saves',
+    });
+    expect(collapsedButton).toHaveAttribute('aria-expanded', 'false');
+
+    // Auto-save versions should be hidden again
+    expect(screen.queryByDisplayValue('2')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('3')).not.toBeInTheDocument();
+    expect(screen.queryByDisplayValue('4')).not.toBeInTheDocument();
   });
 });

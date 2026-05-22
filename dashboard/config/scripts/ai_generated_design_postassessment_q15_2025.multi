@@ -7,7 +7,7 @@ wrong 'The website uses fewer colors and graphics to save memory.'
 wrong 'The website looks more complex and advanced to visitors.'
 wrong 'The website loads faster but becomes harder to use.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 6, 11, 12
