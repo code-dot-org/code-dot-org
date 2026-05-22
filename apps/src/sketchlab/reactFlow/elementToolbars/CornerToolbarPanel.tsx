@@ -42,6 +42,7 @@ export default function CornerToolbarPanel({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeType,
     setLineEdgeLocked,
   } = useLineToolbar({edges, openToolbarTarget, setEdges, pushSnapshot});
@@ -74,6 +75,9 @@ export default function CornerToolbarPanel({
           onSelectArrowHeads={value =>
             setLineEdgeArrowHeads(openLineEdge.id, value)
           }
+          onSelectRotation={value =>
+            setLineEdgeRotation(openLineEdge.id, value)
+          }
           onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
           onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
         />
@@ -88,6 +92,7 @@ export default function CornerToolbarPanel({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeLocked,
     setLineEdgeType,
   ]);

@@ -6,12 +6,14 @@ import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {DEFAULT_ROTATION} from '../constants';
 import {useClipboard} from '../context';
 import {ArrowHeadValue} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import LockedNotice from './LockedNotice';
+import RotationGroup from './RotationGroup';
 import SwatchGroup from './SwatchGroup';
 import {
   DEFAULT_EDGE_TYPE,
@@ -94,6 +96,7 @@ interface LineEdgeToolbarProps {
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
   onSelectEdgeType: (value: EdgeTypeValue) => void;
   onSelectArrowHeads: (value: ArrowHeadValue) => void;
+  onSelectRotation: (value: number) => void;
   onSetLocked: (value: boolean) => void;
 }
 
@@ -125,6 +128,7 @@ export default function LineEdgeToolbar({
   onSelectStrokeStyle,
   onSelectEdgeType,
   onSelectArrowHeads,
+  onSelectRotation,
   onSetLocked,
 }: LineEdgeToolbarProps) {
   const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
@@ -241,6 +245,10 @@ export default function LineEdgeToolbar({
                 iconName={ARROW_HEAD_ICONS[option.value as ArrowHeadValue]}
               />
             )}
+          />
+          <RotationGroup
+            value={edge.data?.rotation ?? DEFAULT_ROTATION}
+            onChange={onSelectRotation}
           />
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}

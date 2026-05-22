@@ -3,7 +3,11 @@ import React, {useCallback, useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
+import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
+  DEFAULT_ROTATION,
+} from '../constants';
 import {ToolbarTarget} from '../context';
 import {
   DEFAULT_LINE_WIDTH,
@@ -202,6 +206,33 @@ export function useLineToolbar({
     [updateLineEdgeLockState]
   );
 
+  const setLineEdgeRotation = useCallback(
+    (edgeId: string, rotation: number) => {
+      updateLineEdge(edgeId, edge => {
+        const style = {...edge.style};
+        if (rotation === DEFAULT_ROTATION) {
+          delete style.transform;
+          delete style.transformBox;
+          delete style.transformOrigin;
+        } else {
+          style.transform = `rotate(${rotation}deg)`;
+          style.transformBox = 'fill-box';
+          style.transformOrigin = 'center';
+        }
+
+        return {
+          ...edge,
+          data: {
+            ...(edge.data || {}),
+            rotation,
+          },
+          style,
+        };
+      });
+    },
+    [updateLineEdge]
+  );
+
   return {
     openLineEdge,
     setLineEdgeColor,
@@ -209,6 +240,7 @@ export function useLineToolbar({
     setLineEdgeStrokeStyle,
     setLineEdgeType,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeLocked,
   };
 }
