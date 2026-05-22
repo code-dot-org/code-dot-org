@@ -1,22 +1,25 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import {useReactFlow} from '@xyflow/react';
+import {useNodesData, useReactFlow} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {useClipboard} from '../context';
-import {ArrowHeadValue} from '../types';
+import {useClipboard, usePushSnapshot} from '../context';
+import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 import LockedNotice from './LockedNotice';
 import SwatchGroup from './SwatchGroup';
 import {
+  DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_STROKE_STYLE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
+  EdgeTypeValue,
+  EDGE_TYPE_OPTIONS,
   LineStrokeStyleValue,
   LINE_STROKE_STYLE_OPTIONS,
   LINE_WIDTH_OPTIONS,
@@ -86,10 +89,10 @@ function LineOptionGroup({
 
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
-  anchorNodeId: string;
   onSelectColor: (value: string) => void;
   onSelectWidth: (value: number) => void;
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
+  onSelectEdgeType: (value: EdgeTypeValue) => void;
   onSelectArrowHeads: (value: ArrowHeadValue) => void;
   onSetLocked: (value: boolean) => void;
 }
@@ -108,18 +111,45 @@ const ARROW_HEAD_ICONS: Record<ArrowHeadValue, string> = {
   both: 'arrows-left-right',
 };
 
+const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
+  straight: 'minus',
+  default: 'wave-sine',
+  smoothstep: 'corner',
+  step: 'wave-square',
+};
+
 export default function LineEdgeToolbar({
   edge,
-  anchorNodeId,
   onSelectColor,
   onSelectWidth,
   onSelectStrokeStyle,
+  onSelectEdgeType,
   onSelectArrowHeads,
   onSetLocked,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+  const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
+    useReactFlow();
+  const pushSnapshot = usePushSnapshot();
 
   const isLocked = edge.data?.locked === true;
+
+  const endpointInfo = useNodesData<LineAnchorNodeType>([
+    edge.source,
+    edge.target,
+  ]);
+  const anchorEndpoints = endpointInfo.filter(
+    (n): n is LineAnchorNodeType => !!n && n.type === 'lineAnchor'
+  );
+
+  // The edge holds the handle visibility preference so it survives attach/detach cycles.
+  const handlesVisible = edge.data?.showHandles ?? true;
+  const hasAnchors = anchorEndpoints.length > 0;
+  const onToggleHandles = () => {
+    const next = !handlesVisible;
+    pushSnapshot();
+    updateEdge(edge.id, {data: {...edge.data, showHandles: next}});
+    anchorEndpoints.forEach(n => updateNodeData(n.id, {showHandles: next}));
+  };
 
   const selectedValue =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -138,6 +168,11 @@ export default function LineEdgeToolbar({
   )
     ? selectedStrokeStyle
     : DEFAULT_LINE_STROKE_STYLE;
+  const selectedEdgeTypeValue = EDGE_TYPE_OPTIONS.some(
+    option => option.value === edge.type
+  )
+    ? (edge.type as EdgeTypeValue)
+    : DEFAULT_EDGE_TYPE;
 
   const selectedArrowHeads = useMemo(() => {
     const hasStartArrow = !!edge.markerStart;
@@ -170,11 +205,7 @@ export default function LineEdgeToolbar({
   );
 
   return (
-    <ToolbarShell
-      target={{type: 'edge', id: edge.id}}
-      anchorNodeId={anchorNodeId}
-      ariaLabel="Line style"
-    >
+    <ToolbarShell target={{type: 'edge', id: edge.id}} ariaLabel="Line style">
       {isLocked ? (
         <LockedNotice onUnlock={() => onSetLocked(false)} />
       ) : (
@@ -208,6 +239,18 @@ export default function LineEdgeToolbar({
             }
           />
           <LineOptionGroup
+            groupLabel="Line shape"
+            options={EDGE_TYPE_OPTIONS}
+            selectedValue={selectedEdgeTypeValue}
+            onSelect={value => onSelectEdgeType(value as EdgeTypeValue)}
+            ariaLabelPrefix="Line shape"
+            getButtonContent={option => (
+              <FontAwesomeV6Icon
+                iconName={EDGE_TYPE_ICONS[option.value as EdgeTypeValue]}
+              />
+            )}
+          />
+          <LineOptionGroup
             groupLabel="Arrow heads"
             options={ARROW_HEAD_OPTIONS}
             selectedValue={selectedArrowHeads}
@@ -231,6 +274,11 @@ export default function LineEdgeToolbar({
               const items = [...getNodes(), ...getEdges()];
               updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
             }}
+            handlesToggle={
+              hasAnchors
+                ? {visible: handlesVisible, onToggle: onToggleHandles}
+                : undefined
+            }
           />
         </>
       )}

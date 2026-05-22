@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Classroom Context
 
-#### This is the third unit of the course, building off the content from units one and two. The course was designed to teach in order.
+This is the third unit of the course, building off the content from units one and two. The course was designed to teach in order.
 
-#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
 
 <div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
 
@@ -29,8 +29,8 @@ markdown <<MARKDOWN
 
 ## Unit Length and Format
 
-#### **Total Duration:** Approximately 3 weeks
-#### **Structure:** Eleven 45-minute lessons and one 5-day culminating project
+**Total Duration:** Approximately 3 weeks
+**Structure:** Eleven 45-minute lessons and one 5-day culminating project
 
 <img src="https://images.code.org/0845fe02cb126948ac8b81f06b861103-image-1767974753854.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 

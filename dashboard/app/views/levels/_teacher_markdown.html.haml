@@ -10,4 +10,4 @@
   #markdown.teacher.hide-as-student
     %h3= t('teacher.for_teachers_only')
     / Render markdown text clientside via _teacher_markdown.js
-    .content.markdown-container{data: {markdown: data['teacher_markdown']}}
+    .content.markdown-container{data: {markdown: data['teacher_markdown'], allow_embeds: true}}

@@ -5,59 +5,137 @@ description 'description here'
 markdown <<MARKDOWN
 # Searching
 
-#### Imagine opening a school website and typing **“calendar”** into the search bar. Instantly, a short list of pages appears even though the site contains hundreds of documents.
+Imagine opening a school website and typing **“calendar”** into the search bar. Instantly, a short list of pages appears even though the site contains hundreds of documents.
 
 <br>
 
-<img src="https://images.code.org/09f3b6ac8f017d7cae84610b797af6ad-image-1767801900953.png" alt="example of a search bar with results" width="300px" style="border-radius:10px; float:right; margin: 0 40px 10px 20px;">
+<img src="https://images.code.org/09f3b6ac8f017d7cae84610b797af6ad-image-1767801900953.png" alt="example of a search bar with results" width="400px" style="border-radius:10px; float:right; margin: 0 40px 10px 20px;">
 
-<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
+## Try the Search
 
-#### **Pause & Reflect**
+A search algorithm has to decide what counts as a match. 
 
-- #### How does the website decide which pages match your search?
-- #### What happens if a page *almost* matches your word, but not exactly?
-- #### Who might be helped, or left out, by how search results are ordered?
+**Before clicking each card, predict which pages might show up.**
 
-<br>
+<div style="clear:both;"></div>
 
-> #### You may have thought about things like: keywords matter, spelling matters, some results appear first, and some content may never show up at all.
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin:24px 0;">
 
-#### 👉 The results were created using a **searching algorithm**.
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🔍 Search: “calendar”
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      Possible matches:<br>
+      ✅ School Calendar<br>
+      ✅ Athletics Calendar<br><br>
+      The word “calendar” appears directly in both page titles.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🔍 Search: “sports”
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      Possible issue:<br>
+      ⚠️ “Athletics Calendar” might not appear if the search only looks for the exact word “sports.”<br><br>
+      This shows how word choice can affect what users find.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🔍 Search: “lunch”
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      Possible match:<br>
+      ✅ Lunch Menu<br><br>
+      This is a strong match because the keyword appears directly in the page title.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🔍 Search: “parents”
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      Possible match:<br>
+      ✅ Parent Resources<br><br>
+      A search algorithm may need to handle small differences, like “parent” vs. “parents.”
+    </div>
+  </details>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Key Idea:</strong> Search is about matching a user’s query to data. The results depend on what the program checks, such as titles, keywords, spelling, or exact words.
+</p>
+
+</div>
+
 ---
 
 ## What is a searching algorithm?
 
-#### A **searching algorithm** is a rule a program uses to look through data to find items that match a specific value or keyword.
+A **searching algorithm** is a rule a program uses to look through data to find items that match a specific value or keyword.
 
-#### In JavaScript, searching is often used to scan arrays or strings to find matching data — like locating a student name, a message, or a product based on what a user types.
+In JavaScript, searching is often used to scan arrays or strings to find matching data, like locating a student name, a message, or a page based on what a user types.
 
 ---
 
 ## What is a query?
 
-#### When you use a search feature, you are asking the computer a question — even if it doesn’t feel like one.
+When you use a search feature, you are asking the computer a question, even if it doesn’t feel like one.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔍 <strong>Query</strong> is the question or request you send to a computer to get specific information back from a larger set of data.</p>
+<div style="background-color:#B7E0E5;border-radius:10px;padding:15px;margin:20px auto;max-width:85%;box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word;">
+<p style="font-size:14pt;margin-top:12px;line-height:120%;">
+🔍 <strong>Query</strong> is the word, phrase, or request you send to a computer to get specific information back from a larger set of data.
+</p>
 </div>
 
-#### A query might be:
-- #### A word you type into a search bar  
-- #### A phrase like a student name or title  
-- #### A value the program is trying to find inside a list  
+A query might be:
 
-#### The searching algorithm uses the query to decide **what counts as a match** and what does not.
+- A word typed into a search bar  
+- A phrase like a student name or page title  
+- A value the program is trying to find inside a list  
 
-<br>
-
-
+The searching algorithm uses the query to decide **what counts as a match** and what does not.
 
 ---
 
-## Next up
+## Quick Check
 
-#### Let’s take a look at how searching works in JavaScript and what “matching” really means behind the scenes.
+Think about the searches above.
 
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Why might “sports” fail to find “Athletics Calendar”?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+Because the search may only look for exact word matches. If the page title says “Athletics” but the user searches “sports,” the program may not see them as related unless it is designed to handle synonyms or related terms.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+What should students pay attention to when building search?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+Students should pay attention to what data is being searched, what counts as a match, and how small differences in spelling, wording, or capitalization can change the results.
+</div>
+</details>
+
+---
+
+## Next Up
+
+Let’s take a look at how searching works in JavaScript and what “matching” really means behind the scenes.
 
 MARKDOWN

@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod5-fictions-02_2026'
+title 'Check For Understanding: AI Fictions'
+description ''
+question 'Why can AI-generated misinformation be difficult to identify?'
+
+wrong 'AI systems intentionally try to mislead users.'
+right 'AI produces confident, well-structured answers that may include incomplete or incorrect information.'
+wrong 'AI responses often include technical language that is hard to understand.'
+wrong 'AI makes mistakes when given unclear or poorly written prompts.'
+allow_multiple_attempts true

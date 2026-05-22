@@ -96,11 +96,12 @@ export function isTourAvailableOnLevel(
   if (!isAvailableForLab) {
     return false;
   }
-  // While we are developing the new sketch lab, skip any product tours when the
-  // experiment is on.
+  // The Sketch Lab tour(s) are only currently available for excalidraw-based
+  // Sketch lab.
+  // TODO: remove excalidraw tour https://codedotorg.atlassian.net/browse/AFL-641
   if (
     levelProperties.appName === 'sketchlab' &&
-    experiments.isEnabledAllowingQueryString('sketch2')
+    !experiments.isEnabledAllowingQueryString(experiments.EXCALIDRAW)
   ) {
     return false;
   }

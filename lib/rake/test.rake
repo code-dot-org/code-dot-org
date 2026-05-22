@@ -110,15 +110,16 @@ namespace :test do
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
-      '-c', 'Chrome,iPhone',
+      '--device-farm',
+      '-c', 'Chrome',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--eyes',
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', '20' # The total saucelabs concurrency budget is 65
+      '--parallel', '20'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -129,35 +130,6 @@ namespace :test do
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       raise "Eyes tests failed"
-    end
-  end
-
-  timed_task_with_logging :devicefarm_eyes_ui do
-    ChatClient.log 'Running <b>dashboard</b> UI visual tests on AWS Device Farm...'
-    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-    failed_browser_count = RakeUtils.system_with_chat_logging(
-      "cd #{dashboard_dir('test/ui')} &&",
-      'bundle', 'exec', './runner.rb',
-      '--device-farm',
-      '-c', 'Chrome',
-      '-d', CDO.site_host('studio.code.org'),
-      '-p', CDO.site_host('code.org'),
-      '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--eyes',
-      '--magic_retry',
-      '--with-status-page',
-      '-f', eyes_features.join(","),
-      '--parallel', '25'
-    )
-    if failed_browser_count == 0
-      message = '⊙‿⊙ Device Farm Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-      ChatClient.log message
-      ChatClient.message 'server operations', message, color: 'green'
-    else
-      message = 'ಠ_ಠ Device Farm Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-      ChatClient.log message, color: 'red'
-      ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "Device Farm Eyes tests failed"
     end
   end
 

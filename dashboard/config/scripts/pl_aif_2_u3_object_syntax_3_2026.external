@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Arrays in Objects
 
-#### Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
+Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
 
-#### This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
+This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
 
 ---
 
@@ -17,9 +17,9 @@ markdown <<MARKDOWN
 
 ## Example
 
-#### With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
+With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
 
-#### In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
+In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
 
 
 
@@ -36,10 +36,21 @@ markdown <<MARKDOWN
   </p>
 </div>
 
+---
+
+## 🔍 Check for Understanding
+> #### Look at the parallel arrays shown above. What three pieces of information belong together at index 1?
+> - ####List the player’s name, goals, and wcWinner value.
+<details> <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;"> Check your thinking </summary> <div style="margin-top:16px; background:#f7f8fa;"> <p style = "font-size: 14pt;">At <b>index 1</b>, the values belong to the second player in each array.</p> <p style = "font-size: 14pt;"><b>name:</b> "Ronaldo"</p> <p style = "font-size: 14pt;"><b>goals:</b> 954</p> <p style = "font-size: 14pt;"><b>wcWinner:</b> false</p> </div> </details>
 
 
-## Next up
+---
 
-#### In the next level, you will practice creating an object out of three parallel arrays. 
+<div style="background-color:#B7E0E5;border-radius:40px;color:#000000;width:95%;padding:20px 24px;margin:24px 0;">
 
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Encouragement:</strong> You’re halfway there! This learning module moves quickly to introduce the core concepts and activities, so it’s completely normal to feel overwhelmed at first. As you begin working through the actual curriculum, the ideas will become more concrete and start to connect together.
+</p>
+
+</div>
 MARKDOWN

@@ -10,14 +10,14 @@ markdown <<MARKDOWN
 
 ## Key Understandings
 
-* #### The counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. 
-* #### The counter pattern can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.
-* #### When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.
-* #### Movement in an animation is just a change in position. Changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.
+* The counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. 
+* The counter pattern can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.
+* When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.
+* Movement in an animation is just a change in position. Changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.
 
 ## Other Uses for the Counter Pattern
 
-#### Any block that takes a number as input could be animated using the counter pattern in the draw loop. Take a look at the three following examples, each of which uses the counter pattern to animate a different aspect of the image. Below each image is an example of the code that was used _inside the Draw Loop_ to produce the animation.
+Any block that takes a number as input could be animated using the counter pattern in the draw loop. Take a look at the three following examples, each of which uses the counter pattern to animate a different aspect of the image. Below each image is an example of the code that was used _inside the Draw Loop_ to produce the animation.
 
 <table style="width:95%; text-align:center;">
 <tr>

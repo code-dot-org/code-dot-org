@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-revised_2026",
-    "long_instructions": "## Finalize Your App\r\n\r\nIn this level, you’ll polish and improve your app before sharing it.\r\n\r\nUse your peer feedback and the [Project Rubric](https://docs.google.com/document/d/1X021QnqLwRY6l76aiCUluE56ARKPdgLPC2K3SXcCD90/edit?usp=sharing) to guide your improvements.\r\n\r\n1. Refine your app’s functionality so it works correctly.  \r\n2. Improve your design to make your app clear and user-friendly.  \r\n3. Clean up your code by organizing it with functions and event listeners.  \r\n4. Fix any issues based on feedback or testing.\r\n\r\nFocus on making your app complete, reliable, and easy to use.",
+    "long_instructions": "## Finalize Your App\r\n\r\nPolish and improve your app before sharing it. Use your peer feedback and the [Project Rubric](https://docs.google.com/document/d/1X021QnqLwRY6l76aiCUluE56ARKPdgLPC2K3SXcCD90/edit?usp=sharing) to guide your improvements.\r\n\r\n1. Refine your app's functionality so it works correctly.  \r\n2. Improve your design to make your app clear and user-friendly.  \r\n3. Clean up your code by organizing it with functions and event listeners.  \r\n4. Fix any issues based on feedback or testing.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -38,6 +38,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-20T08:10:25.968+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level8_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level8_2026\"},{\"changed_at\":\"2026-04-20 08:17:49 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T08:10:25.968+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level8_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level8_2026\"},{\"changed_at\":\"2026-04-20 08:17:49 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-16 19:40:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

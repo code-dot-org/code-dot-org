@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -90,7 +90,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.22
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -164,7 +164,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.22
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     volumes:
       - name: mysql
@@ -297,7 +297,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.22
+    image: codedotorg/cdo-ci:internal-mysql
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -316,13 +316,13 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build
+  - name: cache-staging-ci-build-internal-mysql
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-internal-mysql.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -344,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 1232b3f73bcef6bf1cce7c0136a564305b18c3fe5ad985d2f15266482cb03645
+hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
 
 ...

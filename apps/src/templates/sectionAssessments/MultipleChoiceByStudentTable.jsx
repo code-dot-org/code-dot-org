@@ -15,6 +15,8 @@ import {
 } from './assessmentDataShapes';
 import PercentAnsweredCell from './PercentAnsweredCell';
 
+import moduleStyles from './multiple-choice-by-student-table.module.scss';
+
 export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
@@ -93,10 +95,8 @@ class MultipleChoiceByStudentTable extends Component {
         cell: {
           formatters: [this.questionCellFormatter],
           props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.questionCell,
-            },
+            style: tableLayoutStyles.cell,
+            className: moduleStyles.questionCell,
           },
         },
       },
@@ -185,12 +185,6 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470,
   },
 };
 

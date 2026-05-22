@@ -1,10 +1,10 @@
+import {Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -12,7 +12,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import {freeResponsesDataPropType} from './assessmentDataShapes';
 
-const PADDING = 15;
+import moduleStyles from './free-responses-table.module.scss';
 
 export const COLUMNS = {
   NAME: 0,
@@ -52,9 +52,15 @@ class FreeResponsesAssessmentsTable extends Component {
   responseCellFormatter = (response, {rowData, rowIndex}) => {
     return (
       <div>
-        {response && <div style={styles.response}>{response}</div>}
+        {response && (
+          <Typography variant="body3" className={moduleStyles.response}>
+            {response}
+          </Typography>
+        )}
         {!response && (
-          <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
+          <Typography variant="body3" className={moduleStyles.noResponse}>
+            {i18n.emptyFreeResponse()}
+          </Typography>
         )}
       </div>
     );
@@ -67,19 +73,15 @@ class FreeResponsesAssessmentsTable extends Component {
         header: {
           label: i18n.studentName(),
           props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.studentNameColumnHeader,
-            },
+            style: tableLayoutStyles.headerCell,
+            className: moduleStyles.studentNameHeaderCell,
           },
           transforms: [sortable],
         },
         cell: {
           props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.studentNameColumnCell,
-            },
+            style: tableLayoutStyles.cell,
+            className: moduleStyles.studentNameCell,
           },
         },
       },
@@ -87,12 +89,7 @@ class FreeResponsesAssessmentsTable extends Component {
         property: 'response',
         header: {
           label: i18n.response(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.responseHeaderCell,
-            },
-          },
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           formatters: [this.responseCellFormatter],
@@ -127,28 +124,5 @@ class FreeResponsesAssessmentsTable extends Component {
     );
   }
 }
-
-const styles = {
-  studentNameColumnHeader: {
-    padding: PADDING,
-  },
-  studentNameColumnCell: {
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    maxWidth: 200,
-    padding: PADDING,
-    verticalAlign: 'top',
-  },
-  responseColumnHeader: {
-    padding: PADDING,
-  },
-  noResponse: {
-    color: color.lighter_gray,
-  },
-  response: {
-    whiteSpace: 'pre-wrap',
-  },
-};
 
 export default FreeResponsesAssessmentsTable;

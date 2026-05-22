@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-07T22:23:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "What might cause your filter to fail or give biased results?\r\n\r\nThink about the data:\r\n* Could a movie be missing information?\r\n* Could your condition exclude movies that should be included?\r\n* Is your cutoff (year or rating) fair?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-07 22:23:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

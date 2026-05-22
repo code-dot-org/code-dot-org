@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Real-life Algorithmic Decision Making
 
-#### Algorithms are embedded in our everyday lives and can shape the opportunities we receive, the content we see, and even the decisions made about us—often without us realizing it.
+Algorithms are embedded in our everyday lives and can shape the opportunities we receive, the content we see, and even the decisions made about us—often without us realizing it.
 
 ## Consider this:
 
@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 
 ## Prioritizing Understanding
 
-#### By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
+By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
 
 
 

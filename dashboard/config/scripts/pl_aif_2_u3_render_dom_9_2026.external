@@ -5,13 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Rendering Lists of Objects
 
-#### Before we start rendering content on the page, we need a way to transform data into something we can display.
+Before we start rendering content on the page, we need a way to transform data into something we can display.
 
-#### JavaScript gives us a powerful tool for this: `.map()`.
+JavaScript gives us a powerful tool for this: `.map()`.
 
-#### We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
+We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
 
+---
 
+## 🔍 Check for Understanding 
 
 <div
   style="
@@ -20,24 +22,20 @@ markdown <<MARKDOWN
     border-radius: 10px;
     padding: 12px;
     margin: 16px 0;
-    background: #b2dee3;
+    background: #f7f8fa;
   "
 >
-  <img 
-    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
-    alt="A clipboard labeled TO DO" 
-    width="40px"
-    style="margin-right: 12px;"
-  >
+
+
 
   <div style="font-size: 14px;">
     <strong>
-      Look at the code and output below. What happens when <code>.map()</code> is used?
+      <p style = "font-size:14pt;"></p>Look at the code and output below. What happens when <code>.map()</code> is used?</p>
     </strong>
 
 <ul style="margin-top: 14px;">
-      <li><i>What happens to each item in the list?</i></li>
-      <li><i>What does the final output look like compared to the original array?</i></li>
+      <li style = "font-size: 14pt;"><i>What happens to each item in the list?</i></li>
+      <li style = "font-size: 14pt;"><i>What does the final output look like compared to the original array?</i></li>
     </ul>
   </div>
 </div>
@@ -83,19 +81,33 @@ markdown <<MARKDOWN
   </div>
 </div>
 
+<br>
+
+<details >
+    <summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">💡 Check your thinking </summary>
+<div style="margin-top:16px; background:#f7f8fa;">
+    <p style ="font-size: 14pt; ">
+Each item in the list is multiplied by 2, so every number is doubled. <br><br>
+The final output is a new array with all the same positions as the original array, but each value is twice as large.<br>
+
+
+</p>
+</div>
+</details>
+
 ---
 ## Rendering Data into the DOM with .map()
 
-#### When we render data on a web page, we often start with an array of objects. EX: users, products, or messages.
-#### `.map()` allows us to loop through that data and turn each object into a piece of HTML, which we can then display on the page.
+When we render data on a web page, we often start with an array of objects. EX: users, products, or messages.
+`.map()` allows us to loop through that data and turn each object into a piece of HTML, which we can then display on the page.
 
-#### **In other words:**
+**In other words:**
 
-- #### Each item in the data becomes one visual element
+- Each item in the data becomes one visual element
 
-- #### `.map()` helps us create those elements consistently and efficiently
+- `.map()` helps us create those elements consistently and efficiently
 
-- #### This pattern shows up constantly in real-world web development.
+- This pattern shows up constantly in real-world web development.
 
 <div
   style="

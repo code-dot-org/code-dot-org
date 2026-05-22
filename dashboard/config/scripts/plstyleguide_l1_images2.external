@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Alt Text
 
-#### **All images should have corresponding alt text.** The exception to this is purely decorative elements.
+**All images should have corresponding alt text.** The exception to this is purely decorative elements.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
@@ -22,12 +22,12 @@ markdown <<MARKDOWN
 
 ### **Guidelines**
 
-#### For alt text, use the following guidelines, sourced from the Section 508 government website (cited above).
+For alt text, use the following guidelines, sourced from the Section 508 government website (cited above).
 
-* #### Alt text should be short and to the point.
-* #### Alt text should communicate the same information as the visual content.
-* #### Alt text should refer to relevant content provided by the image, rather than simply describing how the image looks.
-* #### Alt text should not contain any extra or unnecessary information, and should not repeat information that is already provided in the text.
+* Alt text should be short and to the point.
+* Alt text should communicate the same information as the visual content.
+* Alt text should refer to relevant content provided by the image, rather than simply describing how the image looks.
+* Alt text should not contain any extra or unnecessary information, and should not repeat information that is already provided in the text.
 
 ## Decorative Images
 
@@ -50,5 +50,5 @@ markdown <<MARKDOWN
 
 ### **Guidelines**
 
-#### Use your best judgment to decide if an image is decorative. To set a text as decorative, use the tag `alt=""` in your image code.
+Use your best judgment to decide if an image is decorative. To set a text as decorative, use the tag `alt=""` in your image code.
 MARKDOWN
