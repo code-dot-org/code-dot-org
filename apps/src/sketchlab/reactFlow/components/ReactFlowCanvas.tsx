@@ -64,13 +64,13 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {getEdgeAriaLabel} from '../utils/elementLabel';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
-import {getEdgeAriaLabel} from '../utils/nodeLabel';
 
 import Toolbar from './Toolbar';
 
