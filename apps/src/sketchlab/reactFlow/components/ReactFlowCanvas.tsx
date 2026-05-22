@@ -393,13 +393,15 @@ export default function ReactFlowCanvas({
       };
     };
 
+    const nodeMap = new Map(nodes.map(node => [node.id, node]));
+
     // Assign a 1-based index to each free-floating line (both endpoints are
     // anchors) so the screenreader can distinguish them: "Line 1", "Line 2".
     let floatingLineCount = 0;
     const floatingLineIndex = new Map<string, number>();
     edges.forEach(edge => {
-      const src = nodes.find(node => node.id === edge.source);
-      const tgt = nodes.find(node => node.id === edge.target);
+      const src = nodeMap.get(edge.source);
+      const tgt = nodeMap.get(edge.target);
       if (
         (!src || src.type === 'lineAnchor') &&
         (!tgt || tgt.type === 'lineAnchor')
@@ -440,7 +442,11 @@ export default function ReactFlowCanvas({
           ...edge,
           selected,
           ...(locked && {deletable: false}),
-          ariaLabel: getEdgeLabel(edge, nodes, floatingLineIndex.get(edge.id)),
+          ariaLabel: getEdgeLabel(
+            edge,
+            nodeMap,
+            floatingLineIndex.get(edge.id)
+          ),
           className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,

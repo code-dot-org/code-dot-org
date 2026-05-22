@@ -31,11 +31,11 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
  */
 export function getEdgeLabel(
   edge: SketchlabReactFlowEdge,
-  nodes: SketchlabReactFlowNode[],
+  nodeMap: Map<string, SketchlabReactFlowNode>,
   lineIndex?: number
 ): string {
-  const sourceNode = nodes.find(node => node.id === edge.source);
-  const targetNode = nodes.find(node => node.id === edge.target);
+  const sourceNode = nodeMap.get(edge.source);
+  const targetNode = nodeMap.get(edge.target);
 
   const sourceIsAnchor = !sourceNode || sourceNode.type === 'lineAnchor';
   const targetIsAnchor = !targetNode || targetNode.type === 'lineAnchor';
