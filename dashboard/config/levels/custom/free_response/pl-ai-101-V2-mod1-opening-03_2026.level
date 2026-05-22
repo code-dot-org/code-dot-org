@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-05-20T21:15:23.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Reflection\r\n\r\n#### Take a minute to reflect on your goals for this course. List one or two below. We'll come back to these at the end of this Professional Learning series.\r\n\r\n<br>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Need Help?</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n#### Some example goals include…\r\n* #### Speed up classroom management with AI.\r\n* #### To be exposed to many AI options so I can choose from them later.\r\n* #### Learn the basics of AI so I can answer my student’s questions.\r\n\r\n</p></div>\r\n</details>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/c/ai-cs/ai-101-self-paced-pl-community/477\" target=\"_blank\">AI 101 Self-Paced PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader AI 101 learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/module-1-level-5-reflection-goals/39647\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n**Note About Using the Forum**: Our forum automatically flags suspicious accounts, to avoid your account being (temporary) suspended, we suggest that you take a minute before posting your message after drafting it.\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>",
+    "long_instructions": "# Opening Reflection\r\n\r\nBefore you begin the AI 101 Professional Learning Series, take a minute to reflect on your goals for this course. \r\n\r\n> In the **reflection box below**, answer the following question: If you were to describe your goal in a hashtag, what might it be?\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n</div>\r\n</div>\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -16,10 +17,12 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:23.109+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-opening-03\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-opening-03\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:23.109+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-opening-03\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-opening-03\"},{\"changed_at\":\"2026-05-21 12:11:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-21 13:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-21 13:58:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

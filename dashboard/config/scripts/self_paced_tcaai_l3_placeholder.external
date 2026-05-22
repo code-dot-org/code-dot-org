@@ -3,5 +3,104 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-Sample Project Placeholder
+# Breaking Down the Generate and Judge Guide
+
+In the previous level, you explored an example Generate and Judge Guide created by a student. This level breaks down the major sections of the project and highlights how students apply the big ideas from across the unit.
+
+As you review each section, notice how the student moves beyond simple reactions about AI and instead makes evidence-based judgments about responsible AI use.
+
+## Opening Section
+
+<table style="width:100%; border-collapse:collapse; margin:25px 0px;">
+<tr>
+<td style="width:40%; vertical-align:top; padding-right:20px;">
+
+This opening section introduces the topic, audience, and purpose of the guide.
+
+By choosing a specific audience and focus, the student creates a clearer foundation for the project.
+
+</td>
+<td style="width:60%; vertical-align:top;">
+<img src="https://images.code.org/754c6f55e839f235de4e6d183363ffb6-image-1779395945932.32.01 PM.png" alt="Audience, theme, and purpose of the AI Guide" style="width:100%; border-radius:10px;">
+</td>
+</tr>
+</table>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Helpful vs. Unhelpful AI Use
+
+<table style="width:100%; border-collapse:collapse; margin:25px 0px;">
+<tr>
+<td style="width:40%; vertical-align:top; padding-right:20px;">
+
+This section helps students compare responsible and irresponsible uses of AI.
+
+The student explains both the benefits and risks while emphasizing that humans are responsible for what gets shared.
+
+</td>
+<td style="width:60%; vertical-align:top;">
+<img src="https://images.code.org/7fc29fcb8841d9137ac5dc2ed778d407-image-1779396005869.32.34 PM.png" alt="Chat examples of helpful and unhelpful AI use" style="width:100%; border-radius:10px;">
+</td>
+</tr>
+</table>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Chatbot Evidence
+
+<table style="width:100%; border-collapse:collapse; margin:25px 0px;">
+<tr>
+<td style="width:40%; vertical-align:top; padding-right:20px;">
+
+This section gives students the opportunity to test and evaluate AI-generated responses.
+
+The student analyzes the chatbot’s output, identifies strengths and weaknesses, and explains why human judgment is still necessary.
+
+</td>
+<td style="width:60%; vertical-align:top;">
+<img src="https://images.code.org/64e5c35389ecbd6817a9e7c6c004fc8f-image-1779396005828.32.57 PM.png" alt="Logs of custom chatbot use" style="width:100%; border-radius:10px;">
+</td>
+</tr>
+</table>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Image Generation
+
+<table style="width:100%; border-collapse:collapse; margin:25px 0px;">
+<tr>
+<td style="width:40%; vertical-align:top; padding-right:20px;">
+
+This section encourages students to think critically about AI-generated images and misinformation.
+
+The student reflects on audience trust, realism, and the responsibility creators have when sharing AI-generated media.
+
+</td>
+<td style="width:60%; vertical-align:top;">
+<img src="https://images.code.org/8daca8f013fe688c80bcfbfccaf54f0a-image-1779396005857.32.47 PM.png" alt="A generated image and tips for image gen" style="width:100%; border-radius:10px;">
+</td>
+</tr>
+</table>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Tips for Responsible Use
+
+<table style="width:100%; border-collapse:collapse; margin:25px 0px;">
+<tr>
+<td style="width:40%; vertical-align:top; padding-right:20px;">
+
+This final section synthesizes ideas from across the unit into practical advice for others.
+  
+The student connects recommendations back to earlier investigations and demonstrates evidence-based reasoning about AI use.
+
+</td>
+<td style="width:60%; vertical-align:top;">
+<img src="https://images.code.org/e97a3bbbec1e36386126c4391fd3d639-image-1779396005843.33.02 PM.png" alt="Four final tips for responsible use" style="width:100%; border-radius:10px;">
+</td>
+</tr>
+</table>
+
+<br>
 MARKDOWN

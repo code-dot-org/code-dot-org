@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2026-04-01T21:17:47.000Z",
   "level_num": "custom",
@@ -64,10 +65,10 @@
     "start_blocks": "onEvent(\"happyButton\", \"click\", function() {\r\n  setProperty(\"emojiImage\", \"image\", \"icon://fa-smile-o\");\r\n  //Play a happy song here\r\n  \r\n});\r\n\r\nonEvent(\"sadButton\", \"click\", function() {\r\n  setProperty(\"emojiImage\", \"image\", \"icon://fa-frown-o\");\r\n  //Play a sad song here\r\n  \r\n});\r\n",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L14.8 - happySong\",\r\n  \"callout_text\": \"Add code for your happy song here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"happySong\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"Play a happy song here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L14.8 - sadSong\",\r\n  \"callout_text\": \"Add code for your sad song here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"sadSong\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"Play a sad song here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "rubric_key_concept": "Create apps that play music with the circuit playground",
-    "rubric_performance_level_1": "The app has two playSong() blocks that play different songs. Each song is at least four notes and includes at least one rest",
-    "rubric_performance_level_2": "The app has two playSong() blocks that play different songs, but at least one of the songs is shorter than four notes or does not include a rest",
-    "rubric_performance_level_3": "The app has one playSong() block for one of the emojis, but not for both emojis",
-    "rubric_performance_level_4": "The app has no playSong() blocks",
+    "rubric_performance_level_1": "The app has two playNotes() blocks that play different songs. Each song is at least four notes and includes at least one rest",
+    "rubric_performance_level_2": "The app has two playNotes() blocks that play different songs, but at least one of the songs is shorter than four notes or does not include a rest",
+    "rubric_performance_level_3": "The app has one playNotes() block for one of the emojis, but not for both emojis",
+    "rubric_performance_level_4": "The app has no playNotes() blocks",
     "encrypted_examples": "RpPYOTR/PNFwkVY2Q/xwezJOUeOJnYyww/NvOSqYKLvxlQDCp7DOEe4TDvcq\nKhYT6YU7imqLREXMmKEKsACZUg==\n",
     "reference_links": [
       "/maker/setup"
@@ -75,9 +76,8 @@
     "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:17:47.135+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - A_2025\\\"\"],\"cloned_from\":\"CSD U6 - Music - A_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:17:47.135+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - A_2025\\\"\"],\"cloned_from\":\"CSD U6 - Music - A_2025\"},{\"changed_at\":\"2026-05-21 18:29:57 +0000\",\"changed\":[\"code_functions\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"rubric_performance_level_4\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
