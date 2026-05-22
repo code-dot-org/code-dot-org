@@ -90,7 +90,7 @@ module Geocoder
     # Single-digit numbers ("level 3", "score 5") are almost never house numbers.
     # '|' separates concatenated text block fields — split on it so the candidate
     # doesn't bleed across block boundaries. No-op when text contains no '|'.
-    match = text.match(/\b[0-9]{2,}\b/)
+    match = text.match(/\b\d{2,}\b/)
     return nil unless match
 
     pos = match.begin(0)
