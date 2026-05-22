@@ -109,7 +109,7 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
-  'portfolio/show': './src/sites/studio/pages/portfolio/show.js',
+  'scrapbook/show': './src/sites/studio/pages/scrapbook/show.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',

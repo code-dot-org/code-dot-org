@@ -1,3 +1,5 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   closestCenter,
   DndContext,
@@ -15,16 +17,14 @@ import {
   useSortable,
 } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
-import {Dialog} from '@code-dot-org/component-library/dialog';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Link as MuiLink} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import moduleStyles from './PortfolioGallery.module.scss';
+import moduleStyles from './ScrapbookGallery.module.scss';
 
-interface PortfolioEntry {
+interface ScrapbookEntry {
   id: number;
   script_id: number;
   level_id: number;
@@ -42,22 +42,22 @@ interface Props {
   userName: string;
 }
 
-export default function PortfolioGallery({userName}: Props) {
-  const [entries, setEntries] = useState<PortfolioEntry[] | null>(null);
+export default function ScrapbookGallery({userName}: Props) {
+  const [entries, setEntries] = useState<ScrapbookEntry[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [pendingDelete, setPendingDelete] = useState<PortfolioEntry | null>(
+  const [pendingDelete, setPendingDelete] = useState<ScrapbookEntry | null>(
     null
   );
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    HttpClient.fetchJson<PortfolioEntry[]>('/api/v1/portfolio_entries')
+    HttpClient.fetchJson<ScrapbookEntry[]>('/api/v1/scrapbook_entries')
       .then(({value}) => {
         if (!cancelled) setEntries(value);
       })
       .catch(() => {
-        if (!cancelled) setError('Could not load portfolio entries.');
+        if (!cancelled) setError('Could not load scrapbook entries.');
       });
     return () => {
       cancelled = true;
@@ -83,7 +83,7 @@ export default function PortfolioGallery({userName}: Props) {
     setDeleting(true);
     try {
       const response = await HttpClient.delete(
-        `/api/v1/portfolio_entries/${pendingDelete.id}`,
+        `/api/v1/scrapbook_entries/${pendingDelete.id}`,
         true
       );
       if (response.ok) {
@@ -101,15 +101,15 @@ export default function PortfolioGallery({userName}: Props) {
 
   return (
     <div className={moduleStyles.page}>
-      <h1 className={moduleStyles.title}>{userName}&rsquo;s Aha! Moments</h1>
+      <h1 className={moduleStyles.title}>{userName}&rsquo;s 💡 Aha! Moments</h1>
       {error && <div className={moduleStyles.error}>{error}</div>}
       {!error && entries === null && (
         <div className={moduleStyles.loading}>Loading...</div>
       )}
       {!error && entries !== null && entries.length === 0 && (
         <div className={moduleStyles.empty}>
-          No Aha! moments saved yet. Click the +Portfolio button on any level
-          to add one.
+          No Aha! moments saved yet. Click the +Scrapbook button on any level to
+          add one.
         </div>
       )}
       {!error && entries !== null && entries.length > 0 && (
@@ -160,7 +160,7 @@ function SortableEntryCard({
   entry,
   onDeleteRequested,
 }: {
-  entry: PortfolioEntry;
+  entry: ScrapbookEntry;
   onDeleteRequested: () => void;
 }) {
   const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
@@ -200,9 +200,7 @@ function SortableEntryCard({
             aria-label={isWide ? 'Shrink to row' : 'Expand to full row'}
             title={isWide ? 'Shrink to row' : 'Expand to full row'}
           >
-            <FontAwesomeV6Icon
-              iconName={isWide ? 'compress' : 'expand'}
-            />
+            <FontAwesomeV6Icon iconName={isWide ? 'compress' : 'expand'} />
           </button>
           <button
             type="button"

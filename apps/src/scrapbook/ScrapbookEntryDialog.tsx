@@ -7,7 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import captureLevelScreenshot from './captureLevelScreenshot';
 import RegionSelector, {SelectionRect} from './RegionSelector';
 
-import moduleStyles from './PortfolioEntryDialog.module.scss';
+import moduleStyles from './ScrapbookEntryDialog.module.scss';
 
 interface Props {
   isOpen: boolean;
@@ -32,7 +32,7 @@ interface ExistingEntry {
 
 const EMPTY_FORM: FormState = {atFirst: '', butThen: '', andNow: ''};
 
-export default function PortfolioEntryDialog({
+export default function ScrapbookEntryDialog({
   isOpen,
   onClose,
   scriptId,
@@ -55,7 +55,7 @@ export default function PortfolioEntryDialog({
     setError(null);
 
     HttpClient.fetchJson<ExistingEntry[]>(
-      `/api/v1/portfolio_entries?script_id=${scriptId}&level_id=${levelId}`
+      `/api/v1/scrapbook_entries?script_id=${scriptId}&level_id=${levelId}`
     )
       .then(({value: existingEntries}) => {
         if (cancelled) return;
@@ -132,7 +132,7 @@ export default function PortfolioEntryDialog({
       const payload = {
         script_id: scriptId,
         level_id: levelId,
-        portfolio_entry: {
+        scrapbook_entry: {
           at_first_text: form.atFirst,
           but_then_text: form.butThen,
           and_now_text: form.andNow,
@@ -141,7 +141,7 @@ export default function PortfolioEntryDialog({
         },
       };
       const response = await HttpClient.post(
-        '/api/v1/portfolio_entries',
+        '/api/v1/scrapbook_entries',
         JSON.stringify(payload),
         true,
         {'Content-Type': 'application/json'}
@@ -162,7 +162,7 @@ export default function PortfolioEntryDialog({
 
   return (
     <Dialog
-      title="Add to Portfolio"
+      title="Add to Scrapbook"
       onClose={handleClose}
       primaryButtonProps={{
         children: saving ? 'Saving...' : 'Save',

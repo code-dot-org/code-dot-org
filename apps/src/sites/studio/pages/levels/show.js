@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
-import PortfolioButton from '@cdo/apps/portfolio/PortfolioButton';
+import ScrapbookButton from '@cdo/apps/scrapbook/ScrapbookButton';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -91,15 +91,15 @@ function initPage() {
     }
   };
 
-  const portfolioMountPoint = document.getElementById(
-    'portfolio-button-mount-point'
+  const scrapbookMountPoint = document.getElementById(
+    'scrapbook-button-mount-point'
   );
-  if (portfolioMountPoint) {
+  if (scrapbookMountPoint) {
     createReactRoot(
       <Provider store={getStore()}>
-        <PortfolioButton />
+        <ScrapbookButton />
       </Provider>,
-      portfolioMountPoint,
+      scrapbookMountPoint,
       {
         legacyReactDomRender: true,
       }
