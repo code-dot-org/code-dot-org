@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -29,6 +30,7 @@ export default function ToolbarDropdownRow({
   renderPopoverContent,
 }: ToolbarDropdownRowProps) {
   const labelId = useId();
+  const {theme} = useTheme();
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
   const closePopover = () => setAnchorEl(null);
@@ -88,7 +90,9 @@ export default function ToolbarDropdownRow({
           },
         }}
       >
-        {renderPopoverContent(closePopover)}
+        {/* The popover renders into a body-level portal, escaping the
+         * ThemeProvider's <div data-theme={...}> wrapper. */}
+        <div data-theme={theme}>{renderPopoverContent(closePopover)}</div>
       </Popover>
     </div>
   );
