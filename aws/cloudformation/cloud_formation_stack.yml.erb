@@ -426,6 +426,8 @@ Resources:
     Type: AWS::CloudFront::Function
     Properties:
       Name: <%= stack_name %>-AcceptLanguage
+      # Required: a distribution can only associate functions in the LIVE stage.
+      AutoPublish: true
       FunctionCode: <%= js_erb 'accept-language.js.erb', uglify: false, max: FUNCTION_MAX %>
       FunctionConfig:
         Comment: "Normalizes Accept-Language header from viewer requests"
