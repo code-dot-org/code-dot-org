@@ -65,7 +65,10 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
-import {createLineAnchorAtHandle} from '../utils/lineAnchors';
+import {
+  createLineAnchorAtHandle,
+  snapEdgesIntoDraggedNode,
+} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -170,10 +173,8 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition, flowToScreenPosition, getEdges} = useReactFlow<
-    SketchlabReactFlowNode,
-    SketchlabReactFlowEdge
-  >();
+  const {screenToFlowPosition, flowToScreenPosition, getEdges, getNode} =
+    useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
@@ -255,16 +256,28 @@ export default function ReactFlowCanvas({
 
   const handleNodeDragStop = useCallback(
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
-      if (node.type !== 'lineAnchor') return;
-      snapAnchorIfNearby({
-        anchorId: node.id,
-        screenPoint: {x: event.clientX, y: event.clientY},
-        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+      if (node.type === 'lineAnchor') {
+        snapAnchorIfNearby({
+          anchorId: node.id,
+          screenPoint: {x: event.clientX, y: event.clientY},
+          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+          edges: getEdges(),
+          setEdges,
+        });
+        return;
+      }
+      // A real node was dropped: attach any free line endpoint whose
+      // handle lands within the snap radius of one of the node's handles.
+      snapEdgesIntoDraggedNode({
+        draggedNodeId: node.id,
         edges: getEdges(),
+        getNode,
+        flowToScreenPosition,
         setEdges,
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
       });
     },
-    [getEdges, setEdges]
+    [getEdges, getNode, flowToScreenPosition, setEdges]
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =

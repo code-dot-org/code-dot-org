@@ -54,7 +54,7 @@ This function defines the filtering rule.
 It looks at each song and keeps only the ones with a rank of 10 or less.
 
 <br><br>
-
+<div style="clear:both;"></div>
 
 **3. Using the function**
 

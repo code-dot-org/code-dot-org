@@ -21,7 +21,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-12-17T21:59:44.391+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U1-evolving-web_6\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U1-evolving-web_6\"},{\"changed_at\":\"2025-12-19 21:11:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-05 18:04:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-05-20 15:44:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-12-17T21:59:44.391+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U1-evolving-web_6\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U1-evolving-web_6\"},{\"changed_at\":\"2025-12-19 21:11:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-05 18:04:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-05-20 15:44:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-05-21 16:27:17 +0000\",\"changed\":[],\"changed_by_id\":21015,\"changed_by_email\":\"lori.goldade+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

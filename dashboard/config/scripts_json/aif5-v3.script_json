@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-06 21:04:58 UTC",
+    "serialized_at": "2026-05-21 15:33:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7077,6 +7077,20 @@
       }
     },
     {
+      "name": "[Key] Redesign Challenge",
+      "url": "https://docs.google.com/document/d/1xyByUYWzL2ze3RrOr_0tR5oF5Bk-dEkL1zPcV4cAjwE/",
+      "key": "key_redesign_challenge",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_redesign_challenge"
+      }
+    },
+    {
       "name": "Layered Defenses",
       "url": "https://docs.google.com/document/d/1A20Ct1B4DdbddiDFSVDbcec7-aXbX_ZKNVT90Zgv2wc/edit?usp=sharing",
       "key": "layered_defenses_2",
@@ -7143,6 +7157,48 @@
       },
       "seeding_key": {
         "resource.key": "phishing_with_ai_1"
+      }
+    },
+    {
+      "name": "Redesign Challenge",
+      "url": "https://docs.google.com/document/d/1IYDt1se9hSmXCsxpLw0hvmn2ygzzpqj46FqIyeQi8PU/",
+      "key": "redesign_challenge",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "redesign_challenge"
+      }
+    },
+    {
+      "name": "Security vs. Usability",
+      "url": "https://docs.google.com/presentation/d/10sT4vu7JJxY-QRPENYLgDGk5_AC4Aq__zzOyZ0eTkG0/",
+      "key": "security_vs_usability",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "security_vs_usability"
+      }
+    },
+    {
+      "name": "Security vs Usability Matrix",
+      "url": "https://docs.google.com/document/d/1nDUuhG4dGEHj1w6jz_Au4gUl3fC7L466jptnMzrn2yo/",
+      "key": "security_vs_usability_matrix",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "security_vs_usability_matrix"
       }
     },
     {
@@ -7227,6 +7283,30 @@
       "seeding_key": {
         "lesson.key": "Lesson 10: AI in Encryption",
         "resource.key": "ai_in_encryption_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "resource.key": "key_redesign_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "resource.key": "redesign_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "resource.key": "security_vs_usability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "resource.key": "security_vs_usability_matrix"
       }
     },
     {
