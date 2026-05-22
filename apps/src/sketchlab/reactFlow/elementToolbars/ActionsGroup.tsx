@@ -124,7 +124,7 @@ export default function ActionsGroup({
             >
               <FontAwesomeV6Icon
                 iconName={
-                  handlesToggle.visible ? 'hide-handles' : 'show-handles'
+                  handlesToggle.visible ? 'handles-hidden' : 'handles-visible'
                 }
                 iconStyle={'regular'}
                 iconFamily={'kit'}
