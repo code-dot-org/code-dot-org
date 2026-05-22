@@ -14,7 +14,7 @@
     "self-paced-pl-ai-101-mod5-2026",
     "self-paced-pl-ai-101-mod4-2026"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
