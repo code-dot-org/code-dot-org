@@ -148,6 +148,22 @@ describe('getEdgeLabel', () => {
     );
   });
 
+  it('truncates node labels longer than 10 words', () => {
+    const longText = 'one two three four five six seven eight nine ten eleven';
+    const map = nodeMap(textNode('n1', longText), textNode('n2', 'short'));
+    expect(getEdgeLabel(edge('e1', 'n1', 'n2'), map)).toBe(
+      'Line from one two three four five six seven eight nine ten... to short'
+    );
+  });
+
+  it('does not truncate labels of exactly 10 words', () => {
+    const tenWords = 'one two three four five six seven eight nine ten';
+    const map = nodeMap(textNode('n1', tenWords), textNode('n2', 'short'));
+    expect(getEdgeLabel(edge('e1', 'n1', 'n2'), map)).toBe(
+      `Line from ${tenWords} to short`
+    );
+  });
+
   it('treats an anchor source paired with a real target node correctly', () => {
     const map = nodeMap(anchorNode('a1'), shapeNode('n1', 'diamond'));
     expect(getEdgeLabel(edge('e1', 'a1', 'n1'), map)).toBe(

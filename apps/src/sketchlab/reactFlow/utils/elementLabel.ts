@@ -23,6 +23,15 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
   return node.type;
 }
 
+const MAX_LABEL_WORDS = 10;
+
+function truncateToWords(text: string): string {
+  const words = text.trim().split(/\s+/);
+  return words.length > MAX_LABEL_WORDS
+    ? `${words.slice(0, MAX_LABEL_WORDS).join(' ')}...`
+    : text;
+}
+
 /**
  * Aria label for an edge, describing its endpoints in human-readable terms.
  * For a free-floating line (both endpoints are node anchors) the
@@ -46,9 +55,9 @@ export function getEdgeLabel(
 
   const sourceLabel = sourceIsAnchor
     ? 'line endpoint'
-    : getNodeLabel(sourceNode!);
+    : truncateToWords(getNodeLabel(sourceNode!));
   const targetLabel = targetIsAnchor
     ? 'line endpoint'
-    : getNodeLabel(targetNode!);
+    : truncateToWords(getNodeLabel(targetNode!));
   return `Line from ${sourceLabel} to ${targetLabel}`;
 }
