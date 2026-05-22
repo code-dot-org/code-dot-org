@@ -43,7 +43,12 @@ export function getEdgeLabel(
   if (sourceIsAnchor && targetIsAnchor) {
     return lineIndex !== undefined ? `Line ${lineIndex}` : 'Line';
   }
-  return `Line from ${getNodeLabel(sourceNode!)} to ${getNodeLabel(
-    targetNode!
-  )}`;
+
+  const sourceLabel = sourceIsAnchor
+    ? 'line endpoint'
+    : getNodeLabel(sourceNode!);
+  const targetLabel = targetIsAnchor
+    ? 'line endpoint'
+    : getNodeLabel(targetNode!);
+  return `Line from ${sourceLabel} to ${targetLabel}`;
 }
