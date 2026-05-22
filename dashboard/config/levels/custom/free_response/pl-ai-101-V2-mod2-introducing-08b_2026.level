@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-20T21:17:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# AI for Oceans Reflection\r\n\r\nCongratulations on completing the AI for Oceans activity. Take a moment to reflect before you continue learning about how AI works.\r\n\r\n> In the reflection box below, answer **one or more** of the following questions:\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. Based on your current understanding, how does training AI systems work?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. How do you think your training data influenced the results that AI produced?\r\n> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 3. How could biased data result in problems when using AI? What are ways to address this?\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n</div>\r\n</div>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:15.036+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-introducing-08b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-introducing-08b\"},{\"changed_at\":\"2026-05-21 13:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

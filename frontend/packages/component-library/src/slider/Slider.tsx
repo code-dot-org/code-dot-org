@@ -135,6 +135,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const gradientDirection = isRtl ? 'left' : 'right';
 
   const [backgroundStyle, setBackgroundStyle] = useState('');
+  const [borderGradientStyle, setBorderGradientStyle] = useState('');
 
   // Override min and max values for percent mode
   const minSliderValue = isPercentMode && minValue === undefined ? 0 : minValue;
@@ -235,6 +236,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         `linear-gradient(to ${gradientDirection}, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`,
       );
     }
+    setBorderGradientStyle(
+      `linear-gradient(to ${gradientDirection}, ${fillColor} ${fillPercent}%, var(--background-neutral-septenary) ${fillPercent}%)`,
+    );
   }, [
     value,
     fillColor,
@@ -304,7 +308,13 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             disabled={disabled}
             onChange={handleChange}
             aria-labelledby={labelId}
-            style={{background: backgroundStyle}} // Apply dynamic background gradient style
+            style={
+              {
+                background: backgroundStyle,
+                '--slider-background': backgroundStyle,
+                '--slider-border-gradient': borderGradientStyle,
+              } as React.CSSProperties
+            } // Apply dynamic background gradient style
             {...HTMLInputAttributes}
           />
           {/* // TODO: Uncomment when working on adding steps support OR working on adding center mark*/}

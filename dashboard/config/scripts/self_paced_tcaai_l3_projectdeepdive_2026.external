@@ -1,0 +1,30 @@
+name 'self-paced-TCaAI-L3-ProjectDeepDive_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Generate and Judge Guide
+
+Throughout Thinking Critically About AI, students build a Generate and Judge Guide that synthesizes their investigations, testing, reflections, and evidence about responsible AI use.
+
+Unlike a traditional end-of-unit project completed all at once, students revisit and revise their guide throughout the unit. By the end of the unit, students produce a guide that combines:
+* examples and evidence from AI investigations
+* recommendations for responsible AI use
+* reflections about context, judgment, and human responsibility
+
+## Explore a Sample Guide
+
+On the next level, you’ll explore a sample Generate and Judge Guide created from work across the unit.
+
+<div style="background-color:#F5F7F8; padding:10px; border-radius:10px; margin:15px 0px;">
+
+**As you explore the sample project on the next level, look for:**
+* How the student uses evidence and examples from earlier lessons
+* Where the student makes nuanced or conditional recommendations about AI use
+* How the student explains when human judgment matters
+* How the project balances AI usefulness with risks and limitations
+
+</div>
+
+
+MARKDOWN
