@@ -53,6 +53,8 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
   useEffect(() => {
     if (demoType) {
       trySetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, demoType);
+    } else {
+      trySetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, '');
     }
   }, [demoType]);
 

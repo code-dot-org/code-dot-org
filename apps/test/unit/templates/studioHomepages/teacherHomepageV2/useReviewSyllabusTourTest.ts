@@ -178,11 +178,11 @@ describe('useReviewSyllabusTour', () => {
     );
   });
 
-  it('does not write to sessionStorage when demoType is null', () => {
+  it('clears the demoType key from sessionStorage when demoType is null', () => {
     renderHook(() => useReviewSyllabusTour(null));
-    expect(mockTrySetSessionStorage).not.toHaveBeenCalledWith(
+    expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
-      expect.anything()
+      ''
     );
   });
 });
