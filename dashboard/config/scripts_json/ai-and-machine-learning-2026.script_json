@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 13:47:30 UTC",
+    "serialized_at": "2026-05-21 19:21:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -13013,16 +13013,6 @@
   ],
   "vocabularies": [
     {
-      "key": "bias",
-      "word": "bias",
-      "definition": "when a person, source, or piece of information favors one side of a topic in a way that is unfair or leaves out important details",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
       "key": "categorical_data",
       "word": "Categorical Data",
       "definition": "data that can be separated into groups",
@@ -13198,12 +13188,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 5: Classification Models",
         "vocabulary.key": "classification"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Model Cards",
-        "vocabulary.key": "bias"
       }
     }
   ],

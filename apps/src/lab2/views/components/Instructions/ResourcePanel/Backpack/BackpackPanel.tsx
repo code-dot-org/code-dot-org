@@ -73,6 +73,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }>({PRIMARY_BACKPACK_KEY: []});
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -379,6 +382,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           color="tertiary"
           size="small"
           className={moduleStyles.saveButton}
+          disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (error: string) =>
               addAlert('danger', error)

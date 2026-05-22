@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Ethical Considerations\r\n\r\n#### What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Ethical Considerations\r\n\r\nWhat is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

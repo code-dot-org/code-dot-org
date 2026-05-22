@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 02:06:00 UTC",
+    "serialized_at": "2026-05-21 13:16:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -141,7 +141,7 @@
       "key": "e9a45d85-3fdd-44bd-9cb4-0c1f084eed3f",
       "position": 5,
       "properties": {
-        "progression_name": "AI Literacy"
+        "progression_name": "AI Fluency"
       },
       "seeding_key": {
         "activity_section.key": "e9a45d85-3fdd-44bd-9cb4-0c1f084eed3f",
@@ -563,7 +563,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {
@@ -585,7 +585,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {
@@ -607,7 +607,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {
@@ -629,7 +629,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {
@@ -651,7 +651,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {
@@ -673,7 +673,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "AI Literacy"
+        "progression": "AI Fluency"
       },
       "bonus": false,
       "seeding_key": {

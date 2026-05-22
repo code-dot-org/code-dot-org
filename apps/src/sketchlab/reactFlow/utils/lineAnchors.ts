@@ -7,8 +7,9 @@ import {
 import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
+import {NodeDataBase} from '../types';
 
-import {endpointPatch} from './handleSnap';
+import {endpointPatch, findNearestHandleAmong} from './handleSnap';
 
 // The Handle id rendered by LineAnchorNode for a given role.
 export function lineAnchorHandleId(role: 'source' | 'target'): string {
@@ -21,7 +22,8 @@ export function lineAnchorHandleId(role: 'source' | 'target'): string {
 // vertically centered, so we offset the node's top-left corner accordingly.
 export function createLineAnchorAtHandle(
   handleFlowPosition: XYPosition,
-  role: 'source' | 'target'
+  role: 'source' | 'target',
+  baseData?: Partial<NodeDataBase>
 ): SketchlabReactFlowNode {
   const position: XYPosition =
     role === 'source'
@@ -37,7 +39,7 @@ export function createLineAnchorAtHandle(
     id: createUuid(),
     type: 'lineAnchor',
     position,
-    data: {lineAnchorRole: role},
+    data: {...baseData, lineAnchorRole: role},
     style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
   };
 }
@@ -62,17 +64,30 @@ export function anchorHandleFlowPosition(
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
-// edge fields that point one side of an edge at it.
+// edge fields that point one side of an edge at it. `baseData` lets
+// callers carry across state (e.g. showHandles) from an existing
+// anchor on the edge so detach paths don't reset toolbar choices.
 export function attachEdgeToFreshAnchor(
   flowPosition: XYPosition,
-  side: 'source' | 'target'
+  side: 'source' | 'target',
+  baseData?: Partial<NodeDataBase>
 ): {
   anchor: SketchlabReactFlowNode;
   edgePatch: Partial<SketchlabReactFlowEdge>;
 } {
-  const anchor = createLineAnchorAtHandle(flowPosition, side);
+  const anchor = createLineAnchorAtHandle(flowPosition, side, baseData);
   const edgePatch = endpointPatch(side, anchor.id, lineAnchorHandleId(side));
   return {anchor, edgePatch};
+}
+
+// When one side of an edge is being detached, decide what data the new
+// anchor should carry. The edge-level `data.showHandles` is the
+// source of truth because it persists through attach-to-node cycles when
+// no anchor exists to carry the state.
+export function inheritedAnchorBaseData(edge: {
+  data?: {showHandles?: boolean} | undefined;
+}): Partial<NodeDataBase> {
+  return edge.data?.showHandles === false ? {showHandles: false} : {};
 }
 
 // Returns an object containing the current flow position of the
@@ -96,6 +111,66 @@ export function resolveEdgeEndpoint(
     screenToFlowPosition
   );
   return flowPosition ? {flowPosition, node} : null;
+}
+
+// Inverse of snapAnchorIfNearby: when a real node is dropped, any free
+// (lineAnchor) edge endpoint whose visible handle lies within radiusPx of
+// one of the dropped node's matching handles is connected to that node.
+export function snapEdgesIntoDraggedNode({
+  draggedNodeId,
+  edges,
+  getNode,
+  flowToScreenPosition,
+  setEdges,
+  radiusPx,
+}: {
+  draggedNodeId: string;
+  edges: SketchlabReactFlowEdge[];
+  getNode: (id: string) => SketchlabReactFlowNode | undefined;
+  flowToScreenPosition: (point: XYPosition) => XYPosition;
+  setEdges: (
+    updater: (
+      currentEdges: SketchlabReactFlowEdge[]
+    ) => SketchlabReactFlowEdge[]
+  ) => void;
+  radiusPx: number;
+}): void {
+  const draggedNodeHandles = document.querySelectorAll<HTMLElement>(
+    `.react-flow__handle[data-nodeid="${CSS.escape(draggedNodeId)}"]`
+  );
+  if (draggedNodeHandles.length === 0) return;
+
+  const patchByEdgeId = new Map<string, Partial<SketchlabReactFlowEdge>>();
+  edges.forEach(edge => {
+    (['source', 'target'] as const).forEach(side => {
+      const endpointId = side === 'source' ? edge.source : edge.target;
+      const anchor = getNode(endpointId);
+      if (!anchor || anchor.type !== 'lineAnchor') return;
+      const handleScreenPosition = flowToScreenPosition(
+        anchorHandleFlowPosition(anchor.position, side)
+      );
+      const snap = findNearestHandleAmong(
+        draggedNodeHandles,
+        handleScreenPosition,
+        side,
+        radiusPx,
+        () => draggedNodeId
+      );
+      if (!snap) return;
+      patchByEdgeId.set(edge.id, {
+        ...(patchByEdgeId.get(edge.id) ?? {}),
+        ...endpointPatch(side, snap.nodeId, snap.handleId),
+      });
+    });
+  });
+
+  if (patchByEdgeId.size === 0) return;
+  setEdges(currentEdges =>
+    currentEdges.map(currentEdge => {
+      const patch = patchByEdgeId.get(currentEdge.id);
+      return patch ? {...currentEdge, ...patch} : currentEdge;
+    })
+  );
 }
 
 // Resolves the on-screen position of a node's handle to canvas coordinates.

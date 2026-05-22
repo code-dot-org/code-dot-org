@@ -7,7 +7,7 @@ import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserH
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
-import React, {useMemo, useRef} from 'react';
+import React, {useRef} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -22,10 +22,10 @@ import {
   isPermanentlyReadOnlyWorkspace,
   isTemporarilyReadOnlyWorkspace,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
-import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
@@ -66,38 +66,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
   );
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
-  );
-  const versionDetails = useAppSelector(
-    state => state.lab2Project.versionDetails
-  );
-
-  const locale = currentLocale();
-  const versionDate = useMemo(() => {
-    if (!versionDetails?.lastModified) {
-      return '';
-    }
-    const dateFormatter = new Intl.DateTimeFormat(locale, {
-      month: 'short',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-    });
-    // The Regex here removes the space before AM/PM to match mocks and make more compact.
-    return dateFormatter
-      .format(new Date(versionDetails.lastModified))
-      .replace(/\s(AM|PM)/gi, '$1');
-  }, [versionDetails, locale]);
-
-  const versionBannerText = versionDate ? (
-    <>
-      You're viewing a previous version of this project from{' '}
-      <strong>{versionDate}</strong>.
-    </>
-  ) : (
-    "You're viewing the initial version of this project."
-  );
 
   return (
     <div style={style} className={className}>
@@ -117,14 +85,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         {teacherViewingStudent && (
           <TeacherViewingStudentProjectAlert inWorkspaceContainer />
         )}
-        {viewingOldVersion && (
-          <Alert
-            className={moduleStyles.previousVersionBanner}
-            text={versionBannerText}
-            type="warning"
-            size="xs"
-          />
-        )}
+        <PreviousVersionAlert />
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,
