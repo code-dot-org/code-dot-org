@@ -68,6 +68,15 @@
 }
 
 /*
+ * Style the browser-native ::backdrop of the ConfirmationDialog (showModal()).
+ * The backdrop covers the entire page; use the ocean transparent-black token
+ * to match the scrim the original canvas-relative backdrop provided.
+ */
+#container-react dialog::backdrop {
+  background-color: rgb(0 0 0 / 85%);
+}
+
+/*
  * Focus ring on the guide dialog element itself (non-Info modal guides that
  * receive programmatic .focus()).  :focus (not :focus-within) so the ring
  * does NOT fire when a child inside the dialog — e.g. the Info guide's
