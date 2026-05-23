@@ -251,13 +251,24 @@ export class OceansPage {
   }
 
   /**
-   * Start prediction and wait until the Continue button is available
-   * (canSkipPredict becomes true after the prediction animation runs).
+   * Wait until the Continue button appears in the Predict scene.
    *
-   * @param timeout - Max ms to wait for the Continue button; defaults to 15 s.
+   * The button becomes available once canSkipPredict is true (after the
+   * prediction animation completes).  Matches the 30 s budget used by
+   * {@link waitForPredictScene} for the same reason — CI runners are slow.
    */
-  async runPrediction(timeout = 15_000): Promise<void> {
-    await this.runButton.click();
+  async waitForPredictComplete(timeout = 30_000): Promise<void> {
     await this.predictContinueButton.waitFor({state: 'visible', timeout});
+  }
+
+  /**
+   * Click the Run button then wait for the Continue button to appear.
+   *
+   * Use {@link waitForPredictComplete} separately when the Run button is
+   * activated by keyboard rather than mouse (keyboard-flow tests).
+   */
+  async runPrediction(): Promise<void> {
+    await this.runButton.click();
+    await this.waitForPredictComplete();
   }
 }

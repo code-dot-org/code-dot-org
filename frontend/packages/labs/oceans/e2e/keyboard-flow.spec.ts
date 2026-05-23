@@ -37,7 +37,7 @@ test.describe('FishVTrash — keyboard-only flow', () => {
 
     // Start prediction via keyboard.
     await pressEnter(p.runButton);
-    await p.predictContinueButton.waitFor({state: 'visible', timeout: 30_000});
+    await p.waitForPredictComplete();
 
     // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
@@ -86,7 +86,7 @@ test.describe('FishShort — keyboard-only flow', () => {
 
     // Start prediction via keyboard.
     await pressEnter(p.runButton);
-    await p.predictContinueButton.waitFor({state: 'visible', timeout: 30_000});
+    await p.waitForPredictComplete();
 
     // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
