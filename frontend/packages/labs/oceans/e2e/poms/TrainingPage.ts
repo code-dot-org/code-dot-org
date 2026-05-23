@@ -36,13 +36,19 @@ export abstract class TrainingPage extends OceansPage {
 
     await expect(async () => {
       if (via === 'key') {
-        await button.press('Enter');
+        // focus() then page-level keyboard.press — same pattern as pressEnter().
+        // locator.press() re-checks stability after focus(), which lets the MUI
+        // focus-ring CSS transition delay the key, making it more likely to land
+        // inside the ~1 s fish-eat animation window (where onClassifyFish
+        // no-ops).  page.keyboard.press fires immediately after focus with no
+        // second stability gate.
+        await button.focus();
+        await button.page().keyboard.press('Enter');
       } else {
         await button.click();
       }
-      // 1 500 ms: the fish-eat animation that blocks onClassifyFish is ~1 s,
-      // so a dropped press will never succeed here.  Failing fast halves the
-      // wasted wait time vs the old 3 000 ms value.
+      // 1 500 ms: a dropped press (onClassifyFish no-ops during ~1 s animation)
+      // will never succeed here.  Fail fast so toPass retries sooner.
       await expect(this.trainCount).toHaveText(String(next), {timeout: 1_500});
     }).toPass({timeout: 15_000});
   }
