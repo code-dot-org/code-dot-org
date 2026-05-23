@@ -3,7 +3,12 @@ require 'json'
 class StudentWorkEvaluationsController < ApplicationController
   include Rails.application.routes.url_helpers
   before_action :authenticate_user!
-  load_and_authorize_resource :student_work_evaluation
+  # NOTE: use `authorize_resource` (not `load_and_authorize_resource`) because
+  # StudentWorkEvaluation has no `user_id` column. CanCanCan's default
+  # auto-build assigns `user_id = current_user.id`, which raises NoMethodError
+  # on this model (it uses `requester_id` / `student_id` instead). The #create
+  # action below builds the record explicitly with the correct attributes.
+  authorize_resource :student_work_evaluation
 
   # POST /student_work_evaluations
   def create
