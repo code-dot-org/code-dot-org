@@ -58,6 +58,7 @@ class Button extends React.Component<ButtonProps> {
         data-guide-dismiss-focus={guideDismissFocus || undefined}
         sx={[
           {
+            display: 'inline-block',
             cursor: 'pointer',
             backgroundColor: 'var(--ocean-color-white)',
             color: 'var(--ocean-color-grey)',
