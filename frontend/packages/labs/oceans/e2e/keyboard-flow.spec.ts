@@ -28,6 +28,8 @@ test.describe('FishVTrash — keyboard-only flow', () => {
   test('completes Training → Predict → Pond using only keyboard', async ({
     page,
   }) => {
+    // 4-scene end-to-end flow; prediction animation alone can take ~30 s on CI.
+    test.setTimeout(120_000);
     const p = await FishVTrashPage.load(page);
 
     // Classify two fish via keyboard Enter on the yes/no buttons.
@@ -60,6 +62,8 @@ test.describe('FishShort — keyboard-only flow', () => {
   test('completes Words → Training → Predict → Pond using only keyboard', async ({
     page,
   }) => {
+    // 5-scene end-to-end flow; prediction animation alone can take ~30 s on CI.
+    test.setTimeout(120_000);
     // Navigate directly rather than via FishShortPage.load() because load()
     // auto-clicks the word, bypassing the keyboard-selection path we want
     // to exercise.
