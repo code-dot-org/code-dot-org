@@ -7,13 +7,17 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 /**
  * Focus `locator` then activate it with Enter, asserting focus lands first.
  *
- * Verifies the element is reachable by keyboard — the same path a user
- * relying solely on a keyboard (or screen-reader virtual cursor) would take.
+ * Uses page-level keyboard dispatch rather than locator.press() so no
+ * per-element stability wait fires after the key event.  This matches how
+ * AT (screen readers, switch access) actually emit keyboard events — at the
+ * OS/page level against whatever element holds focus, not "at" a specific
+ * element.  It also avoids the Firefox hang where locator.press() waits for
+ * post-action lifecycle after a key triggers a scene unmount.
  */
 async function pressEnter(locator: Locator): Promise<void> {
   await locator.focus();
   await expect(locator).toBeFocused();
-  await locator.press('Enter');
+  await locator.page().keyboard.press('Enter');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -42,9 +46,9 @@ test.describe('FishVTrash — keyboard-only flow', () => {
     // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
-
-    await expect(p.pondSurface).toBeVisible();
-    await expect(p.trainMoreButton).toBeVisible();
+    // pondSurface already verified by waitForPondScene; check trainMoreButton
+    // with waitFor (uses global test timeout) rather than expect's 5 s default.
+    await p.trainMoreButton.waitFor({state: 'visible'});
   });
 });
 
@@ -91,10 +95,10 @@ test.describe('FishShort — keyboard-only flow', () => {
     // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
-
-    await expect(p.pondSurface).toBeVisible();
-    // Info button is an ARIA toggle — verify it's present and has aria-pressed.
-    await expect(p.infoButton).toBeVisible();
+    // pondSurface already verified by waitForPondScene.  Use waitFor on
+    // infoButton (global test timeout) before checking its ARIA attribute.
+    await p.infoButton.waitFor({state: 'visible'});
+    // Info button is an ARIA toggle — verify it has aria-pressed.
     await expect(p.infoButton).toHaveAttribute('aria-pressed');
   });
 });
