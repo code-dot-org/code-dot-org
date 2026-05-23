@@ -8,6 +8,13 @@ import Button from '@/oceans/components/common/Button';
 import I18n from '@/oceans/i18n';
 import {DIALOG_TITLE_FONT_SIZE} from '@/oceans/styles/layout';
 
+/** Base sx shared by the Yes and No buttons. */
+const dialogButtonBaseSx = {
+  padding: '3.5% 8%',
+  width: '35%',
+  color: 'var(--ocean-color-white)',
+} as const;
+
 interface ConfirmationDialogProps {
   onYesClick: () => void;
   onNoClick: () => void;
@@ -86,32 +93,28 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
           <Box sx={{paddingTop: '5%', clear: 'both'}}>
             <Button
               onClick={this.props.onYesClick}
-              sx={{
-                backgroundColor: 'var(--ocean-color-red)',
-                color: 'var(--ocean-color-white)',
-                left: '5%',
-                padding: '3.5% 8%',
-                width: '35%',
-                '&:hover': {
+              sx={[
+                dialogButtonBaseSx,
+                {
                   backgroundColor: 'var(--ocean-color-red)',
+                  left: '5%',
+                  '&:hover': {backgroundColor: 'var(--ocean-color-red)'},
                 },
-              }}
+              ]}
             >
               <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}
-              sx={{
-                backgroundColor: 'var(--ocean-color-orange)',
-                color: 'var(--ocean-color-white)',
-                float: 'right',
-                right: '5%',
-                padding: '3.5% 8%',
-                width: '35%',
-                '&:hover': {
+              sx={[
+                dialogButtonBaseSx,
+                {
                   backgroundColor: 'var(--ocean-color-orange)',
+                  float: 'right',
+                  right: '5%',
+                  '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
                 },
-              }}
+              ]}
             >
               {I18n.t('cancel')}
             </Button>

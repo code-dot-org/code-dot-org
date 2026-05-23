@@ -22,6 +22,9 @@ import {
 /** Padding applied to both the Typist animation box and the accessible text box. */
 const GUIDE_DIALOG_PADDING = '20px';
 
+/** Interval between keystroke sound ticks while the guide text is animating. */
+const TYPING_SOUND_INTERVAL_MS = 100;
+
 export const stopTypingSounds = () => {
   const state = getState();
   if (state.guideTypingTimer) {
@@ -194,7 +197,7 @@ class Guide extends React.Component<Record<string, never>> {
     ) {
       const guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
-      }, 1000 / 10);
+      }, TYPING_SOUND_INTERVAL_MS);
       setState({guideTypingTimer}, {skipCallback: true});
     }
 

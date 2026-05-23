@@ -56,32 +56,22 @@ export const wordSet: Record<string, WordSetEntry> = {
   },
 };
 
+/** Shared base for all word-choice buttons. */
+const wordButtonBaseSx = {
+  width: '20%',
+  marginTop: '2%',
+  '&:hover, &:focus': {
+    backgroundColor: 'var(--ocean-color-orange)',
+    color: 'var(--ocean-color-white)',
+  },
+} as const;
+
 /** Derives MUI sx layout from the word-button CSS class identifier. */
 function wordButtonSx(
   buttonClass: string,
 ): React.ComponentProps<typeof Button>['sx'] {
-  if (buttonClass === 'ocean-word-button--2col') {
-    return {
-      width: '20%',
-      marginLeft: '14%',
-      marginRight: '14%',
-      marginTop: '2%',
-      '&:hover, &:focus': {
-        backgroundColor: 'var(--ocean-color-orange)',
-        color: 'var(--ocean-color-white)',
-      },
-    };
-  }
-  return {
-    width: '20%',
-    marginLeft: '6%',
-    marginRight: '6%',
-    marginTop: '2%',
-    '&:hover, &:focus': {
-      backgroundColor: 'var(--ocean-color-orange)',
-      color: 'var(--ocean-color-white)',
-    },
-  };
+  const margin = buttonClass === 'ocean-word-button--2col' ? '14%' : '6%';
+  return [wordButtonBaseSx, {marginLeft: margin, marginRight: margin}];
 }
 
 interface WordsState {

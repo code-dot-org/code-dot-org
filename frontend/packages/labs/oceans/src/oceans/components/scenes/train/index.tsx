@@ -18,6 +18,9 @@ import {
   orangeCornerButtonSx,
 } from '@/oceans/styles/layout';
 
+/** CSS transition applied to the bot head when it opens/closes. */
+const BOT_HEAD_TRANSITION = 'transform 500ms';
+
 interface TrainState {
   headOpen: boolean;
 }
@@ -73,7 +76,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             alt=""
             sx={[
               {
-                transition: 'transform 500ms',
+                transition: BOT_HEAD_TRANSITION,
                 left: '3%',
                 width: '43%',
                 top: '0%',

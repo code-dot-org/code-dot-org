@@ -24,6 +24,13 @@ const MediaControl = Object.freeze({
   FastForward: 'fast-forward',
 });
 
+/** sx for the time-scale label shown beside rewind / fast-forward buttons. */
+const timeScaleLabelSx = {
+  width: '40px',
+  fontSize: '80%',
+  textAlign: 'center',
+} as const;
+
 /** Base sx for every media-control icon button. */
 const mediaControlSx = {
   cursor: 'pointer',
@@ -140,10 +147,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
                 selectedControl === MediaControl.Rewind ? selectedSx : {},
               ]}
             >
-              <Typography
-                component="span"
-                sx={{width: '40px', fontSize: '80%', textAlign: 'center'}}
-              >
+              <Typography component="span" sx={timeScaleLabelSx}>
                 {selectedControl === MediaControl.Rewind &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
@@ -169,10 +173,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
               ]}
             >
               <FontAwesomeIcon icon={faForward} aria-hidden />
-              <Typography
-                component="span"
-                sx={{width: '40px', fontSize: '80%', textAlign: 'center'}}
-              >
+              <Typography component="span" sx={timeScaleLabelSx}>
                 {selectedControl === MediaControl.FastForward &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
