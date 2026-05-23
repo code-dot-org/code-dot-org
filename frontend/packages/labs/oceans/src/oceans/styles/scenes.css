@@ -55,10 +55,8 @@
 }
 
 /*
- * Reset UA dialog styles so <dialog open> is visually equivalent to the
- * <div role="dialog"> it replaces.  The sx on the dialog element reinforces
- * the same values; CSS wins against emotion classes only for specificity
- * ties, so belt-and-suspenders is cheap here.
+ * Reset UA dialog styles so <dialog open> is visually equivalent to a
+ * <div role="dialog">.  Applies to guide dialogs (opened via showModal()).
  */
 #container-react dialog {
   margin: 0;
@@ -70,22 +68,14 @@
 }
 
 /*
- * Focus ring on the guide dialog box.  Uses teal (matching the DS focus
- * color) rather than white (:focus-within fires even on programmatic focus
- * where :focus-visible would not).
+ * Focus ring on the guide dialog element itself (non-Info modal guides that
+ * receive programmatic .focus()).  :focus (not :focus-within) so the ring
+ * does NOT fire when a child inside the dialog — e.g. the Info guide's
+ * Continue button — holds focus.
  */
-#container-react dialog.guide-dialog:focus-within {
+#container-react dialog.guide-dialog:focus {
   outline: 2px solid var(--ocean-color-teal);
   outline-offset: 4px;
-}
-
-/*
- * Scrim behind the confirmation dialog.  The <dialog> is opened via
- * showModal() so ::backdrop is only attached to that dialog (not to
- * <dialog open> guide dialogs which are non-modal and have no backdrop).
- */
-dialog:not(.guide-dialog)::backdrop {
-  background-color: var(--ocean-color-transparent-black);
 }
 
 /*

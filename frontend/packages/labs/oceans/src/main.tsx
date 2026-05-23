@@ -7,6 +7,7 @@ import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
 import OceansLab from './App';
+import './oceans/styles/oceansLab.css';
 import {AppMode, type AppModeValue} from './oceans/constants';
 
 initializeCore({plugins: [localizationPlugin]});
@@ -90,22 +91,20 @@ function DemoShell() {
         ))}
       </div>
 
-      {/* Lab area — mirrors OceansContainer: centred, capped at 1280 px, 10 px gap */}
-      <div
-        style={{
-          flex: 1,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          padding: '0 10px 10px',
-          minHeight: 0,
-        }}
-      >
+      {/* Lab area — oceans-lab-shell centres; oceans-lab-frame sizes + sets font-size. */}
+      <div className="oceans-lab-shell" style={{paddingTop: 0}}>
         <div
-          style={{
-            width: '100%',
-            maxWidth: 1280,
-          }}
+          className="oceans-lab-frame"
+          style={
+            {
+              /*
+               * Match ml-activities' 1024 px max container so the responsive
+               * font-size (18 px × containerWidth / 930) agrees with the
+               * authoritative reference at any viewport width.
+               */
+              '--oceans-lab-max-width': '1024px',
+            } as React.CSSProperties
+          }
         >
           <OceansLab
             appMode={appMode}

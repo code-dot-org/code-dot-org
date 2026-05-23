@@ -104,7 +104,9 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
         </Box>
 
-        {/* Fish counter badge */}
+        {/* Fish counter badge — border-box equivalent of reference (content-box)
+         * values: height 8.5% = (5%×H + 2×1%×W) / H at 1024×576,
+         * minWidth 12% = 7% + 2×2.5% (padding in W%). */}
         <Box
           sx={{
             position: 'absolute',
@@ -113,18 +115,16 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             backgroundColor: 'var(--ocean-color-transparent-black)',
             color: 'var(--ocean-color-neon-blue)',
             borderRadius: '33px',
-            textAlign: 'right',
-            minWidth: '7%',
-            height: '5%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '4px',
+            minWidth: '12%',
+            height: '8.5%',
             padding: '1% 2.5%',
           }}
         >
-          <Box
-            component="img"
-            src={counterIcon}
-            alt=""
-            sx={{float: 'left', height: '100%'}}
-          />
+          <Box component="img" src={counterIcon} alt="" sx={{height: '100%'}} />
           <Box
             component="span"
             id="uitest-train-count"
@@ -214,7 +214,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           sx={[
             cornerIconButtonBaseSx,
             {
-              width: '2.4%',
+              width: '4.8%',
               '&:hover, &:focus-visible': {
                 backgroundColor: 'var(--ocean-color-red)',
                 color: 'var(--ocean-color-white)',

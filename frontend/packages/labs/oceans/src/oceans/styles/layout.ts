@@ -36,6 +36,10 @@ export const srOnlySx = {
 /**
  * Base sx for floating circular icon buttons anchored at top-right of a scene.
  * Extend with scene-specific hover colors and exact width.
+ *
+ * Height is 8.7% — border-box equivalent of the reference's content-box
+ * total: 6%×H + 2×(0.75%×W).  At the 1024×576 canvas that resolves to
+ * ≈50 px total height.  Width is set per-scene (erase 4.8%, info 4.9%).
  */
 export const cornerIconButtonBaseSx = {
   position: 'absolute',
@@ -44,7 +48,7 @@ export const cornerIconButtonBaseSx = {
   borderRadius: '50px',
   padding: '0.75% 1.2%',
   fontSize: '120%',
-  height: '6%',
+  height: '8.7%',
   backgroundColor: 'var(--ocean-color-white)',
   color: 'var(--ocean-color-grey)',
 } as const;

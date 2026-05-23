@@ -21,6 +21,12 @@
   align-items: flex-start;
   padding: 10px;
 
+  /* Establish an inline-size container so cqi in .oceans-lab-frame is relative
+   * to the shell width rather than the viewport.  Without this the lab still
+   * works (cqi falls back to svw) but the shell's own width is the tighter
+   * constraint when the parent is not full-viewport. */
+  container-type: inline-size;
+
   /* Match the curriculum-path body background. */
   background-color: rgb(2 0 28);
 }
