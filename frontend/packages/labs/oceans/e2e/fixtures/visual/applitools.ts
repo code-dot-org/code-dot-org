@@ -95,6 +95,7 @@ export async function withApplitoolsCheck(
     name: string,
     opts: VisualCheckOptions = {},
   ): Promise<void> => {
+    await page.evaluate(() => document.fonts.ready);
     const target = Target.window().fully();
     if (opts.mask && opts.mask.length > 0) {
       target.ignoreRegions(...opts.mask);

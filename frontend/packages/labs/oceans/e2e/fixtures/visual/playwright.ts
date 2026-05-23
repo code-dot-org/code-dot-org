@@ -27,6 +27,7 @@ export async function withPlaywrightCheck(
     name: string,
     opts: VisualCheckOptions = {},
   ): Promise<void> => {
+    await page.evaluate(() => document.fonts.ready);
     await expect(page).toHaveScreenshot(`${name}.png`, {
       animations: 'disabled',
       mask: opts.mask,

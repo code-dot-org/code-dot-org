@@ -58,6 +58,11 @@ export const wordSet: Record<string, WordSetEntry> = {
 
 /** Shared base for all word-choice buttons. */
 const wordButtonBaseSx = {
+  // border-box so padding is included in the 20% width: matches production
+  // (studio sets box-sizing:border-box globally; scenes.css overrides to
+  // content-box for other elements but word buttons need border-box to fit
+  // 2 columns — 2 × (14% + 20% + 14%) = 96% < 100%).
+  boxSizing: 'border-box',
   width: '20%',
   marginTop: '2%',
   '&:hover, &:focus': {
