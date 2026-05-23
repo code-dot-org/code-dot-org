@@ -5,7 +5,7 @@ import {
   faPlay,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {Box, IconButton, Typography} from '@mui/material';
+import {Box, IconButton} from '@mui/material';
 import * as React from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
@@ -55,10 +55,16 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
     timeScale: defaultTimeScale,
   };
 
+  /** Ref to the Play/Pause button — focused programmatically when controls mount. */
+  playPauseRef = React.createRef<HTMLButtonElement>();
+
   onRun = () => {
     const state = setState({isRunning: true, runStartTime: $time()});
     if (state.appMode !== AppMode.CreaturesVTrashDemo) {
-      this.setState({displayControls: true});
+      // Focus Play/Pause after React commits the media controls to the DOM.
+      this.setState({displayControls: true}, () => {
+        this.playPauseRef.current?.focus();
+      });
     }
   };
 
@@ -140,23 +146,29 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
             }}
           >
             <IconButton
-              aria-label="Rewind"
+              aria-label={
+                selectedControl === MediaControl.Rewind &&
+                this.state.timeScale !== defaultTimeScale
+                  ? `Rewind x${this.state.timeScale}`
+                  : 'Rewind'
+              }
               onClick={() => this.onScaleTime(true)}
               sx={[
                 mediaControlSx,
                 selectedControl === MediaControl.Rewind ? selectedSx : {},
               ]}
             >
-              <Typography component="span" sx={timeScaleLabelSx}>
+              <Box component="span" sx={timeScaleLabelSx}>
                 {selectedControl === MediaControl.Rewind &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
-              </Typography>
+              </Box>
               <FontAwesomeIcon icon={faBackward} aria-hidden />
             </IconButton>
             <IconButton
               aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
+              ref={this.playPauseRef}
               sx={mediaControlSx}
             >
               <FontAwesomeIcon
@@ -165,7 +177,12 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
               />
             </IconButton>
             <IconButton
-              aria-label="Fast forward"
+              aria-label={
+                selectedControl === MediaControl.FastForward &&
+                this.state.timeScale !== defaultTimeScale
+                  ? `Fast forward x${this.state.timeScale}`
+                  : 'Fast forward'
+              }
               onClick={() => this.onScaleTime(false)}
               sx={[
                 mediaControlSx,
@@ -173,11 +190,11 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
               ]}
             >
               <FontAwesomeIcon icon={faForward} aria-hidden />
-              <Typography component="span" sx={timeScaleLabelSx}>
+              <Box component="span" sx={timeScaleLabelSx}>
                 {selectedControl === MediaControl.FastForward &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
-              </Typography>
+              </Box>
             </IconButton>
           </Box>
         )}

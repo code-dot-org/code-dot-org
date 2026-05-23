@@ -1,4 +1,4 @@
-import {Box, Typography} from '@mui/material';
+import {Box} from '@mui/material';
 import * as React from 'react';
 
 import I18n from '@/oceans/i18n';
@@ -51,13 +51,15 @@ class PondPanel extends React.Component {
           <Box onClick={this.onPondPanelClick} sx={[panelBaseSx, {left: '3%'}]}>
             {state.pondExplainGeneralSummary && (
               <Box>
-                <Typography sx={{marginBottom: '5%'}}>
+                <Box sx={{marginBottom: '5%'}}>
                   {I18n.t('mostImportantParts')}
-                </Typography>
+                </Box>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
                   <Box key={i}>
                     {f.importance > 0 && (
                       <Box
+                        role="img"
+                        aria-label={`${I18n.t(f.partType)}: ${Math.round((Math.abs(f.importance) / state.pondExplainGeneralSummary![0].importance) * 100)}% importance`}
                         sx={{
                           position: 'relative',
                           marginBottom: BAR_ITEM_MARGIN,
@@ -96,9 +98,9 @@ class PondPanel extends React.Component {
                     )}
                   </Box>
                 ))}
-                <Typography sx={{marginTop: '3%'}}>
+                <Box sx={{marginTop: '3%'}}>
                   {I18n.t('clickIndividualFish')}
-                </Typography>
+                </Box>
               </Box>
             )}
           </Box>
@@ -127,6 +129,8 @@ class PondPanel extends React.Component {
                   <Box key={i}>
                     {f.impact < 0 && (
                       <Box
+                        role="img"
+                        aria-label={`${I18n.t(f.partType)}: supports match`}
                         sx={{
                           position: 'relative',
                           marginBottom: BAR_ITEM_MARGIN,
@@ -161,6 +165,8 @@ class PondPanel extends React.Component {
                     )}
                     {f.impact > 0 && (
                       <Box
+                        role="img"
+                        aria-label={`${I18n.t(f.partType)}: works against match`}
                         sx={{
                           position: 'relative',
                           marginBottom: BAR_ITEM_MARGIN,

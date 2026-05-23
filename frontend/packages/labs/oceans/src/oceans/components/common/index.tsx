@@ -22,6 +22,7 @@ class Body extends React.Component<BodyProps> {
   render() {
     const currentGuide = guide?.getCurrentGuide();
     const modalGuide = currentGuide && !currentGuide.noDimBackground;
+    const shouldInert = modalGuide;
 
     return (
       <Box
@@ -40,7 +41,9 @@ class Body extends React.Component<BodyProps> {
             width: '100%',
             height: '100%',
           }}
-          inert={!!modalGuide || undefined}
+          // React 18 passes `inert` as an HTML presence attribute (empty
+          // string = present); MUI Box types it as boolean, hence the cast.
+          inert={(shouldInert ? '' : undefined) as unknown as boolean}
         >
           {this.props.children}
         </Box>

@@ -1,4 +1,4 @@
-import {type Locator, type Page} from 'playwright/test';
+import {expect, type Locator, type Page} from 'playwright/test';
 
 /** App mode values mirrored from `src/oceans/constants.ts`. */
 export const AppMode = {
@@ -54,7 +54,7 @@ export class OceansPage {
 
   /** All word-choice buttons rendered in the Words scene. */
   get wordButtons(): Locator {
-    return this.page.locator('.words-button');
+    return this.page.getByTestId('word-button');
   }
 
   // ── Predict scene ───────────────────────────────────────────────────
@@ -129,6 +129,59 @@ export class OceansPage {
     return this.page
       .locator('#uitest-nav-btns')
       .getByRole('button', {name: 'Continue'});
+  }
+
+  // ── Guide overlay ───────────────────────────────────────────────────
+
+  /**
+   * Clickable guide overlay (covers the whole scene).
+   * Dismisses modal guides on click.  Only present while a guide is showing.
+   */
+  get guideOverlay(): import('playwright/test').Locator {
+    return this.page.locator('#uitest-dismiss-guide');
+  }
+
+  /**
+   * The guide dialog element.  Receives programmatic focus (tabIndex=-1) when
+   * a modal guide appears; Space/Enter dismiss the guide from this element.
+   * aria-label holds the guide text; aria-modal=true for modal guides.
+   */
+  get guideDialog(): import('playwright/test').Locator {
+    return this.page.locator('dialog.guide-dialog');
+  }
+
+  /**
+   * Dismiss all queued guides by pressing Enter on each dialog in turn.
+   * Waits for the first guide to appear before starting the loop.
+   *
+   * @param maxGuides - Safety cap to avoid infinite loops.
+   */
+  async dismissAllGuides(maxGuides = 10): Promise<void> {
+    // Wait for the first guide; if none appears, return immediately.
+    const appeared = await this.guideOverlay
+      .waitFor({state: 'visible', timeout: 15_000})
+      .then(() => true)
+      .catch(() => false);
+    if (!appeared) return;
+
+    for (let i = 0; i < maxGuides; i++) {
+      if (!(await this.guideOverlay.isVisible().catch(() => false))) break;
+      const labelBefore = await this.guideDialog
+        .getAttribute('aria-label')
+        .catch(() => null);
+      // Press Enter inside the retry loop: guideShowing is false while Typist
+      // animates, so Enter is a no-op until typing completes.  toPass retries
+      // the whole callback (press + check) until the guide advances or closes.
+      await expect(async () => {
+        if (!(await this.guideOverlay.isVisible())) return;
+        await this.guideDialog.press('Enter');
+        if (!(await this.guideOverlay.isVisible())) return;
+        const label = await this.guideDialog
+          .getAttribute('aria-label')
+          .catch(() => null);
+        expect(label).not.toBe(labelBefore);
+      }).toPass({timeout: 20_000});
+    }
   }
 
   // ── Confirmation dialog ─────────────────────────────────────────────

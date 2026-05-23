@@ -1,4 +1,4 @@
-import {Box, Typography} from '@mui/material';
+import {type SxProps, Box, Typography} from '@mui/material';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -37,7 +37,7 @@ export const stopTypingSounds = () => {
  * sx overrides for the guide dialog box keyed by GuideEntry.style.
  * Default (no style) renders a dark scrim anchored at the bottom.
  */
-const GUIDE_STYLE_SX: Record<string, object> = {
+const GUIDE_STYLE_SX: Record<string, SxProps> = {
   Info: {
     backgroundColor: 'var(--ocean-color-white)',
     color: 'var(--ocean-color-dark-grey)',
@@ -60,7 +60,7 @@ const GUIDE_STYLE_SX: Record<string, object> = {
  * sx overrides for the arrow image keyed by GuideEntry.arrow.
  * All arrows share position:absolute + width:8% base.
  */
-const GUIDE_ARROW_SX: Record<string, object> = {
+const GUIDE_ARROW_SX: Record<string, SxProps> = {
   BotRight: {top: '15%', right: '12.5%', transform: 'translateX(-50%)'},
   LowerLeft: {bottom: '17%', left: '8.5%', transform: 'translateX(-50%)'},
   LowerRight: {bottom: '17%', right: '0.75%', transform: 'translateX(-50%)'},
@@ -83,42 +83,36 @@ const GUIDE_ARROW_SX: Record<string, object> = {
 };
 
 class Guide extends React.Component<Record<string, never>> {
-  guideDialogRef = React.createRef<HTMLDivElement>();
-  lastFocusedGuideId: string | null = null;
+  /** Guide id seen on the last render; used to detect guide transitions. */
+  lastGuideId: string | null = null;
 
   componentDidUpdate() {
-    // Focus the dialog only when the guide changes, not on every re-render
     const currentGuide = guide.getCurrentGuide();
-    const currentGuideId = currentGuide ? currentGuide.id : null;
-
-    if (
-      currentGuideId !== this.lastFocusedGuideId &&
-      currentGuide &&
-      this.guideDialogRef &&
-      this.guideDialogRef.current
-    ) {
-      // `focusVisible` is a non-standard option (Firefox extension) accepted
-      // by some browsers; cast since it isn't in lib.dom's FocusOptions.
-      this.guideDialogRef.current.focus({focusVisible: false} as FocusOptions);
-      this.lastFocusedGuideId = currentGuideId;
-    } else if (!currentGuide) {
-      this.lastFocusedGuideId = null;
+    const currentId = currentGuide?.id ?? null;
+    if (currentId === this.lastGuideId) return;
+    this.lastGuideId = currentId;
+    // Route focus based on guide type:
+    //   - no guide / ambient arrow: return to scene (DOM order picks target)
+    //   - Info guide: autoFocus on the Continue <button> handles it natively
+    //   - modal guide: focus the <dialog> element so the screen reader reads
+    //     its aria-label (the guide text) immediately
+    if (!currentGuide || currentGuide.noDimBackground) {
+      // container-react exists in the dashboard host; fall back to body in
+      // the standalone dev server and other embedding contexts.
+      const container =
+        document.getElementById('container-react') ?? document.body;
+      const target =
+        container.querySelector<HTMLElement>('[data-guide-dismiss-focus]') ??
+        container.querySelector<HTMLElement>(
+          'button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        );
+      target?.focus();
+    } else if (currentGuide.style !== 'Info') {
+      (
+        document.querySelector<HTMLElement>('dialog.guide-dialog') ?? undefined
+      )?.focus();
     }
   }
-
-  onTypingDone() {
-    clearInterval(
-      getState().guideTypingTimer as ReturnType<typeof setInterval>,
-    );
-    setState({guideShowing: true, guideTypingTimer: undefined});
-  }
-
-  onGuideKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
-      e.preventDefault();
-      this.onGuideClick();
-    }
-  };
 
   onGuideClick = () => {
     const state = getState();
@@ -170,6 +164,13 @@ class Guide extends React.Component<Record<string, never>> {
       state.textToSpeechLocale,
     );
   };
+
+  onTypingDone() {
+    clearInterval(
+      getState().guideTypingTimer as ReturnType<typeof setInterval>,
+    );
+    setState({guideShowing: true, guideTypingTimer: undefined});
+  }
 
   render() {
     const state = getState();
@@ -227,6 +228,9 @@ class Guide extends React.Component<Record<string, never>> {
     // literals from guidesHoc / guidesK5; pass through verbatim.
     const imageStyle = currentGuide?.imageStyle;
 
+    /** True when this guide dims background and traps focus. */
+    const isModal = !!(currentGuide && !currentGuide.noDimBackground);
+
     return (
       <Box>
         {currentGuide && currentGuide.image && (
@@ -263,11 +267,52 @@ class Guide extends React.Component<Record<string, never>> {
                 bgSx,
               ]}
             >
+              {/*
+               * <dialog open> keeps the element in normal document flow so
+               * position:absolute is relative to the canvas, not the viewport.
+               * showModal() would promote to the top layer and break the layout.
+               * UA dialog styles (margin, padding, border, max-height, overflow)
+               * are reset in scenes.css and reinforced in sx below.
+               */}
               <Box
-                aria-labelledby="guide-heading"
+                component="dialog"
+                {...({
+                  open: true,
+                } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+                role="dialog"
+                aria-labelledby={
+                  currentGuide.style === 'Info' ? 'guide-heading' : undefined
+                }
+                aria-label={
+                  currentGuide.style !== 'Info'
+                    ? currentGuide.textFn(getState())
+                    : undefined
+                }
+                aria-modal={isModal || undefined}
+                // tabIndex={-1} allows programmatic focus via .focus() without
+                // putting the dialog itself in the natural Tab order.
                 tabIndex={-1}
                 className="guide-dialog"
-                sx={[
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === 'Tab' && isModal) {
+                    // Modal dialogs trap Tab — the dialog or its focused child
+                    // is the only destination.  For Info guides the Continue
+                    // button handles its own Tab cycle; for non-Info guides the
+                    // dialog element itself keeps focus via this preventDefault.
+                    e.preventDefault();
+                  } else if (
+                    e.key === 'Escape' ||
+                    e.key === ' ' ||
+                    e.key === 'Enter' ||
+                    e.key === 'Spacebar'
+                  ) {
+                    // Dismiss the guide.  Escape is required by ARIA authoring
+                    // practices §3.8 for all modal dialogs.
+                    e.preventDefault();
+                    this.onGuideClick();
+                  }
+                }}
+                sx={
                   {
                     position: 'absolute',
                     backgroundColor: 'var(--ocean-color-transparent-black)',
@@ -277,9 +322,15 @@ class Guide extends React.Component<Record<string, never>> {
                     bottom: '2%',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                  },
-                  styleOverrideSx,
-                ]}
+                    // UA dialog reset (scenes.css reinforces these).
+                    margin: 0,
+                    padding: 0,
+                    border: 'none',
+                    maxHeight: 'none',
+                    overflow: 'visible',
+                    ...styleOverrideSx,
+                  } as SxProps
+                }
               >
                 <Box>
                   {currentGuide.style === 'Info' && (
@@ -322,13 +373,17 @@ class Guide extends React.Component<Record<string, never>> {
                     }
                   >
                     <Box
-                      ref={this.guideDialogRef}
                       aria-live="polite"
-                      tabIndex={0}
-                      onKeyDown={this.onGuideKeyDown}
+                      aria-atomic="true"
                       sx={{
                         padding: GUIDE_DIALOG_PADDING,
-                        color: 'rgb(0 0 0 / 0%)',
+                        // Transparent text keeps the dialog sized correctly
+                        // (the Typist sibling is position:absolute so cannot
+                        // provide height).  color:transparent is read by
+                        // modern SRs; aria-live forces announcement regardless.
+                        color: 'transparent',
+                        userSelect: 'none',
+                        pointerEvents: 'none',
                       }}
                     >
                       {currentGuide.textFn(getState())}
@@ -370,6 +425,9 @@ class Guide extends React.Component<Record<string, never>> {
 
                   {currentGuide.style === 'Info' && (
                     <Button
+                      // Dialog is the sole context; no preceding content to miss.
+                      // eslint-disable-next-line jsx-a11y/no-autofocus
+                      autoFocus
                       sx={{
                         backgroundColor: 'var(--ocean-color-orange)',
                         color: 'var(--ocean-color-white)',
@@ -381,7 +439,7 @@ class Guide extends React.Component<Record<string, never>> {
                           backgroundColor: 'var(--ocean-color-orange)',
                         },
                       }}
-                      onClick={() => {}}
+                      onClick={this.onGuideClick}
                     >
                       {I18n.t('continue')}
                     </Button>
@@ -394,7 +452,7 @@ class Guide extends React.Component<Record<string, never>> {
                 component="img"
                 src={arrowDownImage}
                 alt=""
-                sx={[{position: 'absolute', width: '8%'}, arrowSx]}
+                sx={{position: 'absolute', width: '8%', ...arrowSx} as SxProps}
               />
             )}
           </Box>

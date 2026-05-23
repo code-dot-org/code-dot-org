@@ -7,6 +7,32 @@ export const ASPECT_RATIO_16_9 = '56.25%';
 /** Font size for modal dialog title headings (Guide Info, ConfirmationDialog). */
 export const DIALOG_TITLE_FONT_SIZE = '220%';
 
+/** Absolute-fill overlay: covers parent's entire bounding box. */
+export const absoluteFillSx = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+} as const;
+
+/**
+ * Visually-hidden pattern (sr-only).  Removes element from visual flow while
+ * keeping it accessible to screen readers.  Do NOT use on containers that
+ * must maintain layout height — use color:transparent + padding instead.
+ */
+export const srOnlySx = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  padding: 0,
+  margin: '-1px',
+  overflow: 'hidden',
+  clip: 'rect(0, 0, 0, 0)',
+  whiteSpace: 'nowrap',
+  border: 0,
+} as const;
+
 /**
  * Base sx for floating circular icon buttons anchored at top-right of a scene.
  * Extend with scene-specific hover colors and exact width.

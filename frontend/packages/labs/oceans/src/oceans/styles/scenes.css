@@ -11,15 +11,15 @@
  */
 
 /*
- * Reset box-sizing inside the React UI overlay.  CssBaseline (and most
- * modern resets) set border-box globally; the lab's %-based padding /
- * height inside #container-react assumes content-box (matching the
- * curriculum path's Rails-default behaviour).  Re-scope locally rather
- * than fighting the host.
+ * Explicit border-box reset.  The production host (studio.code.org) applies
+ * a global border-box reset; we mirror it here so the standalone dev server
+ * and Playwright suite behave identically.  All %-based layouts (16:9 Body
+ * padding, word-button column widths, pond-panel widths) were designed and
+ * verified against border-box sizing.
  */
 #container-react,
 #container-react * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -39,4 +39,65 @@
   --ocean-color-teal: #3fbed5;
   --ocean-color-transparent-black: rgb(0 0 0 / 85%);
   --ocean-color-transparent-white: rgb(255 255 255 / 80%);
+}
+
+/*
+ * CdoTheme's :focus-visible rule uses --borders-brand-teal-primary, which
+ * requires component-library-styles/colors.css.  That file is not imported
+ * here, so the variable resolves to empty and the outline is invisible.
+ * Re-establish a visible focus ring for all MUI interactive elements inside
+ * the lab using the ocean-defined teal token.
+ */
+#container-react .MuiButtonBase-root:focus-visible {
+  outline: 2px solid var(--ocean-color-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/*
+ * Reset UA dialog styles so <dialog open> is visually equivalent to the
+ * <div role="dialog"> it replaces.  The sx on the dialog element reinforces
+ * the same values; CSS wins against emotion classes only for specificity
+ * ties, so belt-and-suspenders is cheap here.
+ */
+#container-react dialog {
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+
+/*
+ * Focus ring on the guide dialog box.  Uses teal (matching the DS focus
+ * color) rather than white (:focus-within fires even on programmatic focus
+ * where :focus-visible would not).
+ */
+#container-react dialog.guide-dialog:focus-within {
+  outline: 2px solid var(--ocean-color-teal);
+  outline-offset: 4px;
+}
+
+/*
+ * Scrim behind the confirmation dialog.  The <dialog> is opened via
+ * showModal() so ::backdrop is only attached to that dialog (not to
+ * <dialog open> guide dialogs which are non-modal and have no backdrop).
+ */
+dialog:not(.guide-dialog)::backdrop {
+  background-color: var(--ocean-color-transparent-black);
+}
+
+/*
+ * Focus ring for non-MUI interactive elements: plain <button> elements
+ * (Box component="button" toggles), role="button" divs (pond canvas), and
+ * <dialog> elements that receive programmatic focus.  MuiButtonBase already
+ * gets a ring via the rule above; these cover the rest.
+ */
+#container-react button:focus-visible:not(.MuiButtonBase-root),
+#container-react [role='button']:focus-visible,
+#container-react dialog:focus-visible {
+  outline: 2px solid var(--ocean-color-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
 }

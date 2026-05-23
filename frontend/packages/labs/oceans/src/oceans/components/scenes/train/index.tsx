@@ -1,6 +1,6 @@
 import {faBan, faCheck, faTrash} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {Box, IconButton, Typography} from '@mui/material';
+import {Box, IconButton} from '@mui/material';
 import * as React from 'react';
 
 import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
@@ -16,6 +16,7 @@ import {getState, setState} from '@/oceans/state';
 import {
   cornerIconButtonBaseSx,
   orangeCornerButtonSx,
+  srOnlySx,
 } from '@/oceans/styles/layout';
 
 /** CSS transition applied to the bot head when it opens/closes. */
@@ -23,11 +24,14 @@ const BOT_HEAD_TRANSITION = 'transform 500ms';
 
 interface TrainState {
   headOpen: boolean;
+  /** Most recent classification label, announced via the live region. */
+  announcement: string;
 }
 
 class Train extends React.Component<Record<string, never>, TrainState> {
   state: TrainState = {
     headOpen: false,
+    announcement: '',
   };
 
   render() {
@@ -46,7 +50,8 @@ class Train extends React.Component<Record<string, never>, TrainState> {
     return (
       <Body>
         {/* Question text */}
-        <Typography
+        <Box
+          component="div"
           sx={{
             position: 'absolute',
             top: '15%',
@@ -58,7 +63,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           }}
         >
           {state.trainingQuestion}
-        </Typography>
+        </Box>
 
         {/* AI bot illustration */}
         <Box
@@ -120,42 +125,22 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             alt=""
             sx={{float: 'left', height: '100%'}}
           />
-          <Typography
+          <Box
             component="span"
             id="uitest-train-count"
+            role="status"
             sx={{fontSize: '90%'}}
           >
             {Math.min(999, state.yesCount + state.noCount)}
-          </Typography>
+          </Box>
         </Box>
 
-        {/* Erase button */}
-        <IconButton
-          aria-label={I18n.t('erase')}
-          onClick={() => {
-            setState({
-              showConfirmationDialog: true,
-              confirmationDialogOnYes: resetTrainingFunction,
-            });
-          }}
-          sx={[
-            cornerIconButtonBaseSx,
-            {
-              width: '2.4%',
-              '&:hover, &:focus': {
-                backgroundColor: 'var(--ocean-color-red)',
-                color: 'var(--ocean-color-white)',
-              },
-            },
-          ]}
-        >
-          <FontAwesomeIcon
-            icon={faTrash}
-            style={{display: 'block', margin: 'auto', height: '100%'}}
-          />
-        </IconButton>
+        {/* Screen-reader announcement for the most recent classification. */}
+        <Box role="status" aria-live="polite" aria-atomic="true" sx={srOnlySx}>
+          {this.state.announcement}
+        </Box>
 
-        {/* Yes / No classification buttons */}
+        {/* Classification buttons: No (left) then Yes (right) — natural Tab order. */}
         <Box
           sx={{
             position: 'absolute',
@@ -173,7 +158,10 @@ class Train extends React.Component<Record<string, never>, TrainState> {
               },
             }}
             onClick={() => {
-              this.setState({headOpen: true});
+              this.setState({
+                headOpen: true,
+                announcement: `Classified as ${noButtonText}`,
+              });
               return train.onClassifyFish(false);
             }}
             sound={'no'}
@@ -183,6 +171,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             {noButtonText}
           </Button>
           <Button
+            guideDismissFocus
             sx={{
               marginLeft: '10px',
               '&:hover': {
@@ -191,7 +180,10 @@ class Train extends React.Component<Record<string, never>, TrainState> {
               },
             }}
             onClick={() => {
-              this.setState({headOpen: true});
+              this.setState({
+                headOpen: true,
+                announcement: `Classified as ${yesButtonText}`,
+              });
               return train.onClassifyFish(true);
             }}
             sound={'yes'}
@@ -202,13 +194,36 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           </Button>
         </Box>
 
-        {/* Continue button */}
+        {/* Continue button — before Erase in DOM for Tab order. */}
         <Button
           sx={orangeCornerButtonSx}
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           {I18n.t('continue')}
         </Button>
+
+        {/* Erase button */}
+        <IconButton
+          aria-label={I18n.t('erase')}
+          onClick={() => {
+            setState({
+              showConfirmationDialog: true,
+              confirmationDialogOnYes: resetTrainingFunction,
+            });
+          }}
+          sx={[
+            cornerIconButtonBaseSx,
+            {
+              width: '2.4%',
+              '&:hover, &:focus-visible': {
+                backgroundColor: 'var(--ocean-color-red)',
+                color: 'var(--ocean-color-white)',
+              },
+            },
+          ]}
+        >
+          <FontAwesomeIcon icon={faTrash} />
+        </IconButton>
       </Body>
     );
   }

@@ -13,7 +13,7 @@ test.describe('FishShort — words scene', () => {
     await oceans.waitForWordsScene();
     const count = await oceans.wordButtons.count();
     // FishShort has two columns: colors (3) + shapes (3) = 6 word buttons
-    expect(count).toBe(6);
+    expect(count, 'FishShort words scene should show 6 word buttons').toBe(6);
   });
 
   test('word question prompt is visible', async ({page}) => {
@@ -62,7 +62,10 @@ test.describe('FishShort — pond info panel', () => {
     await oceans.fullFlow();
     // Info button only appears in FishShort/FishLong when both fish sets populated
     await expect(oceans.infoButton).toBeVisible({timeout: 10_000});
-    await expect(oceans.infoButton).toHaveAttribute('aria-pressed');
+    await expect(oceans.infoButton).toHaveAttribute(
+      'aria-pressed',
+      /^(true|false)$/,
+    );
   });
 
   test('info button toggles aria-pressed on click', async ({page}) => {

@@ -1,4 +1,4 @@
-import {Box, Typography} from '@mui/material';
+import {Box} from '@mui/material';
 import _ from 'lodash';
 import * as React from 'react';
 
@@ -146,7 +146,7 @@ class Words extends React.Component<Record<string, never>, WordsState> {
       <Body>
         <Content>
           {entry.textKey && (
-            <Typography
+            <Box
               sx={{
                 textAlign: 'center',
                 marginTop: '20px',
@@ -155,13 +155,13 @@ class Words extends React.Component<Record<string, never>, WordsState> {
               }}
             >
               {I18n.t(entry.textKey)}{' '}
-            </Typography>
+            </Box>
           )}
           <Box>
             {this.state.choices.map((item, itemIndex) => (
               <Button
                 key={itemIndex}
-                className="words-button"
+                testId="word-button"
                 sx={btnSx}
                 onClick={() => this.onChangeWord(itemIndex)}
               >

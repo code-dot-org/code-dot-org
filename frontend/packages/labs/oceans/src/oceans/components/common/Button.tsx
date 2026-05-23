@@ -11,12 +11,16 @@ import soundLibrary from '@/oceans/models/soundLibrary';
 interface ButtonProps
   extends Pick<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
-    'className' | 'style' | 'id' | 'children'
+    'autoFocus' | 'id' | 'children'
   > {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
   /** MUI sx overrides forwarded directly to MuiButton. */
   sx?: MuiButtonProps['sx'];
+  /** Marks this button as the preferred focus target after a modal guide is dismissed. */
+  guideDismissFocus?: boolean;
+  /** Forwarded as data-testid for Playwright locators. */
+  testId?: string;
 }
 
 /**
@@ -41,15 +45,17 @@ class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const {className, style, id, children, sx} = this.props;
+    const {autoFocus, id, children, sx, guideDismissFocus, testId} = this.props;
     return (
       <MuiButton
         type="button"
+        // eslint-disable-next-line jsx-a11y/no-autofocus -- forwarded from caller; justification lives at the call site
+        autoFocus={autoFocus}
         id={id}
-        className={className}
-        style={style}
+        data-testid={testId}
         onClick={this.onClick}
         disableRipple
+        data-guide-dismiss-focus={guideDismissFocus || undefined}
         sx={[
           {
             cursor: 'pointer',
@@ -62,7 +68,10 @@ class Button extends React.Component<ButtonProps> {
             border: 'none',
             whiteSpace: 'nowrap',
             lineHeight: 1.3,
+            fontWeight: 'normal',
             textTransform: 'none',
+            letterSpacing: 'normal',
+            fontFamily: 'inherit',
             '&:hover': {
               backgroundColor: 'var(--ocean-color-white)',
             },

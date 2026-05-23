@@ -18,6 +18,7 @@ import {getState, setState} from '@/oceans/state';
 import {
   cornerIconButtonBaseSx,
   orangeCornerButtonSx,
+  srOnlySx,
 } from '@/oceans/styles/layout';
 import SVMTrainer from '@/utils/SVMTrainer';
 
@@ -47,7 +48,11 @@ function Collide(
   return true;
 }
 
-/** Base sx shared by both toggle-icon (recall) buttons. */
+/**
+ * Base sx shared by both toggle-icon (recall) buttons.
+ * Uses Box component="button" (not IconButton) so MUI adds no extra sizing,
+ * min-width, overflow, or theme overrides — matching the original <button>.
+ */
 const toggleBaseSx = {
   cursor: 'pointer',
   height: '100%',
@@ -59,8 +64,8 @@ const toggleBaseSx = {
   display: 'flex',
   margin: 0,
   borderRadius: 0,
-  '&:focus': {position: 'relative', zIndex: 1},
-} as const;
+  '&:focus-visible': {position: 'relative', zIndex: 1},
+};
 
 class Pond extends React.Component {
   constructor(props: Record<string, never>) {
@@ -218,6 +223,11 @@ class Pond extends React.Component {
 
     return (
       <Body>
+        {/* Screen-reader announcement for fish selection changes. */}
+        <Box role="status" aria-live="polite" aria-atomic="true" sx={srOnlySx}>
+          {state.pondClickedFish ? 'Fish selected' : ''}
+        </Box>
+
         {/* Canvas surface — the fish animation renders here via imperative renderer */}
         <Box
           role="button"
@@ -254,10 +264,13 @@ class Pond extends React.Component {
             showInfoButton ? {right: '7%'} : {right: '1.2%'},
           ]}
         >
-          <IconButton
+          <Box
+            component="button"
+            type="button"
             key="toggle-matching"
-            onClick={e => this.getMatchingFishSet(e, true)}
+            onClick={(e: React.MouseEvent) => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
+            aria-pressed={!state.showRecallFish}
             sx={[
               toggleBaseSx,
               {
@@ -276,11 +289,14 @@ class Pond extends React.Component {
               icon={faCheck}
               style={{width: '100%', height: '100%'}}
             />
-          </IconButton>
-          <IconButton
+          </Box>
+          <Box
+            component="button"
+            type="button"
             key="toggle-non-matching"
-            onClick={e => this.getMatchingFishSet(e, false)}
+            onClick={(e: React.MouseEvent) => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
+            aria-pressed={state.showRecallFish}
             sx={[
               toggleBaseSx,
               {
@@ -299,7 +315,7 @@ class Pond extends React.Component {
               icon={faBan}
               style={{width: '100%', height: '100%'}}
             />
-          </IconButton>
+          </Box>
         </Box>
 
         {/* Info icon button */}
@@ -307,13 +323,13 @@ class Pond extends React.Component {
           <IconButton
             id="uitest-info-btn"
             aria-label={I18n.t('fishInformation')}
-            aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
+            aria-pressed={state.pondPanelShowing}
             onClick={this.onPondPanelButtonClick}
             sx={[
               cornerIconButtonBaseSx,
               {
                 width: '2.5%',
-                '&:hover, &:focus': {
+                '&:hover, &:focus-visible': {
                   backgroundColor: 'var(--ocean-color-teal)',
                   color: 'var(--ocean-color-white)',
                 },

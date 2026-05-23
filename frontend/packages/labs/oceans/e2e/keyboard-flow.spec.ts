@@ -22,26 +22,27 @@ async function pressEnter(locator: Locator): Promise<void> {
 // ─────────────────────────────────────────────────────────────────────────────
 
 test.describe('FishVTrash — keyboard-only flow', () => {
-  test('completes Training → Predict → Pond using only keyboard', async ({
-    page,
-  }) => {
-    test.setTimeout(120_000); // 4-scene flow; prediction animation ~30 s on CI
-    const p = await FishVTrashPage.load(page);
+  test(
+    'completes Training → Predict → Pond using only keyboard',
+    {timeout: 120_000},
+    async ({page}) => {
+      const p = await FishVTrashPage.load(page);
 
-    await p.classifyOne(true, 'key');
-    await p.classifyOne(false, 'key');
-    await expect(p.trainCount).toHaveText('2');
+      await p.classifyOne(true, 'key');
+      await p.classifyOne(false, 'key');
+      await expect(p.trainCount).toHaveText('2');
 
-    await pressEnter(p.trainingContinueButton);
-    await p.waitForPredictScene();
+      await pressEnter(p.trainingContinueButton);
+      await p.waitForPredictScene();
 
-    await pressEnter(p.runButton);
-    await p.waitForPredictComplete();
+      await pressEnter(p.runButton);
+      await p.waitForPredictComplete();
 
-    await pressEnter(p.predictContinueButton);
-    await p.waitForPondScene();
-    await p.trainMoreButton.waitFor({state: 'visible'});
-  });
+      await pressEnter(p.predictContinueButton);
+      await p.waitForPondScene();
+      await p.trainMoreButton.waitFor({state: 'visible'});
+    },
+  );
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -49,38 +50,66 @@ test.describe('FishVTrash — keyboard-only flow', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 test.describe('FishShort — keyboard-only flow', () => {
-  test('completes Words → Training → Predict → Pond using only keyboard', async ({
-    page,
-  }) => {
-    test.setTimeout(120_000); // 5-scene flow; prediction animation ~30 s on CI
-    // goto() directly — FishShortPage.load() auto-clicks the word, bypassing
-    // the keyboard-selection path this test exists to exercise.
-    const base = new OceansPage(page);
-    await base.goto(AppMode.FishShort);
-    await base.waitForWordsScene();
+  test(
+    'completes Words → Training → Predict → Pond using only keyboard',
+    {timeout: 120_000},
+    async ({page}) => {
+      // goto() directly — FishShortPage.load() auto-clicks the word, bypassing
+      // the keyboard-selection path this test exists to exercise.
+      const base = new OceansPage(page);
+      await base.goto(AppMode.FishShort);
+      await base.waitForWordsScene();
 
-    // Words are randomised; capture the text to key the yes/no locators.
-    const firstWord = base.wordButtons.first();
-    const wordText = (await firstWord.textContent())!.trim();
-    await pressEnter(firstWord);
+      // Words are randomised; capture the text to key the yes/no locators.
+      const firstWord = base.wordButtons.first();
+      const wordText = (await firstWord.textContent())!.trim();
+      await pressEnter(firstWord);
 
-    const p = new FishShortPage(page, wordText);
-    await p.waitForTrainingScene();
+      const p = new FishShortPage(page, wordText);
+      await p.waitForTrainingScene();
 
-    await p.classifyOne(true, 'key');
-    await p.classifyOne(false, 'key');
-    await expect(p.trainCount).toHaveText('2');
+      await p.classifyOne(true, 'key');
+      await p.classifyOne(false, 'key');
+      await expect(p.trainCount).toHaveText('2');
 
-    await pressEnter(p.trainingContinueButton);
-    await p.waitForPredictScene();
+      await pressEnter(p.trainingContinueButton);
+      await p.waitForPredictScene();
 
-    await pressEnter(p.runButton);
-    await p.waitForPredictComplete();
+      await pressEnter(p.runButton);
+      await p.waitForPredictComplete();
 
-    await pressEnter(p.predictContinueButton);
-    await p.waitForPondScene();
-    await p.infoButton.waitFor({state: 'visible'});
-    await expect(p.infoButton).toHaveAttribute('aria-pressed');
+      await pressEnter(p.predictContinueButton);
+      await p.waitForPondScene();
+      await p.infoButton.waitFor({state: 'visible'});
+      await expect(p.infoButton).toHaveAttribute(
+        'aria-pressed',
+        /^(true|false)$/,
+      );
+    },
+  );
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Training scene — Tab order
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('Training scene — Tab order', () => {
+  test('Tab cycles Not Fish → Fish → Continue → Erase', async ({page}) => {
+    const p = await FishVTrashPage.load(page);
+    await p.noButton.focus();
+    await page.keyboard.press('Tab');
+    await expect(p.yesButton).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(p.trainingContinueButton).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(p.eraseButton).toBeFocused();
+  });
+
+  test('Shift+Tab from Fish goes to Not Fish', async ({page}) => {
+    const p = await FishVTrashPage.load(page);
+    await p.yesButton.focus();
+    await page.keyboard.press('Shift+Tab');
+    await expect(p.noButton).toBeFocused();
   });
 });
 
