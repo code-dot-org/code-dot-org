@@ -11,6 +11,20 @@
  */
 
 /*
+ * Font-size scaling: mirrors FishView.jsx's baseFontSize = 18 * W / 930.
+ * cqi resolves against the nearest container-type:inline-size ancestor
+ * (the #oceans-canvas-wrapper div in App.tsx).  In production, FishView.jsx
+ * sets fontSize inline on #container-react which overrides this rule.
+ */
+#oceans-canvas-wrapper {
+  container-type: inline-size;
+}
+
+#container-react {
+  font-size: calc(100cqi * 0.0194);
+}
+
+/*
  * Explicit content-box reset.  The original ml-activities reference used
  * content-box throughout; all %-based sizes in sx props (button widths,
  * counter badge height/minWidth, icon button sizes) were designed and

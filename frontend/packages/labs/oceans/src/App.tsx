@@ -82,8 +82,13 @@ export default function OceansLab({
   // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.
   // Canvas JS resolution is set to 1024×576 by initAll; CSS width/height 100%
   // scales them to fill whatever space the studio (or any other consumer) gives us.
+  // id="oceans-canvas-wrapper" establishes a container-type:inline-size context
+  // (via scenes.css) so #container-react can use cqi for font scaling.
   return (
-    <div style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}>
+    <div
+      id="oceans-canvas-wrapper"
+      style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}
+    >
       <div
         style={{
           position: 'absolute',
