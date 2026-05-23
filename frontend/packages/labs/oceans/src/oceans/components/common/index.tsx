@@ -6,6 +6,7 @@ import Button from '@/oceans/components/common/Button';
 import ConfirmationDialog from '@/oceans/components/common/ConfirmationDialog';
 import Guide from '@/oceans/components/common/Guide';
 import guide from '@/oceans/models/guide';
+import {ASPECT_RATIO_16_9} from '@/oceans/styles/layout';
 
 interface BodyProps {
   children?: React.ReactNode;
@@ -25,7 +26,11 @@ class Body extends React.Component<BodyProps> {
     return (
       <Box
         onClick={this.props.onClick}
-        sx={{position: 'relative', width: '100%', paddingTop: '56.25%'}}
+        sx={{
+          position: 'relative',
+          width: '100%',
+          paddingTop: ASPECT_RATIO_16_9,
+        }}
       >
         <Box
           sx={{

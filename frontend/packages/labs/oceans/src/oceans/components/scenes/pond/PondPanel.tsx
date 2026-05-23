@@ -16,6 +16,10 @@ function barWidthStyle(percent: number): React.CSSProperties {
   } as React.CSSProperties;
 }
 
+const BAR_ITEM_MARGIN = '7%';
+const BAR_HEIGHT = '150%';
+const BAR_LABEL_TOP = '30%';
+
 /** sx shared by both panel variants (left and right). */
 const panelBaseSx = {
   position: 'absolute',
@@ -53,7 +57,12 @@ class PondPanel extends React.Component {
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
                   <Box key={i}>
                     {f.importance > 0 && (
-                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
+                      <Box
+                        sx={{
+                          position: 'relative',
+                          marginBottom: BAR_ITEM_MARGIN,
+                        }}
+                      >
                         &nbsp;
                         {/* Width driven by --ocean-bar-width CSS variable */}
                         <Box
@@ -66,7 +75,7 @@ class PondPanel extends React.Component {
                             position: 'absolute',
                             top: 0,
                             left: '0%',
-                            height: '150%',
+                            height: BAR_HEIGHT,
                             backgroundColor: 'var(--ocean-color-teal)',
                             width: 'var(--ocean-bar-width, 0%)',
                           }}
@@ -76,7 +85,7 @@ class PondPanel extends React.Component {
                         <Box
                           sx={{
                             position: 'absolute',
-                            top: '30%',
+                            top: BAR_LABEL_TOP,
                             left: '3%',
                             textAlign: 'right',
                           }}
@@ -117,7 +126,12 @@ class PondPanel extends React.Component {
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <Box key={i}>
                     {f.impact < 0 && (
-                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
+                      <Box
+                        sx={{
+                          position: 'relative',
+                          marginBottom: BAR_ITEM_MARGIN,
+                        }}
+                      >
                         &nbsp;
                         <Box
                           style={barWidthStyle(
@@ -127,7 +141,7 @@ class PondPanel extends React.Component {
                             position: 'absolute',
                             top: 0,
                             left: '50%',
-                            height: '150%',
+                            height: BAR_HEIGHT,
                             backgroundColor: 'var(--ocean-color-green)',
                             width: 'var(--ocean-bar-width, 0%)',
                           }}
@@ -137,7 +151,7 @@ class PondPanel extends React.Component {
                         <Box
                           sx={{
                             position: 'absolute',
-                            top: '30%',
+                            top: BAR_LABEL_TOP,
                             left: '53%',
                           }}
                         >
@@ -146,7 +160,12 @@ class PondPanel extends React.Component {
                       </Box>
                     )}
                     {f.impact > 0 && (
-                      <Box sx={{position: 'relative', marginBottom: '7%'}}>
+                      <Box
+                        sx={{
+                          position: 'relative',
+                          marginBottom: BAR_ITEM_MARGIN,
+                        }}
+                      >
                         &nbsp;
                         <Box
                           style={barWidthStyle(
@@ -156,7 +175,7 @@ class PondPanel extends React.Component {
                             position: 'absolute',
                             top: 0,
                             right: '50%',
-                            height: '150%',
+                            height: BAR_HEIGHT,
                             backgroundColor: 'var(--ocean-color-red)',
                             width: 'var(--ocean-bar-width, 0%)',
                           }}
@@ -166,7 +185,7 @@ class PondPanel extends React.Component {
                         <Box
                           sx={{
                             position: 'absolute',
-                            top: '30%',
+                            top: BAR_LABEL_TOP,
                             width: '47%',
                             textAlign: 'right',
                           }}

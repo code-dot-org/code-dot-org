@@ -13,6 +13,10 @@ import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import train from '@/oceans/models/train';
 import {getState, setState} from '@/oceans/state';
+import {
+  cornerIconButtonBaseSx,
+  orangeCornerButtonSx,
+} from '@/oceans/styles/layout';
 
 interface TrainState {
   headOpen: boolean;
@@ -131,22 +135,16 @@ class Train extends React.Component<Record<string, never>, TrainState> {
               confirmationDialogOnYes: resetTrainingFunction,
             });
           }}
-          sx={{
-            position: 'absolute',
-            top: '2%',
-            right: '1.2%',
-            borderRadius: '50px',
-            padding: '0.75% 1.2%',
-            fontSize: '120%',
-            backgroundColor: 'var(--ocean-color-white)',
-            color: 'var(--ocean-color-grey)',
-            height: '6%',
-            width: '2.4%',
-            '&:hover, &:focus': {
-              backgroundColor: 'var(--ocean-color-red)',
-              color: 'var(--ocean-color-white)',
+          sx={[
+            cornerIconButtonBaseSx,
+            {
+              width: '2.4%',
+              '&:hover, &:focus': {
+                backgroundColor: 'var(--ocean-color-red)',
+                color: 'var(--ocean-color-white)',
+              },
             },
-          }}
+          ]}
         >
           <FontAwesomeIcon
             icon={faTrash}
@@ -203,14 +201,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
 
         {/* Continue button */}
         <Button
-          sx={{
-            position: 'absolute',
-            bottom: '2%',
-            right: '1.2%',
-            backgroundColor: 'var(--ocean-color-orange)',
-            color: 'var(--ocean-color-white)',
-            '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
-          }}
+          sx={orangeCornerButtonSx}
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           {I18n.t('continue')}

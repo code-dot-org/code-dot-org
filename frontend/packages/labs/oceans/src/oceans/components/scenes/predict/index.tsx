@@ -14,6 +14,7 @@ import {$time, currentRunTime, finishMovement} from '@/oceans/helpers';
 import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import {getState, setState} from '@/oceans/state';
+import {orangeCornerButtonSx} from '@/oceans/styles/layout';
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
@@ -181,14 +182,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
         )}
         {!state.isRunning && !state.isPaused && (
           <Button
-            sx={{
-              position: 'absolute',
-              bottom: '2%',
-              right: '1.2%',
-              backgroundColor: 'var(--ocean-color-orange)',
-              color: 'var(--ocean-color-white)',
-              '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
-            }}
+            sx={orangeCornerButtonSx}
             onClick={this.onRun}
             id="uitest-run-btn"
           >
@@ -198,14 +192,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
           <Button
-            sx={{
-              position: 'absolute',
-              bottom: '2%',
-              right: '1.2%',
-              backgroundColor: 'var(--ocean-color-orange)',
-              color: 'var(--ocean-color-white)',
-              '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
-            }}
+            sx={orangeCornerButtonSx}
             onClick={this.onContinue}
             id="uitest-continue-btn"
           >

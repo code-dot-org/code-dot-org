@@ -6,6 +6,7 @@ import * as React from 'react';
 import snail from '@/assets/images/snail-large.png';
 import Button from '@/oceans/components/common/Button';
 import I18n from '@/oceans/i18n';
+import {DIALOG_TITLE_FONT_SIZE} from '@/oceans/styles/layout';
 
 interface ConfirmationDialogProps {
   onYesClick: () => void;
@@ -62,7 +63,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
             <Box>
               <Typography
                 sx={{
-                  fontSize: '220%',
+                  fontSize: DIALOG_TITLE_FONT_SIZE,
                   color: 'var(--ocean-color-dark-grey)',
                   paddingBottom: '5%',
                   textAlign: 'center',

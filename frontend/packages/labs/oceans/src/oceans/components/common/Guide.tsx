@@ -12,11 +12,15 @@ import I18n from '@/oceans/i18n';
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
+import {DIALOG_TITLE_FONT_SIZE} from '@/oceans/styles/layout';
 import {
   startTextToSpeech,
   stopTextToSpeech,
   hasTextToSpeechVoices,
 } from '@/utils/TextToSpeech';
+
+/** Padding applied to both the Typist animation box and the accessible text box. */
+const GUIDE_DIALOG_PADDING = '20px';
 
 export const stopTypingSounds = () => {
   const state = getState();
@@ -279,7 +283,7 @@ class Guide extends React.Component<Record<string, never>> {
                     <Typography
                       id="guide-heading"
                       sx={{
-                        fontSize: '220%',
+                        fontSize: DIALOG_TITLE_FONT_SIZE,
                         color: 'var(--ocean-color-dark-grey)',
                         paddingBottom: '5%',
                         textAlign: 'center',
@@ -291,7 +295,7 @@ class Guide extends React.Component<Record<string, never>> {
 
                   {/* Visible Typist animation for sighted users */}
                   <Box
-                    sx={{position: 'absolute', padding: '20px'}}
+                    sx={{position: 'absolute', padding: GUIDE_DIALOG_PADDING}}
                     aria-hidden="true"
                   >
                     <Typist
@@ -320,7 +324,7 @@ class Guide extends React.Component<Record<string, never>> {
                       tabIndex={0}
                       onKeyDown={this.onGuideKeyDown}
                       sx={{
-                        padding: '20px',
+                        padding: GUIDE_DIALOG_PADDING,
                         color: 'rgb(0 0 0 / 0%)',
                       }}
                     >

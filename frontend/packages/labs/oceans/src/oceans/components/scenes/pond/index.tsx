@@ -15,6 +15,10 @@ import guide from '@/oceans/models/guide';
 import {arrangeFish} from '@/oceans/models/pond';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
+import {
+  cornerIconButtonBaseSx,
+  orangeCornerButtonSx,
+} from '@/oceans/styles/layout';
 import SVMTrainer from '@/utils/SVMTrainer';
 
 /** True when the current mode trains an SVM on word-attribute fish. */
@@ -306,16 +310,8 @@ class Pond extends React.Component {
             aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
             onClick={this.onPondPanelButtonClick}
             sx={[
+              cornerIconButtonBaseSx,
               {
-                position: 'absolute',
-                top: '2%',
-                right: '1.2%',
-                borderRadius: '50px',
-                padding: '0.75% 1.2%',
-                fontSize: '120%',
-                backgroundColor: 'var(--ocean-color-white)',
-                color: 'var(--ocean-color-grey)',
-                height: '6%',
                 width: '2.5%',
                 '&:hover, &:focus': {
                   backgroundColor: 'var(--ocean-color-teal)',
@@ -378,32 +374,12 @@ class Pond extends React.Component {
                 >
                   {I18n.t('newWord')}
                 </Button>
-                <Button
-                  sx={{
-                    backgroundColor: 'var(--ocean-color-orange)',
-                    color: 'var(--ocean-color-white)',
-                    position: 'absolute',
-                    bottom: '2%',
-                    right: '1.2%',
-                    '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
-                  }}
-                  onClick={state.onContinue}
-                >
+                <Button sx={orangeCornerButtonSx} onClick={state.onContinue}>
                   {I18n.t('finish')}
                 </Button>
               </Box>
             ) : (
-              <Button
-                sx={{
-                  position: 'absolute',
-                  bottom: '2%',
-                  right: '1.2%',
-                  backgroundColor: 'var(--ocean-color-orange)',
-                  color: 'var(--ocean-color-white)',
-                  '&:hover': {backgroundColor: 'var(--ocean-color-orange)'},
-                }}
-                onClick={state.onContinue}
-              >
+              <Button sx={orangeCornerButtonSx} onClick={state.onContinue}>
                 {I18n.t('continue')}
               </Button>
             )}
