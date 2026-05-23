@@ -1,6 +1,59 @@
+import {AxeBuilder} from '@axe-core/playwright';
 import {expect, test} from 'playwright/test';
 
 import {FishVTrashPage} from './poms/FishVTrashPage';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Automated WCAG scanning — catches structural a11y violations early.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// color-contrast is disabled because the ocean lab's design palette (red,
+// orange, teal on white; white on dark) predates WCAG compliance work and
+// is tracked as a separate design-system issue.  All other WCAG 2.1 AA
+// structural rules (roles, labels, keyboard, focus order) are enforced.
+const axeBuilder = (page: Parameters<typeof AxeBuilder>[0]['page']) =>
+  new AxeBuilder({page})
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+    .disableRules(['color-contrast']);
+
+/** Compact violation summary for assertion failure messages. */
+function summarize(
+  violations: Awaited<ReturnType<AxeBuilder['analyze']>>['violations'],
+) {
+  return JSON.stringify(
+    violations.map(v => ({
+      id: v.id,
+      impact: v.impact,
+      nodes: v.nodes.map(n => n.html),
+    })),
+    null,
+    2,
+  );
+}
+
+test.describe('Automated WCAG scan (axe-core)', () => {
+  test('training scene has no structural WCAG 2.1 AA violations', async ({
+    page,
+  }) => {
+    await FishVTrashPage.load(page);
+    const results = await axeBuilder(page).analyze();
+    expect(results.violations, summarize(results.violations)).toEqual([]);
+  });
+
+  test('erase confirmation dialog has no structural WCAG 2.1 AA violations', async ({
+    page,
+  }) => {
+    const oceans = await FishVTrashPage.load(page);
+    await oceans.eraseButton.click();
+    await expect(oceans.confirmationDialog).toBeVisible();
+    const results = await axeBuilder(page).analyze();
+    expect(results.violations, summarize(results.violations)).toEqual([]);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ARIA roles and attributes
+// ─────────────────────────────────────────────────────────────────────────────
 
 test.describe('Accessibility', () => {
   test('erase button has descriptive aria-label', async ({page}) => {
@@ -70,5 +123,34 @@ test.describe('Accessibility', () => {
       (await oceans.yesButton.locator('svg[aria-hidden]').count()) +
       (await oceans.noButton.locator('svg[aria-hidden]').count());
     expect(hiddenCount).toBe(svgCount);
+  });
+
+  // ─── Confirmation dialog ─────────────────────────────────────────────────
+
+  test('confirmation dialog has role=dialog and a heading', async ({page}) => {
+    const oceans = await FishVTrashPage.load(page);
+    await oceans.eraseButton.click();
+    await expect(oceans.confirmationDialog).toBeVisible();
+    await expect(oceans.confirmationHeader).toBeVisible();
+  });
+
+  test('focus returns to erase button after dialog cancel', async ({page}) => {
+    const oceans = await FishVTrashPage.load(page);
+    await oceans.eraseButton.focus();
+    await oceans.eraseButton.press('Enter');
+    await expect(oceans.confirmationDialog).toBeVisible();
+    await oceans.confirmationCancelButton.click();
+    // Per ARIA authoring practices, focus must return to the element that
+    // opened the dialog when it is dismissed.
+    await expect(oceans.eraseButton).toBeFocused();
+  });
+
+  test('focus returns to erase button after dialog confirm', async ({page}) => {
+    const oceans = await FishVTrashPage.load(page);
+    await oceans.eraseButton.focus();
+    await oceans.eraseButton.press('Enter');
+    await expect(oceans.confirmationDialog).toBeVisible();
+    await oceans.confirmationEraseButton.click();
+    await expect(oceans.eraseButton).toBeFocused();
   });
 });

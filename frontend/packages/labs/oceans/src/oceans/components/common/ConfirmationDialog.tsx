@@ -30,6 +30,20 @@ interface ConfirmationDialogProps {
  * should evaluate adopting DSCO Dialog with a redesigned snail placement.
  */
 class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
+  /**
+   * The element that had focus when the dialog opened.
+   * Captured on mount and restored on unmount (ARIA dialog pattern).
+   */
+  private previousFocus: HTMLElement | null = null;
+
+  componentDidMount() {
+    this.previousFocus = document.activeElement as HTMLElement | null;
+  }
+
+  componentWillUnmount() {
+    this.previousFocus?.focus();
+  }
+
   render() {
     return (
       <Box
