@@ -40,7 +40,10 @@ export abstract class TrainingPage extends OceansPage {
       } else {
         await button.click();
       }
-      await expect(this.trainCount).toHaveText(String(next), {timeout: 3_000});
+      // 1 500 ms: the fish-eat animation that blocks onClassifyFish is ~1 s,
+      // so a dropped press will never succeed here.  Failing fast halves the
+      // wasted wait time vs the old 3 000 ms value.
+      await expect(this.trainCount).toHaveText(String(next), {timeout: 1_500});
     }).toPass({timeout: 15_000});
   }
 
