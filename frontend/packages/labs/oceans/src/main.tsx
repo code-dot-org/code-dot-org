@@ -5,6 +5,7 @@ import {createRoot} from 'react-dom/client';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import '@code-dot-org/fonts/brands/code.org/index.css';
 
 import OceansLab from './App';
 import {AppMode, type AppModeValue} from './oceans/constants';
@@ -60,7 +61,7 @@ function DemoShell() {
         height: '100vh',
         backgroundColor: 'rgb(2, 0, 28)',
         color: 'white',
-        fontFamily: 'sans-serif',
+        fontFamily: "'Figtree', sans-serif",
         boxSizing: 'border-box',
       }}
     >
