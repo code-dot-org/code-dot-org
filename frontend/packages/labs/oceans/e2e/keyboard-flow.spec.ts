@@ -5,14 +5,11 @@ import {FishVTrashPage} from './poms/FishVTrashPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
 /**
- * Focus `locator` then activate it with Enter, asserting focus lands first.
+ * Focus `locator`, assert focus landed, then activate with Enter.
  *
- * Uses page-level keyboard dispatch rather than locator.press() so no
- * per-element stability wait fires after the key event.  This matches how
- * AT (screen readers, switch access) actually emit keyboard events — at the
- * OS/page level against whatever element holds focus, not "at" a specific
- * element.  It also avoids the Firefox hang where locator.press() waits for
- * post-action lifecycle after a key triggers a scene unmount.
+ * Dispatches at the page level after focus — the same path AT (screen
+ * readers, switch access) takes, and avoids locator.press()'s second
+ * stability check after focus that delays the key event.
  */
 async function pressEnter(locator: Locator): Promise<void> {
   await locator.focus();
@@ -28,28 +25,21 @@ test.describe('FishVTrash — keyboard-only flow', () => {
   test('completes Training → Predict → Pond using only keyboard', async ({
     page,
   }) => {
-    // 4-scene end-to-end flow; prediction animation alone can take ~30 s on CI.
-    test.setTimeout(120_000);
+    test.setTimeout(120_000); // 4-scene flow; prediction animation ~30 s on CI
     const p = await FishVTrashPage.load(page);
 
-    // Classify two fish via keyboard Enter on the yes/no buttons.
     await p.classifyOne(true, 'key');
     await p.classifyOne(false, 'key');
     await expect(p.trainCount).toHaveText('2');
 
-    // Continue Training → Predict via keyboard.
     await pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
 
-    // Start prediction via keyboard.
     await pressEnter(p.runButton);
     await p.waitForPredictComplete();
 
-    // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
-    // pondSurface already verified by waitForPondScene; check trainMoreButton
-    // with waitFor (uses global test timeout) rather than expect's 5 s default.
     await p.trainMoreButton.waitFor({state: 'visible'});
   });
 });
@@ -62,47 +52,34 @@ test.describe('FishShort — keyboard-only flow', () => {
   test('completes Words → Training → Predict → Pond using only keyboard', async ({
     page,
   }) => {
-    // 5-scene end-to-end flow; prediction animation alone can take ~30 s on CI.
-    test.setTimeout(120_000);
-    // Navigate directly rather than via FishShortPage.load() because load()
-    // auto-clicks the word, bypassing the keyboard-selection path we want
-    // to exercise.
+    test.setTimeout(120_000); // 5-scene flow; prediction animation ~30 s on CI
+    // goto() directly — FishShortPage.load() auto-clicks the word, bypassing
+    // the keyboard-selection path this test exists to exercise.
     const base = new OceansPage(page);
     await base.goto(AppMode.FishShort);
     await base.waitForWordsScene();
 
-    // Select the first word via keyboard.  Words are randomised on each load;
-    // capture the text so we can construct the correct yes/no button locators.
+    // Words are randomised; capture the text to key the yes/no locators.
     const firstWord = base.wordButtons.first();
     const wordText = (await firstWord.textContent())!.trim();
-    await firstWord.focus();
-    await expect(firstWord).toBeFocused();
-    await firstWord.press('Enter');
+    await pressEnter(firstWord);
 
-    // Reuse FishShortPage for yes/no button locators keyed on the chosen word.
     const p = new FishShortPage(page, wordText);
     await p.waitForTrainingScene();
 
-    // Classify via keyboard.
     await p.classifyOne(true, 'key');
     await p.classifyOne(false, 'key');
     await expect(p.trainCount).toHaveText('2');
 
-    // Continue Training → Predict via keyboard.
     await pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
 
-    // Start prediction via keyboard.
     await pressEnter(p.runButton);
     await p.waitForPredictComplete();
 
-    // Continue Predict → Pond via keyboard.
     await pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
-    // pondSurface already verified by waitForPondScene.  Use waitFor on
-    // infoButton (global test timeout) before checking its ARIA attribute.
     await p.infoButton.waitFor({state: 'visible'});
-    // Info button is an ARIA toggle — verify it has aria-pressed.
     await expect(p.infoButton).toHaveAttribute('aria-pressed');
   });
 });
@@ -117,12 +94,10 @@ test.describe('Erase confirmation dialog — keyboard', () => {
     await p.classifyOne(true);
     await expect(p.trainCount).toHaveText('1');
 
-    // Open dialog via keyboard — dialog has role="dialog" with a heading.
     await pressEnter(p.eraseButton);
     await expect(p.confirmationDialog).toBeVisible();
     await expect(p.confirmationHeader).toBeVisible();
 
-    // Cancel via keyboard — count must be unchanged.
     await pressEnter(p.confirmationCancelButton);
     await expect(p.trainCount).toHaveText('1');
     await expect(p.confirmationDialog).not.toBeVisible();
@@ -133,11 +108,9 @@ test.describe('Erase confirmation dialog — keyboard', () => {
     await p.classifyOne(true);
     await expect(p.trainCount).toHaveText('1');
 
-    // Open dialog via keyboard.
     await pressEnter(p.eraseButton);
     await expect(p.confirmationDialog).toBeVisible();
 
-    // Confirm erase via keyboard — count resets to zero.
     await pressEnter(p.confirmationEraseButton);
     await expect(p.trainCount).toHaveText('0');
     await expect(p.confirmationDialog).not.toBeVisible();
