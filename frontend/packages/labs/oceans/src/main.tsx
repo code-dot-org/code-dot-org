@@ -61,7 +61,7 @@ function DemoShell() {
         height: '100vh',
         backgroundColor: 'rgb(2, 0, 28)',
         color: 'white',
-        fontFamily: "'Figtree', sans-serif",
+        fontFamily: 'var(--mui-typography-fontFamily)',
         boxSizing: 'border-box',
       }}
     >
