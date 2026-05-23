@@ -133,19 +133,30 @@ export class OceansPage {
 
   // ── Confirmation dialog ─────────────────────────────────────────────
 
-  /** Header text of the erase-confirmation dialog ("Are you sure?"). */
+  /**
+   * The erase-confirmation dialog element.
+   * Scoping all confirmation locators within the dialog means role+name queries
+   * can't accidentally match the toolbar Erase button that lives outside it.
+   */
+  get confirmationDialog(): Locator {
+    return this.page.getByRole('dialog');
+  }
+
+  /** Heading element inside the erase-confirmation dialog ("Are you sure?"). */
   get confirmationHeader(): Locator {
-    return this.page.locator('.confirmation-text');
+    return this.confirmationDialog.getByRole('heading', {
+      name: 'Are you sure?',
+    });
   }
 
   /** Erase confirm button inside the confirmation dialog. */
   get confirmationEraseButton(): Locator {
-    return this.page.locator('.dialog-button', {hasText: 'Erase'});
+    return this.confirmationDialog.getByRole('button', {name: 'Erase'});
   }
 
   /** Cancel button inside the confirmation dialog. */
   get confirmationCancelButton(): Locator {
-    return this.page.locator('.dialog-button', {hasText: 'Cancel'});
+    return this.confirmationDialog.getByRole('button', {name: 'Cancel'});
   }
 
   // ── Navigation ──────────────────────────────────────────────────────
@@ -156,18 +167,25 @@ export class OceansPage {
   }
 
   /**
-   * Navigate to the standalone dev server for the given mode. Appends
-   * `?guide=off`, plus `?testFreeze=1` when opts.freeze is set
-   * (deterministic mode for visual-regression specs).
+   * Navigate to the standalone dev server for the given mode.
+   *
+   * By default appends `?guide=off` to suppress guide overlays.
+   * Pass `guides: 'K5'` (or another variant) to load with guides enabled
+   * instead — useful for testing guide keyboard-dismissal flows.
    *
    * @param mode - App mode to load; defaults to FishVTrash.
-   * @param opts - Optional freeze flag for visual-regression callers.
+   * @param opts - Optional freeze/guides flags.
    */
   async goto(
     mode: AppModeValue = AppMode.FishVTrash,
-    opts: {freeze?: boolean} = {},
+    opts: {freeze?: boolean; guides?: string} = {},
   ): Promise<void> {
-    const params = new URLSearchParams({guide: 'off', mode});
+    const params = new URLSearchParams({mode});
+    if (opts.guides) {
+      params.set('guides', opts.guides);
+    } else {
+      params.set('guide', 'off');
+    }
     if (opts.freeze) {
       params.set('testFreeze', '1');
     }

@@ -44,6 +44,8 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
         }}
       >
         <Box
+          role="dialog"
+          aria-labelledby="uitest-confirm-header"
           sx={{
             position: 'absolute',
             backgroundColor: 'var(--ocean-color-white)',
@@ -69,6 +71,8 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
             />
             <Box>
               <Typography
+                id="uitest-confirm-header"
+                component="h2"
                 sx={{
                   fontSize: DIALOG_TITLE_FONT_SIZE,
                   color: 'var(--ocean-color-dark-grey)',
@@ -102,7 +106,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
                 },
               ]}
             >
-              <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
+              <FontAwesomeIcon icon={faEraser} aria-hidden /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}
