@@ -328,7 +328,7 @@ class Pond extends React.Component {
             sx={[
               cornerIconButtonBaseSx,
               {
-                width: '4.9%',
+                width: '2.5%',
                 '&:hover, &:focus-visible': {
                   backgroundColor: 'var(--ocean-color-teal)',
                   color: 'var(--ocean-color-white)',

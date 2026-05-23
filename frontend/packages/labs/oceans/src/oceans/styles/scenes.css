@@ -11,15 +11,15 @@
  */
 
 /*
- * Explicit border-box reset.  The production host (studio.code.org) applies
- * a global border-box reset; we mirror it here so the standalone dev server
- * and Playwright suite behave identically.  All %-based layouts (16:9 Body
- * padding, word-button column widths, pond-panel widths) were designed and
- * verified against border-box sizing.
+ * Explicit content-box reset.  The original ml-activities reference used
+ * content-box throughout; all %-based sizes in sx props (button widths,
+ * counter badge height/minWidth, icon button sizes) were designed and
+ * verified against content-box sizing.  The Eyes baseline was captured with
+ * this setting — do not change without updating all dependent sx values.
  */
 #container-react,
 #container-react * {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 :root {
