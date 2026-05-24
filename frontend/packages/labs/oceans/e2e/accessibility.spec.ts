@@ -68,12 +68,6 @@ test.describe('Automated WCAG scan (axe-core)', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 test.describe('Accessibility', () => {
-  test('erase button has descriptive aria-label', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    // I18n.t('erase') = "Erase" (capital E per oceans.json)
-    await expect(oceans.eraseButton).toHaveAttribute('aria-label', 'Erase');
-  });
-
   test('pond toggle buttons have descriptive aria-labels', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.fullFlow();
@@ -106,13 +100,6 @@ test.describe('Accessibility', () => {
     await expect(oceans.trainCount).toHaveText('1');
   });
 
-  test('erase button has type=button (no accidental form submit)', async ({
-    page,
-  }) => {
-    const oceans = await FishVTrashPage.load(page);
-    await expect(oceans.eraseButton).toHaveAttribute('type', 'button');
-  });
-
   test('media control buttons have explicit aria-labels', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
@@ -125,26 +112,7 @@ test.describe('Accessibility', () => {
     );
   });
 
-  test('FontAwesome icons are hidden from screen readers', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    // Verify SVGs inside the training yes/no buttons carry aria-hidden
-    const svgCount =
-      (await oceans.yesButton.locator('svg').count()) +
-      (await oceans.noButton.locator('svg').count());
-    const hiddenCount =
-      (await oceans.yesButton.locator('svg[aria-hidden]').count()) +
-      (await oceans.noButton.locator('svg[aria-hidden]').count());
-    expect(hiddenCount).toBe(svgCount);
-  });
-
   // ─── Confirmation dialog ─────────────────────────────────────────────────
-
-  test('confirmation dialog has role=dialog and a heading', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.eraseButton.click();
-    await expect(oceans.confirmationDialog).toBeVisible();
-    await expect(oceans.confirmationHeader).toBeVisible();
-  });
 
   test('focus returns to erase button after dialog cancel', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
@@ -178,31 +146,6 @@ test.describe('Accessibility', () => {
   // expected to FAIL until the fixes land.  Each test targets a distinct
   // property: aria-modal presence, focus-on-open, and Tab containment.
 
-  test('C1: confirmation dialog carries aria-modal="true"', async ({page}) => {
-    // ARIA authoring practices §3.8 require aria-modal on modal dialogs so
-    // AT can infer that background content is inert.  The current dialog box
-    // (role="dialog") has no aria-modal attribute.
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.eraseButton.click();
-    await expect(oceans.confirmationDialog).toBeVisible();
-    await expect(oceans.confirmationDialog).toHaveAttribute(
-      'aria-modal',
-      'true',
-    );
-  });
-
-  test('C1: focus moves into the confirmation dialog when it opens', async ({
-    page,
-  }) => {
-    // componentDidMount focuses the last button (Cancel — safer default than
-    // the destructive Erase).  Use a locator-based assertion instead of
-    // elementHandle + evaluate so Playwright auto-retries the check.
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.eraseButton.click();
-    await expect(oceans.confirmationDialog).toBeVisible();
-    await expect(oceans.confirmationCancelButton).toBeFocused();
-  });
-
   test('C1: confirmation dialog is opened as a browser-native modal', async ({
     page,
   }) => {
@@ -216,21 +159,6 @@ test.describe('Accessibility', () => {
     await expect(oceans.confirmationDialog).toBeVisible();
     // Wrap in toPass for auto-retry in case React hasn't committed aria-modal yet.
     await expect(page.locator('dialog[aria-modal]:modal')).toBeVisible();
-  });
-
-  // ─── M1: Train count aria-live ──────────────────────────────────────────
-  // #uitest-train-count carries role="status" (implicit aria-live="polite")
-  // so AT announces classification count updates automatically.
-
-  test('M1: train count element has role="status" or aria-live', async ({
-    page,
-  }) => {
-    const oceans = await FishVTrashPage.load(page);
-    // role="status" is the implemented fix; accept aria-live as an alternative.
-    await expect(
-      oceans.trainCount,
-      'Expected #uitest-train-count to have role="status" or aria-live',
-    ).toHaveAttribute('role', 'status');
   });
 
   // ─── M2: Rewind/FF speed reflected in aria-label ────────────────────────

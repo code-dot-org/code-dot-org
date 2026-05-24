@@ -65,6 +65,7 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@mui/material": "catalog:",
     "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-react": "catalog:",
