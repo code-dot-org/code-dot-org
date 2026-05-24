@@ -224,11 +224,17 @@ guideTest.describe('Guide focus', () => {
   );
 
   guideTest('guide dialog carries aria-label with guide text', async ({p}) => {
-    await expect(p.guideDialog).toHaveAttribute('aria-label', /.+/);
+    // toPass: React may not have committed aria-label by the time the test
+    // body runs on Firefox — retry briefly rather than failing on first poll.
+    await expect(async () => {
+      await expect(p.guideDialog).toHaveAttribute('aria-label', /.+/);
+    }).toPass({timeout: 5_000});
   });
 
   guideTest('modal guide has aria-modal="true"', async ({p}) => {
-    await expect(p.guideDialog).toHaveAttribute('aria-modal', 'true');
+    await expect(async () => {
+      await expect(p.guideDialog).toHaveAttribute('aria-modal', 'true');
+    }).toPass({timeout: 5_000});
   });
 
   guideTest('Tab is trapped inside modal guide', async ({p}) => {
