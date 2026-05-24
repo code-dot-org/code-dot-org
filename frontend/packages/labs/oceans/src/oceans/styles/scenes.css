@@ -22,6 +22,15 @@
   box-sizing: content-box;
 }
 
+/*
+ * Word buttons use border-box so that padding is included in the 20% width.
+ * The % margins (14% each side) were designed for border-box: 2 × 48% = 96%.
+ * Specificity (1,1,0) beats the content-box wildcard above at (1,0,0).
+ */
+#container-react .ocean-word-button {
+  box-sizing: border-box;
+}
+
 :root {
   /* Was colors.js.  Kept in lockstep with src/oceans/styles/colors.js,
    * which is still the only colour source for code paths that need a JS

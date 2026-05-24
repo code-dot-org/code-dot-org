@@ -21,6 +21,8 @@ interface ButtonProps
   guideDismissFocus?: boolean;
   /** Forwarded as data-testid for Playwright locators. */
   testId?: string;
+  /** Forwarded as className to MuiButton; allows scenes.css to target specific button variants. */
+  className?: string;
 }
 
 /**
@@ -45,13 +47,15 @@ class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const {autoFocus, id, children, sx, guideDismissFocus, testId} = this.props;
+    const {autoFocus, id, children, sx, guideDismissFocus, testId, className} =
+      this.props;
     return (
       <MuiButton
         type="button"
         // eslint-disable-next-line jsx-a11y/no-autofocus -- forwarded from caller; justification lives at the call site
         autoFocus={autoFocus}
         id={id}
+        className={className}
         data-testid={testId}
         onClick={this.onClick}
         disableRipple
