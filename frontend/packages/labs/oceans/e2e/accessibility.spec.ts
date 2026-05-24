@@ -10,7 +10,15 @@ const guideTest = test.extend<{p: OceansPage}>({
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
     await expect(instance.guideDialog).toBeVisible();
-    await expect(instance.guideDialog).toBeFocused();
+    // toBeFocused() reports "inactive" when document lost window focus on CI
+    // headless.  Check activeElement directly instead.
+    await expect(async () => {
+      const isFocused = await page.evaluate(() => {
+        const dialog = document.querySelector('dialog.guide-dialog');
+        return document.activeElement === dialog;
+      });
+      expect(isFocused).toBe(true);
+    }).toPass({timeout: 5_000});
     await use(instance);
   },
 });
@@ -197,7 +205,15 @@ guideTest.describe('Guide focus', () => {
   guideTest(
     'modal guide dialog receives focus when it appears',
     async ({p}) => {
-      await expect(p.guideDialog).toBeFocused();
+      // toBeFocused() reports "inactive" when document lost window focus on CI
+      // headless.  Check activeElement directly instead.
+      await expect(async () => {
+        const isFocused = await p.page.evaluate(() => {
+          const dialog = document.querySelector('dialog.guide-dialog');
+          return document.activeElement === dialog;
+        });
+        expect(isFocused).toBe(true);
+      }).toPass({timeout: 5_000});
     },
   );
 
@@ -212,7 +228,14 @@ guideTest.describe('Guide focus', () => {
   guideTest('Tab is trapped inside modal guide', async ({p}) => {
     await p.guideDialog.focus();
     await p.page.keyboard.press('Tab');
-    await expect(p.guideDialog).toBeFocused();
+    // toBeFocused() reports "inactive" on CI headless; check activeElement directly.
+    await expect(async () => {
+      const isFocused = await p.page.evaluate(() => {
+        const dialog = document.querySelector('dialog.guide-dialog');
+        return document.activeElement === dialog;
+      });
+      expect(isFocused).toBe(true);
+    }).toPass({timeout: 5_000});
   });
 
   guideTest('Enter dismisses the current guide', async ({p}) => {
