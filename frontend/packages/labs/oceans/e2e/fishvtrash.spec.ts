@@ -36,10 +36,12 @@ test.describe('FishVTrash — predict scene', () => {
   });
 
   test('continue button appears after prediction runs', async ({page}) => {
+    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
+    test.setTimeout(120_000);
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
-    await oceans.runPrediction();
-    await expect(oceans.predictContinueButton).toBeVisible();
+    await oceans.runButton.click();
+    await oceans.waitForPredictComplete(60_000);
   });
 });
 
