@@ -39,10 +39,7 @@ test.describe('FishVTrash — predict scene', () => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
     await oceans.runButton.click();
-    // Continue is gated on canSkipPredict, a canvas RAF timer set 5 s after
-    // run starts — no TF.js dependency. 15 s covers the 5 s delay plus
-    // browser/CI jitter without inflating the test budget.
-    await expect(oceans.predictContinueButton).toBeVisible({timeout: 15_000});
+    await oceans.waitForPredictComplete();
   });
 });
 

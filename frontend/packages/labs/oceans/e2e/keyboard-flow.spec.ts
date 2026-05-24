@@ -27,12 +27,15 @@ test.describe('FishVTrash — Training scene keyboard', () => {
 
 test.describe('FishVTrash — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
+    // The train → predict → pond chain can run long when the predict
+    // scene's RAF loop stalls under 32-worker Firefox CPU contention.
+    test.slow();
     const fishVTrash = await FishVTrashPage.load(page);
     await fishVTrash.train({yesCount: 1, noCount: 1});
     await fishVTrash.advanceToPredictScene();
 
     await fishVTrash.pressEnter(fishVTrash.runButton);
-    await fishVTrash.waitForPredictComplete(60_000);
+    await fishVTrash.waitForPredictComplete();
 
     await fishVTrash.pressEnter(fishVTrash.predictContinueButton);
     await fishVTrash.waitForPondScene();
@@ -93,6 +96,9 @@ test.describe('FishShort — Training scene keyboard', () => {
 
 test.describe('FishShort — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
+    // The word → train → predict → pond chain can run long when the
+    // predict scene's RAF loop stalls under 32-worker Firefox CPU contention.
+    test.slow();
     const oceans = new OceansPage(page);
     await oceans.goto(AppMode.FishShort);
     await oceans.waitForWordsScene();
@@ -108,7 +114,7 @@ test.describe('FishShort — Predict scene keyboard', () => {
     await fishShort.advanceToPredictScene();
 
     await fishShort.pressEnter(fishShort.runButton);
-    await fishShort.waitForPredictComplete(60_000);
+    await fishShort.waitForPredictComplete();
 
     await fishShort.pressEnter(fishShort.predictContinueButton);
     await fishShort.waitForPondScene();

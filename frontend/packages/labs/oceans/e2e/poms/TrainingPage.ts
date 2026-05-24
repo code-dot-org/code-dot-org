@@ -44,8 +44,11 @@ export abstract class TrainingPage extends OceansPage {
       } else {
         await button.click();
       }
-      // Tight timeout: a dropped press never recovers.
-      await expect(this.trainCount).toHaveText(String(next), {timeout: 1_500});
+      // Dropped-press detection: if the counter hasn't moved within 3 s the
+      // click/keypress was swallowed (landed during isRunning animation).
+      // 3 s covers the ~1 s fish-eat animation plus Firefox-under-load jitter
+      // while keeping the retry latency well below the 15 s outer toPass budget.
+      await expect(this.trainCount).toHaveText(String(next), {timeout: 3_000});
     }).toPass({timeout: 15_000});
   }
 

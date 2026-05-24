@@ -213,12 +213,15 @@ guideTest.describe('Guide focus', () => {
     const p = new FishVTrashPage(page);
     await p.goto(AppMode.FishVTrash, {guides: 'HoC'});
     await p.dismissAllGuides();
-    // toBeFocused() can report "inactive" after a click flurry; probe directly.
-    await expect(async () => {
-      const focused = await page.evaluate(() =>
-        document.activeElement?.getAttribute('data-guide-dismiss-focus'),
-      );
-      expect(focused).toBe('true');
-    }).toPass({timeout: 5_000});
+    // waitForFunction inherits the global test budget (60 s) and is more
+    // efficient than polling with toPass: React's componentDidUpdate may not
+    // have propagated focus to the dismiss-target by the time dismissAllGuides
+    // returns, and under 32-worker Firefox load the propagation can take several
+    // seconds.
+    await page.waitForFunction(
+      () =>
+        document.activeElement?.getAttribute('data-guide-dismiss-focus') ===
+        'true',
+    );
   });
 });

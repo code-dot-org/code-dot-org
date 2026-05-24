@@ -296,8 +296,12 @@ export class OceansPage {
   /**
    * Wait until the Continue button appears in the Predict scene
    * (canSkipPredict becomes true after the prediction animation completes).
+   *
+   * The state flip lives inside the renderer's RAF loop, which can stall for
+   * tens of seconds under 32-worker Firefox CPU contention.  120 s budgets
+   * the worst CPU-starvation case observed in the prove suite.
    */
-  async waitForPredictComplete(timeout = 30_000): Promise<void> {
+  async waitForPredictComplete(timeout = 120_000): Promise<void> {
     await this.predictContinueButton.waitFor({state: 'visible', timeout});
   }
 
