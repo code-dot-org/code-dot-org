@@ -10,15 +10,12 @@ const guideTest = test.extend<{p: OceansPage}>({
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
     await expect(instance.guideDialog).toBeVisible();
-    // toBeFocused() reports "inactive" when document lost window focus on CI
-    // headless.  Check activeElement directly instead.
-    await expect(async () => {
-      const isFocused = await page.evaluate(() => {
-        const dialog = document.querySelector('dialog.guide-dialog');
-        return document.activeElement === dialog;
-      });
-      expect(isFocused).toBe(true);
-    }).toPass({timeout: 5_000});
+    // Focus verification is intentionally omitted here: the fixture's job is
+    // only to navigate and confirm the guide dialog is in the DOM.  Each test
+    // that needs a specific focus state (Tab-trap, receives-focus) sets it up
+    // itself.  Checking focus here was the source of intermittent Firefox
+    // headless failures that caused unrelated tests to fail in the fixture
+    // setup phase.
     await use(instance);
   },
 });
