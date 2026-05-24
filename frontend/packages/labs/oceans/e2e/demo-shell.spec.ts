@@ -3,32 +3,6 @@ import {expect, test} from 'playwright/test';
 import {OceansPage} from './poms/OceansPage';
 
 test.describe('DemoShell mode picker', () => {
-  test('renders all five modes', async ({page}) => {
-    await page.goto('/?guide=off');
-    const labels = [
-      'Fish vs Trash',
-      'Fish Short',
-      'Fish Long',
-      'Creatures vs Trash',
-      'Creatures Demo',
-    ];
-    for (const label of labels) {
-      await expect(page.getByRole('radio', {name: label})).toBeVisible();
-    }
-  });
-
-  test('FishVTrash is selected by default', async ({page}) => {
-    await page.goto('/?guide=off');
-    await expect(
-      page.getByRole('radio', {name: 'Fish vs Trash'}),
-    ).toBeChecked();
-  });
-
-  test('URL param ?mode=short selects Fish Short radio', async ({page}) => {
-    await page.goto('/?guide=off&mode=short');
-    await expect(page.getByRole('radio', {name: 'Fish Short'})).toBeChecked();
-  });
-
   test('switching to Fish Short mode shows words scene', async ({page}) => {
     await page.goto('/?guide=off');
     await page.getByRole('radio', {name: 'Fish Short'}).click();

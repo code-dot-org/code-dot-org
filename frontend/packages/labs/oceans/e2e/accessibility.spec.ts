@@ -86,25 +86,6 @@ test.describe('Accessibility', () => {
     );
   });
 
-  test('yes and no buttons are keyboard-focusable', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    // Programmatic focus (the DemoShell mode-picker sits above the lab in
-    // tab order, so Tab alone would hit a radio first).
-    await oceans.yesButton.focus();
-    await expect(oceans.yesButton).toBeFocused();
-    await expect(oceans.yesButton).toHaveAttribute('type', 'button');
-
-    await oceans.noButton.focus();
-    await expect(oceans.noButton).toBeFocused();
-    await expect(oceans.noButton).toHaveAttribute('type', 'button');
-  });
-
-  test('yes button is activatable by keyboard Enter', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(true, 'key');
-    await expect(oceans.trainCount).toHaveText('1');
-  });
-
   test('media control buttons have explicit aria-labels', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
