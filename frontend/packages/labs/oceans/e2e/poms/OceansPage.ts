@@ -37,7 +37,7 @@ export class OceansPage {
 
   /** Counter span showing total classifications so far. */
   get trainCount(): Locator {
-    return this.page.locator('#uitest-train-count');
+    return this.page.getByRole('status', {name: 'Fish counted'});
   }
 
   /** Erase button — also the sentinel for "training scene is visible". */
@@ -61,12 +61,12 @@ export class OceansPage {
 
   /** Run button that starts prediction. */
   get runButton(): Locator {
-    return this.page.locator('#uitest-run-btn');
+    return this.page.getByRole('button', {name: 'Run prediction'});
   }
 
   /** Container div holding the three media-control buttons. */
   get mediaControlsContainer(): Locator {
-    return this.page.locator('#uitest-media-ctrl');
+    return this.page.getByRole('group', {name: 'Playback controls'});
   }
 
   /** Rewind media control. */
@@ -89,7 +89,7 @@ export class OceansPage {
 
   /** Continue button in Predict scene (appears after canSkipPredict). */
   get predictContinueButton(): Locator {
-    return this.page.locator('#uitest-continue-btn');
+    return this.page.getByRole('button', {name: 'Continue from predict'});
   }
 
   /* Pond scene */
@@ -116,7 +116,7 @@ export class OceansPage {
    * Has `aria-pressed` reflecting open/closed state.
    */
   get infoButton(): Locator {
-    return this.page.locator('#uitest-info-btn');
+    return this.page.getByRole('button', {name: 'Fish Information'});
   }
 
   /** Train More button that returns to the Training scene. */
@@ -127,15 +127,15 @@ export class OceansPage {
   /** Continue button inside the pond nav-buttons container. */
   get pondContinueButton(): Locator {
     return this.page
-      .locator('#uitest-nav-btns')
+      .getByRole('navigation', {name: 'Pond navigation'})
       .getByRole('button', {name: 'Continue'});
   }
 
   /* Guide overlay */
 
-  /** Guide overlay; clicking it dismisses a modal guide. */
+  /** Guide overlay; clicking or pressing Enter/Space dismisses a modal guide. */
   get guideOverlay(): Locator {
-    return this.page.locator('#uitest-dismiss-guide');
+    return this.page.getByRole('button', {name: 'Dismiss guide'});
   }
 
   /** Guide dialog element; carries the guide text on aria-label. */

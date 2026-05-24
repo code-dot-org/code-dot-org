@@ -127,8 +127,8 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
           <Box
             component="span"
-            id="uitest-train-count"
             role="status"
+            aria-label="Fish counted"
             sx={{fontSize: '90%'}}
           >
             {Math.min(999, state.yesCount + state.noCount)}

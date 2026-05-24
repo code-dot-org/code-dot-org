@@ -107,7 +107,7 @@ test.describe('@visual', () => {
     await oceans.waitForPredictScene();
     // Mask media controls — their Pause/Play label flips with state.
     await visualCheck('creaturesvtrashdemo-predict', {
-      mask: [page.locator('#uitest-media-ctrl')],
+      mask: [page.getByRole('group', {name: 'Playback controls'})],
     });
   });
 });

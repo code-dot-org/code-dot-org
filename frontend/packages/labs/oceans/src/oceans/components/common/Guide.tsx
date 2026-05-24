@@ -242,8 +242,24 @@ class Guide extends React.Component<Record<string, never>> {
           <Box>
             <Box
               key={currentGuide.id}
+              role="button"
+              tabIndex={0}
+              aria-label="Dismiss guide"
               onClick={this.onGuideClick}
-              id="uitest-dismiss-guide"
+              onKeyDown={(e: React.KeyboardEvent) => {
+                // Only act on events that originate on the overlay itself.
+                // The <dialog> child handles its own Space / Enter / Escape;
+                // stopping propagation there prevents those from bubbling here.
+                if (e.target !== e.currentTarget) return;
+                if (
+                  e.key === 'Enter' ||
+                  e.key === ' ' ||
+                  e.key === 'Spacebar'
+                ) {
+                  e.preventDefault();
+                  this.onGuideClick();
+                }
+              }}
               sx={[
                 {
                   position: 'absolute',
@@ -286,7 +302,9 @@ class Guide extends React.Component<Record<string, never>> {
                     e.key === 'Spacebar'
                   ) {
                     // Dismiss on Escape / Enter / Space, per modal-dialog conventions.
+                    // Stop propagation so the overlay onKeyDown guard never sees it.
                     e.preventDefault();
+                    e.stopPropagation();
                     this.onGuideClick();
                   }
                 }}

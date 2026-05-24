@@ -317,7 +317,6 @@ class Pond extends React.Component {
         {/* Info icon button */}
         {showInfoButton && (
           <IconButton
-            id="uitest-info-btn"
             aria-label={I18n.t('fishInformation')}
             aria-pressed={state.pondPanelShowing}
             onClick={this.onPondPanelButtonClick}
@@ -364,7 +363,7 @@ class Pond extends React.Component {
 
         {/* Navigation buttons when the user can skip the pond scene */}
         {state.canSkipPond && (
-          <Box id="uitest-nav-btns">
+          <Box component="nav" aria-label="Pond navigation">
             {state.appMode === AppMode.FishLong ? (
               <Box>
                 <Button

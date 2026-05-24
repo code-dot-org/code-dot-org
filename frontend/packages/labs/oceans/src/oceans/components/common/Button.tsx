@@ -11,7 +11,7 @@ import soundLibrary from '@/oceans/models/soundLibrary';
 interface ButtonProps
   extends Pick<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
-    'autoFocus' | 'id' | 'children'
+    'autoFocus' | 'id' | 'children' | 'aria-label'
   > {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => boolean | void;
   sound?: string;
@@ -38,14 +38,23 @@ class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const {autoFocus, id, children, sx, guideDismissFocus, testId, className} =
-      this.props;
+    const {
+      autoFocus,
+      id,
+      children,
+      sx,
+      guideDismissFocus,
+      testId,
+      className,
+      'aria-label': ariaLabel,
+    } = this.props;
     return (
       <MuiButton
         type="button"
         // eslint-disable-next-line jsx-a11y/no-autofocus -- justification at call site
         autoFocus={autoFocus}
         id={id}
+        aria-label={ariaLabel}
         className={className}
         data-testid={testId}
         onClick={this.onClick}

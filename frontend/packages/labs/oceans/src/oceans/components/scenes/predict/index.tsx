@@ -135,7 +135,9 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
       <Body>
         {this.state.displayControls && (
           <Box
-            id="uitest-media-ctrl"
+            component="div"
+            role="group"
+            aria-label="Playback controls"
             sx={{
               position: 'absolute',
               width: '100%',
@@ -202,7 +204,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
           <Button
             sx={orangeCornerButtonSx}
             onClick={this.onRun}
-            id="uitest-run-btn"
+            aria-label="Run prediction"
           >
             <FontAwesomeIcon icon={faPlay} />
             &nbsp; &nbsp; {I18n.t('run')}
@@ -212,7 +214,7 @@ class Predict extends React.Component<Record<string, never>, PredictState> {
           <Button
             sx={orangeCornerButtonSx}
             onClick={this.onContinue}
-            id="uitest-continue-btn"
+            aria-label="Continue from predict"
           >
             {I18n.t('continue')}
           </Button>
