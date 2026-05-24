@@ -12,7 +12,7 @@ test.describe('FishShort — pond info panel', () => {
   }) => {
     const oceans = await FishShortPage.load(page, 'Blue');
     // 1 yes + 1 no satisfies pondFish.length > 0 && recallFish.length > 0
-    await oceans.train(1, 1);
+    await oceans.train({yes: 1, no: 1});
     await oceans.fullFlow();
     // Info button only appears in FishShort/FishLong when both fish sets populated
     await expect(oceans.infoButton).toBeVisible({timeout: 10_000});
@@ -24,7 +24,7 @@ test.describe('FishShort — pond info panel', () => {
 
   test('info button toggles aria-pressed on click', async ({page}) => {
     const oceans = await FishShortPage.load(page, 'Blue');
-    await oceans.train(1, 1);
+    await oceans.train({yes: 1, no: 1});
     await oceans.fullFlow();
     await expect(oceans.infoButton).toBeVisible({timeout: 10_000});
     await expect(oceans.infoButton).toHaveAttribute('aria-pressed', 'false');

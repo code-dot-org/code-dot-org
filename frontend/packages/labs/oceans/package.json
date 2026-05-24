@@ -88,12 +88,12 @@
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
-    "@mui/material": "*",
+    "@mui/material": "^7.0.0",
     "lodash": "^4.17.5",
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"

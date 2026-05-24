@@ -10,14 +10,14 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 
 test.describe('FishVTrash — Training scene keyboard', () => {
   test('classifies via keyboard and advances to Predict', async ({page}) => {
-    const p = await FishVTrashPage.load(page);
+    const fishVTrash = await FishVTrashPage.load(page);
 
-    await p.classifyOne(true, 'key');
-    await p.classifyOne(false, 'key');
-    await expect(p.trainCount).toHaveText('2');
+    await fishVTrash.classifyOne({yes: true, via: 'key'});
+    await fishVTrash.classifyOne({yes: false, via: 'key'});
+    await expect(fishVTrash.trainCount).toHaveText('2');
 
-    await p.pressEnter(p.trainingContinueButton);
-    await p.waitForPredictScene();
+    await fishVTrash.pressEnter(fishVTrash.trainingContinueButton);
+    await fishVTrash.waitForPredictScene();
   });
 });
 
@@ -27,16 +27,16 @@ test.describe('FishVTrash — Training scene keyboard', () => {
 
 test.describe('FishVTrash — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
-    const p = await FishVTrashPage.load(page);
-    await p.train(1, 1);
-    await p.advanceToPredictScene();
+    const fishVTrash = await FishVTrashPage.load(page);
+    await fishVTrash.train({yes: 1, no: 1});
+    await fishVTrash.advanceToPredictScene();
 
-    await p.pressEnter(p.runButton);
-    await p.waitForPredictComplete(60_000);
+    await fishVTrash.pressEnter(fishVTrash.runButton);
+    await fishVTrash.waitForPredictComplete(60_000);
 
-    await p.pressEnter(p.predictContinueButton);
-    await p.waitForPondScene();
-    await p.trainMoreButton.waitFor({state: 'visible'});
+    await fishVTrash.pressEnter(fishVTrash.predictContinueButton);
+    await fishVTrash.waitForPondScene();
+    await fishVTrash.trainMoreButton.waitFor({state: 'visible'});
   });
 });
 
@@ -46,17 +46,17 @@ test.describe('FishVTrash — Predict scene keyboard', () => {
 
 test.describe('FishShort — Words scene keyboard', () => {
   test('selects word via keyboard and advances to Training', async ({page}) => {
-    const base = new OceansPage(page);
-    await base.goto(AppMode.FishShort);
-    await base.waitForWordsScene();
+    const oceans = new OceansPage(page);
+    await oceans.goto(AppMode.FishShort);
+    await oceans.waitForWordsScene();
 
     // Words are randomised; capture the text to key the yes/no locators.
-    const firstWord = base.wordButtons.first();
+    const firstWord = oceans.wordButtons.first();
     const wordText = (await firstWord.textContent())!.trim();
-    await base.pressEnter(firstWord);
+    await oceans.pressEnter(firstWord);
 
-    const p = new FishShortPage(page, wordText);
-    await p.waitForTrainingScene();
+    const fishShort = new FishShortPage(page, wordText);
+    await fishShort.waitForTrainingScene();
   });
 });
 
@@ -66,24 +66,24 @@ test.describe('FishShort — Words scene keyboard', () => {
 
 test.describe('FishShort — Training scene keyboard', () => {
   test('classifies via keyboard and advances to Predict', async ({page}) => {
-    const base = new OceansPage(page);
-    await base.goto(AppMode.FishShort);
-    await base.waitForWordsScene();
+    const oceans = new OceansPage(page);
+    await oceans.goto(AppMode.FishShort);
+    await oceans.waitForWordsScene();
 
     // Click to select word — word selection is covered by the Words keyboard test.
-    const firstWord = base.wordButtons.first();
+    const firstWord = oceans.wordButtons.first();
     const wordText = (await firstWord.textContent())!.trim();
     await firstWord.click();
 
-    const p = new FishShortPage(page, wordText);
-    await p.waitForTrainingScene();
+    const fishShort = new FishShortPage(page, wordText);
+    await fishShort.waitForTrainingScene();
 
-    await p.classifyOne(true, 'key');
-    await p.classifyOne(false, 'key');
-    await expect(p.trainCount).toHaveText('2');
+    await fishShort.classifyOne({yes: true, via: 'key'});
+    await fishShort.classifyOne({yes: false, via: 'key'});
+    await expect(fishShort.trainCount).toHaveText('2');
 
-    await p.pressEnter(p.trainingContinueButton);
-    await p.waitForPredictScene();
+    await fishShort.pressEnter(fishShort.trainingContinueButton);
+    await fishShort.waitForPredictScene();
   });
 });
 
@@ -93,27 +93,27 @@ test.describe('FishShort — Training scene keyboard', () => {
 
 test.describe('FishShort — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
-    const base = new OceansPage(page);
-    await base.goto(AppMode.FishShort);
-    await base.waitForWordsScene();
+    const oceans = new OceansPage(page);
+    await oceans.goto(AppMode.FishShort);
+    await oceans.waitForWordsScene();
 
     // Clicks for scene navigation — keyboard is tested from Predict onwards.
-    const firstWord = base.wordButtons.first();
+    const firstWord = oceans.wordButtons.first();
     const wordText = (await firstWord.textContent())!.trim();
     await firstWord.click();
 
-    const p = new FishShortPage(page, wordText);
-    await p.waitForTrainingScene();
-    await p.train(1, 1);
-    await p.advanceToPredictScene();
+    const fishShort = new FishShortPage(page, wordText);
+    await fishShort.waitForTrainingScene();
+    await fishShort.train({yes: 1, no: 1});
+    await fishShort.advanceToPredictScene();
 
-    await p.pressEnter(p.runButton);
-    await p.waitForPredictComplete(60_000);
+    await fishShort.pressEnter(fishShort.runButton);
+    await fishShort.waitForPredictComplete(60_000);
 
-    await p.pressEnter(p.predictContinueButton);
-    await p.waitForPondScene();
-    await p.infoButton.waitFor({state: 'visible'});
-    await expect(p.infoButton).toHaveAttribute(
+    await fishShort.pressEnter(fishShort.predictContinueButton);
+    await fishShort.waitForPondScene();
+    await fishShort.infoButton.waitFor({state: 'visible'});
+    await expect(fishShort.infoButton).toHaveAttribute(
       'aria-pressed',
       /^(true|false)$/,
     );
