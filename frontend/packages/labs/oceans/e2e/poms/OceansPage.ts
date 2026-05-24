@@ -137,7 +137,7 @@ export class OceansPage {
    * Clickable guide overlay (covers the whole scene).
    * Dismisses modal guides on click.  Only present while a guide is showing.
    */
-  get guideOverlay(): import('playwright/test').Locator {
+  get guideOverlay(): Locator {
     return this.page.locator('#uitest-dismiss-guide');
   }
 
@@ -146,7 +146,7 @@ export class OceansPage {
    * a modal guide appears; Space/Enter dismiss the guide from this element.
    * aria-label holds the guide text; aria-modal=true for modal guides.
    */
-  get guideDialog(): import('playwright/test').Locator {
+  get guideDialog(): Locator {
     return this.page.locator('dialog.guide-dialog');
   }
 

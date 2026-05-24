@@ -1,3 +1,11 @@
+import {
+  Box,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Radio,
+  RadioGroup,
+} from '@mui/material';
 import {useState} from 'react';
 
 import OceansLab from './App';
@@ -44,64 +52,81 @@ export default function DemoShell() {
     }
   }
 
+  /** Update appMode when the user picks a different radio. */
+  function handleModeChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setAppMode(event.target.value as AppModeValue);
+  }
+
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
         backgroundColor: 'rgb(2, 0, 28)',
         color: 'white',
-        fontFamily: 'var(--mui-typography-fontFamily)',
         boxSizing: 'border-box',
       }}
     >
-      {/* Mode picker — kept small so it doesn't affect the lab's dimensions */}
-      <div
-        style={{
-          flexShrink: 0,
-          padding: '6px 10px',
-          fontSize: 12,
-          opacity: 0.7,
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '4px 12px',
-        }}
+      {/* Mode picker — kept small so it doesn't affect the lab's dimensions. */}
+      <FormControl
+        component="fieldset"
+        sx={{flexShrink: 0, px: '10px', py: '6px', opacity: 0.7}}
       >
-        {APP_MODES.map(m => (
-          <label key={m.id} style={{cursor: 'pointer', whiteSpace: 'nowrap'}}>
-            <input
-              type="radio"
-              name="mode"
+        {/* Visually hidden but exposed to assistive tech and tests. */}
+        <FormLabel
+          component="legend"
+          sx={{
+            position: 'absolute',
+            width: 1,
+            height: 1,
+            overflow: 'hidden',
+            clip: 'rect(0 0 0 0)',
+          }}
+        >
+          Mode
+        </FormLabel>
+        <RadioGroup
+          row
+          name="mode"
+          value={appMode}
+          onChange={handleModeChange}
+          sx={{gap: '4px 12px', flexWrap: 'wrap'}}
+        >
+          {APP_MODES.map(m => (
+            <FormControlLabel
+              key={m.id}
               value={m.id}
-              checked={appMode === m.id}
-              onChange={() => setAppMode(m.id)}
-            />{' '}
-            {m.label}
-          </label>
-        ))}
-      </div>
+              control={<Radio size="small" sx={{color: 'inherit', p: 0.5}} />}
+              label={m.label}
+              slotProps={{typography: {fontSize: 12}}}
+              sx={{m: 0, whiteSpace: 'nowrap'}}
+            />
+          ))}
+        </RadioGroup>
+      </FormControl>
 
-      {/* Lab area — mirrors OceansContainer: centred, capped at 1280 px, 10 px gap */}
-      <div
-        style={{
+      {/* Lab area — mirrors OceansContainer: centred, capped at 1280 px, 10 px gap. */}
+      <Box
+        sx={{
           flex: 1,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'flex-start',
-          padding: '0 10px 10px',
+          px: '10px',
+          pb: '10px',
           minHeight: 0,
         }}
       >
-        <div style={{width: '100%', maxWidth: 1280}}>
+        <Box sx={{width: '100%', maxWidth: 1280}}>
           <OceansLab
             appMode={appMode}
             guides={params.get('guides') ?? undefined}
             textToSpeechLocale={params.get('tts') ?? undefined}
             onContinue={handleContinue}
           />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 }
