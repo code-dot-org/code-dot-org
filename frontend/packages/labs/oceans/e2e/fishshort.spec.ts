@@ -2,9 +2,9 @@ import {expect, test} from './fixtures/visual';
 import {FishShortPage} from './poms/FishShortPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishShort — Pond info panel
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishShort — Pond info panel
+ */
 
 test.describe('FishShort — pond info panel', () => {
   test('info button visible and has aria-pressed after full flow', async ({
@@ -33,9 +33,9 @@ test.describe('FishShort — pond info panel', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Visual regression
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Visual regression
+ */
 
 test.describe('@visual', () => {
   test('words scene before any word click', async ({page, visualCheck}) => {

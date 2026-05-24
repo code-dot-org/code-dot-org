@@ -7,37 +7,22 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 /** Extended test that provides a pre-navigated OceansPage with guides loaded. */
 const guideTest = test.extend<{p: OceansPage}>({
   p: async ({page}, use) => {
-    // bringToFront() prevents the OS from throttling this page's timers when
-    // many parallel workers are running (the same fix applied to other tests in
-    // commit 29e29034237).  Without it the Typist animation that renders the
-    // guide dialog can stall past the default 5 s toBeVisible window under
-    // full-worker prove-e2e runs.
+    // Keep timers off the throttle list so the Typist animation runs in
+    // background tabs under parallel workers.
     await page.context().pages()[0]?.bringToFront();
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
-    // Wait for the guide dialog using locator.waitFor() so the backing
-    // limit is the test's global 60 s budget rather than an ad-hoc value.
-    // bringToFront() above prevents the OS from throttling the page's timers
-    // (which would stall the Typist animation that renders the dialog text).
     await instance.guideDialog.waitFor({state: 'visible'});
-    // Focus verification is intentionally omitted here: the fixture's job is
-    // only to navigate and confirm the guide dialog is in the DOM.  Each test
-    // that needs a specific focus state (Tab-trap, receives-focus) sets it up
-    // itself.  Checking focus here was the source of intermittent Firefox
-    // headless failures that caused unrelated tests to fail in the fixture
-    // setup phase.
     await use(instance);
   },
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Automated WCAG scanning — catches structural a11y violations early.
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Automated WCAG scanning — catches structural a11y violations early.
+ */
 
-// color-contrast is disabled because the ocean lab's design palette (red,
-// orange, teal on white; white on dark) predates WCAG compliance work and
-// is tracked as a separate design-system issue.  All other WCAG 2.1 AA
-// structural rules (roles, labels, keyboard, focus order) are enforced.
+// color-contrast is disabled: the lab's pre-WCAG palette is tracked as a
+// separate design-system concern. All other 2.1 AA structural rules apply.
 const axeBuilder = (page: Parameters<typeof AxeBuilder>[0]['page']) =>
   new AxeBuilder({page})
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
@@ -78,9 +63,9 @@ test.describe('Automated WCAG scan (axe-core)', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ARIA roles and attributes
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * ARIA roles and attributes
+ */
 
 test.describe('Accessibility', () => {
   test('pond toggle buttons have descriptive aria-labels', async ({page}) => {
@@ -108,7 +93,7 @@ test.describe('Accessibility', () => {
     );
   });
 
-  // ─── Confirmation dialog ─────────────────────────────────────────────────
+  /* Confirmation dialog */
 
   test('focus returns to erase button after dialog cancel', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
@@ -116,8 +101,7 @@ test.describe('Accessibility', () => {
     await oceans.eraseButton.press('Enter');
     await expect(oceans.confirmationDialog).toBeVisible();
     await oceans.confirmationCancelButton.click();
-    // Per ARIA authoring practices, focus must return to the element that
-    // opened the dialog when it is dismissed.
+    // ARIA: focus returns to the opener.
     await expect(oceans.eraseButton).toBeFocused();
   });
 
@@ -140,15 +124,10 @@ test.describe('Accessibility', () => {
   test('confirmation dialog is opened as a browser-native modal', async ({
     page,
   }) => {
-    // The dialog must be opened via showModal() so the browser enforces Tab
-    // trapping natively across all platforms.  The CSS :modal pseudo-class is
-    // only set by showModal() — it is not set by <dialog open> or role="dialog"
-    // divs — making it a reliable cross-browser signal that the modal state
-    // (and its built-in Tab trap) is active.
+    // :modal is only set by showModal(); confirms native Tab-trap is active.
     const oceans = await FishVTrashPage.load(page);
     await oceans.eraseButton.click();
     await expect(oceans.confirmationDialog).toBeVisible();
-    // Wrap in toPass for auto-retry in case React hasn't committed aria-modal yet.
     await expect(page.locator('dialog[aria-modal]:modal')).toBeVisible();
   });
 
@@ -158,12 +137,10 @@ test.describe('Accessibility', () => {
     await oceans.runButton.click();
     await expect(oceans.mediaControlsContainer).toBeVisible();
 
-    // One click cycles timeScale from 1 → 2 (timeScales = [1, 2]).
-    // aria-label must update to include the multiplier.
+    // One click cycles timeScale 1 → 2; aria-label gains the multiplier.
     await oceans.rewindButton.click();
 
-    // Accept any label that contains both "Rewind" (case-insensitive) and
-    // the speed multiplier "2", e.g. "Rewind x2" or "Rewind ×2".
+    // Matches "Rewind x2" or "Rewind ×2".
     await expect(oceans.rewindButton).toHaveAttribute(
       'aria-label',
       /rewind.+2/i,
@@ -171,16 +148,15 @@ test.describe('Accessibility', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Guide focus management
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Guide focus management
+ */
 
 guideTest.describe('Guide focus', () => {
   guideTest(
     'modal guide dialog receives focus when it appears',
     async ({p}) => {
-      // toBeFocused() reports "inactive" when document lost window focus on CI
-      // headless.  Check activeElement directly instead.
+      // toBeFocused() reports "inactive" headless; probe activeElement directly.
       await expect(async () => {
         const isFocused = await p.page.evaluate(() => {
           const dialog = document.querySelector('dialog.guide-dialog');
@@ -192,8 +168,7 @@ guideTest.describe('Guide focus', () => {
   );
 
   guideTest('guide dialog carries aria-label with guide text', async ({p}) => {
-    // toPass: React may not have committed aria-label by the time the test
-    // body runs on Firefox — retry briefly rather than failing on first poll.
+    // Retry: Firefox may not have committed aria-label on first poll.
     await expect(async () => {
       await expect(p.guideDialog).toHaveAttribute('aria-label', /.+/);
     }).toPass({timeout: 5_000});
@@ -208,7 +183,7 @@ guideTest.describe('Guide focus', () => {
   guideTest('Tab is trapped inside modal guide', async ({p}) => {
     await p.guideDialog.focus();
     await p.page.keyboard.press('Tab');
-    // toBeFocused() reports "inactive" on CI headless; check activeElement directly.
+    // See above: probe activeElement directly.
     await expect(async () => {
       const isFocused = await p.page.evaluate(() => {
         const dialog = document.querySelector('dialog.guide-dialog');
@@ -220,9 +195,7 @@ guideTest.describe('Guide focus', () => {
 
   guideTest('Enter dismisses the current guide', async ({p}) => {
     const labelBefore = await p.guideDialog.getAttribute('aria-label');
-    // Press Enter inside the retry loop: guideShowing is false while Typist
-    // animates, so the first Enter may be a no-op.  toPass retries (press +
-    // check) until the guide advances or the overlay closes entirely.
+    // Enter is a no-op while Typist animates; retry press+check until it lands.
     await expect(async () => {
       const visible = await p.guideOverlay.isVisible();
       if (!visible) return;
@@ -235,15 +208,14 @@ guideTest.describe('Guide focus', () => {
     }).toPass({timeout: 20_000});
   });
 
-  // Fish button test uses FishVTrashPage directly — doesn't need the guide fixture.
+  // Uses FishVTrashPage directly — no guide fixture needed.
   test('Fish button is focused after all guides are dismissed', async ({
     page,
   }) => {
     const p = new FishVTrashPage(page);
     await p.goto(AppMode.FishVTrash, {guides: 'HoC'});
     await p.dismissAllGuides();
-    // toBeFocused() reports "inactive" when document lost window focus during
-    // the click sequence.  Check activeElement directly instead.
+    // toBeFocused() can report "inactive" after a click flurry; probe directly.
     await expect(async () => {
       const focused = await page.evaluate(() =>
         document.activeElement?.getAttribute('data-guide-dismiss-focus'),

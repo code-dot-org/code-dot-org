@@ -23,7 +23,7 @@ import train from '@/oceans/models/train';
 import {getState, resetState, setInitialState, setState} from '@/oceans/state';
 import UI from '@/oceans/ui';
 
-// ─── Mocks ───────────────────────────────────────────────────────────────────
+/* Mocks */
 
 vi.mock('@/oceans/models/guide', () => ({
   default: {
@@ -55,7 +55,7 @@ vi.mock('@/oceans/models/train', () => ({
   },
 }));
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+/* Helpers */
 
 /** Render <UI /> wrapped in MUI ThemeProvider with state set to Training. */
 function renderTraining() {
@@ -81,7 +81,7 @@ function rerender(result: ReturnType<typeof renderTraining>): void {
   );
 }
 
-// ─── Setup ────────────────────────────────────────────────────────────────────
+/* Setup */
 
 beforeAll(() => {
   I18n.initI18n();
@@ -96,9 +96,9 @@ beforeEach(() => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Training scene — initial render
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Training scene — initial render
+ */
 
 describe('Training scene — initial render', () => {
   test('loads with counter at zero', () => {
@@ -131,9 +131,9 @@ describe('Training scene — initial render', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Training scene — count increments
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Training scene — count increments
+ */
 
 describe('Training scene — count increments', () => {
   test('yes click increments training count', () => {
@@ -165,9 +165,9 @@ describe('Training scene — count increments', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Training scene — ARIA attributes
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Training scene — ARIA attributes
+ */
 
 describe('Training scene — ARIA attributes', () => {
   test('train count element has role="status"', () => {
@@ -219,11 +219,7 @@ describe('Training scene — ARIA attributes', () => {
   });
 
   test('yes button responds to click when focused', () => {
-    // jsdom doesn't synthesise Enter→click on focused buttons the way real
-    // browsers do, so we can only verify the two ingredients of keyboard
-    // activation: the button can take focus, and a click on it (the event
-    // an Enter press would produce in a real browser) updates state.  The
-    // end-to-end Enter→activation path is covered in e2e/keyboard-flow.spec.ts.
+    // jsdom can't run MUI's keyDown→click chain; the e2e suite covers Enter.
     const result = renderTraining();
     const yesBtn = screen.getByRole('button', {name: 'Fish'});
     yesBtn.focus();
@@ -236,9 +232,9 @@ describe('Training scene — ARIA attributes', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Training scene — Tab order (DOM order)
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Training scene — Tab order (DOM order)
+ */
 
 describe('Training scene — Tab order', () => {
   /**
@@ -273,9 +269,9 @@ describe('Training scene — Tab order', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Erase confirmation dialog — structure
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Erase confirmation dialog — structure
+ */
 
 describe('Erase confirmation dialog — structure', () => {
   test('erase button opens confirmation dialog', () => {
@@ -312,9 +308,9 @@ describe('Erase confirmation dialog — structure', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Erase confirmation dialog — interactions
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Erase confirmation dialog — interactions
+ */
 
 describe('Erase confirmation dialog — interactions', () => {
   test('cancel dismisses dialog without resetting count', () => {
@@ -360,14 +356,12 @@ describe('Erase confirmation dialog — interactions', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Erase confirmation dialog — keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Erase confirmation dialog — keyboard
+ */
 
 describe('Erase confirmation dialog — keyboard', () => {
-  // jsdom can't drive real Enter→click on focused buttons, so these tests
-  // verify the focus + click halves of the keyboard flow.  The full Enter
-  // press path is covered end-to-end in e2e/keyboard-flow.spec.ts.
+  // jsdom can't run Enter→click on focused buttons; e2e covers that path.
 
   test('focus + click on erase opens dialog; focus + click on cancel dismisses', () => {
     const result = renderTraining();

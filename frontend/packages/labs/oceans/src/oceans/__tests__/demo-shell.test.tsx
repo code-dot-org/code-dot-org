@@ -16,12 +16,12 @@ import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import DemoShell from '../../DemoShell';
 
-// ─── Mocks ───────────────────────────────────────────────────────────────────
+/* Mocks */
 
 /** Replace the full lab with a lightweight sentinel — no TF.js, no canvas. */
 vi.mock('../../App', () => ({default: () => <div data-testid="oceans-lab" />}));
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+/* Helpers */
 
 function renderDemoShell() {
   return render(
@@ -35,9 +35,9 @@ afterEach(() => {
   vi.unstubAllGlobals();
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Mode picker — static rendering
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Mode picker — static rendering
+ */
 
 describe('DemoShell mode picker', () => {
   test('renders all five mode radio buttons', () => {

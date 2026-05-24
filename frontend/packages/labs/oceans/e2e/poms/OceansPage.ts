@@ -33,7 +33,7 @@ export class OceansPage {
     return this.page.getByRole('button', {name: label});
   }
 
-  // ── Training scene ──────────────────────────────────────────────────
+  /* Training scene */
 
   /** Counter span showing total classifications so far. */
   get trainCount(): Locator {
@@ -50,14 +50,14 @@ export class OceansPage {
     return this.page.getByRole('button', {name: 'Continue'});
   }
 
-  // ── Words scene (FishShort / FishLong) ──────────────────────────────
+  /* Words scene (FishShort / FishLong) */
 
   /** All word-choice buttons rendered in the Words scene. */
   get wordButtons(): Locator {
     return this.page.getByTestId('word-button');
   }
 
-  // ── Predict scene ───────────────────────────────────────────────────
+  /* Predict scene */
 
   /** Run button that starts prediction. */
   get runButton(): Locator {
@@ -92,7 +92,7 @@ export class OceansPage {
     return this.page.locator('#uitest-continue-btn');
   }
 
-  // ── Pond scene ──────────────────────────────────────────────────────
+  /* Pond scene */
 
   /** Clickable fish-pond surface (role=button). */
   get pondSurface(): Locator {
@@ -131,7 +131,7 @@ export class OceansPage {
       .getByRole('button', {name: 'Continue'});
   }
 
-  // ── Guide overlay ───────────────────────────────────────────────────
+  /* Guide overlay */
 
   /**
    * Clickable guide overlay (covers the whole scene).
@@ -151,19 +151,13 @@ export class OceansPage {
   }
 
   /**
-   * Dismiss all queued guides by pressing Enter on each dialog in turn.
-   * Waits for the first guide to appear before starting the loop.
-   *
-   * A cumulative 30 s wall-clock cap bounds the whole call so a wedged
-   * Typist animation can't stack `maxGuides × 20 s` of per-iteration
-   * `toPass()` budget into a multi-minute hang on CI.  First iteration
-   * keeps the original 20 s budget; later iterations clamp to whatever
-   * remains, with a 2 s floor so the last guide still gets a fair shot.
+   * Press Enter on each queued guide dialog until the overlay closes.
+   * A 30 s wall-clock cap stops a wedged Typist animation from compounding
+   * per-iteration timeouts into a multi-minute hang.
    *
    * @param maxGuides - Safety cap to avoid infinite loops.
    */
   async dismissAllGuides(maxGuides = 10): Promise<void> {
-    // Wait for the first guide; if none appears, return immediately.
     const appeared = await this.guideOverlay
       .waitFor({state: 'visible', timeout: 15_000})
       .then(() => true)
@@ -174,16 +168,12 @@ export class OceansPage {
     for (let i = 0; i < maxGuides; i++) {
       if (!(await this.guideOverlay.isVisible().catch(() => false))) break;
       const remaining = deadline - Date.now();
-      // First pass keeps the full 20 s budget; subsequent passes clamp to
-      // whatever's left of the cumulative cap, never below 2 s.
       const iterTimeout =
         i === 0 ? 20_000 : Math.max(2_000, Math.min(20_000, remaining));
       const labelBefore = await this.guideDialog
         .getAttribute('aria-label')
         .catch(() => null);
-      // Press Enter inside the retry loop: guideShowing is false while Typist
-      // animates, so Enter is a no-op until typing completes.  toPass retries
-      // the whole callback (press + check) until the guide advances or closes.
+      // Enter is a no-op while Typist animates; retry press+check until it lands.
       await expect(async () => {
         if (!(await this.guideOverlay.isVisible())) return;
         await this.guideDialog.press('Enter');
@@ -197,17 +187,11 @@ export class OceansPage {
     }
   }
 
-  // ── Confirmation dialog ─────────────────────────────────────────────
+  /* Confirmation dialog */
 
   /**
-   * The erase-confirmation dialog element.
-   *
-   * Scoped by accessible name ("Are you sure?") because Guide.tsx also renders
-   * a role=dialog element — an unscoped getByRole('dialog') matches both in
-   * strict mode whenever a guide is open at the same time as confirmation.
-   *
-   * Scoping all confirmation locators within the dialog also means role+name
-   * queries can't accidentally match the toolbar Erase button outside it.
+   * Erase-confirmation dialog, scoped by name; an unscoped match collides
+   * with Guide's dialog.
    */
   get confirmationDialog(): Locator {
     return this.page.getByRole('dialog', {name: 'Are you sure?'});
@@ -230,7 +214,7 @@ export class OceansPage {
     return this.confirmationDialog.getByRole('button', {name: 'Cancel'});
   }
 
-  // ── Navigation ──────────────────────────────────────────────────────
+  /* Navigation */
 
   /** The app mode this page expects. Subclasses override. */
   protected get appMode(): AppModeValue {
@@ -336,12 +320,8 @@ export class OceansPage {
   }
 
   /**
-   * Focus `locator`, assert focus landed, then activate with Enter.
-   *
-   * Dispatches the key at the page level after focusing — this is the same
-   * path assistive tech (screen readers, switch access) takes, and it avoids
-   * Playwright's `locator.press()` second stability check after focus, which
-   * can drop the key event on slow CI runners.
+   * Focus `locator` and press Enter at the page level — same path AT takes,
+   * and avoids locator.press()'s second stability check dropping events on CI.
    *
    * @param locator - The control to focus and activate.
    */

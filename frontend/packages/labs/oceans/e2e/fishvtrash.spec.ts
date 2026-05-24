@@ -2,9 +2,9 @@ import {expect, test} from './fixtures/visual';
 import {FishVTrashPage} from './poms/FishVTrashPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Predict scene
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Predict scene
+ */
 
 test.describe('FishVTrash — predict scene', () => {
   test('continue from training shows run button', async ({page}) => {
@@ -46,9 +46,9 @@ test.describe('FishVTrash — predict scene', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Pond scene
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Pond scene
+ */
 
 test.describe('FishVTrash — pond scene', () => {
   test('full flow reaches pond with toggle buttons', async ({page}) => {
@@ -75,9 +75,9 @@ test.describe('FishVTrash — pond scene', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CreaturesVTrashDemo — starts in Predict
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * CreaturesVTrashDemo — starts in Predict
+ */
 
 test.describe('CreaturesVTrashDemo mode', () => {
   test('loads directly in predict scene with run button', async ({page}) => {
@@ -90,9 +90,9 @@ test.describe('CreaturesVTrashDemo mode', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Visual regression
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Visual regression
+ */
 
 test.describe('@visual', () => {
   test('FishVTrash initial training scene', async ({page, visualCheck}) => {

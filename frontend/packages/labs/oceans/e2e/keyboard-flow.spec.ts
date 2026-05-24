@@ -4,9 +4,9 @@ import {FishShortPage} from './poms/FishShortPage';
 import {FishVTrashPage} from './poms/FishVTrashPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Training scene keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Training scene keyboard
+ */
 
 test.describe('FishVTrash — Training scene keyboard', () => {
   test('classifies via keyboard and advances to Predict', async ({page}) => {
@@ -21,9 +21,9 @@ test.describe('FishVTrash — Training scene keyboard', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Predict scene keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Predict scene keyboard
+ */
 
 test.describe('FishVTrash — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
@@ -43,9 +43,9 @@ test.describe('FishVTrash — Predict scene keyboard', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishShort — Words scene keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishShort — Words scene keyboard
+ */
 
 test.describe('FishShort — Words scene keyboard', () => {
   test('selects word via keyboard and advances to Training', async ({page}) => {
@@ -63,9 +63,9 @@ test.describe('FishShort — Words scene keyboard', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishShort — Training scene keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishShort — Training scene keyboard
+ */
 
 test.describe('FishShort — Training scene keyboard', () => {
   test('classifies via keyboard and advances to Predict', async ({page}) => {
@@ -90,9 +90,9 @@ test.describe('FishShort — Training scene keyboard', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishShort — Predict scene keyboard
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishShort — Predict scene keyboard
+ */
 
 test.describe('FishShort — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {

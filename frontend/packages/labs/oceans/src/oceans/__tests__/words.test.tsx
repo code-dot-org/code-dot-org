@@ -22,7 +22,7 @@ import I18n from '@/oceans/i18n';
 import {getState, resetState, setInitialState, setState} from '@/oceans/state';
 import UI from '@/oceans/ui';
 
-// ─── Mocks ───────────────────────────────────────────────────────────────────
+/* Mocks */
 
 vi.mock('@/oceans/models/guide', () => ({
   default: {
@@ -54,7 +54,7 @@ vi.mock('@/oceans/models/train', () => ({
   },
 }));
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+/* Helpers */
 
 /** Render <UI /> wrapped in MUI ThemeProvider with state set to Words / FishShort. */
 function renderWords() {
@@ -78,7 +78,7 @@ function rerender(result: ReturnType<typeof renderWords>): void {
   );
 }
 
-// ─── Setup ────────────────────────────────────────────────────────────────────
+/* Setup */
 
 beforeAll(() => {
   I18n.initI18n();
@@ -88,9 +88,9 @@ beforeEach(() => {
   resetState();
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Words scene — initial render
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Words scene — initial render
+ */
 
 describe('Words scene — initial render', () => {
   test('shows 6 word-choice buttons for FishShort', () => {
@@ -107,9 +107,9 @@ describe('Words scene — initial render', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Words scene — word selection
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Words scene — word selection
+ */
 
 describe('Words scene — word selection', () => {
   test('clicking a word transitions to training scene', () => {
