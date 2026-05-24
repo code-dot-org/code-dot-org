@@ -69,9 +69,24 @@ module Cdo
         # @param statement_id [String] Identifier for the SQL statement to check.
         # @return [String] Current status of statement execution (`ABORTED`, `SUBMITTED`, `FINISHED`, etc.).
         def status(statement_id)
-          desc = @client.describe_statement(id: statement_id)
-          # https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/RedshiftDataAPIService/Types/DescribeStatementResponse.html#status-instance_method
-          desc.status
+          describe_statement(statement_id).status
+        end
+
+        # Full details for a single Data API statement, including
+        # `sub_statements`, `db_user`, `duration`, etc.
+        # https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/RedshiftDataAPIService/Types/DescribeStatementResponse.html
+        # @param statement_id [String]
+        # @return [Aws::RedshiftDataAPIService::Types::DescribeStatementResponse]
+        def describe_statement(statement_id)
+          @client.describe_statement(id: statement_id)
+        end
+
+        # Pageable list of recent Data API statements (newest first). Each
+        # statement record carries only the truncated query_string; call
+        # `describe_statement` to get full details and sub_statements.
+        # @return [Aws::PageableResponse] iterate via `.each_page`
+        def list_statements(status: 'ALL', max_results: 100)
+          @client.list_statements(status: status, max_results: max_results)
         end
 
         # Long-running Ruby applications can invoke this method to block until a statement completes.

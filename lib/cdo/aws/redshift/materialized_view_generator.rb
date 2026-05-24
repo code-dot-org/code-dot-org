@@ -8,6 +8,20 @@ module Cdo
     module Redshift
       # Given a Learning Platform ActiveRecord Model, generate SQL (DDL) for a Materialized View in Redshift that sources
       # data from the target Redshift database table where that Model's transactional MySQL data is exported to via Zero-ETL.
+      # One row of `view_status` output: the most recent CREATE/DROP/REFRESH
+      # the Redshift Data API knows about for one materialized view FQN.
+      ViewStatusRow = Struct.new(
+        :model_name,
+        :table_name,
+        :view_type,        # 'pii' | 'non_pii'
+        :operation,        # 'CREATE' | 'REFRESH' | 'DROP' | nil
+        :executed_at,      # Time | nil
+        :statement_id,     # String | nil
+        :status,           # 'FINISHED' | 'FAILED' | 'ABORTED' | 'STARTED' | '(no recent)' | ...
+        :db_user,          # String | nil
+        keyword_init: true
+      )
+
       class MaterializedViewGenerator
         TEXT_DATA_TYPES = [:string, :text].freeze
         DATE_TIME_DATA_TYPES = [:date, :datetime, :timestamp].freeze
@@ -116,28 +130,36 @@ module Cdo
           Digest::SHA256.hexdigest(rendered_sql)
         end
 
-        # Generates, saves, renders, and executes the DDL for both PII and non-PII materialized views.
-        # Each view's batch is `[DROP IF EXISTS, CREATE, COMMENT ON COLUMN ... IS '<hash>']` — the
-        # COMMENT records the DDL hash on the view's first column (Redshift rejects COMMENT ON
-        # MATERIALIZED VIEW) so `sync_all_views` can skip rebuilds when the DDL is unchanged.
+        # Submits the DROP+CREATE+COMMENT batch for both PII and non-PII materialized
+        # views asynchronously via `batch_execute_async` and returns the resulting
+        # statement IDs without waiting for completion. Each view's batch is
+        # `[DROP IF EXISTS, CREATE, COMMENT ON COLUMN ... IS '<hash>']` — the COMMENT
+        # records the DDL hash on the view's first column (Redshift rejects COMMENT
+        # ON MATERIALIZED VIEW) so subsequent `sync_all_views` runs can skip rebuilds
+        # when the DDL is unchanged.
+        #
+        # Use `Cdo::Aws::Redshift::Client#status` / `MaterializedViewGenerator.wait_for_statements`
+        # to poll for completion. CREATE MATERIALIZED VIEW populates synchronously on
+        # Redshift, so large source tables can take many minutes — much longer than
+        # the synchronous Data API client timeout, which is why this method does not
+        # wait.
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
-        # @return [Array<String>] fully qualified names of views created
+        # @return [Hash{String => String}] fqn => Redshift Data API statement_id
         def create_or_replace_views(client:, environment_type:)
           env = environment_type.to_s
           save_ddl_templates
-          created = []
+          statements = {}
 
           rendered_ddls(environment_type: env).each do |fqn, info|
             drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
 
-            client.batch_execute([drop_sql, create_sql, comment_sql])
-            created << fqn
+            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql])
           end
 
-          created
+          statements
         end
 
         # Refreshes both PII and non-PII materialized views for this model.
@@ -162,41 +184,33 @@ module Cdo
           ERB.new(template).result_with_hash(environment_type: environment_type.to_s)
         end
 
-        # Syncs materialized views in Redshift for a set of models: creates or
-        # replaces views for each model and drops orphaned views that no longer
-        # correspond to any model in the set.
+        # Syncs materialized views in Redshift for a set of models: submits the
+        # DROP+CREATE+COMMENT batch (async) for each model that needs work, and
+        # submits a single consolidated DROP batch (async) for any orphaned views
+        # that no longer correspond to a model in the set. Returns the resulting
+        # statement IDs without waiting — pass `:statements` from the result to
+        # `.wait_for_statements` (interactive) or hand them off to a follow-up
+        # status check (cron).
         #
-        # To avoid re-populating large views unnecessarily, each model's
-        # rendered DDL is hashed and compared against the hash stored as the
-        # view's Redshift COMMENT by a previous run. Views whose DDL has not
-        # changed are reported as `:unchanged` in the returned plan and are
-        # skipped at apply time. The daily REFRESH MATERIALIZED VIEW job keeps
-        # their contents up to date.
+        # To avoid re-populating large views unnecessarily, each model's rendered
+        # DDL is hashed and compared against the hash stored as the view's Redshift
+        # COMMENT ON COLUMN by a previous run. Views whose DDL has not changed are
+        # reported as `:unchanged` and skipped at submit time. The daily REFRESH
+        # MATERIALIZED VIEW job keeps their contents fresh.
         #
-        # When a block is supplied, it is called before each unit of Redshift
-        # work so callers can report progress. The yielded events are:
-        #
-        #   yield(:apply, table_name)              # before create-or-replace for one model
-        #   yield(:applied, table_name)            # after create-or-replace for one model
-        #   yield(:skipped, table_name)            # all of this model's views already match the desired DDL hash
-        #   yield(:error, table_name, exception)   # create-or-replace raised; sync continues
-        #   yield(:drop_batch, [fqn, ...])         # before the single DROP batch (skipped when empty)
-        #
-        # CREATE MATERIALIZED VIEW populates the view synchronously on Redshift,
-        # so large source tables can take minutes per view; the :apply / :applied
-        # events let an interactive caller emit per-model progress lines.
-        #
-        # Per-model failures (e.g., the source Zero ETL table not yet replicated,
-        # transient Redshift errors) are caught and reported via the :error event
-        # rather than aborting the whole run; the failed view name is added to
-        # the returned plan under :failed.
+        # Yielded progress events (block optional):
+        #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
+        #   yield(:skipped, table_name)                    # comment hash matches desired DDL
+        #   yield(:error, table_name, exception)           # submit raised; sync continues
+        #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to sync
-        # @param dry_run [Boolean] when true, returns the plan without executing
-        # @yield [event, payload] optional progress callback (see above)
-        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop arrays of fully-qualified view names, and :failed
+        # @param dry_run [Boolean] when true, returns the plan without submitting anything
+        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop arrays of FQNs;
+        #   :failed array of table names whose submit raised; and :statements
+        #   `{fqn => statement_id}` map (empty when dry_run is true).
         def self.sync_all_views(client:, environment_type:, models:, dry_run: false)
           generators = models.map {|model| new(model)}
 
@@ -224,36 +238,221 @@ module Cdo
             to_update: ((desired_fqns & existing_fqns) - unchanged_fqns).sort,
             unchanged: ((desired_fqns & existing_fqns) & unchanged_fqns).sort,
             to_drop: (existing_fqns - desired_fqns).sort,
-            failed: []
+            failed: [],
+            statements: {}
           }
 
-          unless dry_run
-            generators.each do |gen|
-              table_name = gen.model.table_name
-              gen_fqns = gen.expected_view_fqns(environment_type)
+          return plan if dry_run
 
-              if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
-                yield(:skipped, table_name) if block_given?
-                next
-              end
+          generators.each do |gen|
+            table_name = gen.model.table_name
+            gen_fqns = gen.expected_view_fqns(environment_type)
 
-              yield(:apply, table_name) if block_given?
-              begin
-                gen.create_or_replace_views(client: client, environment_type: environment_type)
-                yield(:applied, table_name) if block_given?
-              rescue StandardError => exception
-                plan[:failed] << table_name
-                yield(:error, table_name, exception) if block_given?
-              end
+            if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
+              yield(:skipped, table_name) if block_given?
+              next
             end
 
-            unless plan[:to_drop].empty?
-              yield(:drop_batch, plan[:to_drop]) if block_given?
-              client.batch_execute(plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"})
+            begin
+              submitted = gen.create_or_replace_views(client: client, environment_type: environment_type)
+              plan[:statements].merge!(submitted)
+              yield(:submitted, table_name, submitted.keys) if block_given?
+            rescue StandardError => exception
+              plan[:failed] << table_name
+              yield(:error, table_name, exception) if block_given?
             end
           end
 
+          unless plan[:to_drop].empty?
+            drop_sql = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+            plan[:statements]['__drop_orphans__'] = client.batch_execute_async(drop_sql)
+            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
+          end
+
           plan
+        end
+
+        # Polls the Redshift Data API for completion of every statement in the
+        # given `{fqn => statement_id}` map. Polls until all statements have
+        # reached a terminal status (FINISHED / FAILED / ABORTED) or `timeout`
+        # seconds have elapsed. Each pass calls `client.status` for every still-
+        # pending statement, sleeps `poll_interval` seconds, and repeats.
+        #
+        # Yielded progress events (block optional):
+        #   yield(:finished, fqn, duration_seconds)     # statement completed successfully
+        #   yield(:failed, fqn, error_message)          # statement FAILED or ABORTED
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param statements [Hash{String => String}] fqn => Redshift statement_id
+        # @param poll_interval [Integer] seconds between polling passes
+        # @param timeout [Integer, nil] cap on total wait; raises QueryError when crossed.
+        #   Defaults to nil (poll forever — statements have ~24h Data API retention).
+        # @return [Hash] :finished => [fqn, ...], :failed => [[fqn, error_msg], ...]
+        def self.wait_for_statements(client:, statements:, poll_interval: 10, timeout: nil)
+          pending = statements.dup
+          finished = []
+          failed = []
+          start_times = Hash.new {|h, k| h[k] = Time.now}
+          waited_at = Time.now
+
+          until pending.empty?
+            if timeout && (Time.now - waited_at) > timeout
+              raise Cdo::Aws::Redshift::Client::QueryError,
+                "Timed out after #{timeout}s waiting on #{pending.length} statement(s)"
+            end
+
+            pending.dup.each do |fqn, statement_id|
+              start_times[fqn] # touch to record start on first observation
+              current = client.status(statement_id)
+              case current
+              when 'FINISHED'
+                duration = (Time.now - start_times[fqn]).round(1)
+                pending.delete(fqn)
+                finished << fqn
+                yield(:finished, fqn, duration) if block_given?
+              when 'FAILED', 'ABORTED'
+                desc = client.describe_statement(statement_id)
+                msg = desc.error.to_s.lines.first&.strip || "(#{current})"
+                pending.delete(fqn)
+                failed << [fqn, msg]
+                yield(:failed, fqn, msg) if block_given?
+              end
+            end
+
+            sleep poll_interval unless pending.empty?
+          end
+
+          {finished: finished, failed: failed}
+        end
+
+        # Returns one `ViewStatusRow` per (model, view variant) plus extra rows
+        # for orphan FQNs (views referenced by recent Data API statements but no
+        # longer claimed by any model in `models`). The "operation" column is the
+        # user-meaningful action of the most recent batch touching that FQN —
+        # CREATE wins over REFRESH wins over DROP, so our DROP+CREATE+COMMENT
+        # create-or-replace batches report as `CREATE`, the consolidated
+        # orphan-drop batch reports per-FQN as `DROP`, and a refresh-only batch
+        # reports as `REFRESH`. COMMENT sub-statements are intentionally
+        # ignored.
+        #
+        # Two-phase lookup: list_statements is cheap and only carries a
+        # truncated `query_string`, so we use a string `include?` check on
+        # `dashboard_<env>(_pii)?.zeroetl_` to filter candidates without
+        # describing every Data API statement on the cluster. Each candidate
+        # batch then gets one `describe_statement` round trip to fetch
+        # sub_statements and db_user.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @param models [Enumerable<Class>] currently-registered exportable models
+        # @param hours_back [Integer] window for recent-statement lookup; the
+        #   Data API retains ~24h of history, so this is capped in practice.
+        # @return [Array<ViewStatusRow>]
+        def self.view_status(client:, environment_type:, models:, hours_back: 24)
+          env = environment_type.to_s
+          schema_prefixes = ["dashboard_#{env}_pii.zeroetl_", "dashboard_#{env}.zeroetl_"]
+          op_priority = {'CREATE' => 3, 'REFRESH' => 2, 'DROP' => 1}.freeze
+          cutoff = hours_back.hours.ago
+
+          parse_sub = lambda do |sql|
+            sql = sql.to_s.strip
+            if sql.start_with?('DROP MATERIALIZED VIEW IF EXISTS ')
+              ['DROP', sql.delete_prefix('DROP MATERIALIZED VIEW IF EXISTS ').split.first]
+            elsif sql.start_with?('DROP MATERIALIZED VIEW ')
+              ['DROP', sql.delete_prefix('DROP MATERIALIZED VIEW ').split.first]
+            elsif sql.start_with?('CREATE MATERIALIZED VIEW ')
+              ['CREATE', sql.delete_prefix('CREATE MATERIALIZED VIEW ').split.first]
+            elsif sql.start_with?('REFRESH MATERIALIZED VIEW ')
+              ['REFRESH', sql.delete_prefix('REFRESH MATERIALIZED VIEW ').split.first]
+            else
+              [nil, nil]
+            end
+          end
+
+          # Phase 1: candidate batches from list_statements (newest-first;
+          # stop paginating once we cross the cutoff).
+          candidates = []
+          done = false
+          client.list_statements.each_page do |page|
+            break if done
+            page.statements.each do |s|
+              if s.created_at < cutoff
+                done = true
+                break
+              end
+              qs = s.query_string.to_s
+              candidates << s if schema_prefixes.any? {|prefix| qs.include?(prefix)}
+            end
+          end
+
+          # Phase 2: describe each candidate, resolve per-FQN primary op.
+          fqn_to_latest = {}
+          candidates.each do |batch|
+            desc = client.describe_statement(batch.id)
+            fqn_to_op = {}
+            desc.sub_statements.each do |sub|
+              op, fqn = parse_sub.call(sub.query_string)
+              next if op.nil? || fqn.nil?
+              next unless schema_prefixes.any? {|prefix| fqn.start_with?(prefix)}
+              current = fqn_to_op[fqn]
+              fqn_to_op[fqn] = op if current.nil? || op_priority[op] > op_priority[current]
+            end
+
+            fqn_to_op.each do |fqn, op|
+              existing = fqn_to_latest[fqn]
+              fqn_to_latest[fqn] = {batch: batch, desc: desc, op: op} if existing.nil? || batch.created_at > existing[:batch].created_at
+            end
+          end
+
+          view_type_for = ->(fqn) {fqn.include?('_pii.zeroetl_') ? 'pii' : 'non_pii'}
+
+          # Expected FQNs per model.
+          model_fqns = {}
+          models.sort_by(&:name).each do |model|
+            new(model).expected_view_fqns(env).each {|fqn| model_fqns[fqn] = model}
+          end
+          expected_set = model_fqns.keys.to_set
+
+          build_row = lambda do |model_name, table_name, fqn|
+            latest = fqn_to_latest[fqn]
+            if latest
+              ViewStatusRow.new(
+                model_name: model_name,
+                table_name: table_name,
+                view_type: view_type_for.call(fqn),
+                operation: latest[:op],
+                executed_at: latest[:batch].created_at,
+                statement_id: latest[:batch].id,
+                status: latest[:batch].status,
+                db_user: latest[:desc].db_user
+              )
+            else
+              ViewStatusRow.new(
+                model_name: model_name,
+                table_name: table_name,
+                view_type: view_type_for.call(fqn),
+                operation: nil,
+                executed_at: nil,
+                statement_id: nil,
+                status: '(no recent)',
+                db_user: nil
+              )
+            end
+          end
+
+          rows = []
+          model_fqns.sort_by {|fqn, m| [m.name, view_type_for.call(fqn)]}.each do |fqn, model|
+            rows << build_row.call(model.name, model.table_name, fqn)
+          end
+
+          orphan_fqns = (fqn_to_latest.keys - expected_set.to_a).sort
+          orphan_fqns.each do |fqn|
+            prefix = schema_prefixes.find {|p| fqn.start_with?(p)}
+            orphan_table = prefix ? fqn.delete_prefix(prefix) : fqn
+            rows << build_row.call('(orphan)', orphan_table, fqn)
+          end
+
+          rows
         end
 
         # Queries Redshift for existing `zeroetl_` materialized views in the

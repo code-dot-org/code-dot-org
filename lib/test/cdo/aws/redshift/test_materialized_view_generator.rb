@@ -218,23 +218,47 @@ module Cdo
             FileUtils.remove_entry(tmpdir)
           end
 
-          it 'batch executes DROP and CREATE for both views' do
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+          it 'submits each view batch via batch_execute_async and returns statement IDs by FQN' do
+            client.stubs(:batch_execute_async).returns('id-pii').then.returns('id-non-pii')
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
-            assert_equal 2, batches.length
-            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users', batches[0][0]
-            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
-            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production.zeroetl_users', batches[1][0]
-            assert_includes batches[1][1], 'CREATE MATERIALIZED VIEW dashboard_production.zeroetl_users'
+            assert_equal(
+              {
+                'dashboard_production_pii.zeroetl_users' => 'id-pii',
+                'dashboard_production.zeroetl_users' => 'id-non-pii'
+              },
+              result
+            )
+          end
 
-            assert_equal ['dashboard_production_pii.zeroetl_users', 'dashboard_production.zeroetl_users'], result
+          it 'returns empty hash when model has no columns' do
+            model.stubs(:columns).returns([])
+            client.expects(:batch_execute_async).never
+            assert_empty generator.create_or_replace_views(client: client, environment_type: :test)
+          end
+
+          it 'each batch is [DROP, CREATE, COMMENT ON COLUMN ... IS hash-of-create]' do
+            batches = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              batches << sqls
+              "id-#{batches.length}"
+            end
+
+            generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal 2, batches.length
+            batches.each do |sqls|
+              assert_equal 3, sqls.length
+              assert sqls[0].start_with?('DROP MATERIALIZED VIEW IF EXISTS ')
+              assert sqls[1].start_with?('CREATE MATERIALIZED VIEW ')
+              expected_hash = Digest::SHA256.hexdigest(sqls[1])
+              assert_match(/\ACOMMENT ON COLUMN \S+\.id IS '#{expected_hash}'\z/, sqls[2])
+            end
           end
 
           it 'saves ERB template files to the template directory' do
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async).returns('id')
             generator.create_or_replace_views(client: client, environment_type: :test)
 
             assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
@@ -243,7 +267,7 @@ module Cdo
 
           it 'renders ERB placeholders in the CREATE SQL' do
             batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; 'id'}
 
             generator.create_or_replace_views(client: client, environment_type: :test)
 
@@ -253,49 +277,186 @@ module Cdo
             end
           end
 
-          it 'accepts symbol environment_type' do
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
-
-            result = generator.create_or_replace_views(client: client, environment_type: :production)
-
-            assert_includes batches[0][0], 'dashboard_production_pii'
-            assert_equal 'dashboard_production_pii.zeroetl_users', result[0]
-          end
-
-          it 'returns empty array when model has no columns' do
-            model.stubs(:columns).returns([])
-            result = generator.create_or_replace_views(client: client, environment_type: :production)
-            assert_empty result
-          end
-
           it 'skips non-pii view when all columns are text' do
             model.stubs(:columns).returns([name_col, bio_col])
             batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; 'id'}
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
             assert_equal 1, batches.length
             assert_equal 'DROP MATERIALIZED VIEW IF EXISTS dashboard_production_pii.zeroetl_users', batches[0][0]
             assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW dashboard_production_pii.zeroetl_users'
-            assert_equal ['dashboard_production_pii.zeroetl_users'], result
+            assert_equal ['dashboard_production_pii.zeroetl_users'], result.keys
+          end
+        end
+
+        describe '.view_status' do
+          let(:client) {mock('redshift_client')}
+
+          # Builds a stub matching the Aws::PageableResponse contract:
+          # only `each_page` is called by `view_status`.
+          def pageable(statements)
+            page = stub('page', statements: statements)
+            pageable = stub('pageable')
+            pageable.stubs(:each_page).yields(page)
+            pageable
           end
 
-          it 'appends a COMMENT ON COLUMN statement with the DDL hash on the view first column' do
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+          def list_stmt(id:, query_string:, created_at: Time.now, status: 'FINISHED')
+            stub('list_stmt', id: id, query_string: query_string, created_at: created_at, status: status)
+          end
 
-            generator.create_or_replace_views(client: client, environment_type: :production)
+          def describe(sub_query_strings:, db_user: 'dev')
+            subs = sub_query_strings.map {|qs| stub('sub', query_string: qs)}
+            stub('desc', sub_statements: subs, db_user: db_user)
+          end
 
-            # PII view: first column is 'id' (first entry in all_columns).
-            # Non-PII view: first column is also 'id' (first non-text column).
-            batches.each do |sqls|
-              create_sql = sqls[1]
-              comment_sql = sqls[2]
-              expected_hash = Digest::SHA256.hexdigest(create_sql)
-              assert_match(/\ACOMMENT ON COLUMN \S+\.id IS '#{expected_hash}'\z/, comment_sql)
+          it 'returns a CREATE row for each PII and non-PII view in the most recent batch' do
+            batch_pii = list_stmt(id: 'pii-1',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS dashboard_test_pii.zeroetl_usersCREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users"
+)
+            batch_non_pii = list_stmt(id: 'non-pii-1',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS dashboard_test.zeroetl_usersCREATE MATERIALIZED VIEW dashboard_test.zeroetl_users"
+)
+
+            client.stubs(:list_statements).returns(pageable([batch_pii, batch_non_pii]))
+            client.stubs(:describe_statement).with('pii-1').returns(describe(sub_query_strings: [
+                                                                               'DROP MATERIALIZED VIEW IF EXISTS dashboard_test_pii.zeroetl_users',
+                                                                               'CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users AS SELECT id FROM x;',
+                                                                               "COMMENT ON COLUMN dashboard_test_pii.zeroetl_users.id IS 'abc'"
+                                                                             ]
+)
+)
+            client.stubs(:describe_statement).with('non-pii-1').returns(describe(sub_query_strings: [
+                                                                                   'DROP MATERIALIZED VIEW IF EXISTS dashboard_test.zeroetl_users',
+                                                                                   'CREATE MATERIALIZED VIEW dashboard_test.zeroetl_users AS SELECT id FROM x;',
+                                                                                   "COMMENT ON COLUMN dashboard_test.zeroetl_users.id IS 'def'"
+                                                                                 ]
+)
+)
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert_equal 2, rows.length
+            non_pii_row = rows.find {|r| r.view_type == 'non_pii'}
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            assert_equal 'CREATE', pii_row.operation
+            assert_equal 'CREATE', non_pii_row.operation
+            assert_equal 'pii-1', pii_row.statement_id
+            assert_equal 'non-pii-1', non_pii_row.statement_id
+            assert_equal 'User', pii_row.model_name
+            assert_equal 'users', pii_row.table_name
+            assert_equal 'dev', pii_row.db_user
+          end
+
+          it 'CREATE wins over DROP within the same batch (DROP+CREATE+COMMENT)' do
+            batch = list_stmt(id: 'b1',
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS dashboard_test_pii.zeroetl_users CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users'
+)
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('b1').returns(describe(sub_query_strings: [
+                                                                            'DROP MATERIALIZED VIEW IF EXISTS dashboard_test_pii.zeroetl_users',
+                                                                            'CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users AS SELECT id FROM x;'
+                                                                          ]
+)
+)
+            model.stubs(:name).returns('User')
+            model.stubs(:columns).returns([name_col]) # PII-only model
+
+            rows = MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            row = rows.first
+            assert_equal 'CREATE', row.operation
+          end
+
+          it 'reports the consolidated orphan-drop batch per FQN' do
+            orphan_pii = 'dashboard_test_pii.zeroetl_old'
+            orphan_non_pii = 'dashboard_test.zeroetl_old'
+            batch = list_stmt(id: 'drop-batch',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS #{orphan_pii} DROP MATERIALIZED VIEW IF EXISTS #{orphan_non_pii}"
+)
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('drop-batch').returns(describe(sub_query_strings: [
+                                                                                    "DROP MATERIALIZED VIEW IF EXISTS #{orphan_pii}",
+                                                                                    "DROP MATERIALIZED VIEW IF EXISTS #{orphan_non_pii}"
+                                                                                  ]
+)
+)
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            orphan_rows = rows.select {|r| r.model_name == '(orphan)'}
+            assert_equal 2, orphan_rows.length
+            orphan_rows.each do |r|
+              assert_equal 'DROP', r.operation
+              assert_equal 'old', r.table_name
+              assert_equal 'drop-batch', r.statement_id
             end
+          end
+
+          it 'emits a "(no recent)" row for expected views with no matching statement' do
+            client.stubs(:list_statements).returns(pageable([]))
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert_equal 2, rows.length
+            rows.each do |r|
+              assert_equal '(no recent)', r.status
+              assert_nil r.operation
+              assert_nil r.statement_id
+              assert_nil r.executed_at
+            end
+          end
+
+          it 'ignores statements that do not mention our zeroetl_ schema prefixes' do
+            unrelated = list_stmt(id: 'unrelated', query_string: 'SELECT * FROM some_other_table')
+            client.stubs(:list_statements).returns(pageable([unrelated]))
+            client.expects(:describe_statement).never
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            rows.each {|r| assert_equal '(no recent)', r.status}
+          end
+
+          it 'stops paginating once the cutoff is crossed' do
+            recent = list_stmt(id: 'recent', created_at: Time.now,
+              query_string: 'CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users'
+)
+            old = list_stmt(id: 'old', created_at: 48.hours.ago,
+              query_string: 'CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users'
+)
+
+            client.stubs(:list_statements).returns(pageable([recent, old]))
+            client.stubs(:describe_statement).with('recent').returns(describe(sub_query_strings: [
+                                                                                'CREATE MATERIALIZED VIEW dashboard_test_pii.zeroetl_users AS SELECT id FROM x;'
+                                                                              ]
+)
+)
+            client.expects(:describe_statement).with('old').never
+
+            model.stubs(:name).returns('User')
+
+            MaterializedViewGenerator.view_status(
+              client: client, environment_type: :test, models: [model], hours_back: 24
+            )
           end
         end
 
@@ -439,12 +600,10 @@ module Cdo
 
           it 'classifies new views as to_add' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async)
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
             assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_users'
@@ -453,19 +612,17 @@ module Cdo
             assert_empty plan[:to_drop]
           end
 
-          it 'classifies existing views as to_update' do
+          it 'classifies existing-but-stale views as to_update' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users'},
-                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users'}
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async)
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
             assert_empty plan[:to_add]
@@ -477,186 +634,146 @@ module Cdo
           it 'classifies orphaned views as to_drop' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users'},
-                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users'},
-                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_old_table'},
-                {'schema' => 'dashboard_production', 'name' => 'zeroetl_old_table'}
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => nil},
+                {'schema' => 'dashboard_production_pii', 'name' => 'zeroetl_old_table', 'comment' => nil},
+                {'schema' => 'dashboard_production', 'name' => 'zeroetl_old_table', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async)
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
             assert_includes plan[:to_drop], 'dashboard_production_pii.zeroetl_old_table'
             assert_includes plan[:to_drop], 'dashboard_production.zeroetl_old_table'
           end
 
-          it 'executes create_or_replace and drop when not dry_run' do
-            client.stubs(:execute).returns(
-              [
-                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
-              ]
-            )
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+          it 'submits async batches for changed views and returns their statement IDs' do
+            client.stubs(:execute).returns([])
+            id_seq = 0
+            client.stubs(:batch_execute_async).with do |_sqls|
+              id_seq += 1
+              "id-#{id_seq}"
+            end
 
-            MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: [model]
+            result = MaterializedViewGenerator.sync_all_views(
+              client: client, environment_type: :production, models: [model]
             )
 
-            create_batches = batches.select {|b| b.any? {|s| s.include?('CREATE')}}
-            drop_batches = batches.select {|b| b.all? {|s| s.include?('DROP') && !s.include?('CREATE')}}
-
-            refute_empty create_batches
-            assert_equal 1, drop_batches.length
-            assert_includes drop_batches[0][0], 'zeroetl_old_table'
+            assert_equal 2, result[:statements].length
+            assert(result[:statements].keys.any? {|fqn| fqn.include?('zeroetl_users')})
+            refute_empty result[:to_add]
+            assert_empty result[:failed]
           end
 
-          it 'does not execute anything when dry_run is true' do
+          it 'submits the orphan-drop batch async and includes it under __drop_orphans__' do
             client.stubs(:execute).returns(
-              [
-                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
-              ]
+              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+            )
+            submitted = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              submitted << sqls
+              "id-#{submitted.length}"
+            end
+
+            result = MaterializedViewGenerator.sync_all_views(
+              client: client, environment_type: :test, models: [model]
             )
 
+            assert_includes result[:statements].keys, '__drop_orphans__'
+            drop_sqls = submitted.find {|sqls| sqls.all? {|s| s.include?('DROP') && !s.include?('CREATE')}}
+            refute_nil drop_sqls
+            assert(drop_sqls.any? {|s| s.include?('zeroetl_old_table')})
+          end
+
+          it 'does not submit anything when dry_run is true' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+            )
+            client.expects(:batch_execute_async).never
+
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: [model],
-              dry_run: true
+              client: client, environment_type: :test, models: [model], dry_run: true
             )
 
             refute_empty plan[:to_add]
             refute_empty plan[:to_drop]
+            assert_empty plan[:statements]
           end
 
-          it 'handles multiple models' do
-            client.stubs(:execute).returns([])
-            client.stubs(:batch_execute)
-
-            plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model, activities_model]
+          it 'does not yield any events on dry_run' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
             )
-
-            assert_equal 4, plan[:to_add].length
-            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_users'
-            assert_includes plan[:to_add], 'dashboard_production.zeroetl_users'
-            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_activities'
-            assert_includes plan[:to_add], 'dashboard_production.zeroetl_activities'
-          end
-
-          it 'does not issue a standalone DROP batch when to_drop is empty' do
-            client.stubs(:execute).returns([])
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
-
-            MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: [model]
-            )
-
-            batches.each do |batch|
-              assert batch.any? {|sql| sql.include?('CREATE')},
-                "Expected every batch to contain a CREATE statement, got: #{batch}"
-            end
-          end
-
-          it 'yields :apply and :applied events around each create-or-replace when a block is given' do
-            client.stubs(:execute).returns([])
-            client.stubs(:batch_execute)
 
             events = []
             MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model, activities_model]
-            ) {|event, payload| events << [event, payload]}
+              client: client, environment_type: :test, models: [model], dry_run: true
+            ) {|event, _, _| events << event}
 
-            assert_equal(
-              [
-                [:apply, 'users'], [:applied, 'users'],
-                [:apply, 'activities'], [:applied, 'activities']
-              ],
-              events
-            )
+            assert_empty events
           end
 
-          it 'yields :drop_batch with the list of fqns before dropping orphaned views' do
+          it 'yields :submitted with table name and submitted FQNs per model' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns('id-1', 'id-2')
+
+            events = []
+            MaterializedViewGenerator.sync_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            submitted = events.find {|e| e[0] == :submitted}
+            refute_nil submitted
+            assert_equal 'users', submitted[1]
+            assert_equal 2, submitted[2].length
+          end
+
+          it 'yields :drop_batch_submitted with the orphan FQNs' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'},
-                {'schema' => 'dashboard_test', 'name' => 'zeroetl_old_table'}
+                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil},
+                {'schema' => 'dashboard_test', 'name' => 'zeroetl_old_table', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async).returns('id')
 
             drop_events = []
             MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: [model]
-            ) {|event, payload| drop_events << payload if event == :drop_batch}
+              client: client, environment_type: :test, models: [model]
+            ) {|event, payload, _| drop_events << payload if event == :drop_batch_submitted}
 
             assert_equal 1, drop_events.length
             assert_includes drop_events[0], 'dashboard_test_pii.zeroetl_old_table'
             assert_includes drop_events[0], 'dashboard_test.zeroetl_old_table'
           end
 
-          it 'does not yield :drop_batch when to_drop is empty' do
+          it 'does not yield :drop_batch_submitted when to_drop is empty' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async).returns('id')
 
             events = []
             MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
-            ) {|event, _payload| events << event}
+              client: client, environment_type: :production, models: [model]
+            ) {|event, _payload, _| events << event}
 
-            refute_includes events, :drop_batch
+            refute_includes events, :drop_batch_submitted
           end
 
-          it 'does not yield any events on dry_run' do
-            client.stubs(:execute).returns(
-              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}]
-            )
-
-            events = []
-            MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: [model],
-              dry_run: true
-            ) {|event, _| events << event}
-
-            assert_empty events
-          end
-
-          it 'continues past per-model failures and reports them via :error and :failed' do
+          it 'continues past per-model submit failures and records them under :failed' do
             client.stubs(:execute).returns([])
-
-            # First batch_execute (PII view for users) fails; remaining succeed.
             call_count = 0
-            client.stubs(:batch_execute).with do |_sqls|
+            client.stubs(:batch_execute_async).with do |_sqls|
               call_count += 1
-              raise Cdo::Aws::Redshift::Client::QueryError, 'Relation does not exist' if call_count == 1
-              true
+              raise Cdo::Aws::Redshift::Client::QueryError, 'Submit failed' if call_count == 1
+              "id-#{call_count}"
             end
 
             events = []
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model, activities_model]
+              client: client, environment_type: :production, models: [model, activities_model]
             ) {|event, payload, extra| events << [event, payload, extra]}
 
             error_events = events.select {|e| e[0] == :error}
@@ -665,18 +782,16 @@ module Cdo
             assert_instance_of Cdo::Aws::Redshift::Client::QueryError, error_events[0][2]
 
             assert_equal ['users'], plan[:failed]
-            # Subsequent model still got an :applied event.
-            assert(events.any? {|ev, payload, _| ev == :applied && payload == 'activities'})
+            # Subsequent model still got a :submitted event.
+            assert(events.any? {|ev, payload, _| ev == :submitted && payload == 'activities'})
           end
 
-          it 'reports an empty :failed array when all models succeed' do
+          it 'reports an empty :failed array when all submits succeed' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async)
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
             assert_empty plan[:failed]
@@ -692,19 +807,18 @@ module Cdo
                 {'schema' => schema, 'name' => name, 'comment' => Digest::SHA256.hexdigest(info[:sql])}
               end
             )
-            client.expects(:batch_execute).never
+            client.expects(:batch_execute_async).never
 
             events = []
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
-            ) {|event, payload, _extra| events << [event, payload]}
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, _| events << [event, payload]}
 
             assert_includes events, [:skipped, 'users']
             refute_empty plan[:unchanged]
             assert_empty plan[:to_add]
             assert_empty plan[:to_update]
+            assert_empty plan[:statements]
           end
 
           it 'recreates models whose existing comment hash differs from the desired DDL' do
@@ -714,16 +828,14 @@ module Cdo
                 {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => 'also-stale'}
               ]
             )
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+            submitted = []
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
-            refute(batches.empty?, 'expected at least one batch_execute call when DDL hash differs')
+            refute_empty submitted
             refute_empty plan[:to_update]
             assert_empty plan[:unchanged]
           end
@@ -737,36 +849,102 @@ module Cdo
                 {'schema' => 'dashboard_production', 'name' => 'zeroetl_users', 'comment' => nil}
               ]
             )
-            batches = []
-            client.stubs(:batch_execute).with {|sqls| batches << sqls; true}
+            submitted = []
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :production,
-              models: [model]
+              client: client, environment_type: :production, models: [model]
             )
 
-            refute(batches.empty?)
+            refute_empty submitted
             assert_empty plan[:unchanged]
+          end
+
+          it 'handles multiple models' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async)
+
+            plan = MaterializedViewGenerator.sync_all_views(
+              client: client, environment_type: :production, models: [model, activities_model]
+            )
+
+            assert_equal 4, plan[:to_add].length
+            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_users'
+            assert_includes plan[:to_add], 'dashboard_production.zeroetl_users'
+            assert_includes plan[:to_add], 'dashboard_production_pii.zeroetl_activities'
+            assert_includes plan[:to_add], 'dashboard_production.zeroetl_activities'
           end
 
           it 'handles empty model set' do
             client.stubs(:execute).returns(
-              [
-                {'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table'}
-              ]
+              [{'schema' => 'dashboard_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
             )
-            client.stubs(:batch_execute)
+            client.stubs(:batch_execute_async).returns('id')
 
             plan = MaterializedViewGenerator.sync_all_views(
-              client: client,
-              environment_type: :test,
-              models: []
+              client: client, environment_type: :test, models: []
             )
 
             assert_empty plan[:to_add]
             assert_empty plan[:to_update]
             assert_includes plan[:to_drop], 'dashboard_test_pii.zeroetl_old_table'
+          end
+        end
+
+        describe '.wait_for_statements' do
+          let(:client) {mock('redshift_client')}
+
+          it 'polls every statement and returns finished/failed FQN partitions' do
+            client.stubs(:status).with('id-a').returns('STARTED', 'FINISHED')
+            client.stubs(:status).with('id-b').returns('STARTED', 'STARTED', 'FAILED')
+            client.stubs(:describe_statement).with('id-b').returns(stub('desc', error: "Bad query\nwith details", sub_statements: []))
+
+            events = []
+            result = MaterializedViewGenerator.wait_for_statements(
+              client: client,
+              statements: {'a' => 'id-a', 'b' => 'id-b'},
+              poll_interval: 0
+            ) {|event, fqn, _| events << [event, fqn]}
+
+            assert_equal ['a'], result[:finished]
+            assert_equal [['b', 'Bad query']], result[:failed]
+            assert_includes events, [:finished, 'a']
+            assert_includes events, [:failed, 'b']
+          end
+
+          it 'raises QueryError when the timeout is exceeded' do
+            client.stubs(:status).returns('STARTED')
+
+            assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
+              MaterializedViewGenerator.wait_for_statements(
+                client: client,
+                statements: {'a' => 'id-a'},
+                poll_interval: 0,
+                timeout: 0
+              )
+            end
+          end
+
+          it 'returns immediately for an empty statement set without polling' do
+            client.expects(:status).never
+
+            result = MaterializedViewGenerator.wait_for_statements(
+              client: client, statements: {}, poll_interval: 0
+            )
+
+            assert_empty result[:finished]
+            assert_empty result[:failed]
+          end
+
+          it 'treats ABORTED as a failed terminal state' do
+            client.stubs(:status).with('id-a').returns('ABORTED')
+            client.stubs(:describe_statement).with('id-a').returns(stub('desc', error: nil, sub_statements: []))
+
+            result = MaterializedViewGenerator.wait_for_statements(
+              client: client, statements: {'a' => 'id-a'}, poll_interval: 0
+            )
+
+            assert_equal [['a', '(ABORTED)']], result[:failed]
           end
         end
       end
