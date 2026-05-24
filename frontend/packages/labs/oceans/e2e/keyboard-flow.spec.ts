@@ -27,9 +27,6 @@ test.describe('FishVTrash — Training scene keyboard', () => {
 
 test.describe('FishVTrash — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
-    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
-    test.setTimeout(120_000);
-
     const p = await FishVTrashPage.load(page);
     await p.train(1, 1);
     await p.advanceToPredictScene();
@@ -96,9 +93,6 @@ test.describe('FishShort — Training scene keyboard', () => {
 
 test.describe('FishShort — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
-    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
-    test.setTimeout(120_000);
-
     const base = new OceansPage(page);
     await base.goto(AppMode.FishShort);
     await base.waitForWordsScene();
