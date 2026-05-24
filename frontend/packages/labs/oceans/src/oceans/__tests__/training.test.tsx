@@ -110,18 +110,14 @@ describe('Training scene — initial render', () => {
 
   test('yes, no, and erase buttons are visible', () => {
     renderTraining();
-    expect(
-      screen.getByRole('button', {name: 'Fish', exact: true}),
-    ).toBeVisible();
+    expect(screen.getByRole('button', {name: 'Fish'})).toBeVisible();
     expect(screen.getByRole('button', {name: 'Not Fish'})).toBeVisible();
     expect(screen.getByRole('button', {name: 'Erase'})).toBeVisible();
   });
 
   test('yes button label is "Fish" in fishvtrash mode', () => {
     renderTraining();
-    expect(
-      screen.getByRole('button', {name: 'Fish', exact: true}),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Fish'})).toBeInTheDocument();
   });
 
   test('no button label is "Not Fish" in fishvtrash mode', () => {
@@ -142,7 +138,7 @@ describe('Training scene — initial render', () => {
 describe('Training scene — count increments', () => {
   test('yes click increments training count', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
     expect(document.getElementById('uitest-train-count')).toHaveTextContent(
       '1',
@@ -160,7 +156,7 @@ describe('Training scene — count increments', () => {
 
   test('mixed training updates count correctly', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     fireEvent.click(screen.getByRole('button', {name: 'Not Fish'}));
     rerender(result);
     expect(document.getElementById('uitest-train-count')).toHaveTextContent(
@@ -200,9 +196,10 @@ describe('Training scene — ARIA attributes', () => {
 
   test('yes and no buttons have type="button"', () => {
     renderTraining();
-    expect(
-      screen.getByRole('button', {name: 'Fish', exact: true}),
-    ).toHaveAttribute('type', 'button');
+    expect(screen.getByRole('button', {name: 'Fish'})).toHaveAttribute(
+      'type',
+      'button',
+    );
     expect(screen.getByRole('button', {name: 'Not Fish'})).toHaveAttribute(
       'type',
       'button',
@@ -211,7 +208,7 @@ describe('Training scene — ARIA attributes', () => {
 
   test('FontAwesome icons inside yes/no buttons carry aria-hidden', () => {
     renderTraining();
-    const yesBtn = screen.getByRole('button', {name: 'Fish', exact: true});
+    const yesBtn = screen.getByRole('button', {name: 'Fish'});
     const noBtn = screen.getByRole('button', {name: 'Not Fish'});
     const svgs = [
       ...yesBtn.querySelectorAll('svg'),
@@ -223,7 +220,7 @@ describe('Training scene — ARIA attributes', () => {
 
   test('yes button is keyboard-activatable via Enter', () => {
     const result = renderTraining();
-    const yesBtn = screen.getByRole('button', {name: 'Fish', exact: true});
+    const yesBtn = screen.getByRole('button', {name: 'Fish'});
     yesBtn.focus();
     expect(yesBtn).toHaveFocus();
     // jsdom does not run MUI's keyDown→click chain; fire click directly on
@@ -319,7 +316,7 @@ describe('Erase confirmation dialog — structure', () => {
 describe('Erase confirmation dialog — interactions', () => {
   test('cancel dismisses dialog without resetting count', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
     expect(document.getElementById('uitest-train-count')).toHaveTextContent(
       '1',
@@ -340,7 +337,7 @@ describe('Erase confirmation dialog — interactions', () => {
 
   test('confirm erase resets training count to zero', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
     expect(document.getElementById('uitest-train-count')).toHaveTextContent(
       '1',
@@ -367,7 +364,7 @@ describe('Erase confirmation dialog — interactions', () => {
 describe('Erase confirmation dialog — keyboard', () => {
   test('opens via keyboard (Enter on erase) and cancels via keyboard', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
 
     const eraseBtn = screen.getByRole('button', {name: 'Erase'});
@@ -395,7 +392,7 @@ describe('Erase confirmation dialog — keyboard', () => {
 
   test('opens via keyboard (Enter on erase) and confirms erase via keyboard', () => {
     const result = renderTraining();
-    fireEvent.click(screen.getByRole('button', {name: 'Fish', exact: true}));
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
 
     const eraseBtn = screen.getByRole('button', {name: 'Erase'});
