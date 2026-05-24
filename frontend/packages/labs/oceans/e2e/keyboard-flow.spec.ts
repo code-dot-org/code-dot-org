@@ -18,16 +18,11 @@ async function pressEnter(locator: Locator): Promise<void> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — keyboard-only scene completion
+// FishVTrash — Training scene keyboard
 // ─────────────────────────────────────────────────────────────────────────────
 
-test.describe('FishVTrash — keyboard-only flow', () => {
-  test('completes Training → Predict → Pond using only keyboard', async ({
-    page,
-  }) => {
-    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
-    test.setTimeout(120_000);
-
+test.describe('FishVTrash — Training scene keyboard', () => {
+  test('classifies via keyboard and advances to Predict', async ({page}) => {
     const p = await FishVTrashPage.load(page);
 
     await p.classifyOne(true, 'key');
@@ -36,6 +31,21 @@ test.describe('FishVTrash — keyboard-only flow', () => {
 
     await pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FishVTrash — Predict scene keyboard
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('FishVTrash — Predict scene keyboard', () => {
+  test('runs prediction via keyboard and advances to Pond', async ({page}) => {
+    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
+    test.setTimeout(120_000);
+
+    const p = await FishVTrashPage.load(page);
+    await p.train(1, 1);
+    await p.advanceToPredictScene();
 
     await pressEnter(p.runButton);
     await p.waitForPredictComplete(60_000);
@@ -47,16 +57,11 @@ test.describe('FishVTrash — keyboard-only flow', () => {
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FishShort — keyboard-only scene completion (includes word selection)
+// FishShort — Words scene keyboard
 // ─────────────────────────────────────────────────────────────────────────────
 
-test.describe('FishShort — keyboard-only flow', () => {
-  test('completes Words → Training → Predict → Pond using only keyboard', async ({
-    page,
-  }) => {
-    test.setTimeout(120_000);
-    // goto() directly — FishShortPage.load() auto-clicks the word, bypassing
-    // the keyboard-selection path this test exists to exercise.
+test.describe('FishShort — Words scene keyboard', () => {
+  test('selects word via keyboard and advances to Training', async ({page}) => {
     const base = new OceansPage(page);
     await base.goto(AppMode.FishShort);
     await base.waitForWordsScene();
@@ -68,6 +73,26 @@ test.describe('FishShort — keyboard-only flow', () => {
 
     const p = new FishShortPage(page, wordText);
     await p.waitForTrainingScene();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FishShort — Training scene keyboard
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('FishShort — Training scene keyboard', () => {
+  test('classifies via keyboard and advances to Predict', async ({page}) => {
+    const base = new OceansPage(page);
+    await base.goto(AppMode.FishShort);
+    await base.waitForWordsScene();
+
+    // Click to select word — word selection is covered by the Words keyboard test.
+    const firstWord = base.wordButtons.first();
+    const wordText = (await firstWord.textContent())!.trim();
+    await firstWord.click();
+
+    const p = new FishShortPage(page, wordText);
+    await p.waitForTrainingScene();
 
     await p.classifyOne(true, 'key');
     await p.classifyOne(false, 'key');
@@ -75,6 +100,31 @@ test.describe('FishShort — keyboard-only flow', () => {
 
     await pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FishShort — Predict scene keyboard
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('FishShort — Predict scene keyboard', () => {
+  test('runs prediction via keyboard and advances to Pond', async ({page}) => {
+    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
+    test.setTimeout(120_000);
+
+    const base = new OceansPage(page);
+    await base.goto(AppMode.FishShort);
+    await base.waitForWordsScene();
+
+    // Clicks for scene navigation — keyboard is tested from Predict onwards.
+    const firstWord = base.wordButtons.first();
+    const wordText = (await firstWord.textContent())!.trim();
+    await firstWord.click();
+
+    const p = new FishShortPage(page, wordText);
+    await p.waitForTrainingScene();
+    await p.train(1, 1);
+    await p.advanceToPredictScene();
 
     await pressEnter(p.runButton);
     await p.waitForPredictComplete(60_000);
