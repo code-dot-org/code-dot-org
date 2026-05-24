@@ -1,4 +1,4 @@
-import {ThemeProvider} from '@mui/material';
+import {CssBaseline, ThemeProvider} from '@mui/material';
 import {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 
@@ -117,6 +117,9 @@ function DemoShell() {
 
 createRoot(document.getElementById('root')!).render(
   <ThemeProvider theme={CdoTheme}>
+    {/* Sets body { font-family: Figtree, ... } so it cascades into the lab's
+        separate React root (init.tsx createRoot), mirroring studio's bootstrap. */}
+    <CssBaseline />
     <DemoShell />
   </ThemeProvider>,
 );
