@@ -218,13 +218,16 @@ describe('Training scene — ARIA attributes', () => {
     expect(hidden).toHaveLength(svgs.length);
   });
 
-  test('yes button is keyboard-activatable via Enter', () => {
+  test('yes button responds to click when focused', () => {
+    // jsdom doesn't synthesise Enter→click on focused buttons the way real
+    // browsers do, so we can only verify the two ingredients of keyboard
+    // activation: the button can take focus, and a click on it (the event
+    // an Enter press would produce in a real browser) updates state.  The
+    // end-to-end Enter→activation path is covered in e2e/keyboard-flow.spec.ts.
     const result = renderTraining();
     const yesBtn = screen.getByRole('button', {name: 'Fish'});
     yesBtn.focus();
     expect(yesBtn).toHaveFocus();
-    // jsdom does not run MUI's keyDown→click chain; fire click directly on
-    // the focused element — functionally identical to keyboard activation.
     fireEvent.click(yesBtn);
     rerender(result);
     expect(document.getElementById('uitest-train-count')).toHaveTextContent(
@@ -362,7 +365,11 @@ describe('Erase confirmation dialog — interactions', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 describe('Erase confirmation dialog — keyboard', () => {
-  test('opens via keyboard (Enter on erase) and cancels via keyboard', () => {
+  // jsdom can't drive real Enter→click on focused buttons, so these tests
+  // verify the focus + click halves of the keyboard flow.  The full Enter
+  // press path is covered end-to-end in e2e/keyboard-flow.spec.ts.
+
+  test('focus + click on erase opens dialog; focus + click on cancel dismisses', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
@@ -370,7 +377,6 @@ describe('Erase confirmation dialog — keyboard', () => {
     const eraseBtn = screen.getByRole('button', {name: 'Erase'});
     eraseBtn.focus();
     expect(eraseBtn).toHaveFocus();
-    // jsdom does not run MUI's keyDown→click chain; fire click on focused element.
     fireEvent.click(eraseBtn);
     rerender(result);
 
@@ -390,7 +396,7 @@ describe('Erase confirmation dialog — keyboard', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
-  test('opens via keyboard (Enter on erase) and confirms erase via keyboard', () => {
+  test('focus + click on erase opens dialog; focus + click on confirm resets count', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);

@@ -7,9 +7,19 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 /** Extended test that provides a pre-navigated OceansPage with guides loaded. */
 const guideTest = test.extend<{p: OceansPage}>({
   p: async ({page}, use) => {
+    // bringToFront() prevents the OS from throttling this page's timers when
+    // many parallel workers are running (the same fix applied to other tests in
+    // commit 29e29034237).  Without it the Typist animation that renders the
+    // guide dialog can stall past the default 5 s toBeVisible window under
+    // full-worker prove-e2e runs.
+    await page.context().pages()[0]?.bringToFront();
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
-    await expect(instance.guideDialog).toBeVisible();
+    // Wait for the guide dialog using locator.waitFor() so the backing
+    // limit is the test's global 60 s budget rather than an ad-hoc value.
+    // bringToFront() above prevents the OS from throttling the page's timers
+    // (which would stall the Typist animation that renders the dialog text).
+    await instance.guideDialog.waitFor({state: 'visible'});
     // Focus verification is intentionally omitted here: the fixture's job is
     // only to navigate and confirm the guide dialog is in the DOM.  Each test
     // that needs a specific focus state (Tab-trap, receives-focus) sets it up
@@ -127,12 +137,7 @@ test.describe('Accessibility', () => {
     await expect(oceans.playPauseButton).toBeFocused();
   });
 
-  // ─── C1: ConfirmationDialog focus management gaps ────────────────────────
-  // These three tests document confirmed WCAG 2.1 AA findings (C1) and are
-  // expected to FAIL until the fixes land.  Each test targets a distinct
-  // property: aria-modal presence, focus-on-open, and Tab containment.
-
-  test('C1: confirmation dialog is opened as a browser-native modal', async ({
+  test('confirmation dialog is opened as a browser-native modal', async ({
     page,
   }) => {
     // The dialog must be opened via showModal() so the browser enforces Tab
@@ -147,16 +152,7 @@ test.describe('Accessibility', () => {
     await expect(page.locator('dialog[aria-modal]:modal')).toBeVisible();
   });
 
-  // ─── M2: Rewind/FF speed reflected in aria-label ────────────────────────
-  // When the user activates Rewind (or Fast forward) the speed cycles from
-  // ×1 to ×2.  The button's aria-label stays "Rewind" / "Fast forward" and
-  // never communicates the active speed, leaving AT users with no indication
-  // that the speed changed.  Fix: update aria-label to include the multiplier
-  // when timeScale !== 1, e.g. "Rewind x2".
-
-  test('M2: Rewind aria-label includes speed when active at ×2', async ({
-    page,
-  }) => {
+  test('Rewind aria-label includes speed when active at ×2', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
     await oceans.runButton.click();

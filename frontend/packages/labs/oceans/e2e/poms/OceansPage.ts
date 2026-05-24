@@ -154,6 +154,12 @@ export class OceansPage {
    * Dismiss all queued guides by pressing Enter on each dialog in turn.
    * Waits for the first guide to appear before starting the loop.
    *
+   * A cumulative 30 s wall-clock cap bounds the whole call so a wedged
+   * Typist animation can't stack `maxGuides × 20 s` of per-iteration
+   * `toPass()` budget into a multi-minute hang on CI.  First iteration
+   * keeps the original 20 s budget; later iterations clamp to whatever
+   * remains, with a 2 s floor so the last guide still gets a fair shot.
+   *
    * @param maxGuides - Safety cap to avoid infinite loops.
    */
   async dismissAllGuides(maxGuides = 10): Promise<void> {
@@ -164,8 +170,14 @@ export class OceansPage {
       .catch(() => false);
     if (!appeared) return;
 
+    const deadline = Date.now() + 30_000;
     for (let i = 0; i < maxGuides; i++) {
       if (!(await this.guideOverlay.isVisible().catch(() => false))) break;
+      const remaining = deadline - Date.now();
+      // First pass keeps the full 20 s budget; subsequent passes clamp to
+      // whatever's left of the cumulative cap, never below 2 s.
+      const iterTimeout =
+        i === 0 ? 20_000 : Math.max(2_000, Math.min(20_000, remaining));
       const labelBefore = await this.guideDialog
         .getAttribute('aria-label')
         .catch(() => null);
@@ -180,7 +192,8 @@ export class OceansPage {
           .getAttribute('aria-label')
           .catch(() => null);
         expect(label).not.toBe(labelBefore);
-      }).toPass({timeout: 20_000});
+      }).toPass({timeout: iterTimeout});
+      if (Date.now() >= deadline) break;
     }
   }
 
@@ -188,11 +201,16 @@ export class OceansPage {
 
   /**
    * The erase-confirmation dialog element.
-   * Scoping all confirmation locators within the dialog means role+name queries
-   * can't accidentally match the toolbar Erase button that lives outside it.
+   *
+   * Scoped by accessible name ("Are you sure?") because Guide.tsx also renders
+   * a role=dialog element — an unscoped getByRole('dialog') matches both in
+   * strict mode whenever a guide is open at the same time as confirmation.
+   *
+   * Scoping all confirmation locators within the dialog also means role+name
+   * queries can't accidentally match the toolbar Erase button outside it.
    */
   get confirmationDialog(): Locator {
-    return this.page.getByRole('dialog');
+    return this.page.getByRole('dialog', {name: 'Are you sure?'});
   }
 
   /** Heading element inside the erase-confirmation dialog ("Are you sure?"). */
@@ -315,5 +333,21 @@ export class OceansPage {
   async runPrediction(): Promise<void> {
     await this.runButton.click();
     await this.waitForPredictComplete();
+  }
+
+  /**
+   * Focus `locator`, assert focus landed, then activate with Enter.
+   *
+   * Dispatches the key at the page level after focusing — this is the same
+   * path assistive tech (screen readers, switch access) takes, and it avoids
+   * Playwright's `locator.press()` second stability check after focus, which
+   * can drop the key event on slow CI runners.
+   *
+   * @param locator - The control to focus and activate.
+   */
+  async pressEnter(locator: Locator): Promise<void> {
+    await locator.focus();
+    await expect(locator).toBeFocused();
+    await this.page.keyboard.press('Enter');
   }
 }

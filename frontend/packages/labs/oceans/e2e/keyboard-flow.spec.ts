@@ -1,21 +1,8 @@
-import {type Locator, expect, test} from 'playwright/test';
+import {expect, test} from 'playwright/test';
 
 import {FishShortPage} from './poms/FishShortPage';
 import {FishVTrashPage} from './poms/FishVTrashPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
-
-/**
- * Focus `locator`, assert focus landed, then activate with Enter.
- *
- * Dispatches at the page level after focus — the same path AT (screen
- * readers, switch access) takes, and avoids locator.press()'s second
- * stability check after focus that delays the key event.
- */
-async function pressEnter(locator: Locator): Promise<void> {
-  await locator.focus();
-  await expect(locator).toBeFocused();
-  await locator.page().keyboard.press('Enter');
-}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FishVTrash — Training scene keyboard
@@ -29,7 +16,7 @@ test.describe('FishVTrash — Training scene keyboard', () => {
     await p.classifyOne(false, 'key');
     await expect(p.trainCount).toHaveText('2');
 
-    await pressEnter(p.trainingContinueButton);
+    await p.pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
   });
 });
@@ -47,10 +34,10 @@ test.describe('FishVTrash — Predict scene keyboard', () => {
     await p.train(1, 1);
     await p.advanceToPredictScene();
 
-    await pressEnter(p.runButton);
+    await p.pressEnter(p.runButton);
     await p.waitForPredictComplete(60_000);
 
-    await pressEnter(p.predictContinueButton);
+    await p.pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
     await p.trainMoreButton.waitFor({state: 'visible'});
   });
@@ -69,7 +56,7 @@ test.describe('FishShort — Words scene keyboard', () => {
     // Words are randomised; capture the text to key the yes/no locators.
     const firstWord = base.wordButtons.first();
     const wordText = (await firstWord.textContent())!.trim();
-    await pressEnter(firstWord);
+    await base.pressEnter(firstWord);
 
     const p = new FishShortPage(page, wordText);
     await p.waitForTrainingScene();
@@ -98,7 +85,7 @@ test.describe('FishShort — Training scene keyboard', () => {
     await p.classifyOne(false, 'key');
     await expect(p.trainCount).toHaveText('2');
 
-    await pressEnter(p.trainingContinueButton);
+    await p.pressEnter(p.trainingContinueButton);
     await p.waitForPredictScene();
   });
 });
@@ -126,10 +113,10 @@ test.describe('FishShort — Predict scene keyboard', () => {
     await p.train(1, 1);
     await p.advanceToPredictScene();
 
-    await pressEnter(p.runButton);
+    await p.pressEnter(p.runButton);
     await p.waitForPredictComplete(60_000);
 
-    await pressEnter(p.predictContinueButton);
+    await p.pressEnter(p.predictContinueButton);
     await p.waitForPondScene();
     await p.infoButton.waitFor({state: 'visible'});
     await expect(p.infoButton).toHaveAttribute(
