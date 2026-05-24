@@ -226,7 +226,6 @@ describe('Training scene — ARIA attributes', () => {
  */
 
 describe('Training scene — Tab order', () => {
-  /** Tab order follows DOM order; the test asserts the four-button sequence. */
   test('Tab order: Not Fish → Fish → Continue → Erase', () => {
     renderTraining();
     const allButtons = screen.getAllByRole('button');

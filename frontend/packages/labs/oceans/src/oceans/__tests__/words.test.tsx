@@ -95,7 +95,6 @@ beforeEach(() => {
 describe('Words scene — initial render', () => {
   test('shows 6 word-choice buttons for FishShort', () => {
     renderWords();
-    // FishShort has two columns: colors (3) + shapes (3) = 6 word buttons.
     expect(screen.getAllByTestId('word-button')).toHaveLength(6);
   });
 

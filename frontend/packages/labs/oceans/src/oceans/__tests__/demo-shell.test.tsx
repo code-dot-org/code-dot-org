@@ -59,7 +59,6 @@ describe('DemoShell mode picker', () => {
   });
 
   test('URL param ?mode=short selects Fish Short radio', () => {
-    // Stub window.location so getInitialMode() returns AppMode.FishShort.
     vi.stubGlobal('location', {search: '?mode=short'});
     renderDemoShell();
     expect(screen.getByRole('radio', {name: 'Fish Short'})).toBeChecked();
