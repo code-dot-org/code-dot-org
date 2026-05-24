@@ -26,16 +26,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   private dialogRef = React.createRef<HTMLElement>();
 
   componentDidMount() {
-    const dialog = this.dialogRef.current as HTMLDialogElement | null;
-    if (!dialog) return;
-    dialog.showModal();
-    // Move focus from the destructive default to Cancel.
-    const buttons = dialog.querySelectorAll<HTMLElement>(
-      'button:not([disabled])',
-    );
-    if (buttons.length > 0) {
-      buttons[buttons.length - 1].focus();
-    }
+    (this.dialogRef.current as HTMLDialogElement | null)?.showModal();
   }
 
   componentWillUnmount() {
@@ -136,6 +127,8 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
             <FontAwesomeIcon icon={faEraser} aria-hidden /> {I18n.t('erase')}
           </Button>
           <Button
+            // eslint-disable-next-line jsx-a11y/no-autofocus -- non-destructive default in a destructive modal
+            autoFocus
             onClick={this.props.onNoClick}
             sx={[
               dialogButtonBaseSx,
