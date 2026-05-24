@@ -12,8 +12,8 @@ test.describe('FishVTrash — Training scene keyboard', () => {
   test('classifies via keyboard and advances to Predict', async ({page}) => {
     const fishVTrash = await FishVTrashPage.load(page);
 
-    await fishVTrash.classifyOne({yes: true, via: 'key'});
-    await fishVTrash.classifyOne({yes: false, via: 'key'});
+    await fishVTrash.classifyOne({answer: 'yes', via: 'key'});
+    await fishVTrash.classifyOne({answer: 'no', via: 'key'});
     await expect(fishVTrash.trainCount).toHaveText('2');
 
     await fishVTrash.pressEnter(fishVTrash.trainingContinueButton);
@@ -28,7 +28,7 @@ test.describe('FishVTrash — Training scene keyboard', () => {
 test.describe('FishVTrash — Predict scene keyboard', () => {
   test('runs prediction via keyboard and advances to Pond', async ({page}) => {
     const fishVTrash = await FishVTrashPage.load(page);
-    await fishVTrash.train({yes: 1, no: 1});
+    await fishVTrash.train({yesCount: 1, noCount: 1});
     await fishVTrash.advanceToPredictScene();
 
     await fishVTrash.pressEnter(fishVTrash.runButton);
@@ -78,8 +78,8 @@ test.describe('FishShort — Training scene keyboard', () => {
     const fishShort = new FishShortPage(page, wordText);
     await fishShort.waitForTrainingScene();
 
-    await fishShort.classifyOne({yes: true, via: 'key'});
-    await fishShort.classifyOne({yes: false, via: 'key'});
+    await fishShort.classifyOne({answer: 'yes', via: 'key'});
+    await fishShort.classifyOne({answer: 'no', via: 'key'});
     await expect(fishShort.trainCount).toHaveText('2');
 
     await fishShort.pressEnter(fishShort.trainingContinueButton);
@@ -104,7 +104,7 @@ test.describe('FishShort — Predict scene keyboard', () => {
 
     const fishShort = new FishShortPage(page, wordText);
     await fishShort.waitForTrainingScene();
-    await fishShort.train({yes: 1, no: 1});
+    await fishShort.train({yesCount: 1, noCount: 1});
     await fishShort.advanceToPredictScene();
 
     await fishShort.pressEnter(fishShort.runButton);

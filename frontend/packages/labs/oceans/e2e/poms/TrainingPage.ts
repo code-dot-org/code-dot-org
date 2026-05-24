@@ -23,18 +23,18 @@ export abstract class TrainingPage extends OceansPage {
    * that window is silently ignored.
    *
    * @param opts - Classification options.
-   * @param opts.yes - `true` to press Yes, `false` to press No.
+   * @param opts.answer - `'yes'` to press the Yes button, `'no'` to press No.
    * @param opts.via - Activation method: `'click'` (default) or `'key'` (Enter).
    */
   async classifyOne(opts: {
-    yes: boolean;
+    answer: 'yes' | 'no';
     via?: 'click' | 'key';
   }): Promise<void> {
-    const {yes, via = 'click'} = opts;
+    const {answer, via = 'click'} = opts;
     const currentText = (await this.trainCount.textContent()) ?? '0';
     const count = parseInt(currentText.trim(), 10);
     const next = Math.min(999, count + 1);
-    const button = yes ? this.yesButton : this.noButton;
+    const button = answer === 'yes' ? this.yesButton : this.noButton;
 
     await expect(async () => {
       if (via === 'key') {
@@ -55,15 +55,15 @@ export abstract class TrainingPage extends OceansPage {
    * Perform a training sequence of yes-clicks followed by no-clicks.
    *
    * @param opts - Training counts.
-   * @param opts.yes - Number of Yes classifications to submit.
-   * @param opts.no  - Number of No classifications to submit.
+   * @param opts.yesCount - Number of Yes classifications to submit.
+   * @param opts.noCount  - Number of No classifications to submit.
    */
-  async train(opts: {yes: number; no: number}): Promise<void> {
-    for (let i = 0; i < opts.yes; i++) {
-      await this.classifyOne({yes: true});
+  async train(opts: {yesCount: number; noCount: number}): Promise<void> {
+    for (let i = 0; i < opts.yesCount; i++) {
+      await this.classifyOne({answer: 'yes'});
     }
-    for (let i = 0; i < opts.no; i++) {
-      await this.classifyOne({yes: false});
+    for (let i = 0; i < opts.noCount; i++) {
+      await this.classifyOne({answer: 'no'});
     }
   }
 
@@ -74,11 +74,16 @@ export abstract class TrainingPage extends OceansPage {
    * and advances to the Pond scene.
    *
    * @param opts - Optional training counts.
-   * @param opts.yes - Yes classifications to submit before advancing.
-   * @param opts.no  - No classifications to submit before advancing.
+   * @param opts.yesCount - Yes classifications to submit before advancing.
+   * @param opts.noCount  - No classifications to submit before advancing.
    */
-  async fullFlow(opts: {yes?: number; no?: number} = {}): Promise<void> {
-    await this.train({yes: opts.yes ?? 0, no: opts.no ?? 0});
+  async fullFlow(
+    opts: {yesCount?: number; noCount?: number} = {},
+  ): Promise<void> {
+    await this.train({
+      yesCount: opts.yesCount ?? 0,
+      noCount: opts.noCount ?? 0,
+    });
     await this.advanceToPredictScene();
     await this.runPrediction();
     await this.predictContinueButton.click();
