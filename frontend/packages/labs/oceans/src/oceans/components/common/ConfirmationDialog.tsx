@@ -52,8 +52,8 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
         ref={this.dialogRef as React.Ref<HTMLDivElement>}
         component="dialog"
         aria-modal="true"
-        aria-labelledby="uitest-confirm-header"
-        aria-describedby="uitest-confirm-warning"
+        aria-labelledby="confirm-header"
+        aria-describedby="confirm-warning"
         // Route Escape through onNoClick so the parent owns dismissal.
         onCancel={(e: React.SyntheticEvent) => {
           e.preventDefault();
@@ -91,7 +91,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
           />
           <Box>
             <Typography
-              id="uitest-confirm-header"
+              id="confirm-header"
               component="h2"
               sx={{
                 fontSize: DIALOG_TITLE_FONT_SIZE,
@@ -113,7 +113,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
               }}
             >
               <Typography
-                id="uitest-confirm-warning"
+                id="confirm-warning"
                 sx={{fontSize: 'inherit', fontFamily: 'inherit'}}
               >
                 {I18n.t('eraseWarning')}
