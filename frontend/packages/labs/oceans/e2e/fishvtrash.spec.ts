@@ -36,12 +36,13 @@ test.describe('FishVTrash — predict scene', () => {
   });
 
   test('continue button appears after prediction runs', async ({page}) => {
-    // TF.js inference is slow in Firefox/WebKit on CI; 120 s covers it.
-    test.setTimeout(120_000);
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
     await oceans.runButton.click();
-    await oceans.waitForPredictComplete(60_000);
+    // Continue is gated on canSkipPredict, a canvas RAF timer set 5 s after
+    // run starts — no TF.js dependency. 15 s covers the 5 s delay plus
+    // browser/CI jitter without inflating the test budget.
+    await expect(oceans.predictContinueButton).toBeVisible({timeout: 15_000});
   });
 });
 
