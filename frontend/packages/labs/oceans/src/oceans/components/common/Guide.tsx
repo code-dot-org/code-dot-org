@@ -25,6 +25,15 @@ const GUIDE_DIALOG_PADDING = '20px';
 /** Interval between keystroke sound ticks while the guide text is animating. */
 const TYPING_SOUND_INTERVAL_MS = 100;
 
+/**
+ * Whether `key` is one of the ARIA `role="button"` activation keys.
+ *
+ * @param key - `KeyboardEvent.key` value to test.
+ * @returns true for Enter, Space (' ' on modern UAs, 'Spacebar' on IE/legacy).
+ */
+const isActivationKey = (key: string): boolean =>
+  key === 'Enter' || key === ' ' || key === 'Spacebar';
+
 export const stopTypingSounds = () => {
   const state = getState();
   if (state.guideTypingTimer) {
@@ -102,6 +111,44 @@ class Guide extends React.Component<Record<string, never>> {
       )?.focus();
     }
   }
+
+  /**
+   * Overlay-only dismissal: fire onGuideClick on Enter / Space, but only when
+   * the event originated on the overlay itself.  Bubbles from the inner
+   * <dialog> are filtered out by the target check; the dialog's own handler
+   * already stops propagation on those keys.
+   *
+   * @param e - Keyboard event from the overlay Box.
+   */
+  onOverlayKeyDown = (e: React.KeyboardEvent) => {
+    if (e.target !== e.currentTarget) return;
+    if (isActivationKey(e.key)) {
+      e.preventDefault();
+      this.onGuideClick();
+    }
+  };
+
+  /**
+   * Dialog dismissal + Tab trap.  Tab is swallowed when the guide is modal;
+   * Escape / Enter / Space all dismiss.  Stop propagation so the surrounding
+   * overlay's keydown guard doesn't fire a second dismissal.
+   *
+   * @param e - Keyboard event from the inner <dialog> Box.
+   */
+  onDialogKeyDown = (e: React.KeyboardEvent) => {
+    const isModal = !!(
+      guide.getCurrentGuide() && !guide.getCurrentGuide()?.noDimBackground
+    );
+    if (e.key === 'Tab' && isModal) {
+      e.preventDefault();
+      return;
+    }
+    if (e.key === 'Escape' || isActivationKey(e.key)) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.onGuideClick();
+    }
+  };
 
   onGuideClick = () => {
     const state = getState();
@@ -246,20 +293,7 @@ class Guide extends React.Component<Record<string, never>> {
               tabIndex={0}
               aria-label="Dismiss guide"
               onClick={this.onGuideClick}
-              onKeyDown={(e: React.KeyboardEvent) => {
-                // Only act on events that originate on the overlay itself.
-                // The <dialog> child handles its own Space / Enter / Escape;
-                // stopping propagation there prevents those from bubbling here.
-                if (e.target !== e.currentTarget) return;
-                if (
-                  e.key === 'Enter' ||
-                  e.key === ' ' ||
-                  e.key === 'Spacebar'
-                ) {
-                  e.preventDefault();
-                  this.onGuideClick();
-                }
-              }}
+              onKeyDown={this.onOverlayKeyDown}
               sx={[
                 {
                   position: 'absolute',
@@ -291,23 +325,7 @@ class Guide extends React.Component<Record<string, never>> {
                 // Programmatic focus only; keep it out of the natural Tab order.
                 tabIndex={-1}
                 className="guide-dialog"
-                onKeyDown={(e: React.KeyboardEvent) => {
-                  if (e.key === 'Tab' && isModal) {
-                    // Trap Tab inside the modal guide.
-                    e.preventDefault();
-                  } else if (
-                    e.key === 'Escape' ||
-                    e.key === ' ' ||
-                    e.key === 'Enter' ||
-                    e.key === 'Spacebar'
-                  ) {
-                    // Dismiss on Escape / Enter / Space, per modal-dialog conventions.
-                    // Stop propagation so the overlay onKeyDown guard never sees it.
-                    e.preventDefault();
-                    e.stopPropagation();
-                    this.onGuideClick();
-                  }
-                }}
+                onKeyDown={this.onDialogKeyDown}
                 sx={
                   {
                     position: 'absolute',
