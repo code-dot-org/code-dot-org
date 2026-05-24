@@ -7,12 +7,6 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 /** Extended test that provides a pre-navigated OceansPage with guides loaded. */
 const guideTest = test.extend<{p: OceansPage}>({
   p: async ({page}, use) => {
-    // bringToFront() marks the page as the active browser tab so Firefox
-    // headless does not throttle setTimeout to ≥1000ms.  Without this,
-    // Typist (avgTypingDelay=35ms) can take >20s to finish the long HoC
-    // guide text, blocking the guideShowing gate and causing Enter-dismiss
-    // tests to time out.
-    await page.bringToFront();
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
     await expect(instance.guideDialog).toBeVisible();

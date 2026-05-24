@@ -42,7 +42,20 @@ export default defineConfig({
     },
     {
       name: 'firefox',
-      use: {...devices['Desktop Firefox']},
+      use: {
+        ...devices['Desktop Firefox'],
+        // Disable Firefox background-tab timer throttling so setTimeout-based
+        // animations (e.g. Typist at 35ms intervals) run at full speed in
+        // headless mode.  Without this, Firefox can delay timers to ≥1000ms
+        // when the page is not the OS-focused window, causing the guide's
+        // Typist animation to stall and "Enter dismisses" tests to time out.
+        launchOptions: {
+          firefoxUserPrefs: {
+            'dom.timeout.background_throttling_max_budget': -1,
+            'dom.min_background_timeout_value': 0,
+          },
+        },
+      },
       grepInvert: /@visual/,
     },
     {
