@@ -7,8 +7,7 @@ import {AppMode, OceansPage} from './poms/OceansPage';
 /** Extended test that provides a pre-navigated OceansPage with guides loaded. */
 const guideTest = test.extend<{p: OceansPage}>({
   p: async ({page}, use) => {
-    // Keep timers off the throttle list so the Typist animation runs in
-    // background tabs under parallel workers.
+    // Bring tab to foreground so animation timers aren't throttled.
     await page.context().pages()[0]?.bringToFront();
     const instance = new OceansPage(page);
     await instance.goto(AppMode.FishVTrash, {guides: 'HoC'});
@@ -21,8 +20,7 @@ const guideTest = test.extend<{p: OceansPage}>({
  * Automated WCAG scanning — catches structural a11y violations early.
  */
 
-// color-contrast is disabled: the lab's pre-WCAG palette is tracked as a
-// separate design-system concern. All other 2.1 AA structural rules apply.
+// color-contrast is tracked as a separate design-system concern.
 const axeBuilder = (page: Parameters<typeof AxeBuilder>[0]['page']) =>
   new AxeBuilder({page})
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
@@ -124,7 +122,7 @@ test.describe('Accessibility', () => {
   test('confirmation dialog is opened as a browser-native modal', async ({
     page,
   }) => {
-    // :modal is only set by showModal(); confirms native Tab-trap is active.
+    // :modal asserts the dialog was opened modally, not just shown.
     const oceans = await FishVTrashPage.load(page);
     await oceans.eraseButton.click();
     await expect(oceans.confirmationDialog).toBeVisible();
@@ -156,7 +154,7 @@ guideTest.describe('Guide focus', () => {
   guideTest(
     'modal guide dialog receives focus when it appears',
     async ({p}) => {
-      // toBeFocused() reports "inactive" headless; probe activeElement directly.
+      // Probe activeElement directly; the matcher misreports focus in headless.
       await expect(async () => {
         const isFocused = await p.page.evaluate(() => {
           const dialog = document.querySelector('dialog.guide-dialog');
@@ -168,7 +166,7 @@ guideTest.describe('Guide focus', () => {
   );
 
   guideTest('guide dialog carries aria-label with guide text', async ({p}) => {
-    // Retry: Firefox may not have committed aria-label on first poll.
+    // Retry: aria-label may not be committed on first poll.
     await expect(async () => {
       await expect(p.guideDialog).toHaveAttribute('aria-label', /.+/);
     }).toPass({timeout: 5_000});

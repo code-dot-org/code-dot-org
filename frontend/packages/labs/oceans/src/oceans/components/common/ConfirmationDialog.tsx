@@ -20,33 +20,16 @@ interface ConfirmationDialogProps {
   onNoClick: () => void;
 }
 
-/**
- * Modal "are you sure you want to erase training?" dialog.
- *
- * Uses a native <dialog> opened via showModal() so the browser provides Tab
- * trapping, focus restoration to the opener, and the :modal pseudo-class —
- * no manual JS keydown handler needed.
- *
- * The dialog is the card itself (position:fixed, viewport-centered).  The
- * browser's ::backdrop covers the page behind it; styled via scenes.css.
- *
- * Uses MUI Box rather than DSCO Dialog because the snail image hangs outside
- * the dialog box at -46 % bottom / -41 % left — a decorative overflow pattern
- * DSCO Dialog's chrome cannot accommodate.
- */
+/** Modal erase-confirmation dialog. Built on the native <dialog> element so the browser handles focus trap, restoration, and backdrop. */
 class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
-  /**
-   * Ref to the native <dialog> element.  Typed as HTMLElement (the common
-   * ancestor MUI Box infers) and narrowed to HTMLDialogElement at call sites.
-   */
+  /** Ref to the underlying <dialog>; narrowed to HTMLDialogElement at call sites. */
   private dialogRef = React.createRef<HTMLElement>();
 
   componentDidMount() {
     const dialog = this.dialogRef.current as HTMLDialogElement | null;
     if (!dialog) return;
     dialog.showModal();
-    // showModal() focuses the first focusable element (Erase — destructive).
-    // Override to Cancel as the safer default.
+    // Move focus from the destructive default to Cancel.
     const buttons = dialog.querySelectorAll<HTMLElement>(
       'button:not([disabled])',
     );
@@ -56,7 +39,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
   }
 
   componentWillUnmount() {
-    // close() returns focus to the element focused before showModal() was called.
+    // Closing returns focus to the opener.
     const dialog = this.dialogRef.current as HTMLDialogElement | null;
     if (dialog?.open) {
       dialog.close();
@@ -71,8 +54,7 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
         aria-modal="true"
         aria-labelledby="uitest-confirm-header"
         aria-describedby="uitest-confirm-warning"
-        // Native cancel event fires on Escape; preventDefault stops the browser
-        // from closing the dialog itself so our state-driven close runs instead.
+        // Route Escape through onNoClick so the parent owns dismissal.
         onCancel={(e: React.SyntheticEvent) => {
           e.preventDefault();
           this.props.onNoClick();

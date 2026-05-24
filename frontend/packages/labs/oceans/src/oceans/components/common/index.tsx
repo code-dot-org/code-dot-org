@@ -41,8 +41,7 @@ class Body extends React.Component<BodyProps> {
             width: '100%',
             height: '100%',
           }}
-          // React 18 passes `inert` as an HTML presence attribute (empty
-          // string = present); MUI Box types it as boolean, hence the cast.
+          // Cast: the prop is typed boolean but rendered as an HTML presence attribute.
           inert={(shouldInert ? '' : undefined) as unknown as boolean}
         >
           {this.props.children}

@@ -48,11 +48,7 @@ function Collide(
   return true;
 }
 
-/**
- * Base sx shared by both toggle-icon (recall) buttons.
- * Uses Box component="button" (not IconButton) so MUI adds no extra sizing,
- * min-width, overflow, or theme overrides — matching the original <button>.
- */
+/** Base sx for the two recall-toggle buttons. */
 const toggleBaseSx = {
   cursor: 'pointer',
   height: '100%',
@@ -228,7 +224,7 @@ class Pond extends React.Component {
           {state.pondClickedFish ? 'Fish selected' : ''}
         </Box>
 
-        {/* Canvas surface — the fish animation renders here via imperative renderer */}
+        {/* Canvas surface — fish animation renders here. */}
         <Box
           role="button"
           aria-label="Fish pond"

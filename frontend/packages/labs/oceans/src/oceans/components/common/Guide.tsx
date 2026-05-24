@@ -33,10 +33,7 @@ export const stopTypingSounds = () => {
   }
 };
 
-/**
- * sx overrides for the guide dialog box keyed by GuideEntry.style.
- * Default (no style) renders a dark scrim anchored at the bottom.
- */
+/** Per-style sx overrides; default style anchors a dark scrim at the bottom. */
 const GUIDE_STYLE_SX: Record<string, SxProps> = {
   Info: {
     backgroundColor: 'var(--ocean-color-white)',
@@ -56,10 +53,7 @@ const GUIDE_STYLE_SX: Record<string, SxProps> = {
   },
 };
 
-/**
- * sx overrides for the arrow image keyed by GuideEntry.arrow.
- * All arrows share position:absolute + width:8% base.
- */
+/** Per-arrow position offsets; base position and width are applied at the call site. */
 const GUIDE_ARROW_SX: Record<string, SxProps> = {
   BotRight: {top: '15%', right: '12.5%', transform: 'translateX(-50%)'},
   LowerLeft: {bottom: '17%', left: '8.5%', transform: 'translateX(-50%)'},
@@ -91,14 +85,9 @@ class Guide extends React.Component<Record<string, never>> {
     const currentId = currentGuide?.id ?? null;
     if (currentId === this.lastGuideId) return;
     this.lastGuideId = currentId;
-    // Route focus based on guide type:
-    //   - no guide / ambient arrow: return to scene (DOM order picks target)
-    //   - Info guide: autoFocus on the Continue <button> handles it natively
-    //   - modal guide: focus the <dialog> element so the screen reader reads
-    //     its aria-label (the guide text) immediately
+    // Move focus to the dialog or to the next scene control as the guide changes.
     if (!currentGuide || currentGuide.noDimBackground) {
-      // container-react exists in the dashboard host; fall back to body in
-      // the standalone dev server and other embedding contexts.
+      // Fall back to body when the host container isn't present.
       const container =
         document.getElementById('container-react') ?? document.body;
       const target =
@@ -267,13 +256,7 @@ class Guide extends React.Component<Record<string, never>> {
                 bgSx,
               ]}
             >
-              {/*
-               * <dialog open> keeps the element in normal document flow so
-               * position:absolute is relative to the canvas, not the viewport.
-               * showModal() would promote to the top layer and break the layout.
-               * UA dialog styles (margin, padding, border, max-height, overflow)
-               * are reset in scenes.css and reinforced in sx below.
-               */}
+              {/* Use <dialog open>, not showModal(): the top layer would escape the canvas-relative coords. */}
               <Box
                 component="dialog"
                 {...({
@@ -289,16 +272,12 @@ class Guide extends React.Component<Record<string, never>> {
                     : undefined
                 }
                 aria-modal={isModal || undefined}
-                // tabIndex={-1} allows programmatic focus via .focus() without
-                // putting the dialog itself in the natural Tab order.
+                // Programmatic focus only; keep it out of the natural Tab order.
                 tabIndex={-1}
                 className="guide-dialog"
                 onKeyDown={(e: React.KeyboardEvent) => {
                   if (e.key === 'Tab' && isModal) {
-                    // Modal dialogs trap Tab — the dialog or its focused child
-                    // is the only destination.  For Info guides the Continue
-                    // button handles its own Tab cycle; for non-Info guides the
-                    // dialog element itself keeps focus via this preventDefault.
+                    // Trap Tab inside the modal guide.
                     e.preventDefault();
                   } else if (
                     e.key === 'Escape' ||
@@ -306,8 +285,7 @@ class Guide extends React.Component<Record<string, never>> {
                     e.key === 'Enter' ||
                     e.key === 'Spacebar'
                   ) {
-                    // Dismiss the guide.  Escape is required by ARIA authoring
-                    // practices §3.8 for all modal dialogs.
+                    // Dismiss on Escape / Enter / Space, per modal-dialog conventions.
                     e.preventDefault();
                     this.onGuideClick();
                   }
@@ -322,7 +300,7 @@ class Guide extends React.Component<Record<string, never>> {
                     bottom: '2%',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    // UA dialog reset (scenes.css reinforces these).
+                    // Reset UA <dialog> defaults.
                     margin: 0,
                     padding: 0,
                     border: 'none',
@@ -377,10 +355,7 @@ class Guide extends React.Component<Record<string, never>> {
                       aria-atomic="true"
                       sx={{
                         padding: GUIDE_DIALOG_PADDING,
-                        // Transparent text keeps the dialog sized correctly
-                        // (the Typist sibling is position:absolute so cannot
-                        // provide height).  color:transparent is read by
-                        // modern SRs; aria-live forces announcement regardless.
+                        // Invisible sibling sizes the dialog; aria-live announces the text.
                         color: 'transparent',
                         userSelect: 'none',
                         pointerEvents: 'none',
@@ -425,8 +400,7 @@ class Guide extends React.Component<Record<string, never>> {
 
                   {currentGuide.style === 'Info' && (
                     <Button
-                      // Dialog is the sole context; no preceding content to miss.
-                      // eslint-disable-next-line jsx-a11y/no-autofocus
+                      // eslint-disable-next-line jsx-a11y/no-autofocus -- sole content of a modal dialog
                       autoFocus
                       sx={{
                         backgroundColor: 'var(--ocean-color-orange)',

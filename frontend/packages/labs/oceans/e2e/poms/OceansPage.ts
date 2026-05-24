@@ -133,27 +133,18 @@ export class OceansPage {
 
   /* Guide overlay */
 
-  /**
-   * Clickable guide overlay (covers the whole scene).
-   * Dismisses modal guides on click.  Only present while a guide is showing.
-   */
+  /** Guide overlay; clicking it dismisses a modal guide. */
   get guideOverlay(): Locator {
     return this.page.locator('#uitest-dismiss-guide');
   }
 
-  /**
-   * The guide dialog element.  Receives programmatic focus (tabIndex=-1) when
-   * a modal guide appears; Space/Enter dismiss the guide from this element.
-   * aria-label holds the guide text; aria-modal=true for modal guides.
-   */
+  /** Guide dialog element; carries the guide text on aria-label. */
   get guideDialog(): Locator {
     return this.page.locator('dialog.guide-dialog');
   }
 
   /**
-   * Press Enter on each queued guide dialog until the overlay closes.
-   * A 30 s wall-clock cap stops a wedged Typist animation from compounding
-   * per-iteration timeouts into a multi-minute hang.
+   * Press Enter until every queued guide dismisses, capped at 30 s wall-clock.
    *
    * @param maxGuides - Safety cap to avoid infinite loops.
    */
@@ -173,7 +164,7 @@ export class OceansPage {
       const labelBefore = await this.guideDialog
         .getAttribute('aria-label')
         .catch(() => null);
-      // Enter is a no-op while Typist animates; retry press+check until it lands.
+      // Animation may swallow the first press; retry until aria-label changes.
       await expect(async () => {
         if (!(await this.guideOverlay.isVisible())) return;
         await this.guideDialog.press('Enter');
@@ -189,10 +180,7 @@ export class OceansPage {
 
   /* Confirmation dialog */
 
-  /**
-   * Erase-confirmation dialog, scoped by name; an unscoped match collides
-   * with Guide's dialog.
-   */
+  /** Erase-confirmation dialog, scoped by name. */
   get confirmationDialog(): Locator {
     return this.page.getByRole('dialog', {name: 'Are you sure?'});
   }
@@ -320,8 +308,7 @@ export class OceansPage {
   }
 
   /**
-   * Focus `locator` and press Enter at the page level — same path AT takes,
-   * and avoids locator.press()'s second stability check dropping events on CI.
+   * Focus `locator` then press Enter at the page level.
    *
    * @param locator - The control to focus and activate.
    */

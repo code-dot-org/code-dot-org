@@ -19,22 +19,13 @@ interface ButtonProps
   sx?: MuiButtonProps['sx'];
   /** Marks this button as the preferred focus target after a modal guide is dismissed. */
   guideDismissFocus?: boolean;
-  /** Forwarded as data-testid for Playwright locators. */
+  /** Test hook forwarded as `data-testid`. */
   testId?: string;
-  /** Forwarded as className to MuiButton; allows scenes.css to target specific button variants. */
+  /** Forwarded as `className` for per-scene styling overrides. */
   className?: string;
 }
 
-/**
- * Shared button used across scenes.  Wraps MUI Button to stay idiomatic with
- * the design system while preserving the lab-specific side effects: dismiss
- * any active guide and play the configured sound unless the click handler
- * returns `false`.
- *
- * Visual styling is intentionally ocean-specific (white bg, grey text, 8 px
- * radius, em-based padding) via sx — the CdoTheme defaults are overridden here
- * because the oceans lab has its own visual language.
- */
+/** Shared button: dismisses any active guide and plays the configured sound unless the click handler returns false. */
 class Button extends React.Component<ButtonProps> {
   onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     guide.dismissCurrentGuide();
@@ -52,7 +43,7 @@ class Button extends React.Component<ButtonProps> {
     return (
       <MuiButton
         type="button"
-        // eslint-disable-next-line jsx-a11y/no-autofocus -- forwarded from caller; justification lives at the call site
+        // eslint-disable-next-line jsx-a11y/no-autofocus -- justification at call site
         autoFocus={autoFocus}
         id={id}
         className={className}

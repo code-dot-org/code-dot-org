@@ -38,15 +38,13 @@ export abstract class TrainingPage extends OceansPage {
 
     await expect(async () => {
       if (via === 'key') {
-        // page.keyboard fires immediately after focus; locator.press() adds a
-        // second stability gate that delays the key into the ~1 s isRunning
-        // window where onClassifyFish no-ops.
+        // Press via page.keyboard to dodge the stability gate that lands keys mid-animation.
         await button.focus();
         await button.page().keyboard.press('Enter');
       } else {
         await button.click();
       }
-      // 1 500 ms > ~1 s animation; a dropped press never succeeds, fail fast.
+      // Tight timeout: a dropped press never recovers.
       await expect(this.trainCount).toHaveText(String(next), {timeout: 1_500});
     }).toPass({timeout: 15_000});
   }

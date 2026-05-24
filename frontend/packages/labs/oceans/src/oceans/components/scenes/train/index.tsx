@@ -104,8 +104,7 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
         </Box>
 
-        {/* Fish counter badge — content-box sizing mirrors reference index.js:
-         * height 5%, minWidth 7%, padding 1% 2.5% add to the total. */}
+        {/* Fish counter badge. */}
         <Box
           sx={{
             position: 'absolute',

@@ -1,15 +1,7 @@
-/**
- * Vitest global test setup.  Extends the Vitest `expect` with
- * @testing-library/jest-dom matchers (toBeInTheDocument, toHaveAttribute,
- * toHaveFocus, etc.) for all tests in this package.
- */
+/** Global test setup: jest-dom matchers and an HTMLDialogElement polyfill. */
 import '@testing-library/jest-dom/vitest';
 
-/**
- * jsdom lacks HTMLDialogElement.showModal()/close(); polyfill the `open`
- * attribute toggle. Anything depending on real modal semantics (:modal,
- * focus trap, backdrop, scroll lock) belongs in e2e, not here.
- */
+/** Polyfill showModal()/close() as `open` attribute toggles; modal semantics belong in e2e. */
 if (!HTMLDialogElement.prototype.showModal) {
   HTMLDialogElement.prototype.showModal = function (
     this: HTMLDialogElement,

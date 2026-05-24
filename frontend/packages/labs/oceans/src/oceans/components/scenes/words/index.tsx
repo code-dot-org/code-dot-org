@@ -11,7 +11,7 @@ import {getState, setState} from '@/oceans/state';
 interface WordSetEntry {
   textKey: string;
   choices: string[][];
-  /** Layout variant used to derive button sx (column spacing). */
+  /** Layout variant key, mapped to per-variant sx. */
   buttonClass: string;
 }
 

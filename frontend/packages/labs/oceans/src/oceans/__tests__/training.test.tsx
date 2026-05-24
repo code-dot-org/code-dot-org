@@ -1,15 +1,4 @@
-/**
- * Unit tests for the Training scene and Erase confirmation dialog.
- *
- * Renders <UI /> with state pre-set to Modes.Training so each test exercises
- * the training scene without TF.js, network, or canvas.
- *
- * Mocked:
- *   @/oceans/models/guide        getCurrentGuide() → null (no guides)
- *   @/oceans/models/soundLibrary playSound, loadSounds → no-ops
- *   @/oceans/modeHelpers         toMode() sets currentMode without TF.js
- *   @/oceans/models/train        onClassifyFish() increments counts without TF.js
- */
+/** Unit tests for the Training scene and Erase confirmation dialog; runtime-heavy modules are stubbed below. */
 
 import {ThemeProvider} from '@mui/material';
 import {render, screen, within, fireEvent} from '@testing-library/react';
@@ -219,7 +208,7 @@ describe('Training scene — ARIA attributes', () => {
   });
 
   test('yes button responds to click when focused', () => {
-    // jsdom can't run MUI's keyDown→click chain; the e2e suite covers Enter.
+    // jsdom can't run the keyDown→click chain; covered in e2e instead.
     const result = renderTraining();
     const yesBtn = screen.getByRole('button', {name: 'Fish'});
     yesBtn.focus();
@@ -237,10 +226,7 @@ describe('Training scene — ARIA attributes', () => {
  */
 
 describe('Training scene — Tab order', () => {
-  /**
-   * Tab order follows DOM source order for elements with equal tabIndex (0).
-   * Query all buttons, assert the sequence Not Fish → Fish → Continue → Erase.
-   */
+  /** Tab order follows DOM order; the test asserts the four-button sequence. */
   test('Tab order: Not Fish → Fish → Continue → Erase', () => {
     renderTraining();
     const allButtons = screen.getAllByRole('button');

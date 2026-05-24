@@ -26,19 +26,7 @@ export function getInitialMode(): AppModeValue {
   return (params.get('mode') as AppModeValue) || AppMode.FishVTrash;
 }
 
-/**
- * Dev harness that mirrors a real host application's OceansLab embedding.
- *
- * Layout matches the studio OceansContainer:
- *   - Full-viewport dark blue background.
- *   - OceansLab centred horizontally, sized to a 16:9 aspect ratio.
- *   - content-box sizing reset for #container-react (matches the curriculum
- *     path's Rails defaults; the studio applies the same reset).
- *
- * A compact mode-picker and URL-param support (?mode=, ?guides=, ?tts=) are
- * added for local development and Playwright testing without changing the
- * dimensions or box-model of the embedded lab.
- */
+/** Dev harness that embeds OceansLab the way a host page would, with a mode picker and URL params for local iteration. */
 export default function DemoShell() {
   const [appMode, setAppMode] = useState<AppModeValue>(getInitialMode);
   const params = new URLSearchParams(window.location.search);
@@ -68,7 +56,7 @@ export default function DemoShell() {
         boxSizing: 'border-box',
       }}
     >
-      {/* Mode picker — kept small so it doesn't affect the lab's dimensions. */}
+      {/* Mode picker. */}
       <FormControl
         component="fieldset"
         sx={{flexShrink: 0, px: '10px', py: '6px', opacity: 0.7}}
