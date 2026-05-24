@@ -30,7 +30,7 @@
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest --run",
-    "test:deflake": "CI=true playwright test --project=chromium --repeat-each=5 --retries=0",
+    "test:deflake": "CI=true playwright test --repeat-each=5 --retries=0",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
     "test:visual:prove": "tsx scripts/prove-visual.ts",
