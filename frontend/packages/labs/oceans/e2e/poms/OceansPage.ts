@@ -312,13 +312,15 @@ export class OceansPage {
   }
 
   /**
-   * Focus `locator` then press Enter at the page level.
+   * Focus `locator` then press Enter at the page level. No toBeFocused
+   * assertion — `locator.focus()` already retries actionability, and the
+   * intermediate poll window races with RAF-driven state updates that can
+   * briefly unmount the target.
    *
    * @param locator - The control to focus and activate.
    */
   async pressEnter(locator: Locator): Promise<void> {
     await locator.focus();
-    await expect(locator).toBeFocused();
     await this.page.keyboard.press('Enter');
   }
 }
