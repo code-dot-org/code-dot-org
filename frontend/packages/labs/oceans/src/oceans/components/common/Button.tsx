@@ -25,7 +25,11 @@ interface ButtonProps
   className?: string;
 }
 
-/** Shared button: dismisses any active guide and plays the configured sound unless the click handler returns false. */
+/**
+ * Shared button used across scenes.  Dismisses any active guide and plays
+ * the configured sound (`sound` prop, default `'other'`) unless the click
+ * handler explicitly returns `false`.
+ */
 class Button extends React.Component<ButtonProps> {
   onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     guide.dismissCurrentGuide();

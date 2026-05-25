@@ -56,7 +56,6 @@ export default function DemoShell() {
         boxSizing: 'border-box',
       }}
     >
-      {/* Mode picker. */}
       <FormControl
         component="fieldset"
         sx={{flexShrink: 0, px: '10px', py: '6px', opacity: 0.7}}

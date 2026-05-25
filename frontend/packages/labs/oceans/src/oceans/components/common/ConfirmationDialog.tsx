@@ -20,9 +20,8 @@ interface ConfirmationDialogProps {
   onNoClick: () => void;
 }
 
-/** Modal erase-confirmation dialog. Built on the native <dialog> element so the browser handles focus trap, restoration, and backdrop. */
+/** Modal "are you sure you want to erase training?" dialog. */
 class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
-  /** Ref to the underlying <dialog>; narrowed to HTMLDialogElement at call sites. */
   private dialogRef = React.createRef<HTMLElement>();
 
   componentDidMount() {
@@ -61,7 +60,6 @@ class ConfirmationDialog extends React.Component<ConfirmationDialogProps> {
           overflow: 'visible',
           maxWidth: 'none',
           maxHeight: 'none',
-          // Visual appearance.
           backgroundColor: 'var(--ocean-color-white)',
           color: 'var(--ocean-color-dark-grey)',
           padding: '2%',

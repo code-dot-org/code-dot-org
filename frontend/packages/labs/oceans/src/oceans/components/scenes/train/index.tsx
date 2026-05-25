@@ -49,7 +49,6 @@ class Train extends React.Component<Record<string, never>, TrainState> {
 
     return (
       <Body>
-        {/* Question text */}
         <Box
           component="div"
           sx={{
@@ -65,7 +64,6 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           {state.trainingQuestion}
         </Box>
 
-        {/* AI bot illustration */}
         <Box
           sx={{
             position: 'absolute',
@@ -104,7 +102,6 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
         </Box>
 
-        {/* Fish counter badge. */}
         <Box
           sx={{
             position: 'absolute',
@@ -202,7 +199,6 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           {I18n.t('continue')}
         </Button>
 
-        {/* Erase button */}
         <IconButton
           aria-label={I18n.t('erase')}
           onClick={() => {

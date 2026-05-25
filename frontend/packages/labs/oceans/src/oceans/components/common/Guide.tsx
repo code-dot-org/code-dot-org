@@ -86,7 +86,6 @@ const GUIDE_ARROW_SX: Record<string, SxProps> = {
 };
 
 class Guide extends React.Component<Record<string, never>> {
-  /** Guide id seen on the last render; used to detect guide transitions. */
   lastGuideId: string | null = null;
 
   componentDidUpdate() {
@@ -164,9 +163,11 @@ class Guide extends React.Component<Record<string, never>> {
         {skipCallback: true},
       );
     } else {
-      // Only dismiss modal guides (noDimBackground guides aren't dismissable here).
+      // Make sure we don't try and dismiss a guide if it's
+      // not modal.
       if (currentGuide && !currentGuide.noDimBackground) {
-        // No TTS started, so attempt to dismiss instead.
+        // This click did not start text to speech, so attempt
+        // to dismiss the guide.
         const dismissed = guide.dismissCurrentGuide();
         if (dismissed) {
           if (state.textToSpeechLocale) {
@@ -185,22 +186,32 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Skip if TTS isn't wanted or voices aren't loaded yet.
+    // Do nothing if text to speech is not desired or yet available.
     if (!state.textToSpeechLocale || !hasTextToSpeechVoices()) {
       return false;
     }
 
-    // Skip if there's no guide, or if we've already started TTS for it
-    // (which may have already finished playing).
+    // Do nothing if there is no current guide, or if we've already started
+    // text to speech for the current guide (which might have finished
+    // playing by now).
     if (!currentGuide || state.textToSpeechCurrentGuide === currentGuide) {
       return false;
     }
 
-    // Start first play from a click handler; all subsequent plays on render.
+    // In this implementation, we want to start the first play of text to
+    // speech from a click handler, but all subsequent plays when we first
+    // render a new piece of text, rather than from a click handler.
+    // Therefore:
+    // If we are in a click handler, do nothing if we've already started
+    // text to speech from a click handler.
+    // If we are not in a click handler, do nothing if we've never started
+    // from a click handler before.
     if (inClickHandler === state.hasTextToSpeechStartedByClick) {
       return false;
     }
 
+    // Make an attempt to play text to speech, and return whether we
+    // believe it has started.
     return startTextToSpeech(
       currentGuide.textFn(getState()),
       state.textToSpeechLocale,
@@ -218,7 +229,7 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    // Background overlay sx: hidden, info-darkened, or default scrim.
+    // Background variant: hidden, info-darkened, or the default scrim.
     const bgSx: React.ComponentProps<typeof Box>['sx'] = currentGuide
       ? currentGuide.noDimBackground
         ? {
@@ -256,7 +267,6 @@ class Guide extends React.Component<Record<string, never>> {
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
-    // Dialog box sx: base + optional style override.
     const styleOverrideSx =
       currentGuide?.style && GUIDE_STYLE_SX[currentGuide.style]
         ? GUIDE_STYLE_SX[currentGuide.style]

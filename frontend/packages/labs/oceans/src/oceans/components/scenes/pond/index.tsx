@@ -37,6 +37,7 @@ function Collide(
   w2: number,
   h2: number,
 ): boolean {
+  // Detect a non-collision.
   if (
     x1 + w1 - 1 < x2 ||
     x1 > x2 + w2 - 1 ||
@@ -45,6 +46,8 @@ function Collide(
   ) {
     return false;
   }
+
+  // Otherwise we have a collision.
   return true;
 }
 
@@ -71,9 +74,11 @@ class Pond extends React.Component {
   getMatchingFishSet = (e: React.MouseEvent | null, showMatching: boolean) => {
     const state = getState();
 
-    // No-op if a transition is already running, or if the requested set is
-    // already on screen. recallFish are non-matching; pondFish are matching.
-    // showMatching=true wants pondFish (showRecallFish=false), and vice versa.
+    // No-op if transition is already in progress or if already showing the desired fish set.
+    // Note that recallFish are fish that are not matching the word/attribute.
+    // pondFish are fish that are matching the word/attribute.
+    // showMatching true -> want matching (showRecallFish false)
+    // showMatching false -> want recalled fish (showRecallFish true).
     if (
       state.pondFishTransitionStartTime ||
       state.showRecallFish === !showMatching
@@ -92,13 +97,13 @@ class Pond extends React.Component {
       soundLibrary.playSound('no');
     }
 
-    // Skip arrangement if these fish already have positions.
+    // Don't call arrangeFish if fish have already been arranged.
     if (nextFishSet.length > 0 && !nextFishSet[0].getXY?.()) {
       arrangeFish(nextFishSet as unknown as Parameters<typeof arrangeFish>[0]);
     }
 
     if (currentFishSet.length === 0) {
-      // Empty current set: switch immediately rather than play the empty animation.
+      // Immediately transition to nextFishSet rather than waiting for empty animation.
       setState({showRecallFish: !state.showRecallFish, pondClickedFish: null});
     } else {
       setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
@@ -110,7 +115,7 @@ class Pond extends React.Component {
   };
 
   onPondClick = (e: React.MouseEvent) => {
-    // Suppress pond clicks while a Guide is showing.
+    // Don't allow pond clicks if a Guide is currently showing.
     if (guide.getCurrentGuide()) {
       return;
     }
@@ -123,7 +128,7 @@ class Pond extends React.Component {
     const pondWidth = boundingRect.width;
     const pondHeight = boundingRect.height;
 
-    // Map the DOM click coords into the pond canvas coord space.
+    // Scale the click to the pond canvas dimensions.
     const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
     const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
@@ -133,10 +138,12 @@ class Pond extends React.Component {
 
     if (state.pondFishBounds) {
       let fishClicked = false;
-      // Iterate in reverse so the topmost-rendered fish wins the hit-test.
+      // Look through the array in reverse so that we click on a fish that
+      // is rendered topmost.
       _.reverse(state.pondFishBounds).forEach(fishBound => {
-        // Register a new click only if no fish was hit yet this pass,
-        // the target isn't the already-active fish, and the bbox collides.
+        // If we haven't already clicked on a fish in this current iteration,
+        // and we're not clicking on a fish that is already actively clicked,
+        // and we have a collision, then we have clicked on a new fish!
         if (
           !fishClicked &&
           !(

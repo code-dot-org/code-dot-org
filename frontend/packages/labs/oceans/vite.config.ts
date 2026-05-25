@@ -5,10 +5,8 @@ import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
-// In library build mode Vite cannot determine the deployment base URL, so
-// ?url imports get inlined as data URIs. TFJS cannot resolve the .bin weight
-// file relative to a data URI, so we emit both model files explicitly via a
-// Rollup plugin and reference them at runtime via import.meta.url.
+// Emit TFJS model files as real assets. In library mode ?url imports inline
+// as data URIs, which TFJS can't resolve the .bin weights against.
 function emitModelAssets(): Plugin {
   return {
     name: 'emit-model-assets',
@@ -32,10 +30,8 @@ function emitModelAssets(): Plugin {
   };
 }
 
-// In dev mode OceanObject.ts resolves model files via import.meta.url as
-// src/oceans/assets/models/{file}, but the source files live one level up at
-// src/oceans/{file}. Redirect those requests to the actual source location so
-// TFJS can fetch the model without a build step.
+// Dev-only: redirect model fetches to the unbuilt source location, since
+// OceanObject.ts resolves via import.meta.url as src/oceans/assets/models/*.
 function devModelAssets(): Plugin {
   return {
     name: 'dev-model-assets',
@@ -54,7 +50,7 @@ function devModelAssets(): Plugin {
 }
 
 export default defineConfig({
-  // Some bundled deps (TFJS, etc.) reference `global`; shim it for the browser.
+  // Browser shim for `global` (TFJS etc. expect it).
   define: {
     global: 'globalThis',
   },
@@ -62,9 +58,9 @@ export default defineConfig({
     react(),
     emitModelAssets(),
     devModelAssets(),
-    // Generate TypeScript declaration files from tsconfig.app.json.
+    // Emit .d.ts files.
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
-    // Externalize peerDependencies only — TFJS and other runtime deps stay bundled.
+    // Externalize peer deps only; bundle TFJS and other runtime deps.
     externalizeDeps({deps: false}),
   ],
   resolve: {
@@ -75,10 +71,8 @@ export default defineConfig({
   server: {
     allowedHosts: ['localhost-studio.code.org'],
     fs: {
-      // Allow the dev server to serve files from anywhere in the Yarn
-      // workspace. Required so url() references inside symlinked workspace
-      // CSS (notably @code-dot-org/fonts woff2 assets) resolve outside the
-      // oceans package root. Matches studio's vite.config.ts.
+      // Serve files from the whole Yarn workspace so symlinked CSS url()s
+      // (e.g. @code-dot-org/fonts woff2) resolve. Matches studio.
       allow: [searchForWorkspaceRoot(process.cwd())],
     },
   },

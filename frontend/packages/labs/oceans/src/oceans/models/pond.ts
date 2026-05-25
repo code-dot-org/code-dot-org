@@ -165,8 +165,6 @@ const formatArrangement = (): [number, number][] => {
     });
   });
 
-  // Flatten the per-priority buckets into a 1-D priority-ordered list,
-  // shuffling within each priority bucket.
   let formattedArrangement: [number, number][] = [];
   intermediateArr.forEach(a => {
     formattedArrangement = formattedArrangement.concat(_.shuffle(a));

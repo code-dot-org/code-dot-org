@@ -43,15 +43,13 @@ const getCurrentGuide = (): GuideEntry | null => {
 };
 
 /**
- * Dismiss the currently visible guide.
+ * Dismiss the currently visible guide if one is showing.
  *
- * Guards on guideShowing so the guide cannot be dismissed until the Typist
- * animation completes.  guideShowing is set to true only in onTypingDone().
- *
- * @returns True if a guide was dismissed; false if none was active or still typing.
+ * @returns True if a guide was dismissed; false if none was active or visible.
  */
 const dismissCurrentGuide = (): boolean => {
   const currentGuide = getCurrentGuide();
+
   // If we have a current guide, and it's actually showing (rather than still typing).
   if (currentGuide && getState().guideShowing) {
     const state = getState();

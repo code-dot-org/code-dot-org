@@ -325,7 +325,6 @@ const loadAllPredictionImages = async (): Promise<void> => {
  * @returns Raw (unscaled) X offset value.
  */
 const getRawOffsetForTime = (state: State, t: number, offset = 0): number => {
-  // Normalize the fish movement amount from 0 to 1.
   return offset + t / state.moveTime;
 };
 
@@ -340,7 +339,6 @@ const getRawOffsetForTime = (state: State, t: number, offset = 0): number => {
 const getOffsetForTime = (state: State, t: number, offset = 0): number => {
   let amount = getRawOffsetForTime(state, t, offset);
 
-  // Apply an S-curve to that amount.
   amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
 
   return (
@@ -405,10 +403,8 @@ const getYForFish = (
   let y = constants.canvasHeight / 2 - constants.fishCanvasHeight / 2;
 
   if (state.currentMode === Modes.Predicting) {
-    // Move fish down a little on predict screen.
     y += 50;
 
-    // Drop the fish down further past the midpoint if they are not liked.
     const doesLike = predictedClassId === ClassType.Like;
     if (!doesLike) {
       const midScreenX =
@@ -419,7 +415,6 @@ const getYForFish = (
       }
     }
 
-    // Sway fish vertically on the predicting screen.
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fishIdx + 1) * 10) % 360;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
@@ -506,7 +501,6 @@ const drawMovingFish = (state: State): void => {
     let size = 1;
     if (drawPolaroidFlag && state.isRunning && x > midScreenX) {
       size = 0.35;
-      // Apply sine wave to y-value to make item jump into AI bot's head.
       y -= Math.sin((runtime / state.moveTime) * Math.PI) * 200;
     }
 
@@ -563,7 +557,6 @@ const drawPolaroid = (
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight * size) / 2;
   const adjustedY = y - yDiff;
 
-  // White outer polaroid frame.
   const padding = 10 * size;
   const paddingBottom = 60 * size;
   DrawRect(
@@ -573,7 +566,6 @@ const drawPolaroid = (
     rectSize + paddingBottom,
     colors.white,
   );
-  // Dark grey inner polaroid frame (where item is displayed).
   DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
 };
 
@@ -621,7 +613,6 @@ const drawPrediction = (
     ctx.drawImage(frame, adjustedX, adjustedY);
   }
 
-  // Draw icon below frame.
   if (icon) {
     const iconX = adjustedX + w / 2 - icon.width / 2;
     const iconY = adjustedY + h + 15;
@@ -661,7 +652,6 @@ const drawPredictBot = (state: State): void => {
   botY = botY || canvas.height / 2 - botImg.height / 2;
   const ctx = canvas.getContext('2d')!;
 
-  // Move AI bot above fish parade.
   if (state.isRunning || state.isPaused) {
     botYDestination = botYDestination || botY - 179;
 
@@ -693,12 +683,9 @@ const drawWordFishImages = (): void => {
     state.appMode,
   ) as unknown as typeof fishData;
   let fishCount = state.fishCount;
-  // Generate at most one new fish per animation cycle so they don't all spawn together.
   let newFishGenerated = false;
 
   const t = $time();
-  // Walk each lane: each lane holds one fish; spawn a replacement once the
-  // current fish swims completely off the screen.
   Object.keys(state.wordFish!).forEach(laneKey => {
     const lane = Number(laneKey);
     let fish = (state.wordFish as Record<number, FishOceanObject | null>)[lane];
@@ -713,7 +700,6 @@ const drawWordFishImages = (): void => {
       newFish.randomize();
       const y = lane * constants.fishCanvasHeight * fishScale;
       newFish.setXY({x: -constants.fishCanvasWidth, y});
-      // Only one fish per lane, so randomize the swim direction for visual variety.
       newFish.faceLeft = Math.random() < 0.5 ? true : false;
       (state.wordFish as Record<number, FishOceanObject | null>)[lane] =
         newFish;
@@ -782,8 +768,6 @@ const drawPondFishImages = (): void => {
     h: number;
   }> = [];
 
-  // Draw all the unclicked fish first, then the clicked fish, so the
-  // selected fish renders on top.
   [false, true].forEach(drawClickedFish => {
     fishes.forEach(fish => {
       const pondClickedFish = getState().pondClickedFish;
@@ -799,7 +783,6 @@ const drawPondFishImages = (): void => {
         let swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
         let swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
-        // Vary fish motion while the recall/match transition is in progress.
         if (transitionOffset > 0 && (fish.getId() as number) % 2 === 0) {
           swayOffsetX *= 2;
           swayOffsetY *= 5;
@@ -813,7 +796,6 @@ const drawPondFishImages = (): void => {
 
         const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
 
-        // Record this screen location so click-hit-testing in onPondClick can match it.
         fishBounds.push({
           fishId: fish.id,
           ...fishBound,
@@ -853,12 +835,9 @@ const drawSingleFish = (
     fish.drawToCanvas(fishCanvas);
   }
 
-  // TODO: Does scaling during drawImage have a performance impact on some
-  // devices/browsers?  We might need to pre-cache scaled images.
   const width = fishCanvas.width * size;
   const height = fishCanvas.height * size;
 
-  // Maintain the center of the fish.
   const adjustedFishXPos = fishXPos - width / 2 + fishCanvas.width / 2;
   const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
 
