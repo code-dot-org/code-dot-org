@@ -1,3 +1,10 @@
+.nameCellWrapper {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 160px;
+}
+
 .nameWithChip {
   display: inline-flex;
   align-items: center;
