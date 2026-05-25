@@ -172,28 +172,29 @@ module Middleware
         @main_fullpath ||= request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}"
       end
 
+      private def locale_region(locale)
+        locale_regions = Cdo::GlobalEdition.locales_regions[locale]
+        locale_regions = locale_regions&.select {|region| Cdo::GlobalEdition.region_available?(region)}
+        return if locale_regions.blank?
+
+        return original_region if locale_regions.include?(original_region)
+        return url_region      if locale_regions.include?(url_region)
+
+        locale_regions.first
+      end
+
+      private def available_region
+        return original_region if Cdo::GlobalEdition.region_available?(original_region)
+        return url_region      if Cdo::GlobalEdition.region_available?(url_region)
+
+        nil
+      end
+
       # Determines and memoizes the effective Global Edition region for the request.
       #
       # @return [String, nil] resolved region code (e.g., "fa"), or nil if none is valid
       private def effective_region
-        return @effective_region if defined?(@effective_region)
-
-        @effective_region =
-          if original_locale
-            locale_regions = Cdo::GlobalEdition.locales_regions[original_locale]
-            locale_regions = locale_regions&.select {|region| Cdo::GlobalEdition.region_available?(region)}
-            return if locale_regions.blank?
-
-            return original_region if locale_regions.include?(original_region)
-            return url_region      if locale_regions.include?(url_region)
-
-            locale_regions.first
-          else
-            return original_region if Cdo::GlobalEdition.region_available?(original_region)
-            return url_region      if Cdo::GlobalEdition.region_available?(url_region)
-
-            nil
-          end
+        @effective_region ||= original_locale ? locale_region(original_locale) : available_region
       end
 
       private def setup_region(new_region)
