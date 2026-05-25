@@ -155,6 +155,7 @@ class Guide extends React.Component<Record<string, never>> {
     const currentGuide = guide.getCurrentGuide();
 
     if (this.attemptTextToSpeechTextToSpeech(true)) {
+      // This click started text to speech.
       setState(
         {
           hasTextToSpeechStartedByClick: true,
@@ -163,7 +164,9 @@ class Guide extends React.Component<Record<string, never>> {
         {skipCallback: true},
       );
     } else {
+      // Only dismiss modal guides (noDimBackground guides aren't dismissable here).
       if (currentGuide && !currentGuide.noDimBackground) {
+        // No TTS started, so attempt to dismiss instead.
         const dismissed = guide.dismissCurrentGuide();
         if (dismissed) {
           if (state.textToSpeechLocale) {
@@ -182,10 +185,13 @@ class Guide extends React.Component<Record<string, never>> {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
+    // Skip if TTS isn't wanted or voices aren't loaded yet.
     if (!state.textToSpeechLocale || !hasTextToSpeechVoices()) {
       return false;
     }
 
+    // Skip if there's no guide, or if we've already started TTS for it
+    // (which may have already finished playing).
     if (!currentGuide || state.textToSpeechCurrentGuide === currentGuide) {
       return false;
     }
@@ -239,6 +245,7 @@ class Guide extends React.Component<Record<string, never>> {
     }
 
     if (this.attemptTextToSpeechTextToSpeech(false)) {
+      // This call started text to speech.
       setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
 

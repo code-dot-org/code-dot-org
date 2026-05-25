@@ -71,6 +71,9 @@ class Pond extends React.Component {
   getMatchingFishSet = (e: React.MouseEvent | null, showMatching: boolean) => {
     const state = getState();
 
+    // No-op if a transition is already running, or if the requested set is
+    // already on screen. recallFish are non-matching; pondFish are matching.
+    // showMatching=true wants pondFish (showRecallFish=false), and vice versa.
     if (
       state.pondFishTransitionStartTime ||
       state.showRecallFish === !showMatching
@@ -89,11 +92,13 @@ class Pond extends React.Component {
       soundLibrary.playSound('no');
     }
 
+    // Skip arrangement if these fish already have positions.
     if (nextFishSet.length > 0 && !nextFishSet[0].getXY?.()) {
       arrangeFish(nextFishSet as unknown as Parameters<typeof arrangeFish>[0]);
     }
 
     if (currentFishSet.length === 0) {
+      // Empty current set: switch immediately rather than play the empty animation.
       setState({showRecallFish: !state.showRecallFish, pondClickedFish: null});
     } else {
       setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
@@ -105,6 +110,7 @@ class Pond extends React.Component {
   };
 
   onPondClick = (e: React.MouseEvent) => {
+    // Suppress pond clicks while a Guide is showing.
     if (guide.getCurrentGuide()) {
       return;
     }
@@ -117,6 +123,7 @@ class Pond extends React.Component {
     const pondWidth = boundingRect.width;
     const pondHeight = boundingRect.height;
 
+    // Map the DOM click coords into the pond canvas coord space.
     const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
     const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
@@ -126,7 +133,10 @@ class Pond extends React.Component {
 
     if (state.pondFishBounds) {
       let fishClicked = false;
+      // Iterate in reverse so the topmost-rendered fish wins the hit-test.
       _.reverse(state.pondFishBounds).forEach(fishBound => {
+        // Register a new click only if no fish was hit yet this pass,
+        // the target isn't the already-active fish, and the bbox collides.
         if (
           !fishClicked &&
           !(
