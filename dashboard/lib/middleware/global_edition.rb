@@ -93,7 +93,7 @@ module Middleware
         if request.GET.key?(REGION_KEY)
           new_region = request.GET[REGION_KEY].presence
 
-          redirect_path = ::File.join('/', main_path)
+          redirect_path = ActionDispatch::Journey::Router::Utils.normalize_path(main_path)
           redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
           redirect_uri = URI(redirect_path)
@@ -272,7 +272,7 @@ module Middleware
       private def setup_redirect_to(redirect_path)
         @redirect_response ||= Rack::Response.new
         @redirect_response.do_not_cache!
-        @redirect_response.redirect ::File.join('/', redirect_path.to_s)
+        @redirect_response.redirect ActionDispatch::Journey::Router::Utils.normalize_path(redirect_path)
       end
 
       # Prepares the current request so it can be correctly routed by the application.
