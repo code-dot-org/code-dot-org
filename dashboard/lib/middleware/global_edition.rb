@@ -48,7 +48,7 @@ module Middleware
         @app = app
         @env = env
 
-        @request = Rack::Request.new(@env)
+        @request = ActionDispatch::Request.new(@env)
         @original_script_name = @request.script_name
         @original_path_info   = @request.path_info
         @original_path        = @request.path
@@ -229,12 +229,15 @@ module Middleware
         )
       end
 
-      private def existing_route?(path = original_path_info)
+      private def existing_route?
         return false unless request.hostname == CDO.dashboard_hostname
-        request_method = request.params['_method'].presence || request.request_method
-        Dashboard::Application.routes.recognize_path(path, method: request_method).present?
-      rescue ActionController::RoutingError
-        false
+
+        Dashboard::Application.routes.recognize_path_with_request(
+          request,
+          original_path_info,
+          {},
+          raise_on_missing: false
+        ).present?
       end
 
       # Resolves the most appropriate locale for the given region.
