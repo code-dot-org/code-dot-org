@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-bottom: 1px solid var(--borders-neutral-primary, #292f36);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   margin-top: 12px;
   padding-bottom: 12px;
 }
@@ -119,7 +119,7 @@ p.date {
 }
 
 .readAt {
-  color: var(--background-error-primary);
+  color: var(--text-error-primary);
   font-size: 8px;
   min-width: 8px;
   margin-inline-start: 8px;
