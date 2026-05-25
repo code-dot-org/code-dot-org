@@ -195,11 +195,13 @@ $sidebar-tooltip-z-index: 2010;
   justify-content: center;
   align-items: center;
   border-radius: 58px;
+  // $ai_rubric_cyan is an AI-product accent shared across rubrics, chat-message,
+  // music, and this header; no DSCO semantic token covers it yet, so leaving as-is.
   background: $ai_rubric_cyan;
 
   span {
     @include main-font-medium;
-    color: $light-black;
+    color: var(--text-neutral-primary);
     font-size: 8px;
     font-style: normal;
     line-height: 100%;
@@ -212,12 +214,12 @@ $sidebar-tooltip-z-index: 2010;
 
 .aiDiffHeader {
   border-radius: 4px 4px 0 0;
-  background: $neutral_dark;
-  color: $neutral_white;
+  background: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-white-fixed);
 
-  border-top: 2px solid $neutral_dark;
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  border-top: 2px solid var(--borders-neutral-solid);
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
 
   padding-inline-start: 0.75rem;
 
@@ -242,10 +244,10 @@ $sidebar-tooltip-z-index: 2010;
     margin-left: 4px;
 
     div {
-      background-color: $neutral_dark80;
+      background-color: var(--background-neutral-octonary);
 
       span {
-        color: $neutral_white;
+        color: var(--text-neutral-white-fixed);
       }
     }
   }
