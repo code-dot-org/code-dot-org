@@ -41,6 +41,14 @@ module Middleware
         ].freeze
       end
 
+      # HTTP path prefixes that should be processed as is, without a Global Edition regional redirect.
+      def self.non_redirectable_path_prefixes
+        @non_redirectable_path_prefixes ||= %w[
+          /api/
+          /dashboardapi/
+        ].freeze
+      end
+
       attr_reader :app, :env, :request, :original_script_name, :original_path_info, :original_path, :original_region,
                   :original_locale
 
@@ -264,6 +272,7 @@ module Middleware
       private def redirectable?
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
+        return false if original_path.start_with?(*self.class.non_redirectable_path_prefixes)
 
         true
       end
