@@ -215,7 +215,7 @@ $sidebar-tooltip-z-index: 2010;
 .aiDiffHeader {
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary-inverse);
-  color: var(--text-neutral-white-fixed);
+  color: var(--text-neutral-inverse);
 
   border-top: 2px solid var(--borders-neutral-solid);
   border-right: 2px solid var(--borders-neutral-solid);
@@ -247,7 +247,7 @@ $sidebar-tooltip-z-index: 2010;
       background-color: var(--background-neutral-octonary);
 
       span {
-        color: var(--text-neutral-white-fixed);
+        color: var(--text-neutral-inverse);
       }
     }
   }
@@ -542,7 +542,7 @@ html body .sidebarActionTooltip {
   gap: 12px;
   padding-left: 16px;
   text-decoration: none;
-  color: var(--text-neutral-black-fixed);
+  color: var(--text-neutral-inverse);
   border: 0;
   font-size: var(--font-size-body-sm, 14px);
   margin: 0;
@@ -810,7 +810,7 @@ html body .sidebarActionTooltip {
   background: var(--background-brand-teal-primary, #0093a4);
   z-index: 1;
   p {
-    color: var(--text-neutral-white-fixed);
+    color: var(--text-neutral-inverse);
     margin: 0;
   }
   &Blue {
@@ -818,11 +818,11 @@ html body .sidebarActionTooltip {
   }
 
   &Red {
-    background: var(--accent-strawberry-50, #ed6060);
+    background: var(--background-accent-strawberry-primary, #ed6060);
   }
 
   &Purple {
-    background: var(--borders-brand-purple-primary, #8c52ba);
+    background: var(--background-brand-purple-primary, #8c52ba);
   }
 }
 
@@ -830,7 +830,7 @@ html body .sidebarActionTooltip {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  color: var(--text-neutral-white-fixed);
+  color: var(--text-neutral-inverse);
 }
 
 .markdownStyle {
