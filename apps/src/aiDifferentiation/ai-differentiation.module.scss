@@ -50,16 +50,16 @@ $sidebar-tooltip-z-index: 2010;
 .fabBackgroundDrawer {
   display: flex;
   flex-direction: column;
-  border-right: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
-  background: $neutral_white;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
   flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
-    border-bottom: 0.125rem solid $neutral_dark;
+    border-bottom: 0.125rem solid var(--borders-neutral-solid);
   }
 
   h2 {
@@ -175,7 +175,7 @@ $sidebar-tooltip-z-index: 2010;
   padding: 0;
 
   border-width: 2px;
-  border-color: $background_gray;
+  border-color: var(--borders-neutral-light);
   border-radius: 15px;
   border-style: solid;
 }
@@ -267,9 +267,9 @@ $sidebar-tooltip-z-index: 2010;
 .fabBackground {
   display: flex;
   flex-direction: column;
-  border-right: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
-  background: $neutral_white;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: $body-height * 1px;
   overflow-x: hidden;
@@ -277,7 +277,7 @@ $sidebar-tooltip-z-index: 2010;
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
-    border-bottom: 0.125rem solid $neutral_dark;
+    border-bottom: 0.125rem solid var(--borders-neutral-solid);
   }
 
   h2 {
@@ -302,7 +302,7 @@ $sidebar-tooltip-z-index: 2010;
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
-    border-top: 2px solid $neutral_gray10;
+    border-top: 2px solid var(--borders-neutral-light);
   }
 }
 
@@ -403,7 +403,7 @@ $sidebar-tooltip-z-index: 2010;
   background-color: var(--background-neutral-secondary);
   height: auto;
   display: flex;
-  border-right: 1px solid $neutral_dark;
+  border-right: 1px solid var(--borders-neutral-solid);
   transition: all 0.2s ease-in-out;
 
   &.sidebarContainerCollapsed {
@@ -654,7 +654,7 @@ html body .sidebarActionTooltip {
       align-self: stretch;
 
       a {
-        color: #9660bf;
+        color: var(--text-brand-purple-primary);
         text-decoration: underline;
         font-weight: 600;
         font-size: 14px;
@@ -810,7 +810,7 @@ html body .sidebarActionTooltip {
   background: var(--background-brand-teal-primary, #0093a4);
   z-index: 1;
   p {
-    color: $neutral_white;
+    color: var(--text-neutral-white-fixed);
     margin: 0;
   }
   &Blue {
@@ -830,7 +830,7 @@ html body .sidebarActionTooltip {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  color: $neutral_white;
+  color: var(--text-neutral-white-fixed);
 }
 
 .markdownStyle {
@@ -870,7 +870,7 @@ html body .sidebarActionTooltip {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  color: $neutral_dark;
+  color: var(--text-neutral-primary);
 }
 
 .artifactThreadIcon {
