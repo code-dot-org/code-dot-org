@@ -9,9 +9,9 @@
   .prompt {
     // Base chip styles (from component library chip.module.scss)
     display: inline-block;
-    background-color: var(--neutral-base-white);
+    background-color: var(--background-neutral-primary);
     border: variables.$default-border;
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
     min-width: 30px;
     text-align: center;
     border-radius: 100px;
@@ -27,7 +27,7 @@
     @include mixins.button-three-text;
 
     &:hover:not(:disabled) {
-      background-color: var(--neutral-gray-10);
+      background-color: var(--background-neutral-tertiary);
     }
 
     &:focus-visible {
@@ -35,12 +35,12 @@
     }
 
     &.selected {
-      background-color: var(--brand-teal-50);
-      color: white;
-      border-color: var(--brand-teal-50);
+      background-color: var(--background-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
+      border-color: var(--borders-brand-teal-primary);
 
       &:hover {
-        background-color: var(--brand-teal-70);
+        background-color: var(--background-brand-teal-strong);
       }
     }
 
@@ -49,7 +49,7 @@
       cursor: not-allowed;
 
       &:hover {
-        background-color: var(--neutral-base-white);
+        background-color: var(--background-neutral-primary);
       }
     }
 
