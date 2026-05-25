@@ -100,8 +100,8 @@ module Middleware
           redirect_uri.query = URI.encode_www_form(request.GET.except(REGION_KEY)).presence
           redirect_path = redirect_uri.to_s
 
-          setup_region(new_region)
           setup_redirect_to(redirect_path)
+          setup_region(new_region)
         # Fallback for legacy `/global/fa/*` paths
         elsif original_path_info.match?(%r{^/global/fa(?:/.*)?$})
           international_path = original_path_info.sub('/global/fa', '')
@@ -138,8 +138,8 @@ module Middleware
         request.path_info   = original_path_info
       end
 
-      # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
+        return @redirect_response if @redirect_response
         @response ||= Rack::Response[*app.call(env)]
       end
 
@@ -269,8 +269,9 @@ module Middleware
       end
 
       private def setup_redirect_to(redirect_path)
-        response.do_not_cache!
-        response.redirect ::File.join('/', redirect_path.to_s)
+        @redirect_response ||= Rack::Response.new
+        @redirect_response.do_not_cache!
+        @redirect_response.redirect ::File.join('/', redirect_path.to_s)
       end
 
       # Prepares the current request so it can be correctly routed by the application.
