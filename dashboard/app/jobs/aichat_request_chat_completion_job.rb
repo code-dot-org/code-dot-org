@@ -55,7 +55,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
+    begin
+      user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
+    rescue Net::ReadTimeout => exception
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE], exception.message]
+    end
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
@@ -85,7 +89,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     # Moderate model output for toxicity.
-    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
+    begin
+      model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
+    rescue Net::ReadTimeout => exception
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE], exception.message]
+    end
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)
