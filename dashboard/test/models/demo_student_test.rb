@@ -153,13 +153,41 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert_equal 'pw', student.reload.encrypted_password
   end
 
+  # after_commit :reset_policy_cache: transactional tests roll back, so the
+  # real :commit hook never fires unless invoked explicitly.
+
+  test 'after_commit hook clears Policies::DemoSections cache' do
+    student = create(:student, :in_email_section)
+    record = DemoStudent.new(user: student, demo_type: 'high')
+    Policies::DemoSections.all_demo_student_ids # warm cache (does not include student)
+
+    record.save!
+    record.run_callbacks(:commit)
+
+    assert_includes Policies::DemoSections.all_demo_student_ids, student.id
+  end
+
+  test 'after_commit hook clears Policies::DemoSections cache on destroy' do
+    student = create(:student, :in_email_section)
+    record = DemoStudent.create!(user: student, demo_type: 'high')
+    record.run_callbacks(:commit) # ensure post-create cache is fresh
+    Policies::DemoSections.all_demo_student_ids # warm cache (includes student)
+
+    record.destroy!
+    record.run_callbacks(:commit)
+
+    refute_includes Policies::DemoSections.all_demo_student_ids, student.id
+  end
+
   # Demo students are protected from hard-delete and purge so the
   # demo_students row persists and permission checks keep working for
-  # archived (soft-deleted) users.
+  # archived (soft-deleted) users. Protection uses the uncached durable
+  # check, so a stale per-process cache cannot bypass it.
 
   test 'User#really_destroy! raises ProtectedRecord for a demo student' do
     student = create(:student, :in_email_section)
     DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
     assert_raises(DemoStudent::ProtectedRecord) {student.really_destroy!}
     assert User.with_deleted.exists?(student.id)
@@ -171,6 +199,17 @@ class DemoStudentTest < ActiveSupport::TestCase
 
     assert_nothing_raised {student.really_destroy!}
     refute User.with_deleted.exists?(student.id)
+  end
+
+  test 'User#really_destroy! protection survives a stale per-process cache' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    # Force the in-process cache empty so cached demo_student? returns false.
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    refute Policies::DemoSections.demo_student?(student.id)
+    assert Policies::DemoSections.demo_student_durable?(student.id)
+    assert_raises(DemoStudent::ProtectedRecord) {student.really_destroy!}
   end
 
   test 'foreign key prevents raw-SQL deletion of a demo student user' do
@@ -186,6 +225,7 @@ class DemoStudentTest < ActiveSupport::TestCase
   test 'User#destroy soft-deletes a demo student and demo_student? stays true' do
     student = create(:student, :in_email_section)
     DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
     student.destroy
 
@@ -197,7 +237,18 @@ class DemoStudentTest < ActiveSupport::TestCase
   test 'User#clear_user_and_mark_purged raises ProtectedRecord for a demo student' do
     student = create(:student, :in_email_section)
     DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
+    assert_raises(DemoStudent::ProtectedRecord) {student.clear_user_and_mark_purged}
+    assert_nil student.reload.purged_at
+  end
+
+  test 'User#clear_user_and_mark_purged protection survives a stale per-process cache' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    refute Policies::DemoSections.demo_student?(student.id)
     assert_raises(DemoStudent::ProtectedRecord) {student.clear_user_and_mark_purged}
     assert_nil student.reload.purged_at
   end

@@ -34,6 +34,7 @@ class DemoStudent < ApplicationRecord
   validate :user_must_be_lockable, on: :create
 
   after_create :lock_user_login!
+  after_commit :reset_policy_cache
 
   private def user_must_be_student
     return unless user
@@ -54,6 +55,10 @@ class DemoStudent < ApplicationRecord
       "must be exclusively in email/word/picture sections " \
         "(got: #{types.inspect})",
     )
+  end
+
+  private def reset_policy_cache
+    Policies::DemoSections.reset_cache!
   end
 
   # Runs inside the implicit save transaction so a lockdown failure rolls

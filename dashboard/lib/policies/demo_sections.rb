@@ -91,8 +91,28 @@ class Policies::DemoSections
     end
   end
 
+  def self.all_demo_student_ids
+    @all_demo_student_ids ||= DemoStudent.distinct.pluck(:user_id).to_set
+  end
+
+  # Per-process cache. Fast enough for hot paths (controller scoping,
+  # ability checks) but stale across workers until `reset_cache!` runs
+  # in each one. Don't use this in security guards that must not be
+  # bypassed by a stale cache — use `demo_student_durable?` instead.
   def self.demo_student?(user_id)
+    all_demo_student_ids.include?(user_id.to_i)
+  end
+
+  # Uncached existence check, hits the database directly. Use this in
+  # destructive paths (purge, hard-delete) where a stale per-process
+  # cache on a remote worker would otherwise permit the operation.
+  # Cheap: the demo_students table is small and `user_id` is indexed.
+  def self.demo_student_durable?(user_id)
     DemoStudent.exists?(user_id: user_id.to_i)
+  end
+
+  def self.reset_cache!
+    @all_demo_student_ids = nil
   end
 
   def self.resolve_unit(unit_name)

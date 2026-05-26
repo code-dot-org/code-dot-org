@@ -451,8 +451,10 @@ class User < ApplicationRecord
   # keep returning true for the archived user. The FK on demo_students is
   # ON DELETE RESTRICT, so the database is the ultimate authority here; this
   # guard exists to surface a clearer error before MySQL rejects the DELETE.
+  # Uses the durable (uncached) check because a stale per-process cache could
+  # otherwise let a worker think a freshly-flagged demo student is fair game.
   def really_destroy!
-    if Policies::DemoSections.demo_student?(id)
+    if Policies::DemoSections.demo_student_durable?(id)
       raise DemoStudent::ProtectedRecord,
         "Cannot hard-delete demo student user_id=#{id}; demo students may only be soft-deleted."
     end

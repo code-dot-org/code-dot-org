@@ -1785,6 +1785,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     stub_demo_preset
     demo_student = create(:student, :in_email_section)
     DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
     post :create_demo, params: {demo_type: 'high'}
     assert_response :success
