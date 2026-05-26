@@ -12,12 +12,19 @@
 }
 
 // Active when the underlying value is a raw pixel number (not a preset).
-// Background tint mirrors MUI MenuItem's selected state so the Custom row
-// reads as "the chosen option" alongside the MenuList above it.
+// Mirrors the selected-row treatment in OptionListPopover so the Custom
+// row reads as "the chosen option" alongside the MenuList above it.
 .customOptionRowSelected {
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-brand-teal-primary);
 }
 
 .customOptionLabel {
   color: var(--text-neutral-primary);
+}
+
+// Applied directly to the Typography when the Custom row is the active
+// option. <Typography> has a baked-in color from the code-dot-org MUI
+// theme, so the cleanest way to flip it is per-element.
+.customOptionLabelSelected {
+  color: var(--text-neutral-white-fixed);
 }

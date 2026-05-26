@@ -1,4 +1,5 @@
 import TextField from '@code-dot-org/component-library/textField';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -83,7 +84,14 @@ export default function FontSizeCustomInput({
         [styles.customOptionRowSelected]: isSelected,
       })}
     >
-      <span className={styles.customOptionLabel}>Custom</span>
+      <Typography
+        variant="body4"
+        className={classNames(styles.customOptionLabel, {
+          [styles.customOptionLabelSelected]: isSelected,
+        })}
+      >
+        Custom
+      </Typography>
       <TextField
         name="font-size-px"
         aria-label="Font size in pixels"

@@ -1,5 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {ListItemIcon, ListItemText, MenuItem, MenuList} from '@mui/material';
+import {
+  ListItemIcon,
+  ListItemText,
+  MenuItem,
+  MenuList,
+  Typography,
+} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import styles from './option-list-popover.module.scss';
@@ -52,7 +59,11 @@ export default function OptionListPopover<T extends string | number>({
             }}
           >
             {(option.preview || option.icon) && (
-              <ListItemIcon className={styles.optionListIcon}>
+              <ListItemIcon
+                className={classNames(styles.optionListIcon, {
+                  [styles.optionListIconSelected]: isSelected,
+                })}
+              >
                 {option.preview ?? (
                   <FontAwesomeV6Icon
                     iconName={option.icon as string}
@@ -61,8 +72,15 @@ export default function OptionListPopover<T extends string | number>({
                 )}
               </ListItemIcon>
             )}
-            <ListItemText className={styles.optionListLabel}>
-              {option.label}
+            <ListItemText className={styles.optionListLabel} disableTypography>
+              <Typography
+                variant="body4"
+                className={classNames({
+                  [styles.optionListLabelSelected]: isSelected,
+                })}
+              >
+                {option.label}
+              </Typography>
             </ListItemText>
             {isSelected && (
               <FontAwesomeV6Icon

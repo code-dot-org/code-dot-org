@@ -1,6 +1,5 @@
 .optionList:global(.MuiList-root) {
   padding: 4px 0;
-  min-width: 200px;
 }
 
 .optionListItem:global(.MuiMenuItem-root) {
@@ -14,13 +13,25 @@
   color: var(--text-neutral-primary);
 }
 
+.optionListIconSelected:global(.MuiListItemIcon-root) {
+  color: var(--text-neutral-white-fixed);
+}
+
 .optionListLabel:global(.MuiListItemText-root) {
   margin: 0;
   flex: 1 1 auto;
 }
 
+.optionListItem:global(.MuiMenuItem-root.Mui-selected) {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.optionListLabelSelected {
+  color: var(--text-neutral-white-fixed);
+}
+
 .optionListCheck {
   font-size: 12px;
-  color: var(--text-neutral-primary);
+  color: var(--text-neutral-white-fixed);
   margin-left: 8px;
 }
