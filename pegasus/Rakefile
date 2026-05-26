@@ -1,5 +1,7 @@
 require_relative 'src/env'
 
+# temporarily trigger pegasus tests
+
 SECONDS_TO_WAIT = 60
 TIMES_TO_TRY = 5
 
