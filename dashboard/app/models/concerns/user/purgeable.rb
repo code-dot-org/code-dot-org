@@ -19,10 +19,7 @@ module User::Purgeable
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
-    # Use the durable (uncached) check: this method only nulls PII columns,
-    # it doesn't delete the user row, so the demo_students FK can't catch a
-    # stale per-process cache here the way it does for really_destroy!.
-    if Policies::DemoSections.demo_student_durable?(id)
+    if Policies::DemoSections.demo_student?(id)
       raise DemoStudent::ProtectedRecord,
         "Cannot purge demo student user_id=#{id}; demo students may only be soft-deleted."
     end
