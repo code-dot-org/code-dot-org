@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import styles from './option-list-popover.module.scss';
 
@@ -40,8 +40,23 @@ export default function OptionListPopover<T extends string | number>({
   ariaLabel,
   customRow,
 }: OptionListPopoverProps<T>) {
+  const listRef = useRef<HTMLUListElement>(null);
+
+  // Ensure first menu item gets focus when opened.
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const selected = list.querySelector<HTMLElement>(
+      '[role="menuitem"].Mui-selected'
+    );
+    const target =
+      selected ?? list.querySelector<HTMLElement>('[role="menuitem"]');
+    target?.focus();
+  }, []);
+
   return (
     <MenuList
+      ref={listRef}
       autoFocusItem
       className={styles.optionList}
       aria-label={ariaLabel}
