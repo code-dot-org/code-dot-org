@@ -86,8 +86,8 @@ module Geocoder
   # Geocodes a pre-validated candidate string and returns it if Mapbox confirms
   # a street-level address match, nil otherwise.
   #
-  # Callers are responsible for extracting and validating the candidate before
-  # calling this method (see ShareFiltering.extract_address_candidate).
+  # Callers are responsible for extracting a candidate via extract_address_candidate
+  # before calling this method.
   def self.find_potential_street_address(candidate)
     return nil if candidate.nil? || candidate.empty?
 
@@ -100,6 +100,20 @@ module Geocoder
       r.relevance >= 0.8 && r.address && r.data&.dig('place_type')&.include?('address')
     end
 
+    candidate
+  end
+
+  # Extracts a plausible street address candidate from a text string.
+  # Returns the candidate string if found, nil otherwise.
+  # A candidate starts at the first multi-digit number and spans up to
+  # MAX_ADDRESS_WORDS words; it must meet minimum length and word-count thresholds.
+  def self.extract_address_candidate(text)
+    return nil unless text
+    match = text.match(/\b\d{2,}\b/)
+    return nil unless match
+    candidate = text[match.begin(0)..].split.first(MAX_ADDRESS_WORDS).join(' ')
+    return nil if candidate.length < MIN_ADDRESS_LENGTH
+    return nil if candidate.count(' ') < 2
     candidate
   end
 
