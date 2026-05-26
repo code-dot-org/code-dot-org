@@ -1,8 +1,10 @@
+import * as Sentry from '@sentry/browser';
 import {generateText, type GenerateTextResult} from 'ai';
 
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {getErrorLogData} from './logHelper';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
@@ -76,44 +78,62 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
-  try {
-    const {model, ...restOptions} = options;
+  const {model, ...restOptions} = options;
+  const modelString = getModelString(model);
+  const promptLength = (options as {prompt?: string}).prompt?.length ?? 0;
 
-    const serializedOutput = await serializeOutputSchema(options.output);
+  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+    try {
+      const serializedOutput = await serializeOutputSchema(options.output);
 
-    const payload = {
-      ...restOptions,
-      model: getModelString(model),
-      output: serializedOutput,
-    };
+      const payload = {
+        ...restOptions,
+        model: modelString,
+        output: serializedOutput,
+      };
 
-    const [token, turnstileToken] = await Promise.all([
-      fetchAccessToken(),
-      fetchTurnstileTokenIfEnabled(),
-    ]);
+      const [token, turnstileToken] = await Promise.all([
+        fetchAccessToken(),
+        fetchTurnstileTokenIfEnabled(),
+      ]);
 
-    const headers = {
-      'Content-Type': 'application/json',
-      ...turnstileHeaders(turnstileToken),
-    };
+      const headers = {
+        'Content-Type': 'application/json',
+        ...turnstileHeaders(turnstileToken),
+      };
 
-    const response = await HttpClient.post(
-      AI_GATEWAY_URL,
-      JSON.stringify({...payload, token}),
-      false,
-      headers
+      const response = await HttpClient.post(
+        AI_GATEWAY_URL,
+        JSON.stringify({...payload, token}),
+        false,
+        headers
+      );
+
+      const data = await (response.json() as Promise<
+        SerializableAIResponse<TOOLS, OUTPUT>
+      >);
+
+      return rehydrateAIResponse<TOOLS, OUTPUT>(data);
+    } catch (error) {
+      await reportGatewayError(error, 'generateTextThroughGateway');
+      throw error;
+    }
+  };
+
+  if (DCDO.get('frontend-observability-enabled', false)) {
+    return Sentry.startSpan(
+      {
+        name: 'ai-gateway.generate-text',
+        op: 'ai.generate_text',
+        attributes: {
+          'ai.model': modelString,
+          'ai.prompt_length': promptLength,
+        },
+      },
+      execute
     );
-
-    const data = await (response.json() as Promise<
-      SerializableAIResponse<TOOLS, OUTPUT>
-    >);
-
-    return rehydrateAIResponse<TOOLS, OUTPUT>(data);
-  } catch (error) {
-    const logData = await getErrorLogData(error);
-    console.error('Fetch error in generateTextThroughGateway:', logData);
-    throw error;
   }
+  return execute();
 };
 
 export default generateTextThroughGateway;
