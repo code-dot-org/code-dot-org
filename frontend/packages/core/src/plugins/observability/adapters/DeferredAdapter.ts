@@ -5,6 +5,7 @@ import type {
   ObservabilityLogger,
   ObservabilityMetrics,
   TagValue,
+  SpanOptions,
 } from '../types';
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 
@@ -39,6 +40,17 @@ export class DeferredAdapter implements ObservabilityClient {
    */
   recordError(error: unknown, context?: Record<string, unknown>): void {
     this.enqueue(client => client.recordError(error, context));
+  }
+
+  /**
+   * Delegate to the real client if available, otherwise run the callback
+   * directly. Spans cannot be deferred since they wrap live execution.
+   */
+  startSpan<T>(options: SpanOptions, callback: () => T): T {
+    if (this.delegate) {
+      return this.delegate.startSpan(options, callback);
+    }
+    return callback();
   }
 
   /**
