@@ -4,7 +4,9 @@ const baseConfig = require('./jest.config');
 
 module.exports = {
   ...baseConfig,
-  testMatch: ['**/test/unit/aiGateway/contract/updateAiGatewaySchemaSnapshots.ts'],
+  testMatch: [
+    '**/test/unit/aiGateway/contract/updateAiGatewaySchemaSnapshots.ts',
+  ],
   setupFiles: [],
   setupFilesAfterEnv: [],
 };
