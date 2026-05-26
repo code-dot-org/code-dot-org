@@ -81,6 +81,14 @@ const externalConfig = {
     react: 'react',
     'react-dom': 'react-dom',
     'react/jsx-runtime': 'react/jsx-runtime',
+    // Externalize redux + react-redux so the consumer's instances are
+    // used at runtime. Bundling our own copies creates two react-redux
+    // instances on the page (one ours, one the consumer's) sharing the
+    // same React reconciler — their subscription notification chains
+    // interleave and trip redux's "getState() while reducer is
+    // executing" guard. One instance per page eliminates the race.
+    redux: 'redux',
+    'react-redux': 'react-redux',
   },
 };
 

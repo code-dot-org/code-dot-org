@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.50",
+  "version": "0.0.51",
   "private": false,
   "repository": {
     "type": "git",
@@ -81,7 +81,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-papaparse": "^3.8.0",
-    "react-redux": "^9.2.0",
+    "react-redux": "^8.1.3",
     "redux": "^4.0.5",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.7",
