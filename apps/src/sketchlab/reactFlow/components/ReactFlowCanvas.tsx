@@ -727,6 +727,7 @@ export default function ReactFlowCanvas({
                 <CornerToolbarPanel
                   nodes={nodes}
                   edges={edges}
+                  setNodes={setNodes}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
                 />
