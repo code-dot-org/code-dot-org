@@ -470,6 +470,32 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.demo_students
+  #
+
+  test "hard-deletes the purged user's demo_student rows" do
+    user = create(:student)
+    DemoStudent.create!(user: user, demo_type: 'high')
+    refute_empty DemoStudent.where(user_id: user.id)
+
+    purge_user user
+
+    assert_empty DemoStudent.where(user_id: user.id)
+  end
+
+  test "leaves other users' demo_student rows untouched" do
+    user = create(:student)
+    other = create(:student)
+    DemoStudent.create!(user: user, demo_type: 'high')
+    other_row = DemoStudent.create!(user: other, demo_type: 'high')
+
+    purge_user user
+
+    assert_empty DemoStudent.where(user_id: user.id)
+    assert_equal [other_row.id], DemoStudent.where(user_id: other.id).pluck(:id)
+  end
+
+  #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
   # Table: dashboard.assessment_activities

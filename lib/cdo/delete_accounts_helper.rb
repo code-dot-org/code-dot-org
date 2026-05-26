@@ -91,6 +91,18 @@ class DeleteAccountsHelper
     end
   end
 
+  # Removes the user's demo-student designations. Demo-student rows are pure
+  # configuration (which accounts behave as demo students) and contain no PII,
+  # but there's no reason to retain them for a purged account. This replaces the
+  # ON DELETE CASCADE that previously lived on demo_students.user_id; since users
+  # are soft-deleted, that cascade never actually fired.
+  # @param [Integer] user_id The user whose demo-student rows to remove.
+  def clean_demo_students(user_id)
+    @log.puts "Cleaning DemoStudent"
+    deleted_rows = DemoStudent.where(user_id: user_id).delete_all
+    @log.puts "Cleaned #{deleted_rows} DemoStudent" if deleted_rows > 0
+  end
+
   # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
@@ -502,6 +514,7 @@ class DeleteAccountsHelper
     delete_learning_goal_teacher_evaluations(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
+    clean_demo_students(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
     remove_mailjet_contact(user_email) if user_email&.present?
