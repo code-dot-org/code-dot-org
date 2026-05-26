@@ -2301,6 +2301,19 @@ columns:
     default_function: 
     collation: 
     comment: 
+  demo_students:
+  - *9
+  - *18
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: demo_type
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   donor_schools:
   - *5
   - *47
@@ -8822,6 +8835,7 @@ primary_keys:
   - project_id
   - table_name
   delayed_jobs: id
+  demo_students: id
   donor_schools: id
   donors: id
   email_preferences: id
@@ -9061,6 +9075,7 @@ data_sources:
   datablock_storage_records: true
   datablock_storage_tables: true
   delayed_jobs: true
+  demo_students: true
   donor_schools: true
   donors: true
   email_preferences: true
@@ -10500,6 +10515,35 @@ indexes:
     columns:
     - priority
     - run_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  demo_students:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: demo_students
+    name: index_demo_students_on_user_id_and_demo_type
+    unique: true
+    columns:
+    - user_id
+    - demo_type
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: demo_students
+    name: index_demo_students_on_demo_type_and_user_id
+    unique: false
+    columns:
+    - demo_type
+    - user_id
     lengths: {}
     orders: {}
     opclasses: {}
