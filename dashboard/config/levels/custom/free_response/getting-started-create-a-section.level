@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Identity Activity",
-    "long_instructions": "## After watching the video, think about:\r\n\r\n* #### Which login type will work best for my students?\r\n* #### Creating your first <a href=\"https://studio.code.org/home\" target=\"_blank\">section</a>  \r\n\r\n\r\n",
+    "long_instructions": "## After watching the video, think about:\r\n\r\n* Which login type will work best for my students?\r\n* Creating your first <a href=\"https://studio.code.org/home\" target=\"_blank\">section</a>  \r\n\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

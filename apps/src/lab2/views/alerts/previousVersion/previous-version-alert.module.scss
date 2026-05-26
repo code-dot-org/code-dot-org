@@ -1,0 +1,10 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+// Trim the default Alert so the banner sits flush against the
+// workspace header.
+.previousVersionBanner {
+  border-bottom: variables.$default-border;
+  border-radius: 0;
+  padding-block: 0;
+  height: 39px;
+}

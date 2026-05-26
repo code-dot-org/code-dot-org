@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "#### Imagine you have a friend who isn't taking this class and they say \"Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me\". \r\n\r\n#### What would you say in response?",
+    "long_instructions": "Imagine you have a friend who isn't taking this class and they say \"Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me\". \r\n\r\nWhat would you say in response?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

@@ -7,7 +7,7 @@
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#### Ethical Checkpoint\r\n\r\nSome professionals use AI as part of their careers in specific situations (like the newspaper example in an earlier lesson). \r\n\r\n- What's a situation where using AI might require careful prompting?\r\n- How could a human involved help mitigate unintended consequences from a leading prompt?",
+    "long_instructions": "Ethical Checkpoint\r\n\r\nSome professionals use AI as part of their careers in specific situations (like the newspaper example in an earlier lesson). \r\n\r\n- What's a situation where using AI might require careful prompting?\r\n- How could a human involved help mitigate unintended consequences from a leading prompt?",
     "stay_on_level_after_submit": "true",
     "allow_user_uploads": "false",
     "submittable": "false",

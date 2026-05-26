@@ -169,7 +169,7 @@ button.updateButton {
 }
 
 .removeItemIcon {
-  color: $light_gray_500;
+  color: var(--text-neutral-quaternary);
   margin: 6px;
 
   &:hover {

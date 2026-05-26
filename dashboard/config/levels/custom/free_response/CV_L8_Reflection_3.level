@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Influence of Datasets\r\n\r\n#### Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Influence of Datasets\r\n\r\nReflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

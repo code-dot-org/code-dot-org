@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Step 5: Ethical Considerations",
-    "long_instructions": "####What ethical considerations, such as privacy, bias, or misrepresentation, did you take into account throughout the entire process? Describe any ethical concerns you considered when selecting your data set, making decisions with our dataset, creating your visualizations, and answering your data question. ",
+    "long_instructions": "What ethical considerations, such as privacy, bias, or misrepresentation, did you take into account throughout the entire process? Describe any ethical concerns you considered when selecting your data set, making decisions with our dataset, creating your visualizations, and answering your data question. ",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

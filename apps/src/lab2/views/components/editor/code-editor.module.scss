@@ -1,3 +1,9 @@
 .codeEditorContainer {
   height: 100%;
+
+  // MergeView scrolls as a single unit via overflow-y on .cm-mergeView.
+  // Give .cm-mergeView a fixed height so it fills the container and its own overflow-y:auto takes effect.
+  :global(.cm-mergeView) {
+    height: 100%;
+  }
 }

@@ -1,3 +1,4 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {EventEmitter} from 'events';
 import {get} from 'js-cookie';
 
@@ -12,9 +13,6 @@ import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 declare global {
   interface Window {
     LocalizeLoader?: Promise<LocalizeJS>;
-    newrelic?: {
-      noticeError: (err: Error) => void;
-    };
   }
 }
 
@@ -165,8 +163,8 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
 
         resolve(true);
       }).catch(err => {
-        // There was an error loading the Localize library, so log that via NewRelic
-        window.newrelic?.noticeError?.(err);
+        // Failed to load the Localize library; report to the browser observability provider.
+        Observability.recordError(err);
       });
 
       if (window.LocalizeLoader === undefined) {

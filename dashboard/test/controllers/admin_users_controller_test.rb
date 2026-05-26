@@ -953,6 +953,15 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select 'td', text: user2.id.to_s
   end
 
+  test 'lookup_by_email_form finds user by hashed email' do
+    sign_in @admin
+    hashed_email = AuthenticationOption.hash_email(@not_admin.email)
+    get :lookup_by_email_form, params: {email: hashed_email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: @not_admin.id.to_s
+  end
+
   test 'lookup_by_email_form shows all credential_types for a user with multiple auth options' do
     email = 'multi_auth@example.com'
     user = create(:teacher, email: email)

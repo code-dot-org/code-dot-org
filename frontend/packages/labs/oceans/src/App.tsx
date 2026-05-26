@@ -1,5 +1,10 @@
 import {useCallback, useEffect, useRef} from 'react';
 
+// Scene styles live in CSS classes — pull them in here so the lab works
+// in any consumer (standalone dev harness, library build, studio embed)
+// without each consumer having to remember to import the CSS separately.
+import './oceans/styles/scenes.css';
+
 import {
   AppMode,
   type AppModeValue,
