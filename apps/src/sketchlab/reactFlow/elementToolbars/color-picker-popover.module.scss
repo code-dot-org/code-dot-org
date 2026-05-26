@@ -1,9 +1,14 @@
+// 24px rounded-square swatches, 4px gap, 4px padding around the grid.
+// Width caps at 5 swatches per row so the popover stays narrow — both
+// palettes (background = 9 items including custom, stroke/font = 8)
+// wrap to 2 rows.
+//   5 * 24 (swatch) + 4 * 4 (gap) + 2 * 4 (padding) = 144px
 .swatchGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  padding: 10px;
-  max-width: 232px;
+  gap: 4px;
+  padding: 4px;
+  max-width: 144px;
 }
 
 .swatch {
@@ -12,7 +17,7 @@
   min-width: 24px;
   min-height: 24px;
   padding: 0;
-  border-radius: 50%;
+  border-radius: 4px;
   border: 1px solid var(--borders-neutral-primary);
 
   &:hover {
@@ -33,10 +38,9 @@
 }
 
 // The component-library MUI theme overrides IconButton :focus-visible to
-// force a 0.375rem border-radius; we want 50% so the focus outline
-// follows the circular swatch shape.
+// force a 0.375rem border-radius; match the swatch shape instead.
 .swatch:global(.MuiIconButton-root):focus-visible {
-  border-radius: 50%;
+  border-radius: 4px;
 }
 
 // Swatch-shaped label wraps the native color input. Clicking or focusing
@@ -58,7 +62,7 @@
 }
 
 .customSwatchIcon {
-  font-size: 12px;
+  font-size: 13px;
   pointer-events: none;
 }
 
