@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -104,7 +105,7 @@ describe('TextResponses', () => {
       });
 
       expect(wrapper.exists('CSVLink')).toBe(true);
-      expect(wrapper.exists('Button')).toBe(true);
+      expect(wrapper.exists(MuiButton)).toBe(true);
     });
 
     it('renders a filter if there are 2+ lessons to filter by', async () => {

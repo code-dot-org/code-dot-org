@@ -11,7 +11,6 @@ import {
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
-import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
 
 import {setupNavigationHandler} from './browserNavigation';
@@ -217,8 +216,6 @@ function setUpGlobalData(store) {
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
         data.is_verified_instructor && store.dispatch(setVerified());
-
-        logToCloud.setCustomAttribute('userId', data.id);
       }
     })
     .catch(err => {

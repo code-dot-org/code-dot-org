@@ -26,6 +26,12 @@ export interface ObservabilityConfig {
 export type LogAttributes = Record<string, unknown>;
 
 /**
+ * Tag value type accepted by setTag. Sentry indexes these as low-cardinality
+ * filterable dimensions, so non-primitive values are intentionally rejected.
+ */
+export type TagValue = string | number | boolean;
+
+/**
  * Provider-agnostic logging surface exposed to consumers.
  */
 export interface ObservabilityLogger {
@@ -77,5 +83,7 @@ export interface ObservabilityClient {
   metrics: ObservabilityMetrics;
   setConsented(userId: string | null): void;
   isConsented(): boolean;
+  setTag(key: string, value: TagValue): void;
+  setContext(name: string, ctx: Record<string, unknown> | null): void;
   shutdown(): Promise<void>;
 }

@@ -4,6 +4,7 @@ import type {
   ObservabilityConfig,
   ObservabilityLogger,
   ObservabilityMetrics,
+  TagValue,
 } from '../types';
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 
@@ -57,6 +58,24 @@ export class DeferredAdapter implements ObservabilityClient {
    */
   isConsented(): boolean {
     return this.delegate?.isConsented() ?? Boolean(this.consentedUserId);
+  }
+
+  /**
+   * Queue a tag set for replay against the eventual provider client.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  setTag(key: string, value: TagValue): void {
+    this.enqueue(client => client.setTag(key, value));
+  }
+
+  /**
+   * Queue a context set for replay against the eventual provider client.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  setContext(name: string, ctx: Record<string, unknown> | null): void {
+    this.enqueue(client => client.setContext(name, ctx));
   }
 
   /**

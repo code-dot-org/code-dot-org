@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -99,11 +98,19 @@ class TeacherContentToggle extends React.Component {
       <div style={styles.container}>
         <div style={contentStyle} ref="content" />
         <div
-          style={[frameStyle, !showLockedLessonMessage && styles.hidden]}
+          style={
+            showLockedLessonMessage
+              ? frameStyle
+              : {...frameStyle, ...styles.hidden}
+          }
           ref="lockMessage"
         />
         <div
-          style={[frameStyle, !showHiddenLessonMessage && styles.hidden]}
+          style={
+            showHiddenLessonMessage
+              ? frameStyle
+              : {...frameStyle, ...styles.hidden}
+          }
           ref="hiddenMessage"
         />
       </div>
@@ -120,7 +127,7 @@ const styles = {
   },
 };
 
-export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
+export const UnconnectedTeacherContentToggle = TeacherContentToggle;
 
 // Exported so that it can be tested
 export const mapStateToProps = state => {

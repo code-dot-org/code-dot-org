@@ -10,6 +10,7 @@ import type {
   ObservabilityLogger,
   ObservabilityMetrics,
   SamplingConfig,
+  TagValue,
 } from './types';
 
 export type {
@@ -19,6 +20,7 @@ export type {
   ObservabilityLogger,
   ObservabilityMetrics,
   SamplingConfig,
+  TagValue,
 };
 export {createObservabilityClient};
 
@@ -70,6 +72,31 @@ export function setConsented(userId: string | null): void {
  */
 export function isConsented(): boolean {
   return observabilityClient.isConsented();
+}
+
+/**
+ * Set or replace a session-scoped tag on subsequent provider events.
+ * Tags are low-cardinality, indexed dimensions; reserve them for values
+ * useful as a filter (e.g. `appType`, `locale`).
+ * @param key Tag name.
+ * @param value Primitive tag value.
+ */
+export function setTag(key: string, value: TagValue): void {
+  observabilityClient.setTag(key, value);
+}
+
+/**
+ * Attach a structured context blob to subsequent provider events. Contexts
+ * are not indexed and are sized for high-cardinality or per-request data
+ * (e.g. project channel id, level metadata). Pass `null` to clear.
+ * @param name Context name.
+ * @param ctx Structured context object, or `null` to clear.
+ */
+export function setContext(
+  name: string,
+  ctx: Record<string, unknown> | null,
+): void {
+  observabilityClient.setContext(name, ctx);
 }
 
 /**
