@@ -52,12 +52,14 @@ export function init(config: ObservabilityConfig): void {
  * Record an exception through the active provider, if any.
  * @param error The thrown value or exception-like object to record.
  * @param context Optional structured metadata to attach to the error event.
+ * @param tags Optional low-cardinality tags indexed by the provider for filtering.
  */
 export function recordError(
   error: unknown,
   context?: Record<string, unknown>,
+  tags?: Record<string, TagValue>,
 ): void {
-  observabilityClient.recordError(error, context);
+  observabilityClient.recordError(error, context, tags);
 }
 
 /**

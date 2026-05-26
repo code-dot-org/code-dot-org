@@ -10,6 +10,11 @@ vi.mock('@sentry/browser', () => ({
   setUser: vi.fn(),
   setTag: vi.fn(),
   setContext: vi.fn(),
+  withScope: vi
+    .fn()
+    .mockImplementation((callback: (scope: unknown) => void) =>
+      callback({setTag: vi.fn()}),
+    ),
   close: vi.fn().mockResolvedValue(undefined),
   startSpan: vi.fn().mockImplementation((_options, callback) => callback()),
   browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
@@ -158,8 +163,32 @@ describe('observability plugin', () => {
     const error = new Error('boom');
     recordError(error, {lab: 'music'});
 
+    expect(Sentry.withScope).toHaveBeenCalled();
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
       extra: {lab: 'music'},
+    });
+  });
+
+  it('applies per-event tags via withScope on recordError', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    const mockScope = {setTag: vi.fn()};
+    vi.mocked(Sentry.withScope).mockImplementationOnce(
+      (callback: (scope: unknown) => void) => callback(mockScope),
+    );
+
+    const error = new Error('tagged error');
+    recordError(error, {detail: 'ctx'}, {feature: 'ai-gateway'});
+
+    expect(mockScope.setTag).toHaveBeenCalledWith('feature', 'ai-gateway');
+    expect(Sentry.captureException).toHaveBeenCalledWith(error, {
+      extra: {detail: 'ctx'},
     });
   });
 
