@@ -21,7 +21,12 @@ end
 
 When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
-  @browser.execute_script("$(\".blocklySvg [#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
+  selector = ".blocklySvg [#{id_selector}='#{get_block_id(block)}']"
+  @browser.execute_script(<<~JS)
+    var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
+    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerdown', opts));
+    document.dispatchEvent(new PointerEvent('pointerup', opts));
+  JS
 end
 
 # This helps click on a field in Blockly. It always picks the first element from the list generated
@@ -293,7 +298,7 @@ end
 
 Then(/^the function editor workspace has (\d+) blocks$/) do |n|
   script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
-  expect(@browser.execute_script(script)).to eq(n)
+  expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
 def current_block_xml
