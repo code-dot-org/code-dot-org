@@ -147,7 +147,7 @@ export default function ToolbarShell({
       <Paper
         ref={containerRef}
         className={styles.toolbar}
-        elevation={3}
+        elevation={0}
         role="toolbar"
         aria-label={ariaLabel}
         style={{maxHeight}}
