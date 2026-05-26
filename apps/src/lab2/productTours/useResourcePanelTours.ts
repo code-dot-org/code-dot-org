@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -71,7 +71,6 @@ const useResourcePanelTours = ({
   // The resource panel is introduced in the (separate) Web Lab 2 overview tour.
   const isPythonlab = levelProperties.appName === 'pythonlab';
 
-  // RESOURCE PANEL ONBOARDING TOUR
   const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
@@ -85,6 +84,7 @@ const useResourcePanelTours = ({
     );
   }, [isPythonlab, levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
+  // ONBOARDING TOUR
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
     () =>
       tryGetLocalStorage(
@@ -92,29 +92,17 @@ const useResourcePanelTours = ({
         'no'
       ) === 'yes'
   );
-  useEffect(() => {
-    setOnboardingTourSeen(
-      tryGetLocalStorage(
-        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-        'no'
-      ) === 'yes'
-    );
-  }, []);
   const onOnboardingTourComplete = useCallback(() => {
-    onTourComplete(
-      ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName
-    )();
+    onTourComplete(ONBOARDING_FLOW_NAME)();
     setOnboardingTourSeen(true);
   }, []);
 
   const onOnboardingTourCancel = useCallback((stepIndex: number) => {
-    onTourCancel(
-      ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName
-    )(stepIndex);
+    onTourCancel(ONBOARDING_FLOW_NAME)(stepIndex);
     setOnboardingTourSeen(true);
   }, []);
 
-  const {tour: resourcePanelOnboardingTour} = useLab2ProductTour({
+  const {tour: onboardingTour} = useLab2ProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     tourAvailable: isOnboardingTourEnabled,
@@ -123,7 +111,7 @@ const useResourcePanelTours = ({
     onCancel: onOnboardingTourCancel,
   });
 
-  useStartTourWhenAvailable(resourcePanelOnboardingTour);
+  useStartTourWhenAvailable(onboardingTour);
 
   // VALIDATION TOUR
   const showValidationTour = useMemo(
