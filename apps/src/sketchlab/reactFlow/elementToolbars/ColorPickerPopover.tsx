@@ -6,7 +6,8 @@ import React from 'react';
 
 import {ColorSwatch} from './toolbarPalettes';
 
-import styles from './element-toolbar.module.scss';
+import styles from './color-picker-popover.module.scss';
+import sharedStyles from './element-toolbar.module.scss';
 
 const CUSTOM_COLOR_DEFAULT = '#000000';
 
@@ -50,7 +51,7 @@ export default function ColorPickerPopover({
               size="small"
               className={classNames(styles.swatch, {
                 [styles.swatchSelected]: isSelected,
-                [styles.swatchTransparent]: swatch.transparent,
+                [sharedStyles.swatchTransparent]: swatch.transparent,
               })}
               style={
                 swatch.transparent ? undefined : {backgroundColor: swatch.value}

@@ -1,0 +1,26 @@
+.optionList:global(.MuiList-root) {
+  padding: 4px 0;
+  min-width: 200px;
+}
+
+.optionListItem:global(.MuiMenuItem-root) {
+  padding: 6px 12px;
+  gap: 8px;
+  min-height: 32px;
+}
+
+.optionListIcon:global(.MuiListItemIcon-root) {
+  min-width: 0;
+  color: var(--text-neutral-primary);
+}
+
+.optionListLabel:global(.MuiListItemText-root) {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.optionListCheck {
+  font-size: 12px;
+  color: var(--text-neutral-primary);
+  margin-left: 8px;
+}

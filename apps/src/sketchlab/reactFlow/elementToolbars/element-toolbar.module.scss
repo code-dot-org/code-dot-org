@@ -32,6 +32,7 @@
   --sketchlab-bg-pink: #861043;
 }
 
+// Toolbar shell — owned by ToolbarShell.
 .toolbar {
   display: flex;
   flex-direction: column;
@@ -78,14 +79,15 @@
   overflow-x: hidden;
   scrollbar-gutter: stable;
   padding: 0 2px;
+
+  // Every section/standalone row after the first gets a divider above it.
+  & > * + * {
+    padding-top: 12px;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
 }
 
-// Every section/standalone row after the first gets a divider above it.
-.scrollContent > * + * {
-  padding-top: 12px;
-  border-top: 1px solid var(--borders-neutral-primary);
-}
-
+// Section wrapper — shared by ToolbarSection, RotationGroup, AltTextRow.
 .section {
   display: flex;
   flex-direction: column;
@@ -103,148 +105,10 @@
   gap: 6px;
 }
 
-// Form row: label-left, dropdown-trigger-right.
-.dropdownRow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.dropdownRowLabel {
-  flex: 0 0 76px;
-  color: var(--text-neutral-secondary);
-}
-
-// MUI Button overrides: bordered, neutral surface, content-justified
-// between the preview/label cluster and the chevron.
-.dropdownTrigger:global(.MuiButtonBase-root) {
-  flex: 1 1 auto;
-  justify-content: space-between;
-  border: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  padding: 2px 8px;
-  min-height: 28px;
-  font-weight: 400;
-  text-transform: none;
-
-  &:hover {
-    background-color: var(--background-neutral-secondary);
-    border-color: var(--borders-neutral-secondary);
-  }
-}
-
-.dropdownTriggerContent {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-}
-
-.dropdownTriggerLabel {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.dropdownChevron {
-  font-size: 10px;
-  margin-left: 4px;
-  color: var(--text-neutral-secondary);
-}
-
-// Small color/line preview inside the trigger button.
-.dropdownPreviewSwatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  border: 1px solid var(--borders-neutral-primary);
-  flex-shrink: 0;
-}
-
-// Popover body.
-.popoverPaper:global(.MuiPaper-root) {
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
-  margin-top: 4px;
-}
-
-.swatchGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 10px;
-  max-width: 232px;
-}
-
-.swatch {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1px solid var(--borders-neutral-primary);
-
-  &:hover {
-    border-color: var(--text-neutral-primary);
-  }
-}
-
-// 1px gap (in toolbar background) between the swatch edge and the
-// selection ring, so black/transparent swatches remain distinguishable.
-// Chaining `:global(.MuiIconButton-root)` gives this rule 3-class
-// specificity, outranking MUI's own focus-visible box-shadow that would
-// otherwise suppress the ring while the button has focus.
-.swatch.swatchSelected:global(.MuiIconButton-root),
-.swatch.swatchSelected.customSwatch {
-  box-shadow:
-    0 0 0 1px var(--background-neutral-primary),
-    0 0 0 3px var(--text-neutral-primary);
-}
-
-// The component-library MUI theme overrides IconButton :focus-visible to
-// force a 0.375rem border-radius; we want 50% so the focus outline
-// follows the circular swatch shape.
-.swatch:global(.MuiIconButton-root):focus-visible {
-  border-radius: 50%;
-}
-
-// Swatch-shaped label wraps the native color input. Clicking or focusing
-// the label activates the visually-hidden input, which opens the picker.
-.customSwatch {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--text-neutral-primary);
-
-  // Propagate the inner input's focus state to the label, since the
-  // opacity:0 input can't show its own outline.
-  &:focus-within {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 2px;
-  }
-}
-
-.customSwatchIcon {
-  font-size: 12px;
-  pointer-events: none;
-}
-
-.customSwatchInput {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: none;
-  opacity: 0;
-  cursor: pointer;
-}
-
+// Transparent-swatch diagonal pattern — shared by the popover swatches
+// (ColorPickerPopover) and the dropdown trigger preview
+// (ColorPreviewSwatch). Composes with whatever shape/size class the
+// caller already set.
 .swatchTransparent {
   background-color: var(--background-neutral-primary);
   background-image: linear-gradient(
@@ -256,55 +120,8 @@
   );
 }
 
-// Transparent variant for the small swatch preview in dropdown triggers.
-.dropdownPreviewSwatch.swatchTransparent {
-  background-color: var(--background-neutral-primary);
-}
-
-// Option-list popover.
-.optionList:global(.MuiList-root) {
-  padding: 4px 0;
-  min-width: 200px;
-}
-
-.optionListItem:global(.MuiMenuItem-root) {
-  padding: 6px 12px;
-  gap: 8px;
-  min-height: 32px;
-}
-
-.optionListIcon:global(.MuiListItemIcon-root) {
-  min-width: 0;
-  color: var(--text-neutral-primary);
-}
-
-.optionListLabel:global(.MuiListItemText-root) {
-  margin: 0;
-  flex: 1 1 auto;
-}
-
-.optionListCheck {
-  font-size: 12px;
-  color: var(--text-neutral-primary);
-  margin-left: 8px;
-}
-
-// Custom row at the bottom of the Size popover (label + numeric input).
-.customOptionRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 6px 12px;
-  border-top: 1px solid var(--borders-neutral-primary);
-  margin-top: 4px;
-}
-
-.customOptionLabel {
-  color: var(--text-neutral-primary);
-}
-
-// Line previews (used in popovers + dropdown triggers).
+// Inline line preview span — width/style set inline by the caller.
+// Used by LineEdgeToolbar in both popover items and trigger previews.
 .linePreview {
   display: inline-block;
   width: 20px;
@@ -313,16 +130,12 @@
   vertical-align: middle;
 }
 
+// RotationGroup row.
 .rotationRow {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
-}
-
-.rotationLabel {
-  flex: 0 0 76px;
-  color: var(--text-neutral-secondary);
 }
 
 .rotationSlider {
@@ -332,6 +145,7 @@
   margin: 0 4px;
 }
 
+// Narrow numeric input — shared by RotationGroup and FontSizeCustomInput.
 // The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
 // override the wrapper and the input so the field fits 3 digits plus the
 // native number spinner.
@@ -351,29 +165,7 @@
   }
 }
 
-// Alt-text row uses the same label gutter as dropdown rows so the
-// TextField lines up with the dropdown triggers above/below.
-.altTextRow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.altTextField {
-  flex: 1 1 auto;
-  min-width: 0;
-
-  & > label {
-    min-width: 0;
-    width: 100%;
-  }
-
-  input {
-    width: 100%;
-    min-width: 0;
-  }
-}
-
+// LockedNotice fallback state.
 .lockedNotice {
   display: flex;
   flex-direction: column;
@@ -384,7 +176,8 @@
   text-align: center;
 }
 
-// Actions: neutral icon row on the left, destructive delete on the right.
+// Actions row — neutral icon group on the left, destructive delete pinned
+// to the right edge.
 .actionsContainer {
   display: flex;
   flex-direction: row;

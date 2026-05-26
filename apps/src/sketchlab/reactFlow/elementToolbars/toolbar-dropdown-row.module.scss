@@ -1,0 +1,57 @@
+// Form row: label-left, dropdown-trigger-right.
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdownRowLabel {
+  flex: 0 0 76px;
+  color: var(--text-neutral-secondary);
+}
+
+// MUI Button overrides: bordered, neutral surface, content-justified
+// between the preview/label cluster and the chevron.
+.dropdownTrigger:global(.MuiButtonBase-root) {
+  flex: 1 1 auto;
+  justify-content: space-between;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 2px 8px;
+  min-height: 28px;
+  font-weight: 400;
+  text-transform: none;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+    border-color: var(--borders-neutral-secondary);
+  }
+}
+
+.dropdownTriggerContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dropdownTriggerLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdownChevron {
+  font-size: 10px;
+  margin-left: 4px;
+  color: var(--text-neutral-secondary);
+}
+
+// Popover body.
+.popoverPaper:global(.MuiPaper-root) {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  margin-top: 4px;
+}

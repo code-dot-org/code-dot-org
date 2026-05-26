@@ -6,7 +6,7 @@ import React, {useId, useState} from 'react';
 
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 
-import styles from './element-toolbar.module.scss';
+import styles from './toolbar-dropdown-row.module.scss';
 
 interface ToolbarDropdownRowProps {
   label: string;

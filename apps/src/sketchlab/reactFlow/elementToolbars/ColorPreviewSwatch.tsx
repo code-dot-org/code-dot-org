@@ -3,7 +3,8 @@ import React from 'react';
 
 import {ColorSwatch} from './toolbarPalettes';
 
-import styles from './element-toolbar.module.scss';
+import styles from './color-preview-swatch.module.scss';
+import sharedStyles from './element-toolbar.module.scss';
 
 interface ColorPreviewSwatchProps {
   value: string | undefined;
@@ -23,7 +24,7 @@ export default function ColorPreviewSwatch({
     <span
       aria-hidden="true"
       className={classNames(styles.dropdownPreviewSwatch, {
-        [styles.swatchTransparent]: isTransparent,
+        [sharedStyles.swatchTransparent]: isTransparent,
       })}
       style={isTransparent ? undefined : {backgroundColor: value}}
     />

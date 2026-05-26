@@ -1,0 +1,23 @@
+// Custom-px row at the bottom of the Size popover (label + numeric input).
+// Sits below the MenuList items as a visual sibling, separated by a
+// 1px rule that echoes MUI's MenuItem-to-MenuItem spacing.
+.customOptionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  margin-top: 4px;
+}
+
+// Active when the underlying value is a raw pixel number (not a preset).
+// Background tint mirrors MUI MenuItem's selected state so the Custom row
+// reads as "the chosen option" alongside the MenuList above it.
+.customOptionRowSelected {
+  background-color: var(--background-neutral-secondary);
+}
+
+.customOptionLabel {
+  color: var(--text-neutral-primary);
+}

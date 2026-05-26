@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {ListItemIcon, ListItemText, MenuItem, MenuList} from '@mui/material';
 import React from 'react';
 
-import styles from './element-toolbar.module.scss';
+import styles from './option-list-popover.module.scss';
 
 export interface OptionListItem<T extends string | number> {
   value: T;

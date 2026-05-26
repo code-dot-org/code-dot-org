@@ -2,7 +2,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useCallback, useEffect, useId, useState} from 'react';
 
-import styles from './element-toolbar.module.scss';
+import styles from './alt-text-row.module.scss';
+import sharedStyles from './element-toolbar.module.scss';
 
 interface AltTextRowProps {
   value: string;
@@ -41,11 +42,15 @@ export default function AltTextRow({value, onChange}: AltTextRowProps) {
   );
 
   return (
-    <div className={styles.section} role="group" aria-labelledby={labelId}>
+    <div
+      className={sharedStyles.section}
+      role="group"
+      aria-labelledby={labelId}
+    >
       <Typography
         id={labelId}
         variant="overline3"
-        className={styles.sectionTitle}
+        className={sharedStyles.sectionTitle}
       >
         Alt text
       </Typography>

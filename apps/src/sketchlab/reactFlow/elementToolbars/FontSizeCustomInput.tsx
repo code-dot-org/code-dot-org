@@ -4,7 +4,8 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {fontSizePx, FontSize, MIN_FONT_SIZE_PX} from './toolbarPalettes';
 
-import styles from './element-toolbar.module.scss';
+import sharedStyles from './element-toolbar.module.scss';
+import styles from './font-size-custom-input.module.scss';
 
 interface FontSizeCustomInputProps {
   selectedValue: FontSize | undefined;
@@ -79,7 +80,7 @@ export default function FontSizeCustomInput({
   return (
     <div
       className={classNames(styles.customOptionRow, {
-        [styles.optionListItem]: isSelected,
+        [styles.customOptionRowSelected]: isSelected,
       })}
     >
       <span className={styles.customOptionLabel}>Custom</span>
@@ -93,7 +94,7 @@ export default function FontSizeCustomInput({
         onBlur={handleInputBlur}
         onKeyDown={handleInputKeyDown}
         size="s"
-        className={styles.smallInput}
+        className={sharedStyles.smallInput}
       />
     </div>
   );
