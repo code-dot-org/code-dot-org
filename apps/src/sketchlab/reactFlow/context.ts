@@ -23,11 +23,6 @@ interface ToolbarVisibilityContextValue {
   trapFocus: boolean;
   openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   closeToolbar: () => void;
-  // Tracks whether any dropdown popover (e.g. color picker, size list) is
-  // currently open. ToolbarShell uses this to pause its focus-trap-react
-  // while a MUI Popover is open — otherwise the two traps fight each
-  // other (focus-trap-react pulls focus back into the toolbar Paper while
-  // MUI's TrapFocus pulls focus back into the popover Paper, recursing).
   isAnyPopoverOpen: boolean;
   setPopoverOpen: (open: boolean) => void;
 }

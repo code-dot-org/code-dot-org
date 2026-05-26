@@ -2,7 +2,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useId, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 import {useToolbarVisibility} from '../context';
@@ -32,30 +39,9 @@ export default function ToolbarDropdownRow({
   const {setPopoverOpen} = useToolbarVisibility();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const wasOpenRef = useRef(false);
-  // Tracks whether we've incremented the any-popover-open counter, so
-  // open/close/unmount each call setPopoverOpen at most once per cycle.
-  // A naive open-keyed useEffect double-decrements when the cleanup
-  // races the explicit close.
-  const incrementedRef = useRef(false);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
-  // Open/close both flip local anchor state AND register with the
-  // context that tracks any-popover-open. Doing both in the same event
-  // handler batches the state updates so ToolbarShell sees
-  // isAnyPopoverOpen=true on the SAME render that mounts the Popover —
-  // its focus-trap-react then deactivates in commit phase, before MUI's
-  // own TrapFocus activates in useEffect (see ToolbarShell for why).
-  const openPopover = useCallback(
-    (target: HTMLElement) => {
-      setAnchorEl(target);
-      if (!incrementedRef.current) {
-        incrementedRef.current = true;
-        setPopoverOpen(true);
-      }
-    },
-    [setPopoverOpen]
-  );
   // Plain close — MUI Popover's TrapFocus restores focus via its
   // nodeToRestore mechanism. Calling triggerRef.focus() inside this
   // callback races against TrapFocus's enforce-focus listener and
@@ -63,23 +49,21 @@ export default function ToolbarDropdownRow({
   // below instead.
   const closePopover = useCallback(() => {
     setAnchorEl(null);
-    if (incrementedRef.current) {
-      incrementedRef.current = false;
-      setPopoverOpen(false);
-    }
-  }, [setPopoverOpen]);
+  }, []);
 
-  // Safety net for the case where the component unmounts while the
-  // popover is still open (e.g. user selects a different node and the
-  // toolbar swaps): decrement so the counter doesn't get stuck.
-  useEffect(() => {
-    return () => {
-      if (incrementedRef.current) {
-        incrementedRef.current = false;
-        setPopoverOpen(false);
-      }
-    };
-  }, [setPopoverOpen]);
+  // Tell ToolbarShell when our popover is open so it can deactivate
+  // its focus-trap-react (see context.ts + ToolbarShell). useLayoutEffect
+  // (not useEffect) is load-bearing: it runs synchronously in commit
+  // phase, queuing a state update that propagates to ToolbarShell BEFORE
+  // MUI Popover's useEffect-based TrapFocus activates in a later phase.
+  // The cleanup pairs with setup symmetrically — runs on open->closed,
+  // on parent re-mount, AND on unmount-while-open — so no extra refs or
+  // safety-net effects are needed.
+  useLayoutEffect(() => {
+    if (!open) return;
+    setPopoverOpen(true);
+    return () => setPopoverOpen(false);
+  }, [open, setPopoverOpen]);
 
   // Backstop: when the popover transitions open->closed, ensure focus
   // lands on the trigger. MUI's nodeToRestore usually handles this, but
@@ -127,7 +111,7 @@ export default function ToolbarDropdownRow({
         aria-labelledby={labelId}
         aria-haspopup={popoverRole === 'menu' ? 'menu' : 'dialog'}
         aria-expanded={open}
-        onClick={event => openPopover(event.currentTarget)}
+        onClick={event => setAnchorEl(event.currentTarget)}
       >
         <span className={styles.dropdownTriggerContent}>
           {triggerPreview}
