@@ -16,7 +16,7 @@ import {Weblab2LevelProperties} from '../types';
 
 const WEBLAB2_ONBOARDING_TOUR_SEEN = 'weblab2OnboardingTourSeen';
 
-const useWeblab2OnboardingTour = (levelProperties: Weblab2LevelProperties) => {
+const useWeblab2IntroTour = (levelProperties: Weblab2LevelProperties) => {
   const [isLevelLoading, setIsLevelLoading] = useState(false);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     setIsLevelLoading(true);
@@ -27,14 +27,14 @@ const useWeblab2OnboardingTour = (levelProperties: Weblab2LevelProperties) => {
 
   const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
-      ProductTour.Weblab2Onboarding,
+      ProductTour.Weblab2Intro,
       levelProperties
     );
     return isEnabledOnLevel && !isLevelLoading;
   }, [levelProperties, isLevelLoading]);
 
   const flowName =
-    ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName;
+    ProductTourConfigurations[ProductTour.Weblab2Intro].metricName;
 
   const onTourStart = useCallback(
     () =>
@@ -65,7 +65,7 @@ const useWeblab2OnboardingTour = (levelProperties: Weblab2LevelProperties) => {
   );
 
   const {tour} = useLab2ProductTour({
-    getSteps: ProductTourConfigurations[ProductTour.Weblab2Onboarding].getSteps,
+    getSteps: ProductTourConfigurations[ProductTour.Weblab2Intro].getSteps,
     localStorageKey: WEBLAB2_ONBOARDING_TOUR_SEEN,
     tourAvailable: isOnboardingTourEnabled,
     onStart: onTourStart,
@@ -76,4 +76,4 @@ const useWeblab2OnboardingTour = (levelProperties: Weblab2LevelProperties) => {
   useStartTourWhenAvailable(tour);
 };
 
-export default useWeblab2OnboardingTour;
+export default useWeblab2IntroTour;

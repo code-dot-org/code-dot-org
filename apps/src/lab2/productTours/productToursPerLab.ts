@@ -13,7 +13,7 @@ export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
   ResourcePanelValidation = 'resource_panel_validation',
   SketchlabIntro = 'sketchlab_intro',
-  Weblab2Onboarding = 'weblab2_onboarding',
+  Weblab2Intro = 'weblab2_intro',
 }
 
 export interface ProductTourConfig {
@@ -63,8 +63,8 @@ export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
       triggeredByLevel: false,
       getSteps: createSketchlabTourSteps,
     },
-    [ProductTour.Weblab2Onboarding]: {
-      name: ProductTour.Weblab2Onboarding,
+    [ProductTour.Weblab2Intro]: {
+      name: ProductTour.Weblab2Intro,
       displayName: 'Welcome to Web Lab',
       metricName: 'Welcome to Web Lab',
       triggeredByLevel: false,
@@ -131,5 +131,5 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
   sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
-  weblab2: [ProductTourConfigurations[ProductTour.Weblab2Onboarding]],
+  weblab2: [ProductTourConfigurations[ProductTour.Weblab2Intro]],
 };
