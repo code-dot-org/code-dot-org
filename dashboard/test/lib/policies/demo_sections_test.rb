@@ -9,8 +9,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student_ids
 
   test 'demo_student_ids returns ids for known type' do
-    high1 = create(:student)
-    high2 = create(:student)
+    high1 = create(:student, :in_email_section)
+    high2 = create(:student, :in_email_section)
     create(:student) # middle, not returned
     DemoStudent.create!(user: high1, demo_type: 'high')
     DemoStudent.create!(user: high2, demo_type: 'high')
@@ -19,7 +19,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   end
 
   test 'demo_student_ids returns empty array for unknown demo type' do
-    DemoStudent.create!(user: create(:student), demo_type: 'high')
+    DemoStudent.create!(user: create(:student, :in_email_section), demo_type: 'high')
 
     assert_equal [], Policies::DemoSections.demo_student_ids(:unknown_type)
   end
@@ -29,7 +29,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   end
 
   test 'demo_student_ids accepts string argument' do
-    student = create(:student)
+    student = create(:student, :in_email_section)
     DemoStudent.create!(user: student, demo_type: 'high')
 
     assert_equal [student.id], Policies::DemoSections.demo_student_ids('high')
@@ -38,8 +38,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # all_demo_student_ids
 
   test 'all_demo_student_ids returns combined ids from all types' do
-    high = create(:student)
-    middle = create(:student)
+    high = create(:student, :in_email_section)
+    middle = create(:student_in_word_section)
     DemoStudent.create!(user: high, demo_type: 'high')
     DemoStudent.create!(user: middle, demo_type: 'middle')
     Policies::DemoSections.reset_cache!
@@ -187,7 +187,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student?
 
   test 'demo_student? returns true for a demo student id' do
-    student = create(:student)
+    student = create(:student, :in_email_section)
     DemoStudent.create!(user: student, demo_type: 'high')
     Policies::DemoSections.reset_cache!
 
@@ -195,16 +195,16 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   end
 
   test 'demo_student? returns false for a non-demo student id' do
-    DemoStudent.create!(user: create(:student), demo_type: 'high')
+    DemoStudent.create!(user: create(:student, :in_email_section), demo_type: 'high')
     Policies::DemoSections.reset_cache!
 
     refute Policies::DemoSections.demo_student?(-1)
   end
 
   test 'demo_student? matches across all demo types' do
-    high = create(:student)
-    middle = create(:student)
-    elementary = create(:student)
+    high = create(:student, :in_email_section)
+    middle = create(:student_in_word_section)
+    elementary = create(:student_in_picture_section)
     DemoStudent.create!(user: high, demo_type: 'high')
     DemoStudent.create!(user: middle, demo_type: 'middle')
     DemoStudent.create!(user: elementary, demo_type: 'elementary')
@@ -214,5 +214,30 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert Policies::DemoSections.demo_student?(middle.id)
     assert Policies::DemoSections.demo_student?(elementary.id)
     refute Policies::DemoSections.demo_student?(-1)
+  end
+
+  # demo_student_durable?
+
+  test 'demo_student_durable? returns true for a demo student id without caching' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+
+    # Force the in-process cache to a wrong answer; the durable check must
+    # ignore it and ask the database directly.
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    refute Policies::DemoSections.demo_student?(student.id)
+    assert Policies::DemoSections.demo_student_durable?(student.id)
+  end
+
+  test 'demo_student_durable? returns false for a non-demo student id' do
+    refute Policies::DemoSections.demo_student_durable?(-1)
+  end
+
+  test 'demo_student_durable? accepts string argument' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+
+    assert Policies::DemoSections.demo_student_durable?(student.id.to_s)
   end
 end

@@ -31,49 +31,55 @@ class DemoStudent < ApplicationRecord
   validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::DEMO_TYPES.map(&:to_s)}}
   validates :user_id, uniqueness: {scope: :demo_type}
   validate :user_must_be_student
+  validate :user_must_be_lockable, on: :create
 
+  after_create :lock_user_login!
   after_commit :reset_policy_cache
-  after_create_commit :lock_user_login!
 
   private def user_must_be_student
     return unless user
     errors.add(:user, 'must be a student') unless user.student?
   end
 
+  # A user can be flagged as a demo student only if their entire section
+  # membership is in login types where credentials are issued at the section
+  # level (word/picture) or via a plain email/password we can null out.
+  # OAuth/SSO sections aren't lockable: clearing `encrypted_password` doesn't
+  # block the IdP from signing the user back in.
+  private def user_must_be_lockable
+    return unless user
+    types = user.sections_as_student.pluck(:login_type).uniq
+    return if types.any? && types.all? {|t| ALLOWED_SECTION_LOGIN_TYPES.include?(t)}
+    errors.add(
+      :user,
+      "must be exclusively in email/word/picture sections " \
+        "(got: #{types.inspect})",
+    )
+  end
+
   private def reset_policy_cache
     Policies::DemoSections.reset_cache!
   end
 
+  # Runs inside the implicit save transaction so a lockdown failure rolls
+  # back the demo_students insert and the user keeps their credentials.
+  # Clearing `encrypted_password` also rotates Devise's authenticatable_salt,
+  # which signs out any active sessions on the next request. Authentication
+  # options are hard-deleted (not paranoia-soft-deleted) so OAuth refresh
+  # tokens and hashed credentials don't linger in the database.
+  #
   # Fires only via DemoStudent.create!/save!. Direct SQL inserts into the
   # demo_students table bypass this and leave the linked user un-locked.
   private def lock_user_login!
-    section_login_types = user.sections_as_student.pluck(:login_type).uniq
-    unless section_login_types.any? && section_login_types.all? {|t| ALLOWED_SECTION_LOGIN_TYPES.include?(t)}
-      Honeybadger.notify(
-        'Demo student is not exclusively in email/word/picture sections',
-        context: {user_id: user_id, demo_type: demo_type, section_login_types: section_login_types},
-      )
-      return false
-    end
-
-    ActiveRecord::Base.transaction do
-      user.update!(
-        secret_words: nil,
-        secret_picture_id: nil,
-        encrypted_password: '',
-        hashed_email: '',
-        email: '',
-        provider: nil,
-        uid: nil,
-      )
-      user.authentication_options.destroy_all
-    end
-    true
-  rescue StandardError => exception
-    Honeybadger.notify(
-      exception,
-      context: {message: 'Failed to lock demo student login', user_id: user_id, demo_type: demo_type},
+    user.update!(
+      secret_words: nil,
+      secret_picture_id: nil,
+      encrypted_password: '',
+      hashed_email: '',
+      email: '',
+      provider: nil,
+      uid: nil,
     )
-    false
+    user.authentication_options.with_deleted.each(&:really_destroy!)
   end
 end
