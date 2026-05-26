@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "####**What is a question you still have about AI?**\r\n",
+    "long_instructions": "**What is a question you still have about AI?**\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

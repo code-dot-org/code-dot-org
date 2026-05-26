@@ -1,4 +1,4 @@
-require_relative '../../../../shared/test/spy_newrelic_agent'
+require_relative '../../../../shared/test/observability_test_recorder'
 require 'test_helper'
 
 module Pd

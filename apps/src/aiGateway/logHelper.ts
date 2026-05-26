@@ -1,6 +1,5 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
-import DCDO from '@cdo/apps/dcdo';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 export type GatewayErrorCategory =
@@ -66,10 +65,6 @@ export const reportGatewayError = async (
 ): Promise<void> => {
   const logData = await getErrorLogData(error);
   console.error(`[${source}] fetch error:`, logData);
-
-  if (!DCDO.get('frontend-observability-enabled', false)) {
-    return;
-  }
 
   const hasStatus = 'status' in logData && typeof logData.status === 'number';
   Observability.recordError(error, {

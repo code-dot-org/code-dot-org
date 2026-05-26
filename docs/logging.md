@@ -68,7 +68,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 ### Observability services (third-party)
 
 - **[Honeybadger](../lib/cdo/honeybadger.rb)**: Honeybadger reports back‑end errors in [Rails](../dashboard/app/controllers/application_controller.rb#L386-L388) and in CLI/cron jobs via specialized stdout/stderr capture [helpers](../lib/cdo/honeybadger.rb#L27-L74), and forwards infrastructure alerts through a CloudWatch→SNS [Lambda](../aws/cloudformation/honeybadgerNotify.js#L4-L24) defined in the [alerting template](../aws/cloudformation/alerting.yml.erb#L21-L41).
-- **[New Relic](../cookbooks/cdo-apps/templates/default/newrelic.yml.erb)**: New Relic provides back‑end Application Performance Monitoring (APM) and records server‑side custom metrics such as the [Files API](../dashboard/legacy/middleware/files_api.rb#L90-L106), and it captures errors/exceptions in the [studio front‑end](../apps/src/logToCloud.js#L31-L41) and the [marketing front‑end](../frontend/apps/marketing/src/providers/newrelic/NewRelicLoader.tsx#L6-L13).
+- **[OpenTelemetry + Sentry](../dashboard/engines/observability/README.md)**: Backend APM is provided by an OpenTelemetry SDK that auto-instruments Rails and forwards spans through a local OTel Contrib collector ([cookbook](../cookbooks/cdo-otel-collector)) to Sentry. Application-level events are emitted as span events on the active OTel span (e.g. [Files API](../dashboard/legacy/middleware/files_api.rb#L90-L106) calls `OpenTelemetry::Trace.current_span.add_event(...)`). Browser-side errors are reported to Sentry via the [observability plugin](../frontend/packages/core/src/plugins/observability) consumed by `apps/src/sites/studio/pages/essential.js`.
 - **Statsig**: This is used for feature flagging/analytics for [marketing site](../frontend/apps/marketing/src/providers/statsig/client.ts), studio [front‑end](../apps/webpackEntryPoints.js), and [back‑end](../dashboard/lib/metrics/events.rb). Where possible, prefer Statsig (or equivalent) for client analytics events over direct Firehose writes.
 
 ## Destinations (and durability expectations)
@@ -121,7 +121,7 @@ First, the browser requests the document page for a level:
 
 Secondly, while the user is on the page (in addition to the above):
 
-- Browser‑side interaction events are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group; the page may also [report](#observability-services-thirdparty) New Relic page actions/errors.
+- Browser‑side interaction events are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group; the page may also [report](#observability-services-thirdparty) errors to Sentry through the observability plugin.
 - Client analytics may [log](#observability-services-thirdparty) to Statsig (back‑end via server SDK; front‑end via app code) and [log](#event-pipelines-firehose) to Firehose (deprecated).
 - Background jobs (e.g., ActiveJob) kicked off from user actions [log](#application-servers-ec2) via the same Rails logger and appear in the same `<env>-syslog` CloudWatch log group.
 - Hourly, instance app logs are [synced](#s3-cdo-logs-bucket) to S3 for long‑term retention.
@@ -133,8 +133,8 @@ Secondly, while the user is on the page (in addition to the above):
 - Reduce duplication between layers
   - CloudFront logging: Standard TSV uploads and the real-time Parquet pipeline both record every request. Decide whether to keep real-time for fast DDoS triage or fall back to the legacy archive, but stop paying for both.
   - General Request Logging: CloudFront, ALB, NGINX, and Rails all log requests. Maybe we keep CloudFront; keep Rails for application context.
-  - Errors: Rails/syslog, Honeybadger, and New Relic all capture the same failures. Treat Honeybadger as the alerting source; keep Rails/syslog for raw detail;
-  - Front‑end telemetry: New Relic Browser, Browser Events, Firehose, and Statsig all track user behavior. Maybe favor New Relic for JS errors; favor Statsig for experiments and analytics.
+  - Errors: Rails/syslog, Honeybadger, and Sentry (via OTel) all capture the same failures. Treat Honeybadger as the alerting source; keep Rails/syslog for raw detail;
+  - Front‑end telemetry: Sentry (errors), Browser Events, Firehose, and Statsig all track user behavior. Favor Sentry for JS errors; favor Statsig for experiments and analytics.
   - Database visibility: Rails Lograge timings and Aurora exports full audit/slow/general/error logs to CloudWatch. Maybe one can be retired.
 - Ensure graceful autoscaling termination flushes hourly-synced logs to S3.
   - This would assure no logs are lost on instance termination of scale-down or production code deploys.

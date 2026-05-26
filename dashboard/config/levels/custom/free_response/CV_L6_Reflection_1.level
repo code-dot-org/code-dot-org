@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Pixels, RGB, and Computer Vision\r\n\r\n#### Considering what you've learned about pixels and RGB values, what kinds of information do you think computer vision algorithms can extract from images, and for what purposes?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Pixels, RGB, and Computer Vision\r\n\r\nConsidering what you've learned about pixels and RGB values, what kinds of information do you think computer vision algorithms can extract from images, and for what purposes?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

@@ -689,6 +689,9 @@ const EVENTS = {
 
   LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
   LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
+
+  LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
+  LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -6,20 +6,13 @@ import {
   inferGatewayErrorCategory,
   reportGatewayError,
 } from '@cdo/apps/aiGateway/logHelper';
-import DCDO from '@cdo/apps/dcdo';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 jest.mock('@code-dot-org/core/plugins/observability', () => ({
   recordError: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/dcdo', () => ({
-  __esModule: true,
-  default: {get: jest.fn()},
-}));
-
 const mockRecordError = Observability.recordError as jest.Mock;
-const mockDcdoGet = DCDO.get as jest.Mock;
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -88,13 +81,11 @@ describe('reportGatewayError', () => {
   });
 
   it('always calls console.error', async () => {
-    mockDcdoGet.mockReturnValue(false);
     await reportGatewayError(new Error('test'));
     expect(console.error).toHaveBeenCalled();
   });
 
   it('includes the source in the console.error message', async () => {
-    mockDcdoGet.mockReturnValue(false);
     await reportGatewayError(new Error('test'), 'myFunction');
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining('myFunction'),
@@ -102,20 +93,12 @@ describe('reportGatewayError', () => {
     );
   });
 
-  it('does not call Observability.recordError when flag is off', async () => {
-    mockDcdoGet.mockReturnValue(false);
-    await reportGatewayError(new Error('test'));
-    expect(mockRecordError).not.toHaveBeenCalled();
-  });
-
-  it('calls Observability.recordError when flag is on', async () => {
-    mockDcdoGet.mockReturnValue(true);
+  it('always calls Observability.recordError', async () => {
     await reportGatewayError(new Error('test'));
     expect(mockRecordError).toHaveBeenCalledTimes(1);
   });
 
   it('tags unhandled category for a plain Error', async () => {
-    mockDcdoGet.mockReturnValue(true);
     const error = new Error('generic');
     await reportGatewayError(error);
     expect(mockRecordError).toHaveBeenCalledWith(
@@ -125,7 +108,6 @@ describe('reportGatewayError', () => {
   });
 
   it('tags category and status_code for a NetworkError', async () => {
-    mockDcdoGet.mockReturnValue(true);
     const response = new Response('', {status: 429});
     const error = new NetworkError('HTTP 429', response);
     await reportGatewayError(error);
@@ -139,7 +121,6 @@ describe('reportGatewayError', () => {
   });
 
   it('tags provider_5xx for a 500 NetworkError', async () => {
-    mockDcdoGet.mockReturnValue(true);
     const response = new Response('', {status: 500});
     const error = new NetworkError('HTTP 500', response);
     await reportGatewayError(error);
