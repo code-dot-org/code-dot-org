@@ -5,7 +5,7 @@ import {
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {reportGatewayError} from './logHelper';
+import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
@@ -44,7 +44,8 @@ async function transcribeThroughGateway(
 
     return await response.json();
   } catch (error) {
-    await reportGatewayError(error, 'transcribeThroughGateway');
+    const logData = getErrorLogData(error);
+    console.error('Fetch error in transcribeThroughGateway:', logData);
     throw error;
   }
 }

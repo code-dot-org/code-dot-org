@@ -1,34 +1,4 @@
-import * as Observability from '@code-dot-org/core/plugins/observability';
-
-import DCDO from '@cdo/apps/dcdo';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-
-export type GatewayErrorCategory =
-  | 'jwt_missing'
-  | 'jwt_expired'
-  | 'jwt_invalid'
-  | 'turnstile_failed'
-  | 'turnstile_timeout'
-  | 'rate_limit_local'
-  | 'provider_429'
-  | 'provider_5xx'
-  | 'provider_timeout'
-  | 'validation_error'
-  | 'unhandled';
-
-// Status-to-category mapping per docs/observability/error-taxonomy.md.
-// Imprecise until Phase 2 C2 adds structured error bodies to gateway responses.
-export const inferGatewayErrorCategory = (
-  status: number
-): GatewayErrorCategory => {
-  if (status === 401) return 'jwt_invalid';
-  if (status === 429) return 'rate_limit_local';
-  if (status === 504) return 'provider_timeout';
-  if (status >= 500) return 'provider_5xx';
-  if (status >= 400) return 'validation_error';
-  return 'unhandled';
-};
-
 /**
  * Resolves the most descriptive representation of an error for logging.
  * If it's a NetworkError, it attempts to safely extract the response body.
@@ -58,29 +28,4 @@ export const getErrorLogData = async (error: unknown) => {
   }
   // Default return for standard Errors.
   return {type: 'GenericError', error};
-};
-
-export const reportGatewayError = async (
-  error: unknown,
-  source = 'ai-gateway'
-): Promise<void> => {
-  const logData = await getErrorLogData(error);
-  console.error(`[${source}] fetch error:`, logData);
-
-  if (!DCDO.get('frontend-observability-enabled', false)) {
-    return;
-  }
-
-  const hasStatus = 'status' in logData && typeof logData.status === 'number';
-  Observability.recordError(error, {
-    error_type: logData.type,
-    ...(hasStatus
-      ? {
-          status_code: (logData as {status: number}).status,
-          category: inferGatewayErrorCategory(
-            (logData as {status: number}).status
-          ),
-        }
-      : {category: 'unhandled' as GatewayErrorCategory}),
-  });
 };
