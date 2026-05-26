@@ -12,8 +12,8 @@ vi.mock('@sentry/browser', () => ({
   setContext: vi.fn(),
   withScope: vi
     .fn()
-    .mockImplementation((callback: (scope: unknown) => void) =>
-      callback({setTag: vi.fn()}),
+    .mockImplementation((callback: (scope: Sentry.Scope) => void) =>
+      callback({setTag: vi.fn()} as unknown as Sentry.Scope),
     ),
   close: vi.fn().mockResolvedValue(undefined),
   startSpan: vi.fn().mockImplementation((_options, callback) => callback()),
@@ -180,7 +180,8 @@ describe('observability plugin', () => {
 
     const mockScope = {setTag: vi.fn()};
     vi.mocked(Sentry.withScope).mockImplementationOnce(
-      (callback: (scope: unknown) => void) => callback(mockScope),
+      (callback: (scope: Sentry.Scope) => void) =>
+        callback(mockScope as unknown as Sentry.Scope),
     );
 
     const error = new Error('tagged error');
