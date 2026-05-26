@@ -117,10 +117,6 @@ use_my_studio: true
 #acapela_ephemeral_password: ''
 
 
-# Credentials for new relic logging. Used to log apps build times.
-# Log in to https://rpm.newrelic.com/accounts/501463 to get the key
-#new_relic_license_key: ''
-
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a
 # street address geocoding service, while freegeoip provides an IP address
 # geocoding service.  (The former is "lookup" in the Geocoder config, while the

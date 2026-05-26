@@ -1784,7 +1784,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     stub_demo_preset
     demo_student = create(:student)
-    CDO.stubs(:demo_student_ids).returns({'high' => [demo_student.id.to_s]})
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
     Policies::DemoSections.reset_cache!
 
     post :create_demo, params: {demo_type: 'high'}

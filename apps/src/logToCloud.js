@@ -1,4 +1,5 @@
-import experiments from './util/experiments';
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {makeEnum} from './utils';
 
 const PageAction = makeEnum(
@@ -24,30 +25,29 @@ const PageAction = makeEnum(
   'NoValidAmplitudeEventNameError'
 );
 
-const MAX_FIELD_LENGTH = 4095;
-const REPORT_PAGE_SIZE =
-  experiments.isEnabled('logPageSize') || Math.random() < 0.01;
-
 /**
- * Wraps and adds functionality to window.newrelic, which is only included in
- * production. This causes us to no-op in other environments.
+ * Legacy facade for the New Relic browser agent. Mirrors NR's split between
+ * `record_custom_event` (information attached to the page session, addPageAction
+ * here) and `noticeError` (the exception stream, logError here):
+ *
+ *   - addPageAction -> Observability.logger.info, regardless of name. Page
+ *     actions in NR were structured events, not exceptions.
+ *   - logError      -> Observability.recordError, the exception stream.
+ *
+ * Existing callers keep working unchanged; new code should call into
+ * `@code-dot-org/core/plugins/observability` directly.
  */
 module.exports = {
   PageAction: PageAction,
 
   /**
-   * @param {string} actionName - Must be one of the keys from PageAction
-   * @param {object} value - Object literal representing columns we want to
-   *   add for this action
-   * @param {number} [sampleRate] - Optional sample rate. Default is 1.0
+   * @param {string} actionName - Must be one of the keys from PageAction.
+   * @param {object} value - Object literal of context attributes for the event.
+   * @param {number} [sampleRate] - Optional sample rate. Default is 1.0.
    */
   addPageAction: function (actionName, value, sampleRate) {
     if (sampleRate === undefined) {
       sampleRate = 1.0;
-    }
-
-    if (!window.newrelic) {
-      return;
     }
 
     if (!PageAction[actionName]) {
@@ -61,81 +61,16 @@ module.exports = {
     }
 
     if (Math.random() > sampleRate) {
-      // Ignore this instance
       return;
     }
 
-    for (var prop in value) {
-      // New relic doesnt handle booleans. Make them strings.
-      if (typeof value[prop] === 'boolean') {
-        value[prop] = value[prop].toString();
-      }
-
-      if (typeof value[prop] === 'string') {
-        value[prop] = value[prop].substring(0, MAX_FIELD_LENGTH);
-      }
-    }
-
-    window.newrelic.addPageAction(actionName, value);
-  },
-
-  /**
-   * Sets an attribute that will be included on any subsequent generated events
-   */
-  setCustomAttribute: function (key, value) {
-    if (!window.newrelic) {
-      return;
-    }
-
-    window.newrelic.setCustomAttribute(key, value);
-  },
-
-  loadFinished() {
-    if (!window.newrelic) {
-      return;
-    }
-
-    window.newrelic.finished();
+    Observability.logger.info(actionName, value);
   },
 
   logError(e) {
-    if (!window.newrelic) {
+    if (!e) {
       return;
     }
-    window.newrelic.noticeError(e);
-  },
-
-  reportPageSize() {
-    if (!REPORT_PAGE_SIZE) {
-      return;
-    }
-    try {
-      const resources = performance && performance.getEntriesByType('resource');
-      let totalDownloadSize = 0;
-      let jsDownloadSize = 0;
-      const jsFileRegex = /\.js$/;
-      for (const resource of resources) {
-        if (
-          resource.transferSize === undefined ||
-          resource.encodedBodySize === undefined
-        ) {
-          return;
-        }
-        totalDownloadSize += resource.transferSize;
-        if (jsFileRegex.test(resource.name)) {
-          jsDownloadSize += resource.transferSize;
-        }
-      }
-      if (!window.newrelic) {
-        return;
-      }
-      window.newrelic.setCustomAttribute(
-        'totalDownloadSize',
-        totalDownloadSize
-      );
-      window.newrelic.setCustomAttribute('jsDownloadSize', jsDownloadSize);
-    } catch (e) {
-      this.logError(e);
-    }
+    Observability.recordError(e);
   },
 };

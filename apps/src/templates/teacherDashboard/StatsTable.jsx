@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -48,15 +49,14 @@ class StatsTable extends Component {
 
     if (studentUrl) {
       return (
-        <a
+        <Link
           className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          openInNewTab
         >
           {name}
-        </a>
+        </Link>
       );
     } else {
       return <span className="uitest-display-name-cell">{name}</span>;

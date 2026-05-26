@@ -8,7 +8,10 @@ vi.mock('@sentry/browser', () => ({
   init: vi.fn(),
   captureException: vi.fn(),
   setUser: vi.fn(),
+  setTag: vi.fn(),
+  setContext: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
+  startSpan: vi.fn().mockImplementation((_options, callback) => callback()),
   browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
   consoleLoggingIntegration: vi.fn().mockReturnValue({name: 'ConsoleLogging'}),
   logger: {
@@ -41,8 +44,11 @@ import {
   metrics,
   observabilityPlugin,
   recordError,
-  shutdown,
   setConsented,
+  setContext,
+  setTag,
+  shutdown,
+  startSpan,
 } from '../index';
 import type {ObservabilityConfig} from '../types';
 import {isSampled} from '../sampling';
@@ -285,6 +291,73 @@ describe('observability plugin', () => {
     expect(pendingOperations).toHaveLength(1000);
   });
 
+  it('forwards setTag through the module-level API after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    setTag('appType', 'applab');
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('appType', 'applab');
+  });
+
+  it('forwards setContext through the module-level API after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    setContext('channel', {id: 'abc123'});
+
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'abc123'});
+  });
+
+  it('replays pre-init setTag and setContext calls once the provider is ready', () => {
+    const adapter = new SentryAdapter();
+
+    adapter.setTag('appType', 'maze');
+    adapter.setContext('channel', {id: 'pre-init'});
+    expect(Sentry.setTag).not.toHaveBeenCalled();
+    expect(Sentry.setContext).not.toHaveBeenCalled();
+
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+    });
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('appType', 'maze');
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'pre-init'});
+  });
+
+  it('queues setTag and setContext through the deferred adapter until the real client is installed', () => {
+    const deferredClient = new DeferredAdapter();
+    _initializeSingleton(deferredClient);
+
+    setTag('locale', 'en');
+    setContext('channel', {id: 'queued'});
+
+    expect(Sentry.setTag).not.toHaveBeenCalled();
+    expect(Sentry.setContext).not.toHaveBeenCalled();
+
+    const client = new SentryAdapter();
+    client.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+    });
+    deferredClient.flushTo(client);
+    _initializeSingleton(client);
+
+    expect(Sentry.setTag).toHaveBeenCalledWith('locale', 'en');
+    expect(Sentry.setContext).toHaveBeenCalledWith('channel', {id: 'queued'});
+  });
+
   it('tracks consent through the module-level API', async () => {
     observabilityPlugin.onCoreReady({
       observability: {
@@ -373,6 +446,52 @@ describe('observability plugin', () => {
 
     getItem.mockRestore();
     warnSpy.mockRestore();
+  });
+
+  it('startSpan runs callback and returns its value before initialization', () => {
+    const result = startSpan({name: 'test.span'}, () => 42);
+    expect(result).toBe(42);
+    expect(Sentry.startSpan).not.toHaveBeenCalled();
+  });
+
+  it('startSpan delegates to Sentry after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    const result = startSpan(
+      {name: 'test.operation', op: 'test.op', attributes: {key: 'value'}},
+      () => 'done',
+    );
+
+    expect(result).toBe('done');
+    expect(Sentry.startSpan).toHaveBeenCalledWith(
+      expect.objectContaining({
+        name: 'test.operation',
+        op: 'test.op',
+        attributes: {key: 'value'},
+      }),
+      expect.any(Function),
+    );
+  });
+
+  it('startSpan runs callback directly on DeferredAdapter before flush', () => {
+    const deferredClient = new DeferredAdapter();
+    _initializeSingleton(deferredClient);
+
+    let ran = false;
+    const result = startSpan({name: 'test.span'}, () => {
+      ran = true;
+      return 'value';
+    });
+
+    expect(ran).toBe(true);
+    expect(result).toBe('value');
+    expect(Sentry.startSpan).not.toHaveBeenCalled();
   });
 
   it('resets a corrupted observability session id before sampling', () => {
