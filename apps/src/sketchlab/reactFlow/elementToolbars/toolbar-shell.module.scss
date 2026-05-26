@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
-  padding: 8px 8px 12px;
+  //gap: 6px;
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
@@ -15,10 +14,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  // Pull the close button into the toolbar's padding so it sits in the
-  // corner rather than inside its own row of whitespace.
-  margin: -4px -4px -4px 0;
+  padding: 6px 8px 6px 10px;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-quaternary);
 }
 
 .headerTitle {
@@ -38,12 +36,12 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding: 6px 8px 8px 8px;
   gap: 12px;
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-gutter: stable;
-  padding: 0 2px;
 
   // Every section/standalone row after the first gets a divider above it.
   & > * + * {
