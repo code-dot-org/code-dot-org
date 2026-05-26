@@ -10,6 +10,7 @@ import type {
   ObservabilityLogger,
   ObservabilityMetrics,
   SamplingConfig,
+  SpanOptions,
   TagValue,
 } from './types';
 
@@ -21,6 +22,7 @@ export type {
   ObservabilityMetrics,
   SamplingConfig,
   TagValue,
+  SpanOptions,
 };
 export {createObservabilityClient};
 
@@ -56,6 +58,16 @@ export function recordError(
   context?: Record<string, unknown>,
 ): void {
   observabilityClient.recordError(error, context);
+}
+
+/**
+ * Run callback inside a provider span. No-ops when observability is not
+ * configured; otherwise delegates to the active provider implementation.
+ * @param options Span name, operation, and attributes.
+ * @param callback Work to perform inside the span.
+ */
+export function startSpan<T>(options: SpanOptions, callback: () => T): T {
+  return observabilityClient.startSpan(options, callback);
 }
 
 /**
