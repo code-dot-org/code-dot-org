@@ -48,36 +48,30 @@ export function getEventClientPosition(
   return touch ? {x: touch.clientX, y: touch.clientY} : null;
 }
 
-// Returns the nearest handle matching the criteria within the radius, or null if
-// none found.
-export function findNearestHandleInRadius(
+// Picks the nearest handle to screenPoint among the given candidates,
+// keeping only those of the requested type and within radiusPx. resolveNodeId
+// returns the node id to record for a candidate, or null to skip it — this
+// is where callers express their inclusion rules (e.g. exclude a specific
+// node, skip lineAnchor handles).
+export function findNearestHandleAmong(
+  handles: NodeListOf<HTMLElement>,
   screenPoint: XYPosition,
-  excludeNodeId: string,
   requiredType: 'source' | 'target',
-  radiusPx: number
+  radiusPx: number,
+  resolveNodeId: (handle: HTMLElement) => string | null
 ): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
   let closest: SnapTarget | null = null;
   let closestDistance = radiusPx;
 
   handles.forEach(handle => {
-    const nodeId = handle.dataset.nodeid;
-    if (!nodeId || nodeId === excludeNodeId) {
-      return;
-    }
-    // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
-    if (
-      handle
-        .closest('.react-flow__node')
-        ?.classList.contains('react-flow__node-lineAnchor')
-    ) {
-      return;
-    }
     const handleType = getHandleType(handle);
     if (handleType !== requiredType) {
       return;
     }
-
+    const nodeId = resolveNodeId(handle);
+    if (nodeId === null) {
+      return;
+    }
     const rect = handle.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -97,6 +91,38 @@ export function findNearestHandleInRadius(
   });
 
   return closest;
+}
+
+// Returns the nearest handle matching the criteria within the radius, or null if
+// none found.
+export function findNearestHandleInRadius(
+  screenPoint: XYPosition,
+  excludeNodeId: string,
+  requiredType: 'source' | 'target',
+  radiusPx: number
+): SnapTarget | null {
+  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
+  return findNearestHandleAmong(
+    handles,
+    screenPoint,
+    requiredType,
+    radiusPx,
+    handle => {
+      const nodeId = handle.dataset.nodeid;
+      if (!nodeId || nodeId === excludeNodeId) {
+        return null;
+      }
+      // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
+      if (
+        handle
+          .closest('.react-flow__node')
+          ?.classList.contains('react-flow__node-lineAnchor')
+      ) {
+        return null;
+      }
+      return nodeId;
+    }
+  );
 }
 
 // Handles snapping an edge endpoint onto a real node handle.
