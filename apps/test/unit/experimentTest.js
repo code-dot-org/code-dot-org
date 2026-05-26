@@ -282,4 +282,24 @@ describe('experiments', function () {
       assert.notInclude(keys, 'cookie-exp');
     });
   });
+
+  it('repeated isEnabled calls with enableExperiments query param do not duplicate entries', function () {
+    mockedQueryString = '?enableExperiments=awesome-feature';
+    experiments.isEnabled('awesome-feature');
+    experiments.isEnabled('awesome-feature');
+    experiments.isEnabled('awesome-feature');
+    const stored = JSON.parse(localStorage.getItem('experimentsList'));
+    const matches = stored.filter(e => e.key === 'awesome-feature');
+    assert.lengthOf(matches, 1);
+  });
+
+  it('repeated isEnabled calls with tempEnableExperiments query param do not duplicate entries', function () {
+    mockedQueryString = '?tempEnableExperiments=awesome-feature';
+    experiments.isEnabled('awesome-feature');
+    experiments.isEnabled('awesome-feature');
+    experiments.isEnabled('awesome-feature');
+    const stored = JSON.parse(localStorage.getItem('experimentsList'));
+    const matches = stored.filter(e => e.key === 'awesome-feature');
+    assert.lengthOf(matches, 1);
+  });
 });
