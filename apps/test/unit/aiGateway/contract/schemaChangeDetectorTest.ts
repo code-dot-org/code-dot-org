@@ -4,7 +4,7 @@ import {
   type JsonSchema,
   type ChangeResult,
   type ChangeKind,
-} from '@cdo/apps/aiGateway/schemaChangeDetector';
+} from '@cdo/apps/aiGateway/contract/schemaChangeDetector';
 
 // ---------------------------------------------------------------------------
 // Helpers

@@ -18,11 +18,11 @@ import path from 'path';
 import {
   detectChanges,
   type JsonSchema,
-} from '@cdo/apps/aiGateway/schemaChangeDetector';
+} from '@cdo/apps/aiGateway/contract/schemaChangeDetector';
 
 const SNAPSHOT_DIR = path.resolve(
   __dirname,
-  '../../../src/aiGateway/schemaSnapshots'
+  '../../../../src/aiGateway/contract/schemaSnapshots'
 );
 
 const BASE_REF = 'origin/staging';

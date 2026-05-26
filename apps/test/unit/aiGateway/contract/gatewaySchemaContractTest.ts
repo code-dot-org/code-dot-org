@@ -18,15 +18,15 @@ import fs from 'fs';
 import path from 'path';
 import {zodToJsonSchema} from 'zod-to-json-schema';
 
-import {ALL_GATEWAY_SCHEMA_GROUPS} from '@cdo/apps/aiGateway/gatewaySchemas';
+import {ALL_GATEWAY_SCHEMA_GROUPS} from '@cdo/apps/aiGateway/contract/gatewaySchemas';
 import {
   detectChanges,
   type JsonSchema,
-} from '@cdo/apps/aiGateway/schemaChangeDetector';
+} from '@cdo/apps/aiGateway/contract/schemaChangeDetector';
 
 const SNAPSHOT_DIR = path.resolve(
   __dirname,
-  '../../../src/aiGateway/schemaSnapshots'
+  '../../../../src/aiGateway/contract/schemaSnapshots'
 );
 
 function snapshotPath(groupName: string, version: number | string): string {

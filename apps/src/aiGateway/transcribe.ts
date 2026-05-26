@@ -8,7 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   GatewayTranscribeResponseV1Schema,
   type GatewayTranscribeResponseV1,
-} from './gatewaySchemas';
+} from './contract/gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
