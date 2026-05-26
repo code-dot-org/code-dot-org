@@ -26,7 +26,7 @@ export const FileBrowserHeaderPopUpButton = ({
 }: FileBrowserHeaderPopUpButtonProps) => {
   const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
-    config: {validMimeTypes, supportedFileTypes},
+    config: {validMimeTypes, supportedFileTypes, hideNewFolderButton},
     levelProperties,
   } = useCodebridgeContext();
   const {appName} = levelProperties;
@@ -61,7 +61,7 @@ export const FileBrowserHeaderPopUpButton = ({
         disabled={disabled}
         ariaLabel={codebridgeI18n.manageFiles()}
       >
-        {!isWidget2SourcesMode && (
+        {!isWidget2SourcesMode && !hideNewFolderButton && (
           <PopUpButtonOption
             iconName="plus"
             labelText={codebridgeI18n.newFolder()}

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-04 16:35:58 UTC",
+    "serialized_at": "2026-05-19 11:21:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7194,10 +7194,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },

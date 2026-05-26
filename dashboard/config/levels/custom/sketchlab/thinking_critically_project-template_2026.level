@@ -49,8 +49,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 592,
-              "height": 75
+              "width": 591,
+              "height": 74
             },
             "dragging": false
           },
@@ -69,7 +69,7 @@
             },
             "measured": {
               "width": 138,
-              "height": 47
+              "height": 46
             },
             "dragging": false
           },
@@ -139,8 +139,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 592,
-              "height": 75
+              "width": 591,
+              "height": 74
             },
             "dragging": false
           },
@@ -159,7 +159,7 @@
             },
             "measured": {
               "width": 166,
-              "height": 47
+              "height": 46
             },
             "dragging": false
           },
@@ -252,8 +252,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 207,
-              "height": 47
+              "width": 206,
+              "height": 46
             },
             "dragging": false
           },
@@ -272,8 +272,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 592,
-              "height": 75
+              "width": 591,
+              "height": 74
             },
             "dragging": false
           },
@@ -339,8 +339,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 58,
-              "height": 47
+              "width": 57,
+              "height": 46
             },
             "dragging": false
           },
@@ -358,8 +358,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 192,
-              "height": 47
+              "width": 191,
+              "height": 46
             },
             "dragging": false
           },
@@ -378,8 +378,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 592,
-              "height": 75
+              "width": 591,
+              "height": 74
             },
             "dragging": false
           },
@@ -387,18 +387,19 @@
             "id": "QPDtJM4vUN9TwIFhHt2cI",
             "type": "text",
             "position": {
-              "x": -158.5871229330058,
-              "y": -905.2771542708389
+              "x": -164.3897769587727,
+              "y": -913.6271515947884
             },
             "data": {
               "text": "Templates & Shapes Library",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 289,
-              "height": 47
+              "width": 398,
+              "height": 56
             },
             "dragging": false
           },
@@ -406,19 +407,20 @@
             "id": "mXyRPZt-4quQS5v_0X5Dp",
             "type": "text",
             "position": {
-              "x": -154.99623875066504,
-              "y": -830.1282219390202
+              "x": -119.23064775572908,
+              "y": -841.0426933645489
             },
             "data": {
               "text": "- Use any of these samples in your own project! \n- Just select the object completely, and move it over. \n- Copy and paste if you want more than one.",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "measured": {
-              "width": 546,
-              "height": 104
+              "width": 545,
+              "height": 103
             },
             "dragging": false
           },
@@ -426,47 +428,55 @@
             "id": "00rGEC9VcEv7LKwSBC1le",
             "type": "text",
             "position": {
-              "x": -1685.0701134394817,
-              "y": -894.1037852529648
+              "x": -1559.6916725547646,
+              "y": -912.9105513856725
             },
             "data": {
               "text": "Your Guide to using AI ",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": 72,
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 243,
-              "height": 47
+              "width": 769,
+              "height": 111
             },
-            "dragging": false
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "GaVSWIG7E3xabfcqcc0Ir",
             "type": "text",
             "position": {
-              "x": -1994.6142444370553,
-              "y": -851.4407106531854
+              "x": -1565.636017016236,
+              "y": -792.7913436229953
             },
             "data": {
               "text": "- Design a guide for an audience related to a theme you're interested in. \n- Add examples of AI use, AI tips, and guidance based on evidence.\n- Use the roadmap above - move your marker as you go\n- You can use templates and shapes in the library to the right or make your own.\n- Be creative!\n",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "measured": {
-              "width": 798,
-              "height": 161
+              "width": 797,
+              "height": 160
             },
-            "dragging": false
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "P8q9DfRAM3z6v7NjbG5XS",
             "type": "shape",
             "position": {
-              "x": -1966.948906081934,
-              "y": -596.5050371699316
+              "x": -1964.4552631732797,
+              "y": -531.6703215449211
             },
             "style": {
               "width": 496.5466385097319,
@@ -490,8 +500,8 @@
             "id": "WA5A3E43HadJjvWOhMznK",
             "type": "shape",
             "position": {
-              "x": -1438.0381368233627,
-              "y": -594.9707758038955
+              "x": -1435.5444939147085,
+              "y": -530.1360601788851
             },
             "style": {
               "width": 496.5466385097319,
@@ -516,7 +526,7 @@
             "type": "shape",
             "position": {
               "x": -892.3222818078414,
-              "y": -595.8458198082669
+              "y": -533.5047470919108
             },
             "style": {
               "width": 496.5466385097319,
@@ -540,18 +550,19 @@
             "id": "T1M8kuJGKpYqXsePvYuBH",
             "type": "text",
             "position": {
-              "x": -1965.6037115001975,
-              "y": -654.5746360926928
+              "x": -1972.3462990889268,
+              "y": -585.5307785728862
             },
             "data": {
               "text": "Your theme:",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 137,
-              "height": 47
+              "width": 185,
+              "height": 56
             },
             "dragging": false
           },
@@ -559,18 +570,19 @@
             "id": "FlOI5b3VFkNV3hFtWLHyq",
             "type": "text",
             "position": {
-              "x": -1429.5352482493986,
-              "y": -655.2591357277495
+              "x": -1442.0830683632282,
+              "y": -586.9934221304554
             },
             "data": {
               "text": "Your Audience:",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 167,
-              "height": 47
+              "width": 227,
+              "height": 56
             },
             "dragging": false
           },
@@ -578,18 +590,19 @@
             "id": "gq-5khshImXGJOKQwhBg8",
             "type": "text",
             "position": {
-              "x": -877.7065404056334,
-              "y": -656.4102895077839
+              "x": -892.7878062133966,
+              "y": -589.382441473281
             },
             "data": {
               "text": "The Purpose:",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": "extra-large",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 146,
-              "height": 47
+              "width": 197,
+              "height": 56
             },
             "dragging": false
           },
@@ -597,8 +610,8 @@
             "id": "4G7sfxvy5LcjRFYHtZKbZ",
             "type": "text",
             "position": {
-              "x": -1859.71382448971,
-              "y": -312.70598389777183
+              "x": -1869.688396124327,
+              "y": -207.97298173429337
             },
             "data": {
               "text": "Add examples of AI Generated content below",
@@ -607,8 +620,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 467,
-              "height": 47
+              "width": 477,
+              "height": 46
             },
             "dragging": false
           },
@@ -616,8 +629,8 @@
             "id": "cvtvTCM-vKGF0reTLiXad",
             "type": "text",
             "position": {
-              "x": -1060.2198276593965,
-              "y": -320.29985962264664
+              "x": -1017.8278982122744,
+              "y": -215.5668574591682
             },
             "data": {
               "text": "Add AI Usage Tips and Guidance below",
@@ -626,8 +639,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 405,
-              "height": 47
+              "width": 412,
+              "height": 46
             },
             "dragging": false
           },
@@ -635,8 +648,8 @@
             "id": "GvfDnExtk9sSkqZ5dtx0w",
             "type": "shape",
             "position": {
-              "x": -1981.2690513509453,
-              "y": -1350.973908277726
+              "x": -1931.1176749970584,
+              "y": -1371.8703150918454
             },
             "style": {
               "width": 2784.7246102845124,
@@ -647,7 +660,8 @@
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)",
-              "fontColor": "var(--sketchlab-stroke-default)"
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "locked": true
             },
             "measured": {
               "width": 2785,
@@ -660,170 +674,209 @@
             "id": "nrGYhGRs2p9EefPPL75LS",
             "type": "text",
             "position": {
-              "x": -849.9960647531777,
-              "y": -1448.5628005614826
+              "x": -842.4726862026073,
+              "y": -1550.1952790147152
             },
             "data": {
               "text": "Project Roadmap",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
+              "fontSize": 90,
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 188,
-              "height": 47
-            }
+              "width": 815,
+              "height": 197
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false,
+            "width": 815,
+            "height": 197,
+            "resizing": false
           },
           {
             "id": "b7h5Anp-2wi2nZBWKkwhZ",
             "type": "text",
             "position": {
-              "x": -1893.2210233650324,
-              "y": -1285.0719849492173
+              "x": -1909.938148816328,
+              "y": -1224.4724051882706
             },
             "data": {
               "text": "Choose a \nmarker to \nmove along \nyour roadmap\nand track\nyour progress",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 154,
-              "height": 190
-            }
+              "height": 189
+            },
+            "dragging": false
           },
           {
             "id": "vqtvvWcFeHTF0yv_eCjPH",
             "type": "text",
             "position": {
-              "x": -1287.1112286259672,
-              "y": -1126.9991056733256
+              "x": -1259.5255072738755,
+              "y": -1134.522484223896
             },
             "data": {
               "text": "Project \nLaunch",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 94,
-              "height": 75
-            }
+              "width": 96,
+              "height": 74
+            },
+            "dragging": false
           },
           {
             "id": "4ZiYCmZSkcA-NddcnSBRK",
             "type": "text",
             "position": {
-              "x": -1094.3454088174403,
-              "y": -1132.8123997493353
+              "x": -1058.7900530992786,
+              "y": -1147.9081401317583
             },
             "data": {
               "text": "Define your theme, \naudience, & purpose",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 218,
-              "height": 75
-            }
+              "width": 222,
+              "height": 74
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "Grrrc0ul_ruhTQe5cvjaL",
             "type": "text",
             "position": {
-              "x": -757.603317967717,
-              "y": -1132.3094201671609
+              "x": -745.5228464453015,
+              "y": -1158.157883998918
             },
             "data": {
               "text": "Add examples of \ngood & poor AI outputs",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 249,
-              "height": 75
-            }
+              "width": 252,
+              "height": 74
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "90wGVEBt_sdSwsNFTNpMU",
             "type": "text",
             "position": {
-              "x": -391.2889614929936,
-              "y": -1132.3094201671609
+              "x": -389.1993208115817,
+              "y": -1169.922952432576
             },
             "data": {
               "text": "Add an AI \ngenerated image",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 184,
-              "height": 75
-            }
+              "width": 189,
+              "height": 74
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "AFjZtOjW7LlUULGJQGYxn",
             "type": "text",
             "position": {
-              "x": -101.24999564327027,
-              "y": -1132.3094201671609
+              "x": -78.26394814773877,
+              "y": -1186.6400778838718
             },
             "data": {
               "text": "Write a tip for \nwriting good prompts",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 232,
-              "height": 75
-            }
+              "width": 238,
+              "height": 74
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "rLdz_nT-R9urroyfqY86d",
             "type": "text",
             "position": {
-              "x": 276.679834691676,
-              "y": -1130.8260566536294
+              "x": 287.1280380987357,
+              "y": -1189.335995733164
             },
             "data": {
               "text": "Write a tip for \nsafe AI use",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 160,
-              "height": 75
-            }
+              "width": 164,
+              "height": 74
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "JkEEoeXeGnrX0ZHotnudM",
             "type": "text",
             "position": {
-              "x": 578.3318423061762,
-              "y": -1132.3094201671609
+              "x": 561.6147168548806,
+              "y": -1172.0125931139878
             },
             "data": {
               "text": "Write your \nfinal statement",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 166,
-              "height": 75
-            }
+              "width": 171,
+              "height": 74
+            },
+            "dragging": false
           },
           {
             "id": "GCx9PSHKytlqgHQPW_XWI",
             "type": "image",
             "position": {
-              "x": -1452.7907137184188,
-              "y": -1257.2273278868324
+              "x": -1433.9839475857111,
+              "y": -1261.4066092496564
             },
             "style": {
               "width": 140.06140888582468,
@@ -832,19 +885,21 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/852eeb360723ee9499dd50ca61afc7558f8c77e7.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 140,
               "height": 140
-            }
+            },
+            "dragging": false
           },
           {
             "id": "fFWKxMhrjXg0pGEsM4mds",
             "type": "image",
             "position": {
-              "x": -1277.8326814338686,
-              "y": -1217.4784444891843
+              "x": -1265.2937171829178,
+              "y": -1248.5096158899453
             },
             "style": {
               "width": 78.19289799101739,
@@ -853,40 +908,24 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 78,
-              "height": 82
-            }
-          },
-          {
-            "id": "LUJSLUPEgGw8FEUrQbiSL",
-            "type": "image",
-            "position": {
-              "x": -1028.5571019695133,
-              "y": -1300.0608718201006
+              "width": 115,
+              "height": 103
             },
-            "style": {
-              "width": 125.51560410373733,
-              "height": 121.24454019408603
-            },
-            "data": {
-              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 126,
-              "height": 121
-            }
+            "dragging": false,
+            "width": 115,
+            "height": 103,
+            "resizing": false
           },
           {
             "id": "6XjIpZB_tLwMZ6gemXkYe",
             "type": "image",
             "position": {
-              "x": -669.4799220358409,
-              "y": -1250.8149081863885
+              "x": -679.5110934366015,
+              "y": -1293.447386639621
             },
             "style": {
               "width": 110.17898938624785,
@@ -895,19 +934,21 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 110,
               "height": 110
-            }
+            },
+            "dragging": false
           },
           {
             "id": "jVui8CZZeV1eVWyTPM9w8",
             "type": "image",
             "position": {
-              "x": -355.9904583953644,
-              "y": -1288.5349668184076
+              "x": -353.4826655451742,
+              "y": -1308.5973096199286
             },
             "style": {
               "width": 110.17898938624785,
@@ -916,19 +957,21 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 110,
               "height": 110
-            }
+            },
+            "dragging": false
           },
           {
             "id": "qtmfpbQjhfdIyJo8GEkDh",
             "type": "image",
             "position": {
-              "x": -26.388318461394192,
-              "y": -1277.1488730904043
+              "x": -22.20903709857028,
+              "y": -1333.5691714885272
             },
             "style": {
               "width": 110.17898938624785,
@@ -937,19 +980,21 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 110,
               "height": 110
-            }
+            },
+            "dragging": false
           },
           {
             "id": "jyWfcgqQe9LsJBSM4dRBx",
             "type": "image",
             "position": {
-              "x": 313.40260051332893,
-              "y": -1258.8114310351962
+              "x": 308.9748451421591,
+              "y": -1355.8269497988852
             },
             "style": {
               "width": 110.17898938624785,
@@ -958,12 +1003,14 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 110,
               "height": 110
-            }
+            },
+            "dragging": false
           },
           {
             "id": "UU6PsWgUXJ7AtzYXq6x64",
@@ -979,7 +1026,8 @@
             "data": {
               "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/83ec065519afe8cab4be1f973a8061d135388e2e.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 237,
@@ -990,134 +1038,157 @@
             "id": "MZVLqLq22XIw9NO3im3gf",
             "type": "text",
             "position": {
-              "x": -1288.9669048080948,
-              "y": -1043.5623232729222
+              "x": -1268.554297496673,
+              "y": -1062.8961664141991
             },
             "data": {
               "text": "Lesson 2",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 105,
-              "height": 47
-            }
+              "width": 104,
+              "height": 46
+            },
+            "dragging": false
           },
           {
             "id": "w9y3UTcsdc9wr7AArt8Th",
             "type": "text",
             "position": {
-              "x": -1048.4033644262202,
-              "y": -1043.5623232729222
+              "x": -1029.3019347657603,
+              "y": -1077.0528533790443
             },
             "data": {
               "text": "Lesson 2 & 3",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 142,
-              "height": 47
-            }
+              "width": 141,
+              "height": 46
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "0f8Jm3FAJnesBdW8dRm13",
             "type": "text",
             "position": {
-              "x": -658.9017265938357,
-              "y": -1043.5623232729222
+              "x": -683.6137250218966,
+              "y": -1086.3537083359251
             },
             "data": {
               "text": "Lesson 3",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 104,
-              "height": 47
-            }
+              "height": 46
+            },
+            "dragging": false
           },
           {
             "id": "9fM4tb9UA06nMkIBh5sUn",
             "type": "text",
             "position": {
-              "x": -334.3779516455388,
-              "y": -1043.5623232729222
+              "x": -351.0950770968344,
+              "y": -1087.4447775825731
             },
             "data": {
               "text": "Lesson 4",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 106,
-              "height": 47
-            }
+              "width": 105,
+              "height": 46
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "_Q1-uaNGEciAIjM_e8WJ5",
             "type": "text",
             "position": {
-              "x": -17.03875566623651,
-              "y": -1043.5623232729222
+              "x": -19.12839634764847,
+              "y": -1106.2515437152808
             },
             "data": {
               "text": "Lesson 6",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 105,
-              "height": 47
-            }
+              "width": 104,
+              "height": 46
+            },
+            "dragging": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "_w3C5yomub5nG6bItSfGn",
             "type": "text",
             "position": {
-              "x": 318.63447233720876,
-              "y": -1043.5623232729222
+              "x": 314.45519097438483,
+              "y": -1106.2515437152806
             },
             "data": {
               "text": "Lesson 7",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 104,
-              "height": 47
-            }
+              "width": 103,
+              "height": 46
+            },
+            "dragging": false
           },
           {
             "id": "3mS2OlkwD4BhXF3O1UljR",
             "type": "text",
             "position": {
-              "x": 624.7001056136712,
-              "y": -1043.5623232729222
+              "x": 591.2658547110799,
+              "y": -1091.624058945397
             },
             "data": {
               "text": "Lesson 9",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
-              "width": 105,
-              "height": 47
-            }
+              "width": 104,
+              "height": 46
+            },
+            "dragging": false
           },
           {
             "id": "NnVHBh246KwjWxZbbJYUm",
             "type": "image",
             "position": {
-              "x": -1699.9220589655943,
-              "y": -1288.1226896598134
+              "x": -1735.4459505495975,
+              "y": -1237.9713133059265
             },
             "style": {
               "width": 60.59197917702926,
@@ -1131,14 +1202,15 @@
             "measured": {
               "width": 61,
               "height": 87
-            }
+            },
+            "dragging": false
           },
           {
             "id": "jTD441UHaZeyQoDP9A9I7",
             "type": "image",
             "position": {
-              "x": -1696.7492867057467,
-              "y": -1178.2621437332764
+              "x": -1736.452459652574,
+              "y": -1128.1107673793895
             },
             "style": {
               "width": 55.25287466989435,
@@ -1152,14 +1224,15 @@
             "measured": {
               "width": 55,
               "height": 79
-            }
+            },
+            "dragging": false
           },
           {
             "id": "rASh3h5WAehiSDed6WPUl",
             "type": "image",
             "position": {
-              "x": -1631.0529120216415,
-              "y": -1287.28868523989
+              "x": -1660.3078815614087,
+              "y": -1239.226949567415
             },
             "style": {
               "width": 60.48845752048699,
@@ -1173,14 +1246,15 @@
             "measured": {
               "width": 60,
               "height": 87
-            }
+            },
+            "dragging": false
           },
           {
             "id": "VT-1pVrc30KNfqcr6QiIO",
             "type": "image",
             "position": {
-              "x": -1565.0369464683465,
-              "y": -1183.562677584509
+              "x": -1583.8437126010542,
+              "y": -1129.232019867798
             },
             "style": {
               "width": 61.56610870978224,
@@ -1194,14 +1268,15 @@
             "measured": {
               "width": 62,
               "height": 88
-            }
+            },
+            "dragging": false
           },
           {
             "id": "A6ejdY9CbKwny4NzB36c5",
             "type": "image",
             "position": {
-              "x": -1563.0339490117653,
-              "y": -1287.2886852398897
+              "x": -1579.7510744630608,
+              "y": -1236.594203086059
             },
             "style": {
               "width": 60.48845752048699,
@@ -1215,14 +1290,15 @@
             "measured": {
               "width": 60,
               "height": 87
-            }
+            },
+            "dragging": false
           },
           {
             "id": "rVdY4qL3zP9tHY6Qxm3Cm",
             "type": "image",
             "position": {
-              "x": -1633.4236987720058,
-              "y": -1181.556180594335
+              "x": -1664.768308993185,
+              "y": -1129.3151635590361
             },
             "style": {
               "width": 59.84596832122943,
@@ -1236,14 +1312,15 @@
             "measured": {
               "width": 60,
               "height": 86
-            }
+            },
+            "dragging": false
           },
           {
             "id": "e25b4421-7112-4f0d-9116-b25e04418912",
             "type": "lineAnchor",
             "position": {
-              "x": -1190.3661015255063,
-              "y": -197.77065626096783
+              "x": -1206.2653140410612,
+              "y": -20.337914457660737
             },
             "style": {
               "width": 10,
@@ -1728,8 +1805,8 @@
               "backgroundColor": "var(--sketchlab-bg-gray)"
             },
             "position": {
-              "x": -145.55517230793203,
-              "y": 122.79970538224484
+              "x": -136.62459377310188,
+              "y": 198.70962292830114
             },
             "width": 166,
             "height": 182,
@@ -1739,19 +1816,64 @@
             },
             "dragging": false,
             "resizing": false
+          },
+          {
+            "id": "1d5702a0-48a5-48df-8a97-08c72e2e5770",
+            "type": "image",
+            "position": {
+              "x": -996.5293395842052,
+              "y": -1264.826491003751
+            },
+            "style": {
+              "width": 78.19289799101739,
+              "height": 81.99508262914969
+            },
+            "data": {
+              "src": "/level_starter_assets/thinking_critically_project-template_2026/uuid/38c4fd1a8db356eb7bb659adccce649f019ed089.png",
+              "altText": "",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 115,
+              "height": 103
+            },
+            "dragging": false,
+            "width": 115,
+            "height": 103,
+            "resizing": false
+          },
+          {
+            "id": "91496a5e-7199-4a7f-a93d-a76ffa0687e2",
+            "type": "lineAnchor",
+            "position": {
+              "x": -1215.6659426391843,
+              "y": -202.10832244331536
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
           }
         ],
         "edges": [
           {
             "id": "a3613628-beb2-4f41-a3b1-cfab5da23b4d",
-            "source": "WA5A3E43HadJjvWOhMznK",
+            "source": "91496a5e-7199-4a7f-a93d-a76ffa0687e2",
             "target": "e25b4421-7112-4f0d-9116-b25e04418912",
             "type": "straight",
             "style": {
               "strokeWidth": 5,
               "stroke": "var(--sketchlab-stroke-default)"
             },
-            "sourceHandle": "bottom-source"
+            "sourceHandle": "line-anchor-source"
           },
           {
             "id": "a4d3f70c-ad5f-45a6-b850-b22cbbb12362",
@@ -1770,7 +1892,10 @@
               "strokeWidth": 5
             },
             "targetHandle": "left-target",
-            "sourceHandle": "right-source"
+            "sourceHandle": "right-source",
+            "data": {
+              "locked": true
+            }
           },
           {
             "id": "7d7fa701-a7ef-415f-8ebe-624528700e49",
@@ -1784,9 +1909,9 @@
           }
         ],
         "viewport": {
-          "x": 981.4713042116098,
-          "y": 700.1961035415184,
-          "zoom": 0.46929982046678637
+          "x": 856.4145479274825,
+          "y": 587.6413593551114,
+          "zoom": 0.3798314828570336
         }
       }
     },
@@ -1796,6 +1921,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:11:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:11:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-20 22:04:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Sketchlab>

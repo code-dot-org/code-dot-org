@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Read 3: Questions",
-    "long_instructions": "![](https://images.code.org/be673f70de57f69a31b69f64a938418f-image-1721231639002.40.55 AM.png)\r\n\r\n####What questions can I answer using this data?\r\n- A question I could answer is...\r\n- This data could show...\r\n",
+    "long_instructions": "![](https://images.code.org/be673f70de57f69a31b69f64a938418f-image-1721231639002.40.55 AM.png)\r\n\r\nWhat questions can I answer using this data?\r\n- A question I could answer is...\r\n- This data could show...\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

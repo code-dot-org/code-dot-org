@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#### **Feel**\r\n#### How does Jordan feel?\r\n\r\n",
+    "long_instructions": "**Feel**\r\nHow does Jordan feel?\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

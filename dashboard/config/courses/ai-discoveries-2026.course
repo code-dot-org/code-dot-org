@@ -9,8 +9,7 @@
     "the-design-process-2026",
     "data-and-society-2026",
     "creating-apps-with-devices-circuit-2026",
-    "creating-apps-with-devices-microbit-2026",
-    "problem-solving-and-computing-2026"
+    "creating-apps-with-devices-microbit-2026"
   ],
   "unit_prefixes": [
     "1",
@@ -21,10 +20,10 @@
     "5",
     "6",
     "7a",
-    "7b",
-    "10"
+    "7b"
   ],
   "original_script_names": [
+    "programming-with-music-lab-2026",
     "web-development-2026",
     "thinking-critically-about-ai-2026",
     "ai-and-machine-learning-2026",
@@ -32,10 +31,9 @@
     "the-design-process-2026",
     "data-and-society-2026",
     "creating-apps-with-devices-circuit-2026",
-    "creating-apps-with-devices-microbit-2026",
-    "problem-solving-and-computing-2026"
+    "creating-apps-with-devices-microbit-2026"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -55,6 +53,171 @@
       },
       "seeding_key": {
         "resource.key": "ai_discoveries_syllabus"
+      }
+    },
+    {
+      "name": "AID Learning Frameworks",
+      "url": "https://docs.google.com/document/d/12qDM5CdjD_2znf50m08QUYChXcjelJQgNYT6O3xTaZU/view",
+      "key": "aid_learning_frameworks",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aid_learning_frameworks"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/courses/ai-discoveries-2026/code",
+      "key": "all_code_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_5"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/ai-discoveries-2026/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-discoveries-2026/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-discoveries-2026/vocab",
+      "key": "all_vocabulary_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8"
+      }
+    },
+    {
+      "name": "Getting Started with AI",
+      "url": "https://docs.google.com/document/d/1cWOLJENdOAPvCwqtIyayuOYix25ChzWAG_1RuJNoswM/view",
+      "key": "getting_started_with_ai",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_with_ai"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/12geyLagw_-sLtIv0-BSk-jBqn99pM59H0QiPKHvR0Lk/view",
+      "key": "guide_to_assessment",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1gxBwZPBllHSAW0xl6zM7ujmXHrbAP4QqmIYvNad3tUg/view",
+      "key": "guide_to_curriculum_videos",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1pQOKzRAwQvpuVvRFJzE3-di8F6g-Os5HrL93vcNpIOQ/view",
+      "key": "guide_to_debugging",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_debugging"
+      }
+    },
+    {
+      "name": "Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/1Jh742mDNbI_M4ko943RJJW3Uw2g6F4WrBtqni9kacZk/view",
+      "key": "guide_to_differentiation",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_differentiation"
+      }
+    },
+    {
+      "name": "Guide to Implementation",
+      "url": "https://docs.google.com/document/d/1f54jTXopAJlZxSVMNqqe4ZGG1SwerGDKlqqgVeRKLPE/view",
+      "key": "guide_to_implementation_1",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_implementation_1"
+      }
+    },
+    {
+      "name": "Guide to Learning Tools",
+      "url": "https://docs.google.com/document/d/1mVRgf3RoCBcxgiCtL00BNmHg_GbMAv6bFCBp1Mxybu8/view",
+      "key": "guide_to_learning_tools",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_learning_tools"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels",
+      "url": "https://docs.google.com/document/d/1KRBr2BKi_xAmI4atw8xE8811toY3PWNPcvJZlVRGYW4/view",
+      "key": "guide_to_programming_levels",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels"
+      }
+    },
+    {
+      "name": "Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1CVpcMUmf8tYpFG493ELI1JVlMwLeCLKZILQNunbAazg/view",
+      "key": "guide_to_teaching_and_learning_strategies",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_teaching_and_learning_strategies"
+      }
+    },
+    {
+      "name": "Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NwC5kX7EaBsAEdFh_ZDbin_N4Jb2inUck9-Bz7KtMjk/view",
+      "key": "guide_to_using_resources",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources"
       }
     }
   ],

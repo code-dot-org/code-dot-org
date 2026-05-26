@@ -426,8 +426,8 @@ NetSimTable.prototype.deleteOnUnload = function (id) {
     function (err) {
       if (err) {
         // Nothing we can really do with the error, as we're in the process of
-        // navigating away. Throw so that high incidence rates will show up in
-        // new relic.
+        // navigating away. Throw so that the unhandled rejection is captured
+        // by browser observability.
         throw err;
       }
       this.removeRowsFromCache_([id]);

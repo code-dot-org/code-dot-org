@@ -1,0 +1,93 @@
+name 'self-paced-TCaAI-L2-BI2_may-2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Big Idea 2: AI Requires Human Judgment
+
+One of the most important understandings students develop throughout Thinking Critically About AI is that AI systems can produce outputs that sound convincing while still being incomplete, misleading, or incorrect.
+
+Students begin recognizing that using AI responsibly requires more than simply accepting the first output generated. Instead, students learn that humans must evaluate, verify, question, and make decisions about how AI outputs should be used.
+
+## What Students Learn
+
+<div style="display:flex; justify-content:space-between; gap:14px; margin:25px 0px;">
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Confidence ≠ Accuracy
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students explore how AI systems can sound extremely confident even when information is incorrect or incomplete.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Verification Matters
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students learn strategies for checking AI-generated information using evidence, trusted sources, and human judgment.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Humans Make Final Decisions
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students examine when AI can assist humans and when humans need to take a more active role in evaluating outputs.
+    </p>
+  </div>
+
+</div>
+
+A major instructional goal of this section of the unit is helping students move beyond treating AI outputs as automatically trustworthy simply because they sound polished or professional.
+
+## Across the Unit
+
+As students continue through the unit, they repeatedly encounter situations where AI-generated outputs require human oversight and evaluation.
+
+* **Lesson 5** helps students recognize that even well-designed prompts can still produce unexpected or unhelpful chatbot responses
+* **Lesson 6** asks students to evaluate AI-generated feedback and decide which suggestions are actually useful
+* **Lesson 7** introduces verification strategies and explores how AI systems can confidently generate false information
+
+Across these lessons, students begin developing habits of questioning, verification, and conditional thinking rather than assuming AI outputs are always reliable.
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+<div style="background-color:#B7E0E5; padding:20px; border-radius:10px; margin:25px 0px; overflow:auto;">
+
+<img 
+src="https://images.code.org/3ef8d604cb8467ddd429fe467c731911-image-1779225064477.jpeg" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<p style="font-size:16px; font-weight:bold; margin-top:0;">
+REAL-WORLD CONNECTION: When AI Invented Court Cases
+</p>
+
+<p style="font-size:16px;">
+In 2023, two lawyers used ChatGPT while preparing documents for a real court case. The AI generated legal cases and citations looked professional and convincing.
+</p>
+
+<p style="font-size:16px;">
+The problem? Several of the cases did not actually exist.
+</p>
+
+<p style="font-size:16px;">
+The lawyers submitted the fake citations to the court and were later fined $5,000. The judge explained that while AI can assist with professional work, humans are still responsible for checking whether information is accurate.
+</p>
+
+<p style="font-size:16px; margin-bottom:0;">
+This case became an early public example of how AI systems can sound extremely confident, even when the information they generate is completely wrong.
+</p>
+<br>
+
+<p style="font-size:14px; margin-bottom:0;">
+<b>Note</b>: This case study is included as part of the Warm-Up Activity in <a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7: Verifying AI Output</a>.
+</p>
+
+
+</div>
+MARKDOWN

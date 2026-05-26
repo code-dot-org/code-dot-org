@@ -108,6 +108,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
+  gem 'prosopite'
   gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
@@ -212,8 +213,6 @@ gem 'nokogiri', '~> 1.18.9'
 gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
-
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 

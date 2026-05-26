@@ -1,3 +1,5 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {
   installCustomBlocks,
   appendBlocksByCategory,
@@ -7,7 +9,6 @@ import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
 import {generateAuthoredHints} from './authoredHintUtils';
 import * as blocksCommon from './blocksCommon';
 import {addReadyListener} from './dom';
-import logToCloud from './logToCloud';
 import {getStore, registerReducers} from './redux';
 import * as commonReducers from './redux/commonReducers';
 import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
@@ -136,8 +137,6 @@ export default function (app, levels, options) {
         next();
       }
     }
-    logToCloud.reportPageSize();
-    logToCloud.loadFinished();
   }
   // exported apps can and need to be setup synchronously
   // since the student code executes immediately at page load
@@ -148,7 +147,10 @@ export default function (app, levels, options) {
     addReadyListener(onReady);
   }
 
-  // Report app type to newRelic
-  logToCloud.setCustomAttribute('appType', options && options.app);
-  logToCloud.setCustomAttribute('locale', options && options.locale);
+  if (options?.app) {
+    Observability.setTag('appType', options.app);
+  }
+  if (options?.locale) {
+    Observability.setTag('locale', options.locale);
+  }
 }

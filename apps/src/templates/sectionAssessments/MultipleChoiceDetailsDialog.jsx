@@ -1,13 +1,10 @@
+import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
@@ -17,6 +14,8 @@ import {
   QuestionType,
 } from './sectionAssessmentsRedux';
 
+import moduleStyles from './details-dialog.module.scss';
+
 class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -25,94 +24,69 @@ class MultipleChoiceDetailsDialog extends Component {
     studentAnswers: PropTypes.array,
   };
 
-  render() {
+  renderContent() {
     const {questionAndAnswers, studentAnswers} = this.props;
 
-    // Questions are in markdown format and should not display as plain text in the dialog.
+    if (questionAndAnswers.questionType !== QuestionType.MULTI) {
+      return null;
+    }
 
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.props.isDialogOpen}
-        style={styles.dialog}
-        handleClose={this.props.closeDialog}
-      >
-        {questionAndAnswers.questionType === QuestionType.MULTI && (
-          <div>
-            <h2>{i18n.questionDetails()}</h2>
-            <div style={styles.instructions}>
-              <SafeMarkdown markdown={questionAndAnswers.question} />
-            </div>
-            {questionAndAnswers.answers &&
-              questionAndAnswers.answers.length > 0 && (
-                <div>
-                  {questionAndAnswers.answers.map((answer, index) => {
-                    return (
-                      <div key={index} style={styles.answerBlock}>
-                        <div style={styles.iconSpace}>
-                          {answer.correct && (
-                            <FontAwesome
-                              icon="check-circle"
-                              style={styles.icon}
-                            />
-                          )}
-                          {!answer.correct && <span>&nbsp;</span>}
-                        </div>
-                        <div style={styles.answerLetter}>{answer.letter}</div>
-                        <div style={styles.answers} />
-                        <SafeMarkdown markdown={answer.text} />
-                        <div style={{clear: 'both'}} />
-                      </div>
-                    );
-                  })}
+      <div id="dsco-dialog-description">
+        <SafeMarkdown
+          className={moduleStyles.multipleChoiceDetailsQuestion}
+          markdown={questionAndAnswers.question}
+        />
+        {questionAndAnswers.answers &&
+          questionAndAnswers.answers.length > 0 && (
+            <div>
+              {questionAndAnswers.answers.map((answer, index) => (
+                <div key={index} className={moduleStyles.answerBlock}>
+                  <div className={moduleStyles.iconColumn}>
+                    {answer.correct && (
+                      <FontAwesomeV6Icon
+                        iconName="check-circle"
+                        className={moduleStyles.correctIcon}
+                      />
+                    )}
+                  </div>
+                  <div className={moduleStyles.answerLetter}>
+                    {answer.letter}
+                  </div>
+                  <div className={moduleStyles.answerBody}>
+                    <SafeMarkdown markdown={answer.text} />
+                  </div>
                 </div>
-              )}
-            {studentAnswers && studentAnswers.length > 0 && (
-              <MultipleChoiceByQuestionTable studentAnswers={studentAnswers} />
-            )}
-          </div>
+              ))}
+            </div>
+          )}
+        {studentAnswers && studentAnswers.length > 0 && (
+          <MultipleChoiceByQuestionTable studentAnswers={studentAnswers} />
         )}
-        <DialogFooter>
-          <Button
-            text={i18n.done()}
-            onClick={this.props.closeDialog}
-            color={Button.ButtonColor.gray}
-          />
-        </DialogFooter>
-      </BaseDialog>
+      </div>
+    );
+  }
+
+  render() {
+    const {isDialogOpen, closeDialog} = this.props;
+
+    if (!isDialogOpen) return null;
+
+    return (
+      <Dialog
+        title={i18n.questionDetails()}
+        customContent={this.renderContent()}
+        onClose={closeDialog}
+        primaryButtonProps={{
+          onClick: closeDialog,
+          variant: 'contained',
+          color: 'primary',
+          children: i18n.done(),
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  instructions: {
-    marginTop: 20,
-  },
-  answers: {
-    float: 'left',
-    width: 550,
-  },
-  icon: {
-    color: color.level_perfect,
-  },
-  iconSpace: {
-    width: 40,
-    float: 'left',
-  },
-  answerBlock: {
-    width: '100%',
-  },
-  answerLetter: {
-    width: 30,
-    float: 'left',
-    fontWeight: 'bold',
-  },
-};
 
 export const UnconnectedMultipleChoiceDetailsDialog =
   MultipleChoiceDetailsDialog;

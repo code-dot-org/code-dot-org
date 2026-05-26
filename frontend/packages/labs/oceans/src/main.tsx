@@ -103,12 +103,8 @@ function DemoShell() {
           style={{
             width: '100%',
             maxWidth: 1280,
-            // content-box reset: matches the studio path's MUI CssBaseline override
-            // so %-based padding inside #container-react renders identically.
           }}
         >
-          {/* Inline style resets content-box on the lab container, same as studio */}
-          <style>{`#container-react, #container-react * { box-sizing: content-box; }`}</style>
           <OceansLab
             appMode={appMode}
             guides={params.get('guides') ?? undefined}

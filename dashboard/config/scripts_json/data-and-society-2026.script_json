@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-30 02:02:13 UTC",
+    "serialized_at": "2026-05-19 15:51:03 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5373,10 +5373,11 @@
   "resources": [
     {
       "name": " Activity Guide - Pet Records",
-      "url": "https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/",
+      "url": "https://docs.google.com/document/d/1Kd_LS2HiMNSKg6_szQM3m0ZY017-mBLIcqrBl5p4UhU/view",
       "key": "activity_guide_-_pet_records",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5432,11 +5433,13 @@
     },
     {
       "name": "Animal Shapes",
-      "url": "https://docs.google.com/document/d/1C4ibYExm68IWA-1q_RujlEMZhxwwjCKIaH7UT-fMvy8/edit",
+      "url": "https://docs.google.com/document/d/1pPgNUqnPG-wa4NIsRbbj2WyTJbywanr10dTV-lbsneU/view",
       "key": "animal_shapes",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "animal_shapes"
@@ -5444,10 +5447,11 @@
     },
     {
       "name": "ASCII",
-      "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
+      "url": "https://docs.google.com/document/d/1YnHTGTAnqR0EsBHGqO3_AW8QQi5it2SUty8PfU3kYto/view",
       "key": "ascii",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5456,10 +5460,11 @@
     },
     {
       "name": "ASCII and Binary Representation",
-      "url": "https://docs.google.com/presentation/d/1H_628Cu-yLT9_epIA_Nf26BDWf82VwvpWmQsRrUHFR4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1OOzoDKF8LnqbTdTTJFS5ijnnQrne5mSMQQyIRno2nWg/view",
       "key": "ascii_and_binary_representation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5468,10 +5473,11 @@
     },
     {
       "name": "ASCII Challenges",
-      "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view",
+      "url": "https://docs.google.com/document/d/1HLiRNinhUvoPqbBP307dPcnpYt7lBEJ_IttIgMT4ouI/view",
       "key": "ascii_challenges",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5481,10 +5487,11 @@
     },
     {
       "name": "ASCII Challenges",
-      "url": "https://docs.google.com/document/d/1HtbjV-HiNGAEH0FVSdipR6RIknT16YXc1SqGhM58eII/edit",
+      "url": "https://docs.google.com/document/d/1SZy5b5iG2h7RzmIfW-dyKTX7mRDiDp9cAn2xj1MgjLo/view",
       "key": "ascii_challenges_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5493,10 +5500,11 @@
     },
     {
       "name": "ASCII Text",
-      "url": "https://docs.google.com/document/d/1If85I7nDxl_3uBbGDoZg86zrwGuw1ShFVK8eaDOH0_A/view",
+      "url": "https://docs.google.com/document/d/1IvvMP-hZnU6rzYXhttOk8day2mDfkGpMdpIsS7cxn0k/view",
       "key": "ascii_text",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -5506,12 +5514,12 @@
     },
     {
       "name": "ASCII to Binary Table",
-      "url": "https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/",
+      "url": "https://docs.google.com/document/d/1RPzNXCzHHtESO-AdCFSdbjTC_23_i4Ds21IJXuo5ACA/view",
       "key": "ascii_to_binary_table",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Reference"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ascii_to_binary_table"
@@ -5519,10 +5527,11 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
+      "url": "https://docs.google.com/document/d/1AFKyU7mw9Lb7QLVkUp8SmjECgVvTPedul0mHS0zlW48/view",
       "key": "automating_data_decisions",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5531,10 +5540,11 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/edit",
+      "url": "https://docs.google.com/document/d/1-6i2oAeQB7L2Xx4532X-Dsb3gtNfxPUU5y93V8GHj8k/view",
       "key": "automating_data_decisions_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -5544,10 +5554,11 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
+      "url": "https://docs.google.com/document/d/1gadfWgpp0lgzYy_nIzItMM_f9XFIk_kJaepORXhkQIw/view",
       "key": "automating_data_decisions_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5557,10 +5568,11 @@
     },
     {
       "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/presentation/d/1VjhblOzOjwYbxV-r9ilFTK4HVv7ycVEylSLUZuXVj1o/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HblDMFzSFo7FeUkJMudOFBqsjF_8pUwpcb3yfytfzbc/view",
       "key": "automating_data_decisions_3",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5582,10 +5594,11 @@
     },
     {
       "name": "Combining Representations",
-      "url": "https://docs.google.com/presentation/d/1ZgbSYLjMwuCcKHEttaz4Yole7RcQ05qdOEIvXZCqp7g/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CwDSNTxmvi4bN1hc-sbFvk7iAPzKIRKvlj81XDXJhzI/view",
       "key": "combining_representations",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5594,10 +5607,11 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
+      "url": "https://docs.google.com/document/d/1rjlogxzdp6BCpltbxxUhEEZyUzx7HOY4LEE1CxiTLsk/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5607,10 +5621,11 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1uk54ffts0mvoMoo1aM_9WQxhB_i9dVbperk3V5NZgv4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1g-s-yP-idwl-JRXnaTlWXAs74kU5U0lUMxtLnWJT2as/view",
       "key": "create_a_representation",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5619,11 +5634,13 @@
     },
     {
       "name": "Create a Representation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view",
+      "url": "https://docs.google.com/document/d/1E44mM5Dag-c3XhEglIPz4UyEfATdaOafkip4tRqnruk/view",
       "key": "create_a_representation_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "create_a_representation_-_student_checklist"
@@ -5631,11 +5648,13 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/edit#",
+      "url": "https://docs.google.com/document/d/1nF1K_LGAOED1n9jIuAfXWHehH7oTa9rkVrrpV9TMpBE/view",
       "key": "create_a_representation_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "create_a_representation_1"
@@ -5643,10 +5662,11 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/edit",
+      "url": "https://docs.google.com/document/d/10pCZCa1lNAeQnPT_BzZNhK6rGE4DBkpbjqHcD2WSTe4/view",
       "key": "create_a_representation_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -5656,10 +5676,11 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/presentation/d/1aWM0KcQSDGWMEeBU2wSourzuIAWM-uTrcjEDi2XjpF4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_ITM25KF_AsI6AB8s0aDw_T80h7N97bgznM_ufjLS9Y/view",
       "key": "create_a_representation_3",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5668,10 +5689,11 @@
     },
     {
       "name": "Create a Representation Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
+      "url": "https://docs.google.com/document/d/134GGvLsuAJNuUcmJWcejxvohnS2BvG1Gyx96PtPagAA/view",
       "key": "create_a_representation_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5735,10 +5757,11 @@
     },
     {
       "name": "Data and Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1H4dA3M2bGDnY0bdhvMCFqagGNirbO5FY7V62YVwyAnE/template/preview",
+      "url": "https://docs.google.com/presentation/d/17WJxbh2s73UJs2FwL5RlxyQolHOrV5vLqEMT-llQkaQ/view",
       "key": "data_and_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5747,10 +5770,11 @@
     },
     {
       "name": "Data in the Real World",
-      "url": "https://docs.google.com/document/d/1HXqpl795GTX4WVgJB_HxPP31oIy49hTVg6x_GXPdgfY/edit",
+      "url": "https://docs.google.com/document/d/1_phAR3feO__qcyw80-ynyfV7qDhuV1e9EY20JZL5gok/view",
       "key": "data_in_the_real_world",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5759,10 +5783,11 @@
     },
     {
       "name": "Data in the Real World",
-      "url": "https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1P-pxJJgxOIz6SuigA-JK4EAvZA1Vn06dEdst8e-loRQ/view",
       "key": "data_in_the_real_world_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5772,10 +5797,11 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/edit",
+      "url": "https://docs.google.com/document/d/19CseBlcJO9wx6EkcDeQnGuJuvHFS_OVU3HuyTBqnRd0/view",
       "key": "interpreting_data",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5784,10 +5810,11 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/edit",
+      "url": "https://docs.google.com/document/d/1E3koW70yvhWDydqDydxMEeoz4i3i4wtSG3s1_Lcy-qA/view",
       "key": "interpreting_data_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5797,10 +5824,11 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/document/d/1KC2wlSjvxZxZqZiezrtUZrPsGumkI70hkJDagR1gNDE/edit",
+      "url": "https://docs.google.com/document/d/1R-e_0xnAkt8136JUPvXvGk6gtRLte8U25B5H-tN8xAQ/view",
       "key": "interpreting_data_2",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Resource"
       },
@@ -5810,10 +5838,11 @@
     },
     {
       "name": "Interpreting Data",
-      "url": "https://docs.google.com/presentation/d/1mKkGbIeF5RFZpedgzlbREEeI0mVvDfWB2wTu9HcGnKk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1SNfEhAGQXmaSWMLxM-tDYzr26VBREaKcn7CWma6HfLI/view",
       "key": "interpreting_data_3",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5822,10 +5851,11 @@
     },
     {
       "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/presentation/d/1uu-BG16LBWezudq9QjrgdiJ0zhEb66Kxno9IVziC6mQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GsHmI0oiIpiBA1xNCn151RhpSqV86_EnBlIS4DpBjzI/view",
       "key": "keeping_data_secret",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5834,12 +5864,12 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://docs.google.com/document/d/1W6WI5qPIs6i-Y7YFllu18kPTD-5WpGyUKAmRK6ILvw0/edit",
+      "url": "https://docs.google.com/document/d/16TafyJ233AJ_yACr2JhGZ4sZkdf_3tJBTXtZRJfV_KU/view",
       "key": "make_a_recommendation",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Peer Review"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "make_a_recommendation"
@@ -5847,11 +5877,13 @@
     },
     {
       "name": "Make a Recommendation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit",
+      "url": "https://docs.google.com/document/d/1JJPeA08p318RDSv2VmnTRWZb-WWUVoXp9oETJnx4bLQ/view",
       "key": "make_a_recommendation_-_student_checklist",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "make_a_recommendation_-_student_checklist"
@@ -5859,10 +5891,11 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/edit",
+      "url": "https://docs.google.com/document/d/1W0-rOsCRETVaWOpHQxraQ39bJZteAO7BbP4laszp2vI/view",
       "key": "make_a_recommendation_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -5872,12 +5905,12 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit",
+      "url": "https://docs.google.com/document/d/15dqJ32AlRKfZYZzW5WpdpSOF4_eckKd_ppZcgP3dA_E/view",
       "key": "make_a_recommendation_2",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Project Guide"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "make_a_recommendation_2"
@@ -5885,10 +5918,11 @@
     },
     {
       "name": "Making Decisions With Data",
-      "url": "https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit",
+      "url": "https://docs.google.com/document/d/1pUSyGVEzvyxqqY5tbrtUarQEaLll7Tsi7M6FzalDCxI/view",
       "key": "making_decisions_with_data",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5897,10 +5931,11 @@
     },
     {
       "name": "Making Decisions with Data",
-      "url": "https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1wx6HO8iRq4I0OXw7JKlgEac8fajGXfh63wEWIYrlSBM/view",
       "key": "making_decisions_with_data_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5922,10 +5957,11 @@
     },
     {
       "name": "Meals Data",
-      "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
+      "url": "https://docs.google.com/document/d/196ZQIDJMF3f4NjeNneoANqzDaCOBxPydKXz3f82bYlw/view",
       "key": "meals_data",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -5934,10 +5970,11 @@
     },
     {
       "name": "Medical Records",
-      "url": "https://docs.google.com/document/d/1dwpyCS7QjQg9L6h-V8Xnc6r21P6VCiFCJckk_ZBlxco/view",
+      "url": "https://docs.google.com/document/d/1RK8NPaNGZ0Y4oqegmQZ18tQ6OetHdV5-GkMYsQ38cCw/view",
       "key": "medical_records",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5947,10 +5984,11 @@
     },
     {
       "name": "Medical Records",
-      "url": "https://docs.google.com/document/d/1Aqr9MX62EHxTSHzkdWEvdQcS2QC2hd0LSqrZHgr5pu8/edit",
+      "url": "https://docs.google.com/document/d/1FI6-LqpOhzAoWn6vtS2ZkzACKI6CzGvYCGpyKSRAgFM/view",
       "key": "medical_records_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5972,12 +6010,12 @@
     },
     {
       "name": "Number Cards",
-      "url": "https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/",
+      "url": "https://docs.google.com/document/d/1xd0YnHd7vUNnPeAb-Wm-dFIw6QU_oAUbjsnhswX4A0A/view",
       "key": "number_cards",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Manipulative"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "number_cards"
@@ -5985,10 +6023,11 @@
     },
     {
       "name": "Number Cards - Digital Manipulative",
-      "url": "https://docs.google.com/presentation/d/1cBJrrEm4P5zyz4to07ol1l_AtPcS5QamNXAlS06gObk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1w-MxykkZrn-kpKDQodb1LNq1O_ksBiCXH_D5qAw2fvs/view",
       "key": "number_cards_-_digital_manipulative",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "number_cards_-_digital_manipulative"
@@ -5996,10 +6035,11 @@
     },
     {
       "name": "Patterns and Representation",
-      "url": "https://docs.google.com/presentation/d/1Y2LUX2NgkFp1yhu2lOJjxmkfe9Y_sqqJw9aqxkNZdko/template/preview",
+      "url": "https://docs.google.com/presentation/d/1C0-UudkCSeXn7kiF86Nl99zlQlAsRy3Ea7KjBPq1xko/view",
       "key": "patterns_and_representation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6008,10 +6048,11 @@
     },
     {
       "name": "Peer Review Exemplar 1 ",
-      "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
+      "url": "https://docs.google.com/document/d/11DVJQE7Fbbja7ODM6OZyveq3DKyspfks6K9_lCrz_vQ/view",
       "key": "peer_review_exemplar_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6020,10 +6061,11 @@
     },
     {
       "name": "Peer Review Exemplar 2",
-      "url": "https://docs.google.com/document/d/1N1gwMu_vOMpB0GeEVsyAc18CTKQn_sleb5dg9zDSROQ/edit",
+      "url": "https://docs.google.com/document/d/1letJzVg4chNV1YvjiMIuwPOykl4ofUpSyiHB1u3rUx8/view",
       "key": "peer_review_exemplar_2",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6057,10 +6099,11 @@
     },
     {
       "name": "Problem Solving with Big Data",
-      "url": "https://docs.google.com/presentation/d/1Ktcdj7Vi9Kz8_MAZNiTJx-ekHhohA1min9imY1GCiGk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1jJ52PIuC3OM0mdYw4oEe58RHGhZC2i0tTvJ8E6Tkld8/view",
       "key": "problem_solving_with_big_data",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6069,10 +6112,11 @@
     },
     {
       "name": "Problem Solving with Data",
-      "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
+      "url": "https://docs.google.com/document/d/1HIkJ1p88ogyFJxZ3Cs0brGZ_552ssbj6Xni99VPJfN8/view",
       "key": "problem_solving_with_data",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6081,10 +6125,11 @@
     },
     {
       "name": "Problem Solving with Data",
-      "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
+      "url": "https://docs.google.com/document/d/1xnzxKA_RhA5fkb37LrjPTix0cUJ0gQp1teIUPBnKhu4/view",
       "key": "problem_solving_with_data_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6094,10 +6139,11 @@
     },
     {
       "name": "Problem Solving With Data",
-      "url": "https://docs.google.com/presentation/d/1YBD2p-xueRZD_d4xkFXdgotciApwtxoqSAaFgTPRUBY/template/preview",
+      "url": "https://docs.google.com/presentation/d/16SAlKYzyffgKx3WWohL2zg4cesQIdHMAjBQFrngXyng/view",
       "key": "problem_solving_with_data_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6106,7 +6152,7 @@
     },
     {
       "name": "Project - Make a Recommendation",
-      "url": "https://docs.google.com/presentation/d/1YGowSqpNoGwgTDANdK9QdTv8ZPDWCdSZxsg9kYeOzdY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1CyRfKVxyv96t1aopvN_NyDHrVBa-5Rlz5JSkyz3SnbI/view",
       "key": "project_-_make_a_recommendation",
       "properties": {
         "audience": "Teacher",
@@ -6119,10 +6165,11 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-fEUF7Y8HiUwC3KC6xjJkYF6_LLCVGMxNRCmXlC-jk0/view",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6131,10 +6178,11 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
+      "url": "https://docs.google.com/document/d/1DR7c3UtlP8d9mqpyoo4EGig0Ol3W4i7pVAHouY6ZCGM/view",
       "key": "representation_matters",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6143,10 +6191,11 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ONLB2GNakwPW4w6suLGkr0IivnbHxCzwZQgJFn4shWA/view",
       "key": "representation_matters_1",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6156,10 +6205,11 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://docs.google.com/presentation/d/18MkeifmTS-w3fZykxuICShYD0iby376Q3xcIwucVQxA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dTECcZd2Uiec-pqtLGBqTv8y7CWWb0ZeNl29mAKhDX0/view",
       "key": "representation_matters_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6168,10 +6218,11 @@
     },
     {
       "name": "Representing Images",
-      "url": "https://docs.google.com/presentation/d/1MgxglxIqncKroQ43ozKVTZJvBaVRkJu3CV3LSuwafG8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CJzESkVe63gIQYj3dZ_QUGF2NBP2HJ540L2ZdY9ymbw/view",
       "key": "representing_images",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6180,10 +6231,11 @@
     },
     {
       "name": "Representing Information",
-      "url": "https://docs.google.com/document/d/13uCoIIaBhxSzVqMk9xMBDJzQ0KBT-cBav3Bb3srftkk/view",
+      "url": "https://docs.google.com/document/d/1R3KgxRX2Sp68kPeWvdK_HPiRDGX7WolfHOIf_QI18-g/view",
       "key": "representing_information",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6193,10 +6245,11 @@
     },
     {
       "name": "Representing Information 1",
-      "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
+      "url": "https://docs.google.com/document/d/1KodavPwzy9sI3z_JR14GGaFptPUDIGD1SJtOpBA_6ZA/view",
       "key": "representing_information_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6205,10 +6258,11 @@
     },
     {
       "name": "Representing Information 2",
-      "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
+      "url": "https://docs.google.com/document/d/1qTVQfHtaRTFSgy-EZVFb_462hja9iQpdIbLT2f9wcVE/view",
       "key": "representing_information_2",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6217,10 +6271,11 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
+      "url": "https://docs.google.com/document/d/1ky--XqyFWjMbqg8KuKJcC1oMjN78r38WHOY2Ni4dbF4/view",
       "key": "representing_numbers",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6229,10 +6284,11 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://docs.google.com/presentation/d/1z4EV00YdYe1vXThLwmU_wAMZvNLM2FLMoCmsFQufnq0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1OXkO5F0hopO_VavmPRzkbhN8T2nw82D0JGz25YCqMlI/view",
       "key": "representing_numbers_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6241,10 +6297,11 @@
     },
     {
       "name": "Representing Numbers 2021",
-      "url": "https://docs.google.com/document/d/1fJwrzxyEtp8LFLKdCHod9ZO0b6U-DSjjJzpaBBCGcQo/view",
+      "url": "https://docs.google.com/document/d/1Bo9LokuH6prn27Kt616v2wY4RaOal7L2I0tUMZOxx3o/view",
       "key": "representing_numbers_2021",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6254,10 +6311,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1RlG5HQAUSU4WssPX5zsm0MbZex1BiX6t5mQZ-T8ArD4/view",
       "key": "sample_marked_rubrics_1",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Exemplar"
       },
@@ -6267,10 +6325,11 @@
     },
     {
       "name": "Secret Messages",
-      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1B-lCVcQ4TlJaCxMj8guj_FAt7MVoVLiLhRANSvxHJkc/view",
       "key": "secret_messages",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6280,10 +6339,11 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://docs.google.com/document/d/1lKk4xwVAwst0t5dLICDg64HVaJGVaJm5Ldzix2Ydock/edit",
+      "url": "https://docs.google.com/document/d/1s32gszKFhtIkt_ZSiL2LnpUf8Kck_S_gBitJS_7uWwA/view",
       "key": "structuring_data",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6292,10 +6352,11 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://docs.google.com/presentation/d/1QKhywXEEOpXmQf0ELVGvCSiYEHfqdlIPjRISqCjVp10/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tzqC_keUs8A9Hflcrc9O1LFNvR4MoQwvsZpVlhS08hk/view",
       "key": "structuring_data_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6304,10 +6365,11 @@
     },
     {
       "name": "Structuring Data 2021",
-      "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
+      "url": "https://docs.google.com/document/d/1jpsUDd_VcyK8Ai2uVJHZIHkJpHlQY6txVghImEiIIq4/view",
       "key": "structuring_data_2021",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },

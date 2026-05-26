@@ -1,0 +1,19 @@
+name 'pl_sandbox_aif_2_U2-if-else-flowchart-H5P'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+Holding for embedding 
+
+<iframe
+  src="https://amandadennard-dotcom.github.io/Flowchart-dragdrop-iframe/flowchart_dragdrop_iframe.html"
+  width="100%"
+  height="780"
+  frameborder="0">
+</iframe>
+
+## Up Next 
+
+In the next level, you will create a flowchart with Sketch Lab that you will later use to create a conditional in code. 
+MARKDOWN
