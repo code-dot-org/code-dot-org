@@ -113,8 +113,8 @@
   native: "Español (Mexico)"
 
 "es-LA":
-  english: "Spanish (Latin America)"
-  native: "Español (Latinoamérica)"
+english: "Spanish (LATAM)"
+native: "Español (LATAM)"
   fallback: "es-MX"
 
 "et": "et-EE"
