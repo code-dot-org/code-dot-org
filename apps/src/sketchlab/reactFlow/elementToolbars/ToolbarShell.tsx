@@ -29,7 +29,8 @@ export default function ToolbarShell({
   children,
 }: ToolbarShellProps) {
   const readOnly = useSketchLabReadOnly();
-  const {openToolbarTarget, trapFocus, closeToolbar} = useToolbarVisibility();
+  const {openToolbarTarget, trapFocus, closeToolbar, isAnyPopoverOpen} =
+    useToolbarVisibility();
   const isVisible =
     openToolbarTarget?.type === target.type &&
     openToolbarTarget.id === target.id;
@@ -108,8 +109,23 @@ export default function ToolbarShell({
 
   return (
     <FocusTrap
-      active={trapFocus}
+      // Fully deactivate the toolbar's trap whenever a MUI Popover
+      // (dropdown / color picker) is open. The popover lives in a
+      // body-level portal and has its own TrapFocus, and both would
+      // fight: focus-trap-react pulls focus back into the toolbar Paper
+      // while MUI's TrapFocus pulls it back into the popover Paper.
+      // `paused` isn't enough because of effect-ordering: focus-trap-
+      // react's pause runs in commit phase but MUI's TrapFocus setup
+      // runs in useEffect (post-paint), so by the time we pause, MUI
+      // has already started auto-focusing. Deactivation removes the
+      // listeners synchronously in the same commit, before MUI activates.
+      active={trapFocus && !isAnyPopoverOpen}
       focusTrapOptions={{
+        // Don't move focus on (re-)activation — when the popover closes
+        // and the trap comes back, we want focus to stay where MUI's
+        // nodeToRestore put it (the dropdown trigger), not snap to the
+        // first toolbar control.
+        initialFocus: false,
         // Route Escape through handleClose. Return false so the trap
         // stays active; the subsequent isVisible=false flip is what
         // actually deactivates it. We don't use onDeactivate because it

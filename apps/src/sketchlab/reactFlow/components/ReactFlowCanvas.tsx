@@ -149,6 +149,13 @@ export default function ReactFlowCanvas({
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
+  // Counter rather than boolean so close-of-one + open-of-another briefly
+  // overlapping doesn't flip the trap on then immediately off.
+  const [popoverOpenCount, setPopoverOpenCount] = useState(0);
+  const setPopoverOpen = useCallback((open: boolean) => {
+    setPopoverOpenCount(prev => prev + (open ? 1 : -1));
+  }, []);
+
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
       setOpenToolbarInfo({
@@ -169,8 +176,17 @@ export default function ReactFlowCanvas({
       trapFocus,
       openToolbar,
       closeToolbar,
+      isAnyPopoverOpen: popoverOpenCount > 0,
+      setPopoverOpen,
     }),
-    [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
+    [
+      openToolbarTarget,
+      trapFocus,
+      openToolbar,
+      closeToolbar,
+      popoverOpenCount,
+      setPopoverOpen,
+    ]
   );
 
   const {screenToFlowPosition, flowToScreenPosition, getEdges, getNode} =
