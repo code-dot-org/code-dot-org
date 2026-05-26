@@ -1,4 +1,4 @@
-import type {ObservabilityConfig} from '../types';
+import type {ObservabilityConfig, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
@@ -19,9 +19,14 @@ export class NoopAdapter extends BaseAdapter {
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
+  ): void {
     void error;
     void context;
+    void tags;
   }
 
   /**
