@@ -2,7 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Popover, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useId, useState} from 'react';
+import React, {useCallback, useEffect, useId, useRef, useState} from 'react';
 
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 
@@ -31,9 +31,30 @@ export default function ToolbarDropdownRow({
 }: ToolbarDropdownRowProps) {
   const labelId = useId();
   const {theme} = useTheme();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const wasOpenRef = useRef(false);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
-  const closePopover = () => setAnchorEl(null);
+  // Plain close — MUI Popover's TrapFocus restores focus via its
+  // nodeToRestore mechanism. Calling triggerRef.focus() inside this
+  // callback races against TrapFocus's enforce-focus listener and
+  // triggers a focus loop; we backstop via the open->closed effect
+  // below instead.
+  const closePopover = useCallback(() => {
+    setAnchorEl(null);
+  }, []);
+
+  // Backstop: when the popover transitions open->closed, ensure focus
+  // lands on the trigger. MUI's nodeToRestore usually handles this, but
+  // it can drop focus to <body> when other listeners on the canvas
+  // intercept the close sequence. This runs after MUI's TrapFocus has
+  // fully torn down, so it doesn't conflict with enforce-focus.
+  useEffect(() => {
+    if (wasOpenRef.current && !open) {
+      triggerRef.current?.focus();
+    }
+    wasOpenRef.current = open;
+  }, [open]);
 
   return (
     <div className={styles.dropdownRow}>
@@ -45,6 +66,7 @@ export default function ToolbarDropdownRow({
         {label}
       </Typography>
       <Button
+        ref={triggerRef}
         className={styles.dropdownTrigger}
         variant="outlined"
         color="secondary"
