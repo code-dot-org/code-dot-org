@@ -109,8 +109,8 @@
   fallback: "es-MX"
 
 "es-MX":
-  english: "Spanish (Mexico)"
-  native: "Español (Mexico)"
+  english: "Spanish (US)"
+  native: "Español (EEUU)"
 
 "es-LA":
 english: "Spanish (LATAM)"
