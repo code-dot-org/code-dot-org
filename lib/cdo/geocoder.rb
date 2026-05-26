@@ -109,7 +109,7 @@ module Geocoder
   # MAX_ADDRESS_WORDS words; it must meet minimum length and word-count thresholds.
   def self.extract_address_candidate(text)
     return nil unless text
-    match = text.match(/\b\d{2,}\b/)
+    match = text.match(/\b\d{2,}/)
     return nil unless match
     candidate = text[match.begin(0)..].split.first(MAX_ADDRESS_WORDS).join(' ')
     return nil if candidate.length < MIN_ADDRESS_LENGTH
