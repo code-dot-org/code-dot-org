@@ -1,7 +1,7 @@
-// Form row: label-left, dropdown-trigger-right.
 .dropdownRow {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
 }
 
@@ -10,10 +10,8 @@
   color: var(--text-neutral-tertiary);
 }
 
-// MUI Button overrides: bordered, neutral surface, content-justified
-// between the preview/label cluster and the chevron.
 .dropdownTrigger:global(.MuiButtonBase-root) {
-  flex: 1 1 auto;
+  width: 110px;
   justify-content: space-between;
   border: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);

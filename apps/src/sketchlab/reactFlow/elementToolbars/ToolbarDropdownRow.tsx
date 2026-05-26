@@ -18,10 +18,7 @@ interface ToolbarDropdownRowProps {
   renderPopoverContent: (closePopover: () => void) => React.ReactNode;
 }
 
-// Form row: label-left, dropdown-trigger-right. Owns the open/anchor state
-// for its popover so each row's submenu is independent. Trigger renders
-// "[preview] {triggerLabel} [chevron]" — preview is e.g. a color swatch or
-// FA icon supplied by the parent.
+// Toolbar row with label on the left and a dropdown-triggering button on the right.
 export default function ToolbarDropdownRow({
   label,
   triggerPreview,

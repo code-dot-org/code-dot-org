@@ -73,9 +73,9 @@ export const EDGE_TYPE_OPTIONS = [
 export type EdgeTypeValue = (typeof EDGE_TYPE_OPTIONS)[number]['value'];
 
 export const TEXT_ALIGN_OPTIONS = [
-  {value: 'left', label: 'Align left', icon: 'align-left'},
-  {value: 'center', label: 'Align center', icon: 'align-center'},
-  {value: 'right', label: 'Align right', icon: 'align-right'},
+  {value: 'left', label: 'Left', icon: 'align-left'},
+  {value: 'center', label: 'Center', icon: 'align-center'},
+  {value: 'right', label: 'Right', icon: 'align-right'},
 ] as const;
 
 export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
