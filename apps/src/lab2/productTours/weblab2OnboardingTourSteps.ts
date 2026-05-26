@@ -7,7 +7,11 @@ import {
   nextButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
-import {resourcePanelInstructionsElementId} from '../views/components/Instructions/ResourcePanel/constants';
+import {
+  resourcePanelInstructionsElementId,
+  resourcePanelLinksElementId,
+  resourcePanelNavigationButtonElementId,
+} from '../views/components/Instructions/ResourcePanel/constants';
 
 export const createWeblab2OnboardingTourSteps = (tour: Tour): StepOptions[] => [
   {
@@ -33,13 +37,36 @@ export const createWeblab2OnboardingTourSteps = (tour: Tour): StepOptions[] => [
     },
   },
   {
+    id: 'links',
+    attachTo: {element: `#${resourcePanelLinksElementId}`, on: 'right'},
+    title: 'Extra links',
+    text: "Here is where you'll find links to documentation and lab settings including light/dark and font size.",
+    buttons: [backButton(tour), nextButton(tour)],
+    floatingUIOptions: {
+      middleware: [offset(12)],
+    },
+  },
+  {
+    id: 'navigation',
+    attachTo: {
+      element: `#${resourcePanelNavigationButtonElementId}`,
+      on: 'top',
+    },
+    title: 'Finish level',
+    text: 'The button that allows you to submit or move to the next level can always be found at the bottom of the resource area. It will be disabled if you need to do more work to complete the level.',
+    buttons: [backButton(tour), nextButton(tour)],
+    floatingUIOptions: {
+      middleware: [offset(12)],
+    },
+  },
+  {
     id: 'workspace',
     attachTo: {
       element: '#editor-preview-container',
       on: 'left',
     },
     title: 'Code & Preview Areas',
-    text: 'On the right are your Code and Preview areas. You can choose to have Code, Preview or Split view open. Try going to Split mode to start.',
+    text: 'On the right are your Code and Preview areas. You can choose to have Code, Preview or Split View open. Try going to Split View to start.',
     buttons: [backButton(tour), nextButton(tour)],
     floatingUIOptions: {
       middleware: [offset(12)],
