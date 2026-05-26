@@ -72,7 +72,6 @@ class DCDOBase < DynamicConfigBase
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
-      'language-deprecation-warning-enabled': DCDO.get('language-deprecation-warning-enabled', false),
       'latam-ge-region-notice-enabled-until': DCDO.get('latam-ge-region-notice-enabled-until', nil),
       'launch-grades-in-sign-up': DCDO.get('launch-grades-in-sign-up', false)
     }
