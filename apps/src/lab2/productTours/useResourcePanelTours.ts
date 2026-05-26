@@ -14,6 +14,7 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 import {LevelProperties} from '../types';
 
 import {TriggerSource} from './constants';
+import {createOnboardingTourSteps} from './onboardingTourSteps';
 import {
   ProductTour,
   ProductTourConfigurations,
@@ -45,9 +46,10 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
     triggerSource: TriggerSource.Auto,
   });
 
+const ONBOARDING_FLOW_NAME =
+  ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName;
 const VALIDATION_FLOW_NAME =
   ProductTourConfigurations[ProductTour.ResourcePanelValidation].metricName;
-const WEBLAB2_ONBOARDING_TOUR_SEEN = 'weblab2OnboardingTourSeen';
 
 const useResourcePanelTours = ({
   levelProperties,
@@ -65,72 +67,14 @@ const useResourcePanelTours = ({
     setIsLevelLoading(false);
   });
 
-  const isWeblab2 = levelProperties.appName === 'weblab2';
-
-  // WEB LAB 2 ONBOARDING TOUR
-  const isWeblab2OnboardingEnabled = useMemo(() => {
-    const isEnabledOnLevel = isTourEnabledOnLevel(
-      ProductTour.Weblab2Onboarding,
-      levelProperties
-    );
-    return (
-      isWeblab2 && isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading
-    );
-  }, [isWeblab2, levelProperties, isStandaloneCollapsed, isLevelLoading]);
-
-  // Snapshot at mount so Web Lab 2 resource panel onboarding only auto-starts
-  // on a later page view, not immediately after completing Web Lab onboarding.
-  const [weblab2OnboardingTourSeenAtPageLoad] = useState(
-    () => tryGetLocalStorage(WEBLAB2_ONBOARDING_TOUR_SEEN, 'no') === 'yes'
-  );
-
-  const onWeblab2OnboardingTourComplete = useCallback(() => {
-    onTourComplete(
-      ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName
-    )();
-  }, []);
-
-  const onWeblab2OnboardingTourCancel = useCallback((stepIndex: number) => {
-    onTourCancel(
-      ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName
-    )(stepIndex);
-  }, []);
-
-  const {tour: weblab2OnboardingTour} = useLab2ProductTour({
-    getSteps: ProductTourConfigurations[ProductTour.Weblab2Onboarding].getSteps,
-    localStorageKey: WEBLAB2_ONBOARDING_TOUR_SEEN,
-    tourAvailable: isWeblab2OnboardingEnabled,
-    onStart: onTourStart(
-      ProductTourConfigurations[ProductTour.Weblab2Onboarding].metricName
-    ),
-    onComplete: onWeblab2OnboardingTourComplete,
-    onCancel: onWeblab2OnboardingTourCancel,
-  });
-
-  useStartTourWhenAvailable(weblab2OnboardingTour);
-
   // RESOURCE PANEL ONBOARDING TOUR
-  const isResourcePanelOnboardingEnabled = useMemo(() => {
+  const showResourcePanelOnboardingTour = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
       levelProperties
     );
     return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
   }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
-
-  // For Web Lab 2, wait for the Web Lab onboarding tour before showing the
-  // resource panel onboarding tour on a later page view. Other labs should
-  // show this tour normally.
-  const showResourcePanelOnboardingTour = useMemo(
-    () =>
-      isResourcePanelOnboardingEnabled &&
-      (!isWeblab2 || weblab2OnboardingTourSeenAtPageLoad),
-    [
-      isResourcePanelOnboardingEnabled,
-      isWeblab2,
-      weblab2OnboardingTourSeenAtPageLoad,
-    ]
-  );
 
   const [resourcePanelOnboardingTourSeen, setResourcePanelOnboardingTourSeen] =
     useState(
@@ -167,13 +111,10 @@ const useResourcePanelTours = ({
   );
 
   const {tour: resourcePanelOnboardingTour} = useLab2ProductTour({
-    getSteps:
-      ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].getSteps,
+    getSteps: createOnboardingTourSteps,
     localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     tourAvailable: showResourcePanelOnboardingTour,
-    onStart: onTourStart(
-      ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName
-    ),
+    onStart: onTourStart(ONBOARDING_FLOW_NAME),
     onComplete: onResourcePanelOnboardingTourComplete,
     onCancel: onResourcePanelOnboardingTourCancel,
   });
