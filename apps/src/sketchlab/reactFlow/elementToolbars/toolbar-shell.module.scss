@@ -1,0 +1,53 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 8px 8px 12px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  pointer-events: all;
+  min-width: 240px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  // Pull the close button into the toolbar's padding so it sits in the
+  // corner rather than inside its own row of whitespace.
+  margin: -4px -4px -4px 0;
+}
+
+.headerTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-neutral-secondary);
+  font-weight: 600;
+  padding-left: 2px;
+}
+
+.closeButton {
+  padding: 2px;
+  color: var(--text-neutral-primary);
+}
+
+.scrollContent {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 0 2px;
+
+  // Every section/standalone row after the first gets a divider above it.
+  & > * + * {
+    padding-top: 12px;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}

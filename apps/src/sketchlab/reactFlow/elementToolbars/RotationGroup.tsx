@@ -4,7 +4,8 @@ import React, {useCallback, useEffect, useId, useState} from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 
-import styles from './element-toolbar.module.scss';
+import sharedStyles from './element-toolbar.module.scss';
+import styles from './rotation-group.module.scss';
 
 export const ROTATION_MIN = 0;
 export const ROTATION_MAX = 359;
@@ -95,11 +96,15 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   );
 
   return (
-    <div className={styles.section} role="group" aria-labelledby={groupLabelId}>
+    <div
+      className={sharedStyles.section}
+      role="group"
+      aria-labelledby={groupLabelId}
+    >
       <Typography
         id={groupLabelId}
         variant="overline3"
-        className={styles.sectionTitle}
+        className={sharedStyles.sectionTitle}
       >
         Rotation
       </Typography>
@@ -132,7 +137,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           onBlur={handleInputBlur}
           onKeyDown={handleInputKeyDown}
           size="s"
-          className={styles.smallInput}
+          className={sharedStyles.smallInput}
         />
       </div>
     </div>

@@ -33,7 +33,7 @@ import {
 import ToolbarSection from './ToolbarSection';
 import ToolbarShell from './ToolbarShell';
 
-import styles from './element-toolbar.module.scss';
+import styles from './line-edge-toolbar.module.scss';
 
 type LinePreviewStyle = 'solid' | 'dashed' | 'dotted';
 

@@ -1,0 +1,41 @@
+// Actions row — neutral icon group on the left, destructive delete pinned
+// to the right edge.
+.actionsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionsButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.actionButton:global(.MuiIconButton-root) {
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.deleteButton:global(.MuiIconButton-root) {
+  margin-left: auto;
+  border: 1px solid var(--sketchlab-stroke-red);
+  background-color: var(--background-neutral-primary);
+  color: var(--sketchlab-stroke-red);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+
+  &:hover {
+    background-color: var(--sketchlab-bg-red);
+  }
+}

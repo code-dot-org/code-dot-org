@@ -6,7 +6,7 @@ import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
 import ToolbarSection from './ToolbarSection';
 
-import styles from './element-toolbar.module.scss';
+import styles from './actions-group.module.scss';
 
 interface HandlesToggle {
   visible: boolean;

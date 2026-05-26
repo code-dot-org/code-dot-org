@@ -32,62 +32,6 @@
   --sketchlab-bg-pink: #861043;
 }
 
-// Toolbar shell — owned by ToolbarShell.
-.toolbar {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-  padding: 8px 8px 12px;
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
-  pointer-events: all;
-  min-width: 240px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  // Pull the close button into the toolbar's padding so it sits in the
-  // corner rather than inside its own row of whitespace.
-  margin: -4px -4px -4px 0;
-}
-
-.headerTitle {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-neutral-secondary);
-  font-weight: 600;
-  padding-left: 2px;
-}
-
-.closeButton {
-  padding: 2px;
-  color: var(--text-neutral-primary);
-}
-
-.scrollContent {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 12px;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-gutter: stable;
-  padding: 0 2px;
-
-  // Every section/standalone row after the first gets a divider above it.
-  & > * + * {
-    padding-top: 12px;
-    border-top: 1px solid var(--borders-neutral-primary);
-  }
-}
-
-// Section wrapper — shared by ToolbarSection, RotationGroup, AltTextRow.
 .section {
   display: flex;
   flex-direction: column;
@@ -105,10 +49,6 @@
   gap: 6px;
 }
 
-// Transparent-swatch diagonal pattern — shared by the popover swatches
-// (ColorPickerPopover) and the dropdown trigger preview
-// (ColorPreviewSwatch). Composes with whatever shape/size class the
-// caller already set.
 .swatchTransparent {
   background-color: var(--background-neutral-primary);
   background-image: linear-gradient(
@@ -120,32 +60,6 @@
   );
 }
 
-// Inline line preview span — width/style set inline by the caller.
-// Used by LineEdgeToolbar in both popover items and trigger previews.
-.linePreview {
-  display: inline-block;
-  width: 20px;
-  border-top-color: currentColor;
-  border-top-style: solid;
-  vertical-align: middle;
-}
-
-// RotationGroup row.
-.rotationRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-}
-
-.rotationSlider {
-  flex: 1 1 auto;
-  min-width: 80px;
-  color: var(--text-neutral-primary);
-  margin: 0 4px;
-}
-
-// Narrow numeric input — shared by RotationGroup and FontSizeCustomInput.
 // The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
 // override the wrapper and the input so the field fits 3 digits plus the
 // native number spinner.
@@ -162,58 +76,5 @@
   input {
     width: 68px;
     min-width: 0;
-  }
-}
-
-// LockedNotice fallback state.
-.lockedNotice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
-  color: var(--text-neutral-primary);
-  text-align: center;
-}
-
-// Actions row — neutral icon group on the left, destructive delete pinned
-// to the right edge.
-.actionsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-}
-
-.actionsButtons {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-
-.actionButton:global(.MuiIconButton-root) {
-  border: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  border-radius: 4px;
-  width: 28px;
-  height: 28px;
-
-  &:hover {
-    background-color: var(--background-neutral-secondary);
-  }
-}
-
-.deleteButton:global(.MuiIconButton-root) {
-  margin-left: auto;
-  border: 1px solid var(--sketchlab-stroke-red);
-  background-color: var(--background-neutral-primary);
-  color: var(--sketchlab-stroke-red);
-  border-radius: 4px;
-  width: 28px;
-  height: 28px;
-
-  &:hover {
-    background-color: var(--sketchlab-bg-red);
   }
 }

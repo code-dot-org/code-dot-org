@@ -8,7 +8,7 @@ import {
   useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
 
-import styles from './element-toolbar.module.scss';
+import styles from './toolbar-shell.module.scss';
 
 // Gap between the toolbar's lower edge and the Controls panel.
 const TOOLBAR_BOTTOM_GAP_PX = 32;

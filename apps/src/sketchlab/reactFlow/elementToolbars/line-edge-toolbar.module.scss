@@ -1,0 +1,9 @@
+// Inline line preview span — width/style set inline by the caller.
+// Used in both popover option items and the dropdown trigger previews.
+.linePreview {
+  display: inline-block;
+  width: 20px;
+  border-top-color: currentColor;
+  border-top-style: solid;
+  vertical-align: middle;
+}
