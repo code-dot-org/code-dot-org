@@ -446,6 +446,17 @@ class User < ApplicationRecord
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
+  # Demo students may only be soft-deleted (archived). The demo_students row
+  # must persist so permission checks via `Policies::DemoSections.demo_student?`
+  # keep returning true for the archived user.
+  def really_destroy!
+    if Policies::DemoSections.demo_student?(id)
+      raise DemoStudent::ProtectedRecord,
+        "Cannot hard-delete demo student user_id=#{id}; demo students may only be soft-deleted."
+    end
+    super
+  end
+
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
   # @param school_info_attr the attributes to set and check

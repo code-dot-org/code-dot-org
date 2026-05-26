@@ -19,6 +19,11 @@ module User::Purgeable
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
+    if Policies::DemoSections.demo_student?(id)
+      raise DemoStudent::ProtectedRecord,
+        "Cannot purge demo student user_id=#{id}; demo students may only be soft-deleted."
+    end
+
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     authentication_options.with_deleted.each(&:really_destroy!)

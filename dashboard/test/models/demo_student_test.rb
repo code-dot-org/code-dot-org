@@ -183,4 +183,46 @@ class DemoStudentTest < ActiveSupport::TestCase
 
     assert_nothing_raised {record.run_callbacks(:commit)}
   end
+
+  # Demo students are protected from hard-delete and purge so the
+  # demo_students row persists and permission checks keep working for
+  # archived (soft-deleted) users.
+
+  test 'User#really_destroy! raises ProtectedRecord for a demo student' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    assert_raises(DemoStudent::ProtectedRecord) {student.really_destroy!}
+    assert User.with_deleted.exists?(student.id)
+    assert Policies::DemoSections.demo_student?(student.id)
+  end
+
+  test 'User#really_destroy! still works for a non-demo student' do
+    student = create(:student)
+
+    assert_nothing_raised {student.really_destroy!}
+    refute User.with_deleted.exists?(student.id)
+  end
+
+  test 'User#destroy soft-deletes a demo student and demo_student? stays true' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    student.destroy
+
+    assert student.reload.deleted_at.present?
+    assert DemoStudent.exists?(user_id: student.id)
+    assert Policies::DemoSections.demo_student?(student.id)
+  end
+
+  test 'User#clear_user_and_mark_purged raises ProtectedRecord for a demo student' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    assert_raises(DemoStudent::ProtectedRecord) {student.clear_user_and_mark_purged}
+    assert_nil student.reload.purged_at
+  end
 end

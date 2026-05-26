@@ -14,6 +14,12 @@
 #  index_demo_students_on_user_id_and_demo_type  (user_id,demo_type) UNIQUE
 #
 class DemoStudent < ApplicationRecord
+  # Raised when something tries to hard-delete or purge a user that is a demo
+  # student. Soft-delete (paranoia) is allowed and the demo_students row is
+  # preserved so `Policies::DemoSections.demo_student?` keeps returning true
+  # for permission checks against archived users.
+  class ProtectedRecord < StandardError; end
+
   # OAuth and SSO credentials cannot be cleared for demo students.
   ALLOWED_SECTION_LOGIN_TYPES = [
     Section::LOGIN_TYPE_EMAIL,
