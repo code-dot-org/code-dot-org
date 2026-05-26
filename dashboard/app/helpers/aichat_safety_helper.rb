@@ -27,7 +27,7 @@ module AichatSafetyHelper
       # Retry only on network-related exceptions.
       response = Retryable.retryable(
         tries: 2,
-        on: [Net::OpenTimeout, SocketError, Errno::ECONNRESET]
+        on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
       ) do
         attempts += 1
         start_time_unstructured = Time.now
