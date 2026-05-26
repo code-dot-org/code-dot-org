@@ -1,23 +1,19 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL →
-# Redshift materialized view" pipeline. Everything lives under one
-# `analytics_export:` namespace so the whole workflow is discoverable via
-# `bundle exec rake -T analytics_export`. The `rds:` namespace is reserved for
-# generic RDS infrastructure tasks (snapshots, parameter groups, etc.) and is
-# intentionally not used here.
+# Redshift materialized view" pipeline.
 #
-# IMPORTANT: These tasks inspect the local database schema to determine which
-# tables can be replicated via Zero ETL and which Redshift materialized views to
-# create. The output is then used to configure the managed test server and
-# production Zero ETL integrations and Redshift materialized views.
+# IMPORTANT: These tasks must be executed by an engineer with administrative permissions to AWS on their local
+# development environment.
+#   * `export AWS_PROFILE=codeorg-admin`
+#   * ensure `CDO.redshift_username` is set to a SQL user that has permissions to CREATE/DROP/REFRESH Materialized Views
+#  in the `dashboard.dashboard_production` and `dashboard.dashboard_production_pii` schemas and also ability to query
+#  Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the target Zero
+# ETL databases.
 #
-# Before running these against a non-development environment (e.g., `test` or
-# `production`), make sure your local schema matches the target environment:
-#
-#   git switch staging && git pull
-#   (cd dashboard && bundle exec rake db:migrate RAILS_ENV=development)
-#
-# A stale local schema will produce a stale filter expression (missing
-# excludes for newly added tables, or stale excludes for tables that have
+# These tasks inspect the local database schema to determine which tables can be replicated via Zero ETL and which
+# Redshift materialized views to create. The output is then used to configure the managed test server and production
+# Zero ETL integrations and Redshift materialized views. Before running these against a non-development environment
+# (e.g., `test` or `production`), make sure your local schema matches the target environment. A stale local schema will
+# produce a stale filter expression (missing excludes for newly added tables, or stale excludes for tables that have
 # since gained a primary key) and the wrong set of materialized views.
 
 Rake::Task['db:migrate'].enhance do
@@ -56,9 +52,8 @@ namespace :analytics_export do
 
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
-    db_user = ENV.fetch('REDSHIFT_DB_USER', 'dev')
 
-    client = Cdo::Aws::Redshift::Client.new(db_user: db_user)
+    client = Cdo::Aws::Redshift::Client.new
 
     plan = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
       client: client,
@@ -154,6 +149,117 @@ namespace :analytics_export do
     exit 1 if result[:failed].any? || wait_result[:failed].any?
   end
 
+  # bundle exec rake 'analytics_export:refresh_materialized_views[production]'
+  # DRY_RUN=1 bundle exec rake 'analytics_export:refresh_materialized_views[test]'
+  desc "Refresh Redshift materialized views for stale models. Skips views Redshift reports as not stale. Set DRY_RUN=1 to preview."
+  task :refresh_materialized_views, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:refresh_materialized_views[environment_type]" if args[:environment_type].blank?
+
+    require 'cdo/aws/redshift/materialized_view_generator'
+    require 'cdo/aws/redshift/client'
+
+    Rails.application.eager_load!
+
+    errors = AnalyticsExportable.exportability_errors
+    if errors.any?
+      warn "[AnalyticsExportable] Skipping models that cannot be exported via Zero ETL:"
+      errors.each {|msg| warn "  - #{msg}"}
+      warn ""
+    end
+
+    models = AnalyticsExportable.valid_exported_models
+    abort "No exportable models found." if models.empty?
+
+    env = args[:environment_type].to_sym
+    dry_run = ENV['DRY_RUN'].present?
+
+    client = Cdo::Aws::Redshift::Client.new
+
+    # Phase 1: dry-run preview — group models into stale / fresh / no_views
+    # without touching Redshift beyond the SVV_MV_INFO catalog read.
+    would_refresh = {}
+    skipped = []
+    no_views = []
+    Cdo::Aws::Redshift::MaterializedViewGenerator.refresh_all_views(
+      client: client, environment_type: env, models: models, dry_run: true
+    ) do |event, table_name, payload|
+      case event
+      when :would_refresh
+        would_refresh[table_name] = payload
+      when :skipped
+        skipped << table_name
+      when :no_views
+        no_views << table_name
+      end
+    end
+
+    if would_refresh.any?
+      puts "Stale (#{would_refresh.length} model(s)):"
+      would_refresh.each {|table, fqns| puts "  ~ #{table} (#{fqns.length} view(s))"}
+    end
+
+    puts "Fresh (will be skipped): #{skipped.length} model(s)." unless skipped.empty?
+    puts "No views: #{no_views.length} model(s)." unless no_views.empty?
+
+    if would_refresh.empty?
+      puts "Nothing to refresh."
+      next
+    end
+
+    if dry_run
+      puts "\n[DRY RUN] No statements submitted."
+      next
+    end
+
+    print "\nProceed? [y/N] "
+    abort "Aborted." unless $stdin.gets&.strip&.downcase == 'y'
+
+    puts "\nSubmitting REFRESH for #{would_refresh.length} model(s)..."
+    started_at = Time.now
+
+    result = Cdo::Aws::Redshift::MaterializedViewGenerator.refresh_all_views(
+      client: client, environment_type: env, models: models
+    ) do |event, payload, extra|
+      case event
+      when :submitted
+        puts "  submitted #{payload} (#{extra.length} view(s))"
+      when :error
+        warn "  submit FAILED for #{payload}: #{extra.class}: #{extra.message.lines.first&.strip}"
+      end
+    end
+
+    statements = result[:statements] || {}
+
+    if statements.empty?
+      elapsed = (Time.now - started_at).round(1)
+      puts "Done in #{elapsed}s. No statements to wait for."
+      next
+    end
+
+    puts "\nWaiting for #{statements.length} statement(s) to complete (polls every 10s, Ctrl-C to detach — statements keep running on Redshift)..."
+
+    wait_result = Cdo::Aws::Redshift::MaterializedViewGenerator.wait_for_statements(
+      client: client, statements: statements
+    ) do |event, fqn, detail|
+      case event
+      when :finished
+        puts "  FINISHED  #{fqn} (#{detail}s)"
+      when :failed
+        puts "  FAILED    #{fqn} -- #{detail}"
+      end
+    end
+
+    elapsed = (Time.now - started_at).round(1)
+    puts "\nDone in #{elapsed}s. #{wait_result[:finished].length} finished, #{wait_result[:failed].length} failed."
+
+    if result[:failed].any?
+      warn "\n#{result[:failed].length} model(s) failed at submit time:"
+      result[:failed].each {|t| warn "  - #{t}"}
+    end
+
+    exit 1 if result[:failed].any? || wait_result[:failed].any?
+  end
+
   # bundle exec rake 'analytics_export:sync_status[production]'
   # HOURS_BACK=12 bundle exec rake 'analytics_export:sync_status[production]'
   # bundle exec rake 'analytics_export:sync_status[production]' > status.csv
@@ -169,9 +275,8 @@ namespace :analytics_export do
 
     env = args[:environment_type].to_s
     hours_back = ENV.fetch('HOURS_BACK', '24').to_i
-    db_user = ENV.fetch('REDSHIFT_DB_USER', 'dev')
 
-    client = Cdo::Aws::Redshift::Client.new(db_user: db_user)
+    client = Cdo::Aws::Redshift::Client.new
     rows = Cdo::Aws::Redshift::MaterializedViewGenerator.view_status(
       client: client,
       environment_type: env,
@@ -188,7 +293,20 @@ namespace :analytics_export do
     warn "Status counts: #{counts.sort.map {|k, v| "#{v} #{k}"}.join(', ')}" unless counts.empty?
 
     CSV($stdout) do |csv|
-      csv << %w[model table view_type operation executed_at statement_id status db_user]
+      csv << %w[
+        model
+        mysql_table_name
+        view_type
+        most_recent_operation
+        operation_executed_at
+        operation_duration_seconds
+        redshift_statement_id
+        operation_status
+        redshift_db_user
+        view_is_stale
+        view_state
+        view_state_description
+      ]
       rows.each do |r|
         csv << [
           r.model_name,
@@ -196,9 +314,13 @@ namespace :analytics_export do
           r.view_type,
           r.operation,
           r.executed_at&.iso8601,
+          r.duration_seconds&.round(1),
           r.statement_id,
           r.status,
-          r.db_user
+          r.db_user,
+          r.is_stale.nil? ? nil : r.is_stale.to_s,
+          r.state,
+          r.state_description
         ]
       end
     end

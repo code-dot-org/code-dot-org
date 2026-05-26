@@ -9,16 +9,21 @@ module Cdo
       # Given a Learning Platform ActiveRecord Model, generate SQL (DDL) for a Materialized View in Redshift that sources
       # data from the target Redshift database table where that Model's transactional MySQL data is exported to via Zero-ETL.
       # One row of `view_status` output: the most recent CREATE/DROP/REFRESH
-      # the Redshift Data API knows about for one materialized view FQN.
+      # the Redshift Data API knows about for one materialized view FQN,
+      # plus the view's current freshness as reported by SVV_MV_INFO.
       ViewStatusRow = Struct.new(
         :model_name,
         :table_name,
-        :view_type,        # 'pii' | 'non_pii'
-        :operation,        # 'CREATE' | 'REFRESH' | 'DROP' | nil
-        :executed_at,      # Time | nil
-        :statement_id,     # String | nil
-        :status,           # 'FINISHED' | 'FAILED' | 'ABORTED' | 'STARTED' | '(no recent)' | ...
-        :db_user,          # String | nil
+        :view_type,         # 'pii' | 'non_pii'
+        :operation,         # 'CREATE' | 'REFRESH' | 'DROP' | nil
+        :executed_at,       # Time | nil
+        :duration_seconds,  # Float | nil — wall-clock execution time of the operation; nil while running.
+        :statement_id,      # String | nil
+        :status,            # 'FINISHED' | 'FAILED' | 'ABORTED' | 'STARTED' | '(no recent)' | ...
+        :db_user,           # String | nil
+        :is_stale,          # true | false | nil (nil = view not found in SVV_MV_INFO)
+        :state,             # Integer | nil — Redshift's numeric refresh state
+        :state_description, # String | nil — human-readable form of :state
         keyword_init: true
       )
 
@@ -27,6 +32,34 @@ module Cdo
         DATE_TIME_DATA_TYPES = [:date, :datetime, :timestamp].freeze
         NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
         SQL_INDENT = ' ' * 2
+
+        # Human-readable descriptions for the numeric `state` column of
+        # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
+        # full recompute or incrementally); states >= 100 mean the view can no
+        # longer be refreshed because its source schema drifted and it must be
+        # rebuilt with CREATE OR REPLACE (i.e., `sync_materialized_views`).
+        # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_MV_INFO.html
+        MV_STATE_DESCRIPTIONS = {
+          0 => 'Refreshes by full recompute',
+          1 => 'Refreshes incrementally',
+          101 => "Can't refresh: a source column was dropped — rebuild required",
+          102 => "Can't refresh: a source column type changed — rebuild required",
+          103 => "Can't refresh: a source table was renamed — rebuild required",
+          104 => "Can't refresh: a source column was renamed — rebuild required",
+          105 => "Can't refresh: a source schema was renamed — rebuild required"
+        }.freeze
+
+        # Maps an SVV_MV_INFO numeric `state` to a human-readable description.
+        # Falls back to a generic "can't be refreshed" message for any
+        # undocumented state >= 100 (AWS may add new failure codes), and an
+        # "unknown" message otherwise.
+        # @param state [Integer, nil]
+        # @return [String, nil] nil only when state is nil
+        def self.describe_mv_state(state)
+          return nil if state.nil?
+          MV_STATE_DESCRIPTIONS[state] ||
+            (state >= 100 ? "Can't be refreshed — rebuild required (state #{state})" : "Unknown state #{state}")
+        end
 
         attr_reader :model
 
@@ -162,17 +195,30 @@ module Cdo
           statements
         end
 
-        # Refreshes both PII and non-PII materialized views for this model.
+        # Submits REFRESH MATERIALIZED VIEW for this model's PII and non-PII
+        # views asynchronously and returns the resulting statement IDs without
+        # waiting. Each view is submitted as its own single-statement async call
+        # so callers can track completion per FQN (e.g., via `.wait_for_statements`).
+        # REFRESH on a Zero ETL-sourced view can take longer than the synchronous
+        # client timeout when many INSERT/UPDATE/DELETE rows have streamed in
+        # since the last refresh, which is why this method does not wait.
+        #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
-        # @return [Array<String>] fully qualified names of views refreshed
-        def refresh_views(client:, environment_type:)
+        # @param only [Array<String>, nil] optional FQN whitelist — when given,
+        #   submits REFRESH only for FQNs in this model's view variants that
+        #   intersect the list. Used by `.refresh_all_views` to skip non-stale
+        #   views.
+        # @return [Hash{String => String}] fqn => Redshift Data API statement_id
+        def refresh_views(client:, environment_type:, only: nil)
           env = environment_type.to_s
           fqns = view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
-          return fqns if fqns.empty?
+          fqns &= Array(only) if only
+          return {} if fqns.empty?
 
-          client.batch_execute(fqns.map {|fqn| "REFRESH MATERIALIZED VIEW #{fqn}"})
-          fqns
+          fqns.each_with_object({}) do |fqn, statements|
+            statements[fqn] = client.execute_async("REFRESH MATERIALIZED VIEW #{fqn}")
+          end
         end
 
         # Renders a DDL ERB template file with the given environment type.
@@ -325,6 +371,86 @@ module Cdo
           {finished: finished, failed: failed}
         end
 
+        # Submits REFRESH MATERIALIZED VIEW asynchronously for every PII and
+        # non-PII view across the given set of models, and returns the resulting
+        # statement IDs without waiting. Pair with `.wait_for_statements` to
+        # gate downstream analytics work on REFRESH completion.
+        #
+        # Skips views that Redshift reports as not stale (`SVV_MV_INFO.is_stale = 'f'`):
+        # when Zero ETL hasn't delivered any change rows since the previous refresh,
+        # there's nothing to do. A view that doesn't appear in SVV_MV_INFO (newly
+        # created, or just not catalog-visible) is treated as stale so it gets
+        # refreshed — safer than skipping something we can't see.
+        #
+        # Intended caller: end-of-cron hooks such as
+        # `bin/cron/export_mysql_database_to_redshift`, which can submit
+        # REFRESH at the tail of the DMS daily-copy job and either return
+        # immediately or wait for completion before signalling downstream
+        # reports that the warehouse is consistent.
+        #
+        # Per-model submit failures (e.g., the view does not yet exist in
+        # Redshift because the most recent CREATE failed) are caught and
+        # reported via the `:error` event rather than aborting the whole run.
+        #
+        # Yielded progress events (block optional):
+        #   yield(:would_refresh, table_name, [fqn, ...]) # dry_run only — would submit these FQNs
+        #   yield(:submitted, table_name, [fqn, ...])     # async REFRESHes submitted for one model
+        #   yield(:skipped, table_name)                   # every view for this model is not stale
+        #   yield(:no_views, table_name)                  # model has no MV variants (no columns / all text)
+        #   yield(:error, table_name, exception)          # submit raised; refresh_all_views continues
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol] :production or :test
+        # @param models [Enumerable<Class>] ActiveRecord model classes whose views to refresh
+        # @param dry_run [Boolean] when true, reports what would be refreshed via the
+        #   `:would_refresh` event without submitting anything. `:skipped` and `:no_views`
+        #   are still yielded so callers can render a complete preview.
+        # @return [Hash] :statements => {fqn => statement_id}, :failed => [table_name, ...]
+        #   (both empty when dry_run is true).
+        def self.refresh_all_views(client:, environment_type:, models:, dry_run: false)
+          statements = {}
+          failed = []
+
+          staleness = list_view_staleness(client: client, environment_type: environment_type)
+
+          models.each do |model|
+            gen = new(model)
+            table_name = model.table_name
+            expected_fqns = gen.expected_view_fqns(environment_type)
+
+            if expected_fqns.empty?
+              yield(:no_views, table_name) if block_given?
+              next
+            end
+
+            # A view we don't have catalog info for is treated as stale: better
+            # to over-refresh than to leave a view stale because we couldn't
+            # confirm its freshness.
+            stale_fqns = expected_fqns.select {|fqn| staleness[fqn].nil? || staleness[fqn][:is_stale]}
+
+            if stale_fqns.empty?
+              yield(:skipped, table_name) if block_given?
+              next
+            end
+
+            if dry_run
+              yield(:would_refresh, table_name, stale_fqns) if block_given?
+              next
+            end
+
+            begin
+              submitted = gen.refresh_views(client: client, environment_type: environment_type, only: stale_fqns)
+              statements.merge!(submitted)
+              yield(:submitted, table_name, submitted.keys) if block_given?
+            rescue StandardError => exception
+              failed << table_name
+              yield(:error, table_name, exception) if block_given?
+            end
+          end
+
+          {statements: statements, failed: failed}
+        end
+
         # Returns one `ViewStatusRow` per (model, view variant) plus extra rows
         # for orphan FQNs (views referenced by recent Data API statements but no
         # longer claimed by any model in `models`). The "operation" column is the
@@ -386,12 +512,23 @@ module Cdo
           end
 
           # Phase 2: describe each candidate, resolve per-FQN primary op.
+          # `sub_statements` is populated only for batch statements (e.g., our
+          # DROP+CREATE+COMMENT batches). Single-statement submissions (e.g.,
+          # REFRESH via `execute_async`) report sub_statements=nil; for those
+          # we parse `desc.query_string` directly.
           fqn_to_latest = {}
           candidates.each do |batch|
             desc = client.describe_statement(batch.id)
+            sub_queries =
+              if desc.sub_statements && !desc.sub_statements.empty?
+                desc.sub_statements.map(&:query_string)
+              else
+                [desc.query_string]
+              end
+
             fqn_to_op = {}
-            desc.sub_statements.each do |sub|
-              op, fqn = parse_sub.call(sub.query_string)
+            sub_queries.each do |sql|
+              op, fqn = parse_sub.call(sql)
               next if op.nil? || fqn.nil?
               next unless schema_prefixes.any? {|prefix| fqn.start_with?(prefix)}
               current = fqn_to_op[fqn]
@@ -406,6 +543,10 @@ module Cdo
 
           view_type_for = ->(fqn) {fqn.include?('_pii.zeroetl_') ? 'pii' : 'non_pii'}
 
+          # Freshness info from SVV_MV_INFO — independent signal from the Data
+          # API statement history, useful for "is this view actually fresh?"
+          staleness = list_view_staleness(client: client, environment_type: env)
+
           # Expected FQNs per model.
           model_fqns = {}
           models.sort_by(&:name).each do |model|
@@ -413,8 +554,17 @@ module Cdo
           end
           expected_set = model_fqns.keys.to_set
 
+          # `desc.duration` is reported in nanoseconds by the Redshift Data API.
+          # Convert to seconds (Float); nil/zero (still running) becomes nil.
+          duration_seconds_for = lambda do |desc|
+            nanos = desc.duration
+            return nil if nanos.nil? || nanos <= 0
+            nanos.to_f / 1_000_000_000
+          end
+
           build_row = lambda do |model_name, table_name, fqn|
             latest = fqn_to_latest[fqn]
+            stale_info = staleness[fqn]
             if latest
               ViewStatusRow.new(
                 model_name: model_name,
@@ -422,9 +572,13 @@ module Cdo
                 view_type: view_type_for.call(fqn),
                 operation: latest[:op],
                 executed_at: latest[:batch].created_at,
+                duration_seconds: duration_seconds_for.call(latest[:desc]),
                 statement_id: latest[:batch].id,
                 status: latest[:batch].status,
-                db_user: latest[:desc].db_user
+                db_user: latest[:desc].db_user,
+                is_stale: stale_info&.dig(:is_stale),
+                state: stale_info&.dig(:state),
+                state_description: describe_mv_state(stale_info&.dig(:state))
               )
             else
               ViewStatusRow.new(
@@ -433,9 +587,13 @@ module Cdo
                 view_type: view_type_for.call(fqn),
                 operation: nil,
                 executed_at: nil,
+                duration_seconds: nil,
                 statement_id: nil,
                 status: '(no recent)',
-                db_user: nil
+                db_user: nil,
+                is_stale: stale_info&.dig(:is_stale),
+                state: stale_info&.dig(:state),
+                state_description: describe_mv_state(stale_info&.dig(:state))
               )
             end
           end
@@ -453,6 +611,36 @@ module Cdo
           end
 
           rows
+        end
+
+        # Queries Redshift for the freshness of `zeroetl_` materialized views
+        # in the dashboard schemas for the given environment. SVV_MV_INFO is
+        # the system view Redshift exposes for this: `is_stale` is 't'/'f'
+        # depending on whether the underlying source table has unprocessed
+        # changes since the last refresh, and `state` is Redshift's numeric
+        # refresh status (e.g., 1 = refresh in progress, 100 = stale).
+        #
+        # SVV_MV_INFO returns fixed-width VARCHAR columns, so the query TRIMs
+        # `schema_name` and `name` before comparing/returning.
+        # @return [Hash{String => Hash}] fqn => {is_stale: Boolean, state: Integer}
+        private_class_method def self.list_view_staleness(client:, environment_type:)
+          env = environment_type.to_s
+          schemas = ["#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}", "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii"]
+          schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
+
+          rows = client.execute(<<~SQL)
+            SELECT TRIM(schema_name) AS schema, TRIM(name) AS name, is_stale, state
+            FROM SVV_MV_INFO
+            WHERE TRIM(schema_name) IN (#{schema_list})
+              AND TRIM(name) LIKE 'zeroetl_%'
+          SQL
+
+          rows.each_with_object({}) do |r, h|
+            h["#{r['schema']}.#{r['name']}"] = {
+              is_stale: r['is_stale'] == 't',
+              state: r['state'].to_i
+            }
+          end
         end
 
         # Queries Redshift for existing `zeroetl_` materialized views in the
