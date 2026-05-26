@@ -30,12 +30,12 @@ const HEADER_LOGO_SELECTOR = '#header_logo_container';
 // before React mounts.
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
-// opening: backdrop + white card fade in; media not yet rendered.
-// gif:     GIF loops (or MP4 plays once).
+// opening: backdrop fades in; media not yet rendered.
+// gif:     GIF loops (or MP4 plays once) over the dimmer.
 // hold:    GIF/video stays on its last frame for HOLD_MS.
-// landing: card slides from viewport center to the header slot while the
+// landing: media slides from viewport center to the header slot while the
 //          GIF/video fades out and the SVG fades in.
-// done:    card has landed; SVG sits where the native logo would.
+// done:    media has landed; SVG sits where the native logo would.
 type Phase = 'opening' | 'gif' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
@@ -183,7 +183,6 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   // still-modal-sized card.
   const svgHidden = phase === 'opening' || phase === 'gif' || phase === 'hold';
   const backdropFading = phase === 'landing' || phase === 'done';
-  const cardLanded = phase === 'landing' || phase === 'done';
 
   const backdropClassName = [
     styles.backdrop,
@@ -197,7 +196,6 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     styles.card,
     !entered && styles.cardNoTransition,
     !entered && styles.cardOpening,
-    cardLanded && styles.cardLanded,
   ]
     .filter(Boolean)
     .join(' ');

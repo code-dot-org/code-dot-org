@@ -1,7 +1,7 @@
-// Fullscreen dimmer behind the centered card. Lives in document.body so
+// Fullscreen dimmer behind the centered media. Lives in document.body so
 // it's not clipped by the teacher dashboard's overflow. Starts at opacity
 // 0 (via .backdropOpening on first paint) and fades in over 300ms; later
-// fades out over 700ms in lockstep with the card slide into the header.
+// fades out over 700ms in lockstep with the slide into the header.
 .backdrop {
   position: fixed;
   inset: 0;
@@ -21,87 +21,51 @@
   transition: opacity 700ms ease;
 }
 
-// The card is portaled to document.body to escape stacking contexts on
-// .header_left and .header_logo that would otherwise sit it below the
-// backdrop. JS sets its initial top/left/width/height to a modal-sized
-// rect centered in the viewport; the landing effect rewrites those four
-// properties to the native <img>'s viewport rect so the card slides and
-// resizes home in one tween. Animating size directly (rather than via
-// transform scale) keeps the modal a different aspect from the header
-// slot without distorting the media inside (object-fit: contain refits
-// every frame). The white fill, rounded corners, and shadow fade out in
-// lockstep so the card resolves into the in-header logo with no frame.
+// The card is an invisible positioned container (no fill of its own — just
+// the media over the dimmer). Portaled to document.body to escape stacking
+// contexts on .header_left / .header_logo that would otherwise sit it
+// below the backdrop. JS sets its initial top/left/width/height to a
+// modal-sized rect centered in the viewport; the landing effect rewrites
+// those to the native <img>'s viewport rect so the media slides and
+// resizes into the header in one tween. The media fills the card and uses
+// object-fit: contain, so it keeps aspect ratio as the card resizes.
 .card {
   position: fixed;
   z-index: 9999;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
   opacity: 1;
   transition:
     opacity 300ms ease,
     top 700ms cubic-bezier(0.4, 0, 0.2, 1),
     left 700ms cubic-bezier(0.4, 0, 0.2, 1),
     width 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    height 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 700ms ease,
-    border-radius 700ms ease,
-    box-shadow 700ms ease;
+    height 700ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
-  overflow: hidden;
 }
 
 .cardOpening {
   opacity: 0;
 }
 
-.cardLanded {
-  background-color: transparent;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 // Applied on the first render only, so the layout-effect-applied size
-// places the card at the modal position with no opening animation. The
-// inner image transitions are also suppressed: the card starts at 0x0
-// until JS sizes it, which would otherwise animate the image's
-// calc(100% - 60px) width/height from ~0 to their final values — that's
-// the squish-then-correct on the first frame. Removed after the first
-// paint, restoring the regular transitions that drive the slide into
-// the header slot.
-.cardNoTransition,
-.cardNoTransition .image {
+// places the card at the modal position with no opening animation: the
+// card starts at 0x0 until JS sizes it, and without this the size jump
+// would animate. Removed after the first paint, restoring the transitions
+// that drive the slide into the header slot.
+.cardNoTransition {
   transition: none;
 }
 
-// 30px of breathing room around the GIF/SVG/video in the centered modal.
-// Width/height are explicit (calc-based, not derived from right/bottom
-// insets) because <video> won't auto-size off those insets the way <img>
-// does — without an explicit width it falls back to the media's intrinsic
-// resolution and blows past the modal. The padding transitions back to 0
-// in lockstep with the card slide so it doesn't survive into the landed
-// (177x30) state and crush the logo.
+// The GIF/SVG/video fills the card; object-fit: contain keeps its aspect
+// ratio (letterboxed over the dimmer) as the card resizes during the
+// slide.
 .image {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
-  object-fit: contain;
-  opacity: 1;
-  transition:
-    opacity 500ms ease,
-    top 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    left 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    width 700ms cubic-bezier(0.4, 0, 0.2, 1),
-    height 700ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cardLanded .image {
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 500ms ease;
 }
 
 .imageHidden {
