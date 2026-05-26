@@ -67,14 +67,23 @@ const useResourcePanelTours = ({
     setIsLevelLoading(false);
   });
 
+  // We only support resource panel tours in Python Lab for now.
+  // The resource panel is introduced in the (separate) Web Lab 2 overview tour.
+  const isPythonlab = levelProperties.appName === 'pythonlab';
+
   // RESOURCE PANEL ONBOARDING TOUR
   const showResourcePanelOnboardingTour = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
       levelProperties
     );
-    return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
-  }, [levelProperties, isStandaloneCollapsed, isLevelLoading]);
+    return (
+      isPythonlab &&
+      isEnabledOnLevel &&
+      !isStandaloneCollapsed &&
+      !isLevelLoading
+    );
+  }, [isPythonlab, levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
   const [resourcePanelOnboardingTourSeen, setResourcePanelOnboardingTourSeen] =
     useState(
@@ -124,7 +133,8 @@ const useResourcePanelTours = ({
   // VALIDATION TOUR
   const showValidationTour = useMemo(
     () =>
-      (!isLevelLoading &&
+      (isPythonlab &&
+        !isLevelLoading &&
         isTourEnabledOnLevel(
           ProductTour.ResourcePanelValidation,
           levelProperties
@@ -133,6 +143,7 @@ const useResourcePanelTours = ({
           resourcePanelOnboardingTourSeen)) ||
       false,
     [
+      isPythonlab,
       isLevelLoading,
       levelProperties,
       showResourcePanelOnboardingTour,
