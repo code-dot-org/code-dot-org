@@ -14,7 +14,7 @@ import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/us
 
 import {Weblab2LevelProperties} from '../types';
 
-const WEBLAB2_ONBOARDING_TOUR_SEEN = 'weblab2OnboardingTourSeen';
+const WEBLAB2_INTRO_TOUR_SEEN = 'weblab2IntroTourSeen';
 
 const useWeblab2IntroTour = (levelProperties: Weblab2LevelProperties) => {
   const [isLevelLoading, setIsLevelLoading] = useState(false);
@@ -25,7 +25,7 @@ const useWeblab2IntroTour = (levelProperties: Weblab2LevelProperties) => {
     setIsLevelLoading(false);
   });
 
-  const isOnboardingTourEnabled = useMemo(() => {
+  const isIntroTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.Weblab2Intro,
       levelProperties
@@ -66,8 +66,8 @@ const useWeblab2IntroTour = (levelProperties: Weblab2LevelProperties) => {
 
   const {tour} = useLab2ProductTour({
     getSteps: ProductTourConfigurations[ProductTour.Weblab2Intro].getSteps,
-    localStorageKey: WEBLAB2_ONBOARDING_TOUR_SEEN,
-    tourAvailable: isOnboardingTourEnabled,
+    localStorageKey: WEBLAB2_INTRO_TOUR_SEEN,
+    tourAvailable: isIntroTourEnabled,
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,
