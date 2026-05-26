@@ -5,6 +5,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import {AiCustomizations, Visibility} from './customizations';
 
 export interface AichatLevelProperties extends LevelProperties {
+  aichatCapabilities?: LevelAichatCapabilities;
   /**
    * Initial AI chat customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
@@ -13,6 +14,17 @@ export interface AichatLevelProperties extends LevelProperties {
    * the value if it is set to editable.
    */
   aichatSettings?: LevelAichatSettings;
+}
+
+export enum AichatCapabilities {
+  TEXT = 'text',
+  IMAGE = 'image',
+  FILES = 'files',
+}
+
+export interface LevelAichatCapabilities {
+  inputs: AichatCapabilities[];
+  outputs: AichatCapabilities[];
 }
 
 /**

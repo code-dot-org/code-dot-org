@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#aichat-capabilities-container"}}
+  AI Chat Capabilities
+
+#aichat-capabilities-container.in.collapse
+  #aichat-capabilities-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_aichat_capabilities.js'),
+        data: {aichatcapabilities: @level.properties["aichat_capabilities"].to_json}}
