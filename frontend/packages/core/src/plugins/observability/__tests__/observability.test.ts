@@ -48,6 +48,7 @@ import {
   setContext,
   setTag,
   shutdown,
+  startSpan,
 } from '../index';
 import type {ObservabilityConfig} from '../types';
 import {isSampled} from '../sampling';
@@ -463,15 +464,16 @@ describe('observability plugin', () => {
     await vi.dynamicImportSettled();
 
     const result = startSpan(
-      {name: 'ai-gateway.generate-text', op: 'ai.generate_text'},
+      {name: 'test.operation', op: 'test.op', attributes: {key: 'value'}},
       () => 'done',
     );
 
     expect(result).toBe('done');
     expect(Sentry.startSpan).toHaveBeenCalledWith(
       expect.objectContaining({
-        name: 'ai-gateway.generate-text',
-        op: 'ai.generate_text',
+        name: 'test.operation',
+        op: 'test.op',
+        attributes: {key: 'value'},
       }),
       expect.any(Function),
     );
