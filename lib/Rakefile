@@ -1,5 +1,7 @@
 require 'rake/testtask'
 
+# temporarily trigger lib tests
+
 desc 'Run tests for lib directory'
 task :test do
   puts 'starting test task'
