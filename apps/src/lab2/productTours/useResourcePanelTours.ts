@@ -72,7 +72,7 @@ const useResourcePanelTours = ({
   const isPythonlab = levelProperties.appName === 'pythonlab';
 
   // RESOURCE PANEL ONBOARDING TOUR
-  const showResourcePanelOnboardingTour = useMemo(() => {
+  const isOnboardingTourEnabled = useMemo(() => {
     const isEnabledOnLevel = isTourEnabledOnLevel(
       ProductTour.ResourcePanelOnboarding,
       levelProperties
@@ -85,47 +85,42 @@ const useResourcePanelTours = ({
     );
   }, [isPythonlab, levelProperties, isStandaloneCollapsed, isLevelLoading]);
 
-  const [resourcePanelOnboardingTourSeen, setResourcePanelOnboardingTourSeen] =
-    useState(
-      () =>
-        tryGetLocalStorage(
-          RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-          'no'
-        ) === 'yes'
-    );
+  const [onboardingTourSeen, setOnboardingTourSeen] = useState(
+    () =>
+      tryGetLocalStorage(
+        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+        'no'
+      ) === 'yes'
+  );
   useEffect(() => {
-    setResourcePanelOnboardingTourSeen(
+    setOnboardingTourSeen(
       tryGetLocalStorage(
         RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
         'no'
       ) === 'yes'
     );
   }, []);
-  const onResourcePanelOnboardingTourComplete = useCallback(() => {
+  const onOnboardingTourComplete = useCallback(() => {
     onTourComplete(
       ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName
     )();
-    setResourcePanelOnboardingTourSeen(true);
+    setOnboardingTourSeen(true);
   }, []);
 
-  const onResourcePanelOnboardingTourCancel = useCallback(
-    (stepIndex: number) => {
-      onTourCancel(
-        ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]
-          .metricName
-      )(stepIndex);
-      setResourcePanelOnboardingTourSeen(true);
-    },
-    []
-  );
+  const onOnboardingTourCancel = useCallback((stepIndex: number) => {
+    onTourCancel(
+      ProductTourConfigurations[ProductTour.ResourcePanelOnboarding].metricName
+    )(stepIndex);
+    setOnboardingTourSeen(true);
+  }, []);
 
   const {tour: resourcePanelOnboardingTour} = useLab2ProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-    tourAvailable: showResourcePanelOnboardingTour,
+    tourAvailable: isOnboardingTourEnabled,
     onStart: onTourStart(ONBOARDING_FLOW_NAME),
-    onComplete: onResourcePanelOnboardingTourComplete,
-    onCancel: onResourcePanelOnboardingTourCancel,
+    onComplete: onOnboardingTourComplete,
+    onCancel: onOnboardingTourCancel,
   });
 
   useStartTourWhenAvailable(resourcePanelOnboardingTour);
@@ -139,15 +134,14 @@ const useResourcePanelTours = ({
           ProductTour.ResourcePanelValidation,
           levelProperties
         ) &&
-        (!showResourcePanelOnboardingTour ||
-          resourcePanelOnboardingTourSeen)) ||
+        (!isOnboardingTourEnabled || onboardingTourSeen)) ||
       false,
     [
       isPythonlab,
       isLevelLoading,
       levelProperties,
-      showResourcePanelOnboardingTour,
-      resourcePanelOnboardingTourSeen,
+      isOnboardingTourEnabled,
+      onboardingTourSeen,
     ]
   );
 
