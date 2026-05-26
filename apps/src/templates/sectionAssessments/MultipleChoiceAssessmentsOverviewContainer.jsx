@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -32,12 +33,12 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER && (
           <div>
-            <h2>
+            <Typography variant="h2" component="h2" gutterBottom>
               {i18n.multipleChoiceQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
                 numStudents: totalStudentCount,
               })}
-            </h2>
+            </Typography>
             <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={questionAnswerData}
               openDialog={this.props.openDialog}

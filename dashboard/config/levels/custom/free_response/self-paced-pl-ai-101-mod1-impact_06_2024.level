@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Reflection\r\n\r\n#### Thinking back on what you’ve seen so far in this module, what has resonated with you? Is there something you didn't agree with or feel differently about in regards to AI?",
+    "long_instructions": "# Reflection\r\n\r\nThinking back on what you’ve seen so far in this module, what has resonated with you? Is there something you didn't agree with or feel differently about in regards to AI?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

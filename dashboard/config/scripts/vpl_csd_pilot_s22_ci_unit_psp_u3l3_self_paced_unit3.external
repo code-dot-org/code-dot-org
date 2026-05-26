@@ -22,7 +22,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🖼️ Problem Solving Process with Design</summary>
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### 🔎 <b>Define</b>
+🔎 <b>Define</b>
 
 <img src="https://images.code.org/6561d2dc9e981376f36799a1f68de5e9-image-1700514906651.14.15 PM.png" style="float:right; width:250px; border-radius:30px; margin-left:15px; margin-right: 15px;" alt="A diagram showing the four steps of the Problem Solving Process">
 
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
 * ##### Imagine you're one of your users. Write down what a user might see, hear, or feel when experiencing their need or want
 * ##### If possible, interview potential users
 
-#### 📝 <b>Prepare</b>
+📝 <b>Prepare</b>
 
 * ##### Set aside your personal beliefs or assumptions to <b>empathize</b> with the users
 * ##### Brainstorm potential solutions that meet the needs and wants of your users
@@ -39,14 +39,14 @@ markdown <<MARKDOWN
 * ##### Create a "pros" and "cons" list for potential solutions to help decide which one to create
 * ##### Decide on the "minimum" you need to create to start testing what works and what doesn't
 
-#### 🖥️ <b>Try</b>
+🖥️ <b>Try</b>
 
 * ##### Sketch your idea on paper or with a digital tool
 * ##### Create a <b>prototype</b> of your product - a quick, low-stakes version of your idea that you can test
 * ##### Identify a specific aspect of your prototype you want to test and receive feedback on
 * ##### Share your prototype with others and get feedback
 
-#### 🤔 <b>Reflect</b>
+🤔 <b>Reflect</b>
 
 * ##### What categories of feedback did you get from your design? What improvements can you make based on that feedback?
 * #####  What was the reaction to your prototype when you shared it with others? How can you build on positive reactions? How can you make changes to avoid negative reactions?
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">💻 Problem Solving Process with Programming</summary>
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### 🔎 <b>Define</b>
+🔎 <b>Define</b>
 
 <img src="https://images.code.org/6561d2dc9e981376f36799a1f68de5e9-image-1700514906651.14.15 PM.png" style="float:right; width:250px; border-radius:30px; margin-left:15px; margin-right: 15px;" alt="A diagram showing the four steps of the Problem Solving Process">
 
@@ -73,7 +73,7 @@ markdown <<MARKDOWN
 * ##### Identify any skills you are being asked to apply
 * ##### Decide which aspect of the program you want to complete first
 
-#### 📝 <b>Prepare</b>
+📝 <b>Prepare</b>
 
 * ##### Brainstorm the different ways you could solve the entire problem using programming.
 * ##### Write in plain English or pseudocode your ideas for how to solve the program to do what it's supposed to do
@@ -82,7 +82,7 @@ markdown <<MARKDOWN
 * ##### Review similar programs you may have written in the past
 * ##### Sketch your idea on paper if needed
 
-#### 🖥️ <b>Try</b>
+🖥️ <b>Try</b>
 
 * ##### Pick one idea from the previous step and document why you chose that idea
 * ##### Implement your chosen idea and write one small piece of code at a time
@@ -91,7 +91,7 @@ markdown <<MARKDOWN
 * ##### Go back to the previous step to look at your other ideas for solving if you get stuck
 * ##### Apply appropriate debugging strategies
 
-#### 🤔 <b>Reflect</b>
+🤔 <b>Reflect</b>
 
 * ##### Compare your program to the defined problem. Were you successful in solving all aspects of the problem? How do you know?
 * ##### Ask a classmate to try your program. Are there places where they struggle or show confusion?

@@ -2,13 +2,14 @@
 
 ## Adding a New Provider Adapter
 
-Follow these steps to add support for a new observability provider such as
-`newrelic`.
+Follow these steps to add support for a new observability provider. Substitute
+the new provider's name for `<provider>` (lower-case identifier used in config
+and the factory) and `<ProviderName>` (the corresponding adapter class name).
 
 ### 1. Create the adapter
 
-Extend `BaseAdapter` in `adapters/NewRelicAdapter.ts`. `BaseAdapter` handles
-the consent queue, session ID-based sampling, and the default no-op
+Extend `BaseAdapter` in `adapters/<ProviderName>Adapter.ts`. `BaseAdapter`
+handles the consent queue, session ID-based sampling, and the default no-op
 `logger`/`metrics` implementations, so the adapter only needs to implement the
 provider-specific hooks:
 
@@ -16,7 +17,7 @@ provider-specific hooks:
 import type {ObservabilityConfig} from '../types';
 import {BaseAdapter} from './BaseAdapter';
 
-export class NewRelicAdapter extends BaseAdapter {
+export class <ProviderName>Adapter extends BaseAdapter {
   protected initProvider(config: ObservabilityConfig): void {
     const enableLogs = this.isLogSampled(config.sampling?.logSampleRate);
 
@@ -47,7 +48,7 @@ export class NewRelicAdapter extends BaseAdapter {
 Update `provider` in `types.ts`:
 
 ```ts
-provider: 'sentry' | 'newrelic' | 'none';
+provider: 'sentry' | '<provider>' | 'none';
 ```
 
 Add any provider-specific config fields needed by the adapter.
@@ -57,9 +58,9 @@ Add any provider-specific config fields needed by the adapter.
 Update `factory.ts` so the new provider is dynamically imported:
 
 ```ts
-if (provider === 'newrelic') {
-  const {NewRelicAdapter} = await import('./adapters/NewRelicAdapter');
-  return new NewRelicAdapter();
+if (provider === '<provider>') {
+  const {<ProviderName>Adapter} = await import('./adapters/<ProviderName>Adapter');
+  return new <ProviderName>Adapter();
 }
 ```
 

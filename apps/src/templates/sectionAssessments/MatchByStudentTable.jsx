@@ -14,6 +14,8 @@ import {
 } from './assessmentDataShapes';
 import PercentAnsweredCell from './PercentAnsweredCell';
 
+import moduleStyles from './match-by-student-table.module.scss';
+
 export const COLUMNS = {
   OPTION: 0,
   STUDENT_ANSWER: 1,
@@ -88,10 +90,8 @@ class MatchByStudentTable extends Component {
         cell: {
           formatters: [this.optionCellFormatter],
           props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.optionCell,
-            },
+            style: tableLayoutStyles.cell,
+            className: moduleStyles.optionCell,
           },
         },
       },
@@ -189,12 +189,6 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
-  },
-  optionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470,
   },
 };
 

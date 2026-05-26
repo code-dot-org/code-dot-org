@@ -16,6 +16,8 @@ import {optionDataPropTypeMatch} from './assessmentDataShapes';
 import PercentAnsweredCell from './PercentAnsweredCell';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 
+import moduleStyles from './match-overview-table.module.scss';
+
 export const COLUMNS = {
   OPTION: 0,
 };
@@ -159,11 +161,11 @@ class MatchAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell,
           maxWidth:
             styleConstants['content-width'] -
             numAnswers * (ANSWER_COLUMN_WIDTH + PADDING),
         },
+        className: moduleStyles.optionCell,
       },
     },
   });
@@ -239,11 +241,6 @@ const styles = {
   notAnsweredCell: {
     padding: 0,
     height: 40,
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
   },
 };
 

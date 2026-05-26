@@ -1,7 +1,7 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 const DEFAULT_FILTER_KEY = i18n.all();
@@ -18,44 +18,26 @@ function TextResponsesLessonSelector({lessons, onChangeFilter}) {
     onChangeFilter(newFilterByLessonName);
   };
 
+  const items = [
+    {value: DEFAULT_FILTER_KEY, text: DEFAULT_FILTER_KEY},
+    ...lessons.map(lesson => ({value: lesson, text: lesson})),
+  ];
+
   return (
-    <div style={styles.dropdownContainer}>
-      <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
-      <select
-        id="uitest-lesson-filter"
-        style={styles.dropdown}
-        onChange={onChange}
-      >
-        <option key={DEFAULT_FILTER_KEY}>{DEFAULT_FILTER_KEY}</option>
-        {lessons.map(lesson => (
-          <option key={lesson}>{lesson}</option>
-        ))}
-      </select>
-    </div>
+    <SimpleDropdown
+      id="uitest-lesson-filter"
+      name="lesson-filter"
+      labelText={i18n.filterByStage()}
+      items={items}
+      onChange={onChange}
+      size="s"
+    />
   );
 }
 
 TextResponsesLessonSelector.propTypes = {
   lessons: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChangeFilter: PropTypes.func.isRequired,
-};
-
-const styles = {
-  dropdownContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  dropdownLabel: {
-    ...fontConstants['main-font-semi-bold'],
-  },
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    height: 30,
-    paddingLeft: 8,
-    paddingRight: 8,
-    marginLeft: 8,
-  },
 };
 
 export default TextResponsesLessonSelector;

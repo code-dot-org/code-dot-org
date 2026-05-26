@@ -1,0 +1,149 @@
+name 'pl-aif-2-U3-array-methods-CFU'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Array Methods: Check for Understanding
+
+Arrays can change as a program runs. These four methods help students add or remove items from the front or back of an array.
+
+---
+## Part 1: Match the Method
+
+Look at each method name and visual cue. What do you think it does? Click each card to check your prediction.
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:20px;font-weight:700;list-style:none;">
+      ➡️ ➕ <code>push()</code>
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      <strong>Adds to the back</strong><br>
+      Adds an item to the end of the array.<br><br>
+      <em>Think: push it to the back of the line.</em>
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:20px;font-weight:700;list-style:none;">
+      ⬅️ ➕ <code>unshift()</code>
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      <strong>Adds to the front</strong><br>
+      Adds an item to the beginning of the array.<br><br>
+      <em>Think: shift everything over and put this in front.</em>
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:20px;font-weight:700;list-style:none;">
+      ➡️ ➖ <code>pop()</code>
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      <strong>Removes from the back</strong><br>
+      Removes the last item in the array.<br><br>
+      <em>Think: pop it off the back.</em>
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:20px;font-weight:700;list-style:none;">
+      ⬅️ ➖ <code>shift()</code>
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      <strong>Removes from the front</strong><br>
+      Removes the first item in the array.<br><br>
+      <em>Think: shift everything up by removing the first item.</em>
+    </div>
+  </details>
+
+</div>
+
+---
+
+## Part 2: Which Method Would You Use?
+
+Read each scenario. Click to reveal the best array method.
+
+### Scenario 1: Playlist
+
+A music app adds a new song to the end of a playlist.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Reveal Method
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+<strong><code>push()</code></strong><br>
+Use <code>push()</code> because the new song is added to the back, or end, of the array.
+</div>
+</details>
+
+<br>
+
+### Scenario 2: Notifications
+
+A notification app removes the oldest notification from the beginning of the list.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Reveal Method
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+<strong><code>shift()</code></strong><br>
+Use <code>shift()</code> because the oldest notification is at the front of the array and needs to be removed.
+</div>
+</details>
+
+<br>
+
+### Scenario 3: To-Do List
+
+A to-do app adds an urgent task to the top of the list.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Reveal Method
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+<strong><code>unshift()</code></strong><br>
+Use <code>unshift()</code> because the urgent task is added to the front, or beginning, of the array.
+</div>
+</details>
+
+<br>
+
+### Scenario 4: Recent Posts
+
+A social media app removes the newest post from the end of a list of recent posts.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Reveal Method
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+<strong><code>pop()</code></strong><br>
+Use <code>pop()</code> because the newest post is at the back, or end, of the array and needs to be removed.
+</div>
+</details>
+
+---
+
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> Students often confuse <code>shift()</code> and <code>unshift()</code>. Encourage them to use the visual cues and memory phrases (“push to the back,” “shift from the front”) as they practice modifying arrays.
+</p>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

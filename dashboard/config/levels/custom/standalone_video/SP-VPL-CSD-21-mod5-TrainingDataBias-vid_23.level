@@ -12,7 +12,7 @@
     "parent_level_id": 28811,
     "name_suffix": "_23",
     "encrypted": "false",
-    "long_instructions": "\r\n\r\n##### This video is included in the CS Discoveries curriculum to introduce students to training data bias.\r\n##\r\n\r\n##### **Bias** - when a decision favors some things and deprioritizes or excludes others\r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### Why is it important for my students to consider training bias when learning about AI and machine learning? \r\n"
+    "long_instructions": "\r\n\r\n##### This video is included in the CS Discoveries curriculum to introduce students to training data bias.\r\n##\r\n\r\n##### **Bias** - when a decision favors some things and deprioritizes or excludes others\r\n\r\n## As you watch the video, consider the following:\r\n\r\nWhy is it important for my students to consider training bias when learning about AI and machine learning? \r\n"
   },
   "published": true,
   "notes": "",

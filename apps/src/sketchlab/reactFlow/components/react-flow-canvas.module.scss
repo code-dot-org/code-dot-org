@@ -39,6 +39,12 @@
   }
 
   :global(.react-flow__node-lineAnchor:focus .react-flow__handle) {
+    // Override the hidden-handle styling (opacity 0 / pointer-events none)
+    // applied by LineAnchorNode when data.showHandles is false. Without this
+    // a focused anchor with hidden handles would leave keyboard focus
+    // invisible, which is confusing.
+    opacity: 1;
+    pointer-events: auto;
     box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
   }
 

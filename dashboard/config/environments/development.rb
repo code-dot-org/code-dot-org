@@ -77,4 +77,18 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   config.experiment_cache_time_seconds = 0
+
+  config.after_initialize do
+    # Writes to dashboard/log/development.log
+    # Prosopite.rails_logger = true
+
+    # Writes to dashboard/log/prosopite.log
+    Prosopite.prosopite_logger = true
+
+    # Enable this to write all queries to the console as well, which is helpful for debugging but can be very noisy.
+    # Prosopite.stderr_logger = true
+
+    # Ignore N+1 queries related to experiments
+    Prosopite.ignore_queries = [/FROM `experiments`/]
+  end
 end

@@ -37,10 +37,6 @@ class TranslationServiceTest < Minitest::Test
     assert @@translation_service.translated?('es-MX', :unplugged_activity)
   end
 
-  def test_translated_given_pegasus_string_should_return_true
-    assert @@translation_service.translated?('es-MX', :anybody_can_learn)
-  end
-
   def test_translated_given_blockly_mooc_string_should_return_true
     assert @@translation_service.translated?('de-DE', 'turtle.loopVariable')
   end

@@ -9,7 +9,7 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import router from '@/modules/router';
 
-// This root element is added to the page in dashboard/views/app/index.html.haml via rails_vite
+// This root element is added to the page in dashboard/app/views/frontend_studio/index.html.haml via rails_vite
 const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {

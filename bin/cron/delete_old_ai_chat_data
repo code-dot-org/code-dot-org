@@ -23,8 +23,10 @@ def main
   deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < Time.now - 90.days}.delete
   ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
 
-  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < Time.now - 91.days}.delete
-  ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+  # Stop doing this temporarily because of database issues.
+  # Work tracked here: https://codedotorg.atlassian.net/browse/SL-1696
+  # deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < Time.now - 91.days}.delete
+  # ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
 end
 
 main

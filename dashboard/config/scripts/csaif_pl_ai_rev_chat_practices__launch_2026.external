@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Best Practices
 
-#### In <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3/lessons/13" target="blank" rel="noopener noreferrer">Unit 1 - Problem Solving with AI</a> students will develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways.
+In <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3/lessons/13" target="blank" rel="noopener noreferrer">Unit 1 - Problem Solving with AI</a> students will develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways.
 
-#### Here are some quick tips for you to think about when getting started working with AI Chat.
+Here are some quick tips for you to think about when getting started working with AI Chat.
 
 <details style="background-color: #f3f3f3; padding: 12px; margin-bottom: 12px; margin-right: 5px; 
                  border-radius: 6px; border: 1px solid #ddd;">

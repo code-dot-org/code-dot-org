@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **AI and Algorithmic Decisions**, a unit where students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+This professional learning module prepares you to teach **AI and Algorithmic Decisions**, a unit where students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
 ___
 
@@ -25,17 +25,50 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
-
-
-* #### Guide students in visual planning, introducing flowcharts as tools for mapping algorithms and predicting program behavior.
+* Prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
 
 
-* #### Teach foundational JavaScript skills, including variables, functions, and if/else statements, through scaffolded coding and debugging practice.
+* Guide students in visual planning, introducing flowcharts as tools for mapping algorithms and predicting program behavior.
 
 
+* Teach foundational JavaScript skills, including variables, functions, and if/else statements, through scaffolded coding and debugging practice.
+
+---
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://studio.code.org/form/selfpaced_pd_teaching_aif_algorithmic_decisions_pre_survey"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
+
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey — it takes fewer than five minutes to complete.
+    </div>
+  </div>
+</div>
 
 
 ---

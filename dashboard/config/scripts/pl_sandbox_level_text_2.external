@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Sizing
 
-#### All body text should be H4 size for readability. H5 may be used for directing the user to interact with the page. For example:
+All body text should be H4 size for readability. H5 may be used for directing the user to interact with the page. For example:
 
 ###### Click on the arrows below to expand each section.
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -28,11 +28,11 @@ markdown <<MARKDOWN
 
 ## Formatting
 
-#### Bold and italic text should be used sparingly within a page for emphasis. Underlined text is reserved for formatting links. Highlighting should be used only to message caution or an important message.
+Bold and italic text should be used sparingly within a page for emphasis. Underlined text is reserved for formatting links. Highlighting should be used only to message caution or an important message.
 
 ## Special Cases
 
-#### Blockquotes should be used to define key terms and signal an external resource, to-do, or other key callout.
+Blockquotes should be used to define key terms and signal an external resource, to-do, or other key callout.
 
-####
+
 MARKDOWN

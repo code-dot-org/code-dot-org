@@ -5,18 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # What is CSS?
 
-#### CSS **(Cascading Style Sheets)** is the language that controls the look and feel of a webpage.
+CSS **(Cascading Style Sheets)** is the language that controls the look and feel of a webpage.
 
-#### If **HTM**L is the structure, **CSS** is the design—it handles colors, fonts, spacing, and layout.
+If **HTM**L is the structure, **CSS** is the design—it handles colors, fonts, spacing, and layout.
 
 ## Key things CSS does:
-- #### Changes colors, fonts, and text sizes
-- #### Controls spacing (margins, padding, alignment)
-- #### Adds borders, backgrounds, and styles
-- #### Defines layout (how sections of a page are arranged)
+- Changes colors, fonts, and text sizes
+- Controls spacing (margins, padding, alignment)
+- Adds borders, backgrounds, and styles
+- Defines layout (how sections of a page are arranged)
 
 ## Sample Code with CSS 
-#### As you look at the code, notice the same HTML code from the previous letter at the bottom. You will see CSS toward the top. 
+As you look at the code, notice the same HTML code from the previous letter at the bottom. You will see CSS toward the top. 
 
  <div style="text-align: center;">
     <img src="https://images.code.org/3cd11a584f7e2e0be8f7083510af714e-image-1759351495873.png" 
@@ -37,18 +37,18 @@ markdown <<MARKDOWN
 
 ## CSS Selectors
 
-#### HTML uses tags (inside angle brackets < >) to describe the structure of a page.
+HTML uses tags (inside angle brackets < >) to describe the structure of a page.
 
-#### CSS doesn’t really use “tags” in the same way. Instead, it uses selectors to target HTML tags, classes, or IDs and apply styles to them.
+CSS doesn’t really use “tags” in the same way. Instead, it uses selectors to target HTML tags, classes, or IDs and apply styles to them.
 
 ## What's the Difference? 
 
-#### While **HTML tags** tell the browser what the content is (heading, paragraph, image), **CSS selectors** tell the browser how that content should look (color, size, position).
+While **HTML tags** tell the browser what the content is (heading, paragraph, image), **CSS selectors** tell the browser how that content should look (color, size, position).
 
 > #### **So you might say to students:**
 > #### “HTML is like the nouns (things on the page), and CSS is like the adjectives (how those things look). HTML tags create the structure, while CSS selectors style those tags.”
 
-#### Take a look at the CSS selectors from the sample code above to see how they style the page.
+Take a look at the CSS selectors from the sample code above to see how they style the page.
 
 <div style="text-align: left;">
     <img src="https://images.code.org/e9ab8c116a9da07f066eb6c6819f9365-image-1759502312090.png" 
@@ -69,7 +69,7 @@ font-size: 16px; → Sets paragraph text to 16 pixels."
 
 ## Next up
 
-#### Let's take a look to see how JavaScript makes the pages interactive!
+Let's take a look to see how JavaScript makes the pages interactive!
 
 
 MARKDOWN

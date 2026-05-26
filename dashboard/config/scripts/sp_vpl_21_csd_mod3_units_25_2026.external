@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Units
 
-#### <strong>AI Discoveries is organized into multiple units and pathways.</strong> Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  
+<strong>AI Discoveries is organized into multiple units and pathways.</strong> Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  
 
 ### Click on the units below to learn about the course content:
 
@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 75px 20px;">
     <p><img src="https://images.code.org/fb51172912adb76877b301a1fa22019d-image-1776972712734.20.44 PM.png" alt="Image of an AI bot." style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In **Thinking Critically About AI**, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
+In **Thinking Critically About AI**, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
 </p>
 </div>
 </details>
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px;">
     <p><img src="https://images.code.org/7980152abc6fb3bc99d3f986f4071baa-image-1628699865854.png" alt="Image of an AI bot." style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In the **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+In the **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
 </p>
 </div>
 </details>
@@ -38,7 +38,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 50px 20px;">
     <p><img src="https://images.code.org/021557b4db42e48d661db7f955f906e1-image-1627696691880.54.53 PM.png" alt="Splitscreen image showing HTML code on the left and the corresponding webpage on the right." style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In **Web Development**, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. The unit has a large focus on designing web pages for users' needs. At the conclusion of the unit, students will have created a personal website they can publish and share.
+In **Web Development**, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. The unit has a large focus on designing web pages for users' needs. At the conclusion of the unit, students will have created a personal website they can publish and share.
 </p>
 </div>
 </details>
@@ -50,7 +50,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px;">
     <p><img src="https://images.code.org/66a965a55ff9dbc21f54c9b0aa258b61-image-1744140812694.28.33 PM.png" alt="" style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### **Programming with Music Lab** is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
+**Programming with Music Lab** is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
 </p>
 </div>
 </details>
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 30px 20px;">
     <p><img src="https://images.code.org/830b47fb2be2f985c24e41aaf792336d-image-1647985813820.png" alt="Image of a game showing two sprites." style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In the **Interactive Animations and Games** unit, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
+In the **Interactive Animations and Games** unit, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
 </p>
 </div>
 </details>
@@ -74,7 +74,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 30px 20px;">
     <p><img src="https://images.code.org/48e27092cda033443a87f20ff676ed1a-image-1627696811180.55.01 PM.png" alt="Design process notes" style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### The **Design Process** unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
+The **Design Process** unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
 </p>
 </div>
 </details>
@@ -86,7 +86,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 50px 20px;">
     <p><img src="https://images.code.org/7e0d1afd85042d8f59af7932cc375337-image-1627697140990.55.11 PM.png" alt="Images showing resolution differences" style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### The **Data and Society** unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
+The **Data and Society** unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
 </p>
 </div>
 </details>
@@ -98,7 +98,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px 20px 20px 20px;">
     <p><img src="https://images.code.org/b190716a912798f6ba7a4b4d9d040e2a-image-1682448965513.png" alt="Circuit playground" style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in smart devices. Students explore how prototypes evolve into finished products and use a maker mindset to build interactive solutions.
+In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in smart devices. Students explore how prototypes evolve into finished products and use a maker mindset to build interactive solutions.
 
 </p>
 </div>
@@ -111,7 +111,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px;">
     <p><img src="https://images.code.org/b190716a912798f6ba7a4b4d9d040e2a-image-1682448965513.png" alt="Microbit device" style="width: 30%; height: auto; border-radius: 10px; float: left; margin: 10px;">
 
-#### In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize hardware inputs and outputs to interact with the world. Students build prototypes, test ideas, and iterate on designs using a maker mindset.
+In the **Physical Computing** unit, students explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize hardware inputs and outputs to interact with the world. Students build prototypes, test ideas, and iterate on designs using a maker mindset.
 
 </p>
 </div>
@@ -119,19 +119,19 @@ markdown <<MARKDOWN
 
 ## Alternate Units
 
-#### If you are teaching AI Discoveries as a full-year course, plan to include **seven total units** for timing's sake.
+If you are teaching AI Discoveries as a full-year course, plan to include **seven total units** for timing's sake.
 
-#### For Unit 4, choose **one** of the following:
-* #### *Interactive Animations and Games*  
-* ####  *Programming with Music Lab*  
+For Unit 4, choose **one** of the following:
+* *Interactive Animations and Games*  
+* *Programming with Music Lab*  
 
-#### Both options introduce similar programming concepts, but differ in their topics, lessons, and projects. If you find you have extra time in the year, you may choose to teach both units!
+Both options introduce similar programming concepts, but differ in their topics, lessons, and projects. If you find you have extra time in the year, you may choose to teach both units!
 
-#### For Unit 7, choose **one** device option:
-* #### *Circuit Playground*  
-* #### *BBC micro:bit*  
+For Unit 7, choose **one** device option:
+* *Circuit Playground*  
+* *BBC micro:bit*  
 
-#### These versions are functionally equivalent, covering similar content and learning goals with different hardware. 
+These versions are functionally equivalent, covering similar content and learning goals with different hardware. 
 
-#### All units in AI Discoveries can be taught **independently** and in **any order**, as there are no prerequisites.
+All units in AI Discoveries can be taught **independently** and in **any order**, as there are no prerequisites.
 MARKDOWN

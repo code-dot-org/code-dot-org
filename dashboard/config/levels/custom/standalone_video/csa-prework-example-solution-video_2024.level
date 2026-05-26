@@ -14,7 +14,7 @@
     "parent_level_id": 27335,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "#### In this video you will see one of many possible solutions to the previous level.  Feel free to pause the video to make sense of the code as it is written or re-watch it to see how the different pieces connect together. \r\n<hr>\r\n\r\n#### **Up next:** You will be able to choose one or more other practice problems to try."
+    "long_instructions": "In this video you will see one of many possible solutions to the previous level.  Feel free to pause the video to make sense of the code as it is written or re-watch it to see how the different pieces connect together. \r\n<hr>\r\n\r\n**Up next:** You will be able to choose one or more other practice problems to try."
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-03-25T22:51:54.793+00:00\",\"changed\":[\"cloned from \\\"csa-prework-example-solution-video\\\"\"],\"cloned_from\":\"csa-prework-example-solution-video\"},{\"changed_at\":\"2024-10-31 15:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
