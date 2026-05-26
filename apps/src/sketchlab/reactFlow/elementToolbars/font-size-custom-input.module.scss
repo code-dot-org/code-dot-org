@@ -1,9 +1,8 @@
 // Custom-px row at the bottom of the Size popover (label + numeric input).
-// Sits below the MenuList items as a visual sibling, separated by a
-// 1px rule that echoes MUI's MenuItem-to-MenuItem spacing.
-.customOptionRow {
-  display: flex;
-  align-items: center;
+// Rendered as a MUI MenuItem so MUI's MenuList includes it in arrow-key
+// navigation. Chained `:global(.MuiMenuItem-root)` bumps specificity past
+// MUI's own defaults (padding, min-height, justify-content).
+.customOptionRow:global(.MuiMenuItem-root) {
   justify-content: space-between;
   gap: 8px;
   padding: 6px 12px;
@@ -14,7 +13,7 @@
 // Active when the underlying value is a raw pixel number (not a preset).
 // Mirrors the selected-row treatment in OptionListPopover so the Custom
 // row reads as "the chosen option" alongside the MenuList above it.
-.customOptionRowSelected {
+.customOptionRowSelected:global(.MuiMenuItem-root) {
   background-color: var(--background-brand-teal-primary);
 }
 
