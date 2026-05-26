@@ -10,6 +10,7 @@ import type {
   ObservabilityLogger,
   ObservabilityMetrics,
   SamplingConfig,
+  SpanOptions,
   TagValue,
 } from './types';
 
@@ -65,10 +66,7 @@ export function recordError(
  * @param options Span name, operation, and attributes.
  * @param callback Work to perform inside the span.
  */
-export function startSpan<T>(
-  options: import('./types').SpanOptions,
-  callback: () => T,
-): T {
+export function startSpan<T>(options: SpanOptions, callback: () => T): T {
   return observabilityClient.startSpan(options, callback);
 }
 
