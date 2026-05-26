@@ -24,11 +24,8 @@ const ThreeColumns = props => {
       position: 'relative',
       float: isRtl ? 'right' : 'left',
       height,
-      marginRight: isRtl ? undefined : -300,
-      paddingRight: isRtl ? undefined : 300,
-      marginLeft: isRtl ? -300 : undefined,
-      paddingLeft: isRtl ? 300 : undefined,
       overflowY: 'scroll',
+      scrollbarWidth: 'none',
     },
     left: {
       position: 'relative',
