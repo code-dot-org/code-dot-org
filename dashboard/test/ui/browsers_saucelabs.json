@@ -28,11 +28,10 @@
   {
     "name": "Chrome",
     "browserName": "chrome",
-    "browserVersion": "138",
+    "browserVersion": "148",
     "platformName": "Windows 10",
     "sauce:options": {
-      "screenResolution": "1280x1024",
-      "extendedDebugging": true
+      "screenResolution": "1280x1024"
     }
   },
   {

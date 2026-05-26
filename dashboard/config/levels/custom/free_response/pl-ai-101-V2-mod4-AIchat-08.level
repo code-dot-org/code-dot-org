@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-20T15:37:57.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Lesson Plan: Final Touches\r\n\r\nNow that we're almost done with this module, put the final touches on your lesson plan. You may want to consider: how are students using AI, how are you supporting them in their use of AI, and what sort of assessment are you going to have?\r\n\r\n> In the reflection box below, describe the updates to your lesson.\r\n\r\nShare out what you did!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false",
+    "display_name": "Step 2, Reflection",
+    "thumbnail_url": "https://images.code.org/c18a28cf07e6ad4b13c5440600bbbcef-Screenshot 2026-03-18 at 10.56.25 AM.png"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T15:37:57.890+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod4-AILit-06\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod4-AILit-06\"},{\"changed_at\":\"2026-05-20 15:38:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-05-20 17:45:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

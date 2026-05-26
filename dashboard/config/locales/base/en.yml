@@ -1566,8 +1566,18 @@ en:
   not_applicable_abbreviation: "N/A"
   global_edition:
     regions:
+      ar: Arabic
+      br: Brazil
+      cn: China
+      cz: Czech Republic
+      de: Germany
       fa: Farsi
+      fr: France
+      id: Indonesia
+      it: Italy
       in: India
+      jp: Japan
+      pl: Poland
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes

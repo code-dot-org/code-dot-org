@@ -11,11 +11,12 @@
       "student_detail_progress_view": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 20:18:29 UTC",
+    "serialized_at": "2026-05-21 19:08:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

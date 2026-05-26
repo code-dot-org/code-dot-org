@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#### **Thinks**\r\n#### What is Jordan thinking internally?\r\n",
+    "long_instructions": "**Thinks**\r\nWhat is Jordan thinking internally?\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

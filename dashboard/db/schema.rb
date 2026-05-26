@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_20_204057) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -59,13 +59,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "script"
+    t.index ["lesson_id"], name: "index_ai_lesson_summaries_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_ai_lesson_summaries_on_user_id_and_lesson_id"
   end
 
-  create_table "ai_student_podcast_fragments", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "ai_student_podcast_objectives", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "ai_student_podcast_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["ai_student_podcast_id", "objective_id"], name: "index_ai_student_podcast_objectives_unique", unique: true
+    t.index ["ai_student_podcast_id"], name: "index_ai_student_podcast_objectives_on_ai_student_podcast_id"
+    t.index ["objective_id"], name: "index_ai_student_podcast_objectives_on_objective_id"
+  end
+
+  create_table "ai_student_podcasts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "lesson_id"
-    t.string "fragment_type"
-    t.integer "objective_id"
     t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -631,6 +639,15 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "demo_students", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "demo_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["demo_type", "user_id"], name: "index_demo_students_on_demo_type_and_user_id"
+    t.index ["user_id", "demo_type"], name: "index_demo_students_on_user_id_and_demo_type", unique: true
   end
 
   create_table "donor_schools", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1278,6 +1295,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
+  create_table "objectives_practice_problems", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "practice_problem_id", null: false
+    t.bigint "objective_id", null: false
+    t.index ["objective_id", "practice_problem_id"], name: "index_practice_prob_objectives_on_objective_and_prob_ids", unique: true
+    t.index ["practice_problem_id", "objective_id"], name: "index_practice_prob_objectives_on_prob_and_objective_ids", unique: true
+  end
+
   create_table "paired_user_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "driver_user_level_id", unsigned: true
     t.bigint "navigator_user_level_id", unsigned: true
@@ -1859,6 +1883,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
     t.datetime "updated_at", null: false
     t.boolean "receives_marketing", default: false, null: false
     t.index ["script_id"], name: "index_potential_teachers_on_script_id"
+  end
+
+  create_table "practice_problems", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "problem_type", null: false
+    t.boolean "active", default: false, null: false
+    t.text "problem_text", null: false
+    t.json "solution"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "programming_classes", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2871,6 +2905,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_29_120000) do
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
+  add_foreign_key "demo_students", "users", on_delete: :cascade
   add_foreign_key "external_notifications", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"

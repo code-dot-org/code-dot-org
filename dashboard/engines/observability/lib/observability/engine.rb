@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+# Pre-require the OpenTelemetry API so OpenTelemetry::Trace.current_span and
+# friends are defined for callers regardless of whether the SDK is initialized.
+# Without the SDK, current_span returns OpenTelemetry::Trace::Span::INVALID,
+# and add_event / set_attribute on it are documented no-ops.
+require 'opentelemetry'
+
 require_relative 'opentelemetry'
 require_relative 'sentry'
 require_relative 'errors'

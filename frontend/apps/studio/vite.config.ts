@@ -12,6 +12,12 @@ export default defineConfig(({mode}) => {
     build: {
       outDir: 'dist',
     },
+    // TFJS (bundled via @code-dot-org/oceans-lab) references bare `global`
+    // in its browser entry; shim it to globalThis so the browser context
+    // doesn't throw at module-init time.
+    define: {
+      global: 'globalThis',
+    },
     server: {
       allowedHosts: isDev ? ['localhost-studio.code.org'] : undefined,
       fs: {

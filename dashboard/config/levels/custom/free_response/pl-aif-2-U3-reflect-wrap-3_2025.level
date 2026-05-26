@@ -7,7 +7,7 @@
   "properties": {
     "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "#### As you wrap up this module, take some time to reflect. Think about one of the following and share your feelings. \r\n\r\n>- #### What concepts in this unit might be challenging for your students? \r\n>- #### How do the new skills learned in this unit help make projects more exciting? \r\n",
+    "long_instructions": "As you wrap up this module, take some time to reflect. Think about one of the following and share your feelings. \r\n\r\n>- What concepts in this unit might be challenging for your students? \r\n>- How do the new skills learned in this unit help make projects more exciting? \r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

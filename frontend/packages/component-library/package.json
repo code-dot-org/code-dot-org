@@ -223,6 +223,14 @@
       "import": "./dist/formFieldWrapper/index.mjs",
       "require": "./dist/formFieldWrapper/index.js"
     },
+    "./footer": {
+      "types": {
+        "import": "./dist/footer/index.d.ts",
+        "require": "./dist/footer/index.d.ts"
+      },
+      "import": "./dist/footer/index.mjs",
+      "require": "./dist/footer/index.js"
+    },
     "./header": {
       "types": {
         "import": "./dist/header/index.d.ts",
@@ -450,7 +458,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jscodeshift": "^0.15.2",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.10",
     "postcss-modules": "^6.0.1",
     "react": "catalog:",
     "react-dom": "catalog:",

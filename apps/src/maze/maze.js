@@ -448,7 +448,7 @@ module.exports = class Maze {
       // Syntax error, can't happen.
       this.result = ResultType.ERROR;
       console.error('Unexpected exception: ' + e + '\n' + e.stack);
-      // call window.onerror so that we get new relic collection.  prepend with
+      // call window.onerror so browser observability captures it. prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror('UserCode:' + e.message, document.URL, 0);

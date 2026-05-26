@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####**Complete this mad-lib:** Dancing was ___________ in the rain",
+    "long_instructions": "**Complete this mad-lib:** Dancing was ___________ in the rain",
     "teacher_markdown": "Discussion Goal: Notice that most of the answers are likely adjectives, like “fun” or “disastrous” or “difficult”",
     "allow_user_uploads": "false",
     "submittable": "false",

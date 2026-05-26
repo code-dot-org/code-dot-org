@@ -4,7 +4,6 @@ import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
 import FontSizeGroup from './FontSizeGroup';
-import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
 import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
@@ -17,7 +16,6 @@ import {
   DEFAULT_FONT_SIZE,
   DEFAULT_TEXT_ALIGN,
   DEFAULT_STROKE_COLOR,
-  FontSizeValue,
   STROKE_FONT_PALETTE,
   TextAlignValue,
 } from './toolbarPalettes';
@@ -35,11 +33,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const handlesVisible = data.showHandles !== false;
 
   return (
-    <ToolbarShell
-      target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
-      ariaLabel="Shape style"
-    >
+    <ToolbarShell target={{type: 'node', id: nodeId}} ariaLabel="Shape style">
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
@@ -58,9 +52,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
           />
           <FontSizeGroup
             selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-            onSelect={value =>
-              patchNodeData({fontSize: value as FontSizeValue})
-            }
+            onSelect={value => patchNodeData({fontSize: value})}
           />
           <TextAlignGroup
             selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
@@ -79,10 +71,12 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <NodeActionsGroup nodeId={nodeId} />
-          <HandleVisibilityToggle
-            visible={handlesVisible}
-            onToggle={() => patchNodeData({showHandles: !handlesVisible})}
+          <NodeActionsGroup
+            nodeId={nodeId}
+            handlesVisible={handlesVisible}
+            onToggleHandles={() =>
+              patchNodeData({showHandles: !handlesVisible})
+            }
           />
         </>
       )}

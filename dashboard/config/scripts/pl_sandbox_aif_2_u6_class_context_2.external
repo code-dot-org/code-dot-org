@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Classroom Context
 
-#### This is the 6th, and final, unit of the course, building off the content from the previous units. 
+This is the 6th, and final, unit of the course, building off the content from the previous units. 
 
-#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students navigate through a capstone project**.
+Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students navigate through a capstone project**.
 
 <div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
 
@@ -29,8 +29,8 @@ markdown <<MARKDOWN
 
 ## Unit Length and Format
 
-#### **Total Duration:** Approximately 2 weeks
-#### **Structure:** 10 days structred capstone project
+**Total Duration:** Approximately 2 weeks
+**Structure:** 10 days structred capstone project
 
 
 <img src="https://images.code.org/c089a1b337eaeb996ef66189c6fab281-image-1776695464260.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let's begin with the end in mind and take a look at the final project. 
+Let's begin with the end in mind and take a look at the final project. 
 
 
 MARKDOWN

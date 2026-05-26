@@ -101,6 +101,8 @@ class LessonsController < ApplicationController
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
+    unit_group_unit = unit_context[:unit_group_unit]
+    unit_label = unit_group_unit ? "Unit #{unit_group_unit.position}" : nil
     json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
     @lesson_deep_dive_data = {
       lessonId: @lesson.id,
@@ -113,7 +115,8 @@ class LessonsController < ApplicationController
       progressCounts: lesson_progress_status(@lesson.id, current_user&.id).transform_keys do |k|
         k.to_s.camelize(:lower).to_sym
       end,
-      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id)
+      timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id),
+      unitLabel: unit_label
     }
   end
 
@@ -134,6 +137,29 @@ class LessonsController < ApplicationController
   # GET /lessons/:id/edit
   def edit
     setup_edit
+  end
+
+  # GET /lessons/:id/generate
+  # Levelbuilder UI for bulk-creating levels in this lesson, with AI-generated
+  # initial content. The page needs the existing activities so the client can
+  # append new levels to the last activity section before saving the lesson.
+  def generate
+    setup_generate
+  end
+
+  # GET /s/:script_name_or_id/lessons/:lesson_position/generate
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/generate
+  def generate_with_lesson_position
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
+    disallow_legacy_script_levels
+    setup_generate
+    render :generate
   end
 
   # PATCH/PUT /lessons/:id
@@ -272,6 +298,21 @@ class LessonsController < ApplicationController
     view_options(full_width: true)
   end
 
+  # Shared data prep for the lesson generator. Like setup_edit, this serves
+  # both URL forms (lesson id and unit/lesson-position). We hand back the
+  # corresponding edit URL by swapping the trailing /generate for /edit, so
+  # the post-generation "open in editor" link stays in the same URL family
+  # the user came in on.
+  private def setup_generate
+    edit_url = request.path.sub(%r{/generate\z}, '/edit')
+    edit_url = edit_lesson_path(id: @lesson.id) if edit_url == request.path
+    @lesson_data = @lesson.summarize_for_lesson_edit.merge(
+      lessonPath: @lesson.get_uncached_show_path,
+      editLessonUrl: edit_url,
+    )
+    view_options(full_width: true)
+  end
+
   private def lesson_params
     # Convert camelCase params to snake_case. Right now this only works on
     # top-level key names. This lets us do the transformation before calling
@@ -302,7 +343,9 @@ class LessonsController < ApplicationController
       :objectives,
       :standards,
       :opportunity_standards,
-      :jit_pl_concept_ids
+      :jit_pl_concept_ids,
+      :generate_outline,
+      :generate_project_channel_id
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]

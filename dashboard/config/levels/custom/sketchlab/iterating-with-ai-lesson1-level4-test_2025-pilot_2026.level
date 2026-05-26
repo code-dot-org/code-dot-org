@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:39:54.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -29,7 +29,8 @@
             "measured": {
               "width": 406,
               "height": 635
-            }
+            },
+            "zIndex": -2
           },
           {
             "id": "XNdJSVkh-6KOnTFmMsH5r",
@@ -199,7 +200,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
@@ -207,10 +208,7 @@
               "height": 1373
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "zIndex": -1
           },
           {
             "id": "zT9JMSRwh8iu64gEuAjE8",
@@ -378,30 +376,27 @@
               "width": 193,
               "height": 85
             },
-            "selected": false,
             "dragging": false
           },
           {
             "id": "ne7bAjtMGfeupq-vhmhHR",
             "type": "text",
             "position": {
-              "x": 1631.0635636888996,
-              "y": 717.106022137543
+              "x": 1591.0635636888996,
+              "y": 463.10602213754305
             },
             "data": {
               "text": "for (pushups = 0; pushups < goal; pushups ++) {\n      doPushup()\n}",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 491,
               "height": 104
             },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "gX9ugx9AluPEM7pgtWujf",
@@ -453,11 +448,7 @@
             "width": 261,
             "height": 85,
             "resizing": false,
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Hlk4T2FxwOWhhP09_25si",
@@ -559,8 +550,8 @@
             "id": "WEDqEb7ZL_TpoOR54nao6",
             "type": "text",
             "position": {
-              "x": 1778.1715197616554,
-              "y": 509.4270580040886
+              "x": 1614.1715197616554,
+              "y": 301.4270580040886
             },
             "data": {
               "text": "Model",
@@ -571,7 +562,8 @@
             "measured": {
               "width": 79,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "2bf32f1e-9519-4d86-9db8-dc06382149d5",
@@ -610,6 +602,40 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "08503f3b-df27-4656-aa18-efe2e969e575",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2694.763846941715,
+              "y": 1043.915680462288
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "48803bc3-bc62-48d9-99cd-1aea97a33e21",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2490.763846941715,
+              "y": 1175.915680462288
+            },
+            "measured": {
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -714,8 +740,8 @@
           }
         ],
         "viewport": {
-          "x": -413.3819234708576,
-          "y": -41.95784023114402,
+          "x": -428.90285852945135,
+          "y": 560.5251614778404,
           "zoom": 0.5
         }
       }
@@ -2823,6 +2849,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:54.768+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level4-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level4-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:29:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:54.768+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level4-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level4-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:29:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:39:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>
