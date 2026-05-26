@@ -212,7 +212,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     volumes:
       - name: mysql
@@ -344,6 +344,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
+hmac: 49dccc137943ba40cd1d5054dc081bdfced218381102771806676e234f5bb8e8
 
 ...
