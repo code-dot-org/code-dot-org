@@ -33,7 +33,6 @@ class ScaryChangeDetector
     detect_migration_causing_db_performance_risk
     detect_missing_yarn_lock
     detect_special_files
-    detect_dropbox_conflicts
     detect_changed_feature_files
     detect_ai_release_path_change
   end
@@ -135,32 +134,6 @@ class ScaryChangeDetector
         If this change is intentional, you can bypass this message with the
           --no-verify
         flag.
-
-      ERROR
-      raise "Commit blocked."
-    end
-  end
-
-  private def detect_dropbox_conflicts
-    changes = @added.grep(/'s conflicted copy/)
-    unless changes.empty?
-      puts red <<~ERROR
-
-                Looks like you are adding dropbox conflicted copy files.
-                This is probably a mistake.
-
-        #{changes.join("\n")}
-
-                Dropbox creates these files typically when 2 people change the same file at the same time.
-                See https://www.dropbox.com/help/syncing-uploads/conflicted-copy
-
-                Compare the file with its root (same filename minus the conflicted copy part). If they're identical,
-                it's safe to delete the copy.
-                Otherwise follow-up with the content editor mentioned in the copy and resolve the diff.
-
-                If this change is intentional, you can bypass this message with the
-                  --no-verify
-                flag.
 
       ERROR
       raise "Commit blocked."
