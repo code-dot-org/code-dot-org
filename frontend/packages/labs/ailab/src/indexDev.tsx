@@ -1,4 +1,5 @@
 import './assetPath';
+import './setPublicPath';
 import {initAll, instructionsDismissed} from './index';
 import queryString from 'query-string';
 import {ModelDataToSave, SaveResponse} from './types';

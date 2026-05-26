@@ -38,7 +38,14 @@ const commonConfig = {
           },
         },
         generator: {
-          filename: 'assets/images/[name][ext][query]',
+          // URLs resolve to `<__webpack_public_path__>images/<name>`
+          // at runtime. The consumer sets the public path via
+          // `__ml_playground_asset_public_path__` (see
+          // `src/setPublicPath.ts`); leaving an `assets/` prefix here
+          // would double up against consumer paths that already end
+          // in `assets/` or similar, so the prefix lives entirely on
+          // the consumer side.
+          filename: 'images/[name][ext][query]',
         },
       },
     ],
