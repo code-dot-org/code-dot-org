@@ -22,7 +22,7 @@ module AichatSafetyHelper
       attempts = 0
       input = safety_check_input(text, level_id)
       output_type = 'Unstructured'
-      safety_read_timeout = DCDO.get('aichat_safety_openai_read_timeout', DCDO.get('openai_http_read_timeout', 30))
+      safety_read_timeout = DCDO.get('aichat_safety_openai_read_timeout', DCDO.get('openai_http_read_timeout', 20))
 
       # Retry only on network-related exceptions.
       response = Retryable.retryable(
