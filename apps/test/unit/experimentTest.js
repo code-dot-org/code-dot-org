@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import experiments from '@cdo/apps/util/experiments';
@@ -217,5 +218,68 @@ describe('experiments', function () {
     );
     assert.isFalse(experiments.isEnabled('awesome-feature'));
     assert.equal(localStorage.getItem('experimentsList'), '[]');
+  });
+
+  describe('cookie and localStorage interaction', function () {
+    let cookieGetStub;
+
+    beforeEach(function () {
+      cookieGetStub = sinon.stub(Cookie, 'get');
+      cookieGetStub.returns(undefined);
+      window.cookieEnvSuffix = '';
+    });
+
+    afterEach(function () {
+      cookieGetStub.restore();
+    });
+
+    function setCookieExperiments(names) {
+      cookieGetStub
+        .withArgs('_experiments')
+        .returns(encodeURIComponent(JSON.stringify(names)));
+    }
+
+    it('isEnabled returns true for experiments in the cookie', function () {
+      setCookieExperiments(['cookie-exp']);
+      assert.isTrue(experiments.isEnabled('cookie-exp'));
+    });
+
+    it('getEnabledExperiments includes cookie experiments', function () {
+      setCookieExperiments(['cookie-exp']);
+      experiments.setEnabled('local-exp', true);
+      const enabled = experiments.getEnabledExperiments();
+      assert.include(enabled, 'cookie-exp');
+      assert.include(enabled, 'local-exp');
+    });
+
+    it('setEnabled does not copy cookie experiments into localStorage', function () {
+      setCookieExperiments(['cookie-exp']);
+      experiments.setEnabled('local-exp', true);
+      const stored = JSON.parse(localStorage.getItem('experimentsList'));
+      const keys = stored.map(e => e.key);
+      assert.notInclude(keys, 'cookie-exp');
+      assert.include(keys, 'local-exp');
+    });
+
+    it('cookie experiments do not accumulate in localStorage across repeated setEnabled calls', function () {
+      setCookieExperiments(['cookie-a', 'cookie-b']);
+      experiments.setEnabled('local-1', true);
+      experiments.setEnabled('local-2', true);
+      experiments.setEnabled('local-3', true);
+      const stored = JSON.parse(localStorage.getItem('experimentsList'));
+      assert.lengthOf(stored, 3);
+      const keys = stored.map(e => e.key);
+      assert.sameMembers(keys, ['local-1', 'local-2', 'local-3']);
+    });
+
+    it('enableExperiments query param does not leak cookie experiments into localStorage', function () {
+      setCookieExperiments(['cookie-exp']);
+      mockedQueryString = '?enableExperiments=new-exp';
+      experiments.isEnabled('new-exp');
+      const stored = JSON.parse(localStorage.getItem('experimentsList'));
+      const keys = stored.map(e => e.key);
+      assert.include(keys, 'new-exp');
+      assert.notInclude(keys, 'cookie-exp');
+    });
   });
 });
