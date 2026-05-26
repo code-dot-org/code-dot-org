@@ -15,7 +15,6 @@ export type GatewayErrorCategory =
   | 'validation_error'
   | 'unhandled';
 
-// Status-to-category mapping per docs/observability/error-taxonomy.md.
 // Imprecise until Phase 2 C2 adds structured error bodies to gateway responses.
 export const inferGatewayErrorCategory = (
   status: number
@@ -67,15 +66,19 @@ export const reportGatewayError = async (
   console.error(`[${source}] fetch error:`, logData);
 
   const hasStatus = 'status' in logData && typeof logData.status === 'number';
-  Observability.recordError(error, {
-    error_type: logData.type,
-    ...(hasStatus
-      ? {
-          status_code: (logData as {status: number}).status,
-          category: inferGatewayErrorCategory(
-            (logData as {status: number}).status
-          ),
-        }
-      : {category: 'unhandled' as GatewayErrorCategory}),
-  });
+  Observability.recordError(
+    error,
+    {
+      error_type: logData.type,
+      ...(hasStatus
+        ? {
+            status_code: (logData as {status: number}).status,
+            category: inferGatewayErrorCategory(
+              (logData as {status: number}).status
+            ),
+          }
+        : {category: 'unhandled' as GatewayErrorCategory}),
+    },
+    {feature: 'ai-gateway'}
+  );
 };

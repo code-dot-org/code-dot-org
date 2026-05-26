@@ -103,7 +103,8 @@ describe('reportGatewayError', () => {
     await reportGatewayError(error);
     expect(mockRecordError).toHaveBeenCalledWith(
       error,
-      expect.objectContaining({category: 'unhandled'})
+      expect.objectContaining({category: 'unhandled'}),
+      {feature: 'ai-gateway'}
     );
   });
 
@@ -116,7 +117,8 @@ describe('reportGatewayError', () => {
       expect.objectContaining({
         status_code: 429,
         category: 'rate_limit_local',
-      })
+      }),
+      {feature: 'ai-gateway'}
     );
   });
 
@@ -126,7 +128,8 @@ describe('reportGatewayError', () => {
     await reportGatewayError(error);
     expect(mockRecordError).toHaveBeenCalledWith(
       error,
-      expect.objectContaining({category: 'provider_5xx', status_code: 500})
+      expect.objectContaining({category: 'provider_5xx', status_code: 500}),
+      {feature: 'ai-gateway'}
     );
   });
 });

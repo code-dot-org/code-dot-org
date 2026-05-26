@@ -116,6 +116,11 @@ const generateTextThroughGateway = async <
           `${LOG} generateText response schema mismatch:`,
           parseResult.error.errors
         );
+        Observability.recordError(
+          parseResult.error,
+          {category: 'validation_error', error_type: 'SchemaMismatch'},
+          {feature: 'ai-gateway'}
+        );
         if (process.env.NODE_ENV === 'development') {
           throw parseResult.error;
         }
