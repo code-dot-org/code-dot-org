@@ -31,6 +31,7 @@ class Aichat < Level
     bot_title
     bot_description
     aichat_settings
+    aichat_capabilities
     starter_assets
     submittable
     disable_edit_run_for_submission
