@@ -10,14 +10,6 @@ module DemoStudents
     Section::LOGIN_TYPE_PICTURE,
   ].freeze
 
-  # Boot-time sweep. Locks every account referenced by a DemoStudent row.
-  # Idempotent — safe to re-run.
-  def self.prevent_demo_student_logins
-    DemoStudent.find_each do |demo_student|
-      prevent_demo_student_login(demo_student.user_id, demo_student.demo_type)
-    end
-  end
-
   # Returns true on success, false if the id was skipped.
   def self.prevent_demo_student_login(user_id, demo_type)
     user = User.find_by(id: user_id)
@@ -35,21 +27,32 @@ module DemoStudents
     end
 
     section_login_types = user.sections_as_student.pluck(:login_type).uniq
-    unless section_login_types.any? {|login_type| ALLOWED_SECTION_LOGIN_TYPES.include?(login_type)}
+    if section_login_types.empty? || section_login_types.any? {|t| ALLOWED_SECTION_LOGIN_TYPES.exclude?(t)}
       Honeybadger.notify(
-        'Demo student is not in any email/word/picture section',
+        'Demo student is not exclusively in email/word/picture sections',
         context: {user_id: user_id, demo_type: demo_type, section_login_types: section_login_types},
       )
       return false
     end
 
-    user.update!(
-      secret_words: nil,
-      secret_picture_id: nil,
-      encrypted_password: '',
-      hashed_email: '',
-    )
-    user.authentication_options.destroy_all
+    # Clearing encrypted_password also rotates Devise's authenticatable_salt,
+    # which invalidates any active sessions for this user on the next request.
+    # For migrated users User#email/#hashed_email read through
+    # primary_contact_info, so destroy_all on authentication_options is what
+    # actually severs the live identity; the column clears below cover the
+    # legacy/unmigrated path.
+    ActiveRecord::Base.transaction do
+      user.update!(
+        secret_words: nil,
+        secret_picture_id: nil,
+        encrypted_password: '',
+        hashed_email: '',
+        email: '',
+        provider: nil,
+        uid: nil,
+      )
+      user.authentication_options.destroy_all
+    end
     true
   end
 end

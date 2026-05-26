@@ -31,8 +31,14 @@ class DemoStudent < ApplicationRecord
     Policies::DemoSections.reset_cache!
   end
 
+  # Fires only via DemoStudent.create!/save!. Direct SQL inserts into the
+  # demo_students table bypass this and leave the linked user un-locked.
   private def lock_user_login!
-    require 'demo_students'
     DemoStudents.prevent_demo_student_login(user_id, demo_type)
+  rescue StandardError => exception
+    Honeybadger.notify(
+      exception,
+      context: {message: 'Failed to lock demo student login', user_id: user_id, demo_type: demo_type},
+    )
   end
 end

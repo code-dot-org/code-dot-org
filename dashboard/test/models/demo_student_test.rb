@@ -80,4 +80,16 @@ class DemoStudentTest < ActiveSupport::TestCase
 
     assert_equal '', student.reload.encrypted_password
   end
+
+  test 'after_create_commit hook reports lockdown failures to Honeybadger instead of raising' do
+    student = create(:student, :in_email_section, encrypted_password: 'pw')
+    record = DemoStudent.new(user: student, demo_type: 'high')
+    record.save!
+
+    boom = RuntimeError.new('lockdown blew up')
+    DemoStudents.expects(:prevent_demo_student_login).raises(boom)
+    Honeybadger.expects(:notify).with(boom, has_entries(context: has_entries(user_id: student.id)))
+
+    assert_nothing_raised {record.run_callbacks(:commit)}
+  end
 end
