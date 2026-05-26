@@ -6,6 +6,13 @@ locales: [es-LA]
 locale_lock: true
 countries: [MX, CR, SV, GT, HN, NI, PA, CU, DO, PR, AR, BO, CL, CO, EC, PY, PE, UY, VE]
 
+# The list of available project types
+project_types: &project_types
+  - spritelab
+  - artist
+  - applab
+  - gamelab
+
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
@@ -33,7 +40,7 @@ header:
       - title: my_dashboard
         url: /la/home
         domain: studio.code.org
-        id: header-student-home
+        id: header-teacher-home
       - title: course_catalog
         url: /la/catalog
         domain: studio.code.org
@@ -55,14 +62,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            domain: code.org
-            url: /privacy
+            url: https://code-org.translate.goog/es/privacy?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            domain: code.org
-            url: /cookies
+            url: https://code-org.translate.goog/es/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            domain: code.org
-            url: /tos
+            url: https://code-org.translate.goog/es/terms-of-service?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
 
     teacher:
       - title: learn
@@ -74,14 +78,11 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            domain: code.org
-            url: /privacy
+            url: https://code-org.translate.goog/es/privacy?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_cookie_notice
-            domain: code.org
-            url: /cookies
+            url: https://code-org.translate.goog/es/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
           - title: legal_tos
-            domain: code.org
-            url: /tos
+            url: https://code-org.translate.goog/es/terms-of-service?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
 
   # Help button (?)
   help:
@@ -95,73 +96,12 @@ footer:
   links:
     studio:
       - title: privacy
-        url: /privacy
-        domain: code.org
+        url: https://code-org.translate.goog/es/privacy?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: /cookies
-        domain: code.org
-      - title: translate
-        url: /translate
-        domain: code.org
-      - title: help_support
-        url: https://support.code.org
-        target: _blank
-        loc_prefix: landing.
-        id: support
-      - title: store
-        url: https://store.code.org
+        url: https://code-org.translate.goog/es/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
-        url: /tos
-        domain: code.org
-    code_org:
-      - title: privacy_policy
-        url: /privacy
-        domain: code.org
-        style: "color: #ffa400;"
-      - title: cookie_notice
-        url: /cookies
-        domain: code.org
-      - title: about
-        url: /about
-        domain: code.org
-      - title: partners
-        url: /partners
-        domain: code.org
-      - title: blog
-        url: https://medium.com/@codeorg
-        target: _blank
-      - title: donate
-        url: /donate
-        domain: code.org
-      - title: store
-        url: shop
-        domain: code.org
-      - title: support
-        url: http://support.code.org/
-        target: _blank
-      - title: terms
-        url: /tos
-        domain: code.org
-    hour_of_code:
-      - title: contact
-        url: http://support.code.org/hc/es-la/requests/new
-        target: _blank
-      - title: support
-        url: http://support.code.org
-        target: _blank
-      - title: terms
-        url: /tos
-        domain: code.org
-        target: _blank
-      - title: privacy
-        url: /privacy
-        domain: code.org
-        target: _blank
-      - title: cookie
-        domain: hourofcode.com
-        url: /cookies
-        target: _blank
+        url: https://code-org.translate.goog/es/terms-of-service?_x_tr_sl=auto&_x_tr_tl=es-MX&_x_tr_hl=en&_x_tr_pto=wapp
 
 # Route matching to influence properties of components
 pages:
@@ -183,3 +123,42 @@ pages:
           language: es-LA
       # Hide the right panel with "New Features", "Announcements", etc.
       TeacherPromotions: false
+  # Teacher dashboard
+  - path: /teacher_dashboard
+    components:
+      DownloadParentLetterButton: false
+      ManageStudentsLoginInfo:
+        providePrivacyLetter: false
+  # Home dashboards
+  - path: /home
+    components:
+      MarketingAnnouncementBanner: false
+      TeacherResources: false
+      IncubatorBanner: false
+  # Account Settings
+  - path: /users/edit
+    components:
+      # Do not allow LTI use
+      LtiRosterSyncSettings: false
+      # Do not provide parental links to information about how to create accounts when deleting sections / accounts
+      PersonalLoginDialog:
+        hideInstructions: true
+      TeacherWarning:
+        hideInstructions: true
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /la/global
