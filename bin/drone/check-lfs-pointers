@@ -1,15 +1,6 @@
 #!/bin/sh
 # Guard both directions of a .gitattributes/Git LFS mismatch in the given ref
 # (default HEAD), printing direction-specific fix instructions on failure.
-#
-# Run in CI after merging the target branch, so HEAD is the post-merge tree that
-# will land, with that tree checked out (the reverse check below reads the
-# working-tree .gitattributes via git check-attr). A single committish is
-# inspected -- not an A..B range -- so a PR that introduces a mismatch and then
-# fixes it in a later commit is not failed on the transient bad commit.
-#
-# Lives in its own file (rather than inline in .drone.yml) so Drone echoes only
-# the invocation, keeping the error text out of the logs on the passing path.
 
 ref="${1:-HEAD}"
 status=0
