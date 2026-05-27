@@ -7,20 +7,16 @@ import {
   AichatCapabilities,
   LevelAichatCapabilities,
 } from '@cdo/apps/aichatLab/types';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 import moduleStyles from './edit-aichat-capabilities.module.scss';
 
-const ALL_CAPABILITIES: AichatCapabilities[] = [
-  AichatCapabilities.TEXT,
-  AichatCapabilities.IMAGE,
-  AichatCapabilities.FILES,
-];
-
-const CAPABILITY_LABELS: Record<AichatCapabilities, string> = {
+const CAPABILITY_LABELS: {[key in AichatCapabilities]: string} = {
   [AichatCapabilities.TEXT]: 'Text',
   [AichatCapabilities.IMAGE]: 'Image',
   [AichatCapabilities.FILES]: 'Files',
 };
+const ALL_CAPABILITIES = getTypedKeys(CAPABILITY_LABELS);
 
 const DEFAULT_CAPABILITIES: LevelAichatCapabilities = {
   inputs: [AichatCapabilities.TEXT],
@@ -50,7 +46,7 @@ function anyModelSupports(
 // Per-output allowlist of compatible inputs. An output not listed here permits
 // all inputs. Add new safety constraints by tweaking this table.
 const ALLOWED_INPUTS_FOR_OUTPUT: {
-  [k in AichatCapabilities]?: AichatCapabilities[];
+  [key in AichatCapabilities]?: AichatCapabilities[];
 } = {
   // Image output is incompatible with image/files input for safety reasons.
   [AichatCapabilities.IMAGE]: [AichatCapabilities.TEXT],
@@ -92,7 +88,7 @@ const EditAichatCapabilities: React.FunctionComponent<{
     const next = current.includes(capability)
       ? current.filter(c => c !== capability)
       : [...current, capability];
-    // Always keep text — a chat without text isn't useful.
+    // Text is always enabled.
     if (!next.includes(AichatCapabilities.TEXT)) {
       next.push(AichatCapabilities.TEXT);
     }
