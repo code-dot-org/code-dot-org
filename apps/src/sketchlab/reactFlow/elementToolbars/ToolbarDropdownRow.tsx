@@ -35,10 +35,15 @@ export default function ToolbarDropdownRow({
   renderPopoverContent,
 }: ToolbarDropdownRowProps) {
   const labelId = useId();
+  const valueId = useId();
+  const popoverId = useId();
   const {theme} = useTheme();
   const {setPopoverOpen} = useToolbarVisibility();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const wasOpenRef = useRef(false);
+  // When set, suppresses the post-close trigger refocus so a Tab/Shift+Tab
+  // handler can land focus elsewhere instead.
+  const skipTriggerFocusRef = useRef(false);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
@@ -56,21 +61,45 @@ export default function ToolbarDropdownRow({
 
   // When the popover closes, move focus back to the trigger button.
   // MUI usually does this itself, but other canvas focus listeners can
-  // intercept the close and leave focus on <body>.
+  // intercept the close and leave focus on <body>. Skipped when a Tab
+  // handler has already chosen a different focus target.
   useEffect(() => {
     if (wasOpenRef.current && !open) {
-      triggerRef.current?.focus();
+      if (!skipTriggerFocusRef.current) {
+        triggerRef.current?.focus();
+      }
+      skipTriggerFocusRef.current = false;
     }
     wasOpenRef.current = open;
   }, [open]);
 
-  // Tab closes the popover so the user can keep Tab-navigating the toolbar.
+  // Tab closes the popover and moves focus to the next/previous toolbar
+  // control (skipping the trigger), so the user can keep Tab-navigating
+  // through the toolbar without an extra keypress on the trigger.
   const handlePopoverKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (event.key === 'Tab') {
-        event.preventDefault();
-        closePopover();
+      if (event.key !== 'Tab') return;
+      event.preventDefault();
+      const trigger = triggerRef.current;
+      const toolbar = trigger?.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`);
+      if (trigger && toolbar) {
+        const focusables = Array.from(
+          toolbar.querySelectorAll<HTMLElement>(
+            'button:not(:disabled), input:not(:disabled), [tabindex]:not([tabindex="-1"])'
+          )
+        );
+        const idx = focusables.indexOf(trigger);
+        const target = event.shiftKey
+          ? focusables[idx - 1]
+          : focusables[idx + 1];
+        if (target) {
+          skipTriggerFocusRef.current = true;
+          // Defer until after the popover unmounts and MUI's TrapFocus
+          // tears down, otherwise it pulls focus back inside.
+          setTimeout(() => target.focus(), 0);
+        }
       }
+      closePopover();
     },
     [closePopover]
   );
@@ -91,14 +120,16 @@ export default function ToolbarDropdownRow({
         color="secondary"
         size="small"
         disableRipple
-        aria-labelledby={labelId}
+        aria-labelledby={`${labelId} ${valueId}`}
         aria-haspopup={popoverRole === 'menu' ? 'menu' : 'dialog'}
         aria-expanded={open}
+        aria-controls={open ? popoverId : undefined}
         onClick={event => setAnchorEl(event.currentTarget)}
       >
         <span className={styles.dropdownTriggerContent}>
           {triggerPreview}
           <Typography
+            id={valueId}
             variant="body4"
             component="strong"
             className={styles.dropdownTriggerLabel}
@@ -135,7 +166,7 @@ export default function ToolbarDropdownRow({
         }}
       >
         {/* Re-apply data-theme; the portal escapes ThemeProvider. */}
-        <div data-theme={theme} onKeyDown={handlePopoverKeyDown}>
+        <div id={popoverId} data-theme={theme} onKeyDown={handlePopoverKeyDown}>
           {renderPopoverContent(closePopover)}
         </div>
       </Popover>
