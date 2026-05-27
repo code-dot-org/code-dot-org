@@ -78,6 +78,7 @@ function RootContent() {
         userAuth={auth}
       />
       {renderRouteArea(auth, onRetry)}
+      <StudioFooter />
       <TanStackRouterDevtools />
     </>
   );
