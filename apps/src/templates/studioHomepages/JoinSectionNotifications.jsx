@@ -1,11 +1,14 @@
 /** @file Notifications showing results of the join/leave section operation. */
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+
+const SUCCESS_ICON = {iconName: 'circle-check'};
+const ERROR_ICON = {iconName: 'triangle-exclamation'};
 
 export default function JoinSectionNotifications({
   action,
@@ -15,6 +18,7 @@ export default function JoinSectionNotifications({
   sectionCapacity,
   showingPlSections,
   joiningPlSection,
+  onDismiss,
 }) {
   if (action === 'join' && result === 'success') {
     return (
@@ -22,29 +26,43 @@ export default function JoinSectionNotifications({
         sectionName={name}
         showingPlSections={showingPlSections}
         joiningPlSection={joiningPlSection}
+        onClose={onDismiss}
       />
     );
   } else if (action === 'leave' && result === 'success') {
     return (
-      <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
+      <LeaveSectionSuccessNotification
+        sectionName={name}
+        sectionId={id}
+        onClose={onDismiss}
+      />
     );
   } else if (action === 'join' && result === 'section_notfound') {
-    return <JoinSectionNotFoundNotification sectionId={id} />;
+    return (
+      <JoinSectionNotFoundNotification sectionId={id} onClose={onDismiss} />
+    );
   } else if (action === 'join' && result === 'fail') {
-    return <JoinSectionFailNotification sectionId={id} />;
+    return <JoinSectionFailNotification sectionId={id} onClose={onDismiss} />;
   } else if (action === 'join' && result === 'exists') {
-    return <JoinSectionExistsNotification sectionName={name} />;
+    return (
+      <JoinSectionExistsNotification sectionName={name} onClose={onDismiss} />
+    );
   } else if (action === 'join' && result === 'section_owned') {
-    return <JoinSectionOwnedNotification sectionId={id} />;
+    return <JoinSectionOwnedNotification sectionId={id} onClose={onDismiss} />;
   } else if (action === 'join' && result === 'cant_be_participant') {
-    return <JoinSectionParticipantNotification sectionId={id} />;
+    return (
+      <JoinSectionParticipantNotification sectionId={id} onClose={onDismiss} />
+    );
   } else if (action === 'join' && result === 'section_restricted') {
-    return <JoinSectionRestrictedNotification sectionId={id} />;
+    return (
+      <JoinSectionRestrictedNotification sectionId={id} onClose={onDismiss} />
+    );
   } else if (action === 'join' && result === 'section_full') {
     return (
       <JoinSectionFullNotification
         sectionId={id}
         sectionCapacity={sectionCapacity}
+        onClose={onDismiss}
       />
     );
   }
@@ -58,12 +76,14 @@ JoinSectionNotifications.propTypes = {
   sectionCapacity: PropTypes.number,
   showingPlSections: PropTypes.bool,
   joiningPlSection: PropTypes.bool,
+  onDismiss: PropTypes.func,
 };
 
 const JoinSectionSuccessNotification = ({
   sectionName,
   showingPlSections,
   joiningPlSection,
+  onClose,
 }) => {
   let notificationMessage = null;
   if (!showingPlSections && joiningPlSection) {
@@ -82,11 +102,12 @@ const JoinSectionSuccessNotification = ({
   }
 
   return (
-    <Notification
-      type="success"
-      notice={i18n.sectionsNotificationSuccess()}
-      details={notificationMessage}
-      dismissible={true}
+    <NotificationBanner
+      variant="success"
+      icon={SUCCESS_ICON}
+      title={i18n.sectionsNotificationSuccess()}
+      description={notificationMessage}
+      onClose={onClose}
     />
   );
 };
@@ -94,100 +115,121 @@ JoinSectionSuccessNotification.propTypes = {
   sectionName: PropTypes.string.isRequired,
   showingPlSections: PropTypes.bool,
   joiningPlSection: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 
-const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
-  <Notification
-    type="success"
-    notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationLeaveSuccess({sectionName, sectionId})}
-    dismissible={true}
+const LeaveSectionSuccessNotification = ({sectionName, sectionId, onClose}) => (
+  <NotificationBanner
+    variant="success"
+    icon={SUCCESS_ICON}
+    title={i18n.sectionsNotificationSuccess()}
+    description={i18n.sectionsNotificationLeaveSuccess({
+      sectionName,
+      sectionId,
+    })}
+    onClose={onClose}
   />
 );
 LeaveSectionSuccessNotification.propTypes =
   JoinSectionSuccessNotification.propTypes;
 
-const JoinSectionNotFoundNotification = ({sectionId}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinNotFound({sectionId})}
-    dismissible={true}
+const JoinSectionNotFoundNotification = ({sectionId, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationJoinNotFound({sectionId})}
+    onClose={onClose}
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
 };
 
-const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinFull({
+const JoinSectionFullNotification = ({sectionId, sectionCapacity, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationJoinFull({
       sectionId,
       sectionCapacity,
     })}
-    dismissible={true}
+    onClose={onClose}
   />
 );
 JoinSectionFullNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
   sectionCapacity: PropTypes.number.isRequired,
+  onClose: PropTypes.func,
 };
 
-const JoinSectionRestrictedNotification = ({sectionId}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinRestricted({sectionId})}
-    dismissible={true}
+const JoinSectionRestrictedNotification = ({sectionId, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationJoinRestricted({sectionId})}
+    onClose={onClose}
   />
 );
 JoinSectionRestrictedNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
 };
 
-const JoinSectionFailNotification = ({sectionId}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinFail({sectionId})}
-    dismissible={true}
+const JoinSectionFailNotification = ({sectionId, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationJoinFail({sectionId})}
+    onClose={onClose}
   />
 );
 JoinSectionFailNotification.propTypes =
   JoinSectionNotFoundNotification.propTypes;
 
-const JoinSectionOwnedNotification = ({sectionId}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationAlreadyOwned({sectionId})}
-    dismissible={true}
+const JoinSectionOwnedNotification = ({sectionId, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationAlreadyOwned({sectionId})}
+    onClose={onClose}
   />
 );
 JoinSectionOwnedNotification.propTypes =
   JoinSectionNotFoundNotification.propTypes;
 
-const JoinSectionParticipantNotification = ({sectionId}) => (
-  <Notification
-    type="failure"
-    notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationCantBeParticipant({
+const JoinSectionParticipantNotification = ({sectionId, onClose}) => (
+  <NotificationBanner
+    variant="error"
+    role="alert"
+    icon={ERROR_ICON}
+    title={i18n.sectionsNotificationFailure()}
+    description={i18n.sectionsNotificationCantBeParticipant({
       sectionId,
     })}
-    dismissible={true}
+    onClose={onClose}
   />
 );
 JoinSectionParticipantNotification.propTypes =
   JoinSectionNotFoundNotification.propTypes;
 
-const JoinSectionExistsNotification = ({sectionName}) => (
-  <Notification
-    type="success"
-    notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationJoinExists({sectionName})}
-    dismissible={true}
+const JoinSectionExistsNotification = ({sectionName, onClose}) => (
+  <NotificationBanner
+    variant="success"
+    icon={SUCCESS_ICON}
+    title={i18n.sectionsNotificationSuccess()}
+    description={i18n.sectionsNotificationJoinExists({sectionName})}
+    onClose={onClose}
   />
 );
 JoinSectionExistsNotification.propTypes =
