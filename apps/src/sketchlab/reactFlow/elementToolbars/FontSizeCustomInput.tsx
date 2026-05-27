@@ -104,7 +104,7 @@ export default function FontSizeCustomInput({
         onKeyDown={handleInputKeyDown}
         size="s"
         className={sharedStyles.smallInput}
-        type="number"
+        inputType="number"
       />
     </MenuItem>
   );

@@ -169,6 +169,10 @@ export default function ToolbarDropdownRow({
         <div
           id={popoverId}
           data-theme={theme}
+          role={popoverRole === 'dialog' ? 'dialog' : undefined}
+          aria-label={
+            popoverRole === 'dialog' ? popoverAriaLabel ?? label : undefined
+          }
           className={styles.popoverContent}
           onKeyDown={handlePopoverKeyDown}
         >
