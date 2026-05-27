@@ -23,8 +23,10 @@ When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
   selector = ".blocklySvg [#{id_selector}='#{get_block_id(block)}']"
   @browser.execute_script(<<~JS)
+    var el = $("#{selector}")[0];
+    if (!el) return;
     var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
-    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerdown', opts));
+    el.dispatchEvent(new PointerEvent('pointerdown', opts));
     document.dispatchEvent(new PointerEvent('pointerup', opts));
   JS
 end

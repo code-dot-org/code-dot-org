@@ -4,10 +4,7 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {
-  ScrollBlockDragger as ScrollBlockDraggerBase,
-  ScrollOptions,
-} from '@blockly/plugin-scroll-options';
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -48,6 +45,7 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {CdoScrollBlockDragger} from './addons/cdoScrollBlockDragger';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
@@ -111,15 +109,6 @@ import {
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
-
-// Blockly 13 removed `workspace` from the Dragger base class. The scroll
-// plugin still references `this.workspace`, so we re-expose it via the
-// draggable (which for blocks is always a BlockSvg with a workspace).
-class ScrollBlockDragger extends ScrollBlockDraggerBase {
-  get workspace(): BlocklyCore.WorkspaceSvg {
-    return (this.draggable as BlocklyCore.BlockSvg).workspace;
-  }
-}
 
 const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
@@ -580,7 +569,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         },
       },
       plugins: {
-        blockDragger: ScrollBlockDragger,
+        blockDragger: CdoScrollBlockDragger,
         metricsManager: CdoMetricsManager,
         connectionChecker: CdoConnectionChecker,
       },
