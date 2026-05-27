@@ -47,6 +47,11 @@ export const cornerIconButtonBaseSx = {
   borderRadius: '50px',
   padding: '0.75% 1.2%',
   fontSize: '120%',
+  // `height: 6%` is what production sets inline on the equivalent <div>.
+  // Paired with `height: 100%` + `display: block` on the inner FA SVG,
+  // the SVG stretches to fill the 6%-defined parent content height.  Without
+  // it, MUI IconButton's flex layout collapses to the SVG's intrinsic 1em
+  // and the button renders 4 px shorter than production.
   height: '6%',
   backgroundColor: 'var(--ocean-color-white)',
   color: 'var(--ocean-color-grey)',

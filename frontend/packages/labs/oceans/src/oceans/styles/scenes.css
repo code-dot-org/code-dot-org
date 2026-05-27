@@ -8,7 +8,29 @@
  *      host's reset.
  *   2. CSS custom properties (color tokens) — these must stay in the cascade
  *      because both JS (canvas, Markdown) and sx consumers read them.
+ *   3. Container-query font-size — mirrors FishView.jsx's 18 px at 930 px
+ *      width so all em/%-relative button and text sizes match production
+ *      regardless of the host page's body font-size.
  */
+
+/*
+ * Declare the anonymous absolute-fill wrapper that holds #container-react as a
+ * CSS container so cqw units inside resolve against its inline size.  :has()
+ * targets the direct parent without requiring an id on the wrapper element.
+ * Chrome 105+, Firefox 121+, Safari 15.4+.
+ */
+*:has(> #container-react) {
+  container-type: inline-size;
+}
+
+/*
+ * Scale font-size proportionally to the container width.
+ * 18 / 930 ≈ 1.935% — matches FishView.jsx's calculation so all em/%-based
+ * children (buttons, counters, text) size identically to the production path.
+ */
+#container-react {
+  font-size: 1.935cqw;
+}
 
 /*
  * Explicit content-box reset.  The original ml-activities reference used
@@ -20,6 +42,16 @@
 #container-react,
 #container-react * {
   box-sizing: content-box;
+}
+
+/*
+ * Buttons opt back into border-box because production (studio's Rails reset
+ * applies `* { box-sizing: border-box }` globally) renders them that way.
+ * Without this, em-relative padding stacks on top of the 15% minWidth and
+ * inflates the button ~40% beyond the production size.
+ */
+#container-react .MuiButton-root {
+  box-sizing: border-box;
 }
 
 /*
@@ -51,19 +83,6 @@
 }
 
 /*
- * CdoTheme's :focus-visible rule uses --borders-brand-teal-primary, which
- * requires component-library-styles/colors.css.  That file is not imported
- * here, so the variable resolves to empty and the outline is invisible.
- * Re-establish a visible focus ring for all MUI interactive elements inside
- * the lab using the ocean-defined teal token.
- */
-#container-react .MuiButtonBase-root:focus-visible {
-  outline: 2px solid var(--ocean-color-teal);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/*
  * Reset UA dialog styles so <dialog open> is visually equivalent to a
  * <div role="dialog">.  Applies to guide dialogs (opened via showModal()).
  */
@@ -86,26 +105,36 @@
 }
 
 /*
- * Focus ring on the guide dialog element itself (non-Info modal guides that
- * receive programmatic .focus()).  :focus (not :focus-within) so the ring
- * does NOT fire when a child inside the dialog — e.g. the Info guide's
- * Continue button — holds focus.
+ * Focus ring inside the oceans canvas: white outline + black box-shadow.
+ * Mirrors @code-dot-org/ml-activities live styling — high contrast against
+ * the canvas's varied backgrounds (canvas art, dim scrim, dialog).
+ *
+ * :focus-visible only, so programmatic .focus() (e.g. the guide dialog
+ * receives focus on every guide transition) does NOT paint a ring —
+ * visual learners are not distracted by rings that appear without a
+ * keyboard interaction.  CdoTheme's :focus-visible token is unavailable
+ * here (component-library-styles/colors.css is not imported), so this
+ * rule is what makes the ring visible at all inside the lab.
  */
-#container-react dialog.guide-dialog:focus {
-  outline: 2px solid var(--ocean-color-teal);
-  outline-offset: 4px;
-}
-
-/*
- * Focus ring for non-MUI interactive elements: plain <button> elements
- * (Box component="button" toggles), role="button" divs (pond canvas), and
- * <dialog> elements that receive programmatic focus.  MuiButtonBase already
- * gets a ring via the rule above; these cover the rest.
- */
+#container-react .MuiButtonBase-root:focus-visible,
 #container-react button:focus-visible:not(.MuiButtonBase-root),
 #container-react [role='button']:focus-visible,
 #container-react dialog:focus-visible {
-  outline: 2px solid var(--ocean-color-teal);
+  outline: 2px solid white;
   outline-offset: 2px;
-  border-radius: 4px;
+  box-shadow: 0 0 0 4px black;
+}
+
+/*
+ * Suppress UA default ring on non-keyboard programmatic focus.  The
+ * guide dialog receives .focus() on every transition; without this
+ * override some UAs paint a default :focus ring.  `:not(:focus-visible)`
+ * guards the rule so a keyboard-driven transition (which DOES match
+ * :focus-visible) still gets the sandwich from the rule above — without
+ * the guard, this rule's class specificity would override the
+ * element-only :focus-visible rule and the ring would never appear.
+ */
+#container-react dialog.guide-dialog:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
