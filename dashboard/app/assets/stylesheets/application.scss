@@ -1198,6 +1198,9 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
     img {
       height: 22px;
       width: auto;
+      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+      // reserves ~130px wide before fetch, preventing horizontal CLS.
+      aspect-ratio: 591.15 / 100;
       display: block;
     }
   }
