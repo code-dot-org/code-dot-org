@@ -1738,8 +1738,8 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the sectionCode selector', () => {
-    it('undefined if the section is not found', () => {
-      expect(sectionCode(getState(), 42)).to.be.undefined;
+    it('null if the section is not found', () => {
+      expect(sectionCode(getState(), 42)).to.equal(null);
     });
 
     it('the section code if the section is found', () => {

@@ -12,6 +12,7 @@ import {
   createDemoSection,
   DemoSectionCreationError,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   DemoPresetView,
   DemoType,
@@ -121,7 +122,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     return {
       id: 0,
       name: preset.sectionName,
-      code: 'DEMO-123',
+      code: DEMO_SECTION_CODE_PLACEHOLDER,
       hidden: false,
       courseDisplayName,
       courseVersionName: preset.unitGroup?.name,
@@ -287,7 +288,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                     <Typography variant="overline1" gutterBottom>
                       <span>{i18n.sectionCodeWithColon()}</span>{' '}
                       <span className={joinLinkStyles.sectionCodeTextHidden}>
-                        DEMO-123
+                        {DEMO_SECTION_CODE_PLACEHOLDER}
                       </span>
                     </Typography>
                   </span>

@@ -850,19 +850,36 @@ class ManageStudentsTable extends Component {
                     effect="solid"
                     place="top"
                   >
-                    <div>{i18n.demoSectionAddStudentsDisabled()}</div>
+                    <div>{i18n.demoSectionActionDisabled()}</div>
                   </ReactTooltip>
                 )}
               </span>
             )}
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <PrintLoginCards
-                sectionId={this.props.sectionId}
-                entryPointForMetrics={
-                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
-                }
-                onPrintLoginCards={this.onPrintLoginCards}
-              />
+              <span
+                data-for="demo-print-login-cards-manage-tooltip"
+                data-tip=""
+                style={{display: 'inline-block'}}
+              >
+                <PrintLoginCards
+                  sectionId={this.props.sectionId}
+                  entryPointForMetrics={
+                    PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                  }
+                  onPrintLoginCards={this.onPrintLoginCards}
+                  disabled={this.props.isDemoSection}
+                />
+                {this.props.isDemoSection && (
+                  <ReactTooltip
+                    id="demo-print-login-cards-manage-tooltip"
+                    role="tooltip"
+                    effect="solid"
+                    place="top"
+                  >
+                    <div>{i18n.demoSectionActionDisabled()}</div>
+                  </ReactTooltip>
+                )}
+              </span>
             )}
             <GlobalEditionWrapper
               component={() => (

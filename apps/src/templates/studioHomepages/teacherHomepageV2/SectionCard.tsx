@@ -90,7 +90,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             </div>
             <JoinLinkCopyButton
               loginType={section.loginType}
-              sectionCode={section.code ?? DEMO_SECTION_CODE_PLACEHOLDER}
+              sectionCode={section.demoType ? DEMO_SECTION_CODE_PLACEHOLDER : (section.code ?? '')}
               sectionId={section.id}
               studioUrlPrefix={studioUrlPrefix}
               hidden={section.hidden}

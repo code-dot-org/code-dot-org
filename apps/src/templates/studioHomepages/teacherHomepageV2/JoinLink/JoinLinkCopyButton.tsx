@@ -116,18 +116,23 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       >
         <Typography variant="overline1" gutterBottom>
           {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
-          <button
-            onClick={() => showSectionCodeDialog()}
-            id="uitest-why-link"
-            className={styles.noSectionCode}
-            aria-label={i18n.whyWithQuestionMark()}
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="circle-question" iconStyle="regular" />
-          </button>
+          {!isDemoSection && (
+            <button
+              onClick={() => showSectionCodeDialog()}
+              id="uitest-why-link"
+              className={styles.noSectionCode}
+              aria-label={i18n.whyWithQuestionMark()}
+              type="button"
+            >
+              <FontAwesomeV6Icon
+                iconName="circle-question"
+                iconStyle="regular"
+              />
+            </button>
+          )}
         </Typography>
       </div>
-      {shouldShowDialog && (
+      {!isDemoSection && shouldShowDialog && (
         <Dialog
           title={i18n.noSectionDialogHeader({classroom: classroomType})}
           description={i18n.noSectionDialogBody({classroom: classroomType})}
