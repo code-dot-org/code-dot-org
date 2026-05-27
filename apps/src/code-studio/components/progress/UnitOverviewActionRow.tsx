@@ -172,7 +172,10 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
             viewAs === ViewType.Instructor &&
             isMigrated &&
             teacherResources.length > 0 && (
-              <div className={styles.teacherResources}>
+              <div
+                className={styles.teacherResources}
+                id="teacher-resources-dropdown"
+              >
                 <ResourcesDropdown
                   resources={teacherResources}
                   unitId={scriptId}
