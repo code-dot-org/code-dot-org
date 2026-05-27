@@ -178,19 +178,22 @@ describe('observability plugin', () => {
     } as PluginConfig);
     await vi.dynamicImportSettled();
 
-    const mockScope = {setTag: vi.fn()};
-    vi.mocked(Sentry.withScope).mockImplementationOnce(
-      (callback: (scope: Sentry.Scope) => void) =>
-        callback(mockScope as unknown as Sentry.Scope),
-    );
-
     const error = new Error('tagged error');
     recordError(error, {detail: 'ctx'}, {feature: 'ai-gateway'});
 
-    expect(mockScope.setTag).toHaveBeenCalledWith('feature', 'ai-gateway');
+    expect(vi.mocked(Sentry.withScope)).toHaveBeenCalledOnce();
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
       extra: {detail: 'ctx'},
     });
+
+    // Retrieve the callback passed to withScope and invoke it with a fresh mock
+    // scope to assert the tag was applied. The overloaded withScope signature
+    // requires an unknown cast to extract the callback from mock.calls.
+    const [[capturedCallback]] = vi.mocked(Sentry.withScope).mock
+      .calls as unknown as [[(scope: Sentry.Scope) => void]];
+    const mockScope = {setTag: vi.fn()};
+    capturedCallback(mockScope as unknown as Sentry.Scope);
+    expect(mockScope.setTag).toHaveBeenCalledWith('feature', 'ai-gateway');
   });
 
   it('delegates logger and metrics calls after initialization', async () => {
