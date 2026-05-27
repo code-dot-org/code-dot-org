@@ -9,11 +9,14 @@ import {
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import rehypeRaw from 'rehype-raw';
 import rehypeReact from 'rehype-react';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
+
+import localization, {useLocalization} from '@cdo/apps/localization';
 
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
@@ -149,6 +152,123 @@ blocklyTags.forEach(tag => {
   };
 });
 
+const isXmlBlock = child =>
+  typeof child?.type === 'function' && child?.type()?.type === 'xml';
+
+/**
+ * Convert a translated DOM node back to a React element tree. Placeholder
+ * spans (those carrying a `data-token` attribute) are swapped for the
+ * original untranslated React element they stand in for; everything else is
+ * recreated structurally so the translated text nodes land in the right place.
+ */
+const domToReact = (node, key, placeholders) => {
+  if (node.nodeType === Node.TEXT_NODE) {
+    return node.nodeValue;
+  }
+
+  if (node.nodeType !== Node.ELEMENT_NODE) {
+    return null;
+  }
+
+  if (node.hasAttribute('data-token')) {
+    const idx = Number(node.getAttribute('data-token'));
+    return React.cloneElement(placeholders[idx], {key: `xml-${idx}`});
+  }
+
+  const props = {key};
+  for (const attr of node.attributes) {
+    const name = attr.name === 'class' ? 'className' : attr.name;
+    props[name] = attr.value;
+  }
+
+  const children = [];
+  node.childNodes.forEach((child, i) => {
+    const result = domToReact(child, i, placeholders);
+    if (result !== null) {
+      children.push(result);
+    }
+  });
+
+  return React.createElement(
+    node.hasAttribute('data-code-element')
+      ? 'code'
+      : node.tagName.toLowerCase(),
+    props,
+    ...children
+  );
+};
+
+/**
+ * Localizes a 'complex' paragraph: one containing one or more <xml> blocks
+ * that our translation engine would otherwise refuse to touch. The approach:
+ *
+ *   1. Build a detached <p> DOM tree from the React children. Strings become
+ *      text nodes, simple inline elements (<b>, <a>, <code>, ...) become real
+ *      DOM so the translator can reason about their content, and each <xml>
+ *      block is replaced by an empty `<span data-token="i">`
+ *      placeholder while the original React element is stashed by index.
+ *
+ *   2. Hand the <p> to localization.translate, which returns an equivalent DOM
+ *      tree with the text nodes translated.
+ *
+ *   3. Walk the translated DOM and rebuild a React tree, swapping each
+ *      placeholder span back for its stashed XML element. The outer <p>
+ *      inherits the original element's props plus `data-notranslate` so the
+ *      translator doesn't try to re-translate the already-translated output.
+ */
+const LocalizedParagraph = ({p}) => {
+  useLocalization();
+
+  const childArray = React.Children.toArray(p.props.children);
+  const placeholders = [];
+
+  const container = document.createElement('p');
+  container.setAttribute('data-isolate', 'true');
+  childArray.forEach(item => {
+    if (typeof item === 'string' || typeof item === 'number') {
+      container.appendChild(document.createTextNode(String(item)));
+    } else if (isXmlBlock(item)) {
+      const span = document.createElement('span');
+      span.setAttribute('data-token', String(placeholders.length));
+      placeholders.push(item);
+      container.appendChild(span);
+    } else {
+      const tmp = document.createElement('template');
+      tmp.innerHTML = ReactDOMServer.renderToStaticMarkup(item);
+
+      // If this is a <code>...</code> element, replace with a <b>
+      // with a data-code-element attribute. Our translation system
+      // does not recognize `<code>` blocks.
+      const child = tmp.content.children?.[0];
+      if (child?.tagName?.toLowerCase() === 'code') {
+        const span = document.createElement('b');
+        span.innerHTML = child.innerHTML;
+        span.setAttribute('data-code-element', 'true');
+        container.appendChild(span);
+      } else {
+        container.appendChild(tmp.content);
+      }
+    }
+  });
+
+  const translated = localization.translate(container, [
+    'blockly-instructions',
+  ]);
+
+  const root = domToReact(translated, undefined, placeholders);
+  const {...truncatedProps} = p.props;
+  delete truncatedProps.children;
+  return React.cloneElement(root, {
+    // Send it all the props but none of the original children
+    ...truncatedProps,
+    'data-notranslate': 'true',
+  });
+};
+
+LocalizedParagraph.propTypes = {
+  p: PropTypes.element,
+};
+
 // These wrappers add context for Localize to better understand the markdown
 // output. This also will enable URL localization for all links.
 const localizationComponentWrappers = {
@@ -156,8 +276,21 @@ const localizationComponentWrappers = {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     return <a {...props} data-lz-url="true" data-localize="markdown-url" />;
   },
-  p: function (props) {
-    return <p {...props} data-isolate="true" />;
+  p: function ({children, ...props}) {
+    // Wraps the paragraph rendering such that we send it for translation
+    // before rendering it to the screen.
+    return (
+      <LocalizedParagraph
+        p={
+          // Also ensure that it is not translated. This gets forcibly
+          // added to the props list anyway, but we definitely do not
+          // want to translate the content here.
+          <p data-notranslate="true" {...props}>
+            {children}
+          </p>
+        }
+      />
+    );
   },
 };
 
