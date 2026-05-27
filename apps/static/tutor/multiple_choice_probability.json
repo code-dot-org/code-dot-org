@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23611b0593d208854294ad85449dd8191d7ac6493bdf6402b8904f6918ebc835
-size 595
+{
+  "id": 10,
+  "type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is probability?",
+  "solution": [
+    {
+      "option": "the likelihood that a specific outcome might occur",
+      "correct": true
+    },
+    {
+      "option": "the certainty that a specific outcome will definitely occur",
+      "correct": false
+    },
+    {
+      "option": "the total number of possible outcomes in a given situation",
+      "correct": false
+    },
+    {
+      "option": "a guess about the future based on personal opinion rather than data",
+      "correct": false
+    }
+  ]
+}

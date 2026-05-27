@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a99606d0bfba12575a1d1aa796f5d65e480411e27e11a29a52b14c4fbcf0adf6
-size 459
+{
+  "id": 5,
+  "type": "sort",
+  "active": true,
+  "problem_text": "Sort the following animals by type",
+  "solution": [
+    {
+      "option": "tiger",
+      "correct": "mammal"
+    },
+    {
+      "option": "corn snake",
+      "correct": "reptile"
+    },
+    {
+      "option": "leopard gecko",
+      "correct": "reptile"
+    },
+    {
+      "option": "koala",
+      "correct": "mammal"
+    },
+    {
+      "option": "goose",
+      "correct": "bird"
+    }
+  ]
+}

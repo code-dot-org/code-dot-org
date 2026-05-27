@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d707d9009a9b30d9c829fbed1a7b668194b001944b867b17571ae2feb65e181
-size 756
+{
+  "id": 5,
+  "type": "match",
+  "active": true,
+  "problem_text": "Match the vocabulary word with its definition",
+  "solution": [
+    {
+      "option": "abstraction",
+      "correct": "focusing on the important information and ignoring irrelevant details"
+    },
+    {
+      "option": "artificial intelligence (AI)",
+      "correct": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions"
+    },
+    {
+      "option": "probability",
+      "correct": "the likelihood that a specific outcome might occur"
+    },
+    {
+      "option": "prompt",
+      "correct": "a question, instruction, scenario, or statement provided by the user to guide the AI's response"
+    }
+  ]
+}

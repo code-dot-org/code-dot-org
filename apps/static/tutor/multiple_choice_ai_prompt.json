@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be9e4633a1a26d642045dee644413704cf096143512a77767d15b99008854156
-size 663
+{
+  "id": 6,
+  "type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following inputs is most likely to get the best results from AI chat?",
+  "solution": [
+    {
+      "option": "What pet should I get?",
+      "correct": false
+    },
+    {
+      "option": "I'm allergic to dogs, but still want a pet. What do you recommend?",
+      "correct": false
+    },
+    {
+      "option": "Tell me which animal to get.",
+      "correct": false
+    },
+    {
+      "option": "What are good options for a pet that is less than $30, is soft, can live in a cage in my room, and won't wake me up at night?",
+      "correct": true
+    }
+  ]
+}

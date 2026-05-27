@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ef118339d14f71fb29934bfefc422b43ac13675550e3f0352d77ca8b8bfd30c
-size 575
+{
+  "id": 7,
+  "type": "scramble",
+  "active": true,
+  "problem_text": "AI makes predictions based on probability - how likely something is to occur. Order the following sentence completions from least likely to most likely. The menu today is spaghetti and....",
+  "solution": [
+    {
+      "option": "trucks",
+      "correct": 0
+    },
+    {
+      "option": "eels",
+      "correct": 1
+    },
+    {
+      "option": "cookies",
+      "correct": 2
+    },
+    {
+      "option": "salad",
+      "correct": 3
+    },
+    {
+      "option": "meatballs",
+      "correct": 4
+    }
+  ]
+}

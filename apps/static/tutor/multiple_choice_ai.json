@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25afc45777d45c6d8cf766712d99e45169629652ccbeefc778ecbd9692cea1be
-size 721
+{
+  "id": 9,
+  "type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is artificial intelligence (AI)?",
+  "solution": [
+    {
+      "option": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "correct": true
+    },
+    {
+      "option": "a robot or machine designed to physically replace human workers",
+      "correct": false
+    },
+    {
+      "option": "a computer program that follows a fixed set of rules and cannot learn or adapt",
+      "correct": false
+    },
+    {
+      "option": "the study of how computers store and organize large amounts of data",
+      "correct": false
+    }
+  ]
+}
