@@ -12,7 +12,8 @@ export default function ToolbarSection({title, children}: ToolbarSectionProps) {
   return (
     <section className={styles.section} role="group" aria-label={title}>
       <Typography
-        variant="overline3"
+        variant="body4"
+        component="strong"
         className={styles.sectionTitle}
         aria-hidden="true"
       >

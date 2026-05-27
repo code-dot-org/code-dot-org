@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px 6px 10px;
+  padding: 6px 8px;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-quaternary);
   max-height: 32px;
@@ -28,7 +28,6 @@
   letter-spacing: 0.08em;
   color: var(--text-neutral-secondary);
   font-weight: 600;
-  padding-left: 2px;
 }
 
 .closeButton {
