@@ -1,8 +1,16 @@
 # Brand configuration module that provides brand-specific assets and URLs.
-# Uses DCDO flag 'brand-router-enabled' as on/off switch.
-# When enabled, brand is resolved from URL param > cookie > default:
-#   ?brand=codeai  → sets brand to codeai and persists in cookie
-#   ?brand-reset=1 → clears brand cookie, reverts to default
+#
+# DCDO keys:
+#   default-brand         The brand code returned to all users when no per-user
+#                         override applies. Defaults to BRAND_CODE_ORG when unset
+#                         or set to an unknown code.
+#   brand-router-enabled  On/off switch for per-user routing. When off, every
+#                         request gets the default-brand. When on, the brand is
+#                         resolved per request: URL param > cookie > default.
+#
+# Per-user routing (when brand-router-enabled is on):
+#   ?brand=codeai     → sets brand to codeai and persists in cookie
+#   ?brand-reset=1    → clears brand cookie, reverts to default
 require_relative 'cookie_helpers'
 
 module Cdo
@@ -35,14 +43,19 @@ module Cdo
     }.freeze
 
     # Get the current brand code.
-    # When brand-router-enabled is off, always returns default brand.
-    # When enabled, checks URL param > cookie for brand code.
+    # When brand-router-enabled is off, always returns the default brand.
+    # When on, checks URL param > cookie, falling back to the default brand.
+    # The default brand is read from DCDO 'default-brand' and falls back to
+    # BRAND_CODE_ORG when unset or set to an unknown code.
     # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_code(request = nil)
-      return BRAND_CODE_ORG unless DCDO.get('brand-router-enabled', false)
+      default = DCDO.get('default-brand', BRAND_CODE_ORG)
+      default = BRAND_CODE_ORG unless BRANDS.key?(default)
+
+      return default unless DCDO.get('brand-router-enabled', false)
 
       brand = resolve_brand(request)
-      BRANDS.key?(brand) ? brand : BRAND_CODE_ORG
+      BRANDS.key?(brand) ? brand : default
     end
 
     # Get the current brand configuration

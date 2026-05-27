@@ -4,6 +4,30 @@ require 'cdo/brand'
 class BrandTest < ActiveSupport::TestCase
   setup do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODE_ORG).returns(Cdo::Brand::BRAND_CODE_ORG)
+  end
+
+  test 'default-brand DCDO sets the fallback when router is disabled' do
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODE_ORG).returns(Cdo::Brand::BRAND_CODEAI)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code
+  end
+
+  test 'default-brand DCDO sets the fallback when router is enabled and no override' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODE_ORG).returns(Cdo::Brand::BRAND_CODEAI)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code
+  end
+
+  test 'URL param overrides default-brand when router is enabled' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODE_ORG).returns(Cdo::Brand::BRAND_CODEAI)
+    request = mock_request(params: {'brand' => 'code'})
+    assert_equal Cdo::Brand::BRAND_CODE_ORG, Cdo::Brand.current_brand_code(request)
+  end
+
+  test 'unknown default-brand value falls back to BRAND_CODE_ORG' do
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODE_ORG).returns('not-a-real-brand')
+    assert_equal Cdo::Brand::BRAND_CODE_ORG, Cdo::Brand.current_brand_code
   end
 
   test 'returns default brand when router is disabled' do
