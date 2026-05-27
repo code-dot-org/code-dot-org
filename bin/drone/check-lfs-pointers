@@ -1,0 +1,27 @@
+#!/bin/sh
+# Verify every file that .gitattributes marks as Git LFS is actually stored as
+# a pointer in the given ref (default HEAD), and print fix instructions if not.
+#
+# Run in CI after merging the target branch, so HEAD is the post-merge tree that
+# will land. A single committish is inspected -- not an A..B range -- so a PR
+# that introduces a mismatch and then fixes it in a later commit is not failed
+# on the transient bad commit.
+#
+# Lives in its own file (rather than inline in .drone.yml) so Drone echoes only
+# the invocation, keeping the error text out of the logs on the passing path.
+
+ref="${1:-HEAD}"
+
+if git lfs fsck --pointers "$ref"; then
+  exit 0
+fi
+
+cat >&2 <<'EOF'
+
+ERROR: Git LFS pointer mismatch (see above).
+A file that .gitattributes marks as LFS is committed as content, not a pointer.
+Run the following commands in your feature branch to fix it:
+    git add --renormalize .
+    git commit
+EOF
+exit 1
