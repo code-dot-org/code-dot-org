@@ -54,8 +54,9 @@ export default function ToolbarDropdownRow({
     return () => setPopoverOpen(false);
   }, [open, setPopoverOpen]);
 
-  // Backstop focus return — MUI's nodeToRestore can drop focus to body when
-  // canvas listeners intercept the close.
+  // When the popover closes, move focus back to the trigger button.
+  // MUI usually does this itself, but other canvas focus listeners can
+  // intercept the close and leave focus on <body>.
   useEffect(() => {
     if (wasOpenRef.current && !open) {
       triggerRef.current?.focus();
