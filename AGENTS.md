@@ -1,6 +1,7 @@
 # studio.code.org / aka dashboard: code.org's K-12 CS and AI education platform for all kids and teachers
 
 ## Basic facts about this monorepo:
+
 - implements code.org's curriculum supporting our mission of K-12 CS and AI education.
 - lives at https://github.com/code-dot-org/code-dot-org
 - deployed in production as https://studio.code.org, but usually we call it "dashboard" internally
@@ -14,6 +15,7 @@
 IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
 
 ## A few other useful docs:
+
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX. ALWAYS read @apps/README.md before working with frontend code.
 - TESTING.md: how to run various types of tests, both frontend, backend and ui tests. ALWAYS read @TESTING.md before running any kind of tests.
 - frontend/AGENTS.md: conventions, commands, and architecture guidance for the Turborepo
@@ -35,10 +37,12 @@ and architecture.
 - `dashboard/engines/observability/README.md` (if exists)
 
 ## Rails Tips and Tricks:
+
+- **Migrations MUST ship in their own branch / PR.** A branch whose diff against `staging` adds a file under `dashboard/db/migrate/` may only also change `dashboard/db/schema.rb`, `dashboard/db/schema_cache.yml`, and annotaterb's `== Schema Information` comment block in `dashboard/app/models/**/*.rb`. Any other `.rb` / `.rake` change fails `./tools/hooks/pre-commit` (see `tools/hooks/restrict_migration_changes.rb`). Code that depends on a migration belongs in a separate branch that merges **after** the migration branch is merged and deployed — migrations that ship alongside their consumers are very painful to revert once they reach chef-managed environments.
 - As previously mentioned, see `dashboard/` directory for a conventional rails app with the usual directories (i.e. with dashboard/app/controllers, dashboard/app/models, dashboard/bin/rails, etc)
 - Some non-rails ruby code also lives in `lib/`
 - We use CanCanCan for authorization and Devise for authentication
-- Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)
+- Use `bundle exec` to run ruby commands (exception: most ./bin/\* commands automatically load the rails environment)
 - To execute/test Ruby / Rails code snippets (recommended!), use `./bin/rails runner` from the `dashboard/` directory.
 - `./bin/mysql-client-dashboard-reader` can be used to safely query the local db with SQL commands
 - `./bin/mysql-client-dashboard-writer` is also available, but is not safe and usage should be approved by the user first
@@ -48,6 +52,7 @@ and architecture.
 - Linting: run `./tools/hooks/pre-commit` which only lints modified files (=fast, run frequently). You should definitely run this before reporting success to the user if you've changed any js/ts/jsx/tsx/ruby.
 
 ## React Tips and Tricks:
+
 - As previously mentioned, see `apps/` for most (but not all) of our existing JS/TS/JSX/TSX code
 - Some new code is being added in `frontend/`, using standalone/modular JS packages. In the future we plan to use this more and more.
 - In contrast, `apps/` is basically one giant webpack bundle
@@ -67,19 +72,21 @@ and architecture.
     - A good litmus test is if you've made a batch of changes, or before reporting success to the user, run `yarn run typecheck` first.
 
 ## Design System
+
 - When working on React UI in `apps/` or `frontend/`, refer to the `design-system` agent skill for component library guidelines, styling rules, and DSCO-to-MUI migration guidance.
 - Our design system lives in `frontend/packages/component-library/` with shared styles in `frontend/packages/component-library-styles/`.
 - **Always prefer design system components** over custom or legacy alternatives. Only create custom UI components when no design system equivalent exists.
 
 ## Levelbuilder
+
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
 - Levelbuilder is mostly implemented in rails, but with some react views
 - Levelbuilder lets curriculum authors write "levels" that are like config files for frontend "labs"
 - curriculum is stored in several sub-directories of dashboard/config each of which have thousands or more files under them like:
-  - dashboard/config/courses/*.course
-  - dashboard/config/course_offerings/*json
+  - dashboard/config/courses/\*.course
+  - dashboard/config/course_offerings/\*json
   - dashboard/config/scripts contains a variety of curriculum related files with a nested directory structure
-  - dashboard/config/scripts_json/*.script_json
+  - dashboard/config/scripts_json/\*.script_json
   - etc
 
 ## Other potentially interesting directories
@@ -88,6 +95,7 @@ and architecture.
 - `cookbooks/`: contains chef cookbooks used to manage low level infrastructure on our production servers ("prod, staging, test") and adhocs
 
 ## General Tips and Tricks:
+
 - This is a fairly large monorepo, so be mindful about getting lost and filling your context with unrelated files
 - Testing:
   - Running our whole test suite (backend, frontend, and especially UI tests) can take quite a while, so running targeted test subsets is recommended in dev loops
@@ -107,12 +115,14 @@ and architecture.
 - the main branch of this repo is named `staging`. to see what work exists in a feature branch, assume `staging` is the base branch for that work unless otherwise noted.
 
 ## Test strategy during the dev loop
+
 - find and run all the unit tests you can identify as relevant before running any full test suites
 - next, test as much as you can with rails runner, mysql commands, in the browser, etc (as relevant)
 - finally, if there's a relevant test suite, run it
 - once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
 
 ## Agent skills
+
 - Add agent skills to the `.agents/skills` directory shared by all agents.
 - Skill directories matching `.agents/skills/*.local` are not committed to git.
 - Prefer adding agent skills to extending AGENTS.md.
