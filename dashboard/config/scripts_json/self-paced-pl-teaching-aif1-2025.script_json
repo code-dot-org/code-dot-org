@@ -8,6 +8,7 @@
       "curriculum_umbrella": "Self-paced PL - AIF",
       "is_migrated": true,
       "supported_locales": [
+        "es-LA",
         "es-MX"
       ],
       "topic_tags": [

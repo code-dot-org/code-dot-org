@@ -18,6 +18,7 @@ import {
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -185,6 +186,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     (sectionId: number, path: string) => {
       const nextPath = path.startsWith('/')
         ? path
+            // Add the correct sectionId to the path.
+            .replace(':sectionId', sectionId.toString())
+            // Remove the TEACHER_NAVIGATION_BASE_URL prefix if present since
+            // navigate is relative to that base url.
+            .replace(new RegExp(`^${TEACHER_NAVIGATION_BASE_URL}`), '')
         : generatePath(
             `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
             {
@@ -238,7 +244,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       <ul className={styles.sectionList}>
         <li
           id="ui-test-demo-section-card"
-          className={styles.sectionCardWrapper}
+          className={`${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`}
           aria-labelledby="demo-section-card-title"
         >
           <div className={styles.sectionCardHeader}>
