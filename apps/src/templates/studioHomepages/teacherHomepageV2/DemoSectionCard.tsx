@@ -116,19 +116,19 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       numSections === 0 &&
       totalSections === 0 &&
       !!preset &&
-      !isLoadingDemoCard
+      demoPresetsAreLoaded
     ) {
       hasLoggedViewRef.current = true;
       analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CARD_VIEWED, {
         demoType,
-        hasGrades: !!gradesTeaching && gradesTeaching.length > 0,
+        hasGrades: gradesTeaching.length > 0,
       });
     }
   }, [
     numSections,
     totalSections,
     preset,
-    isLoadingDemoCard,
+    demoPresetsAreLoaded,
     demoType,
     gradesTeaching,
   ]);
@@ -204,7 +204,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
             analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
               demoType,
               triggeringAction: pendingKey,
-              errorType: error.errorType,
+              errorType: 'generic',
             });
           }
           setNotice({
