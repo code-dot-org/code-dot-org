@@ -1,0 +1,20 @@
+.buttonContainer {
+  // 970px is the legacy styleConstants['content-width']; preserved verbatim.
+  width: 970px;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hiddenSectionLabel {
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: var(--text-neutral-tertiary);
+}
+
+.hiddenSectionDesc {
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 10px;
+  color: var(--text-neutral-tertiary);
+}
