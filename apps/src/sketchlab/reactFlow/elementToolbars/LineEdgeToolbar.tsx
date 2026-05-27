@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useNodesData, useReactFlow} from '@xyflow/react';
 import React, {useMemo} from 'react';
@@ -10,14 +9,12 @@ import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
-import ColorPickerPopover from './ColorPickerPopover';
-import ColorPreviewSwatch from './ColorPreviewSwatch';
+import ColorDropdownRow from './ColorDropdownRow';
 import LockedNotice from './LockedNotice';
 import OptionListPopover from './OptionListPopover';
 import ToolbarDropdownRow from './ToolbarDropdownRow';
 import {
   ARROW_HEAD_OPTIONS,
-  colorLabel,
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_STROKE_STYLE,
   DEFAULT_LINE_WIDTH,
@@ -56,8 +53,6 @@ export default function LineEdgeToolbar({
   const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
     useReactFlow();
   const pushSnapshot = usePushSnapshot();
-  const {theme} = useTheme();
-  const isDarkMode = theme === 'Dark';
 
   const isLocked = edge.data?.locked === true;
 
@@ -143,29 +138,11 @@ export default function LineEdgeToolbar({
       ) : (
         <>
           <ToolbarSection title="Appearance">
-            <ToolbarDropdownRow
+            <ColorDropdownRow
               label="Color"
-              popoverRole="dialog"
-              triggerPreview={
-                <ColorPreviewSwatch
-                  value={selectedColor}
-                  swatches={STROKE_FONT_PALETTE}
-                />
-              }
-              triggerLabel={colorLabel(
-                selectedColor,
-                STROKE_FONT_PALETTE,
-                isDarkMode
-              )}
-              renderPopoverContent={closePopover => (
-                <ColorPickerPopover
-                  groupLabel="Color"
-                  swatches={STROKE_FONT_PALETTE}
-                  selectedValue={selectedColor}
-                  onSelect={onSelectColor}
-                  onClose={closePopover}
-                />
-              )}
+              swatches={STROKE_FONT_PALETTE}
+              value={selectedColor}
+              onSelect={onSelectColor}
             />
             <ToolbarDropdownRow
               label="Thickness"

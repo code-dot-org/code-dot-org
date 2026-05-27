@@ -25,7 +25,7 @@ interface ToolbarDropdownRowProps {
   renderPopoverContent: (closePopover: () => void) => React.ReactNode;
 }
 
-// Toolbar row with label on the left and a dropdown-triggering button on the right.
+// Toolbar row with a label on the left and a dropdown-triggering button on the right.
 export default function ToolbarDropdownRow({
   label,
   triggerPreview,
@@ -42,34 +42,20 @@ export default function ToolbarDropdownRow({
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
-  // Plain close — MUI Popover's TrapFocus restores focus via its
-  // nodeToRestore mechanism. Calling triggerRef.focus() inside this
-  // callback races against TrapFocus's enforce-focus listener and
-  // triggers a focus loop; we backstop via the open->closed effect
-  // below instead.
   const closePopover = useCallback(() => {
     setAnchorEl(null);
   }, []);
 
-  // Tell ToolbarShell when our popover is open so it can deactivate
-  // its focus-trap-react (see context.ts + ToolbarShell). useLayoutEffect
-  // (not useEffect) is load-bearing: it runs synchronously in commit
-  // phase, queuing a state update that propagates to ToolbarShell BEFORE
-  // MUI Popover's useEffect-based TrapFocus activates in a later phase.
-  // The cleanup pairs with setup symmetrically — runs on open->closed,
-  // on parent re-mount, AND on unmount-while-open — so no extra refs or
-  // safety-net effects are needed.
+  // useLayoutEffect so ToolbarShell deactivates its focus-trap on the
+  // same commit, before MUI Popover's own TrapFocus attaches in useEffect.
   useLayoutEffect(() => {
     if (!open) return;
     setPopoverOpen(true);
     return () => setPopoverOpen(false);
   }, [open, setPopoverOpen]);
 
-  // Backstop: when the popover transitions open->closed, ensure focus
-  // lands on the trigger. MUI's nodeToRestore usually handles this, but
-  // it can drop focus to <body> when other listeners on the canvas
-  // intercept the close sequence. This runs after MUI's TrapFocus has
-  // fully torn down, so it doesn't conflict with enforce-focus.
+  // Backstop focus return — MUI's nodeToRestore can drop focus to body when
+  // canvas listeners intercept the close.
   useEffect(() => {
     if (wasOpenRef.current && !open) {
       triggerRef.current?.focus();
@@ -77,11 +63,7 @@ export default function ToolbarDropdownRow({
     wasOpenRef.current = open;
   }, [open]);
 
-  // Tab closes the popover (forward or backward). MUI's TrapFocus
-  // otherwise loops Tab within the popover; users expect Tab to exit
-  // and continue navigating the toolbar. Closing here triggers
-  // nodeToRestore + our open->closed effect, both of which land focus
-  // back on the trigger, so the next Tab moves to the next toolbar row.
+  // Tab closes the popover so the user can keep Tab-navigating the toolbar.
   const handlePopoverKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (event.key === 'Tab') {
@@ -115,8 +97,12 @@ export default function ToolbarDropdownRow({
       >
         <span className={styles.dropdownTriggerContent}>
           {triggerPreview}
-          <Typography variant="body4" className={styles.dropdownTriggerLabel}>
-            <Typography variant="strong">{triggerLabel}</Typography>
+          <Typography
+            variant="body4"
+            component="strong"
+            className={styles.dropdownTriggerLabel}
+          >
+            {triggerLabel}
           </Typography>
         </span>
         <FontAwesomeV6Icon
@@ -133,11 +119,8 @@ export default function ToolbarDropdownRow({
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
-          // Tag both the modal root (which hosts the click-catching
-          // Backdrop) and the Paper with the toolbar panel class. The
-          // canvas' outside-click listener walks up from event.target;
-          // without the root tag, clicks on the Backdrop look
-          // like outside-toolbar clicks and dismiss the toolbar.
+          // Tag the modal root + paper so the canvas' outside-click listener
+          // treats them as inside the toolbar.
           root: {
             className: SKETCHLAB_TOOLBAR_PANEL_CLASS,
           },
@@ -150,10 +133,7 @@ export default function ToolbarDropdownRow({
           },
         }}
       >
-        {/* The popover renders into a body-level portal, escaping the
-         * ThemeProvider's <div data-theme={...}> wrapper. The keydown
-         * handler intercepts Tab to close the dropdown — see comment
-         * above. */}
+        {/* Re-apply data-theme; the portal escapes ThemeProvider. */}
         <div data-theme={theme} onKeyDown={handlePopoverKeyDown}>
           {renderPopoverContent(closePopover)}
         </div>

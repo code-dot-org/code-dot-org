@@ -19,8 +19,7 @@ interface ActionsGroupProps {
   onBringToFront?: () => void;
   onSendToBack?: () => void;
   onDuplicate?: () => void;
-  // Bundled so the `visible` boolean can't be supplied without an
-  // `onToggle` handler (which previously left aria-pressed undefined).
+  // Bundled so visible can't be supplied without onToggle.
   handlesToggle?: HandlesToggle;
 }
 

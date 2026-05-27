@@ -25,8 +25,6 @@ interface OptionListPopoverProps<T extends string | number> {
   onSelect: (value: T) => void;
   onClose: () => void;
   ariaLabel: string;
-  // Optional row appended below the list (e.g. Custom px input for Size).
-  // Marked selected when no preset matches the underlying value.
   customRow?: React.ReactNode;
 }
 

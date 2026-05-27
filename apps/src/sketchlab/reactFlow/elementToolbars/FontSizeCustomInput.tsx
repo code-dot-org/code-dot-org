@@ -14,15 +14,8 @@ interface FontSizeCustomInputProps {
   isSelected: boolean;
 }
 
-// Inline Custom-px input rendered as the last item in the Size popover.
-// Using <MenuItem> as the root means MUI's MenuList includes the row in its
-// arrow-key navigation — arrowing down past the last preset lands here.
-// Stays blank while a preset (Small/Medium/...) is the active size, so the
-// user can click in and type a fresh value without the preset's px first
-// loading into the field and getting clamped by partial backspace edits.
-// Only fills the input when the saved font size IS already a custom number.
-// Commit happens on blur or Enter — never per-keystroke — so transient
-// values during typing don't snap the canvas font size.
+// Custom font-size input. Blank when a preset is selected; commits on
+// blur or Enter.
 export default function FontSizeCustomInput({
   selectedValue,
   onSelect,
@@ -34,27 +27,21 @@ export default function FontSizeCustomInput({
   const [isFocused, setIsFocused] = useState(false);
   const rootRef = useRef<HTMLLIElement>(null);
 
-  // Sync the field to the saved value when not focused, so external
-  // changes (e.g. picking a preset in the list above) are reflected.
+  // Sync the field to the saved value when not focused.
   useEffect(() => {
     if (!isFocused) {
       setInputValue(displayValue);
     }
   }, [displayValue, isFocused]);
 
-  // Forward focus from the MenuItem wrapper to the inner input so the
-  // user can start typing immediately on arrow-down or row click. The
-  // MenuItem itself is never the intended focus stop — it only exists so
-  // MUI's MenuList includes the row in arrow-key navigation.
+  // Forward focus from the MenuItem wrapper to the inner input.
   const focusInput = useCallback(() => {
     rootRef.current?.querySelector('input')?.focus();
   }, []);
 
   const handleRootFocus = useCallback(
     (event: React.FocusEvent<HTMLLIElement>) => {
-      // event.target === currentTarget only when the MenuItem itself
-      // received focus (e.g. via arrow keys). Skip when focus bubbled up
-      // from the input child, which would re-focus and loop.
+      // Skip events bubbled from the input child.
       if (event.target === event.currentTarget) {
         focusInput();
       }
@@ -66,7 +53,7 @@ export default function FontSizeCustomInput({
     setIsFocused(false);
     const parsed = Number.parseInt(inputValue, 10);
     if (!Number.isFinite(parsed)) {
-      // Invalid or empty entry — revert to whatever's currently saved.
+      // Invalid or empty — revert to the saved value.
       setInputValue(displayValue);
       return;
     }

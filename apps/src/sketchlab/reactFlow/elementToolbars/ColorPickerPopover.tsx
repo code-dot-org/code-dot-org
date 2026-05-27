@@ -11,7 +11,7 @@ import styles from './color-picker-popover.module.scss';
 
 const CUSTOM_COLOR_DEFAULT = '#000000';
 
-export function isCustomHex(value: string | undefined): value is string {
+function isCustomHex(value: string | undefined): value is string {
   return typeof value === 'string' && value.startsWith('#');
 }
 
@@ -23,10 +23,8 @@ export interface ColorPickerPopoverProps {
   onClose: () => void;
 }
 
-// Number of swatch columns per row. Matches the grid width set in
-// color-picker-popover.module.scss (max-width 144px = 5 swatches @ 24px
-// + 4 gaps @ 4px + 2 paddings @ 4px). Bumping the width there means
-// updating this constant too.
+// Matches the grid `max-width` in color-picker-popover.module.scss. Keep
+// the two in sync — Up/Down arrow navigation jumps this many cells.
 const SWATCH_COLUMNS = 5;
 
 export default function ColorPickerPopover({
@@ -40,13 +38,9 @@ export default function ColorPickerPopover({
   const isDarkMode = theme === 'Dark';
   const customSelected = isCustomHex(selectedValue);
   const customValue = customSelected ? selectedValue : CUSTOM_COLOR_DEFAULT;
-  const customLabel = `${groupLabel}: Custom color`;
   const gridRef = useRef<HTMLDivElement>(null);
 
-  // MUI Popover auto-focuses its Paper but doesn't dive into the content,
-  // so the user previously had to Tab once to land on a swatch before
-  // arrow keys would work. On mount (= popover open), jump focus to the
-  // currently-selected swatch, or to the first swatch if no match.
+  // Focus the selected (or first) swatch on open so arrow keys work immediately.
   useEffect(() => {
     const grid = gridRef.current;
     if (!grid) return;
@@ -55,12 +49,8 @@ export default function ColorPickerPopover({
     target?.focus();
   }, []);
 
-  // Arrow-key navigation across the 2D swatch grid. Tab still works for
-  // entry/exit; arrows move within the grid:
-  //   Left/Right: linear (wraps row boundaries)
-  //   Up/Down: jump by column count, clamped at grid edges
-  // Focusables are the swatch <button>s plus the <input type="color"> for
-  // the custom swatch.
+  // Arrow keys navigate the 2D grid. Left/Right move linearly across the
+  // row; Up/Down jump by SWATCH_COLUMNS.
   const handleGridKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (
       event.key !== 'ArrowLeft' &&
@@ -102,9 +92,7 @@ export default function ColorPickerPopover({
   };
 
   return (
-    // The keydown listener here IS the keyboard-accessibility affordance
-    // (arrow-key navigation across the swatch grid) — disabling the
-    // a11y rule rather than dropping the handler.
+    // Arrow-key navigation is the a11y affordance here.
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       ref={gridRef}
@@ -143,7 +131,6 @@ export default function ColorPickerPopover({
         );
       })}
       <Tooltip title="Custom color" placement="top">
-        {/* If the user has a custom color selected, show it as the background color, otherwise show the palette icon. */}
         <label
           className={classNames(styles.swatch, styles.customSwatch, {
             [styles.swatchSelected]: customSelected,
@@ -159,12 +146,10 @@ export default function ColorPickerPopover({
           <input
             type="color"
             value={customValue}
-            // Don't close on every change — the native picker fires
-            // continuously as the user moves their cursor. They will
-            // commit by clicking outside the popover.
+            // Don't close per change — the native picker fires continuously.
             onChange={event => onSelect(event.target.value)}
             className={styles.customSwatchInput}
-            aria-label={customLabel}
+            aria-label={`${groupLabel}: Custom color`}
           />
         </label>
       </Tooltip>

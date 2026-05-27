@@ -10,9 +10,7 @@ interface AltTextRowProps {
   onChange: (next: string) => void;
 }
 
-// Commit-on-blur text input for the image's alt attribute. Local state
-// while focused keeps undo snapshots from being pushed for every
-// keystroke (patchNodeData calls pushSnapshot).
+// Commit on blur (not per keystroke) so each edit produces one undo snapshot.
 export default function AltTextRow({value, onChange}: AltTextRowProps) {
   const labelId = useId();
   const [inputValue, setInputValue] = useState(value);

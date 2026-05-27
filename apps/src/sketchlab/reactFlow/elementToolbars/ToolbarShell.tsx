@@ -17,7 +17,6 @@ const TOOLBAR_MIN_HEIGHT_PX = 120;
 interface ToolbarShellProps {
   target: {type: 'node' | 'edge'; id: string};
   ariaLabel: string;
-  // Short uppercase label shown in the toolbar header (e.g. "SHAPE").
   title: string;
   children: React.ReactNode;
 }
@@ -86,16 +85,11 @@ export default function ToolbarShell({
     return null;
   }
 
-  // When the user clicks a non-interactive area of the toolbar
-  // (background padding, group spacing, labels), prevent that event,
-  // which would otherwise cause focus to leave the currently select node/edge
-  // and close the toolbar.
+  // Stop clicks on non-interactive parts of the toolbar (background
+  // padding, labels) from moving focus off the selected node/edge.
   const preventAutoClose = (event: React.MouseEvent) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return;
-    // Skip preventDefault for any focusable / interactive control
-    // so MUI widgets get their native focus on click. The tabindex check
-    // also catches custom widgets that aren't covered by tag or role.
     if (
       target.closest(
         'button, input, textarea, select, a, [contenteditable="true"], ' +
@@ -109,37 +103,24 @@ export default function ToolbarShell({
 
   return (
     <FocusTrap
-      // Fully deactivate the toolbar's trap whenever a MUI Popover
-      // (dropdown / color picker) is open. The popover lives in a
-      // body-level portal and has its own TrapFocus, and both would
-      // fight: focus-trap-react pulls focus back into the toolbar Paper
-      // while MUI's TrapFocus pulls it back into the popover Paper.
-      // `paused` isn't enough because of effect-ordering: focus-trap-
-      // react's pause runs in commit phase but MUI's TrapFocus setup
-      // runs in useEffect (post-paint), so by the time we pause, MUI
-      // has already started auto-focusing. Deactivation removes the
-      // listeners synchronously in the same commit, before MUI activates.
+      // Deactivate (not pause) while a MUI popover is open. Both traps
+      // would otherwise fight each other; deactivation removes the
+      // focusin listener synchronously in commit phase, before MUI's
+      // TrapFocus activates in useEffect.
       active={trapFocus && !isAnyPopoverOpen}
       focusTrapOptions={{
-        // Don't move focus on (re-)activation — when the popover closes
-        // and the trap comes back, we want focus to stay where MUI's
-        // nodeToRestore put it (the dropdown trigger), not snap to the
-        // first toolbar control.
+        // Don't snap focus on re-activation — keep it where MUI's
+        // nodeToRestore put it (the dropdown trigger).
         initialFocus: false,
-        // Route Escape through handleClose. Return false so the trap
-        // stays active; the subsequent isVisible=false flip is what
-        // actually deactivates it. We don't use onDeactivate because it
-        // also fires when another node's toolbar takes over, and we
-        // don't want to move focus in that case.
+        // Return false so the trap stays active; isVisible=false handles
+        // the actual deactivation.
         escapeDeactivates: event => {
           event.preventDefault();
           event.stopPropagation();
           handleClose();
           return false;
         },
-        // If the user clicked on another node we don't want to return
-        // focus to the previous node. handleClose handles the
-        // user-initiated close cases.
+        // handleClose owns user-initiated focus return.
         returnFocusOnDeactivate: false,
         clickOutsideDeactivates: true,
       }}
