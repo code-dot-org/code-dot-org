@@ -149,8 +149,8 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
 }
 
 // Generates a single panel image, uploads it as a level asset, and returns
-// the public asset URL. We feed the image prompt to gemini-2.5-flash-image
-// and grab the first image file the model emits.
+// the public asset URL. We feed the image prompt to the image model and
+// grab the first image file it emits.
 //
 // Exported so the slides generator can reuse the no-text constraint
 // prose and the asset-upload plumbing without copy-pasting.
