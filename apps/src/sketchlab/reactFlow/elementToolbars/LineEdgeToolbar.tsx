@@ -11,8 +11,7 @@ import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 import ActionsGroup from './ActionsGroup';
 import ColorDropdownRow from './ColorDropdownRow';
 import LockedNotice from './LockedNotice';
-import OptionListPopover from './OptionListPopover';
-import ToolbarDropdownRow from './ToolbarDropdownRow';
+import OptionListDropdownRow from './OptionListDropdownRow';
 import {
   ARROW_HEAD_OPTIONS,
   DEFAULT_EDGE_TYPE,
@@ -23,7 +22,6 @@ import {
   LineStrokeStyleValue,
   LINE_STROKE_STYLE_OPTIONS,
   LINE_WIDTH_OPTIONS,
-  LineWidthValue,
   strokeStyleFromDasharray,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
@@ -127,84 +125,56 @@ export default function LineEdgeToolbar({
               value={selectedColor}
               onSelect={onSelectColor}
             />
-            <ToolbarDropdownRow
+            <OptionListDropdownRow
               label="Thickness"
-              triggerPreview={
+              triggerIcon={
                 <FontAwesomeV6Icon
                   iconName="line-weight"
                   iconStyle="solid"
                   iconFamily="kit"
                 />
               }
-              triggerLabel={widthOption.label}
-              renderPopoverContent={closePopover => (
-                <OptionListPopover<LineWidthValue>
-                  ariaLabel="Thickness"
-                  options={LINE_WIDTH_OPTIONS}
-                  selectedValue={widthOption.value}
-                  onSelect={onSelectWidth}
-                  onClose={closePopover}
-                />
-              )}
+              options={LINE_WIDTH_OPTIONS}
+              selectedOption={widthOption}
+              onSelect={onSelectWidth}
             />
-            <ToolbarDropdownRow
+            <OptionListDropdownRow
               label="Style"
-              triggerPreview={
+              triggerIcon={
                 <FontAwesomeV6Icon
                   iconName="line-style"
                   iconStyle="solid"
                   iconFamily="kit"
                 />
               }
-              triggerLabel={strokeStyleOption.label}
-              renderPopoverContent={closePopover => (
-                <OptionListPopover<LineStrokeStyleValue>
-                  ariaLabel="Style"
-                  options={LINE_STROKE_STYLE_OPTIONS}
-                  selectedValue={strokeStyleOption.value}
-                  onSelect={onSelectStrokeStyle}
-                  onClose={closePopover}
-                />
-              )}
+              options={LINE_STROKE_STYLE_OPTIONS}
+              selectedOption={strokeStyleOption}
+              onSelect={onSelectStrokeStyle}
             />
-            <ToolbarDropdownRow
+            <OptionListDropdownRow
               label="Shape"
-              triggerPreview={
+              triggerIcon={
                 <FontAwesomeV6Icon
                   iconName="line-shape"
                   iconStyle="solid"
                   iconFamily="kit"
                 />
               }
-              triggerLabel={edgeTypeOption.label}
-              renderPopoverContent={closePopover => (
-                <OptionListPopover<EdgeTypeValue>
-                  ariaLabel="Shape"
-                  options={EDGE_TYPE_OPTIONS}
-                  selectedValue={edgeTypeOption.value}
-                  onSelect={onSelectEdgeType}
-                  onClose={closePopover}
-                />
-              )}
+              options={EDGE_TYPE_OPTIONS}
+              selectedOption={edgeTypeOption}
+              onSelect={onSelectEdgeType}
             />
-            <ToolbarDropdownRow
+            <OptionListDropdownRow
               label="Arrowheads"
-              triggerPreview={
+              triggerIcon={
                 <FontAwesomeV6Icon
                   iconName="arrow-right-arrow-left"
                   iconStyle="solid"
                 />
               }
-              triggerLabel={arrowHeadOption.label}
-              renderPopoverContent={closePopover => (
-                <OptionListPopover<ArrowHeadValue>
-                  ariaLabel="Arrowheads"
-                  options={ARROW_HEAD_OPTIONS}
-                  selectedValue={arrowHeadOption.value}
-                  onSelect={onSelectArrowHeads}
-                  onClose={closePopover}
-                />
-              )}
+              options={ARROW_HEAD_OPTIONS}
+              selectedOption={arrowHeadOption}
+              onSelect={onSelectArrowHeads}
             />
           </ToolbarSection>
           <ActionsGroup

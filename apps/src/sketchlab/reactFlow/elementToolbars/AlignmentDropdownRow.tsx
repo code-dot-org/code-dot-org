@@ -1,13 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
 
-import OptionListPopover from './OptionListPopover';
-import ToolbarDropdownRow from './ToolbarDropdownRow';
-import {
-  TEXT_ALIGN_OPTIONS,
-  TextAlignValue,
-  textAlignLabel,
-} from './toolbarPalettes';
+import OptionListDropdownRow from './OptionListDropdownRow';
+import {TEXT_ALIGN_OPTIONS, TextAlignValue} from './toolbarPalettes';
 
 const DEFAULT_ALIGN_ICON = 'align-center';
 
@@ -20,26 +15,24 @@ export default function AlignmentDropdownRow({
   value,
   onSelect,
 }: AlignmentDropdownRowProps) {
-  const icon = useMemo(
+  const selectedOption = useMemo(
     () =>
-      TEXT_ALIGN_OPTIONS.find(option => option.value === value)?.icon ??
-      DEFAULT_ALIGN_ICON,
+      TEXT_ALIGN_OPTIONS.find(option => option.value === value) ??
+      TEXT_ALIGN_OPTIONS[1],
     [value]
   );
   return (
-    <ToolbarDropdownRow
+    <OptionListDropdownRow
       label="Alignment"
-      triggerPreview={<FontAwesomeV6Icon iconName={icon} iconStyle="solid" />}
-      triggerLabel={textAlignLabel(value)}
-      renderPopoverContent={closePopover => (
-        <OptionListPopover<TextAlignValue>
-          ariaLabel="Alignment"
-          options={TEXT_ALIGN_OPTIONS}
-          selectedValue={value}
-          onSelect={onSelect}
-          onClose={closePopover}
+      triggerIcon={
+        <FontAwesomeV6Icon
+          iconName={selectedOption.icon ?? DEFAULT_ALIGN_ICON}
+          iconStyle="solid"
         />
-      )}
+      }
+      options={TEXT_ALIGN_OPTIONS}
+      selectedOption={selectedOption}
+      onSelect={onSelect}
     />
   );
 }
