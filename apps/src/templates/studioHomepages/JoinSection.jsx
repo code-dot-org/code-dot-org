@@ -121,6 +121,7 @@ export default class JoinSection extends React.Component {
         <div className={styles.actionBox}>
           <TextField
             name="sectionCode"
+            size="s"
             className="ui-test-join-section"
             value={this.state.sectionCode}
             onChange={this.handleChange}
@@ -129,6 +130,7 @@ export default class JoinSection extends React.Component {
           />
           <MuiButton
             onClick={this.joinSection}
+            size="small"
             className="ui-test-join-section"
             variant="contained"
             color="primary"
