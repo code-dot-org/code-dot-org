@@ -73,22 +73,30 @@ class BrandTest < ActiveSupport::TestCase
   test 'logo_filename returns correct value per brand' do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     request = mock_request(params: {'brand' => 'codeai'})
-    assert_equal 'logo.svg', Cdo::Brand.logo_filename(request)
+    assert_equal 'logo-codeai.svg', Cdo::Brand.logo_filename(request)
     assert_equal 'logo.svg', Cdo::Brand.logo_filename
   end
 
   test 'header_logo_filename returns correct value per brand' do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     request = mock_request(params: {'brand' => 'codeai'})
-    assert_equal 'logo.svg', Cdo::Brand.header_logo_filename(request)
+    assert_equal 'logo-codeai-inverse.svg', Cdo::Brand.header_logo_filename(request)
     assert_equal 'logo-inverse.svg', Cdo::Brand.header_logo_filename
   end
 
   test 'legal_name returns correct value per brand' do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     request = mock_request(params: {'brand' => 'codeai'})
-    assert_equal 'Code.ai', Cdo::Brand.legal_name(request)
+    assert_equal 'CodeAI', Cdo::Brand.legal_name(request)
     assert_equal 'Code.org', Cdo::Brand.legal_name
+  end
+
+  test 'codeai-next brand returns its placeholder config' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai-next'})
+    assert_equal Cdo::Brand::BRAND_CODEAI_NEXT, Cdo::Brand.current_brand_code(request)
+    assert_equal 'Code.ai', Cdo::Brand.legal_name(request)
+    assert_equal 'logo.svg', Cdo::Brand.header_logo_filename(request)
   end
 
   private def mock_request(params: {}, cookies: {})
