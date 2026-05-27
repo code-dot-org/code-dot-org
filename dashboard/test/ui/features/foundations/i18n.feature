@@ -28,13 +28,13 @@ Scenario: Minecraft:Agent tutorial in Spanish
 Scenario: Toolbox Categories in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element ".blocklyToolboxCategory:nth-child(1) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Events"
-  Then element ".blocklyToolboxCategory:nth-child(2) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Text"
-  Then element ".blocklyToolboxCategory:nth-child(3) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Variables"
-  Then element ".blocklyToolboxCategory:nth-child(4) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Effects"
-  Then element ".blocklyToolboxCategory:nth-child(5) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Sprites"
-  Then element ".blocklyToolboxCategory:nth-child(6) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Functions"
-  Then element ".blocklyToolboxCategory:nth-child(7) .blocklyTreeLabel" has "es-MX" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(1) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Events"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(2) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Text"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(3) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(4) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Effects"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(5) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Sprites"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(6) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Functions"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(7) .blocklyToolboxCategoryLabel" has "es-MX" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/es-MX"
@@ -74,13 +74,13 @@ Scenario: Minecraft:Agent tutorial in Portuguese
 Scenario: Toolbox Categories in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element ".blocklyToolboxCategory:nth-child(1) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Events"
-  Then element ".blocklyToolboxCategory:nth-child(2) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Text"
-  Then element ".blocklyToolboxCategory:nth-child(3) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Variables"
-  Then element ".blocklyToolboxCategory:nth-child(4) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Effects"
-  Then element ".blocklyToolboxCategory:nth-child(5) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Sprites"
-  Then element ".blocklyToolboxCategory:nth-child(6) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Functions"
-  Then element ".blocklyToolboxCategory:nth-child(7) .blocklyTreeLabel" has "pt-BR" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(1) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Events"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(2) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Text"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(3) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(4) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Effects"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(5) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Sprites"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(6) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Functions"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(7) .blocklyToolboxCategoryLabel" has "pt-BR" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/pt-BR"
@@ -129,13 +129,13 @@ Scenario: Translated function names in Arabic
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element ".blocklyToolboxCategory:nth-child(1) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Events"
-  Then element ".blocklyToolboxCategory:nth-child(2) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Text"
-  Then element ".blocklyToolboxCategory:nth-child(3) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Variables"
-  Then element ".blocklyToolboxCategory:nth-child(4) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Effects"
-  Then element ".blocklyToolboxCategory:nth-child(5) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Sprites"
-  Then element ".blocklyToolboxCategory:nth-child(6) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Functions"
-  Then element ".blocklyToolboxCategory:nth-child(7) .blocklyTreeLabel" has "ar-SA" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(1) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Events"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(2) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Text"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(3) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Variables"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(4) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Effects"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(5) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Sprites"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(6) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Functions"
+  Then element ".blocklyToolboxCategoryContainer:nth-child(7) .blocklyToolboxCategoryLabel" has "ar-SA" text from key "data.block_categories.Variables"
 
 Scenario: Pixelation Widget long and short instructions in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/17/levels/2/lang/es-MX"

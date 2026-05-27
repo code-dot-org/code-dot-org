@@ -279,11 +279,53 @@ Then(/^the project matches my memorized code$/) do
 end
 
 Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
-  script = "
-    $('#{selector}').simulate('pointerdown')
-    $('#{selector}').simulate('pointerup')
-  "
-  @browser.execute_script(script)
+  @browser.execute_script(<<~JS)
+    (function() {
+      var el = $(#{selector.to_json}).filter(function() {
+        return $(this).parents(':hidden').length === 0;
+      })[0];
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      el.dispatchEvent(new PointerEvent('pointerdown', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+      el.dispatchEvent(new PointerEvent('pointerup', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+    })();
+  JS
+end
+
+# Blockly 13 toolbox categories respond to `pointerdown` (not `click`), so we must
+# dispatch a real PointerEvent rather than using native .click() or jQuery simulate.
+When(/^I click toolbox category selector "(.*?)"$/) do |selector|
+  @browser.execute_script(<<~JS)
+    (function() {
+      var el = $(#{selector.to_json}).filter(function() {
+        return $(this).parents(':hidden').length === 0;
+      })[0];
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      el.dispatchEvent(new PointerEvent('pointerdown', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+      document.dispatchEvent(new PointerEvent('pointerup', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+    })();
+  JS
 end
 
 Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
