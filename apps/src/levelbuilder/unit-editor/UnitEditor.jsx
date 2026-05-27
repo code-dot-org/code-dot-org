@@ -20,6 +20,7 @@ import ResourcesEditor from '@cdo/apps/levelbuilder/course-editor/ResourcesEdito
 import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
+import CopyUnitDialog from '@cdo/apps/levelbuilder/unit-editor/CopyUnitDialog';
 import LessonExtrasEditor from '@cdo/apps/levelbuilder/unit-editor/LessonExtrasEditor';
 import UnitCard from '@cdo/apps/levelbuilder/unit-editor/UnitCard';
 import {
@@ -91,6 +92,7 @@ class UnitEditor extends React.Component {
     isMissingRequiredDeviceCompatibilities: PropTypes.bool,
     allowMajorCurriculumChanges: PropTypes.bool,
     initialEnableBlocklyKeyboardNavigation: PropTypes.bool,
+    unitGroupNames: PropTypes.arrayOf(PropTypes.string),
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -144,6 +146,7 @@ class UnitEditor extends React.Component {
       hideWithinCourse: !!this.props.initialHideWithinCourse,
       enableBlocklyKeyboardNavigation:
         this.props.initialEnableBlocklyKeyboardNavigation || false,
+      copyUnitDialogOpen: false,
     };
   }
 
@@ -304,6 +307,23 @@ class UnitEditor extends React.Component {
 
     return (
       <div>
+        {this.props.isLevelbuilder && (
+          <div style={{marginBottom: 10}}>
+            <Button
+              type="button"
+              text="Copy unit"
+              color="gray"
+              onClick={() => this.setState({copyUnitDialogOpen: true})}
+              id="copy-unit-open-button"
+            />
+          </div>
+        )}
+        <CopyUnitDialog
+          isOpen={this.state.copyUnitDialogOpen}
+          sourceUnitName={this.props.name}
+          unitGroupNames={this.props.unitGroupNames || []}
+          handleClose={() => this.setState({copyUnitDialogOpen: false})}
+        />
         <label>
           Title
           <input
