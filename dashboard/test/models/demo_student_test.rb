@@ -233,5 +233,4 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert_raises(DemoStudent::ProtectedRecord) {student.clear_user_and_mark_purged}
     assert_nil student.reload.purged_at
   end
-
 end
