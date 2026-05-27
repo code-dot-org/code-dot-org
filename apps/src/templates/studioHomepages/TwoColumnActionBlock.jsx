@@ -62,7 +62,7 @@ export default function TwoColumnActionBlock({
               <div key={index}>
                 <MuiButton
                   variant="contained"
-                  color={button.color || 'purple'}
+                  color="purple"
                   href={button.url}
                   target={button.target}
                   id={button.id}
@@ -98,8 +98,6 @@ TwoColumnActionBlock.propTypes = {
       extraText: PropTypes.string,
       target: PropTypes.string,
       id: PropTypes.string,
-      // MUI Button color name (defaults to the brand-purple 'purple' variant).
-      color: PropTypes.string,
     })
   ),
 
