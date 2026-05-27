@@ -48,12 +48,12 @@ module Cdo
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       },
       BRAND_CODEAI_NEXT => {
-        logo_filename: 'logo.svg',
-        header_logo_filename: 'logo.svg',
-        logo_alt_key: :code_org_logo_alt,
+        logo_filename: 'logo-codeai.svg',
+        header_logo_filename: 'logo-codeai-inverse.svg',
+        logo_alt_key: :codeai_logo_alt,
         favicon: 'favicon.ico',
-        legal_name: 'Code.ai',
-        trademark_html: '&copy; Code.ai, %{current_year}. Code.ai&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.ai.'
+        legal_name: 'CodeAI',
+        trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       }
     }.freeze
 
