@@ -1,7 +1,4 @@
-// Custom-px row at the bottom of the Size popover (label + numeric input).
-// Rendered as a MUI MenuItem so MUI's MenuList includes it in arrow-key
-// navigation. Chained `:global(.MuiMenuItem-root)` bumps specificity past
-// MUI's own defaults (padding, min-height, justify-content).
+// :global(.MuiMenuItem-root) outranks MUI's default padding / min-height.
 .customOptionRow:global(.MuiMenuItem-root) {
   justify-content: space-between;
   gap: 8px;
@@ -10,20 +7,11 @@
   margin-top: 4px;
 }
 
-// Active when the underlying value is a raw pixel number (not a preset).
-// Mirrors the selected-row treatment in OptionListPopover so the Custom
-// row reads as "the chosen option" alongside the MenuList above it.
 .customOptionRowSelected:global(.MuiMenuItem-root) {
   background-color: var(--background-brand-teal-primary);
 }
 
-.customOptionLabel {
-  color: var(--text-neutral-primary);
-}
-
-// Applied directly to the Typography when the Custom row is the active
-// option. <Typography> has a baked-in color from the code-dot-org MUI
-// theme, so the cleanest way to flip it is per-element.
+// <Typography>'s theme color overrides inheritance; flip it directly.
 .customOptionLabelSelected {
   color: var(--text-neutral-white-fixed);
 }

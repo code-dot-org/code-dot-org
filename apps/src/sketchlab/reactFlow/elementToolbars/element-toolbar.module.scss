@@ -44,12 +44,6 @@
   font-weight: 700;
 }
 
-.sectionBody {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
 // The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
 // override the wrapper and the input so the field fits 3 digits plus the
 // native number spinner.

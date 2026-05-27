@@ -85,9 +85,7 @@ export default function FontSizeCustomInput({
     >
       <Typography
         variant="body4"
-        className={classNames(styles.customOptionLabel, {
-          [styles.customOptionLabelSelected]: isSelected,
-        })}
+        className={isSelected ? styles.customOptionLabelSelected : undefined}
       >
         Custom
       </Typography>

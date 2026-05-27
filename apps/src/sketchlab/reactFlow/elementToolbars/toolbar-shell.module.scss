@@ -1,7 +1,6 @@
 .toolbar {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   border: 1px solid var(--borders-neutral-primary);
@@ -37,7 +36,6 @@
 .scrollContent {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   padding: 6px 0 8px;
   gap: 12px;
   min-height: 0;

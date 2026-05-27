@@ -18,7 +18,7 @@ export default function ToolbarSection({title, children}: ToolbarSectionProps) {
       >
         {title}
       </Typography>
-      <div className={styles.sectionBody}>{children}</div>
+      {children}
     </section>
   );
 }
