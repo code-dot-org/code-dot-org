@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import DemoChip from '@cdo/apps/templates/DemoChip';
@@ -22,6 +23,10 @@ interface SectionCardProps {
   id: number;
 }
 
+// NOTE: DemoSectionCard mirrors this component's layout for the
+// pre-creation practice card. When changing this card's structure,
+// styles, or actions, mirror the change in DemoSectionCard.tsx so the
+// two stay visually and behaviorally consistent.
 export const SectionCard: React.FC<SectionCardProps> = ({
   studioUrlPrefix,
   section,
@@ -39,7 +44,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({
 
   return (
     <li
-      className={styles.sectionCardWrapper}
+      className={classNames(styles.sectionCardWrapper, {
+        [styles.demoSectionCardWrapper]: Boolean(section.demoType),
+      })}
       ref={setNodeRef}
       style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${section.id}`}
