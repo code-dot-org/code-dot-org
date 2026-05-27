@@ -1,5 +1,7 @@
 import {EventEmitter} from 'events';
 
+import * as Observability from '../observability';
+
 import type {
   LocalizeJS,
   LocalizeOptions,
@@ -170,12 +172,8 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
 
         resolve(true);
       }).catch(err => {
-        // There was an error loading the Localize library, so log that via NewRelic
-        (
-          window as unknown as {
-            newrelic?: {noticeError?: (err: Error) => void};
-          }
-        ).newrelic?.noticeError?.(err);
+        // Failed to load the Localize library; report to the browser observability provider.
+        Observability.recordError(err);
       });
 
       if (window.LocalizeLoader === undefined) {

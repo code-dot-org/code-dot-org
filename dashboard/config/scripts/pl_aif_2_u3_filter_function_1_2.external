@@ -70,7 +70,7 @@ It looks at each song and keeps only the ones with a rank of 10 or less.
 
 <br><br>
 
-
+<div style="clear:both;"></div>
 **3. Using the function**
 
 <img src="https://images.code.org/7241520635924315620d7a77e4e7e3b2-image-1767647866565.png" alt="array of songs in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">

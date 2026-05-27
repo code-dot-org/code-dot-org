@@ -825,7 +825,7 @@ Artist.prototype.evalCode = function (code, executionInfo) {
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
     if (e.message !== 'Infinity') {
-      // call window.onerror so that we get new relic collection.  prepend with
+      // call window.onerror so browser observability captures it. prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror('UserCode:' + e.message, document.URL, 0);

@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 02:39:38 UTC",
+    "serialized_at": "2026-05-21 16:31:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -128,8 +128,18 @@
       }
     },
     {
-      "key": "0ca1843d-827c-4487-b635-446bde39a2c8",
+      "key": "d34de172-c1fb-4b9d-b11b-ffcce0f539b5",
       "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d34de172-c1fb-4b9d-b11b-ffcce0f539b5",
+        "lesson_activity.key": "e1d381b7-f068-48aa-be4a-9a77089706e6"
+      }
+    },
+    {
+      "key": "0ca1843d-827c-4487-b635-446bde39a2c8",
+      "position": 5,
       "properties": {
         "progression_name": "Adding Style to Web Apps with AI (15 min)"
       },
@@ -140,7 +150,7 @@
     },
     {
       "key": "380c0099-4952-4d27-8253-86e18f6c7f2f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Web Design with AI (10 min)"
       },
@@ -151,7 +161,7 @@
     },
     {
       "key": "87e35659-6f72-44b0-9c4b-31701730b1c6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Wireframes  (10 min)"
       },
@@ -162,7 +172,7 @@
     },
     {
       "key": "069467b9-8367-4bf7-afca-a4f6b7e349cc",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Closing(5 min)"
       },

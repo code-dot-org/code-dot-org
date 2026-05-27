@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####A language model answered these mad-libs with:\r\n- Thank <span style=\"color:red\">**you**</span>.\r\n- He dipped his french fries in <span style=\"color:red\">**ketchup**</span>.\r\n- The current President is <span style=\"color:red\">**Roosevelt**</span>.\r\n\r\n####Why do you think it gave these answers?\r\n",
+    "long_instructions": "A language model answered these mad-libs with:\r\n- Thank <span style=\"color:red\">**you**</span>.\r\n- He dipped his french fries in <span style=\"color:red\">**ketchup**</span>.\r\n- The current President is <span style=\"color:red\">**Roosevelt**</span>.\r\n\r\nWhy do you think it gave these answers?\r\n",
     "teacher_markdown": "Discussion Goal: Students might be skeptical that a language mode would truly give this answer, which is true - this is a made-up example for the purpose of this warm-up. However, if you imagine that a language model did give this answer, is there any logic behind that? From last class, students should recall that language models use probability to choose the words they generate. And since there were two different presidents named Roosevelt, one of which served 4 terms, it may be conceivable that the name “President” and “Roosevelt” are so highly correlated that the language model always picks this word to fill in this blank.",
     "allow_user_uploads": "false",
     "submittable": "false",

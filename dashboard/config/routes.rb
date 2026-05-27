@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app(/*path)", to: "app#index"
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all

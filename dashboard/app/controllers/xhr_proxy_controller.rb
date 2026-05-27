@@ -44,13 +44,12 @@ class XhrProxyController < ApplicationController
       return
     end
 
-    event_details = {
-      channel_id: channel_id,
-      owner_storage_id: owner_storage_id,
-      url: url
-    }
-    NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
-    Rails.logger.info "XhrProxyControllerRequest #{event_details}"
+    span = OpenTelemetry::Trace.current_span
+    span.set_attribute('XhrProxyControllerRequest', true)
+    span.set_attribute('XhrProxyControllerRequest.channel_id', channel_id)
+    span.set_attribute('XhrProxyControllerRequest.owner_storage_id', owner_storage_id)
+    span.set_attribute('XhrProxyControllerRequest.url', url)
+    Rails.logger.info "XhrProxyControllerRequest channel_id=#{channel_id} owner_storage_id=#{owner_storage_id} url=#{url}"
 
     render_proxied_url(
       url,

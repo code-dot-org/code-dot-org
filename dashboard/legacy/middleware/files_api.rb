@@ -92,22 +92,20 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return unless CDO.newrelic_logging
-
-    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/FilesApi/#{quota_event_type}_#{quota_type}", value
+    )
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return unless CDO.newrelic_logging
-
     owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    event_details = {
-      quota_type: quota_type,
-      encrypted_channel_id: encrypted_channel_id,
-      owner_user_id: owner_user_id
-    }
-    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
+    span = OpenTelemetry::Trace.current_span
+    event_name = "FilesApi#{quota_event_type}"
+    span.set_attribute(event_name, true)
+    span.set_attribute("#{event_name}.quota_type", quota_type)
+    span.set_attribute("#{event_name}.encrypted_channel_id", encrypted_channel_id)
+    span.set_attribute("#{event_name}.owner_user_id", owner_user_id)
   end
 
   helpers do
@@ -223,13 +221,6 @@ class FilesApi < Sinatra::Base
   # @return [IO] requested file body as an IO stream
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
-    # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    begin
-      NewRelic::Agent.ignore_enduser
-    rescue
-      nil
-    end
-
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
