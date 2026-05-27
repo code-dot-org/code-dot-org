@@ -1,4 +1,5 @@
 import {render, screen, fireEvent} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import FacadeBackground, {FacadeProps} from '../FacadeBackground';
 
@@ -6,7 +7,7 @@ describe('FacadeBackground', () => {
   const defaultProps: FacadeProps = {
     posterThumbnail: 'test-thumbnail.jpg',
     alt: 'Test Alt Text',
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   };
 
   it('renders an image with the provided alt text', () => {

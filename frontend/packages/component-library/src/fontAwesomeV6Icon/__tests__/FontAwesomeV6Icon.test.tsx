@@ -1,5 +1,4 @@
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 

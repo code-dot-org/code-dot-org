@@ -1,6 +1,7 @@
 import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Footer from '../Footer';
 import type {FooterProps} from '../Footer';
@@ -26,7 +27,7 @@ const BASE_PROPS: FooterProps = {
   },
   languages: BASE_LANGUAGES,
   selectedLocaleCode: 'en',
-  onLanguageChange: jest.fn(),
+  onLanguageChange: vi.fn(),
 };
 
 describe('Footer', () => {
@@ -96,7 +97,7 @@ describe('Footer', () => {
   });
 
   it('calls onLanguageChange with the chosen value', async () => {
-    const onLanguageChange = jest.fn();
+    const onLanguageChange = vi.fn();
     const user = userEvent.setup();
     render(<Footer {...BASE_PROPS} onLanguageChange={onLanguageChange} />);
     const select = screen.getByRole('combobox');
