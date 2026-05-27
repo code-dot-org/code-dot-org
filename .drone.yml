@@ -135,21 +135,17 @@ name: ui
 clone:
   disable: true
 
-# Both services share the worker's host network namespace because the
+# The redis service shares the worker's host network namespace because the
 # ui-tests step does too (so puma on 0.0.0.0:3000 is reachable on the
-# worker's primary ENI from Device Farm via VPC peering). With
-# network_mode: host the docker-compose service-DNS names
-# (ci-tests-redis, ci-tests-mysql) do not resolve, so the step adds
-# matching /etc/hosts entries pointing at 127.0.0.1.
+# worker's primary ENI from Device Farm via VPC peering). The detached
+# ci-tests-mysql step below does the same. With network_mode: host the
+# docker service-DNS names (ci-tests-redis, ci-tests-mysql) do not resolve,
+# so the ui-tests step adds matching /etc/hosts entries pointing at
+# 127.0.0.1.
 services:
   - name: ci-tests-redis
     image: redis
     network_mode: host
-  - name: ci-tests-mysql
-    image: mysql:8.0
-    network_mode: host
-    environment:
-      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -187,12 +183,13 @@ steps:
       pull: true
 
   # Implement mysql db as a detached step rather than a service, so that we can
-  # wait to start it up until we've finished restoring the cache.
+  # wait to start it up until we've finished restoring the cache. Shares the
+  # worker's host network namespace (see the services comment above) so it is
+  # reachable from the host-networked ui-tests step at 127.0.0.1.
   - name: ci-tests-mysql
     image: mysql:8.0
     detach: true
-    ports:
-      - 3306
+    network_mode: host
     volumes:
       - name: mysql
         path: /var/lib/mysql
