@@ -75,7 +75,7 @@ export default function ToolbarDropdownRow({
 
   // Tab closes the popover and moves focus to the next/previous toolbar
   // control (skipping the trigger), so the user can keep Tab-navigating
-  // through the toolbar without an extra keypress on the trigger.
+  // through the toolbar without an extra tab.
   const handlePopoverKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (event.key !== 'Tab') return;
@@ -166,7 +166,12 @@ export default function ToolbarDropdownRow({
         }}
       >
         {/* Re-apply data-theme; the portal escapes ThemeProvider. */}
-        <div id={popoverId} data-theme={theme} onKeyDown={handlePopoverKeyDown}>
+        <div
+          id={popoverId}
+          data-theme={theme}
+          className={styles.popoverContent}
+          onKeyDown={handlePopoverKeyDown}
+        >
           {renderPopoverContent(closePopover)}
         </div>
       </Popover>
