@@ -1,9 +1,7 @@
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
 
@@ -62,18 +60,17 @@ export default function TwoColumnActionBlock({
           >
             {buttons.map((button, index) => (
               <div key={index}>
-                <Button
-                  __useDeprecatedTag
+                <MuiButton
+                  variant="contained"
+                  color={button.color || 'purple'}
                   href={button.url}
-                  color={
-                    button.color || Button.ButtonColor.brandSecondaryDefault
-                  }
-                  text={button.text}
                   target={button.target}
                   id={button.id}
                   onClick={button.onClick}
                   aria-label={button.ariaLabel}
-                />
+                >
+                  {button.text}
+                </MuiButton>
                 {button.extraText && (
                   <Typography variant="body4" gutterBottom>
                     {button.extraText}
@@ -101,7 +98,8 @@ TwoColumnActionBlock.propTypes = {
       extraText: PropTypes.string,
       target: PropTypes.string,
       id: PropTypes.string,
-      color: PropTypes.oneOf(Object.values(Button.ButtonColor)),
+      // MUI Button color name (defaults to the brand-purple 'purple' variant).
+      color: PropTypes.string,
     })
   ),
 
