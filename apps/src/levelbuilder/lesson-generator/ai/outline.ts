@@ -91,7 +91,7 @@ export async function generateLessonOutline(
           '',
           `Unit context — this lesson sits inside the unit "${
             ctx.unitName ?? ''
-          }". Keep the level sequence consistent with the unit's arc, but`,
+          }". Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but`,
           'only plan levels for the specific lesson outline below:',
           ctx.unitOutline,
         ]

@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-05-20T21:18:12.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Writing Your Own Prompts\r\n\r\nThink of a task you’d like to use AI for that wasn’t included in the prompt library—or revise one of the prompts you’ve already explored.\r\n\r\nWrite a prompt for that task. \r\n\r\nApproach prompt writing as an iterative process: start with a simple version, then adjust the level of detail, clarity, or structure to improve the response. Try adding more context about your students, your goals, or the specific task, and notice how the output changes. If the response isn’t quite what you need, revise your prompt and try again—small changes can lead to more useful and relevant results.\r\n\r\nUse the **TaCo FoRT** framework to guide your thinking, and return to the Prompt Library as needed for ideas and inspiration.\r\n\r\n<p align=\"center\">\r\n<img src=\"https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png\" alt=\"lesson plan diagram\" width=\"70%\" style=\"border-radius:10px; border: 5px solid black;\">\r\n</p>\r\n\r\n## Reflection\r\n\r\n> In the reflection box below, share the prompt you wrote along with a few sentences about the development process.\r\n",
+    "long_instructions": "# Writing Your Own Prompts\r\n\r\nThink of a task you’d like to use AI for that wasn’t included in the prompt library—or revise one of the prompts you’ve already explored.\r\n\r\nWrite a prompt for that task. \r\n\r\nApproach prompt writing as an iterative process: start with a simple version, then adjust the level of detail, clarity, or structure to improve the response. Try adding more context about your students, your goals, or the specific task, and notice how the output changes. If the response isn’t quite what you need, revise your prompt and try again—small changes can lead to more useful and relevant results.\r\n\r\nUse the **TaCo FoRT** framework to guide your thinking, and return to the Prompt Library as needed for ideas and inspiration.\r\n\r\n<p align=\"center\">\r\n<img src=\"https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png\" alt=\"lesson plan diagram\" width=\"70%\" style=\"border-radius:10px; border: 5px solid black;\">\r\n</p>\r\n\r\n## Reflection\r\n\r\n> In the reflection box below, share the prompt you wrote along with a few sentences about the development process.\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n</div>\r\n</div>",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "true",
     "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:18:12.598+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod3-llm-08\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod3-llm-08\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:18:12.598+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod3-llm-08\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod3-llm-08\"},{\"changed_at\":\"2026-05-21 13:59:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

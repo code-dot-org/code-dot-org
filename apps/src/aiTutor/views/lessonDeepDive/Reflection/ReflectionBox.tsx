@@ -5,6 +5,8 @@ import {
   saveUserLessonObjectiveReflection,
   saveUserLessonReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {LessonDeepDiveData, ReflectionData} from '../types';
 
@@ -65,6 +67,32 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         saveUserLessonReflection(lessonId, success, struggle),
         ...objectiveSaves,
       ]);
+
+      // Always kick off podcast generation, passing the objectives the student
+      // is still working on. If they rated everything "Got it" the list is
+      // empty and the podcast covers the lesson generally. It runs as a
+      // background job server-side and PodcastsBox retrieves it later from the
+      // same lesson + objective set, so we fire and forget here — a failure must
+      // not block the student from practicing.
+      const strugglingObjectiveIds = objectives
+        .filter(o => {
+          const reflection = objectiveReflections[o.id];
+          return (
+            reflection === LessonObjectiveReflectionValues.LOST ||
+            reflection === LessonObjectiveReflectionValues.UNSURE
+          );
+        })
+        .map(o => o.id);
+      HttpClient.post(
+        '/ai_student_podcasts/generate_podcast',
+        JSON.stringify({
+          lesson_id: lessonId,
+          objective_ids: strugglingObjectiveIds,
+        }),
+        true, // useAuthenticityToken
+        {'Content-Type': 'application/json'}
+      ).catch(() => {});
+
       onSubmitComplete({
         objectiveReflections: objectiveReflections as Record<
           string,

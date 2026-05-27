@@ -7,7 +7,7 @@
   "properties": {
     "title": "Reflection:",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "\r\n\r\n#### Take a moment to gather your thoughts on the potential of this unit:\r\n\r\n>#### After seeing how students will be able to use AI to build web apps, how do you feel about guiding that kind of creative, open-ended work? What opportunities do you see for deeper learning—and what challenges might come with helping students balance AI support with their own coding decisions?",
+    "long_instructions": "\r\n\r\nTake a moment to gather your thoughts on the potential of this unit:\r\n\r\n>After seeing how students will be able to use AI to build web apps, how do you feel about guiding that kind of creative, open-ended work? What opportunities do you see for deeper learning—and what challenges might come with helping students balance AI support with their own coding decisions?",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",

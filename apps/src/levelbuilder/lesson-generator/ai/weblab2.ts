@@ -79,7 +79,7 @@ export async function generateWeblab2Level(
           '',
           `Unit context — this level sits inside the unit "${
             ctx.unitName ?? ''
-          }". Use it for broad continuity (recurring themes, tone, arc)`,
+          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
           'but build only the specific level described below:',
           ctx.unitOutline,
         ]

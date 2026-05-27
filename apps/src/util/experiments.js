@@ -71,6 +71,8 @@ experiments.ONBOARDING = 'onboarding';
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
 // Route all Gemini model traffic through the AI gateway instead of the Rails backend
 experiments.USE_AI_GATEWAY = 'useAiGateway';
+// Enable speech-to-text input in AI chat lab and AI tutor for all models
+experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 // Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
 experiments.EXCALIDRAW = 'excalidraw';
 
@@ -88,16 +90,7 @@ experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
-experiments.getStoredExperiments_ = function () {
-  // Get experiments on current user from experiments cookie
-  const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
-  const userExperiments = experimentsCookie
-    ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
-        key: name,
-      }))
-    : [];
-
-  // Get experiments stored in local storage.
+experiments.getLocalStorageExperiments_ = function () {
   try {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
@@ -111,10 +104,21 @@ experiments.getStoredExperiments_ = function () {
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
     }
-    return userExperiments.concat(enabledExperiments);
+    return enabledExperiments;
   } catch (e) {
-    return userExperiments;
+    return [];
   }
+};
+
+experiments.getStoredExperiments_ = function () {
+  const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
+  const userExperiments = experimentsCookie
+    ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
+        key: name,
+      }))
+    : [];
+
+  return userExperiments.concat(this.getLocalStorageExperiments_());
 };
 
 experiments.getEnabledExperiments = function () {
@@ -122,7 +126,7 @@ experiments.getEnabledExperiments = function () {
 };
 
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
-  const allEnabled = this.getStoredExperiments_();
+  const allEnabled = this.getLocalStorageExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
   );
