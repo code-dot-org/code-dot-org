@@ -56,6 +56,27 @@ export default function DemoShell() {
         boxSizing: 'border-box',
       }}
     >
+      {/* Skip link — pure anchor; targets the canvas-spanning "Dismiss guide" overlay so Enter dismisses immediately. */}
+      <Box
+        component="a"
+        href="#oceans-guide"
+        sx={{
+          position: 'absolute',
+          left: '-9999px',
+          top: 0,
+          '&:focus': {
+            left: '10px',
+            top: '10px',
+            padding: '8px 16px',
+            backgroundColor: 'white',
+            color: 'rgb(2, 0, 28)',
+            textDecoration: 'underline',
+            zIndex: 1000,
+          },
+        }}
+      >
+        Skip to main content
+      </Box>
       <FormControl
         component="fieldset"
         sx={{flexShrink: 0, px: '10px', py: '6px', opacity: 0.7}}

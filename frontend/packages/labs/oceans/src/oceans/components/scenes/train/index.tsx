@@ -7,6 +7,10 @@ import aiBotBody from '@/assets/images/ai-bot/ai-bot-body.png';
 import aiBotHead from '@/assets/images/ai-bot/ai-bot-head.png';
 import counterIcon from '@/assets/images/polaroid-icon.png';
 import {Body, Button} from '@/oceans/components/common';
+import {
+  buildClassificationAnnouncement,
+  formatItemsClassified,
+} from '@/oceans/components/scenes/train/announcement';
 import {AppMode, Modes} from '@/oceans/constants';
 import helpers from '@/oceans/helpers';
 import I18n from '@/oceans/i18n';
@@ -102,7 +106,10 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
         </Box>
 
+        {/* Inspectable badge: aria-label carries the count, not a live region. */}
         <Box
+          aria-label={formatItemsClassified(state.yesCount + state.noCount)}
+          data-testid="training-count"
           sx={{
             position: 'absolute',
             top: '2%',
@@ -122,12 +129,8 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             alt=""
             sx={{float: 'left', height: '100%'}}
           />
-          <Box
-            component="span"
-            role="status"
-            aria-label="Fish counted"
-            sx={{fontSize: '90%'}}
-          >
+          {/* Hide inner number from AT; parent aria-label reads it. */}
+          <Box component="span" aria-hidden="true" sx={{fontSize: '90%'}}>
             {Math.min(999, state.yesCount + state.noCount)}
           </Box>
         </Box>
@@ -155,11 +158,13 @@ class Train extends React.Component<Record<string, never>, TrainState> {
               },
             }}
             onClick={() => {
-              this.setState({
-                headOpen: true,
-                announcement: `Classified as ${noButtonText}`,
-              });
-              return train.onClassifyFish(false);
+              const succeeded = train.onClassifyFish(false);
+              const announcement = succeeded
+                ? buildClassificationAnnouncement(
+                    getState().yesCount + getState().noCount,
+                  )
+                : this.state.announcement;
+              this.setState({headOpen: true, announcement});
             }}
             sound={'no'}
           >
@@ -177,11 +182,13 @@ class Train extends React.Component<Record<string, never>, TrainState> {
               },
             }}
             onClick={() => {
-              this.setState({
-                headOpen: true,
-                announcement: `Classified as ${yesButtonText}`,
-              });
-              return train.onClassifyFish(true);
+              const succeeded = train.onClassifyFish(true);
+              const announcement = succeeded
+                ? buildClassificationAnnouncement(
+                    getState().yesCount + getState().noCount,
+                  )
+                : this.state.announcement;
+              this.setState({headOpen: true, announcement});
             }}
             sound={'yes'}
           >
@@ -218,7 +225,11 @@ class Train extends React.Component<Record<string, never>, TrainState> {
             },
           ]}
         >
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon
+            icon={faTrash}
+            style={{display: 'block', margin: 'auto', height: '100%'}}
+            aria-hidden
+          />
         </IconButton>
       </Body>
     );

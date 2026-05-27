@@ -92,7 +92,12 @@ class Guide extends React.Component<Record<string, never>> {
     const currentGuide = guide.getCurrentGuide();
     const currentId = currentGuide?.id ?? null;
     if (currentId === this.lastGuideId) return;
+    const isFirstGuideQueue = this.lastGuideId === null;
     this.lastGuideId = currentId;
+    // Don't steal focus on the very first queue — keeps the skip link
+    // reachable on initial load.  Once the user has engaged via the
+    // skip link, subsequent guide transitions move focus normally.
+    if (isFirstGuideQueue) return;
     // Move focus to the dialog or to the next scene control as the guide changes.
     if (!currentGuide || currentGuide.noDimBackground) {
       // Fall back to body when the host container isn't present.
@@ -325,6 +330,7 @@ class Guide extends React.Component<Record<string, never>> {
             >
               {/* Use <dialog open>, not showModal(): the top layer would escape the canvas-relative coords. */}
               <Box
+                id="oceans-guide"
                 component="dialog"
                 {...({
                   open: true,

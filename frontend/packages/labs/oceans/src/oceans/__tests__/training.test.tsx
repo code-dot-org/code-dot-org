@@ -92,9 +92,7 @@ beforeEach(() => {
 describe('Training scene — initial render', () => {
   test('loads with counter at zero', () => {
     renderTraining();
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('0');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('0');
   });
 
   test('yes, no, and erase buttons are visible', () => {
@@ -129,18 +127,14 @@ describe('Training scene — count increments', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
   });
 
   test('no click increments training count', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Not Fish'}));
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
   });
 
   test('mixed training updates count correctly', () => {
@@ -148,9 +142,7 @@ describe('Training scene — count increments', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     fireEvent.click(screen.getByRole('button', {name: 'Not Fish'}));
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('2');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('2');
   });
 });
 
@@ -159,12 +151,52 @@ describe('Training scene — count increments', () => {
  */
 
 describe('Training scene — ARIA attributes', () => {
-  test('train count element has role="status"', () => {
+  test('counter is SR-inspectable: aria-label carries count, not a live region', () => {
     renderTraining();
-    expect(screen.getByRole('status', {name: 'Fish counted'})).toHaveAttribute(
-      'role',
-      'status',
+    const counter = screen.getByTestId('training-count');
+    expect(counter).toHaveAttribute('aria-label', '0 items classified');
+    expect(counter).not.toHaveAttribute('role', 'status');
+    expect(counter).not.toHaveAttribute('aria-live');
+  });
+
+  test('counter aria-label updates as the count changes', () => {
+    const result = renderTraining();
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
+    rerender(result);
+    expect(screen.getByTestId('training-count')).toHaveAttribute(
+      'aria-label',
+      '1 item classified',
     );
+  });
+
+  test('classification announcement region carries label + count', () => {
+    const result = renderTraining();
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
+    rerender(result);
+    expect(screen.getByRole('status')).toHaveTextContent('1 item classified.');
+  });
+
+  test('classification announcement appends milestone text at threshold', () => {
+    const result = renderTraining();
+    setState({yesCount: 9});
+    rerender(result);
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
+    rerender(result);
+    expect(screen.getByRole('status')).toHaveTextContent(
+      '10 items classified. Good start.',
+    );
+  });
+
+  test('one past a milestone does not re-fire the suffix', () => {
+    const result = renderTraining();
+    setState({yesCount: 10});
+    rerender(result);
+    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
+    rerender(result);
+    expect(screen.getByRole('status')).toHaveTextContent(
+      '11 items classified.',
+    );
+    expect(screen.getByRole('status')).not.toHaveTextContent('Good start');
   });
 
   test('erase button has aria-label="Erase"', () => {
@@ -215,9 +247,7 @@ describe('Training scene — ARIA attributes', () => {
     expect(yesBtn).toHaveFocus();
     fireEvent.click(yesBtn);
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
   });
 });
 
@@ -302,9 +332,7 @@ describe('Erase confirmation dialog — interactions', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
 
     fireEvent.click(screen.getByRole('button', {name: 'Erase'}));
     rerender(result);
@@ -313,9 +341,7 @@ describe('Erase confirmation dialog — interactions', () => {
     );
     rerender(result);
 
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
@@ -323,9 +349,7 @@ describe('Erase confirmation dialog — interactions', () => {
     const result = renderTraining();
     fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
     rerender(result);
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
 
     fireEvent.click(screen.getByRole('button', {name: 'Erase'}));
     rerender(result);
@@ -334,9 +358,7 @@ describe('Erase confirmation dialog — interactions', () => {
     );
     rerender(result);
 
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('0');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('0');
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 });
@@ -369,9 +391,7 @@ describe('Erase confirmation dialog — keyboard', () => {
     fireEvent.click(cancelBtn);
     rerender(result);
 
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('1');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('1');
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
@@ -394,9 +414,7 @@ describe('Erase confirmation dialog — keyboard', () => {
     fireEvent.click(confirmBtn);
     rerender(result);
 
-    expect(
-      screen.getByRole('status', {name: 'Fish counted'}),
-    ).toHaveTextContent('0');
+    expect(screen.getByTestId('training-count')).toHaveTextContent('0');
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 });
