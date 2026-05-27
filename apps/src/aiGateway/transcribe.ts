@@ -6,6 +6,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  CURRENT_SCHEMA_VERSION,
   GatewayTranscribeResponseV1Schema,
   type GatewayTranscribeResponseV1,
 } from './contract/gatewaySchemas';
@@ -44,7 +45,7 @@ async function transcribeThroughGateway(
       `${AI_GATEWAY_URL}/transcribe`,
       formData,
       false,
-      turnstileHeaders(turnstileToken)
+      {'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION, ...turnstileHeaders(turnstileToken)}
     );
 
     const rawResponse = await response.json();
