@@ -13,7 +13,7 @@ import {
   resourcePanelNavigationButtonElementId,
 } from '../views/components/Instructions/ResourcePanel/constants';
 
-export const createWeblab2OnboardingTourSteps = (tour: Tour): StepOptions[] => [
+export const createWebLab2IntroTourSteps = (tour: Tour): StepOptions[] => [
   {
     id: 'weblab2-welcome',
     title: 'Welcome to Web Lab',

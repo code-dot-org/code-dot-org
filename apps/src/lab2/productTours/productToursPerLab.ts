@@ -7,7 +7,7 @@ import {AppName, LevelProperties} from '../types';
 
 import {createOnboardingTourSteps} from './onboardingTourSteps';
 import {createValidationTourSteps} from './validationTourSteps';
-import {createWeblab2OnboardingTourSteps} from './weblab2OnboardingTourSteps';
+import {createWebLab2IntroTourSteps} from './weblab2IntroTourSteps';
 
 export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
@@ -68,7 +68,7 @@ export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
       displayName: 'Welcome to Web Lab',
       metricName: 'Welcome to Web Lab',
       triggeredByLevel: false,
-      getSteps: createWeblab2OnboardingTourSteps,
+      getSteps: createWebLab2IntroTourSteps,
     },
   };
 
