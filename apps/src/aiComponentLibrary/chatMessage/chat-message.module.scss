@@ -3,6 +3,8 @@
 @import '@code-dot-org/component-library-styles/typography.module';
 
 $message-border-radius: 8px;
+$user-color: $light_gray_100;
+$assistant-color: $brand_primary_light;
 $bot-container-size: 32px;
 $icon-message-gap: 8px;
 $icon-overlay-padding-right: 8px;
@@ -151,16 +153,14 @@ $vertical-gap: 0.375rem;
   justify-content: center;
   align-items: center;
   border-radius: 58px;
-  // $ai_rubric_cyan is an AI-product accent shared across rubrics, music,
-  // and the aiDifferentiation header; no DSCO semantic token covers it yet.
   background: $ai_rubric_cyan;
   border-width: 1px;
-  border-color: var(--borders-neutral-light);
+  border-color: $background_gray;
   border-style: solid;
 
   span {
     @include main-font-medium;
-    color: var(--text-neutral-primary);
+    color: $light-black;
     font-size: 8px;
     font-style: normal;
     line-height: 100%;
