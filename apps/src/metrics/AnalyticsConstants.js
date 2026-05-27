@@ -483,6 +483,30 @@ const EVENTS = {
   SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
   SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
 
+  // Demo Sections
+  DEMO_SECTION_CARD_VIEWED: 'Demo Section Card Viewed',
+  DEMO_SECTION_CREATION_SUCCEEDED: 'Demo Section Creation Succeeded',
+  DEMO_SECTION_CREATION_FAILED: 'Demo Section Creation Failed',
+  DEMO_SECTION_CREATION_CONFLICT: 'Demo Section Creation Conflict',
+  DEMO_SECTION_CARD_VIEW_PROGRESS_CLICKED:
+    'Demo Section Card View Progress Clicked',
+  DEMO_SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
+    'Demo Section Card View Lesson Materials Clicked',
+  DEMO_SECTION_CARD_GO_TO_COURSE_CLICKED:
+    'Demo Section Card Go To Course Clicked',
+  DEMO_SECTION_CARD_JUMP_TO_LESSON_CLICKED:
+    'Demo Section Card Jump To Lesson Clicked',
+  DEMO_SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Demo Section Card Jump To Unit Overview Clicked',
+  DEMO_SECTION_CARD_SETTINGS_CLICKED: 'Demo Section Card Settings Clicked',
+  DEMO_SECTION_CARD_ROSTER_CLICKED: 'Demo Section Card Roster Clicked',
+  DEMO_SECTION_CARD_LOGIN_CARDS_CLICKED:
+    'Demo Section Card Login Cards Clicked',
+  DEMO_SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
+    'Demo Section Card Print Certificates Clicked',
+  DEMO_SECTION_TEACHER_DASHBOARD_VIEWED:
+    'Demo Section Teacher Dashboard Viewed',
+
   // Student Homepage
   STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
 
