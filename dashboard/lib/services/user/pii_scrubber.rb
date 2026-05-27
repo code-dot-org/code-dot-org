@@ -24,6 +24,10 @@ module Services
 
       def initialize(user:)
         raise ArgumentError, 'user must be a soft-deleted User' unless user.is_a?(::User) && user.deleted_at.present?
+        if ::Policies::DemoSections.demo_student_durable?(user.id)
+          raise DemoStudent::ProtectedRecord,
+            "Cannot PII-scrub demo student user_id=#{user.id}; demo students keep their profile data."
+        end
         @user = user
         @email = user.email.presence || user.read_attribute(:email)
       end
