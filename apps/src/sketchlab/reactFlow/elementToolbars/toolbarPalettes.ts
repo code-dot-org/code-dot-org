@@ -46,8 +46,6 @@ export type FontSize = FontSizeValue | number;
 // since the canvas can be zoomed out.
 export const MIN_FONT_SIZE_PX = 6;
 
-// Line option icons live in the FontAwesome Kit. Add `iconFamily: 'kit'`
-// so the renderer picks them up from the right family.
 export const LINE_WIDTH_OPTIONS = [
   {value: 1, label: 'Thin', icon: 'line-regular', iconFamily: 'kit'},
   {value: 3, label: 'Medium', icon: 'line-medium', iconFamily: 'kit'},
