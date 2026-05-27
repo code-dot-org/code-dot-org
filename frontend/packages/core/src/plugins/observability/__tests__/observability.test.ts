@@ -11,6 +11,7 @@ vi.mock('@sentry/browser', () => ({
   setTag: vi.fn(),
   setContext: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
+  startSpan: vi.fn().mockImplementation((_options, callback) => callback()),
   browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
   consoleLoggingIntegration: vi.fn().mockReturnValue({name: 'ConsoleLogging'}),
   logger: {
@@ -47,6 +48,7 @@ import {
   setContext,
   setTag,
   shutdown,
+  startSpan,
 } from '../index';
 import type {ObservabilityConfig} from '../types';
 import {isSampled} from '../sampling';
@@ -444,6 +446,52 @@ describe('observability plugin', () => {
 
     getItem.mockRestore();
     warnSpy.mockRestore();
+  });
+
+  it('startSpan runs callback and returns its value before initialization', () => {
+    const result = startSpan({name: 'test.span'}, () => 42);
+    expect(result).toBe(42);
+    expect(Sentry.startSpan).not.toHaveBeenCalled();
+  });
+
+  it('startSpan delegates to Sentry after initialization', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    const result = startSpan(
+      {name: 'test.operation', op: 'test.op', attributes: {key: 'value'}},
+      () => 'done',
+    );
+
+    expect(result).toBe('done');
+    expect(Sentry.startSpan).toHaveBeenCalledWith(
+      expect.objectContaining({
+        name: 'test.operation',
+        op: 'test.op',
+        attributes: {key: 'value'},
+      }),
+      expect.any(Function),
+    );
+  });
+
+  it('startSpan runs callback directly on DeferredAdapter before flush', () => {
+    const deferredClient = new DeferredAdapter();
+    _initializeSingleton(deferredClient);
+
+    let ran = false;
+    const result = startSpan({name: 'test.span'}, () => {
+      ran = true;
+      return 'value';
+    });
+
+    expect(ran).toBe(true);
+    expect(result).toBe('value');
+    expect(Sentry.startSpan).not.toHaveBeenCalled();
   });
 
   it('resets a corrupted observability session id before sampling', () => {

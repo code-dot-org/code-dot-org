@@ -74,11 +74,21 @@ export const NOOP_METRICS: ObservabilityMetrics = {
 };
 
 /**
+ * Options for creating a span around a unit of work.
+ */
+export interface SpanOptions {
+  name: string;
+  op?: string;
+  attributes?: Record<string, string | number | boolean>;
+}
+
+/**
  * Minimal adapter contract shared by the module-level API and plugin bootstrap.
  */
 export interface ObservabilityClient {
   init(config: ObservabilityConfig): void;
   recordError(error: unknown, context?: Record<string, unknown>): void;
+  startSpan<T>(options: SpanOptions, callback: () => T): T;
   logger: ObservabilityLogger;
   metrics: ObservabilityMetrics;
   setConsented(userId: string | null): void;
