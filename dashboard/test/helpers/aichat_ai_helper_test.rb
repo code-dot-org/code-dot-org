@@ -24,16 +24,14 @@ class AichatAiHelperTest < ActionView::TestCase
       }
     end
 
-    before do
+    it 'includes text and file message parts with mime types' do
       AichatAssetHelper.expects(:get_asset_base64_string).
         with('image.png', 'project', encrypted_channel_id, level_name).
         returns('image-base64')
       AichatAssetHelper.expects(:get_asset_base64_string).
         with('notes.pdf', 'level', encrypted_channel_id, level_name).
         returns('pdf-base64')
-    end
 
-    it 'includes text and file message parts with mime types' do
       parts = AichatAiHelper.format_message_parts(message_payload, encrypted_channel_id, level_name)
 
       _(parts.length).must_equal 3
