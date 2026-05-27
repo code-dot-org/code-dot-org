@@ -62,7 +62,7 @@ export default function TwoColumnActionBlock({
               <div key={index}>
                 <MuiButton
                   variant="contained"
-                  color="purple"
+                  color="primary"
                   href={button.url}
                   target={button.target}
                   id={button.id}
