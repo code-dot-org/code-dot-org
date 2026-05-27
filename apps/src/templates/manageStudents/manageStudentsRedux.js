@@ -33,9 +33,9 @@ const DEMO_SECRET_PICTURE_URLS = [
   robotThumb,
 ];
 
-const demoIndex = studentId =>
-  ((studentId % DEMO_SECRET_WORDS.length) + DEMO_SECRET_WORDS.length) %
-  DEMO_SECRET_WORDS.length;
+// Stable positive modulo so a negative studentId still maps into [0, length).
+const demoIndex = (studentId, length) =>
+  ((studentId % length) + length) % length;
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
@@ -933,11 +933,15 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       genderTeacherInput: student.gender_teacher_input || '',
       secretWords:
         student.secret_words ??
-        (isDemoStudent ? DEMO_SECRET_WORDS[demoIndex(student.id)] : null),
+        (isDemoStudent
+          ? DEMO_SECRET_WORDS[demoIndex(student.id, DEMO_SECRET_WORDS.length)]
+          : null),
       secretPictureUrl:
         student.secret_picture_url ??
         (isDemoStudent
-          ? DEMO_SECRET_PICTURE_URLS[demoIndex(student.id)]
+          ? DEMO_SECRET_PICTURE_URLS[
+              demoIndex(student.id, DEMO_SECRET_PICTURE_URLS.length)
+            ]
           : null),
       loginType: loginType,
       sectionId: sectionId,

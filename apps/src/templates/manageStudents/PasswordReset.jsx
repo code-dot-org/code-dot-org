@@ -96,7 +96,7 @@ class PasswordReset extends Component {
 
   render() {
     const {resetDisabled, isDemoStudent} = this.props;
-    const tooltipId = resetDisabled && _.uniqueId();
+    const tooltipId = resetDisabled ? _.uniqueId() : '';
     const tooltipText = isDemoStudent
       ? 'Password actions are not available for demo section students.'
       : i18n.resetTeacherPasswordTooltip();
