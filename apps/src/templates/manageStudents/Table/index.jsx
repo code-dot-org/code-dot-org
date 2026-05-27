@@ -64,6 +64,7 @@ import {
   sectionCode,
   sectionName,
   sectionUnitName,
+  isDemoSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import experiments from '@cdo/apps/util/experiments';
@@ -128,6 +129,7 @@ class ManageStudentsTable extends Component {
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
     syncEnabled: PropTypes.bool,
+    isDemoSection: PropTypes.bool,
   };
 
   constructor(props) {
@@ -402,6 +404,7 @@ class ManageStudentsTable extends Component {
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
+                isDemoSection={this.props.isDemoSection}
               />
             </div>
           </span>
@@ -431,7 +434,9 @@ class ManageStudentsTable extends Component {
           <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
         </ReactTooltip>
         <div>
-          <SharingControlActionsHeaderCell />
+          <SharingControlActionsHeaderCell
+            isDemoSection={this.props.isDemoSection}
+          />
         </div>
       </span>
     );
@@ -516,7 +521,7 @@ class ManageStudentsTable extends Component {
     }
 
     if (this.props.currentUser?.isTeacher && this.props.currentUser?.inUSA) {
-      columns.push(UsStateColumn());
+      columns.push(UsStateColumn(this.props.isDemoSection));
     }
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
@@ -720,9 +725,13 @@ class ManageStudentsTable extends Component {
   }
 
   onPrintLoginCards() {
-    const {sectionId} = this.props;
-    const url =
-      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    const {sectionId, isDemoSection} = this.props;
+    // Do not auto-open the print dialog for demo sections — teachers should
+    // be able to review the cards first (and the print button on the
+    // login_info page is separately disabled for demo sections).
+    const url = isDemoSection
+      ? teacherDashboardUrl(sectionId, '/login_info')
+      : teacherDashboardUrl(sectionId, '/login_info') + '?autoPrint=true';
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 
@@ -799,16 +808,52 @@ class ManageStudentsTable extends Component {
         <div className={moduleStyles.additionalControlsContainer}>
           <div className={moduleStyles.additionalControlsButtonsRow}>
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <AddMultipleStudents sectionId={this.props.sectionId} />
+              <span
+                data-for="demo-add-students-tooltip"
+                data-tip=""
+                style={{display: 'inline-block'}}
+              >
+                <AddMultipleStudents
+                  sectionId={this.props.sectionId}
+                  disabled={this.props.isDemoSection}
+                />
+                {this.props.isDemoSection && (
+                  <ReactTooltip
+                    id="demo-add-students-tooltip"
+                    role="tooltip"
+                    effect="solid"
+                    place="top"
+                  >
+                    <div>{i18n.demoSectionAddStudentsDisabled()}</div>
+                  </ReactTooltip>
+                )}
+              </span>
             )}
             {this.isMoveStudentsEnabled() && (
-              <MoveStudents
-                studentData={this.studentDataMinusBlanks().filter(
-                  s => !s.isDemoStudent
+              <span
+                data-for="demo-move-students-tooltip"
+                data-tip=""
+                style={{display: 'inline-block'}}
+              >
+                <MoveStudents
+                  studentData={this.studentDataMinusBlanks().filter(
+                    s => !s.isDemoStudent
+                  )}
+                  transferData={transferData}
+                  transferStatus={transferStatus}
+                  disabled={this.props.isDemoSection}
+                />
+                {this.props.isDemoSection && (
+                  <ReactTooltip
+                    id="demo-move-students-tooltip"
+                    role="tooltip"
+                    effect="solid"
+                    place="top"
+                  >
+                    <div>{i18n.demoSectionAddStudentsDisabled()}</div>
+                  </ReactTooltip>
                 )}
-                transferData={transferData}
-                transferStatus={transferStatus}
-              />
+              </span>
             )}
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
               <PrintLoginCards
@@ -843,6 +888,7 @@ class ManageStudentsTable extends Component {
               loginType={loginType}
               studioUrlPrefix={this.props.studioUrlPrefix}
               sourceName="ManageStudentsTable"
+              isDemoSection={this.props.isDemoSection}
             />
           </div>
         </div>
@@ -974,6 +1020,7 @@ export default connect(
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
     syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
+    isDemoSection: isDemoSection(state, state.teacherSections.selectedSectionId),
   }),
   dispatch => ({
     saveAllStudents() {

@@ -17,7 +17,7 @@ export interface Section {
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
-  code: string;
+  code: string | null;
   codeReviewExpiresAt?: number | null;
   course?: Course | null;
   courseDisplayName: string | null;
@@ -108,7 +108,7 @@ export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 export interface ServerSection {
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
-  code: string;
+  code: string | null;
   course_display_name?: string | null;
   course_id: number | null;
   course_offering_id?: number | null;

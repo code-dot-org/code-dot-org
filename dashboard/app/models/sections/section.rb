@@ -318,6 +318,9 @@ class Section < ApplicationRecord
   validate :user_must_be_teacher, unless: -> {deleted?}
 
   def assign_code
+    # Demo sections have no join code — students are pre-enrolled at creation
+    # and no one else is permitted to join.
+    return if demo_type.present?
     self.code = unused_random_code unless code
   end
 

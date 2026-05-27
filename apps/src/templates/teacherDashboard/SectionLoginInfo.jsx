@@ -2,6 +2,7 @@ import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
@@ -9,6 +10,10 @@ import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageSt
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import {
+  DEMO_SECTION_CODE_PLACEHOLDER,
+  isDemoSection as isDemoSectionSelector,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -38,10 +43,11 @@ class SectionLoginInfo extends React.Component {
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
+    isDemoSection: PropTypes.bool,
   };
 
   render() {
-    const {studioUrlPrefix, section} = this.props;
+    const {studioUrlPrefix, section, isDemoSection} = this.props;
     const singleStudentId = queryParams('studentId');
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
@@ -49,6 +55,12 @@ class SectionLoginInfo extends React.Component {
           student => student.id.toString() === singleStudentId
         )
       : this.props.students;
+    // Demo sections have no real join code; use the placeholder everywhere
+    // section.code would be rendered so teachers see a coherent placeholder
+    // rather than null/undefined.
+    const displayCode = isDemoSection
+      ? DEMO_SECTION_CODE_PLACEHOLDER
+      : section.code;
 
     return (
       <div id="ui-test-section-login-info">
@@ -58,15 +70,17 @@ class SectionLoginInfo extends React.Component {
           <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
             section={section}
+            sectionCode={displayCode}
             students={students}
             autoPrint={autoPrint}
+            isDemoSection={isDemoSection}
             loginType={section.loginType}
           />
         )}
-        {section.loginType === SectionLoginType.email && (
+        {section.loginType === SectionLoginType.email && !isDemoSection && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            sectionCode={section.code}
+            sectionCode={displayCode}
             sectionId={section.id}
           />
         )}
@@ -85,11 +99,14 @@ class SectionLoginInfo extends React.Component {
 
 export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 
-export default connect(state => ({
-  section:
-    state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.teacherSections.selectedStudents,
-}))(SectionLoginInfo);
+export default connect(state => {
+  const selectedSectionId = state.teacherSections.selectedSectionId;
+  return {
+    section: state.teacherSections.sections[selectedSectionId],
+    students: state.teacherSections.selectedStudents,
+    isDemoSection: isDemoSectionSelector(state, selectedSectionId),
+  };
+})(SectionLoginInfo);
 
 export class LtiLogins extends React.Component {
   static propTypes = {
@@ -218,12 +235,17 @@ class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
+    // Safe section code to display — caller substitutes the placeholder for
+    // demo sections so null never reaches rendered strings.
+    sectionCode: PropTypes.string,
     students: PropTypes.array.isRequired,
     autoPrint: PropTypes.bool,
+    isDemoSection: PropTypes.bool,
   };
 
   componentDidMount() {
-    if (this.props.autoPrint) {
+    // Do not auto-open the print dialog for demo sections.
+    if (this.props.autoPrint && !this.props.isDemoSection) {
       this.printLoginCards();
     }
   }
@@ -261,7 +283,7 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section, sectionCode, students} = this.props;
     // Filter out any users who are teachers, used below to generate picture
     // login cards.
     const studentsOnly = students.filter(
@@ -274,7 +296,7 @@ class WordOrPictureLogins extends React.Component {
         <SignInInstructions
           loginType={section.loginType}
           studioUrlPrefix={studioUrlPrefix}
-          sectionCode={section.code}
+          sectionCode={sectionCode}
         />
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
@@ -304,19 +326,37 @@ class WordOrPictureLogins extends React.Component {
         )}
         {students.length >= 1 && (
           <span>
-            <PrintLoginCards
-              sectionId={section.id}
-              onPrintLoginCards={this.printLoginCards}
-              entryPointForMetrics={
-                PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
-              }
-            />
+            <span
+              data-for="demo-print-login-cards-tooltip"
+              data-tip=""
+              style={{display: 'inline-block'}}
+            >
+              <PrintLoginCards
+                sectionId={section.id}
+                onPrintLoginCards={this.printLoginCards}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
+                }
+                disabled={this.props.isDemoSection}
+              />
+            </span>
+            {this.props.isDemoSection && (
+              <ReactTooltip
+                id="demo-print-login-cards-tooltip"
+                role="tooltip"
+                effect="solid"
+                place="top"
+              >
+                <div>{i18n.demoSectionActionDisabled()}</div>
+              </ReactTooltip>
+            )}
             <br />
             <div id="printArea" style={styles.container}>
               {studentsOnly.map(student => (
                 <LoginCard
                   key={student.id}
                   section={section}
+                  sectionCode={sectionCode}
                   student={student}
                   studioUrlPrefix={studioUrlPrefix}
                 />
@@ -335,12 +375,14 @@ class WordOrPictureLogins extends React.Component {
 class LoginCard extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
+    // Caller-provided display code — may be a placeholder for demo sections.
+    sectionCode: PropTypes.string,
     student: PropTypes.object.isRequired,
     studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   render() {
-    const {studioUrlPrefix, section, student} = this.props;
+    const {studioUrlPrefix, section, sectionCode, student} = this.props;
 
     return (
       <div style={styles.card}>
@@ -353,9 +395,9 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint1({
-            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            directLink: `${studioUrlPrefix}/sections/${sectionCode}`,
             joinLink: `${studioUrlPrefix}/join`,
-            sectionCode: section.code,
+            sectionCode: sectionCode,
           })}
         />
         <SafeMarkdown

@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import i18n from '@cdo/locale';
 
@@ -14,6 +15,7 @@ class ManageStudentsActionsHeaderCell extends Component {
     editAll: PropTypes.func,
     isShareColumnVisible: PropTypes.bool,
     hideSharingColumn: PropTypes.func,
+    isDemoSection: PropTypes.bool,
   };
 
   state = {
@@ -33,13 +35,14 @@ class ManageStudentsActionsHeaderCell extends Component {
   };
 
   buildOptions() {
-    const {isShareColumnVisible, hideSharingColumn} = this.props;
+    const {isShareColumnVisible, hideSharingColumn, isDemoSection} = this.props;
     const options = [
       {
         value: 'edit-all',
         label: i18n.editAll(),
         icon: {iconName: 'pen'},
         onClick: this.onEditAll,
+        isOptionDisabled: isDemoSection,
       },
     ];
     if (!isShareColumnVisible) {
@@ -48,6 +51,7 @@ class ManageStudentsActionsHeaderCell extends Component {
         label: i18n.controlProjectSharing(),
         icon: {iconName: 'share-nodes'},
         onClick: this.openProjectSharingDialog,
+        isOptionDisabled: isDemoSection,
       });
     } else {
       options.push({
@@ -55,26 +59,44 @@ class ManageStudentsActionsHeaderCell extends Component {
         label: i18n.hideProjectSharingColumn(),
         icon: {iconName: 'eye-slash'},
         onClick: hideSharingColumn,
+        isOptionDisabled: isDemoSection,
       });
     }
     return options;
   }
 
   render() {
+    const {isDemoSection} = this.props;
     return (
       <div>
-        <ActionDropdown
-          name="student-header-actions"
-          labelText={i18n.actions()}
-          size="s"
-          menuPlacement="right"
-          options={this.buildOptions()}
-          triggerButtonProps={{
-            color: 'tertiary',
-            variant: 'text',
-            children: <FontAwesomeV6Icon iconName="gear" />,
-          }}
-        />
+        <span
+          data-for="demo-actions-header-tooltip"
+          data-tip=""
+          style={{display: 'inline-block'}}
+        >
+          <ActionDropdown
+            name="student-header-actions"
+            labelText={i18n.actions()}
+            size="s"
+            menuPlacement="right"
+            options={this.buildOptions()}
+            triggerButtonProps={{
+              color: 'tertiary',
+              variant: 'text',
+              children: <FontAwesomeV6Icon iconName="gear" />,
+            }}
+          />
+        </span>
+        {isDemoSection && (
+          <ReactTooltip
+            id="demo-actions-header-tooltip"
+            role="tooltip"
+            effect="solid"
+            place="top"
+          >
+            <div>{i18n.demoSectionActionDisabled()}</div>
+          </ReactTooltip>
+        )}
         <ControlProjectSharingDialog
           isDialogOpen={this.state.isProjectSharingDialogOpen}
           closeDialog={this.closeProjectSharingDialog}

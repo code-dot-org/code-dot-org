@@ -24,6 +24,7 @@ interface JoinLinkCopyButtonProps {
   studioUrlPrefix: string;
   sourceName?: string;
   hidden?: boolean;
+  isDemoSection?: boolean;
 }
 
 const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
@@ -33,6 +34,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   studioUrlPrefix,
   sourceName = 'teacherHomepage',
   hidden = false,
+  isDemoSection = false,
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
@@ -58,7 +60,9 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     }, 5000);
   };
 
-  return loginType &&
+  // Demo sections have no real join code, so always render the N/A path.
+  return !isDemoSection &&
+    loginType &&
     (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
     hidden ? (
       <Typography variant="overline1" gutterBottom>

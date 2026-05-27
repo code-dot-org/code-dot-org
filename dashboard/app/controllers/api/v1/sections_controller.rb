@@ -221,6 +221,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       render_404
       return
     end
+    # Demo sections have a fixed pre-enrolled roster; joining is not permitted.
+    # This is defense-in-depth: load_resource finds sections by code and demo
+    # sections have no code, so they cannot normally be reached here.
+    if @section.demo_type.present?
+      return render json: {errors: 'Cannot join a demo section'}, status: :forbidden
+    end
     result = @section.add_student current_user
     # add_student returns 'failure' when id of current user is owner of @section
     if result == 'failure'

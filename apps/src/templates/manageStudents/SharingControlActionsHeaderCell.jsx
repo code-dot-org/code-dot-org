@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import i18n from '@cdo/locale';
 
@@ -14,6 +15,7 @@ const LEARN_MORE_URL =
 class SharingControlActionsHeaderCell extends Component {
   static propTypes = {
     handleShareSetting: PropTypes.func,
+    isDemoSection: PropTypes.bool,
   };
 
   onEnableAll = () => {
@@ -29,18 +31,21 @@ class SharingControlActionsHeaderCell extends Component {
   };
 
   render() {
+    const {isDemoSection} = this.props;
     const options = [
       {
         value: 'enable-all-sharing',
         label: i18n.projectSharingEnableAll(),
         icon: {iconName: 'circle-check'},
         onClick: this.onEnableAll,
+        isOptionDisabled: isDemoSection,
       },
       {
         value: 'disable-all-sharing',
         label: i18n.projectSharingDisableAll(),
         icon: {iconName: 'circle-xmark'},
         onClick: this.onDisableAll,
+        isOptionDisabled: isDemoSection,
       },
       {
         value: 'learn-more-sharing',
@@ -52,18 +57,34 @@ class SharingControlActionsHeaderCell extends Component {
 
     return (
       <div>
-        <ActionDropdown
-          name="sharing-control-actions"
-          labelText={i18n.actions()}
-          size="s"
-          menuPlacement="right"
-          options={options}
-          triggerButtonProps={{
-            color: 'tertiary',
-            variant: 'text',
-            children: <FontAwesomeV6Icon iconName="gear" />,
-          }}
-        />
+        <span
+          data-for="demo-sharing-header-tooltip"
+          data-tip=""
+          style={{display: 'inline-block'}}
+        >
+          <ActionDropdown
+            name="sharing-control-actions"
+            labelText={i18n.actions()}
+            size="s"
+            menuPlacement="right"
+            options={options}
+            triggerButtonProps={{
+              color: 'tertiary',
+              variant: 'text',
+              children: <FontAwesomeV6Icon iconName="gear" />,
+            }}
+          />
+        </span>
+        {isDemoSection && (
+          <ReactTooltip
+            id="demo-sharing-header-tooltip"
+            role="tooltip"
+            effect="solid"
+            place="top"
+          >
+            <div>{i18n.demoSectionActionDisabled()}</div>
+          </ReactTooltip>
+        )}
       </div>
     );
   }

@@ -7,6 +7,7 @@ import React from 'react';
 
 import DemoChip from '@cdo/apps/templates/DemoChip';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
@@ -89,10 +90,11 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             </div>
             <JoinLinkCopyButton
               loginType={section.loginType}
-              sectionCode={section.code}
+              sectionCode={section.code ?? DEMO_SECTION_CODE_PLACEHOLDER}
               sectionId={section.id}
               studioUrlPrefix={studioUrlPrefix}
               hidden={section.hidden}
+              isDemoSection={Boolean(section.demoType)}
             />
           </div>
         </div>

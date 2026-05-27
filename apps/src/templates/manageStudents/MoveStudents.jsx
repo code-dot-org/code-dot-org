@@ -57,6 +57,7 @@ class MoveStudents extends Component {
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
     cancelStudentTransfer: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   state = {
@@ -252,6 +253,7 @@ class MoveStudents extends Component {
           color="tertiary"
           size="small"
           onClick={this.openDialog}
+          disabled={this.props.disabled}
           type="button"
           startIcon={<FontAwesomeV6Icon iconName="right-from-bracket" />}
         >

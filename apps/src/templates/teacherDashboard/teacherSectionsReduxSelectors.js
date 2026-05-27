@@ -45,8 +45,19 @@ export function rosterProviderName(state) {
   return getRoot(state).rosterProviderName;
 }
 
+// Placeholder shown in the UI wherever section code would appear for demo
+// sections, which have no real join code.
+export const DEMO_SECTION_CODE_PLACEHOLDER = 'DEMO-123';
+
 export function sectionCode(state, sectionId) {
-  return (getRoot(state).sections[sectionId] || {}).code;
+  const section = getRoot(state).sections[sectionId] || {};
+  if (section.code != null) return section.code;
+  if (section.demoType) return DEMO_SECTION_CODE_PLACEHOLDER;
+  return null;
+}
+
+export function isDemoSection(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).demoType;
 }
 
 export function sectionName(state, sectionId) {
