@@ -23,12 +23,10 @@ export interface Panel {
   // Honored only when useLinks is set on the level.
   showContinueButton?: boolean;
 
-  // Teacher-only note shown below the panel's bubble row in the viewer
-  // when the active user is a teacher/levelbuilder. The server strips
-  // this field from payloads sent to non-teachers, so it never reaches
-  // a student's browser. Currently produced by the slides AI generator;
-  // the regular panels-level editor doesn't expose it unless a panel
-  // already has one (so existing levels stay visually unchanged).
+  // Teacher-only note shown below the panel in the viewer. The server
+  // strips it from non-teacher payloads, so it never reaches a student.
+  // Produced by the slides AI generator; the regular panels editor only
+  // exposes the field when a panel already has one.
   teacherNote?: string;
 
   // The following fields are exploratory and not yet exposed in levelbuilder.

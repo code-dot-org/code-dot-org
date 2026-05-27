@@ -238,13 +238,8 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             movePanel={movePanel}
             deletePanel={deletePanel}
             last={index === panels.length - 1}
-            // Slides feature: only surface the teacher-note input when at
-            // least one panel already carries a note. That keeps regular
-            // panels-level edit pages visually unchanged while still
-            // letting the slides editor (whose AI fills teacherNote on
-            // every panel) edit them in place. New panels appended
-            // afterward pick up the field too, since they share the same
-            // panels[] state.
+            // Slides feature: show the teacher-note input only when some panel
+            // already carries a note, so regular panels-edit pages stay unchanged.
             showTeacherNotes={panels.some(
               p => p.teacherNote && p.teacherNote.trim()
             )}

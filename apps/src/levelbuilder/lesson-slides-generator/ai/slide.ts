@@ -53,8 +53,8 @@ interface SlidePlan {
 // lesson + unit context, and a sibling-forward summary of slides
 // already generated earlier in the same run.
 //
-// We make ONE gemini-flash call to plan the panel (text + image prompt
-// + layout), then a second image call to render the picture, and
+// We make one text-model call to plan the panel (text + image prompt
+// + layout), then a second image-model call to render the picture, and
 // assemble a Panel.
 export async function generateSlide(ctx: SlideContext): Promise<Panel> {
   const hasAnyOutline = !!(
