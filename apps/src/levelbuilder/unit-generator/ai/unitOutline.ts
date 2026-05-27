@@ -59,7 +59,9 @@ export async function generateUnitOutline(
 ): Promise<OutlineLesson[]> {
   const prompt = [
     'You are helping a curriculum author plan the lessons in a single CS',
-    'unit (a multi-lesson learning experience for middle-school students).',
+    'unit (a multi-lesson learning experience). Assume a middle-school',
+    'audience unless the unit outline below names a different grade band or',
+    'target audience, in which case follow the outline.',
     `Break the outline below into a sequence of ${MIN_LESSONS} to ${MAX_LESSONS} lessons that, in`,
     'order, take the student through the learning experience.',
     '',
