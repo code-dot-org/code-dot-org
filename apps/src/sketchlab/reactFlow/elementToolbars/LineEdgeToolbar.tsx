@@ -184,7 +184,13 @@ export default function LineEdgeToolbar({
             />
             <ToolbarDropdownRow
               label="Thickness"
-              triggerPreview={renderOptionIcon(widthOption)}
+              triggerPreview={
+                <FontAwesomeV6Icon
+                  iconName="line-weight"
+                  iconStyle="solid"
+                  iconFamily="kit"
+                />
+              }
               triggerLabel={widthOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<LineWidthValue>
@@ -198,7 +204,13 @@ export default function LineEdgeToolbar({
             />
             <ToolbarDropdownRow
               label="Style"
-              triggerPreview={renderOptionIcon(strokeStyleOption)}
+              triggerPreview={
+                <FontAwesomeV6Icon
+                  iconName="line-style"
+                  iconStyle="solid"
+                  iconFamily="kit"
+                />
+              }
               triggerLabel={strokeStyleOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<LineStrokeStyleValue>
@@ -212,7 +224,13 @@ export default function LineEdgeToolbar({
             />
             <ToolbarDropdownRow
               label="Shape"
-              triggerPreview={renderOptionIcon(edgeTypeOption)}
+              triggerPreview={
+                <FontAwesomeV6Icon
+                  iconName="line-shape"
+                  iconStyle="solid"
+                  iconFamily="kit"
+                />
+              }
               triggerLabel={edgeTypeOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<EdgeTypeValue>
@@ -226,7 +244,12 @@ export default function LineEdgeToolbar({
             />
             <ToolbarDropdownRow
               label="Arrowheads"
-              triggerPreview={renderOptionIcon(arrowHeadOption)}
+              triggerPreview={
+                <FontAwesomeV6Icon
+                  iconName="arrow-right-arrow-left"
+                  iconStyle="solid"
+                />
+              }
               triggerLabel={arrowHeadOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<ArrowHeadValue>

@@ -79,7 +79,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             <ToolbarDropdownRow
               label="Size"
               triggerPreview={
-                <FontAwesomeV6Icon iconName="text-height" iconStyle="solid" />
+                <FontAwesomeV6Icon iconName="text-size" iconStyle="solid" />
               }
               triggerLabel={fontSizeLabel(resolvedFontSize)}
               renderPopoverContent={closePopover => (
