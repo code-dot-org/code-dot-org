@@ -12,31 +12,9 @@ import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import styles from './podcasts-box.module.scss';
+import Waveform from './Waveform';
 
-// Rainbow waveform bars: [heightPct, color]
-const BARS: [number, string][] = [
-  [35, '#9657c7'],
-  [55, '#8a60cb'],
-  [75, '#7d6acf'],
-  [90, '#7173d3'],
-  [100, '#5e7ed7'],
-  [85, '#4b89db'],
-  [70, '#3894df'],
-  [80, '#25a0e3'],
-  [95, '#00b4c8'],
-  [100, '#00b89b'],
-  [90, '#00bc6e'],
-  [80, '#4abf45'],
-  [95, '#8ac23c'],
-  [100, '#b4c336'],
-  [85, '#d4c030'],
-  [75, '#f0ba2a'],
-  [60, '#f5a52a'],
-  [70, '#fa902a'],
-  [50, '#fa752a'],
-  [40, '#fa5a2a'],
-];
+import styles from './podcasts-box.module.scss';
 
 function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
@@ -56,12 +34,43 @@ type ScriptLine = {voice_id: string; text: string};
 
 const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [status, setStatus] = useState<PodcastStatus>('loading');
   const [scriptLines, setScriptLines] = useState<ScriptLine[] | null>(null);
+  // The analyser feeds the live Waveform. It's created lazily on first play
+  // (an AudioContext must start from a user gesture), and stays null if Web
+  // Audio is unavailable, in which case Waveform falls back to its CSS pulse.
+  const [analyser, setAnalyser] = useState<AnalyserNode | null>(null);
+
+  // Routes the audio element through an AnalyserNode once. createMediaElement-
+  // Source can only wrap an element a single time, so this is guarded by the
+  // analyser already existing. The blob object URL is same-origin, so the
+  // analyser reads real samples (a cross-origin source would read silence).
+  const setupAnalyser = useCallback(() => {
+    if (analyser || !audioRef.current || !window.AudioContext) {
+      return;
+    }
+    try {
+      const ctx = new AudioContext();
+      const source = ctx.createMediaElementSource(audioRef.current);
+      const node = ctx.createAnalyser();
+      node.fftSize = 64;
+      node.smoothingTimeConstant = 0.7;
+      source.connect(node);
+      node.connect(ctx.destination);
+      audioCtxRef.current = ctx;
+      setAnalyser(node);
+    } catch {
+      // Web Audio unavailable; Waveform keeps its decorative animation.
+    }
+  }, [analyser]);
+
+  // Release the AudioContext when the component goes away.
+  useEffect(() => () => void audioCtxRef.current?.close(), []);
 
   // The podcast is keyed by the objectives the student is still working on, so
   // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
@@ -153,10 +162,14 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
     if (isPlaying) {
       audio.pause();
     } else {
+      setupAnalyser();
+      // The context may start suspended under the autoplay policy; resuming
+      // within this click gesture lets the analyser receive samples.
+      void audioCtxRef.current?.resume();
       audio.play().catch(() => {});
     }
     setIsPlaying(p => !p);
-  }, [isPlaying]);
+  }, [isPlaying, setupAnalyser]);
 
   const skipBack = useCallback(() => {
     if (audioRef.current) {
@@ -203,19 +216,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
 
       <p className={styles.overline}>Podcast</p>
 
-      <div className={styles.waveform}>
-        {BARS.map(([height, color], i) => (
-          <div
-            key={i}
-            className={`${styles.bar} ${isPlaying ? styles.barAnimating : ''}`}
-            style={{
-              height: `${height}%`,
-              backgroundColor: color,
-              animationDelay: `${(i * 0.04).toFixed(2)}s`,
-            }}
-          />
-        ))}
-      </div>
+      <Waveform analyser={analyser} isPlaying={isPlaying} />
 
       <div className={styles.playerArea}>
         <div className={styles.volumeRow}>
@@ -280,7 +281,13 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
           <div className={styles.transcriptLines}>
             {scriptLines.map((line, i) => (
               <p key={i} className={styles.transcriptLine}>
-                <span className={styles.speaker}>{line.voice_id}</span>
+                <span
+                  className={`${styles.speaker} ${
+                    line.voice_id === 'Sam' ? styles.speakerSam : ''
+                  }`}
+                >
+                  {line.voice_id}
+                </span>
                 {line.text}
               </p>
             ))}

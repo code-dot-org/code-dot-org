@@ -34,6 +34,12 @@ $purple: #9657c7;
   flex-shrink: 0;
 }
 
+// Live (analyser-driven) bars update ~60fps, so the leisurely idle transition
+// would smear them; use a short linear one to stay responsive.
+.barLive {
+  transition: height 0.07s linear;
+}
+
 @keyframes pulse {
   0%, 100% { transform: scaleY(1); }
   50%       { transform: scaleY(0.5); }
@@ -203,4 +209,8 @@ $purple: #9657c7;
   font-weight: 600;
   color: $purple;
   margin-right: 6px;
+}
+
+.speakerSam {
+  color: #ffb42e;
 }
