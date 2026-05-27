@@ -54,15 +54,12 @@
   # instances (ie staging, test) are all their own daemon)
   if node['cdo-apps']['daemon']
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
-      cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
 
-      # This should be run after the commit_content job that happens on both the levelbuilder
-      # and staging environments
+      # This should be run after the commit_content job that happens on the levelbuilder
+      # environment.
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
       cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
 
