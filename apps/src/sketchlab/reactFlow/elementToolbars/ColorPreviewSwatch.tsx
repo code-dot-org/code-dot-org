@@ -1,10 +1,9 @@
-import classNames from 'classnames';
 import React from 'react';
 
 import {ColorSwatch} from './toolbarPalettes';
+import TransparentSwatchIcon from './TransparentSwatchIcon';
 
 import styles from './color-preview-swatch.module.scss';
-import sharedStyles from './element-toolbar.module.scss';
 
 interface ColorPreviewSwatchProps {
   value: string | undefined;
@@ -12,8 +11,7 @@ interface ColorPreviewSwatchProps {
 }
 
 // Small square swatch shown inside a dropdown trigger to preview the
-// current color choice. Handles the transparent-pattern variant when the
-// selected swatch is the transparent entry in the palette.
+// current color choice.
 export default function ColorPreviewSwatch({
   value,
   swatches,
@@ -23,10 +21,10 @@ export default function ColorPreviewSwatch({
   return (
     <span
       aria-hidden="true"
-      className={classNames(styles.dropdownPreviewSwatch, {
-        [sharedStyles.swatchTransparent]: isTransparent,
-      })}
+      className={styles.dropdownPreviewSwatch}
       style={isTransparent ? undefined : {backgroundColor: value}}
-    />
+    >
+      {isTransparent && <TransparentSwatchIcon />}
+    </span>
   );
 }

@@ -20,7 +20,7 @@ export const STROKE_FONT_PALETTE: ColorSwatch[] = [
 ];
 
 export const BACKGROUND_PALETTE: ColorSwatch[] = [
-  {value: 'transparent', label: 'Transparent', transparent: true},
+  {value: 'transparent', label: 'Clear', transparent: true},
   {value: 'var(--sketchlab-bg-gray)', label: 'Gray'},
   {value: 'var(--sketchlab-bg-red)', label: 'Red'},
   {value: 'var(--sketchlab-bg-yellow)', label: 'Yellow'},

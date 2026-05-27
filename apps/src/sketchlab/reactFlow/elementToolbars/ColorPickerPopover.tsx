@@ -5,9 +5,9 @@ import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
 import {ColorSwatch} from './toolbarPalettes';
+import TransparentSwatchIcon from './TransparentSwatchIcon';
 
 import styles from './color-picker-popover.module.scss';
-import sharedStyles from './element-toolbar.module.scss';
 
 const CUSTOM_COLOR_DEFAULT = '#000000';
 
@@ -126,7 +126,6 @@ export default function ColorPickerPopover({
               size="small"
               className={classNames(styles.swatch, {
                 [styles.swatchSelected]: isSelected,
-                [sharedStyles.swatchTransparent]: swatch.transparent,
               })}
               style={
                 swatch.transparent ? undefined : {backgroundColor: swatch.value}
@@ -137,7 +136,9 @@ export default function ColorPickerPopover({
                 onSelect(swatch.value);
                 onClose();
               }}
-            />
+            >
+              {swatch.transparent && <TransparentSwatchIcon />}
+            </IconButton>
           </Tooltip>
         );
       })}
