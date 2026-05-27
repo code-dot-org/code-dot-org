@@ -38,7 +38,8 @@ const observabilityLoggerByLevel: Record<
  * see {@link AnalyticsReporter} which reports to Amplitude.
  *
  * For legacy client-side reporting see {@link firehose} for AWS
- * Firehose reporting and {@link logToCloud} for New Relic reporting.
+ * Firehose reporting and {@link logToCloud} as a backwards-compatible
+ * facade for browser observability.
  */
 class MetricsReporter {
   private lastCheckCanReportTime: number;

@@ -71,6 +71,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
           icon,
           value,
           id,
+          className: buttonClassName,
         }) => (
           <SegmentedButton
             key={value}
@@ -85,6 +86,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
             buttonType={type}
             value={value}
             id={id}
+            className={buttonClassName}
           />
         ),
       )}

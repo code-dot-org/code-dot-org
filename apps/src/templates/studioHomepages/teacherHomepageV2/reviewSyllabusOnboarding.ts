@@ -169,7 +169,7 @@ const createHighSchoolHomepageSteps = (
 const QUIZ_LEVEL_QUESTION = `
   <div class="onboarding-step-content">
     <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">When you&#8217;re prepping a lesson, you don&#8217;t have time to review every single level &#8212; and you don&#8217;t need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
+    <span class="onboarding-step-text">When you're prepping a lesson, you don&#8217;t have time to review every single level &#8212; and you don&#8217;t need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
   </div>
   <div class="quiz-options-grid">
     <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>

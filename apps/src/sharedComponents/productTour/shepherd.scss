@@ -192,16 +192,16 @@
   }
 }
 
-.quiz-option-wrong {
-  border-color: #e53e3e !important;
-  background-color: rgb(229 62 62 / 15%) !important;
-  color: var(--accent-strawberry-40) !important;
+div .quiz-option-wrong {
+  border-color: #e53e3e;
+  background-color: rgb(229 62 62 / 15%);
+  color: var(--accent-strawberry-40);
 }
 
-.quiz-option-correct {
-  border-color: #38a169 !important;
-  background-color: rgb(56 161 105 / 15%) !important;
-  color: #68d391 !important;
+div .quiz-option-correct {
+  border-color: #38a169;
+  background-color: rgb(56 161 105 / 15%);
+  color: #68d391;
 }
 
 .quiz-feedback {

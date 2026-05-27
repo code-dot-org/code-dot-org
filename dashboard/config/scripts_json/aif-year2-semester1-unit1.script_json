@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 21:46:02 UTC",
+    "serialized_at": "2026-05-26 13:48:21 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -34,12 +34,15 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lesson 1",
+      "name": "What is Intelligence?",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**What does it mean to be intelligent?**\n\nIn this lesson, students explore what intelligence means, examining the question from a human and machine perspective. They begin with their own intuitions and, through engaging with thought experiments and classroom discussions, they refine their thinking and emerge with a clearer understanding of their own definition of intelligence.",
+        "preparation": "- Print copies of the Logic-Based AI Unit Guide (one for each student)\n- Print and cut out copies of the Intelligence Card Sort activity (one for each pair of two students)",
+        "student_overview": "**What does it mean to be intelligent?**\n\nExplore what intelligence means, examining the question from a human and machine perspective."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -214,10 +217,30 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d5b66cea-231a-4e6d-b656-9bb406d80bd9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5b66cea-231a-4e6d-b656-9bb406d80bd9",
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec"
+      }
+    }
   ],
   "script_levels": [
 
@@ -238,16 +261,65 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "artificial_intelligence_ai_",
+      "word": "artificial intelligence (AI)",
+      "definition": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "turing_test",
+      "word": "Turing test",
+      "definition": "a test in which a machine is considered intelligent if you can’t tell it apart from a human in conversation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "turing_test"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "turing_test"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "3e06f2c7-669b-4699-9db0-61a19d2c19bb",
+      "properties": {
+        "description": "Describe their personal definition of intelligence."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "3e06f2c7-669b-4699-9db0-61a19d2c19bb"
+      }
+    },
+    {
+      "key": "a722636f-d950-4a99-ada6-77de9d70536f",
+      "properties": {
+        "description": "Evaluate the Turing test as a measure of machine intelligence."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a722636f-d950-4a99-ada6-77de9d70536f"
+      }
+    }
   ],
   "lessons_standards": [
 

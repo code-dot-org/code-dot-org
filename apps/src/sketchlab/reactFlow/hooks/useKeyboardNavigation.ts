@@ -21,6 +21,7 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {getNodeLabel} from '../utils/elementLabel';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -32,7 +33,6 @@ import {
   inheritedAnchorBaseData,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
-import {getNodeLabel} from '../utils/nodeLabel';
 
 import {useAriaAnnouncer} from './useAriaAnnouncer';
 import {useConnectMode} from './useConnectMode';
