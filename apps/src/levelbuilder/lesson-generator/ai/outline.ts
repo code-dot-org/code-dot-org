@@ -65,8 +65,10 @@ export async function generateLessonOutline(
   ctx: LessonContext
 ): Promise<OutlineLevel[]> {
   const prompt = [
-    'You are helping a curriculum author plan a single lesson for a',
-    'middle-school CS class. Break the outline below into a sequence of',
+    'You are helping a curriculum author plan a single lesson for a CS',
+    'class. Assume a middle-school audience unless the outline below names',
+    'a different grade band or target audience, in which case follow the',
+    'outline. Break the outline below into a sequence of',
     '2 to 8 levels that, in order, take the student through the learning',
     'experience. Each level is one of:',
     '  - Panels: a short comic-strip-like sequence used for narrative,',
