@@ -31,6 +31,7 @@ import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
@@ -63,6 +64,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   const tour = useCreateSectionTour(isElementaryTeacher);
   const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
@@ -295,6 +297,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               <OnboardingChecklist
                 createSectionTour={tour}
                 reviewSyllabusTour={reviewSyllabusTour}
+                learnHowToEvaluateTour={learnHowToEvaluateTour}
                 demoType={demoSectionDemoType}
               />
             )}

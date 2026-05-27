@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
+import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
@@ -41,6 +42,10 @@ function SectionProgressV2({
   loadExpandedLessonsFromLocalStorage,
 }) {
   const params = useParams();
+  React.useEffect(() => {
+    resumeLearnHowToEvaluateTour();
+  }, []);
+
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {

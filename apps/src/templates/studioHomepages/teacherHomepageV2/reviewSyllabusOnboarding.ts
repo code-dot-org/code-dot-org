@@ -2,7 +2,9 @@ import {StepOptions, Tour} from 'shepherd.js';
 
 import {
   createCompletionStep,
+  createQuizWhenHandlers,
   nextButton,
+  withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -17,13 +19,6 @@ const ALL_DROPDOWN_ITEMS_SELECTOR = '#go-to-lesson-dropdown ul li';
 const UNIT_BREADCRUMB_SELECTOR = '.unit-breadcrumb';
 const UNIT_BREADCRUMB_LINK_SELECTOR = '.unit-breadcrumb a';
 export const UNIT_BREADCRUMB_STEP_ID = 'unit-breadcrumb-step';
-
-const withSparkle = (text: string): string => `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">${text}</span>
-  </div>
-`;
 
 const waitForElement = (
   selector: string,
@@ -96,7 +91,8 @@ const createHighSchoolHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        "Before you assign anything to students, it helps to know what's coming. The Jump to menu gets you straight to the syllabus for your assigned unit. \n Click the dropdown menu to take a look."
+        "Before you assign anything to students, it helps to know what's coming. The Jump to menu gets you straight to the syllabus for your assigned unit.",
+        'Click the dropdown menu to take a look.'
       ),
       advanceOn: {
         selector: `#${DROPDOWN_BUTTON_ID}`,
@@ -111,7 +107,8 @@ const createHighSchoolHomepageSteps = (
         on: 'right',
       },
       text: withSparkle(
-        'Your assigned unit is right at the top. Click it to see the full lesson breakdown before your students do. \n Click the unit name to continue.'
+        'Your assigned unit is right at the top. Click it to see the full lesson breakdown before your students do.',
+        'Click the unit name to continue.'
       ),
       beforeShowPromise: () =>
         waitForElement(FIRST_DROPDOWN_ITEM_SELECTOR, controller.signal),
@@ -189,8 +186,6 @@ const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
   tour.on('complete', () => controller.abort());
 
   let breadcrumbClickHandler: ((e: Event) => void) | null = null;
-  let quizClickHandler: EventListener | null = null;
-  let quizAdvanceTimer: ReturnType<typeof setTimeout> | null = null;
 
   return [
     {
@@ -255,71 +250,10 @@ const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
       buttons: [],
       beforeShowPromise: () =>
         waitForElement('#progress-lesson-1', controller.signal),
-      when: {
-        show() {
-          quizAdvanceTimer = null;
-
-          document
-            .querySelectorAll<HTMLButtonElement>('.quiz-option')
-            .forEach(btn => {
-              btn.dataset.originalText = btn.textContent?.trim() ?? '';
-            });
-
-          quizClickHandler = (e: Event) => {
-            const target = e.currentTarget as HTMLButtonElement;
-            const allOptions = Array.from(
-              document.querySelectorAll<HTMLButtonElement>('.quiz-option')
-            );
-
-            if (target.dataset.answer === 'correct') {
-              target.classList.add('quiz-option-correct');
-              allOptions.forEach(btn => {
-                btn.disabled = true;
-              });
-              quizAdvanceTimer = setTimeout(() => {
-                quizAdvanceTimer = null;
-                tour.next();
-              }, 1000);
-            } else {
-              allOptions.forEach(btn => {
-                if (btn.classList.contains('quiz-option-wrong')) {
-                  btn.classList.remove('quiz-option-wrong');
-                  btn.textContent = btn.dataset.originalText ?? '';
-                  btn.disabled = false;
-                }
-              });
-              target.classList.add('quiz-option-wrong');
-              target.textContent = `❌ ${
-                target.dataset.originalText ?? target.textContent?.trim() ?? ''
-              }`;
-              target.disabled = true;
-              const feedback =
-                document.querySelector<HTMLElement>('.quiz-feedback');
-              if (feedback)
-                feedback.textContent =
-                  'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.';
-            }
-          };
-
-          document
-            .querySelectorAll<HTMLButtonElement>('.quiz-option')
-            .forEach(btn => btn.addEventListener('click', quizClickHandler!));
-        },
-        hide() {
-          if (quizAdvanceTimer !== null) {
-            clearTimeout(quizAdvanceTimer);
-            quizAdvanceTimer = null;
-          }
-          if (quizClickHandler !== null) {
-            document
-              .querySelectorAll<HTMLButtonElement>('.quiz-option')
-              .forEach(btn =>
-                btn.removeEventListener('click', quizClickHandler!)
-              );
-            quizClickHandler = null;
-          }
-        },
-      },
+      when: createQuizWhenHandlers(
+        tour,
+        'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
+      ),
     },
     {
       id: 'lesson-resources-intro',
