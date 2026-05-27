@@ -1,5 +1,16 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+
+import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import styles from './podcasts-box.module.scss';
 
@@ -33,11 +44,35 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-const PodcastsBox: FC = () => {
+interface PodcastsBoxProps {
+  lessonId: number;
+  reflectionData: ReflectionData | null;
+}
+
+type PodcastStatus = 'loading' | 'ready' | 'unavailable';
+
+const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [audioSrc, setAudioSrc] = useState<string | null>(null);
+  const [status, setStatus] = useState<PodcastStatus>('loading');
+
+  // The podcast is keyed by the objectives the student is still working on, so
+  // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
+  const objectiveIds = useMemo(() => {
+    if (!reflectionData) {
+      return [];
+    }
+    return Object.entries(reflectionData.objectiveReflections)
+      .filter(
+        ([, value]) =>
+          value === LessonObjectiveReflectionValues.LOST ||
+          value === LessonObjectiveReflectionValues.UNSURE
+      )
+      .map(([objectiveId]) => objectiveId);
+  }, [reflectionData]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -54,6 +89,41 @@ const PodcastsBox: FC = () => {
       audio.removeEventListener('ended', onEnded);
     };
   }, []);
+
+  // Fetch the mp3 as a blob and hand the audio element an object URL. A blob
+  // keeps the scrubber and skip controls working, since the controller serves
+  // the file via send_data without HTTP range support.
+  useEffect(() => {
+    if (objectiveIds.length === 0) {
+      setStatus('unavailable');
+      return;
+    }
+
+    const params = new URLSearchParams();
+    params.set('lesson_id', String(lessonId));
+    objectiveIds.forEach(id => params.append('objective_ids[]', id));
+
+    let cancelled = false;
+    let objectUrl: string | null = null;
+    setStatus('loading');
+
+    HttpClient.get(`/ai_student_podcasts/retrieve_podcast_from_s3?${params}`)
+      .then(response => response.blob())
+      .then(blob => {
+        if (cancelled) return;
+        objectUrl = URL.createObjectURL(blob);
+        setAudioSrc(objectUrl);
+        setStatus('ready');
+      })
+      .catch(() => {
+        if (!cancelled) setStatus('unavailable');
+      });
+
+    return () => {
+      cancelled = true;
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, [lessonId, objectiveIds]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -99,8 +169,7 @@ const PodcastsBox: FC = () => {
 
   return (
     <div className={styles.container}>
-      {/* no src — placeholder UI until podcast content is wired up */}
-      <audio ref={audioRef}>
+      <audio ref={audioRef} src={audioSrc ?? undefined}>
         <track
           kind="captions"
           label="English captions"
@@ -157,6 +226,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.controlButton}
             onClick={skipBack}
+            disabled={status !== 'ready'}
             aria-label="Skip back 10 seconds"
           >
             <FontAwesomeV6Icon iconName="backward-fast" />
@@ -165,6 +235,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.playButton}
             onClick={togglePlay}
+            disabled={status !== 'ready'}
             aria-label={isPlaying ? 'Pause' : 'Play'}
           >
             <FontAwesomeV6Icon iconName={isPlaying ? 'pause' : 'play'} />
@@ -173,6 +244,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.controlButton}
             onClick={skipForward}
+            disabled={status !== 'ready'}
             aria-label="Skip forward 10 seconds"
           >
             <FontAwesomeV6Icon iconName="forward-fast" />
@@ -181,8 +253,12 @@ const PodcastsBox: FC = () => {
       </div>
 
       <p className={styles.description}>
-        This lesson&apos;s concepts, explained as a short audio summary. Press
-        play to listen.
+        {status === 'loading' &&
+          "Putting together this lesson's podcast. One moment…"}
+        {status === 'unavailable' &&
+          "This lesson's podcast isn't ready yet. Check back soon."}
+        {status === 'ready' &&
+          "This lesson's concepts, explained as a short audio summary. Press play to listen."}
       </p>
     </div>
   );

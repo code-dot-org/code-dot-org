@@ -9,7 +9,7 @@ module AiStudentPodcastsHelper
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
 
   def self.create_and_save_to_s3(student_podcast_data)
-    filename = s3_filename(student_podcast_data.id)
+    filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
     return unless elevenlabs_client.available_credits
 
@@ -23,8 +23,8 @@ module AiStudentPodcastsHelper
     AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
   end
 
-  def self.retrieve_podcast_from_s3(student_podcast_id)
-    AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(student_podcast_id))
+  def self.retrieve_podcast_from_s3(lesson_id, objective_ids)
+    AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(lesson_id, objective_ids))
   end
 
   VOICE_ID_MAP = {
@@ -207,7 +207,12 @@ module AiStudentPodcastsHelper
     OpenaiClient.new(CDO.openai_lesson_summaries_api_key, OPENAI_MODEL)
   end
 
-  def self.s3_filename(student_podcast_id)
-    PODCAST_FOLDER + 'student_podcast_' + student_podcast_id.to_s + '.mp3'
+  # A podcast's content is determined entirely by its lesson and the set of
+  # objectives it covers, so multiple users requesting the same lesson +
+  # objectives share a single S3 object. Objective ids are sorted to make the
+  # key independent of the order they were stored in.
+  def self.s3_filename(lesson_id, objective_ids)
+    sorted_ids = Array(objective_ids).map(&:to_i).sort
+    PODCAST_FOLDER + "student_podcast_#{lesson_id}-#{sorted_ids.join('-')}.mp3"
   end
 end

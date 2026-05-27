@@ -4,9 +4,17 @@ class AiStudentPodcastsController < ApplicationController
   # GET /ai_student_podcasts/:id
   def show
     return head :forbidden unless SingleUserExperiment.enabled?(user: current_user, experiment_name: 'lesson-tutor')
-    podcast_data = AiStudentPodcast.find_by(id: params[:id], user_id: current_user.id)
+    podcast_data = AiStudentPodcast.find_by(lesson_id: podcast_params[:lesson_id], user_id: current_user.id)
     return head :not_found unless podcast_data
     render json: podcast_data
+  end
+
+  def retrieve_podcast_from_s3
+    return head :forbidden unless SingleUserExperiment.enabled?(user: current_user, experiment_name: 'lesson-tutor')
+    podcast_filename = AiStudentPodcastsHelper.s3_filename(podcast_params[:lesson_id], podcast_params[:objective_ids])
+    return head :not_found unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, podcast_filename)
+    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, podcast_filename)
+    send_data podcast, type: 'audio/mpeg', disposition: 'inline'
   end
 
   # POST /ai_student_podcasts/generate_podcast

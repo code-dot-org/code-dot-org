@@ -1210,6 +1210,7 @@ Dashboard::Application.routes.draw do
     resources :ai_student_podcasts, only: [:show] do
       collection do
         post :generate_podcast
+        get :retrieve_podcast_from_s3
       end
     end
 

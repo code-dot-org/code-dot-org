@@ -112,6 +112,15 @@ $purple: #9657c7;
     outline: 2px solid #a374d6;
     outline-offset: 2px;
   }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+
+    &:hover {
+      color: #d4dae1;
+    }
+  }
 }
 
 .playButton {
@@ -135,6 +144,15 @@ $purple: #9657c7;
   &:focus-visible {
     outline: 2px solid #a374d6;
     outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+
+    &:hover {
+      background: #fff;
+    }
   }
 }
 

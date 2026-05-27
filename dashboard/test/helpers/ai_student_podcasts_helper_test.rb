@@ -156,7 +156,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(generated_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(@podcast.id),
+      AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
     )
@@ -175,7 +175,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(existing_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(@podcast.id),
+      AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
     )
@@ -190,10 +190,11 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   test "retrieve_podcast_from_s3 delegates to AWS::S3.download_from_bucket" do
     AWS::S3.expects(:download_from_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(42)
+      AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns('mp3-bytes')
 
-    assert_equal 'mp3-bytes', AiStudentPodcastsHelper.retrieve_podcast_from_s3(42)
+    assert_equal 'mp3-bytes',
+      AiStudentPodcastsHelper.retrieve_podcast_from_s3(@lesson.id, [@objective.id])
   end
 
   # *****
@@ -268,9 +269,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # s3_filename tests
   # *****
 
-  test "s3_filename returns folder-prefixed mp3 filename including the podcast id" do
-    assert_equal 'student_podcasts/student_podcast_42.mp3',
-      AiStudentPodcastsHelper.s3_filename(42)
+  test "s3_filename builds a folder-prefixed key from lesson_id and sorted objective_ids" do
+    assert_equal 'student_podcasts/student_podcast_7-3-5-9.mp3',
+      AiStudentPodcastsHelper.s3_filename(7, [9, 3, 5])
   end
 
   # *****
