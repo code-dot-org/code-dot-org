@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-18 18:35:04 UTC",
+    "serialized_at": "2026-05-19 23:35:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6163,6 +6163,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/1/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Brand Identity",
       "url": "https://docs.google.com/presentation/d/14L83a37wE_O0DqL69JvOU9x7RY4ieb6pB_tI2VW0C10/edit?usp=sharing",
       "key": "brand_identity",
@@ -6712,6 +6734,18 @@
     {
       "seeding_key": {
         "resource.key": "ai-generated_design_unit_guide_1",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "ai-generated-design-2026"
       }
     }

@@ -12,8 +12,13 @@ $(document).ready(() => {
         return;
       }
 
+      const props = {
+        ...container.dataset,
+        allowEmbeds: container.dataset.allowEmbeds === 'true',
+      };
+
       ReactDom.render(
-        React.createElement(SafeMarkdown, container.dataset, null),
+        React.createElement(SafeMarkdown, props, null),
         container
       );
     }

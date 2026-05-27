@@ -1,0 +1,51 @@
+name 'self-paced-TCaAI-L2-BI2-KeyLessonMoments'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: AI Requires Human Judgment
+
+The idea that humans must evaluate AI outputs develops throughout the middle of the unit as students begin recognizing that AI-generated responses are not automatically trustworthy simply because they sound polished or helpful.
+
+## Lesson 5: Creating a Chatbot
+
+<img 
+src="https://images.code.org/b79a6815792eca814e05c108714c5c85-image-1779235336832.jpg" 
+alt="" 
+style="width:35%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/5" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+**Lesson Objectives**: 
+
+* Create user guidelines for effective co-creation with AI based on experimental evidence.
+* Distinguish between helpful and harmful uses of AI.
+
+### Student Activity: Analyze a Chatbot
+
+In this lesson, students explore how chatbot behavior changes based on the prompts and instructions humans provide. As students revise prompts and compare outputs, they begin noticing that AI responses can sound polished and convincing while still being vague, incomplete, or unhelpful.
+
+Students experiment with adding context and goals into prompts to make AI outputs more targeted, but they also learn that improving a prompt does not eliminate the need for human judgment.
+
+Throughout the activity, students are pushed to evaluate:
+* whether an AI response actually serves its intended purpose
+* what details make an output more or less useful
+* when an output should be revised, questioned, or rejected altogether
+
+### Try It Out!
+
+Open the Lesson 5 lesson plan and read through the Warm-Up and Activity sections to get a sense of how students build and test custom chatbot prompts. In the next level, you’ll experience an activity from Lesson 5 where students analyze and revise a chatbot’s system prompt.
+
+As you test the chatbot and change parts of the prompt, pay attention to how small prompt changes affect the chatbot’s behavior.
+
+While interacting with the level, consider:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> What kinds of judgment do students need to make when deciding whether an AI output is actually useful or trustworthy?
+</p>
+
+</div>
+
+MARKDOWN

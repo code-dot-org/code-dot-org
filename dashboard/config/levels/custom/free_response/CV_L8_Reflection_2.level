@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Confidence Scores\r\n\r\n#### What is a confidence score, and why is it important in the output of a computer vision model?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Confidence Scores\r\n\r\nWhat is a confidence score, and why is it important in the output of a computer vision model?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

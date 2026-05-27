@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Real-World Applications\r\n\r\n#### How can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Real-World Applications\r\n\r\nHow can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

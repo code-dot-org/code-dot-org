@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 21:34:31 UTC",
+    "serialized_at": "2026-05-19 22:36:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6550,7 +6550,7 @@
       "url": "https://docs.google.com/document/d/1UjbILX-9ROJQTIQZ6nUjaE7qVxCYGkGR1CVXdiIuvIw/edit?usp=sharing",
       "key": "_key_user_profiles_audit_log_suspicious_activity",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
@@ -6563,7 +6563,7 @@
       "url": "https://docs.google.com/presentation/d/1gtjg3TyBdRwjwA4NOLQEjwtG1WNlx505HicRtzkQTYk/edit?usp=sharing",
       "key": "aaa_and_ai",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
@@ -8506,6 +8506,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

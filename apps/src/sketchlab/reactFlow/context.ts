@@ -58,3 +58,11 @@ export const ClipboardProvider = ClipboardContext.Provider;
 export function useClipboard(): ClipboardContextValue {
   return useContext(ClipboardContext);
 }
+
+const PushSnapshotContext = createContext<() => void>(() => {});
+
+export const PushSnapshotProvider = PushSnapshotContext.Provider;
+
+export function usePushSnapshot(): () => void {
+  return useContext(PushSnapshotContext);
+}

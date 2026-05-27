@@ -123,7 +123,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     expected_request = {
       user_id: @teacher.id,
       lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
-      unit_id: @unit.id
+      unit_id: @unit.id,
+      credits_available: false
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -139,7 +140,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     expected_request = {
       user_id: @teacher.id,
       lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
-      unit_id: @unit.id
+      unit_id: @unit.id,
+      credits_available: false
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -159,7 +161,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     expected_request = {
       user_id: @teacher.id,
       lesson_ids: [],
-      unit_id: unit_without_plans.id
+      unit_id: unit_without_plans.id,
+      credits_available: false
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -240,7 +243,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     expected_request = {
       user_id: @teacher.id,
       lesson_ids: [@lesson_with_plan.id],
-      unit_id: @unit.id
+      unit_id: @unit.id,
+      credits_available: false
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)

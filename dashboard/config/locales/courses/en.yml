@@ -887,7 +887,7 @@ en:
             * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
-          version_title: ''
+          version_title: "'24-'25"
         lorisandbox:
           title: lorisandbox
           description_short: ''
@@ -6846,9 +6846,26 @@ en:
           version_title: "'26-'27"
         ai-foundations-exploring-ai-and-cs-2026:
           title: 'AI Foundations: Exploring AI and CS'
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: 'In AI Foundations: Exploring AI and CS, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.'
+          description_teacher: |-
+            AI Foundations: Exploring AI and CS introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF: Exploring AI and CS is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-2026) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu.
           version_title: Fall 2026
         aif-designing-and-building-with-ai-2026:
           title: 'AI Foundations: Designing and Building with AI'
@@ -6858,9 +6875,26 @@ en:
           version_title: Fall 2026
         ai-foundations-year1-2026:
           title: AI Foundations Year 1
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: AI Foundations is a full-year course that builds students' CS and AI knowledge while empowering them to create meaningful, human-centered work.
+          description_student: 'AI Foundations is a full-year course where you''ll learn how computers and AI actually work — and how to build with them. In the first semester, you''ll write your own programs, explore how the Internet and cybersecurity work, and dig into how AI makes decisions and shapes real people''s lives. In the second semester, you''ll step into the designer''s seat: learning JavaScript and teaming up with AI to build interactive web apps that are useful, thoughtful, and human-centered. By the end of the year, you''ll know how to think like a computer scientist, ask sharper questions about technology, and use computing and AI to build things that matter to you.'
+          description_teacher: |-
+            AI Foundations is a full-year course that builds students' understanding of CS and AI. In the first semester, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions — writing programs, analyzing the Internet, investigating cybersecurity, and examining how AI impacts individuals and communities. In the second semester, students step into the role of intentional designers, learning JavaScript and working alongside AI to build interactive, human-centered web apps that are technically functional and ethically informed. Across both semesters, students develop computational thinking, critical analysis, and creative problem-solving skills to use computing and AI to build meaningful things in their world.
+
+            ## Prerequisites
+
+            AI Foundations is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-2026) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu.
           version_title: "'26-'27"
         hoai-web-design-pilot-v1:
           title: hoai-web-design-pilot-v1
@@ -6885,15 +6919,39 @@ en:
           version_title: "'25-'26"
         ai-foundations-designing-and-building-with-ai-2026:
           title: 'AI Foundations: Designing and Building with AI'
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_short: Students build interactive web apps with JavaScript while using AI as a creative coding partner to design technology that reflects their ideas and values.
+          description_student: 'AI Foundations: Designing and Building with AI helps you become a creator who works with AI to build interactive web apps that matter. You learn JavaScript and use AI tools to generate, edit, and improve code across HTML, CSS, and JavaScript while developing skills in problem-solving, design, and systems thinking. Through a series of projects, you design and build apps that are creative, functional, and responsible. By the end of the course, you''ll have the confidence to code, collaborate thoughtfully with AI, and create technology that reflects your own ideas and values.'
+          description_teacher: |-
+            AI Foundations: Designing and Building with AI equips students to become intentional designers who work alongside AI to build meaningful, interactive web apps. Students learn JavaScript while using AI to generate, adapt, and refine code across HTML, CSS, and JavaScript, developing computational thinking, human-centered design, and systems thinking skills. Across a progression of projects, they design and build interactive applications that are both technically functional and ethically informed, leaving the course with the confidence to program, collaborate thoughtfully with AI, and create systems that reflect their values and vision.
+
+            ## Prerequisites
+
+            AIF: Designing and Building with AI is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-2026) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu.
+          version_title: Fall 2026
         ai-discoveries-2026:
           title: AI Discoveries
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: AI Discoveries is a middle school CS and AI course where students build websites, apps, and games while learning to investigate and shape the AI systems around them.
+          description_student: AI Discoveries is a course about creating with computer science and AI, and thinking critically about the AI systems shaping the world around you. You'll build websites, apps, and games of your own design — for purposes you care about and audiences you choose. You investigate AI systems already in your life, training your own models, programming with them, and auditing whether they actually work for the people they're meant to serve. Along the way, you work with data to answer questions you genuinely want to answer, examine how computing technologies get shaped by the people who build them, and design alternatives to systems that fall short. AI Discoveries treats you as someone capable of figuring out how these technologies work, deciding when they're worth using, and building things that reflect your own ideas about what's worth making.
+          description_teacher: |-
+            AI Discoveries is an introductory, classroom-based course appropriate for 6–8th grade students. The course aims to empower students to create authentic artifacts and engage with computer science and AI as media for creativity, communication, problem solving, and exploration. AI Discoveries (AID) takes a wide lens on computer science by covering topics such as programming, web development, design, and data, while placing AI literacy and computational thinking at the center of the experience. The course inspires students as they build their own websites, apps, and games and as they develop the critical thinking skills to understand and evaluate the AI systems shaping their world.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Discoveries. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-discoveries-2026) for our self-paced online option.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu.
           version_title: "'26-'27"
         web-development-2026:
           title: Web Development
@@ -6984,10 +7042,10 @@ en:
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: ''
         teaching-ai-discoveries-2026:
-          title: Teaching AI Discoveries
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          title: Preparing to Teach AI Discoveries
+          description_short: After completing this online professional learning module, you'll be ready to get started teaching Code.org's AI Discoveries curriculum with your students.
+          description_student: "## Welcome\n#####Welcome to Code.org's free self-paced online course for educators to get started teaching AI Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s AI Discoveries course** with your students.\n\n#### **Find the learning that works for you**\n* #####**Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and AI Discoveries. However, you can **engage with the content in the order that best meets your needs.** "
+          description_teacher: "T## Welcome\n#####Welcome to Code.org's free self-paced online course for educators to get started teaching AI Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s AI Discoveries course** with your students.\n\n#### **Find the learning that works for you**\n* #####**Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and AI Discoveries. However, you can **engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         intro-to-web-lab:
           title: Intro to Web Lab
@@ -7029,7 +7087,7 @@ en:
             * Become a part of a network of teachers who are doing similar work.
           version_title: "'25-'26"
         teaching-web-dev-2026:
-          title: Teaching Web Development
+          title: Preparing to Teach Web Development
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Web Development.
           description_student: |-
             ## Welcome
@@ -7055,7 +7113,7 @@ en:
           description_teacher: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
           version_title: "'26-'27"
         teaching-data-and-society-2026:
-          title: Teaching Data and Society
+          title: Preparing to Teach Data and Society
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Teaching Data and Society.
           description_student: |-
             ## Welcome
@@ -7081,40 +7139,52 @@ en:
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-ai-ml-2026:
-          title: Teaching AI and Machine Learning
+          title: Preparing to Teach AI and Machine Learning
           description_short: This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning.
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s AI Discoveries Unit 2 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers AI Discoveries Unit 2 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s AI Discoveries Unit 2 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers AI Discoveries Unit 2 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-creating-apps-with-devices-circuit-2026:
-          title: Teaching Creating Apps with Devices (Circuit Playground)
+          title: Preparing to Teach  Creating Apps with Devices (Circuit Playground)
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (Circuit Playground) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices (Circuit Playground). However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (Circuit Playground) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices (Circuit Playground). However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-interactive-animations-and-games-2026:
-          title: Teaching Interactive Animations and Games
+          title: Preparing to Teach Interactive Animations and Games
           description_short: ''
           description_student: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_teacher: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           version_title: "'26-'27"
         teaching-creating-apps-with-devices-microbit-2026:
-          title: 'Preparing to Teach: Creating Apps with Devices (micro:bit)'
+          title: Preparing to Teach Creating Apps with Devices (micro:bit)
           description_short: " After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit)** Unit with your students."
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-exploring-ai-and-computing-2026:
-          title: 'Preparing to Teach: Exploring AI and Computing'
+          title: 'Preparing to Teach AI Foundations: Exploring AI and CS'
           description_short: ''
-          description_student: "The [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\nThis Professional Learning covers Semester 1 of the AI Foundations Curriculum. Semester 2 is currently in development.\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
-          description_teacher: "The [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\nThis Professional Learning covers Semester 1 of the AI Foundations Curriculum. Semester 2 is currently in development.\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
+          description_student: "The [**AI Foundations Curriculum: Exploring AI and CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out [**AIF: Exploring AI and CS**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
+          description_teacher: "The [**AI Foundations Curriculum: Exploring AI and CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out [**AIF: Exploring AI and CS**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
           version_title: "'26-'27"
         teaching-designing-and-building-with-ai-2026:
-          title: 'Preparing to Teach: Designing & Building with AI Curriculum'
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          title: 'Teaching AI Foundations: Designing & Building with AI Curriculum'
+          description_short: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          description_student: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          description_teacher: |-
+            # Welcome!
+            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
           version_title: "'26-'27"
         tools-ai-enabled-classroom-facilitators-2026:
           title: tools-ai-enabled-classroom-facilitators-2026
@@ -7227,9 +7297,29 @@ en:
           version_title: "'26-'27"
         thinking-critically-about-ai-2026:
           title: Thinking Critically About AI
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: 'Students build a durable lens for thinking critically about AI: how it works, why it fails, and how to use it responsibly.'
+          description_student: |-
+            In this unit, students develop the conceptual foundation and habits of mind they'll need to engage with AI thoughtfully. Students examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. They investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, students develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, students have a durable lens for thinking about AI.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Recognize common ways AI appears in daily life and digital tools.
+            - Explain at a high level how AI systems generate outputs and why they can be wrong.
+            - Evaluate AI outputs for accuracy, bias, and appropriateness.
+            - Describe how data and human decisions influence AI behavior.
+            - Make responsible choices about when and how to use AI.
+            - Articulate personal and shared norms for ethical and productive AI use.
+          description_teacher: |-
+            In this unit, you develop the conceptual foundation and habits of mind you'll need to engage with AI thoughtfully. You examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. You investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, you develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, you have a durable lens for thinking about AI.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Recognize common ways AI appears in daily life and digital tools.
+            - Explain at a high level how AI systems generate outputs and why they can be wrong.
+            - Evaluate AI outputs for accuracy, bias, and appropriateness.
+            - Describe how data and human decisions influence AI behavior.
+            - Make responsible choices about when and how to use AI.
+            - Articulate personal and shared norms for ethical and productive AI use.
           version_title: "'26-'27"
         data-society-2026:
           title: Data and Society
@@ -7286,4 +7376,91 @@ en:
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          version_title: "'26-'27"
+        aif-year2-semester1-pilot:
+          title: AI Foundations Year 2 Semester 1 Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-ai-101-2026:
+          title: AI 101 Professional Learning for Educators
+          description_short: ''
+          description_student: |-
+            ## Welcome!
+            Welcome to Code.org's self-paced online course for educators to get started with AI.
+
+            This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            In this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.
+
+            Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
+          description_teacher: |-
+            ## Welcome!
+            Welcome to Code.org's self-paced online course for educators to get started with AI.
+
+            This is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            In this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.
+
+            Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**
+          version_title: "'26-'27"
+        computing-foundations-for-a-digital-age-2027:
+          title: 'Computing Foundations for a Digital Age: Indiana (AI Foundations)'
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: 'In Computing Foundations for a Digital Age: Indiana (AI Foundations), you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.'
+          description_teacher: |-
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching Computing Foundations for a Digital Age: Indiana (AI Foundations). [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'26-'27"
+        teaching-thinking-critically-about-ai-2026:
+          title: Preparing to Teach Thinking Critically About AI
+          description_short: This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+          description_student: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
+          description_teacher: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
           version_title: "'26-'27"

@@ -1200,7 +1200,7 @@ class Unit < ApplicationRecord
   end
 
   def finish_url(unit_group_unit: nil)
-    return hoc_finish_url if hoc_or_hoai?
+    return hoc_finish_url if hoc_or_hoai? && !pl_course?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
     ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)

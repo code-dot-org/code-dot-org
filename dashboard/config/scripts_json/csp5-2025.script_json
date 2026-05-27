@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:21:10 UTC",
+    "serialized_at": "2026-05-19 19:57:07 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3306,6 +3306,21 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Exploring Two Columns",
+      "url": "https://docs.google.com/document/d/1TjJxUqmlIJP9QoAzO45ZV9cHLdduAVYLPT7_liDqapg/",
+      "key": "_key_exploring_two_columns",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_two_columns"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp5-2023/resources",
       "key": "all_resources_4",
@@ -3857,6 +3872,12 @@
       "seeding_key": {
         "lesson.key": "Exploring One Column",
         "resource.key": "exploring_one_column_data_unit_lesson_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "_key_exploring_two_columns"
       }
     },
     {
@@ -4870,6 +4891,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

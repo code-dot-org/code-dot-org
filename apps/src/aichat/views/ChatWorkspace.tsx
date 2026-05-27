@@ -87,6 +87,9 @@ interface ChatWorkspaceProps {
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
   disabledState?: AiChatDisabledState;
+  // If true, disables the ability to send messages. disabledState takes precendence over this, and
+  // will disable the entire workspace.
+  disableSendingMessages?: boolean;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -114,6 +117,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       hasInstructionsDrawer,
       lessonId,
       disabledState,
+      disableSendingMessages,
       renderLastMessagePostText,
     },
     ref
@@ -412,7 +416,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
               lessonId={lessonId}
-              chatDisabled={disabled}
+              chatDisabled={disabled || disableSendingMessages}
             />
           )}
         </div>

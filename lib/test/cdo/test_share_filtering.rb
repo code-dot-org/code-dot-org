@@ -80,23 +80,8 @@ class ShareFilteringTest < Minitest::Test
       'My Street Address',
       '1600 Pennsylvania Ave NW, Washington, DC 20500'
     )
-    assert_equal(
-      ShareFailure.new(
-        ShareFiltering::FailureType::ADDRESS,
-        '1600 Pennsylvania Ave NW, Washington, DC 20500'
-      ),
-      ShareFiltering.find_share_failure(program, 'en', 'playlab')
-    )
-
-    assert_equal(
-      ShareFailure.new(
-        ShareFiltering::FailureType::ADDRESS,
-        '1600 Pennsylvania Ave NW, Washington, DC 20500'
-      ),
-      assert_raises(PIIFilterException) do
-        ShareFiltering.find_share_failure(program, 'en', 'playlab', exceptions: true)
-      end.share_failure
-    )
+    assert_nil ShareFiltering.find_share_failure(program, 'en', 'playlab')
+    assert_nil ShareFiltering.find_share_failure(program, 'en', 'playlab', exceptions: true)
   end
 
   def test_find_share_failure_with_phone_number

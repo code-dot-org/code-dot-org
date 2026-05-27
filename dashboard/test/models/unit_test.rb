@@ -2160,6 +2160,18 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'finish_url for hoai pl unit returns certificate url, not hoc finish url' do
+    unit = create(:script)
+    course = create(:single_unit_course, unit: unit, instructor_audience: 'facilitator', participant_audience: 'teacher')
+    CourseOffering.add_course_offering(course).update!(marketing_initiative: 'HOAI')
+    unit.reload
+
+    assert unit.hoc_or_hoai?
+    assert unit.pl_course?
+    encoded_course_name = ERB::Util.url_encode(Base64.urlsafe_encode64(course.name))
+    assert_equal "#{CDO.default_scheme}//test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
+  end
+
   test 'finish_url returns unit group finish url if in a unit group' do
     unit_group = create(:unit_group)
     unit = create(:script)

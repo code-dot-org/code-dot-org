@@ -1,0 +1,60 @@
+name 'self-paced-TCaAI-L2-BI3-KeyLessonMoments'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: Context and Risk Matter
+
+The idea that responsible AI use depends on context begins to emerge as students move beyond “AI is good” or “AI is bad” thinking and toward more conditional reasoning about when AI should — and should not — be used.
+
+## Lesson 6: Getting Feedback
+
+<img 
+src="https://images.code.org/38736279d36ee6d5ab89076052c49da3-image-1779249355754.jpg" 
+alt="" 
+style="width:35%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/6" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+📎 **Student Resource**: <a href="https://docs.google.com/document/d/1HcYRUZBRas6UC-9JL8hpJHjJRZvDiJ2gIaOhLwNpTYs/edit?usp=sharing" target="blank" rel="noopener noreferrer">AI or Nah? Card Sort</a>
+
+**Lesson Objectives**: 
+
+* Evaluate feedback from both AI and a peer and explain why some suggestions are more useful than others.
+* Write clear guidance for others about when and why to use AI based on your own reasoning and judgment.
+
+### Student Activity: AI or Nah?
+
+In this warm-up activity, students sort different real-world AI use cases into three categories:
+
+* Use AI
+* Don’t Use AI
+* It Depends
+
+As students discuss and defend their decisions, they begin to recognize that responsible AI use often depends on context rather than simple rules.
+
+Many of the most productive discussions happen in the “It Depends” category, where students must consider:
+
+* What is at stake
+* Who could be affected
+* Whether human judgment is necessary
+* What risks might emerge if AI makes a mistake
+
+This activity helps students move toward more nuanced and conditional reasoning about responsible AI use.
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+Open the Lesson 6 lesson plan and read through the Warm-Up discussion prompts and sample scenarios from the AI or Nah? activity.
+
+As you explore the activity, consider the following question:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> What examples might you add to the list of scenarios based on your students' interests?
+</p>
+
+</div>
+MARKDOWN

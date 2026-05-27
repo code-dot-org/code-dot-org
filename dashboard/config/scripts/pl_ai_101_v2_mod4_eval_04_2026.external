@@ -1,0 +1,174 @@
+name 'pl-ai-101-V2-mod4-eval-04_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Evaluating AI Use in the Classroom
+
+Using AI does not guarentee that your lesson plan will be support the needs of your students.
+
+Before using AI for teacher support or student learning, you will want to evaluate whether or not it will meet the needs of your students. To do so, you can use a checklist like the one below:
+
+<br>
+
+<table style="width:100%; max-width:700px; margin:0 auto; border-collapse:separate; border-spacing:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36; background-color:#FFFFFF; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(41,47,54,0.05);">
+<thead>
+<tr>
+<th colspan="2" style="background-color:#0093A4; color:#FFFFFF; text-align:left; padding:14px 18px; font-size:20px; font-weight:700; line-height:1.3;">
+Evaluating AI Use Checklist
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Are the learning objectives maintained?
+</td>
+</tr>
+  
+<tr>
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Does this expand access while keeping the challenge?
+</td>
+</tr>
+
+<tr style="background-color:#F7F8FA;">
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Are students still doing the meaningful thinking?
+</td>
+</tr>
+
+<tr>
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Does this strengthen student voice and identity?
+</td>
+</tr>
+
+<tr style="background-color:#F7F8FA;">
+<td style="width:44px; padding:14px 0 14px 18px; border-top:1px solid #E8ECF0; vertical-align:top;">
+<div style="width:18px; height:18px; border:2px solid #8C52BA; border-radius:4px;"></div>
+</td>
+<td style="padding:14px 18px 14px 0; border-top:1px solid #E8ECF0; font-size:15px; line-height:1.4;">
+Will this build independence over time?
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<br>
+
+If most answers are yes, the design is likely supporting strong teaching and meaningful learning.
+
+## Evaulation Scenarios
+
+Take a look at two scenarios where AI was used in the classroom. We'll use these as examples of how to apply the checklist.
+
+👉 Click on the scenario to see how it does against the checklist.
+
+> **💬 Quick Reflection:** Take a moment to evaluate each scenario on your own before clicking to show the answer.
+
+--- 
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 1
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+A 7th-grade math student is solving multi-step equations and keeps making the same mistake. They ask AI for “a hint only” and then “one worked example that is similar but not the same.” The student completes the problem, compares their steps to the example, and writes a quick note about the error they fixed.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p><strong>Expand access while keeping the challenge? ✔︎</strong><br>
+The hint provides support, but the student still solves the original grade-level problem.</p>
+
+<p><strong>Students still doing meaningful thinking? ✔︎</strong><br>
+The student analyzes their mistake, compares steps, and reflects on their correction.</p>
+
+<p><strong>Strengthens voice and identity? ✔︎</strong><br>
+The reasoning and final solution remain the student’s own.</p>
+
+<p><strong>Builds independence over time? ✔︎</strong><br>
+Scaffolded help plus reflection supports skill growth and future problem-solving.</p>
+
+<p style="margin-top:12px;"><strong>Overall:</strong> This design increases access while preserving rigor, ownership, and long-term growth.</p>
+</div>
+</details>
+
+<br>
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 2
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+An 8th-grade English student writes a literary analysis essay and asks AI to improve clarity and make the writing more sophisticated. The student reviews the suggestions and accepts most of them. The final essay is stronger and now mirrors work typically produced by a 12th-grade student.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p><strong>Expand access while keeping the challenge? ◑</strong><br>
+The product improves, but the cognitive challenge of crafting language may be reduced.</p>
+
+<p><strong>Students still doing meaningful thinking? ✖︎</strong><br>
+Accepting broad revisions limits the student’s active revision and stylistic decision-making.</p>
+
+<p><strong>Strengthens voice and identity? ✖︎</strong><br>
+Heavy rewriting can shift or dilute authentic student voice.</p>
+
+<p><strong>Builds independence over time? ✖︎</strong><br>
+Repeated reliance on AI for stylistic upgrades may slow development of writing skills.</p>
+
+<p style="margin-top:12px;"><strong>Overall:</strong> The essay appears stronger, but the design does not fully support independence, ownership, or deep skill development.</p>
+</div>
+</details>
+
+<br>
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
+<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
+Scenario 3
+</div>
+<div style="font-size:16px; color:#555; margin-bottom:10px;">
+A high school social studies teacher assigns a presentation on renewable energy and provides students with a slide template to organize their ideas. To support students, the teacher integrates AI into the planning stage. Students first create their own rough outline, then ask AI to generate an alternative way to organize the presentation. Students compare both structures, revise their plans, and explain which organizational choices they kept and why.
+</div>
+</summary>
+
+<div style="padding:18px; font-size:18px; line-height:1.5;">
+
+<p><strong>Expand access while keeping the challenge? ✔︎</strong><br>
+AI supports brainstorming and organization, but students still create and revise their own presentation structure.</p>
+
+<p><strong>Students still doing meaningful thinking? ✔︎</strong><br>
+Students compare multiple organizational approaches, evaluate effectiveness, and make intentional decisions about audience and sequencing.</p>
+
+<p><strong>Strengthens voice and identity? ✔︎</strong><br>
+The final presentation reflects student choices, priorities, and communication style rather than a single template.</p>
+
+<p><strong>Builds independence over time? ✔︎</strong><br>
+Students develop stronger organizational and planning skills by practicing how to evaluate and revise structures independently.</p>
+
+<p style="margin-top:12px;"><strong>Overall:</strong> This design increases student ownership and deeper thinking by using AI as a comparison tool rather than a replacement for student decision-making.</p>
+</div>
+</details>
+MARKDOWN

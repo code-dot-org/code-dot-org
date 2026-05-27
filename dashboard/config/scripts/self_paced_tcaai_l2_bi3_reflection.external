@@ -1,0 +1,52 @@
+name 'self-paced-TCaAI-L2-BI3-Reflection'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Key Lesson Moments: Context and Risk Matter
+
+## Lesson 8: AI Privacy and Safety
+
+<img 
+src="https://images.code.org/1d813120ea57078937abdf39ded8cc84-image-1779249540057.jpeg" 
+alt="" 
+style="width:35%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/8" target="blank" rel="noopener noreferrer">Lesson Plan Link</a>
+
+📎 **Student Resource**: <a href="https://docs.google.com/document/d/1LIw4YHQI0oTthaV0WMDd3pu_yw1fG5Xt2g8XCpulaWY/edit?usp=sharing" target="blank" rel="noopener noreferrer">Privacy and Safety Exploration</a>
+
+**Lesson Objectives**: 
+
+* Analyze potential consequences of oversharing in an AI-enabled world.
+* Distinguish between public, private, and sensitive information.
+* Explain how AI systems use pattern recognition to create detailed output.
+
+### Student Activity: Z-Tech's Selfie
+
+This lesson begins with a mystery scenario: a famous streamer named Z-Tech suddenly stops posting online after strangers identify where he lives using only details from a selfie he shared publicly.
+
+Students examine the selfie and search for “invisible” clues that could reveal information about Z-Tech’s location or identity. As they investigate, students begin realizing that:
+
+* small pieces of information can combine to create major privacy risks
+* AI systems can help people identify patterns humans might overlook
+* information that feels harmless in isolation can become risky in context
+
+As students discuss their findings, they begin moving toward more nuanced thinking about privacy, safety, and responsible information sharing online.
+
+<div style="clear:both;"></div>
+
+### Try It Out!
+
+Open the Lesson 8 lesson plan and read through the Warm-Up and discussion prompts connected to the Z-Tech selfie investigation.
+
+As you explore the activity, consider the following question:
+
+<div style="background-color:#F5F7F8; padding:18px; border-radius:10px; margin:20px 0px;">
+
+<p style="font-size:16px; margin:0;">
+<strong>Reflection:</strong> How can activities like the Z-Tech investigation help students recognize that privacy and safety risks often depend on context and combinations of information?
+</p>
+
+</div>
+MARKDOWN
