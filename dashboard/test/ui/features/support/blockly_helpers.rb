@@ -72,8 +72,8 @@ module BlocklyHelpers
         })[0];
         if (!el) return;
         var rect = el.getBoundingClientRect();
-        var startX = rect.left + rect.width / 2;
-        var startY = rect.top + rect.height / 2;
+        var startX = rect.left + 1;
+        var startY = rect.top + 1;
         var endX = startX + #{dx.to_i};
         var endY = startY + #{dy.to_i};
         var moves = 8;
