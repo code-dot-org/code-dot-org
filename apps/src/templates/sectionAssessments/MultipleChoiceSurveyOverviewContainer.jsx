@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -26,12 +27,12 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
     } = this.props;
     return (
       <div>
-        <h2>
+        <Typography variant="h2">
           {i18n.multipleChoiceQuestionsOverview({
             numSubmissions: totalStudentSubmissions,
             numStudents: totalStudentCount,
           })}
-        </h2>
+        </Typography>
         {multipleChoiceSurveyData.length > 0 && (
           <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData}

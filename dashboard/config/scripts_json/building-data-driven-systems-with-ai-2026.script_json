@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 07:09:34 UTC",
+    "serialized_at": "2026-05-21 11:35:59 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -106,8 +106,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**How do arrays help us keep track of and update information in a program?**\n\nIn this lesson, students explore how to organize related data using arrays, moving beyond single-value variables to structured collections. They construct arrays, retrieve values by index to update the DOM, and utilize properties like .length. The lesson emphasizes the importance of clear data structure for both user-facing features and AI comprehension, with students using AI to generate sample data and debug common indexing errors while maintaining responsibility for verifying the code.",
-        "student_overview": "**How do arrays help us keep track of and update information in a program?**\n\nIn this lesson, you learn how to organize lists of related information using a data structure called an array. You build a personal favorites list and a dynamic magazine cover by creating arrays and writing code to display specific items on the screen based on their position. Along the way, you use AI to help generate content and fix bugs, learning why keeping data organized helps both you and computer programs understand your app better."
+        "overview": "**How do arrays help us keep track of and update information in a program?**\n\nStudents move from single-value variables to ordered collections by exploring arrays. Through an unplugged concert line activity, they build intuition for positions (indices) versus values (items), then transfer that model to code by declaring arrays, accessing items by index, updating values, and using .length. The lesson also introduces the idea that well-structured data helps both programmers and AI tools understand information accurately.",
+        "student_overview": "**How do arrays help us keep track of and update information in a program?**\n\nEver wonder how an app keeps your playlist in order, or how a concert venue knows exactly who's next in line? It comes down to arrays, one of the most powerful tools in programming. In this lesson, you act out a concert line, figure out what happens when people join, leave, or swap spots, and then bring that same thinking into code. By the end, you can build, read, and update lists that any app (or AI) can actually work with."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Intro to Data Structures",
@@ -123,8 +123,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How can planning your data ahead of time help prevent mistakes when you display it?**\n\nIn this lesson, students learn how defining an informal schema helps them structure data clearly and safely before rendering it in an interface. They brainstorm fields and data types, refine their schema using AI, and then update an app display to match their design. Students also consider privacy implications and evaluate how schema decisions affect clarity and accessibility.",
-        "student_overview": "**How can planning your data ahead of time help prevent mistakes when you display it?**\n\nIn this lesson, you learn how to plan out the structure of your data using a schema so your app displays information clearly and safely. You design and refine your own schema, get feedback from AI, and then update an app to match your plan. By the end, you see how good data planning makes interfaces easier to understand and helps protect users’ privacy."
+        "overview": "**How can planning your data ahead of time help prevent mistakes when you display it?**\n\nStudents learn that a clear data plan, an informal schema, makes building user interfaces faster and less error-prone. They explore an existing UI to identify repeating fields, define data types for each field, and use AI to generate sample arrays that match their plan. The lesson also surfaces privacy considerations around what data is safe to share with AI tools.",
+        "student_overview": "**How can planning your data ahead of time help prevent mistakes when you display it?**\n\nBefore you build anything, real developers plan what their data needs to look like. In this lesson, you take apart a real interface, figure out what pieces of information show up over and over, and design a plan for your own data before writing a single line of display code. You also tackle a question every developer faces: what data is okay to share with AI, and what should stay private? Planning ahead saves you from messy, mismatched displays later."
       },
       "seeding_key": {
         "lesson.key": "Lesson 2: Turning Data Into Displays",
@@ -140,8 +140,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**How can array methods help us manage collections reliably?**\n\nIn this lesson, students build intuition for managing dynamic data by applying basic array methods—push, pop, shift, and unshift—to real-world scenarios. Through a \"Social Media Story Scheduler\" activity, students act as digital planners, using AI to co-build helper functions that manage parallel arrays (*handling urgent posts or cancellations*). The lesson concludes with a debugging challenge where students identify \"desynced\" data, reinforcing the concept that when arrays hold related data, every method call must update all arrays to avoid mismatched information.",
-        "student_overview": "**How can array methods help us manage collections reliably?**\n\nYou learn how to add, remove, and reorganize items in a list using code commands like push, pop, shift, and unshift. You apply these skills as a social media planner, building tools to handle real-life situations like posting an urgent humidity alert or removing a canceled event. Along the way, you use AI to explain how these commands work and help you debug your code when your data lists get out of sync."
+        "overview": "**How can array methods help us manage collections reliably?**\n\nStudents apply `push`, `pop`, `shift`, and `unshift` to manage dynamic data and recognize how each method changes an array's size and order. Through a social media story scheduler activity, they co-build helper functions with AI and work with parallel arrays. A debugging challenge reinforces that related arrays must be updated together to stay in sync, and students practice evaluating AI explanations against actual program behavior.",
+        "student_overview": "**How can array methods help us manage collections reliably?**\n\nApps are constantly adding, removing, and rearranging stuff: new posts, dismissed notifications, songs skipped in a queue. In this lesson, you take control of that motion using four array methods that let you add or remove items from either end of a list. You also run into one of the trickiest bugs in real apps: what happens when related lists get out of sync? You debug it, fix it, and learn why blindly trusting an AI explanation can lead you in the wrong direction."
       },
       "seeding_key": {
         "lesson.key": "Lesson 3: Basic Array Methods",
@@ -157,8 +157,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**How can we represent real-world data fairly and clearly in code?**\n\nIn this lesson, students shift from using parallel arrays to representing real-world entities using JavaScript objects, creating a more cohesive data structure. Through a co-building activity with AI using the PAIR framework, students create, refactor, and update objects, learning to access properties via both dot and bracket notation. The lesson emphasizes the ethical implications of data representation, challenging students to consider how property choices (schema) shape meaning, fairness, and inclusivity.",
-        "student_overview": "**How can we represent real-world data fairly and clearly in code?**\n\nYou learn how to model real-world items in code using JavaScript objects. You collaborate with AI to build and refine these objects, moving beyond simple lists to structured data that describes specific properties. You practice updating this information using different coding techniques and reflect on how the data fields you choose can impact fairness and how users experience an app."
+        "overview": "**How can we represent real-world data fairly and clearly in code?**\n\nStudents move from parallel arrays to JavaScript objects, learning to group related information about a single entity into one cohesive structure. They define properties, access values using dot and bracket notation, and use AI to generate and refactor objects. The lesson emphasizes that property choices are not neutral, schema decisions shape meaning, fairness, and inclusivity, and students practice critiquing AI-generated objects for hidden assumptions.",
+        "student_overview": "**How can we represent real-world data fairly and clearly in code?**\n\nParallel arrays work, but they get messy fast. What if everything about one thing, your backpack, your favorite snack, a video game character, could live together in a single neat package? That's what objects do. In this lesson, you create objects, update them, and use AI to help generate new ones. But here's the catch: when AI describes something like a \"home\" or a \"family,\" what assumptions sneak in? You get to spot those choices and decide whether they actually represent the real world fairly."
       },
       "seeding_key": {
         "lesson.key": "Lesson 4: Objects for Real-World Data",
@@ -174,8 +174,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How do our data modeling choices influence what users and AI can learn or miss?**\n\nIn this lesson, students explore how lists of objects help organize and manage data that programs and AI systems rely on. They will examine how incomplete or unbalanced lists can introduce **bias**, shaping the outcomes of programs built on those datasets. By the end of the lesson, students will understand both the technical skills for using lists and the importance of creating fair, representative datasets.",
-        "student_overview": "**How do our data modeling choices influence what users and AI can learn or miss?**\n\nToday you learn how computers use lists of objects to store and organize information in a program. You also see how missing or unbalanced data in a list can lead to bias, which can affect how an AI system makes decisions. By the end, you know not just how to build and use lists, but how to make sure the datasets you create are fair and representative."
+        "overview": "**How do our data modeling choices influence what users and AI can learn or miss?**\n\nStudents combine arrays and objects to build datasets, the foundation for almost every real-world app. They generate datasets with AI for topics like animal adoption, community events, or transit stops, then analyze them for patterns of missing or overrepresented data. The lesson introduces bias as a consequence of data choices and asks students to consider how incomplete datasets shape what users and AI systems learn.",
+        "student_overview": "**How do our data modeling choices influence what users and AI can learn or miss?**\n\nEvery app you use, from Spotify to a school directory, runs on a list of things, where each thing has its own set of details. In this lesson, you build datasets using arrays of objects and then take a hard look at what's in them. Whose stories are included? Whose are missing? An AI trained on uneven data can quietly pass those gaps along to millions of users. You get to spot the patterns, ask the tough questions, and think about what fair data actually looks like."
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Lists of Objects",
@@ -191,8 +191,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**How can we turn structured data into clear, useful visuals for users?**\n\nIn this lesson, students explore how to transform structured data into visible interface elements using the .map() method. Using the CHAT framework, they iteratively craft a reusable AI prompt to build a schema-to-card renderer for a community resource app. The lesson emphasizes tracing the flow of data from JavaScript objects to the DOM and refining AI interactions to ensure accurate, user-friendly displays.",
-        "student_overview": "**How can we turn structured data into clear, useful visuals for users?**\n\nIn this lesson, you learn how to turn a list of raw data into a clean, visual display using the `.map()` method. You use the CHAT framework to guide AI in building a \"Cooling Center\" finder, refining your prompts to ensure your app processes and displays information correctly while learning to trace how data moves through your code."
+        "overview": "**How can we turn structured data into clear, useful visuals for users?**\n\nStudents use `.map()` to transform structured data into visible interface elements, tracing the flow from JavaScript objects to the DOM. Using the CHAT framework, they iteratively craft AI prompts to build a schema-to-card renderer. The lesson reinforces that `.map()` applies the same rule to every item, so a flawed rule (whether human- or AI-generated) repeats across the entire dataset, and that breaking big problems into smaller, prompted steps is more reliable than asking AI to build everything at once.",
+        "student_overview": "**How can we turn structured data into clear, useful visuals for users?**\n\nYou've got the data. Now how does it become the rows of cards, posts, or videos you scroll through every day? The answer is `.map()`, a method that applies the same rule to every item in your list. In this lesson, you use it to turn raw data into a real interface, one card at a time. You also learn a key skill for working with AI: instead of asking it to build a whole app, you break the problem down and give it one focused job at a time. That's how pros do it."
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Rendering Lists of Objects",
@@ -208,9 +208,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How can the way we display data affect fairness, accessibility, and trust?**\n\nIn this lesson, students examine how the presentation of data impacts user experience, specifically regarding fairness and accessibility. Acting as accessibility consultants, they use AI to audit code for barriers—such as missing labels or unclear text—and analyze how design choices can unintentionally privilege certain perspectives or obscure others. Students then implement specific code revisions to ensure their applications are inclusive and accurate.",
+        "overview": "**How can the way we display data affect fairness, accessibility, and trust?**\n\nStudents take on the role of accessibility consultants, examining how display choices, what's included, excluded, ordered, or emphasized, shape user experience and trust. Through a card-sorting activity with a shared dataset and different display goals, students design, audit, and revise displays before connecting their observations to how AI systems trained on similar data might inherit the same biases.",
         "preparation": "- (Optional) Print copies of the Accessible or Not? handout (one for each student)",
-        "student_overview": "**How can the way we display data affect fairness, accessibility, and trust?**\n\nYou take on the role of an accessibility consultant to evaluate whether a data display is fair, clear, and usable for everyone. Using AI as an auditing partner, you spot design flaws—like hard-to-read text or biased layouts—and write code fixes to ensure that no user is left out or misled by the way data appears on the screen."
+        "student_overview": "**How can the way we display data affect fairness, accessibility, and trust?**\n\nTwo apps can show the exact same data and leave users with completely different impressions of the world. Why? Because design choices, what gets shown first, what gets left off, what gets a spotlight, are never neutral. In this lesson, you act as a design consultant, audit a peer group's display, get audited back, and revise your work based on real feedback. You walk away knowing how to spot the difference between a display that's clear and inclusive and one that quietly leaves people out."
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
@@ -226,8 +226,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can filter functions help users explore collections fairly and effectively?**\n\nIn this lesson, students learn how filtering helps AI systems narrow down large sets of data to find information that is relevant to a specific goal. They explore examples of filtering in everyday technologies and practice applying filtering criteria to curated datasets. By the end of the lesson, students will understand how filters support efficient decision-making and how choosing different filters can change the output of a program.",
-        "student_overview": "**How can filter functions help users explore collections fairly and effectively?**\n\nToday you learn how computers use filters to sort through lots of information and keep only what matters for a task. You try using different filters yourself and see how they change the results you get. By the end, you understand why filtering is an important first step in helping systems make good decisions."
+        "overview": "**How can filter functions help users explore collections fairly and effectively?**\n\nStudents learn how filter functions use conditions to return subsets of data, and how those conditions encode assumptions about what counts as \"popular,\" \"relevant,\" or \"valid.\" After comparing AI-generated \"Top Rated\" and \"Trending\" book lists, students build and test their own filter functions for a Movie Picker app, using AI to generate edge-case test data and evaluate fairness.",
+        "student_overview": "**How can filter functions help users explore collections fairly and effectively?**\n\nWhy does your \"For You\" page show some videos and not others? Filtering. In this lesson, you learn how a single line of code, a condition, can decide what millions of people see. You build your own filters for a movie app, test them with edge cases, and figure out who or what might get left out by the rules you choose. Spoiler: every filter is a choice, and as a developer, those choices are yours to make."
       },
       "seeding_key": {
         "lesson.key": "Lesson 8: Filtering",
@@ -243,9 +243,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How can search functions help users find what they need in a web app?**\n\nIn this lesson, students move beyond simple rendering to implementing interactive search functionality. They explore the nuances of string matching—identifying why queries like \"blue\" might fail against \"Blue\"—and establish rules for fair, predictable user experiences. Through a choice-based activity using the CHAT framework (Clarify, Hone, Apply, Transfer), students co-build a search feature with AI, focusing on handling edge cases, debugging logic, and validating their functions with rigorous testing.",
+        "overview": "**How can search functions help users find what they need in a web app?**\n\nStudents implement interactive search functionality and investigate the nuances of string matching: why \"blue\" might fail against \"Blue,\" why an empty query returns everything, and what rules make search predictable and fair. Through a choice-based activity, students co-build a search feature with AI using one of three input styles (text field, dropdown, or chips/tags) and validate their function with rigorous edge-case testing.",
         "preparation": "- Print copies of the Searching activity guide (one for each student)",
-        "student_overview": "**How can search functions help users find what they need in a web app?**\n\nIn this lesson, you build a search feature that helps users find exactly what they are looking for. You learn how to handle tricky situations—like differences in capitalization or empty search boxes—and use the CHAT framework to collaborate with AI to build, debug, and test a robust search function for your own app."
+        "student_overview": "**How can search functions help users find what they need in a web app?**\n\nType \"blue\" into a search bar and you'd expect to see blue stuff. But what if the data says \"Blue\"? Capital B, no results. Search seems simple, but the rules underneath it shape what you find and what stays hidden. In this lesson, you build a working search feature, pick the input style that fits your app (a text box, dropdown, or tags), and stress-test it with weird inputs to find the edge cases. By the end, you understand why \"good\" search is a design decision, not just a technical one."
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: Searching",
@@ -261,8 +261,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**How can sort and map functions shape user experience and trust in web apps?**\n\nIn this lesson, students explore how sorting helps programs organize information based on specific attributes or priorities. They then learn how “chaining” allows multiple steps—such as filtering, sorting, and selecting—to be combined to achieve more complex goals. By the end of the lesson, students will understand how chaining operations together enables programs to perform multi-step reasoning on structured data.",
-        "student_overview": "**How can sort and map functions shape user experience and trust in web apps?**\n\nToday you learn how to **sort** data so it’s organized in useful ways, like ranking items from best to worst or shortest to longest. You also learn how to **chain** steps together—first filtering, then sorting, then choosing results—to solve more complicated problems. By the end, you see how chaining makes a program feel like it’s “thinking” through a multi-step plan."
+        "overview": "**How can sort and map functions shape user experience and trust in web apps?**\n\nStudents explore how sorting reorders data based on chosen attributes and how chaining (filter → sort → map) lets programs perform multi-step reasoning. Through a card-based MyTube activity, they compare filter-then-sort versus sort-then-filter sequences for efficiency and fairness, then build their own pipeline in Web Lab and reflect on how each design choice affects who gets seen and who stays hidden.",
+        "student_overview": "**How can sort and map functions shape user experience and trust in web apps?**\n\nOpen any feed: TikTok, YouTube, an app store. The order isn't random. Something decided what gets shown first, and that something is a sort rule combined with a filter and a render step. In this lesson, you build a pipeline that chains these steps together, just like the apps you use every day. You also wrestle with a real question: when you pick \"Most Popular\" over \"Newest,\" who benefits, and who quietly disappears from the top of the screen?"
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Sorting and Chaining",
@@ -278,9 +278,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nIn this project, students design a data-driven app that explores a value of personal importance through a schema, dataset, and interactive features. They examine how data and UI decisions shape user understanding, fairness, and trust. Students iteratively refine their work with AI support, peer feedback, and reflection.",
+        "overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nAcross five days, students design, build, and refine a data-driven web app that explores a value of personal importance. They move through four milestones: planning a schema and dataset, building the interface with `.map()`, adding interactive features (search, filter, or sort), and polishing the final app. Peer feedback (TAG protocol), AI Tutor support, and structured reflections push students to take responsibility for their data choices, their use of AI scaffolds, and the fairness and accessibility of their final product.",
         "preparation": "- Print copies of the Values Explorer Project Planning Guide to students (one for each student)",
-        "student_overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nIn this project, you design a data-driven app based on a value you care about and build a dataset, interface, and interactive features to explore it. You use reflection and iteration to make your app clear, fair, and useful for real users."
+        "student_overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nTime to put it all together. Over the next five days, you design and build a real web app that explores something you actually care about, maybe music, sustainability, mental health, fairness in sports, anything that matters to you. You plan the data, design the interface, add features that let users search, filter, or sort, and polish it until it's something you'd actually want to share. Along the way, you give and get peer feedback, work with AI as a coding partner (not a replacement), and reflect on the choices you made and who they affect. This is your chance to build something that's truly yours."
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Value Explorer Project",
@@ -3922,7 +3922,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Reflection: Array Methods"
       },
@@ -4054,7 +4054,7 @@
       "chapter": 20,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Build a To Do List App"
       },
@@ -4120,7 +4120,7 @@
       "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Create and Update Objects"
       },
@@ -4318,7 +4318,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Check Your Understanding"
       },

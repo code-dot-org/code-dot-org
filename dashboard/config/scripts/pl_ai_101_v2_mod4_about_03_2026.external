@@ -13,41 +13,32 @@ While you can develop your own curriculum for teaching about AI in your classroo
 
   <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
     <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+      <a target="_blank" rel="noopener noreferrer" href="https://studio.code.org/s/oceans?viewAs=Instructor">
+<img src="https://images.code.org/b04745955852abc8ab811cb93b9c6096-Screenshot 2026-05-21 at 9.48.09 AM.png" style="width:100%; height:auto; display:block;">
+    </div></a>
+  </div>
+
+  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
+    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
+      <a target="_blank" rel="noopener noreferrer" href="https://studio.code.org/s/dance-ai?viewAs=Instructor"><img src="https://images.code.org/b487cca6ab14cede235937864d2685e1-Screenshot 2026-05-21 at 9.48.13 AM.png" style="width:100%; height:auto; display:block;"></a>
     </div>
   </div>
 
   <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
     <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+      <a target="_blank" rel="noopener noreferrer" href="https://code.org/curriculum/artificial-intelligence-foundations"><img src="https://images.code.org/ebd97cf40c77f3fb58951c0ef3f54f48-Screenshot 2026-05-21 at 9.48.20 AM.png" style="width:100%; height:auto; display:block;"></a>
     </div>
   </div>
 
   <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
     <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
+      <a target="_blank" rel="noopener noreferrer" href="https://studio.code.org/courses/exploring-gen-ai?viewAs=Instructor"><img src="https://images.code.org/4fa511f5f740679575a0ae264f72823e-Screenshot 2026-05-21 at 9.48.25 AM.png" style="width:100%; height:auto; display:block;"></a>
     </div>
   </div>
 
-  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
-    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
-    </div>
-  </div>
-
-  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
-    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
-    </div>
-  </div>
-
-  <div style="display:inline-block; width:100%; margin:0 0 10px 0; break-inside:avoid;">
-    <div style="background:#fff; border:2px solid #000; border-radius:0; padding:4px;">
-      <img src="IMAGE-URL-HERE" style="width:100%; height:auto; display:block;">
-    </div>
-  </div>
-
+  
 </div>
+
 
 > 💬 **Quick Reflection:** Which of these did you like? What aspects appealed to you?
 MARKDOWN

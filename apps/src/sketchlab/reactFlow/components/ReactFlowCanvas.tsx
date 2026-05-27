@@ -64,8 +64,12 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {getEdgeLabel} from '../utils/elementLabel';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
-import {createLineAnchorAtHandle} from '../utils/lineAnchors';
+import {
+  createLineAnchorAtHandle,
+  snapEdgesIntoDraggedNode,
+} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 import Toolbar from './Toolbar';
@@ -170,10 +174,8 @@ export default function ReactFlowCanvas({
     [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
   );
 
-  const {screenToFlowPosition, flowToScreenPosition, getEdges} = useReactFlow<
-    SketchlabReactFlowNode,
-    SketchlabReactFlowEdge
-  >();
+  const {screenToFlowPosition, flowToScreenPosition, getEdges, getNode} =
+    useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
@@ -255,16 +257,28 @@ export default function ReactFlowCanvas({
 
   const handleNodeDragStop = useCallback(
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
-      if (node.type !== 'lineAnchor') return;
-      snapAnchorIfNearby({
-        anchorId: node.id,
-        screenPoint: {x: event.clientX, y: event.clientY},
-        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+      if (node.type === 'lineAnchor') {
+        snapAnchorIfNearby({
+          anchorId: node.id,
+          screenPoint: {x: event.clientX, y: event.clientY},
+          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+          edges: getEdges(),
+          setEdges,
+        });
+        return;
+      }
+      // A real node was dropped: attach any free line endpoint whose
+      // handle lands within the snap radius of one of the node's handles.
+      snapEdgesIntoDraggedNode({
+        draggedNodeId: node.id,
         edges: getEdges(),
+        getNode,
+        flowToScreenPosition,
         setEdges,
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
       });
     },
-    [getEdges, setEdges]
+    [getEdges, getNode, flowToScreenPosition, setEdges]
   );
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
@@ -379,6 +393,23 @@ export default function ReactFlowCanvas({
       };
     };
 
+    const nodeMap = new Map(nodes.map(node => [node.id, node]));
+
+    // Assign a 1-based index to each free-floating line (both endpoints are
+    // anchors) so the screenreader can distinguish them: "Line 1", "Line 2".
+    let floatingLineCount = 0;
+    const floatingLineIndex = new Map<string, number>();
+    edges.forEach(edge => {
+      const src = nodeMap.get(edge.source);
+      const tgt = nodeMap.get(edge.target);
+      if (
+        (!src || src.type === 'lineAnchor') &&
+        (!tgt || tgt.type === 'lineAnchor')
+      ) {
+        floatingLineIndex.set(edge.id, ++floatingLineCount);
+      }
+    });
+
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
@@ -393,6 +424,10 @@ export default function ReactFlowCanvas({
             connectable: false,
             deletable: false,
           }),
+          // Override React Flow's default "{type} node" aria-label on the
+          // wrapper div for line anchors so it reads as "Line endpoint" instead
+          // of "Line endpoint node".
+          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,
@@ -400,8 +435,6 @@ export default function ReactFlowCanvas({
           },
         };
       }),
-      // TODO: Add meaningful ariaLabel to edges using node labels instead of
-      // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
@@ -409,6 +442,11 @@ export default function ReactFlowCanvas({
           ...edge,
           selected,
           ...(locked && {deletable: false}),
+          ariaLabel: getEdgeLabel(
+            edge,
+            nodeMap,
+            floatingLineIndex.get(edge.id)
+          ),
           className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
@@ -484,7 +522,10 @@ export default function ReactFlowCanvas({
       }
       pushSnapshot();
       setEdges(currentEdges =>
-        addEdge({...connection, ...defaultLineEdgeFields()}, currentEdges)
+        addEdge(
+          {id: createUuid(), ...connection, ...defaultLineEdgeFields()},
+          currentEdges
+        )
       );
     },
     [nodes, pushSnapshot, setEdges]

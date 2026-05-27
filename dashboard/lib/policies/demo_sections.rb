@@ -53,8 +53,7 @@ class Policies::DemoSections
   end
 
   def self.demo_student_ids(demo_type)
-    ids = CDO.demo_student_ids
-    (ids&.dig(demo_type.to_s) || []).map(&:to_i)
+    DemoStudent.where(demo_type: demo_type.to_s).order(:user_id).pluck(:user_id)
   end
 
   def self.preset_view(demo_type)
@@ -93,7 +92,7 @@ class Policies::DemoSections
   end
 
   def self.all_demo_student_ids
-    @all_demo_student_ids ||= DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.to_set
+    @all_demo_student_ids ||= DemoStudent.distinct.pluck(:user_id).to_set
   end
 
   def self.demo_student?(user_id)

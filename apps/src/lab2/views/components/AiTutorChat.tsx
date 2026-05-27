@@ -65,6 +65,9 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   const versionFiles = useAppSelector(
     state => state.lab2Project.aiTutorVersionFiles
   );
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project?.viewingOldVersion
+  );
 
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
@@ -153,6 +156,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         lessonId={lessonId}
         disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
+        disableSendingMessages={viewingOldVersion}
       />
     </div>
   );

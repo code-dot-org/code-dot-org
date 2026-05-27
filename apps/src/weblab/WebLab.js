@@ -637,11 +637,8 @@ WebLab.prototype.redux = function () {
   };
 };
 
-/**
- * Expose New Relic page action hook for use by the enclosed Bramble application.
- * Defined here instead of in CdoBramble.js because logToCloud relies on window.newrelic
- * being set. Bramble is hosted within an iframe, so window is different in that context.
- */
+// Bramble runs inside an iframe with its own window, so it cannot import logToCloud
+// directly. Expose the host page's facade through the WebLab instance.
 WebLab.prototype.addPageAction = function (...args) {
   logToCloud.addPageAction(...args);
 };

@@ -5,9 +5,14 @@ import {
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {
+  GatewayTranscribeResponseV1Schema,
+  type GatewayTranscribeResponseV1,
+} from './contract/gatewaySchemas';
 import {getErrorLogData} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {LOG} from './turnstile/constants';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -42,9 +47,28 @@ async function transcribeThroughGateway(
       turnstileHeaders(turnstileToken)
     );
 
-    return await response.json();
+    const rawResponse = await response.json();
+    const parseResult =
+      GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+    if (!parseResult.success) {
+      console.error(
+        `${LOG} transcribe response schema mismatch:`,
+        parseResult.error.errors
+      );
+      if (process.env.NODE_ENV === 'development') {
+        throw parseResult.error;
+      }
+    }
+    const wire = parseResult.success
+      ? parseResult.data
+      : (rawResponse as GatewayTranscribeResponseV1);
+
+    return {
+      ...wire,
+      warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
+    } as unknown as TranscriptionResult;
   } catch (error) {
-    const logData = getErrorLogData(error);
+    const logData = await getErrorLogData(error);
     console.error('Fetch error in transcribeThroughGateway:', logData);
     throw error;
   }

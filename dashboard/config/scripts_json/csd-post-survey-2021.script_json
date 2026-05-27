@@ -9,6 +9,7 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "supported_locales": [
+        "es-LA",
         "es-MX",
         "it-IT",
         "pt-BR",
