@@ -40,7 +40,7 @@ export default function ActionsGroup({
           {onDuplicate && (
             <Tooltip title="Duplicate" placement="top">
               <IconButton
-                size="small"
+                size="extraSmall"
                 className={styles.actionButton}
                 aria-label="Duplicate"
                 onClick={onDuplicate}
@@ -52,7 +52,7 @@ export default function ActionsGroup({
           {onBringToFront && (
             <Tooltip title="Bring to front" placement="top">
               <IconButton
-                size="small"
+                size="extraSmall"
                 className={styles.actionButton}
                 aria-label="Bring to front"
                 onClick={onBringToFront}
@@ -64,7 +64,7 @@ export default function ActionsGroup({
           {onSendToBack && (
             <Tooltip title="Send to back" placement="top">
               <IconButton
-                size="small"
+                size="extraSmall"
                 className={styles.actionButton}
                 aria-label="Send to back"
                 onClick={onSendToBack}
@@ -76,7 +76,7 @@ export default function ActionsGroup({
           {isStartMode && onLock && (
             <Tooltip title="Lock element" placement="top">
               <IconButton
-                size="small"
+                size="extraSmall"
                 className={styles.actionButton}
                 aria-label="Lock element"
                 onClick={onLock}
@@ -95,7 +95,7 @@ export default function ActionsGroup({
               placement="top"
             >
               <IconButton
-                size="small"
+                size="extraSmall"
                 className={styles.actionButton}
                 aria-label={
                   handlesToggle.visible
@@ -118,7 +118,7 @@ export default function ActionsGroup({
         {onDelete && (
           <Tooltip title="Delete" placement="top">
             <IconButton
-              size="small"
+              size="extraSmall"
               className={styles.deleteButton}
               aria-label="Delete"
               onClick={onDelete}

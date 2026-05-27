@@ -18,6 +18,9 @@
   padding: 6px 8px 6px 10px;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-quaternary);
+  max-height: 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .headerTitle {
@@ -41,11 +44,10 @@
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-gutter: stable;
 
   // Every section/standalone row after the first gets a divider above it.
   & > * + * {
-    padding-top: 12px;
+    padding-top: 6px;
     border-top: 1px solid var(--borders-neutral-primary);
   }
 }

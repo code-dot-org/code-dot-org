@@ -5,7 +5,7 @@
 .optionListItem:global(.MuiMenuItem-root) {
   padding: 6px 12px;
   gap: 8px;
-  min-height: 32px;
+  height: 24px;
 
   &:hover,
   &:global(.Mui-focusVisible) {
