@@ -82,7 +82,11 @@ It looks at each page and checks whether the title includes the search term (lik
 This line runs the function using the original data.
 The result is a new array that contains only the pages that match the search term.
 
+<div style="clear:both;"></div>
+
 ---
+
+
 ## What's next?
 
 Let's see what our final function, the sorting function, does.

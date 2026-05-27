@@ -9,11 +9,12 @@
       "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-27 21:30:33 UTC",
+    "serialized_at": "2026-05-21 19:14:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

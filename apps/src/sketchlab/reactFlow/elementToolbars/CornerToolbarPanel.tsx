@@ -21,6 +21,7 @@ interface CornerToolbarPanelProps {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+  pushSnapshot: () => void;
 }
 
 /**
@@ -32,6 +33,7 @@ export default function CornerToolbarPanel({
   nodes,
   edges,
   setEdges,
+  pushSnapshot,
 }: CornerToolbarPanelProps) {
   const {openToolbarTarget} = useToolbarVisibility();
   const {
@@ -42,7 +44,7 @@ export default function CornerToolbarPanel({
     setLineEdgeArrowHeads,
     setLineEdgeType,
     setLineEdgeLocked,
-  } = useLineToolbar({edges, openToolbarTarget, setEdges});
+  } = useLineToolbar({edges, openToolbarTarget, setEdges, pushSnapshot});
 
   const body = useMemo(() => {
     if (openToolbarTarget?.type === 'node') {

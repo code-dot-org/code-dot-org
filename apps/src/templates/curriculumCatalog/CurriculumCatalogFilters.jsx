@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import CourseOfferingsFilters from '@cdo/apps/templates/courseOfferings/filters/CourseOfferingsFilters';
@@ -193,9 +193,10 @@ const CurriculumCatalogFilters = ({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-              <FontAwesome
-                icon="language"
-                className={`fa-solid ${style.iconVerticalCenter}`}
+              <FontAwesomeV6Icon
+                iconName="language"
+                iconStyle="solid"
+                className={style.iconVerticalCenter}
                 title={i18n.courseInYourLanguage()}
               />
             </Typography>

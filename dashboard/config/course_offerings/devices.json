@@ -4,7 +4,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/a064570e370ae5651c19d7cd50665124-Circuit Playground.png",
@@ -17,5 +17,7 @@
   "published_date": "2023-07-10 09:00:00 UTC",
   "self_paced_pl_course_offering_key": "self-paced-pl-physical-computing",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

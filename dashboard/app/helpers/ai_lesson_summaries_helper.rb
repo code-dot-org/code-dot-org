@@ -65,7 +65,8 @@ module AiLessonSummariesHelper
     request = {
       user_id: user_id,
       lesson_ids: lesson_ids,
-      unit_id: unit.id
+      unit_id: unit.id,
+      credits_available: false,
     }
     AiLessonSummariesJob.perform_later(request: request)
   end
@@ -75,7 +76,8 @@ module AiLessonSummariesHelper
       request = {
         user_id: user_id,
         lesson_ids: [lesson.id],
-        unit_id: unit.id
+        unit_id: unit.id,
+        credits_available: false,
       }
       AiLessonSummariesJob.perform_later(request: request)
     end

@@ -460,7 +460,11 @@ class ScriptLevel < ApplicationRecord
       {
         id: level.id.to_s,
         name: level.name,
-        url: edit_level_path(id: level.id)
+        url: edit_level_path(id: level.id),
+        type: level.type,
+        # Recorded by the AI lesson generator; surfaced here so the
+        # /generate page can re-populate the prompt for an existing level.
+        generateOutline: level.try(:generate_outline),
       }
     end
 

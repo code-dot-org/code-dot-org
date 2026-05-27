@@ -4,7 +4,6 @@ import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
 import FontSizeGroup from './FontSizeGroup';
-import HandleVisibilityToggle from './HandleVisibilityToggle';
 import LockedNotice from './LockedNotice';
 import NodeActionsGroup from './NodeActionsGroup';
 import RotationGroup from './RotationGroup';
@@ -72,10 +71,12 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <NodeActionsGroup nodeId={nodeId} />
-          <HandleVisibilityToggle
-            visible={handlesVisible}
-            onToggle={() => patchNodeData({showHandles: !handlesVisible})}
+          <NodeActionsGroup
+            nodeId={nodeId}
+            handlesVisible={handlesVisible}
+            onToggleHandles={() =>
+              patchNodeData({showHandles: !handlesVisible})
+            }
           />
         </>
       )}

@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-18 03:10:42 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2026-05-20 04:38:47 UTC",
+    "hide_within_course": true,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5270,10 +5270,11 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/1JodK1XtTwvjMiiubIgJI5Utwbkf_yk5OpArkiuB4h0U/template/preview",
+      "url": "https://docs.google.com/presentation/d/1w9RV76h_r7mUCOjwQqcd4D5WkExRJSorx_lD0TImas0/edit?usp=sharing",
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5309,10 +5310,11 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/presentation/d/1mMDJxDUC1E6VLOtBEifwscrK7sm6MchZLtCz5KNUtZg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1C4s9mIdF2JbHMeX64n8LyVTFIOXQBRUMq9wXsIPsix0/edit?usp=sharing",
       "key": "apps_with_storage_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5439,10 +5441,11 @@
     },
     {
       "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1ZB7WSnkGcxToztJXk6c42LW4shC43Q-HfveOJKrKrk4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Mbl1zBYAbNH5vXU94mCPbVzNNFjvIv9guJR_X0UAOmI/edit?usp=sharing",
       "key": "exploring_problem_solving",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5477,10 +5480,11 @@
     },
     {
       "name": "Exploring Problem Solving (Animals)",
-      "url": "https://docs.google.com/presentation/d/1_woCzF1aNGj0NgOjCLNo3OVSDfOQHLSah0DgfMQuToA/template/preview",
+      "url": "https://docs.google.com/presentation/d/13XVHt0WnteSDgzIUTVLqE9sgeD2O3CNgaCoZopS0Jvs/edit?usp=sharing",
       "key": "exploring_problem_solving_animals_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5489,10 +5493,11 @@
     },
     {
       "name": "Exploring Problem Solving (Games)",
-      "url": "https://docs.google.com/presentation/d/1SKzknFhArzVS2uF85GRLhdYcGndLQIdxceNwhaHNlFM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uGwdpIashVzbsUEoaXqfu7TSmgmSgn7l-yOJktdzmnI/edit?usp=sharing",
       "key": "exploring_problem_solving_games_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5528,10 +5533,11 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/1gAkWVmGJdCTUEFr5tfCW4MNE6BpUG3XrgJsRn7ZaPD0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1fnZvYcQjjrxCGYIh4nYVQuEXrlM_XpLqGJzNTLGIpSo/edit?usp=sharing",
       "key": "input_and_output_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5540,10 +5546,11 @@
     },
     {
       "name": "Intro to Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1t-1xD1Wa902jdBH83_ynhL7noL9Mm3gZC3fE3MZ7KoE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1eEmBpcSdUI4048NSkYs7f7zN8yZLUyMaDA33Kz3_UnY/edit?usp=sharing",
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5565,10 +5572,11 @@
     },
     {
       "name": "Intro to Problem Solving (Newspapers)",
-      "url": "https://docs.google.com/presentation/d/1efGJMK1p5uG1vJHiGOyJF1CEb3IdWqkwewOKqu0Sowk/template/preview",
+      "url": "https://docs.google.com/presentation/d/13zBOH3lDFdkk_2LVc_FbsMhMthkgICHWwhAwe_j5HKQ/edit?usp=sharing",
       "key": "intro_to_problem_solving_newspapers_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5577,10 +5585,11 @@
     },
     {
       "name": "Intro to Problem Solving (Paper Tower)",
-      "url": "https://docs.google.com/presentation/d/1qXBUTQYZv86tyAs4I0RtW7XnKWC0BwEr_ZozdkbZsHs/template/preview",
+      "url": "https://docs.google.com/presentation/d/17m7Ts10io21kvsdqN1HYwdL7Ae-AJVdg1H0UnlE8Ewk/edit?usp=sharing",
       "key": "intro_to_problem_solving_paper_tower_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5589,10 +5598,11 @@
     },
     {
       "name": "Intro to Problem Solving (Spaghetti)",
-      "url": "https://docs.google.com/presentation/d/13uyXRCgJyYcpQZZNfW0pUygoIc4QiSsEr1RICNfjcJ0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Hphr9i4cMPmYwNryd0nOz1c393fQair4N6zzPsqsrl0/edit?usp=sharing",
       "key": "intro_to_problem_solving_spaghetti_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5665,10 +5675,11 @@
     },
     {
       "name": "Project - Propose an App",
-      "url": "https://docs.google.com/presentation/d/15En3oA9wLBHlsRlqvPEmYai72aBg0brbs9kTljp8bMU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vrlngWJN1gIkqUWIvZcIe3sW0tKjLfeMZ1PYLdPnOjg/edit?usp=sharing",
       "key": "project_-_propose_an_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5834,10 +5845,11 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1oRpS4dmzZ1ph6wSbyjBMBJ5QlHPjNQpsJ02R2TknaWU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-L2N2EhlaZVP3bwr92UzSO5J9Cc7IgBgkxFH9sJuNDs/edit?usp=sharing",
       "key": "the_problem_solving_process_2",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5899,10 +5911,11 @@
     },
     {
       "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1QjUuifFXnbnMcmzsNnnEJb-dd9fXS52T5XocYNriiLQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Hc_gOMMkdsi71W-CtBF-xf1rkUNlpRiH-Td-kObeOOo/edit?usp=sharing",
       "key": "what_is_a_computer_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

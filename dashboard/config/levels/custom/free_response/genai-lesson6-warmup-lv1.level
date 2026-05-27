@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####**1) Complete this mad-lib:** The __________ was dancing in rain\r\n\r\n####**2) Complete this mad-lib:** Dancing was ___________ in the rain",
+    "long_instructions": "**1) Complete this mad-lib:** The __________ was dancing in rain\r\n\r\n**2) Complete this mad-lib:** Dancing was ___________ in the rain",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

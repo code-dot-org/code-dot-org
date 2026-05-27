@@ -6,7 +6,7 @@
   "original_script_names": [
     "self-paced-pl-teaching-fabric-of-internet"
   ],
-  "published_state": "stable",
+  "published_state": "deprecated",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

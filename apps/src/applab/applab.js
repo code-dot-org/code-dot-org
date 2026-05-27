@@ -4,6 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -437,8 +438,8 @@ Applab.init = function (config) {
     channelId: config.channel,
   });
 
-  // inlcude channel id in any new relic actions we generate
-  logToCloud.setCustomAttribute('channelId', Applab.channelId);
+  // include channel id in any subsequent observability page actions
+  Observability.setContext('channel', {id: Applab.channelId});
 
   config.usesAssets = true;
 
