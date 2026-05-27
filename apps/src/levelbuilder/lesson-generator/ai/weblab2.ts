@@ -59,8 +59,10 @@ export async function generateWeblab2Level(
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
-    'small, self-contained website that a middle-school student will edit.',
-    'Based on the description below, produce two things:',
+    'small, self-contained website that a student will edit. Assume a',
+    'middle-school student unless the description below names a different',
+    'grade band or audience, in which case follow it. Based on the',
+    'description below, produce two things:',
     '  1. Student-facing instructions in markdown that tell the student',
     '     what to do in this level. Reference the file names you create',
     '     so the student knows where to look. Keep it tight.',
