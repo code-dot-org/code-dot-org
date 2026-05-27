@@ -46,31 +46,55 @@ export type FontSize = FontSizeValue | number;
 // since the canvas can be zoomed out.
 export const MIN_FONT_SIZE_PX = 6;
 
+// Line option icons live in the FontAwesome Kit. Add `iconFamily: 'kit'`
+// so the renderer picks them up from the right family.
 export const LINE_WIDTH_OPTIONS = [
-  {value: 1, label: 'Thin'},
-  {value: 3, label: 'Medium'},
-  {value: 5, label: 'Thick'},
+  {value: 1, label: 'Thin', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 3, label: 'Medium', icon: 'line-medium', iconFamily: 'kit'},
+  {value: 5, label: 'Thick', icon: 'line-thick', iconFamily: 'kit'},
 ] as const;
 
 export type LineWidthValue = (typeof LINE_WIDTH_OPTIONS)[number]['value'];
 
 export const LINE_STROKE_STYLE_OPTIONS = [
-  {value: 'solid', label: 'Solid'},
-  {value: 'dashed', label: 'Dashed'},
-  {value: 'dotted', label: 'Dotted'},
+  {value: 'solid', label: 'Solid', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 'dashed', label: 'Dashed', icon: 'line-dashed', iconFamily: 'kit'},
+  {value: 'dotted', label: 'Dotted', icon: 'line-dotted', iconFamily: 'kit'},
 ] as const;
 
 export type LineStrokeStyleValue =
   (typeof LINE_STROKE_STYLE_OPTIONS)[number]['value'];
 
 export const EDGE_TYPE_OPTIONS = [
-  {value: 'straight', label: 'Straight'},
-  {value: 'default', label: 'Curved'},
-  {value: 'smoothstep', label: 'Rounded step'},
-  {value: 'step', label: 'Step'},
+  {
+    value: 'straight',
+    label: 'Straight',
+    icon: 'line-regular',
+    iconFamily: 'kit',
+  },
+  {value: 'default', label: 'Curved', icon: 'line-curve', iconFamily: 'kit'},
+  {
+    value: 'smoothstep',
+    label: 'Rounded step',
+    icon: 'line-step-round',
+    iconFamily: 'kit',
+  },
+  {
+    value: 'step',
+    label: 'Sharp step',
+    icon: 'line-step-sharp',
+    iconFamily: 'kit',
+  },
 ] as const;
 
 export type EdgeTypeValue = (typeof EDGE_TYPE_OPTIONS)[number]['value'];
+
+export const ARROW_HEAD_OPTIONS = [
+  {value: 'none', label: 'None', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 'start', label: 'Start', icon: 'arrow-left'},
+  {value: 'end', label: 'End', icon: 'arrow-right'},
+  {value: 'both', label: 'Both', icon: 'arrows-left-right'},
+] as const;
 
 export const TEXT_ALIGN_OPTIONS = [
   {value: 'left', label: 'Left', icon: 'align-left'},

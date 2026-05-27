@@ -16,6 +16,7 @@ import LockedNotice from './LockedNotice';
 import OptionListPopover from './OptionListPopover';
 import ToolbarDropdownRow from './ToolbarDropdownRow';
 import {
+  ARROW_HEAD_OPTIONS,
   colorLabel,
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_STROKE_STYLE,
@@ -33,56 +34,17 @@ import {
 import ToolbarSection from './ToolbarSection';
 import ToolbarShell from './ToolbarShell';
 
-import styles from './line-edge-toolbar.module.scss';
-
-type LinePreviewStyle = 'solid' | 'dashed' | 'dotted';
-
-const ARROW_HEAD_OPTIONS = [
-  {value: 'none', label: 'None', icon: 'minus'},
-  {value: 'start', label: 'Start', icon: 'arrow-left-long'},
-  {value: 'end', label: 'End', icon: 'arrow-right-long'},
-  {value: 'both', label: 'Both', icon: 'arrows-left-right'},
-] as const;
-
-const EDGE_TYPE_ICONS: Record<EdgeTypeValue, string> = {
-  straight: 'minus',
-  default: 'line-curve',
-  smoothstep: 'line-step-round',
-  step: 'line-step-sharp',
-};
-
-const STROKE_STYLE_LABELS: Record<LineStrokeStyleValue, string> =
-  LINE_STROKE_STYLE_OPTIONS.reduce((acc, option) => {
-    acc[option.value] = option.label;
-    return acc;
-  }, {} as Record<LineStrokeStyleValue, string>);
-
-const WIDTH_LABELS: Record<LineWidthValue, string> = LINE_WIDTH_OPTIONS.reduce(
-  (acc, option) => {
-    acc[option.value] = option.label;
-    return acc;
-  },
-  {} as Record<LineWidthValue, string>
-);
-
-const EDGE_TYPE_LABELS: Record<EdgeTypeValue, string> =
-  EDGE_TYPE_OPTIONS.reduce((acc, option) => {
-    acc[option.value] = option.label;
-    return acc;
-  }, {} as Record<EdgeTypeValue, string>);
-
-function renderLinePreview(
-  width: number,
-  lineStyle: LinePreviewStyle
-): React.ReactNode {
+function renderOptionIcon(option: {
+  icon?: string;
+  iconStyle?: 'solid' | 'regular';
+  iconFamily?: 'kit';
+}): React.ReactNode {
+  if (!option.icon) return null;
   return (
-    <span
-      aria-hidden="true"
-      className={styles.linePreview}
-      style={{
-        borderTopWidth: width,
-        borderTopStyle: lineStyle,
-      }}
+    <FontAwesomeV6Icon
+      iconName={option.icon}
+      iconStyle={option.iconStyle}
+      iconFamily={option.iconFamily}
     />
   );
 }
@@ -136,7 +98,7 @@ export default function LineEdgeToolbar({
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
   const selectedWidth = Number(edge.style?.strokeWidth);
-  const selectedWidthValue = LINE_WIDTH_OPTIONS.some(
+  const selectedWidthValue: LineWidthValue = LINE_WIDTH_OPTIONS.some(
     option => option.value === selectedWidth
   )
     ? (selectedWidth as LineWidthValue)
@@ -144,18 +106,19 @@ export default function LineEdgeToolbar({
   const selectedStrokeStyle = strokeStyleFromDasharray(
     edge.style?.strokeDasharray
   );
-  const selectedStrokeStyleValue = LINE_STROKE_STYLE_OPTIONS.some(
-    option => option.value === selectedStrokeStyle
-  )
-    ? selectedStrokeStyle
-    : DEFAULT_LINE_STROKE_STYLE;
-  const selectedEdgeTypeValue = EDGE_TYPE_OPTIONS.some(
+  const selectedStrokeStyleValue: LineStrokeStyleValue =
+    LINE_STROKE_STYLE_OPTIONS.some(
+      option => option.value === selectedStrokeStyle
+    )
+      ? selectedStrokeStyle
+      : DEFAULT_LINE_STROKE_STYLE;
+  const selectedEdgeTypeValue: EdgeTypeValue = EDGE_TYPE_OPTIONS.some(
     option => option.value === edge.type
   )
     ? (edge.type as EdgeTypeValue)
     : DEFAULT_EDGE_TYPE;
 
-  const selectedArrowHeads = useMemo(() => {
+  const selectedArrowHeads: ArrowHeadValue = useMemo(() => {
     const hasStartArrow = !!edge.markerStart;
     const hasEndArrow = !!edge.markerEnd;
     if (hasStartArrow && hasEndArrow) {
@@ -171,33 +134,18 @@ export default function LineEdgeToolbar({
 
   const {duplicateLine} = useClipboard();
 
-  const widthOptionItems = LINE_WIDTH_OPTIONS.map(option => ({
-    value: option.value,
-    label: option.label,
-    preview: renderLinePreview(option.value, 'solid'),
-  }));
-  const strokeStyleOptionItems = LINE_STROKE_STYLE_OPTIONS.map(option => ({
-    value: option.value,
-    label: option.label,
-    preview: renderLinePreview(2, option.value),
-  }));
-  const edgeTypeOptionItems = EDGE_TYPE_OPTIONS.map(option => ({
-    value: option.value,
-    label: option.label,
-    icon: EDGE_TYPE_ICONS[option.value],
-  }));
-  const arrowHeadOptionItems = ARROW_HEAD_OPTIONS.map(option => ({
-    value: option.value,
-    label: option.label,
-    icon: option.icon,
-  }));
-
-  const arrowHeadIcon =
-    ARROW_HEAD_OPTIONS.find(option => option.value === selectedArrowHeads)
-      ?.icon ?? 'minus';
-  const arrowHeadLabel =
-    ARROW_HEAD_OPTIONS.find(option => option.value === selectedArrowHeads)
-      ?.label ?? 'None';
+  const widthOption = LINE_WIDTH_OPTIONS.find(
+    o => o.value === selectedWidthValue
+  )!;
+  const strokeStyleOption = LINE_STROKE_STYLE_OPTIONS.find(
+    o => o.value === selectedStrokeStyleValue
+  )!;
+  const edgeTypeOption = EDGE_TYPE_OPTIONS.find(
+    o => o.value === selectedEdgeTypeValue
+  )!;
+  const arrowHeadOption = ARROW_HEAD_OPTIONS.find(
+    o => o.value === selectedArrowHeads
+  )!;
 
   return (
     <ToolbarShell
@@ -236,60 +184,56 @@ export default function LineEdgeToolbar({
             />
             <ToolbarDropdownRow
               label="Thickness"
-              triggerPreview={renderLinePreview(selectedWidthValue, 'solid')}
-              triggerLabel={WIDTH_LABELS[selectedWidthValue]}
+              triggerPreview={renderOptionIcon(widthOption)}
+              triggerLabel={widthOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<LineWidthValue>
                   ariaLabel="Thickness"
-                  options={widthOptionItems}
+                  options={LINE_WIDTH_OPTIONS}
                   selectedValue={selectedWidthValue}
-                  onSelect={value => onSelectWidth(value)}
+                  onSelect={onSelectWidth}
                   onClose={closePopover}
                 />
               )}
             />
             <ToolbarDropdownRow
               label="Style"
-              triggerPreview={renderLinePreview(2, selectedStrokeStyleValue)}
-              triggerLabel={STROKE_STYLE_LABELS[selectedStrokeStyleValue]}
+              triggerPreview={renderOptionIcon(strokeStyleOption)}
+              triggerLabel={strokeStyleOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<LineStrokeStyleValue>
                   ariaLabel="Style"
-                  options={strokeStyleOptionItems}
+                  options={LINE_STROKE_STYLE_OPTIONS}
                   selectedValue={selectedStrokeStyleValue}
-                  onSelect={value => onSelectStrokeStyle(value)}
+                  onSelect={onSelectStrokeStyle}
                   onClose={closePopover}
                 />
               )}
             />
             <ToolbarDropdownRow
               label="Shape"
-              triggerPreview={
-                <FontAwesomeV6Icon
-                  iconName={EDGE_TYPE_ICONS[selectedEdgeTypeValue]}
-                />
-              }
-              triggerLabel={EDGE_TYPE_LABELS[selectedEdgeTypeValue]}
+              triggerPreview={renderOptionIcon(edgeTypeOption)}
+              triggerLabel={edgeTypeOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<EdgeTypeValue>
                   ariaLabel="Shape"
-                  options={edgeTypeOptionItems}
+                  options={EDGE_TYPE_OPTIONS}
                   selectedValue={selectedEdgeTypeValue}
-                  onSelect={value => onSelectEdgeType(value)}
+                  onSelect={onSelectEdgeType}
                   onClose={closePopover}
                 />
               )}
             />
             <ToolbarDropdownRow
               label="Arrowheads"
-              triggerPreview={<FontAwesomeV6Icon iconName={arrowHeadIcon} />}
-              triggerLabel={arrowHeadLabel}
+              triggerPreview={renderOptionIcon(arrowHeadOption)}
+              triggerLabel={arrowHeadOption.label}
               renderPopoverContent={closePopover => (
                 <OptionListPopover<ArrowHeadValue>
                   ariaLabel="Arrowheads"
-                  options={arrowHeadOptionItems}
+                  options={ARROW_HEAD_OPTIONS}
                   selectedValue={selectedArrowHeads}
-                  onSelect={value => onSelectArrowHeads(value)}
+                  onSelect={onSelectArrowHeads}
                   onClose={closePopover}
                 />
               )}

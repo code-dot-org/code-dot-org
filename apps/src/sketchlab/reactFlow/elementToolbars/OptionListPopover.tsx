@@ -14,11 +14,9 @@ import styles from './option-list-popover.module.scss';
 export interface OptionListItem<T extends string | number> {
   value: T;
   label: string;
-  // Either a FontAwesome icon name (rendered via FontAwesomeV6Icon) or a
-  // fully-formed preview node (e.g. a stroke-styled <span> for line shapes).
   icon?: string;
   iconStyle?: 'solid' | 'regular';
-  preview?: React.ReactNode;
+  iconFamily?: 'kit';
 }
 
 interface OptionListPopoverProps<T extends string | number> {
@@ -73,18 +71,17 @@ export default function OptionListPopover<T extends string | number>({
               onClose();
             }}
           >
-            {(option.preview || option.icon) && (
+            {option.icon && (
               <ListItemIcon
                 className={classNames(styles.optionListIcon, {
                   [styles.optionListIconSelected]: isSelected,
                 })}
               >
-                {option.preview ?? (
-                  <FontAwesomeV6Icon
-                    iconName={option.icon as string}
-                    iconStyle={option.iconStyle}
-                  />
-                )}
+                <FontAwesomeV6Icon
+                  iconName={option.icon}
+                  iconStyle={option.iconStyle}
+                  iconFamily={option.iconFamily}
+                />
               </ListItemIcon>
             )}
             <ListItemText className={styles.optionListLabel} disableTypography>
