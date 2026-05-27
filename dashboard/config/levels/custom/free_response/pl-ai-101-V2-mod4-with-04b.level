@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Practice\r\n\r\n#### ??????\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n> #### In the reflection box below, answer the following questions:\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. What differences would you expect in the responses generated from these three prompts? Why?\r\n> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. What sort of guidance or structure might you provide to the students to help them write more effective prompts?",
+    "long_instructions": "# Practice\r\n\r\n??????\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n> In the reflection box below, answer the following questions:\r\n> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 1. What differences would you expect in the responses generated from these three prompts? Why?\r\n> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp 2. What sort of guidance or structure might you provide to the students to help them write more effective prompts?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,

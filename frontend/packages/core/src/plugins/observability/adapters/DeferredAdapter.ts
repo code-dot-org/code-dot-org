@@ -4,6 +4,8 @@ import type {
   ObservabilityConfig,
   ObservabilityLogger,
   ObservabilityMetrics,
+  TagValue,
+  SpanOptions,
 } from '../types';
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 
@@ -36,8 +38,25 @@ export class DeferredAdapter implements ObservabilityClient {
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
-    this.enqueue(client => client.recordError(error, context));
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined {
+    this.enqueue(client => {
+      client.recordError(error, context);
+    });
+    return undefined;
+  }
+
+  /**
+   * Delegate to the real client if available, otherwise run the callback
+   * directly. Spans cannot be deferred since they wrap live execution.
+   */
+  startSpan<T>(options: SpanOptions, callback: () => T): T {
+    if (this.delegate) {
+      return this.delegate.startSpan(options, callback);
+    }
+    return callback();
   }
 
   /**
@@ -57,6 +76,24 @@ export class DeferredAdapter implements ObservabilityClient {
    */
   isConsented(): boolean {
     return this.delegate?.isConsented() ?? Boolean(this.consentedUserId);
+  }
+
+  /**
+   * Queue a tag set for replay against the eventual provider client.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  setTag(key: string, value: TagValue): void {
+    this.enqueue(client => client.setTag(key, value));
+  }
+
+  /**
+   * Queue a context set for replay against the eventual provider client.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  setContext(name: string, ctx: Record<string, unknown> | null): void {
+    this.enqueue(client => client.setContext(name, ctx));
   }
 
   /**

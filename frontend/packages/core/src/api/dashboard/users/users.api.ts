@@ -1,4 +1,5 @@
 import type {Transport} from '../../transports/types';
+import type {CurrentUserResponse} from './currentUserTypes';
 import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
@@ -13,6 +14,14 @@ import {
 
 export function createUsersApi(transport: Transport) {
   return {
+    /** GET /api/v1/users/current — raw snake_case response, used by auth bootstrap. */
+    getCurrent(): Promise<CurrentUserResponse> {
+      return transport.request<CurrentUserResponse>({
+        method: 'GET',
+        url: '/api/v1/users/current',
+      });
+    },
+
     /**
      * GET /api/v1/users/current
      */

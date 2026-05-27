@@ -1,0 +1,12 @@
+name 'ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_ac2026'
+display_name 'Create a Flowchart'
+description 'Choose one of the following scenarios and create a flowchart to model the conditions.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson5-level1a_ac2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1c_ac2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1d_ac2026'
+level 'ai-and-algorithmic-decisions-lesson5-level1e_ac2026'
+
+uses_lab2
+navigation_type 'next_level'
