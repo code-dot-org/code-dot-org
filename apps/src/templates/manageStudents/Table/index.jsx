@@ -1037,7 +1037,10 @@ export default connect(
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
     syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
-    isDemoSection: isDemoSection(state, state.teacherSections.selectedSectionId),
+    isDemoSection: isDemoSection(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
   }),
   dispatch => ({
     saveAllStudents() {
