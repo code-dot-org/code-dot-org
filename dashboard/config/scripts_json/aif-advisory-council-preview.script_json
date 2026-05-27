@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-06 19:14:49 UTC",
+    "serialized_at": "2026-05-26 21:45:08 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -29,6 +29,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Unit 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif-advisory-council-preview"
       }
     }
@@ -84,6 +96,57 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "Lesson 2: Making a Button Respond",
+      "name": "Lesson 2: Making a Button Respond",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we use JavaScript to make our websites more interactive?**\n\nStudents write their first event handler. A kinesthetic role-play — Element, User, Listener, Handler — grounds the vocabulary before the JavaScript appears on screen. This is also the unit's first explicit AI literacy moment: \"AI Confidence ≠ AI Correctness\" and \"Context Blindness\" are named, with a Show / Describe / Confirm debugging protocol when AI gives students code that doesn't fit their page. Front-End Developer enters as a real role through Maya's day-in-the-life chatbot interview.",
+        "student_overview": "**How can we use JavaScript to make our websites more interactive?**\n\nA button isn't just a button — something is listening for your click, and something else handles what happens next. You learn the difference between an event listener and an event handler, write your first JavaScript that makes a page respond, and meet Maya, a Front-End Developer who builds this kind of thing every day. You also see your first moment of an AI giving you confident, wrong code — and learn how to catch it."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "Lesson 4: Writing Reusable Functions",
+      "name": "Lesson 4: Writing Reusable Functions",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**How can I make my code cleaner and easier to reuse?**\n\nStudents learn arrow functions, named vs. anonymous syntax, and abstraction — with the framing that clean, well-named code helps humans and AI work with shared code. The spec.md activity introduces literal [Specify] and [Predict] tags, the unit's first explicit handoff from natural-language planning to AI-generated code. \"Write Rewind on your own\" is the unit's first declared Write First task — AI Tutor will not write it.",
+        "student_overview": "**How can I make my code cleaner and easier to reuse?**\n\nRepeating the same lines of code over and over gets messy fast. Functions let you write a chunk of code once and reuse it everywhere. You learn to define and call arrow functions, why naming matters (for you, your teammates, and the AI tools you work with), and how to write a quick plan in `spec.md` before you ask AI to generate code."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "Lesson 5: Making Decisions with If/Else",
+      "name": "Lesson 5: Making Decisions with If/Else",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**How can I make my app make choices based on user actions?**\n\nStudents meet flowcharts and conditional statements together. The lesson names computer vision as the AI capability that lets students hand a sketched flowchart to AI as a visual spec — connecting visual planning directly to code generation. The Warm Up plants a Domain 4 hook (\"Who decided that liking one video means showing similar ones?\"), opening a conversation that returns in later lessons.",
+        "student_overview": "**How can I make my app make choices based on user actions?**\n\nApps make decisions all day — show this if logged in, otherwise show that. The tool for planning those decisions is a flowchart, and the code that runs them is the `if/else` statement. You sketch your first flowchart, hand it to AI as a visual spec, and check whether the code AI writes actually follows your plan. You also start asking a bigger question: who decided the rules the apps you use follow?"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif-advisory-council-preview"
       }
     }
@@ -212,6 +275,132 @@
         "lesson_activity.key": "79a851be-55a0-4a2f-908d-5363c7f94460",
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "c91ea225-30a6-4cb4-baf1-600a74c26e68",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c91ea225-30a6-4cb4-baf1-600a74c26e68",
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "3700bc07-1681-4526-9e0a-4a4f7706bc71",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71",
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "91e50296-31c3-44bd-9dee-0c0338f6ad4b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "91e50296-31c3-44bd-9dee-0c0338f6ad4b",
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "02c52168-1dda-4892-b832-06e1b117e8c0",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02c52168-1dda-4892-b832-06e1b117e8c0",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "b94f1ee8-58e8-40c9-837b-c97db61087f5",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "f9a9957d-2880-49fd-ace2-8e8135c44043",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9a9957d-2880-49fd-ace2-8e8135c44043",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "4f1577d6-5e0f-46a2-811b-e22a1f9f38e9",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f1577d6-5e0f-46a2-811b-e22a1f9f38e9",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "e26505b1-355d-4c26-b295-906ddcf6f75c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview"
+      }
+    },
+    {
+      "key": "7f61d771-8491-45da-a5e7-b57d47ec3780",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f61d771-8491-45da-a5e7-b57d47ec3780",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif-advisory-council-preview"
       }
     }
@@ -810,6 +999,563 @@
         "activity_section.key": "a97c0582-0ae3-42b7-b6d0-a40eb43555d4",
         "lesson_activity.key": "79a851be-55a0-4a2f-908d-5363c7f94460"
       }
+    },
+    {
+      "key": "d3930f79-7fff-49c2-ba5d-43a0246d7847",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the role of a front-end developer to building interactivity on a webpage and recognize JavaScript as the tool that makes interactions happen.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Do This: Briefly spotlight the role of a Front-End Developer. Explain that this role is responsible for what users see and how a webpage responds when they interact with it.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Invite students to name a website or app where something responds instantly (e.g., a button click, animation, or form). Ask, \"What do you think the developer had to decide to make that interaction work?\" This helps students connect the role to real interactions they use every day."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d3930f79-7fff-49c2-ba5d-43a0246d7847",
+        "lesson_activity.key": "c91ea225-30a6-4cb4-baf1-600a74c26e68"
+      }
+    },
+    {
+      "key": "433f4457-178f-4c17-828a-06ed5279d226",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "433f4457-178f-4c17-828a-06ed5279d226",
+        "lesson_activity.key": "c91ea225-30a6-4cb4-baf1-600a74c26e68"
+      }
+    },
+    {
+      "key": "b411dbde-48a8-45e6-a6fb-d493305a778a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *A front-end developer uses JavaScript to make a button respond to a click. If that developer used AI to build a “Like” button, what would they need to tell the AI to make it work?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that a developer must clearly describe both the user action and what should happen in response when using AI to build an interaction. They begin to notice that something must detect the action and trigger the response, rather than the change happening automatically. This sets up the idea that interactions follow a structured process, which will be explored through event listeners and event handlers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b411dbde-48a8-45e6-a6fb-d493305a778a",
+        "lesson_activity.key": "c91ea225-30a6-4cb4-baf1-600a74c26e68"
+      }
+    },
+    {
+      "key": "3eff3569-27aa-4b96-b35f-8fed15f2559f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand how webpages respond to user actions by connecting the roles of event listener (detect) and event handler (respond).\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI and Algorithmic Decisions Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *event listener*. Emphasize that it is attached to an element and waits for a specific user action (click, hover, key press).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *event handler*. Emphasize that this is the response — what actually happens after the event.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students quickly form small groups of three to four and assign one role per person: Element, User, Listener, and Handler. Emphasize that each role represents a part of what happens behind the scenes when someone interacts with a web page. Give students about 30–60 seconds to decide who will take on each role, and prompt them to read their role name aloud within their group so everyone is clear.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups assign roles, circulate to ensure each group has all roles covered and to clarify confusion, especially between the Event Listener and Event Handler. If needed, briefly restate that the listener waits for the action and the handler decides what happens next.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group decide on a simple interaction such as a tap, clap, or press. Once they've chosen their interaction, direct them to say the three planning statements out loud together within their group: what their event is, what the listener is waiting for, and what the handler will do. Emphasize that this is a quick call-and-response style step and should take no more than 1–2 minutes. The goal is for every group to clearly state their plan before acting, not to write anything down or overthink it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups plan, circulate to ensure each group has selected a clear interaction and is actually saying their responses out loud. If a group is quiet or vague, prompt them to say their plan together and be more specific about what will happen.",
+        "duration": "15",
+        "name": "Intro to Event Handling",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage groups to keep interactions simple (tap, clap, press) so the focus stays on the sequence, not the scenario."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3eff3569-27aa-4b96-b35f-8fed15f2559f",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "bdb738c3-db46-4d22-8c28-afb61cfb1ac4",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bdb738c3-db46-4d22-8c28-afb61cfb1ac4",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "63830135-0b58-4801-9967-5be858f2a4e8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct them to act it out using the four-step sequence: the user performs the action, the listener announces that the event was detected and calls \"Run,\" and the handler performs the response. Emphasize that the handler cannot act until the listener calls it, reinforcing the idea that something must detect the event before code runs. Give groups a minute or two to run through the sequence at least once, and encourage them to repeat it with a different response if they finish quickly.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students act out the sequence, circulate to ensure groups are following the correct order and using the language of \"event,\" \"listener,\" and \"handler\" appropriately. If a group skips a step or has the handler acting too early, pause them and ask which step might be missing. Pay close attention to confusion between the listener and handler roles, and reinforce that the listener detects and triggers while the handler performs the response.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure groups explicitly say \"Run\" before the handler acts. This step represents the moment code executes and is critical for understanding how event handling works.\n\nIf students confuse the listener and handler roles, restate that the listener detects and triggers, while the handler performs the action."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63830135-0b58-4801-9967-5be858f2a4e8",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "c9e94df0-6b8b-47ac-bc28-a1983ca635f7",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9e94df0-6b8b-47ac-bc28-a1983ca635f7",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "99b3cc1f-1f46-49bb-81fb-fbd10e91be85",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Who detected the event?*\n- *Who triggered the action?*\n- *Who performed the action?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that different parts of the system have distinct roles in making an interaction happen. The event listener is responsible for detecting when a user action occurs, but it does not perform the action itself—it triggers the next step. The event handler is what actually runs and produces the visible change on the page. Through this discussion, guide students to understand the sequence: a user action (event) is detected by a listener, which then calls the handler to perform the response. This reinforces that interactions do not happen automatically—there is a structured process that connects user input to changes on the screen, which will later map directly to how event listeners and event handlers work in code."
+      },
+      "seeding_key": {
+        "activity_section.key": "99b3cc1f-1f46-49bb-81fb-fbd10e91be85",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "5ff8a848-2b42-403f-916d-e82781108786",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will apply the Select → Listen → Respond model to build interactive features, use AI to generate event-based code, and verify that their code correctly targets elements and updates the page.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that what students just acted out is how event handling works on a web page:\n- The first step is interacts. The user interacts with an element, like clicking a button. Nothing changes yet — this is just the action the user takes.\n- The second step is listen. The page listens for that action. This is the event listener — it waits for a specific event, like a click, and detects when it happens.\n- The final step is respond. The event listener calls the event handler, and the event handler runs the code. This is where something actually changes on the page, like text updating or an image appearing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this code as representing the same three-step process students just acted out for how a web page responds to a user action.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this line of code selects an element on the page (like the button).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this line of code adds an event listener. It tells the page what event to listen for — so in this case, a click.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this line of code is the event handler, which responds to the event. The code that runs and updates the page (text, image, color, etc.).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI-generated code may look correct but still not work, and model how to question and verify whether the code actually matches the event or selected element from the prompt. (especially IDs).",
+        "duration": "20",
+        "name": "Make a Button Respond"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ff8a848-2b42-403f-916d-e82781108786",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "3a0a97c1-3517-4e22-a1f6-0555feeb2fed",
+      "position": 7,
+      "properties": {
+        "description": "AI sounds confident and can generate code that looks correct, but it doesn’t actually know if it will work on your specific page. It is making a best guess based on patterns, so when we see something like this ID \"buttonID,\" we have to stop and ask: does an element with this ID actually exist in our web page, because if it doesn't, nothing will happen even though the code looks right.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a0a97c1-3517-4e22-a1f6-0555feeb2fed",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "f881e390-5eeb-4bfe-a5a5-9799c08a7651",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the term context blindness as the reason AI's code can look completely correct but still fail. Explain that AI generates code based on patterns it has seen in other pages, not on what is actually in the project. The ID it guesses might exist somewhere on the internet, just not in the project."
+      },
+      "seeding_key": {
+        "activity_section.key": "f881e390-5eeb-4bfe-a5a5-9799c08a7651",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "e0adb614-700c-4036-907c-23f2b3539ebc",
+      "position": 9,
+      "properties": {
+        "description": "When AI gives you code that doesn't work, it's not because AI is broken. It's because AI doesn't know what's in your page. It's guessing based on patterns from code it has seen before. That guess is usually plausible — it looks right — but plausible isn't the same as correct. This kind of mistake has a name: context blindness. AI is blind to your context. That's why showing AI your element, describing it in detail, and asking it to confirm matter so much. You're filling in the context AI can't see.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e0adb614-700c-4036-907c-23f2b3539ebc",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "1e4682e0-1339-4a27-a92d-d3e85184d9ca",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce each steps students can use to create and debug AI-generated code. As each tip appears, connect it to how it helps improve their prompt:\n- First, show the element. Emphasize that including a screenshot helps AI understand what part of the page the student is working with.\n- Next, describe the element in detail. Highlight that students should include specific details like text, color, or position so AI can correctly identify it.\n- Finally, confirm the element. Model asking AI to verify which element it's selecting to make sure it's targeting the correct one."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e4682e0-1339-4a27-a92d-d3e85184d9ca",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "58c30925-219b-4942-b64c-0695fa6f6fd6",
+      "position": 11,
+      "properties": {
+        "description": "When your button isn't working, don't just guess! Be specific. First, show the element so the AI can see what you're working with. Then describe the element in detail — what it says, what it looks like, where it is. And if it's still not working, ask AI to confirm which element it's selecting, because sometimes it's targeting the wrong one.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "58c30925-219b-4942-b64c-0695fa6f6fd6",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "72586735-d489-408c-ad62-bbf1517c131c",
+      "position": 12,
+      "properties": {
+        "description": "Now you're going to apply what you learned by acting like a front-end developer—your job is to make a webpage respond to user actions by selecting elements, adding event listeners, and writing event handlers. You can use AI to help generate code, but you also need to test it and make sure it actually works when you interact with the page.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72586735-d489-408c-ad62-bbf1517c131c",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "938d196d-1e39-4f36-9f90-065c4fcb9d08",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1 to complete Levels 1 through 6.\n- Level 1: Predict and trace what the code will do when a button is clicked.\n- Level 2: Use AI to generate code for one button interaction.\n- Level 3: Write code yourself to add a second button interaction.\n- Level 4: Conduct a day-in-the-life interview with a front-end developer chatbot.\n- Level 5: Build an interactive app based on a chosen scenario.\n- Level 6: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, focus on helping students connect the code to the event handling model. Check that they can identify where the code selects an element, listens for an event, and responds. Ask questions like, \"What event is this listening for?\" and \"What actually changes on the page when you click?\" In Levels 2 and 3, support students in working with AI-generated code. Watch for common issues like nothing happening on click or the wrong element responding. Prompt students with, \"Which element is this code targeting?\" and \"How can you tell if it's the right one?\" In Level 5, push students toward fully working interactions. Encourage them to test each button and verify that every interaction works as expected.",
+        "progression_name": "Adding Interactivity"
+      },
+      "seeding_key": {
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "6406ca56-24ad-4c08-8f05-5e11c3c1554a",
+      "position": 14,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to test frequently after adding each interaction. Remind them that if nothing happens, it's usually because the code is not targeting the correct element or the interaction isn't set up properly."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Levels 1 through 5 to assess whether students can add an event handler to make a button interactive and update page content when a button is clicked. Look for evidence that students can correctly select elements, attach event listeners, and create responses that change text or visuals on the page."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6406ca56-24ad-4c08-8f05-5e11c3c1554a",
+        "lesson_activity.key": "3700bc07-1681-4526-9e0a-4a4f7706bc71"
+      }
+    },
+    {
+      "key": "021a8574-9f14-4339-8a2e-98c3d3ba1ce1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to explain how a web page responds to a click by describing both what the user does and what changes on the page. Prompt students to be specific about what should happen when a button is clicked. After partner discussion, invite a few students to share out with the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What part of being a Front-End Developer did you like?*\n- *What part was frustrating?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on their experience of doing Front-End Developer work and start forming personal opinions about whether the role fits them. Listen for specific responses — what they liked or didn't like about the actual work, not just the activity. Students might mention the satisfaction of seeing something they built respond to a click, the creative freedom of picking content, the frustration of debugging AI-generated code, or the cognitive load of switching between writing prompts and reading code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "021a8574-9f14-4339-8a2e-98c3d3ba1ce1",
+        "lesson_activity.key": "91e50296-31c3-44bd-9dee-0c0338f6ad4b"
+      }
+    },
+    {
+      "key": "cfc05ab8-de77-4246-ad85-598cfc8e3b72",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize problems caused by repeated code and begin to identify qualities of clean, maintainable code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What problems might happen if code is repeated many times?*\n- *What would make code easier to work with?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that repeating code can lead to bugs, make updates harder, and slow developers down. They should begin to identify that code is easier to work with when it is organized, readable, and reusable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why clean, organized code matters in real-world development.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "cfc05ab8-de77-4246-ad85-598cfc8e3b72",
+        "lesson_activity.key": "02c52168-1dda-4892-b832-06e1b117e8c0"
+      }
+    },
+    {
+      "key": "f0375815-ab55-4f3b-8ce1-05f090d1c9cd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that code can be grouped into a single behavior and that functions are used to name and reuse that behavior.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI and Algorithmic Decisions Unit Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4 Level 1. Students make predictions, review the code, and make modifications to explore functions.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students identify where the behavior is located. Check that they can distinguish between code that runs inside the event handler and behavior that could be moved into a function. Ask questions like: \"Where is the behavior right now?\" \"What is this code doing when it runs?\"",
+        "duration": "15",
+        "name": "Introduction to Functions",
+        "progression_name": "Exploring Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0375815-ab55-4f3b-8ce1-05f090d1c9cd",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "4f012417-7f45-441b-b54b-06cd1f7f60c6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *function*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this section of code tells JavaScript that we are creating a function and gives it a name. Recall the const keyword and explain that it is used to define a function because we don't want the value of the `addNotification` variable (which is the function) to change.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the empty parentheses and arrow (which is made using the equals sign and greater than symbol together) indicates this is a function. That makes this an arrow function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that within the curly braces is the code we want to execute when the function is called.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that having a named function allows us to call it anywhere we want to use it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that there are two common ways to write arrow functions: named and anonymous. For named arrow functions, emphasize that because it has a name, it can be reused or called later in the code. For anonymous arrow function, clarify that they are often used \"in place,\" such as inside an event handler or passed into another function."
+      },
+      "seeding_key": {
+        "activity_section.key": "4f012417-7f45-441b-b54b-06cd1f7f60c6",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "ed71d6bd-3b9a-4644-a87a-c0ac0ae18d12",
+      "position": 3,
+      "properties": {
+        "description": "Think about it like this, if someone is anonymous, you can not call their name to get their attention. But if you know someone's name, you can call them anytime you need them. Named functions work the same way – we can call them again later.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ed71d6bd-3b9a-4644-a87a-c0ac0ae18d12",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "4abe3723-8ce5-4cec-9e29-6f494f60ee43",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that abstraction hides details and that using named functions helps them organize and reuse behavior when wiring up interactions in an app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define abstraction. Emphasize that abstraction means hiding the details and focusing on what something does. Use the visual to compare what's happening inside versus using the function name, and highlight how the name helps us understand the behavior without seeing the code.",
+        "duration": "20",
+        "name": "Writing Reusable Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "4abe3723-8ce5-4cec-9e29-6f494f60ee43",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "24ce0678-9317-491f-a3bd-b97b8d4ecd55",
+      "position": 5,
+      "properties": {
+        "description": "You've already been doing these things — you predicted what buttons would do, you fixed AI's mistakes and explained why. Today we name the habit. SPEC is the four-letter framework you'll see all semester.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "24ce0678-9317-491f-a3bd-b97b8d4ecd55",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "01aa1ef1-cd62-46a2-98d8-e1ea6d9fc7da",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read each letter aloud. Tell students they'll see [Specify] and [Predict] tags inside the spec.md file in the next level.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which function is easier to understand without reading the code? Which one would AI be more confident about?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear function names improve understanding for both humans and AI, while vague names make it harder to predict what the code does."
+      },
+      "seeding_key": {
+        "activity_section.key": "01aa1ef1-cd62-46a2-98d8-e1ea6d9fc7da",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "00292047-499b-48f5-b7d4-7a7988fb4b91",
+      "position": 7,
+      "properties": {
+        "description": "Now you're going to act like a developer building an interactive app. You'll look at an example, then use AI to help you generate functions for new buttons, connect them, and test that they work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "00292047-499b-48f5-b7d4-7a7988fb4b91",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "66c1743e-8709-4daa-8ad8-d5650f3534ef",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete Levels 2 through 4.\n- Level 2: Use AI to rewrite an event handler to use a function, then rewrite another event handler on their own.\n- Level 3: Use AI to implement functions to hook up buttons in a web app.\n- Level 4: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ensure they are following the spec → add named arrow function → add event listener → test process. Encourage students to test frequently after each change — when something doesn't work, have them check whether the function is defined correctly, whether it's being called, and whether the name matches what it does. Remind students that AI-generated code can look correct but still needs to be tested and verified.",
+        "progression_name": "Write Reusable Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "66c1743e-8709-4daa-8ad8-d5650f3534ef",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "82a0d4f9-0c33-4396-aa53-5f1b0a7727a7",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that AI is generating code based on their description. Clearer descriptions lead to better results. Encourage them to revise their prompt or ask AI to explain the code if something doesn't work."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 3 to assess whether students can meet the lesson objectives. Look for evidence that students can:\n- Write arrow functions to organize code into reusable pieces\n- Refactor behavior into functions instead of writing it directly inside event handlers\n- Explain how abstraction makes code easier to maintain, including how naming and reusing functions improves clarity"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82a0d4f9-0c33-4396-aa53-5f1b0a7727a7",
+        "lesson_activity.key": "b94f1ee8-58e8-40c9-837b-c97db61087f5"
+      }
+    },
+    {
+      "key": "c8a8d8e3-c600-4f0d-9b1a-b3ca3119e285",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students give general answers (like \"I used functions\"), prompt them to be more specific by asking follow-up questions such as:\n- \"What change made your code easier for someone else to understand?\"\n- \"How might AI tools benefit from code that’s clearly named and organized?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c8a8d8e3-c600-4f0d-9b1a-b3ca3119e285",
+        "lesson_activity.key": "f9a9957d-2880-49fd-ace2-8e8135c44043"
+      }
+    },
+    {
+      "key": "f673c4d0-8e52-4fe9-9182-ecb24a0c480c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f673c4d0-8e52-4fe9-9182-ecb24a0c480c",
+        "lesson_activity.key": "f9a9957d-2880-49fd-ace2-8e8135c44043"
+      }
+    },
+    {
+      "key": "2935c2b0-172e-4ac3-a985-907d1f4a6a0a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2935c2b0-172e-4ac3-a985-907d1f4a6a0a",
+        "lesson_activity.key": "f9a9957d-2880-49fd-ace2-8e8135c44043"
+      }
+    },
+    {
+      "key": "f2eb6b74-f4bc-4872-8502-2ae2a6a93534",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What functionality of a social media app does this flowchart represent?*\n- *Where else have you seen an app make a decision like this?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps make decisions based on user input or data, similar to a flowchart. Use familiar examples like social media apps deciding what to show next or a login screen checking if a password is correct. Emphasize that apps are full of these decision points, and each decision affects what the user sees or experiences.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Who decided that liking one video means showing you similar ones?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that algorithmic systems reflect human decisions — someone designed the rules that shape what they see — and begin to see themselves as participants in (not just users of) those systems.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2eb6b74-f4bc-4872-8502-2ae2a6a93534",
+        "lesson_activity.key": "4f1577d6-5e0f-46a2-811b-e22a1f9f38e9"
+      }
+    },
+    {
+      "key": "25bf57e8-b3ce-41de-bb8b-3b4a7e54376b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand the different flowchart components.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI and Algorithmic Decisions Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *flowchart*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the symbols that are often used to create flowcharts:\n- Start/End – where the process begins or stops\n- Process – an action the app or user takes\n- Decision – a question with Yes/No outcomes\n- Connector – shows the flow of logic\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI uses computer vision to interpret flowcharts.",
+        "duration": "10",
+        "name": "Intro to Flowcharts"
+      },
+      "seeding_key": {
+        "activity_section.key": "25bf57e8-b3ce-41de-bb8b-3b4a7e54376b",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "8c5849a1-106c-40ba-8156-b6e37ec7bfc2",
+      "position": 2,
+      "properties": {
+        "description": "Standardization matters not just for humans, but also because it makes it easier for AI to correctly understand and build working programs from a picture of a flowchart.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8c5849a1-106c-40ba-8156-b6e37ec7bfc2",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "60b35a84-af86-461d-ad93-a4d60e81f7ac",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Create a Flowchart activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Flowchart activity guide. Click through the animated slide to show students an example of how to create a flowchart.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that test cases help test that the flowchart logic works. Make sure students try at least one value for each path of the if/else (e.g., one above and one below the temperature cutoff) and by tracing through the flowchart. If they are having trouble identifying that they need to set the temperature variable to different values, ask them what their condition or decision (yellow diamond) is checking."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60b35a84-af86-461d-ad93-a4d60e81f7ac",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "a0a54493-851d-49d9-8426-377a0d3ea2f3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a0a54493-851d-49d9-8426-377a0d3ea2f3",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "5c43d68b-5456-456f-9350-e05bfdf5b87c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will use flowcharts to generate conditional logic and verify that their code correctly interprets user decisions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Students explore a thermometer app, then write code to change the conditional logic.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students can identify the main parts of the program: the variable, the event listener, and the if/else condition. Prompt with questions like: \"What value is the program checking?\" and \"What happens when the slider is moved?\" Support students in connecting the flowchart steps to the code.",
+        "duration": "20",
+        "name": "Coding Conditionals with Flowcharts",
+        "progression_name": "Explore: Temperature App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level is based on the flowchart that students completed in their Unit Guide. Direct students to trace through the flowchart if they are struggling to understand the code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c43d68b-5456-456f-9350-e05bfdf5b87c",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "242482bd-199e-4166-a8ff-9970bcce10f3",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "242482bd-199e-4166-a8ff-9970bcce10f3",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "e3625730-6b25-417e-8359-b4ac71ab8d4b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What does the condition check for?*\n- *What did you change in the conditional logic?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that the condition is checking the value of the temperature variable which is controlled by the slider (or can be hard-coded by the programmer). Students should have made changes to the message text, message color, and background color. They may also have modified the condition, e.g. changed it to temperature > 80.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *conditional statement*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Boolean expression*.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students practice modeling decisions as flowcharts and translate flowchart decisions into JavaScript if/else statements using AI as a coding partner.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use Sketch Lab to build their own flowchart.\n- Level 3: Use AI to support them in generating code for conditional logic.\n- Level 4: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components including a start, process, decision, and outcome. Each flowchart must incorporate at least one variable and at least one function. Help students who are not sure of how to flowchart by asking prompting questions like: \"What decisions does the app have to make?\" or \"What should the user see on screen?\"",
+        "progression_name": "Turning Flowcharts into Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3625730-6b25-417e-8359-b4ac71ab8d4b",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "8ade469e-4a05-432a-94b5-93add6b2fda0",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are feeling confused by the flowchart elements, have them start with the yellow diamond decision point. Turn their decision into a question with (at least) two outcomes. Then have them work backwards to figure out any functions and variables needed for making that decision. Encourage students who finish early to incorporate more than one condition into their flowchart."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this activity as a formative check of how well students understand flowcharting conditional statements. Look for evidence that students are:\n- Able to use diamond shapes to represent a decision point\n- Flowcharting least two outcomes as a result of a decision point (e.g. Yes/No)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ade469e-4a05-432a-94b5-93add6b2fda0",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "81dce4c8-bbf5-483f-9754-5291c840479b",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "81dce4c8-bbf5-483f-9754-5291c840479b",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "eddb707a-45e0-4c08-854a-5c2b3e8f1848",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. How does your conditional connect to what the user sees or experiences?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that conditionals can change what is visible on screen, as well as controlling system behavior behind the scenes. This includes things like sound, data, or app state. Students should connect the decision being made in their code to both the user's experience (what they hear or see on screen) and the underlying changes happening in the program (like volume level or number of items in a cart)."
+      },
+      "seeding_key": {
+        "activity_section.key": "eddb707a-45e0-4c08-854a-5c2b3e8f1848",
+        "lesson_activity.key": "e26505b1-355d-4c26-b295-906ddcf6f75c"
+      }
+    },
+    {
+      "key": "296b5df6-2bce-4f34-b8d1-220b076a4ec3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "296b5df6-2bce-4f34-b8d1-220b076a4ec3",
+        "lesson_activity.key": "7f61d771-8491-45da-a5e7-b57d47ec3780"
+      }
     }
   ],
   "script_levels": [
@@ -1032,6 +1778,314 @@
       "level_keys": [
         "ai-generated-design-lesson11-level2-cfu_aif-aac-2026"
       ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level1-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level1-revised_ac2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level2-revised_ac2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level3-revised_ac2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4chatbot_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level4chatbot_ac2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Interactivity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level4_ac2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "6406ca56-24ad-4c08-8f05-5e11c3c1554a"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-cfu_ac2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level1-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "f0375815-ab55-4f3b-8ce1-05f090d1c9cd"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson4-level1-revised_ac2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write Reusable Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level2-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "66c1743e-8709-4daa-8ad8-d5650f3534ef"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson4-level2-revised_ac2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Write Reusable Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level8_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "66c1743e-8709-4daa-8ad8-d5650f3534ef"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson4-level8_ac2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "82a0d4f9-0c33-4396-aa53-5f1b0a7727a7"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson4-cfu_ac2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore: Temperature App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level1-explore_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "5c43d68b-5456-456f-9350-e05bfdf5b87c"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson5-level1-explore_ac2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Turning Flowcharts into Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "e3625730-6b25-417e-8359-b4ac71ab8d4b"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_ac2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Turning Flowcharts into Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level3-weblab-choice_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "e3625730-6b25-417e-8359-b4ac71ab8d4b"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson5-level3-weblab-choice_ac2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "8ade469e-4a05-432a-94b5-93add6b2fda0"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson5-cfu_ac2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1154,6 +2208,174 @@
         "script.name": "aif-advisory-council-preview",
         "activity_section.key": "52bf648b-12b9-4332-9786-c9620313dcb4"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level1-revised_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level1-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level2-revised_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level3-revised_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level4chatbot_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4chatbot_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level4_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "938d196d-1e39-4f36-9f90-065c4fcb9d08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-cfu_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "6406ca56-24ad-4c08-8f05-5e11c3c1554a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level1-revised_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level1-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "f0375815-ab55-4f3b-8ce1-05f090d1c9cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level2-revised_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level2-revised_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "66c1743e-8709-4daa-8ad8-d5650f3534ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson4-level8_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-level8_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "66c1743e-8709-4daa-8ad8-d5650f3534ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson4-cfu_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson4-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "82a0d4f9-0c33-4396-aa53-5f1b0a7727a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level1-explore_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level1-explore_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "5c43d68b-5456-456f-9350-e05bfdf5b87c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level2-sketch-choice_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "e3625730-6b25-417e-8359-b4ac71ab8d4b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson5-level3-weblab-choice_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-level3-weblab-choice_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "e3625730-6b25-417e-8359-b4ac71ab8d4b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson5-cfu_ac2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson5-cfu_ac2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-advisory-council-preview",
+        "activity_section.key": "8ade469e-4a05-432a-94b5-93add6b2fda0"
+      }
     }
   ],
   "resources": [
@@ -1183,6 +2405,48 @@
       },
       "seeding_key": {
         "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?tab=t.0#heading=h.89gihrytihy4",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=sharing",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] Create a Flowchart",
+      "url": "https://docs.google.com/document/d/1ANlBfCjFLZ65jJpvqMwg71e9O8z6l82ab3HCayfCmGc/edit?usp=sharing",
+      "key": "_key_create_a_flowchart",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_create_a_flowchart"
       }
     },
     {
@@ -1244,6 +2508,35 @@
       }
     },
     {
+      "name": "AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/1LHWHa9kEeeUXwnbgA-tQLnPLoniN35z84Y2GtJuavtU/edit?tab=t.0",
+      "key": "ai_and_algorithmic_decisions_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "name": "AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/1LHWHa9kEeeUXwnbgA-tQLnPLoniN35z84Y2GtJuavtU/edit?usp=sharing",
+      "key": "ai_and_algorithmic_decisions_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
       "name": "Build Your First Web Page",
       "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E/edit?usp=sharing",
       "key": "build_your_first_web_page",
@@ -1255,6 +2548,20 @@
       },
       "seeding_key": {
         "resource.key": "build_your_first_web_page"
+      }
+    },
+    {
+      "name": "Create a Flowchart",
+      "url": "https://docs.google.com/document/d/1xkw_Nt6_mp3qxYbannZLj13LYUIdSsJc1KEjrfXTlhY/edit?usp=sharing",
+      "key": "create_a_flowchart",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_flowchart"
       }
     },
     {
@@ -1284,6 +2591,48 @@
       },
       "seeding_key": {
         "resource.key": "from_wireframes_to_layouts_1"
+      }
+    },
+    {
+      "name": "Making a Button Respond",
+      "url": "https://docs.google.com/presentation/d/15sOFlbQCvpY9Ss-t0GWe_bABaJ1sBhU1cMd01tMkkhk/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "making_a_button_respond",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_a_button_respond"
+      }
+    },
+    {
+      "name": "Making Decisions with If/Else",
+      "url": "https://docs.google.com/presentation/d/1dCZzt_m1ZGNSzdUlRF4jfxlH36tn7v97eJdR1FB7dgw/edit?usp=sharing",
+      "key": "making_decisions_with_if_else",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_if_else"
+      }
+    },
+    {
+      "name": "Reusable Functions",
+      "url": "https://docs.google.com/presentation/d/1Tinbznitfuw4q9sV-XvR2WfWFvNl8OPsMOai9N5sS5E/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "reusable_functions",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "reusable_functions"
       }
     }
   ],
@@ -1320,6 +2669,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "making_a_button_respond"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -1334,6 +2701,54 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "build_your_first_web_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "reusable_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "_key_create_a_flowchart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "create_a_flowchart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "making_decisions_with_if_else"
       }
     },
     {
@@ -1375,6 +2790,16 @@
   ],
   "vocabularies": [
     {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "hides complex details and shows only the essential features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
       "key": "accessibility",
       "word": "accessibility",
       "definition": "the practice of designing products, websites, and spaces so that people with a wide range of abilities, disabilities, and needs can use them fully and independently",
@@ -1382,6 +2807,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "accessibility"
+      }
+    },
+    {
+      "key": "event_handler",
+      "word": "event handler",
+      "definition": "a block of code that runs in response to an event on a web page element",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event_handler"
+      }
+    },
+    {
+      "key": "event_listener",
+      "word": "event listener",
+      "definition": "a JavaScript feature that you attach to a web page element to wait for a specific event",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event_listener"
+      }
+    },
+    {
+      "key": "function",
+      "word": "function",
+      "definition": "a block of reusable code used to perform a single action",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
       }
     },
     {
@@ -1408,8 +2863,32 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "vocabulary.key": "event_handler"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "vocabulary.key": "event_listener"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "vocabulary.key": "prompt_engineering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "vocabulary.key": "function"
       }
     },
     {
@@ -1429,6 +2908,36 @@
 
   ],
   "objectives": [
+    {
+      "key": "010f063e-53fd-4310-9e38-7df6a8ec99ae",
+      "properties": {
+        "description": "Explain how abstraction makes code easier to maintain"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "010f063e-53fd-4310-9e38-7df6a8ec99ae"
+      }
+    },
+    {
+      "key": "11353226-037b-4f5d-800a-b23972d7bf5e",
+      "properties": {
+        "description": "Add an event handler to make a button interactive"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "objective.key": "11353226-037b-4f5d-800a-b23972d7bf5e"
+      }
+    },
+    {
+      "key": "3808f6d3-c8b2-45b7-839b-181ffd810f6a",
+      "properties": {
+        "description": "Use AI prompts to identify and fix simple errors"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "objective.key": "3808f6d3-c8b2-45b7-839b-181ffd810f6a"
+      }
+    },
     {
       "key": "4be72a16-cfef-42a3-b79b-aa10abcfb923",
       "properties": {
@@ -1450,6 +2959,16 @@
       }
     },
     {
+      "key": "8829c22e-ad66-430e-98a5-786b0c998184",
+      "properties": {
+        "description": "Model conditional logic with flowcharts before coding."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "8829c22e-ad66-430e-98a5-786b0c998184"
+      }
+    },
+    {
       "key": "8ed4643c-9ef9-4921-b124-e58c0df3169f",
       "properties": {
         "description": "Articulate accessibility needs in prompts to fix issues."
@@ -1457,6 +2976,46 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: Accessibility in Design",
         "objective.key": "8ed4643c-9ef9-4921-b124-e58c0df3169f"
+      }
+    },
+    {
+      "key": "9141f92f-c56d-4b12-aac1-e5a26fe83048",
+      "properties": {
+        "description": "Modify the DOM to update page content when the button is clicked"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "objective.key": "9141f92f-c56d-4b12-aac1-e5a26fe83048"
+      }
+    },
+    {
+      "key": "9d38c4be-1eac-4238-b283-7c7b171be9e4",
+      "properties": {
+        "description": "Combine conditionals with variables and functions to make decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "9d38c4be-1eac-4238-b283-7c7b171be9e4"
+      }
+    },
+    {
+      "key": "9fed8fc4-b386-4f82-a801-747899ae14ba",
+      "properties": {
+        "description": "Write arrow functions to organize code into reusable pieces"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "9fed8fc4-b386-4f82-a801-747899ae14ba"
+      }
+    },
+    {
+      "key": "a176844f-d8e9-4f24-80e5-54bb1bf5ce55",
+      "properties": {
+        "description": "Refactor repeated code into a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "a176844f-d8e9-4f24-80e5-54bb1bf5ce55"
       }
     },
     {
@@ -1497,6 +3056,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "objective.key": "cca0f1a5-6efb-4b82-a963-2745d78bad45"
+      }
+    },
+    {
+      "key": "d7939ae7-c5ea-498e-b1a4-2f052092540d",
+      "properties": {
+        "description": "Write if/else statements to control app behavior."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "d7939ae7-c5ea-498e-b1a4-2f052092540d"
       }
     },
     {

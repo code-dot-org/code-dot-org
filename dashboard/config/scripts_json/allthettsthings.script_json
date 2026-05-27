@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-25 09:53:48 UTC",
+    "serialized_at": "2026-05-26 23:18:29 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -254,6 +254,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

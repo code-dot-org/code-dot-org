@@ -4,6 +4,7 @@ import type {
   ObservabilityLogger,
   ObservabilityMetrics,
   TagValue,
+  SpanOptions,
 } from '../types';
 import {NOOP_LOGGER, NOOP_METRICS} from '../types';
 import {getOrCreateObservabilitySessionId, isSampled} from '../sampling';
@@ -216,6 +217,14 @@ export abstract class BaseAdapter implements ObservabilityClient {
   protected abstract initProvider(config: ObservabilityConfig): void;
 
   abstract recordError(error: unknown, context?: Record<string, unknown>): void;
+
+  /**
+   * Run callback inside a span. Subclasses override to attach provider tracing.
+   * Default passes through with no instrumentation.
+   */
+  startSpan<T>(_options: SpanOptions, callback: () => T): T {
+    return callback();
+  }
 
   abstract shutdown(): Promise<void>;
 }
