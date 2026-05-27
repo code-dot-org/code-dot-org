@@ -7,6 +7,11 @@
   gap: 8px;
   min-height: 32px;
 
+  &:hover,
+  &:global(.Mui-focusVisible) {
+    background-color: var(--background-neutral-secondary);
+  }
+
   &:global(.Mui-selected) {
     background-color: var(--background-brand-teal-primary);
   }
