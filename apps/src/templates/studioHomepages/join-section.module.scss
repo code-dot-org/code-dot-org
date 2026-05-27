@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+}
+
+// Applied (in addition to .main) when the teacher isn't yet enrolled in any
+// section — a dashed "drop zone" treatment. Defined after .main so its border
+// wins.
+.mainDashed {
+  border: 5px dashed var(--borders-neutral-strong);
+}
+
+.wordBox {
+  flex-grow: 1;
+  // margin-inline-start auto-flips for RTL (replaces the old isRtl prop).
+  margin-block: 25px;
+  margin-inline-start: 25px;
+}
+
+.heading {
+  margin-bottom: 0;
+}
+
+.details {
+  margin-top: 5px;
+}
+
+.actionBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-inline-end: 25px;
+}
