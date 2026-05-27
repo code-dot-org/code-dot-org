@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import NotificationBanner from '../NotificationBanner';
 
@@ -48,7 +48,7 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('renders close button when onClose is provided', () => {
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(<NotificationBanner {...defaultProps} onClose={onClose} />);
     const closeButton = screen.getByRole('button', {
       name: 'Close notification',
@@ -58,7 +58,7 @@ describe('Design System - NotificationBanner', () => {
 
   it('calls onClose when close button is clicked', async () => {
     const user = userEvent.setup();
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(<NotificationBanner {...defaultProps} onClose={onClose} />);
 
     const closeButton = screen.getByRole('button', {

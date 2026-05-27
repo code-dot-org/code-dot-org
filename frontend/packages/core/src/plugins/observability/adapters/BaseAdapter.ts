@@ -216,7 +216,10 @@ export abstract class BaseAdapter implements ObservabilityClient {
    */
   protected abstract initProvider(config: ObservabilityConfig): void;
 
-  abstract recordError(error: unknown, context?: Record<string, unknown>): void;
+  abstract recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined;
 
   /**
    * Run callback inside a span. Subclasses override to attach provider tracing.

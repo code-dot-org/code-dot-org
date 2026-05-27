@@ -2,6 +2,7 @@ import React from 'react';
 
 import {GenerationSummary} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
 
 interface SummaryDialogProps {
@@ -18,15 +19,15 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
   const total = summary.created.length + summary.failed.length;
   const anyCreated = summary.created.length > 0;
   return (
-    <div className={moduleStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={moduleStyles.dialog}>
+    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
+      <div className={sharedStyles.dialog}>
         <h2>Generation complete</h2>
         <p>
           Created <strong>{summary.created.length}</strong> of {total} level(s).
           {summary.failed.length > 0 && (
             <>
               {' '}
-              <span className={moduleStyles.summaryBad}>
+              <span className={sharedStyles.summaryBad}>
                 {summary.failed.length} failed.
               </span>
             </>
@@ -46,7 +47,7 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
         )}
         {summary.failed.length > 0 && (
           <>
-            <h3 className={moduleStyles.summaryBad}>Failed</h3>
+            <h3 className={sharedStyles.summaryBad}>Failed</h3>
             <ul>
               {summary.failed.map((f, i) => (
                 <li key={i}>
@@ -62,10 +63,10 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
             review, reorder, or tweak before publishing.
           </p>
         )}
-        <div className={moduleStyles.dialogActions}>
+        <div className={sharedStyles.dialogActions}>
           <button
             type="button"
-            className={moduleStyles.secondaryButton}
+            className={sharedStyles.secondaryButton}
             onClick={onClose}
           >
             Stay here
@@ -74,8 +75,8 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
             href={editLessonUrl}
             className={
               anyCreated
-                ? moduleStyles.primaryButton
-                : moduleStyles.secondaryButton
+                ? sharedStyles.primaryButton
+                : sharedStyles.secondaryButton
             }
           >
             {anyCreated ? 'Open lesson editor' : 'Open lesson edit'}

@@ -1764,6 +1764,116 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
+  # ---- /generate (unit-level lesson outline page) ----
+
+  test "generate redirects signed-out users" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    get :generate, params: {id: @single_unit_2023.name}
+    assert_redirected_to_sign_in
+  end
+
+  test "generate forbids non-levelbuilders" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:teacher)
+    get :generate, params: {id: @single_unit_2023.name}
+    assert_response :forbidden
+  end
+
+  test "generate refuses unmigrated units" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    get :generate, params: {id: @unmigrated_unit.name}
+    assert_response :forbidden
+  end
+
+  test "generate renders payload via /s/ URL with editUnitUrl pointing at /edit" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    get :generate, params: {id: @migrated_unit.name}
+    assert_response :ok
+    data = assigns(:unit_data)
+    assert_equal @migrated_unit.name, data[:name]
+    assert_equal "/s/#{@migrated_unit.name}/edit", data[:editUnitUrl]
+  end
+
+  test "generate renders payload via /courses/ URL with editUnitUrl pointing at /edit" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    course = @migrated_unit.original_unit_group
+    get :generate, params: {course_course_name: course.name, position: 1}
+    assert_response :ok
+    data = assigns(:unit_data)
+    assert_equal "/courses/#{course.name}/units/1/edit", data[:editUnitUrl]
+  end
+
+  # ---- PUT /lesson_outlines (bulk-write endpoint) ----
+
+  test "update_lesson_outlines refuses unmigrated units" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    put :update_lesson_outlines, params: {id: @unmigrated_unit.name, lessons: '[]'}
+    assert_response :bad_request
+  end
+
+  test "update_lesson_outlines requires lessons param" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    put :update_lesson_outlines, params: {id: @migrated_unit.name}
+    assert_response :bad_request
+  end
+
+  test "update_lesson_outlines creates new lessons in spec order" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [
+        {key: 'one', name: 'One', generateOutline: 'first'},
+        {key: 'two', name: 'Two', generateOutline: 'second'},
+      ],
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    keys = @migrated_unit.lessons.order(:absolute_position).pluck(:key)
+    assert_equal %w(one two), keys
+    assert_equal 'first', @migrated_unit.lessons.find_by(key: 'one').generate_outline
+  end
+
+  test "update_lesson_outlines persists unit-level generateOutline when supplied" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+      generateOutline: 'unit-level prompt',
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'unit-level prompt', @migrated_unit.generate_outline
+  end
+
+  test "update_lesson_outlines leaves unit generate_outline alone when omitted" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+    @migrated_unit.update!(properties: @migrated_unit.properties.merge('generate_outline' => 'preexisting'))
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'preexisting', @migrated_unit.generate_outline
+  end
+
   def stub_file_writes(unit_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{unit_name}.json"]
     File.stubs(:write).with do |filename, _|
