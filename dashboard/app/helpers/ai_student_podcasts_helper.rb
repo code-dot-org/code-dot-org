@@ -3,7 +3,7 @@ class OpenaiStudentPodcastTimeout < StandardError; end
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
   OPENAI_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content' #CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
+  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
@@ -11,7 +11,7 @@ module AiStudentPodcastsHelper
   def self.create_and_save_to_s3(student_podcast_data)
     filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-    # return unless elevenlabs_client.available_credits
+    return unless elevenlabs_client.available_credits
 
     podcast_script = if student_podcast_data.podcast_script
                        student_podcast_data.podcast_script
