@@ -96,7 +96,7 @@ export default function ToolbarDropdownRow({
     <div className={styles.dropdownRow}>
       <Typography
         id={labelId}
-        variant="body3"
+        variant="body4"
         className={styles.dropdownRowLabel}
       >
         {label}
@@ -115,7 +115,9 @@ export default function ToolbarDropdownRow({
       >
         <span className={styles.dropdownTriggerContent}>
           {triggerPreview}
-          <span className={styles.dropdownTriggerLabel}>{triggerLabel}</span>
+          <Typography variant="body4" className={styles.dropdownTriggerLabel}>
+            <Typography variant="strong">{triggerLabel}</Typography>
+          </Typography>
         </span>
         <FontAwesomeV6Icon
           iconName="chevron-down"

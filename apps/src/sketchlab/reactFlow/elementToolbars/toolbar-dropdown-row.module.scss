@@ -12,14 +12,12 @@
 
 .dropdownTrigger:global(.MuiButtonBase-root) {
   width: 110px;
+  height: 24px;
   justify-content: space-between;
   border: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  padding: 2px 8px;
-  min-height: 28px;
-  font-weight: 400;
-  text-transform: none;
+  padding: 0 8px;
 
   &:hover {
     background-color: var(--background-neutral-secondary);
@@ -30,7 +28,7 @@
 .dropdownTriggerContent {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   min-width: 0;
 }
 

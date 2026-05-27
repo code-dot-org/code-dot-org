@@ -34,21 +34,6 @@ import {
 import ToolbarSection from './ToolbarSection';
 import ToolbarShell from './ToolbarShell';
 
-function renderOptionIcon(option: {
-  icon?: string;
-  iconStyle?: 'solid' | 'regular';
-  iconFamily?: 'kit';
-}): React.ReactNode {
-  if (!option.icon) return null;
-  return (
-    <FontAwesomeV6Icon
-      iconName={option.icon}
-      iconStyle={option.iconStyle}
-      iconFamily={option.iconFamily}
-    />
-  );
-}
-
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
   onSelectColor: (value: string) => void;
