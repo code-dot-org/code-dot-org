@@ -8,19 +8,19 @@
 
   hr {
     margin: 1rem 0;
-    border-color: $light_gray_200;
+    border-color: var(--borders-neutral-primary);
   }
 
   a {
     @include main-font-semi-bold;
     font-size: 1rem;
-    color: $brand_secondary_default;
+    color: var(--text-brand-purple-primary);
     margin: 1rem 0;
     text-decoration: underline;
     transition: color ease-in-out .2s;
 
     &:hover {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
     }
   }
 }
