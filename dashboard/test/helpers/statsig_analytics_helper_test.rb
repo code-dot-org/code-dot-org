@@ -18,14 +18,6 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
       _load_web_analytics.must_equal false
     end
 
-    context 'when Global Edition region is present' do
-      let(:ge_region) {'expected_ge_region'}
-
-      it 'returns true' do
-        _load_web_analytics.must_equal true
-      end
-    end
-
     StatsigAnalyticsHelper::TARGET_PATHS.each do |target_path|
       context "when request path is #{target_path}" do
         let(:request_path) {target_path}

@@ -26,6 +26,12 @@ export interface ObservabilityConfig {
 export type LogAttributes = Record<string, unknown>;
 
 /**
+ * Tag value type accepted by setTag. Sentry indexes these as low-cardinality
+ * filterable dimensions, so non-primitive values are intentionally rejected.
+ */
+export type TagValue = string | number | boolean;
+
+/**
  * Provider-agnostic logging surface exposed to consumers.
  */
 export interface ObservabilityLogger {
@@ -68,14 +74,26 @@ export const NOOP_METRICS: ObservabilityMetrics = {
 };
 
 /**
+ * Options for creating a span around a unit of work.
+ */
+export interface SpanOptions {
+  name: string;
+  op?: string;
+  attributes?: Record<string, string | number | boolean>;
+}
+
+/**
  * Minimal adapter contract shared by the module-level API and plugin bootstrap.
  */
 export interface ObservabilityClient {
   init(config: ObservabilityConfig): void;
   recordError(error: unknown, context?: Record<string, unknown>): void;
+  startSpan<T>(options: SpanOptions, callback: () => T): T;
   logger: ObservabilityLogger;
   metrics: ObservabilityMetrics;
   setConsented(userId: string | null): void;
   isConsented(): boolean;
+  setTag(key: string, value: TagValue): void;
+  setContext(name: string, ctx: Record<string, unknown> | null): void;
   shutdown(): Promise<void>;
 }

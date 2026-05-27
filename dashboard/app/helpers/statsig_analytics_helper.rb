@@ -7,6 +7,6 @@ module StatsigAnalyticsHelper
   TARGET_PATH_PATTERNS = Regexp.union(TARGET_PATHS).freeze
 
   def load_web_analytics?(request)
-    request.ge_region.present? || TARGET_PATH_PATTERNS.match?(request.path)
+    TARGET_PATH_PATTERNS.match?(request.path)
   end
 end

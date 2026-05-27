@@ -609,7 +609,7 @@
             "id": "Vcm7kbEhMpQwBnd3HQezS",
             "type": "shape",
             "position": {
-              "x": 790.9377615359844,
+              "x": 810.6900466667419,
               "y": 931.8573605221491
             },
             "style": {
@@ -627,7 +627,8 @@
             "measured": {
               "width": 275,
               "height": 220
-            }
+            },
+            "dragging": false
           },
           {
             "id": "_E3QiacZicDPMOEFs0oY7",
@@ -657,8 +658,8 @@
             "id": "JlZ65S7uKU8cJr8QIs4q3",
             "type": "shape",
             "position": {
-              "x": 1044.3635254622932,
-              "y": 1226.7153516581304
+              "x": 1064.1158105930508,
+              "y": 1223.8935966394508
             },
             "style": {
               "width": 197.84375,
@@ -675,164 +676,8 @@
             "measured": {
               "width": 198,
               "height": 198
-            }
-          },
-          {
-            "id": "AjXKpKrhEQqHAIqMKhnVr",
-            "type": "shape",
-            "position": {
-              "x": 523.0252565180764,
-              "y": 1512.4957637474693
             },
-            "style": {
-              "width": 140.7890625,
-              "height": 156
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Free \nShipping \nApplied",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
-              "fontSize": 20
-            },
-            "measured": {
-              "width": 141,
-              "height": 156
-            }
-          },
-          {
-            "id": "-IkpdoMEVgJgxmJfCP_9M",
-            "type": "shape",
-            "position": {
-              "x": 753.4611155828972,
-              "y": 1516.0503096800082
-            },
-            "style": {
-              "width": 140.7890625,
-              "height": 156
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Free \nShipping \nApplied",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
-              "fontSize": 20
-            },
-            "measured": {
-              "width": 141,
-              "height": 156
-            }
-          },
-          {
-            "id": "OYIpFFSSHnZJHYDihIj-P",
-            "type": "shape",
-            "position": {
-              "x": 1218.3037804122055,
-              "y": 1511.6846540802724
-            },
-            "style": {
-              "width": 140.7890625,
-              "height": 156
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "NO Free \nShipping \nApplied",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
-              "fontSize": 20
-            },
-            "measured": {
-              "width": 141,
-              "height": 156
-            }
-          },
-          {
-            "id": "FvaHx8OoLIr6ub_Hb7jN6",
-            "type": "shape",
-            "position": {
-              "x": 977.139830064949,
-              "y": 1510.133840421431
-            },
-            "style": {
-              "width": 140.7890625,
-              "height": 156
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Free \nShipping \nApplied",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
-              "fontSize": 20
-            },
-            "measured": {
-              "width": 141,
-              "height": 156
-            }
-          },
-          {
-            "id": "mFiXFQKJ2F0GX13B___6V",
-            "type": "shape",
-            "position": {
-              "x": -319.11700631169924,
-              "y": 958.4458395320607
-            },
-            "style": {
-              "width": 821.3898617260127,
-              "height": 474.2331138608705
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 821,
-              "height": 474
-            }
-          },
-          {
-            "id": "_atXyLXY5zug6b23jW1_P",
-            "type": "text",
-            "position": {
-              "x": -297.8050614142908,
-              "y": 981.4562196510067
-            },
-            "data": {
-              "text": "Truth Table - Use this to plan your flowchart",
-              "fontColor": "#1e1e1e",
-              "fontSize": 28.66105333399012,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 577,
-              "height": 55
-            }
-          },
-          {
-            "id": "sFiGQNLy_rE63nYQ72QOY",
-            "type": "image",
-            "position": {
-              "x": -313.25528496824677,
-              "y": 1025.60844367177
-            },
-            "style": {
-              "width": 812.4053816867607,
-              "height": 322.70547105890773
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson9-level9b_2026/uuid/a13ed1267843dc283f398b597f146c3869429cc8.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 812,
-              "height": 323
-            }
+            "dragging": false
           },
           {
             "id": "4-GQrIn44HhjuiXplbGj0",
@@ -871,128 +716,23 @@
             }
           },
           {
-            "id": "l6HKt2qBwnogSbHzcDZ3F",
-            "type": "text",
-            "position": {
-              "x": 114.7946316859447,
-              "y": 1039.2785091475437
-            },
-            "data": {
-              "text": "Outcome (Free Shipping?)",
-              "fontColor": "#ffffff",
-              "fontSize": 30.627734903494108,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 381,
-              "height": 58
-            }
-          },
-          {
-            "id": "LOvdN6rBUcOGR9Csrie8p",
-            "type": "shape",
-            "position": {
-              "x": 102.13508984094,
-              "y": 1075.276216473448
-            },
-            "style": {
-              "width": 388.8281366716147,
-              "height": 63.61862179464932
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 389,
-              "height": 64
-            }
-          },
-          {
-            "id": "D3ENqXmNtTOarwzn0Paze",
-            "type": "shape",
-            "position": {
-              "x": 101.73799708099187,
-              "y": 1139.7081646273198
-            },
-            "style": {
-              "width": 388.8281366716147,
-              "height": 63.61862179464932
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 389,
-              "height": 64
-            }
-          },
-          {
-            "id": "uzSp9PAuqC8NUt_npvxqV",
-            "type": "shape",
-            "position": {
-              "x": 101.4468827689621,
-              "y": 1205.2088848340131
-            },
-            "style": {
-              "width": 388.8281366716147,
-              "height": 63.10165090125174
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 389,
-              "height": 63
-            }
-          },
-          {
-            "id": "SajddUYX4iD5iwzMtL_by",
-            "type": "shape",
-            "position": {
-              "x": 101.37487966972577,
-              "y": 1267.9801672229648
-            },
-            "style": {
-              "width": 388.6108590497522,
-              "height": 69.48511758494332
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 389,
-              "height": 69
-            }
-          },
-          {
             "id": "hbMnP-BicbkLUtiRQa-ni",
             "type": "text",
             "position": {
-              "x": 771.6305218831081,
-              "y": 1133.6011034871929
+              "x": 791.3828070138657,
+              "y": 1130.779348468513
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 73,
-              "height": 54
-            }
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
           },
           {
             "id": "Lsc9_GPANGnVRjVK-E8rk",
@@ -1003,32 +743,33 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 73,
-              "height": 54
+              "width": 58,
+              "height": 39
             }
           },
           {
             "id": "c7WexoNH15uv8bOih8NrD",
             "type": "text",
             "position": {
-              "x": 1017.9325645263372,
-              "y": 1140.767800671438
+              "x": 1056.0262572785123,
+              "y": 1132.302535615399
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 82,
-              "height": 54
-            }
+              "width": 58,
+              "height": 39
+            },
+            "dragging": false
           },
           {
             "id": "K36Wjict2D5qrytTT4jJq",
@@ -1039,13 +780,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 82,
-              "height": 54
+              "width": 58,
+              "height": 39
             }
           },
           {
@@ -1057,13 +798,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 82,
-              "height": 54
+              "width": 58,
+              "height": 39
             }
           },
           {
@@ -1075,266 +816,13 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1971c2",
-              "fontSize": 28,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 16,
               "showHandles": false
             },
             "measured": {
-              "width": 73,
-              "height": 54
-            }
-          },
-          {
-            "id": "Vo06lp1dtAOwQOlWwysxV",
-            "type": "text",
-            "position": {
-              "x": -285.70285214032924,
-              "y": 1357.2676887736513
-            },
-            "data": {
-              "text": "Each row in your table should match one path and one outcome \nin your flowchart.",
-              "fontColor": "#1e1e1e",
-              "fontSize": 24.266682942708346,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 716,
-              "height": 81
-            }
-          },
-          {
-            "id": "lILgoPAwzLOeZRIIKdP4o",
-            "type": "text",
-            "position": {
-              "x": -239.61954911317696,
-              "y": 1090.568676027962
-            },
-            "data": {
-              "text": "True",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 73,
-              "height": 54
-            }
-          },
-          {
-            "id": "_1IeJJ9TVoRtAc0QCl1Ek",
-            "type": "text",
-            "position": {
-              "x": -240.79987630538346,
-              "y": 1151.828610188271
-            },
-            "data": {
-              "text": "True",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 73,
-              "height": 54
-            }
-          },
-          {
-            "id": "BrC2ZddUZwne2kACJu074",
-            "type": "text",
-            "position": {
-              "x": -240.80000420173144,
-              "y": 1218.8831946175483
-            },
-            "data": {
-              "text": "False",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 82,
-              "height": 54
-            }
-          },
-          {
-            "id": "0GbvjGOYNVR3988G7Qsdv",
-            "type": "text",
-            "position": {
-              "x": -242.47634163448947,
-              "y": 1285.0996103304462
-            },
-            "data": {
-              "text": "False",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 82,
-              "height": 54
-            }
-          },
-          {
-            "id": "7WPZKL6pxUK1oOavqWetI",
-            "type": "text",
-            "position": {
-              "x": -57.657293979179485,
-              "y": 1284.2613776658925
-            },
-            "data": {
-              "text": "False",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 82,
-              "height": 54
-            }
-          },
-          {
-            "id": "5iugvW6OMLjtryB3zn2SQ",
-            "type": "text",
-            "position": {
-              "x": -62.267317841524914,
-              "y": 1224.3313232480984
-            },
-            "data": {
-              "text": "True",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 73,
-              "height": 54
-            }
-          },
-          {
-            "id": "UWUk0J3T90GCxm0Q2Qply",
-            "type": "text",
-            "position": {
-              "x": -65.20087637476433,
-              "y": 1163.9822803943753
-            },
-            "data": {
-              "text": "False",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 82,
-              "height": 54
-            }
-          },
-          {
-            "id": "HlVvV9JkiFYILgClTo8Co",
-            "type": "text",
-            "position": {
-              "x": -64.7818879388359,
-              "y": 1090.222346234066
-            },
-            "data": {
-              "text": "True",
-              "fontColor": "#e03131",
-              "fontSize": 28,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 73,
-              "height": 54
-            }
-          },
-          {
-            "id": "87GAFoMiip_eNNZfv7JwW",
-            "type": "text",
-            "position": {
-              "x": 114.58903108592347,
-              "y": 1094.8032299017896
-            },
-            "data": {
-              "text": "Yes - customer get free shipping ",
-              "fontColor": "#e03131",
-              "fontSize": 20,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 315,
-              "height": 44
-            }
-          },
-          {
-            "id": "bkxPOSomhO_MzXTF0WXtF",
-            "type": "text",
-            "position": {
-              "x": 118.90321490154076,
-              "y": 1156.8286741364448
-            },
-            "data": {
-              "text": "Yes - customer get free shipping ",
-              "fontColor": "#e03131",
-              "fontSize": 20,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 315,
-              "height": 44
-            }
-          },
-          {
-            "id": "DxWTmLvToaG4ILEiZsddt",
-            "type": "text",
-            "position": {
-              "x": 123.5132387638863,
-              "y": 1228.0741021476172
-            },
-            "data": {
-              "text": "Yes - customer get free shipping ",
-              "fontColor": "#e03131",
-              "fontSize": 20,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 315,
-              "height": 44
-            }
-          },
-          {
-            "id": "9oWyhm-KvCRtQ1RpauOjm",
-            "type": "text",
-            "position": {
-              "x": 127.70414629395543,
-              "y": 1288.0041565654114
-            },
-            "data": {
-              "text": "No - customer doesn't get free shipping ",
-              "fontColor": "#e03131",
-              "fontSize": 20,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 382,
-              "height": 44
-            }
-          },
-          {
-            "id": "59e1bda2-ea4a-4ba3-aaf7-6ab5553ff332",
-            "type": "lineAnchor",
-            "position": {
-              "x": 854.6366380504875,
-              "y": 1097.4281368050385
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
+              "width": 58,
+              "height": 39
             }
           },
           {
@@ -1355,17 +843,98 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "7b90be65-a458-478f-b1a6-8dbafdc96cf5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Free Shipping Applied",
+              "backgroundColor": "var(--sketchlab-bg-gray)"
+            },
+            "position": {
+              "x": 547.6715978547285,
+              "y": 1513.8111989548197
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e81a83c8-b6fc-448a-8d5a-d2be4e8cb3df",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Free Shipping Applied",
+              "backgroundColor": "var(--sketchlab-bg-gray)"
+            },
+            "position": {
+              "x": 770.5902443304211,
+              "y": 1512.4003214454797
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a05aa2cd-84f7-4fc7-80d4-f92c1c192aa9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Free Shipping Applied",
+              "backgroundColor": "var(--sketchlab-bg-gray)"
+            },
+            "position": {
+              "x": 986.4545032594147,
+              "y": 1515.2220764641593
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ecfea13a-5304-4117-acb6-8b837f9de8e1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "No Free Shipping Applied",
+              "backgroundColor": "var(--sketchlab-bg-gray)"
+            },
+            "position": {
+              "x": 1182.566477057651,
+              "y": 1515.2220764641595
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
           }
         ],
         "edges": [
           {
             "id": "327c7039-8806-4de7-b0c6-8ba289bd61bb",
-            "source": "59e1bda2-ea4a-4ba3-aaf7-6ab5553ff332",
+            "source": "Vcm7kbEhMpQwBnd3HQezS",
             "target": "12c6ffbd-bca7-4a83-9fdf-3edae1bd6198",
             "type": "straight",
             "markerEnd": {
               "type": "arrowclosed"
-            }
+            },
+            "sourceHandle": "bottom-source"
           },
           {
             "id": "df8c7983-bc16-4724-a257-ea584931501c",
@@ -1378,56 +947,92 @@
             }
           },
           {
-            "id": "8313df5b-0703-4f0e-b0b9-d0449c447956",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
             "source": "_E3QiacZicDPMOEFs0oY7",
-            "target": "AjXKpKrhEQqHAIqMKhnVr",
             "sourceHandle": "bottom-source",
+            "target": "7b90be65-a458-478f-b1a6-8dbafdc96cf5",
             "targetHandle": "top-target",
             "markerEnd": {
-              "type": "arrowclosed"
-            }
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge___E3QiacZicDPMOEFs0oY7bottom-source-7b90be65-a458-478f-b1a6-8dbafdc96cf5top-target"
           },
           {
-            "id": "a29f8556-ae42-4409-b442-545b1ee1123e",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
             "source": "_E3QiacZicDPMOEFs0oY7",
-            "target": "-IkpdoMEVgJgxmJfCP_9M",
             "sourceHandle": "bottom-source",
+            "target": "e81a83c8-b6fc-448a-8d5a-d2be4e8cb3df",
             "targetHandle": "top-target",
             "markerEnd": {
-              "type": "arrowclosed"
-            }
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge___E3QiacZicDPMOEFs0oY7bottom-source-e81a83c8-b6fc-448a-8d5a-d2be4e8cb3dftop-target"
           },
           {
-            "id": "69744960-ea00-4ae7-b7f7-21d6f78181e8",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
             "source": "JlZ65S7uKU8cJr8QIs4q3",
-            "target": "FvaHx8OoLIr6ub_Hb7jN6",
             "sourceHandle": "bottom-source",
+            "target": "a05aa2cd-84f7-4fc7-80d4-f92c1c192aa9",
             "targetHandle": "top-target",
             "markerEnd": {
-              "type": "arrowclosed"
-            }
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__JlZ65S7uKU8cJr8QIs4q3bottom-source-a05aa2cd-84f7-4fc7-80d4-f92c1c192aa9top-target"
           },
           {
-            "id": "0bf1cc97-d1dd-4fe7-b9fd-067a67d600a0",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
             "source": "JlZ65S7uKU8cJr8QIs4q3",
-            "target": "OYIpFFSSHnZJHYDihIj-P",
             "sourceHandle": "bottom-source",
+            "target": "ecfea13a-5304-4117-acb6-8b837f9de8e1",
             "targetHandle": "top-target",
             "markerEnd": {
-              "type": "arrowclosed"
-            }
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__JlZ65S7uKU8cJr8QIs4q3bottom-source-ecfea13a-5304-4117-acb6-8b837f9de8e1top-target"
           }
         ],
         "viewport": {
-          "x": 265.6682514323494,
-          "y": -313.24727321468157,
-          "zoom": 0.5371538480401556
+          "x": -110.17799151890449,
+          "y": -476.95721204256563,
+          "zoom": 0.7087787517910867
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:25.973+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9b_2025\"},{\"changed_at\":\"2026-04-16 01:59:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:05:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:09:12 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:09:27 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:47 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:14:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:26:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:15:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:53:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 23:06:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:14:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:14:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:25.973+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9b_2025\"},{\"changed_at\":\"2026-04-16 01:59:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:05:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:09:12 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:09:27 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:47 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:14:14 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 13:26:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:15:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:53:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 23:06:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:14:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:14:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 05:48:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>

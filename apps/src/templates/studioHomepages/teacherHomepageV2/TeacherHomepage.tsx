@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -282,6 +283,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 }}
               />
             )}
+
+            <LatamGeRegionNotice />
+
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
@@ -308,7 +312,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 />
               )
             ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={showHiddenOnly}
