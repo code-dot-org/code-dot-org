@@ -93,8 +93,12 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
+      # Verify every file that should be a Git LFS pointer is stored as one.
+      # Inspect only HEAD (the post-merge tree that will land), not a A..B range:
+      # a range checks every commit, so a PR that introduces a mismatch and then
+      # fixes it in a later commit would still fail on the transient bad commit.
       - |
-        git lfs fsck --pointers origin/$DRONE_TARGET_BRANCH..HEAD || {
+        git lfs fsck --pointers HEAD || {
           echo
           echo "ERROR: Git LFS pointer mismatch (see above)."
           echo "A file that .gitattributes marks as LFS is committed as content, not a pointer."
