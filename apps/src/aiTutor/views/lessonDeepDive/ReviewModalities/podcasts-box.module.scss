@@ -165,3 +165,42 @@ $purple: #9657c7;
   margin: 24px auto 0;
   max-width: 600px;
 }
+
+// ── Transcript ─────────────────────────────────────────────────────────────────
+
+.transcript {
+  width: 100%;
+  max-width: 600px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.transcriptTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #f0f2f5;
+  cursor: pointer;
+}
+
+.transcriptLines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.transcriptLine {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #f0f2f5;
+  margin: 0;
+}
+
+.speaker {
+  font-weight: 600;
+  color: $purple;
+  margin-right: 6px;
+}

@@ -3,7 +3,7 @@ class OpenaiStudentPodcastTimeout < StandardError; end
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
   OPENAI_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content' #CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
@@ -11,7 +11,7 @@ module AiStudentPodcastsHelper
   def self.create_and_save_to_s3(student_podcast_data)
     filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
     return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-    return unless elevenlabs_client.available_credits
+    # return unless elevenlabs_client.available_credits
 
     podcast_script = if student_podcast_data.podcast_script
                        student_podcast_data.podcast_script
@@ -25,6 +25,10 @@ module AiStudentPodcastsHelper
 
   def self.retrieve_podcast_from_s3(lesson_id, objective_ids)
     AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(lesson_id, objective_ids))
+  end
+
+  def self.exists_in_s3?(lesson_id, objective_ids)
+    AWS::S3.exists_in_bucket(PODCAST_BUCKET, s3_filename(lesson_id, objective_ids))
   end
 
   VOICE_ID_MAP = {
@@ -41,18 +45,29 @@ module AiStudentPodcastsHelper
 
   def self.generate_podcast_script(student_podcast_data)
     objective_ids = student_podcast_data.objective_ids
-    existing_script_podcast = AiStudentPodcast.
-      joins(:ai_student_podcast_objectives).
-      where(lesson_id: student_podcast_data.lesson_id).
-      where.not(podcast_script: nil).
-      group('ai_student_podcasts.id').
-      having(
-        'COUNT(ai_student_podcast_objectives.objective_id) = ? AND SUM(ai_student_podcast_objectives.objective_id IN (?)) = ?',
-        objective_ids.size,
-        objective_ids,
-        objective_ids.size
-      ).
-      first
+    existing_script_podcast =
+      if objective_ids.empty?
+        # An objectiveless podcast has no join rows, so the INNER JOIN
+        # aggregation below can never match it; look it up by their absence.
+        AiStudentPodcast.
+          where(lesson_id: student_podcast_data.lesson_id).
+          where.not(podcast_script: nil).
+          where.missing(:ai_student_podcast_objectives).
+          first
+      else
+        AiStudentPodcast.
+          joins(:ai_student_podcast_objectives).
+          where(lesson_id: student_podcast_data.lesson_id).
+          where.not(podcast_script: nil).
+          group('ai_student_podcasts.id').
+          having(
+            'COUNT(ai_student_podcast_objectives.objective_id) = ? AND SUM(ai_student_podcast_objectives.objective_id IN (?)) = ?',
+            objective_ids.size,
+            objective_ids,
+            objective_ids.size
+          ).
+          first
+      end
 
     if existing_script_podcast
       student_podcast_data.podcast_script = existing_script_podcast.podcast_script

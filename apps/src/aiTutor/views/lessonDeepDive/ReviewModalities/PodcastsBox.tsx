@@ -51,6 +51,9 @@ interface PodcastsBoxProps {
 
 type PodcastStatus = 'loading' | 'ready' | 'unavailable';
 
+// One line of the podcast transcript: who is speaking and what they say.
+type ScriptLine = {voice_id: string; text: string};
+
 const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -58,6 +61,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   const [duration, setDuration] = useState(0);
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [status, setStatus] = useState<PodcastStatus>('loading');
+  const [scriptLines, setScriptLines] = useState<ScriptLine[] | null>(null);
 
   // The podcast is keyed by the objectives the student is still working on, so
   // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
@@ -93,8 +97,13 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   // Fetch the mp3 as a blob and hand the audio element an object URL. A blob
   // keeps the scrubber and skip controls working, since the controller serves
   // the file via send_data without HTTP range support.
+  //
+  // A podcast is generated whenever the student submits a reflection, keyed by
+  // their struggling objectives — an empty set when they rated everything "Got
+  // it", which is a valid lesson-level podcast. So we retrieve whenever a
+  // reflection exists; only the no-reflection case has nothing to fetch.
   useEffect(() => {
-    if (objectiveIds.length === 0) {
+    if (!reflectionData) {
       setStatus('unavailable');
       return;
     }
@@ -102,12 +111,14 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
     const params = new URLSearchParams();
     params.set('lesson_id', String(lessonId));
     objectiveIds.forEach(id => params.append('objective_ids[]', id));
+    const query = params.toString();
 
     let cancelled = false;
     let objectUrl: string | null = null;
     setStatus('loading');
+    setScriptLines(null);
 
-    HttpClient.get(`/ai_student_podcasts/retrieve_podcast_from_s3?${params}`)
+    HttpClient.get(`/ai_student_podcasts/retrieve_podcast_from_s3?${query}`)
       .then(response => response.blob())
       .then(blob => {
         if (cancelled) return;
@@ -119,11 +130,22 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
         if (!cancelled) setStatus('unavailable');
       });
 
+    // The transcript lives on the podcast record — its podcast_script is a JSON
+    // string of {voice_id, text} lines — so fetch it from the show route in
+    // parallel with the audio.
+    HttpClient.get(`/ai_student_podcasts?${query}`)
+      .then(response => response.json())
+      .then((data: {podcast_script?: string | null}) => {
+        if (cancelled || !data.podcast_script) return;
+        setScriptLines(JSON.parse(data.podcast_script) as ScriptLine[]);
+      })
+      .catch(() => {});
+
     return () => {
       cancelled = true;
       if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
-  }, [lessonId, objectiveIds]);
+  }, [lessonId, objectiveIds, reflectionData]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -252,14 +274,28 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
         </div>
       </div>
 
-      <p className={styles.description}>
-        {status === 'loading' &&
-          "Putting together this lesson's podcast. One moment…"}
-        {status === 'unavailable' &&
-          "This lesson's podcast isn't ready yet. Check back soon."}
-        {status === 'ready' &&
-          "This lesson's concepts, explained as a short audio summary. Press play to listen."}
-      </p>
+      {status === 'ready' && scriptLines ? (
+        <details className={styles.transcript}>
+          <summary className={styles.transcriptTitle}>TRANSCRIPT</summary>
+          <div className={styles.transcriptLines}>
+            {scriptLines.map((line, i) => (
+              <p key={i} className={styles.transcriptLine}>
+                <span className={styles.speaker}>{line.voice_id}</span>
+                {line.text}
+              </p>
+            ))}
+          </div>
+        </details>
+      ) : (
+        <p className={styles.description}>
+          {status === 'loading' &&
+            "Putting together this lesson's podcast. One moment…"}
+          {status === 'unavailable' &&
+            "This lesson's podcast isn't ready yet. Check back soon."}
+          {status === 'ready' &&
+            "This lesson's concepts, explained as a short audio summary. Press play to listen."}
+        </p>
+      )}
     </div>
   );
 };

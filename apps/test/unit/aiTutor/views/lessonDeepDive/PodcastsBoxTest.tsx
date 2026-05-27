@@ -28,10 +28,31 @@ const reflectionData: ReflectionData = {
   struggle: '',
 };
 
-function mockOkResponse() {
-  mockGet.mockResolvedValue({
-    blob: () => Promise.resolve(new Blob(['mp3-bytes'], {type: 'audio/mpeg'})),
+type ScriptLine = {voice_id: string; text: string};
+
+// Routes the two GETs PodcastsBox makes: the audio blob from
+// retrieve_podcast_from_s3 and the transcript JSON from the show route.
+function mockEndpoints(script: ScriptLine[] | null = null) {
+  mockGet.mockImplementation((url: string) => {
+    if (url.includes('retrieve_podcast_from_s3')) {
+      return Promise.resolve({
+        blob: () =>
+          Promise.resolve(new Blob(['mp3-bytes'], {type: 'audio/mpeg'})),
+      });
+    }
+    return Promise.resolve({
+      json: () =>
+        Promise.resolve({
+          podcast_script: script ? JSON.stringify(script) : null,
+        }),
+    });
   });
+}
+
+function retrieveUrl(): string | undefined {
+  return mockGet.mock.calls
+    .map(call => call[0] as string)
+    .find(url => url.includes('retrieve_podcast_from_s3'));
 }
 
 describe('PodcastsBox', () => {
@@ -42,14 +63,13 @@ describe('PodcastsBox', () => {
   });
 
   it('requests the podcast for the lesson and the struggling objectives only', async () => {
-    mockOkResponse();
+    mockEndpoints();
     render(
       <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
     );
 
-    await waitFor(() => expect(mockGet).toHaveBeenCalledTimes(1));
-    const url = mockGet.mock.calls[0][0] as string;
-    expect(url).toContain('/ai_student_podcasts/retrieve_podcast_from_s3?');
+    await waitFor(() => expect(retrieveUrl()).toBeDefined());
+    const url = retrieveUrl();
     expect(url).toContain('lesson_id=42');
     expect(url).toContain('objective_ids%5B%5D=10');
     expect(url).toContain('objective_ids%5B%5D=20');
@@ -58,7 +78,7 @@ describe('PodcastsBox', () => {
   });
 
   it('turns the fetched blob into an object URL and enables playback', async () => {
-    mockOkResponse();
+    mockEndpoints();
     render(
       <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
     );
@@ -69,6 +89,21 @@ describe('PodcastsBox', () => {
     await waitFor(() => expect(playButton).toBeEnabled());
     expect(window.URL.createObjectURL).toHaveBeenCalledTimes(1);
     expect(window.URL.createObjectURL).toHaveBeenCalledWith(expect.any(Blob));
+  });
+
+  it('renders the script transcript in the description when ready', async () => {
+    mockEndpoints([
+      {voice_id: 'Dan', text: 'What is a variable?'},
+      {voice_id: 'Sam', text: 'A named box for a value.'},
+    ]);
+    render(
+      <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
+    );
+
+    expect(await screen.findByText('What is a variable?')).toBeInTheDocument();
+    expect(screen.getByText('A named box for a value.')).toBeInTheDocument();
+    expect(screen.getByText('Dan')).toBeInTheDocument();
+    expect(screen.getByText('Sam')).toBeInTheDocument();
   });
 
   it('shows an unavailable message and disables controls when retrieval fails', async () => {
@@ -83,7 +118,8 @@ describe('PodcastsBox', () => {
     expect(screen.getByRole('button', {name: 'Play'})).toBeDisabled();
   });
 
-  it('does not request a podcast when there are no struggling objectives', async () => {
+  it('requests the lesson-level podcast with no objective ids when nothing is struggling', async () => {
+    mockEndpoints();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -97,11 +133,10 @@ describe('PodcastsBox', () => {
       />
     );
 
-    expect(
-      await screen.findByText(/podcast isn't ready yet/i)
-    ).toBeInTheDocument();
-    expect(mockGet).not.toHaveBeenCalled();
-    expect(screen.getByRole('button', {name: 'Play'})).toBeDisabled();
+    await waitFor(() => expect(retrieveUrl()).toBeDefined());
+    const url = retrieveUrl();
+    expect(url).toContain('lesson_id=42');
+    expect(url).not.toContain('objective_ids');
   });
 
   it('does not request a podcast when reflectionData is null', async () => {

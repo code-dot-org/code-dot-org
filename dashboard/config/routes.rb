@@ -1207,8 +1207,9 @@ Dashboard::Application.routes.draw do
     end
 
     # AI Student Podcast routes
-    resources :ai_student_podcasts, only: [:show] do
+    resources :ai_student_podcasts, only: [] do
       collection do
+        get :show # GET /ai_student_podcasts?lesson_id=1&objective_ids[]=2
         post :generate_podcast
         get :retrieve_podcast_from_s3
       end
