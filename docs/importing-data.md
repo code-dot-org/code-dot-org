@@ -2,17 +2,7 @@
 
 ## Importing Data
 
-Data may be imported from Google Sheets into SQL tables. Columns in these spreedsheets must be named using type suffixes.
-
-### Importing Google Sheets
-
-1. Create a new gsheet in the "Pegasus" Google Docs folder, naming your columns using type suffixes.
-  - Make Site GoogleCloud (`site.googlecloud@code.org`) the owner of the gsheet.
-1. Add a new `cdo-table-name.gsheet` file locally in the `pegasus/data` folder.
-1. Paste the gsheet ID in the corresponding `pegasus/data/cdo-table-name.gsheet` file (from step 2). (See more context in [this PR](https://github.com/code-dot-org/code-dot-org/pull/54047))
-1. Run the following commands to populate the data locally:
-  - `cd pegasus`
-  - `bundle exec rake seed:sync`
+Data may be imported from CSV files into SQL tables. Columns in these CSVs must be named using type suffixes.
 
 ### Type Suffixes
 
@@ -72,6 +62,5 @@ Location: (<%= row[:latitude_f] %>, <%= row[:longitude_f] %>)
 ### Developer Details
 Make sure you're in the `pegasus` directory.
 
-- `bundle exec rake seed:sync` will detect modified gsheets, download updated versions as .csv files, and then perform a `seed:migrate`.
 - `bundle exec rake seed:migrate` will import any modified .csv files into the database.
 - `bundle exec rake seed:reset` will import all .csv files into the database regardless of their modification status.

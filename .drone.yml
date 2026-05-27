@@ -18,6 +18,12 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -43,7 +49,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -90,7 +96,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -164,11 +170,24 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
+
+  # Implement mysql db as a detached step rather than a service, so that we can
+  # wait to start it up until we've finished restoring the cache.
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    detach: true
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
   - name: checkout
     image: bitnamilegacy/git
@@ -212,11 +231,8 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -238,7 +254,6 @@ steps:
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -279,6 +294,17 @@ name: cache-staging-build
 clone:
   disable: true
 
+services:
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
+
 steps:
   - name: clone
     image: bitnamilegacy/git
@@ -297,7 +323,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -305,9 +331,6 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
@@ -316,13 +339,13 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build-internal-mysql
+  - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -344,6 +367,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
+hmac: 936ffb252e7466b1fa882aa979e9416024d9fc37f088c54c1ca8d9a9157f90d2
 
 ...
