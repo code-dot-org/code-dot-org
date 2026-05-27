@@ -106,8 +106,9 @@ class Train extends React.Component<Record<string, never>, TrainState> {
           />
         </Box>
 
-        {/* Inspectable badge: aria-label carries the count, not a live region. */}
+        {/* role=figure: inspectable display widget; aria-label names it without live-region noise. */}
         <Box
+          role="figure"
           aria-label={formatItemsClassified(state.yesCount + state.noCount)}
           data-testid="training-count"
           sx={{

@@ -37,7 +37,7 @@ export class OceansPage {
 
   /** Counter span showing total classifications so far. */
   get trainCount(): Locator {
-    return this.page.getByRole('status', {name: 'Fish counted'});
+    return this.page.getByTestId('training-count');
   }
 
   /** Erase button — also the sentinel for "training scene is visible". */
