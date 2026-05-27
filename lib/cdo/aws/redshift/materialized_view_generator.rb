@@ -28,9 +28,11 @@ module Cdo
       )
 
       class MaterializedViewGenerator
-        TEXT_DATA_TYPES = [:string, :text].freeze
-        DATE_TIME_DATA_TYPES = [:date, :datetime, :timestamp].freeze
-        NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
+        # Which `DataClassification` levels reach each Redshift view. The non-PII view
+        # carries only data safe for broad analytics access; the PII view carries
+        # everything except secrets (:highly_restricted), which reach neither view.
+        NON_PII_CLASSIFICATIONS = %i[public confidential].freeze
+        PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
 
         # Human-readable descriptions for the numeric `state` column of
@@ -87,15 +89,17 @@ module Cdo
           view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
         end
 
-        # Generates the DDL for the PII (full) Materialized View
+        # Generates the DDL for the PII Materialized View, which projects every column
+        # except those classified :highly_restricted.
         def generate_pii_ddl
-          columns = model.columns.map(&:name)
+          columns = pii_columns
           return nil if columns.empty? # Prevent invalid SQL generation
 
           build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}_pii", columns: columns)
         end
 
-        # Generates the DDL for the non-PII (restricted) Materialized View.
+        # Generates the DDL for the non-PII Materialized View, which projects only
+        # :public and :confidential columns.
         def generate_non_pii_ddl
           return nil if non_pii_columns.empty?
           build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}", columns: non_pii_columns)
@@ -143,7 +147,7 @@ module Cdo
             fqn = fully_qualified_view_name(env, pii: true)
             result[fqn] = {
               sql: ERB.new(pii_template).result_with_hash(environment_type: env),
-              first_column: model.columns.first.name
+              first_column: pii_columns.first
             }
           end
           if (non_pii_template = generate_non_pii_ddl)
@@ -673,16 +677,14 @@ module Cdo
           end
         end
 
+        # Columns projected into the PII view: everything except :highly_restricted.
+        private def pii_columns
+          model.column_names_classified_as(*PII_CLASSIFICATIONS)
+        end
+
+        # Columns projected into the non-PII view: only :public and :confidential.
         private def non_pii_columns
-          model.columns.select do |col|
-            if TEXT_DATA_TYPES.include?(col.type)
-              false # Exclude all text/string columns.
-            elsif DATE_TIME_DATA_TYPES.include?(col.type)
-              NON_PII_DATE_TIME_COLUMN_NAMES.include?(col.name) # A subset of date/time column names are non-pii.
-            else
-              true # Allow integers, booleans, floats, etc.
-            end
-          end.map(&:name)
+          model.column_names_classified_as(*NON_PII_CLASSIFICATIONS)
         end
 
         private def view_name
@@ -698,7 +700,7 @@ module Cdo
         # [true, false] for both PII and non-PII.
         private def view_variants
           variants = []
-          variants << true unless model.columns.empty?
+          variants << true unless pii_columns.empty?
           variants << false unless non_pii_columns.empty?
           variants
         end

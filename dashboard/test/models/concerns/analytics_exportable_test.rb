@@ -123,6 +123,28 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     assert_empty AnalyticsExportable.exportability_errors_by_model
   end
 
+  test 'exportability_errors_by_model surfaces data classification typos' do
+    model = create_base_model('TypoModel', columns: [mock_column('id', :integer)])
+    model.data_classification(nonexistent: :public)
+    model.export_to_analytics
+
+    by_model = AnalyticsExportable.exportability_errors_by_model
+    assert_includes by_model[model].first, 'unknown column(s): nonexistent'
+  end
+
+  test 'classification_coverage maps exported models to their undeclared columns' do
+    declared = create_base_model('DeclaredModel', columns: [mock_column('id', :integer)])
+    declared.data_classification(id: :public)
+    partial = create_base_model('PartialModel', columns: [mock_column('id', :integer), mock_column('name', :string)])
+    partial.data_classification(id: :public)
+    declared.export_to_analytics
+    partial.export_to_analytics
+
+    coverage = AnalyticsExportable.classification_coverage
+    assert_equal [partial], coverage.keys, 'fully-classified models are omitted'
+    assert_equal %w[name], coverage[partial]
+  end
+
   test 'valid_exported_models excludes models that fail validation' do
     valid = create_base_model('ValidModel')
     no_pk = create_base_model('NoPkModel', db_primary_key: nil)
@@ -311,6 +333,9 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     conn.stubs(:primary_key).with(table_name).returns(db_pk)
     klass = Class.new do
       include AnalyticsExportable
+      # ApplicationRecord includes both concerns; AnalyticsExportable's validation calls
+      # into DataClassification, so the test double must compose them the same way.
+      include DataClassification
       define_singleton_method(:base_class) {self}
       define_singleton_method(:name) {name}
       define_singleton_method(:table_name) {table_name}

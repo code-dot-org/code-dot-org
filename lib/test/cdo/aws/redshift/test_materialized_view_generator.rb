@@ -7,6 +7,30 @@ require 'tmpdir'
 module Cdo
   module Aws
     module Redshift
+      # Mimics DataClassification's default (no declarations) column projection so the
+      # generator tests can drive a plain model stub: `column_names_classified_as`
+      # recomputes from the stub's current `columns`, so the many `model.stubs(:columns)`
+      # overrides below need no per-site classification stubbing. The classification
+      # rules themselves are tested in
+      # dashboard/test/models/concerns/data_classification_test.rb.
+      module FakeClassification
+        NON_PII_DATE_TIME = %w[created_at updated_at deleted_at].freeze
+
+        def column_names_classified_as(*levels)
+          wanted = levels.flatten
+          columns.select {|col| wanted.include?(fake_classification(col))}.map(&:name)
+        end
+
+        def fake_classification(col)
+          case col.type
+          when :string, :text then :restricted
+          when :date, :datetime, :timestamp
+            NON_PII_DATE_TIME.include?(col.name) ? :public : :restricted
+          else :public
+          end
+        end
+      end
+
       describe MaterializedViewGenerator do
         def mock_column(name, type)
           col = stub
@@ -33,6 +57,7 @@ module Cdo
         let(:model) {stub}
 
         before do
+          model.extend(FakeClassification)
           model.stubs(:table_name).returns('users')
           model.stubs(:primary_key).returns('id')
           model.stubs(:columns).returns(all_columns)
@@ -640,6 +665,7 @@ module Cdo
           let(:activities_model) {stub}
 
           before do
+            activities_model.extend(FakeClassification)
             activities_model.stubs(:table_name).returns('activities')
             activities_model.stubs(:primary_key).returns('id')
             activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])
@@ -738,6 +764,7 @@ module Cdo
               primary_key: 'id',
               columns: []
             )
+            empty_model.extend(FakeClassification)
             client.expects(:execute_async).never
 
             events = []
@@ -914,6 +941,7 @@ module Cdo
             MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
             MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
 
+            activities_model.extend(FakeClassification)
             activities_model.stubs(:table_name).returns('activities')
             activities_model.stubs(:primary_key).returns('id')
             activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])

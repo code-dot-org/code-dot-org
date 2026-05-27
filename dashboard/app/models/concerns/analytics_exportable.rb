@@ -79,7 +79,23 @@ module AnalyticsExportable
         reasons << "Zero ETL does not support blob columns (#{blob_columns.join(', ')})"
       end
 
+      # Surface DataClassification typos (a declared column that doesn't exist) as an
+      # export validation error, since they silently misclassify the generated views.
+      reasons.concat(model.data_classification_errors)
+
       errors_by_model[model] = reasons if reasons.any?
+    end
+  end
+
+  # Maps each exported model to the columns that have no explicit
+  # `data_classification` declaration (and so rely on the type-based default). Use to
+  # track progress as we classify exported models.
+  # @return [Hash{Class => Array<String>}] models with undeclared columns mapped to
+  #   those column names. Models with full coverage are omitted.
+  def self.classification_coverage
+    exported_models.each_with_object({}) do |model, coverage|
+      undeclared = model.undeclared_data_classification_columns
+      coverage[model] = undeclared unless undeclared.empty?
     end
   end
 
