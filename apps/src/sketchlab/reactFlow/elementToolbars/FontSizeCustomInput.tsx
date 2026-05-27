@@ -11,6 +11,7 @@ import styles from './font-size-custom-input.module.scss';
 interface FontSizeCustomInputProps {
   selectedValue: FontSize | undefined;
   onSelect: (value: number) => void;
+  onClose: () => void;
   isSelected: boolean;
 }
 
@@ -19,6 +20,7 @@ interface FontSizeCustomInputProps {
 export default function FontSizeCustomInput({
   selectedValue,
   onSelect,
+  onClose,
   isSelected,
 }: FontSizeCustomInputProps) {
   const displayValue =
@@ -68,15 +70,18 @@ export default function FontSizeCustomInput({
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         event.preventDefault();
+        // blur() triggers handleInputBlur, which commits the value.
         (event.target as HTMLInputElement).blur();
+        onClose();
       }
     },
-    []
+    [onClose]
   );
 
   return (
     <MenuItem
       ref={rootRef}
+      selected={isSelected}
       className={classNames(styles.customOptionRow, {
         [styles.customOptionRowSelected]: isSelected,
       })}
@@ -99,6 +104,7 @@ export default function FontSizeCustomInput({
         onKeyDown={handleInputKeyDown}
         size="s"
         className={sharedStyles.smallInput}
+        type="number"
       />
     </MenuItem>
   );

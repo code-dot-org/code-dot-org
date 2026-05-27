@@ -34,6 +34,7 @@ export default function SizeDropdownRow({
             <FontSizeCustomInput
               selectedValue={value}
               onSelect={onSelect}
+              onClose={closePopover}
               isSelected={isCustom}
             />
           }
