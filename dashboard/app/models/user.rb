@@ -446,19 +446,25 @@ class User < ApplicationRecord
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
-  # Demo students may only be soft-deleted (archived). The demo_students row
-  # must persist so permission checks via `Policies::DemoSections.demo_student?`
-  # keep returning true for the archived user. The FK on demo_students is
-  # ON DELETE RESTRICT, so the database is the ultimate authority here; this
-  # guard exists to surface a clearer error before MySQL rejects the DELETE.
-  # Uses the durable (uncached) check because a stale per-process cache could
-  # otherwise let a worker think a freshly-flagged demo student is fair game.
-  def really_destroy!
-    if Policies::DemoSections.demo_student_durable?(id)
-      raise DemoStudent::ProtectedRecord,
-        "Cannot hard-delete demo student user_id=#{id}; demo students may only be soft-deleted."
-    end
-    super
+  # Strip every login credential off this user: secrets, Devise password,
+  # email/hashed_email, OAuth/SSO identifiers, primary_contact_info pointer,
+  # and the underlying authentication_options rows. Authentication options are
+  # hard-deleted (not paranoia-soft-deleted) so OAuth refresh tokens and hashed
+  # credentials don't linger in the database. Clearing `encrypted_password`
+  # rotates Devise's authenticatable_salt, which signs out any active sessions
+  # on the next request.
+  def strip_login_credentials!
+    update!(
+      secret_words: nil,
+      secret_picture_id: nil,
+      encrypted_password: '',
+      hashed_email: '',
+      email: '',
+      provider: nil,
+      uid: nil,
+      primary_contact_info_id: nil,
+    )
+    authentication_options.with_deleted.each(&:really_destroy!)
   end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object

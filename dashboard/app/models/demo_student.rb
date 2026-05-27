@@ -31,9 +31,9 @@ class DemoStudent < ApplicationRecord
   validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::DEMO_TYPES.map(&:to_s)}}
   validates :user_id, uniqueness: {scope: :demo_type}
   validate :user_must_be_student
-  validate :user_must_be_lockable, on: :create
+  validate :user_in_allowed_section_types, on: :create
 
-  after_create :lock_user_login!
+  after_create :strip_user_login_credentials!
   after_commit :reset_policy_cache
 
   private def user_must_be_student
@@ -44,9 +44,9 @@ class DemoStudent < ApplicationRecord
   # A user can be flagged as a demo student only if their entire section
   # membership is in login types where credentials are issued at the section
   # level (word/picture) or via a plain email/password we can null out.
-  # OAuth/SSO sections aren't lockable: clearing `encrypted_password` doesn't
+  # OAuth/SSO sections aren't strippable: clearing `encrypted_password` doesn't
   # block the IdP from signing the user back in.
-  private def user_must_be_lockable
+  private def user_in_allowed_section_types
     return unless user
     types = user.sections_as_student.pluck(:login_type).uniq
     return if types.any? && types.all? {|t| ALLOWED_SECTION_LOGIN_TYPES.include?(t)}
@@ -61,25 +61,11 @@ class DemoStudent < ApplicationRecord
     Policies::DemoSections.reset_cache!
   end
 
-  # Runs inside the implicit save transaction so a lockdown failure rolls
-  # back the demo_students insert and the user keeps their credentials.
-  # Clearing `encrypted_password` also rotates Devise's authenticatable_salt,
-  # which signs out any active sessions on the next request. Authentication
-  # options are hard-deleted (not paranoia-soft-deleted) so OAuth refresh
-  # tokens and hashed credentials don't linger in the database.
-  #
-  # Fires only via DemoStudent.create!/save!. Direct SQL inserts into the
-  # demo_students table bypass this and leave the linked user un-locked.
-  private def lock_user_login!
-    user.update!(
-      secret_words: nil,
-      secret_picture_id: nil,
-      encrypted_password: '',
-      hashed_email: '',
-      email: '',
-      provider: nil,
-      uid: nil,
-    )
-    user.authentication_options.with_deleted.each(&:really_destroy!)
+  # Runs inside the create transaction (via after_create), so a credential
+  # strip failure rolls back the demo_students insert and the user keeps
+  # their credentials. Direct SQL inserts into the demo_students table
+  # bypass this and leave the linked user with their credentials intact.
+  private def strip_user_login_credentials!
+    user.strip_login_credentials!
   end
 end

@@ -46,9 +46,9 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert other_type.valid?
   end
 
-  # user_must_be_lockable: refuses to flag a student we can't lock out of all
-  # their existing sections. Validation runs on :create only; sections can
-  # change later without re-triggering the check.
+  # user_in_allowed_section_types: refuses to flag a student we can't strip
+  # credentials for in all their existing sections. Validation runs on :create
+  # only; sections can change later without re-triggering the check.
 
   test 'is invalid when student has no sections' do
     record = DemoStudent.new(user: create(:student), demo_type: 'high')
@@ -87,9 +87,9 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert record.valid?
   end
 
-  # after_create :lock_user_login!: runs inside the create transaction, so a
-  # failure rolls back the demo_students insert and leaves the user with
-  # credentials intact.
+  # after_create :strip_user_login_credentials!: runs inside the create
+  # transaction, so a failure rolls back the demo_students insert and leaves
+  # the user with credentials intact.
 
   test 'create clears credentials for a student in an email section' do
     student = create(
@@ -141,9 +141,19 @@ class DemoStudentTest < ActiveSupport::TestCase
     refute AuthenticationOption.with_deleted.exists?(auth.id)
   end
 
-  test 'create rolls back the demo_students insert when lockdown fails' do
+  test 'create nulls primary_contact_info_id so no FK dangles after auth options are deleted' do
+    student = create(:student, :in_email_section)
+    primary = student.primary_contact_info
+    refute_nil primary, 'precondition: email-section student should have a primary contact info'
+
+    DemoStudent.create!(user: student, demo_type: 'high')
+
+    assert_nil student.reload.primary_contact_info_id
+  end
+
+  test 'create rolls back the demo_students insert when credential strip fails' do
     student = create(:student, :in_email_section, encrypted_password: 'pw')
-    boom = RuntimeError.new('lockdown blew up')
+    boom = RuntimeError.new('credential strip blew up')
     User.any_instance.stubs(:update!).raises(boom)
 
     assert_raises(RuntimeError) do
@@ -179,38 +189,9 @@ class DemoStudentTest < ActiveSupport::TestCase
     refute_includes Policies::DemoSections.all_demo_student_ids, student.id
   end
 
-  # Demo students are protected from hard-delete and purge so the
-  # demo_students row persists and permission checks keep working for
-  # archived (soft-deleted) users. Protection uses the uncached durable
-  # check, so a stale per-process cache cannot bypass it.
-
-  test 'User#really_destroy! raises ProtectedRecord for a demo student' do
-    student = create(:student, :in_email_section)
-    DemoStudent.create!(user: student, demo_type: 'high')
-    Policies::DemoSections.reset_cache!
-
-    assert_raises(DemoStudent::ProtectedRecord) {student.really_destroy!}
-    assert User.with_deleted.exists?(student.id)
-    assert Policies::DemoSections.demo_student?(student.id)
-  end
-
-  test 'User#really_destroy! still works for a non-demo student' do
-    student = create(:student)
-
-    assert_nothing_raised {student.really_destroy!}
-    refute User.with_deleted.exists?(student.id)
-  end
-
-  test 'User#really_destroy! protection survives a stale per-process cache' do
-    student = create(:student, :in_email_section)
-    DemoStudent.create!(user: student, demo_type: 'high')
-    # Force the in-process cache empty so cached demo_student? returns false.
-    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
-
-    refute Policies::DemoSections.demo_student?(student.id)
-    assert Policies::DemoSections.demo_student_durable?(student.id)
-    assert_raises(DemoStudent::ProtectedRecord) {student.really_destroy!}
-  end
+  # Demo students are protected from hard-delete (via FK) and purge (via the
+  # Purgeable concern) so the demo_students row persists and permission
+  # checks keep working for archived (soft-deleted) users.
 
   test 'foreign key prevents raw-SQL deletion of a demo student user' do
     student = create(:student, :in_email_section)
