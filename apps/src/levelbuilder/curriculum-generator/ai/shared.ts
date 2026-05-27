@@ -5,6 +5,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 // debugging conversations can refer to e.g. "the panels-plan prompt" without
 // ambiguity. Add a new tag here if you add another generateText call site.
 export const PROMPT_TAGS = {
+  UNIT_OUTLINE: 'lesson-gen/unit-outline',
   LESSON_OUTLINE: 'lesson-gen/lesson-outline',
   PANELS_PLAN: 'lesson-gen/panels-plan',
   PANELS_IMAGE: 'lesson-gen/panels-image',
@@ -13,13 +14,14 @@ export const PROMPT_TAGS = {
 
 export type PromptTag = (typeof PROMPT_TAGS)[keyof typeof PROMPT_TAGS];
 
-// Optional context for prompt logging. `level` is the kebab-case level
-// identifier (e.g. "agathaweb-add-image"); `subtask` distinguishes
-// multiple prompts emitted for the same level (e.g. "plan", "panel-3").
-// Both end up as space-separated key=value pairs in the log group label
-// so a console search for `level=foo` lights up every prompt for that
-// level.
+// Optional context for prompt logging. Each field renders as a
+// space-separated key=value pair in the log group label so a console
+// search for e.g. `level=foo` lights up every prompt for that level.
+// `unit` and `level` are the unit / level identifier the prompt is
+// generating *for*; `subtask` distinguishes multiple prompts emitted
+// at the same scope (e.g. "plan", "panel-3").
 export interface LogContext {
+  unit?: string;
   level?: string;
   subtask?: string;
 }
@@ -27,6 +29,7 @@ export interface LogContext {
 function formatContext(context?: LogContext): string {
   if (!context) return '';
   const parts: string[] = [];
+  if (context.unit) parts.push(`unit=${context.unit}`);
   if (context.level) parts.push(`level=${context.level}`);
   if (context.subtask) parts.push(`subtask=${context.subtask}`);
   return parts.length ? ` ${parts.join(' ')}` : '';

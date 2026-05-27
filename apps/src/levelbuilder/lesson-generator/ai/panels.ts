@@ -6,16 +6,15 @@ import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {uploadLevelAsset} from '../levelApi';
-
-import {LevelContext} from './context';
+import {LevelContext} from '../../curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from './shared';
+} from '../../curriculum-generator/ai/shared';
+import {uploadLevelAsset} from '../levelApi';
 
 const PANEL_LAYOUTS = [
   'text-top-left',
@@ -76,10 +75,21 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
     'comic-strip-style sequence of full-width panels with overlay text.',
     'The level description follows. Plan a sequence of panels (3 to 6 by',
     'default; if the description names a specific count or range, honor',
-    'that) that, in order, conveys the intent of the description for a',
-    'middle-school classroom. Each panel needs short overlay text (1-3',
-    'sentences, markdown allowed) and an image prompt for a single 16:9',
-    'illustration with no embedded text.',
+    'that) that, in order, conveys the intent of the description. Assume a',
+    'middle-school classroom unless the description names a different grade',
+    'band or audience, in which case follow it. Each panel needs short',
+    'overlay text (1-3 sentences, markdown allowed) and an image prompt for',
+    'a single 16:9 illustration with no embedded text.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.lessonOutline
       ? [
           '',
@@ -162,7 +172,7 @@ async function generateAndUploadPanelImage(
     'shapes, or only suggested by shading. Never spell anything out.',
     '',
     'Generate a single 16:9 widescreen illustration suitable for a',
-    'middle-school classroom.',
+    'school classroom.',
     '',
     'Subject:',
     imagePrompt,
