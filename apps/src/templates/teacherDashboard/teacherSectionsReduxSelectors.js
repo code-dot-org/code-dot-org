@@ -51,7 +51,7 @@ export const DEMO_SECTION_CODE_PLACEHOLDER = 'DEMO-123';
 
 export function sectionCode(state, sectionId) {
   const section = getRoot(state).sections[sectionId] || {};
-  if (section.code != null) return section.code;
+  if (section.code !== null && section.code !== undefined) return section.code;
   if (section.demoType) return DEMO_SECTION_CODE_PLACEHOLDER;
   return null;
 }
