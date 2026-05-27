@@ -73,6 +73,12 @@ class Lessons::SlidesControllerTest < ActionController::TestCase
     assert_equal [], assigns(:slides_data)[:slides]
   end
 
+  test 'show suppresses the site footer' do
+    sign_in @levelbuilder
+    get :show, params: {id: @lesson.id}
+    assert @controller.view_options[:no_footer]
+  end
+
   test 'edit renders the editor payload' do
     sign_in @levelbuilder
     get :edit, params: {id: @lesson.id}

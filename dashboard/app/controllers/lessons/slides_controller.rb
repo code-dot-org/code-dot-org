@@ -42,6 +42,9 @@ module Lessons
     # GET /lessons/:id/slides — panels viewer.
     def show
       setup_slides_view
+      # The viewer is a focused slide surface; the marketing footer just
+      # distracts from the deck. (The editor keeps its footer.)
+      view_options(no_footer: true)
       render :show
     end
 
