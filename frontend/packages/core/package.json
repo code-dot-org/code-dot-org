@@ -28,6 +28,11 @@
       "import": "./dist/api/index.mjs",
       "require": "./dist/api/index.cjs"
     },
+    "./gates": {
+      "types": "./dist/gates/index.d.ts",
+      "import": "./dist/gates/index.mjs",
+      "require": "./dist/gates/index.cjs"
+    },
     "./plugins/localization": {
       "types": "./dist/plugins/localization/index.d.ts",
       "import": "./dist/plugins/localization/index.mjs",
@@ -37,6 +42,16 @@
       "types": "./dist/plugins/observability/index.d.ts",
       "import": "./dist/plugins/observability/index.mjs",
       "require": "./dist/plugins/observability/index.cjs"
+    },
+    "./plugins/gtm": {
+      "types": "./dist/plugins/gtm/index.d.ts",
+      "import": "./dist/plugins/gtm/index.mjs",
+      "require": "./dist/plugins/gtm/index.cjs"
+    },
+    "./plugins/analytics": {
+      "types": "./dist/plugins/analytics/index.d.ts",
+      "import": "./dist/plugins/analytics/index.mjs",
+      "require": "./dist/plugins/analytics/index.cjs"
     }
   },
   "scripts": {
@@ -60,16 +75,22 @@
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@sentry/browser": "catalog:",
+    "@statsig/js-client": "^3.20.2",
+    "@statsig/session-replay": "^3.20.2",
+    "@statsig/web-analytics": "^3.20.2",
     "@tanstack/react-query": "catalog:",
     "@types/flat": "^5.0.5",
+    "@types/js-cookie": "^3",
     "@types/node": "catalog:",
     "@types/tldjs": "^2",
     "@types/uuid": "^10.0.0",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
+    "js-cookie": "^3.0.5",
     "ky": "catalog:",
     "prettier": "catalog:",
+    "query-string": "^9.3.1",
     "react": "catalog:",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
@@ -80,9 +101,31 @@
   },
   "peerDependencies": {
     "@sentry/browser": "^10.51.0",
+    "@statsig/js-client": "^3.20.2",
+    "@statsig/session-replay": "^3.20.2",
+    "@statsig/web-analytics": "^3.20.2",
     "@tanstack/react-query": "*",
+    "js-cookie": "^3.0.5",
     "ky": "^1.14.3",
+    "query-string": "^9.3.1",
     "react": "^18.0.0 || ^19.0.0",
     "uuid": ">=8.3.2"
+  },
+  "peerDependenciesMeta": {
+    "@statsig/js-client": {
+      "optional": true
+    },
+    "@statsig/session-replay": {
+      "optional": true
+    },
+    "@statsig/web-analytics": {
+      "optional": true
+    },
+    "js-cookie": {
+      "optional": true
+    },
+    "query-string": {
+      "optional": true
+    }
   }
 }
