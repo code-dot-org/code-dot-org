@@ -24,15 +24,18 @@ module Services
 
       def initialize(user:)
         raise ArgumentError, 'user must be a soft-deleted User' unless user.is_a?(::User) && user.deleted_at.present?
-        if ::Policies::DemoSections.demo_student_durable?(user.id)
-          raise DemoStudent::ProtectedRecord,
-            "Cannot PII-scrub demo student user_id=#{user.id}; demo students keep their profile data."
-        end
         @user = user
         @email = user.email.presence || user.read_attribute(:email)
       end
 
       def call
+        # Demo students keep their profile data, but stamp pii_scrubbed_at so
+        # the nightly job stops re-selecting them.
+        if ::Policies::DemoSections.demo_student_durable?(user.id)
+          mark_scrubbed
+          return
+        end
+
         user.transaction do
           scrub_user
           scrub_legacy_data

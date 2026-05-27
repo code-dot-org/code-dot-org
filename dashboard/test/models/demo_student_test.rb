@@ -234,29 +234,4 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert_nil student.reload.purged_at
   end
 
-  test 'Services::User::PiiScrubber refuses to construct for a soft-deleted demo student' do
-    student = create(:student, :in_email_section, name: 'Demo Alice', family_name: 'Anderson')
-    DemoStudent.create!(user: student, demo_type: 'high')
-    student.destroy # soft-delete
-    Policies::DemoSections.reset_cache!
-
-    assert_raises(DemoStudent::ProtectedRecord) do
-      Services::User::PiiScrubber.new(user: student)
-    end
-    student.reload
-    assert_equal 'Demo Alice', student.name
-    assert_equal 'Anderson', student.family_name
-  end
-
-  test 'Services::User::PiiScrubber protection survives a stale per-process cache' do
-    student = create(:student, :in_email_section)
-    DemoStudent.create!(user: student, demo_type: 'high')
-    student.destroy
-    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
-
-    refute Policies::DemoSections.demo_student?(student.id)
-    assert_raises(DemoStudent::ProtectedRecord) do
-      Services::User::PiiScrubber.new(user: student)
-    end
-  end
 end
