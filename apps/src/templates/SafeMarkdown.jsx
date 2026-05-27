@@ -155,6 +155,29 @@ blocklyTags.forEach(tag => {
 const isXmlBlock = child =>
   typeof child?.type === 'function' && child?.type()?.type === 'xml';
 
+// Parse an inline CSS declaration string (e.g. "color: red; padding: 4px")
+// into the object form React requires for the `style` prop. Kebab-cased
+// property names are camelCased; vendor prefixes like `-webkit-transform`
+// land as `WebkitTransform` because the leading dash matches the first
+// kebab segment.
+//
+// We really only need this for the visualCodeBlock <code> elements. Those
+// are just a simple `background-color: xxx`, so this is sufficient for
+// those. But this implementation will cover anything that has one or
+// more simple rules.
+const parseInlineStyle = styleString => {
+  const obj = {};
+  styleString.split(';').forEach(decl => {
+    const colon = decl.indexOf(':');
+    if (colon < 0) return;
+    const key = decl.slice(0, colon).trim();
+    const value = decl.slice(colon + 1).trim();
+    if (!key) return;
+    obj[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = value;
+  });
+  return obj;
+};
+
 /**
  * Convert a translated DOM node back to a React element tree. Placeholder
  * spans (those carrying a `data-token` attribute) are swapped for the
@@ -177,8 +200,13 @@ const domToReact = (node, key, placeholders) => {
 
   const props = {key};
   for (const attr of node.attributes) {
-    const name = attr.name === 'class' ? 'className' : attr.name;
-    props[name] = attr.value;
+    if (attr.name === 'class') {
+      props.className = attr.value;
+    } else if (attr.name === 'style') {
+      props.style = parseInlineStyle(attr.value);
+    } else {
+      props[attr.name] = attr.value;
+    }
   }
 
   const children = [];
