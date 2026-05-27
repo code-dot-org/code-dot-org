@@ -1,6 +1,7 @@
 .buttonContainer {
-  // 970px is the legacy styleConstants['content-width']; preserved verbatim.
-  width: 970px;
+  // width is applied inline in OwnedSections.jsx via
+  // styleConstants['content-width'], keeping it sourced from the shared
+  // constant rather than hardcoded here.
   text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;

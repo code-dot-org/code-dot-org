@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import styleConstants from '@cdo/apps/styleConstants';
 import i18n from '@cdo/locale';
 
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
@@ -77,7 +78,10 @@ class OwnedSections extends React.Component {
         {hasSections && (
           <div>
             {this.ownedSectionsTable(false)}
-            <div className={moduleStyles.buttonContainer}>
+            <div
+              className={moduleStyles.buttonContainer}
+              style={{width: styleConstants['content-width']}}
+            >
               {hiddenSectionIds.length > 0 && (
                 <MuiButton
                   className="ui-test-show-hide"
