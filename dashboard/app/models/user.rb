@@ -107,6 +107,7 @@ class User < ApplicationRecord
   include AssignedCoursesAndScripts
   include PartialRegistration
   include Purgeable
+  include CredentialStrippable
   include Facilitator
   include TermsOfService
   include Rails.application.routes.url_helpers
@@ -445,27 +446,6 @@ class User < ApplicationRecord
   include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  # Strip every login credential off this user: secrets, Devise password,
-  # email/hashed_email, OAuth/SSO identifiers, primary_contact_info pointer,
-  # and the underlying authentication_options rows. Authentication options are
-  # hard-deleted (not paranoia-soft-deleted) so OAuth refresh tokens and hashed
-  # credentials don't linger in the database. Clearing `encrypted_password`
-  # rotates Devise's authenticatable_salt, which signs out any active sessions
-  # on the next request.
-  def strip_login_credentials!
-    update!(
-      secret_words: nil,
-      secret_picture_id: nil,
-      encrypted_password: '',
-      hashed_email: '',
-      email: '',
-      provider: nil,
-      uid: nil,
-      primary_contact_info_id: nil,
-    )
-    authentication_options.with_deleted.each(&:really_destroy!)
-  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
