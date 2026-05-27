@@ -35,11 +35,14 @@ const PageLayout: React.FC = () => {
 
   React.useEffect(() => {
     if (sectionDemoType && sectionId !== null) {
-      analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_TEACHER_DASHBOARD_VIEWED, {
-        demoType: sectionDemoType,
-        sectionId,
-        page: getPageFromPathname(location.pathname),
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.DEMO_SECTION_TEACHER_DASHBOARD_VIEWED,
+        {
+          demoType: sectionDemoType,
+          sectionId,
+          page: getPageFromPathname(location.pathname),
+        }
+      );
     }
   }, [location.pathname, sectionDemoType, sectionId]);
 
