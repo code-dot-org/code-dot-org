@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import OptionListPopover from './OptionListPopover';
 import ToolbarDropdownRow from './ToolbarDropdownRow';
@@ -20,8 +20,12 @@ export default function AlignmentDropdownRow({
   value,
   onSelect,
 }: AlignmentDropdownRowProps) {
-  const icon =
-    TEXT_ALIGN_OPTIONS.find(o => o.value === value)?.icon ?? DEFAULT_ALIGN_ICON;
+  const icon = useMemo(
+    () =>
+      TEXT_ALIGN_OPTIONS.find(option => option.value === value)?.icon ??
+      DEFAULT_ALIGN_ICON,
+    [value]
+  );
   return (
     <ToolbarDropdownRow
       label="Alignment"

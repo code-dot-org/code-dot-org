@@ -1,7 +1,5 @@
 // 24px rounded-square swatches, 4px gap, 4px padding around the grid.
-// Width caps at 5 swatches per row so the popover stays narrow — both
-// palettes (background = 9 items including custom, stroke/font = 8)
-// wrap to 2 rows.
+// Width caps at 5 swatches per row.
 //   5 * 24 (swatch) + 4 * 4 (gap) + 2 * 4 (padding) = 144px
 .swatchGrid {
   display: flex;
@@ -25,7 +23,6 @@
   }
 }
 
-// 1px ring inset so the selection halo stays visible on dark swatches.
 // The :global chain outranks MUI's focus-visible box-shadow.
 .swatch.swatchSelected:global(.MuiIconButton-root),
 .swatch.swatchSelected.customSwatch {

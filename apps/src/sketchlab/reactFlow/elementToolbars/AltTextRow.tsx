@@ -10,7 +10,6 @@ interface AltTextRowProps {
   onChange: (next: string) => void;
 }
 
-// Commit on blur (not per keystroke) so each edit produces one undo snapshot.
 export default function AltTextRow({value, onChange}: AltTextRowProps) {
   const labelId = useId();
   const [inputValue, setInputValue] = useState(value);
@@ -22,6 +21,7 @@ export default function AltTextRow({value, onChange}: AltTextRowProps) {
     }
   }, [value, isFocused]);
 
+  // Commit on blur (not per keystroke) so each edit produces one undo snapshot.
   const handleBlur = useCallback(() => {
     setIsFocused(false);
     if (inputValue !== value) {

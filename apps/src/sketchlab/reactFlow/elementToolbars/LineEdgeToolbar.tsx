@@ -16,7 +16,6 @@ import ToolbarDropdownRow from './ToolbarDropdownRow';
 import {
   ARROW_HEAD_OPTIONS,
   DEFAULT_EDGE_TYPE,
-  DEFAULT_LINE_STROKE_STYLE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
   EdgeTypeValue,
@@ -77,55 +76,39 @@ export default function LineEdgeToolbar({
   const selectedColor =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
     DEFAULT_STROKE_COLOR;
-  const selectedWidth = Number(edge.style?.strokeWidth);
-  const selectedWidthValue: LineWidthValue = LINE_WIDTH_OPTIONS.some(
-    option => option.value === selectedWidth
-  )
-    ? (selectedWidth as LineWidthValue)
-    : DEFAULT_LINE_WIDTH;
-  const selectedStrokeStyle = strokeStyleFromDasharray(
-    edge.style?.strokeDasharray
-  );
-  const selectedStrokeStyleValue: LineStrokeStyleValue =
-    LINE_STROKE_STYLE_OPTIONS.some(
-      option => option.value === selectedStrokeStyle
-    )
-      ? selectedStrokeStyle
-      : DEFAULT_LINE_STROKE_STYLE;
-  const selectedEdgeTypeValue: EdgeTypeValue = EDGE_TYPE_OPTIONS.some(
-    option => option.value === edge.type
-  )
-    ? (edge.type as EdgeTypeValue)
-    : DEFAULT_EDGE_TYPE;
 
-  const selectedArrowHeads: ArrowHeadValue = useMemo(() => {
-    const hasStartArrow = !!edge.markerStart;
-    const hasEndArrow = !!edge.markerEnd;
-    if (hasStartArrow && hasEndArrow) {
-      return 'both';
-    } else if (hasStartArrow) {
-      return 'start';
-    } else if (hasEndArrow) {
-      return 'end';
-    } else {
-      return 'none';
-    }
+  const widthOption = useMemo(() => {
+    const width = Number(edge.style?.strokeWidth);
+    return (
+      LINE_WIDTH_OPTIONS.find(option => option.value === width) ??
+      LINE_WIDTH_OPTIONS.find(option => option.value === DEFAULT_LINE_WIDTH)!
+    );
+  }, [edge.style?.strokeWidth]);
+
+  const strokeStyleOption = useMemo(() => {
+    const style = strokeStyleFromDasharray(edge.style?.strokeDasharray);
+    return LINE_STROKE_STYLE_OPTIONS.find(option => option.value === style)!;
+  }, [edge.style?.strokeDasharray]);
+
+  const edgeTypeOption = useMemo(
+    () =>
+      EDGE_TYPE_OPTIONS.find(option => option.value === edge.type) ??
+      EDGE_TYPE_OPTIONS.find(option => option.value === DEFAULT_EDGE_TYPE)!,
+    [edge.type]
+  );
+
+  const arrowHeadOption = useMemo(() => {
+    const hasStart = !!edge.markerStart;
+    const hasEnd = !!edge.markerEnd;
+    let value: ArrowHeadValue;
+    if (hasStart && hasEnd) value = 'both';
+    else if (hasStart) value = 'start';
+    else if (hasEnd) value = 'end';
+    else value = 'none';
+    return ARROW_HEAD_OPTIONS.find(option => option.value === value)!;
   }, [edge.markerStart, edge.markerEnd]);
 
   const {duplicateLine} = useClipboard();
-
-  const widthOption = LINE_WIDTH_OPTIONS.find(
-    o => o.value === selectedWidthValue
-  )!;
-  const strokeStyleOption = LINE_STROKE_STYLE_OPTIONS.find(
-    o => o.value === selectedStrokeStyleValue
-  )!;
-  const edgeTypeOption = EDGE_TYPE_OPTIONS.find(
-    o => o.value === selectedEdgeTypeValue
-  )!;
-  const arrowHeadOption = ARROW_HEAD_OPTIONS.find(
-    o => o.value === selectedArrowHeads
-  )!;
 
   return (
     <ToolbarShell
@@ -158,7 +141,7 @@ export default function LineEdgeToolbar({
                 <OptionListPopover<LineWidthValue>
                   ariaLabel="Thickness"
                   options={LINE_WIDTH_OPTIONS}
-                  selectedValue={selectedWidthValue}
+                  selectedValue={widthOption.value}
                   onSelect={onSelectWidth}
                   onClose={closePopover}
                 />
@@ -178,7 +161,7 @@ export default function LineEdgeToolbar({
                 <OptionListPopover<LineStrokeStyleValue>
                   ariaLabel="Style"
                   options={LINE_STROKE_STYLE_OPTIONS}
-                  selectedValue={selectedStrokeStyleValue}
+                  selectedValue={strokeStyleOption.value}
                   onSelect={onSelectStrokeStyle}
                   onClose={closePopover}
                 />
@@ -198,7 +181,7 @@ export default function LineEdgeToolbar({
                 <OptionListPopover<EdgeTypeValue>
                   ariaLabel="Shape"
                   options={EDGE_TYPE_OPTIONS}
-                  selectedValue={selectedEdgeTypeValue}
+                  selectedValue={edgeTypeOption.value}
                   onSelect={onSelectEdgeType}
                   onClose={closePopover}
                 />
@@ -217,7 +200,7 @@ export default function LineEdgeToolbar({
                 <OptionListPopover<ArrowHeadValue>
                   ariaLabel="Arrowheads"
                   options={ARROW_HEAD_OPTIONS}
-                  selectedValue={selectedArrowHeads}
+                  selectedValue={arrowHeadOption.value}
                   onSelect={onSelectArrowHeads}
                   onClose={closePopover}
                 />
