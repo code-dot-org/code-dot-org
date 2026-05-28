@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import {useState} from 'react';
+import {vi} from 'vitest';
 
 import Tabs, {TabsProps} from '../index';
 
@@ -59,7 +59,7 @@ describe('Design System - Tabs', () => {
 
   it('changes selected tab on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     onSelectedTabChange('test2', 'tab1');
 
@@ -100,7 +100,7 @@ describe('Design System - Tabs', () => {
 
   it("renders disabled tab, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     onSelectedTabChange('test3', 'tab1');
 

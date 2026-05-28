@@ -198,9 +198,9 @@ export class SentryAdapter extends BaseAdapter {
     error: unknown,
     context?: Record<string, unknown>,
     tags?: Record<string, TagValue>,
-  ): void {
+  ): string | undefined {
     if (!this.initialized) {
-      return;
+      return undefined;
     }
 
     try {
@@ -210,13 +210,14 @@ export class SentryAdapter extends BaseAdapter {
             scope.setTag(key, value);
           }
         }
-        Sentry.captureException(error, {extra: context});
+        return Sentry.captureException(error, {extra: context});
       });
     } catch (sdkError) {
       console.warn(
         '[observability] SentryAdapter.recordError failed:',
         sdkError,
       );
+      return undefined;
     }
   }
 

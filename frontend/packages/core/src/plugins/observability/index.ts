@@ -58,8 +58,8 @@ export function recordError(
   error: unknown,
   context?: Record<string, unknown>,
   tags?: Record<string, TagValue>,
-): void {
-  observabilityClient.recordError(error, context, tags);
+): string | undefined {
+  return observabilityClient.recordError(error, context, tags);
 }
 
 /**

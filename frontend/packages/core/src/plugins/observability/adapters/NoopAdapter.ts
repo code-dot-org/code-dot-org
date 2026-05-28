@@ -23,10 +23,11 @@ export class NoopAdapter extends BaseAdapter {
     error: unknown,
     context?: Record<string, unknown>,
     tags?: Record<string, TagValue>,
-  ): void {
+  ): string | undefined {
     void error;
     void context;
     void tags;
+    return undefined;
   }
 
   /**

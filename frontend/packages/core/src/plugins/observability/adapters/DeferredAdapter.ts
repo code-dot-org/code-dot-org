@@ -43,8 +43,11 @@ export class DeferredAdapter implements ObservabilityClient {
     error: unknown,
     context?: Record<string, unknown>,
     tags?: Record<string, TagValue>,
-  ): void {
-    this.enqueue(client => client.recordError(error, context, tags));
+  ): string | undefined {
+    this.enqueue(client => {
+      client.recordError(error, context, tags);
+    });
+    return undefined;
   }
 
   /**
