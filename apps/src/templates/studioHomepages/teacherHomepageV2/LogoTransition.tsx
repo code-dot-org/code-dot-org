@@ -4,11 +4,11 @@ import {createPortal} from 'react-dom';
 import styles from './logoTransition.module.scss';
 
 interface LogoTransitionProps {
-  // Looping animated image (GIF by default; works with any format <img>
-  // can render).
+  // Looping animated image (GIF). Used under ?logo-gif=true; AVIF can't
+  // serve here because Safari doesn't decode AVIF transparency.
   animatedSrc: string;
-  // Video sources offered under ?logo-video=true. WebM is preferred when
-  // present; MP4 is the fallback for browsers that can't play it.
+  // Default video sources. WebM is preferred when the browser can decode
+  // it; MP4 is the fallback.
   webmSrc?: string;
   mp4Src?: string;
   svgSrc: string;
@@ -20,9 +20,9 @@ interface LogoTransitionProps {
 // then lands the resulting static SVG into the empty header slot. The
 // modal-to-header motion is a slide, not a morph.
 
-// Calibrated to the animated image asset's runtime; animated <img>s (GIF,
-// AVIF, etc.) do not fire an "ended" event, so without the ?logo-video=true
-// override we wait on a fixed timer.
+// Calibrated to the GIF asset's runtime. GIFs do not fire an "ended"
+// event, so under ?logo-gif=true we wait on a fixed timer; the default
+// video path uses the real onEnded callback instead.
 const OPEN_FADE_MS = 300;
 const ANIMATED_DURATION_MS = 8000;
 const HOLD_MS = 500;
@@ -69,13 +69,14 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
-  // Honor ?logo-video=true: play the video once and advance phase on the
-  // actual 'ended' event instead of a timer. The video element offers
-  // WebM and MP4; the browser picks the first source it can decode.
+  // Default to the <video> path (WebM with MP4 fallback) — it fires a real
+  // 'ended' event so we don't have to estimate runtime. ?logo-gif=true opts
+  // back into the looping GIF (and AVIF can't be the default because Safari
+  // doesn't decode AVIF transparency, which this animation relies on).
   const [useVideo] = useState<boolean>(() => {
     if (typeof window === 'undefined' || (!webmSrc && !mp4Src)) return false;
     return (
-      new URLSearchParams(window.location.search).get('logo-video') === 'true'
+      new URLSearchParams(window.location.search).get('logo-gif') !== 'true'
     );
   });
 
@@ -156,9 +157,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     return () => window.clearTimeout(t);
   }, [phase]);
 
-  // Drive the play phase. With ?logo-video=true we wait on the <video>'s
-  // 'ended' event; otherwise on a calibrated timer for the looping
-  // animated image.
+  // Drive the play phase. The default video path waits on the <video>'s
+  // 'ended' event; ?logo-gif=true falls back to a calibrated timer for
+  // the looping GIF.
   useEffect(() => {
     if (phase !== 'playing') return;
     if (useVideo) {
