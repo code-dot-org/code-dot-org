@@ -352,8 +352,6 @@ footer:
         target: _blank
         loc_prefix: landing.
         id: support
-      - title: store
-        url: https://store.code.org
       - title: tos_short
         url: /terms-of-service
         domain: code.org
