@@ -1,0 +1,8 @@
+// Small color/line preview inside the trigger button of a dropdown row.
+.dropdownPreviewSwatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  flex-shrink: 0;
+}
