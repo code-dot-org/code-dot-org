@@ -28,8 +28,8 @@ class Policies::Lti
 
   NAMESPACE = 'lti_v1_controller'
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
-  JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
-  DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
+  JWT_ISSUER = CDO.studio_url('').freeze
+  DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course').freeze
   # For security reasons, we only allow target_link_uris that are on domains we control.
   # This is to prevent abuse of our LTI integration to launch unexpected URLs.
   ALLOWED_TARGET_LINK_URI_DOMAINS = Set.new(
@@ -119,10 +119,10 @@ class Policies::Lti
     application_type: "web",
     response_types: ["id_token"],
     grant_types: ["client_credentials", "implicit"],
-    initiate_login_uri: CDO.studio_url('/lti/v1/login', CDO.default_scheme),
-    redirect_uris: [CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)],
+    initiate_login_uri: CDO.studio_url('/lti/v1/login'),
+    redirect_uris: [CDO.studio_url('/lti/v1/authenticate')],
     client_name: "Code.org",
-    jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
+    jwks_uri: CDO.studio_url('/oauth/jwks'),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
     scope: ALL_SCOPES.join(' '),
@@ -145,13 +145,13 @@ class Policies::Lti
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["link_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('', CDO.default_scheme)),
+          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('')),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["assignment_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('', CDO.default_scheme)),
+          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('')),
         }
       ]
     }
