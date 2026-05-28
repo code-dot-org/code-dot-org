@@ -43,7 +43,11 @@ module Cdo
         logo_filename: 'logo-codeai.svg',
         header_logo_filename: 'logo-codeai-inverse.svg',
         logo_alt_key: :codeai_logo_alt,
+        # favicon-codeai.ico is derived from favicon-codeai.svg: rsvg-convert to a
+        # 32x32 PNG, packed as a single-frame PNG-in-ICO. SVG is primary for modern
+        # browsers; ICO is the legacy fallback.
         favicon: 'favicon-codeai.ico',
+        favicon_svg: 'favicon-codeai.svg',
         legal_name: 'CodeAI',
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       },
@@ -52,6 +56,7 @@ module Cdo
         header_logo_filename: 'logo-codeai-inverse.svg',
         logo_alt_key: :codeai_logo_alt,
         favicon: 'favicon-codeai.ico',
+        favicon_svg: 'favicon-codeai.svg',
         legal_name: 'CodeAI',
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       }
@@ -103,6 +108,11 @@ module Cdo
     # Get the favicon filename for the current brand
     def self.favicon(request = nil)
       current_brand_configuration(request)[:favicon]
+    end
+
+    # Get the SVG favicon filename for the current brand, or nil if none configured
+    def self.favicon_svg(request = nil)
+      current_brand_configuration(request)[:favicon_svg]
     end
 
     # Get the legal name for the current brand (for copyright notices)
