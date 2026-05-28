@@ -10,11 +10,6 @@ vi.mock('@sentry/browser', () => ({
   setUser: vi.fn(),
   setTag: vi.fn(),
   setContext: vi.fn(),
-  withScope: vi
-    .fn()
-    .mockImplementation((callback: (scope: Sentry.Scope) => void) =>
-      callback({setTag: vi.fn()} as unknown as Sentry.Scope),
-    ),
   close: vi.fn().mockResolvedValue(undefined),
   startSpan: vi.fn().mockImplementation((_options, callback) => callback()),
   browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
@@ -163,13 +158,13 @@ describe('observability plugin', () => {
     const error = new Error('boom');
     recordError(error, {lab: 'music'});
 
-    expect(Sentry.withScope).toHaveBeenCalled();
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
       extra: {lab: 'music'},
+      tags: undefined,
     });
   });
 
-  it('applies per-event tags via withScope on recordError', async () => {
+  it('passes per-event tags directly to captureException on recordError', async () => {
     observabilityPlugin.onCoreReady({
       observability: {
         provider: 'sentry',
@@ -181,18 +176,10 @@ describe('observability plugin', () => {
     const error = new Error('tagged error');
     recordError(error, {lab: 'music'}, {appType: 'studio'});
 
-    expect(vi.mocked(Sentry.withScope)).toHaveBeenCalledOnce();
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
       extra: {lab: 'music'},
+      tags: {appType: 'studio'},
     });
-
-    // Extract the callback from mock.calls to avoid TS2345 on Sentry's
-    // overloaded withScope signature.
-    const [[capturedCallback]] = vi.mocked(Sentry.withScope).mock
-      .calls as unknown as [[(scope: Sentry.Scope) => void]];
-    const mockScope = {setTag: vi.fn()};
-    capturedCallback(mockScope as unknown as Sentry.Scope);
-    expect(mockScope.setTag).toHaveBeenCalledWith('appType', 'studio');
   });
 
   it('delegates logger and metrics calls after initialization', async () => {
