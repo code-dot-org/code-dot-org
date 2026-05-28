@@ -116,6 +116,7 @@ come in a later phase. Differences from legacy use:
 ## Deferred to later phases
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
+- **File name validation** there is no checks for invalid file names yet.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**
