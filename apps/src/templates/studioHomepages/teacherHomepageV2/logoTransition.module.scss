@@ -55,17 +55,36 @@
   transition: none;
 }
 
-// The GIF/SVG/video fills the card; object-fit: contain keeps its aspect
-// ratio (letterboxed over the dimmer) as the card resizes during the
-// slide.
+// The GIF/SVG/video sits in the card. Box dimensions are driven by CSS
+// `aspect-ratio` (per-format below), not by the loaded content, so the
+// element's shape doesn't depend on the image's decode/load state.
+// Without this, animated GIFs/AVIFs intermittently render at the wrong
+// aspect for the first few frames — Chrome briefly uses the IMG box's
+// aspect (matching width/height 100%) before settling on the content's
+// intrinsic 834x313 canvas. width:100% + height:auto lets the
+// aspect-ratio drive the box; max-height:100% caps when the card is
+// shorter than the aspect (i.e. during the slide into the 130x22 header
+// slot, where the aspect cap would otherwise overshoot vertically).
+// object-fit: contain is now a safety net rather than load-bearing.
 .image {
   position: absolute;
   inset: 0;
+  margin: auto;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   opacity: 1;
   transition: opacity 500ms ease;
+}
+
+.imageAnimated {
+  aspect-ratio: 834 / 313;
+}
+
+.imageSvg {
+  aspect-ratio: 591.15 / 100;
 }
 
 .imageHidden {

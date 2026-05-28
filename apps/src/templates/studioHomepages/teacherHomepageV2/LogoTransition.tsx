@@ -242,7 +242,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 muted
                 playsInline
                 onEnded={handleVideoEnded}
-                className={`${styles.image} ${
+                className={`${styles.image} ${styles.imageAnimated} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
               />
@@ -252,7 +252,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 alt=""
                 width={ANIMATED_WIDTH}
                 height={ANIMATED_HEIGHT}
-                className={`${styles.image} ${
+                className={`${styles.image} ${styles.imageAnimated} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
               />
@@ -260,7 +260,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
           <img
             src={svgSrc}
             alt=""
-            className={`${styles.image} ${svgHidden ? styles.imageHidden : ''}`}
+            className={`${styles.image} ${styles.imageSvg} ${
+              svgHidden ? styles.imageHidden : ''
+            }`}
           />
         </div>,
         document.body
