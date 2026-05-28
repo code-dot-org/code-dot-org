@@ -7,7 +7,7 @@ interface LogoTransitionProps {
   // Looping animated image (GIF by default; works with any format <img>
   // can render).
   animatedSrc: string;
-  // Video sources offered under ?logo-mp4=true. WebM is preferred when
+  // Video sources offered under ?logo-video=true. WebM is preferred when
   // present; MP4 is the fallback for browsers that can't play it.
   webmSrc?: string;
   mp4Src?: string;
@@ -21,7 +21,7 @@ interface LogoTransitionProps {
 // modal-to-header motion is a slide, not a morph.
 
 // Calibrated to the animated image asset's runtime; animated <img>s (GIF,
-// AVIF, etc.) do not fire an "ended" event, so without the ?logo-mp4=true
+// AVIF, etc.) do not fire an "ended" event, so without the ?logo-video=true
 // override we wait on a fixed timer.
 const OPEN_FADE_MS = 300;
 const ANIMATED_DURATION_MS = 8000;
@@ -69,13 +69,13 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
-  // Honor ?logo-mp4=true: play the video once and advance phase on the
+  // Honor ?logo-video=true: play the video once and advance phase on the
   // actual 'ended' event instead of a timer. The video element offers
   // WebM and MP4; the browser picks the first source it can decode.
   const [useVideo] = useState<boolean>(() => {
     if (typeof window === 'undefined' || (!webmSrc && !mp4Src)) return false;
     return (
-      new URLSearchParams(window.location.search).get('logo-mp4') === 'true'
+      new URLSearchParams(window.location.search).get('logo-video') === 'true'
     );
   });
 
@@ -156,7 +156,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     return () => window.clearTimeout(t);
   }, [phase]);
 
-  // Drive the play phase. With ?logo-mp4=true we wait on the <video>'s
+  // Drive the play phase. With ?logo-video=true we wait on the <video>'s
   // 'ended' event; otherwise on a calibrated timer for the looping
   // animated image.
   useEffect(() => {
