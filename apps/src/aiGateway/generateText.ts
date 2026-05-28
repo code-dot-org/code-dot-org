@@ -141,6 +141,7 @@ const generateTextThroughGateway = async <
       name: 'ai-gateway.generate-text',
       op: 'ai.generate_text',
       attributes: {
+        feature: 'ai-gateway',
         'ai.model': modelString,
         'ai.prompt_length': promptLength,
       },

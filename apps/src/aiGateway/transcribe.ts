@@ -1,3 +1,4 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {
   experimental_transcribe as transcribe,
   Experimental_TranscriptionResult as TranscriptionResult,
@@ -22,55 +23,76 @@ type TranscribeOptions = Parameters<typeof transcribe>[0];
 async function transcribeThroughGateway(
   options: TranscribeOptions
 ): Promise<TranscriptionResult> {
-  try {
-    const {model, audio, ...restOptions} = options;
+  const modelString = getModelString(options.model);
 
-    const [token, turnstileToken] = await Promise.all([
-      fetchAccessToken(),
-      fetchTurnstileTokenIfEnabled(),
-    ]);
+  const execute = async (): Promise<TranscriptionResult> => {
+    try {
+      const {model, audio, ...restOptions} = options;
 
-    const formData = new FormData();
-    formData.append('token', token);
-    const audioBlob = await audioToBlob(audio);
-    formData.append('audio', audioBlob, 'audio');
-    formData.append('model', getModelString(model));
+      const [token, turnstileToken] = await Promise.all([
+        fetchAccessToken(),
+        fetchTurnstileTokenIfEnabled(),
+      ]);
 
-    for (const [key, value] of Object.entries(restOptions)) {
-      formData.append(key, String(value));
-    }
+      const formData = new FormData();
+      formData.append('token', token);
+      const audioBlob = await audioToBlob(audio);
+      formData.append('audio', audioBlob, 'audio');
+      formData.append('model', getModelString(model));
 
-    const response = await HttpClient.post(
-      `${AI_GATEWAY_URL}/transcribe`,
-      formData,
-      false,
-      turnstileHeaders(turnstileToken)
-    );
-
-    const rawResponse = await response.json();
-    const parseResult =
-      GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
-    if (!parseResult.success) {
-      console.error(
-        `${LOG} transcribe response schema mismatch:`,
-        parseResult.error.errors
-      );
-      if (process.env.NODE_ENV === 'development') {
-        throw parseResult.error;
+      for (const [key, value] of Object.entries(restOptions)) {
+        formData.append(key, String(value));
       }
-    }
-    const wire = parseResult.success
-      ? parseResult.data
-      : (rawResponse as GatewayTranscribeResponseV1);
 
-    return {
-      ...wire,
-      warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
-    } as unknown as TranscriptionResult;
-  } catch (error) {
-    await reportGatewayError(error, 'transcribeThroughGateway');
-    throw error;
-  }
+      const response = await HttpClient.post(
+        `${AI_GATEWAY_URL}/transcribe`,
+        formData,
+        false,
+        turnstileHeaders(turnstileToken)
+      );
+
+      const rawResponse = await response.json();
+      const parseResult =
+        GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+      if (!parseResult.success) {
+        console.error(
+          `${LOG} transcribe response schema mismatch:`,
+          parseResult.error.errors
+        );
+        Observability.recordError(
+          parseResult.error,
+          {category: 'validation_error', error_type: 'SchemaMismatch'},
+          {feature: 'ai-gateway'}
+        );
+        if (process.env.NODE_ENV === 'development') {
+          throw parseResult.error;
+        }
+      }
+      const wire = parseResult.success
+        ? parseResult.data
+        : (rawResponse as GatewayTranscribeResponseV1);
+
+      return {
+        ...wire,
+        warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
+      } as unknown as TranscriptionResult;
+    } catch (error) {
+      await reportGatewayError(error, 'transcribeThroughGateway');
+      throw error;
+    }
+  };
+
+  return Observability.startSpan(
+    {
+      name: 'ai-gateway.transcribe',
+      op: 'ai.transcribe',
+      attributes: {
+        feature: 'ai-gateway',
+        'ai.model': modelString,
+      },
+    },
+    execute
+  );
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {
