@@ -20,7 +20,7 @@ Resources:
       Code:
         ZipFile: <%=inline_js 'ami-manager.js' %>
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs24.x
       Timeout: 300
       Role: !GetAtt AMIManagerRole.Arn
   AMIManagerRole:
