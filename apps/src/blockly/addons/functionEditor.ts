@@ -26,7 +26,6 @@ import {getUserTheme, setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
-import {initializeAdditionalWorkspace} from './cdoKeyboardNavigation';
 import CdoMetricsManager from './cdoMetricsManager';
 import {initializeScrollbarPair} from './cdoScrollbar';
 import {CdoScrollBlockDragger} from './cdoScrollBlockDragger';
@@ -166,7 +165,6 @@ export default class FunctionEditor {
 
     const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
-    initializeAdditionalWorkspace(this.editorWorkspace);
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }

@@ -36,10 +36,6 @@ import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {
-  initializeKeyboardNavigation,
-  preInjectRegistrations,
-} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -54,7 +50,12 @@ import initializeBlocklyXml, {
   removeInvisibleBlocks,
   removeStaticCallBlocks,
 } from './addons/cdoXml';
-import {registerAllContextMenuItems} from './addons/contextMenu';
+import {
+  overrideOptionWeight,
+  registerAllContextMenuItems,
+  unregisterCrossTabPluginOptions,
+  WeightOptions,
+} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
 import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
@@ -157,11 +158,22 @@ const BlocklyWrapper = function (
   };
 };
 
+// Monkey patch: prevents toolbox from consuming keydown events so they reach
+// the workspace keyboard navigation handler. Still needed per blockly issue #713.
+class NavigationDeferringToolbox extends BlocklyCore.Toolbox {
+  protected override onKeyDown_(e: KeyboardEvent) {}
+}
+
 function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
-  preInjectRegistrations();
+  BlocklyCore.registry.register(
+    BlocklyCore.registry.Type.TOOLBOX,
+    BlocklyCore.registry.DEFAULT,
+    NavigationDeferringToolbox,
+    true
+  );
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -676,10 +688,20 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       ) ||
       DCDO.get('blockly-keyboard-navigation', false)
     ) {
-      initializeKeyboardNavigation(
-        workspace,
-        blocklyWrapper.isDarkTheme || false
-      );
+      unregisterCrossTabPluginOptions();
+      BlocklyCore.keyboardNavigationController.setIsActive(true);
+      // Re-order keyboard-nav context menu options to match our weight scheme.
+      const navMenuWeights: Record<string, WeightOptions> = {
+        blockCutFromContextMenu: WeightOptions.CUT,
+        blockCopyFromContextMenu: WeightOptions.COPY,
+        blockPasteFromContextMenu: WeightOptions.PASTE,
+        move: WeightOptions.MOVE,
+        edit: WeightOptions.EDIT,
+        move_comment: WeightOptions.MOVE_COMMENT,
+      };
+      for (const [option, weight] of Object.entries(navMenuWeights)) {
+        overrideOptionWeight(option, weight);
+      }
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
