@@ -1,0 +1,11 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_authentication_options
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "deleted_at",
+  "user_id",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.authentication_options;

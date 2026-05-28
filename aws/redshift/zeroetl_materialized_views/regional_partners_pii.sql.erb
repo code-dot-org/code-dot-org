@@ -1,0 +1,23 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_regional_partners
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "name",
+  "group",
+  "urban",
+  "attention",
+  "street",
+  "apartment_or_suite",
+  "city",
+  "state",
+  "zip_code",
+  "phone_number",
+  "notes",
+  "created_at",
+  "updated_at",
+  "deleted_at",
+  "properties",
+  "is_active"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.regional_partners;

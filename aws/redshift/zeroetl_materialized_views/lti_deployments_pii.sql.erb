@@ -1,0 +1,12 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_lti_deployments
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "deployment_id",
+  "lti_integration_id",
+  "created_at",
+  "updated_at",
+  "name"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.lti_deployments;

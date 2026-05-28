@@ -1,0 +1,37 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_census_submissions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "type",
+  "submitter_email_address",
+  "submitter_name",
+  "submitter_role",
+  "school_year",
+  "how_many_do_hoc",
+  "how_many_after_school",
+  "how_many_10_hours",
+  "how_many_20_hours",
+  "other_classes_under_20_hours",
+  "topic_blocks",
+  "topic_text",
+  "topic_robots",
+  "topic_internet",
+  "topic_security",
+  "topic_data",
+  "topic_web_design",
+  "topic_game_design",
+  "topic_other",
+  "topic_other_description",
+  "topic_do_not_know",
+  "class_frequency",
+  "tell_us_more",
+  "pledged",
+  "created_at",
+  "updated_at",
+  "share_with_regional_partners",
+  "topic_ethical_social",
+  "inaccuracy_reported",
+  "inaccuracy_comment"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.census_submissions;

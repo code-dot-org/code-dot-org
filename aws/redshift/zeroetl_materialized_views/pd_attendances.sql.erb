@@ -1,0 +1,14 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_pd_attendances
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "pd_session_id",
+  "teacher_id",
+  "created_at",
+  "updated_at",
+  "deleted_at",
+  "pd_enrollment_id",
+  "marked_by_user_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_attendances;

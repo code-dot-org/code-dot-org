@@ -1,0 +1,19 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_aidiff_threads
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "external_id",
+  "llm_version",
+  "title",
+  "unit_id",
+  "lesson_id",
+  "created_at",
+  "updated_at",
+  "session_created",
+  "course_id",
+  "level_id",
+  "context_type"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.aidiff_threads;

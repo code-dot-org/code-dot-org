@@ -1,0 +1,18 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_peer_reviews
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "submitter_id",
+  "reviewer_id",
+  "from_instructor",
+  "script_id",
+  "level_id",
+  "level_source_id",
+  "data",
+  "status",
+  "created_at",
+  "updated_at",
+  "audit_trail"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.peer_reviews;

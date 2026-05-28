@@ -1,0 +1,19 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_aidiff_messages
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "aidiff_thread_id",
+  "external_id",
+  "role",
+  "content",
+  "is_preset",
+  "created_at",
+  "updated_at",
+  "preset_chip_text",
+  "raw_content",
+  "source_links",
+  "is_artifact_candidate",
+  "artifact_candidate_type"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.aidiff_messages;

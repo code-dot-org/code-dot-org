@@ -1,0 +1,11 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_foorm_library_questions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "library_version",
+  "created_at",
+  "updated_at",
+  "published"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.foorm_library_questions;

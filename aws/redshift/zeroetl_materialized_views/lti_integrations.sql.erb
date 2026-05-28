@@ -1,0 +1,17 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_lti_integrations
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "name",
+  "platform_id",
+  "issuer",
+  "client_id",
+  "platform_name",
+  "auth_redirect_url",
+  "jwks_url",
+  "access_token_url",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.lti_integrations;

@@ -1,0 +1,23 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_scripts
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "name",
+  "created_at",
+  "updated_at",
+  "wrapup_video_id",
+  "user_id",
+  "login_required",
+  "properties",
+  "new_name",
+  "family_name",
+  "published_state",
+  "instruction_type",
+  "instructor_audience",
+  "participant_audience",
+  "original_unit_group_id",
+  "hide_within_course",
+  "md5"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.scripts;

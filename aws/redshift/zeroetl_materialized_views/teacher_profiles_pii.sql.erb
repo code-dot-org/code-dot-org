@@ -1,0 +1,17 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_teacher_profiles
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "studio_person_id",
+  "created_at",
+  "updated_at",
+  "course",
+  "facilitator",
+  "teaching",
+  "pd_year",
+  "pd",
+  "other_pd",
+  "properties"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.teacher_profiles;

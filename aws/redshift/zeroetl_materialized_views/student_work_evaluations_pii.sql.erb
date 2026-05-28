@@ -1,0 +1,23 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_student_work_evaluations
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "type",
+  "student_id",
+  "requester_id",
+  "level_id",
+  "unit_id",
+  "skill_id",
+  "section_id",
+  "school_year",
+  "evaluator",
+  "evaluation_criteria",
+  "reasoning",
+  "evaluation",
+  "ai_model_version",
+  "code_version",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.student_work_evaluations;

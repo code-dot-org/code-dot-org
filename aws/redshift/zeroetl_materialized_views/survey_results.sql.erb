@@ -1,0 +1,12 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_survey_results
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "kind",
+  "properties",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.survey_results;

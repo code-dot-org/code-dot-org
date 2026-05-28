@@ -1,0 +1,17 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_user_level_interactions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "level_id",
+  "script_id",
+  "school_year",
+  "interaction",
+  "code_version",
+  "metadata",
+  "deleted_at",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.user_level_interactions;

@@ -1,0 +1,26 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_pd_applications
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "type",
+  "application_year",
+  "application_type",
+  "regional_partner_id",
+  "status",
+  "locked_at",
+  "notes",
+  "form_data",
+  "created_at",
+  "updated_at",
+  "course",
+  "response_scores",
+  "application_guid",
+  "accepted_at",
+  "properties",
+  "deleted_at",
+  "status_timestamp_change_log",
+  "applied_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_applications;

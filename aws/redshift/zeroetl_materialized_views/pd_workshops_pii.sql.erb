@@ -1,0 +1,33 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_pd_workshops
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "organizer_id",
+  "location_name",
+  "location_address",
+  "processed_location",
+  "course",
+  "subject",
+  "capacity",
+  "notes",
+  "section_id",
+  "started_at",
+  "ended_at",
+  "created_at",
+  "updated_at",
+  "processed_at",
+  "deleted_at",
+  "regional_partner_id",
+  "on_map",
+  "funded",
+  "funding_type",
+  "properties",
+  "module",
+  "name",
+  "participant_group_type",
+  "description",
+  "registration_link",
+  "hidden"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_workshops;

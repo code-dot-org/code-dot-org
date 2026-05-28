@@ -1,0 +1,15 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_pd_scholarship_infos
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "application_year",
+  "scholarship_status",
+  "pd_application_id",
+  "pd_enrollment_id",
+  "created_at",
+  "updated_at",
+  "course"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_scholarship_infos;

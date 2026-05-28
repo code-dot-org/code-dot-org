@@ -1,0 +1,28 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_course_offerings
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "key",
+  "display_name",
+  "created_at",
+  "updated_at",
+  "is_featured",
+  "assignable",
+  "curriculum_type",
+  "marketing_initiative",
+  "grade_levels",
+  "header",
+  "image",
+  "cs_topic",
+  "school_subject",
+  "device_compatibility",
+  "description",
+  "professional_learning_program",
+  "video",
+  "published_date",
+  "self_paced_pl_course_offering_id",
+  "ai_teaching_assistant_available",
+  "facilitator_course_permissions"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.course_offerings;

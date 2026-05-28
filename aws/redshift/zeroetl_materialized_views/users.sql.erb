@@ -1,23 +1,32 @@
 CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_users
   BACKUP NO
-  DISTSTYLE KEY DISTKEY (id)
+  DISTSTYLE KEY DISTKEY ("id")
   AUTO REFRESH NO
 AS SELECT
-  id,
-  studio_person_id,
-  sign_in_count,
-  created_at,
-  updated_at,
-  admin,
-  school_info_id,
-  total_lines,
-  secret_picture_id,
-  active,
-  deleted_at,
-  invitation_limit,
-  invited_by_id,
-  invitations_count,
-  terms_of_service_version,
-  urm,
-  primary_contact_info_id
+  "id",
+  "studio_person_id",
+  "sign_in_count",
+  "current_sign_in_at",
+  "last_sign_in_at",
+  "created_at",
+  "updated_at",
+  "provider",
+  "admin",
+  "gender",
+  "locale",
+  "birthday",
+  "user_type",
+  "school_info_id",
+  "total_lines",
+  "active",
+  "deleted_at",
+  "purged_at",
+  "invited_by_id",
+  "invited_by_type",
+  "terms_of_service_version",
+  "urm",
+  "races",
+  "primary_contact_info_id",
+  "cap_status",
+  "cap_status_date"
 FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users;

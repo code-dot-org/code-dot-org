@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_learning_goal_evidence_levels
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "learning_goal_id",
+  "understanding",
+  "teacher_description",
+  "ai_prompt",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.learning_goal_evidence_levels;

@@ -1,0 +1,15 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>.zeroetl_aichat_events
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "level_id",
+  "script_id",
+  "project_id",
+  "created_at",
+  "updated_at",
+  "request_id",
+  "lesson_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.aichat_events;

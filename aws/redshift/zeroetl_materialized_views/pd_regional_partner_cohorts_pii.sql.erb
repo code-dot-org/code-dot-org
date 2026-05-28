@@ -1,0 +1,16 @@
+CREATE MATERIALIZED VIEW dashboard_<%=environment_type%>_pii.zeroetl_pd_regional_partner_cohorts
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "regional_partner_id",
+  "role",
+  "year",
+  "course",
+  "name",
+  "size",
+  "summer_workshop_id",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_regional_partner_cohorts;
