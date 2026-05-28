@@ -519,7 +519,7 @@ const argumentReporterMutator = {
    *     statements.
    */
   loadExtraState: function (state) {
-    this.model = this.workspace.getVariableById(state.modelId);
+    this.model = this.workspace.getVariableMap().getVariableById(state.modelId);
   },
 };
 
@@ -612,7 +612,7 @@ const procedureVars = function () {
         return; // Not on this block.
       }
 
-      const newVar = this.workspace.getVariableById(newId);
+      const newVar = this.workspace.getVariableMap().getVariableById(newId);
       const newName = newVar.name;
       this.addVarInput_(newName, newId);
       this.moveInputBefore(newId, oldId);
@@ -830,7 +830,9 @@ BlocklyCore.Extensions.register('argument_report_get_var_models', function () {
       ];
     }
     // If we don't have a model yet, fall back on finding one based on the name.
-    const foundModel = this.workspace.getVariable(this.getFieldValue('VAR'));
+    const foundModel = this.workspace
+      .getVariableMap()
+      .getVariable(this.getFieldValue('VAR'));
     if (foundModel) {
       return [foundModel];
     }
@@ -851,7 +853,9 @@ export function filterFunctionArgVariables(workspace, flyoutContents) {
 
     // For non-getter variables, select the first valid variable in the dropdown.
     if (kind === 'block' && item.type !== BLOCK_TYPES.variableGet) {
-      const firstVar = workspace.getVariableById(nonParamVarIds[0]);
+      const firstVar = workspace
+        .getVariableMap()
+        .getVariableById(nonParamVarIds[0]);
       if (firstVar) {
         item.fields = {
           ...item.fields,
@@ -863,7 +867,7 @@ export function filterFunctionArgVariables(workspace, flyoutContents) {
     // Preserve all blocks except getters with invalid variables.
     if (item.type !== BLOCK_TYPES.variableGet) return true;
     const varName = item.fields?.VAR?.name;
-    const varModel = varName && workspace.getVariable(varName);
+    const varModel = varName && workspace.getVariableMap().getVariable(varName);
     return varModel ? nonParamVarIds.includes(varModel.getId()) : false;
   });
 }
@@ -873,13 +877,13 @@ function getModelForNewValue(block, varName) {
   const workspace = block.workspace;
   // Create new vars instead of renaming the old ones, so users can't
   // accidentally rename/coalesce vars.
-  let model = workspace.getVariable(varName, '');
+  let model = workspace.getVariableMap().getVariable(varName, '');
   if (!model) {
-    model = workspace.createVariable(varName, '');
+    model = workspace.getVariableMap().createVariable(varName, '');
   } else if (model.name !== varName) {
     // Blockly is case-insensitive so we have to update the var instead of
     // creating a new one.
-    workspace.renameVariableById(model.getId(), varName);
+    workspace.getVariableMap().renameVariable(model, varName);
   }
   return model;
 }
