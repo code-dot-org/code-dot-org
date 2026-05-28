@@ -37,7 +37,7 @@ const ColumnDetailsCategorical = ({
     getLocalizedValue(option, datasetId),
   );
   const barData = {
-    localizedLabels,
+    labels: localizedLabels,
     datasets: [
       {
         label: id,
