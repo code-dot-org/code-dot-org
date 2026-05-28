@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 import React, {useCallback, useEffect, useId, useState} from 'react';
 
 import styles from './alt-text-row.module.scss';
-import sharedStyles from './element-toolbar.module.scss';
+import sharedStyles from '../element-toolbar.module.scss';
 
 interface AltTextRowProps {
   value: string;

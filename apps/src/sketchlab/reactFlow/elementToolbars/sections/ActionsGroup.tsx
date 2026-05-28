@@ -4,7 +4,7 @@ import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
-import ToolbarSection from './ToolbarSection';
+import ToolbarSection from '../components/ToolbarSection';
 
 import styles from './actions-group.module.scss';
 
