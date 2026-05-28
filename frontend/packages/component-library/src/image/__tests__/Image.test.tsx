@@ -1,4 +1,5 @@
 import {render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Image} from '../';
 
@@ -69,7 +70,7 @@ describe('Image Component', () => {
   });
 
   it('calls onLoad callback when image loads', () => {
-    const onLoad = jest.fn();
+    const onLoad = vi.fn();
     render(<Image src="test.jpg" altText="Load test" onLoad={onLoad} />);
     const img = screen.getByRole('img');
     img.dispatchEvent(new Event('load'));
@@ -77,7 +78,7 @@ describe('Image Component', () => {
   });
 
   it('calls onError callback when image fails', () => {
-    const onError = jest.fn();
+    const onError = vi.fn();
     render(<Image src="test.jpg" altText="Error test" onError={onError} />);
     const img = screen.getByRole('img');
     img.dispatchEvent(new Event('error'));

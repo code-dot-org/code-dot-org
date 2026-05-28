@@ -87,7 +87,10 @@ export interface SpanOptions {
  */
 export interface ObservabilityClient {
   init(config: ObservabilityConfig): void;
-  recordError(error: unknown, context?: Record<string, unknown>): void;
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined;
   startSpan<T>(options: SpanOptions, callback: () => T): T;
   logger: ObservabilityLogger;
   metrics: ObservabilityMetrics;

@@ -56,8 +56,8 @@ export function init(config: ObservabilityConfig): void {
 export function recordError(
   error: unknown,
   context?: Record<string, unknown>,
-): void {
-  observabilityClient.recordError(error, context);
+): string | undefined {
+  return observabilityClient.recordError(error, context);
 }
 
 /**
