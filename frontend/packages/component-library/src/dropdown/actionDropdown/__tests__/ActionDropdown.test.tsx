@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {type Mock, vi} from 'vitest';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -11,19 +11,19 @@ const allOptions: ActionDropdownOption[] = [
     value: 'option-1',
     label: 'option1',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 1 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
   {
     value: 'option-2',
     label: 'option2',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 2 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
   {
     value: 'option-3',
     label: 'option3',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 3 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
 ];
 
@@ -39,7 +39,7 @@ const triggerButtonProps = {
 
 describe('Design System - Action Dropdown Component', () => {
   beforeEach(() => {
-    allOptions.forEach(option => (option.onClick as jest.Mock).mockClear());
+    allOptions.forEach(option => (option.onClick as Mock).mockClear());
   });
 
   it('renders with correct label and options', () => {

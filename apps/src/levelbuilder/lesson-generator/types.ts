@@ -76,6 +76,11 @@ export interface ExistingLessonData {
   // final app this lesson is building toward. When set, the per-level
   // AI prompts get the project's MultiFileSource as additional context.
   generateProjectChannelId?: string | null;
+  // Outer-scope context piped down from the Unit this lesson belongs to,
+  // so the lesson-level AI prompts can anchor against the unit identity
+  // and the unit-wide outline the curriculum author wrote on /s/[unit]/generate.
+  unitName?: string;
+  unitOutline?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the

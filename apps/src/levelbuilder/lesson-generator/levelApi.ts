@@ -1,5 +1,4 @@
-import {LevelPropertiesMapValidator} from '@cdo/apps/lab2/responseValidators';
-import {LevelPropertiesMap, MultiFileSource} from '@cdo/apps/lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel} from '@cdo/apps/panels/types';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
@@ -142,22 +141,6 @@ export async function uploadLevelAsset(
     throw new Error(`Failed to upload asset: ${result?.message || 'unknown'}`);
   }
   return result.newAssetUrl;
-}
-
-// GET /lessons/:id/level_properties — fetch the camelCased properties bag
-// for every level in this lesson, keyed by level id (as a string). Used by
-// the generator to feed full content of skipped levels into the continuity
-// context for subsequent generations, so the AI has visibility into the
-// levels we're not regenerating.
-export async function loadLessonLevelProperties(
-  lessonId: number
-): Promise<LevelPropertiesMap> {
-  const {value} = await HttpClient.fetchJson<LevelPropertiesMap>(
-    `/lessons/${lessonId}/level_properties`,
-    undefined,
-    LevelPropertiesMapValidator
-  );
-  return value;
 }
 
 // PUT /lessons/:id — replace the lesson's activity tree wholesale, and
