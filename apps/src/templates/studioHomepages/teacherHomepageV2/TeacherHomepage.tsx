@@ -43,6 +43,7 @@ const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
   logoTransitionAnimatedUrl?: string;
+  logoTransitionWebmUrl?: string;
   logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
@@ -54,6 +55,7 @@ interface EssentialAiDependencyResponse {
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
   logoTransitionAnimatedUrl,
+  logoTransitionWebmUrl,
   logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
@@ -260,6 +262,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
       {logoTransitionAnimatedUrl && logoSvgUrl && (
         <LogoTransition
           animatedSrc={logoTransitionAnimatedUrl}
+          webmSrc={logoTransitionWebmUrl}
           mp4Src={logoTransitionMp4Url}
           svgSrc={logoSvgUrl}
         />

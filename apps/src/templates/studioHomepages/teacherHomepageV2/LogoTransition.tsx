@@ -4,9 +4,12 @@ import {createPortal} from 'react-dom';
 import styles from './logoTransition.module.scss';
 
 interface LogoTransitionProps {
-  // Looping animated image (AVIF by default; works with any format <img>
+  // Looping animated image (GIF by default; works with any format <img>
   // can render).
   animatedSrc: string;
+  // Video sources offered under ?logo-mp4=true. WebM is preferred when
+  // present; MP4 is the fallback for browsers that can't play it.
+  webmSrc?: string;
   mp4Src?: string;
   svgSrc: string;
 }
@@ -57,6 +60,7 @@ type Rect = {top: number; left: number; width: number; height: number};
 
 const LogoTransition: React.FC<LogoTransitionProps> = ({
   animatedSrc,
+  webmSrc,
   mp4Src,
   svgSrc,
 }) => {
@@ -65,10 +69,11 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
-  // Honor ?logo-mp4=true: play the MP4 once and advance phase on the
-  // actual 'ended' event instead of a timer.
+  // Honor ?logo-mp4=true: play the video once and advance phase on the
+  // actual 'ended' event instead of a timer. The video element offers
+  // WebM and MP4; the browser picks the first source it can decode.
   const [useVideo] = useState<boolean>(() => {
-    if (typeof window === 'undefined' || !mp4Src) return false;
+    if (typeof window === 'undefined' || (!webmSrc && !mp4Src)) return false;
     return (
       new URLSearchParams(window.location.search).get('logo-mp4') === 'true'
     );
@@ -234,10 +239,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       {createPortal(
         <div ref={cardRef} className={cardClassName}>
           {showMedia &&
-            (useVideo && mp4Src ? (
+            (useVideo && (webmSrc || mp4Src) ? (
               <video
                 ref={videoRef}
-                src={mp4Src}
                 autoPlay
                 muted
                 playsInline
@@ -245,7 +249,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 className={`${styles.image} ${styles.imageAnimated} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
-              />
+              >
+                {webmSrc && <source src={webmSrc} type="video/webm" />}
+                {mp4Src && <source src={mp4Src} type="video/mp4" />}
+              </video>
             ) : (
               <img
                 src={animatedSrc}
