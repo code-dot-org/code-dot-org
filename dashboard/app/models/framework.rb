@@ -15,6 +15,16 @@
 #
 class Framework < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    shortcode: :confidential,
+    name: :confidential,
+    properties: :confidential,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   def summarize_for_lesson_edit
     {
       name: name,

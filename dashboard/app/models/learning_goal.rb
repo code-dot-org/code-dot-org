@@ -18,6 +18,19 @@
 #
 class LearningGoal < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    key: :confidential,
+    position: :public,
+    rubric_id: :public,
+    learning_goal: :confidential,
+    ai_enabled: :public,
+    tips: :confidential,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :rubric, inverse_of: :learning_goals
   has_many :learning_goal_evidence_levels, dependent: :destroy
 

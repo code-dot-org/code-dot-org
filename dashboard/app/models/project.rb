@@ -28,6 +28,24 @@
 #
 class Project < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    storage_id: :public,
+    value: :restricted,
+    updated_at: :public,
+    updated_ip: :restricted,
+    state: :restricted,
+    created_at: :public,
+    abuse_score: :public,
+    project_type: :restricted,
+    published_at: :restricted,
+    standalone: :public,
+    remix_parent_id: :public,
+    skip_content_moderation: :public,
+    uuid: :restricted,
+  )
+
   # NOTE: skip_content_moderation is currently not used in the codebase.
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account

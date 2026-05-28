@@ -16,6 +16,17 @@
 #
 class Skill < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    description: :confidential,
+    evaluation_criteria: :confidential,
+    concept: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    key: :confidential,
+  )
+
   validates :description, presence: true
 
   has_and_belongs_to_many :levels, join_table: 'levels_skills', dependent: :delete_all

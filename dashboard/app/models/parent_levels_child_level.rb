@@ -35,6 +35,15 @@
 #
 class ParentLevelsChildLevel < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    parent_level_id: :public,
+    child_level_id: :public,
+    position: :public,
+    kind: :confidential,
+  )
+
   belongs_to :parent_level, class_name: 'Level', optional: true
   belongs_to :child_level, class_name: 'Level', optional: true
   validates_uniqueness_of :child_level, scope: :parent_level, message: ->(plcl, _data) {"child_level #{plcl.child_level&.name&.dump} is already taken for parent_level #{plcl.parent_level&.name&.dump}"}

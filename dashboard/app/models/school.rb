@@ -32,6 +32,28 @@
 
 class School < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    school_district_id: :public,
+    name: :confidential,
+    city: :confidential,
+    state: :confidential,
+    zip: :confidential,
+    school_type: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    address_line1: :confidential,
+    address_line2: :confidential,
+    address_line3: :confidential,
+    latitude: :public,
+    longitude: :public,
+    school_category: :confidential,
+    last_known_school_year_open: :confidential,
+    county_id: :confidential,
+    county_name: :confidential,
+  )
+
   include Seeded
 
   self.primary_key = 'id'

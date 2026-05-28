@@ -21,6 +21,18 @@
 #
 class SectionInstructor < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    instructor_id: :public,
+    section_id: :public,
+    invited_by_id: :public,
+    deleted_at: :public,
+    status: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   acts_as_paranoid
 
   belongs_to :instructor, class_name: 'User'

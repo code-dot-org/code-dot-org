@@ -20,6 +20,18 @@
 module CAP
   class UserEvent < ApplicationRecord
     export_to_analytics
+
+    data_classification(
+      id: :public,
+      name: :confidential,
+      user_id: :public,
+      policy: :confidential,
+      created_at: :public,
+      updated_at: :public,
+      state_before: :confidential,
+      state_after: :confidential,
+    )
+
     POLICIES = Policies::ChildAccount::StatePolicies.state_policies.each_value.pluck(:name).freeze
 
     NAMES = [

@@ -21,6 +21,22 @@
 #
 class AichatRequest < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    level_id: :public,
+    script_id: :public,
+    project_id: :public,
+    model_customizations: :restricted,
+    stored_messages: :restricted,
+    new_message: :restricted,
+    execution_status: :public,
+    response: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
   after_initialize :set_default_execution_status
 

@@ -35,6 +35,24 @@ require 'cdo/shared_constants'
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    script_id: :public,
+    chapter: :public,
+    created_at: :public,
+    updated_at: :public,
+    stage_id: :public,
+    position: :public,
+    assessment: :public,
+    properties: :confidential,
+    named_level: :public,
+    bonus: :public,
+    activity_section_id: :public,
+    seed_key: :confidential,
+    activity_section_position: :public,
+  )
+
   include SerializedProperties
   include LevelsHelper
   include SharedConstants

@@ -25,6 +25,21 @@
 # These interactions are used to improve insights into student learning.
 class UserLevelInteraction < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    level_id: :public,
+    script_id: :public,
+    school_year: :confidential,
+    interaction: :confidential,
+    code_version: :confidential,
+    metadata: :confidential,
+    deleted_at: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
   belongs_to :level
 end

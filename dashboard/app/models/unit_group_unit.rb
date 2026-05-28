@@ -16,6 +16,15 @@
 
 class UnitGroupUnit < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    course_id: :public,
+    script_id: :public,
+    position: :public,
+    unit_prefix: :confidential,
+  )
+
   self.table_name = 'course_scripts'
 
   belongs_to :unit_group, foreign_key: 'course_id', optional: true

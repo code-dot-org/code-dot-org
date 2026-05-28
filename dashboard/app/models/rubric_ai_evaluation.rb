@@ -22,6 +22,19 @@ require 'cdo/shared_constants'
 #
 class RubricAiEvaluation < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    requester_id: :public,
+    rubric_id: :public,
+    project_id: :public,
+    project_version: :confidential,
+    status: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
   belongs_to :requester, class_name: 'User'
   belongs_to :rubric

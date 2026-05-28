@@ -18,6 +18,18 @@
 #
 class ParentalPermissionRequest < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    parent_email: :restricted,
+    uuid: :confidential,
+    reminders_sent: :public,
+    created_at: :public,
+    updated_at: :public,
+    resends_sent: :public,
+  )
+
   belongs_to :user
   validates :parent_email, presence: true
 

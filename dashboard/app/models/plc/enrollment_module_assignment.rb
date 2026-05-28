@@ -22,6 +22,16 @@
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::EnrollmentModuleAssignment < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    plc_enrollment_unit_assignment_id: :public,
+    plc_learning_module_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    user_id: :public,
+  )
+
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
   belongs_to :user, optional: true

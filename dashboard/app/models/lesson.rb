@@ -27,6 +27,22 @@ require 'cdo/shared_constants'
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :confidential,
+    absolute_position: :public,
+    script_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    lockable: :public,
+    relative_position: :public,
+    properties: :confidential,
+    lesson_group_id: :public,
+    key: :confidential,
+    has_lesson_plan: :public,
+  )
+
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers

@@ -37,6 +37,31 @@ MAX_INT_VALUE = (2**31) - 1
 
 class AuthoredHintViewRequest < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    script_id: :public,
+    level_id: :public,
+    hint_id: :confidential,
+    hint_class: :confidential,
+    hint_type: :confidential,
+    prev_time: :public,
+    prev_attempt: :public,
+    prev_test_result: :public,
+    prev_level_source_id: :public,
+    next_time: :public,
+    next_attempt: :public,
+    next_test_result: :public,
+    next_level_source_id: :public,
+    final_time: :public,
+    final_attempt: :public,
+    final_test_result: :public,
+    final_level_source_id: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user, optional: true
   belongs_to :script, class_name: 'Unit'
   belongs_to :level

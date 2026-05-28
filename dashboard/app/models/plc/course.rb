@@ -19,6 +19,14 @@
 # A user may be enrolled in multiple courses.
 class Plc::Course < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    created_at: :public,
+    updated_at: :public,
+    course_id: :public,
+  )
+
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', foreign_key: 'plc_course_id', dependent: :destroy
   has_many :plc_course_units, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_id', dependent: :destroy
   belongs_to :unit_group, class_name: '::UnitGroup', foreign_key: 'course_id', dependent: :destroy

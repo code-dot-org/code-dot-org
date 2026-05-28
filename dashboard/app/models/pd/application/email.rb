@@ -18,6 +18,17 @@
 module Pd::Application
   class Email < ApplicationRecord
     export_to_analytics
+
+    data_classification(
+      id: :public,
+      pd_application_id: :public,
+      application_status: :restricted,
+      email_type: :restricted,
+      to: :restricted,
+      created_at: :public,
+      sent_at: :restricted,
+    )
+
     self.table_name = 'pd_application_emails'
 
     belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id', optional: true

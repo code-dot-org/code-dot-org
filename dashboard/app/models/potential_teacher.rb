@@ -16,6 +16,17 @@
 #
 class PotentialTeacher < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :restricted,
+    email: :restricted,
+    script_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    receives_marketing: :public,
+  )
+
   belongs_to :script, class_name: 'Unit', optional: true
 
   validates_presence_of :name, :email

@@ -24,6 +24,24 @@
 
 class LevelConceptDifficulty < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    level_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    sequencing: :public,
+    debugging: :public,
+    repeat_loops: :public,
+    repeat_until_while: :public,
+    for_loops: :public,
+    events: :public,
+    variables: :public,
+    functions: :public,
+    functions_with_params: :public,
+    conditionals: :public,
+  )
+
   include ConceptDifficulties
   belongs_to :level
 

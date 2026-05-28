@@ -16,5 +16,16 @@
 #
 class AidiffMessageFeedback < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    aidiff_message_id: :public,
+    teacher_id: :public,
+    approval: :public,
+    flagged: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :aidiff_message
 end

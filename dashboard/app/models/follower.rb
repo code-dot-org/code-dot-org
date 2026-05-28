@@ -19,6 +19,16 @@
 # (student_user is the student, user is the teacher)
 class Follower < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    student_user_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    section_id: :public,
+    deleted_at: :public,
+  )
+
   acts_as_paranoid
 
   belongs_to :section, optional: true

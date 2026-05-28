@@ -20,6 +20,20 @@
 #
 class LearningGoalAiEvaluation < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    rubric_ai_evaluation_id: :public,
+    learning_goal_id: :public,
+    understanding: :public,
+    ai_confidence: :public,
+    created_at: :public,
+    updated_at: :public,
+    observations: :restricted,
+    ai_confidence_exact_match: :public,
+    evidence: :restricted,
+  )
+
   belongs_to :rubric_ai_evaluation, inverse_of: :learning_goal_ai_evaluations
   belongs_to :learning_goal
 

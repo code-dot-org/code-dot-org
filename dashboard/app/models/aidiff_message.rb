@@ -22,6 +22,23 @@
 #
 class AidiffMessage < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    aidiff_thread_id: :public,
+    external_id: :restricted,
+    role: :public,
+    content: :restricted,
+    is_preset: :public,
+    created_at: :public,
+    updated_at: :public,
+    preset_chip_text: :restricted,
+    raw_content: :restricted,
+    source_links: :restricted,
+    is_artifact_candidate: :public,
+    artifact_candidate_type: :restricted,
+  )
+
   belongs_to :aidiff_thread
   has_one :aidiff_message_feedback, dependent: :destroy
 

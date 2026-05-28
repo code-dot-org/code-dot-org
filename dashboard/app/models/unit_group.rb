@@ -25,6 +25,19 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :confidential,
+    properties: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    published_state: :confidential,
+    instruction_type: :confidential,
+    instructor_audience: :confidential,
+    participant_audience: :confidential,
+  )
+
   include Curriculum::SharedCourseConstants
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse

@@ -15,6 +15,16 @@
 #
 class Rubric < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    lesson_id: :public,
+    level_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    s3_config_dir: :confidential,
+  )
+
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy, inverse_of: :rubric
   belongs_to :level
   belongs_to :lesson

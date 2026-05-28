@@ -12,6 +12,12 @@
 #
 class ProjectStorage < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+  )
+
   # Conceptually, an instance of this class represents blob storage for all of
   # the projects belonging to a single user. The user may have an account (user_id
   # points to the user) or may be unsigned-in (user_id is nil). Under the covers,

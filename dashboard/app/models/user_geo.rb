@@ -23,6 +23,22 @@
 
 class UserGeo < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    indexed_at: :confidential,
+    ip_address: :restricted,
+    city: :confidential,
+    state: :confidential,
+    country: :confidential,
+    postal_code: :confidential,
+    latitude: :restricted,
+    longitude: :restricted,
+  )
+
   belongs_to :user, optional: true
 
   PII_FIELDS = %w[ip_address city postal_code latitude longitude].freeze

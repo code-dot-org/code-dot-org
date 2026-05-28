@@ -21,6 +21,21 @@
 
 class TeacherProfile < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    studio_person_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    course: :confidential,
+    facilitator: :public,
+    teaching: :public,
+    pd_year: :confidential,
+    pd: :confidential,
+    other_pd: :confidential,
+    properties: :confidential,
+  )
+
   include SerializedProperties
   # teals: True if the teacher was a TEALS teacher.
   serialized_attrs %w(teals)

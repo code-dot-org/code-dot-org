@@ -14,5 +14,14 @@
 #
 class TeachingProfileData < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    individual_data: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
 end

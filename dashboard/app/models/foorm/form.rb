@@ -17,6 +17,17 @@
 
 class Foorm::Form < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :restricted,
+    version: :public,
+    questions: :restricted,
+    created_at: :public,
+    updated_at: :public,
+    published: :public,
+  )
+
   include Seeded
   include Pd::Foorm::Constants
 

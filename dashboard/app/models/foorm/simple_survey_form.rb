@@ -17,6 +17,18 @@
 #
 class Foorm::SimpleSurveyForm < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    path: :restricted,
+    kind: :restricted,
+    form_name: :restricted,
+    form_version: :public,
+    properties: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   include SerializedProperties
 
   serialized_attrs [

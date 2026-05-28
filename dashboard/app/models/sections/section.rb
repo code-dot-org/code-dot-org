@@ -47,6 +47,36 @@ require 'policies/lti'
 
 class Section < ApplicationRecord
   export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    name: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    code: :confidential,
+    script_id: :public,
+    course_id: :public,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :public,
+    stage_extras: :public,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :public,
+    sharing_disabled: :public,
+    hidden: :public,
+    tts_autoplay_enabled: :public,
+    restrict_section: :public,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :public,
+    avatar_color: :public,
+    avatar_emoji: :public,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
