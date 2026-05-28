@@ -125,16 +125,25 @@ namespace :ci do
     end
     use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
     ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
-    # Sauce Connect tunnels the SauceLabs browser into the in-container puma.
-    #
-    # Device Farm doesn't need a tunnel -- it reaches puma via the worker's
-    # VPC-private IP address. See device_farm_desktop_browser in
-    # dashboard/test/ui/features/support/connect.rb for more details.
+
+    # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
     needs_sauce_connect = !use_device_farm
     if needs_sauce_connect
       Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
+
+    # In order for Device Farm to reach localhost, the Device Farm project
+    # (set in DEVICE_FARM_DESKTOP_PROJECT_ARN) must live in the same VPC as the
+    # drone workers and belong to the DeviceFarmToDroneWorker security group.
+    # This works because:
+    # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
+    #   puma accessible at port 3000 on the drone worker's primary ENI
+    # - the DroneRunnerEcsSecurityGroup on the drone worker allows inbound
+    #   traffic on port 3000 from the DeviceFarmToDroneWorker security group
+    # - Chrome's --host-resolver-rules maps localhost-studio.code.org to drone
+    #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
+
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")

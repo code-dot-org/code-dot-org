@@ -94,18 +94,8 @@ def device_farm_desktop_browser(http_client: nil)
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
-  # In order for Device Farm to reach localhost in CI, the Device Farm project
-  # (set in DEVICE_FARM_DESKTOP_PROJECT_ARN) must live in the same VPC as the
-  # drone workers and belong to the DeviceFarmToDroneWorker security group.
-  #
-  # This works because:
-  # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
-  #   puma accessible at port 3000 on the drone worker's primary ENI
-  # - the DroneRunnerEcsSecurityGroup on the drone worker allows inbound
-  #   traffic on port 3000 from the DeviceFarmToDroneWorker security group
-  # - Chrome's --host-resolver-rules (set in connect.rb) maps
-  #   localhost-studio.code.org and localhost.code.org to $WORKER_IP, which
-  #   preserves the Host header, Origin, and cookie domain (vs using the IP directly).
+  # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
+  # and localhost.code.org to the drone worker's IP address.
   if $device_farm_browser_config['browserName'] == 'chrome' && ENV['WORKER_IP']
     chrome_options = capabilities['goog:chromeOptions'] || {}
     chrome_args = chrome_options['args'] || []
