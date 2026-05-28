@@ -388,6 +388,18 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           </div>
         )}
       </div>
+      {panel.teacherNote && (
+        // Slides feature: a teacher-only note shown below the bubble row.
+        // The server strips teacherNote from the panels payload for any
+        // user who isn't a teacher/levelbuilder, so a student's browser
+        // never receives it. The block renders only when the active
+        // panel has one — for regular panels levels (no notes anywhere)
+        // nothing here changes.
+        <div className={styles.teacherNote} style={{width}}>
+          <div className={styles.teacherNoteLabel}>Teacher note</div>
+          <EnhancedSafeMarkdown markdown={panel.teacherNote} />
+        </div>
+      )}
       {onSkip && (
         <div className={styles.skipContainer}>
           <button onClick={onSkip} type="button" className={styles.buttonSkip}>

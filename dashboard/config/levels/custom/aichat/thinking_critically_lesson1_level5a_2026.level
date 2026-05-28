@@ -43,12 +43,12 @@
       "availableModelIds": [
         "gemini-2.5-flash-image"
       ],
-      "multimodalEnabled": true
+      "multimodalEnabled": false
     },
     "display_name": "Inner Animal Portrait",
     "bubble_choice_description": "AI will reveal your inner animal and describe it!",
     "thumbnail_url": "https://images.code.org/b7936aee3c0bf89f58e2f97d98d1c9c7-paw.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:47.369+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicea\\\"\"],\"cloned_from\":\"use_ai_test_choicea\"},{\"changed_at\":\"2026-04-21 22:30:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 16:31:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 16:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 17:48:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 17:49:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:47.369+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicea\\\"\"],\"cloned_from\":\"use_ai_test_choicea\"},{\"changed_at\":\"2026-04-21 22:30:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 16:31:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 16:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 17:48:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 17:49:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-27 17:30:52 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

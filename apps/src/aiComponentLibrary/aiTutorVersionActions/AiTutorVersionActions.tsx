@@ -232,7 +232,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
                 <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
               }
             >
-              Accept and save version
+              Save
             </MuiButton>
             <WithTooltip
               tooltipProps={{

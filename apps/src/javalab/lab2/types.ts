@@ -10,6 +10,12 @@ export interface JavalabFlatFile {
   tabOrder?: number;
   isVisible: boolean;
   isValidation?: boolean;
+  // Whether this file's tab is currently open in the editor. Optional;
+  // absent means open. Only meaningful on visible non-validation files.
+  isOpen?: boolean;
+  // Whether this file's tab is the currently focused one.
+  // At most one file in a source should set this true.
+  isActive?: boolean;
 }
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;
