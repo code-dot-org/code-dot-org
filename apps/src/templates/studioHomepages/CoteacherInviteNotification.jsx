@@ -1,14 +1,11 @@
-import {Typography} from '@mui/material';
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
@@ -16,13 +13,19 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
+// Legacy Notification rendered the `collaborate` type with a 'users' icon
+// (see apps/src/sharedComponents/Notification.jsx). Keep the same glyph here
+// for visual continuity.
+const COLLABORATE_ICON = {iconName: 'users'};
+
 const CoteacherInviteNotification = ({
   isForPl,
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
-  // This prop is used to allow asyncLoadSectionData to be run in a way that might remove data
+  // Lets the consumer opt in to a re-load of section data that might remove
+  // entries (e.g. after declining an invite to a hidden section).
   destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
@@ -60,39 +63,46 @@ const CoteacherInviteNotification = ({
   if (!invite) {
     return null;
   }
+
   return (
-    <Notification
-      dismissible={false}
-      type={NotificationType.collaborate}
-      iconStyles={styles.icon}
-      notice={i18n.coteacherInvite({
+    <NotificationBanner
+      // variant="primary" in DSCO NotificationBanner paints brand-purple,
+      // which is the closest match to the legacy `collaborate` type's
+      // light_secondary_500 (purple) coloring.
+      variant="primary"
+      icon={COLLABORATE_ICON}
+      title={i18n.coteacherInvite({
         invitedByName: invite.invited_by_name,
       })}
-      details={
-        <Typography style={{marginBottom: 0}} variant="body2" gutterBottom>
+      description={
+        <>
           {i18n.coteacherInviteDescription({
             invitedByEmail: invite.invited_by_email,
           })}
           <br />
-          <Typography variant="strong">{invite.section_name}</Typography>
-        </Typography>
+          <strong>{invite.section_name}</strong>
+        </>
       }
-      tooltipText={i18n.coteacherTooltip()}
-      buttonsStyles={styles.buttons}
-      buttons={[
-        {
-          text: 'Decline',
-          onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.neutralDark,
-          style: styles.declineButton,
-        },
-        {
-          text: 'Accept',
-          onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.brandSecondaryDefault,
-          style: styles.acceptButton,
-        },
-      ]}
+      actions={
+        <>
+          <MuiButton
+            onClick={() => declineCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="outlined"
+            color="secondary"
+          >
+            {'Decline'}
+          </MuiButton>
+          <MuiButton
+            onClick={() => acceptCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="contained"
+            color="primary"
+          >
+            {'Accept'}
+          </MuiButton>
+        </>
+      }
     />
   );
 };
@@ -118,30 +128,4 @@ CoteacherInviteNotification.propTypes = {
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
   destructiveLoad: PropTypes.bool,
-};
-
-// The Notification object uses styles instead of className for legacy reasons.
-const styles = {
-  acceptButton: {
-    marginLeft: '20px',
-    marginRight: '0px',
-    lineHeight: '100%',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  declineButton: {
-    marginRight: 0,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  buttons: {
-    // center vertically
-    display: 'flex',
-    alignItems: 'center',
-  },
-  icon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 };
