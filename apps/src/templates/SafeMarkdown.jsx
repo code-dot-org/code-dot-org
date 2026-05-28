@@ -223,10 +223,13 @@ const domToReact = (node, key, placeholders) => {
     }
   });
 
+  const isCode = node.hasAttribute('data-code-element');
+  if (isCode) {
+    node.removeAttribute('data-code-element');
+  }
+
   return React.createElement(
-    node.hasAttribute('data-code-element')
-      ? 'code'
-      : node.tagName.toLowerCase(),
+    isCode ? 'code' : node.tagName.toLowerCase(),
     props,
     ...children
   );
