@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Step 3: Data Filtering",
-    "long_instructions": "####Describe how you applied filters to your data. What specific subsets of data did you focus on and why? How did filtering the data help you focus your analysis?",
+    "long_instructions": "Describe how you applied filters to your data. What specific subsets of data did you focus on and why? How did filtering the data help you focus your analysis?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

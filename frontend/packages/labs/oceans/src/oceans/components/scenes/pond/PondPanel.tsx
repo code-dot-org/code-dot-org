@@ -3,8 +3,19 @@ import * as React from 'react';
 
 import I18n from '@/oceans/i18n';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
 import Markdown from '@/utils/Markdown';
+
+/**
+ * Inline style object that drives one of the explanation bars via the
+ * --ocean-bar-width custom property.  This is the one place where the
+ * width genuinely depends on a per-render computed value; the CSS class
+ * reads `width: var(--ocean-bar-width)`.
+ */
+function barWidthStyle(percent: number): React.CSSProperties {
+  return {
+    ['--ocean-bar-width' as keyof React.CSSProperties]: `${percent}%`,
+  } as React.CSSProperties;
+}
 
 class PondPanel extends React.Component {
   onPondPanelClick = (e: React.MouseEvent) => {
@@ -22,38 +33,38 @@ class PondPanel extends React.Component {
     return (
       <div>
         {!state.pondClickedFish && (
-          <div style={styles.pondPanelLeft} onClick={this.onPondPanelClick}>
+          <div
+            className="ocean-pond-panel--left"
+            onClick={this.onPondPanelClick}
+          >
             {state.pondExplainGeneralSummary && (
               <div>
-                <div style={styles.pondPanelPreText}>
+                <div className="ocean-pond-panel__pre-text">
                   {I18n.t('mostImportantParts')}
                 </div>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
                   <div key={i}>
                     {f.importance > 0 && (
-                      <div style={styles.pondPanelRow}>
+                      <div className="ocean-pond-panel__row">
                         &nbsp;
                         <div
-                          style={{
-                            ...styles.pondPanelGeneralBar,
-                            width:
-                              (Math.abs(f.importance) /
-                                state.pondExplainGeneralSummary![0]
-                                  .importance) *
-                                100 +
-                              '%',
-                          }}
+                          className="ocean-pond-panel__bar--general"
+                          style={barWidthStyle(
+                            (Math.abs(f.importance) /
+                              state.pondExplainGeneralSummary![0].importance) *
+                              100,
+                          )}
                         >
                           &nbsp;
                         </div>
-                        <div style={styles.pondPanelGeneralBarText}>
+                        <div className="ocean-pond-panel__bar-text--general">
                           {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
                   </div>
                 ))}
-                <div style={styles.pondPanelPostText}>
+                <div className="ocean-pond-panel__post-text">
                   {I18n.t('clickIndividualFish')}
                 </div>
               </div>
@@ -62,16 +73,19 @@ class PondPanel extends React.Component {
         )}
         {state.pondClickedFish && (
           <div
-            style={
+            className={
               state.pondPanelSide === 'left'
-                ? styles.pondPanelLeft
-                : styles.pondPanelRight
+                ? 'ocean-pond-panel--left'
+                : 'ocean-pond-panel--right'
             }
             onClick={e => this.onPondPanelClick(e)}
           >
             {state.pondExplainFishSummary && (
               <div>
-                <div style={styles.pondPanelPreText} id="pondTextMarkdown">
+                <div
+                  className="ocean-pond-panel__pre-text"
+                  id="pondTextMarkdown"
+                >
                   <Markdown
                     markdown={I18n.t('mostImportantPartsDescription', {
                       word: state.word!.toLowerCase(),
@@ -84,39 +98,33 @@ class PondPanel extends React.Component {
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
                     {f.impact < 0 && (
-                      <div style={styles.pondPanelRow}>
+                      <div className="ocean-pond-panel__row">
                         &nbsp;
                         <div
-                          style={{
-                            ...styles.pondPanelGreenBar,
-                            width:
-                              ((Math.abs(f.impact) / maxExplainValue) * 100) /
-                                2 +
-                              '%',
-                          }}
+                          className="ocean-pond-panel__bar--green"
+                          style={barWidthStyle(
+                            ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
+                          )}
                         >
                           &nbsp;
                         </div>
-                        <div style={styles.pondPanelGreenBarText}>
+                        <div className="ocean-pond-panel__bar-text--green">
                           {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
                     {f.impact > 0 && (
-                      <div style={styles.pondPanelRow}>
+                      <div className="ocean-pond-panel__row">
                         &nbsp;
                         <div
-                          style={{
-                            ...styles.pondPanelRedBar,
-                            width:
-                              ((Math.abs(f.impact) / maxExplainValue) * 100) /
-                                2 +
-                              '%',
-                          }}
+                          className="ocean-pond-panel__bar--red"
+                          style={barWidthStyle(
+                            ((Math.abs(f.impact) / maxExplainValue) * 100) / 2,
+                          )}
                         >
                           &nbsp;
                         </div>
-                        <div style={styles.pondPanelRedBarText}>
+                        <div className="ocean-pond-panel__bar-text--red">
                           {I18n.t(f.partType)}
                         </div>
                       </div>

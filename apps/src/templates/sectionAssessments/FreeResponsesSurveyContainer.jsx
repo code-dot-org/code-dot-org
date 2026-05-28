@@ -1,3 +1,5 @@
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -10,6 +12,8 @@ import {
   getSurveyFreeResponseQuestions,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
+
+import moduleStyles from './free-responses-container.module.scss';
 
 const freeResponseQuestionsPropType = PropTypes.shape({
   questionNumber: PropTypes.number,
@@ -33,22 +37,30 @@ class FreeResponsesSurveyContainer extends Component {
     const {freeResponsesByQuestion} = this.props;
     return (
       <div>
-        <h2>{i18n.studentFreeResponseAnswers()}</h2>
+        <Typography variant="h2">
+          {i18n.studentFreeResponseAnswers()}
+        </Typography>
         {freeResponsesByQuestion.map((question, index) => (
           <div key={index}>
-            <div style={styles.text}>
-              {`${question.questionNumber}. ${question.questionText.slice(
-                0,
-                QUESTION_CHARACTER_LIMIT
-              )}`}
+            <div className={moduleStyles.questionLabel}>
+              <Typography variant="body3">
+                {`${question.questionNumber}. ${question.questionText.slice(
+                  0,
+                  QUESTION_CHARACTER_LIMIT
+                )}`}
+              </Typography>
               {question.questionText.length >= QUESTION_CHARACTER_LIMIT && (
-                <a
-                  onClick={() => {
+                <Link
+                  size="s"
+                  onClick={e => {
+                    // Link defaults href to "#"; suppress the page-top jump
+                    // since this opens a modal rather than navigating.
+                    e.preventDefault();
                     this.selectQuestion(question.questionNumber - 1);
                   }}
                 >
-                  <span>{i18n.seeFullQuestion()}</span>
-                </a>
+                  {i18n.seeFullQuestion()}
+                </Link>
               )}
             </div>
             <FreeResponsesSurveyTable freeResponses={question.answers} />
@@ -58,14 +70,6 @@ class FreeResponsesSurveyContainer extends Component {
     );
   }
 }
-
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-};
 
 export const UnconnectedFreeResponsesSurveyContainer =
   FreeResponsesSurveyContainer;

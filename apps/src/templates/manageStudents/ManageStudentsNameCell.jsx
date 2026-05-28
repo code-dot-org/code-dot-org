@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -10,8 +11,6 @@ import {
 import DemoChip from '@cdo/apps/templates/DemoChip';
 import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
-
-import {tableLayoutStyles} from '../tables/tableConstants';
 
 import {editStudent} from './manageStudentsRedux';
 
@@ -57,19 +56,14 @@ class ManageStudentNameCell extends Component {
     );
 
     return (
-      <div style={tableLayoutStyles.tableNameText}>
+      <div className={moduleStyles.nameCellWrapper}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
               <span className={moduleStyles.nameWithChip}>
-                <a
-                  style={tableLayoutStyles.link}
-                  href={studentUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link size="s" href={studentUrl} openInNewTab>
                   {name}
-                </a>
+                </Link>
                 {this.props.isDemoStudent && (
                   <span className={moduleStyles.demoChipWrapper}>
                     <DemoChip />

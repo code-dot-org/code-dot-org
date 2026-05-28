@@ -7043,9 +7043,9 @@ en:
           version_title: ''
         teaching-ai-discoveries-2026:
           title: Teaching AI Discoveries
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: After completing this online professional learning module, you'll be ready to get started teaching Code.org's AI Discoveries curriculum with your students.
+          description_student: "## Welcome!\n#####Welcome to Code.org's free self-paced online course for educators to get started teaching AI Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s AI Discoveries course** with your students.\n\n#### **Find the learning that works for you**\n* #####**Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and AI Discoveries. However, you can **engage with the content in the order that best meets your needs.** "
+          description_teacher: "## Welcome!\n#####Welcome to Code.org's free self-paced online course for educators to get started teaching AI Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s AI Discoveries course** with your students.\n\n#### **Find the learning that works for you**\n* #####**Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and AI Discoveries. However, you can **engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         intro-to-web-lab:
           title: Intro to Web Lab
@@ -7087,7 +7087,7 @@ en:
             * Become a part of a network of teachers who are doing similar work.
           version_title: "'25-'26"
         teaching-web-dev-2026:
-          title: Preparing to Teach Web Development
+          title: Teaching Web Development
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Web Development.
           description_student: |-
             ## Welcome
@@ -7107,13 +7107,13 @@ en:
             * **Pick your content:** The content is organized to introduce all teachers to Web Development. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
           version_title: "'26-'27"
         teaching-programming-with-music-lab-2026:
-          title: Preparing to Teach Programming with Music Lab
+          title: Teaching Programming with Music Lab
           description_short: ''
           description_student: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
           description_teacher: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
           version_title: "'26-'27"
         teaching-data-and-society-2026:
-          title: Preparing to Teach Data and Society
+          title: Teaching Data and Society
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Teaching Data and Society.
           description_student: |-
             ## Welcome
@@ -7139,42 +7139,38 @@ en:
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-ai-ml-2026:
-          title: Preparing to Teach AI and Machine Learning
+          title: Teaching AI and Machine Learning
           description_short: This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning.
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s AI Discoveries Unit 2 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers AI Discoveries Unit 2 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s AI Discoveries Unit 2 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers AI Discoveries Unit 2 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-creating-apps-with-devices-circuit-2026:
-          title: Preparing to Teach  Creating Apps with Devices (Circuit Playground)
+          title: Teaching Creating Apps with Devices (Circuit Playground)
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (Circuit Playground) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices (Circuit Playground). However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (Circuit Playground) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices (Circuit Playground). However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-interactive-animations-and-games-2026:
-          title: Preparing to Teach Interactive Animations and Games
+          title: Teaching Interactive Animations and Games
           description_short: ''
           description_student: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_teacher: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           version_title: "'26-'27"
         teaching-creating-apps-with-devices-microbit-2026:
-          title: Preparing to Teach Creating Apps with Devices (micro:bit)
+          title: Teaching Creating Apps with Devices (micro:bit)
           description_short: " After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit)** Unit with your students."
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Teaching Creating Apps with Devices (micro:bit) Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized to introduce all teachers to Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'26-'27"
         teaching-exploring-ai-and-computing-2026:
           title: 'Preparing to Teach AI Foundations: Exploring AI and CS'
-          description_short: ''
+          description_short: 'This short professional learning module prepares you to teach concepts in AI Foundations: Exploring AI & CS course.'
           description_student: "The [**AI Foundations Curriculum: Exploring AI and CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out [**AIF: Exploring AI and CS**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
           description_teacher: "The [**AI Foundations Curriculum: Exploring AI and CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out [**AIF: Exploring AI and CS**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
           version_title: "'26-'27"
         teaching-designing-and-building-with-ai-2026:
           title: 'Teaching AI Foundations: Designing & Building with AI Curriculum'
-          description_short: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
-
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+          description_short: 'This short professional learning module introduces you to the concepts in AI Foundations: Designing & Building with AI course— a curriculum where students code alongside AI to build real-world interactive projects.'
           description_student: |-
             # Welcome!
             #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
@@ -7437,4 +7433,30 @@ en:
             * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
 
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'26-'27"
+        teaching-thinking-critically-about-ai-2026:
+          title: Teaching Thinking Critically About AI
+          description_short: This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+          description_student: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
+          description_teacher: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
           version_title: "'26-'27"

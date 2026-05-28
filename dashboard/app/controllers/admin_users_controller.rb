@@ -385,9 +385,9 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/lookup_by_email
   def lookup_by_email_form
-    email = params[:email].to_s.strip.downcase
-    if email.present?
-      hashed_email = AuthenticationOption.hash_email(email)
+    input = params[:email].to_s.strip.downcase
+    if input.present?
+      hashed_email = input.match?(/\A[a-f0-9]{32}\z/) ? input : AuthenticationOption.hash_email(input)
       matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
       user_ids = matched_auth_options.distinct.pluck(:user_id)
       all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)

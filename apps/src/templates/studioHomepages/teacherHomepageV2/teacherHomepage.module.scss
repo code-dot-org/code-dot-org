@@ -69,6 +69,21 @@
   gap: 16px;
 }
 
+// Browsers don't expose dash length / gap for `border-style: dashed`, so paint
+// the dashed outline with four edge gradients instead. Adjust the 12px / 8px
+// values below to tune dash length and gap.
+.demoSectionCardWrapper {
+  border: none;
+  background-image:
+    repeating-linear-gradient(to right, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to right, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to bottom, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to bottom, var(--borders-neutral-primary) 0 12px, transparent 12px 20px);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
+  background-repeat: no-repeat;
+}
+
 .sectionCardHeader {
   padding: 16px;
   border-bottom: 1px solid var(--borders-neutral-primary);

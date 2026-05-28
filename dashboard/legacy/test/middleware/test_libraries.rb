@@ -3,7 +3,7 @@ require_relative 'files_api_test_helper'
 
 class LibrariesTest < FilesApiTestBase
   def setup
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'libraries', @channel_id)
     @api.ensure_aws_credentials
@@ -55,7 +55,7 @@ class LibrariesTest < FilesApiTestBase
     @api.get_object(filename)
     assert not_found?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/LibraryBucket/BucketHelper.list
     )
   end
@@ -87,7 +87,7 @@ class LibrariesTest < FilesApiTestBase
     # Check cache headers
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/LibraryBucket/BucketHelper.list
       Custom/ListRequests/LibraryBucket/BucketHelper.app_size
       Custom/ListRequests/LibraryBucket/BucketHelper.app_size

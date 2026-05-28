@@ -123,20 +123,19 @@
   --text-success-primary: var(--sentiment-success-50);
   --text-success-primary-fixed: var(--sentiment-success-50);
   --text-success-secondary: var(--sentiment-success-70);
-  --text-warning-primary: var(--sentiment-warning-50);
-  --text-warning-primary-fixed: var(--sentiment-warning-50);
+  --text-warning-primary: var(--sentiment-warning-70);
+  --text-warning-primary-fixed: var(--sentiment-warning-70);
   --text-warning-secondary: var(--sentiment-warning-70);
 }
 
 /* Alternative brand — Light theme overrides (ALL pink for visual auditing)
-   Activated by setting data-brand="codeai" on the <html> element.
+   Activated by setting data-brand="codeai-next" on the <html> element.
    Every semantic token is set to a pink shade so it's trivially easy to spot
    which UI surfaces are using DSCO tokens and which are not.
 */
 /* stylelint-disable color-hex-length */
-[data-brand='codeai']:root,
-[data-brand='codeai'][data-theme='Light'],
-[data-brand='codeai'] [data-theme='Light'] {
+[data-brand='codeai-next'][data-theme='Light'],
+[data-brand='codeai-next'] [data-theme='Light'] {
   --background-accent-orange-light: #fff0f7;
   --background-accent-orange-primary: #ff69b4;
   --background-accent-orange-strong: #b02e6c;
@@ -247,8 +246,8 @@
 }
 
 /* Alternative brand — Dark theme overrides (ALL pink for visual auditing) */
-[data-brand='codeai'][data-theme='Dark'],
-[data-brand='codeai'] [data-theme='Dark'] {
+[data-brand='codeai-next'][data-theme='Dark'],
+[data-brand='codeai-next'] [data-theme='Dark'] {
   --background-accent-orange-light: #6e1543;
   --background-accent-orange-primary: #ff69b4;
   --background-accent-orange-strong: #ff8fc9;

@@ -26,36 +26,75 @@ Websites don’t usually leave empty or broken-looking fields on the screen. Ins
 
 --- 
 ## Design Thinking: User Perception
-The way information is displayed doesn’t just inform users—it can shape their opinions.
 
-Below are three versions of the same card, each presenting information slightly differently.
+The way information is displayed doesn’t just inform users,it can shape their opinions.
 
-<img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="3 cards with names, ratings, and reviews" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+Below are three versions of the same product card. Each presents the information slightly differently.
 
- #### 👉 **How does each version of the card influence your perception?**
+<img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="Three product cards showing different ways information can influence user perception" width="650px" style="display:block;margin-left:auto;margin-right:auto;border-radius:10px;">
 
+<br>
 
+#### 👉 Before expanding the sections below, consider:
+* #### Which version feels the most trustworthy?
+* #### Which version seems designed to persuade the user?
+* #### What information is emphasized, hidden, or framed differently?
 
-<div style="clear:both;"></div>
+---
 
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:20px;">
 
+<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:18px;font-weight:bold;">Version 1</summary>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
-Students should recognize the differences between the three versions:<br><br>
-<b>Version 1:</b> Neutral
-Shows a plain rating (for example, “Rating: 2.5/5 stars”).<br>
-<b>Version 2:</b> Biased
-Uses hype language (for example, “Top Value Pick!”).<br>
-<b>Version 3:</b> Hidden Information
-Leaves the rating off entirely.<br><br>
-Tone, label choice (like “Top Value Pick!”), and hiding information (such as omitting a low rating) can all influence user perception and bias how trustworthy or appealing something appears.
+  <div style="margin-top:16px;">
+    <p style="font-size:16px;line-height:1.5;">
+      This version feels more <b>neutral</b> because it presents the rating directly without extra persuasive language.
+    </p>
 
-</p>
-</div>
+  <p style="font-size:16px;line-height:1.5;">
+      The user can evaluate the product using the visible information alone.
+    </p>
+  </div>
 </details>
+
+<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:18px;font-weight:bold;">Version 2</summary>
+
+  <div style="margin-top:16px;">
+    <p style="font-size:16px;line-height:1.5;">
+      This version uses <b>persuasive framing</b>, such as the “Top Value Pick!” label and highlighted button styling.
+    </p>
+
+  <p style="font-size:16px;line-height:1.5;">
+      Even though the product rating is still low, the design encourages users to view the product more positively.
+    </p>
+  </div>
+</details>
+
+<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:18px;font-weight:bold;">Version 3</summary>
+
+  <div style="margin-top:16px;">
+    <p style="font-size:16px;line-height:1.5;">
+      This version removes the rating entirely, which hides potentially important information from the user.
+    </p>
+
+  <p style="font-size:16px;line-height:1.5;">
+      Omitting information can influence perception just as much as adding persuasive language.
+    </p>
+  </div>
+</details>
+
+</div>
+
+---
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+  <p style="font-size:18px;line-height:1.5;margin:0;">
+    <strong>💡 Teacher Tip:</strong> Encourage students to notice not only what information appears on a page, but also what is emphasized, minimized, or omitted. Small design choices can strongly influence how users interpret information online.
+  </p>
+</div>
 
 
 ---

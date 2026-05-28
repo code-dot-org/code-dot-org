@@ -582,16 +582,6 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
-  // Global Edition - Region Switch Confirm events
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
-    'Global Edition Region Switch Confirm Shown',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
-    'Global Edition Region Switch Confirm Closed',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
-    'Global Edition Region Switch Confirm Accepted',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
-    'Global Edition Region Switch Confirm Rejected',
-
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
 
@@ -689,6 +679,9 @@ const EVENTS = {
 
   LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
   LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
+
+  LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
+  LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -1,33 +1,904 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-05-20T19:14:06.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Teacher note**: The following are student-facing directions from Lesson 3: AI-Assisted Creation. You do not need to complete the tasks, but it may be useful to peruse this canvas to prepare for guiding your students through it. Try adding text, shapes, highlighting, etc. \r\n___\r\n\r\n## Generate and Judge Project\r\n\r\nYou will use this canvas to create your project throughout the unit. Any work that you add will be saved and available in future lessons.\r\n\r\n1. Type in your Theme and Audience into the provided boxes.\r\n\r\n2. Think of **at least three** purposes that your audience might use an AI for.\r\n\r\n3. Type your Purpose ideas in the provided box.\r\n",
+    "long_instructions": "## Sample Project\r\n\r\nScroll and zoom the sample project to the right. As you do, consider how you might scaffold your instruction to help students create authentic, meaningful guides in your class.",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
-
-        ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": 1905.1218081342977,
-          "scrollY": 2130.0674403996845,
-          "zoom": {
-            "value": 0.161156018383785
+        "nodes": [
+          {
+            "id": "78c7f1e0-7114-4d82-84fe-2a782acea31d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Lola's Guide to Using AI Responsibly \nas a Content Creator",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-blue)",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 97.3553270755221,
+              "y": 311.3112280716231
+            },
+            "width": 532,
+            "height": 109,
+            "measured": {
+              "width": 532,
+              "height": 109
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c52c87d9-4a2b-4bf2-8bc8-3182067c8f66",
+            "type": "text",
+            "data": {
+              "text": "✨",
+              "fontSize": 50,
+              "locked": true
+            },
+            "position": {
+              "x": 27.421233170686975,
+              "y": 247.5503268357823
+            },
+            "measured": {
+              "width": 136,
+              "height": 105
+            },
+            "dragging": false,
+            "width": 136,
+            "height": 105,
+            "resizing": false
+          },
+          {
+            "id": "517a7e53-eaa5-4d8e-850c-8eb0ddabb137",
+            "type": "text",
+            "data": {
+              "text": "✨",
+              "fontSize": 50
+            },
+            "position": {
+              "x": 545.8599105448262,
+              "y": 243.2082592957177
+            },
+            "measured": {
+              "width": 136,
+              "height": 105
+            },
+            "dragging": false,
+            "width": 136,
+            "height": 105,
+            "resizing": false
+          },
+          {
+            "id": "3e323a1c-14a3-4ea8-93a1-64428609bbcb",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/62e5a737-c130-427f-ac3b-21a46851c49b.png",
+              "altText": "Screenshot_2026-05-21_at_12.39.42_PM-removebg-preview",
+              "locked": true
+            },
+            "position": {
+              "x": 639.168566434802,
+              "y": 354.5993555227793
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "af656f74-d9b5-43a1-91d0-2bc07dbeb074",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/9d6fadd1-dfaa-4117-91fe-3eadfb9fa025.png",
+              "altText": "Screenshot_2026-05-21_at_12.39.34_PM-removebg-preview",
+              "locked": true
+            },
+            "position": {
+              "x": -43.14106327650048,
+              "y": 354.59935552277926
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d9ff7640-ed42-419b-9046-6a8c5d4348e2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A topic I'm interested in is...\n\nusing AI to help create videos, posts, thumbnails, and other online content.",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "locked": true
+            },
+            "position": {
+              "x": -70.67161461201403,
+              "y": 586.1148827596925
+            },
+            "width": 249,
+            "height": 145,
+            "measured": {
+              "width": 249,
+              "height": 145
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "b55a5ad0-d403-47d0-b29e-79407c23ba9e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "This guide is designed for...\n\nyoung creators who use AI tools while making content online.\n",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "locked": true
+            },
+            "position": {
+              "x": 245.6036122399089,
+              "y": 585.1236886050589
+            },
+            "width": 249,
+            "height": 145,
+            "measured": {
+              "width": 249,
+              "height": 145
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "cce9df5d-ae3c-465b-8c48-0957e97c3c69",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "This audience could use AI to...\n\nbrainstorm ideas, generate images, write captions, edit videos, and come up with creative content faster.\n",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "locked": true
+            },
+            "position": {
+              "x": 549.4385482004136,
+              "y": 585.8567816774806
+            },
+            "width": 249,
+            "height": 145,
+            "measured": {
+              "width": 249,
+              "height": 145
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "9c6b0e22-2521-4532-a506-52fbe34e6b69",
+            "type": "text",
+            "data": {
+              "text": "Be Creative:",
+              "locked": true
+            },
+            "position": {
+              "x": -70.88421913738662,
+              "y": 551.5830839924952
+            },
+            "measured": {
+              "width": 110,
+              "height": 26
+            },
+            "dragging": false,
+            "width": 110,
+            "height": 26,
+            "resizing": false
+          },
+          {
+            "id": "07c60fec-e83a-4a2d-9127-a48a36372b24",
+            "type": "text",
+            "data": {
+              "text": "Your Audience:",
+              "locked": true
+            },
+            "position": {
+              "x": 241.322082539868,
+              "y": 539.3336759141365
+            },
+            "measured": {
+              "width": 126,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "fc89e46c-2a26-4076-9ac9-8db1cad13e69",
+            "type": "text",
+            "data": {
+              "text": "The Purpose:",
+              "locked": true
+            },
+            "position": {
+              "x": 547.9742878059861,
+              "y": 539.8712009462981
+            },
+            "measured": {
+              "width": 111,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "085b63a3-8533-4b00-8108-d36187651ed6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -84.82529837171535,
+              "y": 506.1223853373562
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "2bc86462-3739-4e00-8c90-40c9ff59d62f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 798.9102422532767,
+              "y": 504.74319643308405
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "f4172482-afca-4f52-a751-c58faed40898",
+            "type": "text",
+            "data": {
+              "text": "👍 HELPFUL AI USE",
+              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-purple)"
+            },
+            "position": {
+              "x": -334.808395676945,
+              "y": 892.4848603581812
+            },
+            "measured": {
+              "width": 213,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "f881a9a1-8bd0-4272-b25c-99936adbe666",
+            "type": "text",
+            "data": {
+              "text": "😭 UNHELPFUL AI USE",
+              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-purple)"
+            },
+            "position": {
+              "x": 774.6721238712466,
+              "y": 869.8945101856827
+            },
+            "measured": {
+              "width": 246,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "44aa9f96-712e-4a8b-825c-7421ac1f637c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/4819082a-6b5c-43ec-90e2-6126ca8e1752.png",
+              "altText": "Screenshot 2026-05-21 at 12.51.30 PM"
+            },
+            "position": {
+              "x": -717.7056467838232,
+              "y": 858.4975912801842
+            },
+            "width": 923,
+            "height": 468,
+            "measured": {
+              "width": 923,
+              "height": 468
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "8b8dd4b5-49a6-456b-9a23-1a0d2966ff4a",
+            "type": "text",
+            "data": {
+              "text": "The AI can help give ideas, but the creator still has to pick the best ones, make changes, and decide what gets posted."
+            },
+            "position": {
+              "x": -263.09984566469495,
+              "y": 1198.8882147885226
+            },
+            "measured": {
+              "width": 463,
+              "height": 60
+            },
+            "dragging": false,
+            "width": 463,
+            "height": 60,
+            "resizing": false
+          },
+          {
+            "id": "7adcdb8a-2d0b-44b0-93d0-2ed7486405da",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/89319e26-dfb8-46ac-8011-9ace0a20face.png",
+              "altText": "Screenshot 2026-05-21 at 12.56.27 PM"
+            },
+            "position": {
+              "x": 402.77909629409555,
+              "y": 895.7207725826308
+            },
+            "width": 827,
+            "height": 343,
+            "measured": {
+              "width": 827,
+              "height": 343
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "8b405d0f-c582-4f5b-bf00-a96c9f65d5ef",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1080.9542316866673,
+              "y": 1254.6192400678515
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "d3ca2f94-316c-464f-8ab1-bb3010537f88",
+            "type": "lineAnchor",
+            "position": {
+              "x": 913.7814517448214,
+              "y": 1141.5004103375788
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "68601736-dba8-4edf-a1bf-6f278770483a",
+            "type": "text",
+            "data": {
+              "text": "This could trick people and spread false information online. Even if AI made it, the person who posted it is still responsible."
+            },
+            "position": {
+              "x": 910.5155537716291,
+              "y": 1275.7634690494306
+            },
+            "measured": {
+              "width": 389,
+              "height": 46
+            },
+            "dragging": false,
+            "width": 389,
+            "height": 46,
+            "resizing": false
+          },
+          {
+            "id": "90a9bce6-cb87-4213-a018-6e367ab5324b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-green)",
+              "locked": true
+            },
+            "position": {
+              "x": -750.1607827900934,
+              "y": 824.4345703865591
+            },
+            "width": 2179,
+            "height": 568,
+            "measured": {
+              "width": 2179,
+              "height": 568
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "7994830a-9b2f-4f08-ba30-34866880f947",
+            "type": "text",
+            "data": {
+              "text": "MAKING AI IMAGES! 📸",
+              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-pink)",
+              "locked": true
+            },
+            "position": {
+              "x": -381.6210623377037,
+              "y": 1451.5021527831402
+            },
+            "measured": {
+              "width": 254,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "6983ce70-3522-41f6-9e67-91384e4d8d3c",
+            "type": "text",
+            "data": {
+              "text": "AI-generated images can look real even when they are fake. Before sharing AI images, creators should think about:\n\n- whether the image could fool people\n- whether it spreads stereotypes or harmful ideas\n- whether people would know the image was made with AI",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -142.5497319857999,
+              "y": 1533.3235585906277
+            },
+            "measured": {
+              "width": 336,
+              "height": 273
+            },
+            "dragging": false,
+            "width": 336,
+            "height": 273,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "e0b7f846-8dc7-4ed3-87e0-059c8486088e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/2430f23e-ba52-43ce-b8f7-e5dae9e74f96.png",
+              "altText": "ChatGPT Image May 21, 2026, 01_02_32 PM",
+              "locked": true
+            },
+            "position": {
+              "x": -862.213323201403,
+              "y": 1528.4347923435
+            },
+            "width": 689,
+            "height": 584,
+            "measured": {
+              "width": 689,
+              "height": 584
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "94765320-ddbc-4158-8765-c97539b20c0f",
+            "type": "text",
+            "data": {
+              "text": "USING A CUSTOM CHATBOT 😎",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 920.724247665974,
+              "y": 1439.8127957008203
+            },
+            "measured": {
+              "width": 341,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "e04b31a4-060b-468e-a4f3-3ff0e33add6d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/4709c68c-f430-4b76-b8a1-348547abafb1.png",
+              "altText": "Screenshot 2026-05-21 at 1.07.00 PM",
+              "locked": true
+            },
+            "position": {
+              "x": 275.5561478578013,
+              "y": 1499.4404895018656
+            },
+            "width": 1113,
+            "height": 596,
+            "measured": {
+              "width": 1113,
+              "height": 596
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "30aad8e5-b127-463f-9f2b-057675fdef4f",
+            "type": "lineAnchor",
+            "position": {
+              "x": 551.8701588582801,
+              "y": 1877.675006267606
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "828b18bf-572d-4bb3-9a77-d28df5a698c8",
+            "type": "lineAnchor",
+            "position": {
+              "x": 505.65726952009766,
+              "y": 1788.133465218415
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "93b97a1e-7abc-444d-b31f-b20af889a9a1",
+            "type": "text",
+            "data": {
+              "text": "These are the chatbot instructions",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 477.61054437867926,
+              "y": 1884.192659505728
+            },
+            "measured": {
+              "width": 356,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "20ea165d-fc86-44fb-86ca-97e075ddaf01",
+            "type": "text",
+            "data": {
+              "text": "When to Use AI\n\n- The chatbot helps brainstorm ideas quickly\n- The suggestions help the creator get started\n- The chatbot encourages adding personal ideas and reactions\n\n\n\n\nWhy You Might Not\n- Some ideas might sound too similar to videos that already exist\n- AI could still create misleading titles or fake information\n- The creator still has to decide what is actually good to post",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1455.36539147251,
+              "y": 1630.3974705947492
+            },
+            "measured": {
+              "width": 408,
+              "height": 238
+            },
+            "dragging": false,
+            "width": 408,
+            "height": 238,
+            "resizing": false
+          },
+          {
+            "id": "1b4a3964-c38f-426c-9b39-1555ccf166e6",
+            "type": "text",
+            "data": {
+              "text": "👍",
+              "fontSize": 80,
+              "locked": true
+            },
+            "position": {
+              "x": 1795.5874731401939,
+              "y": 1486.1500502115111
+            },
+            "measured": {
+              "width": 98,
+              "height": 122
+            },
+            "dragging": false
+          },
+          {
+            "id": "6672eb14-d2c1-4779-8b38-56725b588105",
+            "type": "text",
+            "data": {
+              "text": "👎",
+              "fontSize": 80,
+              "locked": true
+            },
+            "position": {
+              "x": 1856.2268985423705,
+              "y": 1712.142845825651
+            },
+            "measured": {
+              "width": 98,
+              "height": 122
+            },
+            "dragging": false
+          },
+          {
+            "id": "b44f8b51-5170-454e-acea-cd5fa871095a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "fontSize": "extra-large",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": -430.4477513853458,
+              "y": 2140.198639256962
+            },
+            "width": 1586,
+            "height": 539,
+            "measured": {
+              "width": 1586,
+              "height": 539
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "b8dea7a5-e006-4036-b976-62341782815c",
+            "type": "text",
+            "data": {
+              "text": "TIPS FOR RESPONSIBLE USE",
+              "fontSize": 60,
+              "fontColor": "var(--sketchlab-stroke-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": -47.12684349172736,
+              "y": 2164.331509975887
+            },
+            "measured": {
+              "width": 809,
+              "height": 96
+            },
+            "dragging": false
+          },
+          {
+            "id": "f5589d39-a81c-4c92-8280-e86551214b3b",
+            "type": "text",
+            "data": {
+              "text": "✅  Double-Check Before Posting\nAI can make mistakes or create fake information, even when it sounds confident.\n\n🔐  Protect Your Audience’s Trust\nCreators should think carefully before posting AI-generated content that could confuse or mislead people.\n\n💡  Use AI to Help — Not Replace Your Ideas\nAI is best for brainstorming and support, not for replacing human creativity and judgment.\n\n🤔  Think About the Impact\nEven funny AI-generated content can hurt people or spread misinformation if it’s used irresponsibly.",
+              "textAlign": "left",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": -392.8377689241972,
+              "y": 2295.5942409110635
+            },
+            "measured": {
+              "width": 1063,
+              "height": 333
+            },
+            "dragging": false
+          },
+          {
+            "id": "7b761728-cd3a-49e6-863e-43c3263c0d83",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/self-paced-TCaAI-L3-SampleProject/uuid/ca624ced-9763-415c-8c13-4a4ef38ff030.png",
+              "altText": "pngtree-angry-cute-dog-sticker-png-image_6562186",
+              "locked": true
+            },
+            "position": {
+              "x": 791.9570922169023,
+              "y": 2210.5233890301115
+            },
+            "width": 364,
+            "height": 332,
+            "measured": {
+              "width": 364,
+              "height": 332
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "21a346d7-8837-4beb-9ced-16f99a61a691",
+            "type": "lineAnchor",
+            "position": {
+              "x": -104.42047885650716,
+              "y": 1181.120033538088
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "76446004-4bfb-49a9-99c9-606667a57f5a",
+            "type": "lineAnchor",
+            "position": {
+              "x": -174.63730404130507,
+              "y": 1117.6595664258543
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
           }
-        },
-        "files": {
-        },
-        "externalFiles": {
+        ],
+        "edges": [
+          {
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "source": "b55a5ad0-d403-47d0-b29e-79407c23ba9e",
+            "sourceHandle": "bottom-source",
+            "target": "b55a5ad0-d403-47d0-b29e-79407c23ba9e",
+            "targetHandle": "bottom-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__b55a5ad0-d403-47d0-b29e-79407c23ba9ebottom-source-b55a5ad0-d403-47d0-b29e-79407c23ba9ebottom-target"
+          },
+          {
+            "id": "54d1b3e6-8bcd-418b-b7e5-d930eb641a90",
+            "source": "085b63a3-8533-4b00-8108-d36187651ed6",
+            "target": "2bc86462-3739-4e00-8c90-40c9ff59d62f",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-purple)",
+              "strokeWidth": 5
+            },
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "c041d029-23c6-42dc-a199-c6cd23407efa",
+            "source": "8b405d0f-c582-4f5b-bf00-a96c9f65d5ef",
+            "target": "d3ca2f94-316c-464f-8ab1-bb3010537f88",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-yellow)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-yellow)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 2,
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "c54f3d50-a5b9-416c-8c31-cd8d56d12d03",
+            "source": "30aad8e5-b127-463f-9f2b-057675fdef4f",
+            "target": "828b18bf-572d-4bb3-9a77-d28df5a698c8",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-yellow)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-yellow)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 3,
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "dd285f43-d982-4d3b-9e13-05f2e2699f1a",
+            "source": "21a346d7-8837-4beb-9ced-16f99a61a691",
+            "target": "76446004-4bfb-49a9-99c9-606667a57f5a",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-yellow)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-yellow)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "zIndex": 4,
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": 536.234019282763,
+          "y": -545.9159746318733,
+          "zoom": 0.8194077725276561
         }
       }
     },
@@ -36,6 +907,7 @@
     "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-20T19:14:06.719+00:00\",\"changed\":[\"cloned from \\\"self-paced-TCaAI-L1-LearningTools2_SketchLab\\\"\"],\"cloned_from\":\"self-paced-TCaAI-L1-LearningTools2_SketchLab\"},{\"changed_at\":\"2026-05-20 21:18:53 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-20T19:14:06.719+00:00\",\"changed\":[\"cloned from \\\"self-paced-TCaAI-L1-LearningTools2_SketchLab\\\"\"],\"cloned_from\":\"self-paced-TCaAI-L1-LearningTools2_SketchLab\"},{\"changed_at\":\"2026-05-20 21:18:53 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 16:54:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 19:47:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:12:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:16:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:16:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:21:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:25:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:26:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-05-21 20:28:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Sketchlab>
