@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
@@ -7,7 +8,6 @@ import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -290,21 +290,6 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const onURLClick = () => {
-    showVideoDialog(
-      {
-        autoplay: true,
-        download:
-          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
-        enable_fallback: true,
-        key: 'Gettting_Started_ClassSection',
-        name: 'Creating a Class Section',
-        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
-      },
-      true
-    );
-  };
-
   const renderChildAccountPolicyNotification = () => {
     const isEmailLoggin = queryParams('loginType') === 'email';
     const isStudentSection = queryParams('participantType') === 'student';
@@ -423,15 +408,15 @@ export default function SectionsSetUpContainer({
           >
             {i18n.setUpClassSectionsSubheader()}
           </Typography>
-          <MuiButton
-            type="button"
-            color="tertiary"
-            variant="outlined"
-            size="small"
-            onClick={onURLClick}
+          <Link
+            size="m"
+            type="primary"
+            href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Class-Section"
+            openInNewTab
+            className={moduleStyles.whyCreateSectionLink}
           >
             {i18n.setUpClassSectionsSubheaderLink()}
-          </MuiButton>
+          </Link>
         </>
       )}
       {renderChildAccountPolicyNotification()}
