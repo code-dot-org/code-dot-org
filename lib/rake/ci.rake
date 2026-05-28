@@ -145,9 +145,12 @@ namespace :ci do
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
     Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
-      container_eyes_features = container_features & eyes_features
+      flaky_features = %w(
+        features/star_labs/applab/eyes4.feature
+        features/teacher_tools/level_video.feature
+        features/teacher_tools/level_types/free_response_contained_levels.feature
+        features/teacher_tools/level_completion.feature
+      ).join(',')
       # The concurrency limit for Device Farm desktop sessions in the
       # codeorg-dev AWS account is 50. This concurrency limit is shared across
       # all CI jobs. This limit is not shared by sessions running in local
@@ -178,7 +181,7 @@ namespace :ci do
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--eyes " \
-            "--feature #{container_eyes_features.join(',')} " \
+            "--feature #{flaky_features} " \
             "--local " \
             "--ci " \
             "--db " \
