@@ -36,8 +36,8 @@ module Middleware
           # Exclude HoC legacy API routes from Global Edition scope.
           ::HocLegacy::API_ROOT_PATH + '/', # e.g. `/api/hour/`
           # Exclude health check routes such as `/health_check`.
-          Rails.application.routes.url_helpers.health_check_path,
-          Rails.application.routes.url_helpers.home_health_check_path,
+          '/health_check',
+          '/home/health_check',
         ].freeze
       end
 
