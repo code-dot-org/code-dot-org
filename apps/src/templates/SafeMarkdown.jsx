@@ -204,6 +204,11 @@ const domToReact = (node, key, placeholders) => {
     return React.cloneElement(placeholders[idx], {key: `xml-${idx}`});
   }
 
+  const isCode = node.hasAttribute('data-code-element');
+  if (isCode) {
+    node.removeAttribute('data-code-element');
+  }
+
   const props = {key};
   for (const attr of node.attributes) {
     if (attr.name === 'class') {
@@ -222,11 +227,6 @@ const domToReact = (node, key, placeholders) => {
       children.push(result);
     }
   });
-
-  const isCode = node.hasAttribute('data-code-element');
-  if (isCode) {
-    node.removeAttribute('data-code-element');
-  }
 
   return React.createElement(
     isCode ? 'code' : node.tagName.toLowerCase(),
