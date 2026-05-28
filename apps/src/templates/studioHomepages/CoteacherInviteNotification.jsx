@@ -1,4 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
@@ -12,6 +14,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
+
+import styles from './coteacher-invite-notification.module.scss';
 
 // Legacy Notification rendered the `collaborate` type with a 'users' icon
 // (see apps/src/sharedComponents/Notification.jsx). Keep the same glyph here
@@ -71,9 +75,31 @@ const CoteacherInviteNotification = ({
       // light_secondary_500 (purple) coloring.
       variant="primary"
       icon={COLLABORATE_ICON}
-      title={i18n.coteacherInvite({
-        invitedByName: invite.invited_by_name,
-      })}
+      // Preserve the legacy `tooltipText` affordance via a small info-circle
+      // trigger trailing the title text — legacy `Notification` rendered it
+      // exactly here (apps/src/sharedComponents/Notification.jsx:106-115).
+      title={
+        <>
+          {i18n.coteacherInvite({
+            invitedByName: invite.invited_by_name,
+          })}
+          <WithTooltip
+            tooltipProps={{
+              text: i18n.coteacherTooltip(),
+              size: 's',
+              tooltipId: 'coteacher-invite-tooltip',
+            }}
+          >
+            <button
+              type="button"
+              className={styles.tooltipTrigger}
+              aria-label={i18n.coteacherTooltip()}
+            >
+              <FontAwesomeV6Icon iconName="circle-info" />
+            </button>
+          </WithTooltip>
+        </>
+      }
       description={
         <>
           {i18n.coteacherInviteDescription({

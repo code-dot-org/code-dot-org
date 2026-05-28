@@ -47,12 +47,17 @@ describe('CoteacherInviteNotification', () => {
     expect(wrapper.find(NotificationBanner).length).toBe(0);
   });
 
+  // `title` is now a fragment (invited-by text + tooltip trigger), so we
+  // shallow-render it through a wrapping <div> to extract the visible text.
+  const titleTextFor = banner =>
+    shallow(<div>{banner.prop('title')}</div>).text();
+
   it('renders notification if there is a coteacher invite', () => {
     const wrapper = shallow(<CoteacherInviteNotification {...defaultProps} />);
     const banner = wrapper.find(NotificationBanner);
     expect(banner.length).toBe(1);
     expect(banner.prop('variant')).toBe('primary');
-    expect(banner.prop('title')).toContain('The Great Pumpkin');
+    expect(titleTextFor(banner)).toContain('The Great Pumpkin');
   });
 
   it('renders PL notification if there is a coteacher invite for PL', () => {
@@ -62,7 +67,7 @@ describe('CoteacherInviteNotification', () => {
     const banner = wrapper.find(NotificationBanner);
     expect(banner.length).toBe(1);
     expect(banner.prop('variant')).toBe('primary');
-    expect(banner.prop('title')).toContain('Ms. Frizzle');
+    expect(titleTextFor(banner)).toContain('Ms. Frizzle');
   });
 
   it('renders no notifications if there is no PL invite and isForPl is true', () => {
