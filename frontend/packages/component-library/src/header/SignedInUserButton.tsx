@@ -1,5 +1,5 @@
-import {Box} from '@mui/material';
-import {FunctionComponent} from 'react';
+import Typography from '@mui/material/Typography';
+import type {FunctionComponent} from 'react';
 
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import CustomDropdown from '@/dropdown/CustomDropdown';
@@ -8,14 +8,25 @@ import Link from '@/link/Link';
 
 import moduleStyles from './signedInUserButton.module.scss';
 
+/**
+ * Discriminated union of auth states consumed by header auth components.
+ * Matches the `status` field of `AuthOutcome` from `@code-dot-org/studio`.
+ * `loading` covers the window before auth resolves in consumers that render
+ * before `beforeLoad` completes.
+ */
 export type UserAuthProp =
-  | {isSignedIn: false}
-  | {isSignedIn: true; firstName: string};
+  | {status: 'signed-in'; display_name: string}
+  | {status: 'signed-out'}
+  | {status: 'loading'}
+  | {status: 'error'};
 
+/** Props for {@link SignedInUserButton}. */
 export interface SignedInUserButtonProps {
-  userAuth: UserAuthProp;
+  /** Must be the signed-in variant of {@link UserAuthProp}. */
+  userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
 }
 
+/** Navigation links shown inside the signed-in account dropdown. */
 const SUB_MENU_ITEMS = [
   {label: 'My projects', href: '/projects'},
   // TODO: wire up pair programming URL
@@ -24,8 +35,11 @@ const SUB_MENU_ITEMS = [
   {label: 'Sign out', href: '/users/sign_out'},
 ] as const;
 
-// Rendered inside DropdownProviderWrapper so useDropdownContext resolves.
-// Must be at module scope — inlining creates a new component type per render (remounts).
+/**
+ * Chevron icon that reflects the open/closed state of the signed-in dropdown.
+ * Defined at module scope — inlining inside SignedInUserButton would create a
+ * new component type on every render, causing remounts.
+ */
 const ChevronIcon = () => {
   const {activeDropdownName} = useDropdownContext();
   const icon =
@@ -33,14 +47,16 @@ const ChevronIcon = () => {
   return <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />;
 };
 
-// Use && to generate .cls.cls specificity, beating MUI's internal
-// per-variant/per-color overrides which sit at single-class specificity.
+/**
+ * MUI sx styles for the dropdown trigger button.
+ * Uses `&&` double-class specificity to beat MUI's per-variant/per-color
+ * overrides which sit at single-class specificity.
+ */
 const triggerSx = {
   '&&': {
-    typography: 'body3',
     backgroundColor: 'var(--background-brand-teal-primary)',
-    color: 'white',
-    border: '1px solid white',
+    color: 'var(--neutral-base-white)',
+    border: '1px solid var(--neutral-base-white)',
     borderRadius: '4px',
     boxShadow: 'none',
     textTransform: 'none' as const,
@@ -51,23 +67,20 @@ const triggerSx = {
   },
   '&&:hover, &&:active, &&:focus-visible': {
     backgroundColor: 'var(--background-brand-teal-primary)',
-    color: 'white',
+    color: 'var(--neutral-base-white)',
     boxShadow: 'none',
   },
-  '&& .MuiButton-endIcon': {color: 'white'},
+  '&& .MuiButton-endIcon': {color: 'var(--neutral-base-white)'},
 };
 
+/** Dropdown button showing the signed-in user's display name with an account menu. */
 const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   userAuth,
 }) => {
-  if (!userAuth.isSignedIn) {
-    return null;
-  }
-
   return (
     <CustomDropdown
       name="signed-in-user"
-      labelText={userAuth.firstName}
+      labelText={userAuth.display_name}
       size="m"
       menuPlacement="right"
       aria-label="Account menu"
@@ -78,8 +91,10 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         sx: triggerSx,
         endIcon: <ChevronIcon />,
         children: (
-          <Box
+          <Typography
+            variant="body3"
             component="span"
+            color="inherit"
             sx={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -88,8 +103,8 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
               flex: '1 1 auto',
             }}
           >
-            {userAuth.firstName}
-          </Box>
+            {userAuth.display_name}
+          </Typography>
         ),
       }}
     >

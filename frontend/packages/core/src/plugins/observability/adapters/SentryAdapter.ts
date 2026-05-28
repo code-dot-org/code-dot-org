@@ -192,18 +192,22 @@ export class SentryAdapter extends BaseAdapter {
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined {
     if (!this.initialized) {
-      return;
+      return undefined;
     }
 
     try {
-      Sentry.captureException(error, {extra: context});
+      return Sentry.captureException(error, {extra: context});
     } catch (sdkError) {
       console.warn(
         '[observability] SentryAdapter.recordError failed:',
         sdkError,
       );
+      return undefined;
     }
   }
 
