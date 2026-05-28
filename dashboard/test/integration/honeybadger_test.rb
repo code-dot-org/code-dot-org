@@ -15,12 +15,12 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
     let(:user) {create(:user)}
 
     around do |test|
-      # Use `routes.append` rather than `routes.draw`: `draw` clears the entire
-      # route set and rebuilds it from this block, leaving the production routes
-      # (and `url_helpers`) inaccessible for the duration of the test. Any
-      # middleware in the request stack that consults `url_helpers` then raises
-      # NoMethodError. `append` keeps the real routes intact and adds ours on
-      # top after `reload_routes!` re-evaluates routes.rb.
+      # routes.append, not routes.draw. draw clears the route table and rebuilds
+      # it from this block, leaving the production routes (and the url_helpers
+      # derived from them) inaccessible during the test body; any middleware in
+      # the Rack stack that consults url_helpers then raises NoMethodError.
+      # append queues the route onto the existing table, which the following
+      # reload_routes! finalizes alongside the normal routes.rb load.
       Rails.application.routes.append do
         get :notify_error, to: "#{ErrorController.new.controller_path}#notify"
       end
