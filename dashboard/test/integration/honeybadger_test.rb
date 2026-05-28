@@ -15,12 +15,17 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
     let(:user) {create(:user)}
 
     around do |test|
-      Rails.application.routes.draw do
+      routes = Rails.application.routes
+      original_disable_clear_and_finalize = routes.disable_clear_and_finalize
+
+      routes.disable_clear_and_finalize = true
+      routes.draw do
         get :notify_error, controller: ErrorController.new.controller_path, action: :notify
       end
 
       test.call
     ensure
+      routes.disable_clear_and_finalize = original_disable_clear_and_finalize
       Rails.application.reload_routes!
     end
 
