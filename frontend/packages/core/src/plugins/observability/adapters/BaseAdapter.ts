@@ -219,6 +219,7 @@ export abstract class BaseAdapter implements ObservabilityClient {
   abstract recordError(
     error: unknown,
     context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
   ): string | undefined;
 
   /**
