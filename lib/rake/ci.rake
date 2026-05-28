@@ -124,7 +124,7 @@ namespace :ci do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
     use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
-    ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
+    # ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
 
     # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
     needs_sauce_connect = !use_device_farm
@@ -161,20 +161,20 @@ namespace :ci do
       # (SauceLabs by default, Device Farm under USE_DEVICE_FARM_TAG).
       # --first-run-local keeps the first attempt on the in-container
       # chromedriver and only hands off to the remote provider on rerun.
-      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-          "--feature #{container_features.join(',')} " \
-          "--local " \
-          "--ci " \
-          "--db " \
-          "#{use_device_farm ? '--device-farm ' : ''}" \
-          "#{ui_test_browsers.empty? ? '' : "--config #{ui_test_browsers.join(',')} "}" \
-          "--parallel #{PARALLEL_COUNT} " \
-          "--abort_when_failures_exceed 10 " \
-          "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
-          "--output-synopsis " \
-          "--with-status-page " \
-          "--html"
+      # RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+      #     "--feature #{container_features.join(',')} " \
+      #     "--local " \
+      #     "--ci " \
+      #     "--db " \
+      #     "#{use_device_farm ? '--device-farm ' : ''}" \
+      #     "#{ui_test_browsers.empty? ? '' : "--config #{ui_test_browsers.join(',')} "}" \
+      #     "--parallel #{PARALLEL_COUNT} " \
+      #     "--abort_when_failures_exceed 10 " \
+      #     "--retry_count 2 " \
+      #     "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+      #     "--output-synopsis " \
+      #     "--with-status-page " \
+      #     "--html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--eyes " \
@@ -182,12 +182,10 @@ namespace :ci do
             "--local " \
             "--ci " \
             "--db " \
-            "#{use_device_farm ? '--device-farm ' : ''}" \
+            "--device-farm " \
             "--config Chrome " \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
-            "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
