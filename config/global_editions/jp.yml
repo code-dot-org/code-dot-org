@@ -165,4 +165,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /jp/professional-learning/courses
