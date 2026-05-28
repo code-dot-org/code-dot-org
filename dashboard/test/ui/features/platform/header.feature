@@ -32,7 +32,7 @@ Feature: Header navigation bar
   Scenario: Student in Spanish should see 4 header links
     Given I create a student named "Eva Estudiante"
     Given I am on "http://studio.code.org/home/lang/es"
-    Then check that I am on "http://studio.code.org/home?lang=es"
+    Then check that I am on "http://studio.code.org/es/home?lang=es"
     And I wait to see ".headerlinks"
     And I see "#header-student-home"
     And element "#header-student-home" has "es" text from key "nav.header.my_dashboard"
@@ -47,7 +47,7 @@ Feature: Header navigation bar
   Scenario: Teacher in Spanish should see 5 header links
     Given I create a teacher named "Pabla Profesora"
     Given I am on "http://studio.code.org/teacher_dashboard/home/lang/es"
-    Then check that I am on "http://studio.code.org/teacher_dashboard/home?lang=es"
+    Then check that I am on "http://studio.code.org/es/teacher_dashboard/home?lang=es"
     And I wait to see ".headerlinks"
     And I see "#header-teacher-home"
     And element "#header-teacher-home" has "es" text from key "nav.header.my_dashboard"
