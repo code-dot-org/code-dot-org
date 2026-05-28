@@ -179,11 +179,11 @@ describe('observability plugin', () => {
     await vi.dynamicImportSettled();
 
     const error = new Error('tagged error');
-    recordError(error, {detail: 'ctx'}, {feature: 'ai-gateway'});
+    recordError(error, {lab: 'music'}, {appType: 'studio'});
 
     expect(vi.mocked(Sentry.withScope)).toHaveBeenCalledOnce();
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
-      extra: {detail: 'ctx'},
+      extra: {lab: 'music'},
     });
 
     // Extract the callback from mock.calls to avoid TS2345 on Sentry's
@@ -192,7 +192,7 @@ describe('observability plugin', () => {
       .calls as unknown as [[(scope: Sentry.Scope) => void]];
     const mockScope = {setTag: vi.fn()};
     capturedCallback(mockScope as unknown as Sentry.Scope);
-    expect(mockScope.setTag).toHaveBeenCalledWith('feature', 'ai-gateway');
+    expect(mockScope.setTag).toHaveBeenCalledWith('appType', 'studio');
   });
 
   it('delegates logger and metrics calls after initialization', async () => {
