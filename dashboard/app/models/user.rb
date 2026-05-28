@@ -107,6 +107,7 @@ class User < ApplicationRecord
   include AssignedCoursesAndScripts
   include PartialRegistration
   include Purgeable
+  include CredentialStrippable
   include Facilitator
   include TermsOfService
   include Rails.application.routes.url_helpers

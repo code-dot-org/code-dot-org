@@ -43,7 +43,7 @@ module Cdo
         logo_filename: 'logo-codeai.svg',
         header_logo_filename: 'logo-codeai-inverse.svg',
         logo_alt_key: :codeai_logo_alt,
-        favicon: 'favicon.ico',
+        favicon: 'favicon-codeai.ico',
         legal_name: 'CodeAI',
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       },
@@ -51,7 +51,7 @@ module Cdo
         logo_filename: 'logo-codeai.svg',
         header_logo_filename: 'logo-codeai-inverse.svg',
         logo_alt_key: :codeai_logo_alt,
-        favicon: 'favicon.ico',
+        favicon: 'favicon-codeai.ico',
         legal_name: 'CodeAI',
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       }

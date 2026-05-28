@@ -214,6 +214,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
             )}
             <div
+              id="editor-preview-container"
               className={classNames(
                 weblab2Styles.editorAndPreviewContainer,
                 isAiTutorVersion && weblab2Styles.aiTutorVersionContainer
