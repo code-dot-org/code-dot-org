@@ -18,7 +18,6 @@ const PROGRESS_TABLE_SELECTOR = '#ui-test-progress-table-v2';
 const STUDENT_SNAPSHOT_SELECTOR = 'a[href*="student_snapshot"]';
 const STUDENT_ROW_PREFIX = 'ui-test-student-row-unexpanded-';
 const CORRECT_STUDENT = 'Samir Patel';
-const FALLBACK_STUDENTS = ['Samir Patel', 'Aisha Brooks', 'Leo Reyes'];
 
 export const PROGRESS_TABLE_STEP_ID = 'progress-table-step';
 
@@ -65,12 +64,12 @@ const waitForElement = (
 
 const getStudentNamesFromDOM = (): string[] => {
   const els = document.querySelectorAll(`[id^="${STUDENT_ROW_PREFIX}"]`);
-  const names: string[] = [];
+  const others: string[] = [];
   els.forEach(el => {
     const name = el.id.replace(STUDENT_ROW_PREFIX, '');
-    if (name) names.push(name);
+    if (name && name !== CORRECT_STUDENT) others.push(name);
   });
-  return names.length >= 3 ? names.slice(0, 3) : FALLBACK_STUDENTS;
+  return [CORRECT_STUDENT, ...others.slice(0, 2)];
 };
 
 const buildQuizHtml = (studentNames: string[]): string => {
@@ -84,7 +83,7 @@ const buildQuizHtml = (studentNames: string[]): string => {
   return `
   <div class="onboarding-step-content">
     <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">At a glance, you can see which students are cruising and which might be stuck. Look at the status icons &#8212; which student appears to be falling behind in their recent lessons?</span>
+    <span class="onboarding-step-text">At a glance, you can see which students are cruising and which might be stuck. Look at the status icons — which student appears to be falling behind in their recent lessons?</span>
   </div>
   <div class="quiz-options-grid">
     ${buttons}
@@ -94,7 +93,6 @@ const buildQuizHtml = (studentNames: string[]): string => {
 };
 
 // Homepage steps
-
 export const createLearnHowToEvaluateHomepageSteps = (
   tour: Tour,
   sessionStorageKey: string

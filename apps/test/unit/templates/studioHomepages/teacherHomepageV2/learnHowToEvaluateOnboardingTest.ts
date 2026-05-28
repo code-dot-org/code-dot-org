@@ -45,6 +45,10 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
     `;
   });
 
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
   it('returns one step attached to the View progress button', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
@@ -59,14 +63,9 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
       mockTour as unknown as Tour,
       LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
     );
-
-    // Trigger the show lifecycle so the click handler is registered
     (steps[0].when as {show: () => void}).show();
 
-    const btn = document.getElementById(
-      'ui-test-demo-section-action-progress'
-    )!;
-    btn.click();
+    document.getElementById('ui-test-demo-section-action-progress')!.click();
 
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
@@ -79,44 +78,39 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
       mockTour as unknown as Tour,
       LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
     );
+    const when = steps[0].when as {show: () => void; hide: () => void};
+    when.show();
 
-    (steps[0].when as {show: () => void; hide: () => void}).show();
     const btn = document.getElementById(
       'ui-test-demo-section-action-progress'
     )!;
     expect(btn.classList.contains('tour-step-highlight')).toBe(true);
 
-    (steps[0].when as {show: () => void; hide: () => void}).hide();
+    when.hide();
     expect(btn.classList.contains('tour-step-highlight')).toBe(false);
   });
 });
 
-// ── Progress steps ────────────────────────────────────────────────────────────
-
-describe('createLearnHowToEvaluateProgressSteps', () => {
+describe('createLearnHowToEvaluateProgressSteps step structure', () => {
   let mockTour: ReturnType<typeof makeMockTour>;
 
-  const setupDOM = (withStudentSnapshot = false) => {
-    const snapshotLink = withStudentSnapshot
-      ? `<a href="/teacher_dashboard/sections/1/student_snapshot">Student Snapshot</a>`
-      : '';
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockTour = makeMockTour();
     document.body.innerHTML = `
       <div id="ui-test-progress-table-v2">
         <button id="ui-test-student-row-unexpanded-Samir Patel">Samir Patel</button>
         <button id="ui-test-student-row-unexpanded-Aisha Brooks">Aisha Brooks</button>
         <button id="ui-test-student-row-unexpanded-Leo Reyes">Leo Reyes</button>
       </div>
-      ${snapshotLink}
     `;
-  };
+  });
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    mockTour = makeMockTour();
+  afterEach(() => {
+    document.body.innerHTML = '';
   });
 
   it('includes quiz step, no snapshot step, and completion step when snapshot link is absent', () => {
-    setupDOM(false);
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
@@ -126,7 +120,7 @@ describe('createLearnHowToEvaluateProgressSteps', () => {
   });
 
   it('includes snapshot step when Student Snapshot link is present', () => {
-    setupDOM(true);
+    document.body.innerHTML += `<a href="/teacher_dashboard/sections/1/student_snapshot">Student Snapshot</a>`;
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
@@ -134,7 +128,6 @@ describe('createLearnHowToEvaluateProgressSteps', () => {
   });
 
   it('quiz step text contains all three student names', () => {
-    setupDOM(false);
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
@@ -143,24 +136,42 @@ describe('createLearnHowToEvaluateProgressSteps', () => {
     expect(quizStep.text).toContain('Aisha Brooks');
     expect(quizStep.text).toContain('Leo Reyes');
   });
+});
 
-  it('quiz correct answer (Samir Patel) advances the tour after 1 second', () => {
+describe('progress-table-step when handler', () => {
+  let mockTour: ReturnType<typeof makeMockTour>;
+
+  beforeEach(() => {
     jest.useFakeTimers();
-    setupDOM(false);
-    const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
-    );
-    const quizStep = steps.find(s => s.id === PROGRESS_TABLE_STEP_ID)!;
-
-    // Render quiz buttons into DOM so the when.show handler can find them
-    document.body.innerHTML += `
+    jest.clearAllMocks();
+    mockTour = makeMockTour();
+    document.body.innerHTML = `
+      <div id="ui-test-progress-table-v2">
+        <button id="ui-test-student-row-unexpanded-Samir Patel">Samir Patel</button>
+        <button id="ui-test-student-row-unexpanded-Aisha Brooks">Aisha Brooks</button>
+        <button id="ui-test-student-row-unexpanded-Leo Reyes">Leo Reyes</button>
+      </div>
       <button class="quiz-option" data-answer="correct" type="button">Samir Patel</button>
       <button class="quiz-option" data-answer="wrong" type="button">Aisha Brooks</button>
       <button class="quiz-option" data-answer="wrong" type="button">Leo Reyes</button>
       <div class="quiz-feedback"></div>
     `;
+  });
 
-    (quizStep.when as {show: () => void}).show();
+  afterEach(() => {
+    jest.useRealTimers();
+    document.body.innerHTML = '';
+  });
+
+  const getQuizStep = (tour: Tour) => {
+    const steps = createLearnHowToEvaluateProgressSteps(tour);
+    const step = steps.find(s => s.id === PROGRESS_TABLE_STEP_ID)!;
+    (step.when as {show: () => void}).show();
+    return step;
+  };
+
+  it('correct answer marks button and advances tour after 1 second', () => {
+    getQuizStep(mockTour as unknown as Tour);
 
     const correctBtn = document.querySelector<HTMLButtonElement>(
       '.quiz-option[data-answer="correct"]'
@@ -172,24 +183,10 @@ describe('createLearnHowToEvaluateProgressSteps', () => {
 
     jest.advanceTimersByTime(1000);
     expect(mockTour.next).toHaveBeenCalledTimes(1);
-    jest.useRealTimers();
   });
 
-  it('quiz wrong answer marks button and does not advance tour', () => {
-    setupDOM(false);
-    const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
-    );
-    const quizStep = steps.find(s => s.id === PROGRESS_TABLE_STEP_ID)!;
-
-    document.body.innerHTML += `
-      <button class="quiz-option" data-answer="correct" type="button">Samir Patel</button>
-      <button class="quiz-option" data-answer="wrong" type="button">Aisha Brooks</button>
-      <button class="quiz-option" data-answer="wrong" type="button">Leo Reyes</button>
-      <div class="quiz-feedback"></div>
-    `;
-
-    (quizStep.when as {show: () => void}).show();
+  it('wrong answer marks button and does not advance tour', () => {
+    getQuizStep(mockTour as unknown as Tour);
 
     const wrongBtn = document.querySelector<HTMLButtonElement>(
       '.quiz-option[data-answer="wrong"]'
@@ -200,14 +197,33 @@ describe('createLearnHowToEvaluateProgressSteps', () => {
     expect(wrongBtn.disabled).toBe(true);
     expect(mockTour.next).not.toHaveBeenCalled();
   });
+});
 
-  it('Student Snapshot step intercepts click and advances tour without navigation', () => {
-    setupDOM(true);
+describe('student-snapshot-step when handler', () => {
+  let mockTour: ReturnType<typeof makeMockTour>;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockTour = makeMockTour();
+    document.body.innerHTML = `
+      <div id="ui-test-progress-table-v2">
+        <button id="ui-test-student-row-unexpanded-Samir Patel">Samir Patel</button>
+        <button id="ui-test-student-row-unexpanded-Aisha Brooks">Aisha Brooks</button>
+        <button id="ui-test-student-row-unexpanded-Leo Reyes">Leo Reyes</button>
+      </div>
+      <a href="/teacher_dashboard/sections/1/student_snapshot">Student Snapshot</a>
+    `;
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  it('intercepts click and advances tour without navigation', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
     const snapshotStep = steps.find(s => s.id === 'student-snapshot-step')!;
-
     (snapshotStep.when as {show: () => void}).show();
 
     const link = document.querySelector<HTMLAnchorElement>(

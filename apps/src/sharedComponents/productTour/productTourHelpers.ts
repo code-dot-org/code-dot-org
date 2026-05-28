@@ -31,7 +31,6 @@ export const backButton = (tour: Tour): StepOptionsButton => ({
 });
 
 // Wraps step text with the sparkle icon layout.
-// Pass an optional supportiveText to render a secondary line beneath the main text.
 export const withSparkle = (text: string, supportiveText?: string): string => `
   <div class="onboarding-step-content">
     <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
@@ -83,7 +82,6 @@ export const createCompletionStep = (
 // Returns show/hide handlers for a multiple-choice quiz step.
 // Manages quiz option click listeners, correct/wrong feedback, and the
 // 1-second delay before advancing on a correct answer.
-// Pass highlightSelector to add/remove the tour-step-highlight class on show/hide.
 export const createQuizWhenHandlers = (
   tour: Tour,
   wrongAnswerFeedback: string,
