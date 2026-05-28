@@ -119,14 +119,13 @@ test.describe('Accessibility', () => {
     await expect(oceans.playPauseButton).toBeFocused();
   });
 
-  test('confirmation dialog is opened as a browser-native modal', async ({
-    page,
-  }) => {
-    // :modal asserts the dialog was opened modally, not just shown.
+  test('confirmation dialog has aria-modal semantics', async ({page}) => {
+    // Uses <dialog open> (not showModal) for canvas-relative positioning;
+    // modal semantics are carried by aria-modal="true" on the dialog element.
     const oceans = await FishVTrashPage.load(page);
     await oceans.eraseButton.click();
     await expect(oceans.confirmationDialog).toBeVisible();
-    await expect(page.locator('dialog[aria-modal]:modal')).toBeVisible();
+    await expect(page.locator('dialog[aria-modal="true"]')).toBeVisible();
   });
 
   test('Rewind aria-label includes speed when active at ×2', async ({page}) => {
