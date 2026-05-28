@@ -1,5 +1,6 @@
 /** @file Notifications showing results of the join/leave section operation. */
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -11,6 +12,13 @@ import styles from './join-section-notifications.module.scss';
 
 const SUCCESS_ICON = {iconName: 'circle-check'};
 const ERROR_ICON = {iconName: 'triangle-exclamation'};
+
+// Stable className the legacy `<Notification>` wrapper rendered. Several
+// cucumber scenarios (e.g. teacher_tools/pl_sections.feature) still select on
+// `.announcement-notification` to wait for the join-result banner; carry the
+// class on each NotificationBanner so those selectors keep matching.
+const LEGACY_TEST_HOOK = 'announcement-notification';
+const bannerClass = classNames(styles.banner, LEGACY_TEST_HOOK);
 
 export default function JoinSectionNotifications({
   action,
@@ -106,7 +114,7 @@ const JoinSectionSuccessNotification = ({
   return (
     <NotificationBanner
       variant="success"
-      className={styles.banner}
+      className={bannerClass}
       icon={SUCCESS_ICON}
       title={i18n.sectionsNotificationSuccess()}
       description={notificationMessage}
@@ -124,7 +132,7 @@ JoinSectionSuccessNotification.propTypes = {
 const LeaveSectionSuccessNotification = ({sectionName, sectionId, onClose}) => (
   <NotificationBanner
     variant="success"
-    className={styles.banner}
+    className={bannerClass}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}
     description={i18n.sectionsNotificationLeaveSuccess({
@@ -141,7 +149,7 @@ const JoinSectionNotFoundNotification = ({sectionId, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationJoinNotFound({sectionId})}
@@ -157,7 +165,7 @@ const JoinSectionFullNotification = ({sectionId, sectionCapacity, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationJoinFull({
@@ -177,7 +185,7 @@ const JoinSectionRestrictedNotification = ({sectionId, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationJoinRestricted({sectionId})}
@@ -193,7 +201,7 @@ const JoinSectionFailNotification = ({sectionId, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationJoinFail({sectionId})}
@@ -207,7 +215,7 @@ const JoinSectionOwnedNotification = ({sectionId, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationAlreadyOwned({sectionId})}
@@ -221,7 +229,7 @@ const JoinSectionParticipantNotification = ({sectionId, onClose}) => (
   <NotificationBanner
     variant="error"
     role="alert"
-    className={styles.banner}
+    className={bannerClass}
     icon={ERROR_ICON}
     title={i18n.sectionsNotificationFailure()}
     description={i18n.sectionsNotificationCantBeParticipant({
@@ -236,7 +244,7 @@ JoinSectionParticipantNotification.propTypes =
 const JoinSectionExistsNotification = ({sectionName, onClose}) => (
   <NotificationBanner
     variant="success"
-    className={styles.banner}
+    className={bannerClass}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}
     description={i18n.sectionsNotificationJoinExists({sectionName})}
