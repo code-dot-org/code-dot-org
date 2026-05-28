@@ -68,26 +68,30 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
         ...objectiveSaves,
       ]);
 
-      // Always kick off podcast generation, passing the objectives the student
-      // is still working on. If they rated everything "Got it" the list is
-      // empty and the podcast covers the lesson generally. It runs as a
+      // Always kick off podcast generation. The objective set follows the
+      // student's reflection: their struggling objectives when they rated
+      // anything (empty when they rated everything "Got it" — a valid
+      // lesson-level podcast), or every objective when they submitted without
+      // rating anything (same key the bypass-Continue path uses). It runs as a
       // background job server-side and PodcastsBox retrieves it later from the
-      // same lesson + objective set, so we fire and forget here — a failure must
-      // not block the student from practicing.
-      const strugglingObjectiveIds = objectives
-        .filter(o => {
-          const reflection = objectiveReflections[o.id];
-          return (
-            reflection === LessonObjectiveReflectionValues.LOST ||
-            reflection === LessonObjectiveReflectionValues.UNSURE
-          );
-        })
-        .map(o => o.id);
+      // same key, so fire and forget — a failure must not block the student.
+      const ratedAny = objectives.some(o => !!objectiveReflections[o.id]);
+      const objectiveIdsForGeneration = ratedAny
+        ? objectives
+            .filter(o => {
+              const reflection = objectiveReflections[o.id];
+              return (
+                reflection === LessonObjectiveReflectionValues.LOST ||
+                reflection === LessonObjectiveReflectionValues.UNSURE
+              );
+            })
+            .map(o => o.id)
+        : objectives.map(o => o.id);
       HttpClient.post(
         '/ai_student_podcasts/generate_podcast',
         JSON.stringify({
           lesson_id: lessonId,
-          objective_ids: strugglingObjectiveIds,
+          objective_ids: objectiveIdsForGeneration,
         }),
         true, // useAuthenticityToken
         {'Content-Type': 'application/json'}

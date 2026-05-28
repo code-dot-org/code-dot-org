@@ -150,6 +150,22 @@ describe('ReflectionBox submit button', () => {
     );
   });
 
+  it('requests podcast generation with every lesson objective when no objective is rated', async () => {
+    renderReflectionBox();
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+    });
+
+    expect(postMock).toHaveBeenCalledTimes(1);
+    expect(postMock).toHaveBeenCalledWith(
+      '/ai_student_podcasts/generate_podcast',
+      JSON.stringify({lesson_id: LESSON_ID, objective_ids: ['1', '2']}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  });
+
   it('disables the submit button while submitting and re-enables after', async () => {
     let resolveSubmit: () => void;
     saveReflectionMock.mockReturnValue(

@@ -77,9 +77,13 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
       created.ai_student_podcast_objectives.pluck(:objective_id).sort
   end
 
-  test 'generate_podcast returns existing podcast with matching objectives' do
+  test 'generate_podcast returns the existing podcast and preserves its script when objectives are unchanged' do
     sign_in @user
-    existing = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
+    existing = AiStudentPodcast.create!(
+      user_id: @user.id,
+      lesson_id: @lesson.id,
+      podcast_script: 'cached-script'
+    )
     existing.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
     existing.ai_student_podcast_objectives.create!(objective_id: @objective2.id)
 
@@ -91,19 +95,31 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
 
     assert_response :ok
     assert_equal existing.id, json_response['id']
+    assert_equal 'cached-script', existing.reload.podcast_script
   end
 
-  test 'generate_podcast does not reuse a podcast whose objective set differs' do
+  test 'generate_podcast updates the existing podcast in place when the objective set changes' do
     sign_in @user
-    other_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
-    other_podcast.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
+    existing = AiStudentPodcast.create!(
+      user_id: @user.id,
+      lesson_id: @lesson.id,
+      podcast_script: 'stale-script'
+    )
+    existing.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
 
-    assert_difference 'AiStudentPodcast.count', 1 do
+    assert_no_difference 'AiStudentPodcast.count' do
       post :generate_podcast,
         params: {lesson_id: @lesson.id, objective_ids: [@objective1.id, @objective2.id]},
         format: :json
     end
+
     assert_response :ok
+    assert_equal existing.id, json_response['id']
+    existing.reload
+    assert_equal [@objective1.id, @objective2.id].sort, existing.objective_ids.sort
+    # The cached script doesn't match the new objective set; clearing it makes
+    # the job regenerate audio under the new S3 key.
+    assert_nil existing.podcast_script
   end
 
   test 'generate_podcast scopes by current_user' do
@@ -180,19 +196,26 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
     assert_empty created.ai_student_podcast_objectives
   end
 
-  test 'generate_podcast does not match an objective-bearing podcast when objective_ids is empty' do
+  test 'generate_podcast updates an existing objective-bearing podcast to objectiveless when objective_ids is empty' do
     sign_in @user
-    with_objectives = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
-    with_objectives.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
+    existing = AiStudentPodcast.create!(
+      user_id: @user.id,
+      lesson_id: @lesson.id,
+      podcast_script: 'stale-script'
+    )
+    existing.ai_student_podcast_objectives.create!(objective_id: @objective1.id)
 
-    assert_difference 'AiStudentPodcast.count', 1 do
+    assert_no_difference 'AiStudentPodcast.count' do
       post :generate_podcast,
         params: {lesson_id: @lesson.id, objective_ids: []},
         format: :json
     end
 
     assert_response :ok
-    refute_equal with_objectives.id, json_response['id']
+    assert_equal existing.id, json_response['id']
+    existing.reload
+    assert_empty existing.objective_ids
+    assert_nil existing.podcast_script
   end
 
   # *****
