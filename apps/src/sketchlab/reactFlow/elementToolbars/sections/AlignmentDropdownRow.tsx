@@ -1,11 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
 
-import OptionListDropdownRow from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/OptionListDropdownRow';
-import {
-  TEXT_ALIGN_OPTIONS,
-  TextAlignValue,
-} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
+import OptionListDropdownRow from '../components/OptionListDropdownRow';
+import {TEXT_ALIGN_OPTIONS, TextAlignValue} from '../toolbarPalettes';
 
 const DEFAULT_ALIGN_ICON = 'align-center';
 

@@ -1,7 +1,7 @@
 import {useNodesData, useReactFlow, type Node} from '@xyflow/react';
 import {useCallback} from 'react';
 
-import {usePushSnapshot} from '@cdo/apps/sketchlab/reactFlow/context';
+import {usePushSnapshot} from '../context';
 
 // Subscribing to the store via `useNodesData` (rather than reading `data`
 // from props) ensures selection-state swatches re-render even when a

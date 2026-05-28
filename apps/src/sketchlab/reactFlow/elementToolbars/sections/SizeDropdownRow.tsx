@@ -1,14 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
-import FontSizeCustomInput from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/FontSizeCustomInput';
-import OptionListPopover from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/OptionListPopover';
-import ToolbarDropdownRow from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/ToolbarDropdownRow';
-import {
-  FONT_SIZE_OPTIONS,
-  FontSize,
-  fontSizeLabel,
-} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
+import FontSizeCustomInput from '../components/FontSizeCustomInput';
+import OptionListPopover from '../components/OptionListPopover';
+import ToolbarDropdownRow from '../components/ToolbarDropdownRow';
+import {FONT_SIZE_OPTIONS, FontSize, fontSizeLabel} from '../toolbarPalettes';
 
 interface SizeDropdownRowProps {
   value: FontSize;

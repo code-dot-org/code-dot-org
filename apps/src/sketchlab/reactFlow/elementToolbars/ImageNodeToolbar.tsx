@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
-import {ImageNodeType} from '@cdo/apps/sketchlab/reactFlow/types';
+import {DEFAULT_ROTATION} from '../constants';
+import {ImageNodeType} from '../types';
 
 import LockedNotice from './components/LockedNotice';
 import ToolbarShell from './components/ToolbarShell';

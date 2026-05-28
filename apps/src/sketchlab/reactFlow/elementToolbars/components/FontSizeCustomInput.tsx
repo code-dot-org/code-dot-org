@@ -3,13 +3,10 @@ import {MenuItem, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {
-  FontSize,
-  MIN_FONT_SIZE_PX,
-} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
+import {FontSize, MIN_FONT_SIZE_PX} from '../toolbarPalettes';
 
 import styles from './font-size-custom-input.module.scss';
-import sharedStyles from '@cdo/apps/sketchlab/reactFlow/elementToolbars/element-toolbar.module.scss';
+import sharedStyles from '../element-toolbar.module.scss';
 
 interface FontSizeCustomInputProps {
   selectedValue: FontSize | undefined;

@@ -1,13 +1,10 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 
-import ColorPickerPopover from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/ColorPickerPopover';
-import ColorPreviewSwatch from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/ColorPreviewSwatch';
-import ToolbarDropdownRow from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/ToolbarDropdownRow';
-import {
-  ColorSwatch,
-  colorLabel,
-} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
+import ColorPickerPopover from '../components/ColorPickerPopover';
+import ColorPreviewSwatch from '../components/ColorPreviewSwatch';
+import ToolbarDropdownRow from '../components/ToolbarDropdownRow';
+import {ColorSwatch, colorLabel} from '../toolbarPalettes';
 
 interface ColorDropdownRowProps {
   label: string;

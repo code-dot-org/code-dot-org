@@ -3,18 +3,10 @@ import {useNodesData, useReactFlow} from '@xyflow/react';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
-import {
-  useClipboard,
-  usePushSnapshot,
-} from '@cdo/apps/sketchlab/reactFlow/context';
-import {
-  ArrowHeadValue,
-  LineAnchorNodeType,
-} from '@cdo/apps/sketchlab/reactFlow/types';
-import {
-  newBackZIndex,
-  newFrontZIndex,
-} from '@cdo/apps/sketchlab/reactFlow/utils/stacking';
+
+import {useClipboard, usePushSnapshot} from '../context';
+import {ArrowHeadValue, LineAnchorNodeType} from '../types';
+import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import LockedNotice from './components/LockedNotice';
 import OptionListDropdownRow from './components/OptionListDropdownRow';
