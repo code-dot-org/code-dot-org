@@ -281,6 +281,9 @@ const LocalizedParagraph = ({p}) => {
         const span = document.createElement('b');
         span.innerHTML = child.innerHTML;
         span.setAttribute('data-code-element', 'true');
+        for (const attr of child.attributes) {
+          span.setAttribute(attr.name, attr.value);
+        }
         container.appendChild(span);
       } else {
         container.appendChild(tmp.content);
