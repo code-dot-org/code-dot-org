@@ -13,6 +13,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import {codebridgeLabsWithConsole} from '../constants';
 
 import moduleStyles from './right-buttons.module.scss';
 
@@ -80,7 +81,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           {widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()}
         </MuiButton>
       )}
-      {appName === 'pythonlab' && (
+      {codebridgeLabsWithConsole.includes(appName) && (
         <WithTooltip tooltipProps={tooltipProps}>
           <MuiIconButton
             variant="text"

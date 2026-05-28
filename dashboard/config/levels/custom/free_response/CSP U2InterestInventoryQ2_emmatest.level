@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Letter to Your Principal",
-    "long_instructions": "####Turn your ideas into a persuasive letter.\r\n\r\n> **Do you think AI tools should be used to make decisions in school? Why or why not.** \r\n> **Write a letter to your school principal explaining your answer.**\r\n\r\n#####If you're not sure where to start, try one of these sentence starters:\r\n- I learned that AI...\r\n- I think that AI should/should not be used...\r\n- Did you know that AI...",
+    "long_instructions": "Turn your ideas into a persuasive letter.\r\n\r\n> **Do you think AI tools should be used to make decisions in school? Why or why not.** \r\n> **Write a letter to your school principal explaining your answer.**\r\n\r\n#####If you're not sure where to start, try one of these sentence starters:\r\n- I learned that AI...\r\n- I think that AI should/should not be used...\r\n- Did you know that AI...",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

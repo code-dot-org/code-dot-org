@@ -108,6 +108,18 @@ describe('SectionCard', () => {
     screen.getByText('Demo');
   });
 
+  it('applies the dashed-border wrapper class for demo sections', () => {
+    renderComponent('/teacher_dashboard/home', {...section, demoType: 'high'});
+    const li = screen.getByText('Period 1').closest('li');
+    expect(li?.className).toMatch(/demoSectionCardWrapper/);
+  });
+
+  it('does not apply the dashed-border wrapper class for non-demo sections', () => {
+    renderComponent();
+    const li = screen.getByText('Period 1').closest('li');
+    expect(li?.className).not.toMatch(/demoSectionCardWrapper/);
+  });
+
   it('renders section class code with login info link', () => {
     renderComponent();
     const link = screen.getByRole('button', {name: 'ABCDEF'});

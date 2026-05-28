@@ -25,6 +25,19 @@ class JavalabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'uses_lab2? defaults to false and honors the serialized property' do
+    default_level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab2_default")
+    refute default_level.uses_lab2?
+
+    lab2_level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab2_optin",
+      properties: {uses_lab2: true}
+    )
+    assert lab2_level.uses_lab2?
+  end
+
   test 'get_serialized_maze returns template level maze if level doesnt have one' do
     template_data = {game_id: 68, level_num: "custom", name: "template_neighborhood"}
     serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"

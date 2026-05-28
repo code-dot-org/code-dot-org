@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Step 2: Dataset Decisions",
-    "long_instructions": "####What decisions did you have to make about the data before beginning your analysis? For example, did you need to clean your data by excluding certain data points, combining data categories, or handling missing values? Did you create new attributes and summarize data with the count() function? Explain.",
+    "long_instructions": "What decisions did you have to make about the data before beginning your analysis? For example, did you need to clean your data by excluding certain data points, combining data categories, or handling missing values? Did you create new attributes and summarize data with the count() function? Explain.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

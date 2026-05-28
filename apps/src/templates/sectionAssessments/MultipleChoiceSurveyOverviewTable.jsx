@@ -1,10 +1,10 @@
+import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -96,12 +96,17 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   ) => {
     return (
       <div>
-        <a
-          style={styles.link}
-          onClick={() => this.selectQuestion(rowData.questionNumber - 1)}
+        <Link
+          size="s"
+          onClick={e => {
+            // Link defaults href to "#"; suppress the page-top jump since this
+            // really opens a modal rather than navigating.
+            e.preventDefault();
+            this.selectQuestion(rowData.questionNumber - 1);
+          }}
         >
           {`${rowData.questionNumber}. ${question}`}
-        </a>
+        </Link>
       </div>
     );
   };
@@ -251,9 +256,6 @@ const styles = {
   },
   questionCell: {
     height: MIN_ROW_HEIGHT,
-  },
-  link: {
-    color: color.teal,
   },
 };
 
