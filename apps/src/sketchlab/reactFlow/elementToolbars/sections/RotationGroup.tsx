@@ -2,7 +2,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Slider, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useId, useState} from 'react';
 
-import {DEFAULT_ROTATION} from '../../constants';
+import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
 
 import styles from './rotation-group.module.scss';
 import sharedStyles from '../element-toolbar.module.scss';
