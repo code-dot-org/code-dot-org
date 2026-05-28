@@ -33,6 +33,17 @@ const HEADER_LOGO_SELECTOR = '#header_logo_container';
 // before React mounts.
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
+// Canvas dimensions of the looping animated asset (logo-codeai-transition
+// .gif and the .avif counterpart). Passed to the <img> as width/height
+// attributes so the browser knows the intrinsic aspect ratio before any
+// bytes load — without this, the IMG box has CSS-set 100%/100% dims but
+// no intrinsic aspect for object-fit: contain to honor on the first
+// frame, producing an intermittent squish-then-correct as the asset
+// finishes loading. CSS still drives the rendered size; these are
+// aspect hints only.
+const ANIMATED_WIDTH = 834;
+const ANIMATED_HEIGHT = 313;
+
 // opening: backdrop fades in; media not yet rendered.
 // playing: animated image loops (or MP4 plays once) over the dimmer.
 // hold:    image/video stays on its last frame for HOLD_MS.
@@ -239,6 +250,8 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
               <img
                 src={animatedSrc}
                 alt=""
+                width={ANIMATED_WIDTH}
+                height={ANIMATED_HEIGHT}
                 className={`${styles.image} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
