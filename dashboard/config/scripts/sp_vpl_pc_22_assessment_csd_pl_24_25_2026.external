@@ -9,7 +9,7 @@ Your role as the teacher is to provide students with ongoing feedback in order t
 
 <br>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 How does the curriculum support assessment? </summary>
+<summary style="font-size: 16px; font-weight: bold;">🔎 How does the curriculum support assessment? </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -18,7 +18,7 @@ Frequent formal and informal assessment and feedback are critical to ensure that
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">💻 Lesson-Level assessment</summary>
+<summary style="font-size: 16px; font-weight: bold;">💻 Lesson-Level Assessment</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
@@ -31,7 +31,7 @@ Opportunities for assessment within each lesson are listed out in the lesson pla
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">✏️ Chapter- and Unit-Level Assessment</summary>
+<summary style="font-size: 16px; font-weight: bold;">✏️ Chapter- and Unit-Level Assessment</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p><img src="https://images.code.org/a096b4eb81514f9680da92259e0b5ddd-image-1665772466637.34.07 PM.png" alt="Screenshot of the CS Discoveries 'Guide to Assessment' document." width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
@@ -44,9 +44,7 @@ End of chapter projects incorporate the skills and understandings students have 
 
 Post-project tests are included at the end of every unit.  These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit.  These tests are aligned to the learning framework of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics.
 </p></div></details>
+<br>
 
-
-### <a href="https://docs.google.com/document/d/1wyltOG7qnynuPSc3BYTqEmrIwbMla56MPAraxgL_dNY/view" target="blank" rel="noopener noreferrer" >Click here</a> to read the full CS Discoveries Guide to Assessment. 
-
-
+<a href="https://docs.google.com/document/d/12geyLagw_-sLtIv0-BSk-jBqn99pM59H0QiPKHvR0Lk/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Click here</a> to read the full AI Discoveries Guide to Assessment.
 MARKDOWN

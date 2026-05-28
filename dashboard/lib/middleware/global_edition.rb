@@ -41,6 +41,14 @@ module Middleware
         ].freeze
       end
 
+      # HTTP path prefixes that should be processed as is, without a Global Edition regional redirect.
+      def self.non_redirectable_path_prefixes
+        @non_redirectable_path_prefixes ||= %w[
+          /api/
+          /dashboardapi/
+        ].freeze
+      end
+
       attr_reader :app, :env, :request, :original_script_name, :original_path_info, :original_path, :original_region,
                   :original_locale
 
@@ -48,7 +56,7 @@ module Middleware
         @app = app
         @env = env
 
-        @request = Rack::Request.new(@env)
+        @request = ActionDispatch::Request.new(@env)
         @original_script_name = @request.script_name
         @original_path_info   = @request.path_info
         @original_path        = @request.path
@@ -93,19 +101,19 @@ module Middleware
         if request.GET.key?(REGION_KEY)
           new_region = request.GET[REGION_KEY].presence
 
-          redirect_path = ::File.join('/', main_path)
+          redirect_path = ActionDispatch::Journey::Router::Utils.normalize_path(main_path)
           redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
           redirect_uri = URI(redirect_path)
           redirect_uri.query = URI.encode_www_form(request.GET.except(REGION_KEY)).presence
           redirect_path = redirect_uri.to_s
 
-          setup_region(new_region)
           setup_redirect_to(redirect_path)
+          setup_region(new_region)
         # Fallback for legacy `/global/fa/*` paths
-        elsif original_path_info.match?(%r{^/global/fa(?:/.*)?$})
+        elsif original_path_info.start_with?('/global/fa') && !existing_route?
           international_path = original_path_info.sub('/global/fa', '')
-          request.path_info = international_path unless existing_route?
+          request.path_info = international_path
 
           if redirectable?
             fallback_path = regional_path_for('fa', international_path)
@@ -138,8 +146,8 @@ module Middleware
         request.path_info   = original_path_info
       end
 
-      # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
+        return @redirect_response if @redirect_response
         @response ||= Rack::Response[*app.call(env)]
       end
 
@@ -172,28 +180,29 @@ module Middleware
         @main_fullpath ||= request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}"
       end
 
+      private def locale_region(locale)
+        locale_regions = Cdo::GlobalEdition.locales_regions[locale]
+        locale_regions = locale_regions&.select {|region| Cdo::GlobalEdition.region_available?(region)}
+        return if locale_regions.blank?
+
+        return original_region if locale_regions.include?(original_region)
+        return url_region      if locale_regions.include?(url_region)
+
+        locale_regions.first
+      end
+
+      private def available_region
+        return original_region if Cdo::GlobalEdition.region_available?(original_region)
+        return url_region      if Cdo::GlobalEdition.region_available?(url_region)
+
+        nil
+      end
+
       # Determines and memoizes the effective Global Edition region for the request.
       #
       # @return [String, nil] resolved region code (e.g., "fa"), or nil if none is valid
       private def effective_region
-        return @effective_region if defined?(@effective_region)
-
-        @effective_region =
-          if original_locale
-            locale_regions = Cdo::GlobalEdition.locales_regions[original_locale]
-            locale_regions = locale_regions&.select {|region| Cdo::GlobalEdition.region_available?(region)}
-            return if locale_regions.blank?
-
-            return original_region if locale_regions.include?(original_region)
-            return url_region      if locale_regions.include?(url_region)
-
-            locale_regions.first
-          else
-            return original_region if Cdo::GlobalEdition.region_available?(original_region)
-            return url_region      if Cdo::GlobalEdition.region_available?(url_region)
-
-            nil
-          end
+        @effective_region ||= original_locale ? locale_region(original_locale) : available_region
       end
 
       private def setup_region(new_region)
@@ -228,12 +237,15 @@ module Middleware
         )
       end
 
-      private def existing_route?(path = original_path_info)
+      private def existing_route?
         return false unless request.hostname == CDO.dashboard_hostname
-        request_method = request.params['_method'].presence || request.request_method
-        Dashboard::Application.routes.recognize_path(path, method: request_method).present?
-      rescue ActionController::RoutingError
-        false
+
+        Dashboard::Application.routes.recognize_path_with_request(
+          request,
+          original_path_info,
+          {},
+          raise_on_missing: false
+        ).present?
       end
 
       # Resolves the most appropriate locale for the given region.
@@ -260,6 +272,7 @@ module Middleware
       private def redirectable?
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
+        return false if original_path.start_with?(*self.class.non_redirectable_path_prefixes)
 
         true
       end
@@ -269,8 +282,9 @@ module Middleware
       end
 
       private def setup_redirect_to(redirect_path)
-        response.do_not_cache!
-        response.redirect ::File.join('/', redirect_path.to_s)
+        @redirect_response ||= Rack::Response.new
+        @redirect_response.do_not_cache!
+        @redirect_response.redirect ActionDispatch::Journey::Router::Utils.normalize_path(redirect_path)
       end
 
       # Prepares the current request so it can be correctly routed by the application.

@@ -1,6 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 
-import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '../index';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps, kitIcons} from '../index';
 
 export default {
   title: 'DesignSystem/FontAwesomeV6Icon',
@@ -88,123 +88,11 @@ GroupOfFamiliesOfFontAwesomeV6Icon.args = {
 
 export const GroupOfCustomIconsOfFontAwesomeV6Icon = MultipleTemplate.bind({});
 GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
-  components: [
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-bot-regular',
-      title: 'ai-bot-regular-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-bot-solid',
-      title: 'ai-bot-solid-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-head-regular',
-      title: 'ai-head-regular-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-head-solid',
-      title: 'ai-head-solid-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-locked',
-      title: 'ai-locked-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-off',
-      title: 'ai-off-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-sleeping',
-      title: 'ai-sleeping-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-ta-head-solid',
-      title: 'ai-ta-head-solid-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'ai-ta-tag',
-      title: 'ai-ta-tag-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'classlink',
-      title: 'classlink-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'clever',
-      title: 'clever-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'click-to-continue-down',
-      title: 'click-to-continue-down-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'click-to-continue-up',
-      title: 'click-to-continue-up-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'connected-level',
-      title: 'connected-level-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'duotone-solid-message-question-circle-exclamation',
-      title: 'duotone-solid-message-question-circle-exclamation-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'move',
-      title: 'move-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-bars-magnifying-glass',
-      title: 'solid-bars-magnifying-glass-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-flask-sparkle',
-      title: 'solid-flask-sparkle-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-gear-pen',
-      title: 'solid-gear-pen-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-pen-sparkle',
-      title: 'solid-pen-sparkle-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'solid-thumbtack-slash',
-      title: 'solid-thumbtack-slash-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'text-speech',
-      title: 'text-speech-kit',
-    },
-    {
-      iconFamily: 'kit',
-      iconName: 'text-speech-pause',
-      title: 'text-speech-pause-kit',
-    },
-  ],
+  components: [...kitIcons].map(iconName => ({
+    iconFamily: 'kit',
+    iconName,
+    title: `${iconName}-kit`,
+  })),
 };
 
 export const GroupOfStylesOfFontAwesomeV6Icon = MultipleTemplate.bind({});

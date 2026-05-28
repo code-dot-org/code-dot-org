@@ -5,8 +5,13 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {LevelContext} from './context';
-import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
+import {LevelContext} from '../../curriculum-generator/ai/context';
+import {
+  getTextModel,
+  logPrompt,
+  logResponse,
+  PROMPT_TAGS,
+} from '../../curriculum-generator/ai/shared';
 
 const weblabPlanSchema = Output.object({
   schema: z.object({
@@ -54,8 +59,10 @@ export async function generateWeblab2Level(
 ): Promise<Weblab2Generation> {
   const prompt = [
     'You are helping a curriculum author build a "Web Lab 2" level: a',
-    'small, self-contained website that a middle-school student will edit.',
-    'Based on the description below, produce two things:',
+    'small, self-contained website that a student will edit. Assume a',
+    'middle-school student unless the description below names a different',
+    'grade band or audience, in which case follow it. Based on the',
+    'description below, produce two things:',
     '  1. Student-facing instructions in markdown that tell the student',
     '     what to do in this level. Reference the file names you create',
     '     so the student knows where to look. Keep it tight.',
@@ -67,6 +74,16 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.lessonOutline
       ? [
           '',
@@ -83,6 +100,20 @@ export async function generateWeblab2Level(
           '— building on the same code, reusing characters or examples — but',
           'do NOT restate them; only build the level described last:',
           ctx.precedingLevels,
+        ]
+      : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final state the lesson is building toward.',
+          'The student will reach something like this by the last weblab2',
+          'level. Use it as a destination: pick file structure, library',
+          'choices, naming, and idiom from it so the lesson reads as one',
+          'coherent build. But DO NOT just emit this verbatim — this level',
+          'should be a step along the way, partial relative to the final',
+          'goal. Where the description and target disagree, the description',
+          'wins (it scopes this specific level).',
+          ctx.targetProject,
         ]
       : []),
     '',

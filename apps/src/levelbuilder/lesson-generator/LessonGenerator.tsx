@@ -1,15 +1,18 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {loadLessonLevelProperties} from '../curriculum-generator/api/levelProperties';
+import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
+import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
+import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
+import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {generateWeblab2Level} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
-import OutlineBlock from './components/OutlineBlock';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
 import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
@@ -20,9 +23,10 @@ import {
   priorOutputFromLevelProperties,
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
+import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
-  loadLessonLevelProperties,
+  loadProjectSources,
   saveLessonActivities,
   updateLevelProperty,
   updatePanelsLevel,
@@ -38,6 +42,7 @@ import {
 } from './types';
 
 import moduleStyles from './lesson-generator.module.scss';
+import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
 // Display labels for the per-card Lab dropdown. `satisfies` keeps the
 // label literals narrow (handy if a caller ever wants them) while
@@ -62,7 +67,30 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   // was rendered with and isn't expected to change.
   const initial = useMemo(() => buildInitialState(lesson), [lesson]);
   const [prefix, setPrefix] = useState<string>(initial.prefix);
-  const [levelSpecs, setLevelSpecs] = useState<LevelSpec[]>(initial.specs);
+  const {
+    specs: levelSpecs,
+    setSpecs: setLevelSpecs,
+    updateSpec,
+    removeSpec,
+    moveSpec,
+    addSpec,
+  } = useReorderableList<LevelSpec>({
+    initial: initial.specs,
+    getKey: s => s.key,
+    newSpec: newLevelSpec,
+    // Editing the description re-derives the `generate` checkbox from
+    // whether the description still matches what we last generated for.
+    // The user can still override manually after.
+    onAfterPatch: (_prev, next, patch) => {
+      if (!('description' in patch)) return next;
+      return {
+        ...next,
+        generate:
+          next.lastGeneratedDescription === undefined ||
+          next.description.trim() !== next.lastGeneratedDescription,
+      };
+    },
+  });
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState<ProgressUpdate | null>(null);
   const [progressLog, setProgressLog] = useState<string[]>([]);
@@ -71,73 +99,49 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
+  // Optional Weblab2 channel id. When set, the lesson is generated as
+  // progressing toward the app stored at that channel; the source files
+  // (MultiFileSource) get fetched once and fed to the per-level AI
+  // prompts as "final goal" context.
+  const [projectChannelId, setProjectChannelId] = useState<string>(
+    lesson.generateProjectChannelId || ''
+  );
 
-  // The AI gateway expects an AichatContext on every access-token request.
-  // We're not actually inside an aichat lab here, but setting the context
-  // up front lets the levelbuilder page reuse the same generateText path
-  // the chat lab uses without each call site having to thread its own
-  // context through. Levelbuilders pass the access check unconditionally.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType: AiChatClientTypes.AI_CHAT_LAB,
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId: lesson.id,
-    });
-  }, [lesson.id]);
+  useAichatContext({lessonId: lesson.id});
+  useBeforeUnloadWhile(isGenerating);
 
-  // Block accidental navigation while generation is in progress. The user
-  // explicitly asked for a confirmation prompt; the browser default
-  // beforeunload dialog is the only portable way to get one.
-  useEffect(() => {
-    if (!isGenerating) return;
-    const handler = (event: BeforeUnloadEvent) => {
-      event.preventDefault();
-      event.returnValue = '';
-    };
-    window.addEventListener('beforeunload', handler);
-    return () => window.removeEventListener('beforeunload', handler);
-  }, [isGenerating]);
-
-  const updateSpec = useCallback((key: string, patch: Partial<LevelSpec>) => {
-    setLevelSpecs(specs =>
-      specs.map(s => {
-        if (s.key !== key) return s;
-        const next = {...s, ...patch};
-        // If the description was edited, re-derive whether to generate based
-        // on whether it now matches the description recorded at the last
-        // successful generation. The user can still manually toggle the
-        // checkbox afterward.
-        if ('description' in patch) {
-          next.generate =
-            next.lastGeneratedDescription === undefined ||
-            next.description.trim() !== next.lastGeneratedDescription;
+  // Fetch + format the target project's source for the current channel
+  // id. Returns the formatted "=== path ===\n..." string suitable for a
+  // prompt, or undefined when the field is blank, the fetch fails, or
+  // the channel doesn't carry a MultiFileSource. Both the outline AI
+  // call and the per-level AI calls use this; we don't memoize because
+  // a fetch per click is cheap and avoids stale data after the user
+  // changes the channel id mid-session.
+  const loadTargetProject = useCallback(
+    async (onLog: (line: string) => void): Promise<string | undefined> => {
+      const id = projectChannelId.trim();
+      if (!id) return undefined;
+      try {
+        const {value} = await loadProjectSources(id);
+        const formatted = formatTargetProject(value);
+        if (formatted) {
+          onLog(`Loaded target project source from channel ${id}.`);
+          return formatted;
         }
-        return next;
-      })
-    );
-  }, []);
-
-  const removeSpec = useCallback((key: string) => {
-    setLevelSpecs(specs => specs.filter(s => s.key !== key));
-  }, []);
-
-  const moveSpec = useCallback((key: string, direction: 'up' | 'down') => {
-    setLevelSpecs(specs => {
-      const index = specs.findIndex(s => s.key === key);
-      if (index === -1) return specs;
-      const target = direction === 'up' ? index - 1 : index + 1;
-      if (target < 0 || target >= specs.length) return specs;
-      const next = [...specs];
-      [next[index], next[target]] = [next[target], next[index]];
-      return next;
-    });
-  }, []);
-
-  const addSpec = useCallback(() => {
-    setLevelSpecs(specs => [...specs, newLevelSpec()]);
-  }, []);
+        onLog(
+          `Channel ${id} returned no MultiFileSource; continuing without target context.`
+        );
+        return undefined;
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        onLog(
+          `Warning: couldn't load target project ${id}: ${message}. Continuing.`
+        );
+        return undefined;
+      }
+    },
+    [projectChannelId]
+  );
 
   const handleGenerateOutline = useCallback(async () => {
     if (!outline.trim()) {
@@ -147,13 +151,21 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setOutlineError(null);
     setIsOutlining(true);
     try {
-      // Build the lesson-scope context once. Outer-scope fields
-      // (unitName, unitOutline, targetProject) land here later from the
-      // unit + project branches; populating them is a one-line edit at
-      // the builder site, never a signature change.
+      // Outline-phase fetch errors surface in outlineError too, since
+      // the user is right there watching the outline button. Non-fatal
+      // results just produce no target context for this run.
+      const targetProject = await loadTargetProject(line => {
+        if (line.startsWith('Warning:')) setOutlineError(line);
+      });
+      // Build the lesson-scope context once. Outer unit-scope fields
+      // are piped down via lesson.unitName / lesson.unitOutline so the
+      // outline AI can frame this lesson against the broader unit.
       const lessonCtx = {
+        unitName: lesson.unitName,
+        unitOutline: lesson.unitOutline,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
+        targetProject,
       };
       const planned = await generateLessonOutline(lessonCtx);
       const newSpecs: LevelSpec[] = planned.map(level => ({
@@ -179,7 +191,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     } finally {
       setIsOutlining(false);
     }
-  }, [outline, lesson.name]);
+  }, [
+    outline,
+    lesson.name,
+    lesson.unitName,
+    lesson.unitOutline,
+    setLevelSpecs,
+    loadTargetProject,
+  ]);
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -248,6 +267,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         `Warning: couldn't load existing level content for context: ${message}`
       );
     }
+
+    // Fetch the target project's source files (if a channel id was given)
+    // once for this run and pass the formatted text to each per-level AI
+    // call as "final goal" context. Soft-fail: if the fetch or format
+    // doesn't yield anything usable, every level just runs without the
+    // extra context — same as if the field were blank.
+    const targetProject = await loadTargetProject(appendLog);
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -321,8 +347,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           // sibling-forward (precedingLevels) is fresh per call from the
           // running priorEntries list.
           const levelCtx = {
+            unitName: lesson.unitName,
+            unitOutline: lesson.unitOutline,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
+            targetProject,
             levelName,
             levelDescription: spec.description.trim(),
             precedingLevels: precedingLevelsText || undefined,
@@ -453,9 +482,15 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           lesson.activities || [],
           placements
         );
-        // Persist the outline so reopening /generate restores it. Sending
-        // an empty string clears any previously-saved value.
-        await saveLessonActivities(lesson.id, newActivities, outline.trim());
+        // Persist the outline + target-project channel id so reopening
+        // /generate restores them. Sending '' for either clears the
+        // previously-saved value.
+        await saveLessonActivities(
+          lesson.id,
+          newActivities,
+          outline.trim(),
+          projectChannelId.trim()
+        );
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -488,25 +523,59 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setSummary({created, failed});
     setIsGenerating(false);
     setProgress(null);
-  }, [validationError, lesson, levelSpecs, fullName, appendLog, outline]);
+  }, [
+    validationError,
+    lesson,
+    levelSpecs,
+    fullName,
+    appendLog,
+    outline,
+    setLevelSpecs,
+    projectChannelId,
+    loadTargetProject,
+  ]);
 
   return (
-    <div className={moduleStyles.container}>
-      <h1 className={moduleStyles.heading}>
+    <div className={sharedStyles.container}>
+      <h1 className={sharedStyles.heading}>
         Generate levels for "{lesson.name}"
       </h1>
-      <p className={moduleStyles.subheading}>
+      <p className={sharedStyles.subheading}>
         Plan a sequence of levels and let AI fill them with starter content.
         Each level is created, populated, and added to the end of this lesson.
       </p>
 
       <OutlineBlock
+        heading="Optional: generate the levels below from an outline"
+        helpText="Describe the learning experience you want this lesson to take a student through. The AI will turn that into a sequence of Panels and Web Lab 2 levels with IDs and per-level descriptions. You can edit or remove any of them before generating their content below."
+        placeholder="e.g. Introduce the student to CSS selectors, then have them style a simple form, then reflect on what they learned."
+        buttonLabel="Generate outline"
         value={outline}
         onChange={setOutline}
         onGenerate={handleGenerateOutline}
         isOutlining={isOutlining}
         disabled={isGenerating}
         error={outlineError}
+        extra={
+          <div className={moduleStyles.outlineProjectRow}>
+            <label htmlFor="project-channel-id">
+              Optional: target Web Lab 2 project (channel id)
+            </label>
+            <p className={sharedStyles.outlineHelp}>
+              When set, the lesson is generated as a progression toward the app
+              stored at this channel. The student never sees the target code;
+              the AI uses it as the final goal so each level moves closer to it.
+            </p>
+            <input
+              id="project-channel-id"
+              className={moduleStyles.outlineProjectInput}
+              value={projectChannelId}
+              onChange={e => setProjectChannelId(e.target.value)}
+              placeholder="e.g. abc123 — leave blank to skip"
+              disabled={isOutlining || isGenerating}
+            />
+          </div>
+        }
       />
 
       <div className={moduleStyles.fieldRow}>
@@ -521,7 +590,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         />
       </div>
 
-      <div className={moduleStyles.levelList}>
+      <div className={sharedStyles.cardList}>
         {levelSpecs.map((spec, index) => (
           <LevelCard
             key={spec.key}
@@ -538,10 +607,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         ))}
       </div>
 
-      <div className={moduleStyles.addButtonRow}>
+      <div className={sharedStyles.addButtonRow}>
         <button
           type="button"
-          className={moduleStyles.secondaryButton}
+          className={sharedStyles.secondaryButton}
           onClick={addSpec}
           disabled={isGenerating}
         >
@@ -550,18 +619,18 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       </div>
 
       {topLevelError && (
-        <p className={moduleStyles.summaryBad} role="alert">
+        <p className={sharedStyles.summaryBad} role="alert">
           {topLevelError}
         </p>
       )}
 
-      <footer className={moduleStyles.footer}>
-        <a href={lesson.editLessonUrl} className={moduleStyles.secondaryButton}>
+      <footer className={sharedStyles.footer}>
+        <a href={lesson.editLessonUrl} className={sharedStyles.secondaryButton}>
           Back to lesson edit
         </a>
         <button
           type="button"
-          className={moduleStyles.primaryButton}
+          className={sharedStyles.primaryButton}
           onClick={handleGenerate}
           disabled={isGenerating || !!validationError}
           title={validationError || ''}

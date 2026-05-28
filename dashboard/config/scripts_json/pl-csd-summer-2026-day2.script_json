@@ -2,13 +2,15 @@
   "script": {
     "name": "pl-csd-summer-2026-day2",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 05:59:40 UTC",
+    "serialized_at": "2026-05-19 13:43:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -19,28 +21,1694 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "Introduction to Day 2",
+      "name": "Introduction to Day 2",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nReflect on the Gots and Needs from the previous day. Introduce the themes of the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n* Participants use a shared definition for equity and inclusion in the context of CS education\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get oriented to the day\n* Use a shared definition for equity and inclusion in the context of CS education"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Resources and Assesssment ",
+      "name": "Resources and Assesssment ",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nThis session leads into a discussion around assessment in CS Discoveries. By the end of this session, participants should know how to locate and use both teacher-facing and student-facing resources alone. There is also time for participants to reflect on the role of assessment in their own classroom followed by a tour of assessment tools and resources.\n\n\n**Objectives:**\n* Participants have located the resources available to them to support student learning in their classrooms\n* Participants have reflected on the role assessment plays in their classroom\n* Participants are able to locate and use applicable assessment tools and resources\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Locate the resources available to teachers to support student learning in your classrooms\n* Reflect on the role assessment plays in your classroom\n* Locate and use applicable assessment tools and resources"
+      },
+      "seeding_key": {
+        "lesson.key": "Resources and Assesssment ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Unit 2 - Web Development Connections",
+      "name": "Unit 2 - Web Development Connections",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nOn Day 1, participants engaged in two model lessons: U2L2 Intro to HTML and U2L6 Styling Text with CSS. This session provides participants with space to review what they’ve learned and ask questions about Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Participants are introduced to additional curriculum practice to continue practicing their HTML and CSS skills.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Be introduced to additional curriculum practice to continue practicing your HTML and CSS skills."
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 2 - Web Development Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+      "name": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Essential Practice**: Teachers formatively assess student understanding throughout the lesson\n\n\n**Lesson Decisions**:\n* Use the videos as check-in points for participants using the discussion questions provided in the teacher notes as sensemaking opportunities.\n* The teacher uses the assessment opportunities from the lesson plan to influence the probing questions asked while circulating through the room to check for understanding\n* The teacher asks participants to explain how they think they should score on the mini rubrics in the assessment level\n* The teacher uses a wrap up to assess understanding within the room\n\n\n**Debrief Topic**: Formative Assessment\n\n\n**Objectives:**\n* Participants have reflected on ways to use formative assessment throughout the lesson to gauge the level of understanding within the room\n* Participants are comfortable with the basics of Game Lab\n* Participants have experimented with the grid in Game Lab\n\n**Suggested time**: 55 minutes ",
+        "preparation": "* Prepare projector or other means of showing videos if you wish to watch as a class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. \n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Model Lesson 4 - U3L5 Variables",
+      "name": "Model Lesson 4 - U3L5 Variables",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Essential Practice:** Programming lessons are meant to have active teacher engagement with the teacher circulating to direct students to appropriate resources, guide them through the debugging process, assess understanding and help students determine when to move on and when to do more practice in choice levels.\n\n\n**Lesson Decisions:**\n* The teacher instructs participants to complete all choice level bubbles until they feel comfortable enough to move on to the assessment. If they are successful with the assessment (use the mini rubric to check) they can move on to the challenge choice levels.\n* As participants are working in choice levels, ask to see their work in the assessment level. Ask participants to justify their score on the mini rubric.\n* The teacher directs participants to the student version of the “Student Guide to Debugging” on page 24 of their Resource Packet and prompts them to use the debugging process when they encounter bugs.\n\n\n**Debrief Topic:**\n* Context setting\n* Exploration\n* Experimentation\n* Assessment\n\n \n**Objectives:**\n* Participants understand how programming lessons are structured within the curriculum\n\n**Suggested time:** 55 minutes",
+        "preparation": "* Review the level progression in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "student_overview": "**Question of the Day:**  How can we use variables to store information in our programs?\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Unit 3 Curiculum Investigation: Shapes and Variables",
+      "name": "Unit 3 Curiculum Investigation: Shapes and Variables",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nThis curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants are familiar with Unit 3 - Interactive Animations and Games.\n* Participants gain experience with Game Lab.\n* Participants can create and modify shapes in Game Lab.\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Be familiar with Unit 3 - Interactive Animations and Games.\n* Gain experience with Game Lab.\n* Create and modify shapes in Game Lab.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Curiculum Investigation: Shapes and Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Preparing for TLOs",
+      "name": "Preparing for TLOs",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:** In this session, participants will learn more about what TLOs are and how they will be participating in them.\n\n\n**Objectives:**\n* Participants have their assigned lesson\n* Participants know how the lesson planning process will work\n* Participants have a shared definition for identity\n* Participants are able to describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Recieve your lesson assignment \n* Learn how the lesson planning process will work\n* Develop a shared definition for identity\n* Describe how your identity, experiences, and beliefs shape how you see your role as a CS teacher"
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for TLOs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Lesson Planning - Get to Know Your Lesson",
+      "name": "Lesson Planning - Get to Know Your Lesson",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nUnderstanding the lesson and the resources available in the lesson.\n* Try activities and tools\n* Watch videos\n* Read lesson plan\n* Look through linked resources\n\n**Objectives:**\n* Participants have had a chance to read through the materials and start making a plan for delivering the lesson with their groups\n* Participants have done any core activities from the lesson\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n* Read through the materials and start making a plan for delivering the lesson with your groups\n* Do any core activities from the lesson"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning - Get to Know Your Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Lesson Planning - Make a Plan",
+      "name": "Lesson Planning - Make a Plan",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n* Prepare to deliver your TLO lesson"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning - Make a Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "Day 2 Wrap Up",
+      "name": "Day 2 Wrap Up",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to wrap up the theme and logistics of the day.\n\n\n**Objectives:**\n* Participants share an instructional strategy that they would like to try in their classroom\n* Participants articulate things they got from the workshop today and things they still need in the future\n* Participants complete the daily survey\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n*  Share an instructional strategy that you would like to try in your classroom\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/2\" target=\"blank\" rel=\"noopener noreferrer\">Link to Survey</a> \n\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Day 2 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "bbdcffe4-d608-4799-9bf6-217b0a7dd903",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbdcffe4-d608-4799-9bf6-217b0a7dd903",
+        "lesson.key": "Introduction to Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "a99094af-7750-49d7-8bb9-854f8fc39734",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a99094af-7750-49d7-8bb9-854f8fc39734",
+        "lesson.key": "Resources and Assesssment ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "a589032e-e2f8-499d-9125-9992a1250782",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a589032e-e2f8-499d-9125-9992a1250782",
+        "lesson.key": "Unit 2 - Web Development Connections",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b",
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "03075424-6165-4ecb-8fd4-b2c2170413c3",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3",
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "635a08ef-7004-498a-b07f-36971638f2b7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "635a08ef-7004-498a-b07f-36971638f2b7",
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba",
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "44e1e81b-1a5b-43b7-aae6-978980fefaca",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca",
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "802be36d-ce49-489b-bfb9-ac20702431f2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "802be36d-ce49-489b-bfb9-ac20702431f2",
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "3d1aa1ff-3251-4412-aab6-da681bb87fd2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d1aa1ff-3251-4412-aab6-da681bb87fd2",
+        "lesson.key": "Unit 3 Curiculum Investigation: Shapes and Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "7dc0feb5-45bf-4c5f-bb84-48bcec95b112",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7dc0feb5-45bf-4c5f-bb84-48bcec95b112",
+        "lesson.key": "Preparing for TLOs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "c8a28f8b-3aea-423a-b2a5-aeaa7feb4f47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8a28f8b-3aea-423a-b2a5-aeaa7feb4f47",
+        "lesson.key": "Lesson Planning - Get to Know Your Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "6f6b584d-1a0b-4d65-bf6c-09e919a3d2ba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f6b584d-1a0b-4d65-bf6c-09e919a3d2ba",
+        "lesson.key": "Lesson Planning - Make a Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    },
+    {
+      "key": "79433905-1b05-40b8-b170-9a67fa592146",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79433905-1b05-40b8-b170-9a67fa592146",
+        "lesson.key": "Day 2 Wrap Up",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "57b8e6ab-d5f3-4029-85d5-029f4809c8c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "57b8e6ab-d5f3-4029-85d5-029f4809c8c7",
+        "lesson_activity.key": "bbdcffe4-d608-4799-9bf6-217b0a7dd903"
+      }
+    },
+    {
+      "key": "f0059202-12b9-4be6-9be8-4d6d2a8420ad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f0059202-12b9-4be6-9be8-4d6d2a8420ad",
+        "lesson_activity.key": "a99094af-7750-49d7-8bb9-854f8fc39734"
+      }
+    },
+    {
+      "key": "a5d40430-af48-491c-aff9-3776601aad6a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5d40430-af48-491c-aff9-3776601aad6a",
+        "lesson_activity.key": "a589032e-e2f8-499d-9125-9992a1250782"
+      }
+    },
+    {
+      "key": "312a22bb-d722-4bbf-af27-4a2c04097985",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Based on what you know about computers, what do you think will be different between telling a person about your image and telling a computer about your image?\n",
+        "name": "Programming Images\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "312a22bb-d722-4bbf-af27-4a2c04097985",
+        "lesson_activity.key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b"
+      }
+    },
+    {
+      "key": "0b7f4b19-c5f3-4a66-87c2-8b6146793ca4",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students time to think individually and discuss with a partner, then bring the class together and write their ideas on the board.\n\n**Discussion Goal:** Guide students to realize that the way we communicate with each other may be more informal than how we communicate with a computer. For example, communicating with a digital assistant requires precise language and commands, usually starting with \"Hey\" and then the name of the device. Similarly, as we start coding in this unit, students will need to use a precise set of commands to communicate with a computer."
+      },
+      "seeding_key": {
+        "activity_section.key": "0b7f4b19-c5f3-4a66-87c2-8b6146793ca4",
+        "lesson_activity.key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b"
+      }
+    },
+    {
+      "key": "6a216c94-6025-4d53-9887-39224532fd83",
+      "position": 3,
+      "properties": {
+        "description": "In order to give instructions to a computer, we need to use a language that a computer understands. To make our animations and games, we will use a version of Javascript that uses blocks.  The environment that we'll be programming in is called Game Lab.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6a216c94-6025-4d53-9887-39224532fd83",
+        "lesson_activity.key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b"
+      }
+    },
+    {
+      "key": "76aeec8c-2828-4bae-8476-ecec6a539fa4",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "76aeec8c-2828-4bae-8476-ecec6a539fa4",
+        "lesson_activity.key": "b4e785ea-eca0-4d60-9f9b-2be318dec06b"
+      }
+    },
+    {
+      "key": "53a6d4ec-b870-4738-9684-85bbb5dee06c",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs to program together.",
+        "name": "Simple Drawing in Game Lab\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about Pair Programming in the **[CSD Guide to Teaching and Learning Strategies](https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view)**\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "53a6d4ec-b870-4738-9684-85bbb5dee06c",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "1bac9d98-0e21-452a-9330-41d7bf19e1bd",
+      "position": 2,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "1bac9d98-0e21-452a-9330-41d7bf19e1bd",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "211a0a0f-fd19-4e5e-a151-144a970e50d0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Predict - Introduction to Game Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "211a0a0f-fd19-4e5e-a151-144a970e50d0",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "a72170af-c54d-45e0-aae9-d29d97237fda",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** The parameters in this level will set the *x* and *y* values for the square. Students should recall this from the previous lesson, but what they may not realize is that the top left corner of the square is what will be placed at the *100 x* and *100 y* locations. Using this new information, they will be able to revisit this code at the next level and play with the *x* and *y* parameters to gain a better understanding.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_1/pl-csd-summer/2026] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a72170af-c54d-45e0-aae9-d29d97237fda",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "7ee152c9-4738-4d23-a52d-05290fad75ba",
+      "position": 5,
+      "properties": {
+        "description": "\n\n\n**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. You could consider creating a \"Resource Chart\" to keep track of these options and support students to be self-sufficient as they progress through levels. \n\n* **Videos:** Watched as a class, but students can always return to them.\n* **Help and Tips Tab:** This tab contains all of the relevant videos and reference guides for a particular level.\n* **Reference Guides:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels. You may decide to print these and have them available for students as they work through levels.\n* **Documentation and Examples:** Hovering over a block will show a short description of what the block does. Clicking the \"See Examples\" link will open the documentation for that block. \n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ee152c9-4738-4d23-a52d-05290fad75ba",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "899cd3c0-4137-42c5-8be5-777aa40f7211",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in **[this video](https://www.youtube.com/watch?v=q7d_JtyCq1A)**, which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "899cd3c0-4137-42c5-8be5-777aa40f7211",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "55db337d-19e8-4ff1-b37b-0f8b4969b19e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r drawing_in_game_lab_-_part_2/pl-csd-summer/2026] video in the slides.\n**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "55db337d-19e8-4ff1-b37b-0f8b4969b19e",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "448db18b-4d7e-4f93-b473-5bedd9b2786a",
+      "position": 8,
+      "properties": {
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n**[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)**"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "76ce3951-f526-436b-b92a-ae63ea0bfc6a",
+      "position": 9,
+      "properties": {
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76ce3951-f526-436b-b92a-ae63ea0bfc6a",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "fbc09bfd-9fe8-4bf1-aebe-d4658a890cf3",
+      "position": 10,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - **[click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)**.\n\n**Digging Deeper:** For more tips about assessing student work, see the **[CSD Guide to Assessment](https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view)**."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fbc09bfd-9fe8-4bf1-aebe-d4658a890cf3",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "853211e5-d373-413f-aa57-8172a965ab05",
+      "position": 11,
+      "properties": {
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "853211e5-d373-413f-aa57-8172a965ab05",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "cf4d14a3-160d-49be-bc65-589171af9434",
+      "position": 12,
+      "properties": {
+        "description": "**Share:** Once students have completed their drawings, have them share them with the class. One way to do this is with a gallery walk.",
+        "name": "Share Drawings\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf4d14a3-160d-49be-bc65-589171af9434",
+        "lesson_activity.key": "03075424-6165-4ecb-8fd4-b2c2170413c3"
+      }
+    },
+    {
+      "key": "e56e010a-1f92-4223-9d3d-b01c216ff095",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\n\n\n**Prompt:** Today you learned how to draw in Game Lab for the first time. What type of advice would you share with a friend who was going to learn about drawing in Game Lab to make it easier for them?\n\n**Share:** Allow students to share out their responses with the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "e56e010a-1f92-4223-9d3d-b01c216ff095",
+        "lesson_activity.key": "635a08ef-7004-498a-b07f-36971638f2b7"
+      }
+    },
+    {
+      "key": "b39837b7-7672-497f-8304-7a4c9117108b",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** All computers do four things: input, output, processing, and storage. Where do you see input, output, storage, and processing in Game Lab?",
+        "name": "Input-Output-Storage-Processing\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the **[What Do Computers Do?](https://www.youtube.com/watch?v=92TaQRBwPSs)** video which highlights these four functions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b39837b7-7672-497f-8304-7a4c9117108b",
+        "lesson_activity.key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba"
+      }
+    },
+    {
+      "key": "df37f61d-e19b-4acc-b18b-f74478e7b0f7",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their answers.\n\n**Discussion Goal:** Allow students to share out their different ideas, but eventually bring the conversation back to storage to tie into today's lesson. Students’ answers may include:\n\n* input: values passed as parameters, typing into the Game Lab workspace\n* output: shapes shown on the Game Lab screen\n* storage: remembering the code\n* processing: the If/then and matching that turn the code into the pictures on the screen\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "df37f61d-e19b-4acc-b18b-f74478e7b0f7",
+        "lesson_activity.key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba"
+      }
+    },
+    {
+      "key": "79a00a7b-95e7-4d13-a244-05618a2a5378",
+      "position": 3,
+      "properties": {
+        "description": "Today we're going to focus on storage.  We're going to look at variables, which are a very common way for computers to store information in a program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "79a00a7b-95e7-4d13-a244-05618a2a5378",
+        "lesson_activity.key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba"
+      }
+    },
+    {
+      "key": "4de95fa8-9169-4d53-9aca-59fbe0083666",
+      "position": 4,
+      "properties": {
+        "description": "**Key Vocabulary:** variable - a label for a piece of information used in a program\r\n\r\n**Question of the Day:  How can we use variables to store information in our programs?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "4de95fa8-9169-4d53-9aca-59fbe0083666",
+        "lesson_activity.key": "c14ab11d-dcad-4225-9cd3-84cb8ce913ba"
+      }
+    },
+    {
+      "key": "8a6c56da-a558-4134-9200-2324a6bed4ca",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio.",
+        "name": "Programming with Variables\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the **[CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view)**. This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8a6c56da-a558-4134-9200-2324a6bed4ca",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "9a4dd378-83d6-48df-a488-953398cb2894",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a4dd378-83d6-48df-a488-953398cb2894",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "2f4eb9b1-99e2-4e4f-9d24-e5caea8d163e",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f4eb9b1-99e2-4e4f-9d24-e5caea8d163e",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "f278f7d5-de71-4449-855f-61089b843a87",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_variables/pl-csd-summer/2026] video in the slides.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f278f7d5-de71-4449-855f-61089b843a87",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "6b409e57-4511-4394-bafc-772bb5eb834f",
+      "position": 5,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?\n\n**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b409e57-4511-4394-bafc-772bb5eb834f",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "d70f6880-f176-4dd4-b9da-5297e9c41089",
+      "position": 6,
+      "properties": {
+        "description": "**Discussion Goal:** During this discussion, encourage students to use the vocabulary they saw in the previous video, referring to `xPosition` and `whatsTheY` as variables and describing the equal sign as \"gets the value of\". The concept is the same as the first predict level, with the added emphasis on using correct vocabulary. For example: \"I see that the variable `xPosition` gets the value of 300, so I know it will be drawn on the right side of the screen\"",
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 5:** If students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page. To get back into block mode, students will first need to fix the problem with the variable names. Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "f4d05999-5661-431a-b936-94fb6fbe893e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4d05999-5661-431a-b936-94fb6fbe893e",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "a6557547-9344-4e10-8841-1c8de9a67e22",
+      "position": 8,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a6557547-9344-4e10-8841-1c8de9a67e22",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "7117e89d-acd3-48c8-a0e0-6d36f1a81eaa",
+      "position": 9,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "7117e89d-acd3-48c8-a0e0-6d36f1a81eaa",
+        "lesson_activity.key": "44e1e81b-1a5b-43b7-aae6-978980fefaca"
+      }
+    },
+    {
+      "key": "840998eb-8c9b-4dd5-bd44-418ee39ae494",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we use variables to store information in our programs?**",
+        "name": "Reflection\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "840998eb-8c9b-4dd5-bd44-418ee39ae494",
+        "lesson_activity.key": "802be36d-ce49-489b-bfb9-ac20702431f2"
+      }
+    },
+    {
+      "key": "58fff5b6-8554-4ae0-adfc-e068138b03cb",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** Give students the following prompts:",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this discussion to assess students' mental models of a variable. You may wish to have students write their responses so you can collect them to review later. You should be looking to see primarily that they understand that variables can label or name a number so that it can be used later in their programs. While there are other properties of a variable students may have learned, this is the most important thing they should understand before moving on to the next lesson.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58fff5b6-8554-4ae0-adfc-e068138b03cb",
+        "lesson_activity.key": "802be36d-ce49-489b-bfb9-ac20702431f2"
+      }
+    },
+    {
+      "key": "8a343ee2-5bae-40cc-baf3-c5a2f7ef3326",
+      "position": 3,
+      "properties": {
+        "description": "* What is your own definition of a variable? \r\n* Why are variables useful in programs?\r\n\r\n**Discuss:** Have students silently write their ideas before sharing in pairs and then as a whole group."
+      },
+      "seeding_key": {
+        "activity_section.key": "8a343ee2-5bae-40cc-baf3-c5a2f7ef3326",
+        "lesson_activity.key": "802be36d-ce49-489b-bfb9-ac20702431f2"
+      }
+    },
+    {
+      "key": "23bb48f5-a619-4f91-a773-2becf86babc0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "23bb48f5-a619-4f91-a773-2becf86babc0",
+        "lesson_activity.key": "3d1aa1ff-3251-4412-aab6-da681bb87fd2"
+      }
+    },
+    {
+      "key": "70100f66-c99f-481f-91bb-2e654ac03444",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70100f66-c99f-481f-91bb-2e654ac03444",
+        "lesson_activity.key": "7dc0feb5-45bf-4c5f-bb84-48bcec95b112"
+      }
+    },
+    {
+      "key": "01db5a04-9bad-4f5e-b883-aacf4561d20b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "01db5a04-9bad-4f5e-b883-aacf4561d20b",
+        "lesson_activity.key": "c8a28f8b-3aea-423a-b2a5-aeaa7feb4f47"
+      }
+    },
+    {
+      "key": "78ab57b1-fd4e-4378-a695-59c1b68bd8b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78ab57b1-fd4e-4378-a695-59c1b68bd8b9",
+        "lesson_activity.key": "6f6b584d-1a0b-4d65-bf6c-09e919a3d2ba"
+      }
+    },
+    {
+      "key": "3766fe15-1d55-412c-bc72-504df1556813",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3766fe15-1d55-412c-bc72-504df1556813",
+        "lesson_activity.key": "79433905-1b05-40b8-b170-9a67fa592146"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict - Introduction to Game Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L3 rect_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "211a0a0f-fd19-4e5e-a151-144a970e50d0"
+      },
+      "level_keys": [
+        "CSD U3L3 rect_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 rect_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "899cd3c0-4137-42c5-8be5-777aa40f7211"
+      },
+      "level_keys": [
+        "CSD U3 rect_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Drawing Squares to Corners_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "899cd3c0-4137-42c5-8be5-777aa40f7211"
+      },
+      "level_keys": [
+        "CSD U3 Drawing Squares to Corners_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 fill_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      },
+      "level_keys": [
+        "CSD U3 fill_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 sequence_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      },
+      "level_keys": [
+        "CSD U3 sequence_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 ellipse_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      },
+      "level_keys": [
+        "CSD U3 ellipse_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawing practice choice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "76ce3951-f526-436b-b92a-ae63ea0bfc6a"
+      },
+      "level_keys": [
+        "CSD U3 drawing practice choice_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 debug_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "fbc09bfd-9fe8-4bf1-aebe-d4658a890cf3"
+      },
+      "level_keys": [
+        "CSD U3 debug_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawing challenges_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "853211e5-d373-413f-aa57-8172a965ab05"
+      },
+      "level_keys": [
+        "CSD U3 drawing challenges_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables Predict Where X_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "9a4dd378-83d6-48df-a488-953398cb2894"
+      },
+      "level_keys": [
+        "CSD U3 Variables Predict Where X_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables Predict Where XY_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "6b409e57-4511-4394-bafc-772bb5eb834f"
+      },
+      "level_keys": [
+        "CSD U3 Variables Predict Where XY_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L5 - SB1_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      },
+      "level_keys": [
+        "CSD U3L5 - SB1_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables naming rules v2_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      },
+      "level_keys": [
+        "CSD U3 Variables naming rules v2_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables Draw Poppy_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      },
+      "level_keys": [
+        "CSD U3 Variables Draw Poppy_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games variables practice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "f4d05999-5661-431a-b936-94fb6fbe893e"
+      },
+      "level_keys": [
+        "CSD Games variables practice_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variables assessment_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "a6557547-9344-4e10-8841-1c8de9a67e22"
+      },
+      "level_keys": [
+        "CSD U3 Variables assessment_CSD-PL-24_25_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Games variables challenge_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "7117e89d-acd3-48c8-a0e0-6d36f1a81eaa"
+      },
+      "level_keys": [
+        "CSD Games variables challenge_CSD-PL-24_25_2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L3 rect_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3L3 rect_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "211a0a0f-fd19-4e5e-a151-144a970e50d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 rect_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 rect_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "899cd3c0-4137-42c5-8be5-777aa40f7211"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Drawing Squares to Corners_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Drawing Squares to Corners_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "899cd3c0-4137-42c5-8be5-777aa40f7211"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 fill_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 fill_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 sequence_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 sequence_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 ellipse_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 ellipse_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "448db18b-4d7e-4f93-b473-5bedd9b2786a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawing practice choice_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 drawing practice choice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "76ce3951-f526-436b-b92a-ae63ea0bfc6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 debug_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 debug_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "fbc09bfd-9fe8-4bf1-aebe-d4658a890cf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawing challenges_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 drawing challenges_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "853211e5-d373-413f-aa57-8172a965ab05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables Predict Where X_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables Predict Where X_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "9a4dd378-83d6-48df-a488-953398cb2894"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables Predict Where XY_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables Predict Where XY_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "6b409e57-4511-4394-bafc-772bb5eb834f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L5 - SB1_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3L5 - SB1_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables naming rules v2_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables naming rules v2_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables Draw Poppy_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables Draw Poppy_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "d70f6880-f176-4dd4-b9da-5297e9c41089"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games variables practice_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD Games variables practice_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "f4d05999-5661-431a-b936-94fb6fbe893e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variables assessment_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD U3 Variables assessment_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "a6557547-9344-4e10-8841-1c8de9a67e22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games variables challenge_CSD-PL-24_25_2026",
+        "script_level.level_keys": [
+          "CSD Games variables challenge_CSD-PL-24_25_2026"
+        ],
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day2",
+        "activity_section.key": "7117e89d-acd3-48c8-a0e0-6d36f1a81eaa"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Drawing in Game Lab",
+      "url": "https://docs.google.com/presentation/d/1bWhfO6YBUVSGQo6mGCiAvZpJfOy4MplwT4pecP17qHw/template/preview",
+      "key": "drawing_in_game_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 1",
+      "url": "https://youtu.be/PXn9gKiKKFo",
+      "key": "drawing_in_game_lab_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 2",
+      "url": "https://youtu.be/QLabeWhw_O0",
+      "key": "drawing_in_game_lab_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "name": "Drawing Shapes",
+      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+      "key": "drawing_shapes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "name": "Equity in CS Education ",
+      "url": "https://www.youtube.com/watch?v=PmW6K6ufTpY",
+      "key": "equity_in_cs_education",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "equity_in_cs_education"
+      }
+    },
+    {
+      "name": "Introduction to Variables",
+      "url": "https://youtu.be/UG7Q1Sr0_F0",
+      "key": "introduction_to_variables",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_variables"
+      }
+    },
+    {
+      "name": "Naming Variables",
+      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+      "key": "naming_variables",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://drive.google.com/file/d/1sZpmFctaVP3RCT1Ojx0wcZ2CUyQhKzKv/view?usp=sharing",
+      "key": "variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://youtu.be/WsXNpY3SXe8",
+      "key": "variables_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://docs.google.com/presentation/d/1-QFe2TlgeOb8_ap7eWCv3CLF_t7qUTBGvU2qbrLwu9A/template/preview",
+      "key": "variables_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_2"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Day 2",
+        "resource.key": "equity_in_cs_education"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "resource.key": "introduction_to_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "resource.key": "variables_2"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -49,19 +1717,195 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "fill"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    }
   ],
   "objectives": [
-
+    {
+      "key": "0e2f47dc-28b9-4582-881e-0f862c6d803e",
+      "properties": {
+        "description": "Sequence code correctly to overlay shapes."
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "objective.key": "0e2f47dc-28b9-4582-881e-0f862c6d803e"
+      }
+    },
+    {
+      "key": "17752e04-ce02-4c23-bb50-2ad799d96e69",
+      "properties": {
+        "description": "Use a coordinate system to place elements on the screen."
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "objective.key": "17752e04-ce02-4c23-bb50-2ad799d96e69"
+      }
+    },
+    {
+      "key": "93f2027d-abe7-46cc-823a-fafe32bd5af8",
+      "properties": {
+        "description": "Use variables in a program to store a piece of information that is used multiple times"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "objective.key": "93f2027d-abe7-46cc-823a-fafe32bd5af8"
+      }
+    },
+    {
+      "key": "9be55db7-c4d9-45cc-afaf-027673bdd13f",
+      "properties": {
+        "description": "Identify a variable as a way to label and reference a value in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "objective.key": "9be55db7-c4d9-45cc-afaf-027673bdd13f"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3 - U3L3 Drawing in Game Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4 - U3L5 Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

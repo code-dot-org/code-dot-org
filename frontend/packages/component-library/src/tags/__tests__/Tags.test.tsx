@@ -1,6 +1,6 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent, {UserEvent} from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {type Mock, vi} from 'vitest';
 
 import Tags, {TagProps} from './../index';
 
@@ -146,16 +146,16 @@ describe('Design System - Tags Component', () => {
 
   describe('onClose', () => {
     let user: UserEvent;
-    let onClick1: jest.Mock;
-    let onClick2: jest.Mock;
+    let onClick1: Mock;
+    let onClick2: Mock;
     let tagsList: TagProps[];
     let button1: HTMLElement;
     let button2: HTMLElement;
 
     beforeEach(() => {
       user = userEvent.setup();
-      onClick1 = jest.fn();
-      onClick2 = jest.fn();
+      onClick1 = vi.fn();
+      onClick2 = vi.fn();
       tagsList = [
         {
           type: 'closable',

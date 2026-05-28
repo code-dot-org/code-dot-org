@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-This short professional learning module introduces you to the concepts in **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
+This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI**  course— a curriculum where students code alongside AI to build real-world interactive projects.
 
 This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about. 
 
@@ -30,9 +30,43 @@ ___
 
 **By the end of this professional learning module, you will be able to:**
 
-* Introduce the foundational concepts in the AI Foundations (Semester 2) course.
+* Introduce the foundational concepts in the AI Foundations: Designing & Building with AI course.
 * Understand the basics of web applications and how they support interactive, AI-powered projects.
 * Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
+
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://studio.code.org/form/selfpaced_pd_teaching_aif_designing_ai_pre_survey"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
+
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey — it takes fewer than five minutes to complete.
+    </div>
+  </div>
+</div>
 
 
 

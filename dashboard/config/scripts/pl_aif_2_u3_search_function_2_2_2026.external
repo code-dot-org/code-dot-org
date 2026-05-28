@@ -29,6 +29,20 @@ Before diving into the details, take a moment to look over the code sample as a 
 
 <img src="https://images.code.org/27526a2ffecd3d3b9ca19967d1489a5e-image-1767803724551.png" alt="JavaScript code sample with a searching function for a calendar" width="850px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your answers </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p style ="font-size: 14pt;">
+- The search term is found in .includes(term) inside the filter <br>
+- The .filter() condition: page.title.toLowerCase().includes(term)<br>
+- "calendar" in:searchPages(pages, "calendar")
+
+</p>
+</div>
+</details>
+
 ---
 
 ## Breaking it down
@@ -68,7 +82,11 @@ It looks at each page and checks whether the title includes the search term (lik
 This line runs the function using the original data.
 The result is a new array that contains only the pages that match the search term.
 
+<div style="clear:both;"></div>
+
 ---
+
+
 ## What's next?
 
 Let's see what our final function, the sorting function, does.

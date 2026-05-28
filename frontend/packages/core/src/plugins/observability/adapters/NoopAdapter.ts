@@ -19,9 +19,13 @@ export class NoopAdapter extends BaseAdapter {
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined {
     void error;
     void context;
+    return undefined;
   }
 
   /**

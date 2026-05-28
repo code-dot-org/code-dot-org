@@ -931,6 +931,7 @@ en:
         pl-teaching-moves-paradigm-shift: 'Teaching Moves: Navigating the Paradigm Shift'
         pl-teaching-moves-assessment-in-the-age-of-ai: 'Teaching Moves: Assessment in the Age of AI'
         pl-aif2-filtering-data-u3: Filtering Data U3 Movie filter
+        pl-aif2-teaching-moves-coding-with-ai: Teaching Coding + AI
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
