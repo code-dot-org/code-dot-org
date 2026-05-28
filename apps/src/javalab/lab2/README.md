@@ -97,7 +97,7 @@ come in a later phase. Differences from legacy use:
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
   is supported in Phase 1).
 
-## Phase 1 (current status of conversion)
+## Current Status of Conversion
 
 - Per-level `uses_lab2` opt-in for `Javalab` (`dancelab` pattern).
 - Horizontal layout (`layout/HorizontalLayout.tsx`)
@@ -112,6 +112,7 @@ come in a later phase. Differences from legacy use:
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
   and committing a named version for free.
+- Can create/edit start sources and exemplars.
 
 ## Deferred to later phases
 - **Validation** (`get_validations` override on `Javalab`,
