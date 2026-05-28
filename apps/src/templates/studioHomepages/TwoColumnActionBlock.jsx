@@ -65,6 +65,14 @@ export default function TwoColumnActionBlock({
                   color="primary"
                   href={button.url}
                   target={button.target}
+                  // Mirror the legacy Button's reverse-tabnabbing protection:
+                  // MUI Button does not auto-add `rel` when rendering as an
+                  // anchor with target="_blank", so we set it ourselves.
+                  rel={
+                    button.target === '_blank'
+                      ? 'noopener noreferrer'
+                      : undefined
+                  }
                   id={button.id}
                   onClick={button.onClick}
                   aria-label={button.ariaLabel}
@@ -98,6 +106,8 @@ TwoColumnActionBlock.propTypes = {
       extraText: PropTypes.string,
       target: PropTypes.string,
       id: PropTypes.string,
+      onClick: PropTypes.func,
+      ariaLabel: PropTypes.string,
     })
   ),
 
