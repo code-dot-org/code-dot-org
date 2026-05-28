@@ -8,6 +8,7 @@ import {
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '@cdo/apps/sketchlab/reactFlow/constants';
 import {useToolbarVisibility} from '@cdo/apps/sketchlab/reactFlow/context';
 import {useLineToolbar} from '@cdo/apps/sketchlab/reactFlow/hooks/useLineToolbar';
+
 import ImageNodeToolbar from '../ImageNodeToolbar';
 import LineEdgeToolbar from '../LineEdgeToolbar';
 import ShapeNodeToolbar from '../ShapeNodeToolbar';
