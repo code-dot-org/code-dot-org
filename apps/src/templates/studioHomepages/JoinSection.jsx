@@ -122,7 +122,10 @@ export default class JoinSection extends React.Component {
           <TextField
             name="sectionCode"
             size="s"
-            className="ui-test-join-section"
+            // `id` is forwarded to the inner <input>; `className` lands on the
+            // FormFieldWrapper label instead. UI tests still query the input
+            // via `#ui-test-join-section`.
+            id="ui-test-join-section"
             value={this.state.sectionCode}
             onChange={this.handleChange}
             onKeyUp={this.handleKeyUp}

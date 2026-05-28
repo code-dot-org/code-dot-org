@@ -124,6 +124,7 @@ JoinSectionSuccessNotification.propTypes = {
 const LeaveSectionSuccessNotification = ({sectionName, sectionId, onClose}) => (
   <NotificationBanner
     variant="success"
+    className={styles.banner}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}
     description={i18n.sectionsNotificationLeaveSuccess({
@@ -235,6 +236,7 @@ JoinSectionParticipantNotification.propTypes =
 const JoinSectionExistsNotification = ({sectionName, onClose}) => (
   <NotificationBanner
     variant="success"
+    className={styles.banner}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}
     description={i18n.sectionsNotificationJoinExists({sectionName})}

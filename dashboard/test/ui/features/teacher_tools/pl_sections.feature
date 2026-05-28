@@ -142,7 +142,7 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
@@ -158,7 +158,7 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You do not have the permissions to join section"
@@ -177,7 +177,7 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
@@ -195,7 +195,7 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
@@ -213,7 +213,7 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
 
@@ -231,6 +231,6 @@ Feature: Professional learning Sections
 
     And I wait until element "button.ui-test-join-section" is visible
     And I scroll the "button.ui-test-join-section" element into view
-    And I enter the section code into "input.ui-test-join-section"
+    And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then the professional learning joined sections table should have 1 row
