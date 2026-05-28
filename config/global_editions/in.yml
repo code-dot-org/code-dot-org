@@ -174,4 +174,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /in/en/professional-learning/courses
