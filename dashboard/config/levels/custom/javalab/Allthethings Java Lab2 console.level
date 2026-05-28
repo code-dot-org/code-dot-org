@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2026-05-20T18:08:36.000Z",
   "level_num": "custom",
@@ -13,18 +12,28 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyClass.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!\");\n  }\n}\n",
-        "isVisible": true
+        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!\");\n    HiddenClass.printHi();\n  }\n}\n",
+        "isVisible": true,
+        "isValidation": false,
+        "isOpen": true,
+        "isActive": true,
+        "tabOrder": 0
+      },
+      "HiddenClass.java": {
+        "text": "public class HiddenClass {\n  public static void printHi() {\n    System.out.println(\"hi\");\n  }\n}",
+        "isVisible": false,
+        "isValidation": false,
+        "isOpen": false,
+        "isActive": false,
+        "tabOrder": 1
       }
     },
     "ai_tutor_available": "false",
     "submittable": "false",
-    "encrypted_examples": [
-
-    ],
     "uses_lab2": "true"
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:18 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:25 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

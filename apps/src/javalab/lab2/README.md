@@ -121,12 +121,6 @@ come in a later phase. Differences from legacy use:
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **start_sources and exemplar edit modes** — save flow now writes
-  the legacy flat shape (split into `start_sources` + `validation` for
-  start mode, single flat `exemplar_sources` for exemplar mode). The
-  override is wired through `useSource`'s `levelbuilderSaveOverrides`
-  parameter; see `Javalab2View.tsx`. Still missing: any javalab2-only
-  start_sources UX (e.g. picking which files are validation vs starter).
 - **Starter assets** and image asset support in general.
 - **TS port of `JavabuilderConnection`** — currently imported from
   `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
