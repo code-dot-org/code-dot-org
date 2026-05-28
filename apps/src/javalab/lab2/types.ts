@@ -29,9 +29,8 @@ export type JavalabFlatSource = Record<string, JavalabFlatFile>;
 // requires `ProjectSources | MultiFileSource`, and JavalabFlatSource is
 // assignable to neither. Use `flatSourceFromLevelProperties` to read.
 //
-// `validation` is the decrypted validation map. Only sent in start mode
-// and only to levelbuilders; everyone else gets a names-only stub
-// (`{filename => ""}`) from the Ruby summarize.
+// `validation` is the decrypted validation map. Only sent to levelbuilders;
+// everyone else gets a names-only stub (`{filename => ""}`).
 export interface JavalabLevelProperties extends CodebridgeLevelProperties {
   csaViewMode?: CsaViewMode;
   validation?: JavalabFlatSource;

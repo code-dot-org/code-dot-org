@@ -66,10 +66,8 @@ export async function handleRunClick(
     ?.getChannelId();
 
   // Levelbuilder edit modes (start / exemplar) and any read-only viewer
-  // don't have a channel id.
-  // Send the in-memory source as override sources instead.
-  // Strip validation files: they aren't part of
-  // the program being executed (legacy `getSources` strips them too).
+  // don't have a channel id. Send the in-memory source as override sources instead.
+  // Strip validation files: they aren't part of the program being executed.
   const useOverrideSources =
     getIsStartMode() ||
     getAppOptionsEditingExemplar() ||
