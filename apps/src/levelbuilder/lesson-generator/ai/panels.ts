@@ -16,7 +16,10 @@ import {
 } from '../../curriculum-generator/ai/shared';
 import {uploadLevelAsset} from '../levelApi';
 
-const PANEL_LAYOUTS = [
+// Exported so the slides generator (which also produces Panels-app
+// panels) can reuse the same enum values for its plan schema and
+// layout-normalisation without copy-pasting.
+export const PANEL_LAYOUTS = [
   'text-top-left',
   'text-top-center',
   'text-top-right',
@@ -146,9 +149,12 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
 }
 
 // Generates a single panel image, uploads it as a level asset, and returns
-// the public asset URL. We feed the image prompt to gemini-2.5-flash-image
-// and grab the first image file the model emits.
-async function generateAndUploadPanelImage(
+// the public asset URL. We feed the image prompt to the image model and
+// grab the first image file it emits.
+//
+// Exported so the slides generator can reuse the no-text constraint
+// prose and the asset-upload plumbing without copy-pasting.
+export async function generateAndUploadPanelImage(
   imagePrompt: string,
   levelName: string,
   panelIndex: number

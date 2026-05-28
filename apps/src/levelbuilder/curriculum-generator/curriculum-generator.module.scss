@@ -309,6 +309,34 @@
   margin-top: 8px;
 }
 
+.dialogNote {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+// Progress-bar pieces for the per-item generation dialog. Used by both
+// the lesson generator (per-level progress) and the slides generator
+// (per-slide progress); colour + sizing identical across pages.
+.progressLine {
+  font-family: monospace;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.progressBarOuter {
+  background: #eee;
+  border-radius: 4px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progressBarInner {
+  background: #0094ca;
+  height: 100%;
+  transition: width 0.2s ease;
+}
+
 .summaryBad {
   color: #c33;
 }

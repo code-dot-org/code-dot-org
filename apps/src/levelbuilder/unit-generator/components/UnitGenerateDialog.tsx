@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Dialog from '../../curriculum-generator/components/Dialog';
 import {UnitGenerationSummary} from '../types';
 
 import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
@@ -28,66 +29,63 @@ const UnitGenerateDialog: React.FC<UnitGenerateDialogProps> = ({
 }) => {
   const showingSummary = summary !== null && !isSaving;
   return (
-    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={sharedStyles.dialog}>
-        {!showingSummary && (
-          <>
-            <h2>{error ? 'Save failed' : 'Saving lessons…'}</h2>
-            {error ? (
-              <p className={sharedStyles.summaryBad} role="alert">
-                {error}
-              </p>
-            ) : (
-              <p>
-                Writing {totalToSave} lesson{totalToSave === 1 ? '' : 's'} to
-                this unit. This usually takes a moment.
-              </p>
-            )}
-          </>
-        )}
-        {showingSummary && summary && (
-          <>
-            <h2>Lessons saved</h2>
-            <p>
-              <strong>{summary.total}</strong> lesson
-              {summary.total === 1 ? '' : 's'} are now attached to this unit.
-              Open each one's <code>/generate</code> page to flesh out its
-              content.
+    <Dialog>
+      {!showingSummary && (
+        <>
+          <h2>{error ? 'Save failed' : 'Saving lessons…'}</h2>
+          {error ? (
+            <p className={sharedStyles.summaryBad} role="alert">
+              {error}
             </p>
-            <ul className={moduleStyles.summaryList}>
-              {summary.lessons.map((l, i) => (
-                <li key={i}>
-                  <a href={l.lessonGeneratePath}>{l.name}</a>
-                  {l.isNew && <span className={moduleStyles.tagNew}>new</span>}
-                  {l.createdSeparately && (
-                    <span className={moduleStyles.muted}> no prompt</span>
-                  )}{' '}
-                  <a className={moduleStyles.muted} href={l.lessonEditPath}>
-                    edit
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </>
+          ) : (
+            <p>
+              Writing {totalToSave} lesson{totalToSave === 1 ? '' : 's'} to this
+              unit. This usually takes a moment.
+            </p>
+          )}
+        </>
+      )}
+      {showingSummary && summary && (
+        <>
+          <h2>Lessons saved</h2>
+          <p>
+            <strong>{summary.total}</strong> lesson
+            {summary.total === 1 ? '' : 's'} are now attached to this unit. Open
+            each one's <code>/generate</code> page to flesh out its content.
+          </p>
+          <ul className={moduleStyles.summaryList}>
+            {summary.lessons.map((l, i) => (
+              <li key={i}>
+                <a href={l.lessonGeneratePath}>{l.name}</a>
+                {l.isNew && <span className={moduleStyles.tagNew}>new</span>}
+                {l.createdSeparately && (
+                  <span className={moduleStyles.muted}> no prompt</span>
+                )}{' '}
+                <a className={moduleStyles.muted} href={l.lessonEditPath}>
+                  edit
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      <div className={sharedStyles.dialogActions}>
+        {(showingSummary || error) && (
+          <button
+            type="button"
+            className={sharedStyles.secondaryButton}
+            onClick={onClose}
+          >
+            Stay here
+          </button>
         )}
-        <div className={sharedStyles.dialogActions}>
-          {(showingSummary || error) && (
-            <button
-              type="button"
-              className={sharedStyles.secondaryButton}
-              onClick={onClose}
-            >
-              Stay here
-            </button>
-          )}
-          {showingSummary && (
-            <a href={editUnitUrl} className={sharedStyles.primaryButton}>
-              Back to unit editor
-            </a>
-          )}
-        </div>
+        {showingSummary && (
+          <a href={editUnitUrl} className={sharedStyles.primaryButton}>
+            Back to unit editor
+          </a>
+        )}
       </div>
-    </div>
+    </Dialog>
   );
 };
 

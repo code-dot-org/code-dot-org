@@ -3,6 +3,7 @@ import React, {useCallback, useMemo, useState} from 'react';
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import {loadLessonLevelProperties} from '../curriculum-generator/api/levelProperties';
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
 import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
@@ -25,7 +26,6 @@ import {Placement, rebuildActivities} from './helpers/rebuildActivities';
 import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
-  loadLessonLevelProperties,
   loadProjectSources,
   saveLessonActivities,
   updateLevelProperty,

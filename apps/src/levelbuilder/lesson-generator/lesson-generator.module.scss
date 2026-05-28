@@ -78,33 +78,6 @@
   margin: 0;
 }
 
-// Progress bar in the per-level generation dialog. The bar is a wrap
-// around an inner block whose width animates from 0 → 100%.
-.progressLine {
-  font-family: monospace;
-  font-size: 13px;
-  margin: 4px 0;
-}
-
-.progressBarOuter {
-  background: #eee;
-  border-radius: 4px;
-  height: 12px;
-  overflow: hidden;
-}
-
-.progressBarInner {
-  background: #0094ca;
-  height: 100%;
-  transition: width 0.2s ease;
-}
-
 .summaryGood {
   color: #060;
-}
-
-.dialogNote {
-  font-size: 13px;
-  color: #555;
-  margin-top: 4px;
 }

@@ -1,9 +1,7 @@
 import React from 'react';
 
+import GenerationProgressDialog from '../../curriculum-generator/components/GenerationProgressDialog';
 import {ProgressUpdate} from '../types';
-
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
-import moduleStyles from '../lesson-generator.module.scss';
 
 const phaseLabel = (phase: ProgressUpdate['phase']): string => {
   switch (phase) {
@@ -37,41 +35,29 @@ const ProgressDialog: React.FC<ProgressDialogProps> = ({
         progress.totalLevels
       : 0;
   return (
-    <div className={sharedStyles.dialogBackdrop} role="dialog" aria-modal>
-      <div className={sharedStyles.dialog}>
-        <h2>{isGenerating ? 'Generating…' : 'Done'}</h2>
-        {progress && (
-          <>
-            <div>
-              Level {progress.levelIndex + 1} of {progress.totalLevels}
-              {progress.levelName && (
-                <>
-                  {' '}
-                  — <code>{progress.levelName}</code>
-                </>
-              )}
-            </div>
-            <div>
-              <strong>{phaseLabel(progress.phase)}</strong>
-              {progress.detail ? `: ${progress.detail}` : ''}
-            </div>
-          </>
-        )}
-        <div className={moduleStyles.progressBarOuter}>
-          <div
-            className={moduleStyles.progressBarInner}
-            style={{width: `${Math.min(100, fraction * 100)}%`}}
-          />
-        </div>
-        <div>
-          {log.slice(-10).map((line, i) => (
-            <div className={moduleStyles.progressLine} key={i}>
-              {line}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <GenerationProgressDialog
+      isBusy={isGenerating}
+      fraction={fraction}
+      log={log}
+    >
+      {progress && (
+        <>
+          <div>
+            Level {progress.levelIndex + 1} of {progress.totalLevels}
+            {progress.levelName && (
+              <>
+                {' '}
+                — <code>{progress.levelName}</code>
+              </>
+            )}
+          </div>
+          <div>
+            <strong>{phaseLabel(progress.phase)}</strong>
+            {progress.detail ? `: ${progress.detail}` : ''}
+          </div>
+        </>
+      )}
+    </GenerationProgressDialog>
   );
 };
 

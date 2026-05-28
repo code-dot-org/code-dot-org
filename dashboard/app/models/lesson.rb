@@ -76,6 +76,7 @@ class Lesson < ApplicationRecord
     announcements
     assessment_opportunities
     generate_outline
+    generate_slides_outline
     generate_project_channel_id
   )
 
@@ -497,6 +498,40 @@ class Lesson < ApplicationRecord
       rubric: rubric,
       generateOutline: generate_outline,
       generateProjectChannelId: generate_project_channel_id,
+      unitName: script&.localized_title,
+      unitOutline: script&.generate_outline,
+    }
+  end
+
+  # A lesson can own a deck of intro slides (panels-app panels played
+  # to students before the lesson begins). The actual on-disk JSON
+  # file and its read/write operations live in the Slides class so the
+  # slides feature isn't bound to Lesson — units, courses, or levels
+  # could grow their own decks the same way.
+  def slides
+    Slides.new(
+      owner_kind: :lesson,
+      owner_id: id,
+      path_segments: [
+        script&.name.presence || "unit-#{script_id || 'orphan'}",
+        key.presence || "lesson-#{id}",
+      ]
+    )
+  end
+
+  # Compact payload for the /slides/generate page. Includes the saved
+  # outline prompt (generate_slides_outline) and the persisted slides JSON
+  # so the page can restore both on reload. Keeps the AI's lesson-context
+  # gathering as a separate client-side fetch (loadLessonLevelProperties),
+  # since that data is already exposed for the per-level /generate page.
+  def summarize_for_slides_generate
+    {
+      id: id,
+      name: name,
+      generateSlidesOutline: generate_slides_outline,
+      slides: slides.read['slides'] || [],
+      slidesFilePath: slides.relative_path,
+      generateOutline: generate_outline,
       unitName: script&.localized_title,
       unitOutline: script&.generate_outline,
     }
