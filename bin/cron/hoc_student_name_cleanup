@@ -19,7 +19,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # track when the name is added to the table and update the logic in this script
 # accordingly.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
 require 'optparse'
 require 'optparse/date'
 require 'cdo/db'

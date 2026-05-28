@@ -1,4 +1,4 @@
-require_relative '../src/env'
+require_relative '../../lib/cdo/pegasus/env'
 
 require 'cdo/db'
 require 'cdo/languages'

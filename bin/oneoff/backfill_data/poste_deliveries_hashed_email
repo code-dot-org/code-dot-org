@@ -3,7 +3,7 @@
 # This script populates the hashed_email column of the pegasus poste_deliveries
 # table.
 
-require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../../lib/cdo/pegasus/env', __FILE__)
 require 'digest/md5'
 require src_dir 'database'
 

@@ -5,7 +5,7 @@ require_relative './test_helper'
 require 'minitest/autorun'
 require 'rubygems'
 require 'pdf-reader'
-require_relative '../src/env'
+require_relative '../../lib/cdo/pegasus/env'
 require 'pdf/collate'
 
 class PDFMergerTest < Minitest::Test

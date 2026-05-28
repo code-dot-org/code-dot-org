@@ -1,4 +1,4 @@
-require File.expand_path('../env', __FILE__)
+require_relative '../../lib/cdo/pegasus/env'
 require 'cdo/rack/request'
 require 'cdo/yaml'
 require 'json'

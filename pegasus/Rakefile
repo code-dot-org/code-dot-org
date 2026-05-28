@@ -1,4 +1,4 @@
-require_relative 'src/env'
+require_relative '../lib/cdo/pegasus/env'
 
 SECONDS_TO_WAIT = 60
 TIMES_TO_TRY = 5

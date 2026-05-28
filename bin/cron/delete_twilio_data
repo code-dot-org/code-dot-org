@@ -6,7 +6,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # through their service. Doing so both protects our users (reducing PII data)
 # and reduces our costs (reducing media storage costs).
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
 require 'honeybadger'
 require 'date'
 require 'twilio-ruby'

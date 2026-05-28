@@ -14,7 +14,7 @@
 # This script was run on production from 2021-02-17 5:00pm to 2021-02-18 2:48am PST
 # with the following parameters: --start-id=0 --end_id=1000000000 --sleep=0
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
 require 'cdo/db'
 require 'optparse'
 
