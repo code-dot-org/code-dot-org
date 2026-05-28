@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {ColorSwatch} from '../toolbarPalettes';
+import {ColorSwatch} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
 
 import TransparentSwatchIcon from './TransparentSwatchIcon';
 

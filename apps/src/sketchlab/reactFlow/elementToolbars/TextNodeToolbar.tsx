@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {DEFAULT_ROTATION} from '../constants';
-import {TextNodeType} from '../types';
+import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
+import {TextNodeType} from '@cdo/apps/sketchlab/reactFlow/types';
 
 import LockedNotice from './components/LockedNotice';
 import ToolbarSection from './components/ToolbarSection';

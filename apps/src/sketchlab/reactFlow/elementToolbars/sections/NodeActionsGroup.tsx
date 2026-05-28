@@ -1,8 +1,14 @@
 import {useReactFlow} from '@xyflow/react';
 import React from 'react';
 
-import {useClipboard, usePushSnapshot} from '../../context';
-import {newBackZIndex, newFrontZIndex} from '../../utils/stacking';
+import {
+  useClipboard,
+  usePushSnapshot,
+} from '@cdo/apps/sketchlab/reactFlow/context';
+import {
+  newBackZIndex,
+  newFrontZIndex,
+} from '@cdo/apps/sketchlab/reactFlow/utils/stacking';
 
 import ActionsGroup from './ActionsGroup';
 
