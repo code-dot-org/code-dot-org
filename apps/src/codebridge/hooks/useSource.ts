@@ -22,13 +22,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useInitialSources} from './useInitialSources';
 
 // Overrides for the levelbuilder save payload. A lab that stores its
-// sources in a non-codebridge wire format (e.g. Javalab's legacy flat
-// shape) passes these to convert MultiFileSource → its own shape
-// before POSTing. When omitted, useSource posts the default codebridge
-// MultiFileSource payload.
+// sources in a non-codebridge wire format (e.g. Javalab)
+// passes these to convert MultiFileSource → its own shape
+// before POSTing.
 export interface LevelbuilderSaveOverrides {
-  buildStartSavePayload?: (source: MultiFileSource | undefined) => object;
-  buildExemplarSavePayload?: (source: MultiFileSource | undefined) => object;
+  buildStartSavePayload: (source: MultiFileSource | undefined) => object;
+  buildExemplarSavePayload: (source: MultiFileSource | undefined) => object;
 }
 
 // Hook for handling the project source for the current level.

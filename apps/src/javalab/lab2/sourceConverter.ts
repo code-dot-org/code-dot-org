@@ -138,13 +138,12 @@ export function multiFileToFlat(
   return flat;
 }
 
-// Levelbuilder save: split a MultiFileSource into the two fields the
-// Rails update_start_code endpoint expects for Javalab — `start_sources`
+// Levelbuilder save: split a MultiFileSource into `start_sources`
 // (everything except validation, in the flat shape) and `validation`
 // (validation files only, in the legacy `{text, tabOrder?}` shape).
 // The validation map is fed through `@level.validation=`, which encrypts
 // it into `encrypted_validation`; legacy Javalab readers expect just
-// {text, tabOrder} there, so we strip the type-discriminating fields.
+// {text, tabOrder} there, so we strip irrelevant fields.
 export function splitForLevelbuilderSave(
   source: MultiFileSource | null | undefined
 ): {startSources: JavalabFlatSource; validation: JavalabFlatSource} {

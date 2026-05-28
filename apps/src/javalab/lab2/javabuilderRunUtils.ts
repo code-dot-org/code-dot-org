@@ -4,11 +4,11 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
 import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditingExemplar,
   getIsStartMode,
 } from '@cdo/apps/lab2/projects/utils';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -66,11 +66,9 @@ export async function handleRunClick(
     ?.getChannelId();
 
   // Levelbuilder edit modes (start / exemplar) and any read-only viewer
-  // don't have a meaningful per-user channel for Javabuilder to read.
-  // Send the in-memory source as override sources instead — same path
-  // legacy Javalab takes. As a side effect this skips Javabuilder's
-  // "project not edited yet" guard, which would otherwise fire whenever
-  // channelId is absent. Strip validation files: they aren't part of
+  // don't have a channel id.
+  // Send the in-memory source as override sources instead.
+  // Strip validation files: they aren't part of
   // the program being executed (legacy `getSources` strips them too).
   const useOverrideSources =
     getIsStartMode() ||

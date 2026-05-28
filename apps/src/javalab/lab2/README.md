@@ -114,10 +114,12 @@ come in a later phase. Differences from legacy use:
   and committing a named version for free.
 - Can create/edit start sources and exemplars.
 
-## Deferred to later phases
+## To Dos
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
 - **File name validation** there is no checks for invalid file names yet.
+- **Support locked starter files** you can lock starter files in start mode,
+but we don't persist that information yet.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**

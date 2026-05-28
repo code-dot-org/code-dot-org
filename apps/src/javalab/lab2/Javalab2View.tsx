@@ -82,10 +82,6 @@ const Javalab2View: React.FunctionComponent<
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
   // Convert here before passing to codebridge.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
-    console.log('converting level properties for codebridge', {
-      levelProperties,
-      startMode: getIsStartMode(),
-    });
     const flatTemplate = levelProperties.templateSources as
       | JavalabFlatSource
       | undefined;
@@ -93,18 +89,11 @@ const Javalab2View: React.FunctionComponent<
       | JavalabFlatSource
       | undefined;
 
-    // In start mode the controller decrypts and sends the validation map
-    // alongside start_sources (see levels_controller#edit_blocks). Merge
-    // it into the flat start_sources tagged isValidation=true so
-    // flatToMultiFile turns them into VALIDATION-typed ProjectFiles —
-    // codebridge's shouldShowFile then surfaces them in start mode while
-    // hiding them everywhere else.
     let flatStart = levelProperties.startSources as
       | JavalabFlatSource
       | undefined;
+    // In start mode, merge in validation files.
     if (getIsStartMode() && levelProperties.validation) {
-      console.log(`in start mode, have validation`);
-      console.log({validation: levelProperties.validation});
       const validationFiles: JavalabFlatSource = {};
       for (const [name, entry] of Object.entries(levelProperties.validation)) {
         validationFiles[name] = {...entry, isValidation: true, isVisible: true};
@@ -122,9 +111,7 @@ const Javalab2View: React.FunctionComponent<
 
   // Levelbuilder save needs Javalab's flat shape, not codebridge's
   // MultiFileSource. For start mode, split validation files off into a
-  // separate `validation` field — that's what Rails update_start_code
-  // pipes through `@level.validation=` for encryption. For exemplar mode,
-  // exemplar_sources stays one flat hash (validation included).
+  // separate `validation` field, for consistency with legacy.
   const levelbuilderSaveOverrides = useMemo<LevelbuilderSaveOverrides>(
     () => ({
       buildStartSavePayload: source => {
