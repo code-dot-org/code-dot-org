@@ -36,12 +36,13 @@ module DataClassification
 
   CLASSIFICATIONS = %i[public confidential restricted highly_restricted].freeze
 
-  # Fail-safe defaults for undeclared columns, by data type. Text and non-timestamp
-  # date/time columns are assumed to contain PII (:restricted); timestamps and scalar
-  # types are assumed safe (:public). This reproduces the analytics export's prior
-  # data-type heuristic, but the default is a general "when in doubt, treat as
-  # restricted" policy any consumer can rely on.
-  TEXT_DATA_TYPES = %i[string text].freeze
+  # Fail-safe defaults for undeclared columns, by data type. Free-text and JSON columns
+  # and non-timestamp date/time columns are assumed to contain PII (:restricted);
+  # timestamps and scalar numeric types are assumed safe (:public). JSON columns are
+  # property bags that routinely hold free-form user content, so they are treated as
+  # text. This is a general "when in doubt, treat as restricted" policy any consumer
+  # can rely on.
+  TEXT_DATA_TYPES = %i[string text json jsonb].freeze
   DATE_TIME_DATA_TYPES = %i[date datetime timestamp].freeze
   NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
 

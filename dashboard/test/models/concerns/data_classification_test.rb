@@ -53,6 +53,13 @@ class DataClassificationTest < ActiveSupport::TestCase
     assert_equal :restricted, model.effective_data_classification('title')
   end
 
+  test 'effective_data_classification defaults json columns to restricted' do
+    # JSON columns are property bags that routinely hold free-form user content.
+    model = build_model(columns: [mock_column('new_message', :json), mock_column('settings', :jsonb)])
+    assert_equal :restricted, model.effective_data_classification('new_message')
+    assert_equal :restricted, model.effective_data_classification('settings')
+  end
+
   test 'effective_data_classification defaults timestamp columns to public' do
     columns = %w[created_at updated_at deleted_at].map {|c| mock_column(c, :datetime)}
     model = build_model(columns: columns)
