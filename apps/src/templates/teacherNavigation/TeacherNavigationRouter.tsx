@@ -77,7 +77,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  logoTransitionGifUrl?: string;
+  logoTransitionAnimatedUrl?: string;
   logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
@@ -88,7 +88,7 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  logoTransitionGifUrl,
+  logoTransitionAnimatedUrl,
   logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
@@ -132,7 +132,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <div>
                 <TeacherHomepage
                   studioUrlPrefix={studioUrlPrefix}
-                  logoTransitionGifUrl={logoTransitionGifUrl}
+                  logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
                   logoTransitionMp4Url={logoTransitionMp4Url}
                   logoSvgUrl={logoSvgUrl}
                 />
@@ -361,7 +361,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAiChatSettings,
       selectedSection,
       studioUrlPrefix,
-      logoTransitionGifUrl,
+      logoTransitionAnimatedUrl,
       logoTransitionMp4Url,
       logoSvgUrl,
     ]

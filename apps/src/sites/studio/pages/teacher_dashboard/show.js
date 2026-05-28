@@ -50,7 +50,7 @@ const {
   sectionOrder,
   providers,
   flash,
-  logoTransitionGifUrl,
+  logoTransitionAnimatedUrl,
   logoTransitionMp4Url,
   logoSvgUrl,
 } = scriptData;
@@ -108,14 +108,14 @@ $(document).ready(function () {
       {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
         <TeacherHomepage
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          logoTransitionGifUrl={logoTransitionGifUrl}
+          logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
           logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          logoTransitionGifUrl={logoTransitionGifUrl}
+          logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
           logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />

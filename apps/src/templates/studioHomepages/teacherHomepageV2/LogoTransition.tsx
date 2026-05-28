@@ -4,7 +4,9 @@ import {createPortal} from 'react-dom';
 import styles from './logoTransition.module.scss';
 
 interface LogoTransitionProps {
-  gifSrc: string;
+  // Looping animated image (AVIF by default; works with any format <img>
+  // can render).
+  animatedSrc: string;
   mp4Src?: string;
   svgSrc: string;
 }
@@ -15,10 +17,11 @@ interface LogoTransitionProps {
 // then lands the resulting static SVG into the empty header slot. The
 // modal-to-header motion is a slide, not a morph.
 
-// Calibrated to the GIF asset's runtime; GIFs do not fire an "ended" event,
-// so without the ?logo-mp4=true override we wait on a fixed timer.
+// Calibrated to the animated image asset's runtime; animated <img>s (GIF,
+// AVIF, etc.) do not fire an "ended" event, so without the ?logo-mp4=true
+// override we wait on a fixed timer.
 const OPEN_FADE_MS = 300;
-const GIF_DURATION_MS = 8000;
+const ANIMATED_DURATION_MS = 8000;
 const HOLD_MS = 500;
 const LAND_MS = 700;
 
@@ -31,17 +34,17 @@ const HEADER_LOGO_SELECTOR = '#header_logo_container';
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
 // opening: backdrop fades in; media not yet rendered.
-// gif:     GIF loops (or MP4 plays once) over the dimmer.
-// hold:    GIF/video stays on its last frame for HOLD_MS.
+// playing: animated image loops (or MP4 plays once) over the dimmer.
+// hold:    image/video stays on its last frame for HOLD_MS.
 // landing: media slides from viewport center to the header slot while the
-//          GIF/video fades out and the SVG fades in.
+//          image/video fades out and the SVG fades in.
 // done:    media has landed; SVG sits where the native logo would.
-type Phase = 'opening' | 'gif' | 'hold' | 'landing' | 'done';
+type Phase = 'opening' | 'playing' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
 
 const LogoTransition: React.FC<LogoTransitionProps> = ({
-  gifSrc,
+  animatedSrc,
   mp4Src,
   svgSrc,
 }) => {
@@ -128,25 +131,26 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   }, [mountTarget]);
 
   // Hold in the opening phase long enough for the backdrop + card fade-in
-  // to finish, then advance to 'gif' so the <img>/<video> is mounted and
-  // starts loading/playing.
+  // to finish, then advance to 'playing' so the <img>/<video> is mounted
+  // and starts loading/playing.
   useEffect(() => {
     if (phase !== 'opening') return;
-    const t = window.setTimeout(() => setPhase('gif'), OPEN_FADE_MS);
+    const t = window.setTimeout(() => setPhase('playing'), OPEN_FADE_MS);
     return () => window.clearTimeout(t);
   }, [phase]);
 
   // Drive the play phase. With ?logo-mp4=true we wait on the <video>'s
-  // 'ended' event; otherwise on a calibrated timer for the looping GIF.
+  // 'ended' event; otherwise on a calibrated timer for the looping
+  // animated image.
   useEffect(() => {
-    if (phase !== 'gif') return;
+    if (phase !== 'playing') return;
     if (useVideo) {
       // Some browsers refuse autoplay even with muted+playsinline if the
       // play() call is deferred too long; kick it off explicitly here.
       videoRef.current?.play().catch(() => {});
       return;
     }
-    const t = window.setTimeout(() => setPhase('hold'), GIF_DURATION_MS);
+    const t = window.setTimeout(() => setPhase('hold'), ANIMATED_DURATION_MS);
     return () => window.clearTimeout(t);
   }, [phase, useVideo]);
 
@@ -176,12 +180,13 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   if (!mountTarget) return null;
 
   const showMedia = phase !== 'opening';
-  const gifHidden = phase !== 'gif' && phase !== 'hold';
+  const animatedHidden = phase !== 'playing' && phase !== 'hold';
   // Hold the SVG hidden through the opening, play, and end-of-play hold;
   // it only starts fading in once the card begins sliding, so the final
   // logo appears together with the slide rather than blooming inside the
   // still-modal-sized card.
-  const svgHidden = phase === 'opening' || phase === 'gif' || phase === 'hold';
+  const svgHidden =
+    phase === 'opening' || phase === 'playing' || phase === 'hold';
   const backdropFading = phase === 'landing' || phase === 'done';
 
   const backdropClassName = [
@@ -215,15 +220,15 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 playsInline
                 onEnded={handleVideoEnded}
                 className={`${styles.image} ${
-                  gifHidden ? styles.imageHidden : ''
+                  animatedHidden ? styles.imageHidden : ''
                 }`}
               />
             ) : (
               <img
-                src={gifSrc}
+                src={animatedSrc}
                 alt=""
                 className={`${styles.image} ${
-                  gifHidden ? styles.imageHidden : ''
+                  animatedHidden ? styles.imageHidden : ''
                 }`}
               />
             ))}

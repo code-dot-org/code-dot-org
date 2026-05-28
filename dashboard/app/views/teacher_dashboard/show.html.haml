@@ -30,7 +30,7 @@
   teacher_dashboard_data[:providers] = @current_user.providers
   teacher_dashboard_data[:flash] = @flash if @flash.present?
   if Cdo::Brand.current_brand_code(request) == Cdo::Brand::BRAND_CODEAI
-    teacher_dashboard_data[:logoTransitionGifUrl] = asset_path('logo-codeai-transition.gif')
+    teacher_dashboard_data[:logoTransitionAnimatedUrl] = asset_path('logo-codeai-transition.avif')
     teacher_dashboard_data[:logoTransitionMp4Url] = asset_path('logo-codeai-transition.mp4')
     teacher_dashboard_data[:logoSvgUrl] = asset_path('logo-codeai-inverse.svg')
   end
