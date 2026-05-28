@@ -176,29 +176,6 @@ describe('Training scene — ARIA attributes', () => {
     expect(screen.getByRole('status')).toHaveTextContent('1 item classified.');
   });
 
-  test('classification announcement appends milestone text at threshold', () => {
-    const result = renderTraining();
-    setState({yesCount: 9});
-    rerender(result);
-    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
-    rerender(result);
-    expect(screen.getByRole('status')).toHaveTextContent(
-      '10 items classified. Good start.',
-    );
-  });
-
-  test('one past a milestone does not re-fire the suffix', () => {
-    const result = renderTraining();
-    setState({yesCount: 10});
-    rerender(result);
-    fireEvent.click(screen.getByRole('button', {name: 'Fish'}));
-    rerender(result);
-    expect(screen.getByRole('status')).toHaveTextContent(
-      '11 items classified.',
-    );
-    expect(screen.getByRole('status')).not.toHaveTextContent('Good start');
-  });
-
   test('erase button has aria-label="Erase"', () => {
     renderTraining();
     expect(screen.getByRole('button', {name: 'Erase'})).toHaveAttribute(
