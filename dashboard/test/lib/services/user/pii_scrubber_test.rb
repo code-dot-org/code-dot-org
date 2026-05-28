@@ -220,5 +220,31 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         _ {scrub_pii}.must_change -> {user_facilitator_info.destroyed?}, from: false, to: true
       end
     end
+
+    context 'when user is a demo student' do
+      let(:user) do
+        create(:student, :in_email_section, name: 'Demo Alice', family_name: 'Anderson').tap do |student|
+          DemoStudent.create!(user: student, demo_type: 'high')
+        end
+      end
+
+      it 'preserves profile data but stamps pii_scrubbed_at' do
+        scrub_pii
+        user.reload
+        _(user.name).must_equal 'Demo Alice'
+        _(user.family_name).must_equal 'Anderson'
+        _(user.pii_scrubbed_at).wont_be_nil
+      end
+
+      it 'skips scrub even if the per-process cache is stale' do
+        Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+        refute Policies::DemoSections.demo_student?(user.id)
+
+        scrub_pii
+        user.reload
+        _(user.name).must_equal 'Demo Alice'
+        _(user.pii_scrubbed_at).wont_be_nil
+      end
+    end
   end
 end
