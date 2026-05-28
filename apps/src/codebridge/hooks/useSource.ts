@@ -84,7 +84,7 @@ export const useSource = (
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        if (levelbuilderSaveOverrides?.buildStartSavePayload) {
+        if (levelbuilderSaveOverrides) {
           return levelbuilderSaveOverrides.buildStartSavePayload(source);
         }
         const {parsedSource, validationFile} =
@@ -104,7 +104,7 @@ export const useSource = (
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
         () => {
-          if (levelbuilderSaveOverrides?.buildExemplarSavePayload) {
+          if (levelbuilderSaveOverrides) {
             return levelbuilderSaveOverrides.buildExemplarSavePayload(source);
           }
           return {exemplar_sources: source};

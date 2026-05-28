@@ -32,10 +32,11 @@ import {
 import HorizontalLayout from './layout/HorizontalLayout';
 import {
   flatToMultiFile,
+  mergeValidationIntoStart,
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
-import {JavalabFlatSource, JavalabLevelProperties} from './types';
+import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -58,10 +59,9 @@ const defaultConfig: ConfigType = {
   },
 };
 
-// Java Lab 2 — minimal Phase 1 lab2 shell. Loads a level, edits code in
-// codebridge, runs against Javabuilder, prints stdout/stderr to the
-// codebridge console. Validation, neighborhood, theater, captcha, backpack,
-// and start_sources edit mode are TODOs.
+// Java Lab 2 — lab2 shell. Loads a level, edits code in codebridge,
+// runs against Javabuilder, prints stdout/stderr to the codebridge
+// console. Open TODOs in the README.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
@@ -82,24 +82,18 @@ const Javalab2View: React.FunctionComponent<
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
   // Convert here before passing to codebridge.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
-    const flatTemplate = levelProperties.templateSources as
-      | JavalabFlatSource
-      | undefined;
-    const flatExemplar = levelProperties.exemplarSources as
-      | JavalabFlatSource
-      | undefined;
-
-    let flatStart = levelProperties.startSources as
-      | JavalabFlatSource
-      | undefined;
-    // In start mode, merge in validation files.
-    if (getIsStartMode() && levelProperties.validation) {
-      const validationFiles: JavalabFlatSource = {};
-      for (const [name, entry] of Object.entries(levelProperties.validation)) {
-        validationFiles[name] = {...entry, isValidation: true, isVisible: true};
-      }
-      flatStart = {...(flatStart ?? {}), ...validationFiles};
-    }
+    const flatTemplate = flatSourceFromLevelProperties(
+      levelProperties.templateSources
+    );
+    const flatExemplar = flatSourceFromLevelProperties(
+      levelProperties.exemplarSources
+    );
+    const flatStartRaw = flatSourceFromLevelProperties(
+      levelProperties.startSources
+    );
+    const flatStart = getIsStartMode()
+      ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
+      : flatStartRaw;
 
     return {
       ...levelProperties,

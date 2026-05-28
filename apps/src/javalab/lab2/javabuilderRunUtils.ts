@@ -50,7 +50,7 @@ export async function handleRunClick(
     levelProperties.csaViewMode &&
     levelProperties.csaViewMode !== 'console'
   ) {
-    // Neighborhood and theater are deferred to a later phase.
+    // Neighborhood and theater are not yet supported.
     writeToConsole(
       `[JAVALAB] csaViewMode='${levelProperties.csaViewMode}' is not yet supported in Java Lab 2; running as console.`
     );
@@ -92,7 +92,7 @@ export async function handleRunClick(
       resolve();
     };
 
-    // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
+    // Bare-minimum wiring for now: console output, no mini-app, no captcha
     // handling, no validation result reporting.
     activeConnection = new JavabuilderConnection(
       writeToConsole,

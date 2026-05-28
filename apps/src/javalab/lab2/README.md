@@ -77,8 +77,8 @@ that format.
 ## Run flow
 
 `javabuilderRunner.ts` reuses the legacy
-`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port can
-come in a later phase. Differences from legacy use:
+`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port is
+still on the TODO list. Differences from legacy use:
 
 - The legacy class reads `project.getCurrentId()` from the legacy
   project singleton, which is not initialized in lab2. The constructor
@@ -95,7 +95,7 @@ come in a later phase. Differences from legacy use:
   so Javabuilder reads fresh source from S3 instead of a stale version.
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
-  is supported in Phase 1).
+  is supported so far).
 
 ## Current Status of Conversion
 
