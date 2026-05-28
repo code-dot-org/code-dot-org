@@ -36,8 +36,14 @@ module Middleware
           # Exclude HoC legacy API routes from Global Edition scope.
           ::HocLegacy::API_ROOT_PATH + '/', # e.g. `/api/hour/`
           # Exclude health check routes such as `/health_check`.
-          Rails.application.routes.url_helpers.health_check_path,
-          Rails.application.routes.url_helpers.home_health_check_path,
+          # These are static literals rather than `url_helpers.*_path` calls on
+          # purpose: this list is memoized and evaluated mid-request inside the
+          # middleware stack, and integration tests that call
+          # `Rails.application.routes.draw` to install a throwaway route wipe the
+          # full route set, leaving those helpers undefined when the middleware
+          # runs (see test/integration/honeybadger_test.rb).
+          '/health_check',
+          '/home/health_check',
         ].freeze
       end
 
