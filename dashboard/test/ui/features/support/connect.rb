@@ -86,10 +86,6 @@ def saucelabs_browser(test_run_name, http_client: nil)
   return browser
 end
 
-# The default per-account limit for concurrent desktop sessions is 50.
-# Because CI runs Device Farm in the codeorg-dev AWS account, this limit
-# is not shared with the prod limits in the prod AWS account, which
-# affect local development and the chef-managed test environment.
 def device_farm_desktop_browser(http_client: nil)
   # One-shot TestGrid URL, ready immediately.
   url = Cdo::AWS::DeviceFarm.create_test_grid_url
