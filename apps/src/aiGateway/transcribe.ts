@@ -45,7 +45,10 @@ async function transcribeThroughGateway(
       `${AI_GATEWAY_URL}/transcribe`,
       formData,
       false,
-      {'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION, ...turnstileHeaders(turnstileToken)}
+      {
+        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+        ...turnstileHeaders(turnstileToken),
+      }
     );
 
     const rawResponse = await response.json();
