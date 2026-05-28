@@ -5,7 +5,6 @@ import {
   createQuizWhenHandlers,
   nextButton,
   withSparkle,
-  nextButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
