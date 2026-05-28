@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import GenericButton from './../GenericButton';
 
@@ -14,7 +14,7 @@ describe('Design System - Button', () => {
 
   it('can be clicked', async () => {
     const user = userEvent.setup();
-    const spyOnClick = jest.fn();
+    const spyOnClick = vi.fn();
 
     render(
       <GenericButton
@@ -39,7 +39,7 @@ describe('Design System - Button', () => {
 
   it("renders disabled button and doesn't trigger clicks", async () => {
     const user = userEvent.setup();
-    const spyOnClick = jest.fn();
+    const spyOnClick = vi.fn();
 
     render(
       <GenericButton

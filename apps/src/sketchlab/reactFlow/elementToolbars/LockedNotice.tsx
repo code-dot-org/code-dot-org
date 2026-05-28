@@ -4,7 +4,7 @@ import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
-import styles from './element-toolbar.module.scss';
+import styles from './locked-notice.module.scss';
 
 interface LockedNoticeProps {
   onUnlock?: () => void;

@@ -109,8 +109,13 @@
   fallback: "es-MX"
 
 "es-MX":
-  english: "Spanish (Latin America)"
-  native: "Español (Latinoamérica)"
+  english: "Spanish (US)"
+  native: "Español (EEUU)"
+
+"es-LA":
+  english: "Spanish (LATAM)"
+  native: "Español (LATAM)"
+  fallback: "es-MX"
 
 "et": "et-EE"
 "et-EE":

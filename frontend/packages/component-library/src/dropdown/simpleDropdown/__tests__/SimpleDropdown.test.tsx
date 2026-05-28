@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {useState, ChangeEvent} from 'react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import SimpleDropdown from './../index';
 
@@ -99,7 +99,7 @@ describe('Design System - Dropdown Select Component', () => {
 
   it('changes selected value when one is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderDropdown({
       name: 'test2-dropdown',
@@ -148,7 +148,7 @@ describe('Design System - Dropdown Select Component', () => {
 
   it("doesn't change value when disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderDropdown({
       name: 'test2-dropdown',
@@ -173,7 +173,7 @@ describe('Design System - Dropdown Select Component', () => {
 
   it("doesn't change value when item is disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderDropdown({
       name: 'test3-dropdown',
