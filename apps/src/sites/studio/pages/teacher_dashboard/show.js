@@ -52,7 +52,6 @@ const {
   flash,
   logoTransitionAnimatedUrl,
   logoTransitionWebmUrl,
-  logoTransitionMp4Url,
   logoSvgUrl,
 } = scriptData;
 
@@ -111,7 +110,6 @@ $(document).ready(function () {
           studioUrlPrefix={scriptData.studioUrlPrefix}
           logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
           logoTransitionWebmUrl={logoTransitionWebmUrl}
-          logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />
       ) : (
@@ -119,7 +117,6 @@ $(document).ready(function () {
           studioUrlPrefix={scriptData.studioUrlPrefix}
           logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
           logoTransitionWebmUrl={logoTransitionWebmUrl}
-          logoTransitionMp4Url={logoTransitionMp4Url}
           logoSvgUrl={logoSvgUrl}
         />
       )}

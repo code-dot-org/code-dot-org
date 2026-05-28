@@ -44,7 +44,6 @@ interface TeacherHomepageProps {
   studioUrlPrefix: string;
   logoTransitionAnimatedUrl?: string;
   logoTransitionWebmUrl?: string;
-  logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
 
@@ -56,7 +55,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
   logoTransitionAnimatedUrl,
   logoTransitionWebmUrl,
-  logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
   const isMiniTutorialEnabled =
@@ -263,7 +261,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
         <LogoTransition
           animatedSrc={logoTransitionAnimatedUrl}
           webmSrc={logoTransitionWebmUrl}
-          mp4Src={logoTransitionMp4Url}
           svgSrc={logoSvgUrl}
         />
       )}

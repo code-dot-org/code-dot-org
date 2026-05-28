@@ -17,10 +17,9 @@ interface LogoTransitionProps {
   // Looping animated image (GIF). Used under ?logo-gif=true; AVIF can't
   // serve here because Safari doesn't decode AVIF transparency.
   animatedSrc: string;
-  // Default video sources. WebM is preferred when the browser can decode
-  // it; MP4 is the fallback.
+  // Default video source. WebM is the sole format right now; if you need
+  // to add MP4/HEVC fallbacks, layer them as additional <source> children.
   webmSrc?: string;
-  mp4Src?: string;
   svgSrc: string;
 }
 
@@ -71,7 +70,6 @@ type Rect = {top: number; left: number; width: number; height: number};
 const LogoTransition: React.FC<LogoTransitionProps> = ({
   animatedSrc,
   webmSrc,
-  mp4Src,
   svgSrc,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -91,12 +89,12 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     return cookies.get(SEEN_COOKIE_NAME) === 'true';
   });
 
-  // Default to the <video> path (WebM with MP4 fallback) — it fires a real
-  // 'ended' event so we don't have to estimate runtime. ?logo-gif=true opts
-  // back into the looping GIF (and AVIF can't be the default because Safari
-  // doesn't decode AVIF transparency, which this animation relies on).
+  // Default to the <video> path (WebM) — it fires a real 'ended' event so
+  // we don't have to estimate runtime. ?logo-gif=true opts back into the
+  // looping GIF (and AVIF can't be the default because Safari doesn't
+  // decode AVIF transparency, which this animation relies on).
   const [useVideo] = useState<boolean>(() => {
-    if (typeof window === 'undefined' || (!webmSrc && !mp4Src)) return false;
+    if (typeof window === 'undefined' || !webmSrc) return false;
     return (
       new URLSearchParams(window.location.search).get('logo-gif') !== 'true'
     );
@@ -273,9 +271,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       {createPortal(
         <div ref={cardRef} className={cardClassName}>
           {showMedia &&
-            (useVideo && (webmSrc || mp4Src) ? (
+            (useVideo && webmSrc ? (
               <video
                 ref={videoRef}
+                src={webmSrc}
                 autoPlay
                 muted
                 playsInline
@@ -283,10 +282,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 className={`${styles.image} ${styles.imageAnimated} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
-              >
-                {webmSrc && <source src={webmSrc} type="video/webm" />}
-                {mp4Src && <source src={mp4Src} type="video/mp4" />}
-              </video>
+              />
             ) : (
               <img
                 src={animatedSrc}

@@ -79,7 +79,6 @@ interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   logoTransitionAnimatedUrl?: string;
   logoTransitionWebmUrl?: string;
-  logoTransitionMp4Url?: string;
   logoSvgUrl?: string;
 }
 
@@ -91,7 +90,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   logoTransitionAnimatedUrl,
   logoTransitionWebmUrl,
-  logoTransitionMp4Url,
   logoSvgUrl,
 }) => {
   const sectionId = useAppSelector(
@@ -136,7 +134,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   studioUrlPrefix={studioUrlPrefix}
                   logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
                   logoTransitionWebmUrl={logoTransitionWebmUrl}
-                  logoTransitionMp4Url={logoTransitionMp4Url}
                   logoSvgUrl={logoSvgUrl}
                 />
                 <ScrollRestoration />
@@ -366,7 +363,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       studioUrlPrefix,
       logoTransitionAnimatedUrl,
       logoTransitionWebmUrl,
-      logoTransitionMp4Url,
       logoSvgUrl,
     ]
   );
