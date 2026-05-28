@@ -1,7 +1,7 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import styles from './element-toolbar.module.scss';
+import styles from '../element-toolbar.module.scss';
 
 interface ToolbarSectionProps {
   title: string;

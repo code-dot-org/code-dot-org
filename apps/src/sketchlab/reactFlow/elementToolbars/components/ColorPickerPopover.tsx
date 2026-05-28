@@ -4,7 +4,8 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-import {ColorSwatch} from './toolbarPalettes';
+import {ColorSwatch} from '../toolbarPalettes';
+
 import TransparentSwatchIcon from './TransparentSwatchIcon';
 
 import styles from './color-picker-popover.module.scss';
