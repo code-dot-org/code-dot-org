@@ -49,8 +49,9 @@ class JavalabTest < ActiveSupport::TestCase
     level.stubs(:validation).returns("Test.java" => {"text" => "class Test {}"})
 
     summary = level.summarize_for_lab2_properties(nil, nil, levelbuilder)
-    assert_nil summary[:encryptedValidation]
-    assert_equal({"Test.java" => {"text" => "class Test {}"}}, summary[:validation])
+    refute summary.key?('encryptedValidation')
+    refute summary.key?(:encryptedValidation)
+    assert_equal({"Test.java" => {"text" => "class Test {}"}}, summary['validation'])
   end
 
   test 'summarize_for_lab2_properties strips validation source for non-levelbuilders' do
@@ -67,16 +68,16 @@ class JavalabTest < ActiveSupport::TestCase
 
     [student, teacher, verified_instructor].each do |user|
       summary = level.summarize_for_lab2_properties(nil, nil, user)
-      assert_nil summary[:encryptedValidation]
-      assert_equal({"Test.java" => ''}, summary[:validation], "#{user.user_type} should not see decrypted validation")
+      refute summary.key?('encryptedValidation'), "#{user.user_type} response still contains encryptedValidation"
+      assert_equal({"Test.java" => ''}, summary['validation'], "#{user.user_type} should not see decrypted validation")
     end
   end
 
   test 'summarize_for_lab2_properties omits validation when level has none' do
     level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_no_validation")
     summary = level.summarize_for_lab2_properties(nil, nil, nil)
-    refute summary.key?(:validation)
-    refute summary.key?(:encryptedValidation)
+    refute summary.key?('validation')
+    refute summary.key?('encryptedValidation')
   end
 
   test 'get_serialized_maze returns template level maze if level doesnt have one' do

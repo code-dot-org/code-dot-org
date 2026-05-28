@@ -188,10 +188,10 @@ class Javalab < Level
   # still detect filename collisions without seeing solution code.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
-    level_properties.delete(:encryptedValidation)
+    level_properties.delete('encryptedValidation')
     if validation
       is_levelbuilder = current_user&.permission?(UserPermission::LEVELBUILDER)
-      level_properties[:validation] = is_levelbuilder ? validation : validation.transform_values {''}
+      level_properties['validation'] = is_levelbuilder ? validation : validation.transform_values {''}
     end
     level_properties
   end
