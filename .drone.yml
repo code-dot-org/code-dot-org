@@ -135,8 +135,6 @@ name: ui
 clone:
   disable: true
 
-# Shares the worker's host network namespace so it is reachable from the
-# host-networked ui-tests step (see ui-tests step comment).
 services:
   - name: ci-tests-redis
     image: redis
@@ -178,9 +176,7 @@ steps:
       pull: true
 
   # Implement mysql db as a detached step rather than a service, so that we can
-  # wait to start it up until we've finished restoring the cache. Shares the
-  # worker's host network namespace so it is reachable from the host-networked
-  # ui-tests step (see ui-tests step comment).
+  # wait to start it up until we've finished restoring the cache.
   - name: ci-tests-mysql
     image: mysql:8.0
     detach: true
@@ -237,8 +233,7 @@ steps:
     pull: always
     # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
     # on the worker's primary ENI, reachable from Device Farm's Chrome via
-    # VPC peering. For more details, see device_farm_desktop_browser in
-    # dashboard/test/ui/features/support/connect.rb.
+    # VPC peering.
     network_mode: host
     environment:
       CI_JOB: 'ui_tests'
@@ -379,6 +374,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 85532fcea49aae5e130ebd7ca2089afe1621ecc5f1e098357d9dd1c9bbbbe79a
+hmac: 35bd33e4fe7a663359f332ab5df93923309b33c7b089faa08fb804155c255883
 
 ...
