@@ -1,0 +1,79 @@
+name 'pl_sandbox_aif-2-U4-diff'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How Unit 4 Builds on Unit 3
+
+Unit 3 and Unit 4 may feel similar because both units involve data, collections, and interactive app features. The key difference is the **programming focus**.
+ 
+In **Unit 3**, students focus on how data is structured and managed. They use arrays, objects, and built-in array methods like `map`, `push`, `pop`, `shift`, and `unshift` to represent and update information.
+
+In **Unit 4**, students focus on how programs repeat logic across a collection. They learn the syntax and purpose of loops so they can control how each item in a dataset is checked, filtered, displayed, or searched.
+
+---
+
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0px;">
+  <thead>
+    <tr style="background-color: #026C7A; color: #FFFFFF;">
+      <th style="padding: 12px; text-align: left; font-size: 14px;">Unit 3: Data Structures</th>
+      <th style="padding: 12px; text-align: left; font-size: 14px;">Unit 4: Loops and Filtering</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        Students learn how to represent information using arrays and objects.
+      </td>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        Students learn how to repeat logic across arrays and collections.
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        Students use built-in tools and functions like <code>map()</code>, <code>push()</code>, <code>pop()</code>, <code>shift()</code>, and <code>unshift()</code> to manage data.
+      </td>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        Students write loop syntax to control what happens to each item in a collection.
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        The focus is on organizing, storing, and updating information in apps.
+      </td>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        The focus is on processing data repeatedly to create filters, searches, and dynamic views.
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        The question is: “How should this data be organized and changed?”
+      </td>
+      <td style="padding: 10px; border-bottom: 1px solid #CCCCCC; font-size: 14px;">
+        The question is: “How should the program check each item and decide what to show?”
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; font-size: 14px;">
+        Students apply data structures in a final project that manages collections of information.
+      </td>
+      <td style="padding: 10px; font-size: 14px;">
+        Students evaluate how filtering decisions affect fairness, transparency, and user trust.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; margin: 20px 0px;">
+  <p style="font-size: 16pt; font-weight: bold; margin: 0px 0px 10px 0px;">Why These Units May Feel Similar</p>
+  <p style="font-size: 14pt; line-height: 1.3; margin: 0px;">
+    Both units ask students to work with collections of data in JavaScript apps. The difference is that Unit 3 emphasizes <b>how data is structured and changed</b>, while Unit 4 emphasizes <b>how repeated logic is written and used</b> to process that data.
+  </p>
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
