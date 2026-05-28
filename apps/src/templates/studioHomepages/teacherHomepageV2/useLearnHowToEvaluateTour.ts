@@ -1,5 +1,3 @@
-import {useEffect} from 'react';
-
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
@@ -13,9 +11,6 @@ import {
 } from './learnHowToEvaluateOnboarding';
 
 export {LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY};
-
-const LEARN_HOW_TO_EVALUATE_DEMO_TYPE_KEY =
-  'learnHowToEvaluateOnboardingDemoType';
 
 // Call this on the section progress page to resume the tour after navigation.
 // Runs outside React so it works regardless of render mode.
@@ -46,14 +41,6 @@ export const resumeLearnHowToEvaluateTour = () => {
 };
 
 const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
-  useEffect(() => {
-    if (demoType) {
-      trySetSessionStorage(LEARN_HOW_TO_EVALUATE_DEMO_TYPE_KEY, demoType);
-    } else {
-      trySetSessionStorage(LEARN_HOW_TO_EVALUATE_DEMO_TYPE_KEY, '');
-    }
-  }, [demoType]);
-
   const {tour} = useOnboardingTour({
     getSteps: tour =>
       demoType

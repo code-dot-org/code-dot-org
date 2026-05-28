@@ -155,20 +155,4 @@ describe('useLearnHowToEvaluateTour', () => {
     const {result} = renderHook(() => useLearnHowToEvaluateTour(null));
     expect(result.current).toBeDefined();
   });
-
-  it('saves demoType to sessionStorage on mount', () => {
-    renderHook(() => useLearnHowToEvaluateTour('high'));
-    expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
-      'learnHowToEvaluateOnboardingDemoType',
-      'high'
-    );
-  });
-
-  it('clears demoType from sessionStorage when demoType is null', () => {
-    renderHook(() => useLearnHowToEvaluateTour(null));
-    expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
-      'learnHowToEvaluateOnboardingDemoType',
-      ''
-    );
-  });
 });
