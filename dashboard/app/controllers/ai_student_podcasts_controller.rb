@@ -25,16 +25,35 @@ class AiStudentPodcastsController < ApplicationController
     lesson_id = podcast_params[:lesson_id]
     objective_ids = Array(podcast_params[:objective_ids]).map(&:to_i).sort
 
-    podcast_data = find_user_podcast(lesson_id, objective_ids)
+    # Each (user, lesson) has at most one podcast record. If the student's
+    # struggling set changes, update the existing record in place rather than
+    # piling up rows; if it hasn't changed, leave the record alone so the job
+    # short-circuits on the cached S3 file. order(updated_at: :desc) gives a
+    # deterministic pick if duplicates exist from before this rule landed.
+    podcast_data = AiStudentPodcast.
+      where(user_id: current_user.id, lesson_id: lesson_id).
+      order(updated_at: :desc).
+      first
 
-    unless podcast_data
+    if podcast_data
+      if podcast_data.objective_ids.map(&:to_i).sort != objective_ids
+        # The objective set changed; rebuild the join rows and clear the cached
+        # script so the job regenerates audio for the new key.
+        podcast_data.transaction do
+          podcast_data.ai_student_podcast_objectives.destroy_all
+          objective_ids.each do |obj_id|
+            podcast_data.ai_student_podcast_objectives.create!(objective_id: obj_id)
+          end
+          podcast_data.update!(podcast_script: nil)
+        end
+      end
+    else
       podcast_data = AiStudentPodcast.create!(
         user_id: current_user.id,
         lesson_id: lesson_id,
       )
       objective_ids.each do |obj_id|
-        podcast_data.ai_student_podcast_objectives.
-          create!(objective_id: obj_id)
+        podcast_data.ai_student_podcast_objectives.create!(objective_id: obj_id)
       end
     end
 
