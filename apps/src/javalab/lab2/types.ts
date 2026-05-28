@@ -26,6 +26,9 @@ export type JavalabFlatSource = Record<string, JavalabFlatFile>;
 // the codebridge MultiFileSource view; Javalab2View converts at mount.
 // We do not retype the source fields here so consumers downstream of
 // the conversion (codebridge) can read them as MultiFileSource.
+//
+// `validation` is the decrypted validation map. Only sent in start mode.
 export interface JavalabLevelProperties extends CodebridgeLevelProperties {
   csaViewMode?: CsaViewMode;
+  validation?: JavalabFlatSource;
 }

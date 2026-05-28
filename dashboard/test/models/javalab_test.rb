@@ -38,6 +38,47 @@ class JavalabTest < ActiveSupport::TestCase
     assert lab2_level.uses_lab2?
   end
 
+  test 'summarize_for_lab2_properties returns decrypted validation for levelbuilders' do
+    # Stub `validation` (which decrypts via the encrypted_validation
+    # serialized attr) to sidestep the missing test-env encryption key.
+    # Also stub the encryptedValidation property so it shows up in
+    # `super`'s camelized output and we can assert we strip it.
+    levelbuilder = create(:levelbuilder)
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_with_validation")
+    level.properties['encrypted_validation'] = 'ciphertext'
+    level.stubs(:validation).returns("Test.java" => {"text" => "class Test {}"})
+
+    summary = level.summarize_for_lab2_properties(nil, nil, levelbuilder)
+    assert_nil summary[:encryptedValidation]
+    assert_equal({"Test.java" => {"text" => "class Test {}"}}, summary[:validation])
+  end
+
+  test 'summarize_for_lab2_properties strips validation source for non-levelbuilders' do
+    # Legacy Javalab gates decrypted validation behind levelbuilder mode
+    # (levels_controller#edit_blocks). Students, plain teachers, and even
+    # verified instructors all see names-only.
+    student = create(:student)
+    teacher = create(:teacher)
+    verified_instructor = create(:authorized_teacher)
+
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_with_validation_for_non_lb")
+    level.properties['encrypted_validation'] = 'ciphertext'
+    level.stubs(:validation).returns("Test.java" => {"text" => "class Test {}"})
+
+    [student, teacher, verified_instructor].each do |user|
+      summary = level.summarize_for_lab2_properties(nil, nil, user)
+      assert_nil summary[:encryptedValidation]
+      assert_equal({"Test.java" => ''}, summary[:validation], "#{user.user_type} should not see decrypted validation")
+    end
+  end
+
+  test 'summarize_for_lab2_properties omits validation when level has none' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_no_validation")
+    summary = level.summarize_for_lab2_properties(nil, nil, nil)
+    refute summary.key?(:validation)
+    refute summary.key?(:encryptedValidation)
+  end
+
   test 'get_serialized_maze returns template level maze if level doesnt have one' do
     template_data = {game_id: 68, level_num: "custom", name: "template_neighborhood"}
     serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"
