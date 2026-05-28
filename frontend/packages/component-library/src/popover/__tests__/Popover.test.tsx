@@ -1,11 +1,11 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Popover from './../index';
 
 describe('Design System - Popover Component', () => {
-  const mockOnClose = jest.fn();
+  const mockOnClose = vi.fn();
 
   beforeEach(() => {
     mockOnClose.mockClear();

@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import {ChangeEvent, useState, ComponentProps} from 'react';
+import {vi} from 'vitest';
 
 import Checkbox from '@/checkbox';
 
@@ -11,7 +11,7 @@ describe('Design System - Checkbox', () => {
     props: Partial<ComponentProps<typeof Checkbox>> = {},
   ) => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
     const Wrapper = () => {
       const [checked, setChecked] = useState(initialChecked);
       const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
