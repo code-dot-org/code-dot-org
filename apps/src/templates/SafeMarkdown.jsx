@@ -137,23 +137,29 @@ const blocklyTags = [
   'xml',
 ];
 schema.tagNames = schema.tagNames.concat(blocklyTags);
+const makeBlocklyWrapper = tag => {
+  // Wrap the raw blockly tag (xml, block, ...) in a React function component
+  // so it can sit in a React tree — <xml> etc. are not valid React tags. The
+  // "is" attribute suppresses React's unknown-tag warning:
+  // https://github.com/facebook/react/issues/11184#issuecomment-335942439
+  const wrapper = function (props) {
+    const BlocklyElement = tag;
+    return <BlocklyElement is={tag} {...props} />;
+  };
+  wrapper.displayName = `Blockly_${tag}`;
+  return wrapper;
+};
+
 let blocklyComponentWrappers = {};
 blocklyTags.forEach(tag => {
   schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
-
-  // Create a React component to wrap each Blockly tag. Since these elements ultimately
-  // render as React components, creating a wrapper makes them valid (whereas <xml>
-  // is not a valid React tag).
-  blocklyComponentWrappers[tag] = function (props) {
-    const BlocklyElement = tag;
-    // The "is" attribute prevents React from warning about unrecognized tags:
-    // https://github.com/facebook/react/issues/11184#issuecomment-335942439
-    return <BlocklyElement is={tag} {...props} />;
-  };
+  blocklyComponentWrappers[tag] = makeBlocklyWrapper(tag);
 });
 
-const isXmlBlock = child =>
-  typeof child?.type === 'function' && child?.type()?.type === 'xml';
+// Identify the <xml> blockly wrapper by reference, not by invoking it. This
+// avoids depending on the wrapper's runtime behavior and survives wrapping
+// it in memo/forwardRef/etc.
+const isXmlBlock = child => child?.type === blocklyComponentWrappers.xml;
 
 // Parse an inline CSS declaration string (e.g. "color: red; padding: 4px")
 // into the object form React requires for the `style` prop. Kebab-cased
