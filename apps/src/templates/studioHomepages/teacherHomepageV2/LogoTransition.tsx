@@ -1,7 +1,17 @@
+import cookies from 'js-cookie';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import styles from './logoTransition.module.scss';
+
+// One-shot suppression: once a teacher has watched the morph land, the
+// cookie is set and subsequent visits skip the animation. ?logo-force=true
+// replays it even when the cookie is set (matches the force_show_swipe_
+// overlay precedent in SwipePrompt). 6-month expiry — long enough that
+// teachers don't re-see it across the launch window, short enough that
+// it isn't permanent if the cookie outlives the feature itself.
+const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
+const SEEN_COOKIE_EXPIRES_DAYS = 180;
 
 interface LogoTransitionProps {
   // Looping animated image (GIF). Used under ?logo-gif=true; AVIF can't
@@ -69,6 +79,18 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
+  // Skip the animation if the teacher has already seen it land on a
+  // previous visit, unless ?logo-force=true replays it.
+  const [hasSeen] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    if (
+      new URLSearchParams(window.location.search).get('logo-force') === 'true'
+    ) {
+      return false;
+    }
+    return cookies.get(SEEN_COOKIE_NAME) === 'true';
+  });
+
   // Default to the <video> path (WebM with MP4 fallback) — it fires a real
   // 'ended' event so we don't have to estimate runtime. ?logo-gif=true opts
   // back into the looping GIF (and AVIF can't be the default because Safari
@@ -110,11 +132,16 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   useLayoutEffect(() => {
     if (!mountTarget) return;
 
+    // Always drop the Rails pre-hide style — either we're about to animate
+    // (and take over via inline visibility:hidden below), or hasSeen is
+    // true (and we let the native logo show through with no React work).
+    document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
+    if (hasSeen) return;
+
     const nativeImg = mountTarget.querySelector<HTMLImageElement>('img');
     if (nativeImg) {
       nativeImg.style.visibility = 'hidden';
     }
-    document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
 
     if (cardRef.current && nativeImg) {
       const nativeRect = nativeImg.getBoundingClientRect();
@@ -146,7 +173,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
         nativeImg.style.visibility = '';
       }
     };
-  }, [mountTarget]);
+  }, [mountTarget, hasSeen]);
 
   // Hold in the opening phase long enough for the backdrop + card fade-in
   // to finish, then advance to 'playing' so the <img>/<video> is mounted
@@ -197,6 +224,12 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       if (nativeImg) {
         nativeImg.style.visibility = '';
       }
+      // Mark the teacher as having seen the morph land. Subsequent visits
+      // within SEEN_COOKIE_EXPIRES_DAYS skip the animation.
+      cookies.set(SEEN_COOKIE_NAME, 'true', {
+        expires: SEEN_COOKIE_EXPIRES_DAYS,
+        path: '/',
+      });
       setPhase('done');
     }, LAND_MS);
     return () => window.clearTimeout(t);
@@ -206,7 +239,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     setPhase('hold');
   };
 
-  if (!mountTarget || phase === 'done') return null;
+  if (!mountTarget || hasSeen || phase === 'done') return null;
 
   const showMedia = phase !== 'opening';
   const animatedHidden = phase !== 'playing' && phase !== 'hold';
