@@ -12,7 +12,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyClass.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!\");\n    HiddenClass.printHi();\n  }\n}\n",
+        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!!\");\n    HiddenClass.printHi();\n  }\n}\n",
         "isVisible": true,
         "isValidation": false,
         "isOpen": true,
@@ -24,8 +24,7 @@
         "isVisible": false,
         "isValidation": false,
         "isOpen": false,
-        "isActive": false,
-        "tabOrder": 1
+        "isActive": false
       }
     },
     "ai_tutor_available": "false",
@@ -35,6 +34,6 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:18 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:25 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 11:59:23 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:18 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:25 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 11:59:23 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 14:29:33 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>
