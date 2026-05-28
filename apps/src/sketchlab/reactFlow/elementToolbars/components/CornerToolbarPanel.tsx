@@ -6,14 +6,13 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
-import {useToolbarVisibility} from '../context';
-import {useLineToolbar} from '../hooks/useLineToolbar';
-
-import ImageNodeToolbar from './ImageNodeToolbar';
-import LineEdgeToolbar from './LineEdgeToolbar';
-import ShapeNodeToolbar from './ShapeNodeToolbar';
-import TextNodeToolbar from './TextNodeToolbar';
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../../constants';
+import {useToolbarVisibility} from '../../context';
+import {useLineToolbar} from '../../hooks/useLineToolbar';
+import ImageNodeToolbar from '../ImageNodeToolbar';
+import LineEdgeToolbar from '../LineEdgeToolbar';
+import ShapeNodeToolbar from '../ShapeNodeToolbar';
+import TextNodeToolbar from '../TextNodeToolbar';
 
 interface CornerToolbarPanelProps {
   nodes: SketchlabReactFlowNode[];

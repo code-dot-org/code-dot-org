@@ -11,8 +11,8 @@ import React, {
   useState,
 } from 'react';
 
-import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
-import {useToolbarVisibility} from '../context';
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../../constants';
+import {useToolbarVisibility} from '../../context';
 
 import styles from './toolbar-dropdown-row.module.scss';
 

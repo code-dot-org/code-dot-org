@@ -1,10 +1,10 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 
-import ColorPickerPopover from './ColorPickerPopover';
-import ColorPreviewSwatch from './ColorPreviewSwatch';
-import ToolbarDropdownRow from './ToolbarDropdownRow';
-import {ColorSwatch, colorLabel} from './toolbarPalettes';
+import ColorPickerPopover from '../components/ColorPickerPopover';
+import ColorPreviewSwatch from '../components/ColorPreviewSwatch';
+import ToolbarDropdownRow from '../components/ToolbarDropdownRow';
+import {ColorSwatch, colorLabel} from '../toolbarPalettes';
 
 interface ColorDropdownRowProps {
   label: string;

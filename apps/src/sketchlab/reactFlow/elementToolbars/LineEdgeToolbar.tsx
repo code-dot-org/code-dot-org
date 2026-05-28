@@ -8,10 +8,12 @@ import {useClipboard, usePushSnapshot} from '../context';
 import {ArrowHeadValue, LineAnchorNodeType} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
-import ActionsGroup from './ActionsGroup';
-import ColorDropdownRow from './ColorDropdownRow';
-import LockedNotice from './LockedNotice';
-import OptionListDropdownRow from './OptionListDropdownRow';
+import LockedNotice from './components/LockedNotice';
+import OptionListDropdownRow from './components/OptionListDropdownRow';
+import ToolbarSection from './components/ToolbarSection';
+import ToolbarShell from './components/ToolbarShell';
+import ActionsGroup from './sections/ActionsGroup';
+import ColorDropdownRow from './sections/ColorDropdownRow';
 import {
   ARROW_HEAD_OPTIONS,
   DEFAULT_EDGE_TYPE,
@@ -25,8 +27,6 @@ import {
   strokeStyleFromDasharray,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
-import ToolbarSection from './ToolbarSection';
-import ToolbarShell from './ToolbarShell';
 
 interface LineEdgeToolbarProps {
   edge: SketchlabReactFlowEdge;
