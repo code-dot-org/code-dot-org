@@ -13,22 +13,29 @@ module Cdo::CloudFormation
     FUNCTION_MAX = 10.kilobytes
 
     # Inline a single javascript file into a CloudFormation template for a Lambda function resource.
-    # Raises an error if the minified file is too large.
+    # Raises if the (minified) source is empty or larger than `max`.
     # Use UglifyJS to compress code if `uglify` parameter is set.
     def inline_js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
           RakeUtils.yarn_install
-          `npx uglifyjs --compress --mangle -- #{filename}`
+          out = `npx uglifyjs --compress --mangle -- #{filename}`
+          raise "`npx uglifyjs` failed for '#{filename}' (exit #{$?.exitstatus}). Pass uglify: false if uglify-js isn't available in the deploy environment." unless $?.success?
+          out
         else
           File.read(filename)
         end
+      if str.empty?
+        raise "Inlined JavaScript for '#{filename}' is empty. CloudFormation will reject the empty Code/FunctionCode property."
+      end
       if str.bytesize > max
         raise "Length of JavaScript file '#{filename}' (#{str.length}) cannot exceed #{max} bytes."
       end
       str.to_json
     end
 
+    # Pass `uglify: false` when `npx uglifyjs` may be unavailable in the deploy environment
+    # (e.g. CI runs `yarn install --production` and uglify-js is a devDep).
     def js_erb(filename, **args)
       Tempfile.open do |tmp|
         File.write(tmp, erb_file(filename))

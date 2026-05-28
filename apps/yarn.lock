@@ -3451,6 +3451,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.15.4":
+  version: 7.29.7
+  resolution: "@babel/runtime@npm:7.29.7"
+  checksum: 10/9883b4951787779fd382b121f22f92966d85f19434841f65fb00b2dfec232107e139683f47c6f252891826ad8ee18317b46c3a0e4819116a9885f47b46d7126a
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.18.3":
   version: 7.27.3
   resolution: "@babel/runtime@npm:7.27.3"
@@ -4041,17 +4048,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-playground@npm:0.0.47":
-  version: 0.0.47
-  resolution: "@code-dot-org/ml-playground@npm:0.0.47"
+"@code-dot-org/ml-playground@npm:0.0.51":
+  version: 0.0.51
+  resolution: "@code-dot-org/ml-playground@npm:0.0.51"
   dependencies:
-    "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
-    "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
-    "@fortawesome/react-fontawesome": "npm:^0.1.7"
+    "@fortawesome/fontawesome-svg-core": "npm:^7.2.0"
+    "@fortawesome/free-solid-svg-icons": "npm:^7.2.0"
+    "@fortawesome/react-fontawesome": "npm:^3.3.0"
     chart.js: "npm:^2.9.4"
     react-chartjs-2: "npm:^2.11.1"
     reselect: "npm:^4.0.0"
-  checksum: 10/79a3aa73f29c468422f2e08e232c6ec56480689987a6d6eb33d8b82de228bd7c3a788778a86a06ddd57202bdaf8e0d3c3868db3468457986d4e820f18f0c1f28
+  checksum: 10/7693d2a27d056f768643534c972941a4fe750a91fa59d4ca18c52c99442cb427dba794f681984ece8c20b5d95a2b67a87a125edadcac198626bdae24a8f6e186
   languageName: node
   linkType: hard
 
@@ -5142,6 +5149,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-common-types@npm:7.2.0"
+  checksum: 10/db10ca0b4ceed3226a477a7d424ae1ccb2d65cf0dd868bdc767978a6234b2d30b85197b1f4665e8b6333bdc05a204ed6d154844261e071679c5af6b1d2ebbf06
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:^0.2.25":
   version: 0.2.25
   resolution: "@fortawesome/fontawesome-common-types@npm:0.2.25"
@@ -5158,12 +5172,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-svg-core@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/fontawesome-svg-core@npm:7.2.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": "npm:7.2.0"
+  checksum: 10/2f02236e58ca8506a18eb6ff26be8e9ad74e3cd4621db26d89dbc268e7a5245dbc269ca35ac81b92af6442eaef6b9ab44ee837f819fe94ea95462539ad02037c
+  languageName: node
+  linkType: hard
+
 "@fortawesome/free-solid-svg-icons@npm:^5.11.2":
   version: 5.11.2
   resolution: "@fortawesome/free-solid-svg-icons@npm:5.11.2"
   dependencies:
     "@fortawesome/fontawesome-common-types": "npm:^0.2.25"
   checksum: 10/26f06ebcfef43394f1769092b7e4ae4304a151648579a38f46b8692c4b73891308c32a7817debb21662c19a8f664892800ebc74bd4b9e2e0e5d2d448cdae882c
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@fortawesome/free-solid-svg-icons@npm:7.2.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": "npm:7.2.0"
+  checksum: 10/640f690e04f40e14c37a2602a3c88793b7b63a250951b591a356aa143ce65d30b16449e4dbd33a50e6c90d2538958360cde0ebd657396f99f0b3ae34df496cfe
   languageName: node
   linkType: hard
 
@@ -5176,6 +5208,16 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": ^1.2.20
     react: 16.x
   checksum: 10/79fe90640afbed69c6a15bdc70fa5f4b7e3bea58ca23c4e5c1cb409fef042bc6a0a20e2f4be8a3bb80cb5243867f7b627958a339f86570b003339f8fe08f0232
+  languageName: node
+  linkType: hard
+
+"@fortawesome/react-fontawesome@npm:^3.3.0":
+  version: 3.3.1
+  resolution: "@fortawesome/react-fontawesome@npm:3.3.1"
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ~6 || ~7
+    react: ^18.0.0 || ^19.0.0
+  checksum: 10/e099a5721099f1cf59d61fa21ce0ad6473be782470781574aa3c21136263f44d067e15dae4a4e273876ca3b3f16df6a099f93a4ed9c0a717223dffa66bb57da7
   languageName: node
   linkType: hard
 
@@ -8623,7 +8665,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hoist-non-react-statics@npm:^3.3.0, @types/hoist-non-react-statics@npm:^3.3.1":
+"@types/hoist-non-react-statics@npm:^3.3.0":
+  version: 3.3.7
+  resolution: "@types/hoist-non-react-statics@npm:3.3.7"
+  dependencies:
+    hoist-non-react-statics: "npm:^3.3.0"
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10/13f610572c073970b3f43cc446396974fed786fee6eac2d6fd4b0ca5c985f13e79d4a0de58af4e5b4c68470d808567c3a14108d98edb7d526d4d46c8ec851ed1
+  languageName: node
+  linkType: hard
+
+"@types/hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
   dependencies:
@@ -9018,15 +9071,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-redux@npm:^7.1.16":
-  version: 7.1.19
-  resolution: "@types/react-redux@npm:7.1.19"
+"@types/react-redux@npm:^7.1.20":
+  version: 7.1.34
+  resolution: "@types/react-redux@npm:7.1.34"
   dependencies:
     "@types/hoist-non-react-statics": "npm:^3.3.0"
     "@types/react": "npm:*"
     hoist-non-react-statics: "npm:^3.3.0"
     redux: "npm:^4.0.0"
-  checksum: 10/36749f415460e36fb619dffc7e3c94aca09e150c8a3b4d98a462aa421d2f9de435c930ebe18fac4f1a14f282d8302d78799afb3712a70eaf810f0383cba37e26
+  checksum: 10/febcd1db0c83c5002c6bee0fdda9e70da0653454ffbb72d6c37cbf2f5c005e06fb5271cff344d7164c385c944526565282de9a95ff379e040476b71d27fc2512
   languageName: node
   linkType: hard
 
@@ -11387,7 +11440,7 @@ __metadata:
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
     "@code-dot-org/ml-activities": "npm:0.1.3"
-    "@code-dot-org/ml-playground": "npm:0.0.47"
+    "@code-dot-org/ml-playground": "npm:0.0.51"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
@@ -25302,8 +25355,8 @@ canvg@gabelerner/canvg:
   linkType: hard
 
 "react-beautiful-dnd@npm:^13.1.0":
-  version: 13.1.0
-  resolution: "react-beautiful-dnd@npm:13.1.0"
+  version: 13.1.1
+  resolution: "react-beautiful-dnd@npm:13.1.1"
   dependencies:
     "@babel/runtime": "npm:^7.9.2"
     css-box-model: "npm:^1.2.0"
@@ -25313,9 +25366,9 @@ canvg@gabelerner/canvg:
     redux: "npm:^4.0.4"
     use-memo-one: "npm:^1.1.1"
   peerDependencies:
-    react: ^16.8.5 || ^17.0.0
-    react-dom: ^16.8.5 || ^17.0.0
-  checksum: 10/15060195e41f016b39d962adb523d979b8bb56f84674137a5a9724c126cc9ae2f85972fbee807e249ae6ade7cf8237cd0b6d1665c4c68f91000f57762164569a
+    react: ^16.8.5 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.5 || ^17.0.0 || ^18.0.0
+  checksum: 10/2de8162a74f7fc78294e5a928b92d3fff02c579d137a25d53b1ab4313abeb108709bb7281512f7f94d18257de3122b8c85cb5a8375113cb8657088b1a9bda65b
   languageName: node
   linkType: hard
 
@@ -25675,7 +25728,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.1":
+"react-is@npm:^17.0.1, react-is@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10/73b36281e58eeb27c9cc6031301b6ae19ecdc9f18ae2d518bdb39b0ac564e65c5779405d623f1df9abf378a13858b79442480244bd579968afc1faf9a2ce5e05
@@ -25865,23 +25918,23 @@ canvg@gabelerner/canvg:
   linkType: hard
 
 "react-redux@npm:^7.2.0":
-  version: 7.2.5
-  resolution: "react-redux@npm:7.2.5"
+  version: 7.2.9
+  resolution: "react-redux@npm:7.2.9"
   dependencies:
-    "@babel/runtime": "npm:^7.12.1"
-    "@types/react-redux": "npm:^7.1.16"
+    "@babel/runtime": "npm:^7.15.4"
+    "@types/react-redux": "npm:^7.1.20"
     hoist-non-react-statics: "npm:^3.3.2"
     loose-envify: "npm:^1.4.0"
     prop-types: "npm:^15.7.2"
-    react-is: "npm:^16.13.1"
+    react-is: "npm:^17.0.2"
   peerDependencies:
-    react: ^16.8.3 || ^17
+    react: ^16.8.3 || ^17 || ^18
   peerDependenciesMeta:
     react-dom:
       optional: true
     react-native:
       optional: true
-  checksum: 10/f0040a542b48869204fd5c8b92cedfc3ca921a7828bb918082a41971fd1841ab8f7340c6ccf5a2884e233ab97b78064ee79f675ec3e7d5ddeef24179fb12c494
+  checksum: 10/1c3018bd2601e6d18339281867910b583dcbb3d8856403086e08c00abf0dfe467a94c0d1356bafa8cdf107bf1e2c9899a28486e4778e85c8bc4dfed2076b116f
   languageName: node
   linkType: hard
 
@@ -26658,16 +26711,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.0.0, redux@npm:^4.0.4":
-  version: 4.1.1
-  resolution: "redux@npm:4.1.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.9.2"
-  checksum: 10/1196ac2856c517eb37f1e18891cc8966d3bf0325044f2af07a1f9e0c8d5f914a7fd426cd440ca9c7af815301586f203955441fd3cf60f080ee50956fd222b1be
-  languageName: node
-  linkType: hard
-
-"redux@npm:^4.2.0, redux@npm:^4.2.1":
+"redux@npm:^4.0.0, redux@npm:^4.0.4, redux@npm:^4.2.0, redux@npm:^4.2.1":
   version: 4.2.1
   resolution: "redux@npm:4.2.1"
   dependencies:
@@ -31048,11 +31092,11 @@ canvg@gabelerner/canvg:
   linkType: hard
 
 "use-memo-one@npm:^1.1.1":
-  version: 1.1.2
-  resolution: "use-memo-one@npm:1.1.2"
+  version: 1.1.3
+  resolution: "use-memo-one@npm:1.1.3"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0
-  checksum: 10/71f4598ce422b64a971dc93f45dc245158977f8882f56be82d4629c21577c22244959ac3aa99bd9559d64007b632d58aa43b256981afe56603c77ce3fdee165f
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/8f08eba26d69406b61bb4b8dacdd5a92bd6aef5b53d346dfe87954f7330ee10ecabc937cc7854635155d46053828e85c10b5a5aff7a04720e6a97b9f42999bac
   languageName: node
   linkType: hard
 

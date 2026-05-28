@@ -1182,6 +1182,41 @@ $default-modal-width: 640px;
   }
 }
 
+// CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
+// don't apply. Center it vertically inside the 50px header instead.
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  .header-wrapper .header .header_logo,
+  .header_logo {
+    width: auto;
+    max-width: none;
+    height: 50px;
+    margin-top: 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 22px;
+      width: auto;
+      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+      // reserves ~130px wide before fetch, preventing horizontal CLS.
+      aspect-ratio: 591.15 / 100;
+      display: block;
+    }
+  }
+
+  // Wider logo also crowds the inline .headerlinks; bump the mobile
+  // collapse threshold so the whole bar drops into the hamburger sooner.
+  // (The tablet-level create_menu collapse lives in shared/css/user-menu.scss.)
+  .header-wrapper .header {
+    @media screen and (max-width: 1060px) {
+      .hide_on_tablet {
+        display: none !important;
+      }
+    }
+  }
+}
+
 
 .project_info {
   float: left;
@@ -3632,8 +3667,6 @@ $width: 400px;
   display: inline-block;
   top: 10px;
   left: 10px;
-  text-align: center;
-  font-size: 1.275em;
   position: fixed;
   z-index: 1000;
 
@@ -3644,12 +3677,18 @@ $width: 400px;
     }
   }
 
-  #logo-container {
-    padding: 4px;
-    background-color: $light_gray;
-    width: 60px;
-    border-radius: 0;
-    margin-bottom: 4px;
+  #logo-img {
+    height: 22px;
+    width: auto;
+    display: block;
+  }
+}
+
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  #main-logo #logo-img {
+    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+    // reserves ~130px wide before fetch, preventing horizontal CLS.
+    aspect-ratio: 591.15 / 100;
   }
 }
 

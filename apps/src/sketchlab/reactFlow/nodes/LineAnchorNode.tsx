@@ -30,7 +30,7 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
   const showHandles = data.showHandles !== false;
 
   return (
-    <div className={styles.anchorNode} aria-label="Line endpoint">
+    <div className={styles.anchorNode}>
       <Handle
         type={handleType}
         id={lineAnchorHandleId(handleType)}

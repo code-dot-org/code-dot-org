@@ -36,7 +36,7 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       AuthenticationOption::FACEBOOK  => 'https://www.facebook.com/v2.12/dialog/oauth',
       AuthenticationOption::CLEVER    => 'https://clever.com/oauth/authorize',
     }.each do |provider, expected_oauth_url|
-      it "#{provider.inspect} authentication process is not affected by regional redirection" do
+      it "#{provider.inspect} authentication process is not globalized" do
         post "/users/auth/#{provider}"
         must_redirect_to %r(^#{expected_oauth_url})
 
@@ -51,7 +51,7 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
         _(ge_region_html_data).must_be_nil
       end
 
-      it "Farsi #{provider.inspect} authentication process is not affected by regional redirection" do
+      it "Farsi #{provider.inspect} authentication process is not globalized" do
         post "/fa/users/auth/#{provider}"
         must_redirect_to %r(^#{expected_oauth_url})
 
@@ -73,16 +73,34 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       /health_check
       /home/health_check
     ].each do |path|
-      it "#{path.inspect} path is not affected by regional redirection" do
+      it "#{path.inspect} path is not globalized" do
         get path
         must_respond_with 200
         _(ge_region_html_data).must_be_nil
       end
 
-      it "Farsi #{path.inspect} path is not affected by regional redirection" do
+      it "Farsi #{path.inspect} path is not globalized" do
         get ::File.join('/', ge_region, path)
         must_respond_with 200
         _(ge_region_html_data).must_be_nil
+      end
+    end
+  end
+
+  describe 'api' do
+    %w[
+      /api/v1/users/current
+      /api/user_progress
+      /dashboardapi/user_progress
+    ].each do |path|
+      it "#{path.inspect} path is not affected by regional redirection" do
+        get path
+        must_respond_with 200
+      end
+
+      it "Farsi #{path.inspect} path is not affected by regional redirection" do
+        get ::File.join('/', ge_region, path)
+        must_respond_with 200
       end
     end
   end

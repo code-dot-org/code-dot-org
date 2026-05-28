@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Link from '@/link';
 
@@ -47,7 +47,7 @@ describe('Design System - Link', () => {
 
   it('calls onClick handler correctly', async () => {
     const user = userEvent.setup();
-    const spyOnClick = jest.fn();
+    const spyOnClick = vi.fn();
 
     render(<Link onClick={spyOnClick}>Home</Link>);
 
@@ -59,7 +59,7 @@ describe('Design System - Link', () => {
 
   it('does not call onClick when disabled', async () => {
     const user = userEvent.setup();
-    const spyOnClick = jest.fn();
+    const spyOnClick = vi.fn();
 
     render(
       <Link disabled onClick={spyOnClick}>

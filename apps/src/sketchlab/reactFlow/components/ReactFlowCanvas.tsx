@@ -38,7 +38,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
+import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
@@ -64,6 +64,7 @@ import {
   canCreateConnection,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
+import {getEdgeLabel} from '../utils/elementLabel';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
@@ -149,6 +150,8 @@ export default function ReactFlowCanvas({
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
+  const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
+
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
       setOpenToolbarInfo({
@@ -169,8 +172,17 @@ export default function ReactFlowCanvas({
       trapFocus,
       openToolbar,
       closeToolbar,
+      isAnyPopoverOpen,
+      setPopoverOpen,
     }),
-    [openToolbarTarget, trapFocus, openToolbar, closeToolbar]
+    [
+      openToolbarTarget,
+      trapFocus,
+      openToolbar,
+      closeToolbar,
+      isAnyPopoverOpen,
+      setPopoverOpen,
+    ]
   );
 
   const {screenToFlowPosition, flowToScreenPosition, getEdges, getNode} =
@@ -312,6 +324,13 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
+    // If the user is actively interacting with the toolbar (mouse or keyboard
+    // focus inside it), keep it open regardless of where the focus-tracking
+    // state currently points.
+    const activeElement = document.activeElement as HTMLElement | null;
+    if (activeElement?.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)) {
+      return;
+    }
     const focusedEntry = nodeOrEdgeFocused ? lastFocusedEntry : null;
     if (
       !focusedEntry ||
@@ -392,6 +411,23 @@ export default function ReactFlowCanvas({
       };
     };
 
+    const nodeMap = new Map(nodes.map(node => [node.id, node]));
+
+    // Assign a 1-based index to each free-floating line (both endpoints are
+    // anchors) so the screenreader can distinguish them: "Line 1", "Line 2".
+    let floatingLineCount = 0;
+    const floatingLineIndex = new Map<string, number>();
+    edges.forEach(edge => {
+      const src = nodeMap.get(edge.source);
+      const tgt = nodeMap.get(edge.target);
+      if (
+        (!src || src.type === 'lineAnchor') &&
+        (!tgt || tgt.type === 'lineAnchor')
+      ) {
+        floatingLineIndex.set(edge.id, ++floatingLineCount);
+      }
+    });
+
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
@@ -406,6 +442,10 @@ export default function ReactFlowCanvas({
             connectable: false,
             deletable: false,
           }),
+          // Override React Flow's default "{type} node" aria-label on the
+          // wrapper div for line anchors so it reads as "Line endpoint" instead
+          // of "Line endpoint node".
+          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
           className: isConnectSource ? styles.connectSource : undefined,
           domAttributes: {
             ...domAttributes,
@@ -413,8 +453,6 @@ export default function ReactFlowCanvas({
           },
         };
       }),
-      // TODO: Add meaningful ariaLabel to edges using node labels instead of
-      // raw IDs (React Flow defaults to "Edge from {sourceId} to {targetId}").
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
@@ -422,6 +460,11 @@ export default function ReactFlowCanvas({
           ...edge,
           selected,
           ...(locked && {deletable: false}),
+          ariaLabel: getEdgeLabel(
+            edge,
+            nodeMap,
+            floatingLineIndex.get(edge.id)
+          ),
           className: styles.lineEdge,
           domAttributes: {
             ...domAttributes,
