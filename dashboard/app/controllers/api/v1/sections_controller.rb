@@ -141,20 +141,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       s
     end
 
-    Metrics::Events.log_event(
-      user: current_user,
-      event_name: 'demo_section_created',
-      metadata: {demo_type: demo_type, section_id: section.id}
-    )
-
     render json: section.summarize
   rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
     if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
-      Metrics::Events.log_event(
-        user: current_user,
-        event_name: 'demo_section_already_exists',
-        metadata: {demo_type: params[:demo_type]}
-      )
       render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
     else
       head :bad_request
