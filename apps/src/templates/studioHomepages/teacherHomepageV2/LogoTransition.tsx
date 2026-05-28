@@ -38,7 +38,8 @@ const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 // hold:    image/video stays on its last frame for HOLD_MS.
 // landing: media slides from viewport center to the header slot while the
 //          image/video fades out and the SVG fades in.
-// done:    media has landed; SVG sits where the native logo would.
+// done:    React overlay is unmounted and the native Rails-rendered <img>
+//          in the scrolling header takes over as the visible logo.
 type Phase = 'opening' | 'playing' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
@@ -169,15 +170,26 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       cardRef.current.style.width = `${r.width}px`;
       cardRef.current.style.height = `${r.height}px`;
     }
-    const t = window.setTimeout(() => setPhase('done'), LAND_MS);
+    const t = window.setTimeout(() => {
+      // Hand off to the Rails-rendered <img>: clearing our inline
+      // visibility:hidden lets the native logo (which lives inside the
+      // scrolling header, wrapped in #logo_home_link) take over. We then
+      // unmount the React overlay so what users see — and scroll, and
+      // click — is the same logo Rails renders site-wide.
+      const nativeImg = mountTarget?.querySelector<HTMLImageElement>('img');
+      if (nativeImg) {
+        nativeImg.style.visibility = '';
+      }
+      setPhase('done');
+    }, LAND_MS);
     return () => window.clearTimeout(t);
-  }, [phase]);
+  }, [phase, mountTarget]);
 
   const handleVideoEnded = () => {
     setPhase('hold');
   };
 
-  if (!mountTarget) return null;
+  if (!mountTarget || phase === 'done') return null;
 
   const showMedia = phase !== 'opening';
   const animatedHidden = phase !== 'playing' && phase !== 'hold';
@@ -187,7 +199,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   // still-modal-sized card.
   const svgHidden =
     phase === 'opening' || phase === 'playing' || phase === 'hold';
-  const backdropFading = phase === 'landing' || phase === 'done';
+  const backdropFading = phase === 'landing';
 
   const backdropClassName = [
     styles.backdrop,
