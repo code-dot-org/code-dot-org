@@ -3,6 +3,7 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   flatToMultiFile,
   multiFileToFlat,
+  splitForLevelbuilderSave,
 } from '@cdo/apps/javalab/lab2/sourceConverter';
 import {JavalabFlatSource} from '@cdo/apps/javalab/lab2/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -341,6 +342,115 @@ describe('javalab2 sourceConverter', () => {
       const active = Object.values(round.files).filter(f => f.active === true);
       expect(active).toHaveLength(1);
       expect(active[0].name).toBe('B.java');
+    });
+  });
+
+  describe('splitForLevelbuilderSave', () => {
+    it('returns empty maps for nil/empty input', () => {
+      expect(splitForLevelbuilderSave(null)).toEqual({
+        startSources: {},
+        validation: {},
+      });
+      expect(splitForLevelbuilderSave(undefined)).toEqual({
+        startSources: {},
+        validation: {},
+      });
+      expect(
+        splitForLevelbuilderSave({folders: {}, files: {}, openFiles: []})
+      ).toEqual({startSources: {}, validation: {}});
+    });
+
+    it('puts non-validation files in startSources, validation files in validation', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+          b: {
+            id: 'b',
+            name: 'Hidden.java',
+            contents: 'hidden',
+            folderId: 'root',
+            type: ProjectFileType.SUPPORT,
+          },
+          c: {
+            id: 'c',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+        },
+        openFiles: ['a'],
+      };
+
+      const {startSources, validation} = splitForLevelbuilderSave(source);
+      expect(Object.keys(startSources).sort()).toEqual([
+        'Hidden.java',
+        'Main.java',
+      ]);
+      expect(Object.keys(validation)).toEqual(['Test.java']);
+    });
+
+    it('strips type-discriminating fields from validation entries', () => {
+      // Legacy Javalab stores validation as a flat map of {text, tabOrder?},
+      // and `@level.validation=` encrypts whatever we hand it. Don't bake
+      // the lab2-only isOpen/isActive flags into encrypted_validation.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+        },
+        openFiles: [],
+      };
+      const {validation} = splitForLevelbuilderSave(source);
+      const entry = validation['Test.java'];
+      expect(entry.text).toBe('class Test {}');
+      expect(entry.isVisible).toBe(false);
+      // Validation files don't carry isValidation/isOpen/isActive on the
+      // wire — they're already known-validation by virtue of the field name.
+      expect('isValidation' in entry).toBe(false);
+      expect('isOpen' in entry).toBe(false);
+      expect('isActive' in entry).toBe(false);
+    });
+
+    it('preserves tabOrder on a validation file when it has one', () => {
+      // Validation files aren't usually open tabs, but if a levelbuilder
+      // had one open while editing start_sources, multiFileToFlat assigns
+      // a tabOrder. Keep it so the round-trip stays stable.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+          b: {
+            id: 'b',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['b'],
+      };
+      const {validation} = splitForLevelbuilderSave(source);
+      expect(validation['Test.java'].tabOrder).toBeUndefined();
     });
   });
 });

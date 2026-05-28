@@ -21,13 +21,24 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useInitialSources} from './useInitialSources';
 
+// Overrides for the levelbuilder save payload. A lab that stores its
+// sources in a non-codebridge wire format (e.g. Javalab's legacy flat
+// shape) passes these to convert MultiFileSource → its own shape
+// before POSTing. When omitted, useSource posts the default codebridge
+// MultiFileSource payload.
+export interface LevelbuilderSaveOverrides {
+  buildStartSavePayload?: (source: MultiFileSource | undefined) => object;
+  buildExemplarSavePayload?: (source: MultiFileSource | undefined) => object;
+}
+
 // Hook for handling the project source for the current level.
 // Returns the current project source and a function to save the source.
 // This also handles displaying the levelbuilder save button in start mode.
 export const useSource = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
-  initiaServerSources: ProjectSources | undefined
+  initiaServerSources: ProjectSources | undefined,
+  levelbuilderSaveOverrides?: LevelbuilderSaveOverrides
 ) => {
   const dispatch = useAppDispatch();
   const source = useAppSelector(
@@ -74,6 +85,9 @@ export const useSource = (
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
+        if (levelbuilderSaveOverrides?.buildStartSavePayload) {
+          return levelbuilderSaveOverrides.buildStartSavePayload(source);
+        }
         const {parsedSource, validationFile} =
           prepareSourceForLevelbuilderSave(source);
         return {start_sources: parsedSource, validation_file: validationFile};
@@ -90,7 +104,12 @@ export const useSource = (
       );
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
-        () => ({exemplar_sources: source}),
+        () => {
+          if (levelbuilderSaveOverrides?.buildExemplarSavePayload) {
+            return levelbuilderSaveOverrides.buildExemplarSavePayload(source);
+          }
+          return {exemplar_sources: source};
+        },
         'Levelbuilder: Edit Exemplar',
         `/levels/${levelId}/update_exemplar_code`
       );
@@ -101,6 +120,7 @@ export const useSource = (
     source,
     levelId,
     isWidget2SourcesMode,
+    levelbuilderSaveOverrides,
   ]);
 
   useEffect(() => {

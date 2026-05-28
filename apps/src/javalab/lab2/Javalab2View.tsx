@@ -1,5 +1,8 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {useSource} from '@codebridge/hooks/useSource';
+import {
+  LevelbuilderSaveOverrides,
+  useSource,
+} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
@@ -26,7 +29,11 @@ import {
   stopJavaCode,
 } from './javabuilderRunUtils';
 import HorizontalLayout from './layout/HorizontalLayout';
-import {flatToMultiFile} from './sourceConverter';
+import {
+  flatToMultiFile,
+  multiFileToFlat,
+  splitForLevelbuilderSave,
+} from './sourceConverter';
 import {JavalabFlatSource, JavalabLevelProperties} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
@@ -92,10 +99,30 @@ const Javalab2View: React.FunctionComponent<
     };
   }, [levelProperties]);
 
+  // Levelbuilder save needs Javalab's flat shape, not codebridge's
+  // MultiFileSource. For start mode, split validation files off into a
+  // separate `validation` field — that's what Rails update_start_code
+  // pipes through `@level.validation=` for encryption. For exemplar mode,
+  // exemplar_sources stays one flat hash (validation included).
+  const levelbuilderSaveOverrides = useMemo<LevelbuilderSaveOverrides>(
+    () => ({
+      buildStartSavePayload: source => {
+        const {startSources: startFlat, validation} =
+          splitForLevelbuilderSave(source);
+        return {start_sources: startFlat, validation};
+      },
+      buildExemplarSavePayload: source => ({
+        exemplar_sources: multiFileToFlat(source),
+      }),
+    }),
+    []
+  );
+
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     codebridgeLevelProperties,
-    initialSources
+    initialSources,
+    levelbuilderSaveOverrides
   );
 
   const sourceLevelId = useAppSelector(
