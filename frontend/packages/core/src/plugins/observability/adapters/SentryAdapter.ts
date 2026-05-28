@@ -3,7 +3,7 @@ import {flatten} from 'flat';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '../../../index';
 import type {Environment} from '../../../environment';
-import type {ObservabilityConfig, TagValue} from '../types';
+import type {ObservabilityConfig, SpanOptions, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
@@ -168,22 +168,46 @@ export class SentryAdapter extends BaseAdapter {
   }
 
   /**
+   * Run callback inside a Sentry span, if initialized.
+   * Degrades to a plain callback invocation if Sentry is not ready.
+   */
+  startSpan<T>(options: SpanOptions, callback: () => T): T {
+    if (!this.initialized) {
+      return callback();
+    }
+
+    try {
+      return Sentry.startSpan(
+        {name: options.name, op: options.op, attributes: options.attributes},
+        callback,
+      );
+    } catch (error) {
+      console.warn('[observability] SentryAdapter.startSpan failed:', error);
+      return callback();
+    }
+  }
+
+  /**
    * Capture an exception with optional structured context, if initialized.
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+  ): string | undefined {
     if (!this.initialized) {
-      return;
+      return undefined;
     }
 
     try {
-      Sentry.captureException(error, {extra: context});
+      return Sentry.captureException(error, {extra: context});
     } catch (sdkError) {
       console.warn(
         '[observability] SentryAdapter.recordError failed:',
         sdkError,
       );
+      return undefined;
     }
   }
 

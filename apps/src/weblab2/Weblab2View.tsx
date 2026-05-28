@@ -30,6 +30,7 @@ import {
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
+import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
@@ -86,6 +87,7 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  useWeblab2IntroTour(levelProperties);
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
 

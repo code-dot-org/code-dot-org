@@ -21,6 +21,7 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
@@ -31,6 +32,7 @@ import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import useCreateSectionTour from './useCreateSectionTour';
+import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -51,7 +53,17 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     DCDO.get('onboarding-enabled', false);
   // TODO: replace with real data once teacher grade level is stored on the platform
   const isElementaryTeacher = true;
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
+    const demo = Object.values(sections).find(
+      s => s.demoType !== null && s.demoType !== undefined
+    );
+    return demo?.demoType ?? null;
+  }, [sections]);
+
   const tour = useCreateSectionTour(isElementaryTeacher);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
@@ -209,8 +221,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
-  const sections = useAppSelector(state => state.teacherSections.sections);
-
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
@@ -285,8 +295,12 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled && (
-              <OnboardingChecklist createSectionTour={tour} />
+            {!!isMiniTutorialEnabled && demoSectionDemoType !== null && (
+              <OnboardingChecklist
+                createSectionTour={tour}
+                reviewSyllabusTour={reviewSyllabusTour}
+                demoType={demoSectionDemoType}
+              />
             )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
@@ -298,7 +312,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 />
               )
             ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={showHiddenOnly}

@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {ChangeEvent, useCallback, useState} from 'react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import RadioButton, {RadioButtonProps} from './../index';
 
@@ -42,7 +42,7 @@ describe('Design System - Radio Button', () => {
 
   it('selects button when clicked, remains selected if clicked again', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     let checked = false;
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -114,7 +114,7 @@ describe('Design System - Radio Button', () => {
 
   it("renders disabled radio button and doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     render(<TestRadioButton disabled={true} onChange={spyOnChange} />);
 

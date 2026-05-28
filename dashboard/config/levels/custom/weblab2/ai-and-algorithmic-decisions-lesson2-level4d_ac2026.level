@@ -1,0 +1,142 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-26T21:39:51.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Chaos Classifier</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">🫠 Chaos Classifier</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"image\" class=\"image\" src=\"images/default.png\" alt=\"Chaos classifier illustration\" />\n      </section>\n      <section class=\"right\">\n        <p class=\"prompt\">Which one are you right now?</p>\n        <div class=\"buttons\">\n          <button id=\"dramaButton\" type=\"button\">💬 Friend Drama</button>\n          <button id=\"sleepButton\" type=\"button\">😵 Can't Sleep</button>\n          <button id=\"chargerButton\" type=\"button\">🔋 Lost Your Charger</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\nhtml,\nbody {\n  height: 100%;\n}\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;\n  background: #fde68a;\n  color: #1f2937;\n}\n.title {\n  text-align: center;\n  margin: 16px 0 0;\n  font-size: 1.75rem;\n  letter-spacing: 0.5px;\n  color: #0f172a;\n}\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n  padding: 24px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n.left {\n  background: #fff;\n  border: 1px solid #e5e7eb;\n  border-radius: 12px;\n  padding: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n  border-radius: 8px;\n  object-fit: contain;\n  transition: opacity 300ms ease;\n}\n.right {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 24px;\n}\n.prompt {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #6b7280;\n}\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 240px;\n  margin-inline: auto;\n}\n.buttons button {\n  padding: 12px 16px;\n  font-size: 1rem;\n  border-radius: 10px;\n  border: 1px solid #1f2937;\n  background: #ffffff;\n  color: #111827;\n  cursor: pointer;\n  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;\n}\n.buttons button:hover {\n  background: #f59e0b;\n  border-color: #f59e0b;\n  color: #fff;\n}\n.buttons button:active {\n  transform: translateY(1px);\n}\n@media (max-width: 800px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n  .buttons {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "default.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/6efe035b-a687-45fc-bc7c-02db8ec5bfd3.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "failing.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/305fd641-77bc-475d-899c-ebad54b8febc.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "drama.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/0e2a8fa5-456f-4921-9d31-730ee10453a1.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "sleep.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/9dbc6f3a-9520-46f9-91fe-787422e6e269.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "charger.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/04036617-3706-4531-9ade-2c0dc9424f1a.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "late.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4d_2026/uuid/4c5cf613-2a76-4a38-95ba-39aa95ef3901.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "encrypted": "false",
+    "display_name": "Chaos Classifier",
+    "bubble_choice_description": "Build a Chaos Classifier where clicking each situation button swaps the image to match that chaos.",
+    "thumbnail_url": "https://images.code.org/c771762ef422bbfac683bc217cf5eaf8-default.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "## Do This:\r\n\r\nYou're a junior Front-End Developer at Mood, a meme app startup. Today's task:\r\n\r\n> \"Three situation buttons. Click one, image swaps to match. Use the images in the project folder.\"\r\n\r\n1. Pick your first situation and image, then complete: \"When the user clicks [button name], the page should [exact response].\" Reference this when you prompt AI and check the result.\r\n\r\n2. Ask AI to generate the code so clicking that button swaps the image.\r\n\r\n3. Click the button to test. If something's off, update your prompt or edit the code.\r\n\r\n4. Read through the code. Can you find where it selects the button, listens for the click, and makes the change?\r\n\r\n5. Repeat for two more situations.",
+    "name_suffix": "_ac2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "Do not instruct students to look at or edit the index.html file. Do not ask students guiding questions — give direct, complete answers. When explaining the code you generated, you may reference event listeners and event handlers, but do not use the word \"function\" or explain code in terms of functions. Do not generate code that uses functions — write event handlers directly. If a student asks for the ID of any button or element, look at the code for the correct ID and tell them directly."
+      }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-26T21:39:51.052+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4d_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4d_2026\"}]"
+}]]></config>
+</Weblab2>

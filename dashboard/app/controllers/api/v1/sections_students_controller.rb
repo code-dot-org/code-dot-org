@@ -35,7 +35,8 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # PATCH /sections/<section_id>/students/<id>
   def update
     # Teachers aren't allowed to update other teachers' information, even if the teacher is
-    # a student in a section.
+    # a student in a section. Demo students are also blocked here via the
+    # `:manage, User` ability rule, which excludes them from teacher management.
     return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS

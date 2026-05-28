@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import CloseButton from '@/closeButton';
 
@@ -31,7 +31,7 @@ describe('Design System - CloseButton', () => {
 
   it('calls onClick when clicked', async () => {
     const user = userEvent.setup();
-    const handleClick = jest.fn();
+    const handleClick = vi.fn();
 
     render(
       <CloseButton aria-label="Close to test onClick" onClick={handleClick} />,

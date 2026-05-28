@@ -1,15 +1,30 @@
 # Brand configuration module that provides brand-specific assets and URLs.
-# Uses DCDO flag 'brand-router-enabled' as on/off switch.
-# When enabled, brand is resolved from URL param > cookie > default:
-#   ?brand=codeai  → sets brand to codeai and persists in cookie
-#   ?brand-reset=1 → clears brand cookie, reverts to default
+#
+# DCDO keys:
+#   default-brand         The brand code returned to all users when no per-user
+#                         override applies. Defaults to BRAND_CODE_ORG when unset
+#                         or set to an unknown code.
+#   brand-router-enabled  On/off switch for per-user routing. When off, every
+#                         request gets the default-brand. When on, the brand is
+#                         resolved per request: URL param > cookie > default.
+#
+# Per-user routing (when brand-router-enabled is on):
+#   ?brand=codeai     → sets brand to codeai and persists in cookie
+#   ?brand-reset=1    → clears brand cookie, reverts to default
 require_relative 'cookie_helpers'
 
 module Cdo
   class Brand
     # Brand code enum
+    #
+    # BRAND_CODE_ORG    Legacy Code.org branding. Default fallback.
+    # BRAND_CODEAI      Launch-ready CodeAI branding. Slated to become default
+    #                   at cutover via the 'default-brand' DCDO key.
+    # BRAND_CODEAI_NEXT Parking lot for in-flight CodeAI branding changes that
+    #                   are not yet ready to launch.
     BRAND_CODE_ORG = 'code'.freeze
     BRAND_CODEAI = 'codeai'.freeze
+    BRAND_CODEAI_NEXT = 'codeai-next'.freeze
 
     # Base cookie name for brand persistence (env suffix added by environment_specific_cookie_name)
     BRAND_COOKIE_NAME = 'brand'.freeze
@@ -25,24 +40,37 @@ module Cdo
         trademark_html: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.org.'
       },
       BRAND_CODEAI => {
-        logo_filename: 'logo.svg',
-        header_logo_filename: 'logo.svg',
-        logo_alt_key: :code_org_logo_alt,
-        favicon: 'favicon.ico',
-        legal_name: 'Code.ai',
-        trademark_html: '&copy; Code.ai, %{current_year}. Code.ai&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.ai.'
+        logo_filename: 'logo-codeai.svg',
+        header_logo_filename: 'logo-codeai-inverse.svg',
+        logo_alt_key: :codeai_logo_alt,
+        favicon: 'favicon-codeai.ico',
+        legal_name: 'CodeAI',
+        trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
+      },
+      BRAND_CODEAI_NEXT => {
+        logo_filename: 'logo-codeai.svg',
+        header_logo_filename: 'logo-codeai-inverse.svg',
+        logo_alt_key: :codeai_logo_alt,
+        favicon: 'favicon-codeai.ico',
+        legal_name: 'CodeAI',
+        trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       }
     }.freeze
 
     # Get the current brand code.
-    # When brand-router-enabled is off, always returns default brand.
-    # When enabled, checks URL param > cookie for brand code.
+    # When brand-router-enabled is off, always returns the default brand.
+    # When on, checks URL param > cookie, falling back to the default brand.
+    # The default brand is read from DCDO 'default-brand' and falls back to
+    # BRAND_CODE_ORG when unset or set to an unknown code.
     # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_code(request = nil)
-      return BRAND_CODE_ORG unless DCDO.get('brand-router-enabled', false)
+      default = DCDO.get('default-brand', BRAND_CODE_ORG)
+      default = BRAND_CODE_ORG unless BRANDS.key?(default)
+
+      return default unless DCDO.get('brand-router-enabled', false)
 
       brand = resolve_brand(request)
-      BRANDS.key?(brand) ? brand : BRAND_CODE_ORG
+      BRANDS.key?(brand) ? brand : default
     end
 
     # Get the current brand configuration

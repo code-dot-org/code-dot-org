@@ -27,7 +27,9 @@ filename:
         "text": "...",
         "tabOrder": 0,
         "isVisible": true,
-        "isValidation": false
+        "isValidation": false,
+        "isOpen": true,
+        "isActive": false
       },
       ...
     }
@@ -36,6 +38,12 @@ wrapped as `{source: <flat hash>}` in `main.json`. Javabuilder reads the
 same shape server-side via `JavalabFilesHelper.get_project_files`. We
 must keep this shape on the wire — javalab2 cannot break legacy
 projects, and cannot change what Javabuilder reads.
+
+`isOpen` and `isActive` are lab2-only additions that round-trip
+codebridge's open-tab set and active-tab focus. Both are optional and
+default to `isOpen=true`, `isActive=false`, so legacy levels without
+these fields convert as they always have. Javabuilder ignores
+unknown keys.
 
 Codebridge, on the other hand, speaks `MultiFileSource`:
 
@@ -106,11 +114,6 @@ come in a later phase. Differences from legacy use:
   and committing a named version for free.
 
 ## Deferred to later phases
-- **More robust source conversion** Java Lab did not have the concept of
-  a 'closed' file, only a visible one, where files that were not visible were
-  hidden support files. We should add an additional field when converting back
-  from MultiFileSource that captures the open/closed state of files. Right now, 
-  all your files will be open every time you load a level.
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
 - **Neighborhood mini-app**

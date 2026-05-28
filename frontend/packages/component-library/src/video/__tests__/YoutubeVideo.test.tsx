@@ -1,18 +1,19 @@
 import {render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import YouTubeVideo from '../YoutubeVideo';
 
-jest.mock('react-player', () => ({
+vi.mock('react-player', () => ({
   __esModule: true,
   default: () => <div>YouTube Player</div>,
-  canPlay: jest.fn(),
+  canPlay: vi.fn(),
 }));
 
 describe('YouTubeVideo', () => {
   const defaultProps = {
     src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     posterThumbnail: 'https://example.com/thumbnail.jpg',
-    onError: jest.fn(),
+    onError: vi.fn(),
   };
 
   it('renders the YouTube video player', () => {
@@ -35,8 +36,8 @@ describe('YouTubeVideo', () => {
   });
 
   it('does not inject the YouTube API script if already present', () => {
-    window.YT = {Player: jest.fn()};
-    const appendSpy = jest.spyOn(document.head, 'appendChild');
+    window.YT = {Player: vi.fn()};
+    const appendSpy = vi.spyOn(document.head, 'appendChild');
 
     render(<YouTubeVideo {...defaultProps} />);
 
