@@ -293,3 +293,29 @@ $text-horizontal-padding: 2.6cqw;
     }
   }
 }
+
+// Teacher-only note area shown below the bubble row in the panels
+// viewer. The block sits inside #panels-container and uses the same
+// `width` style as the panels themselves so the text column lines up
+// with the panel above. Renders only when the active panel has a
+// teacherNote (gating handled in the JSX).
+.teacherNote {
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border: 1px solid #e0d8c0;
+  background: #fffbe6;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.teacherNoteLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #846;
+  margin-bottom: 4px;
+}

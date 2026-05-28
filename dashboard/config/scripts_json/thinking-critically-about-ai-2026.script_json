@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-22 17:07:40 UTC",
+    "serialized_at": "2026-05-27 17:20:18 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -4012,17 +4012,6 @@
       }
     },
     {
-      "name": "Guide to Project-Based Learning",
-      "url": "https://docs.google.com/document/d/1ieLxLxiCZQXHzvhXX6ebvlX2ce1KFeKE5NSrPzF9ff4/edit?usp=sharing",
-      "key": "guide_to_project-based_learning",
-      "properties": {
-        "embeddability_type": "embed_and_resource_dropdown"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_project-based_learning"
-      }
-    },
-    {
       "name": "Creating a Chatbot",
       "url": "https://docs.google.com/presentation/d/14M0jHJT75FFLgxkN5OfjjuJBKbC88XJj7LegmCoEM_o/edit?usp=sharing",
       "key": "guidelines_for_working_with_ai",
@@ -4276,12 +4265,6 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
-        "script.name": "thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_project-based_learning",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }

@@ -2,14 +2,15 @@ import {render, screen, act, fireEvent} from '@testing-library/react';
 import {MouseEventHandler} from 'react';
 import ReactPlayer from 'react-player';
 import {defaultProps} from 'react-player/props';
+import {type Mock, vi} from 'vitest';
 
 import Video from '../Video';
 
 type ReactPlayerProps = typeof defaultProps;
 
-ReactPlayer.canPlay = jest.fn();
+ReactPlayer.canPlay = vi.fn();
 
-jest.mock('react-player', () => ({
+vi.mock('react-player', () => ({
   __esModule: true,
   default: ({light, src, playIcon, onError}: ReactPlayerProps) => (
     <div>
@@ -23,7 +24,7 @@ jest.mock('react-player', () => ({
       </button>
     </div>
   ),
-  canPlay: jest.fn(),
+  canPlay: vi.fn(),
 }));
 
 describe('Video Component', () => {
@@ -84,7 +85,7 @@ describe('Video Component', () => {
   });
 
   it('renders native video player when YouTube video fails and fallback is valid', () => {
-    (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
     render(<Video {...defaultProps} />);
 
     fireEvent.click(
@@ -104,7 +105,7 @@ describe('Video Component', () => {
   });
 
   it('renders error state when both YouTube and fallback video fail', () => {
-    (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
     render(<Video {...defaultProps} />);
 
     fireEvent.click(
@@ -136,7 +137,7 @@ describe('Video Component', () => {
 
   it('renders error state when YouTube is known to be blocked', () => {
     window.CDOVideoPlayer!.isYouTubeBlocked = true;
-    (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
     render(<Video {...defaultProps} videoFallback={undefined} />);
 
     fireEvent.click(
@@ -152,7 +153,7 @@ describe('Video Component', () => {
   });
 
   it('renders default error messages when errorHeading and errorBody are not provided', () => {
-    (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
+    (ReactPlayer.canPlay as Mock).mockReturnValue(true);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const {errorHeading, errorBody, ...propsWithoutErrorMessages} =

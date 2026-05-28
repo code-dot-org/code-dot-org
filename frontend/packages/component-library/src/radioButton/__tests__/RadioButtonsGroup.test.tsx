@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {ChangeEvent, useState} from 'react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import {RadioButtonsGroup, RadioButtonsGroupProps} from './../index';
 
@@ -75,7 +75,7 @@ describe('Design System - Radio Buttons Group', () => {
 
   it('changes selected radio button on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     render(<TestRadioButtonsGroup onChange={spyOnChange} />);
 
@@ -112,7 +112,7 @@ describe('Design System - Radio Buttons Group', () => {
 
   it('renders disabled radio buttons and prevents selection', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     const modifiedRadioButtonsData = [
       {...radioButtonsData[0], disabled: true},

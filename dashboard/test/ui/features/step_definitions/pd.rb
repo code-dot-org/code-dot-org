@@ -281,7 +281,7 @@ And 'I visit Farsi version of Professional Learning Lending page' do
     And element "a[href*='/educate/professional-learning']" is not visible
     And element "button.ui-test-join-section" is not visible
     And element "a[href*='/professional-learning/workshops']" is not visible
-    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/fa/teacher"
+    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/fa/professional-learning/courses"
   GHERKIN
 end
 
