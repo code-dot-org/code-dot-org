@@ -96,10 +96,13 @@ def device_farm_desktop_browser(http_client: nil)
 
   # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
   # and localhost.code.org to the drone worker's IP address.
-  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['WORKER_IP']
+  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
+    imds_token = `curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600"`.strip
+    worker_ip = `curl -s -H "X-aws-ec2-metadata-token:#{imds_token}" http://169.254.169.254/latest/meta-data/local-ipv4`.strip
+
     chrome_options = capabilities['goog:chromeOptions'] || {}
     chrome_args = chrome_options['args'] || []
-    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{ENV['WORKER_IP']}, MAP localhost.code.org #{ENV['WORKER_IP']}"
+    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{worker_ip}, MAP localhost.code.org #{worker_ip}"
     chrome_options['args'] = chrome_args
     capabilities['goog:chromeOptions'] = chrome_options
   end
