@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
+import localization from '@cdo/apps/localization';
 
 import * as constants from './constants';
 import * as elementUtils from './designElements/elementUtils';
@@ -78,10 +79,15 @@ class ScreenSelector extends React.Component {
         onChange={this.handleChange}
         disabled={this.props.isRunning}
         aria-label={applabMsg.selectScreen()}
+        data-notranslate="true"
       >
         {options}
-        {canAddScreen && <option>{constants.IMPORT_SCREEN}</option>}
-        {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
+        {canAddScreen && (
+          <option>{localization.translate(constants.IMPORT_SCREEN)}</option>
+        )}
+        {canAddScreen && (
+          <option>{localization.translate(constants.NEW_SCREEN)}</option>
+        )}
       </select>
     );
   }
