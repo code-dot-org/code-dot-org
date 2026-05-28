@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -28,7 +29,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     // No button to view hidden (notification button not counted)
-    expect(wrapper.find('Button').length).to.equal(0);
+    expect(wrapper.find(MuiButton).length).to.equal(0);
   });
 
   it('renders a OwnedSectionsTable with view button if archived sections', () => {
@@ -37,15 +38,17 @@ describe('OwnedSections', () => {
     );
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     // Button to view hidden (notification not counted)
-    expect(wrapper.find('Button').length).to.equal(1);
-    expect(wrapper.find('Button').at(0).props().text, 'View archived sections');
+    expect(wrapper.find(MuiButton).length).to.equal(1);
+    expect(wrapper.find(MuiButton).at(0).props().children).to.equal(
+      'View archived sections'
+    );
   });
 
   it('renders two OwnedSectionsTables if view archived sections clicked', () => {
     const wrapper = shallow(
       <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
-    wrapper.find('Button').at(0).simulate('click');
+    wrapper.find(MuiButton).at(0).simulate('click');
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(2);
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').at(0).props().sectionIds
@@ -53,7 +56,7 @@ describe('OwnedSections', () => {
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').at(1).props().sectionIds
     ).to.deep.equal([13]);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
+    expect(wrapper.find(MuiButton).at(0).props().children).to.equal(
       'Hide archived sections'
     );
   });
@@ -63,9 +66,9 @@ describe('OwnedSections', () => {
       <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
     // Show archived sections
-    wrapper.find('Button').first().simulate('click');
+    wrapper.find(MuiButton).first().simulate('click');
     // Hide archived sections
-    wrapper.find('Button').first().simulate('click');
+    wrapper.find(MuiButton).first().simulate('click');
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds

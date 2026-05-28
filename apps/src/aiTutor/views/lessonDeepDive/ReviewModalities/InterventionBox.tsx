@@ -165,7 +165,11 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         )}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && (
-          <PodcastsBox lessonId={lessonId} reflectionData={reflectionData} />
+          <PodcastsBox
+            lessonId={lessonId}
+            reflectionData={reflectionData}
+            objectives={objectives}
+          />
         )}
       </div>
 

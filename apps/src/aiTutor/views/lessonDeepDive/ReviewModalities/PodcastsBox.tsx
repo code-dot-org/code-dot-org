@@ -8,7 +8,10 @@ import React, {
   useState,
 } from 'react';
 
-import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {
+  LessonDeepDiveData,
+  ReflectionData,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
@@ -25,6 +28,7 @@ function formatTime(seconds: number): string {
 interface PodcastsBoxProps {
   lessonId: number;
   reflectionData: ReflectionData | null;
+  objectives: LessonDeepDiveData['objectives'];
 }
 
 type PodcastStatus = 'loading' | 'ready' | 'unavailable';
@@ -32,7 +36,11 @@ type PodcastStatus = 'loading' | 'ready' | 'unavailable';
 // One line of the podcast transcript: who is speaking and what they say.
 type ScriptLine = {voice_id: string; text: string};
 
-const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
+const PodcastsBox: FC<PodcastsBoxProps> = ({
+  lessonId,
+  reflectionData,
+  objectives,
+}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -74,9 +82,15 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
 
   // The podcast is keyed by the objectives the student is still working on, so
   // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
+  // When the student bypassed reflection or submitted without rating anything
+  // we treat every lesson objective as struggling — matching the key the
+  // generation side uses for those same cases.
   const objectiveIds = useMemo(() => {
-    if (!reflectionData) {
-      return [];
+    if (
+      !reflectionData ||
+      Object.keys(reflectionData.objectiveReflections).length === 0
+    ) {
+      return objectives.map(o => o.id);
     }
     return Object.entries(reflectionData.objectiveReflections)
       .filter(
@@ -85,7 +99,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
           value === LessonObjectiveReflectionValues.UNSURE
       )
       .map(([objectiveId]) => objectiveId);
-  }, [reflectionData]);
+  }, [reflectionData, objectives]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -107,16 +121,11 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
   // keeps the scrubber and skip controls working, since the controller serves
   // the file via send_data without HTTP range support.
   //
-  // A podcast is generated whenever the student submits a reflection, keyed by
-  // their struggling objectives — an empty set when they rated everything "Got
-  // it", which is a valid lesson-level podcast. So we retrieve whenever a
-  // reflection exists; only the no-reflection case has nothing to fetch.
+  // The S3 key is keyed by the struggling-objective set. With a reflection, we
+  // request the student's struggling set (empty when they rated everything "Got
+  // it" — a valid lesson-level podcast). Without a reflection, objectiveIds
+  // above falls back to every lesson objective, so we request that podcast.
   useEffect(() => {
-    if (!reflectionData) {
-      setStatus('unavailable');
-      return;
-    }
-
     const params = new URLSearchParams();
     params.set('lesson_id', String(lessonId));
     objectiveIds.forEach(id => params.append('objective_ids[]', id));
@@ -154,7 +163,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
       cancelled = true;
       if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
-  }, [lessonId, objectiveIds, reflectionData]);
+  }, [lessonId, objectiveIds]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
