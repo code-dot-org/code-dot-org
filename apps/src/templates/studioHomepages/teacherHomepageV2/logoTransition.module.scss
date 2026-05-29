@@ -5,7 +5,7 @@
   opacity: 1;
   z-index: 9998;
   pointer-events: auto;
-  transition: opacity 600ms ease;
+  transition: opacity 1200ms ease;
 }
 
 .backdropOpening {
@@ -25,7 +25,7 @@
   z-index: 9999;
   opacity: 1;
   transition:
-    opacity 600ms ease,
+    opacity 1200ms ease,
     top 700ms cubic-bezier(0.4, 0, 0.2, 1),
     left 700ms cubic-bezier(0.4, 0, 0.2, 1),
     width 700ms cubic-bezier(0.4, 0, 0.2, 1),

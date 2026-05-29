@@ -17,7 +17,7 @@ const SEEN_COOKIE_EXPIRES_DAYS = 180;
 // linear cycle; after that the shapes are still until the cycle would
 // repeat. We stop watching at 4500ms — long enough to see the morph,
 // short enough that the hold + landing don't drag.
-const OPEN_FADE_MS = 600;
+const OPEN_FADE_MS = 1200;
 const ANIMATED_DURATION_MS = 4500;
 const HOLD_MS = 500;
 const LAND_MS = 700;

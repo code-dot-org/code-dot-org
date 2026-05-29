@@ -8,7 +8,7 @@ import LogoTransition from '@cdo/apps/templates/studioHomepages/teacherHomepageV
 const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 const HEADER_LOGO_CONTAINER_ID = 'header_logo_container';
-const OPEN_FADE_MS = 600;
+const OPEN_FADE_MS = 1200;
 const ANIMATED_DURATION_MS = 4500;
 const HOLD_MS = 500;
 const LAND_MS = 700;
