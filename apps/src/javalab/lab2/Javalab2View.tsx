@@ -138,7 +138,11 @@ const Javalab2View: React.FunctionComponent<
     // Javabuilder reads source from S3. Flush the in-memory editor first so
     // S3 reflects what the user sees before the WS connection opens.
     await Lab2Registry.getInstance().getProjectManager()?.flushSave();
-    await handleRunClick(dispatch, levelProperties);
+    await handleRunClick(
+      dispatch,
+      levelProperties.id,
+      labConfig?.miniApp?.name || 'console'
+    );
   };
 
   return (
