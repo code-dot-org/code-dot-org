@@ -1,3 +1,23 @@
+<%#
+  Stack:    lambda (deployed CloudFormation stack name is literally "lambda")
+  Profile:  codeorg-admin (AWS account: codeorg)
+  Cadence:  rare, manual. Drift is likely — always lint and validate first.
+
+  Always, in order:
+    export AWS_PROFILE=codeorg-admin
+    bundle exec rake stack:lambda:lint     RAILS_ENV=production
+    bundle exec rake stack:lambda:validate RAILS_ENV=production
+    ADMIN=1 bundle exec rake stack:lambda:start RAILS_ENV=production
+    unset AWS_PROFILE
+
+  ADMIN=1 is required for :start because this stack manages IAM roles for
+  the Custom Resource lambdas; see lib/cdo/aws/cloud_formation.rb. Lambda
+  source is inlined from the sibling *.js files via the ERB `inline_js`
+  helper, so code changes ship by re-running :start (no separate
+  `aws lambda update-function-code`).
+
+  Rake wiring: lib/rake/stack.rake (the `simple_stacks` loop).
+%>
 <%
 require 'cdo/cloud_formation/vpc'
 self.class.include VPC
@@ -6,7 +26,8 @@ self.class.include VPC
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Lambda layer for functions used in CloudFormation Custom Resources.
-  Note: Admin permissions are required to manage this stack.
+  Note: Admin permissions are required to manage this stack. See the ERB
+  header above for the lint/validate/deploy sequence.
 Parameters:
   SessionChannel:
     Description: Channel to post Slack session audit messages.

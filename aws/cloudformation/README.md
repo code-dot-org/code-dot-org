@@ -22,7 +22,68 @@ First, consult [Specific Template/Stack Notes](#specific-template-stack-notes) t
 
 ### If you have a .yml.erb file
 
-If you're dealing with a .yml.erb file, you'll need to search for the right ruby/rake code to either render it to a template .yml, or directly deploy it. Good places to start your search would be the `lib/rake/stack.rake` file, or there may be a ruby script nearby the file.
+All `*.yml.erb` templates in this directory are rendered and deployed through
+rake tasks defined in [`lib/rake/stack.rake`](../../lib/rake/stack.rake). The
+table below maps each template to its tasks. Many of these stacks deploy
+rarely, so drift between the template and the live stack is likely.
+
+**Always lint and validate before `:start`.** The linter (`cfn-lint`) catches
+schema problems; `:validate` asks AWS to parse the rendered template against
+the live account. Skipping these on a rarely-touched stack is how a small
+template edit becomes an outage.
+
+| Template | Rake namespace | Scope | Deployed stack name(s) | Notes |
+|---|---|---|---|---|
+| [`lambda.yml.erb`](lambda.yml.erb) | `stack:lambda` | Single (account-wide) | `lambda` | Admin-only. `:start` requires `ADMIN=1`. See file header. |
+| [`alerting.yml.erb`](alerting.yml.erb) | `stack:alerting` | Single (account-wide) | `alerting` | |
+| [`vpc.yml.erb`](vpc.yml.erb) | `stack:vpc` | Single (account-wide) | `VPC` | |
+| [`iam.yml.erb`](iam.yml.erb) | `stack:iam` | Single (account-wide) | `IAM` | Admin-only. `:start` requires `ADMIN=1`. See [IAM](#iam) section. |
+| [`data.yml.erb`](data.yml.erb) | `stack:data` | Per-environment | `DATA-<rack_env>` (e.g. `DATA-production`, `DATA-staging`, `DATA-test`) | Run `:start` once per environment, varying `RAILS_ENV`. |
+| [`cloud_formation_stack.yml.erb`](cloud_formation_stack.yml.erb) | `stack:start` | Per-deploy | `STACK_NAME` value (production, staging, test, adhocs) | Monolithic app stack; primarily driven by `adhoc:*` / `stack:*` from [`lib/rake/adhoc.rake`](../../lib/rake/adhoc.rake). |
+| [`domain_redirect.yml.erb`](domain_redirect.yml.erb) | n/a | Per-domain | n/a | Deployed via [`domain_redirect_deploy.sh`](domain_redirect_deploy.sh). |
+
+**Scope key:**
+
+- **Single (account-wide)** — exactly one live stack per AWS account. `RAILS_ENV`
+  still selects which config block is rendered into the template, but the
+  deployed AWS stack name is the same regardless. Convention is
+  `RAILS_ENV=production` since these stacks back production services.
+- **Per-environment** — one live stack per `rack_env` value. `:start` must
+  be run once per environment you intend to update; `RAILS_ENV` selects both
+  the config block *and* the target stack name.
+- **Per-deploy** — caller supplies `STACK_NAME` (adhocs, plus the named
+  production/staging/test deploys).
+
+Standard sequence for any single (account-wide) stack — substitute the namespace:
+
+```bash
+export AWS_PROFILE=codeorg-admin   # or codeorg-dev for non-prod experiments
+bundle exec rake stack:<name>:lint     RAILS_ENV=production
+bundle exec rake stack:<name>:validate RAILS_ENV=production
+bundle exec rake stack:<name>:start    RAILS_ENV=production   # prepend ADMIN=1 for iam, lambda
+unset AWS_PROFILE
+```
+
+For per-environment stacks, run the full sequence once per environment, e.g.
+for `data`:
+
+```bash
+export AWS_PROFILE=codeorg-admin
+for env in production staging test; do
+  bundle exec rake stack:data:lint     RAILS_ENV=$env
+  bundle exec rake stack:data:validate RAILS_ENV=$env
+  bundle exec rake stack:data:start    RAILS_ENV=$env
+done
+unset AWS_PROFILE
+```
+
+Useful env vars honored by all of the above: `VERBOSE=1`, `QUIET=1`,
+`TEMPLATE=<path>` (override the default `<stack>.yml.erb`), `STACK_NAME=<name>`
+(override the default deployed name), `IMPORT_RESOURCES=1`.
+
+Each `.yml.erb` should carry a short ERB-comment header (`<%# ... %>`) with
+its specific deploy invocation; that header is the source of truth when the
+table above and reality disagree.
 
 ### If you have a .yml file
 
