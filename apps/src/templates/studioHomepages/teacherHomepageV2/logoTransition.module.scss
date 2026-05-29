@@ -1,7 +1,3 @@
-// Fullscreen dimmer behind the centered media. Lives in document.body so
-// it's not clipped by the teacher dashboard's overflow. Starts at opacity
-// 0 (via .backdropOpening on first paint) and fades in over 300ms; later
-// fades out over 700ms in lockstep with the slide into the header.
 .backdrop {
   position: fixed;
   inset: 0;
@@ -16,19 +12,18 @@
   opacity: 0;
 }
 
+// Override the default 300ms fade-in transition with a 700ms fade-out
+// that matches the landing slide.
 .backdropFading {
   opacity: 0;
   transition: opacity 700ms ease;
 }
 
-// The card is an invisible positioned container (no fill of its own — just
-// the media over the dimmer). Portaled to document.body to escape stacking
-// contexts on .header_left / .header_logo that would otherwise sit it
-// below the backdrop. JS sets its initial top/left/width/height to a
-// modal-sized rect centered in the viewport; the landing effect rewrites
-// those to the native <img>'s viewport rect so the media slides and
-// resizes into the header in one tween. The media fills the card and uses
-// object-fit: contain, so it keeps aspect ratio as the card resizes.
+// Invisible positioned container — just carries the slide. Portaled to
+// document.body to escape stacking contexts on .header_left /
+// .header_logo that would otherwise sit it below the backdrop. JS sets
+// the modal-sized rect at mount; the landing effect rewrites top/left/
+// width/height to the native <img>'s viewport rect.
 .card {
   position: fixed;
   z-index: 9999;
@@ -46,26 +41,20 @@
   opacity: 0;
 }
 
-// Applied on the first render only, so the layout-effect-applied size
-// places the card at the modal position with no opening animation: the
-// card starts at 0x0 until JS sizes it, and without this the size jump
-// would animate. Removed after the first paint, restoring the transitions
-// that drive the slide into the header slot.
+// Applied on the first render only. The card mounts at 0x0 (no inline
+// dims yet); without this the layout-effect-applied size animates from
+// 0 instead of jumping. Removed via raf after first paint.
 .cardNoTransition {
   transition: none;
 }
 
-// The GIF/SVG/video sits in the card. Box dimensions are driven by CSS
-// `aspect-ratio` (per-format below), not by the loaded content, so the
-// element's shape doesn't depend on the image's decode/load state.
-// Without this, animated GIFs/AVIFs intermittently render at the wrong
-// aspect for the first few frames — Chrome briefly uses the IMG box's
-// aspect (matching width/height 100%) before settling on the content's
-// intrinsic 834x313 canvas. width:100% + height:auto lets the
-// aspect-ratio drive the box; max-height:100% caps when the card is
-// shorter than the aspect (i.e. during the slide into the 130x22 header
-// slot, where the aspect cap would otherwise overshoot vertically).
-// object-fit: contain is now a safety net rather than load-bearing.
+// Box dimensions driven by CSS aspect-ratio (per-format below), not by
+// loaded content — without this, Chrome's animated-image pipeline
+// briefly uses the IMG's CSS box aspect before settling on the asset's
+// intrinsic 834x313, producing an intermittent first-frame squish.
+// width:100% + height:auto + max-height:100% lets the aspect-ratio
+// drive the box and caps it when the card is shorter than the aspect
+// (during the slide into the 130x22 header slot).
 .image {
   position: absolute;
   inset: 0;
