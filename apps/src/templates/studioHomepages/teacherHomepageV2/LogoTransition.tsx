@@ -22,9 +22,9 @@ const LAND_MS = 700;
 const HEADER_LOGO_SELECTOR = '#header_logo_container';
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
-// Asset canvas dimensions, supplied as <img> width/height to reserve
+// WebP canvas dimensions, supplied as <img> width/height to reserve
 // box aspect before bytes load and prevent layout shift.
-const ANIMATED_WIDTH = 834;
+const ANIMATED_WIDTH = 1080;
 const ANIMATED_HEIGHT = 313;
 
 interface LogoTransitionProps {

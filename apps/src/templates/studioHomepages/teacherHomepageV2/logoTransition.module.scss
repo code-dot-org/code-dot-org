@@ -51,7 +51,7 @@
 // Box dimensions driven by CSS aspect-ratio (per-format below), not by
 // loaded content — without this, Chrome's animated-image pipeline
 // briefly uses the IMG's CSS box aspect before settling on the asset's
-// intrinsic 834x313, producing an intermittent first-frame squish.
+// intrinsic canvas, producing an intermittent first-frame squish.
 // width:100% + height:auto + max-height:100% lets the aspect-ratio
 // drive the box and caps it when the card is shorter than the aspect
 // (during the slide into the 130x22 header slot).
@@ -69,7 +69,7 @@
 }
 
 .imageAnimated {
-  aspect-ratio: 834 / 313;
+  aspect-ratio: 1080 / 313;
 }
 
 .imageSvg {
