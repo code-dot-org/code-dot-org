@@ -273,3 +273,18 @@ div .quiz-option-correct {
     background-color: var(--neutral-base-black);
   }
 }
+
+.onboarding-progress-table-step {
+  width: 276px;
+}
+
+.onboarding-step-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-step-supportive-text {
+  color: var(--neutral-white-alpha-60);
+  font-size: 12px;
+  margin-top: 8px;
+}
