@@ -78,8 +78,16 @@
 .stageLanding {
   --logo-bg: rgb(255 255 255 / 0%);
   --logo-fg: #fff;
+  // --ai-inner matches --ai-outer (rather than fading to transparent) so
+  // the blurred inner triangle/ibar stays in lockstep with the outer all
+  // through the interpolation. Color transitions on @property '<color>'
+  // are premultiplied, so a target of rgb(255 255 255 / 0%) would trace
+  // through rgba(0,0,0,α) — the inner would stay black while the outer
+  // shifted to gray, leaving a visible dark spot mid-slide. Matching the
+  // outer keeps the inner invisible by virtue of identical color, both
+  // through the transition and at the landed state.
   --ai-outer: #fff;
-  --ai-inner: rgb(255 255 255 / 0%);
+  --ai-inner: #fff;
 }
 
 .elem {
