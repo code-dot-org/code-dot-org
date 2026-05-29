@@ -62,7 +62,7 @@ export const createWebLab2IntroTourSteps = (tour: Tour): StepOptions[] => [
   {
     id: 'workspace',
     attachTo: {
-      element: '#editor-preview-container',
+      element: '#workspace-with-header',
       on: 'left',
     },
     title: 'Code & Preview Areas',
