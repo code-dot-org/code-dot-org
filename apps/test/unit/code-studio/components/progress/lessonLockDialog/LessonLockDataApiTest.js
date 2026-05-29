@@ -68,11 +68,13 @@ describe('LessonLockDataApi', () => {
         {
           name: 'Student1',
           lockStatus: 'Locked',
+          isDemoStudent: false,
           userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: 'Editable',
+          isDemoStudent: false,
           userLevelData: {},
         },
       ]);

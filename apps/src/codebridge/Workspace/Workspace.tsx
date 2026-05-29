@@ -7,7 +7,7 @@ import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserH
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
-import React, {useMemo, useRef} from 'react';
+import React, {useRef} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -19,12 +19,13 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isProjectTemplateLevel,
-  isReadOnlyWorkspace,
+  isPermanentlyReadOnlyWorkspace,
+  isTemporarilyReadOnlyWorkspace,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
-import currentLocale from '@cdo/apps/util/currentLocale';
+import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
@@ -45,6 +46,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   hideHeaders,
 }) => {
   const {config} = useCodebridgeContext();
+
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,7 +54,8 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const isTemporarilyReadOnly = useAppSelector(isTemporarilyReadOnlyWorkspace);
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -63,60 +66,26 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
   );
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
-  );
-  const versionDetails = useAppSelector(
-    state => state.lab2Project.versionDetails
-  );
-
-  const locale = currentLocale();
-  const versionDate = useMemo(() => {
-    if (!versionDetails?.lastModified) {
-      return '';
-    }
-    const dateFormatter = new Intl.DateTimeFormat(locale, {
-      month: 'short',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-    });
-    // The Regex here removes the space before AM/PM to match mocks and make more compact.
-    return dateFormatter
-      .format(new Date(versionDetails.lastModified))
-      .replace(/\s(AM|PM)/gi, '$1');
-  }, [versionDetails, locale]);
-
-  const versionBannerText = versionDate ? (
-    <>
-      You're viewing a previous version of this project from{' '}
-      <strong>{versionDate}</strong>.
-    </>
-  ) : (
-    "You're viewing the initial version of this project."
-  );
 
   return (
     <div style={style} className={className}>
       <PanelContainer
         id="editor-workspace"
         hideHeaders={hideHeaders}
-        headerContent={<WorkspaceHeader />}
-        rightHeaderContent={<HeaderButtons />}
+        headerContent={<WorkspaceHeader.Content />}
+        rightHeaderContent={
+          <>
+            <WorkspaceHeader.TemplateIcon />
+            <HeaderButtons />
+          </>
+        }
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
         {teacherViewingStudent && (
           <TeacherViewingStudentProjectAlert inWorkspaceContainer />
         )}
-        {viewingOldVersion && (
-          <Alert
-            className={moduleStyles.previousVersionBanner}
-            text={versionBannerText}
-            type="warning"
-            size="xs"
-          />
-        )}
+        <PreviousVersionAlert />
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,
@@ -131,13 +100,16 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Typography
                 className={moduleStyles.fileBrowserHeaderText}
                 variant="body4"
+                component="h2"
               >
                 {codebridgeI18n.filesHeader()}
               </Typography>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
-              {showFileBrowser && !isReadOnly && (
-                <FileBrowserHeaderPopUpButton />
+              {showFileBrowser && !isPermanentlyReadOnly && (
+                <FileBrowserHeaderPopUpButton
+                  disabled={isTemporarilyReadOnly}
+                />
               )}
               <ToggleFileBrowserButton />
             </div>

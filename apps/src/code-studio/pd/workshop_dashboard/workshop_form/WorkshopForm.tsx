@@ -282,13 +282,13 @@ export const WorkshopForm: FC<WorkshopFormProps> = ({config}) => {
           description="You're making an important update to your workshop, would you like your enrollees to be notified via email?"
           mode="light"
           primaryButtonProps={{
-            text: 'Notify',
-            isPending: loadingState === 'notifyLoading',
+            children: 'Notify',
+            loading: loadingState === 'notifyLoading',
             onClick: () => publish(true),
           }}
           secondaryButtonProps={{
-            text: "Don't notify",
-            isPending: loadingState === 'dontNotifyLoading',
+            children: "Don't notify",
+            loading: loadingState === 'dontNotifyLoading',
             onClick: () => publish(false),
           }}
           onClose={() => {

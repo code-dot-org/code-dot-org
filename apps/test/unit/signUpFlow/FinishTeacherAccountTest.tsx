@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import DCDO from '@cdo/apps/dcdo';
 import FinishTeacherAccount, {
   NAME_TYPES,
 } from '@cdo/apps/signUpFlow/FinishTeacherAccount';
@@ -38,6 +39,10 @@ jest.mock('@cdo/apps/utils', () => ({
   navigateToHref: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/dcdo', () => ({
+  get: jest.fn().mockReturnValue(false),
+}));
+
 const navigateToHrefMock = navigateToHref as jest.Mock;
 const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
 
@@ -56,6 +61,7 @@ const FINISH_SIGN_UP_PARAMS = {
     country_code: 'US',
     educator_role: 'classroom_teacher',
     signup_sources_tracking: ['search'],
+    grades_teaching: [],
   },
 };
 
@@ -670,6 +676,73 @@ describe('FinishTeacherAccount', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
+  });
+
+  describe('launch-grades-in-sign-up DCDO flag', () => {
+    const dcdoGetMock = DCDO.get as jest.Mock;
+
+    beforeEach(() => {
+      dcdoGetMock.mockReturnValue(true);
+    });
+
+    afterEach(() => {
+      dcdoGetMock.mockReturnValue(false);
+    });
+
+    it('renders grade chips when flag is enabled', async () => {
+      await waitFor(renderDefault);
+
+      screen.getByText(locale.grades_taught());
+    });
+
+    it('button stays disabled until at least one grade is selected when flag is enabled', async () => {
+      await waitFor(renderDefault);
+
+      fillInFormFields();
+
+      const finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeDisabled();
+
+      fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
+
+      expect(finishSignUpButton).toBeEnabled();
+    });
+
+    it('sends selected grades in payload when flag is enabled', async () => {
+      fetchStub.callsFake(url => {
+        if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+          } as Response);
+        } else {
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: () => Promise.resolve({success: true}),
+          } as Response);
+        }
+      });
+
+      await waitFor(renderDefault);
+
+      fillInFormFields();
+      fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
+      fireEvent.click(screen.getByRole('checkbox', {name: '5'}));
+
+      fireEvent.click(
+        screen.getByRole('button', {name: locale.go_to_my_account()})
+      );
+
+      await waitFor(() => {
+        const fetchCall = fetchStub.getCall(1);
+        const body = JSON.parse(fetchCall.args[1]?.body);
+        expect(body.user.grades_teaching).toEqual(['K', '5']);
+      });
     });
   });
 

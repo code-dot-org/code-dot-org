@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-05T04:50:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "What would happen if the array changed automatically instead of when a button is clicked?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Changing Data and Re-Rendering",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-05T04:50:14.625+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level4-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level4-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-05 04:52:15 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

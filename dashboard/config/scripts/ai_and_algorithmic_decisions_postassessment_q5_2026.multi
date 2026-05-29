@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-postassessment-q5_2026'
 
-question 'A movie-ticket app shows the number of seats left for each showtime. When someone buys a ticket, the number instantly drops by 1 on everyone\'s screen. What part of the program keeps track of and updates that number?'
+question 'A QA Engineer is testing a fitness app. They tap "Log Run" and the run count goes up by 2 instead of 1. They ask AI to suggest a fix. AI returns a confident answer that looks reasonable. What should the QA Engineer do before trusting the fix?'
 
-wrong 'A font setting that shrinks the text as seats fill up'
-wrong 'A comment in the code that reminds developers how many seats were available'
-wrong 'A server photo file that displays pictures of the seats'
-right 'A variable that stores the number of seats and changes whenever a ticket is sold'
+right 'Predict what the fix should do, read the AI''s code line by line, test it, and only then decide whether to accept, adapt, or reject it.'
+wrong 'Apply the fix immediately because AI is usually right.'
+wrong 'Reject the fix without reading it because AI can hallucinate.'
+wrong 'Restart the app and hope the bug goes away.'
 
 allow_multiple_attempts true
 

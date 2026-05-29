@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Wireframing Chatbot\r\n\r\nUse this bot to plan your website's structure and layout. It will guide you through what to include on each page and help you prepare to sketch your wireframes.\r\n\r\n---\r\n\r\n### <i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> Starter Prompts\r\n\r\n> I want to plan out my website pages, but I'm not sure what to put on each one. Can you help me organize my ideas for the Home, About, and Article pages?\r\n\r\n> Can you help me describe what my home page and one other page might look like in words so I can sketch them later?\r\n",
+    "long_instructions": "## Wireframing Chatbot\r\n\r\nUse this bot to plan your website's structure and layout. It will guide you through what to include on each page and help you prepare to sketch your wireframes.\r\n\r\n**Starter Prompts**\r\n\r\n> I want to plan out my website pages, but I'm not sure what to put on each one. Can you help me organize my ideas for the Home, About, and Article pages?\r\n\r\n> Can you help me describe what my home page and one other page might look like in words so I can sketch them later?\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,9 +47,9 @@
     },
     "bubble_choice_description": "Chat with AI about designing wireframes.",
     "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
-    "display_name": "AI Chat",
+    "display_name": "(Optional) AI Wireframing",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.121+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1e_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1e_2025\"},{\"changed_at\":\"2026-03-20 17:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:31:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.121+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1e_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1e_2025\"},{\"changed_at\":\"2026-03-20 17:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:31:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:33:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:34:32 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

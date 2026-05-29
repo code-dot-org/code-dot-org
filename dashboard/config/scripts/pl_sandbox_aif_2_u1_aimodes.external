@@ -1,0 +1,57 @@
+name 'pl_sandbox_aif_2_U1_AImodes'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Effectivly Engaging with AI
+
+In this course, AI is a helper, not a replacement for students’ thinking. Students stay in control of the design and coding process, while AI serves as a creative partner that can suggest, outline, or refine ideas.
+
+## AI with Gaurdrails 
+
+AI Tutor is designed with learning in mind. It doesn not behave exactly like other popular AI tools you may have used before, like ChatGPT. 
+
+Instead, it behaves differntly based on the goal of the activity. 
+
+
+## The Three Roles Framework 
+
+This framework defines three roles, **Designer, Engineer, and QA**, that shape how students engage with planning, building, and evaluating. Rotating through these stances helps students practice intentional design, coding fluency, and critical evaluation.
+
+Pedagogically, the framework keeps responsibilities clear: **students own the creativity and judgment**, while AI serves as a supportive tool for ideas, scaffolds, or critique. This balance ensures students stay in charge of their learning while developing habits of reflection and problem-solving.
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-top: 20px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">💡📝Designer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+The Designer role emphasizes planning and intentionality. Students focus on defining goals, constraints, and user needs, while AI serves as a brainstorming partner to generate options and surface considerations.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️💻 Engineer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+The Engineer role highlights implementation and problem-solving. Students write and adapt code, using AI as a scaffold or debugging helper, while maintaining responsibility for accuracy, accessibility, and alignment with their design goals.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧐✅Quality Assurance (QA)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+The QA role centers on testing, critique, and reflection. Students evaluate whether the system works as intended, identify issues, and decide what to revise, with AI suggesting test cases or potential flaws but leaving decisions to the student.
+</div></details>
+
+
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

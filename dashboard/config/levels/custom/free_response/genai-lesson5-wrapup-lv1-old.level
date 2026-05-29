@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Wrap Up",
-    "long_instructions": "####In your graphic organizer, update the **Embedding** section of the organizer with an explanation of how embeddings are used and created",
+    "long_instructions": "In your graphic organizer, update the **Embedding** section of the organizer with an explanation of how embeddings are used and created",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

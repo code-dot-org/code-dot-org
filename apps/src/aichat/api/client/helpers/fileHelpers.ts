@@ -17,7 +17,7 @@ import {createUuid} from '@cdo/apps/utils';
  */
 function convertMediaTypeToExtension(
   mediaType: string,
-  accepts: string[]
+  accepts: readonly string[]
 ): string {
   if (!accepts.includes(mediaType)) {
     throw new Error(
@@ -67,7 +67,7 @@ export async function assetToFilePart(
 export async function generatedFileToAsset(
   file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string,
-  accepts: string[]
+  accepts: readonly string[]
 ): Promise<ChatAsset> {
   const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
   const asset: ChatAsset = {
@@ -95,7 +95,7 @@ interface PreparedFile {
  */
 export function prepareGeneratedFile(
   file: GeneratedFile,
-  accepts: string[]
+  accepts: readonly string[]
 ): PreparedFile {
   const fileBuffer = file.uint8Array.slice();
   const extension = convertMediaTypeToExtension(file.mediaType, accepts);

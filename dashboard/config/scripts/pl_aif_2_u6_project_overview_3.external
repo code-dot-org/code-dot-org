@@ -1,0 +1,46 @@
+name 'pl-aif-2-U6-project-overview-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Begin with the End in Mind: Final Project Overview
+
+## What Students are Doing
+
+In this capstone, students design, build, and refine a complete, interactive web app for a real audience.
+
+## Core Philosophy
+This project is iterative and process-oriented. It is not a single linear build or a race to add the most features.
+Students will test, revise, and improve their app multiple times, and backtracking is considered an expected part of learning.
+
+---
+
+## Sample project
+
+<img src="https://images.code.org/9edc00ade8d52bae08a5de8c16d7372d-image-1776696508445.png" alt="sample explore-style app with grid of cards and detail view" width="750px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;"><br>
+
+---
+
+## What success looks like
+
+> #### **By the end, students will:**
+> - #### Design a clear, engaging homepage that communicates the purpose of their project
+> - #### Organize content into meaningful sections that support user understanding
+> - #### Show evidence of planning and iteration by refining their design over time
+> - #### Make intentional design decisions and clearly explain their reasoning
+> - #### Reflect on tradeoffs and how their choices impact usability and clarity
+
+---
+
+## Three Key Tools:
+
+Students will show their progress and thinking using three key tools. 
+
+- **Project Guide**: Captures student thinking, why decisions were made, and how the system works
+
+- **Kanban Planning Board**: Tracks tasks, priorities, and workflow (To Do, In Progress, Done)
+
+- **The App**: The tangible product showing what was built
+
+
+MARKDOWN

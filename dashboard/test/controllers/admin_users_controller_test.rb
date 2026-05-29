@@ -399,6 +399,24 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_equal "Dry run completed successfully", response_json['message']
   end
 
+  test "delete_user_progress handles dry_run with string 'true'" do
+    sign_in @admin
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: 'true'
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal true, response_json['dry_run']
+    assert_equal "Dry run completed successfully", response_json['message']
+  end
+
   test "delete_user_progress handles actual deletion" do
     sign_in @admin
 
@@ -410,6 +428,24 @@ class AdminUsersControllerTest < ActionController::TestCase
       csv_data: [{student_id: '123', unit_name: 'course1'}],
       teacher_id: '456',
       dry_run: false
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal false, response_json['dry_run']
+    assert_equal "Progress deletion completed successfully", response_json['message']
+  end
+
+  test "delete_user_progress handles actual deletion with string 'false'" do
+    sign_in @admin
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Deletion output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: 'false'
     }
 
     assert_response :success
@@ -915,6 +951,15 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select 'tbody tr', 2
     assert_select 'td', text: user1.id.to_s
     assert_select 'td', text: user2.id.to_s
+  end
+
+  test 'lookup_by_email_form finds user by hashed email' do
+    sign_in @admin
+    hashed_email = AuthenticationOption.hash_email(@not_admin.email)
+    get :lookup_by_email_form, params: {email: hashed_email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: @not_admin.id.to_s
   end
 
   test 'lookup_by_email_form shows all credential_types for a user with multiple auth options' do

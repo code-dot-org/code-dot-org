@@ -13,7 +13,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_1",
     "encrypted": "false",
-    "long_instructions": "## Accessor Methods \r\n\r\n#### An **accessor method** lets you get or \"access\" the value that is **currently assigned to a variable.**\r\n\r\n#### For a deeper dive into accessor methods, watch the video below. "
+    "long_instructions": "## Accessor Methods \r\n\r\nAn **accessor method** lets you get or \"access\" the value that is **currently assigned to a variable.**\r\n\r\nFor a deeper dive into accessor methods, watch the video below. "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-05-23T14:58:28.657+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-toString-video\\\"\"],\"cloned_from\":\"pl-java-class-design-toString-video\"},{\"changed_at\":\"2025-05-23 15:03:45 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",

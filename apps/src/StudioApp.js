@@ -34,6 +34,7 @@ import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDia
 import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
+import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
@@ -2180,6 +2181,11 @@ StudioApp.prototype.skipLevel = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.configureDom = function (config) {
+  let locale = localization.locale;
+  localization.on('change', _info => {
+    locale = localization.locale;
+  });
+
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
@@ -2201,6 +2207,7 @@ StudioApp.prototype.configureDom = function (config) {
       unitName: config.scriptName,
       levelId: config.serverLevelId,
       levelName: config.level.name,
+      locale: LocalizeToI18nLocales[locale] || locale,
     });
     runButtonWasClicked = true;
   };

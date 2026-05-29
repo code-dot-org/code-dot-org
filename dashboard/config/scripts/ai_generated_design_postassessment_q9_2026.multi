@@ -4,8 +4,8 @@ question 'A travel company\'s design team is planning a new website. Before addi
 
 wrong 'It makes the website load faster once it\'s published online.'
 wrong 'It ensures the website uses the correct color scheme for branding.'
-right 'It helps the team focus on layout and structure before adding visual details.'
 wrong 'It allows the AI tool to automatically write the site\'s content.'
+right 'It helps the team focus on layout and structure before adding visual details.'
 
 allow_multiple_attempts true
 

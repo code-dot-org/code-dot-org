@@ -141,6 +141,8 @@ pardot_password:
 pardot_user_key:
 pardot_username:
 pardot_private_key:
+pardot_client_id:
+pardot_client_secret:
 
 # Honeybadger
 honeybadger_api_token:
@@ -217,6 +219,15 @@ saucelabs_username:
 saucelabs_authkey:
 saucelabs_tunnel_name:
 
+# Credentials for AWS Device Farm, used as an alternative to SauceLabs for
+# running selenium tests against multiple browsers.
+# device_farm_desktop_project_arn is the ARN of a Desktop Browser Testing project,
+# created via the AWS Device Farm console or CLI.
+device_farm_desktop_project_arn:
+# device_farm_mobile_project_arn is the ARN of a Mobile Device Testing project,
+# used for running mobile browser tests (iPhone, iPad, etc.).
+device_farm_mobile_project_arn:
+
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
 applitools_eyes_api_key_view:
@@ -248,10 +259,6 @@ acapela_storage_app:
 acapela_storage_password:
 acapela_ephemeral_app:
 acapela_ephemeral_password:
-
-# Credentials for new relic logging. Used to log apps build times.
-new_relic_license_key:
-newrelic_logging: false
 
 # Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/engines/observability/` for more details.
 enable_opentelemetry: false
@@ -714,3 +721,12 @@ contentful_cs_for_all_api_url: preview.contentful.com
 
 # HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
 hoc_tracking_enabled: true
+
+# Curriculum overrides for demo sections.
+# Curriculum override hashes are keyed by demo type.
+# See Policies::DemoSections for usage.
+demo_section_units:
+demo_section_unit_groups:
+
+# Dummy course for attaching resources to just-in-time PL content
+jit_pl_course_name: 'just-in-time-pl'

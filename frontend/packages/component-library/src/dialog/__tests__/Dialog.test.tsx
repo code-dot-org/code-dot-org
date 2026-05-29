@@ -1,6 +1,5 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Dialog, {DialogProps} from './../index';
 
@@ -8,10 +7,10 @@ describe('Dialog Component', () => {
   const defaultProps: DialogProps = {
     title: 'Test Dialog',
     description: 'This is a test description.',
-    onClose: jest.fn(),
+    onClose: vi.fn(),
     closeLabel: 'Close the dialog',
-    primaryButtonProps: {text: 'Primary Button', onClick: jest.fn()},
-    secondaryButtonProps: {text: 'Secondary Button', onClick: jest.fn()},
+    primaryButtonProps: {children: 'Primary Button', onClick: vi.fn()},
+    secondaryButtonProps: {children: 'Secondary Button', onClick: vi.fn()},
     mode: 'light',
   };
 

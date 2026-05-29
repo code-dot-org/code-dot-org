@@ -11,9 +11,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="Remember to chat responsibily pop-up" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### AI Chat Lab allows for multimodal prompting through images and PDF. While including additional information in prompts can lead to better responses considerations must be taken before sharing images online with AI tools. AI can infer more than just visible objects in an image, including time, location, and personal details. 
+AI Chat Lab allows for multimodal prompting through images and PDF. While including additional information in prompts can lead to better responses considerations must be taken before sharing images online with AI tools. AI can infer more than just visible objects in an image, including time, location, and personal details. 
 
-#### There also are both benefits and risks of AI interpreting images without human context. AI can misinterpret an image and make incorrect assumptions.
+There also are both benefits and risks of AI interpreting images without human context. AI can misinterpret an image and make incorrect assumptions.
 
 <div style="background-color:#F5F7F8; border-left: 6px solid #B7E0E5; padding: 10px; margin-top: 20px; font-family: sans-serif; max-width: 70%">
   <strong style="font-size: 16px;"><i class="fa-solid fa-user-graduate"></i> Career Journeys:</strong>

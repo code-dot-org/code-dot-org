@@ -1,9 +1,9 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {memo, ChangeEvent, InputHTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
 
 import moduleStyles from './radioButton.module.scss';
 
@@ -76,13 +76,12 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
       <i className={moduleStyles.radioIcon} />
       {label && (
         <Typography
-          semanticTag="span"
           className={classnames(
             moduleStyles.radioButtonLabel,
             moduleStyles[`radioButtonLabel-${textThickness}`],
           )}
-          visualAppearance={bodyTextSize}
-          noMargin
+          variant={bodyTextSize}
+          component="span"
         >
           {label}
         </Typography>

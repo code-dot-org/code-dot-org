@@ -5,8 +5,10 @@ import {Provider} from 'react-redux';
 import {
   createMemoryRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
+  useLocation,
 } from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -25,13 +27,70 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
 jest.mock('@cdo/apps/util/HttpClient');
+
+const LocationElement = () => {
+  const location = useLocation();
+  return <div>{location.pathname}</div>;
+};
+
+const HIGH_DEMO_PRESETS = {
+  high: {
+    demo_type: 'high',
+    section_name: 'High School Practice Section',
+    avatar_color: 8,
+    avatar_emoji: 5,
+    login_type: 'email',
+    participant_type: 'student',
+    unit: {
+      name: 'aif2-2025',
+      display_name: 'Artificial Intelligence Foundations',
+    },
+    unit_group: {
+      name: 'artificial-intelligence-foundations-2025',
+      display_name: 'Artificial Intelligence Foundations',
+    },
+  },
+};
+
+// Returns a fetch mock that serves the demo-presets payload plus the
+// available-participant-types endpoint. Other URLs fall through to an
+// empty value so callers can layer additional handlers via `extraHandler`.
+function demoPresetsFetchMock(
+  extraHandler?: (url: string) => ReturnType<typeof Promise.resolve> | undefined
+) {
+  return (url: string) => {
+    if (url === '/api/v1/sections/demo/presets') {
+      return Promise.resolve({
+        value: HIGH_DEMO_PRESETS,
+        response: new Response(),
+      });
+    }
+    if (url === '/dashboardapi/sections/available_participant_types') {
+      return Promise.resolve({
+        value: {availableParticipantTypes: ['student']},
+        response: new Response(),
+      });
+    }
+    const extra = extraHandler?.(url);
+    if (extra) {
+      return extra;
+    }
+    return Promise.resolve({value: {}, response: new Response()});
+  };
+}
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -87,15 +146,29 @@ describe('TeacherHomepage', () => {
   const serverSections = sections.map(serverSectionFromSection);
 
   let fetchSpy: jest.SpyInstance;
+  let originalFetch:
+    | ((input: RequestInfo | URL, init?: RequestInit) => Promise<Response>)
+    | undefined;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
+  let realIsEnabled: typeof experiments.isEnabled;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
+    (globalThis as unknown as {fetch?: jest.Mock}).fetch = jest
+      .fn()
+      .mockResolvedValue({
+        json: () => Promise.resolve({data: {matchedPersona: true}}),
+      } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
-    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(() => {});
     jquerySpy = jest.spyOn($, 'getJSON');
+    realIsEnabled = experiments.isEnabled;
+    experiments.isEnabled = jest.fn((key: string) => key === 'demo-section');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
@@ -118,6 +191,10 @@ describe('TeacherHomepage', () => {
           },
           response: new Response(),
         });
+      } else if (
+        url.match(/^\/sections\/\d+\/retrieve_lessons_for_dropdown$/)
+      ) {
+        return Promise.resolve({value: [], response: new Response()});
       }
       return Promise.resolve({value: {}, response: new Response()});
     });
@@ -155,26 +232,48 @@ describe('TeacherHomepage', () => {
   });
 
   afterEach(() => {
+    (globalThis as {fetch?: typeof originalFetch}).fetch = originalFetch;
     jest.restoreAllMocks();
+    experiments.isEnabled = realIsEnabled;
     restoreRedux();
   });
 
   function renderComponent(initialSections = serverSections) {
     const store = getStore();
     registerReducers({teacherSections, currentUser});
-    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        display_name: 'Rubber Ducky',
+        grades_teaching: ['9', '10'],
+      })
+    );
     store.dispatch(setSections(initialSections));
     return render(
       <Provider store={store}>
         <RouterProvider
           router={createMemoryRouter(
             createRoutesFromElements([
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
-                }
-              />,
+              <Route path="/">
+                <Route
+                  path={TEACHER_NAVIGATION_PATHS.home}
+                  element={
+                    <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
+                  }
+                />
+                <Route
+                  path={TEACHER_NAVIGATION_SECTIONS_URL}
+                  element={<Outlet />}
+                >
+                  <Route path={SPECIFIC_SECTION_BASE_URL} element={<Outlet />}>
+                    <Route
+                      path={TEACHER_NAVIGATION_PATHS.progress}
+                      element={<LocationElement />}
+                    />
+                    <Route path="courses/*" element={<LocationElement />} />
+                  </Route>
+                </Route>
+              </Route>,
             ]),
             {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
           )}
@@ -210,6 +309,123 @@ describe('TeacherHomepage', () => {
     screen.getByText('Period 4');
   });
 
+  it('renders the demo section card for zero-section teachers', async () => {
+    fetchSpy.mockImplementation(demoPresetsFetchMock());
+
+    renderComponent([]);
+    await screen.findByText('High School Practice Section');
+    screen.getByText(/DEMO-123/);
+    screen.getByText('Demo');
+  });
+
+  it('creates a demo section and navigates to progress without reloading', async () => {
+    fetchSpy.mockImplementation(demoPresetsFetchMock());
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/high') {
+        return Promise.resolve({
+          json: () =>
+            Promise.resolve({
+              ...serverSections[0],
+              id: 21,
+              name: 'High School Practice Section',
+            }),
+        });
+      }
+
+      return Promise.resolve({json: () => Promise.resolve({})});
+    });
+
+    renderComponent([]);
+    fireEvent.click(await screen.findByText(i18n.viewProgressButton()));
+    await act(async () => await new Promise(process.nextTick));
+
+    screen.getByText('/sections/21/progress');
+  });
+
+  // Regression: a demo-flow lesson option returns an absolute path that
+  // embeds `:sectionId` and the `/teacher_dashboard` base. The card must
+  // substitute the real id and strip the base before handing the path to
+  // react-router's `navigate`, which is relative to that basename.
+  it('navigates to a demo lesson path with :sectionId and the teacher_dashboard prefix stripped', async () => {
+    fetchSpy.mockImplementation(
+      demoPresetsFetchMock(url => {
+        if (url === '/sections/high/retrieve_lessons_for_dropdown') {
+          return Promise.resolve({
+            value: [
+              {
+                text: 'Unit 3 - Artificial Intelligence Foundations',
+                value:
+                  '/teacher_dashboard/sections/:sectionId/courses/artificial-intelligence-foundations-2025/units/3',
+              },
+            ],
+            response: new Response(),
+          });
+        }
+        return undefined;
+      })
+    );
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/high') {
+        return Promise.resolve({
+          json: () =>
+            Promise.resolve({
+              ...serverSections[0],
+              id: 21,
+              name: 'High School Practice Section',
+            }),
+        });
+      }
+      return Promise.resolve({json: () => Promise.resolve({})});
+    });
+
+    renderComponent([]);
+    fireEvent.click(
+      await screen.findByText('Unit 3 - Artificial Intelligence Foundations')
+    );
+    await act(async () => await new Promise(process.nextTick));
+
+    screen.getByText(
+      '/sections/21/courses/artificial-intelligence-foundations-2025/units/3'
+    );
+  });
+
+  it('falls back to the empty homepage when the demo section is disabled', async () => {
+    experiments.isEnabled = jest.fn(() => false);
+
+    renderComponent([]);
+
+    await screen.findByText(i18n.emptySectionHeadline());
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
+  });
+
+  it('falls back to the empty homepage when demo presets fail to load', async () => {
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/api/v1/sections/demo/presets') {
+        return Promise.reject(new Error('presets failed'));
+      }
+
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    renderComponent([]);
+    await screen.findByText(i18n.emptySectionHeadline());
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.emptyClassSections());
+  });
+
   it('create section button opens popup', async () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
@@ -222,9 +438,8 @@ describe('TeacherHomepage', () => {
     await screen.findByText('Create a new section');
 
     await screen.findByText('Picture password', {}, {timeout: 5000});
-    screen.getByRole('button', {name: 'Cancel'});
-    // This is a hail mary quick flakiness mitigation attempt. If we see continued failures, we should look for underlying causes.
-  }, 25000);
+    expect(document.querySelector('.uitest-new-section-dialog')).not.toBeNull();
+  }, 10000);
 
   it('teaching/archived toggle', async () => {
     renderComponent();
@@ -284,6 +499,30 @@ describe('TeacherHomepage', () => {
     fireEvent.click(archivedButton);
 
     screen.getByText('Welcome, Rubber Ducky');
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t archived any class sections yet.');
+  });
+
+  it('shows the teaching empty state instead of the demo card when only archived sections exist', async () => {
+    fetchSpy.mockImplementation(demoPresetsFetchMock());
+
+    renderComponent([serverSections.find(section => section.id === 15)!]);
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t created any class sections yet.');
+  });
+
+  it('shows the archived empty state instead of the demo card on the archived tab with zero sections', async () => {
+    fetchSpy.mockImplementation(demoPresetsFetchMock());
+
+    renderComponent([]);
+    await act(async () => await new Promise(process.nextTick));
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    fireEvent.click(archivedButton);
+
+    expect(screen.queryByText('High School Practice Section')).toBeNull();
     screen.getByText("It's a bit empty here...");
     screen.getByText('You haven’t archived any class sections yet.');
   });

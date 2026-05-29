@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson2-level6-v1-2026'
+display_name 'Choose a UI to Scale Your Display'
+description '### Choose the same UI you used in the previous levels. You will use `.map()` to display all items instead of just one.'
+
+sublevels
+level 'building-data-driven-systems-lesson2-level6a-v1-2026'
+level 'building-data-driven-systems-lesson2-level6b-v1-2026'
+level 'building-data-driven-systems-lesson2-level6c-v1-2026'
+
+uses_lab2

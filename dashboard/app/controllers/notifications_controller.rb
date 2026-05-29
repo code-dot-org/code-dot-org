@@ -2,7 +2,7 @@ class NotificationsController < ApplicationController
   before_action :authenticate_user!
 
   # TODO: Our contentful setup only supports `en-US` for now.
-  # We should use request.locale if we switch to more locale support.
+  # We should use `I18n.locale` if we switch to more locale support.
   # Decision thread: https://codedotorg.slack.com/archives/C08AMQ869QX/p1758749785732599
   # contentful docs: https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
   LOCALE = I18n.default_locale

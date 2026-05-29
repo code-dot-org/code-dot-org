@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **AI and Algorithmic Decisions**, a unit where students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+This professional learning module prepares you to teach **AI and Algorithmic Decisions**, a unit where students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
 ___
 
@@ -25,15 +25,15 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
-
-
-* #### Guide students in visual planning, introducing flowcharts as tools for mapping algorithms and predicting program behavior.
+* Prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
 
 
-* #### Teach foundational JavaScript skills, including variables, functions, and if/else statements, through scaffolded coding and debugging practice.
+* Guide students in visual planning, introducing flowcharts as tools for mapping algorithms and predicting program behavior.
+
+
+* Teach foundational JavaScript skills, including variables, functions, and if/else statements, through scaffolded coding and debugging practice.
 
 
 

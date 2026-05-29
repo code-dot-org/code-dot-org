@@ -5,17 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing HTML + AI
 
-####  Now that you have been introduced to user experience, let’s dive into how the web apps are made.
+Now that you have been introduced to user experience, let’s dive into how the web apps are made.
 
 ## HTML
 
-#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
+**HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
 
-#### In this activity, you’ll guide students to use AI to help generate a basic HTML framework for a simple web page. The AI acts like a coding assistant, helping students get started while they learn how each part of the code works.
+In this activity, you’ll guide students to use AI to help generate a basic HTML framework for a simple web page. The AI acts like a coding assistant, helping students get started while they learn how each part of the code works.
 
 
 ## Prompt Engineering
-#### A key ingredient of using AI is refining prompts through prompt engineering. When the AI’s output is flawed or incomplete, revise your prompt to be more specific and provide clear context or constraints.
+A key ingredient of using AI is refining prompts through prompt engineering. When the AI’s output is flawed or incomplete, revise your prompt to be more specific and provide clear context or constraints.
 
 
 
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 ## What's Next?
 
-#### Let’s practice prompting AI to create a basic webpage in HTML but first, review the features in Web Lab
+Let’s practice prompting AI to create a basic webpage in HTML but first, review the features in Web Lab
 
 
 MARKDOWN

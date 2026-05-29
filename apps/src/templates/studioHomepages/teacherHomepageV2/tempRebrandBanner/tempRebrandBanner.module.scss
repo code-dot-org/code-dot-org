@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.imageStyle {
+ border-radius: 4px 0 0 4px;
+ height: stretch;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+}
+
+.linkButtonStyle {
+  align-self: flex-end;
+}
+
+.dismissButtonStyle {
+  color: var(--text-neutral-white-fixed);
+  align-self: flex-start;
+  margin-top: 4px;
+  margin-right: 4px;
+}

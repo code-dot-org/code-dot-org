@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-25T01:15:51.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Check a trusted source\nSearch for the same information on a website you already trust.",
+        "imageUrl": "https://images.code.org/b9b867a4898e8533d9d19d90652e4f90-Gemini_Generated_Image_oqf4jdoqf4jdoqf4.png",
+        "key": "thinking_critically_lesson7_level2_2026-31ec809c-49de-4489-a7e8-016afcf23d44"
+      },
+      {
+        "text": "###Look for agreement\nCheck if more than one source says the same thing.",
+        "imageUrl": "https://images.code.org/4a83df78316c3bec7e4c20b611b3c5f5-Gemini_Generated_Image_kra0mrkra0mrkra0.png",
+        "key": "thinking_critically_lesson7_level2_2026-183666db-53d3-4932-a7a0-8afb9d2e58c4"
+      },
+      {
+        "text": "### Look for a date. \nAI information can be outdated.",
+        "imageUrl": "https://images.code.org/80fecd8228e305697202d6a056570cb6-Gemini_Generated_Image_8awb618awb618awb.png",
+        "key": "thinking_critically_lesson7_level2_2026-b0772e02-addd-4741-9eab-dcf47fda2a50"
+      },
+      {
+        "text": "###Ask for sources\nAsk AI to show you where it got its information.",
+        "imageUrl": "https://images.code.org/bcbd768afabe8f64a7b1bc78e0a232f8-Gemini_Generated_Image_kna4xdkna4xdkna4.png",
+        "key": "thinking_critically_lesson7_level2_2026-3f7b3eaa-a6ee-434b-b65b-2f9159cde382"
+      },
+      {
+        "text": "###When in doubt, ask a human\nIf it affects a real decision, have a human double check it.",
+        "imageUrl": "https://images.code.org/e45c1aed4bb4485a97a358d1efa76152-Gemini_Generated_Image_7i3faj7i3faj7i3f.png",
+        "key": "thinking_critically_lesson7_level2_2026-a9058b5f-c525-4892-8a7b-8c4ede8dc278"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-25 01:20:30 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 17:51:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 18:01:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 18:11:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-27 19:25:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

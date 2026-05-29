@@ -11,9 +11,9 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, EXPERIMENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
@@ -107,8 +107,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
 
-  const [isInGradeSelectionExperiment, setIsInGradeSelectionExperiment] =
-    useState(false);
+  const showGradeSelection = !!DCDO.get('launch-grades-in-sign-up', false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -166,17 +165,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   }, [countryCode, usIp, redirectUrl]);
 
-  useEffect(() => {
-    (async () => {
-      const result = await statsigReporter.getIsInExperimentAsync(
-        EXPERIMENTS.SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION,
-        EXPERIMENTS.ENABLE_SELECTING_GRADES,
-        false
-      );
-      setIsInGradeSelectionExperiment(result);
-    })();
-  }, []);
-
   // GDPR is valid if
   // 1. The fetch call has completed AND
   //   2. GDPR is showing AND checked OR
@@ -197,7 +185,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole ||
       signupSources.length < 1 ||
-      (selectedGrades.length < 1 && isInGradeSelectionExperiment),
+      (selectedGrades.length < 1 && showGradeSelection),
     [
       gdprValid,
       givenName,
@@ -207,7 +195,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       educatorRole,
       signupSources,
       selectedGrades,
-      isInGradeSelectionExperiment,
+      showGradeSelection,
     ]
   );
 
@@ -306,6 +294,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         country_code: countryCode,
         educator_role: educatorRole || null,
         signup_sources_tracking: signupSources,
+        grades_teaching: selectedGrades,
       },
     };
     const authToken = await getAuthenticityToken();
@@ -469,7 +458,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
-          {isInGradeSelectionExperiment && (
+          {showGradeSelection && (
             <GradeLevelChips
               inputLabel={locale.grades_taught()}
               values={selectedGrades}

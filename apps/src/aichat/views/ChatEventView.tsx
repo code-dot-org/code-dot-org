@@ -1,15 +1,17 @@
 import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
+import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
-import {FAQ_LINK, modelDescriptions} from '../constants';
+import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
-import {timestampToLocalTime} from '../redux/utils';
 import {
+  AI_TUTOR_VERSION_ACTION_ACCEPT,
+  AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
   ModelUpdate,
   isChatMessage,
@@ -18,12 +20,15 @@ import {
   ChatEventDescriptionKey,
   ChatAsset,
   ModelParameters,
+  isCompletedChatMessage,
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
+
+const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const chatEventDescriptionsOwner = {
   CLEAR_CHAT: 'You cleared the chat workspace.',
@@ -46,7 +51,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = MODEL_PARAMETER_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {
@@ -92,6 +97,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
     // Only wrap chat messages in a focusable div for keyboard navigation
     if (isChatMessage(event)) {
+      const teacherFlagged =
+        isCompletedChatMessage(event) &&
+        event.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
       return (
         <div
           ref={ref}
@@ -101,17 +109,19 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             event.status,
             event.role,
             event.chatMessageText,
-            false // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            false, // Profane messages are never shown in the aria-label context to prevent screen readers from reading inappropriate content.
+            teacherFlagged
           )}
           className={styles.chatMessageOutline}
         >
           <ChatMessageView
             chatMessage={event}
-            isChatHistoryView={isTeacherView || false}
+            isTeacherView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
             clientType={clientType}
             modelParameters={modelParameters}
             postText={postText}
+            teacherFlagged={teacherFlagged}
           />
         </div>
       );
@@ -129,14 +139,14 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
 
       // Use special notification component for AI tutor version actions.
       if (
-        notificationType === 'aiTutorVersionActionAccept' ||
-        notificationType === 'aiTutorVersionActionReject'
+        notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT ||
+        notificationType === AI_TUTOR_VERSION_ACTION_REJECT
       ) {
         return (
           <AiTutorVersionActionNotification
             text={text}
             type={
-              notificationType === 'aiTutorVersionActionAccept'
+              notificationType === AI_TUTOR_VERSION_ACTION_ACCEPT
                 ? 'accept'
                 : 'reject'
             }
@@ -163,15 +173,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             isTeacherView
               ? undefined
               : () => dispatch(removeUpdateMessage(removeId))
-          }
-          link={
-            notificationType === 'permissionsError'
-              ? {
-                  href: FAQ_LINK,
-                  text: commonI18n.learnMore(),
-                  className: styles.alertLink,
-                }
-              : undefined
           }
           size="s"
           ref={ref}

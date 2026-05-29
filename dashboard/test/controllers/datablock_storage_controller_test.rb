@@ -13,6 +13,8 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   setup do
     sign_in @student
     Cdo::Throttle.stubs(:throttle).returns(false)
+    # stub writes so none of the models serialize to disk during testing
+    File.stubs(:write)
   end
 
   def _url(action)

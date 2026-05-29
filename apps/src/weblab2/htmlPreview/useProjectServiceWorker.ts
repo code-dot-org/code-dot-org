@@ -20,6 +20,7 @@ function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   codeStudioUrl: string,
   allowScripts: boolean,
+  blockNetwork: boolean,
   parameters?: object
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
@@ -144,6 +145,17 @@ More information is available in the README in apps/src/weblab2 directory.
       });
     }
   }, [contentSecurityPolicy, parameters, serviceWorker, source]);
+
+  // Send block network state to service worker when it changes.
+  useEffect(() => {
+    if (!serviceWorker) {
+      return;
+    }
+    serviceWorker.postMessage({
+      type: ProjectServiceWorkerMessageType.SET_BLOCK_NETWORK,
+      blockNetwork,
+    });
+  }, [serviceWorker, blockNetwork]);
 
   // Send an intermittent keep-alive message to the service worker to ensure it stays active.
   useEffect(() => {

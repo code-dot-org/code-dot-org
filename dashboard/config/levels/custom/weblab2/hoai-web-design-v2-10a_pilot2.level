@@ -31,7 +31,7 @@
         "documentation"
       ],
       "answerTypeCustomizations": {
-        "buildCSS": "- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Do not use relative units for spacing; only use px.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.",
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
         "documentation": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
         "explainCode": "- Keep explanations simple and friendly\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
       }
@@ -56,8 +56,10 @@
     },
     "thumbnail_url": "https://images.code.org/7975b1e1de3da79ad7e81057a4556b01-Screenshot 2025-04-02 at 7.43.04 AM.png",
     "name_suffix": "_pilot2",
-    "offer_browser_tts": "true"
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** Students are building a vocabulary of CSS properties so they can translate visual intuitions (\"I want it to feel warm\") into specific instructions (\"use a dark orange color for the headings\"). \r\n\r\n**Circulation questions:**\r\n\r\n- \"How would you describe what this property does in your own words?\"  \r\n- \"How does knowing this property change how you'd write a prompt for AI?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may apply styles randomly rather than intentionally \\- ask them \"why did you choose that color? What feeling were you going for?\"  \r\n- Students may struggle with hex codes \\- remind them that color names (like `darkred` or `steelblue`) are valid and can be a useful starting point  ",
+    "require_edit_to_continue": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:20.082+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-04-06 23:28:46 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:25:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-06T18:24:20.082+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-04-06 23:28:46 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-07 03:25:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 03:24:03 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-14 09:41:00 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-04-15 02:15:29 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

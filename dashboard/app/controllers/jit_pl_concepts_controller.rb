@@ -32,6 +32,7 @@ class JitPlConceptsController < ApplicationController
   def update
     @concept.update!(jit_pl_concept_params)
     @concept.resources = Resource.where(id: params[:resource_ids] || [])
+    @concept.json_videos = JSONVideo.where(id: params[:json_video_ids] || [])
     @concept.write_serialization
     render json: @concept.serialize.to_json
   end

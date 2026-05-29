@@ -334,7 +334,10 @@ module UsersHelper
 
     unless exclude_level_progress
       user_levels_by_level = user.user_levels_by_level(unit)
-      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit)
+      # For demo students, scope feedback to the requesting teacher so they
+      # don't see review states (e.g. keepWorking) set by a different teacher.
+      teacher_id = Policies::DemoSections.demo_student?(user.id) ? current_user&.id : nil
+      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], unit, teacher_id)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
       user_data[:completed] = Policies::ScriptActivity.completed?(user, unit)
       user_data[:progress] = merge_user_progress_by_level(

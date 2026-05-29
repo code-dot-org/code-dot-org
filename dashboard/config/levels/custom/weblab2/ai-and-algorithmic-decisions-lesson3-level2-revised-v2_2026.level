@@ -1,0 +1,113 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-08T04:51:41.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Adventure Valley</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n  <main>\n    <div id=\"avatarPanel\">\n      <img id=\"avatar\" src=\"images/player-avatar.png\" alt=\"Player avatar\">\n    </div>\n    <div id=\"statsPanel\">\n      <h1 id=\"usernameDisplay\">GamerGirl</h1>\n      <p id=\"rankDisplay\">Rookie Explorer</p>\n      <div id=\"healthBox\">\n        <p>Health</p>\n        <p id=\"healthDisplay\">20</p>\n      </div>\n      <button id=\"healthUpButton\">+ Health</button>\n    </div>\n  </main>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, sans-serif;\n}\nbody {\n  background: linear-gradient(to bottom, #f6efe3, #e7dcc8);\n  color: #3e2f26;\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nmain {\n  background-color: #fffaf2;\n  border: 3px solid #d8c4a8;\n  border-radius: 20px;\n  padding: 24px;\n  box-shadow: 0 6px 0 rgba(120, 91, 62, 0.12);\n  display: flex;\n  gap: 24px;\n  align-items: center;\n  max-width: 500px;\n  width: 100%;\n}\n#avatarPanel img {\n  width: 180px;\n  height: 180px;\n  object-fit: cover;\n  border-radius: 16px;\n  border: 3px solid #d8c4a8;\n  display: block;\n}\n#statsPanel {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  flex: 1;\n}\n#usernameDisplay {\n  font-size: 1.6rem;\n  color: #4e382a;\n}\n#rankDisplay {\n  font-size: 1rem;\n  color: #8a6a4f;\n}\n#healthBox {\n  background-color: #f8f1e7;\n  border: 2px solid #dbc8af;\n  border-radius: 12px;\n  padding: 12px 16px;\n}\n#healthBox p:first-child {\n  font-size: 0.9rem;\n  color: #7a5a3c;\n  font-weight: bold;\n}\n#healthDisplay {\n  font-size: 2.5rem;\n  font-weight: bold;\n  color: #4a3427;\n  line-height: 1.1;\n}\nbutton {\n  border: none;\n  border-radius: 10px;\n  padding: 10px 16px;\n  font-size: 1rem;\n  font-weight: bold;\n  cursor: pointer;\n  color: #fffaf2;\n  background-color: #8fbc7a;\n  transition: transform 0.15s ease, filter 0.15s ease;\n}\nbutton:hover {\n  transform: translateY(-1px);\n  filter: brightness(1.05);\n}\nbutton:active {\n  transform: translateY(1px);\n}\n@media (max-width: 500px) {\n  main {\n    flex-direction: column;\n    align-items: center;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "let health = 20;\nlet username = \"GamerGirl\";\nlet rank = \"Rookie Explorer\";\nlet avatarImage = \"images/player-avatar.png\";\n\ndocument.getElementById(\"healthDisplay\").textContent = health;\ndocument.getElementById(\"usernameDisplay\").textContent = username;\ndocument.getElementById(\"rankDisplay\").textContent = rank;\ndocument.getElementById(\"avatar\").src = avatarImage;\n\ndocument.getElementById(\"healthUpButton\").addEventListener(\"click\", () => {\n  health = health + 5;\n  document.getElementById(\"healthDisplay\").textContent = health;\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "game-scene.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026/uuid/627e8a4d-32ec-4eec-a008-0921a7008890.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "player-avatar.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026/uuid/c9fe4eb3-2ca2-4c6a-ac68-b3508447b651.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "coin.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026/uuid/8969f11f-7ae1-478c-8280-8a2cea4a2290.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "heart.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level2-revised-v2_2026/uuid/62576124-c3e9-4885-833b-d2b96e1bed8c.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "long_instructions": "## Do This:\r\n\r\nExplore the code for this app. After each change, interact with the app to see how it impacted its functionality.\r\n\r\n1. **Change a starting value.** Find where the program sets the starting value for a variable. Change one of these values (for example: change `health = 20` to a different number, or change the `username`).\r\n\r\n2. **Change what the button does.** Find where the button changes the value of the health variable. Change how much it changes (for example: `change + 5` to `+ 10` or `- 1`).\r\n\r\n3. **Use text instead of a number.** Change the health variable's starting value to text instead of a number (for example: `let health = \"full\"`). What happens when you click the button?\r\n\r\n4. **Prevent a value from changing.** Change `let health` to `const health`. What happens when you click the button?\r\n\r\n5. **(Optional) Challenge.** Find the variable that controls the avatar image. Change the value to a different image in the `images` folder.",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-08 05:35:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:18:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:35:49 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:34:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:48:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 03:51:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 04:05:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-10 05:52:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:34:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 12:57:44 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-04-17 12:58:47 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-04-17 13:01:55 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-04-17 13:03:11 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-05-10 11:48:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 16:35:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 16:42:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 16:47:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

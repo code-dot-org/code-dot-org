@@ -15,6 +15,7 @@ import NetworkPanel from '@cdo/apps/weblab2/debugPanel/NetworkPanel';
 import networkReducer, {
   addRequestData,
   addResponseData,
+  setNetworkRequestsBlocked,
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
 // Helpers matching the Redux action payload shapes.
@@ -25,6 +26,7 @@ function makeRequest(
     method?: string;
     startTime?: string;
     cspDirectiveViolated?: string;
+    blocked?: boolean;
   } = {}
 ) {
   return {
@@ -76,7 +78,7 @@ describe('NetworkPanel', () => {
       renderPanel();
       expect(document.body.textContent).toContain('No network activity');
       expect(document.body.textContent).toContain(
-        'Network requests will appear here when your app makes API calls.'
+        'Network request details will appear here when your app makes API calls.'
       );
     });
 
@@ -355,6 +357,96 @@ describe('NetworkPanel', () => {
         .closest('.ui-test-details-field')
         ?.querySelector('pre');
       expect(valueEl?.textContent?.trim()).toBe('-');
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // Block network toggle
+  // ---------------------------------------------------------------------------
+
+  describe('block network toggle', () => {
+    it('renders the block-network button with "Block network activity" label by default', () => {
+      renderPanel();
+      expect(
+        screen.getByRole('button', {name: 'Block network activity'})
+      ).toBeInTheDocument();
+    });
+
+    it('switches label to "Unblock network activity" when network is blocked', () => {
+      store.dispatch(setNetworkRequestsBlocked(true));
+      renderPanel();
+      expect(
+        screen.getByRole('button', {name: 'Unblock network activity'})
+      ).toBeInTheDocument();
+    });
+
+    it('dispatches setNetworkRequestsBlocked(true) when the block button is clicked', async () => {
+      renderPanel();
+      const user = userEvent.setup();
+      await user.click(
+        screen.getByRole('button', {name: 'Block network activity'})
+      );
+      expect(
+        (
+          store.getState() as {
+            weblab2Network: {networkRequestsBlocked: boolean};
+          }
+        ).weblab2Network.networkRequestsBlocked
+      ).toBe(true);
+    });
+
+    it('dispatches setNetworkRequestsBlocked(false) when the unblock button is clicked', async () => {
+      store.dispatch(setNetworkRequestsBlocked(true));
+      renderPanel();
+      const user = userEvent.setup();
+      await user.click(
+        screen.getByRole('button', {name: 'Unblock network activity'})
+      );
+      expect(
+        (
+          store.getState() as {
+            weblab2Network: {networkRequestsBlocked: boolean};
+          }
+        ).weblab2Network.networkRequestsBlocked
+      ).toBe(false);
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // Blocked requests
+  // ---------------------------------------------------------------------------
+
+  describe('blocked requests', () => {
+    it('shows "Network requests are blocked." error for a blocked request', () => {
+      store.dispatch(
+        addRequestData(
+          makeRequest('1', 'https://api.example.com/data', {blocked: true})
+        )
+      );
+      renderPanel();
+      expect(document.body.textContent).toContain(
+        'Network requests are blocked.'
+      );
+    });
+
+    it('shows the request failure divider for a blocked request', () => {
+      store.dispatch(
+        addRequestData(
+          makeRequest('1', 'https://api.example.com/data', {blocked: true})
+        )
+      );
+      renderPanel();
+      expect(screen.getByAltText('Request failure')).toBeInTheDocument();
+    });
+
+    it('does not show response detail fields for a blocked request', () => {
+      store.dispatch(
+        addRequestData(
+          makeRequest('1', 'https://api.example.com/data', {blocked: true})
+        )
+      );
+      renderPanel();
+      expect(document.body.textContent).not.toContain('Duration');
     });
   });
 

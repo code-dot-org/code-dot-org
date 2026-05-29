@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson2-level2-v1-2026'
+display_name 'Choose a UI Component to Map Data'
+description '### Choose the same UI you explored in the previous level. You will label the data each part of the UI needs so you can build it later.'
+
+sublevels
+level 'building-data-driven-systems-lesson2-level2a-v1-2026'
+level 'building-data-driven-systems-lesson2-level2b-v1-2026'
+level 'building-data-driven-systems-lesson2-level2c-v1-2026'
+
+uses_lab2

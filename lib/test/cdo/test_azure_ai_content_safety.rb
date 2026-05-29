@@ -28,39 +28,15 @@ class AzureAiContentSafetyTest < Minitest::Test
 
   def test_returns_raw_azure_json
     stub_azure_response(AZURE_RESPONSE)
-    result = @ai_content_safety.moderate_image(@image_data, 'image/png')
+    result = @ai_content_safety.moderate_image(@image_data)
     assert_equal AZURE_RESPONSE, result
   end
 
   def test_returns_categories_analysis_array
     stub_azure_response(AZURE_RESPONSE)
-    result = @ai_content_safety.moderate_image(@image_data, 'image/jpeg')
+    result = @ai_content_safety.moderate_image(@image_data)
     assert_instance_of Array, result['categoriesAnalysis']
     assert_equal 4, result['categoriesAnalysis'].length
-  end
-
-  # --- content type validation ---
-
-  def test_raises_on_unsupported_content_type
-    Net::HTTP.expects(:start).never
-    assert_raises AzureAiContentSafety::UnsupportedContentType do
-      @ai_content_safety.moderate_image(@image_data, 'text/plain')
-    end
-  end
-
-  def test_accepts_jpeg
-    stub_azure_response(AZURE_RESPONSE)
-    refute_nil @ai_content_safety.moderate_image(@image_data, 'image/jpeg')
-  end
-
-  def test_accepts_png
-    stub_azure_response(AZURE_RESPONSE)
-    refute_nil @ai_content_safety.moderate_image(@image_data, 'image/png')
-  end
-
-  def test_accepts_gif
-    stub_azure_response(AZURE_RESPONSE)
-    refute_nil @ai_content_safety.moderate_image(@image_data, 'image/gif')
   end
 
   # --- error handling ---
@@ -68,7 +44,7 @@ class AzureAiContentSafetyTest < Minitest::Test
   def test_raises_request_failed_on_http_error
     stub_azure_error_response(400, '{"error":{"code":"InvalidImage","message":"Image too small"}}')
     assert_raises AzureAiContentSafety::RequestFailed do
-      @ai_content_safety.moderate_image(@image_data, 'image/png')
+      @ai_content_safety.moderate_image(@image_data)
     end
   end
 
@@ -88,7 +64,7 @@ class AzureAiContentSafetyTest < Minitest::Test
     end.returns(fake_response)
     Net::HTTP.stubs(:start).yields(mock_http).returns(fake_response)
 
-    @ai_content_safety.moderate_image(@image_data, 'image/png')
+    @ai_content_safety.moderate_image(@image_data)
   end
 
   def test_uses_correct_api_path
@@ -101,7 +77,7 @@ class AzureAiContentSafetyTest < Minitest::Test
     end.returns(fake_response)
     Net::HTTP.stubs(:start).yields(mock_http).returns(fake_response)
 
-    @ai_content_safety.moderate_image(@image_data, 'image/png')
+    @ai_content_safety.moderate_image(@image_data)
   end
 
   private def stub_http_success(body_hash)

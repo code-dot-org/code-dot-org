@@ -82,10 +82,10 @@ export default function LtiSectionSyncDialog({
             markdown={errorMessage}
           />
         ))}
-        {syncResult.honeybadger_id && (
+        {syncResult.error_id && (
           <Typography variant="body4" gutterBottom>
             {i18n.ltiSectionSyncDialogErrorCode({
-              code: syncResult.honeybadger_id,
+              code: syncResult.error_id,
             })}
           </Typography>
         )}

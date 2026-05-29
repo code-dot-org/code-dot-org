@@ -3,9 +3,7 @@
 @no_mobile
 Feature: Global Edition - Farsi Headers when Signed Out
   Background:
-    Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
-    And I set the language cookie
+    Given I set the language cookie
 
   Scenario: Signed out user should see the correct header links on Dashboard
     Given I am on "http://studio.code.org/fa/users/sign_in?lang=fa-IR"
@@ -20,5 +18,5 @@ Feature: Global Edition - Farsi Headers when Signed Out
     And element "#header-csf" has "fa-IR" text from key "nav.header.csf"
     And I see "#header-videos"
     And element "#header-videos" has "fa-IR" text from key "nav.header.videos"
-    And I see "#header-hoc"
-    And element "#header-hoc" has "fa-IR" text from key "nav.header.hour_of_code"
+    And I see "#header-hoa"
+    And element "#header-hoa" has "fa-IR" text from key "nav.header.hour_of_ai"

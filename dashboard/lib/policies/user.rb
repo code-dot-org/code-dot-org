@@ -3,7 +3,11 @@ class Policies::User
 
   # Authentication option types which we always consider to be "owned" by the school
   # the student attends because the school has admin control of the account.
-  SCHOOL_OWNED_TYPES = Set[AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
+  SCHOOL_OWNED_TYPES = Set[
+    AuthenticationOption::CLEVER,
+    AuthenticationOption::LTI_V1,
+    AuthenticationOption::CLASSLINK,
+  ].freeze
 
   # Login types that are always considered personal logins.
   PERSONAL_LOGIN_TYPES = Set[AuthenticationOption::EMAIL, AuthenticationOption::FACEBOOK].freeze
@@ -20,12 +24,12 @@ class Policies::User
     attributes.merge('authentication_options_attributes' => authentication_options).compact
   end
 
-  # Determines if a user passes some of the criteria to be a verified teacher.
+  # Determines if a Google user passes the criteria to be a verified teacher.
   # In order to be a verified teacher candidate, the user must:
   # - Successfully sync a Google Classroom
   # - Have a google_oauth2 Authentication Option
-  # - Have a non-google/non-gmail email domain attached to that googele_oauth2 authentication option
-  def self.verified_teacher_candidate?(user)
+  # - Have a non-google/non-gmail email domain attached to that google_oauth2 authentication option
+  def self.google_verified_teacher_candidate?(user)
     return false if user.verified_teacher?
     google_ao = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     return false unless google_ao

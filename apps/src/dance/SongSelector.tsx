@@ -77,7 +77,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
       id="song-selector-wrapper"
       className={moduleStyles.songSelectorWrapper}
     >
-      <label>
+      <label htmlFor="song_selector">
         <b>{commonI18n.selectSong()}</b>
       </label>
 
@@ -104,6 +104,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
         disabled={levelIsRunning}
         color={Button.ButtonColor.neutralDark}
         icon=" fa-solid fa-play-pause"
+        aria-label={songInPreview ? 'Pause' : 'Play'}
         onClick={onPreviewBtnClick}
       />
     </div>

@@ -1,0 +1,46 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-17T00:29:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "ai-and-algorithmic-decisions-lesson7_revised_template_2026",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildHTML": "Generate both the HTML and CSS at the same time.",
+        "buildJavaScript": "The student has planned a dynamic feature using these four parts:\n- Event: what the user does\n- State: what data is tracked\n- Logic: what decides the change\n- Update: what changes on the page\n\nAsk the student to share their plan for each of these four parts. Then, using their plan, generate the JavaScript in `script.js` that adds this feature to their existing HTML and CSS. \n\nKeep the code beginner-friendly:\n- Use clear variable names that match the student's plan\n- Use a single event listener and event handler\n- Include a variable for state, a condition if the logic needs one, and a function if it helps organize the update\n- Do not add features the student did not ask for\n\nAfter generating the code, briefly explain how the event, state, logic, and update appear in the code."
+      }
+    },
+    "long_instructions": "## Do This:\r\n\r\n1. **Generate the UI:** Plan in `planning.md`, then prompt AI to create the content and styling.\r\n\r\n2. **Build the Feature:** Plan in `planning.md`, then prompt AI to add your dynamic feature.\r\n\r\n3. **Label:** In `script.js`, add comments to label the element selector, event listener, and event handler. Inside the handler, label any variable, condition, or function.\r\n\r\n4. **Evaluate:** Check your feature against POUR:\r\n   - Perceivable — Can users notice what changed?\r\n   - Operable — Can users trigger it easily?\r\n   - Understandable — Do users know what happened?\r\n   - Robust — Does it work reliably?\r\n\r\n5. **Improve:** Identify the weakest part and prompt AI to help you fix it.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-17 01:29:52 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-17 01:40:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-16 01:31:40 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 01:32:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

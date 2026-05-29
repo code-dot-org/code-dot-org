@@ -9,15 +9,15 @@ markdown <<MARKDOWN
 
 ## Why we analyze extremes
 
-#### Looking at extremes such as the minimum and maximum values helps us identify the range of our data and find outliers - values that are much lower or higher than the rest. 
+Looking at extremes such as the minimum and maximum values helps us identify the range of our data and find outliers - values that are much lower or higher than the rest. 
 
-#### These outliers can tell us a lot about unusual events or conditions in our data.
+These outliers can tell us a lot about unusual events or conditions in our data.
 
 ![](https://images.code.org/cdc3e2f188c1aa0eb9a8041317d2e436-image-1728919649535.png)
 
 ## **min()**, **max()**, and **sum()**
 
-#### The **min()**, **max()**, and **sum()** functions are performed on a column of the dataset.
+The **min()**, **max()**, and **sum()** functions are performed on a column of the dataset.
 
    <table border="1" width="100%" cellpadding="10">
         <tr>

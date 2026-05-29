@@ -257,8 +257,8 @@ module Pd::Foorm
       submission_ids = submissions_with_followup.pluck(:id)
 
       submission_users = Pd::WorkshopSurveyFoormSubmission.includes(:user).
-                                                          where(foorm_submission_id: submission_ids).
-                                                          index_by(&:foorm_submission_id)
+        where(foorm_submission_id: submission_ids).
+        index_by(&:foorm_submission_id)
 
       results = []
       submissions_with_followup.each do |submission_data|

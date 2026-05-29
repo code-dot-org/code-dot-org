@@ -1,0 +1,42 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-04-25T01:16:54.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Generate and Judge Project\r\n\r\nUse pattern recognition before you write your tip. Look back at your AI Audit Field Notes that you have so far. What do they have in common when AI gets things wrong or misleading? Write one sentence describing the pattern you noticed across your testing.\r\n\r\nThen write your tip as if you're a fact-checker producing public guidance. Your reader should be able to follow your specific steps to verify any AI output, not just the ones you tested. What exactly should someone do, in what order?",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 1905.1218081342977,
+          "scrollY": 2130.0674403996845,
+          "zoom": {
+            "value": 0.161156018383785
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Create your project in Sketch Lab!",
+    "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png",
+    "project_template_level_name": "thinking_critically_project-template_2026",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-25T01:16:54.907+00:00\",\"changed\":[\"cloned from \\\"aid-thinking_critically_lesson6_level2_2026\\\"\"],\"cloned_from\":\"aid-thinking_critically_lesson6_level2_2026\"},{\"changed_at\":\"2026-04-25 01:17:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:14:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 19:19:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-04 01:51:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Sketchlab>

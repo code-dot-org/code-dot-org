@@ -8,15 +8,15 @@ markdown <<MARKDOWN
 
 
 ## 🔎You might have noticed:
-- #### The **info()** function reveals important information about the data.
-- #### The three data types represented are: **object, float64,** and **int64**.
-- #### Each data type is associated with different kinds of attributes.
+- The **info()** function reveals important information about the data.
+- The three data types represented are: **object, float64,** and **int64**.
+- Each data type is associated with different kinds of attributes.
 
 
 ## 💡You might Wonder: 
-- #### What might each of the data types (object, float64, int64) represent in the dataset?
-- ####Why are specific data types associated with particular attributes?
-- ####How do the data types affect the behavior or analysis of the dataset?
+- What might each of the data types (object, float64, int64) represent in the dataset?
+- Why are specific data types associated with particular attributes?
+- How do the data types affect the behavior or analysis of the dataset?
 
 <br>
 

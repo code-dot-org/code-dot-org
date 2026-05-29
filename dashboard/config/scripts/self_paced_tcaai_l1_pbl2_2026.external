@@ -1,0 +1,136 @@
+name 'self-paced-TCaAI-L1-PBL2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking in Thinking Critically About AI
+
+Throughout Thinking Critically About AI, students practice a set of problem-solving habits to investigate AI systems systematically. These habits are examples of **computational thinking**: an approach to understanding complex systems, identifying patterns, and making informed decisions.
+
+Rather than teaching computational thinking as a separate topic, the unit embeds these practices directly into lessons.
+
+## Computational Thinking Practices in the Unit
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin: 25px 0px;">
+
+  <!-- Algorithmic Thinking -->
+  <div style="background-color: #F5F7F8; border-radius: 10px; padding: 20px; width: 24%; text-align: center; box-sizing: border-box;">
+    <img 
+      src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" 
+      alt="" 
+      style="width: 50px; height: 50px; margin-bottom: 10px;">     
+    <p style="font-size: 16px; font-weight: bold; margin-top: 0;">
+      Algorithmic Thinking
+    </p>
+    <p style="font-size: 16px; margin-bottom: 0;">
+      Students develop repeatable processes for testing AI systems, verifying outputs, and evaluating evidence.
+    </p>
+  </div>
+
+  <!-- Pattern Recognition -->
+  <div style="background-color: #F5F7F8; border-radius: 10px; padding: 20px; width: 24%; text-align: center; box-sizing: border-box;">
+    <img 
+      src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" 
+      alt="" 
+      style="width: 50px; height: 50px; margin-bottom: 10px;">      
+    <p style="font-size: 16px; font-weight: bold; margin-top: 0;">
+      Pattern Recognition
+    </p>
+    <p style="font-size: 16px; margin-bottom: 0;">
+      Students compare examples to identify repeated AI behaviors, assumptions, and limitations.
+    </p>
+  </div>
+
+  <!-- Decomposition -->
+  <div style="background-color: #F5F7F8; border-radius: 10px; padding: 20px; width: 24%; text-align: center; box-sizing: border-box;">
+    <img 
+      src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" 
+      alt="" 
+      style="width: 50px; height: 50px; margin-bottom: 10px;">      
+    <p style="font-size: 16px; font-weight: bold; margin-top: 0;">
+      Decomposition
+    </p>
+    <p style="font-size: 16px; margin-bottom: 0;">
+      Students break complex AI systems and problems into smaller parts that are easier to investigate.
+    </p>
+  </div>
+
+  <!-- Abstraction -->
+  <div style="background-color: #F5F7F8; border-radius: 10px; padding: 20px; width: 24%; text-align: center; box-sizing: border-box;">
+    <img 
+      src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" 
+      alt="" 
+      style="width: 50px; height: 50px; margin-bottom: 10px;">      
+    <p style="font-size: 16px; font-weight: bold; margin-top: 0;">
+      Abstraction
+    </p>
+    <p style="font-size: 16px; margin-bottom: 0;">
+      Students use specific examples and investigations to form broader conclusions about responsible AI use.
+    </p>
+  </div>
+
+</div>
+
+## Instructional Focus
+Teachers do not need to formally lecture on computational thinking vocabulary throughout the unit. Instead, the instructional goal is to help students practice these habits naturally through investigations, discussion, reflection, and revision.
+
+When facilitating discussions, look for opportunities to ask questions like:
+
+<div style="width: 80%; margin: 40px auto;">
+
+<!-- Quote 1 -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 18px;">
+  <img 
+    src="https://images.code.org/4086844cf82c87eb1c9faf23d2d5f227-image-1744318038281.png" 
+    alt="" 
+    style="width: 70px; height: 70px; border-radius: 50%;">
+    
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 16px; max-width: 600px; border-radius: 10px;">
+    “What pattern are you noticing?”
+  </div>
+</div>
+
+<!-- Quote 2 -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 18px; flex-direction: row-reverse;">
+  <img 
+    src="https://images.code.org/aceef16fd20a958bf4ea438db569fad1-image-1744318027547.png" 
+    alt="" 
+    style="width: 70px; height: 70px; border-radius: 50%;">
+    
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 16px; max-width: 600px; border-radius: 10px;">
+    “What changed when you adjusted the prompt?”
+  </div>
+</div>
+
+<!-- Quote 3 -->
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 18px;">
+  <img 
+    src="https://images.code.org/2cd1158362bb55adf308b2a5c8c352a5-image-1744318029997.png" 
+    alt="" 
+    style="width: 70px; height: 70px; border-radius: 50%;">
+    
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 16px; max-width: 600px; border-radius: 10px;">
+    “What evidence supports that conclusion?”
+  </div>
+</div>
+
+<!-- Quote 4 -->
+<div style="display: flex; align-items: center; gap: 15px; flex-direction: row-reverse;">
+  <img 
+    src="https://images.code.org/65067c2c052f9307003507603b1d0d1f-image-1744318025103.png" 
+    alt="" 
+    style="width: 70px; height: 70px; border-radius: 50%;">
+    
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 16px; max-width: 600px; border-radius: 10px;">
+    “Can you break this problem into smaller parts?”
+  </div>
+</div>
+
+</div>
+
+These prompts help students build stronger reasoning habits while developing a more thoughtful understanding of AI systems.
+
+### Heads Up!
+
+You'll see a quick check for understanding about computational thinking on the next page. Feel free to come back to this page to review this information.
+MARKDOWN

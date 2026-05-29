@@ -1,0 +1,83 @@
+// Page-specific styles for the lesson generator. Everything generic
+// (page chrome, outline block, card shell, footer, dialog scaffolding)
+// lives in curriculum-generator.module.scss; this file holds only the
+// classes the lesson page uniquely needs.
+
+.fieldRow {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+// Nested input row inside the outline block for the target Web Lab 2
+// channel id. Tighter than the page's main fieldRow since we're inside
+// a detail panel — label sits above the input, help text below.
+.outlineProjectRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.outlineProjectRow label {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.outlineProjectInput {
+  max-width: 360px;
+  padding: 6px 8px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.fieldRow label {
+  font-weight: 600;
+}
+
+.prefixInput {
+  max-width: 360px;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+// Read-only variant of the shared card frame, rendered for existing
+// levels whose lab type the generator doesn't support. The card sits
+// in the list so the user can reorder around it without losing the
+// level from the lesson; muted background + dashed border signal "you
+// can't edit this here."
+.cardUnsupported {
+  background: #f3f3f3;
+  border-style: dashed;
+}
+
+.unsupportedNote {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
+// "Generate this level" checkbox on each card. Inline-flex so the
+// label sits to the right of the checkbox at the same baseline.
+.skipLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+}
+
+.skipLabel input[type='checkbox'] {
+  margin: 0;
+}
+
+.summaryGood {
+  color: #060;
+}

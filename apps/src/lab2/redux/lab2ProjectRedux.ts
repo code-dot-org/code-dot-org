@@ -29,6 +29,7 @@ export interface Lab2ProjectState {
   viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
+  hasEditedSinceLastVersionSave: boolean;
   projectTooLarge: boolean;
   lastSavedLabConfig: LabConfig | undefined;
   projectSourceLevelId: number | undefined;
@@ -43,10 +44,16 @@ const initialState: Lab2ProjectState = {
   viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
+  hasEditedSinceLastVersionSave: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
   projectSourceLevelId: undefined,
 };
+
+function markEdited(state: Lab2ProjectState) {
+  state.hasEdited = true;
+  state.hasEditedSinceLastVersionSave = true;
+}
 
 // SLICE
 
@@ -101,8 +108,8 @@ const projectSlice = createSlice({
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
     },
-    setHasEdited(state, action: PayloadAction<boolean>) {
-      state.hasEdited = action.payload;
+    resetHasEditedSinceLastVersionSave(state) {
+      state.hasEditedSinceLastVersionSave = false;
     },
     setProjectTooLarge(state, action: PayloadAction<boolean>) {
       state.projectTooLarge = action.payload;
@@ -127,7 +134,7 @@ const projectSlice = createSlice({
             url: action.payload.url,
           }),
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     createNewExternalFile(
@@ -154,7 +161,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: newSource,
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     renameFile(
@@ -183,7 +190,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     saveFile(
@@ -215,7 +222,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     setFileType(
@@ -244,7 +251,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     activateFile(state, action: PayloadAction<FileId>) {
@@ -291,7 +298,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: deleteResult.newSource,
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     moveFile(
@@ -321,7 +328,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     moveFolder(
@@ -351,7 +358,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     createNewFolder(
@@ -367,7 +374,7 @@ const projectSlice = createSlice({
             action.payload.parentId
           ),
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     toggleOpenFolder(state, action: PayloadAction<FolderId>) {
@@ -410,7 +417,7 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: deleteResult.newSource,
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     renameFolder(
@@ -440,7 +447,7 @@ const projectSlice = createSlice({
             },
           },
         };
-        state.hasEdited = true;
+        markEdited(state);
       }
     },
     rearrangeFiles(state, action: PayloadAction<FileId[]>) {
@@ -461,6 +468,7 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.hasEditedSinceLastVersionSave = false;
       state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
@@ -469,6 +477,9 @@ const projectSlice = createSlice({
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
+    },
+    markProjectEdited(state) {
+      markEdited(state);
     },
   },
 });
@@ -483,7 +494,7 @@ export const {
   setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
-  setHasEdited,
+  resetHasEditedSinceLastVersionSave,
   setSource,
   setProjectTooLarge,
   createNewFile,
@@ -502,6 +513,7 @@ export const {
   renameFolder,
   rearrangeFiles,
   setLastSavedLabConfig,
+  markProjectEdited,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
 
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -98,33 +94,9 @@ const handleKeyDown = (event, clickEvent) => {
   }
 };
 
-export function BubbleLink({
-  url,
-  onClick,
-  children,
-  a11y_description,
-  clickedLevelNumber,
-  lessonName,
-}) {
-  const handleClick = () => {
-    const state = getStore().getState();
-    // Ensure we are reporting the parent level number if this is a sublevel
-    const currentLevelNumber = state.progress
-      ? getCurrentLevels(state)?.find(
-          l => l.isCurrentLevel || l.sublevels?.some(s => s.isCurrentLevel)
-        )?.levelNumber
-      : undefined;
-    analyticsReporter.sendEvent(EVENTS.HEADER_PROGRESS_BUBBLE_LINK_CLICKED, {
-      previousLevelNumber: currentLevelNumber,
-      newLevelNumber: clickedLevelNumber,
-      lessonName: lessonName,
-      levelPath: window.location.pathname,
-    });
-    onClick?.();
-  };
-
+export function BubbleLink({url, onClick, children, a11y_description}) {
   const commonProps = {
-    onClick: handleClick,
+    onClick,
     className: 'progress-bubble-link',
     title: a11y_description,
   };
@@ -152,8 +124,6 @@ BubbleLink.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
   a11y_description: PropTypes.string,
-  clickedLevelNumber: PropTypes.number,
-  lessonName: PropTypes.string,
 };
 
 function getTooltipTextForLevel(level) {

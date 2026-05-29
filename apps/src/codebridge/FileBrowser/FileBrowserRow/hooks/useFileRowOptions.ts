@@ -23,6 +23,7 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
@@ -79,6 +80,7 @@ export const useFileRowOptions = (
   const {
     config: {supportedFileTypes},
     levelProperties,
+    aiTutorDisabled,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -128,7 +130,7 @@ export const useFileRowOptions = (
           }),
       },
       {
-        condition: enableUserAddedSelectionContext(appName),
+        condition: enableUserAddedSelectionContext(appName) && !aiTutorDisabled,
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -168,6 +170,10 @@ export const useFileRowOptions = (
                 displayName: fullFilename,
                 filename: fullFilename,
                 sourceCode: file.contents,
+                timestamp: new Date().toLocaleTimeString(currentLocale(), {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                }),
               })
             );
           }
@@ -209,6 +215,7 @@ export const useFileRowOptions = (
       openSaveToBackpackPrompt,
       projectFiles,
       projectFolders,
+      aiTutorDisabled,
     ]
   );
 

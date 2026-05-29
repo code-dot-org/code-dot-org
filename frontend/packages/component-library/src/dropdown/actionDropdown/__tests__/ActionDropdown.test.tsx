@@ -1,6 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
+import {type Mock, vi} from 'vitest';
+
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import ActionDropdown, {ActionDropdownOption} from './../index';
 
@@ -9,34 +11,35 @@ const allOptions: ActionDropdownOption[] = [
     value: 'option-1',
     label: 'option1',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 1 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
   {
     value: 'option-2',
     label: 'option2',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 2 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
   {
     value: 'option-3',
     label: 'option3',
     icon: {iconName: 'check', iconStyle: 'solid', title: 'Option 3 Icon'},
-    onClick: jest.fn(),
+    onClick: vi.fn(),
   },
 ];
 
 const triggerButtonProps = {
-  isIconOnly: true,
-  icon: {
-    iconName: 'check',
-    iconStyle: 'solid' as const,
-    title: 'Trigger Icon',
-  },
+  children: (
+    <FontAwesomeV6Icon
+      iconName="check"
+      iconStyle="solid"
+      title="Trigger Icon"
+    />
+  ),
 };
 
 describe('Design System - Action Dropdown Component', () => {
   beforeEach(() => {
-    allOptions.forEach(option => (option.onClick as jest.Mock).mockClear());
+    allOptions.forEach(option => (option.onClick as Mock).mockClear());
   });
 
   it('renders with correct label and options', () => {
@@ -85,7 +88,9 @@ describe('Design System - Action Dropdown Component', () => {
   });
 
   it("doesn't call onClick when dropdown is disabled", async () => {
-    const user = userEvent.setup();
+    // MUI disabled IconButton sets pointer-events: none, so we need to
+    // bypass the pointer-events check to test click behavior.
+    const user = userEvent.setup({pointerEventsCheck: 0});
     render(
       <ActionDropdown
         name="test2-dropdown"

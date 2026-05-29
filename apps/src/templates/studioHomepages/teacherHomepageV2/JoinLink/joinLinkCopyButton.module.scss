@@ -1,4 +1,3 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .sectionCodeBox {
@@ -28,7 +27,7 @@
   }
 
   button {
-    color: var(--brand-teal-50);
+    color: var(--text-brand-teal-primary);
     margin: 0;
     margin-inline-start: 5px;
     padding: 0 0 4px 0;
@@ -39,12 +38,12 @@
 }
 
 .sectionCodeTextHidden {
-  color: var(--brand-teal-50);
+  color: var(--text-brand-teal-primary);
 }
 
 .noSectionCode {
   margin-left: 5px;
-  color: $teal;
+  color: var(--text-brand-teal-primary);
   text-decoration: none;
   cursor: pointer;
 }

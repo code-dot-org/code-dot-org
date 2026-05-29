@@ -1,13 +1,14 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-02-24T18:11:11.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "title": "Reflect on Brand Identity",
-    "long_instructions": "One insight I gained about brand identity is ___ .",
+    "title": "Check Your Understanding",
+    "long_instructions": "One insight I gained about brand identity is . . . ",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "enter response here...",
@@ -20,8 +21,7 @@
     "skip_sound": true,
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:11.790+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level5_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level5_2025\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:11.790+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level5_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level5_2025\"},{\"changed_at\":\"2026-04-15 19:16:57 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

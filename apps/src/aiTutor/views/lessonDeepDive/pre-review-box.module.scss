@@ -1,0 +1,65 @@
+$purple-text: #a86cd8;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.heading {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(3.5rem, 12vw, 6.25rem);
+  font-weight: 800;
+  line-height: 1;
+  color: $purple-text;
+  margin: 0 0 24px;
+  max-width: 460px;
+}
+
+.body {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #d4dae1;
+  margin: 0 0 32px;
+  max-width: 460px;
+
+  strong {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.button {
+  display: inline-flex;
+  width: 250px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 25px;
+  background: var(--background-brand-purple-primary, #9657c7);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--background-brand-purple-hover, #7d42ad);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline-offset: 2px;
+  }
+}

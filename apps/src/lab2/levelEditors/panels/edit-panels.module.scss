@@ -4,25 +4,64 @@
 $scale-factor: 0.5;
 $full-width: 1920px;
 $full-height: 1080px;
+// Unitless. Used as Nvw below; exported to EditPanels.tsx for the JS-side
+// inner-surface scale.
+$pinned-width-vw: 29;
+
+:export {
+  pinnedWidthVw: $pinned-width-vw;
+}
 
 .container {
   display: flex;
   flex-direction: column;
 }
 
+// Reserves space so the page does not jump when the inner preview pins.
+.panelsSlot {
+  height: $full-height * $scale-factor;
+  width: $full-width * $scale-factor;
+  margin-bottom: 25px;
+}
+
 .panelsContainer {
   position: relative;
   height: $full-height * $scale-factor;
   width: $full-width * $scale-factor;
-  background-color: #121212;
-  margin-bottom: 25px;
+}
+
+// Pins the preview at top-left while the slot above scrolls offscreen.
+// --pinned-scale is written from JS; CSS length-division would work too but
+// has only recently landed across browsers.
+// Set width AND height explicitly. We can't use `height: auto;
+// aspect-ratio: 16 / 9` here: aspect-ratio is only a preferred size and
+// is overridden by min-content sizing, and our child `.fullSizeContainer`
+// keeps its 1920x1080 layout box (transform: scale() doesn't shrink
+// layout). Without an explicit height the pinned box ends up ~1080px
+// tall in layout — visually it paints only the small scaled corner, but
+// the fixed-position box still covers the rest of the screen and blocks
+// clicks. `overflow: hidden` keeps the scaled-but-still-large layout of
+// .fullSizeContainer from poking out beyond the visible box.
+.panelsContainerPinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: #{$pinned-width-vw}vw;
+  height: calc(#{$pinned-width-vw}vw * 9 / 16);
+  overflow: hidden;
+
+  .fullSizeContainer {
+    transform: scale(var(--pinned-scale, 0.5));
+  }
 }
 
 .fullSizeContainer {
   position: relative;
   width: $full-width;
   height: $full-height;
-  transform: scale($scale-factor) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: scale($scale-factor);
 }
 
 .panelEditors {
@@ -50,6 +89,16 @@ $full-height: 1080px;
 
 .textarea {
   flex: 1;
+}
+
+// The teacher-note label is much longer than the other field labels
+// ("Teacher note (shown only to teachers, below the panel bubbles)"),
+// so without a cap it grabs a chunk of the row. Hold it to 30% of the
+// row so the textarea after it gets the rest, and let it wrap inside
+// that band if needed.
+.teacherNoteLabel {
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
 .imageUrlInput {
@@ -87,6 +136,45 @@ $full-height: 1080px;
   margin: auto;
 }
 
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.linkRow {
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+
+  textarea {
+    min-width: 240px;
+  }
+}
+
+.linkSliderHorizontal {
+  input[type='range'] {
+    width: 140px;
+  }
+}
+
+.linkSliderVertical {
+  align-items: center;
+  width: 50px;
+
+  input[type='range'] {
+    writing-mode: vertical-lr;
+    height: 100px;
+    width: auto;
+  }
+}
+
 @keyframes fade-out-toast {
   0% {
     opacity: 1;
@@ -104,6 +192,14 @@ $full-height: 1080px;
   width: 100%;
   height: 100%;
   display: flex;
+  // The overlay is just a positioning wrapper for the fade-in/out toast
+  // — there are no interactive controls inside it. When the preview is
+  // pinned, transform: scale() on .fullSizeContainer doesn't shrink its
+  // layout box, so this overlay can end up taller than the visible
+  // pinned rectangle and block clicks on whatever sits underneath.
+  // Make the overlay click-through; the toast itself reasserts pointer
+  // events for its own region.
+  pointer-events: none;
 }
 
 .toast {
@@ -114,6 +210,11 @@ $full-height: 1080px;
   border: 2px $brand_primary_light solid;
   border-radius: 4px;
   padding: 10px;
+  // Re-enable pointer events on the toast itself in case future content
+  // ever wants to be clickable (e.g. a "Dismiss" button). Mostly here so
+  // the parent overlay's `pointer-events: none` doesn't quietly disable
+  // such interactions if they're added later.
+  pointer-events: auto;
 
   &Show {
     animation: fade-out-toast 3s;

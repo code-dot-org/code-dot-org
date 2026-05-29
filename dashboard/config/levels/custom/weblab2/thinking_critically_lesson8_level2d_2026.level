@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T16:14:13.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Food Delivery App Receipt",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A receipt from last night's dinner delivery",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Food Delivery Receipt - Javier S. Guerrero</title>\n    <style>\n        /* Base Reset and Background */\n        body {\n            background-color: #f0f2f5;\n            font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 100vh;\n            margin: 0;\n            padding: 20px;\n            color: #1d1d1f;\n        }\n\n        /* Mobile App Container */\n        .app-container {\n            background-color: #ffffff;\n            width: 100%;\n            max-width: 390px; /* Standard mobile width */\n            border-radius: 20px;\n            box-shadow: 0 10px 25px rgba(0,0,0,0.1);\n            overflow: hidden;\n            display: flex;\n            flex-direction: column;\n        }\n\n        /* App Header */\n        .app-header {\n            background-color: #ffffff;\n            padding: 16px;\n            text-align: center;\n            font-weight: 600;\n            font-size: 16px;\n            border-bottom: 1px solid #e5e5ea;\n        }\n\n        /* Map Placeholder */\n        .map-section {\n            width: 100%;\n            height: 160px;\n            background-color: #e5e5ea;\n            position: relative;\n        }\n\n        .map-section img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .map-placeholder-text {\n            position: absolute;\n            top: 50%;\n            left: 50%;\n            transform: translate(-50%, -50%);\n            color: #86868b;\n            font-size: 14px;\n        }\n\n        /* Status Banner */\n        .status-banner {\n            background-color: #e8f5e9;\n            color: #2e7d32;\n            padding: 12px 16px;\n            font-weight: 600;\n            display: flex;\n            align-items: center;\n            font-size: 15px;\n        }\n\n        .status-icon {\n            margin-right: 8px;\n            font-size: 18px;\n        }\n\n        /* Content Sections */\n        .section {\n            padding: 16px;\n            border-bottom: 1px solid #e5e5ea;\n        }\n\n        .section:last-child {\n            border-bottom: none;\n        }\n\n        /* Restaurant Info */\n        .restaurant-name {\n            font-size: 22px;\n            font-weight: 700;\n            margin: 0 0 4px 0;\n        }\n\n        .order-meta {\n            color: #86868b;\n            font-size: 14px;\n            margin: 0;\n        }\n\n        /* Delivery Details */\n        .section-title {\n            font-size: 16px;\n            font-weight: 600;\n            margin: 0 0 12px 0;\n            color: #1d1d1f;\n        }\n\n        .detail-row {\n            display: flex;\n            align-items: flex-start;\n            margin-bottom: 12px;\n        }\n\n        .detail-icon {\n            color: #86868b;\n            margin-right: 12px;\n            font-size: 18px;\n            width: 20px;\n            text-align: center;\n        }\n\n        .detail-text {\n            flex: 1;\n        }\n\n        .detail-text strong {\n            display: block;\n            font-size: 15px;\n            margin-bottom: 2px;\n        }\n\n        .detail-text span {\n            color: #515154;\n            font-size: 14px;\n        }\n\n        /* Special Instructions Box */\n        .instructions-box {\n            background-color: #fff8e1;\n            border-left: 4px solid #ffb300;\n            padding: 12px;\n            border-radius: 4px;\n            margin-top: 12px;\n        }\n\n        .instructions-box p {\n            margin: 0;\n            font-size: 14px;\n            line-height: 1.4;\n            color: #3e2723;\n        }\n\n        .allergy-warning {\n            color: #d32f2f;\n            font-weight: 700;\n        }\n\n        /* Order Items */\n        .item-row {\n            display: flex;\n            justify-content: space-between;\n            margin-bottom: 12px;\n            font-size: 15px;\n        }\n\n        .item-qty {\n            background-color: #f2f2f7;\n            padding: 2px 8px;\n            border-radius: 4px;\n            font-weight: 600;\n            margin-right: 12px;\n            font-size: 13px;\n        }\n\n        .item-name {\n            flex: 1;\n        }\n\n        .item-price {\n            font-weight: 500;\n        }\n\n        /* Receipt Breakdown */\n        .receipt-row {\n            display: flex;\n            justify-content: space-between;\n            margin-bottom: 8px;\n            font-size: 14px;\n            color: #515154;\n        }\n\n        .receipt-total {\n            display: flex;\n            justify-content: space-between;\n            margin-top: 12px;\n            padding-top: 12px;\n            border-top: 1px dashed #c7c7cc;\n            font-weight: 700;\n            font-size: 18px;\n            color: #1d1d1f;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"app-container\">\n        <div class=\"app-header\">\n            Order Receipt\n        </div>\n\n        <div class=\"map-section\">\n            <img src=\"delivery_map.jpg\" alt=\"Delivery Map Route\" onerror=\"this.style.display='none';\">\n            <div class=\"map-placeholder-text\" style=\"z-index: 0;\"></div>\n        </div>\n\n        <div class=\"status-banner\">\n            <span class=\"status-icon\">✓</span> Order Delivered\n        </div>\n\n        <div class=\"section\">\n            <h1 class=\"restaurant-name\">Tony's on 5th Street</h1>\n            <p class=\"order-meta\">Order #8492-B • Placed by Javier S. Guerrero</p>\n        </div>\n\n        <div class=\"section\">\n            <h2 class=\"section-title\">Delivery Details</h2>\n            \n            <div class=\"detail-row\">\n                <div class=\"detail-icon\">📍</div>\n                <div class=\"detail-text\">\n                    <strong>Delivery Address</strong>\n                    <span>124 [Redacted Street Name]<br>Apt [Blank]</span>\n                </div>\n            </div>\n\n            <div class=\"instructions-box\">\n                <p><strong>Delivery Notes:</strong> Please leave on the front porch. <span class=\"allergy-warning\">URGENT: Make sure there is absolutely NO cross-contamination with peanuts, I have a severe allergy!</span> Also, please do not ring the doorbell, my dog Barnaby will go crazy and bark.</p>\n            </div>\n        </div>\n\n        <div class=\"section\">\n            <h2 class=\"section-title\">Your Order</h2>\n            \n            <div class=\"item-row\">\n                <div class=\"item-qty\">1</div>\n                <div class=\"item-name\">Large Pepperoni Pizza</div>\n                <div class=\"item-price\">$18.99</div>\n            </div>\n            \n            <div class=\"item-row\">\n                <div class=\"item-qty\">1</div>\n                <div class=\"item-name\">Garlic Knots (6 pc)</div>\n                <div class=\"item-price\">$5.99</div>\n            </div>\n        </div>\n\n        <div class=\"section\">\n            <div class=\"receipt-row\">\n                <span>Subtotal</span>\n                <span>$24.98</span>\n            </div>\n            <div class=\"receipt-row\">\n                <span>Taxes & Fees</span>\n                <span>$4.50</span>\n            </div>\n            <div class=\"receipt-row\">\n                <span>Delivery Tip</span>\n                <span>$5.00</span>\n            </div>\n            <div class=\"receipt-total\">\n                <span>Total</span>\n                <span>$34.48</span>\n            </div>\n        </div>\n    </div>\n\n</body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "delivery_map.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2d_2026/uuid/2a54cba6-8b84-439b-b904-48acbf24b68a.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/04a5c46585b1dec6dcbd0da007b0980e-four.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:14:13.019+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2c_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2c_2026\"},{\"changed_at\":\"2026-04-28 16:15:19 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:15:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:16:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

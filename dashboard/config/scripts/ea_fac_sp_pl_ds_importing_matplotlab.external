@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 ## What is a Module?
 
-#### A **module** is a file in a library that contains thematically related functions.
+A **module** is a file in a library that contains thematically related functions.
 
 
 ## Importing Matplotlib and the *pyplot* Module

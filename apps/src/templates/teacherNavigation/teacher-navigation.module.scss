@@ -147,6 +147,16 @@
   display: flex;
   flex-direction: column;
 
+  .headerSectionNameRow {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+
+    h2 {
+      min-width: 0;
+    }
+  }
+
   .headerSectionName {
     margin-bottom: 0;
     margin-top: 0;
@@ -182,9 +192,10 @@ h2.skeletonHeaderSectionName {
   align-items: center;
 }
 
-.calendarDropdownDescription {
-  font-weight: bold;
-  margin-right: 10px;
+.calendarMinutesPerWeekDropdown {
+  > div {
+    width: 100%;
+  }
 }
 
 .emptyClassroomDiv {

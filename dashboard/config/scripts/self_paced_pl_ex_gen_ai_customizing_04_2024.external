@@ -8,11 +8,11 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/4fdd0f05f507d43b70c1665874ac2d18-Screenshot 2024-10-17 at 10.27.22 AM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 
-#### **In this unit, students will learn how to use and customize their own chatbot using AI Chat Lab**. 
+**In this unit, students will learn how to use and customize their own chatbot using AI Chat Lab**. 
 
-#### The chatbots students are working with are in devleopment, and not finished products like ChatGPT or customer support chatbots on a website. So, they need our help to make them better. 
+The chatbots students are working with are in devleopment, and not finished products like ChatGPT or customer support chatbots on a website. So, they need our help to make them better. 
 
-#### This will be our main goal in this unit - to learn techniques to improve chatbots and models once they’ve already been created.
+This will be our main goal in this unit - to learn techniques to improve chatbots and models once they’ve already been created.
 
 <br>
 
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 
 ## Up Next!
 
-#### In the next levels you’ll get to try **AI Chat Lab**. Take your time exploring chatbot lab as you and your students will be using this tool for both the remainder of the Generative AI Unit.
+In the next levels you’ll get to try **AI Chat Lab**. Take your time exploring chatbot lab as you and your students will be using this tool for both the remainder of the Generative AI Unit.
 
 
 MARKDOWN

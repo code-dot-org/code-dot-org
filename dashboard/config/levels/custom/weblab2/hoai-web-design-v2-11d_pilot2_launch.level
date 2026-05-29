@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:10.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Marcus' Food Waste Webpage\r\n_\"I want to make a webpage about reducing food waste because I think it's something everyone should care about. I want each tip to look like its own box with soft rounded edges. The writing inside should be bold so it really stands out!\"_\r\n\r\n<img src=\"https://images.code.org/6b82d497dd9963953ddb05db5d07b1fb-image-1774473981136.png\" style=\"width: 30%\" />\r\n\r\n&nbsp;\r\n\r\n**Do This:**\r\n1. **Build:** Use the AI Tutor to create this page step by step. Remember to be precise with your prompts!\r\n2. **Refine:** Keep prompting until your page is close to Alex's vision. It doesn't need to be perfect - just similar!\r\n\r\n> **Hint:** Try using `<section>` and `<p>` tags for structure, and `border-radius` and `font-weight` for style. Not sure how? Just ask AI Tutor!\r\n\r\nWhen you're happy with the result, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "buildCSS",
+        "buildHTML",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- You should generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- When making design choices, never cite the level instructions, example images, or hint text as a reason for a design choice. Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made \n- Do not make any additional assumptions or decisions about the webpage. The student must explicitly request each CSS and HTML update.\n- If the student's request is unclear or not specific enough: ask a clarifying question before generating any code.",
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Generate both HTML and CSS at the same time\n- Keep all explanations short, concise, and simple.\n- Do NOT generate `<script>` tags\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.\n\n**MOST IMPORTANT PRIORITIES**\n- When making design choices, never cite the level instructions, example images, or hint text as a reason for a design choice. Your only source of requirements is the student's messages in the chat - ONLY respond to requests the student has explicitly made \n- Do not make any additional assumptions or decisions about the webpage. The student must explicitly request each CSS and HTML update.\n- If the student's request is unclear or not specific enough: ask a clarifying question before generating any code.",
+        "explainCode": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "hint": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "documentation": "- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Marcus Food Page",
+    "bubble_choice_description": "Help Marcus make a webpage about food waste: \"I want to make a webpage about reducing food waste because I think it's something everyone should care about.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "Reducing Food Waste\n\nPlan Your Meals\nBefore you go grocery shopping, plan out what you'll eat for the week. This helps you buy only what you need and avoid letting food go bad in the fridge.\n\nStore Food Properly\nLearn how to store different types of food correctly. Some fruits and vegetables last longer outside the fridge, while others need to stay cold.\n\nUse Your Leftovers\nGet creative with leftovers instead of throwing them away. Last night's roasted vegetables can become today's soup or wrap filling.\n\nCompost What's Left\nIf food does go bad, composting is a much better option than the trash. Compost breaks down into nutrients that can help a garden grow.",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nLjsJZ2CNaiZ7d7wj\n",
+    "thumbnail_url": "https://images.code.org/f96389388ec1545cc29ed39b04881511-image-1775016182163.png",
+    "name_suffix": "_launch",
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** This level is about applying their newfound content knowledge to interpret unclear directions. Students may need multiple prompts to complete the level \\- encourage them to evaluate their results and iterate until the result matches their expectations.\r\n\r\nThe vision descriptions are intentionally written in non-technical language (\"I want it to feel like two separate parts,\" \"like something you'd hang on a wall\") \\- students have to translate that language into precise HTML/CSS prompts. This translation is a core skill.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What specific language did you use in your prompts that you didn't use before?\"  \r\n- \"How many times did you iterate? What changed between your first attempt and your last?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may write very general prompts (\"make it look nice\") and be surprised when the result doesn't match \\- ask them to find one specific thing in the vision description and translate it into a CSS property they know  \r\n- Students may feel like they \"failed\" if they needed many iterations \\- explicitly reframe: \"needing four tries means you were paying attention four times. That's the skill.\"  \r\n- Students may treat the target screenshot as the only valid answer \\- remind them the instructions say \"it doesn't need to be identical, just similar enough\"",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-16T16:17:10.614+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11d_pilot2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11d_pilot2\"},{\"changed_at\":\"2026-04-16 22:19:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

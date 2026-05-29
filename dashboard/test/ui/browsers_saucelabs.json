@@ -1,0 +1,49 @@
+/* saucelabs browser configurator: https://saucelabs.com/platform/platform-configurator */
+
+[
+  {
+    "name": "iPhone",
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:platformVersion": "17.0",
+    "appium:deviceName": "iPhone Simulator",
+    "appium:automationName": "XCUITest",
+    "appium:mobile": true,
+    "sauce:options": {
+      "deviceOrientation": "LANDSCAPE"
+    }
+  },
+  {
+    "name": "iPad",
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "appium:platformVersion": "17.0",
+    "appium:deviceName": "iPad Simulator",
+    "appium:mobile": true,
+    "appium:automationName": "XCUITest",
+    "sauce:options": {
+      "deviceOrientation": "LANDSCAPE"
+    }
+  },
+  {
+    "name": "Chrome",
+    "browserName": "chrome",
+    "browserVersion": "148",
+    "platformName": "Windows 10",
+    "sauce:options": {
+      "screenResolution": "1280x1024"
+    }
+  },
+  {
+    "name": "Safari",
+    "browserName": "Safari",
+    "browserVersion": "17",
+    "platformName": "macOS 13"
+  },
+  {
+    "name": "Firefox",
+    "browserName": "firefox",
+    "browserVersion": "115",
+    "platformName": "Windows 11"
+  }
+]

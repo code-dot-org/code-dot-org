@@ -34,7 +34,7 @@ describe('RailsAuthenticityToken', () => {
       ),
       'rendered the hidden field as expected'
     );
-    assert(logToCloud.logError.notCalled, 'logged nothing to New Relic');
+    assert(logToCloud.logError.notCalled, 'logged nothing to observability');
   });
 
   it('renders empty and logs to cloud when meta tags are not found', () => {
@@ -42,7 +42,7 @@ describe('RailsAuthenticityToken', () => {
 
     const wrapper = shallow(<RailsAuthenticityToken />);
     assert(wrapper.isEmptyRender(), 'rendered nothing');
-    assert(logToCloud.logError.calledOnce, 'logged an error to New Relic');
+    assert(logToCloud.logError.calledOnce, 'logged an error to observability');
   });
 });
 

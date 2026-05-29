@@ -1,13 +1,14 @@
+import {ButtonProps as MuiButtonProps} from '@mui/material';
 import {render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
-import {LinkButtonProps} from '@/button';
 import {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
 
 import HeroBanner from './../HeroBanner';
 
 // Mock Video to avoid issues with react-player
-jest.mock('@/video', () => ({
+vi.mock('@/video', () => ({
   __esModule: true,
   default: ({videoTitle}: {videoTitle: string}) => (
     <div>
@@ -63,8 +64,8 @@ describe('HeroBanner', () => {
   });
 
   it('renders button if buttonProps is provided', () => {
-    const buttonProps: LinkButtonProps = {
-      text: 'Click me!',
+    const buttonProps: MuiButtonProps = {
+      children: 'Click me!',
       href: '/link',
     };
     render(<HeroBanner {...defaultProps} buttonProps={buttonProps} />);

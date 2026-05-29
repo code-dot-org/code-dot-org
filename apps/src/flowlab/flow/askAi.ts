@@ -4,7 +4,7 @@ import {
   AichatContext,
   ChatAsset,
 } from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ValueOf} from '@cdo/apps/types/utils';

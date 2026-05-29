@@ -14,7 +14,9 @@ import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
 
-const SingleValue = (props: SingleValueProps<{value: string}>) => (
+const SingleValue = (
+  props: SingleValueProps<{value: string; description: string}>
+) => (
   <components.SingleValue {...props}>{props.data.value}</components.SingleValue>
 );
 
@@ -116,6 +118,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   return (
     <div className={moduleStyles.row}>
       <Select
+        isMulti={false}
         styles={{
           container: (baseStyles: CSSObject) => ({
             ...baseStyles,
@@ -132,7 +135,8 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
         options={options}
         components={{SingleValue, Option}}
         defaultValue={options.find(option => option.value === condition.name)}
-        onChange={(option: {value: string}) => {
+        onChange={option => {
+          if (!option) return;
           condition.name = option.value;
           condition.value = undefined;
           if (!hasValueType) {

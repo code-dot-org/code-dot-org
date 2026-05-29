@@ -28,7 +28,7 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Stop Value\nThe **stop value** is the value or condition that tells the loop when to stop running. The loop ends when this condition is no longer true.\n\nThe stop value here is anything greater than 10.\n\n***Note:*** *Pay attention to the operators like  `<` vs `<=`, since a single symbol change whether the loop runs one too many times, or not enough.*",
+        "text": "# Stop Value\nThe **stop value** is the value or condition that tells the loop when to stop running. The loop ends when this condition is no longer true.\n\nThe stop value here is anything greater than or equal to 10.\n\n***Note:*** *Pay attention to the operators like  `<` vs `<=`, since a single symbol change whether the loop runs one too many times, or not enough.*",
         "imageUrl": "https://images.code.org/1b9d0fdd55706ee1979648201824d683-forloop (2).png",
         "key": "pl-aif-2-U4-forloop-panel-d675d816-76e7-4098-aebf-2eae9b8939b9",
         "layout": "text-bottom-right"
@@ -48,6 +48,6 @@
     ],
     "name_suffix": "_2025-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-15T16:55:22.829+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\"},{\"changed_at\":\"2026-01-15 16:57:14 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:30:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:37:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-15T16:55:22.829+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\"},{\"changed_at\":\"2026-01-15 16:57:14 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:30:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:37:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-10 20:17:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

@@ -18,6 +18,12 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -90,7 +96,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -170,6 +176,19 @@ steps:
       debug: true
       pull: true
 
+  # Implement mysql db as a detached step rather than a service, so that we can
+  # wait to start it up until we've finished restoring the cache.
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    detach: true
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
+
   - name: checkout
     image: bitnamilegacy/git
     environment:
@@ -212,11 +231,8 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.23
     pull: always
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -232,11 +248,12 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      DEVICE_FARM_DESKTOP_PROJECT_ARN:
+        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      - sudo chown -R mysql:mysql /var/lib/mysql
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -277,6 +294,17 @@ name: cache-staging-build
 clone:
   disable: true
 
+services:
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
+
 steps:
   - name: clone
     image: bitnamilegacy/git
@@ -295,7 +323,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -303,9 +331,6 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
@@ -342,6 +367,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
+hmac: 936ffb252e7466b1fa882aa979e9416024d9fc37f088c54c1ca8d9a9157f90d2
 
 ...

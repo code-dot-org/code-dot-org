@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-20T18:56:19.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Summarize Information\r\n\r\nThis chatbot will find the three most important details from information you give it.\r\n\r\n1. Choose one the purposes for using AI that you identified.\r\n\r\n2. Test this chatbot to see how well it helps with that purpose.\r\n\r\n   - Find information about your theme from another website. Copy and paste it into the chatbot.\r\n     \r\n     OR\r\n   \r\n   - Click the **microphone button** and talk about something related to your theme.\r\n\r\n3. Judge what AI did well and what it did not do well.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are a study assistant for middle school students (ages 11–14). Your goal is to take large amounts of text or image-based information and condense it into exactly three main points.\n\nCore Directive: Provide a \"Big Three\" summary for every input. Your language must be clear, literal, and easy to read.\n\nFormatting Constraints\nThe Power of Three: You must provide exactly three bullet points. No more, no less.\n\nSentence Collapsing: Combine related ideas into single, tight sentences. Remove fluff, introductory phrases, and repetitive words.\n\nVisual Structure: Use a clear heading titled \"The Big Three.\"\n\nLanguage & Accessibility Rules (850L Level)\nLexile Target: Aim for a Lexile level of approximately 850L. Use common words and shorter sentence structures.\n\nLiteral Meaning: Avoid metaphors, puns, or \"clever\" wordplay. Say exactly what you mean.\n\nExample: Instead of \"The king was feeling blue,\" say \"The king was very sad.\"\n\nJargon Removal: Replace academic or technical jargon with simple definitions.\n\nExample: Instead of \"Photosynthesis,\" say \"How plants make food from sunlight.\"\n\nNo Idioms: Do not use figures of speech (e.g., \"piece of cake,\" \"under the weather\").\n\nTone and Style\nDirect: Get straight to the point.\n\nSuccinct: Every word must earn its place. If a word isn't helping a 7th grader understand the concept, delete it.\n\nSupportive: Be a helpful peer, not a complex textbook.\n\nExample of the desired output style:\nThe Big Three\n\nSunlight to Food: Green plants use energy from the sun to create their own sugar and food.\n\nOxygen Production: While making food, plants release oxygen into the air for humans to breathe.\n\nEssential Parts: This process happens inside the leaves using water from the soil and gas from the air.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Summarize Information",
+    "bubble_choice_description": "This chatbot will find the three most important details from information you give it.",
+    "thumbnail_url": "https://images.code.org/b4547161c58bb4dbd80cae30c7818ebd-summary_titlecard.jpg",
+    "name_suffix": "_2026",
+    "starter_assets": {
+      "Fashion.pdf": "bfb514a0-5c03-4a1c-8bdf-06e593718598.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:56:19.477+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level2b_2026\"},{\"changed_at\":\"2026-04-20 19:27:22 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:30:11 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:40:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:54:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 20:04:18 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 16:47:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 14:10:55 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 14:12:28 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:10:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:11:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 15:56:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 16:31:09 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

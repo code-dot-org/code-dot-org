@@ -237,12 +237,12 @@ export default class LandingPageWorkshopsTable extends React.Component {
             description="Are you sure you want to cancel your enrollment in this course?"
             primaryButtonProps={{
               onClick: this.cancelEnrollment,
-              text: 'Yes - cancel my enrollment',
-              color: 'destructive',
+              children: 'Yes - cancel my enrollment',
+              color: 'error',
             }}
             secondaryButtonProps={{
               onClick: this.dismissCancelModal,
-              text: 'No - stay enrolled in this class',
+              children: 'No - stay enrolled in this class',
             }}
           />
         )}

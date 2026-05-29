@@ -110,6 +110,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 123,
           levelName: 'Test Level',
+          locale: 'en-US',
         }
       );
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
@@ -129,6 +130,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: expect.any(String),
           levelId: expect.any(Number),
           levelName: expect.any(String),
+          locale: 'en-US',
         })
       );
     });
@@ -193,6 +195,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 789,
           levelName: 'Different Level',
+          locale: 'en-US',
         }
       );
     });

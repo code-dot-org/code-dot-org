@@ -26,7 +26,7 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     begin
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s,
-        request.locale,
+        I18n.locale.to_s,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
     rescue OpenURI::HTTPError => exception

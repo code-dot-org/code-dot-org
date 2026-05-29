@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material';
+import Dialog from '@code-dot-org/component-library/dialog';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -51,12 +51,11 @@ describe('RemoveCoteacherDialog', () => {
       instructorEmail: 'newsaurus@code.org',
     });
 
-    expect(wrapper.find('Button')).to.have.lengthOf(2);
-    const title = wrapper
-      .find(Typography)
-      .filterWhere(node => node.props().variant === 'strong')
-      .at(0);
-    expect(title.text()).to.contain('Remove newsaurus@code.org');
+    const dialog = wrapper.find(Dialog);
+    expect(dialog).to.have.lengthOf(1);
+    expect(dialog.props().primaryButtonProps).to.exist;
+    expect(dialog.props().secondaryButtonProps).to.exist;
+    expect(dialog.props().title).to.contain('Remove newsaurus@code.org');
   });
   it('cancel remove does nothing', () => {
     const {
@@ -66,12 +65,10 @@ describe('RemoveCoteacherDialog', () => {
       setCoteachersToAdd,
     } = createStubbedCoteacherDialog({instructorEmail: 'newsaurus@code.org'});
 
-    expect(wrapper.find('AccessibleDialog').length).to.equal(1);
+    const dialog = wrapper.find(Dialog);
+    expect(dialog).to.have.lengthOf(1);
 
-    wrapper
-      .find('Button')
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
+    dialog.props().secondaryButtonProps.onClick({preventDefault: () => {}});
 
     wrapper.update();
 
@@ -89,9 +86,9 @@ describe('RemoveCoteacherDialog', () => {
     } = createStubbedCoteacherDialog({instructorEmail: 'newsaurus@code.org'});
 
     wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .primaryButtonProps.onClick({preventDefault: () => {}});
 
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
     expect(removeSavedCoteacher).to.have.not.been.called;
@@ -131,9 +128,9 @@ describe('RemoveCoteacherDialog', () => {
     );
 
     wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .primaryButtonProps.onClick({preventDefault: () => {}});
   });
   it('Failed request closes dialog, but does not remove', done => {
     fetchSpy.returns(Promise.resolve({ok: false}));
@@ -169,8 +166,8 @@ describe('RemoveCoteacherDialog', () => {
     );
 
     wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+      .find(Dialog)
+      .props()
+      .primaryButtonProps.onClick({preventDefault: () => {}});
   });
 });

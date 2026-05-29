@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import {MouseEventHandler} from 'react';
-import '@testing-library/jest-dom';
 import ReactPlayer from 'react-player';
 import {defaultProps} from 'react-player/props';
+import {vi} from 'vitest';
 
 import Video from '@/video';
 
@@ -10,9 +10,9 @@ import ActionBlock, {ActionBlockProps} from '../index';
 
 type ReactPlayerProps = typeof defaultProps;
 
-ReactPlayer.canPlay = jest.fn();
+ReactPlayer.canPlay = vi.fn();
 
-jest.mock('react-player', () => ({
+vi.mock('react-player', () => ({
   __esModule: true,
   default: ({light, playIcon, onError}: ReactPlayerProps) => (
     <div>
@@ -26,7 +26,7 @@ jest.mock('react-player', () => ({
       </button>
     </div>
   ),
-  canPlay: jest.fn(),
+  canPlay: vi.fn(),
 }));
 
 describe('ActionBlock', () => {
@@ -37,17 +37,17 @@ describe('ActionBlock', () => {
 
   const primaryButtonProps = {
     primaryButton: {
-      text: 'Primary Button',
+      children: 'Primary Button',
       href: 'https://code.org',
-      ariaLabel: 'Primary Button aria label',
+      'aria-label': 'Primary Button aria label',
     },
   };
 
   const secondaryButtonProps = {
     secondaryButton: {
-      text: 'Secondary Button',
+      children: 'Secondary Button',
       href: 'https://hourofcode.com',
-      ariaLabel: 'Secondary Button aria label',
+      'aria-label': 'Secondary Button aria label',
     },
   };
 

@@ -3,6 +3,9 @@
 
 #weblab2_fields.in.collapse
   .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :require_edit_to_continue, description: "Require student to edit code before continuing"}
+
+  .field
     = f.label :initial_view_mode, 'Initial View Mode'
     = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
     %p Allows setting the initial view mode when the level is loaded, which can be:

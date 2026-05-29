@@ -14,7 +14,7 @@ Although you can do either we suggest method 2. Why?
 1. Updating as you go allows your code to be cleaner. Keeping the updates associated with the code where they will be updated.
 1. There are certain cases such as collecting data about where the user clicks on the screen or which button they choose which do not allow you to collect the data at the end. 
 
-#### Example Code
+Example Code
 *Code here*
 
 MARKDOWN

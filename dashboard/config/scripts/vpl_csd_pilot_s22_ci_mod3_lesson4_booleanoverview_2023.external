@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question.  The more formal way to say this is that Boolean expressions *evaluate* to either true or false.  That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.
 </p></div>
 
-#### **Boolean Expression** - in programming, an expression that evaluates to True or False.
+**Boolean Expression** - in programming, an expression that evaluates to True or False.
 
 <img src="https://images.code.org/1e559b75a02295007006ad010c59aee1-image-1648648103751.48.03 AM.png" style="float: right; width: 200px; margin-left:5px; margin-right:5px;">
 

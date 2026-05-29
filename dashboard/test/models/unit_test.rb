@@ -53,7 +53,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   def populate_cache_and_disconnect_db
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
@@ -431,7 +431,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -450,7 +450,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -2160,6 +2160,18 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'finish_url for hoai pl unit returns certificate url, not hoc finish url' do
+    unit = create(:script)
+    course = create(:single_unit_course, unit: unit, instructor_audience: 'facilitator', participant_audience: 'teacher')
+    CourseOffering.add_course_offering(course).update!(marketing_initiative: 'HOAI')
+    unit.reload
+
+    assert unit.hoc_or_hoai?
+    assert unit.pl_course?
+    encoded_course_name = ERB::Util.url_encode(Base64.urlsafe_encode64(course.name))
+    assert_equal "#{CDO.default_scheme}//test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
+  end
+
   test 'finish_url returns unit group finish url if in a unit group' do
     unit_group = create(:unit_group)
     unit = create(:script)
@@ -2242,8 +2254,6 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'is ai assessment enabled' do
-    LearningGoal.any_instance.stubs(:validate_ai_config).returns(true)
-
     unit_without_rubrics = create(:unit, :with_levels)
 
     unit_with_non_ai_rubric = create(:unit, :with_levels)
@@ -2267,15 +2277,6 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.summarize[:hasUnnumberedLessons]
     unit.update!(has_unnumbered_lessons: false)
     refute unit.summarize[:hasUnnumberedLessons]
-  end
-
-  test 'has ai tutor level' do
-    unit_without_ai_tutor = create(:unit)
-    refute unit_without_ai_tutor.has_ai_tutor_level?
-
-    unit_with_ai_tutor = create(:unit, :with_levels)
-    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
-    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   test 'with_ai_chat_tools returns units with essential or optional AI chat tools' do
@@ -2483,6 +2484,140 @@ class UnitTest < ActiveSupport::TestCase
     unit.reload
     assert_nil unit.md5
     refute File.exist?(Unit.script_json_filepath(unit.name))
+  end
+
+  # ---- summarize_for_unit_generate / update_lesson_outlines ----
+
+  test 'summarize_for_unit_generate returns id, name, lessons, and flag' do
+    unit = create(:script)
+    group = create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson, script: unit, lesson_group: group, name: 'L1', key: 'l-1')
+    create(:lesson, script: unit, lesson_group: group, name: 'L2', key: 'l-2')
+
+    summary = unit.summarize_for_unit_generate
+    assert_equal unit.id, summary[:id]
+    assert_equal unit.name, summary[:name]
+    assert_equal 2, summary[:lessons].length
+    assert_equal %w(l-1 l-2), summary[:lessons].pluck(:key)
+    refute summary[:multipleLessonGroups]
+  end
+
+  test 'summarize_for_unit_generate flags multiple user-facing lesson groups' do
+    unit = create(:script)
+    create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson_group, script: unit, user_facing: true)
+    assert unit.summarize_for_unit_generate[:multipleLessonGroups]
+  end
+
+  test 'summarize_for_unit_generate exposes generate_outline for round-trip' do
+    unit = create(:script)
+    unit.update!(properties: unit.properties.merge('generate_outline' => 'unit prompt'))
+    assert_equal 'unit prompt', unit.summarize_for_unit_generate[:generateOutline]
+  end
+
+  test 'update_lesson_outlines creates new lessons in the order given' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    unit.update_lesson_outlines([
+                                  {'key' => 'a', 'name' => 'Lesson A', 'generateOutline' => 'pa'},
+                                  {'key' => 'b', 'name' => 'Lesson B'},
+                                ]
+)
+
+    unit.reload
+    keys = unit.lessons.order(:absolute_position).pluck(:key)
+    assert_equal %w(a b), keys
+    assert_equal 'pa', unit.lessons.find_by(key: 'a').generate_outline
+    assert_nil unit.lessons.find_by(key: 'b').generate_outline
+  end
+
+  test 'update_lesson_outlines reorders existing lessons by id' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    a = create(:lesson, script: unit, lesson_group: group, name: 'A', key: 'a')
+    b = create(:lesson, script: unit, lesson_group: group, name: 'B', key: 'b')
+
+    unit.update_lesson_outlines([
+                                  {'id' => b.id, 'key' => b.key, 'name' => b.name},
+                                  {'id' => a.id, 'key' => a.key, 'name' => a.name},
+                                ]
+)
+
+    unit.reload
+    assert_equal %w(b a), unit.lessons.order(:absolute_position).pluck(:key)
+  end
+
+  test 'update_lesson_outlines destroys lessons missing from the payload' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    keep = create(:lesson, script: unit, lesson_group: group, name: 'Keep', key: 'keep')
+    drop = create(:lesson, script: unit, lesson_group: group, name: 'Drop', key: 'drop')
+
+    unit.update_lesson_outlines([
+                                  {'id' => keep.id, 'key' => keep.key, 'name' => keep.name},
+                                ]
+)
+
+    assert_nil Lesson.find_by(id: drop.id)
+    assert_equal [keep.id], unit.reload.lessons.pluck(:id)
+  end
+
+  test 'update_lesson_outlines persists supplied unit-level outline' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], 'overall prompt')
+    assert_equal 'overall prompt', unit.reload.generate_outline
+  end
+
+  test 'update_lesson_outlines leaves unit-level outline alone when nil' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    unit.update!(properties: unit.properties.merge('generate_outline' => 'pre'))
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], nil)
+    assert_equal 'pre', unit.reload.generate_outline
+  end
+
+  test 'update_lesson_outlines refuses units with multiple user-facing lesson groups' do
+    unit = create(:script)
+    create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson_group, script: unit, user_facing: true)
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([])}
+  end
+
+  test 'update_lesson_outlines destroys missing lessons before creating new ones (key reuse)' do
+    # Repro: a user deletes lesson "x" from the UI, then re-runs the AI
+    # outline which happens to suggest a new lesson with the same key "x"
+    # and a fresh prompt. If we created the new one before destroying the
+    # old, the unique (script_id, key) index would 422 the save.
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    old = create(:lesson, script: unit, lesson_group: group, name: 'Old', key: 'x')
+    old.update!(properties: old.properties.merge('generate_outline' => 'old prompt'))
+
+    unit.update_lesson_outlines([
+                                  {'key' => 'x', 'name' => 'New', 'generateOutline' => 'new prompt'}
+                                ]
+)
+
+    unit.reload
+    assert_equal 1, unit.lessons.count
+    fresh = unit.lessons.first
+    assert_equal 'New', fresh.name
+    # The new prompt lands on the freshly-created lesson — the old row
+    # (and its old prompt) is gone.
+    assert_equal 'new prompt', fresh.generate_outline
+    refute_equal old.id, fresh.id
+  end
+
+  test 'update_lesson_outlines requires key and name on new lesson entries' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([{'name' => 'A'}])}
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
   private def has_unlaunched_unit?(units)

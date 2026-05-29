@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### Computer systems and devices are the building blocks of how technology functions in the real world. Understanding how hardware, software, and networks work together is essential for building digital literacy and systems thinking.
+Computer systems and devices are the building blocks of how technology functions in the real world. Understanding how hardware, software, and networks work together is essential for building digital literacy and systems thinking.
 
-#### Code.org’s **AI and the Systems that Power It** unit helps students explore how information flows through digital systems—connecting components like input/output devices, memory, and the internet. Through interactive models and hands-on investigations, students see how devices are designed, how systems communicate, and how these technologies shape our everyday experiences.
+Code.org’s **AI and the Systems that Power It** unit helps students explore how information flows through digital systems—connecting components like input/output devices, memory, and the internet. Through interactive models and hands-on investigations, students see how devices are designed, how systems communicate, and how these technologies shape our everyday experiences.
 
 
-#### See what educators are saying about teaching the **AI and the Systems that Power It** unit. 
+See what educators are saying about teaching the **AI and the Systems that Power It** unit. 
 
 <!-- Flexbox Section 1 -->
 <div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">

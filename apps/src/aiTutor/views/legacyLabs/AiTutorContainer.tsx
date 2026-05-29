@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -70,10 +70,8 @@ export const AiTutorContainer: FC<{
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
-  useAiChatDisabledState({
+  const disabledState = useAiChatDisabledState({
     appName: labState.appType,
-    isPredictLevel: false,
-    hasSubmittedPredictResponse: false,
   });
 
   const lab: CommonLab | undefined =
@@ -185,6 +183,7 @@ export const AiTutorContainer: FC<{
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
           channelId={lab?.channel}
+          disabledState={disabledState}
         />
       </div>
       <div
@@ -197,6 +196,7 @@ export const AiTutorContainer: FC<{
           suggestedPrompts={allPrompts}
           hiddenContextCallback={getHiddenContext}
           analyticsData={analyticsData}
+          disabled={disabledState.disabled}
         />
       </div>
     </>

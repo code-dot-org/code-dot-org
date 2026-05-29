@@ -1,0 +1,39 @@
+@import 'font';
+
+.main {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.hidden {
+  border: 4px dashed var(--borders-neutral-primary);
+  margin: 0 0 12px 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+.description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.verifiedResourcesNotification {
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.confirmText {
+  margin-left: 5px;
+  margin-right: 5px;
+}

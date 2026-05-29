@@ -440,6 +440,9 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
+  // Inject the infinite loop trap into controls_repeat_ext
+  generator.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
+
   blockly.Blocks.maze_untilBlockedOrNotClear.DIRECTIONS = [
     [msg.whileMsg() + ' ' + msg.pilePresent(), 'pilePresent'],
     [msg.whileMsg() + ' ' + msg.holePresent(), 'holePresent'],

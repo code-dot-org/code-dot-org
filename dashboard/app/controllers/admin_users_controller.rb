@@ -385,9 +385,9 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/lookup_by_email
   def lookup_by_email_form
-    email = params[:email].to_s.strip.downcase
-    if email.present?
-      hashed_email = AuthenticationOption.hash_email(email)
+    input = params[:email].to_s.strip.downcase
+    if input.present?
+      hashed_email = input.match?(/\A[a-f0-9]{32}\z/) ? input : AuthenticationOption.hash_email(input)
       matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
       user_ids = matched_auth_options.distinct.pluck(:user_id)
       all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)
@@ -476,7 +476,7 @@ class AdminUsersController < ApplicationController
 
     csv_data = params[:csv_data]
     teacher_id = params[:teacher_id]
-    dry_run = params[:dry_run] == 'true'
+    dry_run = ActiveModel::Type::Boolean.new.cast(params[:dry_run])
 
     if csv_data.blank? || teacher_id.blank?
       render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request

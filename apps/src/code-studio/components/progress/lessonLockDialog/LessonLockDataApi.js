@@ -61,6 +61,7 @@ function extractLockData(serverLockState, sectionId, lessonId) {
     name: studentData.name,
     lockStatus: toLockStatus(studentData),
     userLevelData: studentData.user_level_data,
+    isDemoStudent: !!studentData.is_demo_student,
   }));
 }
 

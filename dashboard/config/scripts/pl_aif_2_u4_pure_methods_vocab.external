@@ -5,24 +5,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Pure Functions & Side Effects
 
-#### When you work with data in JavaScript, how you write a function matters just as much as what it does.
+When you work with data in JavaScript, how you write a function matters just as much as what it does.
 
-#### Some functions quietly change data behind the scenes. Others leave the original data untouched. Understanding the difference helps you write code that is easier to trust, debug, and explain.
+Some functions quietly change data behind the scenes. Others leave the original data untouched. Understanding the difference helps you write code that is easier to trust, debug, and explain.
 
 <img src="https://images.code.org/bff91671a8287ee446cd10565f019e5f-image-1769542918474.png" alt="phone with a volunteer app showing 2 opportinies" width="250px" style="border-radius:10px; float:right; margin: 0 40px 00px 10px;">
 
 
 ## Scenario: Filtering Roles
 
-#### Imagine your app starts with a list of opportunities.
+Imagine your app starts with a list of opportunities.
 
-#### You run a function to filter the list based on category and age.
+You run a function to filter the list based on category and age.
 
-#### After the function runs, one of two things could be true:
+After the function runs, one of two things could be true:
 
-- #### The original list stayed the same, and you got a new filtered list
+- The original list stayed the same, and you got a new filtered list
 
-- #### The original list was changed, even if you didn’t mean to change it
+- The original list was changed, even if you didn’t mean to change it
 
 
 <div style="clear:both;"></div>

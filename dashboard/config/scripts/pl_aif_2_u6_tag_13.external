@@ -1,0 +1,123 @@
+name 'pl-aif-2-U6-tag-13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# TAG Protocol for Meaningful Feedback
+
+When teams are ready for feedback (typically around Day 8 / Milestone 4), use the TAG protocol to guide structured, meaningful peer feedback.
+
+
+TAG helps students move beyond surface-level comments and engage in feedback that improves both the product and their thinking.
+
+---
+
+## How TAG Works
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- TELL -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/b7b707ce75276f775ec583954ec65bf4-image-1776956980531.png" alt="icon for stength with fist" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>1. Tell: Identify Strengths</b></p>
+      <p style="font-size: 12pt;">
+        Students highlight something that is working well in the app.
+        <br><br>
+        This reinforces strong ideas and helps teams recognize what to keep.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Build confidence and clarity around what is already effective.</i></p>
+    </div>
+  </div>
+
+  <!-- ASK -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/6b33a4aff94907563a6ed75218fae485-image-1776957078956.png" alt="Icon with quesiton marks" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>2. Ask: Clarify Understanding</b></p>
+      <p style="font-size: 12pt;">
+        Students ask questions about how the app works or why decisions were made.
+        <br><br>
+        This helps uncover confusion or gaps in communication.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Surface misunderstandings and prompt deeper thinking.</i></p>
+    </div>
+  </div>
+
+  <!-- GIVE -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/948548ff076e40fbdaec850ae53eb3e9-image-1776957143962.png" alt="lightbulb with suggestions icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px;">
+    <div style="flex: 1; background: #F5F7F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
+      <p style="font-size: 18pt;"><b>3. Give: Suggest Improvements</b></p>
+      <p style="font-size: 12pt;">
+        Students offer a concrete suggestion to improve the app.
+        <br><br>
+        Suggestions should be specific and actionable.
+      </p>
+      <p style="font-size: 12pt;"><i><b>Goal:</b> Move the project forward with clear next steps.</i></p>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## When to Use TAG
+
+Students do <b>not</b> need a finished app to get feedback.
+
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 85%;">
+  <p style="font-size: 14pt;">
+    As soon as a team has <b>one working interaction</b>, they are ready for feedback.
+    <br><br>
+    Early feedback leads to better decisions and prevents wasted work later.
+  </p>
+</div>
+
+---
+
+## Keep TAG Flexible
+
+TAG does not need to be a rigid, whole-class activity.
+
+- Teams can give feedback to a neighboring group  
+- You can use TAG during teacher spot-checks  
+- Students can adapt TAG when reviewing AI-generated feedback  
+
+The goal is consistent, meaningful feedback, not a specific format.
+
+---
+
+## Feedback is a Decision, Not a To-Do List
+
+<div style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 85%;">
+  <p style="font-size: 14pt;">
+    Strong teams treat feedback as <b>information for decision-making</b>, not a checklist.
+  </p>
+</div>
+
+Coach students to:
+
+- Act on feedback that improves their goals  
+- Defer feedback that isn’t immediately useful  
+- Reject feedback that doesn’t align with their design  
+
+When reviewing work, look for evidence that teams explain <b>why</b> they accepted or rejected feedback in their Project Guide.
+
+---
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #048899; 
+    border-right: 5px solid #048899;
+    display: inline-block;
+  ">
+    <i>TAG turns feedback into a structured conversation that helps teams improve their work and make better decisions.</i>
+  </p>
+</div>
+
+![]()
+MARKDOWN

@@ -3,7 +3,6 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
@@ -80,8 +79,6 @@ module Dashboard
     end
 
     if Rails.env.development?
-      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
-
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
@@ -99,9 +96,9 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
+    config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
@@ -119,8 +116,6 @@ module Dashboard
     end
 
     config.encoding = 'utf-8'
-
-    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
 
     config.generators do |g|
       g.template_engine :haml
@@ -140,23 +135,19 @@ module Dashboard
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
     config.i18n.fallbacks[:defaults] = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:map] ||= {}
     config.i18n.default_locale = Cdo::I18n::DEFAULT_LOCALE
     LOCALES = Cdo::I18n::LOCALE_CONFIGS
     Cdo::I18n.available_languages.each do |language|
       locale = language[:locale_s]
-      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+      fallback_locale = Cdo::I18n::LOCALE_FALLBACKS[locale]
 
       config.i18n.available_locales << locale
-      config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
+      config.i18n.fallbacks[:map][locale] = fallback_locale if fallback_locale
     end
 
-    config.after_initialize do
-      # For some reason custom fallbacks need to be set on the I18n module
-      # itself and can't be configured using config.i18n.fallbacks.
-      # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
-      # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
-      I18n.fallbacks.map(es: :'es-MX')
-      I18n.fallbacks.map(pt: :'pt-BR')
+    Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|
+      config.i18n.fallbacks[:map][short_locale] = normalized_locale
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
@@ -242,10 +233,6 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    if CDO.newrelic_logging
-      require 'newrelic_rpm'
-    end
-
     # Webpack handles js compression for us, so don't compress by default.
     # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
@@ -279,5 +266,12 @@ module Dashboard
       # Register the TeacherNotificationSource for database-backed notifications
       ::Notifications.register(TeacherNotificationSource.new)
     end
+
+    # `CDO.dashboard_site_host` already includes both the host and the port.
+    # Using it as the route host and clearing the port avoids duplication and
+    # matches the behavior of the global `CDO.studio_url` route generation helper.
+    routes.default_url_options[:protocol] = CDO.default_scheme.chomp(':')
+    routes.default_url_options[:host] = CDO.dashboard_site_host
+    routes.default_url_options.delete(:port)
   end
 end

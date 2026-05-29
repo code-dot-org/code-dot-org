@@ -1,5 +1,5 @@
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -83,6 +83,14 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
     });
   };
 
+  const handleEnableAll = () => {
+    setEnabledAnswerTypes(new Set(TOGGLEABLE_TUTOR_ANSWER_TYPES));
+  };
+
+  const handleDisableAll = () => {
+    setEnabledAnswerTypes(new Set());
+  };
+
   const handleCustomizationChange = (
     answerType: AiTutorAnswerType,
     value: string
@@ -108,6 +116,19 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
         })}
         name={'level[ai_tutor_prompt_settings]'}
       />
+      <div className={moduleStyles.bulkActionButtons}>
+        <MuiButton variant="outlined" size="small" onClick={handleEnableAll}>
+          Enable All
+        </MuiButton>
+        <MuiButton
+          variant="outlined"
+          size="small"
+          disabled={enabledAnswerTypes.size === 0}
+          onClick={handleDisableAll}
+        >
+          Disable All
+        </MuiButton>
+      </div>
       <div className={moduleStyles.togglesContainer}>
         {TOGGLEABLE_TUTOR_ANSWER_TYPES.map(answerType => (
           <div key={answerType}>

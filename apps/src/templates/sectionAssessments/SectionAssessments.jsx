@@ -1,9 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -17,8 +19,6 @@ import {
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import i18n from '@cdo/locale';
-
-import {h3Style} from '../../legacySharedComponents/Headings';
 
 import AssessmentSelector from './AssessmentSelector';
 import FeedbackDownload from './FeedbackDownload';
@@ -34,6 +34,8 @@ import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import StudentSelector from './StudentSelector';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
+
+import moduleStyles from './section-assessments.module.scss';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -165,18 +167,18 @@ class SectionAssessments extends Component {
     return (
       // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'assessments-tab'}>
-        <div style={styles.selectors}>
-          <div style={styles.unitSelection}>
-            <div style={{...h3Style, ...styles.header}}>
+        <div className={moduleStyles.selectors}>
+          <div className={moduleStyles.unitSelection}>
+            <Typography variant="h4" className={moduleStyles.header}>
               {i18n.selectACourse()}
-            </div>
+            </Typography>
             <UnitSelectorV2 v1Styles />
           </div>
           {!isLoading && assessmentList.length > 0 && (
-            <div style={styles.assessmentSelection}>
-              <div style={{...h3Style, ...styles.header}}>
+            <div className={moduleStyles.assessmentSelection}>
+              <Typography variant="h4" className={moduleStyles.header}>
                 {i18n.selectAssessment()}
-              </div>
+              </Typography>
               <AssessmentSelector
                 assessmentList={assessmentList}
                 assessmentId={assessmentId}
@@ -186,32 +188,39 @@ class SectionAssessments extends Component {
           )}
         </div>
         {!isLoading && assessmentList.length > 0 && (
-          <div style={styles.tableContent}>
+          <div className={moduleStyles.tableContent}>
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               !isCurrentAssessmentFeedbackOption && (
                 <div>
-                  <div style={{...h3Style, ...styles.header}}>
+                  <Typography variant="h4" className={moduleStyles.header}>
                     {i18n.selectStudent()}
-                  </div>
+                  </Typography>
                   <StudentSelector
                     studentList={studentList}
                     studentId={studentId}
                     onChange={this.onSelectStudent}
                   />
                   {totalStudentSubmissions > 0 && (
-                    <div style={styles.download}>
-                      <CSVLink
+                    <div className={moduleStyles.download}>
+                      <MuiButton
+                        component={CSVLink}
+                        size="small"
+                        variant="text"
+                        color="secondary"
+                        startIcon={<FontAwesomeV6Icon iconName="download" />}
                         filename="assessments.csv"
                         data={exportableData}
                         headers={CSV_ASSESSMENT_HEADERS}
                       >
-                        <div>{i18n.downloadAssessmentCSV()}</div>
-                      </CSVLink>
+                        {i18n.downloadAssessmentCSV()}
+                      </MuiButton>
                     </div>
                   )}
                   {totalStudentSubmissions <= 0 && (
-                    <div>{i18n.emptyAssessmentSubmissions()}</div>
+                    <Typography variant="body3" gutterBottom>
+                      {i18n.emptyAssessmentSubmissions()}
+                    </Typography>
                   )}
                   <SubmissionStatusAssessmentsContainer />
                   {totalStudentSubmissions > 0 && (
@@ -242,13 +251,18 @@ class SectionAssessments extends Component {
               <div>
                 {totalStudentSubmissions > 0 && (
                   <div>
-                    <CSVLink
-                      filename="surveys.csv"
-                      data={exportableData}
-                      headers={CSV_SURVEY_HEADERS}
-                    >
-                      <div>{i18n.downloadAssessmentCSV()}</div>
-                    </CSVLink>
+                    <div className={moduleStyles.download}>
+                      <MuiButton
+                        component={CSVLink}
+                        variant="text"
+                        startIcon={<FontAwesomeV6Icon iconName="download" />}
+                        filename="surveys.csv"
+                        data={exportableData}
+                        headers={CSV_SURVEY_HEADERS}
+                      >
+                        {i18n.downloadAssessmentCSV()}
+                      </MuiButton>
+                    </div>
                     <MultipleChoiceSurveyOverviewContainer />
                     <FreeResponsesSurveyContainer
                       openDialog={this.showFreeResponseDetailDialog}
@@ -275,47 +289,17 @@ class SectionAssessments extends Component {
           </div>
         )}
         {isLoading && (
-          <div style={styles.loading}>
-            <FontAwesome icon="spinner" className="fa-pulse fa-3x" />
+          <div>
+            <Spinner size="large" />
           </div>
         )}
         {!isLoading && assessmentList.length === 0 && (
-          <div style={styles.empty}>{i18n.noAssessments()}</div>
+          <Typography variant="body3">{i18n.noAssessments()}</Typography>
         )}
       </div>
     );
   }
 }
-
-const styles = {
-  header: {
-    marginBottom: 0,
-  },
-  tableContent: {
-    marginTop: 10,
-    clear: 'both',
-  },
-  selectors: {
-    clear: 'both',
-  },
-  unitSelection: {
-    float: 'left',
-    marginRight: 20,
-  },
-  assessmentSelection: {
-    float: 'left',
-    marginBottom: 10,
-  },
-  download: {
-    marginTop: 10,
-  },
-  loading: {
-    clear: 'both',
-  },
-  empty: {
-    clear: 'both',
-  },
-};
 
 export const UnconnectedSectionAssessments = SectionAssessments;
 

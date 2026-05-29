@@ -105,6 +105,7 @@ export const setHasSeenHomepageWelcome = hasSeenHomepageWelcome => ({
 const initialState = {
   userId: null,
   userName: null,
+  gradesTeaching: [],
   userType: 'unknown',
   userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
@@ -236,6 +237,7 @@ export default function currentUser(state = initialState, action) {
       id,
       username,
       display_name,
+      grades_teaching,
       user_type,
       mute_music,
       under_13,
@@ -271,6 +273,7 @@ export default function currentUser(state = initialState, action) {
       ...state,
       userId: id,
       userName: username,
+      gradesTeaching: grades_teaching || [],
       userType: user_type,
       displayName: display_name,
       isBackgroundMusicMuted: mute_music,

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # What is Trace Code Execution?
 
-#### Students should manually or using a debugger trace their code's execution line by line to understand its behavior and identify where it deviates from the expected outcome.
+Students should manually or using a debugger trace their code's execution line by line to understand its behavior and identify where it deviates from the expected outcome.
 
 <img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 

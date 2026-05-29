@@ -19,12 +19,6 @@
 
 apt_package 'gnupg'
 
-apt_repository 'git-core' do
-  uri          'ppa:git-core/ppa'
-  distribution 'trusty'
-  retries 3
-end
-
 apt_package 'git'
 
 # Install Git LFS, from: https://packagecloud.io/github/git-lfs/install#chef

@@ -1,0 +1,52 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  pointer-events: all;
+  min-width: 240px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-quaternary);
+  max-height: 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.headerTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-neutral-secondary);
+  font-weight: 600;
+}
+
+.closeButton {
+  padding: 2px;
+  color: var(--text-neutral-primary);
+}
+
+.scrollContent {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0 8px;
+  gap: 12px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  // Every section/standalone row after the first gets a divider above it.
+  & > * + * {
+    padding-top: 6px;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}

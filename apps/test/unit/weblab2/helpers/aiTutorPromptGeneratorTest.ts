@@ -6,9 +6,16 @@ import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
+import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
+import securityIntro from '@cdo/apps/weblab2/prompts/securityIntro.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
+import {
+  AllowedFontHostnames,
+  AllowedHostnameSuffixes,
+  AllowedImageHostnameSuffixes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 const ALL_ANSWER_TYPES: AiTutorAnswerType[] = [
   'buildHTML',
@@ -26,9 +33,14 @@ const ALL_ANSWER_TYPES: AiTutorAnswerType[] = [
 
 describe('generateAiTutorPrompt', () => {
   describe('fixed sections', () => {
-    it('starts with basePrompt content', () => {
+    it('starts with environmentPrompt content', () => {
       const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
-      expect(result.startsWith(basePrompt.trim())).toBe(true);
+      expect(result.startsWith(environmentPrompt.trim())).toBe(true);
+    });
+
+    it('includes basePrompt content', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain(basePrompt.trim());
     });
 
     it('ends with preReplyCheckAllowJs content if buildJavaScript answer type is included', () => {
@@ -54,11 +66,42 @@ describe('generateAiTutorPrompt', () => {
       expect(result).toContain('## Mode Answer Contracts');
     });
 
+    it('places environmentPrompt before security section and basePrompt', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const envPos = result.indexOf(environmentPrompt.trim());
+      const securityPos = result.indexOf(securityIntro.trim());
+      const basePos = result.indexOf(basePrompt.trim());
+      expect(envPos).toBeLessThan(securityPos);
+      expect(securityPos).toBeLessThan(basePos);
+    });
+
     it('places the Mode Router section before Mode Answer Contracts', () => {
       const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result.indexOf('## Mode Router')).toBeLessThan(
         result.indexOf('## Mode Answer Contracts')
       );
+    });
+  });
+
+  describe('security section', () => {
+    it('includes the securityIntro content', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain(securityIntro.trim());
+    });
+
+    it('includes allowed connect sources from sharedConstants', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain(`${AllowedHostnameSuffixes.join(', ')}`);
+    });
+
+    it('includes allowed image sources from sharedConstants', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain(`${AllowedImageHostnameSuffixes.join(', ')}`);
+    });
+
+    it('includes allowed font sources from sharedConstants', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      expect(result).toContain(`${AllowedFontHostnames.join(', ')}`);
     });
   });
 
@@ -149,8 +192,8 @@ describe('generateAiTutorPrompt', () => {
       expect(result).toContain(basePrompt.trim());
       expect(result).toContain(buildHTMLTrigger.trim());
       expect(result).toContain(buildCSSContract.trim());
-      // Engineer allows javascript
-      expect(result).toContain(preReplyCheckAllowJs.trim());
+      // Default answer types list does not include buildJavaScript.
+      expect(result).toContain(preReplyCheckNoJs.trim());
     });
   });
 });

@@ -144,6 +144,9 @@ export const HTMLPreview: React.FC = () => {
   );
   const allowUserScripts =
     !isPredictLevel || hasSubmittedPredictResponse || isStartMode;
+  const blockNetwork = useAppSelector(
+    state => state.weblab2Network.networkRequestsBlocked
+  );
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
@@ -455,6 +458,16 @@ export const HTMLPreview: React.FC = () => {
       );
     }
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
+
+  // Keep inner preview's network block state in sync with the debug panel toggle.
+  useEffect(() => {
+    if (isIframeLoaded && iframeRef.current && previewUrl) {
+      iframeRef.current.contentWindow?.postMessage(
+        {type: IframeMessageType.SET_BLOCK_NETWORK, block: blockNetwork},
+        previewUrl
+      );
+    }
+  }, [isIframeLoaded, previewUrl, blockNetwork]);
 
   return (
     <PanelContainer

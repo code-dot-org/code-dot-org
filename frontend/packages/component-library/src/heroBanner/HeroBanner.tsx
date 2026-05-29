@@ -1,13 +1,16 @@
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
 import Alert from '@/alert';
-import {LinkButton, LinkButtonProps} from '@/button';
 import {Theme} from '@/common/contexts';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
 import {LinkProps} from '@/link';
-import {Heading1, BodyOneText, BodyTwoText} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import moduleStyles from './heroBanner.module.scss';
@@ -38,8 +41,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   VideoComponent?: typeof Video;
   /** HeroBanner video */
   videoProps?: VideoProps;
-  /** HeroBanner link */
-  buttonProps?: LinkButtonProps;
+  /** HeroBanner link (MUI Button) */
+  buttonProps?: MuiButtonProps;
   /** HeroBanner announcementBanner */
   announcementBannerProps?: AnnouncementBannerProps;
   /** HeroBanner custom background color.
@@ -122,11 +125,21 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <div className={classNames(moduleStyles.heroBannerContainer)}>
         <div className={moduleStyles.heroBannerTextContainer}>
           <div>
-            <Heading1>{heading}</Heading1>
+            <MuiTypography variant="h1" gutterBottom>
+              {heading}
+            </MuiTypography>
 
-            {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
+            {subHeading && (
+              <MuiTypography variant="body1" gutterBottom>
+                {subHeading}
+              </MuiTypography>
+            )}
 
-            {description && <BodyTwoText>{description}</BodyTwoText>}
+            {description && (
+              <MuiTypography variant="body2" gutterBottom>
+                {description}
+              </MuiTypography>
+            )}
 
             {partner && (
               <span className={moduleStyles.heroBannerPartnerContainer}>
@@ -137,7 +150,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           </div>
           {buttonProps && (
             <div>
-              <LinkButton color="purple" type="primary" {...buttonProps} />
+              <MuiButton variant="contained" color="primary" {...buttonProps} />
             </div>
           )}
         </div>

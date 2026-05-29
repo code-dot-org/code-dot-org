@@ -21,7 +21,8 @@ module Services
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
-      :standards, :lessons_standards, :lessons_opportunity_standards, :rubrics, :learning_goals, :learning_goal_evidence_levels, keyword_init: true
+      :standards, :lessons_standards, :lessons_opportunity_standards, :rubrics, :learning_goals, :learning_goal_evidence_levels,
+      :jit_pl_concepts, :jit_pl_concepts_lessons, keyword_init: true
     )
 
     # Produces a JSON representation of the given Unit and all objects under it in its "tree", in a format specifically
@@ -49,6 +50,7 @@ module Services
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       programming_environments = ProgrammingEnvironment.all
       programming_expressions = ProgrammingExpression.all
+      jit_pl_concepts = JitPlConcept.all
 
       # Use existing seeding_key code to efficiently sort join model objects
       # in a manner that will be stable across environments.
@@ -62,6 +64,7 @@ module Services
         vocabularies: vocabularies,
         programming_environments: programming_environments,
         programming_expressions: programming_expressions,
+        jit_pl_concepts: jit_pl_concepts,
       )
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
@@ -72,6 +75,8 @@ module Services
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(sort_context).to_json}
 
       objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
+
+      jit_pl_concepts_lessons = script.lessons.map(&:jit_pl_concepts_lessons).flatten.sort_by {|jcl| jcl.seeding_key(sort_context).to_json}
 
       rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
@@ -101,7 +106,9 @@ module Services
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards,
         rubrics: rubrics,
-        learning_goals: learning_goals
+        learning_goals: learning_goals,
+        jit_pl_concepts: jit_pl_concepts,
+        jit_pl_concepts_lessons: jit_pl_concepts_lessons,
       )
       scope = {seed_context: seed_context}
 
@@ -123,6 +130,7 @@ module Services
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
+        jit_pl_concepts_lessons: jit_pl_concepts_lessons.map {|jcl| ScriptSeed::JitPlConceptsLessonSerializer.new(jcl, scope: scope).as_json},
         rubrics: rubrics.map {|r| ScriptSeed::RubricSerializer.new(r, scope: scope).as_json},
         learning_goals: learning_goals.map {|lg| ScriptSeed::LearningGoalSerializer.new(lg, scope: scope).as_json},
         learning_goal_evidence_levels: learning_goal_evidence_levels.map {|lgel| ScriptSeed::LearningGoalEvidenceLevelSerializer.new(lgel, scope: scope).as_json},
@@ -268,9 +276,18 @@ module Services
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
+        seed_context.jit_pl_concepts = JitPlConcept.all
+        seed_context.jit_pl_concepts_lessons = import_jit_pl_concepts_lessons(data['jit_pl_concepts_lessons'], seed_context)
+
         seed_context.rubrics = import_rubrics(rubrics_data, seed_context)
         seed_context.learning_goals = import_learning_goals(learning_goals_data, seed_context)
         seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
+
+        # Validate rubrics after all rubric-related imports are complete,
+        # so that learning goals are available for cross-referencing against S3.
+        # Rubrics are imported with validate: false above because their
+        # validations depend on learning goals being present in the database.
+        seed_context.rubrics.each(&:validate!)
 
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
@@ -702,6 +719,28 @@ module Services
       LessonsOpportunityStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_jit_pl_concepts_lessons(jit_pl_concepts_lessons_data, seed_context)
+      return JitPlConceptsLesson.joins(:lesson).where('stages.script_id' => seed_context.script.id) if jit_pl_concepts_lessons_data.nil?
+
+      jit_pl_concepts_lessons_to_import = jit_pl_concepts_lessons_data.map do |jcl_data|
+        lesson_id = seed_context.lessons.find {|l| l.key == jcl_data['seeding_key']['lesson.key']}&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        concept_id = seed_context.jit_pl_concepts.find {|c| c.name == jcl_data['seeding_key']['jit_pl_concept.name']}&.id
+        raise 'No JIT PL concept found' if concept_id.nil?
+
+        JitPlConceptsLesson.new(
+          lesson_id: lesson_id,
+          jit_pl_concept_id: concept_id
+        )
+      end
+
+      seed_context.lessons.each {|l| l.jit_pl_concepts = []}
+
+      JitPlConceptsLesson.import! jit_pl_concepts_lessons_to_import, on_duplicate_key_update: get_columns(JitPlConceptsLesson)
+      JitPlConceptsLesson.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
     def self.import_rubrics(rubrics_data, seed_context)
       rubrics_to_import = rubrics_data.map do |rubric_data|
         lesson = seed_context.lessons.find {|l| l.key == rubric_data['seeding_key']['lesson.key']}
@@ -717,7 +756,7 @@ module Services
 
       existing_rubrics = Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
       destroy_outdated_objects(Rubric, existing_rubrics, rubrics_to_import, seed_context)
-      Rubric.import! rubrics_to_import, on_duplicate_key_update: get_columns(Rubric)
+      Rubric.import! rubrics_to_import, validate: false, on_duplicate_key_update: get_columns(Rubric)
       Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
@@ -960,6 +999,14 @@ module Services
     end
 
     class LessonsVocabularySerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class JitPlConceptsLessonSerializer < ActiveModel::Serializer
       attributes :seeding_key
 
       def seeding_key

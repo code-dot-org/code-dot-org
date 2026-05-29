@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Instance Variables
 
-#### An instance variable is an attribute whose value is unique to each instance of the class. Take a look at this example of two instances of the Painter class. 
+An instance variable is an attribute whose value is unique to each instance of the class. Take a look at this example of two instances of the Painter class. 
 
 <img src="https://images.code.org/cb0eb7706b1d58a98b4390c803a31fb5-image-1747670941479.png" alt="example of 2 instances of the painter class. Painter rosie and Painter amy" width="350px"  style="display: block; margin-left: auto; margin-right: auto;">
 
@@ -46,7 +46,7 @@ markdown <<MARKDOWN
 
 ## Sample class
 
-#### Here is an example of instance variables defined in a class titled Book. This indicates that each instance of a Book object will have a title, author, and year published. 
+Here is an example of instance variables defined in a class titled Book. This indicates that each instance of a Book object will have a title, author, and year published. 
 
 <img src="https://images.code.org/ff791b18564ec10e88f4d26b804194f6-image-1747671502492.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;border-radius: 10px">
 

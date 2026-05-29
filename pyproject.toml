@@ -1,7 +1,8 @@
 [project]
 name = 'code-dot-org'
 version = '1.0'
-requires-python = '>=3.12'
+# pydantic-core 2.27.1 uses PyO3 0.22.6 which only supports up to Python 3.13
+requires-python = '>=3.12,<3.14'
 dependencies = [
   # Register local python packages from /python in 3 places: this list, 
   # in [tool.uv.sources] and in [tool.uv.workspace]

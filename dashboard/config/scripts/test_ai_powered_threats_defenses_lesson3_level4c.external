@@ -7,9 +7,9 @@ thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-17
 
 markdown <<MARKDOWN
 #Sofia  
-#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
 
-#### Look through Sofia's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+Look through Sofia's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
 
 <div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
 

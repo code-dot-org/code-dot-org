@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Wrap Up",
-    "long_instructions": "#### 1) What is something new you learned about AI today?\r\n#### 2) What is a question you still have about AI after today?\r\n",
+    "long_instructions": "1) What is something new you learned about AI today?\r\n2) What is a question you still have about AI after today?\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

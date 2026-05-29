@@ -38,7 +38,7 @@ class ProfanityController < ApplicationController
   end
 
   private def locale
-    params[:locale] || request.locale
+    params[:locale] || I18n.locale.to_s
   end
 
   private def should_extract_text_from_js?

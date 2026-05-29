@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-02 19:57:03 UTC",
+    "serialized_at": "2026-05-28 14:29:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -237,6 +237,50 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-pl-context"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U4-pl-context"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-diff"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U4-diff"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U4-project-overview-4"
         ],
@@ -257,8 +301,30 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-prompting"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-prompting"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -282,8 +348,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -307,8 +373,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -332,8 +398,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -357,8 +423,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -382,8 +448,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -407,20 +473,17 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U4-display-intro-movie"
-        ],
         "progression": "Displaying Objects with Loops (20 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-display-intro-movie"
+          "pl-aif-2-U4-trancparencycues-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -428,12 +491,12 @@
         "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
       },
       "level_keys": [
-        "pl-aif-2-U4-display-intro-movie"
+        "pl-aif-2-U4-trancparencycues-video"
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 15,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -457,8 +520,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -482,8 +545,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -507,8 +570,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 18,
+      "position": 18,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -532,8 +595,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
+      "chapter": 19,
+      "position": 19,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -557,20 +620,17 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
+      "chapter": 20,
+      "position": 20,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U4-filters-active-bubble"
-        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-filters-active-bubble"
+          "pl-aif-2-U4-filter-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -578,12 +638,12 @@
         "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
-        "pl-aif-2-U4-filters-active-bubble"
+        "pl-aif-2-U4-filter-panel"
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -607,8 +667,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -632,8 +692,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 20,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -657,8 +717,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -682,8 +742,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -707,8 +767,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -732,8 +792,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -757,9 +817,31 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-logic-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filter-logic-video"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -782,9 +864,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 3,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -807,8 +889,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -832,8 +914,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -857,9 +939,31 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-AITA-teaching-tools"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-AITA-teaching-tools"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -879,28 +983,6 @@
       },
       "level_keys": [
         "pl-aif-2-U4-final-level"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Progress Bar Sandbox"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U4-trancparencycues-video"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
-      },
-      "level_keys": [
-        "pl-aif-2-U4-trancparencycues-video"
       ]
     }
   ],
@@ -943,9 +1025,45 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U4-pl-context",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-pl-context"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U4-diff",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-diff"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U4-project-overview-4",
         "script_level.level_keys": [
           "pl-aif-2-U4-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "4cf4e67f-cc7a-4987-a3e6-2a25aca90d02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-prompting",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-prompting"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1027,9 +1145,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-display-intro-movie",
+        "level.key": "pl-aif-2-U4-trancparencycues-video",
         "script_level.level_keys": [
-          "pl-aif-2-U4-display-intro-movie"
+          "pl-aif-2-U4-trancparencycues-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1099,9 +1217,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-filters-active-bubble",
+        "level.key": "pl-aif-2-U4-filter-panel",
         "script_level.level_keys": [
-          "pl-aif-2-U4-filters-active-bubble"
+          "pl-aif-2-U4-filter-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1195,6 +1313,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U4-filter-logic-video",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-logic-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U4-threshold-likes-weblab",
         "script_level.level_keys": [
           "pl-aif-2-U4-threshold-likes-weblab"
@@ -1243,9 +1373,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-final-level",
+        "level.key": "pl-aif-2-U4-AITA-teaching-tools",
         "script_level.level_keys": [
-          "pl-aif-2-U4-final-level"
+          "pl-aif-2-U4-AITA-teaching-tools"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1255,14 +1385,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-trancparencycues-video",
+        "level.key": "pl-aif-2-U4-final-level",
         "script_level.level_keys": [
-          "pl-aif-2-U4-trancparencycues-video"
+          "pl-aif-2-U4-final-level"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
       }
     }
   ],
@@ -1294,6 +1424,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

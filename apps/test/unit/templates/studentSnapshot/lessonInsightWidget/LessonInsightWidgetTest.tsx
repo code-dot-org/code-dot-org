@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
-import {act, render, screen, waitFor} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
@@ -137,31 +136,13 @@ describe('LessonInsightWidget', () => {
     });
   });
 
-  it('allows refreshing insight data via settings menu', async () => {
-    const mockResponse = {
-      value: {
-        json: JSON.stringify(mockInsightData),
-      },
-      response: new Response(),
-    };
-
-    mockHttpClient.fetchJson.mockResolvedValue(mockResponse);
-
+  it('does not offer a Refresh Insight option', async () => {
     renderComponent();
 
     await waitFor(() => {
       expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(1);
     });
 
-    const refreshButton = screen.queryByLabelText('Refresh Insight');
-    if (refreshButton) {
-      await act(async () => {
-        await userEvent.click(refreshButton);
-      });
-
-      await waitFor(() => {
-        expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(2);
-      });
-    }
+    expect(screen.queryByLabelText('Refresh Insight')).toBeNull();
   });
 });

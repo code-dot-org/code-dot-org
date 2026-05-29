@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-30T16:19:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "<details>\n<summary style=\"cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;\">\nA) Redirect David to the Kanban board and ask what it suggests next\n</summary>\n\n<div style=\"margin-top:16px;font-size: 12pt;\">\n<strong>Correct Answer:</strong> Redirect David to the Kanban board and ask, “What does the board tell us to work on next?” Remind him that the Project Leader is a temporary facilitator role meant to support coordination and keep work visible, not a manager who dictates decisions or does all the work.\n</div>\n</details>",
+        "imageUrl": "",
+        "key": "undefined-58044c2e-d3a0-4999-8d22-ec1985c695fd",
+        "links": [
+          {
+            "text": "<details>\n<summary style=\"cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;\">\nA) Redirect David to the Kanban board and ask what it suggests next\n</summary>\n\n<div style=\"margin-top:16px;font-size: 12pt;\">\n<strong>Correct Answer:</strong> Redirect David to the Kanban board and ask, “What does the board tell us to work on next?” Remind him that the Project Leader is a temporary facilitator role meant to support coordination and keep work visible, not a manager who dictates decisions or does all the work.\n</div>\n</details>",
+            "x": 50,
+            "y": 50,
+            "targetKey": "undefined-46121a84-b364-4d92-886d-459dd26513ac"
+          }
+        ]
+      },
+      {
+        "text": "",
+        "imageUrl": "",
+        "key": "undefined-46121a84-b364-4d92-886d-459dd26513ac",
+        "links": [
+          {
+            "text": "Back",
+            "x": 50,
+            "y": 50,
+            "targetKey": "undefined-58044c2e-d3a0-4999-8d22-ec1985c695fd"
+          }
+        ]
+      }
+    ],
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-30 16:19:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

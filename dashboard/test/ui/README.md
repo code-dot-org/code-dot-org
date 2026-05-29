@@ -6,19 +6,28 @@ Automated UI tests for the dashboard.
 
 ### Drone (CI) Tests
 
-The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
+The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [saucelabs_browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
 
 To run tests against other browsers in CI, you can apply tags to commit messages.
 
 * `git commit -m "just a normal change"`
 * `git commit -m "fixing bug with firefox [skip chrome][test firefox]"`
-* `git commit -m "updating browsers.json [test all browsers]"`
+* `git commit -m "updating browsers_saucelabs.json [test all browsers]"`
 
 Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L13)
 
 ### DTT (CD) Tests
 
-The UI tests run as part of our deployment during the Deploy To Test (DTT). In this scenario, the full suite of tests is run against all browsers configured in "browsers.json"
+The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches four suites in parallel against two providers:
+
+| Suite | Provider | Browsers |
+|-------|----------|----------|
+| Safari UI | SauceLabs | `macOS Safari` (`browsers_saucelabs.json`) |
+| Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
+| Mobile UI | AWS Device Farm | `iPhone Safari`, `iPad Safari` (`browsers_device_farm.json`) |
+| Eyes | SauceLabs | `Windows Chrome`, `iPhone Safari` (Applitools visual diff, `@eyes` / `@eyes_mobile`) |
+
+Each suite uploads its own status page (`test_status_{Safari_UI,Chrome_Firefox_UI,Mobile_UI,Eyes}.html`) to the test machine and to S3. Provider names ("SauceLabs", "Device Farm") are not surfaced in Slack messages or status page headings -- the suite label is what oncall sees.
 
 ## Local Setup
 

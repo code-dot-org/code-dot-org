@@ -70,13 +70,13 @@ const DashboardSectionSettings: React.FunctionComponent<
           description={i18n.saveBlockerModalDescription()}
           onClose={() => blocker.reset()}
           primaryButtonProps={{
-            text: i18n.continue(),
+            children: i18n.continue(),
             onClick: () => {
               blocker.proceed();
             },
           }}
           secondaryButtonProps={{
-            text: i18n.dialogCancel(),
+            children: i18n.dialogCancel(),
             onClick: () => blocker.reset(),
           }}
         />

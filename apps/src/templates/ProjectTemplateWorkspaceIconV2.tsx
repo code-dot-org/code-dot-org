@@ -33,7 +33,11 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       }}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
-      <button type="button" className={styles.iconButton}>
+      <button
+        type="button"
+        className={styles.iconButton}
+        aria-label="Project template level"
+      >
         <FontAwesomeV6Icon
           iconFamily={'kit'}
           iconName={'connected-level'}

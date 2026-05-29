@@ -1,0 +1,98 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T16:19:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Lock Screen Notifications",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A user's notifications on their cellphone",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Artifact 2: Smartphone Lock Screen Notifications</title>\n    <style>\n        /* Base Reset & Layout */\n        body {\n            background-color: #1a1a1a;\n            color: #333;\n            font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 100vh;\n            margin: 0;\n            padding: 20px;\n            box-sizing: border-box;\n        }\n\n        /* Smartphone Hardware Container */\n        .smartphone {\n            width: 320px;\n            height: 680px;\n            \n            /* Wallpaper zoom and position adjustments to hide top text */\n            background-image: url('wallpaper.JPG');\n            background-size: 150%; /* Zooms in past the default 'cover' size */\n            background-position: center 60%; /* Centers horizontally, shifts focus down vertically to hide the top */\n            background-repeat: no-repeat;\n\n            border-radius: 40px;\n            border: 12px solid #000;\n            position: relative;\n            overflow: hidden;\n            box-shadow: \n                0 0 0 2px #444,\n                0 20px 40px rgba(0, 0, 0, 0.6);\n            display: flex;\n            flex-direction: column;\n        }\n\n        /* Top Screen Notch */\n        .smartphone::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 50%;\n            transform: translateX(-50%);\n            width: 120px;\n            height: 25px;\n            background-color: #000;\n            border-bottom-left-radius: 15px;\n            border-bottom-right-radius: 15px;\n            z-index: 10;\n        }\n\n        /* Status Bar */\n        .status-bar {\n            display: flex;\n            justify-content: space-between;\n            padding: 10px 20px 0 20px;\n            color: #fff;\n            font-size: 11px;\n            font-weight: 600;\n            z-index: 5;\n            text-shadow: 0 1px 2px rgba(0,0,0,0.5); \n        }\n\n        .status-left, .status-right {\n            display: flex;\n            align-items: center;\n            gap: 5px;\n        }\n\n        .wifi-network {\n            font-size: 10px;\n            opacity: 0.9;\n        }\n\n        /* Clock & Date */\n        .clock-container {\n            text-align: center;\n            color: #fff;\n            margin-top: 40px;\n            margin-bottom: 30px;\n            text-shadow: 0 2px 4px rgba(0,0,0,0.3);\n        }\n\n        .time {\n            font-size: 64px;\n            font-weight: 200;\n            line-height: 1;\n            letter-spacing: -1px;\n        }\n\n        .date {\n            font-size: 16px;\n            font-weight: 400;\n            margin-top: 5px;\n        }\n\n        /* Notifications Area */\n        .notifications-container {\n            flex: 1;\n            padding: 0 15px;\n            display: flex;\n            flex-direction: column;\n            gap: 10px;\n            overflow-y: auto;\n        }\n\n        /* Hide scrollbar for a cleaner look */\n        .notifications-container::-webkit-scrollbar {\n            display: none;\n        }\n\n        .notification {\n            background: rgba(255, 255, 255, 0.85);\n            backdrop-filter: blur(15px);\n            -webkit-backdrop-filter: blur(15px);\n            border-radius: 20px;\n            padding: 12px 15px;\n            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n        }\n\n        .notif-header {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 6px;\n        }\n\n        .app-info {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n        /* App Icon Styling for JPGs */\n        .app-icon {\n            width: 22px;\n            height: 22px;\n            border-radius: 6px;\n            object-fit: cover;\n            display: block;\n            border: 1px solid rgba(0,0,0,0.1);\n        }\n\n        .app-name {\n            font-size: 12px;\n            font-weight: 600;\n            color: #555;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n        .notif-time {\n            font-size: 11px;\n            color: #777;\n        }\n\n        .notif-body {\n            font-size: 14px;\n            line-height: 1.4;\n            color: #000;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"smartphone\">\n        <div class=\"status-bar\">\n            <div class=\"status-left\">\n                <span>📶</span>\n                <span class=\"wifi-network\">Richardson_St_Home</span>\n            </div>\n            <div class=\"status-right\">\n                <span>100% 🔋</span>\n            </div>\n        </div>\n\n        <div class=\"clock-container\">\n            <div class=\"time\">3:42</div>\n            <div class=\"date\">Tuesday, April 28</div>\n        </div>\n\n        <div class=\"notifications-container\">\n            \n            <div class=\"notification\">\n                <div class=\"notif-header\">\n                    <div class=\"app-info\">\n                        <img src=\"transit-icon.jpg\" alt=\"City Transit App\" class=\"app-icon\">\n                        <span class=\"app-name\">City Transit</span>\n                    </div>\n                    <span class=\"notif-time\">3:15 PM</span>\n                </div>\n                <div class=\"notif-body\">\n                    ⚠️ <strong>Service Alert:</strong> Route 42 is currently experiencing a 10-minute delay due to downtown traffic.\n                </div>\n            </div>\n\n            <div class=\"notification\">\n                <div class=\"notif-header\">\n                    <div class=\"app-info\">\n                        <img src=\"teamsnap-icon.jpg\" alt=\"TeamSnap App\" class=\"app-icon\">\n                        <span class=\"app-name\">TeamSnap</span>\n                    </div>\n                    <span class=\"notif-time\">3:30 PM</span>\n                </div>\n                <div class=\"notif-body\">\n                    <strong>Reminder:</strong> Blue Hawks Soccer Practice starts in 30 minutes at the fields! Bring plenty of water.\n                </div>\n            </div>\n\n            <div class=\"notification\">\n                <div class=\"notif-header\">\n                    <div class=\"app-info\">\n                        <img src=\"photos-icon.jpg\" alt=\"Photos App\" class=\"app-icon\">\n                        <span class=\"app-name\">Photos</span>\n                    </div>\n                    <span class=\"notif-time\">3:35 PM</span>\n                </div>\n                <div class=\"notif-body\">\n                    ✨ <strong>Memory:</strong> Look back at your trip to Oakwood Community Park!\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n</body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "photos-icon.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2e_2026/uuid/e9077cfb-4d55-40d0-a73c-af00d74795a4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "wallpaper.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2e_2026/uuid/18489f48-1ab0-4d74-905d-34f4dc41950c.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "transit-icon.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2e_2026/uuid/ea95cf4f-aa37-43cb-8a34-8de695bd9c82.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "teamsnap-icon.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2e_2026/uuid/86e9f004-e215-47af-968b-d437e5f4eb08.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/585750e8611d8bd3cc42a23b455f0795-five.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:19:55.767+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2d_2026\"},{\"changed_at\":\"2026-04-28 16:20:00 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:21:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:56:55 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

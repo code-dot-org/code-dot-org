@@ -21,7 +21,11 @@ export type FileUploaderProps = {
     flagged?: boolean
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
-  uploadExternalFile: (file: File) => Promise<string>;
+  uploadExternalFile: (file: File, precomputedUrl?: string) => Promise<string>;
+  // If provided, called before moderation to pre-compute the upload URL so it
+  // can be included in the flagged analytics event. Must be consistent with
+  // the URL that uploadExternalFile will use when passed the same value.
+  generateUploadUrl?: (file: File) => string;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
@@ -102,6 +106,7 @@ export const useFileUploader = ({
   errorCallback,
   validMimeTypes,
   uploadExternalFile,
+  generateUploadUrl,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
@@ -173,21 +178,27 @@ export const useFileUploader = ({
         };
       } else {
         try {
+          // Pre-compute the upload URL before moderation so it can be
+          // included in the flagged analytics event. Both the flagged and safe
+          // upload paths reuse this value to guarantee URL consistency.
+          const precomputedUrl = generateUploadUrl?.(file);
+
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
             const moderationStatus = await moderateImage(file, appName, {
               uploaderType: 'Lab2FileUploader',
+              assetUrl: precomputedUrl,
             });
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
-                const url = await uploadExternalFile(file);
+                const url = await uploadExternalFile(file, precomputedUrl);
                 sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
                   fileName: file.name,
                   fileType: file.name.split('.').pop()?.toLowerCase() || '',
                 });
                 callback(file.name, '', url, callbackArgs.current, true);
               };
-              // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+              // FlaggedImageModal will be shown to the user and user can choose to upload the image or not.
               onImageFlagged(file, ext, uploadFunction);
               return;
             }
@@ -195,7 +206,7 @@ export const useFileUploader = ({
 
           // For non-text files that are not moderated (eg, files uploaded in start mode by levelbuilders)
           // and images that are deemed safe, upload directly to assets.
-          const url = await uploadExternalFile(file);
+          const url = await uploadExternalFile(file, precomputedUrl);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             fileName: file.name,
             fileType: file.name.split('.').pop()?.toLowerCase() || '',
@@ -215,6 +226,7 @@ export const useFileUploader = ({
     validMimeTypes,
     callback,
     uploadExternalFile,
+    generateUploadUrl,
     appName,
     onImageFlagged,
   ]);

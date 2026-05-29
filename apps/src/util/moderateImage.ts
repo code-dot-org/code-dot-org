@@ -1,9 +1,8 @@
-import {extension as mimeToExtension} from 'mime-types';
-
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 const LABS_WITH_IMAGE_MODERATION = [
   'weblab2',
@@ -14,7 +13,12 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
 ];
 
-const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
+type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
+type SeverityThresholds = Partial<Record<CategoryName, number>>;
+type CategoryAnalysis = {
+  category: CategoryName;
+  severity: 0 | 2 | 4 | 6;
+};
 
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
@@ -22,11 +26,11 @@ const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 // the image is 'ok'
 // The severity value increases with the severity of the input content:
 // 0 (safe), 2 (low), 4 (medium), 6 (high)
-const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
+const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<CategoryName, number> = {
   Hate: 2,
   SelfHarm: 2,
   Sexual: 2,
-  Violence: 2,
+  Violence: 4,
 };
 
 interface AnalyticsData {
@@ -44,14 +48,15 @@ export const moderateImage = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
-  }: AnalyticsData
-): Promise<'ok' | 'flagged' | 'skipped'> => {
-  const fileExtension = mimeToExtension(file.type) || '';
+  }: AnalyticsData,
+  overrideSeverityThresholds?: SeverityThresholds
+): Promise<'safe' | 'flagged' | 'error'> => {
+  const imageType = file.type || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
-    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
+    !(SafeAndSupportedImageTypes as readonly string[]).includes(imageType)
   ) {
-    return 'skipped';
+    return 'error';
   }
   const dimensions = [
     {name: 'UploaderType', value: uploaderType},
@@ -68,20 +73,24 @@ export const moderateImage = async (
       'Content-Type': file.type || 'application/octet-stream',
     });
     const json = await response.json();
+    if (json === null) {
+      return 'error';
+    }
+
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
-    if (json === null) {
-      return 'skipped';
-    }
+    const categorySeverityLevelBlocked: Record<CategoryName, number> = {
+      ...CATEGORY_SEVERITY_LEVEL_BLOCKED,
+      ...overrideSeverityThresholds,
+    };
     const categories = json?.categoriesAnalysis;
     if (
       categories?.every(
-        (category: {severity: number; category: string}) =>
-          category?.severity <
-          CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
+        (category: CategoryAnalysis) =>
+          category?.severity < categorySeverityLevelBlocked[category?.category]
       )
     ) {
-      return 'ok';
+      return 'safe';
     }
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
@@ -97,6 +106,6 @@ export const moderateImage = async (
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
-    return 'skipped';
+    return 'error';
   }
 };

@@ -10,20 +10,18 @@ import {
   useParams,
 } from 'react-router-dom';
 
+import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  AiChatAccessLevels,
-  AiChatToolsDependency,
-  AiDiffContext,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {
@@ -33,6 +31,9 @@ import {
 } from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
+
+const sectionDropdownText = (section: Section) =>
+  section.demoType ? `${section.name} (demo)` : section.name;
 
 const TeacherNavigationBar: React.FC<{
   showAiChatSettings: boolean;
@@ -55,6 +56,10 @@ const TeacherNavigationBar: React.FC<{
     state => state.currentUser.aiDifferentiationEnabled
   );
 
+  const teacherAiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
+
   useEffect(() => {
     const sectionIds =
       !selectedSection || _.includes(sectionOrder, selectedSection.id)
@@ -68,7 +73,7 @@ const TeacherNavigationBar: React.FC<{
       })
       .map(section => ({
         value: section.id.toString(),
-        text: section.name,
+        text: sectionDropdownText(section),
       }));
 
     setSectionArray(updatedSectionArray);
@@ -214,12 +219,16 @@ const TeacherNavigationBar: React.FC<{
     (key: string) => {
       return (
         key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
-        selectedSection?.assignedAiChatToolsDependency ===
-          AiChatToolsDependency.ESSENTIAL &&
-        selectedSection?.aiChatAccessLevel === AiChatAccessLevels.DISABLED
+        !!selectedSection &&
+        shouldShowAiChatEssentialAlert({
+          assignedAiChatToolsDependency:
+            selectedSection.assignedAiChatToolsDependency,
+          sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
+          teacherAiChatAccessLevel,
+        })
       );
     },
-    [selectedSection]
+    [selectedSection, teacherAiChatAccessLevel]
   );
 
   const getSidebarOptionsForSection = (

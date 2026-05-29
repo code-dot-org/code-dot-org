@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
+import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
@@ -54,6 +55,12 @@ function SectionProgressV2({
   const levelDataInitialized = React.useMemo(() => {
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
+
+  React.useEffect(() => {
+    if (levelDataInitialized) {
+      resumeLearnHowToEvaluateTour();
+    }
+  }, [levelDataInitialized]);
 
   // We don't want to load data more than necessary, so we only load data when
   // the scriptId or sectionId changes, and only if we haven't already loaded

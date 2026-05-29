@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 // import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -46,7 +47,9 @@ const LinkOption: React.FC<LinkElementProps> = ({
           {iconName && (
             <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
           )}
-          <span>{label}</span>
+          <Typography variant="body2" component="span">
+            {label}
+          </Typography>
         </Link>
       ) : (
         <a
@@ -62,13 +65,21 @@ const LinkOption: React.FC<LinkElementProps> = ({
           }}
         >
           {labelStyle === 'b' ? (
-            <span>
+            <Typography component="span" variant="body2">
               <b>{label}</b>
-            </span>
+            </Typography>
           ) : labelStyle === 'i' ? (
-            <span style={{paddingLeft: '1em'}}>{label}</span>
+            <Typography
+              component="span"
+              variant="body2"
+              style={{paddingLeft: '1em'}}
+            >
+              {label}
+            </Typography>
           ) : (
-            <span>{label}</span>
+            <Typography component="span" variant="body2">
+              {label}
+            </Typography>
           )}
         </a>
       )}

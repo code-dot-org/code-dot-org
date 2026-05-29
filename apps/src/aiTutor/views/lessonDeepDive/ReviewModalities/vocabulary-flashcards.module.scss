@@ -1,0 +1,203 @@
+@use 'sass:color';
+
+$border: #69788a;
+$green: #66c365;
+$purple: #9657c7;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff;
+}
+
+// ── Header row ────────────────────────────────────────────────────────────────
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overline {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $green;
+  margin: 0;
+}
+
+.counter {
+  font-size: 0.75rem;
+  color: #d4dae1;
+}
+
+// ── Card stack ────────────────────────────────────────────────────────────────
+
+.cardStack {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 295px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+// Back shadow cards
+.cardBehind2,
+.cardBehind1 {
+  position: absolute;
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: #a1aebb;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.07), 0 4px 7px rgb(0 0 0 / 0.07);
+}
+
+.cardBehind2 {
+  inset: 8px -32px 0 -32px;
+}
+
+.cardBehind1 {
+  inset: 16px -20px 0 -12px;
+}
+
+// ── Flip card ─────────────────────────────────────────────────────────────────
+
+.cardViewport {
+  position: absolute;
+  inset: 0;
+  perspective: 1200px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.55s ease;
+  transform-style: preserve-3d;
+}
+
+.cardInnerFlipped {
+  transform: rotateY(180deg);
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px;
+  background: #d4dae1;
+  border: 1px solid $border;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.07), 0 4px 7px rgb(0 0 0 / 0.07);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+  overflow: auto;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.cardLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #292f36;
+  margin: 0;
+}
+
+.cardWord {
+  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-size: clamp(2rem, 7vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.05;
+  color: #292f36;
+  margin: 0;
+}
+
+.cardDefinition {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #292f36;
+  margin: 0;
+}
+
+.flipHint {
+  font-size: 0.75rem;
+  color: $border;
+  margin: 0;
+}
+
+// ── Controls ──────────────────────────────────────────────────────────────────
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid #a1aebb;
+  border-radius: 4px;
+  background: #292f36;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover {
+    background: rgba(255 255 255 / 0.08);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.flipButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: $purple;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+
+  &:hover {
+    background: color.adjust($purple, $lightness: -8%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a374d6;
+    outline-offset: 2px;
+  }
+}

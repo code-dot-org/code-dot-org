@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-21T21:57:07.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### What's a Prompt?\n\nA prompt is the message you send to an AI to tell it what to do.\n\nA good prompt tells the AI exactly what you need.",
+        "imageUrl": "https://images.code.org/b76c07d9266cb7be1667d1626ab01f94-Gemini_Generated_Image_hfvnwjhfvnwjhfvn.png",
+        "key": "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### It's Like Ordering a Pizza\n\nWhat do you actually want? Be specific!",
+        "imageUrl": "https://images.code.org/8e8348807e7cac851b805e8a06314bce-Gemini_Generated_Image_4xvjla4xvjla4xvj.png",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Details matter\n\nIf you just say \"I want pizza,\" you might get something weird. But if you say, \"I want a medium pepperoni pizza\" perfect!",
+        "imageUrl": "https://images.code.org/16eae2ad1cb050884b5d273136b6e599-Gemini_Generated_Image_cclmnfcclmnfcclm.png",
+        "key": "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Details Matter\n\nPrompts work the same way. The more useful info you give, the better the answer you get.",
+        "imageUrl": "https://images.code.org/05da8b88f2fc54e3dd50631142054cb2-Gemini_Generated_Image_aa8f9taa8f9taa8f.png",
+        "key": "HoAI_pilot_5_dancer_info-0ae6fab6-0f3d-4751-bd68-31f5bc186f74",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-21T21:57:07.795+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson1-level3_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-21 22:05:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:05:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:07:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:16:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

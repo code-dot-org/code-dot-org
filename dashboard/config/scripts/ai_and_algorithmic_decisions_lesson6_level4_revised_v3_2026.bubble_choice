@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson6-level4-revised-v3_2026'
+display_name 'Plan in Sketch Lab'
+description '### Choose a scenario and plan a function that uses parameters to change what appears on the page.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson6-level4a-revised-v4_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level4b-revised-v4_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level4c-revised-v4_2026'
+
+uses_lab2

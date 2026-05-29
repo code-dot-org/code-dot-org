@@ -27,12 +27,11 @@ const DisclaimerButton: React.FunctionComponent<DisclaimerProps> = ({
           description={lab2I18n.aiTutorDisclaimerLong()}
           className={styles.respectNewLines}
           primaryButtonProps={{
-            text: lab2I18n.backToProject(),
+            children: lab2I18n.backToProject(),
             onClick: () => setIsDisclaimerOpen(false),
           }}
           secondaryButtonProps={{
-            text: lab2I18n.learnMore(),
-            useAsLink: true,
+            children: lab2I18n.learnMore(),
             href: LEARN_MORE_URL,
             target: '_blank',
           }}

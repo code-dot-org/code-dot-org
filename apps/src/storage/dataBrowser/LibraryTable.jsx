@@ -1,4 +1,3 @@
-import moment from 'moment/moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -21,7 +20,6 @@ class LibraryTable extends React.Component {
 
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
-    locale: PropTypes.string,
     onShowPreview: PropTypes.func.isRequired,
   };
 
@@ -35,8 +33,7 @@ class LibraryTable extends React.Component {
     });
 
   render() {
-    const {name, libraryManifest, locale, onShowPreview, importTable} =
-      this.props;
+    const {name, libraryManifest, onShowPreview, importTable} = this.props;
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     const datasetInfo = getDatasetInfo(name, libraryManifest.tables);
     const shouldShowTable =
@@ -45,10 +42,6 @@ class LibraryTable extends React.Component {
         experiments.isEnabled(experiments.SHOW_UNPUBLISHED_DATASET_TABLES));
     if (!shouldShowTable) {
       return null;
-    }
-
-    if (locale) {
-      moment.locale(locale);
     }
 
     return (
@@ -64,13 +57,6 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             <div style={styles.tableDescription}>
-              {datasetInfo.lastUpdated && (
-                <span style={styles.lastUpdated}>
-                  {msg.lastUpdatedWithTime({
-                    time: moment(datasetInfo.lastUpdated).fromNow(),
-                  })}
-                </span>
-              )}
               <TableDescription
                 tableName={name}
                 libraryTables={libraryManifest.tables}
@@ -145,18 +131,11 @@ const styles = {
   collapsibleContainer: {
     paddingLeft: '16px',
   },
-  lastUpdated: {
-    ...fontConstants['main-font-regular'],
-    fontSize: '12px',
-    color: color.light_gray,
-    display: 'inline-block',
-  },
 };
 
 export default connect(
   state => ({
     libraryManifest: state.data.libraryManifest || {},
-    locale: state.pageConstants && state.pageConstants.locale,
   }),
   dispatch => ({
     onShowPreview(tableName) {

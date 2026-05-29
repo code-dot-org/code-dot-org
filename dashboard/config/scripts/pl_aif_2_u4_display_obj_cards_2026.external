@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Displaying Objects as Cards
 
-#### Many apps display information as cards that combine text, images, and ratings into something users can quickly scan. But real-world data is often messy. Some fields may be missing, incomplete, or even **null.**
+Many apps display information as cards that combine text, images, and ratings into something users can quickly scan. But real-world data is often messy. Some fields may be missing, incomplete, or even **null.**
 
-#### When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
+When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
 
 ---
 ## Why Websites Do This
 
-#### Below are two versions of the same card. One includes a missing value.
+Below are two versions of the same card. One includes a missing value.
 
-#### Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
+Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
 
 <img src="https://images.code.org/822e82632e65af46a8c2aca29c92adf2-image-1768937250577.png" alt="2 cards with names, titles, emails, but one is missing the image" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
@@ -26,9 +26,9 @@ markdown <<MARKDOWN
 
 --- 
 ## Design Thinking: User Perception
-#### The way information is displayed doesn’t just inform users—it can shape their opinions.
+The way information is displayed doesn’t just inform users—it can shape their opinions.
 
-#### Below are three versions of the same card, each presenting information slightly differently.
+Below are three versions of the same card, each presenting information slightly differently.
 
 <img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="3 cards with names, ratings, and reviews" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
@@ -64,6 +64,6 @@ Tone, label choice (like “Top Value Pick!”), and hiding information (such as
 
 ## Next up
 
-#### Let's practice adding fallback values in weblab! 
+Let's practice adding fallback values in weblab! 
 
 MARKDOWN

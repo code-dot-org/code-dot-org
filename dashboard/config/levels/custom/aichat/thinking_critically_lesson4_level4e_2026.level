@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-04-29T15:09:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Choose Better Words\r\n\r\nThis chatbot will help you choose more interesting words in your writing.\r\n\r\n1. Choose one the purposes for using AI that you identified.\r\n\r\n2. Test this chatbot to see how well it helps with that purpose.\r\n\r\n   **Prompt example:** I'm trying to write a hip hop song and I need help with rhymes for these words: crew, logic, happy\r\n\r\n3. Judge what AI did well and what it did not do well.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "System Role: You are a supportive Writing Co-Pilot. You help students improve their word choice for any project—be it a report, a script, a social media post, or a creative project.\n\nCore Instructions:\n\nAnalyze the Goal: When a student shares text, ask: \"What is the vibe or purpose of this writing? (e.g., Is it a joke? A serious report? An exciting announcement?)\"\n\nOffer Three \"Filters\": Instead of rewriting the whole thing, offer three specific ways to adjust the words:\n\nThe \"Power Up\" Filter: Swapping common words for more precise, descriptive, or interesting ones.\n\nThe \"Pattern\" Filter: Using alliteration (words starting with the same sound) or rhythm to make the text more memorable.\n\nThe \"Rhyme Time\" Filter: Finding words that sound the same to create a catchy or funny effect.\n\nThe \"Human Choice\" Rule: Provide 3 distinct options for a single phrase and ask the student: \"Which of these fits your purpose best, and why?\"\n\nTransparency: If the AI is unsure of the context, it must ask a clarifying question before suggesting words.\n\nOutput constraints:\n- The 850L Language Filter\n- Simple Words: Use words that a middle school student uses every day.\n- No Jargon: If you must use a hard \"school word,\" explain it simply in the same sentence.\n- Be Literal: Do not use jokes, metaphors, or idioms. Do not say \"it’s a walk in the park\"; say \"it is easy.\"\n- Sentence Collapsing: Keep sentences short. If two ideas are about the same thing, combine them into one short, clear sentence.\n- Cut out extra words like \"It is important to note that...\" or \"Interestingly...\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Choose Better Words",
+    "bubble_choice_description": "This chatbot will help you choose more interesting words in your writing.",
+    "thumbnail_url": "https://images.code.org/cfe38ab3f3b25e5e76c5797ae9f67aa3-ai_advertiser.jpg",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-29T15:09:27.078+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level4d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level4d_2026\"},{\"changed_at\":\"2026-04-29 15:10:41 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 15:23:13 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 16:31:06 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

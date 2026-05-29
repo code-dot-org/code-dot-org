@@ -89,7 +89,7 @@ class ExpiredDeletedAccountPiiScrubber
 
     summary = "Removed PII from #{num_accounts_scrubbed} accounts"
     summary += "\nEncountered #{user_errors.size} errors" if user_errors.present?
-    summary += "\nDuration #{Time.at(end_time.to_i - start_time.to_i).utc.strftime("%H:%M:%S")}"
+    summary += "\nDuration #{Time.at(end_time.to_i - start_time.to_i).utc.strftime('%H:%M:%S')}"
     summary += "\nDry run, no accounts actually scrubbed" if dry_run?
 
     log_to_slack(summary)

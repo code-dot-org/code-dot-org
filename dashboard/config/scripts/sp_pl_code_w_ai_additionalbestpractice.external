@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Best Practices for Introducing AI to your class.
 
-#### LLMs are powerful tools, but they shouldn't replace critical thinking and deep understanding in the classroom. By integrating these best practices, you can leverage the benefits of LLMs while fostering valuable learning experiences for your students.
+LLMs are powerful tools, but they shouldn't replace critical thinking and deep understanding in the classroom. By integrating these best practices, you can leverage the benefits of LLMs while fostering valuable learning experiences for your students.
 
 
 <table border="1" width="800" style="font-size: 16px;"> <!-- Defines a border for clarity and a total width -->

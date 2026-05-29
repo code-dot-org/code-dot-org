@@ -1,14 +1,14 @@
 name 'ai-generated-design-preassessment-q12_2026'
 
-question 'A small business owner uses an AI tool to design a product page, but some images don\'t line up and the buttons overlap on mobile devices. What should the owner do to fix these issues?'
+question 'A local mental health organization is redesigning its website to make teens feel calm and supported. The designer chooses soft blue tones, clean layouts, and rounded shapes. What does this show about how the design connects to user needs?'
 
-right 'Adjust the AI prompt to describe the problems and test the updated design.'
-wrong 'Stop using AI tools and hire someone else to rebuild the page.'
-wrong 'Keep running the same prompt until it looks better by chance.'
-wrong 'Add more pictures to hide the layout problems.'
+wrong 'The design focuses only on what looks trendy online.'
+wrong 'The design ignores the users and focuses on personal taste.'
+right 'The design uses color and style to match the emotions and needs of its audience.'
+wrong 'The design improves the site\'s speed and security features.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lessons 3, 6, 10
+Lessons 5, 7
 MARKDOWN

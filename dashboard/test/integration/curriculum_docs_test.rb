@@ -105,7 +105,7 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
 
   class CodeDocsCachingTest < CurriculumDocsTest
     def setup
-      Unit.stubs(:should_cache?).returns true
+      setup_script_cache
       @programming_environment = create(:programming_environment)
       programming_environment_category = create(:programming_environment_category, programming_environment: @programming_environment)
       @programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)

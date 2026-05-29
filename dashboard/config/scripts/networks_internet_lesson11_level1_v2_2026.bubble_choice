@@ -7,3 +7,5 @@ level 'networks-internet-lesson11-level1a_v2_2026'
 level 'networks-internet-lesson11-level1b_v2_2026'
 level 'networks-internet-lesson11-level1c_v2_2026'
 level 'networks-internet-lesson11-level1d_v2_2026'
+
+uses_lab2

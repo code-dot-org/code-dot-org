@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {
   setQuestions,
   setHasJSONError,
@@ -20,7 +20,7 @@ const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
 
 // performs additional key validation
 // (non-basic characters can get stripped when being transferred to the server)
-export const lintFoormKeys = (text, options, cm) => {
+export const lintFoormKeys = text => {
   const annotations = [];
 
   let hasLintErrors = false;
@@ -30,10 +30,11 @@ export const lintFoormKeys = (text, options, cm) => {
     if (!nameKeyValidator.test(nameValue)) {
       hasLintErrors = true;
       annotations.push({
-        message: 'Question names should only contain letters and underscores.',
+        message:
+          'Question names should only contain letters, numbers, and underscores.',
+        from: match.index,
+        to: match.index + match[0].length,
         severity: 'error',
-        from: cm.posFromIndex(match.index),
-        to: cm.posFromIndex(match.index + match[0].length),
       });
     }
   }
@@ -62,7 +63,7 @@ export function populateCodeMirror() {
     }
   }
 
-  codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
+  codeMirror = initializeCodeMirror6(codeMirrorArea, 'json', {
     callback: _.debounce(onCodeMirrorChange, 250),
     additionalAnnotations: lintFoormKeys,
   });

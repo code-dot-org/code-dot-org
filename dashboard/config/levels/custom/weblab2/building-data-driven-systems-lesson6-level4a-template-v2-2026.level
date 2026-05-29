@@ -1,0 +1,94 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-04T00:38:00.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# template",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Shopping App</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n\n  <body>\n    <main class=\"app\">\n      <header class=\"top-header\">\n        <div class=\"brand-row\">\n          <h1>Daily Finds</h1>\n          <button class=\"cart-button\" id=\"cartButton\">Cart</button>\n        </div>\n\n        <div class=\"fulfillment-row\">\n          <button class=\"fulfillment-chip active\">Pickup</button>\n          <button class=\"fulfillment-chip\">Delivery</button>\n          <button class=\"fulfillment-chip\">Shipping</button>\n        </div>\n\n        <input id=\"searchInput\" type=\"text\" placeholder=\"Search products\" />\n      </header>\n\n      <section class=\"hero-section\">\n        <div>\n          <p class=\"eyebrow\">Today’s picks</p>\n          <h2>Fresh finds for your cart</h2>\n          <p>Browse products, add new items, and update the product list.</p>\n        </div>\n      </section>\n\n      <section class=\"category-section\">\n        <button class=\"category-chip active\">Featured</button>\n        <button class=\"category-chip\">Home</button>\n        <button class=\"category-chip\">Tech</button>\n        <button class=\"category-chip\">Snacks</button>\n        <button class=\"category-chip\">School</button>\n      </section>\n\n      <section class=\"product-tools\">\n        <div class=\"section-title-row\">\n          <div>\n            <p class=\"eyebrow\">Inventory tools</p>\n            <h2>Add a Product</h2>\n          </div>\n        </div>\n\n        <div class=\"form-grid\">\n          <input id=\"productTitleInput\" type=\"text\" placeholder=\"Product name\" />\n          <input id=\"productDescriptionInput\" type=\"text\" placeholder=\"Short description\" />\n          <input id=\"productPriceInput\" type=\"text\" placeholder=\"Price\" />\n          <input id=\"productCategoryInput\" type=\"text\" placeholder=\"Category\" />\n          <input id=\"productRatingInput\" type=\"text\" placeholder=\"Rating\" />\n          <input id=\"productImageInput\" type=\"text\" placeholder=\"Image path\" />\n        </div>\n\n        <button id=\"addProductButton\" class=\"primary-button\">Add Product</button>\n      </section>\n\n      <section class=\"products-section\">\n        <div class=\"section-title-row\">\n          <div>\n            <p class=\"eyebrow\">Shop now</p>\n            <h2>Featured Products</h2>\n          </div>\n\n          <div class=\"list-actions\">\n            <button id=\"saleOnlyButton\" class=\"secondary-button\">Sale Only</button>\n            <button id=\"removeFirstButton\" class=\"secondary-button\">Remove First</button>\n            <button id=\"removeLastButton\" class=\"secondary-button\">Remove Last</button>\n          </div>\n        </div>\n\n        <div id=\"productGrid\" class=\"product-grid\"></div>\n      </section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Inter, Arial, sans-serif;\n  background: #f5f5f5;\n  color: #1f2937;\n}\n\nbutton,\ninput {\n  font: inherit;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n.app {\n  width: 100%;\n  min-height: 100vh;\n  background: #ffffff;\n}\n\n/* Header */\n\n.top-header {\n  padding: 22px 32px;\n  border-bottom: 1px solid #e5e7eb;\n  background: #ffffff;\n}\n\n.brand-row {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 16px;\n  margin-bottom: 18px;\n}\n\n.brand-row h1 {\n  margin: 0;\n  font-size: 2.2rem;\n  letter-spacing: -0.05em;\n  color: #111827;\n}\n\n.cart-button {\n  border: none;\n  border-radius: 999px;\n  padding: 10px 18px;\n  background: #111827;\n  color: #ffffff;\n  font-weight: 700;\n}\n\n.fulfillment-row {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 16px;\n  flex-wrap: wrap;\n}\n\n.fulfillment-chip,\n.category-chip {\n  border: 1px solid #d1d5db;\n  border-radius: 999px;\n  padding: 9px 14px;\n  background: #ffffff;\n  color: #374151;\n  font-weight: 700;\n}\n\n.fulfillment-chip.active,\n.category-chip.active {\n  background: #dc2626;\n  border-color: #dc2626;\n  color: #ffffff;\n}\n\n#searchInput {\n  width: 100%;\n  border: 1px solid #d1d5db;\n  border-radius: 999px;\n  padding: 15px 18px;\n  background: #f9fafb;\n  outline: none;\n}\n\n#searchInput:focus,\ninput:focus {\n  border-color: #9ca3af;\n}\n\n/* Hero */\n\n.hero-section {\n  margin: 24px 32px 0;\n  padding: 28px;\n  border-radius: 24px;\n  background: #fee2e2;\n}\n\n.eyebrow {\n  margin: 0 0 6px;\n  font-size: 0.78rem;\n  font-weight: 800;\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n  color: #b91c1c;\n}\n\n.hero-section h2 {\n  margin: 0;\n  font-size: 2rem;\n  letter-spacing: -0.04em;\n}\n\n.hero-section p:last-child {\n  margin: 8px 0 0;\n  color: #4b5563;\n}\n\n/* Categories */\n\n.category-section {\n  display: flex;\n  gap: 10px;\n  padding: 22px 32px 4px;\n  overflow-x: auto;\n}\n\n/* Product Tools */\n\n.product-tools,\n.products-section {\n  padding: 26px 32px;\n}\n\n.product-tools {\n  border-bottom: 1px solid #eeeeee;\n}\n\n.section-title-row {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  gap: 20px;\n  margin-bottom: 18px;\n}\n\n.section-title-row h2 {\n  margin: 0;\n  font-size: 1.4rem;\n  letter-spacing: -0.03em;\n}\n\n.form-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 12px;\n}\n\n.form-grid input {\n  width: 100%;\n  border: 1px solid #d1d5db;\n  border-radius: 14px;\n  padding: 13px 14px;\n  background: #ffffff;\n  outline: none;\n}\n\n.primary-button {\n  margin-top: 14px;\n  border: none;\n  border-radius: 14px;\n  padding: 14px 18px;\n  background: #dc2626;\n  color: #ffffff;\n  font-weight: 800;\n}\n\n/* Product List */\n\n.list-actions {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n\n.secondary-button {\n  border: 1px solid #d1d5db;\n  border-radius: 14px;\n  padding: 10px 14px;\n  background: #ffffff;\n  color: #374151;\n  font-weight: 700;\n}\n\n.secondary-button:hover,\n.category-chip:hover,\n.fulfillment-chip:hover {\n  background: #f9fafb;\n}\n\n.product-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 18px;\n}\n\n.product-card {\n  border: 1px solid #e5e7eb;\n  border-radius: 20px;\n  overflow: hidden;\n  background: #ffffff;\n}\n\n.product-image {\n  width: 100%;\n  aspect-ratio: 1 / 1;\n  object-fit: cover;\n  display: block;\n  background: #f3f4f6;\n}\n\n.product-content {\n  padding: 14px;\n}\n\n.product-title {\n  margin: 0 0 6px;\n  font-size: 1rem;\n  font-weight: 800;\n  line-height: 1.25;\n}\n\n.product-description {\n  margin: 0 0 12px;\n  color: #6b7280;\n  font-size: 0.9rem;\n  line-height: 1.35;\n}\n\n.product-meta {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 8px;\n}\n\n.product-price {\n  margin: 0;\n  font-size: 1.05rem;\n  font-weight: 900;\n  color: #111827;\n}\n\n.product-rating {\n  color: #6b7280;\n  font-size: 0.85rem;\n  font-weight: 700;\n}\n\n.product-category {\n  display: inline-block;\n  margin-top: 10px;\n  border-radius: 999px;\n  background: #fee2e2;\n  color: #991b1b;\n  padding: 5px 9px;\n  font-size: 0.78rem;\n  font-weight: 800;\n}\n\n/* Empty State */\n\n.empty-state {\n  grid-column: 1 / -1;\n  border: 1px dashed #d1d5db;\n  border-radius: 20px;\n  padding: 32px;\n  text-align: center;\n  color: #6b7280;\n  background: #fafafa;\n}\n\n/* Responsive */\n\n@media (max-width: 900px) {\n  .product-grid {\n    grid-template-columns: repeat(3, 1fr);\n  }\n\n  .form-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media (max-width: 640px) {\n  .top-header,\n  .product-tools,\n  .products-section {\n    padding-left: 18px;\n    padding-right: 18px;\n  }\n\n  .hero-section {\n    margin-left: 18px;\n    margin-right: 18px;\n  }\n\n  .category-section {\n    padding-left: 18px;\n    padding-right: 18px;\n  }\n\n  .section-title-row {\n    flex-direction: column;\n  }\n\n  .product-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n\n  .form-grid {\n    grid-template-columns: 1fr;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.js",
+          "contents": "const createProductCard = (product) => {\n  const card = document.createElement(\"div\");\n  card.classList.add(\"product-card\");\n\n  const img = document.createElement(\"img\");\n  img.src = product.image;\n  img.classList.add(\"product-image\");\n\n  const content = document.createElement(\"div\");\n  content.classList.add(\"product-content\");\n\n  const title = document.createElement(\"h3\");\n  title.textContent = product.title;\n  title.classList.add(\"product-title\");\n\n  const description = document.createElement(\"p\");\n  description.textContent = product.description;\n  description.classList.add(\"product-description\");\n\n  const badge = document.createElement(\"span\");\n  badge.textContent = product.badge;\n  badge.classList.add(\"product-badge\");\n\n  content.appendChild(title);\n  content.appendChild(description);\n  content.appendChild(badge);\n\n  card.appendChild(img);\n  card.appendChild(content);\n\n  productGrid.appendChild(card);\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "starter"
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "const searchInput = document.getElementById(\"searchInput\");\n\nconst productTitleInput = document.getElementById(\"productTitleInput\");\nconst productDescriptionInput = document.getElementById(\"productDescriptionInput\");\nconst productPriceInput = document.getElementById(\"productPriceInput\");\nconst productCategoryInput = document.getElementById(\"productCategoryInput\");\nconst productRatingInput = document.getElementById(\"productRatingInput\");\nconst productImageInput = document.getElementById(\"productImageInput\");\n\nconst addProductButton = document.getElementById(\"addProductButton\");\nconst removeFirstButton = document.getElementById(\"removeFirstButton\");\nconst removeLastButton = document.getElementById(\"removeLastButton\");\n\nconst productGrid = document.getElementById(\"productGrid\");\n\n// This array will store your products.\n// Each product should be an object with the properties you planned in the previous level.\nconst products = [];",
+          "folderId": "0",
+          "active": true
+        },
+        "6": {
+          "id": "6",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "6",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-04T00:38:00.600+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3a-template-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3a-template-v2-2026\"},{\"changed_at\":\"2026-05-04 00:38:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 00:47:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 00:49:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 00:49:08 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-04 00:49:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

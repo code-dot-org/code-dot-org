@@ -56,7 +56,10 @@ module WebPurify
   # @param [Array[String]] language_codes The set of languages to search for profanity in.
   # @return [Array<String>, nil] The profanities (if any) or nil (if none).
   def self.find_potential_profanities(text, language_codes = ['en'])
-    return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
+    unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
+      Honeybadger.notify("WebPurify API key is missing or disabled", context: {endpoint: CDO.webpurify_api_endpoint})
+      return nil
+    end
     return nil if text.nil?
 
     # This is an artificial limit to prevent us from profanity-checking a file up to 5MB (the project size limit)

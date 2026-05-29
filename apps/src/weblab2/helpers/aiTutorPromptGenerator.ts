@@ -1,12 +1,19 @@
 import {DEFAULT_ANSWER_TYPES} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
+import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import {
   ANSWER_TYPE_CONTRACTS,
   ANSWER_TYPE_TRIGGERS,
 } from '@cdo/apps/weblab2/prompts/promptMaps';
+import securityIntro from '@cdo/apps/weblab2/prompts/securityIntro.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
+import {
+  AllowedFontHostnames,
+  AllowedHostnameSuffixes,
+  AllowedImageHostnameSuffixes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 type AnswerTypeGroup = {
   heading: string;
@@ -78,6 +85,20 @@ const generateFinalAnswerTypeList = (
   return finalAnswerTypes;
 };
 
+const buildSecuritySection = (): string => {
+  const connectHostnames = AllowedHostnameSuffixes.join(', ');
+  const imageHostnames = AllowedImageHostnameSuffixes.join(', ');
+  const fontHostnames = AllowedFontHostnames.join(', ');
+
+  return [
+    securityIntro.trim(),
+    '## Allowed External URLs',
+    `Allowed connect sources: ${connectHostnames}`,
+    `Allowed image sources: ${imageHostnames}`,
+    `Allowed font sources: ${fontHostnames}`,
+  ].join('\n');
+};
+
 export const generateAiTutorPrompt = (
   answerTypes: AiTutorAnswerType[],
   answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>
@@ -93,6 +114,10 @@ export const generateAiTutorPrompt = (
   const allowJs = parsedAnswerTypes.includes('buildJavaScript');
 
   return [
+    environmentPrompt.trim(),
+    '',
+    buildSecuritySection(),
+    '',
     basePrompt.trim(),
     '',
     '---',

@@ -1,0 +1,60 @@
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {findChangedProperties} from '@cdo/apps/aichat/redux/utils';
+import {SaveType, ViewMode} from '@cdo/apps/aichatLab/types';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {TestResults} from '@cdo/apps/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
+
+const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
+  updateChatbot: EVENTS.UPDATE_CHATBOT,
+  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
+  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
+};
+
+// Thunk called after a save has completed successfully.
+// Updates the chat window and reports analytics as necessary.
+export const onSaveComplete =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
+      getState().aichatLab;
+
+    const changedProperties = findChangedProperties(
+      savedAiCustomizations,
+      currentAiCustomizations
+    );
+
+    changedProperties.forEach(property => {
+      // Report to analytics the changed value for only selected model id and temperature properties.
+      // Do not include the free text changes (system prompt and retrieval contexts).
+      const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
+      const propertyChangedTo = propertiesChangedValueToReport.includes(
+        property
+      )
+        ? currentAiCustomizations[property]
+        : 'NULL';
+      if (currentSaveType) {
+        dispatch(
+          sendAnalytics(saveTypeToAnalyticsEvent[currentSaveType], {
+            propertyUpdated: property,
+            propertyChangedTo,
+          })
+        );
+      }
+    });
+
+    // Update our last saved customizations to match the current customizations
+    dispatch(setSavedAiCustomizations(currentAiCustomizations));
+    // Notify the UI that the save is complete.
+    dispatch(endSave());
+    // Send a report that user has started the aichat level after a successful save.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+    // Go to the presentation page if we just finished publishing the model card.
+    if (currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
+  };

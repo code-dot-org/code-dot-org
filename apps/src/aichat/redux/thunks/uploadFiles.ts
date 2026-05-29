@@ -5,7 +5,7 @@ import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createAppAsyncThunk} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
-import {AssetSource, ChatAsset} from '../../types';
+import {AssetSource, ChatAsset, UploadStatus} from '../../types';
 import {
   addStagedFile,
   clearStagedFilesAlert,
@@ -17,10 +17,21 @@ import {sendAnalytics} from './sendAnalytics';
 
 export const uploadFiles = createAppAsyncThunk<
   void,
-  {files: File[]; buildAssetUrl: (asset: ChatAsset) => string}
+  {
+    files: File[];
+    buildAssetUrl: (asset: ChatAsset) => string;
+    /** Callback invoked when an upload finishes. If provided, the in-chat alert UI will be hidden for non-successful uploads. */
+    onUploadFinished?: (status: UploadStatus) => void;
+  }
 >(
   'aichat/uploadFiles',
-  async ({files, buildAssetUrl}, {dispatch, getState}) => {
+  async ({files, buildAssetUrl, onUploadFinished}, {dispatch, getState}) => {
+    const notifyUploadFinished = (key: string, status: UploadStatus) => {
+      dispatch(
+        stagedFileUploadFinished({key, status, hideAlert: !!onUploadFinished})
+      );
+      onUploadFinished?.(status);
+    };
     const numStagedFiles = getState().aichat.stagedFiles.length;
     const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
 
@@ -54,23 +65,17 @@ export const uploadFiles = createAppAsyncThunk<
     for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
-        dispatch(
-          stagedFileUploadFinished({
-            key,
-            status: 'sizeLimitExceeded',
-          })
-        );
+        notifyUploadFinished(key, 'sizeLimitExceeded');
         continue; // Skip uploading this file if it exceeds the size limit.
       }
 
       if (file.name.endsWith('.pdf')) {
         fileCountPdf += 1;
       } else {
-        // Moderate images before uploading.
         const moderationResult = await moderateImage(file, 'aichat', {});
         if (moderationResult === 'flagged') {
           imageFlaggedCount += 1;
-          dispatch(stagedFileUploadFinished({key, status: 'imageFileFlagged'}));
+          notifyUploadFinished(key, 'imageFileFlagged');
           continue;
         }
         fileCountImage += 1;
@@ -79,8 +84,7 @@ export const uploadFiles = createAppAsyncThunk<
       try {
         await HttpClient.put(buildAssetUrl(asset), file);
         uploadSuccessCount += 1;
-
-        dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));
+        notifyUploadFinished(key, 'uploaded');
       } catch (error) {
         let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
         if (error instanceof NetworkError && error.response.status === 413) {
@@ -96,13 +100,7 @@ export const uploadFiles = createAppAsyncThunk<
               filename: file.name,
             });
         }
-
-        dispatch(
-          stagedFileUploadFinished({
-            key,
-            status,
-          })
-        );
+        notifyUploadFinished(key, status);
       }
     }
 

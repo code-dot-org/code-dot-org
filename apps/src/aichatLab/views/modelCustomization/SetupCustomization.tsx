@@ -1,0 +1,223 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
+import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
+
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+import {ModelDescription} from '@cdo/apps/aichat/types';
+import {useLevelProperties} from '@cdo/apps/aichatLab/levelPropertiesContext';
+import {setAiCustomizationProperty} from '@cdo/apps/aichatLab/redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import CompareModelsDialog from './CompareModelsDialog';
+import {
+  DEFAULT_VISIBILITIES,
+  MAX_TEMPERATURE,
+  MIN_TEMPERATURE,
+  SET_TEMPERATURE_STEP,
+} from './constants';
+import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
+import UpdateButton from './UpdateButton';
+import {isVisible, isDisabled, isEditable} from './utils';
+
+import styles from '../model-customization-workspace.module.scss';
+
+const SetupCustomization: React.FunctionComponent = () => {
+  const dispatch = useAppDispatch();
+
+  const [isShowingModelDialog, setIsShowingModelDialog] =
+    useState<boolean>(false);
+
+  // we default selectedModelId because it was added later and may not exist in all levels
+  const {
+    temperature,
+    systemPrompt,
+    selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
+  } = useAppSelector(state => state.aichatLab.fieldVisibilities);
+  const aiCustomizations = useAppSelector(
+    state => state.aichatLab.currentAiCustomizations
+  );
+
+  const availableModelIds =
+    useLevelProperties().aichatSettings?.availableModelIds;
+
+  // Handle the possibility that modelDescription can change but levels
+  // may be using outdated model ids. Fall back to first modelDescription.
+  const availableModels = useMemo(() => {
+    let models: ModelDescription[] = [];
+    if (availableModelIds && availableModelIds.length) {
+      // Exclude any models that we don't have descriptions for
+      models = modelDescriptions.filter(model =>
+        availableModelIds.includes(model.id)
+      );
+    }
+    return models.length ? models : [modelDescriptions[0]];
+  }, [availableModelIds]);
+
+  const chosenModelId = useMemo(() => {
+    return (
+      availableModels.find(
+        model => model.id === aiCustomizations.selectedModelId
+      )?.id || availableModels[0].id
+    );
+  }, [aiCustomizations.selectedModelId, availableModels]);
+
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+
+  const anyFieldEditable =
+    (isEditable(temperature) ||
+      isEditable(systemPrompt) ||
+      isEditable(selectedModelId)) &&
+    !readOnlyWorkspace;
+
+  const renderChooseAndCompareModels = () => {
+    const canCompare =
+      isEditable(selectedModelId) && availableModels.length > 1;
+    return (
+      <div>
+        <FieldLabel
+          id="selected-model"
+          label={'Selected model'}
+          tooltipText={
+            'This is the underlying language model being used by the chatbot.'
+          }
+        />
+        <SimpleDropdown
+          labelText={'Selected model'}
+          isLabelVisible={false}
+          onChange={event =>
+            dispatch(
+              setAiCustomizationProperty({
+                property: 'selectedModelId',
+                value: event.target.value,
+              })
+            )
+          }
+          items={availableModels.map(model => {
+            return {value: model.id, text: model.name};
+          })}
+          selectedValue={chosenModelId}
+          name="model"
+          size="s"
+          className={styles.selectedModelDropdown}
+          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
+        />
+        {canCompare && (
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
+            disabled={readOnlyWorkspace}
+            className={classNames(styles.compareModelsButton)}
+            onClick={() => setIsShowingModelDialog(true)}
+            type="button"
+          >
+            {'Compare Models'}
+          </MuiButton>
+        )}
+        {isShowingModelDialog && (
+          <CompareModelsDialog
+            onClose={() => setIsShowingModelDialog(false)}
+            availableModels={availableModels}
+          />
+        )}
+      </div>
+    );
+  };
+
+  // The reason we're multiplying by 10 and dividing by 10 is because the slider
+  // component adds and subtracts by the step value, and with float math, those values
+  // can end up being slightly off after multiple increments/decrements by 0.1.
+  // This way, we can avoid any issues from funky float math.
+  const sliderProps: SliderProps = {
+    name: 'temperature-slider',
+    value: Math.round(aiCustomizations.temperature * 10),
+    minValue: Math.round(MIN_TEMPERATURE * 10),
+    maxValue: Math.round(MAX_TEMPERATURE * 10),
+    step: Math.round(SET_TEMPERATURE_STEP * 10),
+    hideValue: true,
+    disabled: isDisabled(temperature) || readOnlyWorkspace,
+    onChange: event => {
+      const value = parseInt(event.target.value) / 10;
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'temperature',
+          value: value,
+        })
+      );
+    },
+    className: styles.temperatureSlider,
+    leftButtonProps: {
+      children: <FontAwesomeV6Icon iconName="minus" title="Decrease" />,
+      ['aria-label']: 'Decrease',
+    },
+    rightButtonProps: {
+      children: <FontAwesomeV6Icon iconName="plus" title="Increase" />,
+      ['aria-label']: 'Increase',
+    },
+  };
+
+  return (
+    <div className={styles.verticalFlexContainer}>
+      <div className={styles.customizationContainer}>
+        {isVisible(selectedModelId) && renderChooseAndCompareModels()}
+        {isVisible(temperature) && (
+          <>
+            <div
+              className={classNames(
+                styles.horizontalFlexContainer,
+                'uitest-temperature-container'
+              )}
+            >
+              <FieldLabel
+                id="temperature"
+                label={'Temperature'}
+                tooltipText={
+                  'Temperature affects which words are generated as a response. Use the slider to change the temperature.'
+                }
+              />
+              {aiCustomizations.temperature}
+            </div>
+            <Slider {...sliderProps} />
+          </>
+        )}
+        {isVisible(systemPrompt) && (
+          <>
+            <FieldLabel
+              id="system-prompt"
+              label={'System Prompt'}
+              tooltipText={
+                'The system prompt controls how the chatbot behaves. Type your instructions into the text box.'
+              }
+            />
+            <textarea
+              className={styles.systemPromptInput}
+              id="system-prompt"
+              value={aiCustomizations.systemPrompt}
+              disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
+              onChange={event =>
+                dispatch(
+                  setAiCustomizationProperty({
+                    property: 'systemPrompt',
+                    value: event.target.value,
+                  })
+                )
+              }
+            />
+          </>
+        )}
+      </div>
+      <div className={styles.footerButtonContainer}>
+        <UpdateButton isDisabledDefault={!anyFieldEditable} />
+      </div>
+      <SaveChangesAlerts isReadOnly={!anyFieldEditable} />
+    </div>
+  );
+};
+
+export default SetupCustomization;

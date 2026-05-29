@@ -4,7 +4,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/8dabad09a9e6629d9a6f967b0954ee93-CSD Standalone.png",
@@ -15,7 +15,9 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": "2023-07-10 09:00:00 UTC",
-  "self_paced_pl_course_offering_key": "self-paced-pl-csd-unit4",
+  "self_paced_pl_course_offering_key": "teaching-design-process",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

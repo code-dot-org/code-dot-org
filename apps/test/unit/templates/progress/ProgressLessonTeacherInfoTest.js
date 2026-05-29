@@ -282,11 +282,7 @@ describe('ProgressLessonTeacherInfo', () => {
         )
     );
 
-    expect(withSection.find('Connect(HiddenForSectionToggle)').length).toEqual(
-      1
-    );
-    expect(
-      withoutSection.find('Connect(HiddenForSectionToggle)').length
-    ).toEqual(0);
+    expect(withSection.find('HiddenForSectionToggle').length).toEqual(1);
+    expect(withoutSection.find('HiddenForSectionToggle').length).toEqual(0);
   });
 });

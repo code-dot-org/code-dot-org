@@ -96,7 +96,7 @@ module InactivityCleanup
 
       summary = "Deleted #{num_accounts_deleted} accounts"
       summary += "\nEncountered #{num_errors} errors" if num_errors.positive?
-      summary += "\nDuration #{Time.at(end_time.to_i - start_time.to_i).utc.strftime("%H:%M:%S")}"
+      summary += "\nDuration #{Time.at(end_time.to_i - start_time.to_i).utc.strftime('%H:%M:%S')}"
       summary += "\nDry run, no accounts actually deleted" if dry_run?
 
       log_to_slack(summary)

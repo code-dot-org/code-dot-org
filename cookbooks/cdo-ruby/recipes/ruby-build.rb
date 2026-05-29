@@ -4,9 +4,9 @@
 #   https://www.ruby-lang.org/en/documentation/installation/#ruby-build
 #   https://github.com/rbenv/ruby-build#readme
 
-# Arbitrarily use the latest version of ruby build at time this code was
-# written; this probably doesn't matter, but we need to pick something.
-RUBY_BUILD_VERSION = '20250424'.freeze
+# Target a version of ruby-build which includes our target Ruby version, which
+# as of March 2026 is 3.2.11
+RUBY_BUILD_VERSION = '20260327'.freeze
 
 remote_file "/tmp/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz" do
   source "https://github.com/rbenv/ruby-build/archive/refs/tags/v#{RUBY_BUILD_VERSION}.tar.gz"

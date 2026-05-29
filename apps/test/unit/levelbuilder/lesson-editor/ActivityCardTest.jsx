@@ -49,6 +49,7 @@ describe('ActivityCard', () => {
       collapsed: false,
       hasLessonPlan: true,
       allowMajorCurriculumChanges: true,
+      rubricLevelId: null,
     };
   });
 
@@ -169,5 +170,70 @@ describe('ActivityCard', () => {
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
     expect(updateActivityField).toHaveBeenCalledWith(1, 'duration', 1000);
+  });
+
+  it('passes isDeleteable=true to OrderControls when no rubric level matches', () => {
+    const wrapper = shallow(
+      <ActivityCard
+        {...defaultProps}
+        rubricLevelId={999} // Non-matching ID
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
+  });
+
+  it('passes isDeleteable=false to OrderControls when rubric level matches script level', () => {
+    const wrapper = shallow(
+      <ActivityCard
+        {...defaultProps}
+        rubricLevelId={1} // Matches first script level activeId '1'
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(false);
+  });
+
+  it('passes isDeleteable=true when no rubricLevelId provided', () => {
+    const wrapper = shallow(
+      <ActivityCard {...defaultProps} rubricLevelId={null} />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
+  });
+
+  it('passes isDeleteable=true when activity has no script levels', () => {
+    const activityWithNoLevels = {
+      key: 'activity-1',
+      displayName: 'Main Activity',
+      position: 1,
+      duration: 20,
+      activitySections: [
+        {
+          key: 'section-3',
+          position: 1,
+          displayName: 'Making programs',
+          duration: 10,
+          remarks: true,
+          scriptLevels: [], // No script levels
+          text: 'Simple text',
+          tips: [],
+        },
+      ],
+    };
+
+    const wrapper = shallow(
+      <ActivityCard
+        {...defaultProps}
+        activity={activityWithNoLevels}
+        rubricLevelId={1} // Even with rubricLevelId, no levels to match
+      />
+    );
+
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.prop('isDeleteable')).toBe(true);
   });
 });

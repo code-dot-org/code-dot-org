@@ -9,6 +9,7 @@ class JitPlMisconceptionsController < ApplicationController
     @misconception = @concept.jit_pl_misconceptions.new(misconception_params)
     if @misconception.save
       @misconception.resources = Resource.where(id: params[:resource_ids] || [])
+      @misconception.json_videos = JSONVideo.where(id: params[:json_video_ids] || [])
       @concept.reload.write_serialization
       render json: @misconception.serialize
     else
@@ -20,6 +21,7 @@ class JitPlMisconceptionsController < ApplicationController
   def update
     @misconception.update!(misconception_params)
     @misconception.resources = Resource.where(id: params[:resource_ids] || [])
+    @misconception.json_videos = JSONVideo.where(id: params[:json_video_ids] || [])
     @concept.reload.write_serialization
     render json: @misconception.serialize
   end

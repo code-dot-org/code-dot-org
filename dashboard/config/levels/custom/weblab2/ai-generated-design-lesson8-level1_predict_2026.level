@@ -1,0 +1,183 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-07T12:49:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "explainCode": "You are a JavaScript code tutor helping a student understand product filters in an online shopping app.\n\nGive short, clear explanations of what each function does. Focus on how the function uses `.map()`, an `if` statement, and `.push()` to decide which products are shown on the page. Do not add extra concepts or unnecessary detail.\n\nHelp students understand that the button is not the filter. The button runs a function. The filter is the condition inside the function that decides which products are kept.\n\nWhen explaining a filter function, identify:\n1. which array the code loops through\n2. what condition is checked\n3. which products are added to `displayProductsArray`\n4. when `renderProducts()` updates the page\n\nDo not rewrite the code unless the student specifically asks. Do not introduce `.filter()` or other array methods. This lesson uses `.map()` as the looping pattern.\n\nIf the student asks whether the AI explanation is correct, asks for evidence, or challenges your answer, point to the specific condition in the code and explain how the app behavior should match that condition.\n\nAlways keep responses concise and focused on the code."
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Everyday Basics</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n\n<body id=\"mainBody\">\n  <div id=\"appShell\" class=\"app-shell\">\n\n    <header id=\"siteHeader\" class=\"site-header\">\n      <h2 id=\"siteLogo\" class=\"logo\">H&HEM</h2>\n    </header>\n    \n    <nav id=\"breadcrumbNav\" class=\"breadcrumbs\">\n      Home <span>&rsaquo;</span> Clothing <span>&rsaquo;</span> Unisex <span>&rsaquo;</span> Everyday Basics\n    </nav>\n\n    <section id=\"pageIntro\" class=\"page-intro\">\n      <h1 id=\"pageTitle\">Everyday Basics</h1>\n      <p id=\"pageDescription\">Use filters to narrow the product list.</p>\n    </section>\n\n<div id=\"toolbar\" class=\"toolbar\">\n  <div id=\"filterControls\" class=\"filter-controls\">\n    <button id=\"showAllBtn\" class=\"filter-chip\" type=\"button\">All</button>\n    <button id=\"filterTopsBtn\" class=\"filter-chip\" type=\"button\">Tops</button>\n    <button id=\"filterUnder50Btn\" class=\"filter-chip\" type=\"button\">Under $50</button>\n    <button id=\"filterSellingFastBtn\" class=\"filter-chip\" type=\"button\">Selling Fast</button>\n  </div>\n\n  <div id=\"styleCount\" class=\"style-count\">0 styles found</div>\n</div>\n\n    <main id=\"productGrid\" class=\"card-grid\" aria-live=\"polite\"></main>\n    \n  </div>\n  \n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, sans-serif;\n  color: #1f1f1f;\n  background-color: #fcfcfc;\n  padding: 0 20px 40px;\n}\n\n.app-shell {\n  max-width: 1100px;\n  margin: 0 auto;\n}\n\n/* Header */\n.site-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 30px 0;\n}\n\n.logo {\n  font-size: 1.5rem;\n  font-weight: 900;\n  letter-spacing: 2px;\n}\n\n/* Breadcrumbs */\n.breadcrumbs {\n  font-size: 12px;\n  color: #777;\n  margin-bottom: 20px;\n}\n\n.breadcrumbs span {\n  margin: 0 5px;\n}\n\n/* Page intro */\n.page-intro {\n  margin-bottom: 22px;\n}\n\n.page-intro h1 {\n  font-size: 32px;\n  margin-bottom: 6px;\n}\n\n.page-intro p {\n  color: #666;\n  font-size: 14px;\n}\n\n/* Toolbar */\n.toolbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 20px;\n  margin-bottom: 25px;\n}\n\n.filter-controls {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 10px;\n  overflow-x: auto;\n}\n\n.filter-chip {\n  flex-shrink: 0;\n  background: white;\n  border: 1px solid #ddd;\n  border-radius: 999px;\n  padding: 9px 16px;\n  cursor: pointer;\n  font-size: 14px;\n  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;\n}\n\n.filter-chip:hover {\n  transform: translateY(-1px);\n  border-color: #111;\n}\n\n.filter-chip:focus {\n  background-color: #111;\n  color: white;\n  border-color: #111;\n  outline: none;\n}\n\n.filter-chip:active {\n  transform: scale(0.98);\n}\n\n.style-count {\n  font-size: 12px;\n  color: #888;\n  white-space: nowrap;\n  padding-top: 10px;\n}\n\n/* Grid */\n.card-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 400px));\n  justify-content: center;\n  gap: 30px;\n}\n\n.item-card {\n  display: flex;\n  flex-direction: column;\n}\n\n.image-wrap {\n  position: relative;\n  aspect-ratio: 3 / 4;\n  background-color: #f0f0f0;\n  overflow: hidden;\n}\n\n.item-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n/* Item Labels */\n.item-info {\n  padding: 15px 0;\n}\n\n.item-meta {\n  font-size: 11px;\n  color: #777;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  margin-bottom: 6px;\n}\n\n.item-title {\n  font-size: 16px;\n  font-weight: 500;\n  margin-bottom: 5px;\n  line-height: 1.35;\n}\n\n.price {\n  font-weight: 700;\n  font-size: 15px;\n}\n\n.badge-container {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n  margin-top: 10px;\n}\n\n.badge {\n  font-size: 10px;\n  font-weight: 700;\n  padding: 4px 8px;\n}\n\n.badge-outline {\n  border: 1px solid #ddd;\n}\n\n.badge-solid {\n  background: #eee;\n}\n\n/* Empty State */\n.empty-state {\n  grid-column: 1 / -1;\n  padding: 50px 20px;\n  text-align: center;\n  border: 1px dashed #ccc;\n  background: white;\n}\n\n.empty-state h2 {\n  font-size: 20px;\n  margin-bottom: 8px;\n}\n\n.empty-state p {\n  color: #666;\n  font-size: 14px;\n}\n\n/* Responsive */\n@media (max-width: 900px) {\n  .toolbar {\n    flex-direction: column;\n  }\n\n  .style-count {\n    padding-top: 0;\n  }\n\n  .card-grid {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n}\n\n@media (max-width: 300px) {\n  .card-grid {\n    grid-template-columns: 1fr;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "const productGrid = document.getElementById(\"productGrid\");\nconst styleCount = document.getElementById(\"styleCount\");\n\n// This array controls which products are currently shown.\nlet displayProducts = products;\n\n// Displays the current products on the page.\nconst renderProducts = () => {\n  productGrid.innerHTML = \"\";\n  styleCount.textContent = displayProducts.length + \" styles found\";\n\n  displayProducts.map((product) => {\n    createProductCard(product);\n  });\n};\n\n// Filter 1\nconst showAllProducts = () => {\n  displayProducts = products;\n  renderProducts();\n};\n\n// Filter 2\nconst filterTops = () => {\n  displayProducts = [];\n\n  products.map((product) => {\n    if (product.category === \"Tops\") {\n      displayProducts.push(product);\n    }\n  });\n\n  renderProducts();\n};\n\n// Filter 3\nconst filterUnder50 = () => {\n  displayProducts = [];\n\n  products.map((product) => {\n    if (product.price < 50) {\n      displayProducts.push(product);\n    }\n  });\n\n  renderProducts();\n};\n\n// Filter 4\nconst filterSellingFast = () => {\n  displayProducts = [];\n\n  products.map((product) => {\n    if (product.sellingFast === true) {\n      displayProducts.push(product);\n    }\n  });\n\n  renderProducts();\n};\n\n// Event listeners\ndocument.getElementById(\"showAllBtn\").addEventListener(\"click\", showAllProducts);\ndocument.getElementById(\"filterTopsBtn\").addEventListener(\"click\", filterTops);\ndocument.getElementById(\"filterUnder50Btn\").addEventListener(\"click\", filterUnder50);\ndocument.getElementById(\"filterSellingFastBtn\").addEventListener(\"click\", filterSellingFast);\n\n// First page load\nrenderProducts();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "data.js",
+          "contents": "let products = [\n  {\n    id: 1,\n    title: \"Heavyweight Boxy Fit T-Shirt in Classic White\",\n    price: 35,\n    category: \"Tops\",\n    color: \"White\",\n    image: \"images/item1.png\",\n    alt: \"White t-shirt\",\n    sellingFast: false,\n    moreColors: true\n  },\n  {\n    id: 2,\n    title: \"Oversized Premium Fleece Hoodie in Heather Gray\",\n    price: 65,\n    category: \"Hoodies\",\n    color: \"Gray\",\n    image: \"images/item2.png\",\n    alt: \"Gray hoodie\",\n    sellingFast: true,\n    moreColors: true\n  },\n  {\n    id: 3,\n    title: \"Straight Leg Washed Vintage Denim Jeans\",\n    price: 89.99,\n    category: \"Denim\",\n    color: \"Blue\",\n    image: \"images/item3.png\",\n    alt: \"Blue jeans\",\n    sellingFast: true,\n    moreColors: false\n  },\n  {\n    id: 4,\n    title: \"Chunky Minimalist Everyday Sneakers in Off-White\",\n    price: 110,\n    category: \"Shoes\",\n    color: \"White\",\n    image: \"images/item4.png\",\n    alt: \"White sneakers\",\n    sellingFast: true,\n    moreColors: false\n  },\n  {\n    id: 5,\n    title: \"Ribbed Everyday Tank in Soft Black\",\n    price: 24,\n    category: \"Tops\",\n    color: \"Black\",\n    image: \"images/item5.png\",\n    alt: \"Black tank top\",\n    sellingFast: false,\n    moreColors: true\n  },\n  {\n    id: 6,\n    title: \"Relaxed Zip Hoodie in Forest Green\",\n    price: 72,\n    category: \"Hoodies\",\n    color: \"Green\",\n    image: \"images/item6.png\",\n    alt: \"Green hoodie\",\n    sellingFast: false,\n    moreColors: true\n  },\n  {\n    id: 7,\n    title: \"Wide Leg Denim in Light Vintage Wash\",\n    price: 94,\n    category: \"Denim\",\n    color: \"Blue\",\n    image: \"images/item7.png\",\n    alt: \"Light blue jeans\",\n    sellingFast: false,\n    moreColors: false\n  },\n  {\n    id: 8,\n    title: \"Low Profile Canvas Sneakers in Cream\",\n    price: 48,\n    category: \"Shoes\",\n    color: \"Cream\",\n    image: \"images/item8.png\",\n    alt: \"Cream sneakers\",\n    sellingFast: false,\n    moreColors: true\n  },\n  {\n    id: 9,\n    title: \"Cropped Cotton Tee in Dusty Rose\",\n    price: 29,\n    category: \"Tops\",\n    color: \"Pink\",\n    image: \"images/item9.png\",\n    alt: \"Pink t-shirt\",\n    sellingFast: true,\n    moreColors: true\n  },\n  {\n    id: 10,\n    title: \"Classic Pullover Hoodie in Midnight Navy\",\n    price: 58,\n    category: \"Hoodies\",\n    color: \"Navy\",\n    image: \"images/item10.png\",\n    alt: \"Navy hoodie\",\n    sellingFast: true,\n    moreColors: false\n  }\n];",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "helpers.js",
+          "contents": "const createProductCard = (product) => {\n  const productGrid = document.getElementById(\"productGrid\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"item-card\";\n  card.id = \"productCard\" + product.id;\n\n  const imageWrap = document.createElement(\"div\");\n  imageWrap.className = \"image-wrap\";\n  imageWrap.id = \"imageWrap\" + product.id;\n\n  const image = document.createElement(\"img\");\n  image.className = \"item-image\";\n  image.id = \"productImage\" + product.id;\n  image.src = product.image;\n  image.alt = product.alt;\n\n  imageWrap.appendChild(image);\n\n  const info = document.createElement(\"div\");\n  info.className = \"item-info\";\n  info.id = \"itemInfo\" + product.id;\n\n  const meta = document.createElement(\"p\");\n  meta.className = \"item-meta\";\n  meta.id = \"productMeta\" + product.id;\n  meta.textContent = product.category + \" / \" + product.color;\n\n  const title = document.createElement(\"h2\");\n  title.className = \"item-title\";\n  title.id = \"productTitle\" + product.id;\n  title.textContent = product.title;\n\n  const price = document.createElement(\"p\");\n  price.className = \"price\";\n  price.id = \"productPrice\" + product.id;\n  price.textContent = \"$\" + product.price.toFixed(2);\n\n  info.appendChild(meta);\n  info.appendChild(title);\n  info.appendChild(price);\n\n  if (product.moreColors === true || product.sellingFast === true) {\n    const badgeContainer = document.createElement(\"div\");\n    badgeContainer.className = \"badge-container\";\n    badgeContainer.id = \"badgeContainer\" + product.id;\n\n    if (product.moreColors === true) {\n      const moreColorsBadge = document.createElement(\"span\");\n      moreColorsBadge.className = \"badge badge-outline\";\n      moreColorsBadge.id = \"moreColorsBadge\" + product.id;\n      moreColorsBadge.textContent = \"MORE COLORS\";\n\n      badgeContainer.appendChild(moreColorsBadge);\n    }\n\n    if (product.sellingFast === true) {\n      const sellingFastBadge = document.createElement(\"span\");\n      sellingFastBadge.className = \"badge badge-solid\";\n      sellingFastBadge.id = \"sellingFastBadge\" + product.id;\n      sellingFastBadge.textContent = \"SELLING FAST\";\n\n      badgeContainer.appendChild(sellingFastBadge);\n    }\n\n    info.appendChild(badgeContainer);\n  }\n\n  card.appendChild(imageWrap);\n  card.appendChild(info);\n\n  productGrid.appendChild(card);\n};",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "item4.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/6cbc5a20-3a5a-40a5-81b2-35e59cadf865.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "item1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/8778ccd7-72ae-4e9e-9ff5-0b3f4ef9ec92.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "item3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/2a6ddf30-4764-44a4-a8ac-e6fdfd7b02b5.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "item2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/acfab9ee-65ab-41a7-a243-0618ded1a986.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "item6.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/5fb9b319-d4d3-4089-b867-4d8ad772390b.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "item7.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/3736b627-75ac-4a7b-a079-5758595869c6.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "item9.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/8b9698a2-79a6-4570-b108-3f7062661ab8.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "item8.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/0e9054b0-af75-4925-a69d-101ed2c0c503.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "item10.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/fdee5fbd-e201-489e-a63a-95f91cfed14f.png",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "item5.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level1_predict_2026/uuid/f2b0f82f-fc70-4356-9353-7f50bdf014e9.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "4"
+      ]
+    },
+    "long_instructions": "## Explore Product Filters\r\n\r\n### Do This:\r\n\r\n\r\n1. Click **Tops**. Watch how the product grid changes.\r\n\r\n2. In **script.js**, highlight the `filterTops()` function and ask AI:\r\n\r\n   > How does the `filterTops()` function use `.map()`, an `if` statement, and `.push()` to decide which products stay in the list?\r\n\r\n3. Check the AI’s response:\r\n\r\n   * Does the explanation match what you observed after clicking **Tops**?\r\n   * What condition does the code check?\r\n   * Which product property is being used to make the decision?\r\n\r\n4. Above `filterTops()`, add a `//` comment explaining which products it keeps.\r\n\r\n5. Repeat these steps for the other filter buttons and functions:\r\n\r\n   * **Under $50** → `filterUnder50()`\r\n   * **Selling Fast** → `filterSellingFast()`\r\n   * **All** → `showAllProducts()`\r\n",
+    "teacher_markdown": "## Teacher Notes: Explore Product Filters\r\n\r\nIn this level, students explore how the H&HEM app uses filter buttons to change which products appear on the page.\r\n\r\nThe goal is for students to understand that the **button itself is not the filter**. The button only triggers a function. The actual filter is the **condition inside the function** that decides whether each product should be kept or left out.\r\n\r\nStudents are expected to:\r\n\r\n* click each filter button and observe how the product grid changes\r\n* connect the button behavior to the matching function in `script.js`\r\n* identify the condition used inside each filter function\r\n* use the code as evidence to check whether the AI’s explanation is accurate\r\n* add comments that explain what each filter function keeps\r\n\r\nThis level reinforces a key programming idea:\r\n\r\n**A filter checks each item in a list and keeps only the items that match a condition.**\r\n\r\nThe code pattern students should notice is:\r\n\r\n```js\r\nproductsArray.map((product) => {\r\n  if (product.category === \"Tops\") {\r\n    displayProductsArray.push(product);\r\n  }\r\n});\r\n```\r\n\r\nStudents do not need to master every detail of objects yet. They should focus on the relationship between:\r\n\r\n* the product data in `data.js`\r\n* the condition in the `if` statement\r\n* the products that appear after the page re-renders\r\n\r\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-07 12:56:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 13:21:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 13:30:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 13:30:21 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 13:49:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:19:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:30:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:39:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:40:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:40:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:46:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:46:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:47:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:53:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:55:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:56:17 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 14:58:32 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:01:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:02:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 16:51:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

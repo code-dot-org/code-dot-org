@@ -2,11 +2,13 @@ Feature: Teacher Student Toggle
 
 @eyes
 @properties_encryption_key
+@no_device_farm
 Scenario: Toggle on Multi Level
   When I open my eyes to test "toggle on multi level"
   Given I create an authorized teacher-associated student named "Daenerys"
   Then I sign in as "Teacher_Daenerys"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1"
+  And The header is finished animating
   And I see no difference for "page load"
   And I wait to see ".submitButton"
   Then I click selector ".uitest-viewAsStudent"
@@ -34,6 +36,7 @@ Scenario: Toggle on Hidden Maze Level
   Then I click selector ".uitest-togglehidden:eq(1) div:contains('Hidden')"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
+  And The header is finished animating
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
@@ -52,6 +55,7 @@ Scenario: Toggle on Lockable Level
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1?noautoplay=true"
   And I wait until element ".level-group" is visible
   And element "#locked-lesson" is not visible
+  And The header is finished animating
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
@@ -79,6 +83,7 @@ Scenario: Toggle on Lockable Level
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
   And element "#locked-lesson" is not visible
+  And The header is finished animating
   And I see no difference for "view as student while unlocked"
 
   Then I click selector ".uitest-viewAsTeacher"

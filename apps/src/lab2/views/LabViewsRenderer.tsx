@@ -7,7 +7,6 @@ import React, {createContext, Suspense, useEffect, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
-import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
@@ -70,17 +69,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   useInitialLabTheme({
     currentAppName,
     levelProperties,
-  });
-  const isPredictLevel =
-    levelProperties?.predictSettings?.isPredictLevel || false;
-  const hasSubmittedPredictResponse = useAppSelector(
-    state => state.predictLevel.hasSubmittedResponse
-  );
-
-  useAiChatDisabledState({
-    appName: currentAppName,
-    isPredictLevel,
-    hasSubmittedPredictResponse,
   });
 
   const blockLabView = getIsLabViewBlocked(

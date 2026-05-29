@@ -146,6 +146,11 @@ Feature: Hour of Code 2015 tutorial is completable
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"
+    And I wait to see "#clear-puzzle-header"
+    # The droplet content area sometimes covers the clear-puzzle-header button
+    # when it first renders in desktop browsers on Device Farm.
+    # Work around this with an explicit wait.
+    And I wait for 5 seconds
     And I press "clear-puzzle-header"
     And I press "confirm-button"
     Then the Droplet ACE text is "moveRight();\n"

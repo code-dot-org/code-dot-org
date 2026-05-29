@@ -416,6 +416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       uid: user.primary_contact_info.authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
     assert_does_not_create(User) do
       get :clever
     end
@@ -423,6 +424,69 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Then I am signed in
     user.reload
     assert_equal user.id, signed_in_user_id
+  end
+
+  test 'clever: verifies unverified teacher on sign in with Clever teacher role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_difference('UserPermission.count', 1) do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: does not duplicate verification for already verified teacher on sign in' do
+    user = create(:authorized_teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    user.expects(:verify_teacher!).never
+
+    assert_no_difference('UserPermission.count') do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
+  end
+
+  test 'clever: verifies unverified teacher on sign in with Clever staff role' do
+    user = create(:teacher, :with_clever_authentication_option)
+    clever_auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute user.verified_teacher?
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      uid: clever_auth_option.authentication_id
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '123456'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_difference('UserPermission.count', 1) do
+      get :clever
+    end
+
+    assert_equal user.id, signed_in_user_id
+    assert User.find(user.id).verified_teacher?
   end
 
   test 'clever: signs in user and updates auth option if user is found by legacy_id' do
@@ -1630,6 +1694,61 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'signs in the existing user' do
         classlink_req
         _(existing_user.id).must_equal signed_in_user_id
+      end
+
+      it 'verifies an unverified teacher' do
+        refute existing_user.verified_teacher?
+
+        assert_difference('UserPermission.count', 1) do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when teacher already verified' do
+      subject(:existing_user) {create(:authorized_teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not duplicate verification' do
+        existing_user.expects(:verify_teacher!).never
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        assert User.find(existing_user.id).verified_teacher?
+      end
+    end
+
+    context 'when student' do
+      subject(:existing_user) {create(:student, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:student_auth_hash) do
+        auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
+        auth_hash.extra.raw_info.role = 'Student'
+        auth_hash
+      end
+      let(:classlink_req) {get :classlink}
+
+      before do
+        request.env['omniauth.auth'] = student_auth_hash
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'does not verify the student' do
+        existing_user.expects(:verify_teacher!).never
+        assert_no_difference('UserPermission.count') do
+          classlink_req
+        end
+
+        refute User.find(existing_user.id).verified_teacher?
       end
     end
   end

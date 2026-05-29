@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app(/*path)", to: "app#index"
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -119,6 +119,14 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
+    resources :json_videos, only: [:create] do
+      member do
+        get 'content'
+      end
+      collection do
+        get 'search'
+      end
+    end
     resources :videos do
       collection do
         get 'test'
@@ -206,18 +214,20 @@ Dashboard::Application.routes.draw do
         member do
           post 'join'
           post 'leave'
-          post 'update_sharing_disabled'
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
-          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          get 'suggested_lesson'
         end
         collection do
           get 'membership'
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          get 'demo/presets', action: 'presets', as: 'presets'
+          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
+          get 'assigned_essential_ai_dependency'
         end
       end
     end
@@ -281,7 +291,6 @@ Dashboard::Application.routes.draw do
       get '/users/cancel', to: 'registrations#cancel'
       post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
-      get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
@@ -406,6 +415,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
@@ -465,6 +475,8 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        get 'generate', to: 'scripts#generate'
+        put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do
@@ -472,6 +484,10 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'slides/generate', to: 'lessons/slides#generate'
+        get 'slides', to: 'lessons/slides#show'
+        get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -571,6 +587,11 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :generate
+        get 'slides/generate', to: 'lessons/slides#generate', as: 'generate_slides'
+        get 'slides', to: 'lessons/slides#show', as: 'slides'
+        get 'slides/edit', to: 'lessons/slides#edit', as: 'slides_edit'
+        put 'slides_data', to: 'lessons/slides#update'
         post :clone
       end
     end
@@ -1096,7 +1117,6 @@ Dashboard::Application.routes.draw do
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
-        post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
         post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
@@ -1195,6 +1215,15 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [] do
+      collection do
+        get :show # GET /ai_student_podcasts?lesson_id=1&objective_ids[]=2
+        post :generate_podcast
+        get :retrieve_podcast_from_s3
+      end
+    end
+
     # AI Lesson Summary Podcasts routes
     resources :ai_lesson_summary_podcasts, only: [:show] do
       collection do
@@ -1236,6 +1265,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
@@ -1277,7 +1307,7 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
-    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+    post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
@@ -1387,7 +1417,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
-    get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]

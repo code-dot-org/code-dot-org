@@ -1,0 +1,197 @@
+framework,category,standard,description
+csta2026,PS,EK-ALG-PS-01,Carry out algorithms in daily activities.
+csta2026,PS,E1-ALG-PS-01,Decompose a problem or task into individual parts to develop an algorithm.
+csta2026,PS,E2-ALG-PS-01,"Create an algorithm that includes sequence, events, and iteration to solve a problem or express ideas."
+csta2026,PS,E3-ALG-PS-01,"Create algorithms that include sequence, events, iteration, and selection to solve a problem or express ideas."
+csta2026,PS,E4-ALG-PS-01,"Create written representations of algorithms that incorporate a combination of sequence, events, iteration, and selection to solve a problem or express ideas."
+csta2026,PS,E5-ALG-PS-01,"Create visual representations of algorithms that include variables and incorporate a combination of sequence, events, iteration, and selection to solve a problem or express an idea."
+csta2026,PS,MS-ALG-PS-01,Design an algorithm that includes variables of multiple data types to solve a problem or express ideas.
+csta2026,PS,MS-ALG-PS-02,Model a given algorithm with a flowchart or pseudocode that includes a combination of control structures and procedures.
+csta2026,PS,MS-ALG-PS-03,Verify the accuracy of an algorithm for given inputs.
+csta2026,PS,MS-ALG-PS-04,"Justify whether a problem is best solved using procedural instructions, rule-based logic, data-driven methods, or a combination of these approaches."
+csta2026,PS,MS-ALG-PS-05,Use AI tools to generate outputs that assist in solving a computational problem.
+csta2026,PS,HS-ALG-PS-01,Design an algorithm using appropriate data structures to solve a problem or express ideas.
+csta2026,PS,HS-ALG-PS-02,Optimize the design of an algorithm using procedural abstraction and control structures.
+csta2026,PS,HS-ALG-PS-03,"Evaluate algorithms for efficiency, correctness, and clarity, using metrics or test cases."
+csta2026,PS,HS-ALG-PS-04,Describe the differences between deterministic and probabilistic algorithms.
+csta2026,PS,HS-ALG-PS-05,"Evaluate AI-generated output to assess bias, accuracy, and potential harms."
+csta2026,ML,EK-ALG-ML-02,Recognize attributes of objects to notice patterns and make decisions.
+csta2026,ML,E1-ALG-ML-02,Recognize that AI systems are a technology that uses patterns in data to make decisions or generate new things.
+csta2026,ML,E2-ALG-ML-02,Examine how data is used to train machine learning models.
+csta2026,ML,E3-ALG-ML-02,Investigate how machine learning models can change when new data is added to a training set.
+csta2026,ML,E4-ALG-ML-02,Analyze relationships between the properties of training data and a machine learning model's output.
+csta2026,ML,E5-ALG-ML-02,Train a machine learning model to make a classification or prediction.
+csta2026,ML,MS-ALG-ML-06,Hypothesize how a machine learning model generates classifications or predictions.
+csta2026,ML,MS-ALG-ML-07,Investigate ways to improve the accuracy of a machine learning model and reduce bias by refining the quality of examples and nonexamples in the training data.
+csta2026,ML,MS-ALG-ML-08,Evaluate the features and limitations of a machine learning model.
+csta2026,ML,HS-ALG-ML-06,Justify the selection of a type of AI algorithm to accomplish a task.
+csta2026,ML,HS-ALG-ML-07,"Evaluate training data by examining its source, quality, representativeness, potential biases, and privacy implications."
+csta2026,ML,HS-ALG-ML-08,Develop a machine learning model for a chosen task using appropriate data and tools.
+csta2026,IM,EK-ALG-IM-03,Describe how people create algorithms to solve problems.
+csta2026,IM,E1-ALG-IM-03,Explain how changes to algorithms lead to different outcomes.
+csta2026,IM,E2-ALG-IM-03,Describe how algorithms might impact peers in varied situations.
+csta2026,IM,E3-ALG-IM-03,"Compare how different algorithms may affect outcomes, situations, and people with a wide range of needs."
+csta2026,IM,E4-ALG-IM-03,Evaluate how different algorithms for solving the same problem produce outcomes that may benefit or disadvantage different groups of people.
+csta2026,IM,E5-ALG-IM-03,Articulate how human-centered design principles are incorporated into the development of computing technologies.
+csta2026,IM,MS-ALG-IM-09,Evaluate which human-centered design principles are present or missing in existing computing technologies.
+csta2026,IM,MS-ALG-IM-10,"Examine evidence of beneficial and harmful impacts, ethical issues, and biases of algorithms encountered in daily life."
+csta2026,IM,MS-ALG-IM-11,"Modify an algorithm to address a specific societal impact, ethical issue, or bias."
+csta2026,IM,HS-ALG-IM-09,Design computing technologies using human-centered design principles.
+csta2026,IM,HS-ALG-IM-10,"Evaluate the ethical implications, societal impacts, and potential biases of rule-based and data-driven algorithms."
+csta2026,IM,HS-ALG-IM-11,Articulate the values embedded in the design of algorithmic systems.
+csta2026,PD,EK-PRO-PD-04,Create a sequence of commands to complete a simple task or express ideas.
+csta2026,PD,E1-PRO-PD-04,Create code from an algorithm that includes sequence to complete a task or express ideas.
+csta2026,PD,E2-PRO-PD-04,"Create code from an algorithm that includes sequence, events, and iteration to complete a task or express ideas."
+csta2026,PD,E3-PRO-PD-04,"Develop code from a student-created algorithm that includes sequence, events, iteration, and selection to solve a problem or express ideas."
+csta2026,PD,E3-PRO-PD-05,Use constructive feedback to improve programs.
+csta2026,PD,E4-PRO-PD-04,Compare different programming solutions to the same problem based on correctness and clarity.
+csta2026,PD,E4-PRO-PD-05,Collaborate with a team by offering a meaningful contribution to creating a program.
+csta2026,PD,E5-PRO-PD-04,Create a novel program by modifying or combining elements of existing programs.
+csta2026,PD,E5-PRO-PD-05,Construct individual components of a program that are collaboratively assembled into a programming project.
+csta2026,PD,MS-PRO-PD-12,Use procedures to structure code for clarity and reusability.
+csta2026,PD,MS-PRO-PD-13,Use reference documentation in program development.
+csta2026,PD,MS-PRO-PD-14,Justify the importance of attribution and intellectual property when developing computing technologies.
+csta2026,PD,MS-PRO-PD-15,Develop a program utilizing inclusive collaboration practices.
+csta2026,PD,HS-PRO-PD-12,"Create a modular program that uses procedures, external libraries, or objects to improve reusability and readability."
+csta2026,PD,HS-PRO-PD-13,"Use documentation, libraries, Application Programming Interfaces (APIs), and other tools in program development."
+csta2026,PD,HS-PRO-PD-14,Apply appropriate attribution and respect intellectual property when developing computing technologies.
+csta2026,PD,HS-PRO-PD-15,Collaborate on a programming project using a defined workflow that includes design documentation and clear task roles.
+csta2026,VD,EK-PRO-VD-05,Identify everyday gestures and symbols that represent information people use to make choices.
+csta2026,VD,E1-PRO-VD-05,Identify terms that refer to data values that change over time in everyday life.
+csta2026,VD,E2-PRO-VD-05,Label different representations of information with a name and whether its value is constant or changes.
+csta2026,VD,E3-PRO-VD-06,Identify the variables being stored and manipulated in a program.
+csta2026,VD,E4-PRO-VD-06,Trace how data flows and changes variable values in a program.
+csta2026,VD,E5-PRO-VD-06,"Use variables to store, compare, and modify data within a program."
+csta2026,VD,MS-PRO-VD-16,"Use variables of multiple data types to store, access, and manipulate data within a program."
+csta2026,VD,HS-PRO-VD-16,"Create a program that uses appropriate data structures to store, access, and manipulate data."
+csta2026,RD,EK-PRO-RD-06,Describe how a sequence of commands completes a task.
+csta2026,RD,E1-PRO-RD-06,Explain the function of code that includes an event and sequence.
+csta2026,RD,E2-PRO-RD-06,Explain the steps taken to create a program.
+csta2026,RD,E3-PRO-RD-07,Articulate how a specific segment of code contributes to the overall purpose of a program.
+csta2026,RD,E4-PRO-RD-07,Document a program to clarify its functionality.
+csta2026,RD,E5-PRO-RD-07,Create embedded or external documentation for a programming project.
+csta2026,RD,MS-PRO-RD-17,"Analyze the roles of iteration, selection, variables, and procedures in a segment of code."
+csta2026,RD,MS-PRO-RD-18,Analyze AI-generated code for accuracy and usability in a programming project.
+csta2026,RD,HS-PRO-RD-17,"Analyze how a segment of code works, including the role of parameters, return values, and data structures."
+csta2026,RD,HS-PRO-RD-18,"Evaluate AI-generated code for accuracy, reliability, and alignment with program requirements."
+csta2026,TR,EK-PRO-TR-07,Identify steps in a sequence of commands that do not work as expected.
+csta2026,TR,E1-PRO-TR-07,Debug programs that include a sequence.
+csta2026,TR,E2-PRO-TR-07,"Debug programs that include sequence, events, and iteration."
+csta2026,TR,E3-PRO-TR-08,"Debug programs that include sequence, events, iteration, and selection."
+csta2026,TR,E4-PRO-TR-08,Debug programs incrementally and repeatedly as they are developed.
+csta2026,TR,E5-PRO-TR-08,Debug programs using systematic strategies.
+csta2026,TR,MS-PRO-TR-19,"Use systematic strategies to test, refine, and document changes to a computing technology to meet the intended purpose."
+csta2026,TR,MS-PRO-TR-20,Refine a computing technology based on user feedback to improve its usability and accessibility.
+csta2026,TR,HS-PRO-TR-19,"Evaluate a computing technology's alignment with design specifications and responsible design values, including its correctness, effectiveness, and user experience."
+csta2026,TR,HS-PRO-TR-20,"Refine a computing technology based on user feedback, testing results, and responsible design values to improve its effectiveness and impact."
+csta2026,DC,EK-DAT-DC-08,Use collected data to help answer questions.
+csta2026,DC,E1-DAT-DC-08,Use multiple methods to collect both numeric and non-numeric data to help answer questions.
+csta2026,DC,E2-DAT-DC-08,Compare numeric and non-numeric types of data in terms of how they are collected and what information they provide.
+csta2026,DC,E3-DAT-DC-09,Evaluate numeric and non-numeric data for accuracy and completeness.
+csta2026,DC,E4-DAT-DC-09,"Organize collected data into tables using digital tools, with rows representing records and columns representing attributes."
+csta2026,DC,E5-DAT-DC-09,Use digital tools to collect and organize different types of data.
+csta2026,DC,MS-DAT-DC-21,"Evaluate how different levels of precision and granularity in data collection affect accuracy, storage, and analysis."
+csta2026,DC,MS-DAT-DC-22,Explain how data and its associated metadata can be used to answer questions.
+csta2026,DC,HS-DAT-DC-21,Use a digital tool to generate simulated data that fits certain parameters for use in simulations.
+csta2026,DC,HS-DAT-DC-22,"Create a data dictionary that describes the names and types of attributes, allowable values/ranges for each attribute, and logical relationships between variables in a dataset."
+csta2026,DC,MS-DAT-DC-23,"Use a digital tool to sort, filter, group, and summarize structured data."
+csta2026,DC,MS-DAT-DC-24,Analyze options to address data quality issues.
+csta2026,DC,HS-DAT-DC-23,Use a digital tool to clean and organize text-based data.
+csta2026,DC,HS-DAT-DC-24,"Evaluate different approaches to verifying consistency and compliance with expected data types, values, and ranges."
+csta2026,DI,EK-DAT-DI-09,Investigate a question that can be answered by collecting data in students' everyday environments.
+csta2026,DI,E1-DAT-DI-09,Compare questions that can be answered with data investigations and questions that are answered through other means.
+csta2026,DI,E2-DAT-DI-09,Develop a question that can be answered with data.
+csta2026,DI,E3-DAT-DI-10,Investigate a data question involving relationships between multiple attributes.
+csta2026,DI,E4-DAT-DI-10,"Create an explanation that includes at least one data visualization to report the process and results of a data investigation, using computing tools."
+csta2026,DI,E5-DAT-DI-10,Analyze a dataset to identify the nature and possible sources of variability in the data.
+csta2026,DI,MS-DAT-DI-25,Use computational tools to identify relationships among variables in a dataset and make classifications or predictions.
+csta2026,DI,MS-DAT-DI-26,Create data visualizations to show how different design choices can impact the interpretation of the same data.
+csta2026,DI,MS-DAT-DI-27,"Summarize a data investigation process, including potential biases, limitations, and supporting evidence."
+csta2026,DI,HS-DAT-DI-25,"Use computational tools to create data visualizations of multivariate data sets to answer a question, classify, or make predictions."
+csta2026,DI,HS-DAT-DI-26,"Evaluate data simulations and data visualizations to answer data questions, inform decision-making, and identify potential limitations."
+csta2026,IM,EK-DAT-IM-10,Investigate how data can help a person make informed decisions in everyday life.
+csta2026,IM,E1-DAT-IM-10,Examine a variety of data questions that address the needs of a person or community.
+csta2026,IM,E2-DAT-IM-10,"Distinguish between data collection approaches, including those that may lead to inaccurate or biased data."
+csta2026,IM,E3-DAT-IM-11,Design a data collection process that addresses the needs of people from different backgrounds or groups.
+csta2026,IM,E4-DAT-IM-11,Investigate how data collected about people may affect individuals and groups.
+csta2026,IM,E5-DAT-IM-11,Analyze the benefits and risks of computing technology that uses collected data.
+csta2026,IM,MS-DAT-IM-28,"Explain the benefits and risks of allowing personal data and metadata to be collected and used in datasets, including issues of data ownership, privacy, and sovereignty."
+csta2026,IM,MS-DAT-IM-29,"Analyze how decisions made at different stages of working with data can lead to biased data, misleading conclusions, and compromised AI models."
+csta2026,IM,HS-DAT-IM-27,"Evaluate the societal, environmental, and ethical implications of large-scale data collection and processing, including AI applications."
+csta2026,IM,HS-DAT-IM-28,Debate the efficacy of policies and regulations to ensure responsible data use.
+csta2026,HW,EK-SYS-HW-11,Examine the use of tools to accomplish tasks or solve problems for different users.
+csta2026,HW,E1-SYS-HW-11,"Describe the purpose of basic hardware components of a computing system, using accurate terminology."
+csta2026,HW,E2-SYS-HW-11,Explain how the basic hardware components of a computing system work together to perform input and output (I/O) operations.
+csta2026,HW,E3-SYS-HW-12,Describe the role of software in a computing system to accomplish tasks or solve problems.
+csta2026,HW,E4-SYS-HW-12,Apply basic troubleshooting processes to identify and fix common hardware and software issues.
+csta2026,HW,E5-SYS-HW-12,"Explain how hardware and software components of a computing system work together to perform input and output (I/O), processing, and storage."
+csta2026,HW,MS-SYS-HW-30,"Examine differences between computing systems based on user needs, system requirements, and potential societal, environmental, and ethical impacts."
+csta2026,HW,MS-SYS-HW-31,"Describe computing devices used in various industries, their basic functions, and how they are used to accomplish tasks or solve problems."
+csta2026,HW,HS-SYS-HW-29,"Differentiate operating systems (OS) as a special type of software that manages both the hardware and other software components of a computing system, including handling memory and peripherals."
+csta2026,HW,HS-SYS-HW-30,Demonstrate the capabilities and limitations of a physical or simulated computing device to address a task or problem.
+csta2026,SE,EK-SYS-SE-12,Differentiate between public and private information.
+csta2026,SE,E1-SYS-SE-12,Describe how to keep devices and online accounts safe from unauthorized access.
+csta2026,SE,E2-SYS-SE-12,Explain how online actions have real-world consequences.
+csta2026,SE,E3-SYS-SE-13,Evaluate how sharing information online might reveal personally identifiable information (PII) and other details.
+csta2026,SE,E4-SYS-SE-13,Distinguish between authentication and authorization in protecting devices and private information.
+csta2026,SE,E5-SYS-SE-13,"Describe the concepts of the CIA (Confidentiality, Integrity, Availability) Triad and how each part is important in protecting information."
+csta2026,SE,MS-SYS-SE-32,Explain the effects of not using the CIA Triad when working with data.
+csta2026,SE,MS-SYS-SE-33,Evaluate common types of cyber attacks and preventions.
+csta2026,SE,HS-SYS-SE-31,"Identify different types of cybersecurity and physical security measures and the trade-offs for users, data, and devices."
+csta2026,SE,HS-SYS-SE-32,"Classify the causes and impacts of security breaches and social engineering attacks for individuals, industries, communities, and governments."
+csta2026,SE,HS-SYS-SE-33,Formulate a solution to a security flaw in a given system.
+csta2026,NT,E3-SYS-NT-14,Explain how people access the internet to gain information and communicate with each other.
+csta2026,NT,E4-SYS-NT-14,Compare wired and wireless methods that computing devices use to connect to the internet.
+csta2026,NT,E5-SYS-NT-14,Distinguish between the components of wired and wireless networks.
+csta2026,NT,MS-SYS-NT-34,"Model how information in a network is broken down into packets, transmitted between devices, and reassembled."
+csta2026,NT,MS-SYS-NT-35,Explain how the resilience of the internet depends on interconnected devices and their roles and functions within the network.
+csta2026,NT,HS-SYS-NT-34,"Diagram a network of computing systems, including hardware and software."
+csta2026,NT,HS-SYS-NT-35,Analyze how the internet functions as a network of networks and how it differs from other types of networks.
+csta2026,IM,EK-SYS-IM-13,Identify responsible behavior when using computing systems and tools.
+csta2026,IM,E1-SYS-IM-13,Describe an individual's role in responsibly using computing systems and tools.
+csta2026,IM,E2-SYS-IM-13,Describe the benefits and harms that arise from an individual's use of computing systems.
+csta2026,IM,E3-SYS-IM-15,Describe how widely used computing systems may impact an individual's life and community.
+csta2026,IM,E4-SYS-IM-15,Investigate the impacts of widely used computing systems on natural resources and the environment.
+csta2026,IM,E5-SYS-IM-15,Examine how computing systems impact culture and the ways people live and work.
+csta2026,IM,MS-SYS-IM-36,Collaborate to improve the design of a computing system to meet the needs of diverse users.
+csta2026,IM,MS-SYS-IM-37,"Examine how access to computing systems can vary based on personal and social factors, such as physical ability, geographic location, socioeconomic status, and age."
+csta2026,IM,HS-SYS-IM-36,Evaluate the rationales behind laws and policies governing the design and use of computing systems.
+csta2026,IM,HS-SYS-IM-37,"Investigate how computing systems and infrastructure impact society and the environment, identifying who is affected and why."
+csta2026,HI,EK-SOC-HI-14,Identify computing technologies used in daily life that have changed over time.
+csta2026,HI,E1-SOC-HI-14,Compare how an everyday activity changed after a specific computing technology was introduced.
+csta2026,HI,E2-SOC-HI-14,"Analyze the ways that people from different cultures, backgrounds, and time periods have designed computing technologies to help them solve problems and express themselves."
+csta2026,HI,E3-SOC-HI-16,"Examine how computing innovations have changed the ways people live, work, or communicate over time."
+csta2026,HI,E4-SOC-HI-16,Investigate the contributions of diverse individuals and communities in the history of computing.
+csta2026,HI,E5-SOC-HI-16,"Analyze how the inclusion or exclusion of diverse individuals and communities has shaped the design, development, and societal impact of computing technologies."
+csta2026,HI,MS-SOC-HI-38,"Compare the roles of individuals, communities, organizations, and governments in shaping computing technologies across major eras in computing history."
+csta2026,HI,MS-SOC-HI-39,Analyze intended and unintended impacts of historical computing technologies on society and the environment.
+csta2026,HI,HS-SOC-HI-38,Analyze the historical trajectory of specific computing technologies and how their development is linked to societal and environmental factors.
+csta2026,HI,HS-SOC-HI-39,Propose modifications to existing policies and legislation that encourage ethical innovation and minimize societal risks associated with technology.
+csta2026,ET,E3-SOC-ET-17,Describe how new technologies create both benefits and risks in personal and family life.
+csta2026,ET,E4-SOC-ET-17,Analyze how the limitations of existing technologies can lead to emerging technologies.
+csta2026,ET,E5-SOC-ET-17,Examine how people decide whether or not to use emerging technologies.
+csta2026,ET,MS-SOC-ET-40,"Evaluate when it is appropriate to use AI and other emerging technologies to solve a problem based on their capabilities, limitations, and environmental impacts."
+csta2026,ET,MS-SOC-ET-41,Evaluate how design decisions in emerging technologies influence user experiences differently across different communities.
+csta2026,ET,MS-SOC-ET-42,"Debate ways an emerging technology impacts the social, cultural, and environmental issues in local communities."
+csta2026,ET,HS-SOC-ET-40,Evaluate the fundamental technological differences between an emerging technology and established technologies and how those differences influence computing.
+csta2026,ET,HS-SOC-ET-41,"Evaluate the societal and environmental impacts of emerging technologies, including those that lead to inequities in access and outcomes."
+csta2026,ET,HS-SOC-ET-42,"Design a conceptual solution to a real-world problem using an emerging technology, analyzing its potential benefits and harms."
+csta2026,HU,EK-SOC-HU-15,Explain that people design and develop computing technologies.
+csta2026,HU,E1-SOC-HU-15,Differentiate between activities that humans do well and activities that computing technologies do well.
+csta2026,HU,E2-SOC-HU-15,Investigate situations where humans have created computing technologies to solve problems.
+csta2026,HU,E3-SOC-HU-18,Examine why people design and build computing technologies.
+csta2026,HU,E4-SOC-HU-18,Distinguish between human learning and machine learning processes.
+csta2026,HU,E5-SOC-HU-18,Evaluate when it is appropriate to use or not use computing technologies to solve a problem.
+csta2026,HU,MS-SOC-HU-43,Analyze how the decisions humans make when using computing technologies have ethical and social consequences.
+csta2026,HU,HS-SOC-HU-43,"Evaluate how human choices in using, designing, deploying, and regulating computing technologies have risks, benefits, and long-term impacts."
+csta2026,HU,HS-SOC-HU-44,"Debate perspectives on differences between human and artificial intelligence and their implications for consciousness, ethics, and human responsibility."
+csta2026,CE,EK-SOC-CE-16,"Identify how people use digital devices in their homes, schools, and work."
+csta2026,CE,E1-SOC-CE-16,"Describe how computing is used by people in their life at home, school, and community."
+csta2026,CE,E2-SOC-CE-16,Investigate how personal interests connect to computing in different industries and careers.
+csta2026,CE,E3-SOC-CE-19,Explain how people in different industries use computing technologies and skills to accomplish their work.
+csta2026,CE,E4-SOC-CE-19,Investigate how the workforce adopts new computing technologies and continues to update their computing skills.
+csta2026,CE,E5-SOC-CE-19,Examine how professionals collaborate while using computing technologies to solve problems.
+csta2026,CE,MS-SOC-CE-44,Analyze how workers in different careers use computational thinking to solve real-world problems.
+csta2026,CE,MS-SOC-CE-45,Evaluate how automation in technology can create or replace jobs and change how people work.
+csta2026,CE,HS-SOC-CE-45,Analyze how diverse teams of people use computational thinking and technologies to solve problems.
+csta2026,CE,HS-SOC-CE-46,Connect computing knowledge and skills acquired to students' personal goals and career aspirations.

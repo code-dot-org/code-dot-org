@@ -52,12 +52,12 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
         </div>
       }
       primaryButtonProps={{
-        text: i18n.accept(),
+        children: i18n.accept(),
         onClick: () => onAccept(appName),
         disabled: !!errorMessage, // Disable if there's an error message.
       }}
       secondaryButtonProps={{
-        text: i18n.cancel(),
+        children: i18n.cancel(),
         onClick: () => onCancel(appName),
       }}
     />

@@ -1991,7 +1991,7 @@ function fetchAbuseScore(resolve) {
     currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     resolve();
     if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
+      // Throw an error so that browser observability sees this. This shouldn't
       // affect anything else
       throw err;
     }
@@ -2003,7 +2003,7 @@ function fetchSharingDisabled(resolve) {
     sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
     resolve();
     if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
+      // Throw an error so that browser observability sees this. This shouldn't
       // affect anything else
       throw err;
     }
@@ -2023,7 +2023,7 @@ function fetchShareFailure(resolve) {
     intlLanguage = data && data.language ? data.language : intlLanguage;
     resolve();
     if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
+      // Throw an error so that browser observability sees this. This shouldn't
       // affect anything else
       throw err;
     }
@@ -2036,7 +2036,7 @@ function fetchIsTeacherOfProjectOwner(resolve) {
       (data && !!data.is_teacher_of_project_owner) || isTeacherOfProjectOwner;
     resolve();
     if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
+      // Throw an error so that browser observability sees this. This shouldn't
       // affect anything else.
       throw err;
     }
@@ -2053,7 +2053,7 @@ function fetchPrivacyProfanityViolations(resolve) {
     }
     resolve();
     if (err) {
-      // Throw an error so that things like New Relic see this. This shouldn't
+      // Throw an error so that browser observability sees this. This shouldn't
       // affect anything else.
       throw err;
     }
@@ -2195,7 +2195,9 @@ function parsePath() {
 
   const geRegion = getGlobalEditionRegion();
   if (geRegion) {
-    pathname = pathname.replace(`/${geRegion}/`, '/');
+    pathname =
+      pathname.replace(new RegExp(`^/${geRegion}(?:/[a-z]{2})?(?=/|$)`), '') ||
+      '/';
   }
 
   // We have a hash based route. Replace the hash with a slash, and append to

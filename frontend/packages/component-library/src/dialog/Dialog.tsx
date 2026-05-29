@@ -1,9 +1,12 @@
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {Button, ButtonProps} from '@/button';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {BodyTwoText, Heading2} from '@/typography';
 
 import CustomDialog from './CustomDialog';
 
@@ -23,9 +26,9 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Custom bottom content (rendered right after Dialog actions section). */
   customBottomContent?: ReactNode;
   /** Dialog primary button props */
-  primaryButtonProps: ButtonProps;
+  primaryButtonProps: MuiButtonProps;
   /** Dialog secondary button props */
-  secondaryButtonProps?: ButtonProps;
+  secondaryButtonProps?: MuiButtonProps;
   /** Dialog color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -86,28 +89,32 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
   >
     <div className={moduleStyles.dialogTextSection}>
       {imageUrl && <img src={imageUrl} alt="Dialog" />}
-      <Heading2>{title}</Heading2>
+      <MuiTypography variant="h2" gutterBottom>
+        {title}
+      </MuiTypography>
       {description && (
-        <BodyTwoText
+        <MuiTypography
           id="dsco-dialog-description"
           className={moduleStyles.dialogContent}
+          variant="body2"
+          gutterBottom
         >
           {description}
-        </BodyTwoText>
+        </MuiTypography>
       )}
       {customContent}
     </div>
     <div className={moduleStyles.dialogActionsSection}>
       {secondaryButtonProps && (
-        <Button
-          type="secondary"
-          color={mode === 'light' ? 'black' : 'white'}
+        <MuiButton
+          variant="outlined"
+          color={mode === 'light' ? 'secondary' : 'white'}
           {...secondaryButtonProps}
         />
       )}
-      <Button
-        type="primary"
-        color={mode === 'light' ? 'purple' : 'white'}
+      <MuiButton
+        variant="contained"
+        color={mode === 'light' ? 'primary' : 'white'}
         {...primaryButtonProps}
       />
     </div>

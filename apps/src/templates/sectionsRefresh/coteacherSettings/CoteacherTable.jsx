@@ -1,10 +1,10 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
@@ -20,7 +20,10 @@ const getPendingPill = () => {
         data-for={'pending-tooltip'}
       >
         <Typography variant="strong">
-          <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
+          <FontAwesomeV6Icon
+            iconName={'ellipsis'}
+            className={styles.tablePillIcon}
+          />
           {i18n.coteacherPending()}
         </Typography>
       </div>
@@ -29,12 +32,9 @@ const getPendingPill = () => {
         role="tooltip"
         effect="solid"
         place="top"
+        className={styles.tableToolTipText}
       >
-        <Typography
-          className={styles.tableToolTipText}
-          variant="body2"
-          gutterBottom
-        >
+        <Typography variant="body3" component="span">
           {i18n.coteacherPendingTooltip()}
         </Typography>
       </ReactTooltip>
@@ -53,7 +53,10 @@ const getStatusPill = status => {
       return (
         <div className={classNames(styles.tableActive, styles.tablePill)}>
           <Typography variant="strong">
-            <FontAwesome icon={'check'} className={styles.tablePillIcon} />
+            <FontAwesomeV6Icon
+              iconName={'check'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherAccepted()}
           </Typography>
         </div>
@@ -62,7 +65,10 @@ const getStatusPill = status => {
       return (
         <div className={classNames(styles.tableDeclined, styles.tablePill)}>
           <Typography variant="strong">
-            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            <FontAwesomeV6Icon
+              iconName={'xmark'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherDeclined()}
           </Typography>
         </div>
@@ -71,7 +77,10 @@ const getStatusPill = status => {
       return (
         <div className={classNames(styles.tableError, styles.tablePill)}>
           <Typography variant="strong">
-            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            <FontAwesomeV6Icon
+              iconName={'xmark'}
+              className={styles.tablePillIcon}
+            />
             {i18n.coteacherError()}
           </Typography>
         </div>
@@ -99,7 +108,7 @@ export default function CoteacherTable({
               </>
             )}
 
-            {coteacher.instructorEmail}
+            <Typography variant="body2">{coteacher.instructorEmail}</Typography>
           </div>
         </td>
         <td className={styles.tableStatusCell}>
@@ -107,15 +116,18 @@ export default function CoteacherTable({
         </td>
         {!disabled && (
           <td>
-            <button
+            <MuiIconButton
               type="button"
+              variant="text"
+              color="error"
               onClick={() => setCoteacherToRemove(coteacher)}
               className={styles.tableRemoveButton}
+              aria-label={i18n.coteacherRemoveDialogHeader({
+                email: coteacher.instructorEmail,
+              })}
             >
-              <i
-                className={classNames('fa-solid fa-trash', styles.trashIcon)}
-              />
-            </button>
+              <FontAwesomeV6Icon iconName="trash" />
+            </MuiIconButton>
           </td>
         )}
       </tr>
@@ -124,7 +136,9 @@ export default function CoteacherTable({
 
   return coteachers.length === 0 ? (
     <div className={styles.table}>
-      <div className={styles.tableRow}>{i18n.coteacherNoCoteachers()}</div>
+      <div className={styles.tableRow}>
+        <Typography variant="body2">{i18n.coteacherNoCoteachers()}</Typography>
+      </div>
     </div>
   ) : (
     <table className={styles.table}>

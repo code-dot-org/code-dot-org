@@ -17,10 +17,16 @@ import {
   usePrompts,
 } from './hooks';
 
-export const FileBrowserHeaderPopUpButton = () => {
+interface FileBrowserHeaderPopUpButtonProps {
+  disabled?: boolean;
+}
+
+export const FileBrowserHeaderPopUpButton = ({
+  disabled,
+}: FileBrowserHeaderPopUpButtonProps) => {
   const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
-    config: {validMimeTypes, supportedFileTypes},
+    config: {validMimeTypes, supportedFileTypes, hideNewFolderButton},
     levelProperties,
   } = useCodebridgeContext();
   const {appName} = levelProperties;
@@ -52,9 +58,10 @@ export const FileBrowserHeaderPopUpButton = () => {
         iconName="plus"
         alignment="left"
         id="uitest-files-plus"
+        disabled={disabled}
         ariaLabel={codebridgeI18n.manageFiles()}
       >
-        {!isWidget2SourcesMode && (
+        {!isWidget2SourcesMode && !hideNewFolderButton && (
           <PopUpButtonOption
             iconName="plus"
             labelText={codebridgeI18n.newFolder()}

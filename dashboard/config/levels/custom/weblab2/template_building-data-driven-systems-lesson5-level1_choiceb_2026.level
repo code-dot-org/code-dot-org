@@ -1,0 +1,186 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-04T14:40:18.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>City Event Hub</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>City Event Hub</h1>\n    <p>Discover what's happening in your neighborhood.</p>\n  </header>\n\n  <div class=\"container\">\n    <div id=\"event-grid\">\n      </div>\n  </div>\n\n  <script src=\"data.js\"></script>\n  \n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0",
+          "type": "support"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');\n\n:root {\n  --primary: #f97316; /* Orange */\n  --primary-gradient: linear-gradient(135deg, #f97316 0%, #db2777 100%); /* Orange to Pink */\n  --bg: #f1f5f9;\n  --card-bg: #ffffff;\n  --text-main: #0f172a;\n  --text-light: #64748b;\n  --radius-lg: 20px;\n  --radius-md: 12px;\n  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n}\n\nbody {\n  font-family: 'Outfit', sans-serif;\n  background-color: var(--bg);\n  color: var(--text-main);\n  margin: 0;\n  padding: 0;\n  line-height: 1.5;\n}\n\nheader {\n  background: var(--primary-gradient);\n  color: white;\n  padding: 2rem 1rem 5rem; \n  text-align: center;\n}\n\nheader h1 {\n  margin: 0;\n  font-size: 3.5rem;\n  font-weight: 700;\n  letter-spacing: -0.05em;\n}\n\nheader p {\n  font-size: 1.25rem;\n  opacity: 0.9;\n  font-weight: 300;\n  margin-top: 0.5rem;\n}\n\n.container {\n  max-width: 1200px;\n  margin: -4rem auto 3rem; \n  padding: 0 1.5rem;\n  position: relative;\n  z-index: 10;\n}\n\n#event-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 2.5rem;\n}\n\n.event-card {\n  background-color: var(--card-bg);\n  border-radius: var(--radius-lg);\n  overflow: hidden;\n  box-shadow: var(--shadow-md);\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  display: flex;\n  flex-direction: column;\n}\n\n.event-card:hover {\n  transform: translateY(-8px);\n  box-shadow: var(--shadow-hover);\n}\n\n.image-container {\n  position: relative;\n  width: 100%;\n  height: 200px; /* Slightly shorter image for events */\n}\n\n.event-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  background-color: #e2e8f0;\n}\n\n.event-status {\n  position: absolute;\n  top: 1.25rem;\n  right: 1.25rem;\n  font-size: 0.75rem;\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  box-shadow: var(--shadow-sm);\n  backdrop-filter: blur(8px); \n}\n\n/* Event Status Badges */\n.status-open { background-color: rgba(220, 252, 231, 0.9); color: #166534; } /* Green */\n.status-soldout { background-color: rgba(254, 240, 138, 0.9); color: #854d0e; } /* Yellow */\n.status-cancelled { background-color: rgba(254, 226, 226, 0.9); color: #991b1b; } /* Red */\n.status-default { background-color: rgba(241, 245, 249, 0.9); color: #475569; } /* Gray */\n\n.event-content {\n  padding: 2rem;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.event-title {\n  margin: 0 0 1.5rem 0;\n  font-size: 1.75rem;\n  font-weight: 700;\n  color: var(--text-main);\n  letter-spacing: -0.02em;\n  line-height: 1.2;\n}\n\n.event-stats {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.stat-item {\n  background-color: var(--bg);\n  padding: 0.75rem;\n  border-radius: var(--radius-md);\n  font-size: 0.9rem;\n  color: var(--text-light);\n  display: flex;\n  flex-direction: column;\n}\n\n.stat-item strong {\n  color: var(--text-main);\n  font-size: 0.7rem;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  margin-bottom: 0.25rem;\n}\n\n.event-description {\n  font-size: 1rem;\n  color: var(--text-light);\n  line-height: 1.6;\n  margin-top: auto;\n  padding-top: 1.5rem;\n  border-top: 1px solid #e2e8f0;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const grid = document.getElementById(\"event-grid\");\n\n  // Fallback placeholder image URL (Event themed)\n  const placeholderImg = \"https://placehold.co/600x400/e2e8f0/475569?text=Event+Details+Pending\";\n\n  // Check if 'events' array exists (in case they broke data.js)\n  if (typeof events === 'undefined' || !Array.isArray(events)) {\n    grid.innerHTML = `\n      <div style=\"grid-column: 1/-1; margin-top: 6rem; background-color: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: var(--shadow-sm);\">\n        <h3 style=\"margin: 0 0 0.5rem 0; font-size: 1.5rem;\">⚠️ Data Error</h3>\n        <p style=\"margin: 0; font-size: 1.1rem;\">Could not find the <strong>'events'</strong> array. Please check your <em>data.js</em> file!</p>\n      </div>\n    `;\n    return;\n  }\n\n  // Map over the array to create an array of HTML strings\n  const cardsHTML = events.map(event => {\n    // Handle Fallbacks for missing data\n    const img = event.image || placeholderImg;\n    const title = event.title || \"Untitled Event\";\n    const type = event.type || \"TBD\";\n    const location = event.location || \"Location TBD\";\n    const date = event.date || \"Date TBD\";\n    const audience = event.audience || \"All Welcome\";\n    const status = event.status || \"Status Unknown\";\n    const description = event.description || \"More details coming soon.\";\n\n    // Determine the badge color class based on the event status\n    let badgeClass = \"status-default\";\n    const statusLower = status.toLowerCase();\n    \n    if (statusLower.includes(\"open\") || statusLower.includes(\"active\")) {\n      badgeClass = \"status-open\";\n    } else if (statusLower.includes(\"sold\") || statusLower.includes(\"full\")) {\n      badgeClass = \"status-soldout\";\n    } else if (statusLower.includes(\"cancel\")) {\n      badgeClass = \"status-cancelled\";\n    }\n\n    // Return the HTML string for this specific card\n    return `\n      <div class=\"event-card\">\n        <div class=\"image-container\">\n          <img src=\"${img}\" alt=\"${title}\" class=\"event-image\">\n          <span class=\"event-status ${badgeClass}\">${status}</span>\n        </div>\n        <div class=\"event-content\">\n          <h2 class=\"event-title\">${title}</h2>\n          \n          <div class=\"event-stats\">\n            <div class=\"stat-item\">\n              <strong>Date</strong>\n              <span>${date}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Location</strong>\n              <span>${location}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Type</strong>\n              <span>${type}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Audience</strong>\n              <span>${audience}</span>\n            </div>\n          </div>\n          \n          <div class=\"event-description\">\n            ${description}\n          </div>\n        </div>\n      </div>\n    `;\n  }).join('');\n\n  // Inject the final string into the grid all at once\n  grid.innerHTML = cardsHTML;\n});",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "data.js",
+          "contents": "// Students will edit this array!\nconst event =  {\n    title: \"Neighborhood Festival\",\n    type: \"Festival\",\n    location: \"Central Park\",\n    date: \"2026-06-12\",\n    status: \"Open\",\n    audience: \"All Ages\",\n    image: \"https://images.unsplash.com/photo-1533174000275-231cb2e89642?auto=format&fit=crop&q=80&w=400\",\n    description: \"A fun outdoor event with food, music, and games for the whole family.\"\n  }",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "book_club_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/725c6622-b742-41a0-8502-1e486b774f9d.png",
+          "type": "support",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "festival_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/57e5b263-11a4-4028-84b1-0de12212717f.png",
+          "type": "support",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "concert_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/f29faabe-cdbe-4bca-8f54-5c67092ad6a1.png",
+          "type": "support",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "fitness_class_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/f8219f7b-e2dc-42a3-8915-449c3ed72ba9.png",
+          "type": "support",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "art_show_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/9a99a5ff-12ba-4b73-b99b-7585f1964157.png",
+          "type": "support",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "kids_activity_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/7cc17a50-7980-46a3-88bb-454aa5f6b451.png",
+          "type": "support",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "workshop_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/17ac17f1-b048-4570-91ba-eac88eb6df3b.png",
+          "type": "support",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "food_truck_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/8fd6626a-1682-4211-9bbb-044ef6675ceb.png",
+          "type": "support",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "farmers_market_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/b18c5b63-b1c8-41a8-850f-d82a187efd7b.png",
+          "type": "support",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "community_cleanup_event.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/template_building-data-driven-systems-lesson5-level1_choiceb_2026/uuid/0b4de80a-fdea-48a1-b441-e4fe4535bc45.png",
+          "type": "support",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-04 14:40:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:51:37 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 15:51:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:25:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-04 23:25:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

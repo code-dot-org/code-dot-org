@@ -37,6 +37,7 @@ const InnerHTMLPreview = () => {
   // when toggling script permissions or when the source document (or a dependent file) is updated.
   const [renderKey, setRenderKey] = useState(0);
   const [allowScripts, setAllowScripts] = useState(false);
+  const [blockNetwork, setBlockNetwork] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
   const parentOrigin = useMemo(() => {
@@ -50,7 +51,13 @@ const InnerHTMLPreview = () => {
   }, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
-    useProjectServiceWorker(source, parentOrigin, allowScripts, parameters);
+    useProjectServiceWorker(
+      source,
+      parentOrigin,
+      allowScripts,
+      blockNetwork,
+      parameters
+    );
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -67,6 +74,8 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
         setPreviewKey(prevKey => prevKey + 1);
+      } else if (data.type === IframeMessageType.SET_BLOCK_NETWORK) {
+        setBlockNetwork(!!data.block);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {

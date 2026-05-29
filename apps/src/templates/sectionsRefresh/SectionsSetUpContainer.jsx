@@ -1,12 +1,13 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -23,6 +24,11 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {
+  COLORS,
+  EMOJIS,
+} from '../studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
@@ -51,8 +57,9 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
-            aiTutorEnabled: false,
             course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+            avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
+            avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
           },
         ]
   );
@@ -116,20 +123,12 @@ export default function SectionsSetUpContainer({
   const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
 
   const toggleIsCoteacherOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setIsCoteacherOpen(!isCoteacherOpen);
-    },
+    () => setIsCoteacherOpen(!isCoteacherOpen),
     [isCoteacherOpen]
   );
 
   const toggleAdvancedSettingsOpen = useCallback(
-    e => {
-      e.preventDefault();
-
-      setAdvancedSettingsOpen(!advancedSettingsOpen);
-    },
+    () => setAdvancedSettingsOpen(!advancedSettingsOpen),
     [advancedSettingsOpen]
   );
 
@@ -231,7 +230,6 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
@@ -341,17 +339,19 @@ export default function SectionsSetUpContainer({
   ) => {
     return (
       <div className={moduleStyles.withBorderBottom}>
-        <Button
+        <MuiButton
           id={sectionId}
           className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret(isOpen)}
+          variant="text"
+          color="tertiary"
+          startIcon={<FontAwesomeV6Icon iconName={caret(isOpen)} />}
           onClick={toggleIsOpen}
+          type="button"
         >
           <Typography variant="h3" gutterBottom>
             {sectionTitle()}
           </Typography>
-        </Button>
+        </MuiButton>
         <div>{isOpen && sectionContent()}</div>
       </div>
     );
@@ -484,35 +484,35 @@ export default function SectionsSetUpContainer({
             )}
           >
             {isNewSection && ( // Only show 'save and add another' button when creating a new section
-              <Button
+              <MuiButton
                 className={moduleStyles.buttonLeft}
-                icon="plus"
-                text={i18n.addAnotherClassSection()}
-                color={Button.ButtonColor.neutralDark}
-                onClick={e => {
-                  e.preventDefault();
-                  saveSection(sections[0], true, coteachersToAdd);
-                }}
-              />
+                variant="outlined"
+                color="tertiary"
+                startIcon={<FontAwesomeV6Icon iconName="plus" />}
+                onClick={() => saveSection(sections[0], true, coteachersToAdd)}
+                type="button"
+              >
+                {i18n.addAnotherClassSection()}
+              </MuiButton>
             )}
-            <Button
+            <MuiButton
               className={moduleStyles.buttonRight}
               id="uitest-save-section-changes"
-              text={
-                isSaveInProgress
-                  ? i18n.saving()
-                  : isNewSection
-                  ? i18n.finishCreatingSections()
-                  : i18n.save()
-              }
-              color={Button.ButtonColor.brandSecondaryDefault}
+              variant="contained"
+              color="primary"
               disabled={isSaveInProgress}
-              onClick={e => {
-                e.preventDefault();
+              onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
-            />
+              type="button"
+            >
+              {isSaveInProgress
+                ? i18n.saving()
+                : isNewSection
+                ? i18n.finishCreatingSections()
+                : i18n.save()}
+            </MuiButton>
           </div>
         </>
       )}

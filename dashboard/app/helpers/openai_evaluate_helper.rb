@@ -63,8 +63,8 @@ module OpenaiEvaluateHelper
     levels = unit.levels
 
     user_levels = UserLevel.joins(:user, :level).
-                          where(user: students, level: levels, script: unit).
-                          includes(:user, :level, :level_source)
+      where(user: students, level: levels, script: unit).
+      includes(:user, :level, :level_source)
 
     user_levels.each do |user_level|
       if user_level.level_source && user_level.level_source.data.present?

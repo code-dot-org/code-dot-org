@@ -38,7 +38,8 @@ const observabilityLoggerByLevel: Record<
  * see {@link AnalyticsReporter} which reports to Amplitude.
  *
  * For legacy client-side reporting see {@link firehose} for AWS
- * Firehose reporting and {@link logToCloud} for New Relic reporting.
+ * Firehose reporting and {@link logToCloud} as a backwards-compatible
+ * facade for browser observability.
  */
 class MetricsReporter {
   private lastCheckCanReportTime: number;
@@ -148,6 +149,10 @@ class MetricsReporter {
       return;
     }
 
+    if (!DCDO.get('browser-events-enabled', true)) {
+      return;
+    }
+
     try {
       await this.metricsApi.sendLogs([payload]);
     } catch (error) {
@@ -187,6 +192,10 @@ class MetricsReporter {
   private async sendMetrics(metrics: MetricDatum[]) {
     if (!this.isReportingEnabled()) {
       this.fallbackLog(metrics);
+      return;
+    }
+
+    if (!DCDO.get('browser-events-enabled', true)) {
       return;
     }
 

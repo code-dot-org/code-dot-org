@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T20:53:50.000Z",
   "level_num": "custom",
@@ -46,10 +47,9 @@
     },
     "display_name": "AI in Creative Writing",
     "bubble_choice_description": "**Inquiry Question**: How can I use AI to expand my own imagination?",
-    "thumbnail_url": "https://images.code.org/f0b9fb06e5424cabe27c987f7b4b72ec-L3_exploration_2.png",
+    "thumbnail_url": "https://images.code.org/50c79be18279978dc91432a6e5988a89-ai_writer_titlecard.jpg",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:50.143+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:53:50.143+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2b_2026-test_2026-pilot\"},{\"changed_at\":\"2026-04-20 14:36:05 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -20,7 +20,7 @@ end
 
 When /^I view the next authored hint$/ do
   steps <<-STEPS
-    When I press "lightbulb"
+    When I click selector "#lightbulb"
     And I wait until element ".csf-top-instructions button:contains(Yes)" is visible
     And I click selector ".csf-top-instructions button:contains(Yes)"
   STEPS

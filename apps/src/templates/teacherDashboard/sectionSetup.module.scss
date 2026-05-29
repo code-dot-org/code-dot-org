@@ -1,0 +1,150 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: min(1010px, calc(100vw - 40px));
+  max-width: 1010px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px 20px;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+
+  > div:nth-child(3) {
+    // Override the default max-height for the content section of the modal to allow for more content in the modal.
+    max-height: unset;
+  }
+
+  > div:last-child {
+    // Override the default Modal actions styles to align the buttons to the left.
+    justify-content: flex-start;
+  }
+
+}
+
+.loadingState {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 50px 0;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 970px;
+}
+
+.bodyText {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  margin-bottom: 0;
+}
+
+.warningAlert {
+  margin-bottom: 0;
+}
+
+.learnMoreButton {
+  min-width: auto;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  appearance: none;
+  display: flex;
+  width: 100%;
+  min-height: 150px;
+  padding: 16px;
+  margin: 0;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    background: var(--background-neutral-secondary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTitle {
+  margin-bottom: 0;
+}
+
+.cardSubtitle {
+  margin-bottom: 0;
+}
+
+.cardDescription {
+  margin-bottom: 0;
+}
+
+.lmsCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 16px;
+  column-gap: 16px;
+  padding-bottom: 16px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.note {
+  margin-bottom: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: calc(100vw - 24px);
+    padding: 24px 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

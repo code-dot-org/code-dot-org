@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {useRef} from 'react';
-import '@testing-library/jest-dom';
 
 import {WithTooltip, TooltipProps, WithTooltipHandle} from './../index';
 

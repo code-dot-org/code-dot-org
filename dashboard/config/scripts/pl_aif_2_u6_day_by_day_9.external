@@ -1,0 +1,51 @@
+name 'pl-aif-2-U6-day-by-day-9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day-by-Day Plan (continued)
+
+<img src="https://images.code.org/d3be859adedefb0dc6c139ddf5cc8d3f-image-1776869698763.png" alt="construction zone with iteration ahead sign" width="350px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+
+This phase of the project shifts focus toward iteration, where testing and feedback guide each next step. 
+
+Students are encouraged to refine their ideas with a user-centered mindset, making purposeful changes based on what they learn.
+
+<div style="clear:both;"></div>
+
+## Days 5–7: Testing & Iterating
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- Day 5 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/46adfa77a94cb143a6d12a39e00f19b0-image-1776869461796.png" alt="Day 5" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Build, Test, and Benchmark B</b></h3>
+      <p style="font-size: 14pt;">Students continue building and testing their app. The class pauses for Benchmark B to reflect on progress, update the Kanban board, and rotate the Project Leader again.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔍 “What progress have we made, and what should we adjust next?”
+      </p>
+    </div>
+  </div>
+
+  <!-- Days 6 & 7 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/4d85779259f90d2c764ef16fbd9cac09-image-1776869533248.png" alt="Days 6 and 7" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Iterate and Revisit</b></h3>
+      <p style="font-size: 14pt;">Iterative work continues as students build, test, and revise. Testing should actively shape their next steps, and it is perfectly fine to rewrite task cards or revisit earlier milestones if their ideas change.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔄 “What did testing show us, and how should that change our plan?”
+      </p>
+    </div>
+  </div>
+
+</div>
+
+![]()
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

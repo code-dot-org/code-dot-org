@@ -160,34 +160,42 @@ export const SectionList: React.FC<SectionListProps> = ({
     ? hiddenSectionIds
     : sortableSectionIds;
 
+  const renderSectionList = (sectionIds: number[]) => (
+    <ol id="ui-test-section-list" className={styles.sectionList}>
+      {sectionIds.map(id =>
+        sections[id] ? (
+          <SectionCard
+            id={id}
+            key={id}
+            section={sections[id]}
+            onDeleteClickCallback={onDeleteClickCallback}
+            studioUrlPrefix={studioUrlPrefix}
+          />
+        ) : null
+      )}
+    </ol>
+  );
+
   return (
     <div>
       {sectionsAreLoaded ? (
-        <DndContext
-          sensors={sensors}
-          collisionDetection={closestCenter}
-          onDragEnd={handleDragEnd}
-          modifiers={[restrictToVerticalAxis, restrictToParentElement]}
-        >
-          <SortableContext
-            items={sortableSectionIds}
-            strategy={verticalListSortingStrategy}
+        showHiddenOnly ? (
+          renderSectionList(sectionIdsToShow)
+        ) : (
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToVerticalAxis, restrictToParentElement]}
           >
-            <ol id="ui-test-section-list" className={styles.sectionList}>
-              {sectionIdsToShow.map(id =>
-                sections[id] ? (
-                  <SectionCard
-                    id={id}
-                    key={id}
-                    section={sections[id]}
-                    onDeleteClickCallback={onDeleteClickCallback}
-                    studioUrlPrefix={studioUrlPrefix}
-                  />
-                ) : null
-              )}
-            </ol>
-          </SortableContext>
-        </DndContext>
+            <SortableContext
+              items={sortableSectionIds}
+              strategy={verticalListSortingStrategy}
+            >
+              {renderSectionList(sectionIdsToShow)}
+            </SortableContext>
+          </DndContext>
+        )
       ) : (
         <Spinner size="large" />
       )}

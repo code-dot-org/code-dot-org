@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####**What’s an example of a significant technological innovation from the last century?**\r\nFor example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.\r\n",
+    "long_instructions": "**What’s an example of a significant technological innovation from the last century?**\r\nFor example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.\r\n",
     "teacher_markdown": "This prompt is intentionally open-ended to invite all students into the conversation and offer some kind of technological innovation. Some potential answers might be the internet, social media, driverless cars, smartphones, and (of course) artificial intelligence.",
     "allow_user_uploads": "false",
     "submittable": "false",

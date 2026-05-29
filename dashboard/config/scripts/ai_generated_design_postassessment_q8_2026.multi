@@ -4,7 +4,7 @@ question 'A company is developing an app to help teenagers manage their time. Th
 
 wrong 'Add random productivity quotes to make the app more motivating.'
 wrong 'Start designing the app layout without considering user feedback.'
-right 'Write a clear problem that defines Avery\'s main challenge and goal.'
+right 'Write a clear problem statement that defines Avery\'s main challenge and goal.'
 wrong 'Choose bright colors and fonts before identifying key features.'
 
 allow_multiple_attempts true

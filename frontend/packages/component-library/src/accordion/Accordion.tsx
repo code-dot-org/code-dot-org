@@ -1,8 +1,8 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import {BodyTwoText, StrongText} from '@/typography';
 
 import moduleStyles from './accordion.module.scss';
 
@@ -45,16 +45,18 @@ const Accordion: React.FC<AccordionProps> = ({
       <details key={id}>
         <summary>
           {typeof label === 'string' ? (
-            <BodyTwoText>
-              <StrongText>{label}</StrongText>
-            </BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              <Typography variant="strong">{label}</Typography>
+            </Typography>
           ) : (
             label
           )}
           <FontAwesomeV6Icon iconName="chevron-down" />
         </summary>
         {typeof content === 'string' ? (
-          <BodyTwoText>{content}</BodyTwoText>
+          <Typography variant="body2" gutterBottom>
+            {content}
+          </Typography>
         ) : (
           content
         )}

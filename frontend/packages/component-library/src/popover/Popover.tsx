@@ -1,10 +1,10 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode, forwardRef} from 'react';
 
 import CloseButton from '@/closeButton';
 import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {BodyTwoText, Heading5} from '@/typography';
 
 import moduleStyles from './popover.module.scss';
 
@@ -89,7 +89,6 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
             <img src={image.src} alt={image.alt} />
           </div>
         )}
-
         <div className={moduleStyles.informationalSection}>
           {icon && (
             <div className={moduleStyles.iconSection}>
@@ -98,8 +97,12 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
           )}
           <div className={moduleStyles.contentSection}>
             <div className={moduleStyles.textSection}>
-              <Heading5>{title}</Heading5>
-              <BodyTwoText>{content}</BodyTwoText>
+              <Typography variant="h5" gutterBottom>
+                {title}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                {content}
+              </Typography>
               {children}
             </div>
             {buttons && (

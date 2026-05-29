@@ -66,7 +66,7 @@ $m-tail-length: 12px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: var(--neutral-base-white);
+  background: var(--background-neutral-primary);
   box-shadow: 0 0 16px 0 rgba(0 0 0 / 0.19);
 
   .informationalSection {
@@ -80,7 +80,7 @@ $m-tail-length: 12px;
     }
 
     .iconSection {
-      color: var(--brand-purple-50);
+      color: var(--text-brand-purple-primary);
       text-align: center;
       font-size: 2rem;
       line-height: 125%;
@@ -176,7 +176,8 @@ $m-tail-length: 12px;
     inset-block-start: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: var(--neutral-base-white) transparent transparent transparent;
+    border-color: var(--background-neutral-primary) transparent transparent
+      transparent;
   }
 }
 
@@ -186,11 +187,12 @@ $m-tail-length: 12px;
     position: absolute;
     inset-inline-end: 100%;
     border-style: solid;
-    border-color: transparent var(--neutral-base-white) transparent transparent;
+    border-color: transparent var(--background-neutral-primary) transparent
+      transparent;
 
     html[dir='rtl'] & {
       border-color: transparent transparent transparent
-        var(--neutral-base-white);
+        var(--background-neutral-primary);
     }
   }
 }
@@ -202,7 +204,8 @@ $m-tail-length: 12px;
     inset-block-end: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: transparent transparent var(--neutral-base-white) transparent;
+    border-color: transparent transparent var(--background-neutral-primary)
+      transparent;
   }
 }
 
@@ -212,10 +215,11 @@ $m-tail-length: 12px;
     position: absolute;
     inset-inline-start: 100%;
     border-style: solid;
-    border-color: transparent transparent transparent var(--neutral-base-white);
+    border-color: transparent transparent transparent
+      var(--background-neutral-primary);
 
     html[dir='rtl'] & {
-      border-color: transparent var(--neutral-base-white) transparent
+      border-color: transparent var(--background-neutral-primary) transparent
         transparent;
     }
   }

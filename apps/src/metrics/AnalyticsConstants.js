@@ -321,13 +321,21 @@ const EVENTS = {
     'AI Differentiation Notification AI Prompt Clicked',
 
   // AI Tutor
-  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
-  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
   AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
+
+  // AI Tutor: Lesson Deep Dive
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION:
+    'AI Tutor Lesson Deep Dive Modality Navigation',
+  AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED:
+    'AI Tutor Lesson Deep Dive Modality Clicked',
+
+  // Lesson Tutor
+  LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
+  LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
 
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
@@ -390,9 +398,6 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
   SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
     'Signed In User Clicks Help Menu Option',
-  HEADER_LESSON_NAME_CLICKED: 'Header Lesson Name Clicked',
-  HEADER_PROGRESS_BUBBLE_LINK_CLICKED: 'Header Progress Bubble Link Clicked',
-  HEADER_UNIT_DETAILS_TOGGLED: 'Header Unit Details Toggled',
 
   // Header Create menu - signed in
 
@@ -497,6 +502,7 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
   AICHAT_UNSUPPORTED_MODEL_SELECTED:
     'User had previously selected a model that is no longer supported',
+  AICHAT_DICTATION_COMPLETED: 'User completes dictation in aichat',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -575,16 +581,6 @@ const EVENTS = {
 
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
-
-  // Global Edition - Region Switch Confirm events
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
-    'Global Edition Region Switch Confirm Shown',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
-    'Global Edition Region Switch Confirm Closed',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
-    'Global Edition Region Switch Confirm Accepted',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
-    'Global Edition Region Switch Confirm Rejected',
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
@@ -680,6 +676,12 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
+
+  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
+  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
+
+  LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
+  LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
 };
 
 const EVENT_GROUP_NAMES = {
@@ -716,10 +718,4 @@ const EVENT_GROUPS = {
     EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-const EXPERIMENTS = {
-  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
-    'select_grades_taught_on_account_creation',
-  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
-};
-
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

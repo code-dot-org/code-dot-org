@@ -1,5 +1,3 @@
-require 'jwt'
-
 module PardotHelpers
   AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
   SUCCESS_HTTP_CODES = %w(200 201 204).freeze
@@ -38,40 +36,20 @@ module PardotHelpers
     CDO.log.info s
   end
 
-  PRIVATE_KEY = CDO.pardot_private_key
-  PARDOT_BUSINESS_ID = '0Uv5b0000004CHbCAM'
+  CLIENT_ID = CDO.pardot_client_id
+  CLIENT_SECRET = CDO.pardot_client_secret
+  PARDOT_BUSINESS_ID = '0UvVp00000000RRKAY'
 
-  OAUTH_ENDPOINT = 'https://login.salesforce.com/services/oauth2/token'
+  OAUTH_ENDPOINT = 'https://codeorg2.my.salesforce.com/services/oauth2/token'
 
   @@access_token = nil
 
-  # Authenticates and requests an access token
-  # https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm
-  # https://thespotforpardot.com/2021/02/02/pardot-api-and-getting-ready-with-salesforce-sso-users-part-3b-connecting-to-pardot-api-from-code/
+  # OAuth 2.0 client-credentials flow against codeorg2.my.salesforce.com.
   private def request_api_access_token
-    # build token payload
-    payload = {
-      # connected app client id
-      iss: "3MVG9fMtCkV6eLhej.9tKBIE6OLmMCsxJAqIfy_eeSC1UaUR4rL0jkzUQOSRAhzfpHmUxUcuBp2JabX1ZOl2p",
-      # always login.salesforce.com
-      aud: "https://login.salesforce.com",
-      # pardot account email
-      sub: "plc-emails@code.org",
-      # less than 3 minutes after now
-      exp: (Time.now + 2.minutes).to_i
-    }
-
-    # encrypt payload with certificate (the certificate is uploaded to the connected app config)
-    encoded_payload = JWT.encode(
-      payload,
-      OpenSSL::PKey::RSA.new(PRIVATE_KEY),
-      'RS256'
-    )
-
-    # request an access token using our jwt token
     token_request = {
-      'grant_type' => 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      'assertion' => encoded_payload
+      'grant_type' => 'client_credentials',
+      'client_id' => CLIENT_ID,
+      'client_secret' => CLIENT_SECRET,
     }
 
     response = Net::HTTP.post(

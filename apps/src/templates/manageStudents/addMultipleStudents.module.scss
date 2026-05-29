@@ -1,0 +1,15 @@
+.textarea {
+  width: 75%;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  font-family: inherit;
+  margin: 5px;
+
+  &:focus {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}

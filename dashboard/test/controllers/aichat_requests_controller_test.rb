@@ -9,7 +9,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
 
-    @level = create(:level)
+    @level = create(:level, type: 'Aichat')
     @script = create(:script, :in_single_unit_course)
 
     @default_model_customizations = {clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB], temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
@@ -61,12 +61,12 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'unauthorized users can access start_chat_completion from ai tutor levels' do
+  test 'unauthorized users cannot access start_chat_completion from ai tutor levels' do
     sign_in(@unauthorized_student)
     ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))
     post :start_chat_completion, params: params_with_ai_tutor_client_type, as: :json
-    assert_response :success
+    assert_response :forbidden
   end
 
   test 'ai_tutor DCDO flag blocks access to start_chat_completion from ai tutor levels' do
@@ -86,7 +86,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   test 'aichat DCDO flag does not block access to start_chat_completion from ai tutor levels' do
-    sign_in(@unauthorized_student)
+    sign_in(@authorized_teacher1)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(true)
     ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))

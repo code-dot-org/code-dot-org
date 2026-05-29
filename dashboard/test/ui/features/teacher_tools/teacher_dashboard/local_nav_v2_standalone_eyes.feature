@@ -7,7 +7,7 @@ Feature: V2 teacher dashboard local navigation - single-unit course - Eyes
   Scenario: Local navigation on single-unit course
     When I open my eyes to test "teacher local nav v2 - single-unit course overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "interactive-games-animations-2024" unit 1 with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2026" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -15,7 +15,7 @@ Feature: V2 teacher dashboard local navigation - single-unit course - Eyes
     When I click selector "#task-button-View-progress-New-Section" once I see it
     Given I wait until element "#ui-test-teacher-sidebar" is visible
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
-    And I wait until element "h1:contains('Interactive Animations and Games')" is visible
+    And I wait until element "h1:contains('Single Unit 2026')" is visible
     Then I see no difference for "unit overview"
 
     Then I click selector "#uitest-view-as-student" once I see it

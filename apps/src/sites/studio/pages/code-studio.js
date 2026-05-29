@@ -86,7 +86,7 @@ window.Multi = require('@cdo/apps/code-studio/levels/multi');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in New Relic.
+// script error and a url, rethrow it so the URL reaches browser observability.
 var windowOnError = window.onerror;
 
 window.onerror = function (msg, url, ln) {

@@ -1,4 +1,7 @@
 require 'json'
+
+require_relative '../../deployment'
+require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
 
@@ -11,7 +14,9 @@ require_relative '../state_abbr'
 # result in changes to these other files.
 
 module SharedConstants
-  DEFAULT_LOCALE = 'en-US'.freeze
+  DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
+  LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
+  LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
 
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
@@ -759,13 +764,18 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
-  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
-
   LESSON_OBJECTIVE_REFLECTION_VALUES = {
     UNSURE: 'unsure',
     LOST: 'lost',
     CONFIDENT: 'confident',
+  }.freeze
+
+  PRACTICE_PROBLEM_TYPES = {
+    MULTIPLE_CHOICE_MULTI: 'multiple_choice_multi_select',
+    MULTIPLE_CHOICE_SINGLE: 'multiple_choice_single_select',
+    MATCH: 'match',
+    SORT: 'sort',
+    SCRAMBLE: 'scramble',
   }.freeze
 
   AI_TUTOR_TYPES = {
@@ -814,6 +824,8 @@ module SharedConstants
     MODEL_IMAGE_FLAGGED: 1007,
     # The model is currently rate-limited (HTTP 429).
     MODEL_RATE_LIMITED: 1008,
+    # The model's internal content filter blocked its output.
+    MODEL_CONTENT_FILTERED: 1009,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {
@@ -843,14 +855,17 @@ module SharedConstants
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
+    # AI Tutor in levels and on standalone projects.
     AI_TUTOR: "ai-tutor",
     FLOW_LAB: "flow-lab",
+    LESSON_DEEP_DIVE: "lesson-deep-dive",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
     AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
     AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
+    AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
@@ -950,6 +965,8 @@ module SharedConstants
   BUBBLE_CHOICE_CUSTOM_MODES = {
     MUSIC_DANCE_AI: 'music_dance_ai',
   }.freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS = 3
 
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',
@@ -1120,4 +1137,7 @@ module SharedConstants
     'fonts.googleapis.com',
     'fonts.gstatic.com'
   ].freeze
+
+  # Raster formats that are safe to process with ImageMagick, supported in assets, and supported by Azure AI Content Safety.
+  SAFE_AND_SUPPORTED_IMAGE_TYPES = %w(image/gif image/jpeg image/png image/webp).freeze
 end

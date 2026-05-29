@@ -20,7 +20,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
       | url                                                                            | test_name                         | user_type |
       | http://studio.code.org/projects/applab/new                                     | new applab project                | student   |
       | http://studio.code.org/                                                        | logged in student studio homepage | student   |
-      | http://studio.code.org/                                                        | logged in teacher studio homepage | teacher   |
       | http://studio.code.org/courses/allthethingscourse/units/1                      | logged in script progress         | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1  | unplugged video level             | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/14 | no iframe in dsl                  | student   |

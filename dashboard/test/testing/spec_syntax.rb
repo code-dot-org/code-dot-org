@@ -104,10 +104,11 @@ module ActiveSupport
         # Executes a shared example group with the given description, falling back to parent contexts.
         #
         # @param desc [String, Symbol] The description of the shared example group to execute.
-        # @param kwargs [Hash{Symbol => Object}] Keyword arguments passed to the shared example block.
+        # @param args [Array<Object>] Arguments passed to the shared example block.
+        # @param opts [Hash{Symbol => Object}] Keyword arguments passed to the shared example block.
         #
         # @return [void]
-        def it_behaves_like(desc, **kwargs)
+        def it_behaves_like(desc, *args, **opts)
           describe_block = self
 
           while describe_block.respond_to?(:shared_examples)
@@ -118,7 +119,7 @@ module ActiveSupport
 
           raise KeyError, "shared examples not found: #{desc.inspect}" unless block
 
-          instance_exec(**kwargs, &block)
+          instance_exec(*args, **opts, &block)
         end
       end
 

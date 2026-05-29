@@ -1,0 +1,108 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T16:22:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Online Shopping",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A profile from a popular online shopping store",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Account Settings - Apex Gear & Gaming</title>\n    <style>\n        :root {\n            --primary-bg: #f4f6f8;\n            --nav-bg: #1e293b;\n            --card-bg: #ffffff;\n            --text-main: #334155;\n            --text-light: #64748b;\n            --accent: #2563eb;\n            --success: #16a34a;\n            --danger: #dc2626;\n        }\n\n        * {\n            box-sizing: border-box;\n            margin: 0;\n            padding: 0;\n            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\n        }\n\n        body {\n            background-color: var(--primary-bg);\n            color: var(--text-main);\n            display: flex;\n            justify-content: center;\n            padding: 40px 20px;\n        }\n\n        /* E-Commerce UI Container */\n        .app-container {\n            width: 100%;\n            max-width: 1000px;\n            background: var(--primary-bg);\n            border: 1px solid #e2e8f0;\n            box-shadow: 0 10px 25px rgba(0,0,0,0.1);\n            position: relative;\n            overflow: hidden;\n            border-radius: 8px;\n        }\n\n        /* Top Navigation */\n        .top-nav {\n            background-color: var(--nav-bg);\n            padding: 15px 30px;\n            display: flex;\n            align-items: center;\n            color: white;\n            border-bottom: 3px solid var(--accent);\n        }\n\n        .top-nav img.logo {\n            height: 30px;\n            margin-right: 20px;\n            background-color: #334155; /* Placeholder bg in case image is missing */\n            padding: 5px;\n            border-radius: 4px;\n        }\n\n        .top-nav .nav-title {\n            font-weight: 600;\n            font-size: 1.2rem;\n            letter-spacing: 0.5px;\n        }\n\n        /* Main Layout */\n        .main-layout {\n            display: flex;\n            min-height: 500px;\n        }\n\n        /* Sidebar */\n        .sidebar {\n            width: 250px;\n            background: var(--card-bg);\n            border-right: 1px solid #e2e8f0;\n            padding: 30px 0;\n        }\n\n        .sidebar ul {\n            list-style: none;\n        }\n\n        .sidebar li {\n            padding: 15px 30px;\n            color: var(--text-light);\n            font-weight: 500;\n            cursor: pointer;\n            border-left: 4px solid transparent;\n        }\n\n        .sidebar li.active {\n            background-color: #eff6ff;\n            color: var(--accent);\n            border-left: 4px solid var(--accent);\n        }\n\n        /* Content Area */\n        .content {\n            flex: 1;\n            padding: 40px;\n            background: var(--primary-bg);\n        }\n\n        .profile-header {\n            display: flex;\n            align-items: center;\n            margin-bottom: 30px;\n        }\n\n        .avatar {\n            width: 80px;\n            height: 80px;\n            border-radius: 50%;\n            background-color: #cbd5e1;\n            border: 3px solid white;\n            box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n            margin-right: 20px;\n            object-fit: cover;\n        }\n\n        .profile-info h1 {\n            font-size: 1.8rem;\n            color: var(--nav-bg);\n            margin-bottom: 5px;\n        }\n\n        .tag {\n            background: #e2e8f0;\n            padding: 3px 8px;\n            border-radius: 4px;\n            font-size: 0.8rem;\n            color: var(--text-light);\n            font-weight: 600;\n        }\n\n        /* Data Cards */\n        .data-section {\n            background: var(--card-bg);\n            border-radius: 8px;\n            padding: 25px;\n            margin-bottom: 20px;\n            border: 1px solid #e2e8f0;\n            box-shadow: 0 2px 4px rgba(0,0,0,0.02);\n        }\n\n        .data-section h2 {\n            font-size: 1.1rem;\n            margin-bottom: 15px;\n            padding-bottom: 10px;\n            border-bottom: 1px solid #f1f5f9;\n            color: var(--nav-bg);\n        }\n\n        .data-grid {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 20px;\n        }\n\n        .data-item label {\n            display: block;\n            font-size: 0.85rem;\n            color: var(--text-light);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            margin-bottom: 5px;\n        }\n\n        .data-item p {\n            font-size: 1rem;\n            font-weight: 500;\n        }\n\n        .warning-text {\n            color: #d97706; /* Amber */\n            font-weight: bold;\n        }\n\n        /* Order Item */\n        .order-item {\n            display: flex;\n            align-items: center;\n            padding: 15px;\n            border: 1px solid #e2e8f0;\n            border-radius: 6px;\n            background: #f8fafc;\n        }\n\n        .order-thumb {\n            width: 60px;\n            height: 60px;\n            background: #e2e8f0;\n            border-radius: 4px;\n            margin-right: 15px;\n            object-fit: cover;\n        }\n\n        .order-details flex {\n            flex: 1;\n        }\n\n        .order-title {\n            font-weight: 600;\n            margin-bottom: 4px;\n        }\n\n        .order-status {\n            font-size: 0.85rem;\n            font-weight: 600;\n            color: var(--success);\n            display: flex;\n            align-items: center;\n        }\n\n        .order-status::before {\n            content: \"\";\n            display: inline-block;\n            width: 8px;\n            height: 8px;\n            background-color: var(--success);\n            border-radius: 50%;\n            margin-right: 6px;\n        }\n\n        .order-meta {\n            font-size: 0.85rem;\n            color: var(--text-light);\n            margin-top: 4px;\n        }\n\n        /* Tags for Browsed Items */\n        .browsed-tags {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 10px;\n        }\n\n        .browsed-tag {\n            background: #f1f5f9;\n            border: 1px solid #cbd5e1;\n            padding: 6px 12px;\n            border-radius: 20px;\n            font-size: 0.9rem;\n            color: var(--nav-bg);\n        }\n\n    </style>\n</head>\n<body>\n\n    <div class=\"app-container\">\n        <header class=\"top-nav\">\n            <img src=\"store-logo.jpg\" alt=\"Logo\" class=\"logo\" onerror=\"this.style.display='none'\">\n            <div class=\"nav-title\">APEX OUTDOOR & GAMING</div>\n        </header>\n\n        <div class=\"main-layout\">\n            <nav class=\"sidebar\">\n                <ul>\n                    <li class=\"active\">Account Profile</li>\n                    <li>Order History</li>\n                    <li>Payment Methods</li>\n                    <li>Address Book</li>\n                    <li>Privacy & Security</li>\n                </ul>\n            </nav>\n\n            <main class=\"content\">\n                <div class=\"profile-header\">\n                    <img src=\"avatar-shadowcatcher.jpg\" alt=\"Avatar\" class=\"avatar\" onerror=\"this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2NiZDVlMSI+PHBhdGggZD0iTTEyIDJDMi40OCAyIDEwIDIuNDggMTAgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAzYzEuNjYgMCAzIDEuMzQgMyAzcy0xLjM0IDMtMyAzLTMtMS4zNC0My0zIDEuMzQtMyAzLTN6bTAgMTQuMmMtMi41IDAtNC43MS0xLjI4LTYtMy4yMi4wMy0xLjk5IDQtMy4wOCA2LTMuMDhzNS45NyAxLjA5IDYgMy4wOGMtMS4yOSAxLjk0LTMuNSAzLjIyLTYgMy4yMnoiLz48L3N2Zz4='\">\n                    <div class=\"profile-info\">\n                        <h1>@ShadowCatcher_99</h1>\n                        <span class=\"tag\">Premium Member</span>\n                    </div>\n                </div>\n\n                <section class=\"data-section\">\n                    <h2>Identity & Verification</h2>\n                    <div class=\"data-grid\">\n                        <div class=\"data-item\">\n                            <label>Current Username</label>\n                            <p>@ShadowCatcher_99</p>\n                        </div>\n                        <div class=\"data-item\">\n                            <label>Account Age Validation (Birth Year)</label>\n                            <p class=\"warning-text\">2012</p>\n                        </div>\n                        <div class=\"data-item\" style=\"grid-column: span 2;\">\n                            <label>Linked Accounts / Previous Aliases</label>\n                            <p>JavierG_Oakwood_Middle</p>\n                        </div>\n                    </div>\n                </section>\n\n                <section class=\"data-section\">\n                    <h2>Recent Activity & Interests</h2>\n                    <div class=\"data-item\" style=\"margin-bottom: 20px;\">\n                        <label>Recently Browsed Categories</label>\n                        <div class=\"browsed-tags\">\n                            <span class=\"browsed-tag\">High-end Mountain Bikes</span>\n                            <span class=\"browsed-tag\">Carbon Fiber Bike Frames</span>\n                            <span class=\"browsed-tag\">Gaming Headsets</span>\n                        </div>\n                    </div>\n\n                    <div class=\"data-item\">\n                        <label>Recent Orders</label>\n                        <div class=\"order-item\">\n                            <img src=\"product-backpack.jpg\" alt=\"Backpack\" class=\"order-thumb\" onerror=\"this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2NiZDVlMSI+PHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE5IDZINWMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY4YzAtMS4xLS45LTItMi0yem0tNyAwaDJ2MmgtMnYtMnoiLz48L3N2Zz4='\">\n                            <div class=\"order-details\">\n                                <div class=\"order-title\">1x North Ridge Explorer Backpack (Limited Edition)</div>\n                                <div class=\"order-status\">DELIVERED</div>\n                                <div class=\"order-meta\">Delivered to primary address via SecurePost.</div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n            </main>\n        </div>\n    </div>\n\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "icon-headset.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2f_2026/uuid/8192e861-17fc-4c0a-ba88-8e9ada4ee3c8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "icon-bike.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2f_2026/uuid/ed2c38a5-3124-42b0-987c-fe619392024c.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "store-logo.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2f_2026/uuid/1af1ebef-1127-46cd-9d33-53dd7441f7ac.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "product-backpack.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2f_2026/uuid/284ec7df-2793-430e-8caf-2479c66cfc8a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "avatar-shadowcatcher.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2f_2026/uuid/025e52e7-2a75-443b-b26d-f1ee34c8e9e6.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/dd5aa988c1030bb2d10049a34433bec9-six.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:22:27.713+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2e_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2e_2026\"},{\"changed_at\":\"2026-04-28 16:22:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:23:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:56:38 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

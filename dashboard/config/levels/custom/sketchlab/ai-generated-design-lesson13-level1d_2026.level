@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Map and Wireframe Your Site\r\n\r\n1. Plan 3-4 pages for your website, such as Home, About, Article, or Events.\r\n2. Then create quick wireframes for 2 pages: your home page and one additional page.\r\n3. **Save your wireframes to your <i class=\"fa-solid fa-backpack\"></i> Backpack.**\r\n\r\n---\r\n\r\n#### <i class=\"fa-solid fa-square-check\"></i> What to Include\r\n\r\n- **2 different pages**, e.g. Home, Menu, Contact, About Me\r\n- **Wireframe assets** such as images, placeholders, and structure\r\n",
+    "long_instructions": "## Do This:\r\n\r\n1. Plan 3-4 pages for your website, such as Home, About, Article, or Events.\r\n2. Then create quick wireframes for 2 pages: your home page and one additional page.\r\n3. Save your wireframes to your **Backpack.**\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -5751,9 +5751,9 @@
         }
       }
     },
-    "display_name": "Sketch Lab",
+    "display_name": "Create Wireframes",
     "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
-    "bubble_choice_description": "Use Sketch Lab to map your site and design your wireframes.",
+    "bubble_choice_description": "Create wireframes for your web pages.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -12812,6 +12812,6 @@
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:09.272+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1d_2025\"},{\"changed_at\":\"2026-03-20 17:18:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:22:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:45:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:29:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-04 02:30:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:09.272+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1d_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1d_2025\"},{\"changed_at\":\"2026-03-20 17:18:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:22:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:45:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-04 02:29:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-04 02:30:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:32:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

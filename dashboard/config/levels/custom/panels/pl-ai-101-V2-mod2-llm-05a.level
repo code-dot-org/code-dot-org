@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-02-18T16:30:16.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "# 5 Key Elements of a Prompt\n\nAs you craft your AI Chat prompts, keep in mind the 5 key elements that could be added to refine a prompt:\n- **Task**\n- **Context**\n- **Format**\n- **Reference**\n- **Tone**\n\nLet's learn how to improve this prompt: \n>_\"Write a short story about two friends.\"_",
+        "text": "# 5 Key Elements of a Prompt\n\nAs you craft your prompts, keep in mind the 5 key elements that could be added to refine a prompt:\n- **Task**\n- **Context**\n- **Format**\n- **Reference**\n- **Tone**\n\nLet's learn how to improve this prompt: \n>_\"Write a short story about two friends.\"_",
         "imageUrl": "https://images.code.org/eabd83fef43bff3923b61b0f39c30f8b-Screenshot 2025-03-20 at 1.29.48 PM.png",
         "key": "test-problem-solving-with-ai-lesson8-level1-panel-b86fcdec-923f-4405-a50c-6a7da3ef6dc1",
         "layout": "text-top-left"
@@ -52,7 +53,6 @@
     ],
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-18T16:30:16.254+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_02_07_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif_pl_ai_02_07_-rev_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:30:16.254+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_02_07_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif_pl_ai_02_07_-rev_v2_2026\"},{\"changed_at\":\"2026-04-09 15:45:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Panels>

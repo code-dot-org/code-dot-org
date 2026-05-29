@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson2-level1-v1-2026'
+display_name 'Choose a UI to Explore'
+description 'Choose one UI (Card, List, or Profile) to explore. Pay attention to what information it shows and how many pieces of data are needed for one item.'
+
+sublevels
+level 'building-data-driven-systems-lesson2-level1a-v1-2026'
+level 'building-data-driven-systems-lesson2-level1b-v1-2026'
+level 'building-data-driven-systems-lesson2-level1c-v1-2026'
+
+uses_lab2

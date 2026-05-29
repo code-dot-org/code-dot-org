@@ -1,0 +1,191 @@
+export interface ColorSwatch {
+  value: string;
+  label: string;
+  darkModeLabel?: string;
+  transparent?: boolean;
+}
+
+export const STROKE_FONT_PALETTE: ColorSwatch[] = [
+  {
+    value: 'var(--sketchlab-stroke-default)',
+    label: 'Black',
+    darkModeLabel: 'White',
+  },
+  {value: 'var(--sketchlab-stroke-red)', label: 'Red'},
+  {value: 'var(--sketchlab-stroke-yellow)', label: 'Yellow'},
+  {value: 'var(--sketchlab-stroke-green)', label: 'Green'},
+  {value: 'var(--sketchlab-stroke-blue)', label: 'Blue'},
+  {value: 'var(--sketchlab-stroke-purple)', label: 'Purple'},
+  {value: 'var(--sketchlab-stroke-pink)', label: 'Pink'},
+];
+
+export const BACKGROUND_PALETTE: ColorSwatch[] = [
+  {value: 'transparent', label: 'Clear', transparent: true},
+  {value: 'var(--sketchlab-bg-gray)', label: 'Gray'},
+  {value: 'var(--sketchlab-bg-red)', label: 'Red'},
+  {value: 'var(--sketchlab-bg-yellow)', label: 'Yellow'},
+  {value: 'var(--sketchlab-bg-green)', label: 'Green'},
+  {value: 'var(--sketchlab-bg-blue)', label: 'Blue'},
+  {value: 'var(--sketchlab-bg-purple)', label: 'Purple'},
+  {value: 'var(--sketchlab-bg-pink)', label: 'Pink'},
+];
+
+export const FONT_SIZE_OPTIONS = [
+  {value: 'small', label: 'Small', px: 12, shortLabel: 'S'},
+  {value: 'medium', label: 'Medium', px: 16, shortLabel: 'M'},
+  {value: 'large', label: 'Large', px: 22, shortLabel: 'L'},
+  {value: 'extra-large', label: 'Extra Large', px: 30, shortLabel: 'XL'},
+] as const;
+
+export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
+
+// fontSize on a node may be a named preset or a raw pixel number.
+export type FontSize = FontSizeValue | number;
+
+// We set a minimum font size for sanity-checking but do not set a maximum,
+// since the canvas can be zoomed out.
+export const MIN_FONT_SIZE_PX = 6;
+
+export const LINE_WIDTH_OPTIONS = [
+  {value: 1, label: 'Thin', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 3, label: 'Medium', icon: 'line-medium', iconFamily: 'kit'},
+  {value: 5, label: 'Thick', icon: 'line-thick', iconFamily: 'kit'},
+] as const;
+
+export type LineWidthValue = (typeof LINE_WIDTH_OPTIONS)[number]['value'];
+
+export const LINE_STROKE_STYLE_OPTIONS = [
+  {value: 'solid', label: 'Solid', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 'dashed', label: 'Dashed', icon: 'line-dashed', iconFamily: 'kit'},
+  {value: 'dotted', label: 'Dotted', icon: 'line-dotted', iconFamily: 'kit'},
+] as const;
+
+export type LineStrokeStyleValue =
+  (typeof LINE_STROKE_STYLE_OPTIONS)[number]['value'];
+
+export const EDGE_TYPE_OPTIONS = [
+  {
+    value: 'straight',
+    label: 'Straight',
+    icon: 'line-regular',
+    iconFamily: 'kit',
+  },
+  {value: 'default', label: 'Curved', icon: 'line-curve', iconFamily: 'kit'},
+  {
+    value: 'smoothstep',
+    label: 'Rounded step',
+    icon: 'line-step-round',
+    iconFamily: 'kit',
+  },
+  {
+    value: 'step',
+    label: 'Sharp step',
+    icon: 'line-step-sharp',
+    iconFamily: 'kit',
+  },
+] as const;
+
+export type EdgeTypeValue = (typeof EDGE_TYPE_OPTIONS)[number]['value'];
+
+export const ARROW_HEAD_OPTIONS = [
+  {value: 'none', label: 'None', icon: 'line-regular', iconFamily: 'kit'},
+  {value: 'start', label: 'Start', icon: 'arrow-left'},
+  {value: 'end', label: 'End', icon: 'arrow-right'},
+  {value: 'both', label: 'Both', icon: 'arrows-left-right'},
+] as const;
+
+export const TEXT_ALIGN_OPTIONS = [
+  {value: 'left', label: 'Left', icon: 'align-left'},
+  {value: 'center', label: 'Center', icon: 'align-center'},
+  {value: 'right', label: 'Right', icon: 'align-right'},
+] as const;
+
+export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
+
+export const DEFAULT_BACKGROUND_COLOR = 'transparent';
+export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-default)';
+export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-default)';
+export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
+export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
+export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
+export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
+export const DEFAULT_EDGE_TYPE: EdgeTypeValue = 'straight';
+
+// Look up the human-readable label for a color value, accounting for the
+// dark-mode label override (the default stroke is "Black" in light mode
+// and "White" in dark mode). Returns "Custom" for raw hex values and the
+// passed value as a fallback for unrecognized strings.
+export function colorLabel(
+  value: string | undefined,
+  swatches: ColorSwatch[],
+  isDarkMode: boolean
+): string {
+  if (value === undefined) {
+    return '';
+  }
+  const match = swatches.find(swatch => swatch.value === value);
+  if (match) {
+    return isDarkMode && match.darkModeLabel
+      ? match.darkModeLabel
+      : match.label;
+  }
+  if (value.startsWith('#')) {
+    return 'Custom';
+  }
+  return value;
+}
+
+export function fontSizeLabel(value: FontSize | undefined): string {
+  if (typeof value === 'number') {
+    return `${value} px`;
+  }
+  const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
+  return (
+    match?.label ??
+    FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)
+      ?.label ??
+    ''
+  );
+}
+
+export function textAlignLabel(value: TextAlignValue | undefined): string {
+  const match = TEXT_ALIGN_OPTIONS.find(option => option.value === value);
+  return match?.label ?? '';
+}
+
+export function fontSizePx(value: FontSize | undefined): number | undefined {
+  if (typeof value === 'number') {
+    return value;
+  }
+  const match = FONT_SIZE_OPTIONS.find(option => option.value === value);
+  return (
+    match?.px ||
+    FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)?.px
+  );
+}
+
+export function strokeDasharrayFromStyle(
+  style: LineStrokeStyleValue
+): string | undefined {
+  if (style === 'dashed') {
+    return '8 4';
+  }
+  if (style === 'dotted') {
+    return '2 4';
+  }
+  return undefined;
+}
+
+export function strokeStyleFromDasharray(
+  dasharray: string | number | undefined
+): LineStrokeStyleValue {
+  const normalizedDasharray =
+    typeof dasharray === 'number' ? `${dasharray}` : dasharray;
+  if (normalizedDasharray === strokeDasharrayFromStyle('dashed')) {
+    return 'dashed';
+  }
+  if (normalizedDasharray === strokeDasharrayFromStyle('dotted')) {
+    return 'dotted';
+  }
+  return DEFAULT_LINE_STROKE_STYLE;
+}

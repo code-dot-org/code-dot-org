@@ -1,0 +1,9 @@
+name 'thinking_critically_lesson5_level1_2026'
+display_name 'AI Ethical Impact Mini-Lessons'
+description 'Choose a topic you would like to learn more about.'
+
+sublevels
+level 'thinking_critically_lesson5_level2panels_2026'
+level 'thinking_critically_lesson5_level2bpanels_2026'
+
+uses_lab2

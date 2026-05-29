@@ -1,0 +1,107 @@
+name 'self-paced-TCaAI-L1-PBL1_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Student Experience
+
+In Thinking Critically About AI, students are not positioned as passive users of AI tools. Instead, they take on the role of AI testers, investigators, and evaluators who make judgments about when AI should - and should not - be trusted.
+
+<div style="background-color: #FFFFFF; padding: 10px; border-radius: 10px; margin: 20px 0px; border-style: solid; border-width: 1px; border-color: #048899;">
+<p style="font-size: 17px; font-weight: bold; text-align: center; margin-top: 0;">
+Throughout the unit, students repeatedly practice saying:
+</p>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-top: 30px;">
+
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/39878bbf65dcaf0d499b14478a36cda0-image-1779144218623.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can test AI systems.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can use prompts and structured investigations to explore how AI behaves.</p>
+    </details>
+  </div>
+
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/07e60598fe514862be1e578cd6baeb7b-image-1779144221629.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can identify patterns.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can compare outputs and notice repeated behaviors or trends across examples.</p>
+    </details>
+  </div>
+
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/f6b4e6996a896d479e5c96321e6d8db7-image-1779144225250.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can collect evidence.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can document findings and revise my thinking as I learn more about AI systems.</p>
+    </details>
+  </div>
+
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/aa5dedb4efbae242a3ea57c91a4be78d-image-1779144228090.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can evaluate risks.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can analyze credibility, bias, privacy, and safety concerns in AI-generated outputs.</p>
+    </details>
+  </div>
+
+  <div style="width: 19%; text-align: center;">
+    <img src="https://images.code.org/00e114600b652066cee837900966d745-image-1779144230613.png" alt="" style="width: 80px; height: auto; margin-bottom: 12px;">
+    <details style="background-color: #B7E0E5; padding: 15px; border-radius: 10px; text-align: left;">
+      <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">I can make judgments.</summary>
+      <p style="margin-bottom: 0; font-size: 16px;">I can develop evidence-based positions about responsible AI use.</p>
+    </details>
+  </div>
+
+</div>
+</div>
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+## Learning Through Investigation
+
+<img src="https://images.code.org/f315d26c1e734b631be014e89a1c4366-image-1779146167366.16.04 PM.png" alt="" style="width: 30%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+
+Rather than memorizing technical definitions or learning how to code AI systems, students build understanding through hands-on experiences. Many lesson activities ask students to:
+
+* Experiment with prompts
+* Test how AI responds to different inputs
+* Analyze examples of AI-generated text or images
+* Identify what worked, what failed, and why
+ 
+Students revisit these experiences throughout the unit to refine their thinking and build stronger evidence-based conclusions.
+
+### **What Should Teachers Watch For?**
+A major instructional goal of the unit is helping students move beyond simple reactions like:
+
+<div style="display: flex; justify-content: space-between; gap: 12px; margin: 20px 0px;">
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI is good.”
+    </p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI is bad.”
+    </p>
+  </div>
+
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; width: 32%; text-align: center;">
+    <p style="font-size: 16px; font-weight: bold; margin: 0;">
+      “AI made a mistake.”
+    </p>
+  </div>
+
+</div>
+
+Instead, students are encouraged to explain:
+
+* Why the AI behaved a certain way
+* What patterns or assumptions might have influenced the output
+* When human oversight matters most
+* What conditions make AI more or less appropriate to use
+
+Throughout the unit, discussion prompts and investigations are designed to help students develop more specific, evidence-based reasoning about AI systems.
+MARKDOWN

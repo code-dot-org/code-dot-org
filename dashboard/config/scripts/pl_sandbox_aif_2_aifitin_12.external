@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Where Does AI Fit In?
 
-#### In this course, AI is a helper, not a replacement for students’ thinking. Students stay in control of the design and coding process, while AI serves as a creative partner that can suggest, outline, or refine ideas.
+In this course, AI is a helper, not a replacement for students’ thinking. Students stay in control of the design and coding process, while AI serves as a creative partner that can suggest, outline, or refine ideas.
 
 ## How Students Use AI
 
@@ -61,9 +61,13 @@ markdown <<MARKDOWN
 
 ## The Three Roles Framework 
 
-#### This framework defines three roles—Designer, Engineer, and QA—that shape how students engage with planning, building, and evaluating. Rotating through these stances helps students practice intentional design, coding fluency, and critical evaluation.
+This framework defines three roles, **Designer, Engineer, and QA**, that shape how students engage with planning, building, and evaluating.
 
-#### Pedagogically, the framework keeps responsibilities clear: **students own the creativity and judgment**, while AI serves as a supportive tool for ideas, scaffolds, or critique. This balance ensures students stay in charge of their learning while developing habits of reflection and problem-solving.
+Rotating through these stances helps students practice intentional design, coding fluency, and critical evaluation.
+
+Pedagogically, the framework keeps responsibilities clear: **students own the creativity and judgment**, while AI serves as a supportive tool for ideas, scaffolds, or critique.
+
+This balance ensures students stay in charge of their learning while developing habits of reflection and problem-solving.
 
 ##### Click on the arrows below to expand each section.
 
@@ -71,29 +75,31 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">💡📝Designer</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The Designer role emphasizes planning and intentionality. Students focus on defining goals, constraints, and user needs, while AI serves as a brainstorming partner to generate options and surface considerations.
+The Designer role emphasizes planning and intentionality. Students focus on defining goals, constraints, and user needs, while AI serves as a brainstorming partner to generate options and surface considerations.
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🛠️💻 Engineer</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The Engineer role highlights implementation and problem-solving. Students write and adapt code, using AI as a scaffold or debugging helper, while maintaining responsibility for accuracy, accessibility, and alignment with their design goals.
+The Engineer role highlights implementation and problem-solving. Students write and adapt code, using AI as a scaffold or debugging helper, while maintaining responsibility for accuracy, accessibility, and alignment with their design goals.
 </div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 18px; font-weight: bold;">🧐✅Quality Assurance (QA)</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The QA role centers on testing, critique, and reflection. Students evaluate whether the system works as intended, identify issues, and decide what to revise, with AI suggesting test cases or potential flaws but leaving decisions to the student.
+The QA role centers on testing, critique, and reflection. Students evaluate whether the system works as intended, identify issues, and decide what to revise, with AI suggesting test cases or potential flaws but leaving decisions to the student.
 </div></details>
 
 
 
 ## Why This Matters
-#### By learning to use AI this way, students practice ethical and intentional coding. They don’t just accept AI’s work blindly—they evaluate it, adapt it, and ensure it aligns with their values, goals, and understanding.
+By learning to use AI this way, students practice ethical and intentional coding. They don’t just accept AI’s work blindly.
 
-#### This prepares them to work with AI in the real world while keeping ownership of their learning and creations.
+They evaluate it, adapt it, and ensure it aligns with their values, goals, and understanding.
+
+This prepares them to work with AI in the real world while keeping ownership of their learning and creations.
 
 
 

@@ -1,0 +1,65 @@
+:global([data-theme='Light']) {
+  --sketchlab-stroke-default: #292f36;
+  --sketchlab-stroke-red: #fb2c36;
+  --sketchlab-stroke-yellow: #f0b100;
+  --sketchlab-stroke-green: #00bc7d;
+  --sketchlab-stroke-blue: #2b7fff;
+  --sketchlab-stroke-purple: #ad46ff;
+  --sketchlab-stroke-pink: #f6339a;
+  --sketchlab-bg-gray: #dfe3e9;
+  --sketchlab-bg-red: #ffe2e2;
+  --sketchlab-bg-yellow: #fef3c6;
+  --sketchlab-bg-green: #d0fae5;
+  --sketchlab-bg-blue: #dbeafe;
+  --sketchlab-bg-purple: #f3e8ff;
+  --sketchlab-bg-pink: #fce7f3;
+}
+
+:global([data-theme='Dark']) {
+  --sketchlab-stroke-default: #fff;
+  --sketchlab-stroke-red: #fb2c36;
+  --sketchlab-stroke-yellow: #f0b100;
+  --sketchlab-stroke-green: #00bc7d;
+  --sketchlab-stroke-blue: #2b7fff;
+  --sketchlab-stroke-purple: #ad46ff;
+  --sketchlab-stroke-pink: #f6339a;
+  --sketchlab-bg-gray: #576575;
+  --sketchlab-bg-red: #82181a;
+  --sketchlab-bg-yellow: #733e0a;
+  --sketchlab-bg-green: #006045;
+  --sketchlab-bg-blue: #1c398e;
+  --sketchlab-bg-purple: #59168b;
+  --sketchlab-bg-pink: #861043;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.sectionTitle {
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+// The DSCO TextField wrapper hard-codes min-width: 18.75rem on its <label>;
+// override the wrapper and the input so the field fits 3 digits plus the
+// native number spinner.
+.smallInput {
+  flex: 0 0 auto;
+  width: 68px;
+  min-width: 0;
+
+  & > label {
+    min-width: 0;
+    width: 68px;
+  }
+
+  input {
+    width: 68px;
+    min-width: 0;
+    height: 24px;
+  }
+}

@@ -1,0 +1,109 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-30T04:20:44.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# template",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title id=\"pageTitle\">Comments</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <main id=\"mainContainer\" class=\"page\">\n      <header id=\"header\" class=\"hero\">\n        <h1 id=\"heading\">Comments</h1>\n        <p id=\"subtitle\">See what people are saying.</p>\n      </header>\n\n      <section id=\"listContainer\" class=\"list-container\"></section>\n    </main>\n\n    <script src=\"helpers.js\"></script>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #eef1f6;\n  color: #14213d;\n}\n\n#mainContainer {\n  max-width: 700px;\n  margin: 0 auto;\n  padding: 32px 16px 40px;\n}\n\n#header {\n  margin-bottom: 24px;\n}\n\n#heading {\n  margin: 0 0 8px;\n  font-size: 2rem;\n}\n\n#subtitle {\n  margin: 0;\n  font-size: 0.95rem;\n  color: #5f687a;\n}\n\n#listContainer {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.list-item {\n  display: flex;\n  align-items: flex-start;\n  gap: 12px;\n  background: #ffffff;\n  padding: 12px 14px;\n  border-radius: 12px;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);\n}\n\n.avatar {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  object-fit: cover;\n  flex-shrink: 0;\n}\n\n.list-text {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.name {\n  font-weight: 700;\n  font-size: 0.95rem;\n}\n\n.message {\n  font-size: 0.9rem;\n  color: #5f687a;\n  line-height: 1.4;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.js",
+          "contents": "let itemCount = 0;\n\nconst createListItem = (avatarSrc, name, message) => {\n  const container = document.getElementById(\"listContainer\");\n\n  // Create item container\n  const item = document.createElement(\"div\");\n  item.className = \"list-item\";\n  item.id = \"listItem\" + itemCount;\n\n  // Create avatar\n  const avatar = document.createElement(\"img\");\n  avatar.className = \"avatar\";\n  avatar.id = \"avatar\" + itemCount;\n  avatar.src = avatarSrc;\n  avatar.alt = name + \" avatar\";\n\n  // Create text container\n  const text = document.createElement(\"div\");\n  text.className = \"list-text\";\n  text.id = \"textContainer\" + itemCount;\n\n  // Create name\n  const nameEl = document.createElement(\"div\");\n  nameEl.className = \"name\";\n  nameEl.id = \"name\" + itemCount;\n  nameEl.textContent = name;\n\n  // Create message\n  const messageEl = document.createElement(\"div\");\n  messageEl.className = \"message\";\n  messageEl.id = \"message\" + itemCount;\n  messageEl.textContent = message;\n\n  // Build structure\n  text.appendChild(nameEl);\n  text.appendChild(messageEl);\n\n  item.appendChild(avatar);\n  item.appendChild(text);\n\n  container.appendChild(item);\n\n  // Increment counter for next item\n  itemCount++;\n};",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "7": {
+          "id": "7",
+          "name": "user1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson2-level3b-template-v2-2026/uuid/d1d02c4f-fc23-4579-a8ad-6d42d465be3c.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "6",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-30T04:20:44.025+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3a-template-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3a-template-v2-2026\"},{\"changed_at\":\"2026-04-30 04:20:48 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:01 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:23:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-30 04:44:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

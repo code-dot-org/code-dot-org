@@ -1,0 +1,314 @@
+{
+  "script": {
+    "name": "ui-test-csd1-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-04-08 22:03:05 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-csd1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Lesson One",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2af9b629-5965-4b80-8fc1-f5dcc343b310",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2af9b629-5965-4b80-8fc1-f5dcc343b310",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "ac3730d4-511d-4e64-8c76-4c28f148a73f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ac3730d4-511d-4e64-8c76-4c28f148a73f",
+        "lesson_activity.key": "2af9b629-5965-4b80-8fc1-f5dcc343b310"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites scene sprites_allthethings"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025",
+        "activity_section.key": "ac3730d4-511d-4e64-8c76-4c28f148a73f"
+      },
+      "level_keys": [
+        "CSD U3 Sprites scene sprites_allthethings"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites scene challenge_allthethings"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025",
+        "activity_section.key": "ac3730d4-511d-4e64-8c76-4c28f148a73f"
+      },
+      "level_keys": [
+        "CSD U3 Sprites scene challenge_allthethings"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites scene sprites_allthethings",
+        "script_level.level_keys": [
+          "CSD U3 Sprites scene sprites_allthethings"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025",
+        "activity_section.key": "ac3730d4-511d-4e64-8c76-4c28f148a73f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites scene challenge_allthethings",
+        "script_level.level_keys": [
+          "CSD U3 Sprites scene challenge_allthethings"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025",
+        "activity_section.key": "ac3730d4-511d-4e64-8c76-4c28f148a73f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+    {
+      "level_name": "CSD U3 Sprites scene challenge_allthethings",
+      "s3_config_dir": "allthethings-L48",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ],
+  "learning_goals": [
+    {
+      "key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+      "position": 1,
+      "learning_goal": "Code Quality",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+      "position": 2,
+      "learning_goal": "Sprites",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ],
+  "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "Code is messy or non-existent",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Code is readable but disorganized",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Code is readable and well organized, with a couple of small issues",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Code is readable and well organized, with no quality issues",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3cb946e1-fd84-452d-8a1d-e56253c6a0e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites used",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A single sprite used with no attempt to modify it",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Two or more sprites used but no properties changed",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Two or more sprites used with at least one property changed",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "effc0330-65f6-4768-b995-fe3f9ed60a45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csd1-2025"
+      }
+    }
+  ]
+}

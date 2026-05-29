@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-csd-2025",
+  "script_names": [
+    "ui-test-csd1-2025"
+  ],
+  "original_script_names": [
+    "ui-test-csd1-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-csd",
+    "numbered_units": "auto",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

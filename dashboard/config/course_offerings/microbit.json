@@ -4,7 +4,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/b99996c584ab797bb9508a2c9987ea70-Microbit.png",
@@ -15,7 +15,9 @@
   "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/u2u7UJSRuko/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=u2u7UJSRuko&wmode=transparent",
   "published_date": "2023-07-10 09:00:00 UTC",
-  "self_paced_pl_course_offering_key": "self-paced-pl-microbit",
+  "self_paced_pl_course_offering_key": "teaching-creating-apps-with-devices-microbit",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

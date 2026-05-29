@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-28T16:11:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Tech/Gamer Forum",
+    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "bubble_choice_description": "A thread posted on a discussion board",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Forum Post - Javier S. Guerrero</title>\n    <style>\n        /* Base Reset and Dark Mode Theme */\n        body {\n            background-color: #030303;\n            color: #d7dadc;\n            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            height: 100vh;\n            margin: 0;\n        }\n\n        /* Post Container */\n        .post-container {\n            background-color: #1a1a1b;\n            border: 1px solid #343536;\n            border-radius: 6px;\n            display: flex;\n            width: 100%;\n            max-width: 650px;\n            transition: border 0.1s ease;\n        }\n\n        .post-container:hover {\n            border: 1px solid #898989;\n        }\n\n        /* Upvote/Downvote Column */\n        .vote-column {\n            background-color: #161617;\n            padding: 8px 4px;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            border-top-left-radius: 6px;\n            border-bottom-left-radius: 6px;\n            width: 40px;\n        }\n\n        .vote-btn {\n            background: none;\n            border: none;\n            color: #818384;\n            font-size: 20px;\n            cursor: pointer;\n            font-weight: bold;\n            padding: 2px;\n        }\n\n        .vote-btn:hover {\n            background-color: #2a2a2b;\n            border-radius: 4px;\n        }\n\n        .vote-btn.up:hover { color: #ff4500; }\n        .vote-btn.down:hover { color: #7193ff; }\n\n        .vote-count {\n            font-size: 12px;\n            font-weight: 700;\n            margin: 4px 0;\n        }\n\n        /* Main Content Column */\n        .content-column {\n            padding: 8px 16px 8px 8px;\n            display: flex;\n            flex-direction: column;\n            width: 100%;\n        }\n\n        /* Post Header */\n        .post-header {\n            display: flex;\n            align-items: center;\n            font-size: 12px;\n            margin-bottom: 8px;\n            color: #818384;\n        }\n\n        .post-header img.avatar {\n            width: 20px;\n            height: 20px;\n            border-radius: 50%;\n            margin-right: 8px;\n            object-fit: cover;\n        }\n\n        .subreddit {\n            font-weight: bold;\n            color: #d7dadc;\n            margin-right: 4px;\n            text-decoration: none;\n        }\n\n        .subreddit:hover {\n            text-decoration: underline;\n        }\n\n        .user-info {\n            margin-right: 4px;\n        }\n\n        .user-info a {\n            color: #818384;\n            text-decoration: none;\n        }\n\n        .user-info a:hover {\n            text-decoration: underline;\n        }\n\n        /* Post Title */\n        .post-title {\n            font-size: 18px;\n            font-weight: 500;\n            margin: 0 0 8px 0;\n            color: #d7dadc;\n        }\n\n        /* Post Body Content */\n        .post-body {\n            font-size: 14px;\n            line-height: 1.5;\n            margin-bottom: 12px;\n        }\n\n        .post-body p {\n            margin: 0 0 12px 0;\n        }\n\n        /* Image Placeholder */\n        .post-image {\n            width: 100%;\n            border-radius: 4px;\n            border: 1px solid #343536;\n            overflow: hidden;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #030303;\n            min-height: 300px;\n        }\n\n        .post-image img {\n            width: 100%;\n            height: auto;\n            display: block;\n        }\n\n        /* Missing Image Styling (if rig_setup.jpg isn't found) */\n        .post-image span {\n            color: #818384;\n            font-style: italic;\n        }\n\n        /* Post Footer / Actions */\n        .post-footer {\n            display: flex;\n            gap: 8px;\n        }\n\n        .action-btn {\n            display: flex;\n            align-items: center;\n            background: none;\n            border: none;\n            color: #818384;\n            font-size: 12px;\n            font-weight: 700;\n            padding: 8px;\n            cursor: pointer;\n            border-radius: 4px;\n        }\n\n        .action-btn:hover {\n            background-color: #2a2a2b;\n        }\n\n        .action-icon {\n            margin-right: 6px;\n            font-size: 16px;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"post-container\">\n        <div class=\"vote-column\">\n            <button class=\"vote-btn up\">&#8679;</button>\n            <span class=\"vote-count\">1.4k</span>\n            <button class=\"vote-btn down\">&#8681;</button>\n        </div>\n\n        <div class=\"content-column\">\n            <div class=\"post-header\">\n                <img src=\"avatar.jpg\" alt=\"User Avatar\" class=\"avatar\" onerror=\"this.src='https://via.placeholder.com/20/454545/FFFFFF?text=J'\">\n                <a href=\"#\" class=\"subreddit\">r/battlestations</a>\n                <span class=\"user-info\">• Posted by <a href=\"#\">u/JavierSGuerrero</a></span>\n                <span class=\"timestamp\">4 hours ago</span>\n            </div>\n\n            <h2 class=\"post-title\">Show off your weekend setups!</h2>\n\n            <div class=\"post-body\">\n                <p>Finally got my rig running smooth for the weekend grind. Just bought a bunch of new gear for my high-end mountain bikes, so I'm staying inside to save cash and game. Connection is actually blazing fast today on the Richardson_St_Home network. Anyone online to squad up? Hit up my DMs.</p>\n                \n                <div class=\"post-image\">\n                    <img src=\"rig_setup.jpg\" alt=\"Javier's Weekend Gaming Setup\" onerror=\"this.style.display='none'; this.nextElementSibling.style.display='block';\">\n                    <span style=\"display: none;\">[ Image placeholder for rig_setup.jpg ]</span>\n                </div>\n            </div>\n\n            <div class=\"post-footer\">",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "avatar.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2c_2026/uuid/556593da-f6ad-483b-899c-cbe531f5b620.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "rig_setup.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/thinking_critically_lesson8_level2c_2026/uuid/98a61d73-c780-4396-a9bb-6c14a3e55511.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7ec14f4e73db6c07c872e2c951dac8ec-three.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:11:07.249+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2b_2026\"},{\"changed_at\":\"2026-04-28 16:12:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

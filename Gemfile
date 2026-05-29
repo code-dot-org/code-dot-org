@@ -81,8 +81,9 @@ gem 'rack_csrf'
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
+gem 'annotaterb', '~> 4.19', group: [:development, :test]
+
 group :development do
-  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
@@ -107,6 +108,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
+  gem 'prosopite'
   gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
   # For unit testing.
@@ -119,7 +121,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '~> 4.0'
+  gem 'eyes_selenium', '>= 6.0.4' # required for Ruby 3.2 support
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -187,7 +189,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise_invitable', '~> 2.0.12'
 
 gem 'omniauth-classlink', '~> 0.3.1'
 gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'
@@ -210,8 +212,6 @@ gem 'nokogiri', '~> 1.18.9'
 gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
-
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -271,8 +271,9 @@ gem 'aws-sdk-cloudwatchlogs'
 gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core', '>= 3.239.2'
 gem 'aws-sdk-databasemigrationservice'
+gem 'aws-sdk-devicefarm'
 gem 'aws-sdk-dynamodb'
-gem 'aws-sdk-ec2'
+gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'

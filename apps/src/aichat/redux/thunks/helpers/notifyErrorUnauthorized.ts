@@ -1,3 +1,7 @@
+import {
+  AI_CHAT_NOT_AUTHORIZED_STUDENT,
+  AI_CHAT_NOT_AUTHORIZED_TEACHER,
+} from '@cdo/apps/aichat/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -22,8 +26,8 @@ export async function notifyErrorUnauthorized(
   }
 
   const userTypeToMessageText: {[key: string]: string} = {
-    teacher: commonI18n.aiChatNotAuthorizedTeacher(),
-    student: commonI18n.aiChatNotAuthorizedStudent(),
+    teacher: AI_CHAT_NOT_AUTHORIZED_TEACHER,
+    student: AI_CHAT_NOT_AUTHORIZED_STUDENT,
   };
   const messageText =
     userTypeToMessageText[userType] ||
@@ -38,13 +42,9 @@ export async function notifyErrorUnauthorized(
     })
   );
   dispatch(
-    sendAnalytics(
-      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
-      {
-        userType,
-        userAction,
-      },
-      true
-    )
+    sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED, {
+      userType,
+      userAction,
+    })
   );
 }

@@ -38,6 +38,7 @@ import manageStudents, {
   addStudentsFull,
   transferStudentsFull,
   loadSectionStudentData,
+  convertStudentServerData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
@@ -440,6 +441,76 @@ describe('manageStudentsRedux', () => {
       assert.equal(studentDataArray[0], sectionLoginData[3]);
       assert.equal(studentDataArray[1], sectionLoginData[2]);
       assert.equal(studentDataArray[2], sectionLoginData[1]);
+    });
+  });
+
+  describe('convertStudentServerData', () => {
+    const baseServerStudent = {
+      id: 7,
+      name: 'A',
+      family_name: 'B',
+      username: 'a.b',
+      email: null,
+      age: null,
+      gender: null,
+      gender_teacher_input: null,
+      sharing_disabled: false,
+      has_ever_signed_in: false,
+      depends_on_this_section_for_login: true,
+      user_type: 'student',
+      child_account_compliance_state: null,
+      latest_permission_request_sent_at: null,
+      at_risk_age_gated_date: null,
+      us_state: null,
+      secret_words: null,
+      secret_picture_url: null,
+    };
+
+    it('fills demo students with placeholder secret words and picture when server fields are null', () => {
+      const result = convertStudentServerData(
+        [{...baseServerStudent, is_demo_student: true}],
+        'word',
+        53
+      );
+      const student = result[7];
+      assert.isString(student.secretWords);
+      assert.isAbove(student.secretWords.length, 0);
+      // secretPictureUrl resolves to whatever the bundler maps the static
+      // thumbnail import to; in tests jest hands back a module object, so we
+      // assert it's been populated rather than null.
+      assert.isNotNull(student.secretPictureUrl);
+      assert.isDefined(student.secretPictureUrl);
+      assert.equal(student.isDemoStudent, true);
+    });
+
+    it('keeps null secrets for non-demo students when server fields are null', () => {
+      const result = convertStudentServerData(
+        [{...baseServerStudent, is_demo_student: false}],
+        'word',
+        53
+      );
+      const student = result[7];
+      assert.equal(student.secretWords, null);
+      assert.equal(student.secretPictureUrl, null);
+      assert.equal(student.isDemoStudent, false);
+    });
+
+    it('passes through server-provided secrets for demo students without overriding', () => {
+      const result = convertStudentServerData(
+        [
+          {
+            ...baseServerStudent,
+            is_demo_student: true,
+            secret_words: 'server words',
+            secret_picture_url: '/server/pic.png',
+          },
+        ],
+        'word',
+        53
+      );
+      const student = result[7];
+      assert.equal(student.secretWords, 'server words');
+      assert.equal(student.secretPictureUrl, '/server/pic.png');
     });
   });
 
@@ -1131,7 +1202,6 @@ describe('manageStudentsRedux', () => {
         age: 17,
         sharing_disabled: true,
         has_ever_signed_in: false,
-        ai_tutor_access_denied: false,
         at_risk_age_gated: false,
         child_account_compliance_state: null,
         latest_permission_request_sent_at: null,

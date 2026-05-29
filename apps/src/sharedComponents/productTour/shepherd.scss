@@ -1,7 +1,12 @@
 @import 'shepherd.js/dist/css/shepherd.css';
+@import 'color.scss';
 
-// Style the shepherd step container to approximately match the dsco popover.
-.custom-shepherd-step-container {
+.tour-step-highlight {
+  outline: 2px solid orange !important;
+}
+
+// Shared styles for all shepherd step containers.
+%shepherd-step-container-base {
   font-family: Figtree, sans-serif;
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
@@ -74,9 +79,9 @@
     }
 
     &:disabled,
-    &[aria-disabled='true']  {
-        background: var(--background-neutral-disabled);
-        color: var(--text-neutral-disabled-inverse);
+    &[aria-disabled='true'] {
+      background: var(--background-neutral-disabled);
+      color: var(--text-neutral-disabled-inverse);
     }
   }
 
@@ -101,7 +106,185 @@
   }
 
   // The default style for the bottom arrow is a gray color, we want white.
-  &.shepherd-element.shepherd-has-title[data-popper-placement^="bottom"]>.shepherd-arrow:before {
+  &.shepherd-element.shepherd-has-title[data-popper-placement^='bottom']
+    > .shepherd-arrow:before {
     background-color: var(--background-neutral-primary);
   }
+}
+
+// Style the shepherd step container to approximately match the dsco popover.
+.custom-shepherd-step-container {
+  @extend %shepherd-step-container-base;
+}
+
+.onboarding-completion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+
+  .onboarding-completion-emoji {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+.onboarding-completion-step .shepherd-footer {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.onboarding-step-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.onboarding-sparkle-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: linear-gradient(
+    to right,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.onboarding-step-text {
+  flex: 1;
+}
+
+// Quiz step: column of answer option buttons.
+.quiz-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  border: 1px solid var(--neutral-white-alpha-30);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--neutral-base-white);
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+
+  &:not(:disabled):hover {
+    border-color: var(--neutral-white-alpha-70);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+div .quiz-option-wrong {
+  border-color: #e53e3e;
+  background-color: rgb(229 62 62 / 15%);
+  color: var(--accent-strawberry-40);
+}
+
+div .quiz-option-correct {
+  border-color: #38a169;
+  background-color: rgb(56 161 105 / 15%);
+  color: #68d391;
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  min-height: 18px;
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-gray-50);
+}
+
+// Onboarding tour step container styles.
+.custom-shepherd-onboarding-container {
+  @extend %shepherd-step-container-base;
+
+  background-color: var(--neutral-base-black);
+  color: var(--neutral-base-white);
+
+  // Lay out the content as a flex row so the sparkle+text and the X button
+  // all sit on the same line, with the footer wrapping beneath.
+  .shepherd-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+  }
+
+  // Text takes all available width and renders first.
+  .shepherd-text {
+    flex: 1;
+    min-width: 0;
+    order: 1;
+    color: var(--neutral-base-white);
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  // Header only contains the cancel icon here; push it to the right.
+  .shepherd-header {
+    order: 2;
+    flex-shrink: 0;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  // Take the cancel icon out of absolute positioning so it sits inline.
+  .shepherd-cancel-icon {
+    position: static;
+    color: var(--neutral-base-white);
+
+    &:hover {
+      color: rgb(200 200 200);
+    }
+  }
+
+  // Footer wraps to a second row and aligns buttons to the right.
+  .shepherd-footer {
+    flex-basis: 100%;
+    order: 3;
+    padding: 0;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  &.shepherd-element > .shepherd-arrow:before {
+    background-color: var(--neutral-base-black);
+  }
+}
+
+.onboarding-progress-table-step {
+  width: 276px;
+}
+
+.onboarding-step-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-step-supportive-text {
+  color: var(--neutral-white-alpha-60);
+  font-size: 12px;
+  margin-top: 8px;
 }

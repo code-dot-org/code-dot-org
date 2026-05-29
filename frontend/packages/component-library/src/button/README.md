@@ -1,6 +1,8 @@
 # `componentLibrary/button`
 
-## Consuming This Component
+> **⚠️ Deprecated**: The DSCO Button components (`Button`, `LinkButton`, `GenericButton`) are deprecated. Use MUI `Button` and `IconButton` from `@mui/material` instead. All `/apps` consumers and all internal DSCO component consumers have been migrated. See [BUTTON_MIGRATION_TO_MUI.md](BUTTON_MIGRATION_TO_MUI.md) for the migration guide and [MIGRATION_STATUS.md](../../MIGRATION_STATUS.md) for overall progress.
+
+## Legacy Documentation
 
 This package exports three styled React components: [GenericButton](GenericButton.tsx), [Button](Button.tsx),
 [LinkButton](LinkButton.tsx).

@@ -10,6 +10,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMark
 import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
 import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
+import JsonVideosEditor, {JsonVideo} from './JsonVideosEditor';
 
 import moduleStyles from './jitPlConceptsEditor.module.scss';
 
@@ -33,6 +34,7 @@ interface Misconception {
   name?: string;
   text_content?: string;
   resources?: Resource[];
+  json_videos?: JsonVideo[];
   exemplars?: Exemplar[];
 }
 
@@ -51,6 +53,10 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
 }) => {
   const contextKey = `jitPlMisconceptionResource_${initial?.id ?? 'new'}`;
   const initialResourcesRef = useRef(initial?.resources ?? []);
+  const [jsonVideos, setJsonVideos] = useState<JsonVideo[]>(
+    initial?.json_videos ?? []
+  );
+  const [isVideoCreating, setIsVideoCreating] = useState(false);
 
   useEffect(() => {
     if (!hasReducer(contextKey)) {
@@ -80,6 +86,7 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         name,
         text_content: textContent,
         resource_ids: resources.map(r => r.id),
+        json_video_ids: jsonVideos.map(v => v.id),
       },
     })
       .done((data: Misconception) => onSave(data))
@@ -114,8 +121,21 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         resourceContext={contextKey}
         resources={resources}
       />
+      <h4 className={moduleStyles.resourcesHeading}>JSON Videos</h4>
+      <JsonVideosEditor
+        jsonVideos={jsonVideos}
+        onChange={setJsonVideos}
+        onVideoCreatingChange={setIsVideoCreating}
+        associationTarget={
+          initial ? {type: 'jit_pl_misconception', id: initial.id} : undefined
+        }
+      />
       <div className={moduleStyles.formButtons}>
-        <button onClick={save} disabled={isSaving} type="button">
+        <button
+          onClick={save}
+          disabled={isSaving || isVideoCreating}
+          type="button"
+        >
           {isSaving ? 'Saving...' : 'Save'}
         </button>
         <button

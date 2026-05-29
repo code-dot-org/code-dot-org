@@ -11,18 +11,26 @@ describe('MoreDetailsDialog', () => {
     render(<MoreDetailsDialog onClose={() => {}} />);
 
     expect(screen.getByText('Progress Tracking Icon Key')).be.visible;
-    expect(screen.getByRole('button')).be.visible;
+    expect(screen.getByRole('button', {name: 'OK'})).be.visible;
     expect(screen.getByText('Assignment Completion States')).be.visible;
     expect(screen.getByText('Teacher Actions')).be.visible;
     expect(screen.getByText('Level Types')).be.visible;
   });
 
-  it('calls onClose when the close button is clicked', () => {
+  it('calls onClose when the OK button is clicked', () => {
     const onCloseMock = sinon.spy();
     render(<MoreDetailsDialog onClose={onCloseMock} />);
 
-    const closeButton = screen.getByRole('button');
-    fireEvent.click(closeButton);
+    fireEvent.click(screen.getByRole('button', {name: 'OK'}));
+
+    expect(onCloseMock).to.have.been.calledOnce;
+  });
+
+  it('calls onClose when the close (X) button is clicked', () => {
+    const onCloseMock = sinon.spy();
+    render(<MoreDetailsDialog onClose={onCloseMock} />);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
 
     expect(onCloseMock).to.have.been.calledOnce;
   });

@@ -1,3 +1,4 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -5,7 +6,6 @@ import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/Ve
 
 describe('VerifiedResourcesNotification', () => {
   const defaultProps = {
-    width: 700,
     inLesson: false,
   };
 
@@ -14,7 +14,7 @@ describe('VerifiedResourcesNotification', () => {
       <VerifiedResourcesNotification {...defaultProps} />
     );
 
-    expect(wrapper.find('Connect(Notification)').first().props().details).toBe(
+    expect(wrapper.find(NotificationBanner).first().prop('description')).toBe(
       'This course provides extra resources which are only available to verified teachers.'
     );
   });
@@ -24,7 +24,7 @@ describe('VerifiedResourcesNotification', () => {
       <VerifiedResourcesNotification {...defaultProps} inLesson={true} />
     );
 
-    expect(wrapper.find('Connect(Notification)').first().props().details).toBe(
+    expect(wrapper.find(NotificationBanner).first().prop('description')).toBe(
       'This lesson contains extra resources or levels which are only available to verified teachers.'
     );
   });

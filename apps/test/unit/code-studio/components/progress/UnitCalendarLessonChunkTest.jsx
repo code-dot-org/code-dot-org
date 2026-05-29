@@ -1,9 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
-import color from '@cdo/apps/util/color';
 
 const sampleLessonChunk = {
   id: 1,
@@ -33,9 +34,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.purple
+      '2px solid var(--borders-brand-purple-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-primary)'
+    );
   });
 
   it('is purple background with white text when is assessment and being hovered', () => {
@@ -52,12 +55,14 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.purple
+      '2px solid var(--borders-brand-purple-primary)'
     );
     expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(
-      color.purple
+      'var(--background-brand-purple-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('white');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-white-fixed)'
+    );
   });
 
   it('is teal border with grey text when is assessment', () => {
@@ -74,9 +79,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.teal
+      '2px solid var(--borders-brand-teal-primary)'
     );
-    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-primary)'
+    );
   });
 
   it('is teal background with white text when is assessment and being hovered', () => {
@@ -93,10 +100,14 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(wrapper.find('a').prop('style')['border']).toBe(
-      '2px solid ' + color.teal
+      '2px solid var(--borders-brand-teal-primary)'
     );
-    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(color.teal);
-    expect(wrapper.find('a').prop('style')['color']).toBe(color.white);
+    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(
+      'var(--background-brand-teal-primary)'
+    );
+    expect(wrapper.find('a').prop('style')['color']).toBe(
+      'var(--text-neutral-white-fixed)'
+    );
   });
 
   it('has dashed left border when not isStart', () => {
@@ -145,7 +156,11 @@ describe('UnitCalendarLessonChunk', () => {
     );
 
     expect(
-      wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
+      wrapper.containsMatchingElement(
+        <Typography variant="body3" component="div">
+          {sampleLessonChunk.title}
+        </Typography>
+      )
     ).toBe(false);
   });
 
@@ -164,13 +179,17 @@ describe('UnitCalendarLessonChunk', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <div>{sampleLessonChunk.lessonNumber}</div>
+        <Typography variant="body3" component="div">
+          {sampleLessonChunk.lessonNumber}
+        </Typography>
       )
     ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <ReactTooltip>
-          <div>{sampleLessonChunk.title}</div>
+          <Typography variant="body3" component="div">
+            {sampleLessonChunk.title}
+          </Typography>
         </ReactTooltip>
       )
     ).toBe(true);
@@ -189,9 +208,9 @@ describe('UnitCalendarLessonChunk', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome').at(0).prop('style')['visibility']).toBe(
-      'hidden'
-    );
+    expect(
+      wrapper.find(FontAwesomeV6Icon).at(0).prop('style')['visibility']
+    ).toBe('hidden');
   });
 
   it('hides unplugged icon if not unplugged', () => {
@@ -207,8 +226,8 @@ describe('UnitCalendarLessonChunk', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome').at(1).prop('style')['visibility']).toBe(
-      'hidden'
-    );
+    expect(
+      wrapper.find(FontAwesomeV6Icon).at(1).prop('style')['visibility']
+    ).toBe('hidden');
   });
 });

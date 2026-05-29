@@ -25,6 +25,7 @@ export const FileRowIcon: FileBrowserIconComponentType = ({item}) => {
       iconName={iconName}
       iconStyle={iconStyle}
       className={iconClassName}
+      aria-hidden
     />
   );
 };

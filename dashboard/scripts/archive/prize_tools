@@ -37,11 +37,11 @@ class PrizeTools
   end
 
   def self.prizes(user)
-    puts <<-EOS
+    puts <<-OUTPUT
     teacher_prize_earned: #{user.teacher_prize_earned.inspect}
     teacher_prize: #{user.teacher_prize.inspect}
     teacher_bonus_prize_earned: #{user.teacher_bonus_prize_earned.inspect}
     teacher_bonus_prize: #{user.teacher_bonus_prize.inspect}
-    EOS
+    OUTPUT
   end
 end

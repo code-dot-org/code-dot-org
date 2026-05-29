@@ -16,7 +16,7 @@ export default class ProjectHeader extends React.Component {
 
   render() {
     // Verify background image works for both LTR and RTL languages.
-    const backgroundUrl = '/shared/images/banners/project-banner.jpg';
+    const backgroundUrl = '/shared/images/banners/project-banner.png';
     return (
       <div>
         <HeaderBanner

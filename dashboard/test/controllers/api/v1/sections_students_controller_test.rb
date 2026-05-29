@@ -36,6 +36,18 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal expected_summary, @response.body
   end
 
+  test 'is_demo_student is true for demo students' do
+    sign_in @teacher
+
+    Policies::DemoSections.stubs(:demo_student?).with(@student.id).returns(true)
+
+    get :index, params: {section_id: @section.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    assert response[0]['is_demo_student']
+  end
+
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
     student = create(:student_in_picture_section)
     assert student.teacher_managed_account?
@@ -340,6 +352,36 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
           assert_response :success
           _(response_body['us_state']).must_equal us_state
         end
+      end
+    end
+
+    context 'when target is a demo student' do
+      # Teachers cannot manage demo students per the `:manage, User` ability,
+      # so the entire update endpoint 403s — covering password, secret-word
+      # resets, and any other field.
+      let(:demo_student) do
+        s = create(:follower, section: section).student_user
+        DemoStudent.create!(user: s, demo_type: 'middle')
+        Policies::DemoSections.reset_cache!
+        s
+      end
+
+      let(:params) do
+        {section_id: section.id, id: demo_student.id, student: student_params}
+      end
+
+      let(:student_params) {{name: 'New Name', password: 'reset-attempt'}}
+
+      it 'returns forbidden and does not change the student' do
+        patch_update
+        assert_response :forbidden
+        demo_student.reload
+        _(demo_student.encrypted_password).must_equal ''
+      end
+
+      it 'returns forbidden for secret-word resets too' do
+        patch :update, params: params.merge(secrets: User::RESET_SECRETS)
+        assert_response :forbidden
       end
     end
   end

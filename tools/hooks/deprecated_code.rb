@@ -20,10 +20,10 @@ def detect_deprecated_code
     @added_lines.each_line do |line|
       # Detect usage of deprecated code, ignoring comments
       if line.match?(/^[^#\/]*\b#{Regexp.escape(deprecated_code)}\b/i)
-        puts red <<-EOS
+        puts red <<-WARNING
             Looks like you are using deprecated code: #{deprecated_code}
             Please avoid using this as it is planned to be removed in the near future.
-        EOS
+        WARNING
         raise "Commit blocked due to deprecated code usage: #{deprecated_code}."
       end
     end

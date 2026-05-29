@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-24T02:31:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Front-End Developers are the builders of the internet, taking the designs from UX and Brand designers and turning them into functional code.",
+        "imageUrl": "https://images.code.org/5d9837ea6e56df857bee626a0e7990ba-lesson6-panel1.png",
+        "key": "undefined-f97b510a-e1c0-4e9c-88a0-6911a42ef05a",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Developers use a mix of HTML (the skeleton), CSS (the style), and JavaScript (the brain) to create everything you see and click on a website.",
+        "imageUrl": "https://images.code.org/810f06bc7339d1958081d3c0d98cb303-lesson6-panel2.png",
+        "key": "undefined-e9c5e44d-7dc1-4c0b-b8f9-d4991047b009",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "A major part of the job is \"Responsive Design\"—making sure one website adjusts perfectly to fit a phone, a tablet, or a giant desktop monitor.",
+        "imageUrl": "https://images.code.org/471b172042e856ccd60e42121d4e1998-lesson6-panel3.png",
+        "key": "undefined-27e7d451-ed33-4ec9-a662-b9f8fd73455f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Front-end is where logic meets creativity; developers build the animations and transitions that make an app feel fast, snappy, and fun to use.",
+        "imageUrl": "https://images.code.org/9627ad323ccfe8be5ca9fcebe95e0aba-lesson6-panel4.png",
+        "key": "undefined-2c9ccff0-1dcc-43e3-bc17-dde6078e4cc9",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-24T02:31:06.671+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-careerpanel_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-careerpanel_2026\"},{\"changed_at\":\"2026-04-24 02:31:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 11:32:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 11:32:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 12:51:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 13:30:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

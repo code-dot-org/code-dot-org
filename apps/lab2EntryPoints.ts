@@ -7,9 +7,10 @@
  * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
  */
 
-import {AIChatEntryPoint} from '@cdo/apps/aichat/entrypoint';
+import {AIChatEntryPoint} from '@cdo/apps/aichatLab/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
 import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
+import {JavalabEntryPoint} from '@cdo/apps/javalab/lab2/entrypoint';
 import type {Lab2EntryPoint} from '@cdo/apps/lab2/types';
 import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
 import {PanelsEntryPoint} from '@cdo/apps/panels/entrypoint';
@@ -22,6 +23,7 @@ export const lab2EntryPoints = {
   aichat: AIChatEntryPoint,
   bubble_choice: BubbleChoiceEntryPoint,
   dance: DanceEntryPoint,
+  javalab: JavalabEntryPoint,
   music: MusicEntryPoint,
   panels: PanelsEntryPoint,
   pythonlab: PythonlabEntryPoint,

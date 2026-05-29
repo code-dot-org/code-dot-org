@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson6-level5_choice-v2_2026'
+display_name 'Use Functions with Parameters'
+description 'Plan and implement functions with parameters in one of the scenarios below.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson6-level5a-version2_weblab_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level5b-version2_weblab_2026'
+level 'ai-and-algorithmic-decisions-lesson6-level5c-version2_weblab_2026'
+
+uses_lab2
+navigation_type 'next_level'

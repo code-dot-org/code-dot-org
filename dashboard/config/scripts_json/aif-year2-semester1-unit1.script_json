@@ -1,0 +1,657 @@
+{
+  "script": {
+    "name": "aif-year2-semester1-unit1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-28 15:31:56 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aif-year2-semester1-unit1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "What is Intelligence?",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**What does it mean to be intelligent?**\n\nIn this lesson, students explore what intelligence means, examining the question from a human and machine perspective. They begin with their own intuitions and, through engaging with thought experiments and classroom discussions, they refine their thinking and emerge with a clearer understanding of their own definition of intelligence.",
+        "preparation": "- Print copies of the Logic-Based AI Unit Guide (one for each student)\n- Print and cut out copies of the Intelligence Card Sort activity (one for each pair of two students)",
+        "student_overview": "**What does it mean to be intelligent?**\n\nExplore what intelligence means, examining the question from a human and machine perspective."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Lesson 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Lesson 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Lesson 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Lesson 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Lesson 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Lesson 8",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson 9",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Lesson 10",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Lesson 11",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Lesson 12",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "21fac691-68b3-4d23-b5fb-5500025579f3",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "a6b703fc-1e0f-48ed-ac0e-6f2abd5c810e",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6b703fc-1e0f-48ed-ac0e-6f2abd5c810e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d5b66cea-231a-4e6d-b656-9bb406d80bd9",
+      "position": 1,
+      "properties": {
+        "description": "’Intelligence’ is one of those words we all use confidently until someone asks us to define it. Today, we’re going to pin down and test our own definitions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d5b66cea-231a-4e6d-b656-9bb406d80bd9",
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec"
+      }
+    },
+    {
+      "key": "d5eef647-5d88-4c29-b311-addce6ad8af0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you call a person—or an animal, or a computer—”intelligent,” what do you really mean?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prime students’ thinking about what ‘intelligence’ means. Students should surface their working definitions and notice they’re not all the same. Strong responses describe what the brain (or a system) is doing, not just its outcomes: for example, “learns from mistakes,” or “figures things out through trial and error.” Watch for outcome-oriented answers, like “gets good grades.” When you hear these, push students towards the underlying mechanism: “What is the brain doing that makes getting good grades possible?” If students struggle to describe what makes things intelligent, ask them for examples of objects that are not intelligent and compare: what makes some things intelligent and others not? To end the discussion, acknowledge that it’s okay to not agree on a single definition of intelligence. The point is simply to start to think about what ‘intelligence’ really means."
+      },
+      "seeding_key": {
+        "activity_section.key": "d5eef647-5d88-4c29-b311-addce6ad8af0",
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec"
+      }
+    },
+    {
+      "key": "e1307fb6-6dcb-46fa-9836-bb37eae473c7",
+      "position": 3,
+      "properties": {
+        "description": "It’s okay for us not to have a clear definition of ‘intelligence’ yet. For the next few minutes, I want you to write down your own definition based on what you shared or heard from other classmates.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e1307fb6-6dcb-46fa-9836-bb37eae473c7",
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec"
+      }
+    },
+    {
+      "key": "b49d7f98-ccea-4cbc-bc34-6e70d67d4215",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Logic-Based AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students 1–3 minutes to write down their working definition of intelligence in the Lesson 1 Warm Up section. Tell them they’ll come back to it at the end of class to refine it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b49d7f98-ccea-4cbc-bc34-6e70d67d4215",
+        "lesson_activity.key": "e1b145ef-f47c-47cf-ae2d-3e2297cd3aec"
+      }
+    },
+    {
+      "key": "1b5ac0d5-7a79-4f99-aac2-7435a10e3b89",
+      "position": 1,
+      "properties": {
+        "description": "You have a working definition of ‘intelligence.’ Now, let's stress-test it. I'm going to give each pair of you a deck of cards. Each card describes a behavior—sometimes from a person, sometimes from an animal, sometimes from a machine. Your job is to decide what kind of 'intelligence'—if any—that behavior represents, and to group cards that show the same kind of intelligence together. There's no single right answer. What matters is that your group can defend the way you sorted.",
+        "duration": "10",
+        "name": "Intelligence Card Sort",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b5ac0d5-7a79-4f99-aac2-7435a10e3b89",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "f2bdecd6-f9c9-4e79-ac7c-6daedd8d6926",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Intelligence Card Sort instructions to students. Take questions before grouping.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs of two.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It’s okay if, with an odd number of students, you have a group of three."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2bdecd6-f9c9-4e79-ac7c-6daedd8d6926",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "a5aa1e59-0ccd-4c27-bc5d-b6d080efec62",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Intelligence Card Sort set.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Intelligence Card Sort instructions to students while they work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Listen for groups that lump everything into one category (e.g., “It’s all just following rules”) or that split everything into “human” vs. “machine” without considering finer distinctions. If groups stall, ask: “Is the way a calculator solves a problem the same kind of thinking as the way a dog learns a new trick?” or “What about the thermostat—is that intelligence at all?” Reassure pairs who want a right answer that the goal is to surface their reasoning. Disagreements between groups are exactly what we want.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you decide which cards belonged together?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface students’ thinking from the Intelligence Card Sort activity. Students should recognize that intelligence isn’t one thing: it could be rule-following, learning from experience, responding to the environment, or reasoning about new situations. A strong response might name a category and describe why certain cards are part of it: for example, “these cards all learn from the experience, like the baby learning to walk.” Watch out for vague or outcome-only groupings: for example, “these are all the smart cards.” Offer more food for thought: “It’s good you think these cards are smart, but what are they doing that’s smart?” End the discussion by highlighting 2–3 different ways that pairs sorted their cards.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5aa1e59-0ccd-4c27-bc5d-b6d080efec62",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "8a73546c-c49b-43d8-b8d0-000885c91d15",
+      "position": 4,
+      "properties": {
+        "description": "What you’ve just done—having different ideas about what counts as intelligence—is exactly the problem people have been arguing about for decades, especially when it comes to computers. In 1950, a mathematician named Alan Turing proposed one way to settle these debates. Let’s see what you think of his answer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8a73546c-c49b-43d8-b8d0-000885c91d15",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "074b9278-4867-4dc4-b227-16b2c0ffdd48",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the *Turing test*. Emphasize that it’s a behavioral test: it doesn’t care what’s happening inside the machine, only what comes out.",
+        "duration": "20",
+        "name": "The Turing Test in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "074b9278-4867-4dc4-b227-16b2c0ffdd48",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "88588601-71f2-480b-aa2d-78faa6738181",
+      "position": 6,
+      "properties": {
+        "description": "Alan Turing was a mathematician who proposed a simple idea: to test for intelligence, it didn’t matter what a machine was actually doing—it only mattered whether it could hold a conversation as well as a human.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "88588601-71f2-480b-aa2d-78faa6738181",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "af7600e3-7a03-48d4-ae2d-4017afaee5ce",
+      "position": 7,
+      "properties": {
+        "description": "Turing’s goal was to make a reasonable assessment of artificial intelligence, or AI. Let’s define what we mean by AI before we move any further.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "af7600e3-7a03-48d4-ae2d-4017afaee5ce",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "ec2a392d-f4df-40d7-8c2b-07a24d64c614",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence*."
+      },
+      "seeding_key": {
+        "activity_section.key": "ec2a392d-f4df-40d7-8c2b-07a24d64c614",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "fab11ce4-e892-47d7-9261-1054f9754a86",
+      "position": 9,
+      "properties": {
+        "description": "Now, let’s see the Turing Test in action. In this test, a human interviewer talked to two musical artists—one of which was AI. Let’s see how the artists responded to three of the interviewer’s questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fab11ce4-e892-47d7-9261-1054f9754a86",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "aa294095-fce8-483c-89a7-3982ac7f60b3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to raise their hand if they think A is the AI. Ask students to raise their hand if they think B is the AI."
+      },
+      "seeding_key": {
+        "activity_section.key": "aa294095-fce8-483c-89a7-3982ac7f60b3",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "58d924f4-8a04-42f3-9abf-457c82b33a0c",
+      "position": 11,
+      "properties": {
+        "description": "Here’s the next question and the two responses. Remember, one of these responses was generated by AI.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "58d924f4-8a04-42f3-9abf-457c82b33a0c",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "fd76f544-623c-479c-a51f-cb47b37a90da",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to again raise their hand if they think A is the AI. Ask students to raise their hand if they think B is the AI."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd76f544-623c-479c-a51f-cb47b37a90da",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "700c6fb6-02d2-48a5-bb35-9be2efb792ee",
+      "position": 13,
+      "properties": {
+        "description": "Here’s the next question and the two responses. Remember, one of these responses was generated by AI.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "700c6fb6-02d2-48a5-bb35-9be2efb792ee",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "b578db7a-7448-4554-bf59-dea822dff7d8",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to once again raise their hand if they think A is the AI. Ask students to raise their hand if they think B is the AI."
+      },
+      "seeding_key": {
+        "activity_section.key": "b578db7a-7448-4554-bf59-dea822dff7d8",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "5bbcf3ac-2395-4703-9274-57cd834f573a",
+      "position": 15,
+      "properties": {
+        "description": "Are you ready for the reveal?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5bbcf3ac-2395-4703-9274-57cd834f573a",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "2bbdcaa9-227d-4428-8b4a-84276153cecc",
+      "position": 16,
+      "properties": {
+        "description": "Artist A was actually Taylor Swift in an interview for the New York Times. Artist B wasn’t real—instead, their responses were generated entirely by AI. If you thought Artist B was real, it passed the Turing test. So, what do you think? Is the Turing test an accurate test of intelligence? For the next 10 minutes, you’ll gather your thoughts and debate them with AI.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally introduce students to the comic at https://xkcd.com/329/, which riffs on the fundamental idea behind the Turing test."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2bbdcaa9-227d-4428-8b4a-84276153cecc",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "e6bea07c-c12d-4f19-983d-5bcb6dcef435",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Levels 1–4. Students stay on the platform through the rest of the activity.\n- Level 1: Students write down their stance on the Turing test as a measure of intelligence.\n- Level 2: Students debate their stance with AI, using it to strengthen or adjust their argument.\n- Level 3: Students revisit and refine their stance based on the debate. This serves as the lesson's formative assessment.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students about their AI conversations on-screen. Look for:\n- Students who pick a side too quickly without engaging with counter arguments. You could ask: \"What's the best argument against your position? Has the AI tried it on you yet?\"\n- Students conflating \"fooling a human\" with \"thinking like a human.\" Ask students about whether these might be two different things..\n- Students who let the AI talk them out of their position without resistance. You could ask: \"Did the AI's argument actually mean something to you, or just sound persuasive?\"",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 3 responses to gauge understanding before the Wrap Up.\n- If most students offer a clear stance with at least one substantive reason, move to the wrap-up.\n- If responses lean on surface reasoning (e.g., \"it's just a computer,\" \"it's smart because it's fast\"), surface 2–3 student responses anonymously and ask the class to push on them: \"What would the Turing test say about this argument?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6bea07c-c12d-4f19-983d-5bcb6dcef435",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "7d86be1b-c70c-4fe6-9323-bd5d865a9311",
+      "position": 18,
+      "properties": {
+        "description": "Whether or not you ended up convinced by Turing, you've now done what computer scientists have argued about for 75 years: what should count as intelligence in a machine. There's no settled answer. But the answer you would give shapes what we mean when we say a machine is 'smart.' Hold onto your stance—we'll use it again.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7d86be1b-c70c-4fe6-9323-bd5d865a9311",
+        "lesson_activity.key": "21fac691-68b3-4d23-b5fb-5500025579f3"
+      }
+    },
+    {
+      "key": "7b7b3081-df64-41f3-9a00-54c277bcb4eb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students back to their original definition of intelligence in the Unit Guide and have them refine it in light of today’s discussion. Give them about 90 seconds, then have 2–3 students share how their definition changed.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b7b3081-df64-41f3-9a00-54c277bcb4eb",
+        "lesson_activity.key": "a6b703fc-1e0f-48ed-ac0e-6f2abd5c810e"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "artificial_intelligence_ai_",
+      "word": "artificial intelligence (AI)",
+      "definition": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "turing_test",
+      "word": "Turing test",
+      "definition": "a test in which a machine is considered intelligent if you can’t tell it apart from a human in conversation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "turing_test"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "turing_test"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "3e06f2c7-669b-4699-9db0-61a19d2c19bb",
+      "properties": {
+        "description": "Describe their personal definition of intelligence."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "3e06f2c7-669b-4699-9db0-61a19d2c19bb"
+      }
+    },
+    {
+      "key": "a722636f-d950-4a99-ada6-77de9d70536f",
+      "properties": {
+        "description": "Evaluate the Turing test as a measure of machine intelligence."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a722636f-d950-4a99-ada6-77de9d70536f"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

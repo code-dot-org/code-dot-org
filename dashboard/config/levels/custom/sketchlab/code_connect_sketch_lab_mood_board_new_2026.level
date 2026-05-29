@@ -1,0 +1,713 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-05-08T01:14:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Design a Brand Kit",
+    "long_instructions": "## Design a Brand Kit\r\n\r\n### Do This:\r\n1. Choose a topic for your hobby website.\r\n\r\n2. Create a brand kit that captures your chosen website topic. Include:\r\n    - 3–5 color swatches\r\n    - A font pair (heading + body text)\r\n    - 1–2 descriptive style words (e.g., sleek, bold, approachable)\r\n    - 1 image that represents your hobby's world or feeling.\r\n    - (Optional) 1 logo, icon, or background texture that ties your design together.\r\n\r\n3. Add your sketch to your **Backpack** to use in the next level.\r\n",
+    "bubble_choice_description": "Create your brand kit, aligning your colors, fonts, and style words to your chosen user persona.",
+    "thumbnail_url": "https://images.code.org/2dc43811079ab3e241537656dbb50a36-Gemini_Generated_Image_o9w5dso9w5dso9w5.png",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "e262dbad-0f52-4a51-a0f3-384f91144538",
+            "type": "text",
+            "data": {
+              "text": "1. Describe your topic",
+              "showHandles": false,
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 653.0137462759951,
+              "y": 45.11461814712237
+            },
+            "measured": {
+              "width": 270,
+              "height": 111
+            },
+            "dragging": false,
+            "width": 270,
+            "height": 111,
+            "resizing": false
+          },
+          {
+            "id": "0a4bb13b-ed1d-47b8-8b1a-38a0349f62bb",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false
+            },
+            "position": {
+              "x": 942,
+              "y": 38.83332824707031
+            },
+            "width": 1231,
+            "height": 189,
+            "measured": {
+              "width": 1231,
+              "height": 189
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "fba0a586-fe46-4396-a910-21d8b5015684",
+            "type": "text",
+            "data": {
+              "text": "2. Select a sample \nuser persona or \ncreate your own",
+              "showHandles": false,
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 630.6161234834159,
+              "y": 378.1488275457019
+            },
+            "measured": {
+              "width": 281,
+              "height": 101
+            },
+            "width": 281,
+            "height": 101,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "6e08d35e-f667-4638-bbb5-e4df8c4cc6ee",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false,
+              "locked": true
+            },
+            "position": {
+              "x": 939.4733182709292,
+              "y": 300.2917287424662
+            },
+            "width": 1237,
+            "height": 460,
+            "measured": {
+              "width": 1237,
+              "height": 460
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "7126f50c-fd02-4217-ace7-dec382e7675b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #1\n\nWho she is: Varsity winger \n+ part-time barista. Ten-\nminute passing periods are \nher whole window.\n\nHabits & prefs: Saves \nfavorite orders; lactose-\nsensitive; lives in Notes \nand Reminders; cracked \niPhone screen.\n\nNeeds: Speed, price \nclarity, and simple choices\nthat don’t derail her day.\n",
+              "showHandles": false,
+              "backgroundColor": "var(--sketchlab-bg-pink)"
+            },
+            "position": {
+              "x": 979.4747487275956,
+              "y": 338.4506858699613
+            },
+            "width": 251,
+            "height": 392,
+            "measured": {
+              "width": 251,
+              "height": 392
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 3
+          },
+          {
+            "id": "288ece2c-849f-4316-b4ea-6c0ac31b662e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #2\n\nWho he is: Practices late, \nstudies later. Earbuds \nalways in, notifications \nmostly off.\n\nHabits & prefs: Dark mode, \nhaptics off, hates sudden \nsounds; likes quiet status \ncues.\n\nNeeds: Low-glare UI, gentle\nfeedback, and control over \nalerts.",
+              "showHandles": false,
+              "fontSize": "medium",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
+            },
+            "position": {
+              "x": 1283.3333435058594,
+              "y": 335.3072814941406
+            },
+            "width": 251,
+            "height": 392,
+            "measured": {
+              "width": 251,
+              "height": 392
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 4
+          },
+          {
+            "id": "6772b902-175a-4e3c-842e-f99a95929eb5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #3\n\nWho he is: Juggles class, \nwork, and family errands. \nBilingual \n(Spanish/English).\n\nHabits & prefs: Uses school\nChromebook + budget \nAndroid; watches how-to \nclips.\n\nNeeds: Step-by-step flows, \nbilingual support, works-\non-anything reliability.",
+              "showHandles": false,
+              "fontSize": "medium",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
+            },
+            "position": {
+              "x": 1566.3333435058594,
+              "y": 337.3072814941406
+            },
+            "width": 251,
+            "height": 392,
+            "measured": {
+              "width": 251,
+              "height": 392
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 5
+          },
+          {
+            "id": "c86cb34b-45a2-4558-9f2f-520a637623eb",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User Persona #4\n\nWho they are:\n\nHabits & preferences: \n\nNeeds: ",
+              "showHandles": false,
+              "fontSize": "medium",
+              "textAlign": "left",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
+            },
+            "position": {
+              "x": 1874.8957643323868,
+              "y": 340.1592361964711
+            },
+            "width": 251,
+            "height": 392,
+            "measured": {
+              "width": 251,
+              "height": 392
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 2
+          },
+          {
+            "id": "38900713-c079-4f19-9750-30152a36bc04",
+            "type": "text",
+            "data": {
+              "text": "3. Build a mini brand kit with:\n   * 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n   * At least one image\n\nConnect your design choices for \nyour hobby website back to \nthe sample user persona ",
+              "showHandles": false,
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 460.80885233394974,
+              "y": 925.5720756409988
+            },
+            "measured": {
+              "width": 482,
+              "height": 297
+            },
+            "dragging": false,
+            "width": 482,
+            "height": 297,
+            "resizing": false
+          },
+          {
+            "id": "f98f256d-1260-495d-95ea-68424e98ba95",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false,
+              "locked": false
+            },
+            "position": {
+              "x": 936.996216357915,
+              "y": 859.222137295709
+            },
+            "width": 1590,
+            "height": 1636,
+            "measured": {
+              "width": 1590,
+              "height": 1636
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "9c897f07-4b82-4567-9365-f35cc92489c5",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "My Hobby",
+              "fontSize": "large",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "showHandles": false,
+              "locked": false
+            },
+            "position": {
+              "x": 1024.2441668901506,
+              "y": 921.8833741729883
+            },
+            "width": 366,
+            "height": 303,
+            "measured": {
+              "width": 366,
+              "height": 303
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "aab92ee3-27f6-46f6-b899-9057753d1003",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 1",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1477.0285987923517,
+              "y": 926.1910483333052
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "6c5492ba-dfc0-4cf9-ab9e-afccaa700a8d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 2",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1670.7714565918102,
+              "y": 924.6526775317194
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c0afc37d-de3a-40e0-ada0-7bc426426cc2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 3",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1874.5655540986754,
+              "y": 927.4219808904508
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4ac7f829-4cd8-494c-abaa-70654f0d7142",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 4",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2068.308411898134,
+              "y": 925.883610088865
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "7f5a7309-36e2-4c40-a204-e46187197689",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Color 5",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2278.2479143915803,
+              "y": 924.3810249009277
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "bde29ea0-1944-4428-8767-661c4e0cac51",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "My Persona\n\nDrag your persona from above to this space.",
+              "showHandles": false,
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "locked": true
+            },
+            "position": {
+              "x": 1021.0650833833831,
+              "y": 1309.2716381672478
+            },
+            "width": 401,
+            "height": 585,
+            "measured": {
+              "width": 401,
+              "height": 585
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "5b408d6c-2abf-476f-96ae-a49032dd5156",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1469.862945972347,
+              "y": 1168.5739191954253
+            },
+            "width": 973,
+            "height": 120,
+            "measured": {
+              "width": 973,
+              "height": 120
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c1b77933-b046-491f-b448-814efdf845db",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1471.9441249823994,
+              "y": 1385.6809500848503
+            },
+            "width": 973,
+            "height": 120,
+            "measured": {
+              "width": 973,
+              "height": 120
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "551c32a7-a222-4793-80bc-df821e4f53b6",
+            "type": "text",
+            "data": {
+              "text": "Heading font\n https://fonts.google.com/ ",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1465.4518690218033,
+              "y": 1093.3148710376452
+            },
+            "measured": {
+              "width": 212,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "f3d85293-b2bd-4ece-a778-f0db288e9e75",
+            "type": "text",
+            "data": {
+              "text": "Body font",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1474.7005764278347,
+              "y": 1333.7163692140025
+            },
+            "measured": {
+              "width": 89,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "a4bc9367-ec98-44c6-9073-f64dee8dbd41",
+            "type": "text",
+            "data": {
+              "text": "Descriptive style words",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1476.7817554378869,
+              "y": 1563.366574796391
+            },
+            "measured": {
+              "width": 185,
+              "height": 39
+            },
+            "dragging": false
+          },
+          {
+            "id": "4bf89fef-ec2d-491a-8ed5-f6008784387a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "word 1",
+              "showHandles": false,
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1470.4415397944622,
+              "y": 1631.4580945581918
+            },
+            "width": 428,
+            "height": 93,
+            "measured": {
+              "width": 428,
+              "height": 93
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "c71f82a1-c191-4b75-9c39-ca039144130b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "word 2",
+              "showHandles": false,
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1985.0009991170195,
+              "y": 1628.1636272712597
+            },
+            "width": 428,
+            "height": 93,
+            "measured": {
+              "width": 428,
+              "height": 93
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "f4f22007-7504-43b9-b96e-5bb71c742753",
+            "type": "text",
+            "data": {
+              "text": "Image gallery",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1021.4263696531423,
+              "y": 1916.8316167906255
+            },
+            "measured": {
+              "width": 197,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "20efbc3c-f8e4-4cf0-9acd-e54f786b88a3",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1016.8324118076464,
+              "y": 1977.7847728121328
+            },
+            "width": 1468,
+            "height": 473,
+            "measured": {
+              "width": 1468,
+              "height": 473
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "70304d83-225a-4ce4-93e2-0f2d69b66a8c",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "showHandles": false,
+              "locked": true
+            },
+            "position": {
+              "x": 3034.5951274838358,
+              "y": 80.38305861333993
+            },
+            "width": 1733,
+            "height": 2323,
+            "measured": {
+              "width": 1733,
+              "height": 2323
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "05008e65-1135-4ea2-8b14-750edc1b2a19",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/code_connect_sketch_lab_mood_board_new_2026/uuid/a2c1e650-563f-43fa-8eda-35df6c981587.png",
+              "altText": "Screenshot 2026-05-07 210857",
+              "showHandles": false,
+              "locked": true
+            },
+            "position": {
+              "x": 3226.0377453970464,
+              "y": 1194.459937947805
+            },
+            "width": 1446,
+            "height": 1169,
+            "measured": {
+              "width": 1446,
+              "height": 1169
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "08e8209e-cd00-49bb-9383-19b5322c1a0a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/code_connect_sketch_lab_mood_board_new_2026/uuid/0449e757-9050-49fc-b484-b8f2f9237a8d.png",
+              "altText": "Screenshot 2026-05-07 210838",
+              "showHandles": false,
+              "locked": true
+            },
+            "position": {
+              "x": 3206.5089033026834,
+              "y": 239.76494769599873
+            },
+            "width": 1485,
+            "height": 907,
+            "measured": {
+              "width": 1485,
+              "height": 907
+            },
+            "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "e688a526-3d8b-4ff2-9dc0-0670546e222e",
+            "type": "text",
+            "data": {
+              "text": "Example Brand Kit",
+              "fontSize": 76,
+              "locked": true
+            },
+            "position": {
+              "x": 3087.3338944447946,
+              "y": 112.5211622171159
+            },
+            "measured": {
+              "width": 793,
+              "height": 106
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false,
+            "width": 793,
+            "height": 106,
+            "resizing": false
+          },
+          {
+            "id": "07eea4f3-ed68-4bd2-956a-02f598e7f60a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 3063.713039972748,
+              "y": 99.57295400038123
+            },
+            "width": 865,
+            "height": 123,
+            "measured": {
+              "width": 865,
+              "height": 123
+            },
+            "dragging": false,
+            "resizing": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -101.5869771509582,
+          "y": 16.495506673366037,
+          "zoom": 0.24936910396446707
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-08 01:30:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 15:56:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

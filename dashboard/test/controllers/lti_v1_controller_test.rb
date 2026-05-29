@@ -481,6 +481,42 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
+  test 'auth - off-site target_link_uri returns unauthorized' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = 'https://example.com/launch'
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :unauthorized
+    assert_nil session[:user_return_to]
+  end
+
+  test 'auth - hostless target_link_uri returns unauthorized' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = 'https://'
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :unauthorized
+    assert_nil session[:user_return_to]
+  end
+
+  test 'auth - non-http target_link_uri returns unauthorized' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = 'javascript:alert(1)'
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :unauthorized
+    assert_nil session[:user_return_to]
+  end
+
   test 'auth - error raised for issued at time in future' do
     payload = get_valid_payload
     payload[:iat] = 3.days.from_now.to_i
@@ -534,6 +570,28 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
+  end
+
+  test 'auth - given target_link_uri with existing query params, redirect preserves and merges params' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = "#{CDO.studio_url('/courses', CDO.default_scheme)}?foo=bar"
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :redirect
+    redirected_uri = URI.parse(@response.redirect_url)
+    query_params = Rack::Utils.parse_nested_query(redirected_uri.query)
+    deployment = LtiDeployment.find_by(deployment_id: @deployment_id)
+
+    assert_equal URI.parse(payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']).path, redirected_uri.path
+    assert_equal 'bar', query_params['foo']
+    assert_equal @integration.id.to_s, query_params['lti_integration_id']
+    assert_equal deployment.id.to_s, query_params['deployment_id']
+    assert_equal payload[Policies::Lti::LTI_CONTEXT_CLAIM][:id], query_params['context_id']
+    assert_equal payload[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id], query_params['rlid']
+    assert_equal payload[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url], query_params['nrps_url']
   end
 
   test 'auth - given a deployment_id not in our system yet, create LtiDeployment' do

@@ -72,7 +72,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:46:50.921+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_game_2024\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_game_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:46:50.921+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_game_2024\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_game_2024\"},{\"changed_at\":\"2026-04-29 21:53:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 21:54:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 22:09:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1094,6 +1094,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="Wu(!%UzaMVdn|YlL-$P9">score</variable>
+          <variable id="vXa}fV,.{Ht0vv$mQGWp">i</variable>
+        </variables>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs" id="j*(*?aLtlx_?UrK#U7Bw">
             <field name="IMG">"cave"</field>
@@ -1358,6 +1362,41 @@
           <block type="gamelab_comment" id="KtAF+.n#oJ/T[Wr?l{{.">
             <field name="COMMENT"/>
           </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_showVariable" id="4?T-K)-M_KEz~Xj3IFG%">
+            <field name="VAR" id="Wu(!%UzaMVdn|YlL-$P9">score</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker" id="@aK-)GI+P;~ebUqpWQ@K">
+                <field name="LOCATION">{"x":215,"y":190}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideVariable" id="N6IKWZZ`Jf_nq)TUutd2">
+            <field name="VAR" id="vXa}fV,.{Ht0vv$mQGWp">i</field>
+          </block>
+          <block type="math_change" id="Eo,rZsi[al#+_r]}D9#K">
+            <field name="VAR" id="Wu(!%UzaMVdn|YlL-$P9">score</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="A8Eq3+-WfV9N;W02Tz=%">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="variables_set" id="rirx)D0|*G6QFiCMOJ);">
+            <field name="VAR" id="vXa}fV,.{Ht0vv$mQGWp">i</field>
+            <value name="VALUE">
+              <block type="math_number" id="rAd!-7YufEOk!szvB=^6">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="logic_boolean" id="rX5.F#_Ifb%c^O(~aa4M">
+            <field name="BOOL">TRUE</field>
+          </block>
+          <block type="controls_if" id="@hKE?kNdO/TkF750haDf"/>
         </category>
       </xml>
     </toolbox_blocks>

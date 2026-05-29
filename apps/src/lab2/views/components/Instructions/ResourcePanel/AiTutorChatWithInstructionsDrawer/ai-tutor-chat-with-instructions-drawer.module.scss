@@ -9,7 +9,7 @@
 .instructionsDrawer {
   position: relative;
   flex-shrink: 0;
-  padding: 8px;
+  padding: 10px;
   background: var(--background-neutral-primary);
   border-radius: 4px;
   box-sizing: border-box;
@@ -24,6 +24,21 @@
   :global(.instructions) {
     padding: 0;
   }
+}
+
+.scrollFade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--background-neutral-primary)
+  );
+  border-radius: 0 0 4px 4px;
+  pointer-events: none;
 }
 
 .chatPanel {

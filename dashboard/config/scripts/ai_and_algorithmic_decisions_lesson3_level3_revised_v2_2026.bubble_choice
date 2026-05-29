@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson3-level3-revised-v2_2026'
+display_name 'Debug an App'
+description 'Choose an app, then find and fix the bugs so the app behaves correctly.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson3-level3a-revised_2026'
+level 'ai-and-algorithmic-decisions-lesson3-level3b-revised_2026'
+level 'ai-and-algorithmic-decisions-lesson3-level3c-revised_2026'
+
+uses_lab2
+navigation_type 'next_level'

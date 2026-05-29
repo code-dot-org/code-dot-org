@@ -40,7 +40,7 @@ describe('DeleteVocabularyDialog', () => {
   it('deletes vocabulary and calls confirm handler on success', async () => {
     fetchSpy.mockResolvedValue({ok: true});
     const wrapper = mount(<DeleteVocabularyDialog {...defaultProps} />);
-    wrapper.find('#delete-vocabulary').first().simulate('click');
+    wrapper.find('button#delete-vocabulary').first().prop('onClick')();
     await flushPromises();
 
     expect(fetchSpy).toHaveBeenCalledWith('/vocabularies/10', {
@@ -58,7 +58,7 @@ describe('DeleteVocabularyDialog', () => {
     });
     const wrapper = mount(<DeleteVocabularyDialog {...defaultProps} />);
 
-    wrapper.find('#delete-vocabulary').first().simulate('click');
+    wrapper.find('button#delete-vocabulary').first().prop('onClick')();
     await flushPromises();
 
     expect(handleDeleteVocabularyConfirm).not.toHaveBeenCalled();
@@ -67,7 +67,7 @@ describe('DeleteVocabularyDialog', () => {
 
   it('closes dialog without deleting when cancel is clicked', () => {
     const wrapper = mount(<DeleteVocabularyDialog {...defaultProps} />);
-    wrapper.find('#cancel-delete-vocabulary').first().simulate('click');
+    wrapper.find('button#cancel-delete-vocabulary').first().prop('onClick')();
     expect(fetchSpy).not.toHaveBeenCalled();
     expect(handleDeleteVocabularyDialogClose).toHaveBeenCalledTimes(1);
   });

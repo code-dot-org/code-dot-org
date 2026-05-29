@@ -148,7 +148,7 @@ module Cdo
       MARKETING_SITES_HOSTS
     end
 
-    def site_url(domain, path = '', scheme = '', ge_region: nil)
+    def site_url(domain, path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
       path = '/' + path unless path.empty? || path[0] == '/'
 
       if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
@@ -158,8 +158,8 @@ module Cdo
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '', ge_region: nil)
-      site_url('studio.code.org', path, scheme, ge_region: ge_region)
+    def studio_url(path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
+      site_url('studio.code.org', path, scheme, ge_region:)
     end
 
     def code_org_url(path = '', scheme = '', ge_region: nil)

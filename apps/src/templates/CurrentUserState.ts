@@ -20,6 +20,7 @@ export interface CurrentUserState {
   userId: number;
   userName: string;
   displayName?: string;
+  gradesTeaching: string[];
   userType: 'unknown' | 'teacher' | 'student';
   userRoleInCourse: CourseRole;
   signInState: SignInState;

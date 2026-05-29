@@ -1,0 +1,9 @@
+name 'SP-VPL-21-mod3-GameLab-practice-lc_25_2026'
+display_name 'Explore Projects Created Using Code.org Learning Tools'
+description '## Click on one of the options below to explore one of the learning tools used in AI Discoveries. 
+#### When you are finished you will return to this screen and have the option to either explore a new tool or click finish to continue to the next activity in this professional learning course.'
+
+sublevels
+level 'SP-VPL-Mod3-26-AI_WebLab_'
+level 'SP-VPL-Mod3-21-CSD games side scroller demo_25_2026'
+level 'SP-VPL-Mod3-CSP U3 Water Conservation Sample App_25_2026'

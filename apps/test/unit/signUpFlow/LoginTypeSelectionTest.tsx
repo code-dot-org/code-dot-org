@@ -106,6 +106,8 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.sign_up_google());
     screen.getByText(locale.sign_up_microsoft());
     screen.getByText(locale.sign_up_facebook());
+    screen.getByText(locale.sign_up_clever());
+    screen.getByText(locale.sign_up_classlink());
 
     // Renders inputs and reminder for field validations
     screen.getByText(locale.email_address());

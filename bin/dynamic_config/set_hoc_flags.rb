@@ -24,7 +24,7 @@ HIGH_SCALE_UNIT_NAMES = %w(
 def main(argv)
   if argv.size != 1
 
-    puts <<~EOF
+    puts <<~USAGE
       Usage: #{$0}: red|yellow|green
 
        - red: No HOC sharing, no HOC hints, no hoc_activity writes, no signed-in user progress saving, no HOC puzzle rating.
@@ -32,7 +32,7 @@ def main(argv)
        - green: all features turned on. SHOULD NOT BE USED UNTIL HOC IS OVER
 
        Public caching is enabled for all HOC scripts in all cases because this doesn't take away functionality
-    EOF
+    USAGE
     exit
   end
 

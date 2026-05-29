@@ -1,11 +1,11 @@
 name 'ai-generated-design-preassessment-q2_2026'
 
-question 'A local bakery\'s website has well-organized text for its menu and hours, but the owner wants to make the site more appealing by changing fonts, colors, and spacing. Which languages would the web designer user to structure the content and style its appearance?'
+question 'A local bakery\'s website has well-organized text for its menu and hours, but the owner wants to make the site more appealing by changing fonts, colors, and spacing. Which languages would the web designer use to structure the content and style its appearance?'
 
-right 'HTML for structure and CSS for style.'
-wrong 'HTML for style and CSS for structure.'
 wrong 'Only CSS, since it controls everything on a webpage.'
+right 'HTML for structure and CSS for style.'
 wrong 'Only HTML, since styling isn\'t important for users.'
+wrong 'HTML for style and CSS for structure.'
 
 allow_multiple_attempts true
 

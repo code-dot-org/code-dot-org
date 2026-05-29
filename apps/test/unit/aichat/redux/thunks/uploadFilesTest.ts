@@ -42,7 +42,7 @@ describe('uploadFiles', () => {
   beforeEach(() => {
     dispatch = jest.fn();
     mockHttpClient.put.mockResolvedValue({} as Response);
-    mockModerateImage.mockResolvedValue('ok');
+    mockModerateImage.mockResolvedValue('safe');
     mockSendAnalytics.mockReturnValue(jest.fn());
   });
 
@@ -87,7 +87,7 @@ describe('uploadFiles', () => {
     it('still uploads non-flagged files when one file is flagged', async () => {
       mockModerateImage
         .mockResolvedValueOnce('flagged')
-        .mockResolvedValueOnce('ok');
+        .mockResolvedValueOnce('safe');
       const flaggedFile = makeFile('bad.png');
       const cleanFile = makeFile('good.png');
 
@@ -117,8 +117,8 @@ describe('uploadFiles', () => {
       expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
     });
 
-    it('uploads the image when moderation returns ok', async () => {
-      mockModerateImage.mockResolvedValue('ok');
+    it('uploads the image when moderation returns safe', async () => {
+      mockModerateImage.mockResolvedValue('safe');
       const file = makeFile('photo.png');
 
       await uploadFiles({files: [file], buildAssetUrl})(
@@ -130,8 +130,8 @@ describe('uploadFiles', () => {
       expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
     });
 
-    it('uploads the image when moderation is skipped', async () => {
-      mockModerateImage.mockResolvedValue('skipped');
+    it('uploads the image when moderation returns error', async () => {
+      mockModerateImage.mockResolvedValue('error');
       const file = makeFile('photo.png');
 
       await uploadFiles({files: [file], buildAssetUrl})(

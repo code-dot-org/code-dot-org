@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({
   const studentOptions = useMemo(() => {
     return sortedStudents.map(student => ({
       value: student.id.toString(),
-      text: getFullName(student),
+      text: getFullName(student) + (student.isDemoStudent ? ' (Demo)' : ''),
     }));
   }, [sortedStudents]);
 
@@ -191,7 +191,6 @@ const Header: React.FC<HeaderProps> = ({
           items={studentOptions}
           selectedValue={selectedStudent?.id.toString() || ''}
           onChange={event => setSelectedStudentId(Number(event.target.value))}
-          placeholder="Select a student"
           className={styles.dropdown}
           size="s"
           color="gray"

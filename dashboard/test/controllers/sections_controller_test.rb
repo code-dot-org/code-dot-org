@@ -317,6 +317,17 @@ class SectionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
+    sign_in @teacher
+
+    get :retrieve_lessons_for_dropdown, params: {id: 'high'}
+
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal "/teacher_dashboard/sections/:sectionId/courses/original-allthethings-course/units/1", response_json.first['value']
+    assert_match %r{\A/courses/original-allthethings-course/units/1/lessons/\d+/levels/1\z}, response_json.second['value']
+  end
+
   describe 'POST /sections/:id/log_in' do
     subject(:log_in_section) {post :log_in, params: {id: @picture_section.code, **section_params}}
 

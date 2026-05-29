@@ -4,8 +4,8 @@ question 'A designer uses AI to build a web page for a small bakery. The AI\'s d
 
 wrong 'Publish the site as-is since the AI produced it.'
 wrong 'Add more images to distract from the broken links.'
-right 'Test the website and correct the AI\'s mistakes before publishing it.'
 wrong 'Delete the project and start over with a new AI tool.'
+right 'Test the website and correct the AI\'s mistakes before publishing it.'
 
 allow_multiple_attempts true
 

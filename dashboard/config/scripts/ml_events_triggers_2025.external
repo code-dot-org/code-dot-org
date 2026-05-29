@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Storytelling with the When Triggered Event Block
 
-####  In this lesson, students will use when triggered event blocks to code music based on mood and feeling.
+In this lesson, students will use when triggered event blocks to code music based on mood and feeling.
 
 
 <table style="width: 100%; margin: auto;">

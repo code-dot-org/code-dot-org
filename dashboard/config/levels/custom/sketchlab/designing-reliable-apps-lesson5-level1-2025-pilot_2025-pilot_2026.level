@@ -9,94 +9,61 @@
     "long_instructions": "## Seeing the Shape of the JSON\r\n\r\n\r\n### **Do This:**\r\n\r\nUse different colors to highlight and label:\r\n\r\n* Array (Container): The symbols that enclose the full dataset.\r\n\r\n* Objects (Entities): The symbols that define a single pet entry.\r\n\r\n* Nested Structures: An object or array contained within another object.\r\n\r\n* Strings: Text values.\r\n\r\n* Numbers: Numeric values.\r\n\r\n* Booleans: Logical values (true / false).\r\n\r\nFocus on identifying patterns that organize the data.",
     "start_sources": {
       "source": {
-        "type": "excalidraw",
-        "version": 2,
-        "source": "https://levelbuilder-studio.code.org",
-        "elements": [
+        "nodes": [
           {
-            "type": "rectangle",
-            "version": 1212,
-            "versionNonce": 860073180,
-            "isDeleted": false,
             "id": "UhYu-WhONOD8809-PWf1a",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2135.758356602336,
-            "y": -3897.53087069564,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#f8f9fa",
-            "width": 2612.0107368890926,
-            "height": 1406.9661332231706,
-            "seed": 192102244,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1772031567924,
-            "link": null,
-            "locked": false
+            "type": "shape",
+            "position": {
+              "x": -3358.4726073753923,
+              "y": -3003.0161306301065
+            },
+            "style": {
+              "width": 2612.0107368890926,
+              "height": 1406.9661332231706
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "[\n  {\n    \"animal_id\": \"A929418\",\n    \"location\": {\n      \"latitude\": \"30.33372\",\n      \"longitude\": \"-97.69601\",\n      \"human_address\": \"{\\\"address\\\": \\\"7503 BETHUNE AVE\\\", \\\"city\\\": \\\"AUSTIN\\\", \\\"state\\\": \\\"\\\", \\\"zip\\\": \\\"78752\\\"}\"\n    },\n    \"at_aac\": \"Yes (come to the shelter)\",\n    \"intake_date\": \"2025-04-29T00:00:00.000\",\n    \"type\": \"Cat\",\n    \"looks_like\": \"Domestic Shorthair\",\n    \"color\": \"Tortie Point\",\n    \"sex\": \"Intact Female\",\n    \"age\": \"1 year\",\n    \"image\": {\n      \"url\": \"http://www.petharbor.com/pet.asp?uaid=ASTN.A929418\"\n    },\n    \":@computed_region_8spj_utxs\": \"4\",\n    \":@computed_region_q9nd_rr82\": \"9\",\n    \":@computed_region_e9j2_6w3z\": \"43\",\n    \":@computed_region_m2th_e4b7\": \"63\",\n    \":@computed_region_rxpj_nzrk\": \"3\",\n    \":@computed_region_qwte_z96m\": \"202\",\n    \":@computed_region_a3it_2a2z\": \"3641\",\n    \":@computed_region_hnvk_vq9u\": \"39\"\n  },\n\n]",
+              "backgroundColor": "#f8f9fa",
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large",
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 1178,
+              "height": 849
+            },
+            "dragging": false,
+            "width": 1178,
+            "height": 849,
+            "resizing": false
           },
           {
-            "type": "text",
-            "version": 241,
-            "versionNonce": 1081192796,
-            "isDeleted": false,
             "id": "89vIrKgmAmu9IRC4yE8zC",
-            "fillStyle": "solid",
-            "strokeWidth": 2,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -2082.7236641285463,
-            "y": -3826.448076156129,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "#f8f9fa",
-            "width": 2510.15625,
-            "height": 1252.8,
-            "seed": 1991499356,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1772031567924,
-            "link": null,
-            "locked": false,
-            "fontSize": 36,
-            "fontFamily": 3,
-            "text": "[\n  {\n    \"animal_id\": \"A929418\",\n    \"location\": {\n      \"latitude\": \"30.33372\",\n      \"longitude\": \"-97.69601\",\n      \"human_address\": \"{\\\"address\\\": \\\"7503 BETHUNE AVE\\\", \\\"city\\\": \\\"AUSTIN\\\", \\\"state\\\": \\\"\\\", \\\"zip\\\": \\\"78752\\\"}\"\n    },\n    \"at_aac\": \"Yes (come to the shelter)\",\n    \"intake_date\": \"2025-04-29T00:00:00.000\",\n    \"type\": \"Cat\",\n    \"looks_like\": \"Domestic Shorthair\",\n    \"color\": \"Tortie Point\",\n    \"sex\": \"Intact Female\",\n    \"age\": \"1 year\",\n    \"image\": {\n      \"url\": \"http://www.petharbor.com/pet.asp?uaid=ASTN.A929418\"\n    },\n    \":@computed_region_8spj_utxs\": \"4\",\n    \":@computed_region_q9nd_rr82\": \"9\",\n    \":@computed_region_e9j2_6w3z\": \"43\",\n    \":@computed_region_m2th_e4b7\": \"63\",\n    \":@computed_region_rxpj_nzrk\": \"3\",\n    \":@computed_region_qwte_z96m\": \"202\",\n    \":@computed_region_a3it_2a2z\": \"3641\",\n    \":@computed_region_hnvk_vq9u\": \"39\"\n  },\n\n]",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "[\n  {\n    \"animal_id\": \"A929418\",\n    \"location\": {\n      \"latitude\": \"30.33372\",\n      \"longitude\": \"-97.69601\",\n      \"human_address\": \"{\\\"address\\\": \\\"7503 BETHUNE AVE\\\", \\\"city\\\": \\\"AUSTIN\\\", \\\"state\\\": \\\"\\\", \\\"zip\\\": \\\"78752\\\"}\"\n    },\n    \"at_aac\": \"Yes (come to the shelter)\",\n    \"intake_date\": \"2025-04-29T00:00:00.000\",\n    \"type\": \"Cat\",\n    \"looks_like\": \"Domestic Shorthair\",\n    \"color\": \"Tortie Point\",\n    \"sex\": \"Intact Female\",\n    \"age\": \"1 year\",\n    \"image\": {\n      \"url\": \"http://www.petharbor.com/pet.asp?uaid=ASTN.A929418\"\n    },\n    \":@computed_region_8spj_utxs\": \"4\",\n    \":@computed_region_q9nd_rr82\": \"9\",\n    \":@computed_region_e9j2_6w3z\": \"43\",\n    \":@computed_region_m2th_e4b7\": \"63\",\n    \":@computed_region_rxpj_nzrk\": \"3\",\n    \":@computed_region_qwte_z96m\": \"202\",\n    \":@computed_region_a3it_2a2z\": \"3641\",\n    \":@computed_region_hnvk_vq9u\": \"39\"\n  },\n\n]",
-            "lineHeight": 1.2,
-            "baseline": 1244
+            "type": "text",
+            "position": {
+              "x": -2082.7236641285463,
+              "y": -3826.448076156129
+            },
+            "data": {
+              "text": "\n",
+              "fontColor": "#1e1e1e",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 58,
+              "height": 47
+            }
           }
         ],
-        "appState": {
-          "gridSize": null,
-          "viewBackgroundColor": "#ffffff",
-          "scrollX": 2502.4795930409236,
-          "scrollY": 4023.383762775624,
-          "zoom": {
-            "value": 0.41417685434222196
-          }
-        },
-        "files": {
-        },
-        "externalFiles": {
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 3008.4445028402147,
+          "y": 2594.5428515222366,
+          "zoom": 0.8550157973042551
         }
       }
     },
@@ -2057,6 +2024,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:12.329+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:12.329+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-05-07 13:45:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

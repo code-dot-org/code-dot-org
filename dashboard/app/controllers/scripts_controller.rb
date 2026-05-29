@@ -5,10 +5,10 @@ class ScriptsController < ApplicationController
   include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
-  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create, :generate, :update_lesson_outlines]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :generate, :update_lesson_outlines]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
@@ -41,7 +41,7 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course&.id)}
         most_recent_section = current_user.sections_instructed.select {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course.id)}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
@@ -76,7 +76,7 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_info = get_redirect_info(@script, request.locale, @course)
+    if !override_redirect && redirect_info = get_redirect_info(@script, I18n.locale.to_s, @course)
       if redirect_info[:redirect_ugu]
         redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
         return
@@ -88,7 +88,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: request.locale)
+    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: I18n.locale.to_s)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
@@ -107,15 +107,15 @@ class ScriptsController < ApplicationController
       user_providers: current_user&.providers,
       is_instructor: @script.can_be_instructor?(current_user),
       is_verified_instructor: current_user&.verified_instructor?,
-      locale: Unit.locale_english_name_map[request.locale],
-      locale_code: request.locale,
+      locale: Unit.locale_english_name_map[I18n.locale.to_s],
+      locale_code: I18n.locale.to_s,
       course_link: @course&.link(section_id: params[:section_id]),
       course_title: @course&.localized_title || I18n.t('view_all_units'),
       is_single_unit_course: @course&.single_unit_course?,
       sections: @sections
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group_unit: @unit_group_unit).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, I18n.locale.to_s, unit_group_unit: @unit_group_unit).merge(additional_script_data)
 
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
@@ -184,6 +184,55 @@ class ScriptsController < ApplicationController
       locales: Cdo::I18n.locale_options,
       is_levelbuilder: current_user.levelbuilder?
     }
+  end
+
+  # GET /s/:script_name/generate
+  # GET /courses/:course_course_name/units/:position/generate
+  # Levelbuilder UI for bulk-creating lessons in this unit, each with an
+  # AI-suggested outline prompt that the user can edit before saving.
+  # Mirrors LessonsController#generate but at the unit level.
+  def generate
+    return head :forbidden unless @script.is_migrated
+    edit_url = request.path.sub(%r{/generate\z}, '/edit')
+    edit_url = edit_script_path(id: @script) if edit_url == request.path
+    @unit_data = @script.summarize_for_unit_generate.merge(editUnitUrl: edit_url)
+  end
+
+  # PUT /s/:script_name/lesson_outlines
+  # PUT /courses/:course_course_name/units/:position/lesson_outlines
+  # Replace the unit's lesson list with the supplied ordered array. Each
+  # entry is {id?, key, name, generateOutline?}; entries without an id are
+  # created. Lessons present in the unit but missing from the payload are
+  # destroyed (this is the "delete" path the /generate UI uses). Honors
+  # only the first user-facing lesson group: the page is intentionally
+  # scoped to simple units, and the controller refuses anything else.
+  def update_lesson_outlines
+    return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
+    raw = params[:lessons]
+    return head :bad_request, json: {message: 'lessons param required'} unless raw
+    # Rails wraps a JSON body's array entries in ActionController::Parameters,
+    # which the model layer can't symbolize-key directly. String body (legacy
+    # callers) goes through JSON.parse; Parameters get explicitly permitted +
+    # converted to plain hashes here so the model just sees Hash<String, _>.
+    lessons =
+      if raw.is_a?(String)
+        JSON.parse(raw)
+      else
+        Array(raw).map do |entry|
+          if entry.respond_to?(:permit)
+            entry.permit(:id, :key, :name, :generateOutline).to_h
+          else
+            entry
+          end
+        end
+      end
+    # nil means "leave the persisted unit outline alone"; sending the param
+    # at all (even '') updates it.
+    unit_outline = params.key?(:generateOutline) ? params[:generateOutline].to_s : nil
+    @script.update_lesson_outlines(lessons, unit_outline)
+    render json: @script.summarize_for_unit_generate
+  rescue StandardError => exception
+    render status: :unprocessable_entity, json: {message: exception.message}
   end
 
   def update
@@ -297,7 +346,7 @@ class ScriptsController < ApplicationController
 
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
-      unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
+      unit_group = UnitGroup.latest_stable_version(unit_name, locale: I18n.locale.to_s) ||
         UnitGroup.latest_stable_version(unit_name)
       if unit_group&.can_be_participant?(current_user)
         unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group

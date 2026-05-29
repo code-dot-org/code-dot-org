@@ -1,0 +1,24 @@
+framework,parent,category,type,description
+csta2026,,ALG,Concept,Algorithms and Design
+csta2026,,PRO,Concept,Programming
+csta2026,,DAT,Concept,Data and Analysis
+csta2026,,SYS,Concept,Systems and Security
+csta2026,,SOC,Concept,Computing and Society
+csta2026,ALG,PS,Subconcept,Algorithmic Problem Solving
+csta2026,ALG,ML,Subconcept,Machine Learning
+csta2026,ALG,IM,Subconcept,Impacts of Algorithms and Design
+csta2026,PRO,PD,Subconcept,Program Development
+csta2026,PRO,VD,Subconcept,Variables and Data Storage
+csta2026,PRO,RD,Subconcept,Reading and Documenting
+csta2026,PRO,TR,Subconcept,Testing and Refining
+csta2026,DAT,DC,Subconcept,Data Collection and Preparation
+csta2026,DAT,DI,Subconcept,Data Investigation
+csta2026,DAT,IM,Subconcept,Impacts of Data Science
+csta2026,SYS,HW,Subconcept,Hardware and Software
+csta2026,SYS,SE,Subconcept,Security
+csta2026,SYS,NT,Subconcept,Networks
+csta2026,SYS,IM,Subconcept,Impacts of Computing Systems
+csta2026,SOC,HI,Subconcept,History of Computing
+csta2026,SOC,ET,Subconcept,Emerging Technologies
+csta2026,SOC,HU,Subconcept,Humans and Computing
+csta2026,SOC,CE,Subconcept,Career Exploration

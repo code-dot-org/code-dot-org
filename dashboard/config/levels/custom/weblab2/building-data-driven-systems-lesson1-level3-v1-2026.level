@@ -1,0 +1,79 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-04-29T03:57:33.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Update Array Values\r\n\r\n### Do This:\r\n\r\n1. Use your `favoritesArray` from the previous level.\r\n\r\n2. Change at least 2 items in your array using reassignment:\r\n   favoritesArray[index] = \"new value\"\r\n\r\n3. Make sure you update your array **before** displaying the values on the page.\r\n\r\n4. Run your code and check your results:\r\n   * Did your updated items display correctly?\r\n   * What changed when you updated different index positions?",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My Favorites</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>My Favorites List</h1>\n\n  <main>\n    <h2>The First Three</h2>\n    <p id=\"item0\">Item 1 Placeholder</p>\n    <p id=\"item1\">Item 2 Placeholder</p>\n    <p id=\"item2\">Item 3 Placeholder</p>\n\n    <h2>Selected Favorite</h2>\n    <p id=\"favorite\">Your chosen favorite will appear here.</p>\n\n    <h2>Total Count</h2>\n    <p id=\"count\">Total number of favorites: 0</p>\n  </main>\n\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  padding: 20px;\n  background-color: #f4f4f9;\n  color: #333;\n}\n\nheader {\n  margin-bottom: 20px;\n}\n\nh1 {\n  color: #2c3e50;\n}\n\nh2 {\n  border-bottom: 2px solid #ccc;\n  padding-bottom: 5px;\n  margin-top: 30px;\n  color: #34495e;\n}\n\np {\n  padding: 5px 0;\n  margin: 5px 0;\n  background-color: #fff;\n  border-left: 5px solid #3498db;\n  padding-left: 10px;\n}\n\n#favorite {\n  font-weight: bold;\n  font-size: 1.1em;\n  border-left-color: #e74c3c;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "\nconst favorites = [];\n\n\ndocument.getElementById(\"item0\").textContent = \"\"; \n\ndocument.getElementById(\"item1\").textContent = \"\";\n\ndocument.getElementById(\"item2\").textContent =  \"\";\n\ndocument.getElementById(\"count\").textContent =\n  \"Total number of favorites: \" + \"\";\n\n\nconst favoriteIndex = 0; \ndocument.getElementById(\"favorite\").textContent =\n  \"My selected favorite is: \" +  \"\";",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2025-pilot",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "You are helping a beginner student learning arrays in JavaScript.\n\nWrite simple code that updates values in an existing array called favoritesArray using reassignment.\n\nUse syntax like:\nfavoritesArray[0] = \"new value\"\n\nDo not create a new array. Do not use methods like .push(). Do not use loops or advanced syntax.\n\nReturn only valid JavaScript code. No explanation, no extra text.\n\nExample:\n\nfavoritesArray[0] = \"sushi\";\nfavoritesArray[2] = \"noodles\";"
+      }
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson1-level1-template-v1-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-29T03:57:33.264+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2-v1-2026\"},{\"changed_at\":\"2026-04-29 03:58:05 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-29 03:59:40 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

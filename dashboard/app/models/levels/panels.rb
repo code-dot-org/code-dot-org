@@ -31,6 +31,7 @@ class Panels < Level
     background
     level_data
     panels
+    use_links
   )
 
   def self.create_from_level_builder(params, level_params)

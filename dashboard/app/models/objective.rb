@@ -22,6 +22,7 @@ class Objective < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson, optional: true
+  has_and_belongs_to_many :json_videos, join_table: :json_video_objectives
 
   serialized_attrs %w(
     description

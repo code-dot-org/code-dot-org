@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-04-29T20:49:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false",
+    "panels": [
+      {
+        "text": "Imagine asking an AI for a book recommendation. If you just say \"Recommend a book,\" you might get a massive, boring encyclopedia! The AI did exactly what you asked, but the result is not helpful at all.",
+        "imageUrl": "https://images.code.org/5519369960931fe4babdb5ef46a56561-panel_one.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-b1ab3554-4d6c-4fe6-bcdf-a7a10d890990",
+        "typing": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Why did this happen? Because the AI lacked context. **Context** is what the AI needs to know to help you. The AI cannot read your mind. It did not know your age, your reading level, or what kind of stories you actually like.",
+        "imageUrl": "https://images.code.org/073eca2c7771a059e5d31a4d4f6671d0-panel_two.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-cff2f3e0-b989-4b0a-9412-99a131f702cf",
+        "typing": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "You can fix this by adding **context** to your prompt. \n\nInstead, tell the AI: _\"I am a middle school student and I love sci-fi adventures.\"_ Now the AI can give you a better result!",
+        "imageUrl": "https://images.code.org/1a88d57b56564b040a8fb0f89e88e2ee-panel_three.jpg",
+        "key": "thinking_critically_lesson3_level2-panel_2026-5fab007e-dfc8-4625-b539-e2a6e3e20628",
+        "typing": false,
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-04-29 21:12:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 21:14:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 21:23:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

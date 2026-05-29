@@ -1,6 +1,5 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 
 import {CustomDropdown} from './../index';
 
@@ -86,17 +85,17 @@ describe('Design System - Custom Dropdown Component', () => {
     expect(icon).toBeInTheDocument();
   });
 
-  it('renders with DSCO button as trigger', () => {
+  it('renders with MUI button as trigger', () => {
     render(
       <CustomDropdown
         name="test-dropdown"
         labelText="Dropdown label"
         size="m"
-        useDSCOButtonAsTrigger={true}
+        useMuiButtonAsTrigger={true}
         triggerButtonProps={{
-          text: 'DSCO Button',
-          color: 'purple',
-          type: 'primary',
+          children: 'MUI Button',
+          color: 'primary',
+          variant: 'contained',
         }}
       >
         <div>Dropdown content</div>

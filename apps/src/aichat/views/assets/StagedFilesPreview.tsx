@@ -61,13 +61,14 @@ const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
     <div className={styles.container}>
       {stagedFiles.length > 0 && (
         <div className={styles.row}>
-          {stagedFiles.map(({key, asset, status}) => {
+          {stagedFiles.map(({key, asset, status, timestamp}) => {
             const filename = asset.filename;
             return (
               <FilePreview
                 key={key}
                 type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
                 url={`${buildAssetUrl(asset)}?t=${key}`}
+                timestamp={timestamp}
                 filename={filename}
                 isUploading={status === 'uploading'}
                 onRemove={() => dispatch(removeStagedFile(key))}

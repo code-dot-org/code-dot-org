@@ -1,7 +1,7 @@
-import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -9,7 +9,7 @@ export default defineConfig({
     // Enable React support
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
-    dts({tsconfigPath: './tsconfig.app.json'}),
+    dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
