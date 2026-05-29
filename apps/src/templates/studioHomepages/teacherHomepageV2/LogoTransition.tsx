@@ -4,85 +4,63 @@ import {createPortal} from 'react-dom';
 
 import styles from './logoTransition.module.scss';
 
-// The "morph" — old logo transforming into the new wordmark — lives
-// inside the WebP/WebM asset. This component plays that asset in a
-// centered modal and lands the resulting static SVG into the empty
-// header slot. The modal-to-header motion is a slide, not a morph.
+// The morph — old logo transforming into the new wordmark — is driven
+// by CSS keyframes on inline SVG shapes (six elements: c, o, d, e,
+// triangle, ibar). The CSS lives in logoTransition.module.scss; the
+// markup below mirrors https://github.com/code-dot-org/logo-test
+// verbatim. The modal-to-header motion is a slide, not a morph.
 
 const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
 const SEEN_COOKIE_EXPIRES_DAYS = 180;
 
-// Animated <img>s do not fire an "ended" event, so the default WebP
-// path waits on this timer (started at onLoad, not at phase entry).
-// The ?logo-video=true opt-in uses the real onEnded callback instead.
+// The CSS animation's visible morph completes around 45% of its 9.03s
+// linear cycle; after that the shapes are still until the cycle would
+// repeat. We stop watching at 4500ms — long enough to see the morph,
+// short enough that the hold + landing don't drag.
 const OPEN_FADE_MS = 300;
-const ANIMATED_DURATION_MS = 8000;
+const ANIMATED_DURATION_MS = 4500;
 const HOLD_MS = 500;
 const LAND_MS = 700;
 
 const HEADER_LOGO_SELECTOR = '#header_logo_container';
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 
-// WebP canvas dimensions, supplied as <img> width/height to reserve
-// box aspect before bytes load and prevent layout shift.
-const ANIMATED_WIDTH = 1080;
-const ANIMATED_HEIGHT = 313;
-
-interface LogoTransitionProps {
-  // Default looping animated image (WebP). AVIF can't serve here
-  // because Safari doesn't decode AVIF transparency.
-  animatedSrc: string;
-  // Optional video source, used under ?logo-video=true.
-  webmSrc?: string;
-  svgSrc: string;
-}
-
 // Phase state machine. Every transition is one-way; there is no path
 // back to an earlier phase from a later one.
 //
 //   opening (OPEN_FADE_MS = 300ms)
-//     Backdrop fades 0→1, card fades 0→1. Media not yet rendered, so
-//     the WebP / WebM doesn't start fetching until we're already on
-//     screen.
-//     → playing on a setTimeout(OPEN_FADE_MS).
+//     Backdrop fades 0→1, card fades 0→1. Stage SVG isn't rendered
+//     yet, so the CSS animation doesn't start until we're on screen.
+//     → playing on setTimeout(OPEN_FADE_MS).
 //
-//   playing
-//     Animated <img> loops (default) or <video> plays once over the
-//     dimmer.
-//     → hold on the <video>'s native onEnded event, OR on a
-//       setTimeout(ANIMATED_DURATION_MS) that the <img>'s onLoad
-//       handler starts (so we don't burn the duration during the
-//       fetch on slow connections).
+//   playing (ANIMATED_DURATION_MS = 4500ms)
+//     SVG stage mounts, CSS keyframes drive the six shapes through
+//     the morph. CSS animation-fill-mode: forwards holds them at the
+//     final wordmark when the keyframes finish.
+//     → hold on setTimeout(ANIMATED_DURATION_MS).
 //
 //   hold (HOLD_MS = 500ms)
-//     Media sits on its last frame; nothing else changes. Gives the
-//     user a beat to register the finished morph before the slide.
-//     → landing on a setTimeout(HOLD_MS).
+//     Shapes sit at the final wordmark; nothing else changes. Gives
+//     the user a beat before the slide.
+//     → landing on setTimeout(HOLD_MS).
 //
 //   landing (LAND_MS = 700ms)
 //     Card top/left/width/height transition from the modal-centered
-//     rect to the native <img>'s viewport rect. Animated media fades
-//     out, SVG fades in, backdrop fades out — all on the same 700ms
-//     budget. The setTimeout that fires at the end also clears the
-//     inline visibility:hidden on the Rails-rendered <img> and sets
-//     the suppression cookie.
-//     → done on a setTimeout(LAND_MS).
+//     rect to the native <img>'s viewport rect. SVG scales with the
+//     card (viewBox-driven). Backdrop fades out. The setTimeout that
+//     fires at the end clears the inline visibility:hidden on the
+//     Rails <img> and sets the suppression cookie.
+//     → done on setTimeout(LAND_MS).
 //
 //   done (terminal)
-//     Render returns null; the React overlay unmounts. The native
-//     Rails-rendered <img> in the scrolling site header is now the
-//     visible logo — same DOM a returning teacher would see.
+//     Render returns null; React overlay unmounts. The native Rails-
+//     rendered <img> in the scrolling header is now the visible logo.
 type Phase = 'opening' | 'playing' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
 
-const LogoTransition: React.FC<LogoTransitionProps> = ({
-  animatedSrc,
-  webmSrc,
-  svgSrc,
-}) => {
+const LogoTransition: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
@@ -96,26 +74,12 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     return cookies.get(SEEN_COOKIE_NAME) === 'true';
   });
 
-  const [useVideo] = useState<boolean>(() => {
-    if (typeof window === 'undefined' || !webmSrc) return false;
-    return (
-      new URLSearchParams(window.location.search).get('logo-video') === 'true'
-    );
-  });
-
   // Flipped on the first frame after mount. Until it flips: CSS
   // transitions on the card are suppressed and the backdrop + card sit
   // at opacity 0. raf then enables transitions in the same paint that
   // moves opacity to 1, so the open fade-in plays without the
   // 0x0-to-modal-sized size jump also animating.
   const [entered, setEntered] = useState(false);
-
-  // The WebP's animation only starts playing once the file has been
-  // fully fetched and decoded. Track that explicitly so we don't start
-  // counting ANIMATED_DURATION_MS until the frames are actually moving;
-  // otherwise on slow connections the timer expires mid-load and we
-  // hand off to the SVG before the user has seen the morph.
-  const [animatedLoaded, setAnimatedLoaded] = useState(false);
 
   const [mountTarget] = useState<HTMLElement | null>(() =>
     typeof document !== 'undefined'
@@ -176,16 +140,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
 
   useEffect(() => {
     if (phase !== 'playing') return;
-    if (useVideo) {
-      // Some browsers refuse autoplay even with muted+playsinline if the
-      // play() call is deferred; kick it off explicitly.
-      videoRef.current?.play()?.catch(() => {});
-      return;
-    }
-    if (!animatedLoaded) return;
     const t = window.setTimeout(() => setPhase('hold'), ANIMATED_DURATION_MS);
     return () => window.clearTimeout(t);
-  }, [phase, useVideo, animatedLoaded]);
+  }, [phase]);
 
   useEffect(() => {
     if (phase !== 'hold') return;
@@ -221,20 +178,9 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     return () => window.clearTimeout(t);
   }, [phase, mountTarget]);
 
-  const handleVideoEnded = () => {
-    setPhase('hold');
-  };
-
   if (!mountTarget || hasSeen || phase === 'done') return null;
 
-  const showMedia = phase !== 'opening';
-  const animatedHidden = phase !== 'playing' && phase !== 'hold';
-  // SVG stays hidden through opening, play, and end-of-play hold; it
-  // only fades in once the card begins sliding, so the final logo
-  // appears with the slide rather than blooming inside the still-
-  // modal-sized card.
-  const svgHidden =
-    phase === 'opening' || phase === 'playing' || phase === 'hold';
+  const showStage = phase !== 'opening';
   const backdropFading = phase === 'landing';
 
   const backdropClassName = [
@@ -258,38 +204,81 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       {createPortal(<div className={backdropClassName} />, document.body)}
       {createPortal(
         <div ref={cardRef} className={cardClassName}>
-          {showMedia &&
-            (useVideo && webmSrc ? (
-              <video
-                ref={videoRef}
-                src={webmSrc}
-                autoPlay
-                muted
-                playsInline
-                onEnded={handleVideoEnded}
-                className={`${styles.image} ${styles.imageAnimated} ${
-                  animatedHidden ? styles.imageHidden : ''
-                }`}
-              />
-            ) : (
-              <img
-                src={animatedSrc}
-                alt=""
-                width={ANIMATED_WIDTH}
-                height={ANIMATED_HEIGHT}
-                onLoad={() => setAnimatedLoaded(true)}
-                className={`${styles.image} ${styles.imageAnimated} ${
-                  animatedHidden ? styles.imageHidden : ''
-                }`}
-              />
-            ))}
-          <img
-            src={svgSrc}
-            alt=""
-            className={`${styles.image} ${styles.imageSvg} ${
-              svgHidden ? styles.imageHidden : ''
-            }`}
-          />
+          {showStage && (
+            <svg
+              className={styles.stage}
+              viewBox="0 109 1021 176"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+            >
+              <g className={`${styles.elem} ${styles.square} ${styles.c}`}>
+                <rect width="100" height="100" rx="18" ry="18" fill="#fff" />
+                <path d="M82,0H18C8.06,0,0,8.06,0,18v64C0,91.94,8.06,100,18,100h64c9.94,0,18-8.06,18-18V18C100,8.06,91.94,0,82,0ZM51.52,66.64c6.83,0,10.34-4.1,11.44-7.74h8.32c-1.37,7.09-7.74,14.82-19.96,14.82-13.07,0-22.49-9.04-22.49-23.73s10.27-23.73,22.49-23.73,18.53,7.67,19.96,14.82h-8.32c-1.1-3.64-4.62-7.74-11.44-7.74-8.12,0-14.04,6.05-14.04,16.64s5.92,16.64,14.04,16.64Z" />
+              </g>
+              <g className={`${styles.elem} ${styles.square} ${styles.o}`}>
+                <rect width="100" height="100" rx="18" ry="18" fill="#fff" />
+                <path d="M82,0h-64C8.06,0,0,8.06,0,18v64c0,9.94,8.06,18,18,18h64c9.94,0,18-8.06,18-18V18C100,8.06,91.94,0,82,0ZM50.01,73.72c-12.54,0-23.34-9.43-23.34-23.73s10.79-23.73,23.34-23.73,23.34,9.36,23.34,23.73-10.79,23.73-23.34,23.73Z" />
+                <ellipse cx="50.01" cy="50" rx="14.76" ry="16.77" />
+              </g>
+              <g className={`${styles.elem} ${styles.square} ${styles.d}`}>
+                <rect width="100" height="100" rx="18" ry="18" fill="#fff" />
+                <path d="M82,0h-64C8.06,0,0,8.06,0,18v64c0,9.94,8.06,18,18,18h64c9.94,0,18-8.06,18-18V18C100,8.06,91.94,0,82,0ZM48.01,72.74h-14.95V27.24h14.95c13.65,0,23.92,9.1,23.92,22.75s-10.27,22.75-23.92,22.75Z" />
+                <path d="M47.36,34.2h-6.17v31.59h6.17c10.27,0,16.32-5.72,16.32-15.8s-6.05-15.8-16.32-15.8Z" />
+              </g>
+              <g className={`${styles.elem} ${styles.square} ${styles.e}`}>
+                <rect width="100" height="100" rx="18" ry="18" fill="#fff" />
+                <path d="M82,0h-64C8.06,0,0,8.06,0,18v64c0,9.94,8.06,18,18,18h64c9.94,0,18-8.06,18-18V18C100,8.06,91.94,0,82,0ZM66.19,72.74h-32.18V27.24h31.85v6.96h-23.73v11.77h20.15v6.83h-20.15v13h24.05v6.96Z" />
+              </g>
+              <g className={`${styles.elem} ${styles.triangle}`}>
+                <svg
+                  x="0"
+                  y="0"
+                  width="108.22"
+                  height="100"
+                  viewBox="438 0 108.22 100"
+                  overflow="visible"
+                >
+                  <path
+                    className={styles.triOuter}
+                    d="M487.36,2.92l-49.15,88.66c-2.1,3.78,0.64,8.42,4.96,8.42h98.3c4.32,0,7.06-4.64,4.96-8.42L497.29,2.92c-2.16-3.9-7.76-3.9-9.92,0Z"
+                  />
+                  <path
+                    className={styles.triInner}
+                    d="M487.36,2.92l-49.15,88.66c-2.1,3.78,0.64,8.42,4.96,8.42h98.3c4.32,0,7.06-4.64,4.96-8.42L497.29,2.92c-2.16-3.9-7.76-3.9-9.92,0Z"
+                    transform="translate(490.67 67.64) scale(0.55) translate(-490.67 -67.64)"
+                  />
+                </svg>
+              </g>
+              <g className={`${styles.elem} ${styles.ibar}`}>
+                <svg
+                  x="0"
+                  y="0"
+                  width="33.5"
+                  height="100"
+                  viewBox="557.65 0 33.5 100"
+                  overflow="visible"
+                >
+                  <rect
+                    className={styles.barOuter}
+                    x="557.65"
+                    width="33.5"
+                    height="100"
+                    rx="5.5"
+                    ry="5.5"
+                  />
+                  <rect
+                    className={styles.barInner}
+                    x="566.025"
+                    y="25.0"
+                    width="16.75"
+                    height="50.0"
+                    rx="3"
+                    ry="3"
+                  />
+                </svg>
+              </g>
+            </svg>
+          )}
         </div>,
         document.body
       )}

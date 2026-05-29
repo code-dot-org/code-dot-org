@@ -42,9 +42,7 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
-  logoTransitionAnimatedUrl?: string;
-  logoTransitionWebmUrl?: string;
-  logoSvgUrl?: string;
+  logoTransitionEnabled?: boolean;
 }
 
 interface EssentialAiDependencyResponse {
@@ -53,9 +51,7 @@ interface EssentialAiDependencyResponse {
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   studioUrlPrefix,
-  logoTransitionAnimatedUrl,
-  logoTransitionWebmUrl,
-  logoSvgUrl,
+  logoTransitionEnabled,
 }) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
@@ -257,13 +253,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
 
   return (
     <div className={styles.teacherHomepage}>
-      {logoTransitionAnimatedUrl && logoSvgUrl && (
-        <LogoTransition
-          animatedSrc={logoTransitionAnimatedUrl}
-          webmSrc={logoTransitionWebmUrl}
-          svgSrc={logoSvgUrl}
-        />
-      )}
+      {logoTransitionEnabled && <LogoTransition />}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName

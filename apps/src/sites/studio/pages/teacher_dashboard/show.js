@@ -50,9 +50,7 @@ const {
   sectionOrder,
   providers,
   flash,
-  logoTransitionAnimatedUrl,
-  logoTransitionWebmUrl,
-  logoSvgUrl,
+  logoTransitionEnabled,
 } = scriptData;
 
 $(document).ready(function () {
@@ -108,16 +106,12 @@ $(document).ready(function () {
       {sections.length === 0 && !experiments.isEnabled('demo-section') ? (
         <TeacherHomepage
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
-          logoTransitionWebmUrl={logoTransitionWebmUrl}
-          logoSvgUrl={logoSvgUrl}
+          logoTransitionEnabled={!!logoTransitionEnabled}
         />
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          logoTransitionAnimatedUrl={logoTransitionAnimatedUrl}
-          logoTransitionWebmUrl={logoTransitionWebmUrl}
-          logoSvgUrl={logoSvgUrl}
+          logoTransitionEnabled={!!logoTransitionEnabled}
         />
       )}
       <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />

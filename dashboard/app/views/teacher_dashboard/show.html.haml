@@ -34,11 +34,7 @@
   teacher_dashboard_data[:hasCompletedPersonalizationQuiz] = @current_user.present? && TeachingProfileData.find_by(user: @current_user).present?
   teacher_dashboard_data[:providers] = @current_user.providers
   teacher_dashboard_data[:flash] = @flash if @flash.present?
-  if logo_transition_enabled
-    teacher_dashboard_data[:logoTransitionAnimatedUrl] = asset_path('logo-codeai-transition.webp')
-    teacher_dashboard_data[:logoTransitionWebmUrl] = asset_path('logo-codeai-transition.webm')
-    teacher_dashboard_data[:logoSvgUrl] = asset_path('logo-codeai-inverse.svg')
-  end
+  teacher_dashboard_data[:logoTransitionEnabled] = true if logo_transition_enabled
 
 = render partial: 'shared/emulate_print_media'
 
