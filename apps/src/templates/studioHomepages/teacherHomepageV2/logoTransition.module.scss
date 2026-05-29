@@ -4,7 +4,9 @@
   background: rgb(0 0 0 / 60%);
   opacity: 1;
   z-index: 9998;
-  pointer-events: none;
+  // Eat clicks while the animation is on screen so users can't
+  // interact with the page underneath mid-reveal.
+  pointer-events: auto;
   transition: opacity 300ms ease;
 }
 
@@ -13,9 +15,12 @@
 }
 
 // Override the default 300ms fade-in transition with a 700ms fade-out
-// that matches the landing slide.
+// that matches the landing slide. Stop swallowing clicks at the same
+// moment so the user can interact with the page again immediately
+// rather than waiting for the fade to finish.
 .backdropFading {
   opacity: 0;
+  pointer-events: none;
   transition: opacity 700ms ease;
 }
 
