@@ -1,3 +1,42 @@
+<%#
+  Stack:    the monolithic Code.org application stack. Per-deploy: caller
+            supplies the CloudFormation stack name (production, staging,
+            test, levelbuilder, adhocs).
+  Cadence:  frequent — production deploys, plus every adhoc spin-up.
+            (Contrast with the other templates in this directory, which
+            deploy rarely.)
+
+  This template is NOT deployed via `rake stack:<name>:start` directly.
+  It is driven by Cdo::CloudFormation::CdoApp
+  (lib/cdo/cloud_formation/cdo_app.rb), which sets defaults for branch,
+  commit, frontends, database, CDN, etc. based on RAILS_ENV. Entry points:
+
+    Adhocs (RAILS_ENV=adhoc):
+      rake adhoc:start       # standard adhoc; see lib/rake/adhoc.rake
+      rake adhoc:full_stack:start
+      rake adhoc:stop / adhoc:delete / adhoc:start_inactive_instance
+
+    Production / staging / test / levelbuilder:
+      Driven by the deploy pipeline (lib/cdo/...), not hand-run by
+      operators. The same rake task wiring lives in lib/rake/stack.rake
+      under `stack:start` / `stack:start:no_cdn`. Treat manual `:start`
+      invocations as exceptional and coordinate with the deploy owner.
+
+  ADMIN=1 is NOT required: IAM roles created here carry
+  `PermissionsBoundary: !ImportValue IAM-DevPermissions`, so the default
+  CloudFormationService role can manage them.
+
+  Before any manual :start, lint and validate:
+    bundle exec rake stack:lint     RAILS_ENV=<env>
+    bundle exec rake stack:validate RAILS_ENV=<env>
+  (Same for the `adhoc:` namespace — `adhoc:validate` exists; lint runs
+  via the `stack:lint` task.)
+
+  This template depends on resources exported by other stacks in this
+  directory (VPC-*, IAM-*, AccessLogs-Config, etc.). If you're deploying
+  for the first time in a new account, those stacks must be created first
+  (lambda, iam, vpc, then this one).
+%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application

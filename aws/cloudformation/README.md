@@ -40,7 +40,7 @@ template edit becomes an outage.
 | [`iam.yml.erb`](iam.yml.erb) | `stack:iam` | Single (account-wide) | `IAM` | Admin-only. `:start` requires `ADMIN=1`. See [IAM](#iam) section. |
 | [`data.yml.erb`](data.yml.erb) | `stack:data` | Per-environment | `DATA-<rack_env>` (e.g. `DATA-production`, `DATA-staging`, `DATA-test`) | Run `:start` once per environment, varying `RAILS_ENV`. |
 | [`cloud_formation_stack.yml.erb`](cloud_formation_stack.yml.erb) | `stack:start` | Per-deploy | `STACK_NAME` value (production, staging, test, adhocs) | Monolithic app stack; primarily driven by `adhoc:*` / `stack:*` from [`lib/rake/adhoc.rake`](../../lib/rake/adhoc.rake). |
-| [`domain_redirect.yml.erb`](domain_redirect.yml.erb) | n/a | Per-domain | n/a | Deployed via [`domain_redirect_deploy.sh`](domain_redirect_deploy.sh). |
+| [`domain_redirect.yml.erb`](domain_redirect.yml.erb) | n/a | Per-domain group | operator-named | Rendered+linted+validated by [`domain_redirect.sh`](domain_redirect.sh); operator then uploads the YAML manually in the AWS Console. See file header. |
 
 **Scope key:**
 
@@ -133,4 +133,4 @@ unset AWS_PROFILE
 
 ### domain_redirect
 
-"domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect_deploy.sh"
+"domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect.sh". See the ERB header in the template for the exact invocation; the script renders, lints, and validates but does not deploy — the operator then uploads the rendered YAML manually in the AWS Console.
