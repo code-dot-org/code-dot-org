@@ -3,16 +3,9 @@ import {StepOptions, Tour} from 'shepherd.js';
 import {
   createCompletionStep,
   nextButton,
+  withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
-
-// Wraps step text with the sparkle icon + text layout.
-const withSparkle = (text: string): string => `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">${text}</span>
-  </div>
-`;
 
 export const CREATE_SECTION_BUTTON_ID = 'create-section-button';
 
@@ -102,7 +95,8 @@ export const createHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        "Every class you teach gets its own class section. When you're ready to set one up, start here. Click the button to continue."
+        "Every class you teach gets its own class section. When you're ready to set one up, start here.",
+        'Click New class section to continue'
       ),
       advanceOn: {
         selector: `#${CREATE_SECTION_BUTTON_ID}`,
