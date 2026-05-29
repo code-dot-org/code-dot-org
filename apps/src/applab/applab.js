@@ -1228,7 +1228,6 @@ Applab.execute = function () {
       '\n';
   }
   codeWhenRun += studioApp().getCode();
-  console.log('running code', codeWhenRun);
   Applab.currentExecutionLog = [];
 
   if (typeof codeWhenRun === 'string') {
