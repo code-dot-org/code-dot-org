@@ -195,8 +195,8 @@ Resources:
       Code:
         ZipFile: |
           var response = require('cfn-response');
-          var AWS = require('aws-sdk');
-          var s3 = new AWS.S3();
+          var client = new (require('@aws-sdk/client-s3').S3Client)({});
+          var PutBucketNotificationConfigurationCommand = require('@aws-sdk/client-s3').PutBucketNotificationConfigurationCommand;
           exports.handler = function(event, context) {
             var respond = (e) => response.send(event, context, e ? response.FAILED : response.SUCCESS, e ? e : {});
             process.on('uncaughtException', e=>respond(e));
@@ -205,12 +205,12 @@ Resources:
             if (event.RequestType === 'Delete') {
               params.NotificationConfiguration = {};
             }
-            s3.putBucketNotificationConfiguration(params).promise()
+            client.send(new PutBucketNotificationConfigurationCommand(params))
               .then((data)=>respond())
               .catch((e)=>respond());
           };
       Timeout: 30
-      Runtime: nodejs6.10
+      Runtime: nodejs24.x
   FastSnapshotRestore:
     Type: AWS::Lambda::Function
     Properties:
