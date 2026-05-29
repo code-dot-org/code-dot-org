@@ -8,7 +8,10 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
-import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {
+  sendProgressReport,
+  sendStartedReportIfNotStarted,
+} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -239,15 +242,10 @@ const PythonlabView: React.FunctionComponent<
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (!isPredictLevel && currentLevelStatus === LevelStatus.not_tried) {
+    if (!isPredictLevel) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
-      dispatch(
-        sendProgressReport(
-          levelProperties.appName || '',
-          TestResults.LEVEL_STARTED
-        )
-      );
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName || ''));
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
   };
