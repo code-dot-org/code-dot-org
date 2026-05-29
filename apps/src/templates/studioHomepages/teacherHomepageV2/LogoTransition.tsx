@@ -64,13 +64,19 @@ const LogoTransition: React.FC = () => {
   const targetRectRef = useRef<Rect | null>(null);
   const [phase, setPhase] = useState<Phase>('opening');
 
-  const [hasSeen] = useState<boolean>(() => {
+  // True if we should skip the animation: cookie already set OR the user
+  // has the OS-level "prefers-reduced-motion" preference set. ?logo-force=
+  // true bypasses both (the dev/QA replay path).
+  const [shouldSkip] = useState<boolean>(() => {
     if (typeof window === 'undefined') return false;
     if (
       new URLSearchParams(window.location.search).get('logo-force') === 'true'
     ) {
       return false;
     }
+    const prefersReducedMotion =
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+    if (prefersReducedMotion) return true;
     return cookies.get(SEEN_COOKIE_NAME) === 'true';
   });
 
@@ -94,7 +100,7 @@ const LogoTransition: React.FC = () => {
     // `#header_logo_container img`, which would also hide the React
     // card's <img>/<video> once they portal into this same container.
     document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
-    if (hasSeen) return;
+    if (shouldSkip) return;
 
     const nativeImg = mountTarget.querySelector<HTMLImageElement>('img');
     if (nativeImg) {
@@ -130,7 +136,7 @@ const LogoTransition: React.FC = () => {
         nativeImg.style.visibility = '';
       }
     };
-  }, [mountTarget, hasSeen]);
+  }, [mountTarget, shouldSkip]);
 
   useEffect(() => {
     if (phase !== 'opening') return;
@@ -178,7 +184,7 @@ const LogoTransition: React.FC = () => {
     return () => window.clearTimeout(t);
   }, [phase, mountTarget]);
 
-  if (!mountTarget || hasSeen || phase === 'done') return null;
+  if (!mountTarget || shouldSkip || phase === 'done') return null;
 
   const showStage = phase !== 'opening';
   const backdropFading = phase === 'landing';
@@ -202,9 +208,12 @@ const LogoTransition: React.FC = () => {
 
   return (
     <>
-      {createPortal(<div className={backdropClassName} />, document.body)}
       {createPortal(
-        <div ref={cardRef} className={cardClassName}>
+        <div className={backdropClassName} aria-hidden="true" />,
+        document.body
+      )}
+      {createPortal(
+        <div ref={cardRef} className={cardClassName} aria-hidden="true">
           {showStage && (
             <svg
               className={`${styles.stage}${

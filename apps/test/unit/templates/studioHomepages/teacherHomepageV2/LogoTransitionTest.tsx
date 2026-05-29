@@ -53,14 +53,33 @@ const setLocationSearch = (search: string) => {
   });
 };
 
+const setPrefersReducedMotion = (prefers: boolean) => {
+  Object.defineProperty(window, 'matchMedia', {
+    value: (query: string) => ({
+      matches: query === '(prefers-reduced-motion: reduce)' ? prefers : false,
+      media: query,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      addListener: () => {},
+      removeListener: () => {},
+      dispatchEvent: () => false,
+      onchange: null,
+    }),
+    writable: true,
+    configurable: true,
+  });
+};
+
 describe('LogoTransition', () => {
   const originalLocation = window.location;
+  const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
     cookies.remove(SEEN_COOKIE_NAME, {path: '/'});
     document.getElementById(HEADER_LOGO_CONTAINER_ID)?.remove();
     document.getElementById(PRE_HIDE_STYLE_ID)?.remove();
     setLocationSearch('');
+    setPrefersReducedMotion(false);
   });
 
   afterEach(() => {
@@ -68,6 +87,11 @@ describe('LogoTransition', () => {
     Object.defineProperty(window, 'location', {
       value: originalLocation,
       writable: true,
+    });
+    Object.defineProperty(window, 'matchMedia', {
+      value: originalMatchMedia,
+      writable: true,
+      configurable: true,
     });
     jest.useRealTimers();
   });
@@ -110,6 +134,50 @@ describe('LogoTransition', () => {
       render(<LogoTransition />);
       // Native <img> hidden → animation flow took over.
       expect(nativeImg.style.visibility).toBe('hidden');
+    });
+  });
+
+  describe('prefers-reduced-motion', () => {
+    it('renders nothing when the user has prefers-reduced-motion set', () => {
+      setupHeaderContainer();
+      setPrefersReducedMotion(true);
+      render(<LogoTransition />);
+      expect(document.body.querySelector('svg')).toBeNull();
+    });
+
+    it('does not hide the native <img> under prefers-reduced-motion', () => {
+      const nativeImg = setupHeaderContainer();
+      setPrefersReducedMotion(true);
+      render(<LogoTransition />);
+      expect(nativeImg.style.visibility).toBe('');
+    });
+
+    it('removes the pre-hide <style> under prefers-reduced-motion', () => {
+      setupHeaderContainer();
+      addPreHideStyle();
+      setPrefersReducedMotion(true);
+      render(<LogoTransition />);
+      expect(document.getElementById(PRE_HIDE_STYLE_ID)).toBeNull();
+    });
+
+    it('?logo-force=true bypasses prefers-reduced-motion', () => {
+      const nativeImg = setupHeaderContainer();
+      setPrefersReducedMotion(true);
+      setLocationSearch('?logo-force=true');
+      render(<LogoTransition />);
+      expect(nativeImg.style.visibility).toBe('hidden');
+    });
+  });
+
+  describe('accessibility', () => {
+    it('marks the backdrop and card aria-hidden', () => {
+      setupHeaderContainer();
+      render(<LogoTransition />);
+      const ariaHiddenDivs = Array.from(
+        document.body.querySelectorAll('div[aria-hidden="true"]')
+      );
+      // Both the backdrop and the card carry aria-hidden=true.
+      expect(ariaHiddenDivs.length).toBeGreaterThanOrEqual(2);
     });
   });
 
