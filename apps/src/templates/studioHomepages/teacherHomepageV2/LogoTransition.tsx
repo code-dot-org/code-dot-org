@@ -37,6 +37,41 @@ interface LogoTransitionProps {
   svgSrc: string;
 }
 
+// Phase state machine. Every transition is one-way; there is no path
+// back to an earlier phase from a later one.
+//
+//   opening (OPEN_FADE_MS = 300ms)
+//     Backdrop fades 0→1, card fades 0→1. Media not yet rendered, so
+//     the WebP / WebM doesn't start fetching until we're already on
+//     screen.
+//     → playing on a setTimeout(OPEN_FADE_MS).
+//
+//   playing
+//     Animated <img> loops (default) or <video> plays once over the
+//     dimmer.
+//     → hold on the <video>'s native onEnded event, OR on a
+//       setTimeout(ANIMATED_DURATION_MS) that the <img>'s onLoad
+//       handler starts (so we don't burn the duration during the
+//       fetch on slow connections).
+//
+//   hold (HOLD_MS = 500ms)
+//     Media sits on its last frame; nothing else changes. Gives the
+//     user a beat to register the finished morph before the slide.
+//     → landing on a setTimeout(HOLD_MS).
+//
+//   landing (LAND_MS = 700ms)
+//     Card top/left/width/height transition from the modal-centered
+//     rect to the native <img>'s viewport rect. Animated media fades
+//     out, SVG fades in, backdrop fades out — all on the same 700ms
+//     budget. The setTimeout that fires at the end also clears the
+//     inline visibility:hidden on the Rails-rendered <img> and sets
+//     the suppression cookie.
+//     → done on a setTimeout(LAND_MS).
+//
+//   done (terminal)
+//     Render returns null; the React overlay unmounts. The native
+//     Rails-rendered <img> in the scrolling site header is now the
+//     visible logo — same DOM a returning teacher would see.
 type Phase = 'opening' | 'playing' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
