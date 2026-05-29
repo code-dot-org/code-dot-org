@@ -45,7 +45,7 @@ export const createSketchSnapshotBlob = async (
     reactFlow.getViewport()
   );
   if (!bounds) {
-    return {error: 'Add something to your workspace before downloading'};
+    return {error: 'Add something to your workspace before downloading.'};
   }
 
   const {imageWidth, imageHeight, scale, translateX, translateY} =
