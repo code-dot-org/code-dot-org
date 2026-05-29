@@ -11,6 +11,9 @@ import React, {
 } from 'react';
 
 import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -23,7 +26,8 @@ import {
 import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectManager from '../projects/ProjectManager';
 import getInitialSources from '../utils/getInitialSources';
@@ -63,6 +67,7 @@ interface SourcesContainerProps extends LabProps {
    * Currently only used in very specific multi-project scenarios.
    */
   projectManager?: ProjectManager;
+  reportInProgressOnEdit?: boolean;
 }
 
 /**
@@ -74,6 +79,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   defaultSources,
   children,
   projectManager,
+  reportInProgressOnEdit = false,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
@@ -85,7 +91,6 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
-
   const [startOverProps, setStartOverProps] = useState<{
     type: MessageType;
     message?: string;
@@ -95,6 +100,16 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   const setReinitializationHandler = useCallback((handler: () => void) => {
     reinitializationHandler.current = handler;
   }, []);
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
+  // Store currentLevelStatus as a ref to avoid it being a dependency of updateSources.
+  const currentLevelStatusRef = useRef(currentLevelStatus);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    currentLevelStatusRef.current = currentLevelStatus;
+  }, [currentLevelStatus]);
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
@@ -160,12 +175,30 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
           (
             projectManager || Lab2Registry.getInstance().getProjectManager()
           )?.save(newSources, forceSave);
+
+          if (
+            reportInProgressOnEdit &&
+            currentLevelStatusRef.current === LevelStatus.not_tried
+          ) {
+            dispatch(
+              sendProgressReport(
+                levelProperties.appName,
+                TestResults.LEVEL_STARTED
+              )
+            );
+          }
         }
 
         return newSources;
       });
     },
-    [setCurrentSources, projectManager]
+    [
+      setCurrentSources,
+      projectManager,
+      reportInProgressOnEdit,
+      dispatch,
+      levelProperties.appName,
+    ]
   );
 
   const onStartOver = useCallback(() => {

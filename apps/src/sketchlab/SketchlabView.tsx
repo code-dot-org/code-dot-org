@@ -28,6 +28,7 @@ export default function SketchlabView(props: LabProps<LevelProperties>) {
       {...props}
       defaultSources={defaultSources}
       key={props.levelProperties.id}
+      reportInProgressOnEdit={true}
     >
       <InnerView levelProperties={props.levelProperties} />
     </SourcesContainer>
