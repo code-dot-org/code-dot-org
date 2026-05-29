@@ -4,6 +4,15 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import {
   COLORS,
@@ -287,6 +296,64 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
+  });
+
+  describe('grade pre-population from gradesTeaching', () => {
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({currentUser});
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('pre-selects grades from gradesTeaching when creating a new section', () => {
+      getStore().dispatch(
+        setInitialData({
+          id: 1,
+          grades_teaching: ['11', '12'],
+          user_type: 'teacher',
+        })
+      );
+
+      const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+      const section = wrapper.find('SingleSectionSetUp').prop('section');
+
+      expect(section.grades).to.deep.equal(['11', '12']);
+    });
+
+    it('initializes grades to empty array when gradesTeaching is empty', () => {
+      getStore().dispatch(
+        setInitialData({id: 1, grades_teaching: [], user_type: 'teacher'})
+      );
+
+      const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+      const section = wrapper.find('SingleSectionSetUp').prop('section');
+
+      expect(section.grades).to.deep.equal([]);
+    });
+
+    it('does not override grades when editing an existing section', () => {
+      getStore().dispatch(
+        setInitialData({
+          id: 1,
+          grades_teaching: ['11', '12'],
+          user_type: 'teacher',
+        })
+      );
+      const existingSection = {grades: ['K', '1'], name: 'My Class'};
+
+      const wrapper = shallow(
+        <SectionsSetUpContainer
+          {...DEFAULT_PROPS}
+          sectionToBeEdited={existingSection}
+        />
+      );
+      const section = wrapper.find('SingleSectionSetUp').prop('section');
+
+      expect(section.grades).to.deep.equal(['K', '1']);
+    });
   });
 
   it('redirects to defaultRedirectUrl', async () => {
