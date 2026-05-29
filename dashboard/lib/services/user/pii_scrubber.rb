@@ -29,6 +29,13 @@ module Services
       end
 
       def call
+        # Demo students keep their profile data, but stamp pii_scrubbed_at so
+        # the nightly job stops re-selecting them.
+        if ::Policies::DemoSections.demo_student_durable?(user.id)
+          mark_scrubbed
+          return
+        end
+
         user.transaction do
           scrub_user
           scrub_legacy_data

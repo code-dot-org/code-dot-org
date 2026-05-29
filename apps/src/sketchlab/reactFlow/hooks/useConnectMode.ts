@@ -8,8 +8,8 @@ import {
 import {createUuid} from '@cdo/apps/utils';
 
 import {canCreateConnection} from '../utils/connectionRules';
+import {getNodeLabel} from '../utils/elementLabel';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
-import {getNodeLabel} from '../utils/nodeLabel';
 
 /**
  * Pick source/target handles based on relative node positions so the arrow

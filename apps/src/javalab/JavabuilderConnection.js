@@ -38,9 +38,13 @@ export default class JavabuilderConnection {
     onValidationPassed,
     onValidationFailed,
     onConnectDone,
-    setIsCaptchaDialogOpen
+    setIsCaptchaDialogOpen,
+    // Optional. Callers (e.g. Lab2-based labs) that don't initialize the
+    // legacy `project` singleton can pass the channel id explicitly. Legacy
+    // callers omit it and fall back to project.getCurrentId().
+    channelId
   ) {
-    this.channelId = project.getCurrentId();
+    this.channelId = channelId ?? project.getCurrentId();
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -155,7 +159,7 @@ export default class JavabuilderConnection {
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (checkProjectEdited && project.getCurrentId() === undefined) {
+    if (checkProjectEdited && !this.channelId) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }

@@ -6,13 +6,13 @@ Shared ESLint, TypeScript, Prettier, Stylelint, and lint-staged configs for all 
 
 Three flat-config presets are available:
 
-| Preset             | Use for                                            |
-| ------------------ | -------------------------------------------------- |
-| `eslint/node.mjs`  | Node.js tools, config files                        |
-| `eslint/react.mjs` | React apps and component libraries                 |
-| `eslint/jest.mjs`  | Jest test files (overlay on top of another preset) |
+| Preset              | Use for                                              |
+| ------------------- | ---------------------------------------------------- |
+| `eslint/node.mjs`   | Node.js tools, config files                          |
+| `eslint/react.mjs`  | React apps and component libraries                   |
+| `eslint/vitest.mjs` | Vitest test files (overlay on top of another preset) |
 
-All presets include `eslint:recommended`, `typescript-eslint`, and `eslint-plugin-import-x` (with enforced import ordering). The `react` preset adds `eslint-plugin-jsx-a11y` (strict) and `eslint-plugin-react`.
+All base presets include `eslint:recommended`, `typescript-eslint`, and `eslint-plugin-import-x` (with enforced import ordering). The `react` preset adds `eslint-plugin-jsx-a11y` (strict) and `eslint-plugin-react`. The `vitest` preset applies `@vitest/eslint-plugin`'s recommended rules to `*.test.{ts,tsx}`.
 
 ```js
 // eslint.config.mjs — React app
@@ -23,14 +23,48 @@ export default [globalIgnores(['dist']), ...cdoReactConfig];
 ```
 
 ```js
-// eslint.config.mjs — with Jest overlay
-import cdoJestConfig from '@code-dot-org/lint-config/eslint/jest.mjs';
+// eslint.config.mjs — with Vitest overlay
 import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoVitestConfig from '@code-dot-org/lint-config/eslint/vitest.mjs';
 
-export default [...cdoReactConfig, ...cdoJestConfig];
+export default [...cdoReactConfig, ...cdoVitestConfig];
 ```
 
 Spread and extend as needed — consuming packages can append additional rule overrides after the preset.
+
+## Vitest
+
+One preset, for React + jsdom packages:
+
+| Preset             | Use for                                                   |
+| ------------------ | --------------------------------------------------------- |
+| `vitest/react.mjs` | React + jsdom packages (`react()` plugin, jsdom, globals) |
+
+Re-export when a package has no overrides:
+
+```ts
+// vitest.config.ts — no overrides
+export {default} from '@code-dot-org/lint-config/vitest/react.mjs';
+```
+
+Extend with `mergeConfig` when overrides are needed:
+
+```ts
+// vitest.config.ts — with overrides
+import baseConfig from '@code-dot-org/lint-config/vitest/react.mjs';
+import {defineConfig, mergeConfig} from 'vitest/config';
+
+export default mergeConfig(
+  baseConfig,
+  defineConfig({
+    test: {setupFiles: ['./src/setupTests.ts']},
+  }),
+);
+```
+
+`vitest`, `jsdom`, and `@vitejs/plugin-react` must still be in the consuming
+package's `devDependencies` — they're runtime requirements for the test runner
+and are also used by the package's `vite.config.ts`.
 
 ## TypeScript
 
