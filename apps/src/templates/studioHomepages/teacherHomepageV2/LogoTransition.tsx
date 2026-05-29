@@ -12,9 +12,9 @@ import styles from './logoTransition.module.scss';
 const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
 const SEEN_COOKIE_EXPIRES_DAYS = 180;
 
-// Animated <img>s do not fire an "ended" event, so under
-// ?logo-image=true we wait on this timer (started at onLoad, not at
-// phase entry); the default video path uses the real onEnded callback.
+// Animated <img>s do not fire an "ended" event, so the default WebP
+// path waits on this timer (started at onLoad, not at phase entry).
+// The ?logo-video=true opt-in uses the real onEnded callback instead.
 const OPEN_FADE_MS = 300;
 const ANIMATED_DURATION_MS = 8000;
 const HOLD_MS = 500;
@@ -29,9 +29,10 @@ const ANIMATED_WIDTH = 1080;
 const ANIMATED_HEIGHT = 313;
 
 interface LogoTransitionProps {
-  // Looping animated image, used under ?logo-image=true. AVIF can't serve
-  // here because Safari doesn't decode AVIF transparency.
+  // Default looping animated image (WebP). AVIF can't serve here
+  // because Safari doesn't decode AVIF transparency.
   animatedSrc: string;
+  // Optional video source, used under ?logo-video=true.
   webmSrc?: string;
   svgSrc: string;
 }
@@ -63,7 +64,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const [useVideo] = useState<boolean>(() => {
     if (typeof window === 'undefined' || !webmSrc) return false;
     return (
-      new URLSearchParams(window.location.search).get('logo-image') !== 'true'
+      new URLSearchParams(window.location.search).get('logo-video') === 'true'
     );
   });
 
