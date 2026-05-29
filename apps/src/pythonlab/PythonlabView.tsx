@@ -8,12 +8,7 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
-import {
-  sendProgressReport,
-  sendStartedReportIfNotStarted,
-} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {TestResults} from '@cdo/apps/constants';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -33,7 +28,6 @@ import {
   useAppDispatch,
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 
@@ -99,9 +93,6 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
-  const currentLevelStatus = useAppSelector(
-    state => getCurrentLevel(state)?.status
-  );
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
