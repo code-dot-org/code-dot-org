@@ -201,8 +201,11 @@ export const createLearnHowToEvaluateProgressSteps = (
             .querySelector(STUDENT_SNAPSHOT_SELECTOR)
             ?.classList.add('tour-step-highlight');
 
-          snapshotClickHandler = (e: Event) => {
-            e.preventDefault();
+          snapshotClickHandler = () => {
+            trySetSessionStorage(
+              LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+              'onboarding-complete'
+            );
             document
               .querySelector(STUDENT_SNAPSHOT_SELECTOR)
               ?.classList.remove('tour-step-highlight');
@@ -212,7 +215,7 @@ export const createLearnHowToEvaluateProgressSteps = (
                 ?.removeEventListener('click', snapshotClickHandler);
               snapshotClickHandler = null;
             }
-            tour.next();
+            tour.getCurrentStep()?.hide();
           };
 
           document

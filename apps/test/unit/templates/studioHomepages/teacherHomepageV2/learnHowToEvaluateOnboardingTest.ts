@@ -219,7 +219,7 @@ describe('student-snapshot-step when handler', () => {
     document.body.innerHTML = '';
   });
 
-  it('intercepts click and advances tour without navigation', () => {
+  it('saves onboarding-complete to sessionStorage and allows navigation on click', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
@@ -235,7 +235,11 @@ describe('student-snapshot-step when handler', () => {
     });
     link.dispatchEvent(clickEvent);
 
-    expect(clickEvent.defaultPrevented).toBe(true);
-    expect(mockTour.next).toHaveBeenCalledTimes(1);
+    expect(clickEvent.defaultPrevented).toBe(false);
+    expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'onboarding-complete'
+    );
+    expect(mockTour.next).not.toHaveBeenCalled();
   });
 });

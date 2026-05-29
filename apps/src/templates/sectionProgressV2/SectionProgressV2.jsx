@@ -43,10 +43,6 @@ function SectionProgressV2({
 }) {
   const params = useParams();
   React.useEffect(() => {
-    resumeLearnHowToEvaluateTour();
-  }, []);
-
-  React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
       sectionId: sectionId,
@@ -59,6 +55,12 @@ function SectionProgressV2({
   const levelDataInitialized = React.useMemo(() => {
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
+
+  React.useEffect(() => {
+    if (levelDataInitialized) {
+      resumeLearnHowToEvaluateTour();
+    }
+  }, [levelDataInitialized]);
 
   // We don't want to load data more than necessary, so we only load data when
   // the scriptId or sectionId changes, and only if we haven't already loaded
