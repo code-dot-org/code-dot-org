@@ -1,7 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   addEdge,
   Background,
   Controls,
+  ControlButton,
   type IsValidConnection,
   type OnEdgesChange,
   type OnNodesChange,
@@ -726,14 +728,7 @@ export default function ReactFlowCanvas({
               onMouseLeave={handleMouseLeave}
             >
               {!readOnly && (
-                <Toolbar
-                  onAddNode={handleAddNode}
-                  levelName={levelName}
-                  onUndo={handleUndo}
-                  canUndo={canUndo}
-                  onRedo={handleRedo}
-                  canRedo={canRedo}
-                />
+                <Toolbar onAddNode={handleAddNode} levelName={levelName} />
               )}
               <div aria-live="assertive" className={styles.srOnly}>
                 {connectAnnouncement}
@@ -790,7 +785,22 @@ export default function ReactFlowCanvas({
                   pushSnapshot={pushSnapshot}
                 />
                 <Background />
-                <Controls position="bottom-right" />
+                <Controls position="bottom-right" showInteractive={false}>
+                  <ControlButton
+                    onClick={handleUndo}
+                    disabled={!canUndo}
+                    title="Undo"
+                  >
+                    <FontAwesomeV6Icon iconName="rotate-left" />
+                  </ControlButton>
+                  <ControlButton
+                    onClick={handleRedo}
+                    disabled={!canRedo}
+                    title="Redo"
+                  >
+                    <FontAwesomeV6Icon iconName="rotate-right" />
+                  </ControlButton>
+                </Controls>
               </ReactFlow>
             </div>
           </PushSnapshotProvider>
