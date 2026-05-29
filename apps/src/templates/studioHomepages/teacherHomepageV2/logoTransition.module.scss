@@ -57,6 +57,29 @@
   max-height: 100%;
   aspect-ratio: 1021 / 176;
   overflow: visible;
+
+  // The morph ends with black tiles + white letter cutouts; the static
+  // SVG we hand off to draws white tile-shapes with transparent letter
+  // cutouts (so the dark header background shows through). Interpolating
+  // these four CSS variables during the .stageLanding class swap flips
+  // the React stage into the same color scheme as the native SVG, so
+  // there's no black-to-white jump at handoff.
+  /* stylelint-disable custom-property-no-missing-var-function --
+   * `transition: --custom-prop` is the correct syntax for transitioning
+   * @property values; stylelint mistakes the bare name for a var misuse. */
+  transition:
+    --logo-bg 500ms ease,
+    --logo-fg 500ms ease,
+    --ai-outer 500ms ease,
+    --ai-inner 500ms ease;
+  /* stylelint-enable custom-property-no-missing-var-function */
+}
+
+.stageLanding {
+  --logo-bg: rgb(255 255 255 / 0%);
+  --logo-fg: #fff;
+  --ai-outer: #fff;
+  --ai-inner: rgb(255 255 255 / 0%);
 }
 
 .elem {
@@ -64,9 +87,16 @@
   will-change: transform;
 }
 
+// Inline rect fill="#fff" attribute on each square is the initial state;
+// the CSS rule below overrides it via the --logo-bg variable so the
+// landing-phase fade-out works.
+.square rect {
+  fill: var(--logo-bg);
+}
+
 .square path,
 .square ellipse {
-  fill: #000;
+  fill: var(--logo-fg);
 }
 
 .triangle .triOuter {
@@ -85,6 +115,18 @@
 .ibar .barInner {
   fill: var(--ai-inner);
   filter: blur(2px);
+}
+
+@property --logo-bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #fff;
+}
+
+@property --logo-fg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000;
 }
 
 @property --ai-inner {

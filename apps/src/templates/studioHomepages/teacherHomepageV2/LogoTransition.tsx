@@ -182,6 +182,7 @@ const LogoTransition: React.FC = () => {
 
   const showStage = phase !== 'opening';
   const backdropFading = phase === 'landing';
+  const stageLanding = phase === 'landing';
 
   const backdropClassName = [
     styles.backdrop,
@@ -206,7 +207,9 @@ const LogoTransition: React.FC = () => {
         <div ref={cardRef} className={cardClassName}>
           {showStage && (
             <svg
-              className={styles.stage}
+              className={`${styles.stage}${
+                stageLanding ? ` ${styles.stageLanding}` : ''
+              }`}
               viewBox="0 109 1021 176"
               preserveAspectRatio="xMidYMid meet"
               aria-hidden="true"
