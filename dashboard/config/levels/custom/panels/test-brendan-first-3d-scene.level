@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T17:02:59.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-first-3d-scene-cbc8535f-6d83-4c6e-975a-baafe2bb87af",
+        "text": "You've taken your first steps into the exciting world of 3D graphics! You learned how to set up a special drawing surface, a `canvas`, and bring your first 3D object to life within it.",
+        "imageUrl": "https://images.code.org/083f600852caa3aa7d6adb1b4406c00a-test-brendan-first-3d-scene-panel-1-6fe76074-7685-4007-8dc3-99c1e123ca9a.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-first-3d-scene-b37d2c46-a03a-4d48-9dfe-46502e50c5fa",
+        "text": "Remember the X, Y, and Z axes? You used these to precisely control your object's location in space. This movement is called **translation**, allowing you to place objects exactly where you want them.",
+        "imageUrl": "https://images.code.org/3c8b6492ea40f6feb64fe2181495b16f-test-brendan-first-3d-scene-panel-2-170c66ec-88cf-494c-8bee-8319c03d1805.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-first-3d-scene-a8cf34ad-098d-4a96-8939-273e63d1d741",
+        "text": "You also explored **scaling**, changing your object's size and shape. By adjusting the X, Y, and Z scaling factors, you can make objects wider, taller, or deeper, or even stretch them into unique forms.",
+        "imageUrl": "https://images.code.org/87aa26cdca7d1aade3b64e6b20164209-test-brendan-first-3d-scene-panel-3-fcd28268-f09c-473e-8749-671a3fd8dc88.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-first-3d-scene-a77351e8-7eaf-4edf-9de6-64e7046aae91",
+        "text": "You've mastered the fundamentals: initializing a 3D scene, rendering a basic primitive, and controlling its position and scale. These are the building blocks for creating incredible virtual worlds!",
+        "imageUrl": "https://images.code.org/58a3c5575dc3c17a12282d24ee7770ec-test-brendan-first-3d-scene-panel-4-4a51a368-baf9-4c57-a7cc-502cc9741fec.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-first-3d-scene-d8657cd3-742f-4234-83e3-f57713ab0d77",
+        "text": "Now, it's your turn to unleash your creativity! Experiment with different values for position and scale. How many unique objects can you create just by manipulating these properties?",
+        "imageUrl": "https://images.code.org/4b4b29a6e33ee351c57e400916cf4b0c-test-brendan-first-3d-scene-panel-5-b36d5e70-d9c1-46f8-bee3-fc353131678c.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Summarize the core concepts learned: setting up a 3D canvas, rendering basic shapes, and manipulating their position and scale. Encourage students to experiment further with the properties they've learned."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 17:03:47 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 17:03:48 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
