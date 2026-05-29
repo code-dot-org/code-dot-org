@@ -39,7 +39,7 @@ export default function CanvasControls({
                   aria-label="Undo"
                   onClick={onUndo}
                   disabled={!canUndo}
-                  size="small"
+                  size="extraSmall"
                   color="tertiary"
                   variant="text"
                 >
@@ -47,13 +47,17 @@ export default function CanvasControls({
                 </IconButton>
               </span>
             </Tooltip>
-            <Tooltip title="Redo" placement="left">
+            <Tooltip
+              title="Redo"
+              placement="left"
+              open={!canRedo ? false : undefined}
+            >
               <span>
                 <IconButton
                   aria-label="Redo"
                   onClick={onRedo}
                   disabled={!canRedo}
-                  size="small"
+                  size="extraSmall"
                   color="tertiary"
                   variant="text"
                 >
@@ -69,7 +73,7 @@ export default function CanvasControls({
             <IconButton
               aria-label="Zoom in"
               onClick={() => zoomIn()}
-              size="small"
+              size="extraSmall"
               color="tertiary"
               variant="text"
             >
@@ -82,7 +86,7 @@ export default function CanvasControls({
             <IconButton
               aria-label="Zoom out"
               onClick={() => zoomOut()}
-              size="small"
+              size="extraSmall"
               color="tertiary"
               variant="text"
             >
@@ -95,7 +99,7 @@ export default function CanvasControls({
             <IconButton
               aria-label="Zoom to fit"
               onClick={() => fitView()}
-              size="small"
+              size="extraSmall"
               color="tertiary"
               variant="text"
             >

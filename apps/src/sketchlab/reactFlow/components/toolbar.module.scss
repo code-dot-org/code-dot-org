@@ -1,8 +1,8 @@
 @mixin toolbar-base {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 6px;
+  gap: 2px;
+  padding: 4px;
   pointer-events: all;
   background-color: var(--background-neutral-primary);
 }
@@ -23,5 +23,5 @@
 
 .divider {
   border-color: var(--borders-neutral-primary);
-  margin: 0 -6px;
+  margin: 0 -4px;
 }
