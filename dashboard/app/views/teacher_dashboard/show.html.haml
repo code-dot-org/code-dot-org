@@ -3,7 +3,7 @@
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
 
--# Server-side killswitch for the codeai logo morph animation. Defaults
+-# Server-side DCDO flag for the codeai logo morph animation. Defaults
 -# to false (animation enabled); flip the DCDO key to true to disable
 -# the feature site-wide without a deploy if something goes wrong.
 - logo_transition_enabled = Cdo::Brand.current_brand_code(request) == Cdo::Brand::BRAND_CODEAI && !DCDO.get('hide-teacher-dashboard-logo-animation', false)
