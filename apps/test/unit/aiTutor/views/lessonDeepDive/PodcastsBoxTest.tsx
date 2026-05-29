@@ -65,7 +65,11 @@ describe('PodcastsBox', () => {
   it('requests the podcast for the lesson and the struggling objectives only', async () => {
     mockEndpoints();
     render(
-      <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={reflectionData}
+        objectives={[]}
+      />
     );
 
     await waitFor(() => expect(retrieveUrl()).toBeDefined());
@@ -80,7 +84,11 @@ describe('PodcastsBox', () => {
   it('turns the fetched blob into an object URL and enables playback', async () => {
     mockEndpoints();
     render(
-      <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={reflectionData}
+        objectives={[]}
+      />
     );
 
     // The play button is disabled until the audio source is ready, so it
@@ -97,7 +105,11 @@ describe('PodcastsBox', () => {
       {voice_id: 'Sam', text: 'A named box for a value.'},
     ]);
     render(
-      <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={reflectionData}
+        objectives={[]}
+      />
     );
 
     expect(await screen.findByText('What is a variable?')).toBeInTheDocument();
@@ -109,7 +121,11 @@ describe('PodcastsBox', () => {
   it('shows an unavailable message and disables controls when retrieval fails', async () => {
     mockGet.mockRejectedValue(new Error('404 Not Found'));
     render(
-      <PodcastsBox lessonId={LESSON_ID} reflectionData={reflectionData} />
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={reflectionData}
+        objectives={[]}
+      />
     );
 
     expect(
@@ -130,6 +146,7 @@ describe('PodcastsBox', () => {
           success: '',
           struggle: '',
         }}
+        objectives={[]}
       />
     );
 
@@ -139,12 +156,47 @@ describe('PodcastsBox', () => {
     expect(url).not.toContain('objective_ids');
   });
 
-  it('does not request a podcast when reflectionData is null', async () => {
-    render(<PodcastsBox lessonId={LESSON_ID} reflectionData={null} />);
+  it('requests using all lesson objectives when reflectionData is null', async () => {
+    mockEndpoints();
+    render(
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={null}
+        objectives={[
+          {id: '10', description: 'First objective'},
+          {id: '20', description: 'Second objective'},
+        ]}
+      />
+    );
 
-    expect(
-      await screen.findByText(/podcast isn't ready yet/i)
-    ).toBeInTheDocument();
-    expect(mockGet).not.toHaveBeenCalled();
+    await waitFor(() => expect(retrieveUrl()).toBeDefined());
+    const url = retrieveUrl();
+    expect(url).toContain('lesson_id=42');
+    expect(url).toContain('objective_ids%5B%5D=10');
+    expect(url).toContain('objective_ids%5B%5D=20');
+  });
+
+  it('requests using all lesson objectives when the reflection was submitted with no ratings', async () => {
+    mockEndpoints();
+    render(
+      <PodcastsBox
+        lessonId={LESSON_ID}
+        reflectionData={{
+          objectiveReflections: {},
+          success: '',
+          struggle: '',
+        }}
+        objectives={[
+          {id: '10', description: 'First objective'},
+          {id: '20', description: 'Second objective'},
+        ]}
+      />
+    );
+
+    await waitFor(() => expect(retrieveUrl()).toBeDefined());
+    const url = retrieveUrl();
+    expect(url).toContain('lesson_id=42');
+    expect(url).toContain('objective_ids%5B%5D=10');
+    expect(url).toContain('objective_ids%5B%5D=20');
   });
 });

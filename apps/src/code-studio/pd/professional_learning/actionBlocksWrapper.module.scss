@@ -1,5 +1,3 @@
-@import 'color';
-
 // Breakpoints
 $width-sm: 640px;
 $width-lg: 1020px;
@@ -28,8 +26,8 @@ $width-lg: 1020px;
 }
 
 .oneColumnActionBlock {
-  background: $light_gray_50;
-  border: 1px solid $light_gray_200;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   padding: 1.25rem;
   text-align: initial;
@@ -38,7 +36,7 @@ $width-lg: 1020px;
   justify-content: space-between;
 
   .overline {
-    color: $light_primary_500;
+    color: var(--text-brand-teal-primary);
   }
 
   img {

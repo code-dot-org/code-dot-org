@@ -25,6 +25,10 @@
       = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
+    - if brand != Cdo::Brand::BRAND_CODE_ORG
+      - if (favicon_svg = Cdo::Brand.favicon_svg(request))
+        = tag :link, rel: 'icon', type: 'image/svg+xml', href: asset_path(favicon_svg)
+      = favicon_link_tag asset_path(Cdo::Brand.favicon(request)), rel: 'icon', sizes: '32x32'
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/google_analytics'

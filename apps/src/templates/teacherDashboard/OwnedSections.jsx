@@ -1,18 +1,20 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import {beginEditingSection} from './teacherSectionsRedux';
+
+import moduleStyles from './ownedSections.module.scss';
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -76,27 +78,35 @@ class OwnedSections extends React.Component {
         {hasSections && (
           <div>
             {this.ownedSectionsTable(false)}
-            <div style={styles.buttonContainer}>
+            <div
+              className={moduleStyles.buttonContainer}
+              style={{width: styleConstants['content-width']}}
+            >
               {hiddenSectionIds.length > 0 && (
-                <Button
+                <MuiButton
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
-                  icon={viewHidden ? 'caret-up' : 'caret-down'}
-                  text={
-                    viewHidden
-                      ? i18n.hideArchivedSections()
-                      : i18n.viewArchivedSections()
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  startIcon={
+                    <FontAwesomeV6Icon
+                      iconName={viewHidden ? 'caret-up' : 'caret-down'}
+                    />
                   }
-                  color={Button.ButtonColor.gray}
-                />
+                >
+                  {viewHidden
+                    ? i18n.hideArchivedSections()
+                    : i18n.viewArchivedSections()}
+                </MuiButton>
               )}
             </div>
             {viewHidden && hiddenSectionIds.length > 0 && (
               <div>
-                <div style={styles.hiddenSectionLabel}>
+                <div className={moduleStyles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
                 </div>
-                <div style={styles.hiddenSectionDesc}>
+                <div className={moduleStyles.hiddenSectionDesc}>
                   {i18n.archivedSectionsTeacherDescription()}
                 </div>
                 {this.ownedSectionsTable(true)}
@@ -109,29 +119,6 @@ class OwnedSections extends React.Component {
   }
 }
 
-const styles = {
-  button: {
-    marginBottom: 20,
-    float: 'right',
-  },
-  buttonContainer: {
-    width: styleConstants['content-width'],
-    textAlign: 'right',
-    paddingTop: 10,
-    paddingBottom: 10,
-  },
-  hiddenSectionLabel: {
-    fontSize: 18,
-    paddingBottom: 10,
-    color: color.charcoal,
-  },
-  hiddenSectionDesc: {
-    fontSize: 14,
-    lineHeight: '22px',
-    paddingBottom: 10,
-    color: color.charcoal,
-  },
-};
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(() => ({}), {
