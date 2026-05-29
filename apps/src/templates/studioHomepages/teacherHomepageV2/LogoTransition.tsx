@@ -5,15 +5,16 @@ import {createPortal} from 'react-dom';
 import styles from './logoTransition.module.scss';
 
 // The "morph" — old logo transforming into the new wordmark — lives
-// inside the GIF/WebM asset. This component plays that asset in a
+// inside the WebP/WebM asset. This component plays that asset in a
 // centered modal and lands the resulting static SVG into the empty
 // header slot. The modal-to-header motion is a slide, not a morph.
 
 const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
 const SEEN_COOKIE_EXPIRES_DAYS = 180;
 
-// GIFs do not fire an "ended" event, so under ?logo-gif=true we wait on
-// this timer; the default video path uses the real onEnded callback.
+// Animated <img>s do not fire an "ended" event, so under
+// ?logo-image=true we wait on this timer (started at onLoad, not at
+// phase entry); the default video path uses the real onEnded callback.
 const OPEN_FADE_MS = 300;
 const ANIMATED_DURATION_MS = 8000;
 const HOLD_MS = 500;
@@ -28,7 +29,7 @@ const ANIMATED_WIDTH = 1080;
 const ANIMATED_HEIGHT = 313;
 
 interface LogoTransitionProps {
-  // Looping animated image, used under ?logo-gif=true. AVIF can't serve
+  // Looping animated image, used under ?logo-image=true. AVIF can't serve
   // here because Safari doesn't decode AVIF transparency.
   animatedSrc: string;
   webmSrc?: string;
@@ -62,7 +63,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   const [useVideo] = useState<boolean>(() => {
     if (typeof window === 'undefined' || !webmSrc) return false;
     return (
-      new URLSearchParams(window.location.search).get('logo-gif') !== 'true'
+      new URLSearchParams(window.location.search).get('logo-image') !== 'true'
     );
   });
 
