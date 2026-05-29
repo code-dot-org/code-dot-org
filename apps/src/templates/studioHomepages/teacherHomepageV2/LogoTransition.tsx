@@ -144,7 +144,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
     if (useVideo) {
       // Some browsers refuse autoplay even with muted+playsinline if the
       // play() call is deferred; kick it off explicitly.
-      videoRef.current?.play().catch(() => {});
+      videoRef.current?.play()?.catch(() => {});
       return;
     }
     if (!animatedLoaded) return;
