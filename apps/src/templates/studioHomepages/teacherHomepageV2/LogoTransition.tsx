@@ -73,6 +73,13 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
   // 0x0-to-modal-sized size jump also animating.
   const [entered, setEntered] = useState(false);
 
+  // The WebP's animation only starts playing once the file has been
+  // fully fetched and decoded. Track that explicitly so we don't start
+  // counting ANIMATED_DURATION_MS until the frames are actually moving;
+  // otherwise on slow connections the timer expires mid-load and we
+  // hand off to the SVG before the user has seen the morph.
+  const [animatedLoaded, setAnimatedLoaded] = useState(false);
+
   const [mountTarget] = useState<HTMLElement | null>(() =>
     typeof document !== 'undefined'
       ? document.querySelector<HTMLElement>(HEADER_LOGO_SELECTOR)
@@ -138,9 +145,10 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
       videoRef.current?.play().catch(() => {});
       return;
     }
+    if (!animatedLoaded) return;
     const t = window.setTimeout(() => setPhase('hold'), ANIMATED_DURATION_MS);
     return () => window.clearTimeout(t);
-  }, [phase, useVideo]);
+  }, [phase, useVideo, animatedLoaded]);
 
   useEffect(() => {
     if (phase !== 'hold') return;
@@ -232,6 +240,7 @@ const LogoTransition: React.FC<LogoTransitionProps> = ({
                 alt=""
                 width={ANIMATED_WIDTH}
                 height={ANIMATED_HEIGHT}
+                onLoad={() => setAnimatedLoaded(true)}
                 className={`${styles.image} ${styles.imageAnimated} ${
                   animatedHidden ? styles.imageHidden : ''
                 }`}
