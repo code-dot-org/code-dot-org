@@ -68,9 +68,6 @@ export const createWebLab2IntroTourSteps = (tour: Tour): StepOptions[] => [
     title: 'Code & Preview Areas',
     text: 'On the right are your Code and Preview areas. You can choose to have Code, Preview or Split View open.',
     buttons: [backButton(tour), nextButton(tour)],
-    floatingUIOptions: {
-      middleware: [offset(12)],
-    },
   },
   {
     id: 'add-file',
