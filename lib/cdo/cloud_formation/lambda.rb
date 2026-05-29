@@ -156,14 +156,10 @@ module Cdo::CloudFormation
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
         end
 
-        # Return both S3 location and hash of source code.
         {
-          s3_location: {
-            S3Bucket: S3_LAMBDA_BUCKET,
-            S3Key: key
-          },
-          content_hash: hash
-        }
+          S3Bucket: S3_LAMBDA_BUCKET,
+          S3Key: key
+        }.to_json
       ensure
         # Clean up env.json file if we created it
         File.delete(env_json_path) if env_json_created && File.exist?(env_json_path)
