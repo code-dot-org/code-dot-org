@@ -10,15 +10,30 @@ module SeleniumBrowser
     return options
   end
 
+  # Chrome --host-resolver-rules arg that maps our localhost-* hostnames
+  # to the given IP. Lets a Chrome session running on another host (e.g. a
+  # Device Farm worker) reach the test runner's local Rails server.
+  def self.host_resolver_rules(chrome_host_ip)
+    "--host-resolver-rules=MAP localhost-studio.code.org #{chrome_host_ip}, MAP localhost.code.org #{chrome_host_ip}"
+  end
+
   def self.local(browser: :chrome, headless: true)
     browser = browser.to_sym.downcase
     options = webdriver_options_object(browser: browser, headless: headless)
     return Selenium::WebDriver.for(browser, options: options)
   end
 
-  def self.remote(url, capabilities: nil, options: nil, http_client: nil)
+  # When `chrome_host_ip` is set, installs the host-resolver-rules arg on
+  # the passed-in `capabilities`. Not supported with `options:`.
+  def self.remote(url, capabilities: nil, options: nil, http_client: nil, chrome_host_ip: nil)
     if capabilities.nil? && options.nil?
       options = webdriver_options_object(browser: :chrome)
+    end
+
+    if chrome_host_ip
+      chrome_options = capabilities['goog:chromeOptions'] || {}
+      chrome_options['args'] = (chrome_options['args'] || []) + [host_resolver_rules(chrome_host_ip)]
+      capabilities['goog:chromeOptions'] = chrome_options
     end
 
     http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)

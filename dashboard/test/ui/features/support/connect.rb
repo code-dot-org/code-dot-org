@@ -86,6 +86,15 @@ def saucelabs_browser(test_run_name, http_client: nil)
   return browser
 end
 
+# For CI Chrome Device Farm sessions, returns the drone worker's private
+# IP (looked up via EC2 IMDSv2) so the remote browser can reach our local
+# Rails server via host-resolver rules. Returns nil otherwise.
+def device_farm_chrome_host_ip
+  return nil unless $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
+  imds_token = `curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600"`.strip
+  `curl -s -H "X-aws-ec2-metadata-token:#{imds_token}" http://169.254.169.254/latest/meta-data/local-ipv4`.strip
+end
+
 def device_farm_desktop_browser(http_client: nil)
   # One-shot TestGrid URL, ready immediately.
   url = Cdo::AWS::DeviceFarm.create_test_grid_url
@@ -94,23 +103,11 @@ def device_farm_desktop_browser(http_client: nil)
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
-  # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
-  # and localhost.code.org to the drone worker's IP address.
-  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
-    imds_token = `curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600"`.strip
-    worker_ip = `curl -s -H "X-aws-ec2-metadata-token:#{imds_token}" http://169.254.169.254/latest/meta-data/local-ipv4`.strip
-
-    chrome_options = capabilities['goog:chromeOptions'] || {}
-    chrome_args = chrome_options['args'] || []
-    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{worker_ip}, MAP localhost.code.org #{worker_ip}"
-    chrome_options['args'] = chrome_args
-    capabilities['goog:chromeOptions'] = chrome_options
-  end
-
   SeleniumBrowser.remote(
     url,
     capabilities: capabilities,
-    http_client: http_client
+    http_client: http_client,
+    chrome_host_ip: device_farm_chrome_host_ip
   )
 end
 
