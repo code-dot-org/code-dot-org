@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip} from '@mui/material';
+import {IconButton, Paper, Tooltip, Divider} from '@mui/material';
 import {Panel, useReactFlow} from '@xyflow/react';
 import React from 'react';
 
@@ -23,8 +23,8 @@ export default function CanvasControls({
   return (
     <Panel position="bottom-right">
       <Paper
-        className={styles.toolbar}
-        elevation={3}
+        className={`${styles.toolbar} ${styles.canvasControls}`}
+        elevation={0}
         role="toolbar"
         aria-label="Canvas controls"
         aria-orientation="vertical"
@@ -38,7 +38,7 @@ export default function CanvasControls({
               disabled={!canUndo}
               size="small"
               color="tertiary"
-              variant="outlined"
+              variant="text"
             >
               <FontAwesomeV6Icon iconName="rotate-left" />
             </IconButton>
@@ -52,12 +52,13 @@ export default function CanvasControls({
               disabled={!canRedo}
               size="small"
               color="tertiary"
-              variant="outlined"
+              variant="text"
             >
               <FontAwesomeV6Icon iconName="rotate-right" />
             </IconButton>
           </span>
         </Tooltip>
+        <Divider flexItem className={styles.divider} />
         <Tooltip title="Zoom in" placement="left">
           <span>
             <IconButton
@@ -65,7 +66,7 @@ export default function CanvasControls({
               onClick={() => zoomIn()}
               size="small"
               color="tertiary"
-              variant="outlined"
+              variant="text"
             >
               <FontAwesomeV6Icon iconName="plus" />
             </IconButton>
@@ -78,7 +79,7 @@ export default function CanvasControls({
               onClick={() => zoomOut()}
               size="small"
               color="tertiary"
-              variant="outlined"
+              variant="text"
             >
               <FontAwesomeV6Icon iconName="minus" />
             </IconButton>
@@ -91,7 +92,7 @@ export default function CanvasControls({
               onClick={() => fitView()}
               size="small"
               color="tertiary"
-              variant="outlined"
+              variant="text"
             >
               <FontAwesomeV6Icon iconName="expand" />
             </IconButton>

@@ -11,3 +11,12 @@
   pointer-events: all;
   background-color: var(--background-neutral-primary);
 }
+
+.divider {
+  border-color: var(--borders-neutral-primary);
+  margin: 0 -6px;
+}
+
+.canvasControls {
+  border: 1px solid var(--borders-neutral-primary);
+}
