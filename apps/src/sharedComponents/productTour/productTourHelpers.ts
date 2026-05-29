@@ -37,7 +37,8 @@ export const withSparkle = (text: string, supportiveText?: string): string => `
     <div class="onboarding-step-text-stack">
       <span class="onboarding-step-text">${text}</span>
       ${
-        supportiveText && `<span class="onboarding-step-supportive-text">${supportiveText}</span>`
+        supportiveText &&
+        `<span class="onboarding-step-supportive-text">${supportiveText}</span>`
       }
     </div>
   </div>
