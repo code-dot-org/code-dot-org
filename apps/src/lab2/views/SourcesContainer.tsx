@@ -12,7 +12,6 @@ import React, {
 
 import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -100,13 +99,6 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
     reinitializationHandler.current = handler;
   }, []);
 
-  const currentLevelStatus = useAppSelector(
-    state => getCurrentLevel(state)?.status
-  );
-  // Store currentLevelStatus as a ref to avoid it being a dependency of updateSources.
-  const currentLevelStatusRef = useRef(currentLevelStatus);
-  currentLevelStatusRef.current = currentLevelStatus;
-
   const dispatch = useAppDispatch();
 
   const reinitializeSources = useCallback(
@@ -174,13 +166,15 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
             projectManager || Lab2Registry.getInstance().getProjectManager()
           )?.save(newSources, forceSave);
 
-          dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+          if (reportInProgressOnEdit) {
+            dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+          }
         }
 
         return newSources;
       });
     },
-    [setCurrentSources, projectManager, dispatch, levelProperties.appName]
+    [projectManager, reportInProgressOnEdit, dispatch, levelProperties.appName]
   );
 
   const onStartOver = useCallback(() => {
