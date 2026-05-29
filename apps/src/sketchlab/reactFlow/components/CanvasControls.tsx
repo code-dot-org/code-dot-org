@@ -47,11 +47,7 @@ export default function CanvasControls({
                 </IconButton>
               </span>
             </Tooltip>
-            <Tooltip
-              title="Redo"
-              placement="left"
-              open={!canRedo ? false : undefined}
-            >
+            <Tooltip title="Redo" placement="left">
               <span>
                 <IconButton
                   aria-label="Redo"
