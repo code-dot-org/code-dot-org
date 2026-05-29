@@ -348,7 +348,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       supportedFileTypes: levelAichatSettings?.multimodalEnabled
         ? getAllowedFileTypes(modelParameters.selectedModelId).flatMap(
             // mimeToExtensions returns all known extensions for a MIME type, e.g. ['jpg', 'jpeg', 'jpe'] for image/jpeg.
-            // Exclude 'jpe'.
+            // Exclude 'jpe' since it's rarely used.
             mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
           )
         : [],

@@ -70,7 +70,8 @@ export const getAllowedFileTypes = (
   // Gemini 2.5 Flash Image model, we have stricter input criteria so only
   // safe image uploads are allowed. For other multimodal models, we don't
   // do any input moderation, and allow both image and PDF uploads.
-  // image/gif is in SafeAndSupportedImageTypes but excluded here since gifs are not currently supported.
+  // image/gif is in SafeAndSupportedImageTypes but excluded here since gifs
+  // are not currently supported by Gemini 2.5 Flash Image model.
   const images = (SafeAndSupportedImageTypes as readonly string[]).filter(
     t => t !== 'image/gif'
   );
