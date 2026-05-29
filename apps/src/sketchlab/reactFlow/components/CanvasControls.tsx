@@ -10,6 +10,7 @@ interface CanvasControlsProps {
   onRedo: () => void;
   canUndo: boolean;
   canRedo: boolean;
+  isReadOnly: boolean;
 }
 
 export default function CanvasControls({
@@ -17,6 +18,7 @@ export default function CanvasControls({
   onRedo,
   canUndo,
   canRedo,
+  isReadOnly,
 }: CanvasControlsProps) {
   const {zoomIn, zoomOut, fitView} = useReactFlow();
 
@@ -29,35 +31,39 @@ export default function CanvasControls({
         aria-label="Canvas controls"
         aria-orientation="vertical"
       >
-        <Tooltip title="Undo" placement="left">
-          <span>
-            <IconButton
-              aria-label="Undo"
-              onClick={onUndo}
-              disabled={!canUndo}
-              size="small"
-              color="tertiary"
-              variant="text"
-            >
-              <FontAwesomeV6Icon iconName="rotate-left" />
-            </IconButton>
-          </span>
-        </Tooltip>
-        <Tooltip title="Redo" placement="left">
-          <span>
-            <IconButton
-              aria-label="Redo"
-              onClick={onRedo}
-              disabled={!canRedo}
-              size="small"
-              color="tertiary"
-              variant="text"
-            >
-              <FontAwesomeV6Icon iconName="rotate-right" />
-            </IconButton>
-          </span>
-        </Tooltip>
-        <Divider flexItem className={styles.divider} />
+        {!isReadOnly && (
+          <>
+            <Tooltip title="Undo" placement="left">
+              <span>
+                <IconButton
+                  aria-label="Undo"
+                  onClick={onUndo}
+                  disabled={!canUndo}
+                  size="small"
+                  color="tertiary"
+                  variant="text"
+                >
+                  <FontAwesomeV6Icon iconName="rotate-left" />
+                </IconButton>
+              </span>
+            </Tooltip>
+            <Tooltip title="Redo" placement="left">
+              <span>
+                <IconButton
+                  aria-label="Redo"
+                  onClick={onRedo}
+                  disabled={!canRedo}
+                  size="small"
+                  color="tertiary"
+                  variant="text"
+                >
+                  <FontAwesomeV6Icon iconName="rotate-right" />
+                </IconButton>
+              </span>
+            </Tooltip>
+            <Divider flexItem className={styles.divider} />
+          </>
+        )}
         <Tooltip title="Zoom in" placement="left">
           <span>
             <IconButton

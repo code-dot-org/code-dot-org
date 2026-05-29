@@ -788,6 +788,7 @@ export default function ReactFlowCanvas({
                   onRedo={handleRedo}
                   canUndo={canUndo}
                   canRedo={canRedo}
+                  isReadOnly={readOnly}
                 />
               </ReactFlow>
             </div>
