@@ -31,7 +31,9 @@ import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
+import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
 import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
@@ -64,10 +66,13 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   const tour = useCreateSectionTour(isElementaryTeacher);
   const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
+
+  const showRebrandBanner = DCDO.get('codeai-rebrand-banner', false);
 
   const [personaData, setPersonaData] = React.useState<{
     hasMatchedPersona: boolean | null;
@@ -256,6 +261,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {showRebrandBanner && (
+              <TempRebrandBanner showBanner={showRebrandBanner === true} />
+            )}
             {shouldShowPersonalizationAlert && (
               <Alert
                 aria-labelledby="feedback-banner-title"
@@ -299,6 +307,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               <OnboardingChecklist
                 createSectionTour={tour}
                 reviewSyllabusTour={reviewSyllabusTour}
+                learnHowToEvaluateTour={learnHowToEvaluateTour}
                 demoType={demoSectionDemoType}
               />
             )}

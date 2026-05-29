@@ -53,40 +53,6 @@ Resources:
               - Effect: Allow
                 Action: ['lambda:InvokeFunction']
                 Resource: '*'
-  VpcClassicLink:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
-      FunctionName: VpcClassicLink
-      Code:
-        ZipFile: <%=inline_js 'vpcClassicLink.js' %>
-      Handler: index.handler
-      Runtime: nodejs6.10
-      Timeout: 300
-      Role: !GetAtt VpcClassicLinkRole.Arn
-  VpcClassicLinkRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [lambda.amazonaws.com]}
-      Path: '/'
-      Policies:
-        - PolicyName: root
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
-                Resource: "arn:aws:logs:*:*:*"
-              - Effect: Allow
-                Action:
-                  - "ec2:DisableVpcClassicLink"
-                  - "ec2:EnableVpcClassicLink"
-                  - "ec2:EnableVpcClassicLinkDnsSupport"
-                  - "ec2:DisableVpcClassicLinkDnsSupport"
-                Resource: "*"
   CountASG:
     Type: AWS::Lambda::Function
     Properties:
@@ -338,9 +304,6 @@ Outputs:
     Value: !GetAtt AMIManager.Arn
     Description: ServiceToken for AMIManager Lambda function
     Export: {Name: AMIManager}
-  VpcClassicLink:
-    Value: !GetAtt VpcClassicLink.Arn
-    Description: ServiceToken for VpcClassicLink Lambda function
   SlackEvent:
     Value: !GetAtt SlackEvent.Arn
     Export: {Name: SlackEvent}
