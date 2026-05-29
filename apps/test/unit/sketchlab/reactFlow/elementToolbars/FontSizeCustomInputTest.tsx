@@ -76,8 +76,7 @@ describe('FontSizeCustomInput', () => {
       const input = getInput();
       fireEvent.focus(input);
       fireEvent.change(input, {target: {value: '7'}});
-      // External update arrives mid-edit. The field should keep the user's
-      // partial input instead of snapping back.
+      // External update arrives mid-edit.
       rerender(
         <MenuList>
           <FontSizeCustomInput

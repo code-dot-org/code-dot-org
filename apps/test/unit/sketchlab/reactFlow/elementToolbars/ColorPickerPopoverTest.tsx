@@ -1,11 +1,24 @@
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {
+  ThemeProvider,
+  useTheme,
+} from '@code-dot-org/component-library/common/contexts';
 import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 
 import ColorPickerPopover from '@cdo/apps/sketchlab/reactFlow/elementToolbars/components/ColorPickerPopover';
 import {ColorSwatch} from '@cdo/apps/sketchlab/reactFlow/elementToolbars/toolbarPalettes';
+
+function ForceDarkMode({children}: {children: React.ReactNode}) {
+  const {theme, setTheme} = useTheme();
+  useLayoutEffect(() => {
+    if (theme !== 'Dark') {
+      setTheme('Dark');
+    }
+  }, [theme, setTheme]);
+  return theme === 'Dark' ? <>{children}</> : null;
+}
 
 const SWATCHES: ColorSwatch[] = [
   {value: 'red', label: 'Red'},
@@ -75,6 +88,28 @@ describe('ColorPickerPopover', () => {
       ).toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: 'Color: White'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('uses the darkModeLabel for swatches when the theme is Dark', () => {
+      render(
+        <ThemeProvider>
+          <ForceDarkMode>
+            <ColorPickerPopover
+              groupLabel="Color"
+              swatches={SWATCHES}
+              selectedValue={undefined}
+              onSelect={jest.fn()}
+              onClose={jest.fn()}
+            />
+          </ForceDarkMode>
+        </ThemeProvider>
+      );
+      expect(
+        screen.getByRole('button', {name: 'Color: White'})
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Color: Black'})
       ).not.toBeInTheDocument();
     });
   });
@@ -152,7 +187,7 @@ describe('ColorPickerPopover', () => {
       );
     });
 
-    it('ArrowDown jumps forward by SWATCH_COLUMNS (5)', () => {
+    it('ArrowDown jumps forward by SWATCH_COLUMNS', () => {
       // SWATCHES has length 5 → ArrowDown from index 0 lands on the custom
       // color input at index 5.
       renderPopover({selectedValue: 'red'});
@@ -163,7 +198,7 @@ describe('ColorPickerPopover', () => {
       );
     });
 
-    it('ArrowUp jumps backward by SWATCH_COLUMNS (5)', () => {
+    it('ArrowUp jumps backward by SWATCH_COLUMNS', () => {
       renderPopover({selectedValue: 'red'});
       // Manually focus the custom-color input first.
       const customInput = screen.getByLabelText('Color: Custom color');

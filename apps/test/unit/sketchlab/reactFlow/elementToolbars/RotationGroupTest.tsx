@@ -95,7 +95,7 @@ describe('RotationGroup', () => {
       renderGroup({value: 0, onChange});
       const input = getInput();
       fireEvent.focus(input);
-      // 480 → 120 (and the current value is 0, so onChange fires).
+      // 480 → 120
       fireEvent.change(input, {target: {value: '480'}});
       expect(onChange).toHaveBeenCalledWith(120);
     });

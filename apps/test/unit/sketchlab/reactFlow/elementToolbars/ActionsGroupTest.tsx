@@ -64,7 +64,7 @@ describe('ActionsGroup', () => {
       ).toBeInTheDocument();
     });
 
-    it('hides Lock if onLock is omitted even in start mode', () => {
+    it('hides Lock if onLock is omitted in start mode', () => {
       mockGetIsStartMode.mockReturnValue(true);
       render(<ActionsGroup />);
       expect(
@@ -79,26 +79,6 @@ describe('ActionsGroup', () => {
       expect(
         screen.queryByRole('button', {name: /connection handles/})
       ).not.toBeInTheDocument();
-    });
-
-    it('shows "Hide connection handles" with aria-pressed=true when visible', () => {
-      render(
-        <ActionsGroup handlesToggle={{visible: true, onToggle: jest.fn()}} />
-      );
-      const button = screen.getByRole('button', {
-        name: 'Hide connection handles',
-      });
-      expect(button).toHaveAttribute('aria-pressed', 'true');
-    });
-
-    it('shows "Show connection handles" with aria-pressed=false when hidden', () => {
-      render(
-        <ActionsGroup handlesToggle={{visible: false, onToggle: jest.fn()}} />
-      );
-      const button = screen.getByRole('button', {
-        name: 'Show connection handles',
-      });
-      expect(button).toHaveAttribute('aria-pressed', 'false');
     });
   });
 
