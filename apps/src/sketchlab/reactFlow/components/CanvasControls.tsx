@@ -30,6 +30,34 @@ export default function CanvasControls({
         aria-orientation="vertical"
         style={{position: 'static', transform: 'none'}}
       >
+        <Tooltip title="Undo" placement="left">
+          <span>
+            <IconButton
+              aria-label="Undo"
+              onClick={onUndo}
+              disabled={!canUndo}
+              size="small"
+              color="tertiary"
+              variant="outlined"
+            >
+              <FontAwesomeV6Icon iconName="rotate-left" />
+            </IconButton>
+          </span>
+        </Tooltip>
+        <Tooltip title="Redo" placement="left">
+          <span>
+            <IconButton
+              aria-label="Redo"
+              onClick={onRedo}
+              disabled={!canRedo}
+              size="small"
+              color="tertiary"
+              variant="outlined"
+            >
+              <FontAwesomeV6Icon iconName="rotate-right" />
+            </IconButton>
+          </span>
+        </Tooltip>
         <Tooltip title="Zoom in" placement="left">
           <span>
             <IconButton
@@ -56,44 +84,16 @@ export default function CanvasControls({
             </IconButton>
           </span>
         </Tooltip>
-        <Tooltip title="Fit view" placement="left">
+        <Tooltip title="Zoom to fit" placement="left">
           <span>
             <IconButton
-              aria-label="Fit view"
+              aria-label="Zoom to fit"
               onClick={() => fitView()}
               size="small"
               color="tertiary"
               variant="outlined"
             >
               <FontAwesomeV6Icon iconName="expand" />
-            </IconButton>
-          </span>
-        </Tooltip>
-        <Tooltip title="Undo" placement="left">
-          <span>
-            <IconButton
-              aria-label="Undo"
-              onClick={onUndo}
-              disabled={!canUndo}
-              size="small"
-              color="tertiary"
-              variant="outlined"
-            >
-              <FontAwesomeV6Icon iconName="rotate-left" />
-            </IconButton>
-          </span>
-        </Tooltip>
-        <Tooltip title="Redo" placement="left">
-          <span>
-            <IconButton
-              aria-label="Redo"
-              onClick={onRedo}
-              disabled={!canRedo}
-              size="small"
-              color="tertiary"
-              variant="outlined"
-            >
-              <FontAwesomeV6Icon iconName="rotate-right" />
             </IconButton>
           </span>
         </Tooltip>
