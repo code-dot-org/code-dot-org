@@ -122,6 +122,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "generate_podcast_script reuses an existing objectiveless script and skips OpenAI" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
     empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     other_empty = AiStudentPodcast.create!(
       user_id: @other_user.id,
@@ -139,6 +142,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "generate_podcast_script does not reuse an objective-bearing script for an objectiveless podcast" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
     empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     with_objective = AiStudentPodcast.create!(
       user_id: @other_user.id,

@@ -38,7 +38,7 @@ import {
   ToolbarVisibilityProvider,
   type ToolbarTarget,
 } from '../context';
-import CornerToolbarPanel from '../elementToolbars/CornerToolbarPanel';
+import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
 import {
   DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,

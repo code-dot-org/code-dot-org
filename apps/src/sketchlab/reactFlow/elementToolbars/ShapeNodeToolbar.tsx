@@ -3,12 +3,14 @@ import React from 'react';
 import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
-import AlignmentDropdownRow from './AlignmentDropdownRow';
-import ColorDropdownRow from './ColorDropdownRow';
-import LockedNotice from './LockedNotice';
-import NodeActionsGroup from './NodeActionsGroup';
-import RotationGroup from './RotationGroup';
-import SizeDropdownRow from './SizeDropdownRow';
+import LockedNotice from './components/LockedNotice';
+import ToolbarSection from './components/ToolbarSection';
+import ToolbarShell from './components/ToolbarShell';
+import AlignmentDropdownRow from './sections/AlignmentDropdownRow';
+import ColorDropdownRow from './sections/ColorDropdownRow';
+import NodeActionsGroup from './sections/NodeActionsGroup';
+import RotationGroup from './sections/RotationGroup';
+import SizeDropdownRow from './sections/SizeDropdownRow';
 import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
@@ -18,8 +20,6 @@ import {
   DEFAULT_TEXT_ALIGN,
   STROKE_FONT_PALETTE,
 } from './toolbarPalettes';
-import ToolbarSection from './ToolbarSection';
-import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ShapeNodeToolbarProps {

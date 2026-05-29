@@ -1,0 +1,353 @@
+{
+  "script": {
+    "name": "test-brendan",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "generate_outline": "Generate a two lesson progression on rendering 2d graphics inside web lab 2.  Target middle-schoolers.",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-28 18:17:56 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "test-brendan"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "test-brendan"
+      }
+    },
+    {
+      "key": "outlines",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lessons"
+      },
+      "seeding_key": {
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "intro-2d-graphics",
+      "name": "Introduction to 2D Graphics",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "generate_outline": "This lesson introduces students to the concept of 2D graphics and how they are rendered on a computer screen within Web Lab. Students will learn about the coordinate system used in Web Lab, understanding how x and y values determine position. They will practice drawing basic geometric shapes such as rectangles and circles using fundamental drawing commands. By the end, students should be able to accurately position and draw simple shapes on the Web Lab canvas."
+      },
+      "seeding_key": {
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    },
+    {
+      "key": "color-and-lines",
+      "name": "Drawing with Color and Lines",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "generate_outline": "Building on the previous lesson, students will now explore how to add color and modify line properties for their 2D graphics in Web Lab. They will learn to set fill colors for shapes and adjust the stroke color and thickness for outlines. Students will apply these new techniques to create more visually engaging and diverse drawings. By the end, they should be able to create colorful shapes with customized borders and lines on the Web Lab canvas."
+      },
+      "seeding_key": {
+        "lesson.key": "color-and-lines",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78",
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca",
+        "lesson_activity.key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-intro-2d-graphics"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-intro-2d-graphics"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-understanding-coordinates"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-understanding-coordinates"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-draw-first-rectangle"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-draw-first-rectangle"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-draw-first-circle"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-draw-first-circle"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-position-and-draw-shapes"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-position-and-draw-shapes"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-2d-review-2d-basics"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      },
+      "level_keys": [
+        "test-brendan-2d-review-2d-basics"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-intro-2d-graphics",
+        "script_level.level_keys": [
+          "test-brendan-2d-intro-2d-graphics"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-understanding-coordinates",
+        "script_level.level_keys": [
+          "test-brendan-2d-understanding-coordinates"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-draw-first-rectangle",
+        "script_level.level_keys": [
+          "test-brendan-2d-draw-first-rectangle"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-draw-first-circle",
+        "script_level.level_keys": [
+          "test-brendan-2d-draw-first-circle"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-position-and-draw-shapes",
+        "script_level.level_keys": [
+          "test-brendan-2d-position-and-draw-shapes"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-2d-review-2d-basics",
+        "script_level.level_keys": [
+          "test-brendan-2d-review-2d-basics"
+        ],
+        "lesson.key": "intro-2d-graphics",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

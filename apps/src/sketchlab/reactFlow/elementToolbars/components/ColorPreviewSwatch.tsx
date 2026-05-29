@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {ColorSwatch} from './toolbarPalettes';
+import {ColorSwatch} from '../toolbarPalettes';
+
 import TransparentSwatchIcon from './TransparentSwatchIcon';
 
 import styles from './color-preview-swatch.module.scss';
