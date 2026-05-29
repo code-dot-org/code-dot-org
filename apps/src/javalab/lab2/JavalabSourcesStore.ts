@@ -29,8 +29,14 @@ export class JavalabSourcesStore extends SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
+    // Drop labConfig from what we write to S3: the flat main.json must stay in
+    // the legacy shape Javabuilder reads. labConfig is persisted on the channel
+    // instead (ProjectManager copies it there from its own sourcesToSave), so
+    // stripping it here does not lose it.
+    const rest = {...sources};
+    delete rest.labConfig;
     const flat = {
-      ...sources,
+      ...rest,
       source: multiFileToFlat(sources.source as MultiFileSource),
     } as unknown as ProjectSources;
     return super.save(channelId, flat, projectType, forceNewVersion);

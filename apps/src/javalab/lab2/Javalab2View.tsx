@@ -25,6 +25,7 @@ import {
   sendJavaConsoleInput,
   stopJavaCode,
 } from './javabuilderRunUtils';
+import {deriveLabConfig} from './labConfig';
 import HorizontalLayout from './layout/HorizontalLayout';
 import {flatToMultiFile} from './sourceConverter';
 import {JavalabFlatSource, JavalabLevelProperties} from './types';
@@ -56,9 +57,17 @@ const defaultConfig: ConfigType = {
 // and start_sources edit mode are TODOs.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
-> = ({levelProperties, initialSources}) => {
+> = ({levelProperties, initialSources, channel}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
+
+  // Java Lab signals a neighborhood level via csaViewMode. Codebridge shows the
+  // neighborhood preview when projectSources.labConfig.miniApp.name is set, so
+  // we translate csaViewMode (or the channel's stored labConfig) into that shape.
+  const labConfig = useMemo(
+    () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
+    [levelProperties.csaViewMode, channel?.labConfig]
+  );
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button
@@ -86,16 +95,30 @@ const Javalab2View: React.FunctionComponent<
 
     return {
       ...levelProperties,
+      // Drives useInitialSources to attach labConfig to the start/template/
+      // default sources (the new-project path).
+      miniApp: labConfig?.miniApp?.name,
       startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
       templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
       exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
     };
-  }, [levelProperties]);
+  }, [levelProperties, labConfig]);
+
+  // A loaded project's sources come from the flat S3 shape, which carries no
+  // labConfig. Merge it back in so codebridge shows the mini-app for existing
+  // neighborhood projects.
+  const initialSourcesWithLabConfig = useMemo(
+    () =>
+      initialSources && labConfig
+        ? {...initialSources, labConfig}
+        : initialSources,
+    [initialSources, labConfig]
+  );
 
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     codebridgeLevelProperties,
-    initialSources
+    initialSourcesWithLabConfig
   );
 
   const sourceLevelId = useAppSelector(
