@@ -57,12 +57,12 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
-  const {blob: blobToSave, error} = await createSketchSnapshotBlob(reactFlow);
+  const {blob, error} = await createSketchSnapshotBlob(reactFlow);
   if (error) {
     errorCallback(error);
     return;
   }
-  if (!blobToSave) {
+  if (!blob) {
     errorCallback(
       `Error saving ${newFileName} to your Backpack. Please try again`
     );
@@ -74,7 +74,7 @@ export const handleSaveToBackpack = async (
     : EVENTS.SAVE_TO_BACKPACK_NEW;
   backpackApi.saveBlobFile(
     newFileName,
-    blobToSave,
+    blob,
     () => {
       errorCallback(
         `Error saving ${newFileName} to your Backpack. Please try again`
