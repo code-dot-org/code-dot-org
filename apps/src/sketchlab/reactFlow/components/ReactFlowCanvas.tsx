@@ -1,9 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   addEdge,
   Background,
-  Controls,
-  ControlButton,
   type IsValidConnection,
   type OnEdgesChange,
   type OnNodesChange,
@@ -74,6 +71,7 @@ import {
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
+import CanvasControls from './CanvasControls';
 import Toolbar from './Toolbar';
 
 import styles from './react-flow-canvas.module.scss';
@@ -785,22 +783,12 @@ export default function ReactFlowCanvas({
                   pushSnapshot={pushSnapshot}
                 />
                 <Background />
-                <Controls position="bottom-right" showInteractive={false}>
-                  <ControlButton
-                    onClick={handleUndo}
-                    disabled={!canUndo}
-                    title="Undo"
-                  >
-                    <FontAwesomeV6Icon iconName="rotate-left" />
-                  </ControlButton>
-                  <ControlButton
-                    onClick={handleRedo}
-                    disabled={!canRedo}
-                    title="Redo"
-                  >
-                    <FontAwesomeV6Icon iconName="rotate-right" />
-                  </ControlButton>
-                </Controls>
+                <CanvasControls
+                  onUndo={handleUndo}
+                  onRedo={handleRedo}
+                  canUndo={canUndo}
+                  canRedo={canRedo}
+                />
               </ReactFlow>
             </div>
           </PushSnapshotProvider>
