@@ -42,7 +42,8 @@ export default function SketchlabView(props: LabProps<LevelProperties>) {
 
   // Function to tell SourcesContainer whether the sources have changed in a way
   // that should trigger a progress report update. Skipped for legacy Excalidraw.
-  // For React Flow, we ignore viewport changes, as those are not a meaningful edit.
+  // For React Flow, we ignore viewport changes and per-item selection state, as
+  // those are not meaningful edits.
   const sourcesChanged = useExcalidraw
     ? undefined
     : (prevSources: ProjectSources, newSources: ProjectSources) => {
@@ -51,7 +52,12 @@ export default function SketchlabView(props: LabProps<LevelProperties>) {
         if (!isReactFlowSource(prev) || !isReactFlowSource(next)) {
           return false;
         }
-        return !isEqual(omit(prev, 'viewport'), omit(next, 'viewport'));
+        const normalize = (s: SketchlabReactFlowSource) => ({
+          ...omit(s, 'viewport'),
+          nodes: s.nodes.map(n => omit(n, 'selected')),
+          edges: s.edges.map(e => omit(e, 'selected')),
+        });
+        return !isEqual(normalize(prev), normalize(next));
       };
 
   return (
