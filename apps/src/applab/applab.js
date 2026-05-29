@@ -14,6 +14,7 @@ import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import localization from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -549,9 +550,18 @@ Applab.init = function (config) {
       config.level.levelHtml = '';
     }
 
+    // Parse and localize the start HTML, if we need it
+    let startHtml = level.startHtml;
+    if (!level.levelHtml && !!startHtml) {
+      const container = document.createElement('div');
+      container.innerHTML = startHtml;
+      const localized = localization.translate(container);
+      startHtml = localized.innerHTML;
+    }
+
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
-    Applab.setLevelHtml(level.levelHtml || level.startHtml || '');
+    Applab.setLevelHtml(level.levelHtml || startHtml || '');
   };
 
   config.afterEditorReady = function () {
@@ -1218,6 +1228,7 @@ Applab.execute = function () {
       '\n';
   }
   codeWhenRun += studioApp().getCode();
+  console.log('running code', codeWhenRun);
   Applab.currentExecutionLog = [];
 
   if (typeof codeWhenRun === 'string') {
