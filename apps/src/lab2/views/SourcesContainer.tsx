@@ -108,6 +108,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   );
   // Store currentLevelStatus as a ref to avoid it being a dependency of updateSources.
   const currentLevelStatusRef = useRef(currentLevelStatus);
+  currentLevelStatusRef.current = currentLevelStatus;
 
   const dispatch = useAppDispatch();
 

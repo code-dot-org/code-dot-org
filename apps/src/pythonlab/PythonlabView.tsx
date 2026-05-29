@@ -234,8 +234,6 @@ const PythonlabView: React.FunctionComponent<
       isStartMode ? undefined : validationFile
     );
     if (!isPredictLevel) {
-      // If this is not a predict level and the current status is not tried,
-      // send a level started progress report.
       dispatch(sendStartedReportIfNotStarted(levelProperties.appName || ''));
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
