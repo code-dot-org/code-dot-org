@@ -23,12 +23,11 @@ export default function CanvasControls({
   return (
     <Panel position="bottom-right">
       <Paper
-        className={`${styles.toolbar} ${styles.canvasControls}`}
+        className={styles.canvasControls}
         elevation={0}
         role="toolbar"
         aria-label="Canvas controls"
         aria-orientation="vertical"
-        style={{position: 'static', transform: 'none'}}
       >
         <Tooltip title="Undo" placement="left">
           <span>

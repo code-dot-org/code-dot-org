@@ -1,9 +1,4 @@
-.toolbar {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  z-index: 10;
+@mixin toolbar-base {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -12,11 +7,21 @@
   background-color: var(--background-neutral-primary);
 }
 
-.divider {
-  border-color: var(--borders-neutral-primary);
-  margin: 0 -6px;
+.toolbar {
+  @include toolbar-base;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .canvasControls {
+  @include toolbar-base;
   border: 1px solid var(--borders-neutral-primary);
+}
+
+.divider {
+  border-color: var(--borders-neutral-primary);
+  margin: 0 -6px;
 }
