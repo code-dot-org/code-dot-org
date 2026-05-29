@@ -1,4 +1,3 @@
-import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
@@ -178,9 +177,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         return;
       }
       const files = Array.from(e.clipboardData.items)
-        .filter(({type}) =>
-          acceptedFileTypes.includes(`.${mimeToExtension(type) || ''}`)
-        )
+        .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
       dispatch(uploadFiles({files, buildAssetUrl}));
