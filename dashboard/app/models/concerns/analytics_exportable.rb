@@ -109,7 +109,7 @@ module AnalyticsExportable
   end
 
   # Returns the subset of registered models that pass exportability checks.
-  # Use this in long-running jobs (e.g., `redshift:sync_materialized_views`)
+  # Use this in long-running jobs (e.g., `analytics_export:provision_materialized_views`)
   # that should warn-and-skip invalid models rather than abort the run.
   # @return [Set<Class>]
   def self.valid_exported_models

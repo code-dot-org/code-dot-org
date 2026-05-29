@@ -5,9 +5,10 @@
 # development environment.
 #   * `export AWS_PROFILE=codeorg-admin`
 #   * ensure `CDO.redshift_username` is set to a SQL user that has permissions to CREATE/DROP/REFRESH Materialized Views
-#  in the `dashboard.dashboard_production` and `dashboard.dashboard_production_pii` schemas and also ability to query
-#  Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the target Zero
-# ETL databases.
+#  in the `dev.learning_platform_production` and `dev.learning_platform_production_pii` schemas (the views live in the
+#  `dev` database; see `Cdo::Aws::Redshift::MaterializedViewGenerator::MATERIALIZED_VIEW_DATABASE`), and also the ability
+#  to query Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the
+#  target Zero ETL databases.
 #
 # These tasks inspect the local database schema to determine which tables can be replicated via Zero ETL and which
 # Redshift materialized views to create. The output is then used to configure the managed test server and production
@@ -29,11 +30,11 @@ Rake::Task['db:migrate'].enhance do
 end
 
 namespace :analytics_export do
-  # bundle exec rake 'analytics_export:sync_materialized_views[production]'
-  # DRY_RUN=1 bundle exec rake 'analytics_export:sync_materialized_views[test]'
-  desc "Sync Redshift materialized views for all exported models. Set DRY_RUN=1 to preview."
-  task :sync_materialized_views, [:environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:sync_materialized_views[environment_type]" if args[:environment_type].blank?
+  # bundle exec rake 'analytics_export:provision_materialized_views[production]'
+  # DRY_RUN=1 bundle exec rake 'analytics_export:provision_materialized_views[test]'
+  desc "Provision (create/update/drop) Redshift materialized views for all exported models. Set DRY_RUN=1 to preview."
+  task :provision_materialized_views, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:provision_materialized_views[environment_type]" if args[:environment_type].blank?
 
     require 'cdo/aws/redshift/materialized_view_generator'
     require 'cdo/aws/redshift/client'
@@ -53,9 +54,9 @@ namespace :analytics_export do
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
 
-    client = Cdo::Aws::Redshift::Client.new
+    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
 
-    plan = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
+    plan = Cdo::Aws::Redshift::MaterializedViewGenerator.provision_all_views(
       client: client,
       environment_type: env,
       models: models,
@@ -99,7 +100,7 @@ namespace :analytics_export do
     puts "\nSubmitting..."
     started_at = Time.now
 
-    result = Cdo::Aws::Redshift::MaterializedViewGenerator.sync_all_views(
+    result = Cdo::Aws::Redshift::MaterializedViewGenerator.provision_all_views(
       client: client,
       environment_type: env,
       models: models
@@ -173,7 +174,7 @@ namespace :analytics_export do
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
 
-    client = Cdo::Aws::Redshift::Client.new
+    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
 
     # Phase 1: dry-run preview — group models into stale / fresh / no_views
     # without touching Redshift beyond the SVV_MV_INFO catalog read.
@@ -260,12 +261,12 @@ namespace :analytics_export do
     exit 1 if result[:failed].any? || wait_result[:failed].any?
   end
 
-  # bundle exec rake 'analytics_export:sync_status[production]'
-  # HOURS_BACK=12 bundle exec rake 'analytics_export:sync_status[production]'
-  # bundle exec rake 'analytics_export:sync_status[production]' > status.csv
+  # bundle exec rake 'analytics_export:materialized_view_status[production]'
+  # HOURS_BACK=12 bundle exec rake 'analytics_export:materialized_view_status[production]'
+  # bundle exec rake 'analytics_export:materialized_view_status[production]' > status.csv
   desc "Emit CSV (stdout) describing the most recent CREATE/DROP/REFRESH per Materialized View."
-  task :sync_status, [:environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:sync_status[environment_type]" if args[:environment_type].blank?
+  task :materialized_view_status, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:materialized_view_status[environment_type]" if args[:environment_type].blank?
 
     require 'cdo/aws/redshift/materialized_view_generator'
     require 'cdo/aws/redshift/client'
@@ -276,7 +277,7 @@ namespace :analytics_export do
     env = args[:environment_type].to_s
     hours_back = ENV.fetch('HOURS_BACK', '24').to_i
 
-    client = Cdo::Aws::Redshift::Client.new
+    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
     rows = Cdo::Aws::Redshift::MaterializedViewGenerator.view_status(
       client: client,
       environment_type: env,
@@ -288,9 +289,22 @@ namespace :analytics_export do
     expected_count = rows.count {|r| r.model_name != '(orphan)'}
     orphan_count = rows.length - expected_count
 
-    warn "Materialized View sync status — env=#{env}, window=#{hours_back}h"
+    warn "Materialized View status — env=#{env}, window=#{hours_back}h"
     warn "Rows: #{rows.length} (#{expected_count} expected, #{orphan_count} orphan)"
     warn "Status counts: #{counts.sort.map {|k, v| "#{v} #{k}"}.join(', ')}" unless counts.empty?
+
+    # Surface failure detail to stderr so it's visible without opening the CSV. Group by the
+    # error message, since a misconfiguration (e.g. a missing target schema) tends to fail
+    # every view identically.
+    failed = rows.select(&:error)
+    unless failed.empty?
+      warn "\nFailures (#{failed.length}):"
+      failed.group_by(&:error).each do |error, group|
+        sample = group.first
+        warn "  #{group.length}× #{error}"
+        warn "      e.g. #{sample.table_name} (#{sample.view_type}), statement #{sample.statement_id}"
+      end
+    end
 
     CSV($stdout) do |csv|
       csv << %w[
@@ -306,6 +320,7 @@ namespace :analytics_export do
         view_is_stale
         view_state
         view_state_description
+        error
       ]
       rows.each do |r|
         csv << [
@@ -320,7 +335,8 @@ namespace :analytics_export do
           r.db_user,
           r.is_stale.nil? ? nil : r.is_stale.to_s,
           r.state,
-          r.state_description
+          r.state_description,
+          r.error
         ]
       end
     end

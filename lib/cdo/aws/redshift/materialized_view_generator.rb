@@ -24,6 +24,7 @@ module Cdo
         :is_stale,          # true | false | nil (nil = view not found in SVV_MV_INFO)
         :state,             # Integer | nil — Redshift's numeric refresh state
         :state_description, # String | nil — human-readable form of :state
+        :error,             # String | nil — failure detail when the most recent operation FAILED/ABORTED
         keyword_init: true
       )
 
@@ -39,7 +40,7 @@ module Cdo
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
         # full recompute or incrementally); states >= 100 mean the view can no
         # longer be refreshed because its source schema drifted and it must be
-        # rebuilt with CREATE OR REPLACE (i.e., `sync_materialized_views`).
+        # rebuilt with CREATE OR REPLACE (i.e., `provision_materialized_views`).
         # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_MV_INFO.html
         MV_STATE_DESCRIPTIONS = {
           0 => 'Refreshes by full recompute',
@@ -65,15 +66,47 @@ module Cdo
 
         attr_reader :model
 
-        # Analytics Redshift schemas where we create Materialized Views that source data from Zero ETL database use
-        # `dashboard_` naming conventions.
-        BASE_REDSHIFT_SCHEMA_NAME = 'dashboard'.freeze
+        # The Redshift database in which we create the Zero ETL materialized views. We pin this
+        # explicitly — rather than relying on `Client`'s default — so that a future change to the
+        # client default cannot silently relocate the views and break the data team's dbt.
+        #
+        # The views MUST live in the database dbt connects to (`dev`) because dbt builds models on
+        # them with CREATE TABLE AS SELECT. A view in any other database would make that CTAS a
+        # two-hop cross-database chain — dbt's database -> the view's database -> the Zero ETL
+        # target database — which Redshift rejects with "Remote object depends on external shared
+        # object". Creating the views in `dev` makes dbt's read a single in-database reference; the
+        # view's own one hop into the Zero ETL target database is allowed.
+        # https://docs.aws.amazon.com/redshift/latest/dg/cross-database_limitation.html
+        MATERIALIZED_VIEW_DATABASE = 'dev'.freeze
+
+        # Schema prefix for the Materialized Views we create, e.g. `learning_platform_production`
+        # and `learning_platform_production_pii`. The prefix intentionally differs from the Zero ETL
+        # source schema prefix below so there is no `dashboard.dashboard_production` vs
+        # `dev.dashboard_production` ambiguity, and so these schemas do not collide with the data
+        # team's dbt schemas in `dev`.
+        VIEW_SCHEMA_PREFIX = 'learning_platform'.freeze
+
+        # Schema prefix of the Zero ETL *source* tables inside the Zero ETL target database, e.g.
+        # `production_learningplatform_mysql_zeroetl.dashboard_production.<table>`. This mirrors
+        # the MySQL `dashboard` database name and is fixed by the Zero ETL integration — it is NOT
+        # the schema our views live in, and must not be renamed.
+        ZERO_ETL_SOURCE_SCHEMA_PREFIX = 'dashboard'.freeze
 
         # ERB template variable for the environment type (e.g., 'test' or 'production').
         ENVIRONMENT_TYPE_ERB = '<%=environment_type%>'.freeze
 
         # Directory where generated DDL ERB template files are saved.
         SQL_VIEW_TEMPLATE_DIR = aws_dir('redshift', 'zeroetl_materialized_views').freeze
+
+        # Builds a Redshift client pinned to the database where the materialized views live
+        # (`MATERIALIZED_VIEW_DATABASE`). Callers doing materialized-view work (the
+        # `analytics_export:*` rake tasks) should use this rather than `Client.new` so the
+        # connection always targets the database the views must live in, independent of the
+        # client's own default.
+        # @return [Cdo::Aws::Redshift::Client]
+        def self.redshift_client
+          Cdo::Aws::Redshift::Client.new(database: MATERIALIZED_VIEW_DATABASE)
+        end
 
         # @param model [Class] The ActiveRecord model class (e.g., User, Activity)
         def initialize(model)
@@ -83,7 +116,7 @@ module Cdo
         # Returns the fully-qualified view names this generator would create
         # for the given environment.
         # @param environment_type [Symbol, String] e.g., :production, :test
-        # @return [Array<String>] e.g., ["dashboard_production_pii.zeroetl_users", "dashboard_production.zeroetl_users"]
+        # @return [Array<String>] e.g., ["learning_platform_production_pii.zeroetl_users", "learning_platform_production.zeroetl_users"]
         def expected_view_fqns(environment_type)
           env = environment_type.to_s
           view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
@@ -95,14 +128,14 @@ module Cdo
           columns = pii_columns
           return nil if columns.empty? # Prevent invalid SQL generation
 
-          build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}_pii", columns: columns)
+          build_ddl_erb_template(schema: "#{VIEW_SCHEMA_PREFIX}_#{ENVIRONMENT_TYPE_ERB}_pii", columns: columns)
         end
 
         # Generates the DDL for the non-PII Materialized View, which projects only
         # :public and :confidential columns.
         def generate_non_pii_ddl
           return nil if non_pii_columns.empty?
-          build_ddl_erb_template(schema: "#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}", columns: non_pii_columns)
+          build_ddl_erb_template(schema: "#{VIEW_SCHEMA_PREFIX}_#{ENVIRONMENT_TYPE_ERB}", columns: non_pii_columns)
         end
 
         # Saves the PII and non-PII DDL ERB templates to the template directory.
@@ -130,7 +163,7 @@ module Cdo
 
         # Returns the rendered (ERB-evaluated) DDL strings and first column
         # name for this model's PII and non-PII views in the given environment.
-        # Does NOT touch disk or Redshift; used by `sync_all_views` to compare
+        # Does NOT touch disk or Redshift; used by `provision_all_views` to compare
         # the DDL hash against the hash stored as a COMMENT ON COLUMN to decide
         # whether a rebuild is needed.
         #
@@ -172,7 +205,7 @@ module Cdo
         # statement IDs without waiting for completion. Each view's batch is
         # `[DROP IF EXISTS, CREATE, COMMENT ON COLUMN ... IS '<hash>']` — the COMMENT
         # records the DDL hash on the view's first column (Redshift rejects COMMENT
-        # ON MATERIALIZED VIEW) so subsequent `sync_all_views` runs can skip rebuilds
+        # ON MATERIALIZED VIEW) so subsequent `provision_all_views` runs can skip rebuilds
         # when the DDL is unchanged.
         #
         # Use `Cdo::Aws::Redshift::Client#status` / `MaterializedViewGenerator.wait_for_statements`
@@ -234,7 +267,7 @@ module Cdo
           ERB.new(template).result_with_hash(environment_type: environment_type.to_s)
         end
 
-        # Syncs materialized views in Redshift for a set of models: submits the
+        # Provisions materialized views in Redshift for a set of models: submits the
         # DROP+CREATE+COMMENT batch (async) for each model that needs work, and
         # submits a single consolidated DROP batch (async) for any orphaned views
         # that no longer correspond to a model in the set. Returns the resulting
@@ -251,17 +284,17 @@ module Cdo
         # Yielded progress events (block optional):
         #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
         #   yield(:skipped, table_name)                    # comment hash matches desired DDL
-        #   yield(:error, table_name, exception)           # submit raised; sync continues
+        #   yield(:error, table_name, exception)           # submit raised; provisioning continues
         #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] :production or :test
-        # @param models [Enumerable<Class>] ActiveRecord model classes to sync
+        # @param models [Enumerable<Class>] ActiveRecord model classes to provision
         # @param dry_run [Boolean] when true, returns the plan without submitting anything
         # @return [Hash] :to_add, :to_update, :unchanged, :to_drop arrays of FQNs;
         #   :failed array of table names whose submit raised; and :statements
         #   `{fqn => statement_id}` map (empty when dry_run is true).
-        def self.sync_all_views(client:, environment_type:, models:, dry_run: false)
+        def self.provision_all_views(client:, environment_type:, models:, dry_run: false)
           generators = models.map {|model| new(model)}
 
           # Pre-render every desired view's DDL so we can hash-compare against
@@ -467,7 +500,7 @@ module Cdo
         #
         # Two-phase lookup: list_statements is cheap and only carries a
         # truncated `query_string`, so we use a string `include?` check on
-        # `dashboard_<env>(_pii)?.zeroetl_` to filter candidates without
+        # `learning_platform_<env>(_pii)?.zeroetl_` to filter candidates without
         # describing every Data API statement on the cluster. Each candidate
         # batch then gets one `describe_statement` round trip to fetch
         # sub_statements and db_user.
@@ -480,7 +513,7 @@ module Cdo
         # @return [Array<ViewStatusRow>]
         def self.view_status(client:, environment_type:, models:, hours_back: 24)
           env = environment_type.to_s
-          schema_prefixes = ["dashboard_#{env}_pii.zeroetl_", "dashboard_#{env}.zeroetl_"]
+          schema_prefixes = ["#{VIEW_SCHEMA_PREFIX}_#{env}_pii.zeroetl_", "#{VIEW_SCHEMA_PREFIX}_#{env}.zeroetl_"]
           op_priority = {'CREATE' => 3, 'REFRESH' => 2, 'DROP' => 1}.freeze
           cutoff = hours_back.hours.ago
 
@@ -566,6 +599,16 @@ module Cdo
             nanos.to_f / 1_000_000_000
           end
 
+          # Concise failure reason for a (possibly batch) statement, or nil when the
+          # statement did not fail. For our DROP+CREATE+COMMENT batches the useful detail
+          # is on the failed sub-statement (usually the CREATE), so prefer the first failed
+          # sub-statement's error and fall back to the batch-level error.
+          error_for = lambda do |desc, status|
+            return nil unless %w[FAILED ABORTED].include?(status)
+            failed_sub = desc.sub_statements&.find {|sub| sub.status == 'FAILED' && sub.error.present?}
+            (failed_sub&.error || desc.error).to_s.strip.presence
+          end
+
           build_row = lambda do |model_name, table_name, fqn|
             latest = fqn_to_latest[fqn]
             stale_info = staleness[fqn]
@@ -582,7 +625,8 @@ module Cdo
                 db_user: latest[:desc].db_user,
                 is_stale: stale_info&.dig(:is_stale),
                 state: stale_info&.dig(:state),
-                state_description: describe_mv_state(stale_info&.dig(:state))
+                state_description: describe_mv_state(stale_info&.dig(:state)),
+                error: error_for.call(latest[:desc], latest[:batch].status)
               )
             else
               ViewStatusRow.new(
@@ -597,7 +641,8 @@ module Cdo
                 db_user: nil,
                 is_stale: stale_info&.dig(:is_stale),
                 state: stale_info&.dig(:state),
-                state_description: describe_mv_state(stale_info&.dig(:state))
+                state_description: describe_mv_state(stale_info&.dig(:state)),
+                error: nil
               )
             end
           end
@@ -618,7 +663,7 @@ module Cdo
         end
 
         # Queries Redshift for the freshness of `zeroetl_` materialized views
-        # in the dashboard schemas for the given environment. SVV_MV_INFO is
+        # in the analytics view schemas for the given environment. SVV_MV_INFO is
         # the system view Redshift exposes for this: `is_stale` is 't'/'f'
         # depending on whether the underlying source table has unprocessed
         # changes since the last refresh, and `state` is Redshift's numeric
@@ -629,7 +674,7 @@ module Cdo
         # @return [Hash{String => Hash}] fqn => {is_stale: Boolean, state: Integer}
         private_class_method def self.list_view_staleness(client:, environment_type:)
           env = environment_type.to_s
-          schemas = ["#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}", "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii"]
+          schemas = ["#{VIEW_SCHEMA_PREFIX}_#{env}", "#{VIEW_SCHEMA_PREFIX}_#{env}_pii"]
           schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
 
           rows = client.execute(<<~SQL)
@@ -648,7 +693,7 @@ module Cdo
         end
 
         # Queries Redshift for existing `zeroetl_` materialized views in the
-        # dashboard schemas for the given environment, returning the COMMENT
+        # analytics view schemas for the given environment, returning the COMMENT
         # we previously attached to each view's first column — the SHA256 hash
         # of the DDL written by the prior run, or nil if no comment exists
         # (e.g., views created before this change shipped, or a previous
@@ -661,7 +706,7 @@ module Cdo
         # @return [Hash{String => String, nil}] fully qualified view name => comment string
         private_class_method def self.list_existing_view_comments(client:, environment_type:)
           env = environment_type.to_s
-          schemas = ["#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}", "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii"]
+          schemas = ["#{VIEW_SCHEMA_PREFIX}_#{env}", "#{VIEW_SCHEMA_PREFIX}_#{env}_pii"]
           schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
 
           rows = client.execute(<<~SQL)
@@ -692,7 +737,7 @@ module Cdo
         end
 
         private def fully_qualified_view_name(env, pii:)
-          schema = pii ? "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}_pii" : "#{BASE_REDSHIFT_SCHEMA_NAME}_#{env}"
+          schema = pii ? "#{VIEW_SCHEMA_PREFIX}_#{env}_pii" : "#{VIEW_SCHEMA_PREFIX}_#{env}"
           "#{schema}.#{view_name}"
         end
 
@@ -718,7 +763,7 @@ module Cdo
               AUTO REFRESH NO
             AS SELECT
               #{quoted_columns.join(",\n" + SQL_INDENT)}
-            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{BASE_REDSHIFT_SCHEMA_NAME}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
+            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{ZERO_ETL_SOURCE_SCHEMA_PREFIX}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
           SQL
         end
 

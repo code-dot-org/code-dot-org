@@ -6,10 +6,18 @@ module Cdo
       class Client
         class QueryError < StandardError; end
 
+        # Default Redshift database for a new client. `dev` is the primary database in our
+        # cluster for the data/analytics team: it holds their dbt models (per-developer
+        # sandboxes plus the shared analytics and reporting schemas) and the schemas where
+        # external data feeds (e.g. Amplitude, HubSpot, Salesforce) are ingested. Most features
+        # that query Redshift want this database; pass `database:` to target another (e.g.
+        # `dashboard`).
+        DEFAULT_DATABASE = 'dev'.freeze
+
         # IAM permissions are required to execute SQL statements as a specific Redshift SQL user. For example, `daemon`
         # EC2 Instances are granted permission to connect to Redshift as the user `etl_client`
         # https://github.com/code-dot-org/code-dot-org/blob/5520c3c2c034135aa061ed6a279e19c74ab64550/aws/cloudformation/cloud_formation_stack.yml.erb#L563
-        def initialize(cluster_id: CDO.redshift_cluster_id, database: 'dashboard', db_user: CDO.redshift_username)
+        def initialize(cluster_id: CDO.redshift_cluster_id, database: DEFAULT_DATABASE, db_user: CDO.redshift_username)
           @client = ::Aws::RedshiftDataAPIService::Client.new
           @cluster_id = cluster_id
           @database = database
