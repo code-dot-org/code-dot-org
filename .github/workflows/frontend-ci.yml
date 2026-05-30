@@ -77,6 +77,13 @@ jobs:
     uses: ./.github/workflows/oceans-ci.yml
     secrets: inherit
 
+  # Start the apps-e2e-tests Playwright suite. UNGATED (no change filter): it
+  # replaces the legacy Drone dashboard/test/ui path and runs whenever frontend
+  # CI runs, since end-to-end behavior can change from anywhere.
+  apps-e2e-tests:
+    uses: ./.github/workflows/apps-e2e-tests-ci.yml
+    secrets: inherit
+
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
