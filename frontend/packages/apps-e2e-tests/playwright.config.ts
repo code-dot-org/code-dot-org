@@ -6,9 +6,10 @@ const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 /**
  * Playwright config for the apps-e2e-tests suite.
  *
- * Tests run against https://test-studio.code.org (always-on test environment), so
- * there is no webServer block. Default run lane is Chromium; Firefox and WebKit
- * projects exist but are opt-in via `--project=firefox` / `--project=webkit`.
+ * Target host defaults to https://test-studio.code.org (always-on test env); set
+ * TARGET_URL to point at another deployment — e.g. a PR's adhoc — so a PR run
+ * exercises that PR's code rather than the static test env. No webServer block.
+ * Default run lane is Chromium; Firefox and WebKit are opt-in via `--project=...`.
  * Sharding is CLI-only: pass `--shard=$i/$n`.
  *
  * @see https://playwright.dev/docs/test-configuration
@@ -30,7 +31,7 @@ export default defineConfig({
   timeout: 90_000,
   expect: {timeout: 15_000},
   use: {
-    baseURL: 'https://test-studio.code.org',
+    baseURL: process.env.TARGET_URL ?? 'https://test-studio.code.org',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
