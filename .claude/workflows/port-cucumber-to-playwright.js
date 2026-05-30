@@ -369,7 +369,9 @@ INPUTS (from Scout):
   non-determinism.
 
 ─── STEP 4 — Clean up ─────────────────────────────────────────────────────────
-  Delete the probe and the trace (both throwaway). The readiness table is the only survivor.
+  Delete the probe spec, its trace, and any test-results/ the probe produced (all
+  throwaway). Leave the working tree exactly as you found it — the readiness table is the
+  only survivor.
 
 Return the structured readiness intelligence. SEMANTIC ONLY — no selectors, no code.`,
   {schema: READINESS_SCHEMA, label: 'dry-run', phase: 'Dry Run', model: 'sonnet'},
@@ -557,8 +559,13 @@ const body =
 await agent(
   `Create the conventional commit for this port. Run from the repo root.
 
-1. Stage the workflow output (the workflow only ever touches apps-e2e-tests; .gitignore
-   keeps test-results/node_modules out):
+1. Remove throwaway scaffolds an earlier phase may have left so they cannot be staged or
+   linger — the generator's seed spec and any root-level run artifacts are NOT gitignored,
+   and a package-local seed.spec.ts would otherwise be swept into the commit below:
+     rm -f frontend/seed.spec.ts frontend/packages/apps-e2e-tests/seed.spec.ts
+     rm -rf frontend/test-results
+   Then stage the workflow output (the workflow only ever touches apps-e2e-tests; the
+   package .gitignore keeps its own test-results/node_modules out):
      git add frontend/packages/apps-e2e-tests/
 2. ${
       healStatus === 'green'
