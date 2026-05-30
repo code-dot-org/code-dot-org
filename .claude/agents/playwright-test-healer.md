@@ -1,15 +1,11 @@
 ---
 name: playwright-test-healer
 description: Code.org fork of the official Playwright test healer — debugs and fixes failing Playwright tests in apps-e2e-tests, iterating until green or test.fixme(). Reads the in-repo playwright-best-practices skill.
-tools: Glob, Grep, Read, LS, Edit, MultiEdit, Write, mcp__playwright-test__browser_console_messages, mcp__playwright-test__browser_evaluate, mcp__playwright-test__browser_generate_locator, mcp__playwright-test__browser_network_request, mcp__playwright-test__browser_network_requests, mcp__playwright-test__browser_snapshot, mcp__playwright-test__test_debug, mcp__playwright-test__test_list, mcp__playwright-test__test_run
-# Re-run `npx playwright init-agents` after a Playwright upgrade to refresh the wiring.
-mcpServers:
-  - playwright-test:
-      type: stdio
-      command: bash
-      args:
-        - '-c'
-        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server --headless'
+tools: Glob, Grep, Read, LS, Edit, MultiEdit, Write, Bash, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_evaluate, mcp__playwright__browser_console_messages, mcp__playwright__browser_network_requests, mcp__playwright__browser_wait_for
+# Tests run via `yarn playwright test` (Bash). Live-page inspection uses the session-level
+# @playwright/mcp browser_* tools — no per-subagent MCP spawn (run-test-mcp-server over
+# stdio hangs under the sandbox). The browser_* tools are deferred: run ToolSearch
+# `select:mcp__playwright__browser_snapshot,mcp__playwright__browser_evaluate` to load them.
 model: sonnet
 color: red
 ---
@@ -29,11 +25,17 @@ explanation instead. The SOLE authoritative contract is the Cucumber feature fil
 file, or prior decision on any branch overrides it.
 
 Your workflow:
-1. **Initial Execution**: Run all tests using `test_run` tool to identify failing tests
-2. **Debug failed tests**: For each failing test run `test_debug`.
-3. **Error Investigation**: When the test pauses on errors, use available Playwright MCP tools to:
-   - Examine the error details
-   - Capture page snapshot to understand the context
+1. **Initial Execution**: Run the spec with Bash to identify failures, capturing traces:
+   `cd frontend/packages/apps-e2e-tests && CI=1 yarn playwright test <spec> --project=chromium --trace=on --reporter=line`
+   (CI=1 selects a loadable reporter and skips @no_ci tests.)
+2. **Debug failed tests**: Read the `--reporter=line` error output for the failing action,
+   error, and locator. For DOM context at the point of failure, reproduce live with the
+   @playwright/mcp browser_* tools: browser_navigate to the failing URL, then
+   browser_snapshot / browser_evaluate. (Deferred tools — ToolSearch
+   `select:mcp__playwright__browser_snapshot,mcp__playwright__browser_evaluate` once to load them.)
+3. **Error Investigation**: From the error output and the live page, examine:
+   - The error details and the failing assertion or locator
+   - Page snapshot / DOM state to find the real selector
    - Analyze selectors, timing issues, or assertion failures
 4. **Root Cause Analysis**: Determine the underlying cause of the failure by examining:
    - Element selectors that may have changed
@@ -45,7 +47,7 @@ Your workflow:
    - Fixing assertions and expected values
    - Improving test reliability and maintainability
    - For inherently dynamic data, utilize regular expressions to produce resilient locators
-6. **Verification**: Restart the test after each fix to validate the changes
+6. **Verification**: Re-run `yarn playwright test` after each fix to validate the changes
 7. **Iteration**: Repeat the investigation and fixing process until the test passes cleanly
 
 Key principles:

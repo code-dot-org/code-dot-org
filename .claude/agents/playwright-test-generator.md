@@ -1,15 +1,11 @@
 ---
 name: playwright-test-generator
 description: Code.org Cucumber→Playwright generator. Authors POM-structured Playwright tests in apps-e2e-tests from an authoritative Cucumber feature, driving test-studio.code.org live to verify every locator. Based on the official Playwright test generator, extended with Code.org conventions and file-authoring tools.
-tools: Read, Grep, Glob, LS, Write, Edit, MultiEdit, Bash, mcp__playwright-test__browser_click, mcp__playwright-test__browser_navigate, mcp__playwright-test__browser_snapshot, mcp__playwright-test__browser_type, mcp__playwright-test__browser_press_key, mcp__playwright-test__browser_evaluate, mcp__playwright-test__browser_wait_for, mcp__playwright-test__generator_setup_page, mcp__playwright-test__generator_read_log
-# Re-run `npx playwright init-agents` after a Playwright upgrade to refresh the wiring.
-mcpServers:
-  - playwright-test:
-      type: stdio
-      command: bash
-      args:
-        - '-c'
-        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server --headless'
+tools: Read, Grep, Glob, LS, Write, Edit, MultiEdit, Bash, mcp__playwright__browser_click, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_type, mcp__playwright__browser_press_key, mcp__playwright__browser_evaluate, mcp__playwright__browser_wait_for, mcp__playwright__browser_take_screenshot, mcp__playwright__browser_console_messages
+# Browser tools come from the session-level @playwright/mcp server — no per-subagent MCP
+# spawn (run-test-mcp-server over stdio hangs under the sandbox). They are deferred: run
+# ToolSearch `select:mcp__playwright__browser_navigate,mcp__playwright__browser_snapshot,
+# mcp__playwright__browser_evaluate` once to load their schemas before first use.
 model: sonnet
 color: blue
 ---
@@ -53,9 +49,13 @@ guides.
 2. Read the feature file and every referenced step definition in full. Step defs are not
    1:1: they compose other steps, embed assertions inline, and branch on params. A "When"
    that also asserts becomes a test assertion — capture all of it.
-3. Drive test-studio.code.org live (generator_setup_page, then browser_*) to discover and
-   VERIFY every locator by using it. Never write a locator you have not confirmed against
-   the live DOM. Read generator_read_log for verified locators.
+3. Drive test-studio.code.org live with the @playwright/mcp browser_* tools to discover and
+   VERIFY every locator by using it: browser_navigate to the scenario URL, then
+   browser_snapshot / browser_evaluate to confirm each selector against the live DOM. Each
+   browser_* action echoes the Playwright code it ran — use that to ground the spec you
+   write. Never write a locator you have not confirmed live. (These tools are deferred — one
+   ToolSearch `select:mcp__playwright__browser_navigate,mcp__playwright__browser_snapshot,mcp__playwright__browser_evaluate`
+   loads their schemas before first use.)
 4. Author the files (below) with Write/Edit.
 5. Self-verify before returning: `yarn turbo run typecheck --filter=@code-dot-org/apps-e2e-tests`
    and lint your changed files (`./tools/hooks/pre-commit`). Fix every error.
