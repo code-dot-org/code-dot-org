@@ -169,6 +169,81 @@ describe('LogoTransition', () => {
     });
   });
 
+  describe('window resize during playback', () => {
+    const originalInnerWidth = window.innerWidth;
+    const originalInnerHeight = window.innerHeight;
+
+    const setViewport = (width: number, height: number) => {
+      Object.defineProperty(window, 'innerWidth', {
+        value: width,
+        writable: true,
+        configurable: true,
+      });
+      Object.defineProperty(window, 'innerHeight', {
+        value: height,
+        writable: true,
+        configurable: true,
+      });
+    };
+
+    afterEach(() => {
+      setViewport(originalInnerWidth, originalInnerHeight);
+    });
+
+    const findCard = (): HTMLDivElement | undefined =>
+      Array.from(
+        document.body.querySelectorAll<HTMLDivElement>(
+          'div[aria-hidden="true"]'
+        )
+      ).find(el => el.style.top !== '');
+
+    it('re-centers the card when the window resizes', () => {
+      setViewport(1200, 800);
+      setupHeaderContainer();
+      render(<LogoTransition />);
+      const card = findCard();
+      expect(card).toBeDefined();
+      const initialLeft = card!.style.left;
+
+      setViewport(2000, 1200);
+      act(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+      expect(card!.style.left).not.toBe(initialLeft);
+      // 2000 * 0.6 = 1200 capped at 700; left = (2000 - 700) / 2 = 650.
+      expect(card!.style.left).toBe('650px');
+    });
+
+    it('stops re-centering once landing starts', () => {
+      jest.useFakeTimers();
+      setViewport(1200, 800);
+      setupHeaderContainer();
+      render(<LogoTransition />);
+      // Drive through opening → playing → hold → landing.
+      act(() => {
+        jest.advanceTimersByTime(OPEN_FADE_MS);
+      });
+      act(() => {
+        jest.advanceTimersByTime(ANIMATED_DURATION_MS);
+      });
+      act(() => {
+        jest.advanceTimersByTime(HOLD_MS);
+      });
+      // Now in 'landing'. Card's top/left were just rewritten to the
+      // native <img>'s rect; capture them.
+      const card = findCard();
+      expect(card).toBeDefined();
+      const landingLeft = card!.style.left;
+
+      setViewport(2000, 1200);
+      act(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+      // No resize listener active during landing → no change.
+      expect(card!.style.left).toBe(landingLeft);
+    });
+  });
+
   describe('accessibility', () => {
     it('marks the backdrop and card aria-hidden', () => {
       setupHeaderContainer();

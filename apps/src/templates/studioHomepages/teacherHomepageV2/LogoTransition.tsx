@@ -59,6 +59,24 @@ type Phase = 'opening' | 'playing' | 'hold' | 'landing' | 'done';
 
 type Rect = {top: number; left: number; width: number; height: number};
 
+// Compute the modal-centered position from current viewport dimensions
+// and write it to the card. Used both at initial mount and on every
+// resize during opening/playing/hold.
+const applyModalCenter = (card: HTMLDivElement) => {
+  const modalWidth = Math.min(window.innerWidth * 0.6, 700);
+  const modalHeight = Math.min(window.innerHeight * 0.6, 500);
+  card.style.top = `${(window.innerHeight - modalHeight) / 2}px`;
+  card.style.left = `${(window.innerWidth - modalWidth) / 2}px`;
+  card.style.width = `${modalWidth}px`;
+  card.style.height = `${modalHeight}px`;
+};
+
+const measureRect = (el: Element): Rect | null => {
+  const r = el.getBoundingClientRect();
+  if (!r.width || !r.height) return null;
+  return {top: r.top, left: r.left, width: r.width, height: r.height};
+};
+
 const LogoTransition: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const targetRectRef = useRef<Rect | null>(null);
@@ -108,23 +126,10 @@ const LogoTransition: React.FC = () => {
     }
 
     if (cardRef.current && nativeImg) {
-      const nativeRect = nativeImg.getBoundingClientRect();
-      if (nativeRect.width && nativeRect.height) {
-        targetRectRef.current = {
-          top: nativeRect.top,
-          left: nativeRect.left,
-          width: nativeRect.width,
-          height: nativeRect.height,
-        };
-
-        const modalWidth = Math.min(window.innerWidth * 0.6, 700);
-        const modalHeight = Math.min(window.innerHeight * 0.6, 500);
-        const modalTop = (window.innerHeight - modalHeight) / 2;
-        const modalLeft = (window.innerWidth - modalWidth) / 2;
-        cardRef.current.style.top = `${modalTop}px`;
-        cardRef.current.style.left = `${modalLeft}px`;
-        cardRef.current.style.width = `${modalWidth}px`;
-        cardRef.current.style.height = `${modalHeight}px`;
+      const nativeRect = measureRect(nativeImg);
+      if (nativeRect) {
+        targetRectRef.current = nativeRect;
+        applyModalCenter(cardRef.current);
       }
     }
 
@@ -137,6 +142,27 @@ const LogoTransition: React.FC = () => {
       }
     };
   }, [mountTarget, shouldSkip]);
+
+  // Keep the card modal-centered if the viewport resizes mid-animation,
+  // and keep the landing target rect in sync with the native <img>'s
+  // current position. Stops once we enter the landing phase: chasing a
+  // moving target during the 700ms slide is a sharp edge not worth the
+  // complexity, and the browser's natural relayout handles the native
+  // <img> after we unmount.
+  useEffect(() => {
+    if (shouldSkip || !mountTarget) return;
+    if (phase !== 'opening' && phase !== 'playing' && phase !== 'hold') return;
+    const onResize = () => {
+      if (cardRef.current) applyModalCenter(cardRef.current);
+      const nativeImg = mountTarget.querySelector<HTMLImageElement>('img');
+      if (nativeImg) {
+        const nativeRect = measureRect(nativeImg);
+        if (nativeRect) targetRectRef.current = nativeRect;
+      }
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [phase, mountTarget, shouldSkip]);
 
   useEffect(() => {
     if (phase !== 'opening') return;
