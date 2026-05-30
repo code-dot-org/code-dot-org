@@ -9,7 +9,7 @@ mcpServers:
       command: bash
       args:
         - '-c'
-        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server'
+        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server --headless'
 model: sonnet
 color: red
 ---
