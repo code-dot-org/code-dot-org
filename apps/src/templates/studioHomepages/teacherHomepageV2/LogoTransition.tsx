@@ -28,7 +28,7 @@ const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
 // Phase state machine. Every transition is one-way; there is no path
 // back to an earlier phase from a later one.
 //
-//   opening (OPEN_FADE_MS = 300ms)
+//   opening (OPEN_FADE_MS = 1200ms)
 //     Backdrop fades 0→1, card fades 0→1. Stage SVG isn't rendered
 //     yet, so the CSS animation doesn't start until we're on screen.
 //     → playing on setTimeout(OPEN_FADE_MS).
