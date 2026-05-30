@@ -2,6 +2,14 @@
 name: playwright-test-generator
 description: Code.org Cucumber→Playwright generator. Authors POM-structured Playwright tests in apps-e2e-tests from an authoritative Cucumber feature, driving test-studio.code.org live to verify every locator. Based on the official Playwright test generator, extended with Code.org conventions and file-authoring tools.
 tools: Read, Grep, Glob, LS, Write, Edit, MultiEdit, Bash, mcp__playwright-test__browser_click, mcp__playwright-test__browser_navigate, mcp__playwright-test__browser_snapshot, mcp__playwright-test__browser_type, mcp__playwright-test__browser_press_key, mcp__playwright-test__browser_evaluate, mcp__playwright-test__browser_wait_for, mcp__playwright-test__generator_setup_page, mcp__playwright-test__generator_read_log
+# Re-run `npx playwright init-agents` after a Playwright upgrade to refresh the wiring.
+mcpServers:
+  - playwright-test:
+      type: stdio
+      command: bash
+      args:
+        - '-c'
+        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server'
 model: sonnet
 color: blue
 ---

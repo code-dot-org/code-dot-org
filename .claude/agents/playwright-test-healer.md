@@ -2,6 +2,14 @@
 name: playwright-test-healer
 description: Code.org fork of the official Playwright test healer — debugs and fixes failing Playwright tests in apps-e2e-tests, iterating until green or test.fixme(). Reads the in-repo playwright-best-practices skill.
 tools: Glob, Grep, Read, LS, Edit, MultiEdit, Write, mcp__playwright-test__browser_console_messages, mcp__playwright-test__browser_evaluate, mcp__playwright-test__browser_generate_locator, mcp__playwright-test__browser_network_request, mcp__playwright-test__browser_network_requests, mcp__playwright-test__browser_snapshot, mcp__playwright-test__test_debug, mcp__playwright-test__test_list, mcp__playwright-test__test_run
+# Re-run `npx playwright init-agents` after a Playwright upgrade to refresh the wiring.
+mcpServers:
+  - playwright-test:
+      type: stdio
+      command: bash
+      args:
+        - '-c'
+        - 'cd "$(git rev-parse --show-toplevel)/frontend/packages/apps-e2e-tests" && exec npx playwright run-test-mcp-server'
 model: sonnet
 color: red
 ---
