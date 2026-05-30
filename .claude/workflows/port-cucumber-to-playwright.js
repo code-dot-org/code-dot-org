@@ -473,8 +473,11 @@ const specRel = plan.targetSpec.replace('frontend/packages/apps-e2e-tests/', '')
 // CI=1 selects a loadable reporter (the non-CI config default pulls @applitools/eyes-
 // playwright, which crashes if absent) and skips @no_ci tests (infra the gate can't
 // provide); --workers overrides CI's workers:'100%' so the gate measures flake, not load.
+// Resolve the runner via yarn (not npx): the workspace can hoist a different
+// `playwright` than the package's @playwright/test, and npx would pick the wrong
+// one ("two different versions"). yarn resolves the package's own bin.
 const stressCmd =
-  `cd frontend/packages/apps-e2e-tests && CI=1 npx playwright test ${specRel} ` +
+  `cd frontend/packages/apps-e2e-tests && CI=1 yarn playwright test ${specRel} ` +
   `--repeat-each=5 --retries=0 --workers=${STRESS_WORKERS} --trace=retain-on-failure ` +
   `--project=chromium --project=firefox --project=webkit --reporter=line`
 
@@ -559,8 +562,10 @@ await agent(
      git add frontend/packages/apps-e2e-tests/
 2. ${
       healStatus === 'green'
-        ? `Green gate — remove the original Cucumber feature (strangler-fig):\n     git rm ${featureFile}`
-        : `Fixme — DO NOT delete the Cucumber feature; it stays for human review.`
+        ? `Green gate — flip the spec's JSDoc "Migration status: PORTING" to "COMPLETED", ` +
+          `then remove the original Cucumber feature (strangler-fig):\n     git rm ${featureFile}`
+        : `Fixme — leave the spec's "Migration status" as FIXME and DO NOT delete the ` +
+          `Cucumber feature; it stays for human review and the feature is NOT counted as migrated.`
     }
 3. Commit with this EXACT message (heredoc preserves newlines):
      git commit -m "$(cat <<'MSG'
