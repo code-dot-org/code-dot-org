@@ -1,0 +1,54 @@
+# Playwright end-to-end suite for studio.code.org, run against the always-on
+# test-studio.code.org environment.
+#
+# Reusable workflow invoked by frontend-ci.yml as an UNGATED child (unlike the
+# path-gated per-package jobs): this is the replacement for the legacy Drone
+# dashboard/test/ui (Cucumber/Selenium) path, so it runs whenever frontend CI
+# runs rather than only when apps-e2e-tests files change. During the strangler-fig
+# migration it runs alongside the remaining Drone UI tests.
+name: Apps-E2E-Tests-CI
+
+on:
+  workflow_call:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    container:
+      # Must match the `playwright` catalog version in frontend/.yarnrc.yml; the
+      # image ships the matching browser build. Bump both together on upgrade.
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: E2E Tests
+        # Step-level env so the browser path reaches the playwright subprocess
+        # (job-level env is not reliably forwarded through yarn/turbo). The
+        # container pre-installs browsers at /ms-playwright. CI=true is set by
+        # GitHub Actions, which flips playwright.config to its CI reporter lane.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+        run: yarn workspace @code-dot-org/apps-e2e-tests test
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apps-e2e-tests-report
+          path: |
+            frontend/packages/apps-e2e-tests/playwright-report/
+            frontend/packages/apps-e2e-tests/test-results/
+          retention-days: 7
