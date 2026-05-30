@@ -1,11 +1,13 @@
 # Playwright end-to-end suite for studio.code.org, run against the always-on
-# test-studio.code.org environment.
+# test-studio.code.org deployment.
 #
 # Reusable workflow invoked by frontend-ci.yml as an UNGATED child (unlike the
-# path-gated per-package jobs): this is the replacement for the legacy Drone
-# dashboard/test/ui (Cucumber/Selenium) path, so it runs whenever frontend CI
-# runs rather than only when apps-e2e-tests files change. During the strangler-fig
-# migration it runs alongside the remaining Drone UI tests.
+# path-gated per-package jobs), so it runs on every frontend PR alongside the
+# remaining Drone UI tests during the strangler-fig migration.
+#
+# Scope: this checks the DEPLOYED test-studio, not the PR's own code — it is a
+# continuous health check of the migrated suite, not a per-PR regression gate.
+# To gate a PR's code, deploy that PR to an adhoc and set TARGET_URL to it.
 name: Apps-E2E-Tests-CI
 
 on:
@@ -40,6 +42,8 @@ jobs:
         # GitHub Actions, which flips playwright.config to its CI reporter lane.
         env:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
+          TARGET_URL: https://test-studio.code.org
         run: yarn workspace @code-dot-org/apps-e2e-tests test
         working-directory: ./frontend
 
