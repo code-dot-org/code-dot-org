@@ -30,6 +30,10 @@ export async function getLabFixtures(
   const mod = await loader();
   // Convention: each lab exports `<Lab>Fixtures` (e.g. MusicFixtures). Fall
   // back to default export, then the first LabFixtures-shaped value.
-  const exportName = `${labType[0].toUpperCase()}${labType.slice(1)}Fixtures`;
-  return (mod[exportName] ?? mod.default) as LabFixtures | undefined;
+  return (
+    labType.length > 0
+      ? (mod[`${labType[0].toUpperCase()}${labType.slice(1)}Fixtures`] ??
+        mod.default)
+      : mod.default
+  ) as LabFixtures | undefined;
 }
