@@ -2,13 +2,19 @@
 
 Mock Service Worker (MSW) handlers for running labs without Rails. When
 `VITE_API_MODE=msw`, the consumer starts the worker before React mounts; the
-real `kyTransport` then runs unmodified and MSW intercepts at the network
-boundary.
+real HTTP transports and validation runs unmodified and MSW intercepts at the
+network layer.
+
+This mocking module helps different packages devise 'fixtures' which will alter
+that mock API store and provide payloads for those APIs for the purposes of
+avoiding the backend server for most development tasks and testing.
 
 ## Wiring (consumer side)
 
 ```ts
 // apps/<your-app>/src/main.tsx
+// -- or --
+// packages/<your-package>/src/main.tsx (for lab packages, etc)
 async function bootMocks() {
   if (import.meta.env.VITE_API_MODE !== 'msw') return;
 
@@ -41,7 +47,10 @@ to a `{labKey, tag}` scenario:
 ```ts
 registerMockFixture({labKey: 'music', tag: 'simple'}, [
   // static body — wrapped in HttpResponse.json
-  {path: '*/api/widget', respond: {ok: true}},
+  {
+    path: '*/api/widget',
+    respond: {ok: true},
+  },
   // function responder — request, parsed path params, scenario-scoped store
   {
     method: 'post',
@@ -90,6 +99,12 @@ Labs export their own scenarios; e.g. `packages/labs/music/src/fixtures/`
 exports `simple`, `complex`, `error`. The studio dev wiring registers them
 under the lab key and `setActiveScenario` picks the active one from the URL.
 
+Generally, for lab fixtures, the name of the fixture is the `channelId` and
+is selected by any URL that would supply that `channelId` by name. So, for
+standalone projects, for instance, we might have `src/fixtures/simple.ts`
+and that would supply the API responses for `/projects/music/simple/edit` in
+the case of the `music` lab type.
+
 ## Adding a mock
 
 For a one-off or lab-specific endpoint, reach for `registerMockFixture` — no
@@ -135,21 +150,3 @@ your edits within a browser session.
 To wipe the store, navigate with `?cdoMockReset=1`. Studio's `enableMocks`
 calls `maybeResetFromUrl()` before the worker starts and strips the param
 from the URL so subsequent reloads don't reset again.
-
-## Files
-
-| File                      | Purpose                                                              |
-| ------------------------- | -------------------------------------------------------------------- |
-| `scenario.ts`             | Active `{labKey, tag}` selection, shared by the registries + store   |
-| `fixtures.ts`             | `registerMockFixture` — generic per-scenario route registry          |
-| `dispatch.handlers.ts`    | Front catch-all that serves fixture routes, else falls through       |
-| `registry.ts`             | `registerLabFixtures` — lab-fixture sugar over `registerMockFixture` |
-| `handlers.ts`             | Aggregate `getMockHandlers()` consumed by the worker                 |
-| `worker.ts`               | `startMockWorker()` — dynamic import of `msw/browser`, idempotent    |
-| `levels.handlers.ts`      | `*/levels/:id/level_properties` and the script/lesson/project shapes |
-| `preferences.handlers.ts` | `*/user_preference/theme`                                            |
-| `channels.handlers.ts`    | `*/v3/channels/:id`, publish/unpublish, abuse, sharing, teacher flag |
-| `sources.handlers.ts`     | `*/v3/sources/:channelId/...` GET/PUT, versions, restore             |
-| `projects.handlers.ts`    | `*/projects/...` channel-for-level, commits, extra_links, thumbnail  |
-| `scenarioStore.ts`        | sessionStorage write-through, namespaced by lab + tag                |
-| `server.ts`               | `mockServer` for vitest (msw/node) — separate `./server` subpath     |
