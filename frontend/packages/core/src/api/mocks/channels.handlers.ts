@@ -3,7 +3,8 @@ import {http, HttpResponse} from 'msw';
 import type {Channel} from '../dashboard/channels';
 import {ProjectTypes, type ProjectType} from '../dashboard/projects';
 
-import {getActiveFixture, getActiveScenario} from './registry';
+import {getActiveFixture} from './registry';
+import {getActiveScenario} from './scenario';
 import {readResource, writeResource} from './scenarioStore';
 
 function isProjectType(value: string): value is ProjectType {

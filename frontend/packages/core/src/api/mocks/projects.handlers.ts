@@ -1,6 +1,6 @@
 import {http, HttpResponse} from 'msw';
 
-import {getActiveScenario} from './registry';
+import {getActiveScenario} from './scenario';
 import {writeResource} from './scenarioStore';
 
 function activeChannelId(): string {

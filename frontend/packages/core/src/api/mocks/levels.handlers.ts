@@ -1,15 +1,16 @@
 import {http, HttpResponse} from 'msw';
 
 import type {LevelPropertiesMap} from '../dashboard/levels';
-import {getActiveFixture} from './registry';
 
 /**
- * Returns the active fixture's level_properties map, or an empty map. App
- * code reads entries by levelId; an empty map is a valid response and lets
- * the lab render without Rails when no fixture is registered.
+ * Default level_properties response: an empty map. A lab fixture's
+ * `levelProperties` is served ahead of this by the generic dispatcher (see
+ * `registerLabFixtures`); this handler is the fall-through that lets a lab
+ * render without Rails when no fixture is registered. App code reads entries
+ * by levelId, so an empty map is a valid response.
  */
 function levelPropertiesPayload(): LevelPropertiesMap {
-  return getActiveFixture()?.levelProperties ?? {};
+  return {};
 }
 
 export const levelsHandlers = [

@@ -33,7 +33,39 @@ createRoot(document.getElementById('root')!).render(<App />);
 The service worker script (`mockServiceWorker.js`) lives in the consumer's
 `public/` directory; generate it with `npx msw init public --save`.
 
-## Fixture shape
+## Generic fixtures: `registerMockFixture`
+
+The base primitive maps any HTTP method + path pattern to a responder, scoped
+to a `{labKey, tag}` scenario:
+
+```ts
+registerMockFixture({labKey: 'music', tag: 'simple'}, [
+  // static body — wrapped in HttpResponse.json
+  {path: '*/api/widget', respond: {ok: true}},
+  // function responder — request, parsed path params, scenario-scoped store
+  {
+    method: 'post',
+    path: '*/api/echo/:id',
+    respond: async ({params, request, store}) => {
+      const body = await request.json();
+      store.write('last', body);
+      return {id: params.id, body};
+    },
+  },
+]);
+```
+
+The dispatch handler (`dispatch.handlers.ts`) runs first on every request and
+serves the first matching route for the active scenario. On a miss — or when a
+function responder returns `undefined` — it falls through to the default
+domain handlers below it, so a route can selectively override one endpoint and
+leave the rest alone. Registration is additive; `clearMockFixtures(scope?)`
+replaces. Routes match first-registered-first, so register specific paths
+before wildcard ones.
+
+## Lab fixtures: sugar over the generic primitive
+
+`registerLabFixtures` is a convenience layer for the common per-level shape:
 
 ```ts
 type LabFixture = {
@@ -45,19 +77,32 @@ type LabFixture = {
 type LabFixtures = Record<string /* tag */, LabFixture>;
 ```
 
+It splits a `LabFixture` two ways:
+
+- **read-only** (`levelProperties`, `theme`) desugar into `registerMockFixture`
+  routes — the dispatcher serves them.
+- **stateful** (`channel`, `sources`) stay as seed data the behavioral
+  handlers (`channels.handlers`, `sources.handlers`) read via
+  `getActiveFixture()`, layering write-through on top. These can't be plain
+  static routes because GET reflects prior writes.
+
 Labs export their own scenarios; e.g. `packages/labs/music/src/fixtures/`
 exports `simple`, `complex`, `error`. The studio dev wiring registers them
 under the lab key and `setActiveScenario` picks the active one from the URL.
 
-## Adding a handler
+## Adding a mock
+
+For a one-off or lab-specific endpoint, reach for `registerMockFixture` — no
+core change needed. Add a _default_ domain handler only when every scenario
+should get the same baseline response with no fixture registered:
 
 1. Pick the domain file: `levels.handlers.ts`, `preferences.handlers.ts`, etc.
 2. Register the URL with an `*/` prefix so it matches regardless of the
    dashboard host the kyTransport is pointed at.
-3. Pull data from `getActiveFixture()` and fall back to a sensible default
-   when the fixture is absent.
+3. Return a sensible default. Per-scenario data belongs in a fixture, served
+   ahead of the default by the dispatcher.
 4. For writes, persist via `scenarioStore`'s `writeResource(name, value)`;
-   reads layer `readResource()` over the fixture for the latest state.
+   reads layer `readResource()` over the seed for the latest state.
 
 ## Vitest
 
@@ -95,7 +140,10 @@ from the URL so subsequent reloads don't reset again.
 
 | File                      | Purpose                                                              |
 | ------------------------- | -------------------------------------------------------------------- |
-| `registry.ts`             | Fixture registration, active-scenario selection                      |
+| `scenario.ts`             | Active `{labKey, tag}` selection, shared by the registries + store   |
+| `fixtures.ts`             | `registerMockFixture` — generic per-scenario route registry          |
+| `dispatch.handlers.ts`    | Front catch-all that serves fixture routes, else falls through       |
+| `registry.ts`             | `registerLabFixtures` — lab-fixture sugar over `registerMockFixture` |
 | `handlers.ts`             | Aggregate `getMockHandlers()` consumed by the worker                 |
 | `worker.ts`               | `startMockWorker()` — dynamic import of `msw/browser`, idempotent    |
 | `levels.handlers.ts`      | `*/levels/:id/level_properties` and the script/lesson/project shapes |

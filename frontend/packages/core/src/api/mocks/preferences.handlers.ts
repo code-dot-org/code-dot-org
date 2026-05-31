@@ -1,12 +1,11 @@
 import {http, HttpResponse} from 'msw';
 
-import {getActiveFixture} from './registry';
-
 export const preferencesHandlers = [
-  // GET /user_preference/theme — UserThemeSettingsSchema expects `{theme: {...}}`.
-  // The fixture's `theme` is just the inner record; we wrap it here.
+  // GET /user_preference/theme — default empty theme. A lab fixture's `theme`
+  // is served ahead of this by the generic dispatcher (see
+  // `registerLabFixtures`, which wraps it in the `{theme: {...}}` shape
+  // UserThemeSettingsSchema expects); this is the fall-through default.
   http.get('*/user_preference/theme', () => {
-    const theme = getActiveFixture()?.theme ?? {};
-    return HttpResponse.json({theme});
+    return HttpResponse.json({theme: {}});
   }),
 ];

@@ -5,7 +5,7 @@
 // Reads return `undefined` when nothing is stored — the handler falls back
 // to fixture data, which falls back to a handler-specific default.
 
-import {getActiveScenario} from './registry';
+import {getActiveScenario} from './scenario';
 
 const NAMESPACE = 'cdo-mock';
 const RESET_QUERY_PARAM = 'cdoMockReset';
