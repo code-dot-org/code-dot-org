@@ -71,7 +71,7 @@ module Cdo
 
           it 'uses ERB template variable in the pii schema name' do
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
-            assert_includes ddl, 'learning_platform_<%=environment_type%>_pii.zeroetl_users'
+            assert_includes ddl, 'learning_platform_<%=environment_type%>_pii.users'
           end
 
           it 'uses ERB template variables in the source table path' do
@@ -99,7 +99,7 @@ module Cdo
             ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
             environment_type = 'production'
             rendered = ERB.new(ddl).result(binding)
-            assert_includes rendered, 'learning_platform_production_pii.zeroetl_users'
+            assert_includes rendered, 'learning_platform_production_pii.users'
             assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
           end
         end
@@ -145,7 +145,7 @@ module Cdo
 
           it 'uses ERB template variable in the non-pii schema name' do
             ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'learning_platform_<%=environment_type%>.zeroetl_users'
+            assert_includes ddl, 'learning_platform_<%=environment_type%>.users'
             refute_includes ddl, '_pii'
           end
 
@@ -186,7 +186,7 @@ module Cdo
             generator.save_ddl_templates
             pii_path = File.join(tmpdir, 'users_pii.sql.erb')
             rendered = MaterializedViewGenerator.render_ddl(pii_path, environment_type: 'production')
-            assert_includes rendered, 'learning_platform_production_pii.zeroetl_users'
+            assert_includes rendered, 'learning_platform_production_pii.users'
             assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
           end
 
@@ -262,8 +262,8 @@ module Cdo
 
             assert_equal(
               {
-                'learning_platform_production_pii.zeroetl_users' => 'id-pii',
-                'learning_platform_production.zeroetl_users' => 'id-non-pii'
+                'learning_platform_production_pii.users' => 'id-pii',
+                'learning_platform_production.users' => 'id-non-pii'
               },
               result
             )
@@ -322,9 +322,9 @@ module Cdo
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
             assert_equal 1, batches.length
-            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_production_pii.zeroetl_users', batches[0][0]
-            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW learning_platform_production_pii.zeroetl_users'
-            assert_equal ['learning_platform_production_pii.zeroetl_users'], result.keys
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_production_pii.users', batches[0][0]
+            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW learning_platform_production_pii.users'
+            assert_equal ['learning_platform_production_pii.users'], result.keys
           end
         end
 
@@ -375,19 +375,19 @@ module Cdo
 
           it 'captures the failure detail of a FAILED CREATE batch in the row error' do
             batch = list_stmt(id: 'b1', status: 'FAILED',
-              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users'
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
 )
             drop_sub = stub('drop_sub',
-              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users',
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
               status: 'FINISHED', error: ''
             )
             create_sub = stub('create_sub',
-              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;',
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;',
               status: 'FAILED', error: 'Schema "learning_platform_test_pii" does not exist'
             )
             desc = stub('desc',
               sub_statements: [drop_sub, create_sub], db_user: 'dev', duration: 0, error: nil,
-              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users'
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users'
             )
             client.stubs(:list_statements).returns(pageable([batch]))
             client.stubs(:describe_statement).with('b1').returns(desc)
@@ -405,11 +405,11 @@ module Cdo
 
           it 'leaves error nil for a FINISHED batch' do
             batch = list_stmt(id: 'ok-1',
-              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users'
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
 )
             client.stubs(:list_statements).returns(pageable([batch]))
             client.stubs(:describe_statement).with('ok-1').returns(describe(sub_query_strings: [
-                                                                              'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;'
+                                                                              'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
                                                                             ]
 )
 )
@@ -424,24 +424,24 @@ module Cdo
 
           it 'returns a CREATE row for each PII and non-PII view in the most recent batch' do
             batch_pii = list_stmt(id: 'pii-1',
-              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_usersCREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users"
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.usersCREATE MATERIALIZED VIEW learning_platform_test_pii.users"
 )
             batch_non_pii = list_stmt(id: 'non-pii-1',
-              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.zeroetl_usersCREATE MATERIALIZED VIEW learning_platform_test.zeroetl_users"
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.usersCREATE MATERIALIZED VIEW learning_platform_test.users"
 )
 
             client.stubs(:list_statements).returns(pageable([batch_pii, batch_non_pii]))
             client.stubs(:describe_statement).with('pii-1').returns(describe(sub_query_strings: [
-                                                                               'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users',
-                                                                               'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;',
-                                                                               "COMMENT ON COLUMN learning_platform_test_pii.zeroetl_users.id IS 'abc'"
+                                                                               'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
+                                                                               'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;',
+                                                                               "COMMENT ON COLUMN learning_platform_test_pii.users.id IS 'abc'"
                                                                              ]
 )
 )
             client.stubs(:describe_statement).with('non-pii-1').returns(describe(sub_query_strings: [
-                                                                                   'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.zeroetl_users',
-                                                                                   'CREATE MATERIALIZED VIEW learning_platform_test.zeroetl_users AS SELECT id FROM x;',
-                                                                                   "COMMENT ON COLUMN learning_platform_test.zeroetl_users.id IS 'def'"
+                                                                                   'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.users',
+                                                                                   'CREATE MATERIALIZED VIEW learning_platform_test.users AS SELECT id FROM x;',
+                                                                                   "COMMENT ON COLUMN learning_platform_test.users.id IS 'def'"
                                                                                  ]
 )
 )
@@ -466,12 +466,12 @@ module Cdo
 
           it 'CREATE wins over DROP within the same batch (DROP+CREATE+COMMENT)' do
             batch = list_stmt(id: 'b1',
-              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users'
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
 )
             client.stubs(:list_statements).returns(pageable([batch]))
             client.stubs(:describe_statement).with('b1').returns(describe(sub_query_strings: [
-                                                                            'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.zeroetl_users',
-                                                                            'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;'
+                                                                            'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
+                                                                            'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
                                                                           ]
 )
 )
@@ -487,8 +487,8 @@ module Cdo
           end
 
           it 'reports the consolidated orphan-drop batch per FQN' do
-            orphan_pii = 'learning_platform_test_pii.zeroetl_old'
-            orphan_non_pii = 'learning_platform_test.zeroetl_old'
+            orphan_pii = 'learning_platform_test_pii.old'
+            orphan_non_pii = 'learning_platform_test.old'
             batch = list_stmt(id: 'drop-batch',
               query_string: "DROP MATERIALIZED VIEW IF EXISTS #{orphan_pii} DROP MATERIALIZED VIEW IF EXISTS #{orphan_non_pii}"
 )
@@ -532,7 +532,7 @@ module Cdo
             end
           end
 
-          it 'ignores statements that do not mention our zeroetl_ schema prefixes' do
+          it 'ignores statements that do not mention our materialized view schema prefixes' do
             unrelated = list_stmt(id: 'unrelated', query_string: 'SELECT * FROM some_other_table')
             client.stubs(:list_statements).returns(pageable([unrelated]))
             client.expects(:describe_statement).never
@@ -548,15 +548,15 @@ module Cdo
 
           it 'stops paginating once the cutoff is crossed' do
             recent = list_stmt(id: 'recent', created_at: Time.now,
-              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users'
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
 )
             old = list_stmt(id: 'old', created_at: 48.hours.ago,
-              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users'
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
 )
 
             client.stubs(:list_statements).returns(pageable([recent, old]))
             client.stubs(:describe_statement).with('recent').returns(describe(sub_query_strings: [
-                                                                                'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;'
+                                                                                'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
                                                                               ]
 )
 )
@@ -575,8 +575,8 @@ module Cdo
             # refreshes by full recompute (state 0).
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_users', 'is_stale' => 't', 'state' => 1},
-                {'schema' => 'learning_platform_test', 'name' => 'zeroetl_users', 'is_stale' => 'f', 'state' => 0}
+                {'schema' => 'learning_platform_test_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 1},
+                {'schema' => 'learning_platform_test', 'name' => 'users', 'is_stale' => 'f', 'state' => 0}
               ]
             )
             client.stubs(:list_statements).returns(pageable([]))
@@ -598,7 +598,7 @@ module Cdo
 
           it 'describes an unrefreshable view (state >= 100) in state_description' do
             client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_users', 'is_stale' => 't', 'state' => 101}]
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 101}]
             )
             client.stubs(:list_statements).returns(pageable([]))
             model.stubs(:name).returns('User')
@@ -614,17 +614,17 @@ module Cdo
           end
 
           it 'converts describe_statement.duration from nanoseconds to Float seconds (nil when zero / in-progress)' do
-            finished = list_stmt(id: 'f1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users')
-            in_progress = list_stmt(id: 'p1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test.zeroetl_users')
+            finished = list_stmt(id: 'f1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users')
+            in_progress = list_stmt(id: 'p1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test.users')
 
             client.stubs(:list_statements).returns(pageable([finished, in_progress]))
             client.stubs(:describe_statement).with('f1').returns(describe(
-                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users AS SELECT id FROM x;'],
+                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'],
                                                                    duration: 12_345_000_000 # 12.345 seconds in nanoseconds
             )
 )
             client.stubs(:describe_statement).with('p1').returns(describe(
-                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test.zeroetl_users AS SELECT id FROM x;'],
+                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test.users AS SELECT id FROM x;'],
                                                                    duration: 0
             )
 )
@@ -645,10 +645,10 @@ module Cdo
             # statement; describe_statement reports sub_statements=nil with the
             # SQL in `query_string`. view_status must handle that without
             # blowing up.
-            refresh_stmt = list_stmt(id: 'r1', query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users')
+            refresh_stmt = list_stmt(id: 'r1', query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.users')
             client.stubs(:list_statements).returns(pageable([refresh_stmt]))
             client.stubs(:describe_statement).with('r1').returns(
-              describe_single(query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.zeroetl_users')
+              describe_single(query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.users')
             )
             model.stubs(:name).returns('User')
 
@@ -689,15 +689,15 @@ module Cdo
 
             assert_equal(
               [
-                'REFRESH MATERIALIZED VIEW learning_platform_production_pii.zeroetl_users',
-                'REFRESH MATERIALIZED VIEW learning_platform_production.zeroetl_users'
+                'REFRESH MATERIALIZED VIEW learning_platform_production_pii.users',
+                'REFRESH MATERIALIZED VIEW learning_platform_production.users'
               ],
               calls
             )
             assert_equal(
               {
-                'learning_platform_production_pii.zeroetl_users' => 'id-1',
-                'learning_platform_production.zeroetl_users' => 'id-2'
+                'learning_platform_production_pii.users' => 'id-1',
+                'learning_platform_production.users' => 'id-2'
               },
               result
             )
@@ -716,8 +716,8 @@ module Cdo
 
             result = generator.refresh_views(client: client, environment_type: :production)
 
-            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.zeroetl_users'], calls
-            assert_equal ['learning_platform_production_pii.zeroetl_users'], result.keys
+            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.users'], calls
+            assert_equal ['learning_platform_production_pii.users'], result.keys
           end
         end
 
@@ -748,10 +748,10 @@ module Cdo
 
             # Two models, two views each → four statement IDs.
             assert_equal 4, result[:statements].length
-            assert_includes result[:statements].keys, 'learning_platform_production_pii.zeroetl_users'
-            assert_includes result[:statements].keys, 'learning_platform_production.zeroetl_users'
-            assert_includes result[:statements].keys, 'learning_platform_production_pii.zeroetl_activities'
-            assert_includes result[:statements].keys, 'learning_platform_production.zeroetl_activities'
+            assert_includes result[:statements].keys, 'learning_platform_production_pii.users'
+            assert_includes result[:statements].keys, 'learning_platform_production.users'
+            assert_includes result[:statements].keys, 'learning_platform_production_pii.activities'
+            assert_includes result[:statements].keys, 'learning_platform_production.activities'
             assert_empty result[:failed]
           end
 
@@ -759,8 +759,8 @@ module Cdo
             # SVV_MV_INFO says both of this model's views are fresh.
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'is_stale' => 'f', 'state' => 101},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'is_stale' => 'f', 'state' => 101}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 'f', 'state' => 101},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 'f', 'state' => 101}
               ]
             )
             client.expects(:execute_async).never
@@ -778,8 +778,8 @@ module Cdo
             # PII is stale, non-PII is fresh.
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'is_stale' => 't', 'state' => 100},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'is_stale' => 'f', 'state' => 101}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 100},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 'f', 'state' => 101}
               ]
             )
             calls = []
@@ -789,8 +789,8 @@ module Cdo
               client: client, environment_type: :production, models: [model]
             )
 
-            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.zeroetl_users'], calls
-            assert_equal ['learning_platform_production_pii.zeroetl_users'], result[:statements].keys
+            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.users'], calls
+            assert_equal ['learning_platform_production_pii.users'], result[:statements].keys
           end
 
           it 'treats a view missing from SVV_MV_INFO as stale (rebuilds it)' do
@@ -874,8 +874,8 @@ module Cdo
           it 'yields :would_refresh with the stale FQNs and submits nothing when dry_run is true' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'is_stale' => 't', 'state' => 100},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'is_stale' => 't', 'state' => 100}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 100},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 't', 'state' => 100}
               ]
             )
             client.expects(:execute_async).never
@@ -889,7 +889,7 @@ module Cdo
             refute_nil would_refresh
             assert_equal 'users', would_refresh[1]
             assert_equal 2, would_refresh[2].length
-            assert_includes would_refresh[2], 'learning_platform_production_pii.zeroetl_users'
+            assert_includes would_refresh[2], 'learning_platform_production_pii.users'
 
             assert_empty result[:statements]
             assert_empty result[:failed]
@@ -949,13 +949,13 @@ module Cdo
         describe '#expected_view_fqns' do
           it 'returns both PII and non-PII FQNs when non-pii columns exist' do
             fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:production)
-            assert_equal %w[learning_platform_production_pii.zeroetl_users learning_platform_production.zeroetl_users], fqns
+            assert_equal %w[learning_platform_production_pii.users learning_platform_production.users], fqns
           end
 
           it 'returns only PII FQN when all columns are text' do
             model.stubs(:columns).returns([name_col, bio_col])
             fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:test)
-            assert_equal %w[learning_platform_test_pii.zeroetl_users], fqns
+            assert_equal %w[learning_platform_test_pii.users], fqns
           end
 
           it 'returns empty array when model has no columns' do
@@ -966,7 +966,7 @@ module Cdo
 
           it 'accepts string environment_type' do
             fqns = MaterializedViewGenerator.new(model).expected_view_fqns('test')
-            assert_equal %w[learning_platform_test_pii.zeroetl_users learning_platform_test.zeroetl_users], fqns
+            assert_equal %w[learning_platform_test_pii.users learning_platform_test.users], fqns
           end
         end
 
@@ -1020,8 +1020,8 @@ module Cdo
               client: client, environment_type: :production, models: [model]
             )
 
-            assert_includes plan[:to_add], 'learning_platform_production_pii.zeroetl_users'
-            assert_includes plan[:to_add], 'learning_platform_production.zeroetl_users'
+            assert_includes plan[:to_add], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_add], 'learning_platform_production.users'
             assert_empty plan[:to_update]
             assert_empty plan[:to_drop]
           end
@@ -1029,8 +1029,8 @@ module Cdo
           it 'classifies existing-but-stale views as to_update' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'comment' => nil}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
               ]
             )
             client.stubs(:batch_execute_async)
@@ -1040,18 +1040,18 @@ module Cdo
             )
 
             assert_empty plan[:to_add]
-            assert_includes plan[:to_update], 'learning_platform_production_pii.zeroetl_users'
-            assert_includes plan[:to_update], 'learning_platform_production.zeroetl_users'
+            assert_includes plan[:to_update], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_update], 'learning_platform_production.users'
             assert_empty plan[:to_drop]
           end
 
           it 'classifies orphaned views as to_drop' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'comment' => nil},
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_old_table', 'comment' => nil},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_old_table', 'comment' => nil}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production_pii', 'name' => 'old_table', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'old_table', 'comment' => nil}
               ]
             )
             client.stubs(:batch_execute_async)
@@ -1060,8 +1060,8 @@ module Cdo
               client: client, environment_type: :production, models: [model]
             )
 
-            assert_includes plan[:to_drop], 'learning_platform_production_pii.zeroetl_old_table'
-            assert_includes plan[:to_drop], 'learning_platform_production.zeroetl_old_table'
+            assert_includes plan[:to_drop], 'learning_platform_production_pii.old_table'
+            assert_includes plan[:to_drop], 'learning_platform_production.old_table'
           end
 
           it 'submits async batches for changed views and returns their statement IDs' do
@@ -1077,14 +1077,14 @@ module Cdo
             )
 
             assert_equal 2, result[:statements].length
-            assert(result[:statements].keys.any? {|fqn| fqn.include?('zeroetl_users')})
+            assert(result[:statements].keys.any? {|fqn| fqn.include?('users')})
             refute_empty result[:to_add]
             assert_empty result[:failed]
           end
 
-          it 'submits the orphan-drop batch async and includes it under __drop_orphans__' do
+          it 'submits the orphan-drop batch async and includes it under a __drop_orphans__ key' do
             client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
             submitted = []
             client.stubs(:batch_execute_async).with do |sqls|
@@ -1096,15 +1096,38 @@ module Cdo
               client: client, environment_type: :test, models: [model]
             )
 
-            assert_includes result[:statements].keys, '__drop_orphans__'
+            assert(result[:statements].keys.any? {|k| k.start_with?('__drop_orphans__')})
             drop_sqls = submitted.find {|sqls| sqls.all? {|s| s.include?('DROP') && !s.include?('CREATE')}}
             refute_nil drop_sqls
-            assert(drop_sqls.any? {|s| s.include?('zeroetl_old_table')})
+            assert(drop_sqls.any? {|s| s.include?('old_table')})
+          end
+
+          it 'chunks the orphan-drop into batches of at most MAX_BATCH_STATEMENTS statements' do
+            # 95 orphaned views must span 3 batches (40 + 40 + 15), since the Data API caps
+            # batch_execute_statement at 40 statements.
+            orphans = (1..95).map {|i| {'schema' => 'learning_platform_test', 'name' => "old_#{i}", 'comment' => nil}}
+            client.stubs(:execute).returns(orphans)
+
+            drop_batches = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              drop_batches << sqls
+              "id-#{drop_batches.length}"
+            end
+
+            result = MaterializedViewGenerator.provision_all_views(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            drop_only = drop_batches.select {|sqls| sqls.all? {|s| s.start_with?('DROP MATERIALIZED VIEW')}}
+            assert_equal [40, 40, 15], drop_only.map(&:length)
+            assert(drop_only.all? {|sqls| sqls.length <= MaterializedViewGenerator::MAX_BATCH_STATEMENTS})
+            drop_keys = result[:statements].keys.select {|k| k.start_with?('__drop_orphans__')}
+            assert_equal 3, drop_keys.length
           end
 
           it 'does not submit anything when dry_run is true' do
             client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
             client.expects(:batch_execute_async).never
 
@@ -1119,7 +1142,7 @@ module Cdo
 
           it 'does not yield any events on dry_run' do
             client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
 
             events = []
@@ -1148,8 +1171,8 @@ module Cdo
           it 'yields :drop_batch_submitted with the orphan FQNs' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil},
-                {'schema' => 'learning_platform_test', 'name' => 'zeroetl_old_table', 'comment' => nil}
+                {'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil},
+                {'schema' => 'learning_platform_test', 'name' => 'old_table', 'comment' => nil}
               ]
             )
             client.stubs(:batch_execute_async).returns('id')
@@ -1160,8 +1183,8 @@ module Cdo
             ) {|event, payload, _| drop_events << payload if event == :drop_batch_submitted}
 
             assert_equal 1, drop_events.length
-            assert_includes drop_events[0], 'learning_platform_test_pii.zeroetl_old_table'
-            assert_includes drop_events[0], 'learning_platform_test.zeroetl_old_table'
+            assert_includes drop_events[0], 'learning_platform_test_pii.old_table'
+            assert_includes drop_events[0], 'learning_platform_test.old_table'
           end
 
           it 'does not yield :drop_batch_submitted when to_drop is empty' do
@@ -1238,8 +1261,8 @@ module Cdo
           it 'recreates models whose existing comment hash differs from the desired DDL' do
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'comment' => 'stale-hash'},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'comment' => 'also-stale'}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => 'stale-hash'},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => 'also-stale'}
               ]
             )
             submitted = []
@@ -1259,8 +1282,8 @@ module Cdo
             # the catalog query reports comment=nil. Treat as "unknown" and rebuild.
             client.stubs(:execute).returns(
               [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'zeroetl_users', 'comment' => nil},
-                {'schema' => 'learning_platform_production', 'name' => 'zeroetl_users', 'comment' => nil}
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
               ]
             )
             submitted = []
@@ -1283,15 +1306,15 @@ module Cdo
             )
 
             assert_equal 4, plan[:to_add].length
-            assert_includes plan[:to_add], 'learning_platform_production_pii.zeroetl_users'
-            assert_includes plan[:to_add], 'learning_platform_production.zeroetl_users'
-            assert_includes plan[:to_add], 'learning_platform_production_pii.zeroetl_activities'
-            assert_includes plan[:to_add], 'learning_platform_production.zeroetl_activities'
+            assert_includes plan[:to_add], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_add], 'learning_platform_production.users'
+            assert_includes plan[:to_add], 'learning_platform_production_pii.activities'
+            assert_includes plan[:to_add], 'learning_platform_production.activities'
           end
 
           it 'handles empty model set' do
             client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'zeroetl_old_table', 'comment' => nil}]
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
             client.stubs(:batch_execute_async).returns('id')
 
@@ -1301,7 +1324,7 @@ module Cdo
 
             assert_empty plan[:to_add]
             assert_empty plan[:to_update]
-            assert_includes plan[:to_drop], 'learning_platform_test_pii.zeroetl_old_table'
+            assert_includes plan[:to_drop], 'learning_platform_test_pii.old_table'
           end
         end
 
