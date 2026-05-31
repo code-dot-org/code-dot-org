@@ -38,6 +38,19 @@ export const ExemplarSettingsSchema = z.object({
 export const LevelPropertiesBaseSchema = z.object({
   id: z.number(),
   appName: z.enum(ProjectTypes),
+  type: z.string(),
+  name: z.string(),
+  background: z.string().optional(),
+  encrypted: z.boolean().optional(),
+  isAssessment: z
+    .boolean()
+    .nullable()
+    .default(false)
+    .transform(value => value ?? false),
+  parentLevelLink: z
+    .string()
+    .nullable()
+    .transform(value => value ?? undefined),
   longInstructions: z.string().optional(),
   shortInstructions: z.string().optional(),
   instructionsImportant: z.boolean().optional(),
@@ -49,7 +62,8 @@ export const LevelPropertiesBaseSchema = z.object({
   templateSources: MultiFileSourceSchema.optional(),
   exemplarSources: z
     .union([ProjectSourcesSchema, MultiFileSourceSchema])
-    .nullable(),
+    .nullable()
+    .transform(value => value ?? undefined),
   hideVersionHistory: z.boolean().optional(),
   aiTutorAvailable: z.boolean().optional(),
   showRubric: z.boolean().optional(),
@@ -66,8 +80,26 @@ export const LevelPropertiesBaseSchema = z.object({
   finishDialog: z.string().optional(),
   offerBrowserTts: z.boolean().nullable(),
   useSecondaryFinishButton: z.boolean().optional(),
+  // Legacy
+  helpVideos: z.array(z.string()).default([]),
+  baseAssetUrl: z.string().default('/blockly/'),
+  showExemplarLink: z
+    .boolean()
+    .nullable()
+    .transform(value => value ?? false),
   // Codebridge
   widgetView: z.boolean().optional(),
+});
+
+/**
+ * Fields common to Blockly-based levels.
+ */
+export const BlocklyLevelPropertiesSchema = z.object({
+  enableBlocklyKeyboardNavigation: z
+    .boolean()
+    .nullable()
+    .transform(value => value ?? false),
+  sharedBlocks: z.array(z.string()).default([]),
 });
 
 export const LevelPropertiesMapSchema = z.record(

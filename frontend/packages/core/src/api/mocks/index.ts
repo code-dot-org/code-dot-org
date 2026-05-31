@@ -4,6 +4,7 @@ export {
   clearActiveScenario,
   getActiveFixture,
   getActiveScenario,
+  createLevelPropertyFixture,
   type LabFixture,
   type LabFixtures,
 } from './registry';

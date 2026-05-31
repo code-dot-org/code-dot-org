@@ -6,7 +6,11 @@
 // defaults when a fixture is absent or doesn't cover a given endpoint.
 
 import type {Channel} from '../dashboard/channels';
-import type {LevelPropertiesMap} from '../dashboard/levels';
+import type {
+  LevelPropertiesMap,
+  LevelProperties,
+  LevelPropertiesBaseInput,
+} from '../dashboard/levels';
 import type {UserThemeSettings} from '../dashboard/preferences';
 import type {ProjectSourcesAny} from '../dashboard/sources';
 
@@ -63,4 +67,19 @@ export function getActiveFixture(): LabFixture | undefined {
 /** Returns `{labKey, tag}` if a scenario is active. */
 export function getActiveScenario(): {labKey: string; tag: string} | undefined {
   return active;
+}
+
+/**
+ * Wraps a raw level-properties fixture so it slots into a `LevelPropertiesMap`.
+ *
+ * The fixture is typed against the schema *input* (the wire shape), so missing
+ * `.default()` fields are allowed and nullable fields must be `null` rather
+ * than the `undefined` a transform yields. The cast to the output
+ * `LevelProperties` is sound because the handler returns this verbatim and the
+ * API client re-parses it, running the transforms for real.
+ */
+export function createLevelPropertyFixture<
+  T extends LevelPropertiesBaseInput = LevelPropertiesBaseInput,
+>(fixture: T): LevelProperties {
+  return fixture as unknown as LevelProperties;
 }
