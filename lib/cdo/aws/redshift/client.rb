@@ -176,18 +176,43 @@ module Cdo
           results
         end
 
+        # Builds a human-readable failure detail from a DescribeStatement response. Pulls the
+        # top-level error, per-sub-statement errors (for batch statements such as our
+        # DROP+CREATE+COMMENT batches), and the Redshift query id. The Data API sometimes reports
+        # a FAILED statement with an empty Error (notably some parse failures); in that case we
+        # say so explicitly and point at the query id so the real message can be retrieved from
+        # the system tables, rather than emitting only the SQL.
         private def build_error_detail(desc)
           parts = []
           parts << desc.error if desc.error.present?
-          parts << "SQL: #{desc.query_string}" if desc.query_string.present?
 
+          found_sub_error = false
           if desc.respond_to?(:sub_statements) && desc.sub_statements&.any?
             desc.sub_statements.each_with_index do |sub, i|
               next unless sub.status == 'FAILED'
-              parts << "Sub-statement #{i + 1} FAILED: #{sub.error}"
+              found_sub_error = true
+              detail = sub.error.presence || "(no message; status #{sub.status})"
+              parts << "Sub-statement #{i + 1} FAILED: #{detail}"
               parts << "Sub-statement #{i + 1} SQL: #{sub.query_string}" if sub.query_string.present?
             end
           end
+
+          # The Redshift query id (when assigned) lets an operator pull the underlying message
+          # from the system tables. A statement that fails before execution (e.g., a parse error)
+          # may have no query id (0 or -1), so only surface it when positive.
+          if desc.respond_to?(:redshift_query_id) && desc.redshift_query_id.to_i > 0
+            parts << "Redshift query id #{desc.redshift_query_id} " \
+              "(SELECT message FROM stl_error WHERE query = #{desc.redshift_query_id})"
+          end
+
+          # If the Data API gave us no error text at all, say so explicitly so the message is
+          # never just the echoed SQL.
+          unless desc.error.present? || found_sub_error
+            status = desc.respond_to?(:status) ? desc.status : 'FAILED'
+            parts.unshift("Statement #{status} but the Data API returned no error message.")
+          end
+
+          parts << "SQL: #{desc.query_string}" if desc.query_string.present?
 
           parts.empty? ? '(no error detail available)' : parts.join("\n")
         end

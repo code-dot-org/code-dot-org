@@ -36,6 +36,12 @@ module Cdo
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
 
+        # The Redshift Data API's BatchExecuteStatement accepts at most 40 SQL statements per
+        # call. The consolidated orphan-drop can exceed this (a full re-provision of ~110 models
+        # produces ~220 drops), so we submit it in chunks of this size.
+        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
+        MAX_BATCH_STATEMENTS = 40
+
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
         # full recompute or incrementally); states >= 100 mean the view can no
@@ -116,7 +122,7 @@ module Cdo
         # Returns the fully-qualified view names this generator would create
         # for the given environment.
         # @param environment_type [Symbol, String] e.g., :production, :test
-        # @return [Array<String>] e.g., ["learning_platform_production_pii.zeroetl_users", "learning_platform_production.zeroetl_users"]
+        # @return [Array<String>] e.g., ["learning_platform_production_pii.users", "learning_platform_production.users"]
         def expected_view_fqns(environment_type)
           env = environment_type.to_s
           view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
@@ -346,10 +352,11 @@ module Cdo
             end
           end
 
-          unless plan[:to_drop].empty?
-            drop_sql = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
-            plan[:statements]['__drop_orphans__'] = client.batch_execute_async(drop_sql)
-            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
+          # Drop orphaned views in chunks: the Data API caps a batch at MAX_BATCH_STATEMENTS.
+          plan[:to_drop].each_slice(MAX_BATCH_STATEMENTS).with_index do |fqns, chunk_index|
+            drop_sql = fqns.map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+            plan[:statements]["__drop_orphans___#{chunk_index}"] = client.batch_execute_async(drop_sql)
+            yield(:drop_batch_submitted, fqns) if block_given?
           end
 
           plan
@@ -500,7 +507,7 @@ module Cdo
         #
         # Two-phase lookup: list_statements is cheap and only carries a
         # truncated `query_string`, so we use a string `include?` check on
-        # `learning_platform_<env>(_pii)?.zeroetl_` to filter candidates without
+        # `learning_platform_<env>(_pii)?.` to filter candidates without
         # describing every Data API statement on the cluster. Each candidate
         # batch then gets one `describe_statement` round trip to fetch
         # sub_statements and db_user.
@@ -513,7 +520,7 @@ module Cdo
         # @return [Array<ViewStatusRow>]
         def self.view_status(client:, environment_type:, models:, hours_back: 24)
           env = environment_type.to_s
-          schema_prefixes = ["#{VIEW_SCHEMA_PREFIX}_#{env}_pii.zeroetl_", "#{VIEW_SCHEMA_PREFIX}_#{env}.zeroetl_"]
+          schema_prefixes = ["#{VIEW_SCHEMA_PREFIX}_#{env}_pii.", "#{VIEW_SCHEMA_PREFIX}_#{env}."]
           op_priority = {'CREATE' => 3, 'REFRESH' => 2, 'DROP' => 1}.freeze
           cutoff = hours_back.hours.ago
 
@@ -578,7 +585,9 @@ module Cdo
             end
           end
 
-          view_type_for = ->(fqn) {fqn.include?('_pii.zeroetl_') ? 'pii' : 'non_pii'}
+          # PII vs non-PII is determined by the schema (…_pii), not the view name, so this is
+          # robust regardless of the view/table name.
+          view_type_for = ->(fqn) {fqn.split('.', 2).first.to_s.end_with?('_pii') ? 'pii' : 'non_pii'}
 
           # Freshness info from SVV_MV_INFO — independent signal from the Data
           # API statement history, useful for "is this view actually fresh?"
@@ -662,7 +671,7 @@ module Cdo
           rows
         end
 
-        # Queries Redshift for the freshness of `zeroetl_` materialized views
+        # Queries Redshift for the freshness of the materialized views
         # in the analytics view schemas for the given environment. SVV_MV_INFO is
         # the system view Redshift exposes for this: `is_stale` is 't'/'f'
         # depending on whether the underlying source table has unprocessed
@@ -677,11 +686,12 @@ module Cdo
           schemas = ["#{VIEW_SCHEMA_PREFIX}_#{env}", "#{VIEW_SCHEMA_PREFIX}_#{env}_pii"]
           schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
 
+          # No name filter: SVV_MV_INFO lists only materialized views, and the
+          # `learning_platform_*` schemas are dedicated to the views this tool manages.
           rows = client.execute(<<~SQL)
             SELECT TRIM(schema_name) AS schema, TRIM(name) AS name, is_stale, state
             FROM SVV_MV_INFO
             WHERE TRIM(schema_name) IN (#{schema_list})
-              AND TRIM(name) LIKE 'zeroetl_%'
           SQL
 
           rows.each_with_object({}) do |r, h|
@@ -692,7 +702,7 @@ module Cdo
           end
         end
 
-        # Queries Redshift for existing `zeroetl_` materialized views in the
+        # Queries Redshift for existing materialized views in the
         # analytics view schemas for the given environment, returning the COMMENT
         # we previously attached to each view's first column — the SHA256 hash
         # of the DDL written by the prior run, or nil if no comment exists
@@ -709,11 +719,18 @@ module Cdo
           schemas = ["#{VIEW_SCHEMA_PREFIX}_#{env}", "#{VIEW_SCHEMA_PREFIX}_#{env}_pii"]
           schema_list = schemas.map {|s| "'#{s}'"}.join(', ')
 
+          # The `learning_platform_*` schemas are dedicated to the views this tool manages, so
+          # we no longer filter by a name prefix. We DO exclude Redshift's internal
+          # materialized-view backing tables (`mv_tbl__<view>__<n>`), which SVV_COLUMNS can
+          # surface alongside the views and which must not be mistaken for orphaned views.
+          # `_` is a LIKE single-character wildcard here (it matches the literal underscores in
+          # `mv_tbl`), which lets us avoid a backslash ESCAPE clause — Redshift mis-parses the
+          # `'\'` escape literal as an escaped quote. No managed view name begins with `mv_tbl`.
           rows = client.execute(<<~SQL)
             SELECT table_schema AS schema, table_name AS name, remarks AS comment
             FROM SVV_COLUMNS
             WHERE table_schema IN (#{schema_list})
-              AND table_name LIKE 'zeroetl_%'
+              AND table_name NOT LIKE 'mv_tbl%'
               AND ordinal_position = 1
           SQL
 
@@ -732,8 +749,12 @@ module Cdo
           model.column_names_classified_as(*NON_PII_CLASSIFICATIONS)
         end
 
+        # The materialized view shares its source table's name (e.g., `level_sources`). It no
+        # longer carries a `zeroetl_` prefix: the views live in dedicated `learning_platform_*`
+        # schemas (see VIEW_SCHEMA_PREFIX), so there is nothing to disambiguate them from — and
+        # mirroring the source table name reads naturally for analysts and dbt.
         private def view_name
-          "zeroetl_#{model.table_name}"
+          model.table_name
         end
 
         private def fully_qualified_view_name(env, pii:)

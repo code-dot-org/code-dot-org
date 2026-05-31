@@ -181,6 +181,34 @@ class TestRedshiftClient < Minitest::Test
     assert_includes error.message, 'SQL: BAD SQL'
   end
 
+  def test_execute_failure_with_blank_error_surfaces_query_id_and_note
+    exec_resp = mock
+    exec_resp.stubs(:id).returns('blank-err-123')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:execute_statement).returns(exec_resp)
+
+    # Mirrors the Data API quirk where a FAILED statement comes back with an empty Error and no
+    # sub-statements (e.g., a parse error). The detail must still be actionable.
+    desc_failed = mock
+    desc_failed.stubs(:status).returns('FAILED')
+    desc_failed.stubs(:error).returns('')
+    desc_failed.stubs(:query_string).returns('SELECT bogus')
+    desc_failed.stubs(:sub_statements).returns([])
+    desc_failed.stubs(:redshift_query_id).returns(987_654)
+
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+      with(id: 'blank-err-123').
+      twice.
+      returns(desc_failed, desc_failed)
+
+    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
+      @redshift.execute('SELECT bogus')
+    end
+    assert_includes error.message, 'no error message'
+    assert_includes error.message, '987654'
+    assert_includes error.message, 'stl_error'
+    assert_includes error.message, 'SQL: SELECT bogus'
+  end
+
   def test_batch_execute_async_returns_id
     mock_resp = mock
     mock_resp.stubs(:id).returns('batch-123')
