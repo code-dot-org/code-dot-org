@@ -34,6 +34,9 @@ let active: {labKey: string; tag: string} | undefined;
 /**
  * Register all scenarios for a lab. Idempotent — calling twice replaces the
  * earlier registration.
+ *
+ * A convenience function specifically for lab fixtures that wires up common
+ * API paths for level loading.
  */
 export function registerLabFixtures(
   labKey: string,
