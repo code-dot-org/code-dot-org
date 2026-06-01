@@ -1,3 +1,17 @@
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype'), local('?');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'), local('?');
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -7,6 +21,7 @@
   align-self: stretch;
   justify-content: space-between;
   border-radius: 4px;
+  background-color: #6A62D9;
 }
 
 .imageStyle {
@@ -22,8 +37,17 @@
   flex: 1 0 0;
 }
 
+.textStyleFontHeaders {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.textStyleFontBody {
+  font-family: Geist, sans-serif !important;
+}
+
 .linkButtonStyle {
   align-self: flex-end;
+  margin-top: 8px !important;
 }
 
 .dismissButtonStyle {
