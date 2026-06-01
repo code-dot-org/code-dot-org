@@ -113,14 +113,27 @@ export const removeAiTutorAssetFromProject =
     );
     if (!existingFile) return;
 
+    const remainingFiles = {...source.files};
+    delete remainingFiles[existingFile.id];
+
+    // If no files remain in the uploads folder, remove it too.
+    const folderStillUsed = Object.values(remainingFiles).some(
+      f => f.folderId === targetFolder.id
+    );
+    const remainingFolders = folderStillUsed
+      ? source.folders
+      : Object.fromEntries(
+          Object.entries(source.folders).filter(
+            ([id]) => id !== targetFolder.id
+          )
+        );
+
     const updatedSource: MultiFileSource = {
       ...source,
-      files: {
-        ...source.files,
-      },
+      files: remainingFiles,
+      folders: remainingFolders,
       openFiles: (source.openFiles ?? []).filter(id => id !== existingFile.id),
     };
-    delete updatedSource.files[existingFile.id];
 
     dispatch(setAndSaveSource(updatedSource));
   };
