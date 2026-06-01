@@ -22,10 +22,15 @@ export const uploadFiles = createAppAsyncThunk<
     buildAssetUrl: (asset: ChatAsset) => string;
     /** Callback invoked when an upload finishes. If provided, the in-chat alert UI will be hidden for non-successful uploads. */
     onUploadFinished?: (status: UploadStatus) => void;
+    /** Callback invoked after each successful asset upload with the asset and its resolved URL. */
+    onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   }
 >(
   'aichat/uploadFiles',
-  async ({files, buildAssetUrl, onUploadFinished}, {dispatch, getState}) => {
+  async (
+    {files, buildAssetUrl, onUploadFinished, onAssetUploaded},
+    {dispatch, getState}
+  ) => {
     const notifyUploadFinished = (key: string, status: UploadStatus) => {
       dispatch(
         stagedFileUploadFinished({key, status, hideAlert: !!onUploadFinished})
@@ -82,9 +87,11 @@ export const uploadFiles = createAppAsyncThunk<
       }
 
       try {
-        await HttpClient.put(buildAssetUrl(asset), file);
+        const assetUrl = buildAssetUrl(asset);
+        await HttpClient.put(assetUrl, file);
         uploadSuccessCount += 1;
         notifyUploadFinished(key, 'uploaded');
+        onAssetUploaded?.(asset, assetUrl);
       } catch (error) {
         let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
         if (error instanceof NetworkError && error.response.status === 413) {
