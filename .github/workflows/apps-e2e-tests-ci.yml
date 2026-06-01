@@ -12,15 +12,18 @@ name: Apps-E2E-Tests-CI
 
 on:
   workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
 
 jobs:
   e2e:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     container:
-      # Must match the `playwright` catalog version in frontend/.yarnrc.yml; the
-      # image ships the matching browser build. Bump both together on upgrade.
-      image: mcr.microsoft.com/playwright:v1.59.1-noble
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
     steps:
       - name: Install LFS
         run: apt-get update && apt-get install -y git-lfs
@@ -48,7 +51,7 @@ jobs:
         working-directory: ./frontend
 
       - name: Upload Playwright Report
-        if: failure()
+        if: failure() || cancelled()
         uses: actions/upload-artifact@v4
         with:
           name: apps-e2e-tests-report
