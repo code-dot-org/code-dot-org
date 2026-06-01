@@ -100,6 +100,38 @@ describe('registerMockFixture', () => {
     expect(await res.json()).toEqual({});
   });
 
+  it('serves a global (scope-less) route across scenarios', async () => {
+    registerMockFixture({path: '*/api/me', respond: {id: 7}});
+
+    // No scenario active.
+    expect(await (await get('/api/me')).json()).toEqual({id: 7});
+
+    // Any scenario active.
+    setActiveScenario({labKey: 'demo', tag: 'a'});
+    expect(await (await get('/api/me')).json()).toEqual({id: 7});
+
+    setActiveScenario({labKey: 'other', tag: 'z'});
+    expect(await (await get('/api/me')).json()).toEqual({id: 7});
+  });
+
+  it('lets a scenario route shadow a global one', async () => {
+    registerMockFixture({path: '*/api/me', respond: {id: 7}});
+    registerMockFixture(
+      {labKey: 'demo', tag: 'a'},
+      {path: '*/api/me', respond: {id: 1, signedOut: true}},
+    );
+
+    // Scenario 'a' overrides; other scenarios still see the global default.
+    setActiveScenario({labKey: 'demo', tag: 'a'});
+    expect(await (await get('/api/me')).json()).toEqual({
+      id: 1,
+      signedOut: true,
+    });
+
+    setActiveScenario({labKey: 'demo', tag: 'b'});
+    expect(await (await get('/api/me')).json()).toEqual({id: 7});
+  });
+
   it('clears a lab’s routes so the default handler answers again', async () => {
     registerMockFixture(
       {labKey: 'demo', tag: 'a'},

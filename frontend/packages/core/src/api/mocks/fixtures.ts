@@ -74,30 +74,54 @@ export type ResolvedMockRoute = {route: MockRoute; params: PathParams};
 const SCOPE_SEP = '\u0000';
 const routes = new Map<string, MockRoute[]>();
 
+// Routes that apply across every scenario — for general endpoints (current
+// user, locale, feature flags, …) that don't depend on the rendered lab.
+let globalRoutes: MockRoute[] = [];
+
 function scopeKey(labKey: string, tag: string): string {
   return `${labKey}${SCOPE_SEP}${tag}`;
 }
 
 /**
- * Register routes for a scenario. Appends — call repeatedly to layer more
- * endpoints onto the same `{labKey, tag}`. Later registrations match after
- * earlier ones (first match wins), so register specific paths before
- * wildcard ones. Use `clearMockFixtures` to replace rather than extend.
+ * Register mock routes. Omit `scope` for routes that apply across every
+ * scenario; pass a `{labKey, tag}` to bind them to one. Appends — call
+ * repeatedly to layer more endpoints. Later registrations match after earlier
+ * ones (first match wins), so register specific paths before wildcard ones.
+ * Use `clearMockFixtures` to replace rather than extend.
+ *
+ * A scenario route shadows a global one for the same request, so a scenario
+ * can override a general endpoint (e.g. simulate signed-out in an `error`
+ * scenario) without disturbing the global default.
  */
+export function registerMockFixture(fixture: MockFixture): void;
 export function registerMockFixture(
   scope: Scenario,
   fixture: MockFixture,
+): void;
+export function registerMockFixture(
+  scopeOrFixture: Scenario | MockFixture,
+  maybeFixture?: MockFixture,
 ): void {
-  const key = scopeKey(scope.labKey, scope.tag);
+  const scoped = maybeFixture !== undefined;
+  const fixture = (scoped ? maybeFixture : scopeOrFixture) as MockFixture;
   const incoming = Array.isArray(fixture) ? fixture : [fixture];
+
+  if (!scoped) {
+    globalRoutes = [...globalRoutes, ...incoming];
+    return;
+  }
+
+  const {labKey, tag} = scopeOrFixture as Scenario;
+  const key = scopeKey(labKey, tag);
   const existing = routes.get(key);
   routes.set(key, existing ? [...existing, ...incoming] : [...incoming]);
 }
 
 /**
- * Drop registered routes. With no argument, clears every scenario; with a
- * `{labKey, tag}` clears just that scenario; with `{labKey}` clears every
- * scenario under that lab.
+ * Drop registered routes. With no argument, clears everything — every
+ * scenario and the global routes. With `{labKey, tag}` clears just that
+ * scenario; with `{labKey}` clears every scenario under that lab. Scenario
+ * clears leave the global routes untouched.
  */
 export function clearMockFixtures(scope?: {
   labKey?: string;
@@ -105,6 +129,7 @@ export function clearMockFixtures(scope?: {
 }): void {
   if (!scope?.labKey) {
     routes.clear();
+    globalRoutes = [];
     return;
   }
   if (scope.tag !== undefined) {
@@ -117,27 +142,38 @@ export function clearMockFixtures(scope?: {
   }
 }
 
+function matchInList(
+  list: MockRoute[] | undefined,
+  method: string,
+  url: URL,
+): ResolvedMockRoute | undefined {
+  if (!list) return undefined;
+  for (const route of list) {
+    const routeMethod = (route.method ?? 'get').toLowerCase();
+    if (routeMethod !== 'all' && routeMethod !== method) continue;
+    const match = matchRequestUrl(url, route.path);
+    if (match.matches) return {route, params: match.params ?? {}};
+  }
+  return undefined;
+}
+
 /**
- * First route in the active scenario whose method and path match the request,
- * or `undefined`. The dispatch handler turns the result into a response (or a
- * fall-through when `undefined`).
+ * First matching route for the request: the active scenario's routes are tried
+ * first, then the global routes. Returns `undefined` when nothing matches; the
+ * dispatch handler turns that into a fall-through to the default handlers.
  */
 export function resolveMockRoute(
   method: string,
   url: URL,
 ): ResolvedMockRoute | undefined {
-  const scenario = getActiveScenario();
-  if (!scenario) return undefined;
-
-  const list = routes.get(scopeKey(scenario.labKey, scenario.tag));
-  if (!list) return undefined;
-
   const wanted = method.toLowerCase();
-  for (const route of list) {
-    const routeMethod = (route.method ?? 'get').toLowerCase();
-    if (routeMethod !== 'all' && routeMethod !== wanted) continue;
-    const match = matchRequestUrl(url, route.path);
-    if (match.matches) return {route, params: match.params ?? {}};
-  }
-  return undefined;
+  const scenario = getActiveScenario();
+  const scenarioRoutes = scenario
+    ? routes.get(scopeKey(scenario.labKey, scenario.tag))
+    : undefined;
+
+  return (
+    matchInList(scenarioRoutes, wanted, url) ??
+    matchInList(globalRoutes, wanted, url)
+  );
 }

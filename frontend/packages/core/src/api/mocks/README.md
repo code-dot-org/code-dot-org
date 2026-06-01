@@ -41,10 +41,16 @@ The service worker script (`mockServiceWorker.js`) lives in the consumer's
 
 ## Generic fixtures: `registerMockFixture`
 
-The base primitive maps any HTTP method + path pattern to a responder, scoped
-to a `{labKey, tag}` scenario:
+The base primitive maps any HTTP method + path pattern to a responder. A route
+may be **global** (applies to every request) or bound to a `{labKey, tag}`
+**scenario**. Omit the scope for general endpoints — current user, locale,
+feature flags — that don't depend on which lab is rendered:
 
 ```ts
+// Global: no scope. Served for every request, regardless of active scenario.
+registerMockFixture({path: '*/api/current_user', respond: {id: 7}});
+
+// Scenario-scoped: bound to one {labKey, tag}.
 registerMockFixture({labKey: 'music', tag: 'simple'}, [
   // static body — wrapped in HttpResponse.json
   {
@@ -65,12 +71,17 @@ registerMockFixture({labKey: 'music', tag: 'simple'}, [
 ```
 
 The dispatch handler (`dispatch.handlers.ts`) runs first on every request and
-serves the first matching route for the active scenario. On a miss — or when a
-function responder returns `undefined` — it falls through to the default
-domain handlers below it, so a route can selectively override one endpoint and
-leave the rest alone. Registration is additive; `clearMockFixtures(scope?)`
-replaces. Routes match first-registered-first, so register specific paths
-before wildcard ones.
+serves the first matching route, trying the active scenario's routes before
+the global ones — so a scenario can shadow a general endpoint (e.g. simulate
+signed-out in an `error` scenario) without disturbing the global default. On a
+miss — or when a function responder returns `undefined` — it falls through to
+the default domain handlers below it, so a route can selectively override one
+endpoint and leave the rest alone.
+
+Registration is additive. `clearMockFixtures()` clears everything (scenarios +
+global); `clearMockFixtures({labKey, tag})` or `{labKey}` clears just that
+scenario and leaves the global routes intact. Routes match
+first-registered-first, so register specific paths before wildcard ones.
 
 ## Lab fixtures: sugar over the generic primitive
 
