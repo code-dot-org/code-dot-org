@@ -32,6 +32,13 @@ export default function CanvasControls({
     if (!canRedo) setRedoTooltipOpen(false);
   }, [canRedo]);
 
+  useEffect(() => {
+    if (isReadOnly) {
+      setUndoTooltipOpen(false);
+      setRedoTooltipOpen(false);
+    }
+  }, [isReadOnly]);
+
   return (
     <Panel position="bottom-right">
       <Paper
