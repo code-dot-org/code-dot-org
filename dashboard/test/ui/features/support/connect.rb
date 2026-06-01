@@ -3,6 +3,7 @@ require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
 require 'cdo/ci_utils'
+require 'cdo/aws/ec2'
 require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
@@ -97,8 +98,14 @@ def device_farm_desktop_browser(http_client: nil)
   # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
   # and localhost.code.org to the drone worker's IP address.
   if $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
-    imds_token = `curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds:21600"`.strip
-    worker_ip = `curl -s -H "X-aws-ec2-metadata-token:#{imds_token}" http://169.254.169.254/latest/meta-data/local-ipv4`.strip
+    # AWS::EC2 handles the IMDSv2 token/metadata fetch (with timeouts and
+    # error handling); on the drone worker this should always resolve. Fail
+    # loudly rather than set empty host-resolver-rules, which would silently
+    # break localhost name resolution and produce confusing connection errors.
+    worker_ip = AWS::EC2.local_ipv4
+    if worker_ip.blank?
+      raise 'Could not resolve drone worker IP when building Chrome --host-resolver-rules'
+    end
 
     chrome_options = capabilities['goog:chromeOptions'] || {}
     chrome_args = chrome_options['args'] || []
