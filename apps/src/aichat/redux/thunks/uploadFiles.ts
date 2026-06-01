@@ -15,6 +15,16 @@ import {
 
 import {sendAnalytics} from './sendAnalytics';
 
+// Strip characters not allowed in Codebridge project filenames.
+// Preserves the extension; replaces anything other than word chars or hyphens
+// in the base name with an underscore.
+const cleanUploadFilename = (name: string): string => {
+  const lastDot = name.lastIndexOf('.');
+  const base = lastDot >= 0 ? name.slice(0, lastDot) : name;
+  const ext = lastDot >= 0 ? name.slice(lastDot) : '';
+  return base.replace(/[^\w-]/g, '_') + ext;
+};
+
 export const uploadFiles = createAppAsyncThunk<
   void,
   {
@@ -50,12 +60,15 @@ export const uploadFiles = createAppAsyncThunk<
 
     const allowedFiles = Array.from(files)
       .slice(0, numAllowedFiles)
-      .map<[string, ChatAsset, File]>(file => [
-        // Create a unique key for each upload in case the same file is uploaded more than once.
-        `${file.name}-${Date.now()}`,
-        {filename: file.name, source: AssetSource.PROJECT},
-        file,
-      ]);
+      .map<[string, ChatAsset, File]>(file => {
+        const validFilename = cleanUploadFilename(file.name);
+        return [
+          // Create a unique key for each upload in case the same file is uploaded more than once.
+          `${validFilename}-${Date.now()}`,
+          {filename: validFilename, source: AssetSource.PROJECT},
+          file,
+        ];
+      });
 
     for (const [key, asset] of allowedFiles) {
       dispatch(addStagedFile({key, asset}));
