@@ -5,7 +5,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import bannerImage from '../../../../../static/rebrand_banner/teacher_dashboard_hero.png';
+import bannerImage from '../../../../../static/rebrand_banner/rebrand_banner_hero.png';
 
 import style from './tempRebrandBanner.module.scss';
 
