@@ -1,7 +1,6 @@
 import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
-import Radium from 'radium';
 import * as React from 'react';
 
 import aiBotClosed from '@/assets/images/ai-bot/ai-bot-closed.png';
@@ -15,7 +14,6 @@ import guide from '@/oceans/models/guide';
 import {arrangeFish} from '@/oceans/models/pond';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
 import SVMTrainer from '@/utils/SVMTrainer';
 
 /** True when the current mode trains an SVM on word-attribute fish. */
@@ -47,7 +45,7 @@ function Collide(
   return true;
 }
 
-const UnwrappedPond = class Pond extends React.Component {
+class Pond extends React.Component {
   constructor(props: Record<string, never>) {
     super(props);
   }
@@ -214,9 +212,24 @@ const UnwrappedPond = class Pond extends React.Component {
       isFishVariantMode(state.appMode) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
-    const recallIconsStyle = showInfoButton
-      ? styles.recallIcons
-      : {...styles.recallIcons, right: '1.2%'};
+
+    // When the info button is hidden, the recall icons shift to the lab's
+    // right edge to take its place.
+    const recallIconsClassName = showInfoButton
+      ? 'ocean-pond__recall-icons'
+      : 'ocean-pond__recall-icons ocean-pond__recall-icons--no-info';
+
+    // The currently-active toggle is highlighted; the inactive one stays
+    // on the white base.
+    const matchingToggleClassName = state.showRecallFish
+      ? 'ocean-toggle-icon ocean-toggle-icon--matching-left'
+      : 'ocean-toggle-icon ocean-toggle-icon--matching-left ocean-toggle-icon--bg-green';
+    const nonMatchingToggleClassName = state.showRecallFish
+      ? 'ocean-toggle-icon ocean-toggle-icon--non-matching-right ocean-toggle-icon--bg-red'
+      : 'ocean-toggle-icon ocean-toggle-icon--non-matching-right';
+    const infoButtonClassName = state.pondPanelShowing
+      ? 'ocean-info-icon-container ocean-info-icon-container--active'
+      : 'ocean-info-icon-container';
 
     return (
       <Body>
@@ -231,19 +244,15 @@ const UnwrappedPond = class Pond extends React.Component {
               setState({pondClickedFish: null});
             }
           }}
-          style={styles.pondSurface}
+          className="ocean-pond__surface"
         />
-        <div style={recallIconsStyle}>
+        <div className={recallIconsClassName}>
           <button
             key="toggle-matching"
             type="button"
             onClick={e => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
-            style={{
-              ...styles.toggleIcon,
-              ...styles.matchingIconLeft,
-              ...(state.showRecallFish ? {} : styles.bgGreen),
-            }}
+            className={matchingToggleClassName}
           >
             <FontAwesomeIcon
               icon={faCheck}
@@ -255,11 +264,7 @@ const UnwrappedPond = class Pond extends React.Component {
             type="button"
             onClick={e => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
-            style={{
-              ...styles.toggleIcon,
-              ...styles.nonMatchingIconRight,
-              ...(state.showRecallFish ? styles.bgRed : {}),
-            }}
+            className={nonMatchingToggleClassName}
           >
             <FontAwesomeIcon
               icon={faBan}
@@ -273,26 +278,23 @@ const UnwrappedPond = class Pond extends React.Component {
             id="uitest-info-btn"
             aria-label={I18n.t('fishInformation')}
             aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
-            style={{
-              ...styles.infoIconContainer,
-              ...(!state.pondPanelShowing ? {} : styles.bgTeal),
-            }}
+            className={infoButtonClassName}
             onClick={this.onPondPanelButtonClick}
           >
             <FontAwesomeIcon
               icon={faInfo}
-              style={styles.infoIcon}
+              className="ocean-info-icon"
               aria-hidden
             />
           </button>
         )}
-        <img style={styles.pondBot} src={aiBotClosed} alt="" />
+        <img className="ocean-pond__bot" src={aiBotClosed} alt="" />
         {state.canSkipPond && (
           <div id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (
               <div>
                 <Button
-                  style={styles.playAgainButton}
+                  className="ocean-button--play-again"
                   onClick={() => {
                     setState({pondClickedFish: null, pondPanelShowing: false});
                     helpers.resetTraining(state);
@@ -301,18 +303,24 @@ const UnwrappedPond = class Pond extends React.Component {
                 >
                   {I18n.t('newWord')}
                 </Button>
-                <Button style={styles.finishButton} onClick={state.onContinue}>
+                <Button
+                  className="ocean-button--finish"
+                  onClick={state.onContinue}
+                >
                   {I18n.t('finish')}
                 </Button>
               </div>
             ) : (
-              <Button style={styles.continueButton} onClick={state.onContinue}>
+              <Button
+                className="ocean-button--continue"
+                onClick={state.onContinue}
+              >
                 {I18n.t('continue')}
               </Button>
             )}
             <div>
               <Button
-                style={styles.backButton}
+                className="ocean-button--back"
                 onClick={() => {
                   modeHelpers.toMode(Modes.Training);
                   setState({pondClickedFish: null, pondPanelShowing: false});
@@ -327,5 +335,5 @@ const UnwrappedPond = class Pond extends React.Component {
       </Body>
     );
   }
-};
-export default Radium(UnwrappedPond);
+}
+export default Pond;

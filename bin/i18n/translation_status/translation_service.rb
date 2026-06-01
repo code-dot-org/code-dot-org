@@ -1,5 +1,4 @@
 require File.expand_path('../../../../dashboard/config/environment', __FILE__)
-require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require 'i18n'
 
 # Provides access to all the translations managed by the code-dot-org project.

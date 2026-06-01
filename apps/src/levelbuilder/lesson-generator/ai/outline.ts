@@ -3,10 +3,14 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
+import {LessonContext} from '../../curriculum-generator/ai/context';
+import {
+  getTextModel,
+  logPrompt,
+  logResponse,
+  PROMPT_TAGS,
+} from '../../curriculum-generator/ai/shared';
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
-
-import {LessonContext} from './context';
-import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
 // a single-line change. zod's z.enum requires a non-empty tuple, so we
@@ -51,12 +55,20 @@ export interface OutlineLevel {
 // 2-8 levels alternating between Panels (narrative) and Weblab2
 // (hands-on coding). Returns the level specs the caller can drop
 // straight into the per-level form.
+//
+// ctx.targetProject, when supplied, is the formatted final-app snapshot
+// (same string the per-level prompts read from ctx.targetProject). It
+// lets the outline AI plan a progression aimed at that destination —
+// picking weblab2 milestones that move the code toward the target and
+// panels that frame the concepts the target uses.
 export async function generateLessonOutline(
   ctx: LessonContext
 ): Promise<OutlineLevel[]> {
   const prompt = [
-    'You are helping a curriculum author plan a single lesson for a',
-    'middle-school CS class. Break the outline below into a sequence of',
+    'You are helping a curriculum author plan a single lesson for a CS',
+    'class. Assume a middle-school audience unless the outline below names',
+    'a different grade band or target audience, in which case follow the',
+    'outline. Break the outline below into a sequence of',
     '2 to 8 levels that, in order, take the student through the learning',
     'experience. Each level is one of:',
     '  - Panels: a short comic-strip-like sequence used for narrative,',
@@ -74,6 +86,29 @@ export async function generateLessonOutline(
     '  - description: a 1-3 sentence description of what the level should',
     '    teach or do. This becomes the AI prompt that builds the actual',
     '    level content, so be concrete.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but`,
+          'only plan levels for the specific lesson outline below:',
+          ctx.unitOutline,
+        ]
+      : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final app the lesson is building toward.',
+          'Plan the weblab2 levels as milestones on the path from blank to',
+          'this code (introducing one or two concepts per level, in an',
+          'order that yields a runnable intermediate at each step). Pick',
+          'panels that motivate or recap the concepts the target uses. The',
+          'student never sees this code; do not paste it into any',
+          'description — just let it shape the progression.',
+          ctx.targetProject,
+        ]
+      : []),
     '',
     `Outline: ${ctx.lessonOutline ?? ''}`,
   ].join('\n');

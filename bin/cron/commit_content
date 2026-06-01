@@ -2,8 +2,8 @@
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-# This script commits content on the machine to its associated branch. It is expected to be run only
-# on staging and levelbuilder
+# This script commits content on the machine to its associated branch. It is expected to be run
+# only on levelbuilder.
 
 require_relative '../../deployment'
 require 'cdo/chat_client'
@@ -11,13 +11,11 @@ require 'cdo/developers_topic'
 
 class ContentCommitter
   # @param [Symbol] env The environment the commit is being performed on.
-  # @raises [ArgumentError] If env is not one of :staging or :levelbuilder.
+  # @raises [ArgumentError] If env is not :levelbuilder.
   def initialize(env)
     @env = env
     @d_to_env =
       case @env
-      when :staging
-        'dts'
       when :levelbuilder
         'dtl'
       else

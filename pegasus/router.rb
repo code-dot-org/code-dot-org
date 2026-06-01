@@ -6,7 +6,7 @@ require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
-require_relative 'helpers/properties'
+require 'cdo/pegasus/properties'
 require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
@@ -21,13 +21,6 @@ require 'active_support/core_ext/hash'
 require 'sass'
 require 'sass/plugin'
 require 'haml'
-
-if rack_env?(:production)
-  require 'newrelic_rpm'
-  # Enable GC profiler for New Relic instrumentation.
-  GC::Profiler.enable
-  NewRelic::Agent.after_fork(force_reconnect: true)
-end
 
 require 'honeybadger'
 
@@ -177,7 +170,6 @@ class Documents < Sinatra::Base
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
     cache :static
-    NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
     send_file(path)
   end
 
@@ -211,11 +203,6 @@ class Documents < Sinatra::Base
   # Documents
   get_head_or_post '*' do |uri|
     pass unless path = resolve_document(uri)
-    if defined? NewRelic
-      transaction_name = uri
-      transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
-      NewRelic::Agent.set_transaction_name(transaction_name)
-    end
     not_found! if MultipleExtnameFileUtils.file_has_any_extnames(path, settings.not_found_extnames)
     document path
   end

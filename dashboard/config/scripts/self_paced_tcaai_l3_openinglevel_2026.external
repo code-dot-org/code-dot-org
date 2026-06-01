@@ -1,0 +1,34 @@
+name 'self-paced-TCaAI-L3-OpeningLevel_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Generate and Judge Project
+
+Let’s dive into the final section of this professional learning module. This section focuses on the **Generate and Judge Guide**: the project students build throughout the unit to synthesize their investigations, evidence collection, and thinking about responsible AI use.
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px; margin-bottom:0px">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 16px;">
+            In this section, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5; font-size: 16px;">
+                Explore how the Generate and Judge Guide develops across the unit
+            </li>
+            <li style="line-height: 1.5; font-size: 16px;">
+                Review an example student project and consider what successful synthesis looks like
+            </li>
+        </ul>
+    </div>
+    <!-- Image on the right -->
+    <img 
+    src="https://images.code.org/94ed29e562feee5713b0f93fc6a929a7-HS34.png" 
+    alt="" 
+    style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+
+<p style="font-size:16px;">
+<strong>Suggested time for this section:</strong> 10 minutes
+</p>
+MARKDOWN

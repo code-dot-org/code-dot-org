@@ -7,9 +7,9 @@
     "self-paced-pl-teaching-ai-and-ml-2026"
   ],
   "published_state": "stable",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-ai-ml",
     "has_verified_resources": true,

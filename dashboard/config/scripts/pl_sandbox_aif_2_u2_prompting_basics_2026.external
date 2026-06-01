@@ -1,0 +1,117 @@
+name 'pl_sandbox_aif-2-U2-Prompting-basics_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prompting for JavaScript Features
+
+Now that students are building interactive web apps with JavaScript, prompting becomes even more important.
+
+Instead of only describing what a webpage should look like, students now need to clearly explain what the app should DO.
+
+---
+
+## Strong Prompt Checklist
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:15px;width:100%;margin:20px 0px;">
+
+  <div style="background-color:#F5F7F8;color:#000000;padding:20px;border-radius:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:16pt;font-weight:bold;margin:0;">🎯 Is the feature clear?</p>
+    <p style="font-size:14pt;line-height:1.3;margin-top:10px;">
+      Did I explain what the app should do when the user interacts with it?
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8;color:#000000;padding:20px;border-radius:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:16pt;font-weight:bold;margin:0;">🧠 Did I include context?</p>
+    <p style="font-size:14pt;line-height:1.3;margin-top:10px;">
+      Did I explain what arrays, objects, buttons, or data already exist?
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8;color:#000000;padding:20px;border-radius:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:16pt;font-weight:bold;margin:0;">⚙️ Did I include constraints?</p>
+    <p style="font-size:14pt;line-height:1.3;margin-top:10px;">
+      Did I name the JavaScript methods, tools, or rules the AI should follow?
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8;color:#000000;padding:20px;border-radius:10px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:16pt;font-weight:bold;margin:0;">👀 Did I describe the result?</p>
+    <p style="font-size:14pt;line-height:1.3;margin-top:10px;">
+      Did I explain what the user should see or experience after the feature runs?
+    </p>
+  </div>
+
+</div>
+
+---
+
+## Which Prompt Will Build the Better Feature?
+
+A student wants to create a filter button that only shows posts with more than 100 likes.
+
+Before clicking, think about which prompt gives the AI enough information to build the feature successfully.
+
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;margin:24px 0;">
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      Prompt A
+       <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+
+  <div style="background:white;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
+        “Make a filter feature.”
+      </div>
+    </summary>
+
+ 
+
+  <div style="background:#FFF4F4;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.5;">
+        ⚠️ This prompt is too vague. The AI does not know:
+        <ul>
+          <li>What data is being filtered</li>
+          <li>What condition should be used</li>
+          <li>What the feature should do</li>
+        </ul>
+      </div>
+
+  </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      Prompt B
+        <div style="margin-top:14px;font-size:16px;line-height:1.6;">
+
+  <div style="background:white;border-radius:10px;padding:14px 16px;margin-bottom:14px;">
+        “I am building a social media app with an array of post objects. Create a JavaScript function that filters posts with more than 100 likes when the user clicks a button. Use .filter() and include beginner-friendly comments.”
+      </div>
+    </summary>
+
+
+
+  <div style="background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.5;">
+        ✅ This prompt clearly explains:
+        <ul>
+          <li>The data structure</li>
+          <li>The feature behavior</li>
+          <li>The condition</li>
+          <li>The required JavaScript method</li>
+        </ul>
+      </div>
+
+  </div>
+
+  </details>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> As students begin prompting for JavaScript, they often focus on what they want to appear on the screen but forget to describe the behavior, data, or interaction that makes the feature work.
+</p>
+
+</div>
+MARKDOWN

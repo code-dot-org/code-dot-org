@@ -18,7 +18,7 @@
     "self-paced-pl-teaching-insights-from-data-and-ai-2026",
     "self-paced-pl-teaching-foundations-of-ai-programming-2026"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

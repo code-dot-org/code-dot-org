@@ -37,6 +37,7 @@ import {
 } from './progress/ProgressManager';
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {getSourcesStoreForApp} from './projects/sourcesStoreForApp';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
@@ -183,17 +184,20 @@ export const setUpWithLevel = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
+    const sourcesStore = getSourcesStoreForApp(levelProperties.appName);
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.channelId,
           levelProperties.isProjectLevel || false,
-          thunkAPI.getState().lab.isShareView
+          thunkAPI.getState().lab.isShareView,
+          sourcesStore
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
           levelProperties.isProjectLevel || false,
           payload.userId,
-          payload.scriptId
+          payload.scriptId,
+          sourcesStore
         );
 
     // Only set the project manager and initiate load

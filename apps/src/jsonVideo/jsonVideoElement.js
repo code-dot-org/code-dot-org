@@ -59,7 +59,7 @@ export class JsonVideo extends HTMLElement {
 
     container.innerHTML = `
             <img id="poster" class="hidden" alt="">
-            <iframe id="scene-renderer" src="about:blank" scrolling="no"></iframe>
+            <iframe id="scene-renderer" src="about:blank" scrolling="no" sandbox="allow-scripts"></iframe>
             <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
             <div id="controls-bar">
                 <div class="controls-row">

@@ -1,0 +1,109 @@
+name 'pl-ai-101-V2-mod3-closing-01_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Don't stop here, keep learning!
+
+## Additional Resources
+* <a href="https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy " target="_blank">Large Language Model Prompts for Educators</a> from Code.org. 
+* <a href="https://www.aiforeducation.io/prompt-library " target="_blank">Educator's Prompt Library</a> from AI for Education.
+* <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
+* <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
+* <a href="https://iste-ascd.org/ai" target="_blank">Artificial Intelligence in Education</a> from ISTE.
+
+## Take it Further Activities
+
+Want to learn more? Try out the following optional activities.
+  <!-- Dropdown 1 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Google AI in K12 Education
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">If your school uses Google AI, take one of their online courses to learn how to make the most of those systems.
+</p>
+
+<a href="https://edu.exceedlms.com/student/path/1725537" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Tool Comparison Activity
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Every LLM responds slightly differently and users often develop preferences for one over the other. Take the time to try out the same prompt in multiple LLMs and see how the responses differ. <br><br>Reflect on which set of responses do you prefer and try to articulate why.
+</p>
+</div>
+
+</details>
+
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	In Depth Look at Prompting
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">This module introduces prompting and one possible prompting framework, but prompt engineering goes way deeper. OpenAI publishes clear explanation of how prompts affect outputs and examples of improving prompts with structure and detail.
+</p>
+
+  <a href="https://developers.openai.com/api/docs/guides/prompt-guidance" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
+</a>
+</div>
+
+</details>
+
+## What's Next in AI 101 for Educators?
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:1200px; border-collapse:separate; border-spacing:10px; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
+<tr>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/8a0afcbf8eec19ee302524d55d369e5b-Screenshot 2026-02-02 at 5.37.35 PM.png" alt="Introducing AI for Educators" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/47091c530a718287c97c673d46bab250-Screenshot 2026-02-02 at 5.37.39 PM.png" alt="Understanding AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/e2f4139ad5096ba48d7e24a0f76cdee4-Screenshot 2026-02-02 at 5.37.44 PM.png" alt="Transforming Teaching with AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/ac4dbf456a579082128e1ae7e88a5445-Screenshot 2026-02-02 at 5.37.56 PM.png" alt="Bringing AI to the Classroom" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/8de92072252f06e0169337be9cbddc7e-Screenshot 2026-02-02 at 5.38.01 PM.png" alt="Ensuring a Responsible Approach to AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+</tr>
+<tr>
+<td style="font-size:16px; font-weight:700; text-align:center">Introducing AI for Educators</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Understanding AI</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Transforming Teaching with AI</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Bringing AI to the Classroom</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Responsible Approach to AI</td>
+</tr>
+<tr>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Explore the benefits and risks of AI and why AI literacy matters.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Build a foundation by learning core AI concepts and real-world examples.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Learn how AI tools can support planning, feedback, and instructional tasks.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Plan thoughtful ways to introduce AI to students using inclusive practices.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Focus on ethics, bias, safety, and data privacy when using AI.</td>
+</tr>
+</table>
+
+
+MARKDOWN

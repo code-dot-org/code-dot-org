@@ -153,6 +153,20 @@
       display: none;
     }
   }
+
+  // Keep the help button in sync with the .headerlinks collapse, which moves
+  // up to 1060px for codeai (see dashboard application.scss).
+  html[data-brand="codeai"] &,
+  html[data-brand="codeai-next"] & {
+    @media(max-width: 1060px) {
+      &.hide-mobile {
+        display: none;
+      }
+      .hide-mobile {
+        display: none;
+      }
+    }
+  }
 }
 
 .create_menu {
@@ -196,6 +210,25 @@
   @media screen and (max-width: 1120px) {
     &.hide-mobile {
       display: none;
+    }
+  }
+
+  // CodeAI's wider header logo eats ~100px of horizontal space, so the
+  // create menu has to collapse sooner to keep the inline nav from wrapping.
+  // Bump each threshold up; preserve the original ~97px gap between the
+  // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
+  html[data-brand="codeai"] &,
+  html[data-brand="codeai-next"] & {
+    @media screen and (max-width: 1103px) {
+      &.show-small-desktop {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      &.hide-mobile {
+        display: none;
+      }
     }
   }
 }

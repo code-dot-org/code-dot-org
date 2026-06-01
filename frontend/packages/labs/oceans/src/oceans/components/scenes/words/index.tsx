@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import Radium from 'radium';
 import * as React from 'react';
 
 import {Body, Button, Content} from '@/oceans/components/common';
@@ -7,12 +6,12 @@ import {AppMode, Modes} from '@/oceans/constants';
 import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
 
 interface WordSetEntry {
   textKey: string;
   choices: string[][];
-  style: React.CSSProperties;
+  /** Class name for the word-button modifier (column layout). */
+  buttonClass: string;
 }
 
 /*
@@ -29,7 +28,7 @@ export const wordSet: Record<string, WordSetEntry> = {
       ['blue', 'green', 'red'],
       ['circular', 'rectangular', 'triangular'],
     ],
-    style: styles.button2col,
+    buttonClass: 'ocean-word-button--2col',
   },
   long: {
     textKey: 'wordQuestionLong',
@@ -52,7 +51,7 @@ export const wordSet: Record<string, WordSetEntry> = {
         'wild',
       ],
     ],
-    style: styles.button3col,
+    buttonClass: 'ocean-word-button--3col',
   },
 };
 
@@ -60,10 +59,7 @@ interface WordsState {
   choices: string[];
 }
 
-const UnwrappedWords = class Words extends React.Component<
-  Record<string, never>,
-  WordsState
-> {
+class Words extends React.Component<Record<string, never>, WordsState> {
   constructor(props: Record<string, never>) {
     super(props);
 
@@ -123,23 +119,19 @@ const UnwrappedWords = class Words extends React.Component<
 
   render() {
     const state = getState();
+    const appMode = state.appMode as string;
+    const entry = wordSet[appMode];
 
     return (
       <Body>
         <Content>
-          {wordSet[state.appMode as string].textKey && (
-            <div style={styles.wordsText}>
-              {I18n.t(wordSet[state.appMode as string].textKey)}{' '}
-            </div>
+          {entry.textKey && (
+            <div className="ocean-words__text">{I18n.t(entry.textKey)} </div>
           )}
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
-              className="words-button"
-              style={[
-                wordSet[state.appMode as string].style,
-                styles.wordButton,
-              ]}
+              className={`words-button ocean-word-button ${entry.buttonClass}`}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {I18n.t(item)}
@@ -149,5 +141,5 @@ const UnwrappedWords = class Words extends React.Component<
       </Body>
     );
   }
-};
-export default Radium(UnwrappedWords);
+}
+export default Words;

@@ -6,18 +6,20 @@ import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {uploadLevelAsset} from '../levelApi';
-
-import {LevelContext} from './context';
+import {LevelContext} from '../../curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from './shared';
+} from '../../curriculum-generator/ai/shared';
+import {uploadLevelAsset} from '../levelApi';
 
-const PANEL_LAYOUTS = [
+// Exported so the slides generator (which also produces Panels-app
+// panels) can reuse the same enum values for its plan schema and
+// layout-normalisation without copy-pasting.
+export const PANEL_LAYOUTS = [
   'text-top-left',
   'text-top-center',
   'text-top-right',
@@ -67,17 +69,30 @@ interface PanelPlan {
 
 // Returns the per-panel plan for a Panels-type level. We split planning from
 // image generation so the levelbuilder gets per-panel progress and so a single
-// failed image doesn't waste the whole panel set.
+// failed image doesn't waste the whole panel set. Panels are narrative,
+// so the target project (when set) mostly informs what to introduce or
+// motivate; the actual code appears only in adjacent weblab2 levels.
 async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
     'comic-strip-style sequence of full-width panels with overlay text.',
     'The level description follows. Plan a sequence of panels (3 to 6 by',
     'default; if the description names a specific count or range, honor',
-    'that) that, in order, conveys the intent of the description for a',
-    'middle-school classroom. Each panel needs short overlay text (1-3',
-    'sentences, markdown allowed) and an image prompt for a single 16:9',
-    'illustration with no embedded text.',
+    'that) that, in order, conveys the intent of the description. Assume a',
+    'middle-school classroom unless the description names a different grade',
+    'band or audience, in which case follow it. Each panel needs short',
+    'overlay text (1-3 sentences, markdown allowed) and an image prompt for',
+    'a single 16:9 illustration with no embedded text.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this level sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
+          'but build only the specific level described below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.lessonOutline
       ? [
           '',
@@ -95,6 +110,18 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
           'but do NOT regenerate or summarize them; only build the level',
           'described last:',
           ctx.precedingLevels,
+        ]
+      : []),
+    ...(ctx.targetProject
+      ? [
+          '',
+          'Target project — the final app the lesson builds toward.',
+          'Adjacent Web Lab 2 levels work toward this code, so these panels',
+          'should motivate, foreshadow, or recap concepts that show up in',
+          'it. The student never sees the code itself; use it as background',
+          'so your story lands on relevant ideas. Do not paste code into',
+          'panel text.',
+          ctx.targetProject,
         ]
       : []),
     '',
@@ -122,9 +149,12 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
 }
 
 // Generates a single panel image, uploads it as a level asset, and returns
-// the public asset URL. We feed the image prompt to gemini-2.5-flash-image
-// and grab the first image file the model emits.
-async function generateAndUploadPanelImage(
+// the public asset URL. We feed the image prompt to the image model and
+// grab the first image file it emits.
+//
+// Exported so the slides generator can reuse the no-text constraint
+// prose and the asset-upload plumbing without copy-pasting.
+export async function generateAndUploadPanelImage(
   imagePrompt: string,
   levelName: string,
   panelIndex: number
@@ -148,7 +178,7 @@ async function generateAndUploadPanelImage(
     'shapes, or only suggested by shading. Never spell anything out.',
     '',
     'Generate a single 16:9 widescreen illustration suitable for a',
-    'middle-school classroom.',
+    'school classroom.',
     '',
     'Subject:',
     imagePrompt,

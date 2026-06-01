@@ -10,12 +10,13 @@
       "project_sharing": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-20 04:44:32 UTC",
-    "hide_within_course": false,
+    "serialized_at": "2026-05-21 21:13:47 UTC",
+    "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -312,28 +313,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-TCaAI-L1-GettingStarted_2026"
-        ],
-        "lesson.key": "Introduction to Thinking Critically About AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a8a18be-b7c1-4db0-b9ea-15a62d2fce07"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L1-GettingStarted_2026"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Opening"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "self-paced-TCaAI-L1-CertificateOverview1_2026"
         ],
         "lesson.key": "Introduction to Thinking Critically About AI",
@@ -346,8 +325,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -368,8 +347,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -387,6 +366,28 @@
       },
       "level_keys": [
         "self-paced-TCaAI-L1-ModuleRoadmap1_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-GettingStarted_2026"
+        ],
+        "lesson.key": "Introduction to Thinking Critically About AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "30851f8c-76c6-4d57-a410-f7e2cb33782e"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-GettingStarted_2026"
       ]
     },
     {
@@ -1038,6 +1039,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "self-paced-TCaAI-L3-SampleProject"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-SampleProject"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "self-paced-TCaAI-L3-Placeholder"
         ],
         "lesson.key": "lesson-6",
@@ -1050,8 +1073,30 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 4,
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-RubricReflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-RubricReflection"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1078,18 +1123,6 @@
         "level.key": "self-paced-TCaAI-L1-Welcome_2026",
         "script_level.level_keys": [
           "self-paced-TCaAI-L1-Welcome_2026"
-        ],
-        "lesson.key": "Introduction to Thinking Critically About AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
-        "activity_section.key": "2a8a18be-b7c1-4db0-b9ea-15a62d2fce07"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L1-GettingStarted_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L1-GettingStarted_2026"
         ],
         "lesson.key": "Introduction to Thinking Critically About AI",
         "lesson_group.key": "",
@@ -1126,6 +1159,18 @@
         "level.key": "self-paced-TCaAI-L1-ModuleRoadmap1_2026",
         "script_level.level_keys": [
           "self-paced-TCaAI-L1-ModuleRoadmap1_2026"
+        ],
+        "lesson.key": "Introduction to Thinking Critically About AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "30851f8c-76c6-4d57-a410-f7e2cb33782e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-GettingStarted_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-GettingStarted_2026"
         ],
         "lesson.key": "Introduction to Thinking Critically About AI",
         "lesson_group.key": "",
@@ -1483,9 +1528,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-SampleProject",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-SampleProject"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-TCaAI-L3-Placeholder",
         "script_level.level_keys": [
           "self-paced-TCaAI-L3-Placeholder"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinking-critically-about-ai-2026",
+        "activity_section.key": "dc8495f9-e541-4d50-9044-c4a5ac93d7e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-RubricReflection",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-RubricReflection"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",

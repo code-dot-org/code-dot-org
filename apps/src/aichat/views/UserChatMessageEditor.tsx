@@ -1,4 +1,3 @@
-import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
@@ -8,8 +7,8 @@ import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2Redux
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import supportsClientApi from '../api/supportsClientApi';
 import {
   selectIsWaitingForChatResponse,
   sendAnalytics,
@@ -161,11 +160,9 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
-  // Speech to text is only enabled if the client API is supported for the current model
-  // since it makes use of the AI Gateway.
   const speechToTextEnabled =
-    supportsClientApi(modelParameters.selectedModelId) ||
-    experiments.isEnabledAllowingQueryString('enable-speech-to-text');
+    modelParameters.selectedModelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE ||
+    experiments.isEnabledAllowingQueryString(experiments.ENABLE_SPEECH_TO_TEXT);
 
   const acceptedFileTypes = getAllowedFileTypes(
     modelParameters.selectedModelId
@@ -180,9 +177,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         return;
       }
       const files = Array.from(e.clipboardData.items)
-        .filter(({type}) =>
-          acceptedFileTypes.includes(`.${mimeToExtension(type) || ''}`)
-        )
+        .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
       dispatch(uploadFiles({files, buildAssetUrl}));

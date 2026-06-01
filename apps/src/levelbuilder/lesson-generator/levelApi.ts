@@ -1,5 +1,4 @@
-import {LevelPropertiesMapValidator} from '@cdo/apps/lab2/responseValidators';
-import {LevelPropertiesMap, MultiFileSource} from '@cdo/apps/lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel} from '@cdo/apps/panels/types';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
@@ -144,22 +143,6 @@ export async function uploadLevelAsset(
   return result.newAssetUrl;
 }
 
-// GET /lessons/:id/level_properties — fetch the camelCased properties bag
-// for every level in this lesson, keyed by level id (as a string). Used by
-// the generator to feed full content of skipped levels into the continuity
-// context for subsequent generations, so the AI has visibility into the
-// levels we're not regenerating.
-export async function loadLessonLevelProperties(
-  lessonId: number
-): Promise<LevelPropertiesMap> {
-  const {value} = await HttpClient.fetchJson<LevelPropertiesMap>(
-    `/lessons/${lessonId}/level_properties`,
-    undefined,
-    LevelPropertiesMapValidator
-  );
-  return value;
-}
-
 // PUT /lessons/:id — replace the lesson's activity tree wholesale, and
 // optionally update the persisted /generate outline at the same time. The
 // caller is responsible for building a complete activities array (including
@@ -169,7 +152,8 @@ export async function loadLessonLevelProperties(
 export async function saveLessonActivities(
   lessonId: number,
   activities: SerializedActivity[],
-  generateOutline?: string
+  generateOutline?: string,
+  generateProjectChannelId?: string
 ): Promise<void> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
@@ -177,8 +161,20 @@ export async function saveLessonActivities(
   if (generateOutline !== undefined) {
     body.generate_outline = generateOutline;
   }
+  if (generateProjectChannelId !== undefined) {
+    // Sent on every save when the field is present in state; '' clears
+    // the persisted value, so a user can blank out the input and have
+    // it stick.
+    body.generate_project_channel_id = generateProjectChannelId;
+  }
   await HttpClient.put(`/lessons/${lessonId}`, JSON.stringify(body), true, {
     'Content-Type': 'application/json;charset=UTF-8',
     Accept: 'application/json',
   });
 }
+
+// Re-export the lab2 sources `get` helper under a clearer name. The
+// page uses the response as additional context for the AI, not state
+// it round-trips — formatTargetProject narrows the typed result down
+// to MultiFileSource files.
+export {get as loadProjectSources} from '@cdo/apps/lab2/projects/sourcesApi';

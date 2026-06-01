@@ -12,6 +12,7 @@ class LessonsController < ApplicationController
   include LevelsHelper
   include CachedUnitHelper
   include StudentWorkHelper
+  include ResolvesLessonFromParams
 
   # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
@@ -344,7 +345,8 @@ class LessonsController < ApplicationController
       :standards,
       :opportunity_standards,
       :jit_pl_concept_ids,
-      :generate_outline
+      :generate_outline,
+      :generate_project_channel_id
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
@@ -368,24 +370,6 @@ class LessonsController < ApplicationController
       environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
       ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])
     end
-  end
-
-  private def get_unit_context(params)
-    # /s/.../lessons/... URL
-    if params[:script_id]
-      context = Queries::Courses.get_course_context(params[:script_id])
-      raise ActiveRecord::RecordNotFound unless context && context[:unit]
-      return context
-    end
-    # /courses/.../unit/.../lessons/...
-    course_name = params[:course_course_name]
-    unit_position = params[:unit_position]
-    if course_name && unit_position
-      context = Queries::Courses.get_unit_context(course_name, unit_position)
-      raise ActiveRecord::RecordNotFound unless context && context[:unit]
-      return context
-    end
-    raise ActiveRecord::RecordNotFound
   end
 
   private def redirect_to_canonical_path

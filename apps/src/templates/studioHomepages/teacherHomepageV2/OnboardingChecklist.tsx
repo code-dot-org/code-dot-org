@@ -3,6 +3,8 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
@@ -13,16 +15,29 @@ const CHECKLIST_ITEMS = [
 
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
+  reviewSyllabusTour: Tour | null;
+  learnHowToEvaluateTour: Tour | null;
+  demoType: DemoType;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   createSectionTour,
+  reviewSyllabusTour,
+  learnHowToEvaluateTour,
+  demoType,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
   const handleButtonClick = (id: string) => {
     if (id === 'create-section') {
       createSectionTour?.start();
+    } else if (id === 'review-syllabus') {
+      // Only start the review syllabus tour for high school teachers, since the onboarding steps are specific to the high school experience for now
+      if (demoType === 'high') {
+        reviewSyllabusTour?.start();
+      }
+    } else if (id === 'learn-to-evaluate') {
+      learnHowToEvaluateTour?.start();
     }
   };
 

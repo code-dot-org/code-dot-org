@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "#### **Prompt**\r\n\r\n(optional sub-prompt)",
+    "long_instructions": "**Prompt**\r\n\r\n(optional sub-prompt)",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
