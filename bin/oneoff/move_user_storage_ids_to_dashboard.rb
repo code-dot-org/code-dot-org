@@ -1,5 +1,5 @@
 require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require 'optparse'
 
 # To run: ruby bin/oneoff/move_user_storage_ids_to_dashboard.rb

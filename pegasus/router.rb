@@ -24,7 +24,7 @@ require 'haml'
 
 require 'honeybadger'
 
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
 require 'cdo/hamburger'

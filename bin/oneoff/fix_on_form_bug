@@ -5,7 +5,7 @@
 # submissions. These values were recorded as 'on' (rather than '1') by error.
 
 require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require 'cdo/solr'
 
 time_now = Time.now

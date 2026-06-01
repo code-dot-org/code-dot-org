@@ -4,7 +4,7 @@
 # already set, based on information from the `value` column.
 
 require File.expand_path('../../../../lib/cdo/pegasus/src/env', __FILE__)
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require_relative '../../../lib/cdo/shared_constants'
 
 include SharedConstants

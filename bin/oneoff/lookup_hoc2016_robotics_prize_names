@@ -7,7 +7,7 @@
 
 require_relative '../../lib/cdo/pegasus/src/env'
 require 'cdo/sequel'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 PEGASUS_REPORTING_DB = Cdo::Sequel.database_connection_pool CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
 

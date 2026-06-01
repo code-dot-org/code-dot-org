@@ -43,7 +43,7 @@ unless ENV['PEGASUS_RAKE_LOGGER'].to_s.casecmp?('true')
   $log.level = Logger::INFO
 end
 
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 Dir.glob(pegasus_dir('rake/*.rake')) {|path| load path}
 

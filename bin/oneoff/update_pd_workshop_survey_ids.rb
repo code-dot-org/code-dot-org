@@ -4,7 +4,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 def main
   # Find existing survey responses and update Pd::Enrollment.completed_survey_id

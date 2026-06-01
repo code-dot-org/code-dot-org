@@ -6,7 +6,7 @@
 # contacts.id to wipe, generated from a MySQL query on the replica.
 
 require File.expand_path('../../../production/lib/cdo/pegasus/src/env', __FILE__)
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 if ARGV.length != 1
   puts 'Usage: ./bin/oneoff/wipe_emails filename'
