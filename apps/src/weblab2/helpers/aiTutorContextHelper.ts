@@ -1,6 +1,13 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {getFolderPath} from '@codebridge/utils';
+
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 interface AiTutorWebLab2Params {
@@ -11,6 +18,18 @@ interface AiTutorWebLab2Params {
 }
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
+
+// Returns the relative path used in HTML src/href attributes.
+const getRelativeFilePath = (
+  file: ProjectFile,
+  folders: MultiFileSource['folders']
+): string => {
+  if (file.folderId === DEFAULT_FOLDER_ID) {
+    return file.name;
+  }
+  const folderPath = getFolderPath(file.folderId, folders);
+  return `${folderPath.slice(1)}/${file.name}`;
+};
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
   private params?: AiTutorWebLab2Params;
@@ -33,9 +52,14 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
                 getFileExtension(file.name)
               )
           )
-          .map(
-            file => `filename: ${file.name}\n${this.codeBlock(file.contents)}`
-          )
+          .map(file => {
+            const filePath = getRelativeFilePath(file, source.folders);
+            // Image/binary files are stored as asset URLs with no text contents.
+            if (file.url) {
+              return `image: ${filePath}`;
+            }
+            return `filename: ${filePath}\n${this.codeBlock(file.contents)}`;
+          })
           .join('\n\n')
       : undefined;
 
