@@ -60,7 +60,7 @@
   "importToProject": "Import to project",
   "instructionsHeader": "Instructions",
   "invalidFileType": "Cannot support files of type {fileType}.",
-  "invalidNameError": "Names must be only letters, numbers, or underscores",
+  "invalidNameError": "Names must be only letters, numbers, dashes, or underscores",
   "layout": "Layout",
   "loadingEnvironmentTooltip": "Your environment is loading. Please wait.",
   "makeLockedStarter": "Make locked starter file",
