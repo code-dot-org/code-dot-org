@@ -3,12 +3,10 @@ import {
   ThunkAction,
   createAsyncThunk,
 } from '@reduxjs/toolkit';
-import {debounce} from 'lodash';
 import {AnyAction} from 'redux';
 
-import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {TestResults} from '@cdo/apps/constants';
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -315,7 +313,7 @@ function saveProjectIfEditable(
   if (levelStatus === LevelStatus.not_tried && hasEdited) {
     const appName = Lab2Registry.getInstance().getAppName();
     if (appName) {
-      debouncedStartedProgressReport(dispatch, appName);
+      dispatch(sendStartedReportIfNotStarted(appName));
     }
   }
   if (
@@ -328,13 +326,6 @@ function saveProjectIfEditable(
       ?.save(projectSources, forceSave, forceNewVersion);
   }
 }
-
-const debouncedStartedProgressReport = debounce(
-  (dispatch: AppDispatch, appName: string) => {
-    dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
-  },
-  100
-);
 
 const unflagProjectChannel = async (
   channelId: string,

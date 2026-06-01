@@ -102,7 +102,6 @@ export default function ActionsGroup({
                     ? 'Hide connection handles'
                     : 'Show connection handles'
                 }
-                aria-pressed={handlesToggle.visible}
                 onClick={handlesToggle.onToggle}
               >
                 <FontAwesomeV6Icon

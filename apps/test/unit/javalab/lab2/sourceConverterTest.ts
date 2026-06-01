@@ -2,7 +2,9 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
 import {
   flatToMultiFile,
+  mergeValidationIntoStart,
   multiFileToFlat,
+  splitForLevelbuilderSave,
 } from '@cdo/apps/javalab/lab2/sourceConverter';
 import {JavalabFlatSource} from '@cdo/apps/javalab/lab2/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -52,7 +54,10 @@ describe('javalab2 sourceConverter', () => {
       expect(names).toEqual(['A.java', 'B.java', 'C.java']);
     });
 
-    it('typifies hidden and validation files; excludes from openFiles', () => {
+    it('types support/validation files; excludes only SUPPORT from openFiles', () => {
+      // SUPPORT files (hidden, non-validation) are never tabs.
+      // VALIDATION files surface as tabs in start mode so levelbuilders
+      // can edit them — same isOpen rules as STARTER.
       const mf = flatToMultiFile({
         'Main.java': flatFile('m', 0, true, false),
         'Hidden.java': flatFile('h', 1, false, false),
@@ -64,6 +69,15 @@ describe('javalab2 sourceConverter', () => {
       expect(byName['Hidden.java']).toBe(ProjectFileType.SUPPORT);
       expect(byName['Test.java']).toBe(ProjectFileType.VALIDATION);
 
+      const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
+      expect(openNames).toEqual(['Main.java', 'Test.java']);
+    });
+
+    it('excludes validation files with isOpen=false from openFiles', () => {
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('m', 0, true, false),
+        'Test.java': flatFile('t', 1, false, true, {isOpen: false}),
+      });
       const openNames = (mf.openFiles ?? []).map(id => mf.files[id].name);
       expect(openNames).toEqual(['Main.java']);
     });
@@ -211,14 +225,14 @@ describe('javalab2 sourceConverter', () => {
         expect(round[name].isValidation).toBe(original[name].isValidation);
       });
 
-      // Open visible files keep their relative order in tabOrder.
-      // Closed/hidden/validation files have no tab position, so
-      // tabOrder is omitted.
+      // Open tabs (visible non-support and validation) get a tabOrder
+      // in their relative order. SUPPORT files have no tab position.
       const mainTab = round['Main.java'].tabOrder!;
       const helperTab = round['Helper.java'].tabOrder!;
+      const testTab = round['Test.java'].tabOrder!;
       expect(mainTab).toBeLessThan(helperTab);
+      expect(helperTab).toBeLessThan(testTab);
       expect(round['Hidden.java'].tabOrder).toBeUndefined();
-      expect(round['Test.java'].tabOrder).toBeUndefined();
     });
 
     it('SUPPORT and VALIDATION files report isVisible=false', () => {
@@ -295,8 +309,8 @@ describe('javalab2 sourceConverter', () => {
       expect(flat['B.java'].isOpen).toBe(false);
       expect(flat['B.java'].isActive).toBe(false);
       expect(flat['B.java'].tabOrder).toBeUndefined();
-      // Support and validation files emit isOpen:false explicitly and
-      // have no tabOrder either (they aren't tabs).
+      // SUPPORT files are never tabs. VALIDATION here isn't in openFiles
+      // (the levelbuilder closed it), so isOpen=false and no tabOrder.
       expect(flat['C.java'].isOpen).toBe(false);
       expect(flat['C.java'].isActive).toBe(false);
       expect(flat['C.java'].tabOrder).toBeUndefined();
@@ -341,6 +355,280 @@ describe('javalab2 sourceConverter', () => {
       const active = Object.values(round.files).filter(f => f.active === true);
       expect(active).toHaveLength(1);
       expect(active[0].name).toBe('B.java');
+    });
+  });
+
+  describe('splitForLevelbuilderSave', () => {
+    it('returns empty maps for nil/empty input', () => {
+      expect(splitForLevelbuilderSave(null)).toEqual({
+        startSources: {},
+        validation: {},
+      });
+      expect(splitForLevelbuilderSave(undefined)).toEqual({
+        startSources: {},
+        validation: {},
+      });
+      expect(
+        splitForLevelbuilderSave({folders: {}, files: {}, openFiles: []})
+      ).toEqual({startSources: {}, validation: {}});
+    });
+
+    it('puts non-validation files in startSources, validation files in validation', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+          b: {
+            id: 'b',
+            name: 'Hidden.java',
+            contents: 'hidden',
+            folderId: 'root',
+            type: ProjectFileType.SUPPORT,
+          },
+          c: {
+            id: 'c',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+        },
+        openFiles: ['a'],
+      };
+
+      const {startSources, validation} = splitForLevelbuilderSave(source);
+      expect(Object.keys(startSources).sort()).toEqual([
+        'Hidden.java',
+        'Main.java',
+      ]);
+      expect(Object.keys(validation)).toEqual(['Test.java']);
+    });
+
+    it('drops isValidation but preserves open/active state on validation entries', () => {
+      // Legacy Javalab stores validation as a flat map of {text, tabOrder?},
+      // and `@level.validation=` encrypts whatever we hand it. isValidation
+      // is redundant once the entry lives in the validation hash, so we
+      // drop it; isOpen/isActive ride along so tab state restores on the
+      // next start-mode load.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+            active: true,
+          },
+        },
+        openFiles: ['a'],
+      };
+      const {validation} = splitForLevelbuilderSave(source);
+      const entry = validation['Test.java'];
+      expect(entry.text).toBe('class Test {}');
+      expect(entry.isVisible).toBe(false);
+      expect('isValidation' in entry).toBe(false);
+      expect(entry.isOpen).toBe(true);
+      expect(entry.isActive).toBe(true);
+    });
+
+    it('preserves tabOrder on a validation file that is open', () => {
+      // multiFileToFlat assigns tabOrder by position in openFiles. Once
+      // validation files participate in openFiles, their tabOrder must
+      // survive the split so the next load reopens them in place.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+          b: {
+            id: 'b',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['a', 'b'],
+      };
+      const {validation, startSources} = splitForLevelbuilderSave(source);
+      expect(validation['Test.java'].tabOrder).toBe(0);
+      expect(startSources['Main.java'].tabOrder).toBe(1);
+    });
+
+    it('omits tabOrder for a validation file that is not open', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          a: {
+            id: 'a',
+            name: 'Test.java',
+            contents: 'class Test {}',
+            folderId: 'root',
+            type: ProjectFileType.VALIDATION,
+          },
+        },
+        openFiles: [],
+      };
+      const {validation} = splitForLevelbuilderSave(source);
+      expect(validation['Test.java'].tabOrder).toBeUndefined();
+      expect(validation['Test.java'].isOpen).toBe(false);
+    });
+  });
+
+  describe('mergeValidationIntoStart', () => {
+    it('returns the unmodified start sources when there are no validation files', () => {
+      const start: JavalabFlatSource = {
+        'Main.java': flatFile('class Main {}', 0),
+      };
+      expect(mergeValidationIntoStart(start, undefined)).toBe(start);
+      expect(mergeValidationIntoStart(start, {})).toBe(start);
+    });
+
+    it('tags merged validation entries with isValidation: true', () => {
+      const start: JavalabFlatSource = {
+        'Main.java': flatFile('class Main {}', 0),
+      };
+      const validation: JavalabFlatSource = {
+        'Test.java': {text: 'class Test {}', isVisible: false},
+      };
+      const merged = mergeValidationIntoStart(start, validation)!;
+      expect(merged['Main.java'].isValidation).toBeFalsy();
+      expect(merged['Test.java'].isValidation).toBe(true);
+      expect(merged['Test.java'].text).toBe('class Test {}');
+    });
+
+    it('preserves isOpen/isActive/tabOrder from the validation entry', () => {
+      // Restoring tab state on reload is the whole point of carrying
+      // these fields through the validation hash.
+      const validation: JavalabFlatSource = {
+        'Test.java': {
+          text: 't',
+          isVisible: false,
+          isOpen: true,
+          isActive: true,
+          tabOrder: 2,
+        },
+      };
+      const merged = mergeValidationIntoStart(undefined, validation)!;
+      expect(merged['Test.java'].isOpen).toBe(true);
+      expect(merged['Test.java'].isActive).toBe(true);
+      expect(merged['Test.java'].tabOrder).toBe(2);
+    });
+
+    it('returns the validation files alone when there are no start sources', () => {
+      const validation: JavalabFlatSource = {
+        'Test.java': {text: 't', isVisible: false},
+      };
+      const merged = mergeValidationIntoStart(undefined, validation)!;
+      expect(Object.keys(merged)).toEqual(['Test.java']);
+      expect(merged['Test.java'].isValidation).toBe(true);
+    });
+
+    it('warns on filename collision and lets the validation entry win', () => {
+      const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      try {
+        const start: JavalabFlatSource = {
+          'Test.java': flatFile('start text', 0),
+        };
+        const validation: JavalabFlatSource = {
+          'Test.java': {text: 'validation text', isVisible: false},
+        };
+        const merged = mergeValidationIntoStart(start, validation)!;
+        expect(merged['Test.java'].text).toBe('validation text');
+        expect(merged['Test.java'].isValidation).toBe(true);
+        expect(warn).toHaveBeenCalledTimes(1);
+        expect(warn.mock.calls[0][0]).toMatch(/Test\.java/);
+      } finally {
+        warn.mockRestore();
+      }
+    });
+  });
+
+  describe('start + validation round trip', () => {
+    // What Javalab2View actually does in start mode: merge validation
+    // into start, hand to codebridge as MultiFileSource, then on save
+    // split back into start_sources and validation. This test pins the
+    // full path end-to-end so future refactors don't quietly break tab
+    // restoration or accidentally leak validation into start_sources.
+    it('preserves open/active/closed state across merge -> flatToMultiFile -> multiFileToFlat -> split', () => {
+      const start: JavalabFlatSource = {
+        'Main.java': {
+          text: 'class Main {}',
+          isVisible: true,
+          isOpen: true,
+          isActive: false,
+          tabOrder: 0,
+        },
+        'Helper.java': {
+          text: 'class Helper {}',
+          isVisible: true,
+          isOpen: false,
+          isActive: false,
+        },
+      };
+      const validation: JavalabFlatSource = {
+        'OpenTest.java': {
+          text: 'class OpenTest {}',
+          isVisible: false,
+          isOpen: true,
+          isActive: true,
+          tabOrder: 1,
+        },
+        'ClosedTest.java': {
+          text: 'class ClosedTest {}',
+          isVisible: false,
+          isOpen: false,
+          isActive: false,
+        },
+      };
+
+      const merged = mergeValidationIntoStart(start, validation)!;
+      const mf = flatToMultiFile(merged);
+      const {startSources: roundStart, validation: roundValidation} =
+        splitForLevelbuilderSave(mf);
+
+      expect(Object.keys(roundStart).sort()).toEqual([
+        'Helper.java',
+        'Main.java',
+      ]);
+      expect(Object.keys(roundValidation).sort()).toEqual([
+        'ClosedTest.java',
+        'OpenTest.java',
+      ]);
+
+      expect(roundStart['Main.java'].isOpen).toBe(true);
+      expect(roundStart['Main.java'].tabOrder).toBe(0);
+      expect(roundStart['Helper.java'].isOpen).toBe(false);
+      expect(roundStart['Helper.java'].tabOrder).toBeUndefined();
+
+      expect(roundValidation['OpenTest.java'].isOpen).toBe(true);
+      expect(roundValidation['OpenTest.java'].isActive).toBe(true);
+      expect(roundValidation['OpenTest.java'].tabOrder).toBe(1);
+      expect(roundValidation['OpenTest.java'].text).toBe('class OpenTest {}');
+
+      expect(roundValidation['ClosedTest.java'].isOpen).toBe(false);
+      expect(roundValidation['ClosedTest.java'].tabOrder).toBeUndefined();
+      expect(roundValidation['ClosedTest.java'].text).toBe(
+        'class ClosedTest {}'
+      );
+
+      // The encrypted_validation payload never leaks isValidation —
+      // membership in the validation hash already implies it.
+      expect('isValidation' in roundValidation['OpenTest.java']).toBe(false);
+      expect('isValidation' in roundValidation['ClosedTest.java']).toBe(false);
     });
   });
 });
