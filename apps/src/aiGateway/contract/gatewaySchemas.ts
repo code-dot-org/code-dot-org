@@ -293,3 +293,12 @@ export const ALL_GATEWAY_SCHEMA_GROUPS: Record<
   transcribeRequest: transcribeRequestSchemas,
   transcribeResponse: transcribeResponseSchemas,
 };
+
+// ---------------------------------------------------------------------------
+// Current schema version — import this on the client to pin the version sent
+// in X-AI-Gateway-Schema-Version request headers. Bump this alongside
+// CURRENT_VERSION in the worker's src/contract/version.ts when a new schema
+// version is introduced.
+// ---------------------------------------------------------------------------
+
+export const CURRENT_SCHEMA_VERSION = '1' as const;
