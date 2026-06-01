@@ -226,12 +226,12 @@ const InnerHTMLPreview = () => {
     if (!inspectorEnabled) {
       return;
     }
-    const doc = iframeRef.current?.contentDocument;
-    if (!doc) {
+    const currentDocument = iframeRef.current?.contentDocument;
+    if (!currentDocument) {
       // No document yet; this effect re-runs when docLoadedTick bumps on load.
       return;
     }
-    inspectorControllerRef.current = installInspector(doc);
+    inspectorControllerRef.current = installInspector(currentDocument);
     return () => {
       inspectorControllerRef.current?.teardown();
       inspectorControllerRef.current = null;
