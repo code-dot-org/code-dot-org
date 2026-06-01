@@ -1,4 +1,16 @@
-@import 'https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap';
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype'), local('?');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'), local('?');
+}
 
 .container {
   display: flex;
