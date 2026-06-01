@@ -3,6 +3,7 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
+import {extensions as mimeToExtensions} from 'mime-types';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -345,8 +346,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       supportedFileTypes: levelAichatSettings?.multimodalEnabled
-        ? getAllowedFileTypes(modelParameters.selectedModelId).map(
-            f => f.split('.').pop() || ''
+        ? getAllowedFileTypes(modelParameters.selectedModelId).flatMap(
+            // mimeToExtensions returns all known extensions for a MIME type, e.g. ['jpg', 'jpeg', 'jpe'] for image/jpeg.
+            // Exclude 'jpe' since it's rarely used.
+            mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
           )
         : [],
     };

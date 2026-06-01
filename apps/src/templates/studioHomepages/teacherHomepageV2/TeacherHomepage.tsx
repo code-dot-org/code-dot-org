@@ -27,12 +27,14 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
 import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
@@ -42,13 +44,17 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+  logoTransitionEnabled?: boolean;
 }
 
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
-const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+  logoTransitionEnabled,
+}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
@@ -65,6 +71,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   const tour = useCreateSectionTour(isElementaryTeacher);
   const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
@@ -251,6 +258,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   return (
     <div className={styles.teacherHomepage}>
+      {logoTransitionEnabled && <LogoTransition />}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName
@@ -305,6 +313,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               <OnboardingChecklist
                 createSectionTour={tour}
                 reviewSyllabusTour={reviewSyllabusTour}
+                learnHowToEvaluateTour={learnHowToEvaluateTour}
                 demoType={demoSectionDemoType}
               />
             )}
