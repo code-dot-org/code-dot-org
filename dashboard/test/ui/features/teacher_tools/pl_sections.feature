@@ -160,8 +160,8 @@ Feature: Professional learning Sections
     And I scroll the "button.ui-test-join-section" element into view
     And I enter the section code into "input#ui-test-join-section"
     And I click selector "button.ui-test-join-section"
-    Then I wait until element ".announcement-notification" is visible
-    And element ".announcement-notification" contains text matching "You do not have the permissions to join section"
+    Then I wait until element "[role='alert']" is visible
+    And element "[role='alert']" contains text matching "You do not have the permissions to join section"
 
   Scenario: Facilitator tries to join professional learning section for teachers
     Given I create an authorized teacher-associated student named "Gilly"
