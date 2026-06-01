@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_26_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_28_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -77,6 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_26_120000) do
     t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_ai_student_podcasts_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_ai_student_podcasts_on_user_id_and_lesson_id", unique: true
   end
 
   create_table "aichat_events", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
