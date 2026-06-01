@@ -8,6 +8,10 @@ import {
   PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
   ProjectServiceWorkerMessageType,
 } from './constants';
+import {
+  installInspector,
+  type InspectorController,
+} from './htmlPreviewInspector';
 import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
@@ -39,6 +43,11 @@ const InnerHTMLPreview = () => {
   const [allowScripts, setAllowScripts] = useState(false);
   const [blockNetwork, setBlockNetwork] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  const [inspectorEnabled, setInspectorEnabled] = useState(false);
+  // Bumped each time the inner iframe finishes loading, so the inspector
+  // re-installs against the fresh document after a remount (renderKey change).
+  const [docLoadedTick, setDocLoadedTick] = useState(0);
+  const inspectorControllerRef = useRef<InspectorController | null>(null);
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -76,6 +85,9 @@ const InnerHTMLPreview = () => {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.SET_BLOCK_NETWORK) {
         setBlockNetwork(!!data.block);
+      } else if (data.type === IframeMessageType.SET_INSPECTOR_ENABLED) {
+        // Toggle without reloading so the student keeps their page state.
+        setInspectorEnabled(!!data.enabled);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
@@ -205,6 +217,36 @@ const InnerHTMLPreview = () => {
     };
   }, [serviceWorkerReady, isLevelLoading, previewKey, currentFile]);
 
+  // Install or remove the element inspector on the inner document. Re-runs when
+  // the toggle changes (no reload) and when docLoadedTick bumps after the iframe
+  // remounts, so we always attach to the live, same-origin contentDocument.
+  useEffect(() => {
+    inspectorControllerRef.current?.teardown();
+    inspectorControllerRef.current = null;
+    if (!inspectorEnabled) {
+      return;
+    }
+    const doc = iframeRef.current?.contentDocument;
+    if (!doc) {
+      // No document yet; this effect re-runs when docLoadedTick bumps on load.
+      return;
+    }
+    inspectorControllerRef.current = installInspector(doc);
+    return () => {
+      inspectorControllerRef.current?.teardown();
+      inspectorControllerRef.current = null;
+    };
+  }, [inspectorEnabled, docLoadedTick, currentFile]);
+
+  // Backstop teardown on unmount.
+  useEffect(
+    () => () => {
+      inspectorControllerRef.current?.teardown();
+      inspectorControllerRef.current = null;
+    },
+    []
+  );
+
   const getPreview = useCallback(() => {
     if (swWarmedUp && currentFile && !isLevelLoading) {
       return (
@@ -217,6 +259,7 @@ const InnerHTMLPreview = () => {
           key={renderKey} // This forces a re-render when renderKey changes.
           src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
+          onLoad={() => setDocLoadedTick(prevTick => prevTick + 1)}
         />
       );
     } else if (serviceWorkerUnavailable) {
