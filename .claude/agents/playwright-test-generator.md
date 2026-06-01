@@ -96,9 +96,12 @@ accessibility-gap note. (You may not add attributes to app source — see Hard c
 
 Generic guidance says never use page.evaluate. Code.org legacy labs REQUIRE it: loading
 Blockly workspaces (Blockly.serialization.workspaces.load), reading game state
-(Maze/Farmer/Flappy/Craft globals), and Blockly-internal moves. Use it for those, wrap
-with the needed eslint-disable, and document WHY in a one-line comment. Never use it to
-dodge a locator you could find.
+(Maze/Farmer/Flappy/Craft globals), and Blockly-internal moves. Use it for those; never
+use it to dodge a locator you could find.
+
+When accessing window globals inside page.evaluate, use `window as unknown as {GlobalName:
+{method(): void; prop: type}}` with the minimum typed interface — never `window as any`.
+This documents the exact API contract and keeps `any` out of the codebase entirely.
 
 ## Waiting and readiness
 
