@@ -44,6 +44,7 @@ interface AiTutorChatProps {
   lessonId?: number;
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -61,6 +62,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   lessonId,
   disabledState,
   onAssetUploaded,
+  onAssetRemoved,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -154,6 +156,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         onAssetUploaded={onAssetUploaded}
+        onAssetRemoved={onAssetRemoved}
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}

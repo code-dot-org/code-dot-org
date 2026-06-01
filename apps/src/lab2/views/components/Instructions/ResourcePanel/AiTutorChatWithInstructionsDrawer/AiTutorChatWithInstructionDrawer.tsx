@@ -31,6 +31,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -49,6 +50,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   isPredictLevel,
   disabledState,
   onAssetUploaded,
+  onAssetRemoved,
 }) => {
   const {
     containerRef,
@@ -129,6 +131,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             tutorVideos={tutorVideos}
             disabledState={disabledState}
             onAssetUploaded={onAssetUploaded}
+            onAssetRemoved={onAssetRemoved}
           />
         </div>
       </div>

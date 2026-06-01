@@ -34,7 +34,10 @@ import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchema
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {syncAiTutorAssetToProject} from './redux/syncAiTutorAssetToProject';
+import {
+  removeAiTutorAssetFromProject,
+  syncAiTutorAssetToProject,
+} from './redux/syncAiTutorAssetToProject';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
 import {weblab2VideoFiles} from './weblab2Videos';
@@ -159,6 +162,13 @@ const Weblab2View: React.FC<
     },
     [dispatch]
   );
+
+  const onAssetRemoved = useCallback(
+    (asset: ChatAsset) => {
+      dispatch(removeAiTutorAssetFromProject(asset));
+    },
+    [dispatch]
+  );
   useEffect(() => {
     dispatch(setHasRun(true));
 
@@ -196,6 +206,7 @@ const Weblab2View: React.FC<
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
           onAssetUploaded={onAssetUploaded}
+          onAssetRemoved={onAssetRemoved}
           aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}

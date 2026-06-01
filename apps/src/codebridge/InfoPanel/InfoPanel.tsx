@@ -48,6 +48,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     config,
     onImageFlagged,
     onAssetUploaded,
+    onAssetRemoved,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -170,6 +171,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         onImageFlagged={onImageFlagged}
         hasInstructionsDrawer={appName === 'weblab2'}
         onAssetUploaded={onAssetUploaded}
+        onAssetRemoved={onAssetRemoved}
       />
     </div>
   );

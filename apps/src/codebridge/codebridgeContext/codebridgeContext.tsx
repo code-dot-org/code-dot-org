@@ -39,6 +39,7 @@ export type CodebridgeContextType = {
   tutorVideos?: JsonVideoFileMetadata[];
   aiTutorDisabled?: boolean;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

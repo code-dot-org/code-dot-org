@@ -87,3 +87,40 @@ export const syncAiTutorAssetToProject =
 
     dispatch(setAndSaveSource(updatedSource));
   };
+
+/**
+ * Remove an image that was previously synced by syncAiTutorAssetToProject.
+ * No-ops if the file or folder doesn't exist in sources.
+ */
+export const removeAiTutorAssetFromProject =
+  (asset: ChatAsset) =>
+  (dispatch: AppDispatch, getState: () => RootState): void => {
+    if (asset.source !== AssetSource.PROJECT) return;
+
+    const source = getState().lab2Project.projectSources?.source as
+      | MultiFileSource
+      | undefined;
+    if (!source) return;
+
+    const targetFolder = Object.values(source.folders).find(
+      f =>
+        f.name === AI_TUTOR_UPLOADS_FOLDER && f.parentId === DEFAULT_FOLDER_ID
+    );
+    if (!targetFolder) return;
+
+    const existingFile = Object.values(source.files).find(
+      f => f.name === asset.filename && f.folderId === targetFolder.id
+    );
+    if (!existingFile) return;
+
+    const updatedSource: MultiFileSource = {
+      ...source,
+      files: {
+        ...source.files,
+      },
+      openFiles: (source.openFiles ?? []).filter(id => id !== existingFile.id),
+    };
+    delete updatedSource.files[existingFile.id];
+
+    dispatch(setAndSaveSource(updatedSource));
+  };

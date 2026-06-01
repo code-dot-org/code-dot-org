@@ -54,6 +54,7 @@ type CodebridgeProps = {
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 };
 
 export const Codebridge = React.memo(
@@ -75,6 +76,7 @@ export const Codebridge = React.memo(
     tutorVideos,
     secondaryBackpackAppNames,
     onAssetUploaded,
+    onAssetRemoved,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -226,6 +228,7 @@ export const Codebridge = React.memo(
           tutorVideos,
           aiTutorDisabled,
           onAssetUploaded,
+          onAssetRemoved,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

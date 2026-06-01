@@ -37,10 +37,12 @@ const alerts = {
 
 interface StagedFilesPreviewProps {
   buildAssetUrl: (asset: ChatAsset) => string;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 }
 
 const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
   buildAssetUrl,
+  onAssetRemoved,
 }) => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
@@ -71,7 +73,10 @@ const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
                 timestamp={timestamp}
                 filename={filename}
                 isUploading={status === 'uploading'}
-                onRemove={() => dispatch(removeStagedFile(key))}
+                onRemove={() => {
+                  dispatch(removeStagedFile(key));
+                  onAssetRemoved?.(asset);
+                }}
                 onLoadError={() => {
                   dispatch(
                     stagedFileUploadFinished({key, status: 'uploadFailed'})

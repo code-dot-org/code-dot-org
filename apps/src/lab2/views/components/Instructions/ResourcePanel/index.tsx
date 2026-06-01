@@ -162,6 +162,7 @@ type ResourcePanelProps = InstructionsProps & {
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 };
 
 /**
@@ -190,6 +191,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   hasInstructionsDrawer,
   validationSettings,
   onAssetUploaded,
+  onAssetRemoved,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -310,6 +312,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         tutorVideos,
         disabledState: aiChatDisabledState,
         onAssetUploaded,
+        onAssetRemoved,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -414,6 +417,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     tutorVideos,
     aiChatDisabledState,
     onAssetUploaded,
+    onAssetRemoved,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,
