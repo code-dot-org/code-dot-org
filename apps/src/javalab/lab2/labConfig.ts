@@ -1,5 +1,3 @@
-import {MiniApps} from '@codebridge/constants';
-
 import {LabConfig} from '@cdo/apps/lab2/types';
 
 import {CsaViewMode} from './types';
@@ -15,8 +13,8 @@ export function deriveLabConfig(
   if (channelLabConfig) {
     return channelLabConfig;
   }
-  if (csaViewMode === 'neighborhood') {
-    return {miniApp: {name: MiniApps.Neighborhood}};
+  if (csaViewMode && csaViewMode !== 'console') {
+    return {miniApp: {name: csaViewMode}};
   }
   return undefined;
 }

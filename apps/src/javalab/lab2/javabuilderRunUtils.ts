@@ -87,15 +87,11 @@ export async function handleRunClick(
       ).startSources
     : null;
 
-  // Return a promise that stays pending until JavabuilderConnection signals
-  // the program has finished (via its setIsRunning(false) callback.
-  // This enables the run/stop state in Codebridge.
-  // In neighborhood mode the connection hands exit off to miniApp.onClose()
-  // instead, so this promise stays pending and Codebridge's ControlButtons
-  // drives the run state instead.
+  // Return a promise that resolves when the run is settled, which enables the
+  // run/stop state in Codebridge.
   await new Promise<void>(resolve => {
     let resolved = false;
-    const finishRun = (running: boolean) => {
+    const finishRun = (running?: boolean) => {
       if (running || resolved) return;
       resolved = true;
       resolve();
@@ -126,6 +122,15 @@ export async function handleRunClick(
       activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
     } else {
       activeConnection.connectJavabuilder();
+    }
+
+    // Console runs resolve this promise via finishRun when the program exits.
+    // Neighborhood runs don't: the connection delegates clean exit to
+    // miniApp.onClose() (never calling finishRun), run/stop state is
+    // derived from lab2System.isRunning. Nothing awaits true completion here,
+    // so resolve now rather than leaving the promise pending forever.
+    if (miniApp) {
+      finishRun();
     }
   });
 }
