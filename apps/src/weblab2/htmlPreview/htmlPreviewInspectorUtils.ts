@@ -1,7 +1,5 @@
-// Pure, stateless helpers and constants for the element inspector. Kept separate
-// from the InspectorOverlay class (htmlPreviewInspector.ts) so the class isn't
-// buried; nothing here touches instance state.
-//
+// Pure, stateless helpers and constants for the element inspector.
+
 // These run in InnerHTMLPreview's realm but operate on the inner iframe's
 // (same-origin) document, whose elements belong to a *different* realm. So we
 // never use `instanceof Element` (it would be false) — we test `nodeType` and

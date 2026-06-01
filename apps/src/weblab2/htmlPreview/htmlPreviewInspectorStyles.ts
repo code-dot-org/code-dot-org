@@ -1,10 +1,9 @@
-// Inline styles for the inspector overlay nodes, kept as CSSOM objects rather
-// than a CSS/SCSS module. The overlay is injected into the student's preview
+// Inline styles for the inspector overlay nodes.
+// The overlay is injected into the student's preview
 // iframe — a separate document that never loads our bundle's CSS — so a CSS
 // module's hashed class names would have no matching stylesheet there. Styles
 // set via `el.style` (Object.assign) travel with the element across documents
 // and, unlike an injected <style>, are not subject to the iframe's CSP.
-// Consumed by htmlPreviewInspector.ts.
 
 export const HIGHLIGHT_STYLE: Partial<CSSStyleDeclaration> = {
   position: 'absolute',

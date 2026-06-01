@@ -3,13 +3,8 @@
 // Given the inner preview's `document`, installInspector() makes every element
 // in the page reachable by hover and by Tab, drawing a highlight box + a label
 // showing the element's tag, id, and class. The currently focused or hovered
-// element is described to screen readers: focus uses `aria-describedby` (read as
-// part of the focus event, reliable across NVDA/JAWS/VoiceOver), hover uses a
+// element is described to screen readers: focus uses `aria-describedby`, hover uses a
 // best-effort polite live region.
-//
-// Strings are hard-coded English: this page has no localization runtime and the
-// text is essentially code. Pure, stateless helpers and constants live in
-// ./htmlPreviewInspectorUtils.
 //
 // Everything is reversible: teardown() removes our nodes/listeners, restores the
 // tabindex we added and any aria-describedby we set, and is idempotent.
@@ -37,8 +32,6 @@ export interface InspectorController {
 const DESCRIPTION_ID = 'weblab2-inspector-description';
 
 // Owns the overlay nodes, listeners, and mutable state for one inner document.
-// Event handlers are arrow-function fields so they are stable references for
-// add/removeEventListener and keep `this` bound to the instance.
 class InspectorOverlay implements InspectorController {
   private readonly currentDocument: Document;
   private readonly currentWindow: (Window & typeof globalThis) | null;
@@ -49,7 +42,8 @@ class InspectorOverlay implements InspectorController {
 
   // Elements we added tabindex to, for exact restoration on teardown.
   private readonly taggedElements = new Set<Element>();
-  // The element currently described via focus, and its prior describedby.
+  // The element currently described via focus, and its prior describedby, if any,
+  // for restoration on blur/teardown.
   private describedElement: Element | null = null;
   private priorDescribedBy: string | null = null;
 
@@ -162,7 +156,7 @@ class InspectorOverlay implements InspectorController {
     }
   }
 
-  private paint(element: Element): void {
+  private paintOverlay(element: Element): void {
     const rect = element.getBoundingClientRect();
     const scrollX = this.currentWindow ? this.currentWindow.scrollX : 0;
     const scrollY = this.currentWindow ? this.currentWindow.scrollY : 0;
@@ -180,7 +174,7 @@ class InspectorOverlay implements InspectorController {
     this.activeElement = element;
   }
 
-  private hide(): void {
+  private hideOverlay(): void {
     this.highlight.style.display = 'none';
     this.label.style.display = 'none';
     this.activeElement = null;
@@ -230,7 +224,7 @@ class InspectorOverlay implements InspectorController {
     this.animationFrameId = this.currentWindow.requestAnimationFrame(() => {
       this.animationFrameId = 0;
       if (this.activeElement && this.activeElement.isConnected) {
-        this.paint(this.activeElement);
+        this.paintOverlay(this.activeElement);
       }
     });
   };
@@ -242,7 +236,7 @@ class InspectorOverlay implements InspectorController {
     }
     this.hoveredElement = element;
     if (!this.focusedElement) {
-      this.paint(element);
+      this.paintOverlay(element);
       this.announceHover(element);
     }
   };
@@ -256,7 +250,7 @@ class InspectorOverlay implements InspectorController {
     const relatedElement = asElement((event as MouseEvent).relatedTarget);
     if (!relatedElement || isOurNode(relatedElement)) {
       this.hoveredElement = null;
-      this.hide();
+      this.hideOverlay();
     }
   };
 
@@ -266,7 +260,7 @@ class InspectorOverlay implements InspectorController {
       return;
     }
     this.focusedElement = element;
-    this.paint(element);
+    this.paintOverlay(element);
     this.describeForFocus(element);
   };
 
@@ -276,10 +270,10 @@ class InspectorOverlay implements InspectorController {
       this.clearFocusDescription();
       this.focusedElement = null;
       if (this.hoveredElement) {
-        this.paint(this.hoveredElement);
+        this.paintOverlay(this.hoveredElement);
         this.announceHover(this.hoveredElement);
       } else {
-        this.hide();
+        this.hideOverlay();
       }
     }
   };
