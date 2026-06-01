@@ -1,9 +1,8 @@
 // CloudFront Functions handler to normalize Accept-Language header for optimized caching.
 <%
   require 'cdo/languages'
-  require_relative '../../pegasus/helpers/pegasus_languages'
 -%>
-var tags = <%= PegasusLanguages.table.select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase).to_json %>;
+var tags = <%= PEGASUS_DB[:cdo_languages].select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase).to_json %>;
 var defaultTag = 'en';
 
 function handler(event) {
@@ -24,7 +23,7 @@ function handler(event) {
   Section 5.3, Request Header Fields: Content Negotiation
   Quality Values, Section 5.3.1 (https://datatracker.ietf.org/doc/html/rfc7231#section-5.3.1)
   Accept-Language, Section 5.3.5 (https://datatracker.ietf.org/doc/html/rfc7231#section-5.3.5)
-  
+
   Matching of Language Tags, RFC 4647
   Types of Matching: Lookup, Section 3.4 (https://datatracker.ietf.org/doc/html/rfc4647#section-3.4)
  */
