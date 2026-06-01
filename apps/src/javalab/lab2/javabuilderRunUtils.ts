@@ -47,7 +47,7 @@ export async function handleRunClick(
   const state = getStore().getState();
 
   if (csaViewMode === 'theater') {
-    // theater is not yet supported.
+    // Theater is not yet supported.
     writeToConsole(
       `[JAVALAB] csaViewMode='${csaViewMode}' is not yet supported in Java Lab 2; running as console.`
     );
@@ -88,12 +88,11 @@ export async function handleRunClick(
     : null;
 
   // Return a promise that stays pending until JavabuilderConnection signals
-  // the program has finished (via its setIsRunning(false) callback, fired
-  // from onExit / onClose / onError / onTimeout). This enables the run/stop
-  // state in Codebridge. In neighborhood mode the connection hands exit off to
-  // miniApp.onClose() instead, so this promise stays pending and Codebridge's
-  // ControlButtons drives the run state from the Neighborhood's DONE signal
-  // (lab2System.isRunning) rather than from this promise.
+  // the program has finished (via its setIsRunning(false) callback.
+  // This enables the run/stop state in Codebridge.
+  // In neighborhood mode the connection hands exit off to miniApp.onClose()
+  // instead, so this promise stays pending and Codebridge's ControlButtons
+  // drives the run state instead.
   await new Promise<void>(resolve => {
     let resolved = false;
     const finishRun = (running: boolean) => {

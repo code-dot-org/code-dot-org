@@ -69,9 +69,8 @@ const Javalab2View: React.FunctionComponent<
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
 
-  // Java Lab signals a neighborhood level via csaViewMode. Codebridge shows the
-  // neighborhood preview when projectSources.labConfig.miniApp.name is set, so
-  // we translate csaViewMode (or the channel's stored labConfig) into that shape.
+  // Derive the labConfig (which sets the mini app in codebridge) from
+  // the channel or the level's csaViewMode.
   const labConfig = useMemo(
     () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
     [levelProperties.csaViewMode, channel?.labConfig]
@@ -106,8 +105,6 @@ const Javalab2View: React.FunctionComponent<
 
     return {
       ...levelProperties,
-      // Drives useInitialSources to attach labConfig to the start/template/
-      // default sources (the new-project path).
       miniApp: labConfig?.miniApp?.name,
       startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
       templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
@@ -117,7 +114,7 @@ const Javalab2View: React.FunctionComponent<
 
   // A loaded project's sources come from the flat S3 shape, which carries no
   // labConfig. Merge it back in so codebridge shows the mini-app for existing
-  // neighborhood projects.
+  // miniApp-based projects.
   const initialSourcesWithLabConfig = useMemo(
     () =>
       initialSources && labConfig
