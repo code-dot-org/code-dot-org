@@ -23,6 +23,8 @@ interface ToolbarVisibilityContextValue {
   trapFocus: boolean;
   openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   closeToolbar: () => void;
+  isAnyPopoverOpen: boolean;
+  setPopoverOpen: (open: boolean) => void;
 }
 
 const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
@@ -30,6 +32,8 @@ const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
   trapFocus: false,
   openToolbar: () => {},
   closeToolbar: () => {},
+  isAnyPopoverOpen: false,
+  setPopoverOpen: () => {},
 });
 
 export const ToolbarVisibilityProvider = ToolbarVisibilityContext.Provider;

@@ -1,0 +1,37 @@
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionsButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.actionButton:global(.MuiIconButton-root),
+.deleteButton:global(.MuiIconButton-root) {
+  background-color: var(--background-neutral-primary);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+}
+
+.actionButton:global(.MuiIconButton-root) {
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.deleteButton:global(.MuiIconButton-root) {
+  margin-left: auto;
+  border: 1px solid var(--sketchlab-stroke-red);
+  color: var(--sketchlab-stroke-red);
+
+  &:hover {
+    background-color: var(--sketchlab-bg-red);
+  }
+}

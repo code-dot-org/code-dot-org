@@ -16,12 +16,14 @@ const CHECKLIST_ITEMS = [
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
   reviewSyllabusTour: Tour | null;
+  learnHowToEvaluateTour: Tour | null;
   demoType: DemoType;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   createSectionTour,
   reviewSyllabusTour,
+  learnHowToEvaluateTour,
   demoType,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
@@ -34,6 +36,8 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       if (demoType === 'high') {
         reviewSyllabusTour?.start();
       }
+    } else if (id === 'learn-to-evaluate') {
+      learnHowToEvaluateTour?.start();
     }
   };
 

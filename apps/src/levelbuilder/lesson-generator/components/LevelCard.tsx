@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
 import {LabType, LevelSpec} from '../types';
 
+import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
 
 interface LevelCardProps {
@@ -29,61 +30,34 @@ const LevelCard: React.FC<LevelCardProps> = ({
   onMove,
 }) => {
   const unsupported = !!spec.unsupportedType;
+  const displayName =
+    unsupported && spec.existing
+      ? spec.existing.scriptLevel.levels?.[0]?.name || previewName
+      : previewName;
   return (
-    <div
-      className={
-        unsupported
-          ? `${moduleStyles.levelCard} ${moduleStyles.levelCardUnsupported}`
-          : moduleStyles.levelCard
-      }
-    >
-      <div className={moduleStyles.levelCardHeader}>
+    <ReorderableCard
+      title={
         <h3>
-          Level {index + 1} —{' '}
-          <code>
-            {unsupported && spec.existing
-              ? spec.existing.scriptLevel.levels?.[0]?.name || previewName
-              : previewName}
-          </code>
+          Level {index + 1} — <code>{displayName}</code>
         </h3>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.key, 'up')}
-          disabled={disabled || index === 0}
-          aria-label="Move up"
-          title="Move up"
-        >
-          <FontAwesomeV6Icon iconName="arrow-up" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.iconButton}
-          onClick={() => onMove(spec.key, 'down')}
-          disabled={disabled || index === total - 1}
-          aria-label="Move down"
-          title="Move down"
-        >
-          <FontAwesomeV6Icon iconName="arrow-down" />
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.deleteButton}
-          onClick={() => onRemove(spec.key)}
-          disabled={disabled}
-          aria-label="Remove level"
-          title={
-            unsupported
-              ? 'Remove from this lesson (the level itself is preserved)'
-              : 'Remove level'
-          }
-        >
-          <FontAwesomeV6Icon iconName="trash" />
-        </button>
-      </div>
-      <div className={moduleStyles.cardBody}>
-        <div className={moduleStyles.cardSidebar}>
-          <div className={moduleStyles.cardField}>
+      }
+      canMoveUp={index > 0}
+      canMoveDown={index < total - 1}
+      onMoveUp={() => onMove(spec.key, 'up')}
+      onMoveDown={() => onMove(spec.key, 'down')}
+      onRemove={() => onRemove(spec.key)}
+      removeAriaLabel="Remove level"
+      removeTitle={
+        unsupported
+          ? 'Remove from this lesson (the level itself is preserved)'
+          : 'Remove level'
+      }
+      disabled={disabled}
+      cardClassName={unsupported ? moduleStyles.cardUnsupported : undefined}
+    >
+      <div className={sharedStyles.cardBody}>
+        <div className={sharedStyles.cardSidebar}>
+          <div className={sharedStyles.cardField}>
             <label htmlFor={`id-${spec.key}`}>ID</label>
             <input
               id={`id-${spec.key}`}
@@ -93,7 +67,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
               disabled={disabled || unsupported}
             />
           </div>
-          <div className={moduleStyles.cardField}>
+          <div className={sharedStyles.cardField}>
             <label htmlFor={`lab-${spec.key}`}>Lab</label>
             {unsupported ? (
               <input
@@ -130,7 +104,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
             </label>
           )}
         </div>
-        <div className={moduleStyles.cardMain}>
+        <div className={sharedStyles.cardMain}>
           {unsupported ? (
             <p className={moduleStyles.unsupportedNote}>
               The generator doesn't support this lab type. The level stays in
@@ -153,7 +127,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
           )}
         </div>
       </div>
-    </div>
+    </ReorderableCard>
   );
 };
 

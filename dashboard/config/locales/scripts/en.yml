@@ -28327,7 +28327,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-web-dev-2026
-          title: Preparing to Teach Web Development
+          title: Teaching Web Development
           description_audience: ''
           description_short: ''
           description: |-
@@ -28356,7 +28356,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-programming-with-music-lab-2026
-          title: Preparing to Teach Programming with Music Lab
+          title: Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: |-
@@ -28385,7 +28385,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-data-and-society-2026
-          title: Preparing to Teach Data and Society
+          title: Teaching Data and Society
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28412,7 +28412,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-design-process-2026
-          title: Preparing to Teach the Design Process
+          title: Teaching The Design Process
           description_audience: ''
           description_short: ''
           description: |-
@@ -28441,7 +28441,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: Preparing to Teach Interactive Animations and Games
+          title: Teaching Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28470,7 +28470,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-circuit-2026
-          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          title: Teaching Creating Apps for Devices (Circuit Playground)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28479,7 +28479,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
-          title: Preparing to Teach Creating Apps with Devices (micro:bit)
+          title: Teaching Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28490,7 +28490,7 @@ en:
               name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
-          title: 'Preparing to Teach AI and Machine Learning '
+          title: 'Teaching AI and Machine Learning '
           description_audience: ''
           description_short: ''
           description: |-
@@ -29171,11 +29171,41 @@ en:
               name: Lesson 12
           lesson_groups: {}
           name: aif-year2-semester1-unit1
-          title: AIF Year 2 Semester 1 Unit 1
+          title: Logic-Based AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
+
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
+          student_description: |-
+            In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
+
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
         aif-year2-semester1-unit2:
           lessons: {}
           lesson_groups: {}
@@ -29332,7 +29362,7 @@ en:
               name: Big Ideas in Thinking Critically About AI
           lesson_groups: {}
           name: self-paced-pl-teaching-thinking-critically-about-ai-2026
-          title: Preparing to Teach Thinking Critically about AI
+          title: Teaching Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -29357,3 +29387,12 @@ en:
             * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
             **Suggested time:** 70 minutes
+        test-brendan:
+          lessons: {}
+          lesson_groups: {}
+          name: test-brendan
+          title: test brendan
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

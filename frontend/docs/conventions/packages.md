@@ -59,7 +59,7 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Choose the preset that matches the package type:
   - React apps and component libraries → `@code-dot-org/lint-config/eslint/react.mjs`
   - Node.js tooling or config-only packages → `@code-dot-org/lint-config/eslint/node.mjs`
-  - Jest test files → add `@code-dot-org/lint-config/eslint/jest.mjs` as an overlay
+  - Vitest test files → add `@code-dot-org/lint-config/eslint/vitest.mjs` as an overlay
 
 ```js
 // eslint.config.mjs — React package
@@ -83,6 +83,7 @@ export default cdoStylelint;
 
 - Use Vitest (not Jest — Jest is for the legacy `apps/` bundle)
 - Test files: `src/**/__tests__/*.test.ts` or `*.test.tsx`
+- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`)
 
 ## Lint-staged
 
