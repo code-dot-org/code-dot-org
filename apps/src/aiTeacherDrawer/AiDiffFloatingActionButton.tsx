@@ -36,7 +36,7 @@ const LazyAiDiffContainer = React.lazy(
 
 const LazyAiDiffDrawer = React.lazy(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () => import('../AiTeacherDrawer/AiDiffDrawer' as any)
+  () => import('./AiDiffDrawer' as any)
 );
 
 /**
