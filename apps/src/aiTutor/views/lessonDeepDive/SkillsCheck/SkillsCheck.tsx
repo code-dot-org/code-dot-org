@@ -15,11 +15,6 @@ import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
-import matchJSON from '@cdo/static/tutor/match_example.json';
-import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
-import multiMultiJson from '@cdo/static/tutor/multiple_choice_multi_select.json';
-import scrambleJSON from '@cdo/static/tutor/scramble_example.json';
-import sortJSON from '@cdo/static/tutor/sort_example.json';
 
 import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameters';
 import {
@@ -38,20 +33,13 @@ import Sort from './QuestionTypes/Sort';
 
 import styles from './skills-check.module.scss';
 
-const PROBLEMS: PracticeProblem[] = [
-  multiSingleJson as PracticeProblem,
-  multiMultiJson as PracticeProblem,
-  matchJSON as PracticeProblem,
-  scrambleJSON as PracticeProblem,
-  sortJSON as PracticeProblem,
-];
-
 interface SkillsCheckProps {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
   vocabulary: LessonDeepDiveData['vocabulary'];
   objectives: LessonDeepDiveData['objectives'];
+  practiceProblems: PracticeProblem[];
   reflectionData: ReflectionData | null;
   onComplete: () => void;
 }
@@ -62,6 +50,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   lessonSummary,
   vocabulary,
   objectives,
+  practiceProblems,
   reflectionData,
   onComplete,
 }) => {
@@ -74,8 +63,8 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   const [feedback, setFeedback] = useState<string | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
 
-  const currentProblem = PROBLEMS[currentIndex];
-  const isLast = currentIndex === PROBLEMS.length - 1;
+  const currentProblem = practiceProblems[currentIndex];
+  const isLast = currentIndex === practiceProblems.length - 1;
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => i + 1);
@@ -175,7 +164,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   }, [studentAnswer, getAIFeedback]);
 
   const renderProblem = (index: number) => {
-    const problem = PROBLEMS[index];
+    const problem = practiceProblems[index];
     const sharedProps = {
       problem,
       key: problem.id,
@@ -196,6 +185,21 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
         return <Sort {...sharedProps} />;
     }
   };
+
+  // The container filters this box out of the carousel when no problems
+  // are seeded for the lesson, so reaching this branch is rare — but
+  // defending against an empty list keeps the component safe to call
+  // from any code path.
+  if (practiceProblems.length === 0) {
+    return (
+      <div className={styles.quiz}>
+        <div className={styles.quizContent}>
+          <p className={styles.overline}>Skills Check</p>
+          <p>No practice problems available for this lesson yet.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.quiz}>

@@ -1,0 +1,27 @@
+{
+  "key": "aif1-2025-l1-match-vocabulary",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the vocabulary word with its definition",
+  "solution": [
+    {
+      "option": "abstraction",
+      "correct": "focusing on the important information and ignoring irrelevant details"
+    },
+    {
+      "option": "artificial intelligence (AI)",
+      "correct": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions"
+    },
+    {
+      "option": "probability",
+      "correct": "the likelihood that a specific outcome might occur"
+    },
+    {
+      "option": "prompt",
+      "correct": "a question, instruction, scenario, or statement provided by the user to guide the AI's response"
+    }
+  ],
+  "objective_keys": [
+    "7aa95c9a-567e-4082-8ccc-28022066f3ec"
+  ]
+}

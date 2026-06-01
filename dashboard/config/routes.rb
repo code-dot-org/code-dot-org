@@ -127,6 +127,7 @@ Dashboard::Application.routes.draw do
         get 'search'
       end
     end
+    resources :practice_problems, only: [:create, :index]
     resources :videos do
       collection do
         get 'test'

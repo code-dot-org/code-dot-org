@@ -89,4 +89,76 @@ class PracticeProblemTest < ActiveSupport::TestCase
       assert PracticeProblem.exists?(key: 'test-practice-problem'), 'valid file should still be seeded after bad file'
     end
   end
+
+  test 'key is required' do
+    problem = build(:practice_problem, key: nil)
+    refute problem.valid?
+    assert_includes problem.errors[:key], 'is required'
+  end
+
+  test 'key must be unique' do
+    create(:practice_problem, key: 'dup-key')
+    dup = build(:practice_problem, key: 'dup-key')
+    refute dup.valid?
+    assert_includes dup.errors[:key], 'has already been taken'
+  end
+
+  test 'problem_text is required' do
+    problem = build(:practice_problem, problem_text: nil)
+    refute problem.valid?
+    assert_includes problem.errors[:problem_text], 'is required'
+  end
+
+  test 'problem_type must be one of the supported types' do
+    problem = build(:practice_problem, problem_type: 'not_a_real_type')
+    refute problem.valid?
+    assert_includes problem.errors[:problem_type], 'is not included in the list'
+  end
+
+  test 'summarize returns expected hash including objective keys' do
+    problem = create(:practice_problem, key: 'summary-key', problem_type: 'match', problem_text: 'Pair them', solution: [{option: 'a', correct: 'A'}], active: true)
+    problem.objectives << @objective1
+
+    summary = problem.summarize
+    assert_equal problem.id, summary[:id]
+    assert_equal 'summary-key', summary[:key]
+    assert_equal 'match', summary[:problem_type]
+    assert_equal true, summary[:active]
+    assert_equal 'Pair them', summary[:problem_text]
+    assert_equal [{'option' => 'a', 'correct' => 'A'}], summary[:solution]
+    assert_equal [@objective1.key], summary[:objective_keys]
+  end
+
+  test 'write_serialization writes a file readable by seed_record' do
+    Dir.mktmpdir do |tmpdir|
+      problem = create(:practice_problem, key: 'write-test', problem_type: 'multiple_choice_single_select', problem_text: 'Q?', solution: [{option: 'a', correct: true}, {option: 'b', correct: false}], active: true)
+      problem.objectives << @objective1
+
+      Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+      problem.stubs(:file_path).returns(Pathname.new(tmpdir).join('write-test.json'))
+
+      problem.write_serialization
+
+      written = JSON.parse(File.read(problem.file_path))
+      assert_equal 'write-test', written['key']
+      assert_equal 'multiple_choice_single_select', written['problem_type']
+      assert_equal true, written['active']
+      assert_equal 'Q?', written['problem_text']
+      assert_equal [{'option' => 'a', 'correct' => true}, {'option' => 'b', 'correct' => false}], written['solution']
+      assert_equal [@objective1.key], written['objective_keys']
+    end
+  end
+
+  test 'write_serialization is a no-op outside levelbuilder_mode' do
+    Dir.mktmpdir do |tmpdir|
+      problem = create(:practice_problem, key: 'no-write')
+      target = Pathname.new(tmpdir).join('no-write.json')
+      Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+      problem.stubs(:file_path).returns(target)
+
+      problem.write_serialization
+
+      refute File.exist?(target), 'should not write outside levelbuilder mode'
+    end
+  end
 end

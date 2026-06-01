@@ -1,5 +1,5 @@
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useMemo, useState} from 'react';
 
 const darkTheme = createTheme({
   palette: {
@@ -40,7 +40,7 @@ import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
-const BOX_IDS = [
+const ALL_BOX_IDS = [
   'welcome',
   'personalized-welcome',
   'levels-attempted',
@@ -53,6 +53,8 @@ const BOX_IDS = [
   'skills-check',
   'tutor-summary',
 ] as const;
+
+type BoxId = (typeof ALL_BOX_IDS)[number];
 
 interface LessonDeepDiveContainerProps {
   lessonDeepDiveData: LessonDeepDiveData;
@@ -67,6 +69,19 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   );
   const displayName = useAppSelector(
     state => state.currentUser.displayName as string | undefined
+  );
+
+  // Skip the skills-check boxes entirely if the lesson has no seeded
+  // practice problems associated with its objectives.
+  const BOX_IDS: readonly BoxId[] = useMemo(
+    () =>
+      ALL_BOX_IDS.filter(id => {
+        if (id === 'pre-skills-check' || id === 'skills-check') {
+          return lessonDeepDiveData.practiceProblems.length > 0;
+        }
+        return true;
+      }),
+    [lessonDeepDiveData.practiceProblems.length]
   );
 
   const goToNext = useCallback(() => {
@@ -222,6 +237,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             lessonSummary={lessonDeepDiveData.lessonSummary}
             vocabulary={lessonDeepDiveData.vocabulary}
             objectives={lessonDeepDiveData.objectives}
+            practiceProblems={lessonDeepDiveData.practiceProblems}
             reflectionData={reflectionData}
             onComplete={goToNext}
           />

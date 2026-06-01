@@ -1,0 +1,31 @@
+{
+  "key": "aif1-2025-l1-scramble-probability",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "AI makes predictions based on probability - how likely something is to occur. Order the following sentence completions from least likely to most likely. The menu today is spaghetti and....",
+  "solution": [
+    {
+      "option": "trucks",
+      "correct": 0
+    },
+    {
+      "option": "eels",
+      "correct": 1
+    },
+    {
+      "option": "cookies",
+      "correct": 2
+    },
+    {
+      "option": "salad",
+      "correct": 3
+    },
+    {
+      "option": "meatballs",
+      "correct": 4
+    }
+  ],
+  "objective_keys": [
+    "d7a43662-a068-4211-9847-57553f3db2bf"
+  ]
+}

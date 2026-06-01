@@ -13,6 +13,7 @@ import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {generateWeblab2Level} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
+import PracticeProblemSection from './components/PracticeProblemSection';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
 import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
@@ -638,6 +639,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           {isGenerating ? 'Generating…' : 'Generate Lesson with AI'}
         </button>
       </footer>
+
+      <PracticeProblemSection lesson={lesson} />
 
       {(isGenerating || progress) && (
         <ProgressDialog

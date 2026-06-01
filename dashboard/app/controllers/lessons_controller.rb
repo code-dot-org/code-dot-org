@@ -105,6 +105,7 @@ class LessonsController < ApplicationController
     unit_group_unit = unit_context[:unit_group_unit]
     unit_label = unit_group_unit ? "Unit #{unit_group_unit.position}" : nil
     json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
+    practice_problems = PracticeProblem.joins(:objectives).where(objectives: {lesson_id: @lesson.id}, active: true).distinct
     @lesson_deep_dive_data = {
       lessonId: @lesson.id,
       lessonName: @lesson.localized_name,
@@ -113,6 +114,9 @@ class LessonsController < ApplicationController
       objectives: @lesson.objectives.map {|o| {id: o.id, description: o.description}},
       assessmentAnalysis: lesson_assessment_analysis(@lesson.id, current_user&.id),
       jsonVideos: json_videos.map {|v| {key: v.key, url: content_json_video_url(v.key), description: v.description}},
+      practiceProblems: practice_problems.map do |p|
+        {id: p.id, type: p.problem_type, active: p.active, problem_text: p.problem_text, solution: p.solution}
+      end,
       progressCounts: lesson_progress_status(@lesson.id, current_user&.id).transform_keys do |k|
         k.to_s.camelize(:lower).to_sym
       end,

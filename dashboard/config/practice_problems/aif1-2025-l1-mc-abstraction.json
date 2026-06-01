@@ -1,0 +1,27 @@
+{
+  "key": "aif1-2025-l1-mc-abstraction",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is abstraction?",
+  "solution": [
+    {
+      "option": "focusing on the important information and ignoring irrelevant details",
+      "correct": true
+    },
+    {
+      "option": "breaking a problem into smaller, more manageable parts",
+      "correct": false
+    },
+    {
+      "option": "solving a problem step-by-step using a defined sequence of instructions",
+      "correct": false
+    },
+    {
+      "option": "representing complex ideas using pictures or symbols",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "0aea3d8e-1d5d-4a31-b3c5-fd3ac1377dbd"
+  ]
+}

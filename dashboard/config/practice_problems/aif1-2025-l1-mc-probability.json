@@ -1,0 +1,27 @@
+{
+  "key": "aif1-2025-l1-mc-probability",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is probability?",
+  "solution": [
+    {
+      "option": "the likelihood that a specific outcome might occur",
+      "correct": true
+    },
+    {
+      "option": "the certainty that a specific outcome will definitely occur",
+      "correct": false
+    },
+    {
+      "option": "the total number of possible outcomes in a given situation",
+      "correct": false
+    },
+    {
+      "option": "a guess about the future based on personal opinion rather than data",
+      "correct": false
+    }
+  ],
+  "objective_keys": [
+    "d7a43662-a068-4211-9847-57553f3db2bf"
+  ]
+}

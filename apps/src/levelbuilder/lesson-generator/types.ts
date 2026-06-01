@@ -81,6 +81,81 @@ export interface ExistingLessonData {
   // and the unit-wide outline the curriculum author wrote on /s/[unit]/generate.
   unitName?: string;
   unitOutline?: string;
+  // Lesson objectives, as returned by Lesson#summarize_for_lesson_edit.
+  // Drives the practice-problem generator: each generated problem is
+  // associated with exactly one objective via its `key`.
+  objectives?: LessonObjective[];
+  // The lesson's student_overview text, used as additional context when
+  // generating practice problems.
+  studentOverview?: string;
+}
+
+export interface LessonObjective {
+  id: number;
+  description: string;
+  key: string;
+}
+
+// Practice problem types as understood by the seed schema. Mirrors
+// SharedConstants::PRACTICE_PROBLEM_TYPES on the Rails side. Adding a
+// type here also requires a matching generator schema in
+// ai/practiceProblems.ts and a matching editor in
+// components/practiceProblemEditors/.
+export const PRACTICE_PROBLEM_TYPES = [
+  'multiple_choice_single_select',
+  'multiple_choice_multi_select',
+  'match',
+  'scramble',
+  'sort',
+] as const;
+
+export type PracticeProblemType = (typeof PRACTICE_PROBLEM_TYPES)[number];
+
+export interface MultiChoiceSolutionItem {
+  option: string;
+  correct: boolean;
+}
+
+export interface MatchSolutionItem {
+  option: string;
+  correct: string;
+}
+
+export interface OrderedSolutionItem {
+  option: string;
+  correct: number;
+}
+
+export type SolutionItem =
+  | MultiChoiceSolutionItem
+  | MatchSolutionItem
+  | OrderedSolutionItem;
+
+// A single (objective × type) row in the practice-problem generator. The
+// curric author can add, remove, edit, and regenerate one of these at a
+// time; Save sends each row as a single POST to /practice_problems.
+export interface PracticeProblemSpec {
+  // Stable local key, used for React identity and to track this row
+  // through the generation/save loop. Distinct from the seed `key` (below)
+  // which is persisted and must be globally unique across the corpus.
+  uiKey: string;
+  // The seed key for this problem. Auto-derived from prefix+objective+type
+  // on first generation; editable by the user before save.
+  key: string;
+  objectiveKey: string;
+  problemType: PracticeProblemType;
+  problemText: string;
+  solution: SolutionItem[];
+  // Whether the next Generate run should AI-fill this row. Defaults to
+  // true for fresh rows; false after a successful generation. Mirrors
+  // LevelSpec.generate.
+  generate: boolean;
+  // Whether this row should be active when seeded. Maps to the
+  // `active` column on PracticeProblem.
+  active: boolean;
+  // Set after a successful save so the UI can show "Saved" status and
+  // suppress repeat saves of the same content.
+  savedAt?: number;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the

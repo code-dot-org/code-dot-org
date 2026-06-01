@@ -12,6 +12,7 @@ export const PROMPT_TAGS = {
   WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',
   SLIDES_OUTLINE: 'lesson-gen/slides-outline',
   SLIDE_PLAN: 'lesson-gen/slide-plan',
+  PRACTICE_PROBLEM: 'lesson-gen/practice-problem',
 } as const;
 
 export type PromptTag = (typeof PROMPT_TAGS)[keyof typeof PROMPT_TAGS];

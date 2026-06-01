@@ -126,6 +126,40 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor'
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor'
 
+  test 'tutor includes active practice problems for the lesson via its objectives' do
+    objective = create(:objective, lesson: @lesson)
+    problem = create(:practice_problem, key: 'tutor-test-active', active: true, problem_text: 'Q1', problem_type: 'multiple_choice_single_select', solution: [{option: 'a', correct: true}])
+    problem.objectives << objective
+
+    # Inactive problems must not surface to students.
+    inactive = create(:practice_problem, key: 'tutor-test-inactive', active: false)
+    inactive.objectives << objective
+
+    sign_in create(:student)
+    get :tutor, params: {course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}
+    assert_response :success
+
+    data = assigns(:lesson_deep_dive_data)
+    assert_kind_of Array, data[:practiceProblems]
+    # Serializer emits runtime-facing fields only, no :key — assert by id.
+    ids = data[:practiceProblems].pluck(:id)
+    assert_includes ids, problem.id
+    refute_includes ids, inactive.id
+
+    served = data[:practiceProblems].find {|p| p[:id] == problem.id}
+    assert_equal 'multiple_choice_single_select', served[:type]
+    assert_equal 'Q1', served[:problem_text]
+  end
+
+  test 'tutor returns an empty practiceProblems array when the lesson has none' do
+    sign_in create(:student)
+    get :tutor, params: {course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}
+    assert_response :success
+
+    data = assigns(:lesson_deep_dive_data)
+    assert_equal [], data[:practiceProblems]
+  end
+
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},
