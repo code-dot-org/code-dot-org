@@ -8,6 +8,7 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -29,6 +30,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -46,6 +48,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   tutorVideos,
   isPredictLevel,
   disabledState,
+  onAssetUploaded,
 }) => {
   const {
     containerRef,
@@ -125,6 +128,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             hasInstructionsDrawer={true}
             tutorVideos={tutorVideos}
             disabledState={disabledState}
+            onAssetUploaded={onAssetUploaded}
           />
         </div>
       </div>

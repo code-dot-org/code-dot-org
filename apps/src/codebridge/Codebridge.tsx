@@ -15,6 +15,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -52,6 +53,7 @@ type CodebridgeProps = {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
 };
 
 export const Codebridge = React.memo(
@@ -72,6 +74,7 @@ export const Codebridge = React.memo(
     aiTutorResponseSchemaSettings,
     tutorVideos,
     secondaryBackpackAppNames,
+    onAssetUploaded,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -222,6 +225,7 @@ export const Codebridge = React.memo(
           aiTutorSystemPrompt,
           tutorVideos,
           aiTutorDisabled,
+          onAssetUploaded,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

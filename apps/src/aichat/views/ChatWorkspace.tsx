@@ -76,6 +76,7 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
 
   // Optional callback to process the model's response before it is recorded in chat
   // history (useful for structured outputs).
@@ -111,6 +112,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       levelName,
       channelId,
       hasStarterAssets = false,
+      onAssetUploaded,
       hideModelChangeMessage = false,
       responseCallback,
       logLevelActivity,
@@ -362,11 +364,18 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       () => ({
         addFiles: (files, onUploadFinished) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
+            dispatch(
+              uploadFiles({
+                files,
+                buildAssetUrl,
+                onUploadFinished,
+                onAssetUploaded,
+              })
+            );
           }
         },
       }),
-      [canUploadAssets, dispatch, buildAssetUrl]
+      [canUploadAssets, dispatch, buildAssetUrl, onAssetUploaded]
     );
 
     return (
@@ -412,6 +421,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
+              onAssetUploaded={onAssetUploaded}
               logLevelActivity={logLevelActivity}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}

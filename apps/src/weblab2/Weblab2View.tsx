@@ -6,8 +6,9 @@ import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -33,6 +34,7 @@ import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchema
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {syncAiTutorAssetToProject} from './redux/syncAiTutorAssetToProject';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
 import {weblab2VideoFiles} from './weblab2Videos';
@@ -150,6 +152,13 @@ const Weblab2View: React.FC<
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
   const dispatch = useAppDispatch();
+
+  const onAssetUploaded = useCallback(
+    (asset: ChatAsset, assetUrl: string) => {
+      dispatch(syncAiTutorAssetToProject(asset, assetUrl));
+    },
+    [dispatch]
+  );
   useEffect(() => {
     dispatch(setHasRun(true));
 
@@ -186,6 +195,7 @@ const Weblab2View: React.FC<
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
+          onAssetUploaded={onAssetUploaded}
           aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}

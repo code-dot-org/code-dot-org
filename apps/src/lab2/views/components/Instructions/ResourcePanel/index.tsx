@@ -10,6 +10,7 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
@@ -160,6 +161,7 @@ type ResourcePanelProps = InstructionsProps & {
   ) => void;
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
 };
 
 /**
@@ -187,6 +189,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onImageFlagged,
   hasInstructionsDrawer,
   validationSettings,
+  onAssetUploaded,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -306,6 +309,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         aiTutorResponseSchemaSettings,
         tutorVideos,
         disabledState: aiChatDisabledState,
+        onAssetUploaded,
       };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
@@ -409,6 +413,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorResponseSchemaSettings,
     tutorVideos,
     aiChatDisabledState,
+    onAssetUploaded,
     hasInstructionsDrawer,
     isPredictLevel,
     selectedVersion,

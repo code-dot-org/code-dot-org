@@ -45,6 +45,7 @@ interface UserChatMessageEditorProps {
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  onAssetUploaded?: UploadButtonProps['onAssetUploaded'];
   chatDisabled?: boolean;
 }
 
@@ -68,6 +69,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
+  onAssetUploaded,
   chatDisabled,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -180,9 +182,15 @@ const UserChatMessageEditor: React.FunctionComponent<
         .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
-      dispatch(uploadFiles({files, buildAssetUrl}));
+      dispatch(uploadFiles({files, buildAssetUrl, onAssetUploaded}));
     },
-    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
+    [
+      canUploadFiles,
+      buildAssetUrl,
+      dispatch,
+      acceptedFileTypes,
+      onAssetUploaded,
+    ]
   );
 
   const onSpeechToTextFinished = useCallback(
@@ -222,6 +230,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
               acceptedFileTypes={acceptedFileTypes}
+              onAssetUploaded={onAssetUploaded}
             />
           </div>
         )}
