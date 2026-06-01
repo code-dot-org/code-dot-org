@@ -20,6 +20,11 @@ on:
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+  # Single source of truth for the Playwright container image tag. Version must
+  # match the catalog pin in frontend/.yarnrc.yml; variant (noble/jammy) must
+  # match the runner's Ubuntu release. Passed to reusable workflows so both are
+  # updated in one place on upgrade.
+  PLAYWRIGHT_IMAGE_TAG: 'v1.59.1-noble'
 
 jobs:
   # Initializes common variables and environment prior to executing other jobs
@@ -68,6 +73,8 @@ jobs:
     if: ${{ needs.setup.outputs.component-library-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
+    with:
+      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     secrets: inherit
 
   # Start the oceans lab CI workflow
@@ -82,6 +89,8 @@ jobs:
   # CI runs, since end-to-end behavior can change from anywhere.
   apps-e2e-tests:
     uses: ./.github/workflows/apps-e2e-tests-ci.yml
+    with:
+      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     secrets: inherit
 
   # Common teardown actions that must occur after _all_ workflows have completed.

@@ -19,7 +19,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: isCI,
   retries: 0,
-  // @no_ci-tagged tests need infra the automated lane lacks (e.g. Javabuilder).
+  // Tests tagged {tag: '@no_ci'} need infra the automated lane lacks (e.g.
+  // Javabuilder). grepInvert matches {tag} metadata as well as title text
+  // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
   grepInvert: isCI ? /@no_ci/ : undefined,
   workers: isCI ? '100%' : undefined,
   reporter: isCI
