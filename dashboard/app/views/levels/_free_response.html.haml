@@ -4,15 +4,20 @@
   in_level_group ||= false
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
+  show_teacher_markdown = level.get_property(:teacher_markdown).present? || level.solution.present?
+  teaching_tips = "<h3>#{t('teacher.teaching_tips')}</h3> \n\n #{level.get_property(:teacher_markdown)}" if level.get_property(:teacher_markdown).present?
+  solution = "<h3>#{t('teacher.example_solution')}</h3> \n\n #{level.solution}" if level.solution.present?
+  teacher_markdown = "#{teaching_tips} \n\n #{solution}" if show_teacher_markdown
   js_data = {
     response_count: @responses&.first&.count || 0,
     is_contained_level: is_contained_level
   }
 
-- if level.solution.present? && is_contained_level && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
+
+- if show_teacher_markdown && is_contained_level && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   %div{id: "containedLevelAnswer0"}
     .free-response{class: "contained"}
-      = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+      = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => teacher_markdown}}
 
 - if in_level_group || is_contained_level # The LevelGroup will collect results for each level.
   :javascript
@@ -61,7 +66,7 @@
   -# Don't render the dialog partial if we're inside a LevelGroup.
   - show_next_page_link = readonly && !level.submittable?
   = render partial: 'levels/dialog', locals: {app: 'free_response', next_level_link: @next_level_link, show_next_page_link: show_next_page_link} unless (in_level_group || is_contained_level)
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => teacher_markdown}} unless is_contained_level
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}
