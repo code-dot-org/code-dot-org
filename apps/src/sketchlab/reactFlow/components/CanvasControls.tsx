@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Paper, Tooltip, Divider} from '@mui/material';
 import {Panel, useReactFlow} from '@xyflow/react';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import styles from './toolbar.module.scss';
 
@@ -21,6 +21,23 @@ export default function CanvasControls({
   isReadOnly,
 }: CanvasControlsProps) {
   const {zoomIn, zoomOut, fitView} = useReactFlow();
+  const [undoTooltipOpen, setUndoTooltipOpen] = useState(false);
+  const [redoTooltipOpen, setRedoTooltipOpen] = useState(false);
+
+  useEffect(() => {
+    if (!canUndo) setUndoTooltipOpen(false);
+  }, [canUndo]);
+
+  useEffect(() => {
+    if (!canRedo) setRedoTooltipOpen(false);
+  }, [canRedo]);
+
+  useEffect(() => {
+    if (isReadOnly) {
+      setUndoTooltipOpen(false);
+      setRedoTooltipOpen(false);
+    }
+  }, [isReadOnly]);
 
   return (
     <Panel position="bottom-right">
@@ -33,7 +50,13 @@ export default function CanvasControls({
       >
         {!isReadOnly && (
           <>
-            <Tooltip title="Undo" placement="left">
+            <Tooltip
+              title="Undo"
+              placement="left"
+              open={undoTooltipOpen}
+              onOpen={() => setUndoTooltipOpen(true)}
+              onClose={() => setUndoTooltipOpen(false)}
+            >
               <span>
                 <IconButton
                   aria-label="Undo"
@@ -47,7 +70,13 @@ export default function CanvasControls({
                 </IconButton>
               </span>
             </Tooltip>
-            <Tooltip title="Redo" placement="left">
+            <Tooltip
+              title="Redo"
+              placement="left"
+              open={redoTooltipOpen}
+              onOpen={() => setRedoTooltipOpen(true)}
+              onClose={() => setRedoTooltipOpen(false)}
+            >
               <span>
                 <IconButton
                   aria-label="Redo"

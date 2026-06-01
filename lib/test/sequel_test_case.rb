@@ -1,5 +1,4 @@
-require_relative '../src/env'
-require src_dir 'database'
+require 'cdo/db'
 require 'minitest/autorun'
 
 # Encapsulate Sql test cases in a rollback transaction.
