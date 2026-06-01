@@ -136,6 +136,9 @@ export async function handleRunClick(
 }
 
 export function stopJavaCode(): void {
+  // If the neighborhood exists, stop it. This prevents extra animation
+  // from occuring after stop.
+  CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
   if (activeConnection) {
     activeConnection.closeConnection();
     activeConnection = null;
