@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-24.04
     container:
       # Ensure the Playwright version matches in frontend/apps/design-system-storybook/package.json
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
 
     steps:
       - name: Install LFS
