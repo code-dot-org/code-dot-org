@@ -5,8 +5,16 @@ import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
 import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+import {splitForLevelbuilderSave} from './sourceConverter';
 
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
@@ -39,7 +47,7 @@ export async function handleRunClick(
   const state = getStore().getState();
 
   if (csaViewMode === 'theater') {
-    // theater is deferred to a later phase.
+    // theater is not yet supported.
     writeToConsole(
       `[JAVALAB] csaViewMode='${csaViewMode}' is not yet supported in Java Lab 2; running as console.`
     );
@@ -65,6 +73,19 @@ export async function handleRunClick(
   const channelId = Lab2Registry.getInstance()
     .getProjectManager()
     ?.getChannelId();
+
+  // Levelbuilder edit modes (start / exemplar) and any read-only viewer
+  // don't have a channel id. Send the in-memory source as override sources instead.
+  // Strip validation files: they aren't part of the program being executed.
+  const useOverrideSources =
+    getIsStartMode() ||
+    getAppOptionsEditingExemplar() ||
+    isReadOnlyWorkspace(state);
+  const overrideSources = useOverrideSources
+    ? splitForLevelbuilderSave(
+        state.lab2Project.projectSources?.source as MultiFileSource | undefined
+      ).startSources
+    : null;
 
   // Return a promise that stays pending until JavabuilderConnection signals
   // the program has finished (via its setIsRunning(false) callback, fired
@@ -102,7 +123,11 @@ export async function handleRunClick(
       channelId
     );
 
-    activeConnection.connectJavabuilder();
+    if (overrideSources) {
+      activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
+    } else {
+      activeConnection.connectJavabuilder();
+    }
   });
 }
 
