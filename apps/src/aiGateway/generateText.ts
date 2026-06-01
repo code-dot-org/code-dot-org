@@ -7,7 +7,7 @@ import {
   GatewayGenerateTextResponseV1Schema,
   type GatewayGenerateTextResponseV1,
 } from './contract/gatewaySchemas';
-import {getErrorLogData} from './logHelper';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 import {LOG} from './turnstile/constants';
@@ -77,9 +77,10 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
-  try {
-    const {model, ...restOptions} = options;
+  const {model, ...restOptions} = options;
+  const modelString = getModelString(model);
 
+  try {
     const serializedOutput = await serializeOutputSchema(options.output);
 
     const payload = {
@@ -114,6 +115,13 @@ const generateTextThroughGateway = async <
         `${LOG} generateText response schema mismatch:`,
         parseResult.error.errors
       );
+      await reportGatewayError(
+        parseResult.error,
+        'generateTextThroughGateway',
+        modelString,
+        {'error.category': 'schema-mismatch'}
+      );
+
       if (process.env.NODE_ENV === 'development') {
         throw parseResult.error;
       }
@@ -124,8 +132,7 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
-    const logData = await getErrorLogData(error);
-    console.error('Fetch error in generateTextThroughGateway:', logData);
+    await reportGatewayError(error, 'generateTextThroughGateway', modelString);
     throw error;
   }
 };
