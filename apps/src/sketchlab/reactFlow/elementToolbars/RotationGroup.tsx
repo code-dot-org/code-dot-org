@@ -1,6 +1,6 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Slider, Typography} from '@mui/material';
-import React, {useCallback, useEffect, useId, useState} from 'react';
+import React, {useCallback, useEffect, useId, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION} from '../constants';
 
@@ -34,6 +34,34 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   // zeros) without the normalized value overriding their input mid-edit.
   const [inputValue, setInputValue] = useState(String(normalizedValue));
   const [isFocused, setIsFocused] = useState(false);
+  const queuedRotationRef = useRef<number | null>(null);
+  const frameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (frameRef.current !== null) {
+        cancelAnimationFrame(frameRef.current);
+      }
+    };
+  }, []);
+
+  const emitRotationChange = useCallback(
+    (nextValue: number) => {
+      queuedRotationRef.current = nextValue;
+      if (frameRef.current !== null) {
+        return;
+      }
+      frameRef.current = requestAnimationFrame(() => {
+        frameRef.current = null;
+        const queued = queuedRotationRef.current;
+        queuedRotationRef.current = null;
+        if (queued !== null) {
+          onChange(queued);
+        }
+      });
+    },
+    [onChange]
+  );
 
   // Sync display to the normalized value, but only while the input is not
   // focused.
@@ -58,10 +86,10 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
       }
       const normalized = normalizeRotation(parsed);
       if (normalized !== normalizedValue) {
-        onChange(normalized);
+        emitRotationChange(normalized);
       }
     },
-    [onChange, normalizedValue]
+    [emitRotationChange, normalizedValue]
   );
 
   const handleInputBlur = useCallback(() => {
@@ -78,9 +106,9 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
 
   const handleSliderChange = useCallback(
     (_: Event, sliderValue: number) => {
-      onChange(normalizeRotation(sliderValue));
+      emitRotationChange(normalizeRotation(sliderValue));
     },
-    [onChange]
+    [emitRotationChange]
   );
 
   const handleInputKeyDown = useCallback(

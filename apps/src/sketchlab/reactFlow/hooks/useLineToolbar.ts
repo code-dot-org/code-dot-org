@@ -10,6 +10,7 @@ import {
   ARROW_MARKER_HEIGHT_PX,
   ARROW_MARKER_WIDTH_PX,
   DEFAULT_ROTATION,
+  LINE_ANCHOR_SIZE_PX,
 } from '../constants';
 import {ToolbarTarget} from '../context';
 import {
@@ -21,8 +22,6 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {ArrowHeadValue} from '../types';
 import {anchorHandleFlowPosition} from '../utils/lineAnchors';
-
-const LINE_ANCHOR_SIZE_PX = 10;
 
 function rotatePoint(
   point: {x: number; y: number},
@@ -233,7 +232,7 @@ export function useLineToolbar({
     [updateLineEdgeLockState]
   );
 
-  const setLineEdgeRotation = useCallback(
+  const applyLineEdgeRotation = useCallback(
     (edgeId: string, rotation: number) => {
       updateLineEdge(edgeId, edge => {
         const currentRotation = edge.data?.rotation ?? DEFAULT_ROTATION;
@@ -314,6 +313,13 @@ export function useLineToolbar({
       });
     },
     [nodes, setNodes, updateLineEdge]
+  );
+
+  const setLineEdgeRotation = useCallback(
+    (edgeId: string, rotation: number) => {
+      applyLineEdgeRotation(edgeId, rotation);
+    },
+    [applyLineEdgeRotation]
   );
 
   return {
