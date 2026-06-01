@@ -18,8 +18,8 @@ import weblab2Reducer, {
   setInspectorEnabled,
 } from '@cdo/apps/weblab2/weblab2Redux';
 
-const ENABLE_LABEL = 'Turn on element inspector';
-const DISABLE_LABEL = 'Turn off element inspector';
+const ENABLE_LABEL = 'Inspect elements';
+const DISABLE_LABEL = 'Stop inspecting';
 
 describe('HTMLPreviewHeader inspector toggle', () => {
   let store: Store;

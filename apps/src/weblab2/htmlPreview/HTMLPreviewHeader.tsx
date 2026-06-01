@@ -239,9 +239,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               tooltipId: 'toggle-inspector',
               direction: 'onBottom',
               size: 'xs',
-              text: inspectorEnabled
-                ? 'Turn off element inspector'
-                : 'Turn on element inspector',
+              text: inspectorEnabled ? 'Stop inspecting' : 'Inspect elements',
             }}
           >
             <MuiIconButton
@@ -255,9 +253,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               }
               onClick={() => dispatch(setInspectorEnabled(!inspectorEnabled))}
               aria-label={
-                inspectorEnabled
-                  ? 'Turn off element inspector'
-                  : 'Turn on element inspector'
+                inspectorEnabled ? 'Stop inspecting' : 'Inspect elements'
               }
               aria-pressed={inspectorEnabled}
               type="button"
