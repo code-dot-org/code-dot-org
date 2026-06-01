@@ -28,7 +28,10 @@ const BottomNav: React.FC<BottomNavProps> = ({activeLabel, onNavChange}) => (
       <button
         key={label}
         type="button"
-        className={classNames(style.item, label === activeLabel && style.active)}
+        className={classNames(
+          style.item,
+          label === activeLabel && style.active
+        )}
         onClick={() => onNavChange(label)}
       >
         <FontAwesomeV6Icon

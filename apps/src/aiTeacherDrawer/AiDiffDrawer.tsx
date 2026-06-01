@@ -8,8 +8,8 @@ import {useAppSelector} from '../util/reduxHooks';
 
 import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
-import BottomNav from './BottomNav';
 import AiDiffWorkSpace from './AiDiffWorkspace';
+import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
