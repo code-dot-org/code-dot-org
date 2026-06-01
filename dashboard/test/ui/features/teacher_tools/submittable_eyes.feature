@@ -22,7 +22,6 @@ Scenario: Submittable level
 Scenario: Lockable level
   When I open my eyes to test "lockable level"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1"
-  And The header is finished animating
   And I see no difference for "course overview"
   And I scroll our lockable lesson into view
   And I see no difference for "course overview with locked level in view"
