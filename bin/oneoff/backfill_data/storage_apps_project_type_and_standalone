@@ -3,7 +3,7 @@
 # This script sets the `project_type` and `standalone` columns of the `storage_apps` table, if not
 # already set, based on information from the `value` column.
 
-require File.expand_path('../../../../lib/cdo/pegasus/env', __FILE__)
+require File.expand_path('../../../../lib/cdo/pegasus/src/env', __FILE__)
 require src_dir 'database'
 require_relative '../../../lib/cdo/shared_constants'
 

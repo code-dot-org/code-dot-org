@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../../lib/cdo/pegasus/env'
+require_relative '../../lib/cdo/pegasus/src/env'
 require src_dir 'curriculum_course'
 
 class CurriculumCourseTest < Minitest::Test

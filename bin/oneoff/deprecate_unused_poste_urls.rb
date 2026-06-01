@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'sequel'
-require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/sequel'
 require src_dir 'database'
 require_relative './poste_urls_constants'

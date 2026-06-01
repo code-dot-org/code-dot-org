@@ -1,4 +1,4 @@
-require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'retryable'
 require 'cdo/poste'
 require 'honeybadger/ruby'

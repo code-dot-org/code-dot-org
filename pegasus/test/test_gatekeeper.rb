@@ -1,4 +1,4 @@
-require_relative '../../lib/cdo/pegasus/env'
+require_relative '../../lib/cdo/pegasus/src/env'
 require 'minitest/autorun'
 require 'dynamic_config/gatekeeper'
 

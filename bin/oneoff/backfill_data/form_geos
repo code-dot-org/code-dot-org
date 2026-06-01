@@ -3,7 +3,7 @@
 # This script creates a form_geos entry (if one does not already exist) for
 # every form row.
 
-require File.expand_path('../../../../lib/cdo/pegasus/env', __FILE__)
+require File.expand_path('../../../../lib/cdo/pegasus/src/env', __FILE__)
 require src_dir 'database'
 
 if ARGV.length != 3

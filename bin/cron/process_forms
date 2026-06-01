@@ -2,7 +2,7 @@
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require File.expand_path('../../../lib/cdo/pegasus/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
 require 'retryable'
 require src_dir 'forms'

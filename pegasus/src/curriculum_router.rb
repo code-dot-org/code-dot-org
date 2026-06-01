@@ -1,4 +1,4 @@
-require_relative '../../lib/cdo/pegasus/env'
+require_relative '../../lib/cdo/pegasus/src/env'
 require 'cdo/rack/request'
 require 'cdo/yaml'
 require 'json'

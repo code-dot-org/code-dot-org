@@ -1,4 +1,4 @@
-require_relative '../../../deployment'
+require_relative '../../../../deployment'
 require 'cdo/pegasus'
 require 'i18n'
 require 'i18n/backend/fallbacks'
