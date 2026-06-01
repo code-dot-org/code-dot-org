@@ -11,10 +11,14 @@ export const meta = {
   ],
 }
 
-// args: repo-root-relative path to ONE Cucumber feature file.
+// args: repo-root-relative path to ONE Cucumber feature file, or an object:
 //   Workflow({name: 'port-cucumber-to-playwright',
 //             args: 'dashboard/test/ui/features/star_labs/jigsaw.feature'})
+//   Workflow({name: 'port-cucumber-to-playwright',
+//             args: {featureFile: 'dashboard/test/ui/features/star_labs/jigsaw.feature', force: true}})
+// force: true re-ports even if the spec already exists (use after an interrupted port).
 const featureFile = typeof args === 'string' ? args.trim() : args?.featureFile
+const force = typeof args === 'object' && !!args?.force
 if (!featureFile) {
   throw new Error(
     'args must be the repo-root-relative path to one .feature file, e.g. ' +
@@ -236,8 +240,8 @@ Return the structured plan.`,
   {schema: SCOUT_SCHEMA, label: 'scout', phase: 'Scout', model: 'sonnet'},
 )
 
-if (plan.specAlreadyExists) {
-  log(`Spec already exists at ${plan.targetSpec} — nothing to port.`)
+if (plan.specAlreadyExists && !force) {
+  log(`Spec already exists at ${plan.targetSpec} — pass force: true to re-port.`)
   return {featureFile, targetSpec: plan.targetSpec, status: 'already-ported'}
 }
 
@@ -444,7 +448,7 @@ phase('Heal')
 
 const STRESS_SCHEMA = {
   type: 'object',
-  required: ['passed', 'totalRuns', 'failures'],
+  required: ['passed', 'totalRuns', 'failures', 'infraSuspected'],
   properties: {
     passed: {type: 'boolean', description: 'true ONLY if every run passed (0 failed, 0 flaky)'},
     totalRuns: {type: 'number', description: '5 repeats x project count'},
@@ -494,9 +498,12 @@ const stress = tag =>
   )
 
 let result = await stress('gate')
+if (!result) throw new Error('stress gate agent was skipped — cannot continue without a pass/fail result')
 if (!result.passed && result.infraSuspected) {
   log('Gate failure looks like a test-studio infra blip — re-running once before healing')
-  result = await stress('gate-retry') // does not consume a heal attempt
+  const retry = await stress('gate-retry') // does not consume a heal attempt
+  if (!retry) throw new Error('stress gate-retry agent was skipped')
+  result = retry
 }
 
 let attempt = 0
@@ -514,7 +521,9 @@ while (!result.passed && attempt < 3) {
       `timing/selector/state cause.`,
     {agentType: 'playwright-test-healer', label: `heal-${attempt}`, phase: 'Heal', model: 'sonnet'},
   )
-  result = await stress(`reverify-${attempt}`)
+  const reverify = await stress(`reverify-${attempt}`)
+  if (!reverify) throw new Error(`stress reverify-${attempt} agent was skipped`)
+  result = reverify
 }
 
 const healStatus = result.passed ? 'green' : 'fixme'
@@ -533,6 +542,7 @@ if (!result.passed) {
 log(`Heal: ${healStatus}${result.passed ? ` (${result.totalRuns} runs clean)` : ''}`)
 
 // ── Phase 6: Commit ───────────────────────────────────────────────────────────
+const commitFiles = 'frontend/packages/apps-e2e-tests/'
 // Conventional commit. Green gate -> remove the original Cucumber feature
 // (strangler-fig). Fixme -> keep it for human review. No push, no PR.
 phase('Commit')
@@ -564,9 +574,8 @@ await agent(
    and a package-local seed.spec.ts would otherwise be swept into the commit below:
      rm -f frontend/seed.spec.ts frontend/packages/apps-e2e-tests/seed.spec.ts
      rm -rf frontend/test-results
-   Then stage the workflow output (the workflow only ever touches apps-e2e-tests; the
-   package .gitignore keeps its own test-results/node_modules out):
-     git add frontend/packages/apps-e2e-tests/
+   Then stage exactly the files this workflow produced — no broader glob:
+     git add ${commitFiles}
 2. ${
       healStatus === 'green'
         ? `Green gate — flip the spec's JSDoc "Migration status: PORTING" to "COMPLETED", ` +
