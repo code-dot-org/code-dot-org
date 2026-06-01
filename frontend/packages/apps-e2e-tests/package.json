@@ -18,8 +18,9 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "test": "playwright test --project=chromium --pass-with-no-tests",
     "test:report": "playwright show-report playwright-report",
+    "test:ui:ci": "playwright test --pass-with-no-tests",
+    "test:ui:local": "TARGET_URL=http://localhost-studio.code.org:3000 playwright test --project=chromium --pass-with-no-tests",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",

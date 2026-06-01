@@ -44,7 +44,7 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn workspace @code-dot-org/apps-e2e-tests test
+        run: yarn workspace @code-dot-org/apps-e2e-tests test:ui:ci
         working-directory: ./frontend
 
       - name: Upload Playwright Report

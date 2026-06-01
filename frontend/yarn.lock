@@ -1435,7 +1435,7 @@ __metadata:
     concurrently: "npm:^9.1.0"
     globals: "catalog:"
     http-server: "npm:^14.1.1"
-    playwright: "npm:^1.57.0"
+    playwright: "catalog:"
     sass-loader: "npm:^16.0.3"
     storybook: "npm:^10.1.7"
     storybook-addon-rtl: "npm:^3.0.1"
@@ -16311,7 +16311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:1.59.1, playwright@npm:^1.14.0, playwright@npm:^1.57.0":
+"playwright@npm:1.59.1, playwright@npm:^1.14.0":
   version: 1.59.1
   resolution: "playwright@npm:1.59.1"
   dependencies:
