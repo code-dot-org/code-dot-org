@@ -21,7 +21,7 @@ export const handleDownloadSketch = async (
   const blobUrl = URL.createObjectURL(blob);
   const downloadLink = document.createElement('a');
   downloadLink.href = blobUrl;
-  downloadLink.download = 'sketch.png';
+  downloadLink.download = `sketch_${Date.now()}.png`;
   downloadLink.click();
   URL.revokeObjectURL(blobUrl);
 };
