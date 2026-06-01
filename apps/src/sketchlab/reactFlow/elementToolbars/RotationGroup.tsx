@@ -22,9 +22,14 @@ function normalizeRotation(raw: number): number {
 export interface RotationGroupProps {
   value: number;
   onChange: (degrees: number) => void;
+  disabled?: boolean;
 }
 
-export default function RotationGroup({value, onChange}: RotationGroupProps) {
+export default function RotationGroup({
+  value,
+  onChange,
+  disabled = false,
+}: RotationGroupProps) {
   const groupLabelId = useId();
   // Persisted node data may include out-of-range numbers, which would
   // trigger an MUI min/max warning and odd thumb behavior on the Slider.
@@ -140,6 +145,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
         <Slider
           className={styles.rotationSlider}
           size="small"
+          disabled={disabled}
           min={ROTATION_MIN}
           max={ROTATION_MAX}
           step={ROTATION_STEP}
@@ -154,6 +160,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           name="rotation-degrees"
           aria-label="Rotation in degrees"
           inputType="number"
+          disabled={disabled}
           value={inputValue}
           onChange={handleInputChange}
           onFocus={() => setIsFocused(true)}

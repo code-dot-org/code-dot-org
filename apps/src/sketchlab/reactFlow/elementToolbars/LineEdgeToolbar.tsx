@@ -131,7 +131,8 @@ export default function LineEdgeToolbar({
   onSelectRotation,
   onSetLocked,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, getNodes, getEdges} = useReactFlow();
+  const {deleteElements, updateEdge, getNodes, getEdges, getNode} =
+    useReactFlow();
 
   const isLocked = edge.data?.locked === true;
 
@@ -171,6 +172,10 @@ export default function LineEdgeToolbar({
       return 'none';
     }
   }, [edge.markerStart, edge.markerEnd]);
+  const sourceNode = getNode(edge.source);
+  const targetNode = getNode(edge.target);
+  const isFullyDetachedLine =
+    sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
 
   const {duplicateLine} = useClipboard();
 
@@ -249,6 +254,7 @@ export default function LineEdgeToolbar({
           <RotationGroup
             value={edge.data?.rotation ?? DEFAULT_ROTATION}
             onChange={onSelectRotation}
+            disabled={!isFullyDetachedLine}
           />
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}
