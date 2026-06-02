@@ -5,6 +5,9 @@ import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
 import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProgressManager, {
+  ValidationResult,
+} from '@cdo/apps/lab2/progress/ProgressManager';
 import {
   getAppOptionsEditingExemplar,
   getIsStartMode,
@@ -14,6 +17,7 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
+import JavaValidationTracker from './progress/JavaValidationTracker';
 import {splitForLevelbuilderSave} from './sourceConverter';
 
 // Module-local cache so onStop can close the active connection.
@@ -33,9 +37,11 @@ function writeNewline() {
 }
 
 export async function handleRunClick(
+  runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   levelId: number,
-  csaViewMode: string
+  csaViewMode: string,
+  progressManager: ProgressManager | null
 ): Promise<void> {
   let csrfToken: string | null = null;
   try {
@@ -87,6 +93,19 @@ export async function handleRunClick(
       ).startSources
     : null;
 
+  // Validation runs: set every known test row to pending up front so the
+  // table shows test names while Javabuilder runs, then collect per-test
+  // results as TEST_RESULT messages arrive. Mirrors pythonlab's
+  // reset -> run -> updateProgress dance.
+  if (runTests) {
+    progressManager?.resetValidation();
+    progressManager?.updateProgress();
+  }
+  const validationResults: ValidationResult[] = [];
+  const onValidationResult = (result: ValidationResult) => {
+    validationResults.push(result);
+  };
+
   // Return a promise that resolves when the run is settled, which enables the
   // run/stop state in Codebridge.
   await new Promise<void>(resolve => {
@@ -94,10 +113,16 @@ export async function handleRunClick(
     const finishRun = (running?: boolean) => {
       if (running || resolved) return;
       resolved = true;
+      if (runTests && progressManager) {
+        JavaValidationTracker.getInstance().setValidationResults(
+          validationResults
+        );
+        progressManager.updateProgress();
+      }
       resolve();
     };
 
-    // TODO: Theater, Captcha handling and validation result reporting
+    // TODO: Theater, Captcha handling.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       miniApp,
@@ -106,7 +131,7 @@ export async function handleRunClick(
       writeNewline,
       /* setIsRunning */ finishRun,
       /* setIsTesting */ () => {},
-      ExecutionType.RUN,
+      runTests ? ExecutionType.TEST : ExecutionType.RUN,
       miniAppType,
       state.currentUser,
       /* onMarkdownLog */ writeToConsole,
@@ -115,7 +140,8 @@ export async function handleRunClick(
       /* onValidationFailed */ () => {},
       /* onConnectDone */ () => {},
       /* setIsCaptchaDialogOpen */ () => {},
-      channelId
+      channelId,
+      /* onValidationResult */ onValidationResult
     );
 
     if (overrideSources) {
@@ -129,7 +155,10 @@ export async function handleRunClick(
     // miniApp.onClose() (never calling finishRun), run/stop state is
     // derived from lab2System.isRunning. Nothing awaits true completion here,
     // so resolve now rather than leaving the promise pending forever.
-    if (miniApp) {
+    // Validation runs are the exception: their output goes to the console,
+    // not the mini-app, and we must wait for program exit to collect the
+    // per-test results, so we let finishRun fire on exit as usual.
+    if (miniApp && !runTests) {
       finishRun();
     }
   });

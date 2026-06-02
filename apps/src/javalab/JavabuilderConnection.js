@@ -42,9 +42,14 @@ export default class JavabuilderConnection {
     // Optional. Callers (e.g. Lab2-based labs) that don't initialize the
     // legacy `project` singleton can pass the channel id explicitly. Legacy
     // callers omit it and fall back to project.getCurrentId().
-    channelId
+    channelId,
+    // Optional. Lab2 callers pass a callback to receive each per-test
+    // validation result ({message, result}) for the Lab2 validation table.
+    // Legacy callers omit it.
+    onValidationResult
   ) {
     this.channelId = channelId ?? project.getCurrentId();
+    this.onValidationResult = onValidationResult;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -338,6 +343,11 @@ export default class JavabuilderConnection {
           this.sawValidationTests = true;
           if (!testResult.success) {
             this.allValidationPassed = false;
+          }
+          // Forward the per-test result (if any) to Lab2 callers so the
+          // validation table can show a row per test.
+          if (this.onValidationResult && testResult.validationResult) {
+            this.onValidationResult(testResult.validationResult);
           }
         }
         this.onNewlineMessage();

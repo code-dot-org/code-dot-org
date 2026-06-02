@@ -7,9 +7,10 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -31,6 +32,8 @@ import {
 } from './javabuilderRunUtils';
 import {deriveLabConfig} from './labConfig';
 import HorizontalLayout from './layout/HorizontalLayout';
+import JavaValidationTracker from './progress/JavaValidationTracker';
+import JavaValidator from './progress/JavaValidator';
 import {
   flatToMultiFile,
   mergeValidationIntoStart,
@@ -68,6 +71,17 @@ const Javalab2View: React.FunctionComponent<
 > = ({levelProperties, initialSources, channel}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
+  const progressManager = useContext(ProgressManagerContext);
+
+  // Register the lab-specific validator so the Lab2 progress system can
+  // evaluate validation results (driven by Javabuilder test runs).
+  useEffect(() => {
+    if (progressManager && levelProperties.appName === 'javalab') {
+      progressManager.setValidator(
+        new JavaValidator(JavaValidationTracker.getInstance())
+      );
+    }
+  }, [progressManager, levelProperties.appName]);
 
   // Derive the labConfig (which sets the mini app in codebridge) from
   // the channel or the level's csaViewMode.
@@ -157,7 +171,7 @@ const Javalab2View: React.FunctionComponent<
   const hasSource = !!source;
 
   const onRun = async (
-    _runTests: boolean,
+    runTests: boolean,
     dispatch: AppDispatch,
     _source: MultiFileSource | undefined
   ) => {
@@ -165,9 +179,11 @@ const Javalab2View: React.FunctionComponent<
     // S3 reflects what the user sees before the WS connection opens.
     await Lab2Registry.getInstance().getProjectManager()?.flushSave();
     await handleRunClick(
+      runTests,
       dispatch,
       levelProperties.id,
-      labConfig?.miniApp?.name || 'console'
+      labConfig?.miniApp?.name || 'console',
+      progressManager
     );
   };
 

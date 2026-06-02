@@ -23,6 +23,10 @@ export function onTestResult(data, callback, miniAppType, levelId) {
   } = data.detail && data.detail;
   const statusDetails = {className: className, methodName: methodName};
   let successful = true;
+  // Per-test result for the Lab2 validation table. Only populated for
+  // TEST_STATUS messages, where the test name and outcome are known.
+  // `result` is a Lab2 TestStatus (see lab2/progress/ProgressManager).
+  let validationResult = null;
   switch (data.value) {
     case UserTestResultSignalType.TEST_STATUS:
       if (status === TestStatus.SUCCESSFUL) {
@@ -31,6 +35,7 @@ export function onTestResult(data, callback, miniAppType, levelId) {
           test: methodName,
         });
         message = `${CHECK_MARK} ${msg.successfulTestResult(statusDetails)}`;
+        validationResult = {message: testName(statusDetails), result: 'PASS'};
       } else if (status === TestStatus.FAILED) {
         if (methodName) {
           analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_FAILED, {
@@ -40,9 +45,11 @@ export function onTestResult(data, callback, miniAppType, levelId) {
         }
         message = `${HEAVY_X} ${msg.failedTestResult(statusDetails)}`;
         successful = false;
+        validationResult = {message: testName(statusDetails), result: 'FAIL'};
       } else {
         message = `${HEAVY_X} ${msg.abortedTestResult(statusDetails)}`;
         successful = false;
+        validationResult = {message: testName(statusDetails), result: 'ERROR'};
       }
       break;
     case UserTestResultSignalType.STATUS_DETAILS:
@@ -66,5 +73,17 @@ export function onTestResult(data, callback, miniAppType, levelId) {
       break;
   }
   callback(message);
-  return {success: successful, isValidation: isValidation};
+  return {
+    success: successful,
+    isValidation: isValidation,
+    validationResult: validationResult,
+  };
+}
+
+// Human-readable name for a test, used as the validation table row label.
+function testName({className, methodName}) {
+  if (className && methodName) {
+    return `${className}.${methodName}`;
+  }
+  return methodName || className || 'unknown';
 }
