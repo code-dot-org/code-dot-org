@@ -285,7 +285,9 @@ describe('buildCSVString', () => {
       [{Student_Name: 'Alice Smith', 'Loops, Part 1': '100%'}]
     );
 
-    expect(result).toBe(
+    expect(result).toBe('Student_Name,"Loops, Part 1"\nAlice Smith,100%');
+  });
+
   it('wraps value fields containing commas in double quotes', () => {
     const result = buildCSVString(
       ['Student_Name', 'Status'],
@@ -298,4 +300,6 @@ describe('buildCSVString', () => {
   it('escapes embedded double quotes by doubling them', () => {
     const result = buildCSVString(['Title'], [{Title: 'She said "hi"'}]);
 
-    expect(result).toBe('Title\n"S
+    expect(result).toBe('Title\n"She said ""hi"""');
+  });
+});
