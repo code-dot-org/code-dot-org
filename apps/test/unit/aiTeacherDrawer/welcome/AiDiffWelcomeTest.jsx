@@ -2,8 +2,8 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
-import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
+import AiDiffWelcome from '@cdo/apps/aiTeacherDrawer/welcome/AiDiffWelcome';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -21,7 +21,7 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
-jest.mock('@cdo/apps/aiDifferentiation/AiDiffChat', () => {
+jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffChat', () => {
   return function MockAiDiffChat(props) {
     return (
       // eslint-disable-next-line react/prop-types

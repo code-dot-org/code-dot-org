@@ -1,7 +1,7 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import AiDiffNotificationList from '@cdo/apps/aiDifferentiation/notifications/AiDiffNotificationList';
+import AiDiffNotificationList from '@cdo/apps/aiTeacherDrawer/notifications/AiDiffNotificationList';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient');

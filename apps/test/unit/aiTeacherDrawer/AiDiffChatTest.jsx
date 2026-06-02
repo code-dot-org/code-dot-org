@@ -9,8 +9,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import AiDiffChat from '@cdo/apps/aiDifferentiation/AiDiffChat';
-import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import AiDiffChat from '@cdo/apps/aiTeacherDrawer/AiDiffChat';
+import {THREAD_TYPES} from '@cdo/apps/aiTeacherDrawer/constants';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -24,15 +24,15 @@ import {
   AIF_TEACHER_PREP_MENU,
   AIF_MATERIALS_MENU,
   SUGGESTED_PROMPTS_FOR_SELECTION,
-} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+} from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
 import {
   setThreadId,
   setThreadTitle,
   setThreadType,
   setThreadMessages,
   setInitialChatMessage,
-} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {

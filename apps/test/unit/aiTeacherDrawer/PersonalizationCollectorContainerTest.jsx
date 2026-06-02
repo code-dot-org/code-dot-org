@@ -1,13 +1,13 @@
 import {render, screen, fireEvent, waitFor, act} from '@testing-library/react';
 import React from 'react';
 
-import PersonalizationCollectorContainer from '@cdo/apps/aiDifferentiation/personalization/PersonalizationCollectorContainer';
-import * as teachingProfileApi from '@cdo/apps/aiDifferentiation/personalization/teachingProfileApi';
 import * as aiEvaluationApi from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import PersonalizationCollectorContainer from '@cdo/apps/aiTeacherDrawer/personalization/PersonalizationCollectorContainer';
+import * as teachingProfileApi from '@cdo/apps/aiTeacherDrawer/personalization/teachingProfileApi';
 import i18n from '@cdo/locale';
 
 // Mock the APIs
-jest.mock('@cdo/apps/aiDifferentiation/personalization/teachingProfileApi');
+jest.mock('@cdo/apps/aiTeacherDrawer/personalization/teachingProfileApi');
 jest.mock('@cdo/apps/aiEvaluation/aiEvaluationApi');
 
 // Mock analyticsReporter
