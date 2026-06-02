@@ -146,5 +146,50 @@ describe('validateFileName', function () {
         validFileTypes,
       })
     ).toBeUndefined();
+
+    // When the extension comes from the dropdown (selectedFileType), the bare
+    // base name must still be combined with it for the duplicate check.
+    // testFile1.txt already exists in DEFAULT_FOLDER_ID.
+    expect(
+      validateFileName({
+        fileName: 'testFile1',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toEqual(
+      codebridgeI18n.duplicateFileError({fileName: 'testFile1.txt'})
+    );
+
+    // A duplicate support file is likewise detected via the recombined name.
+    expect(
+      validateFileName({
+        fileName: 'support_file',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes: ['vld'],
+        selectedFileType: 'vld',
+      })
+    ).toEqual(
+      codebridgeI18n.duplicateSupportFileError({fileName: 'support_file.vld'})
+    );
+
+    // A unique base name with a dropdown extension is still allowed.
+    expect(
+      validateFileName({
+        fileName: 'brandNewFile',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toBeUndefined();
   });
 });
