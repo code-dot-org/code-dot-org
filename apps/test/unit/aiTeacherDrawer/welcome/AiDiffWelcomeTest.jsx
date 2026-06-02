@@ -2,7 +2,7 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import AiDiffWelcome from '@cdo/apps/aiTeacherDrawer/welcome/AiDiffWelcome';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 

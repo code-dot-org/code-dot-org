@@ -18,7 +18,7 @@ import {
   MINI_LESSON_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
-import {setThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
+import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {
   chatThreadMessagesValidator,
