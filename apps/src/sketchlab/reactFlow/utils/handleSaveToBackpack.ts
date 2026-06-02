@@ -1,5 +1,4 @@
 import {type ReactFlowInstance} from '@xyflow/react';
-import {toBlob} from 'html-to-image';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
@@ -10,15 +9,7 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
-import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
-
-import {computeExportDimensions} from './computeExportDimensions';
-import {getCanvasBounds} from './getCanvasBounds';
-
-const EXPORT_PADDING_PX = 10;
-// Cap the longer side of the exported PNG. Small sketches export at 1:1.
-// Only sketches larger than this along either axis are scaled down to fit.
-const MAX_EXPORT_DIMENSION_PX = 2048;
+import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
@@ -66,59 +57,12 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
-
-  const viewport = document.querySelector<HTMLElement>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__viewport`
-  );
-  if (!viewport) {
-    errorCallback(
-      `Error saving ${newFileName} to your Backpack. Please try again`
-    );
+  const {blob, error} = await createSketchSnapshotBlob(reactFlow);
+  if (error) {
+    errorCallback(error);
     return;
   }
-
-  // Read the themed canvas background so the PNG matches light/dark mode.
-  const canvas = document.querySelector<HTMLElement>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
-  );
-
-  // Find the bounding box of all nodes and edges on the canvas.
-  const rootRect = (canvas ?? viewport).getBoundingClientRect();
-  const contentElements = document.querySelectorAll<Element>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
-      `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
-  );
-  const contentRects = Array.from(contentElements, element =>
-    element.getBoundingClientRect()
-  );
-  const bounds = getCanvasBounds(
-    contentRects,
-    rootRect,
-    reactFlow.getViewport()
-  );
-  if (!bounds) {
-    errorCallback(
-      'Add something to your workspace before saving to your backpack'
-    );
-    return;
-  }
-  const {imageWidth, imageHeight, scale, translateX, translateY} =
-    computeExportDimensions(bounds, EXPORT_PADDING_PX, MAX_EXPORT_DIMENSION_PX);
-  const backgroundColor = canvas
-    ? getComputedStyle(canvas).backgroundColor
-    : '#ffffff';
-
-  const blobToSave = await toBlob(viewport, {
-    backgroundColor,
-    width: imageWidth,
-    height: imageHeight,
-    style: {
-      width: `${imageWidth}px`,
-      height: `${imageHeight}px`,
-      transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
-    },
-  });
-  if (!blobToSave) {
+  if (!blob) {
     errorCallback(
       `Error saving ${newFileName} to your Backpack. Please try again`
     );
@@ -130,7 +74,7 @@ export const handleSaveToBackpack = async (
     : EVENTS.SAVE_TO_BACKPACK_NEW;
   backpackApi.saveBlobFile(
     newFileName,
-    blobToSave,
+    blob,
     () => {
       errorCallback(
         `Error saving ${newFileName} to your Backpack. Please try again`

@@ -3,6 +3,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  CURRENT_SCHEMA_VERSION,
   GatewayGenerateTextResponseV1Schema,
   type GatewayGenerateTextResponseV1,
 } from './contract/gatewaySchemas';
@@ -94,6 +95,7 @@ const generateTextThroughGateway = async <
 
     const headers = {
       'Content-Type': 'application/json',
+      'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
       ...turnstileHeaders(turnstileToken),
     };
 

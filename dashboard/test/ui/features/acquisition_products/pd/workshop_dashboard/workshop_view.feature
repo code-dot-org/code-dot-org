@@ -12,7 +12,7 @@ Scenario: Workshop Overview, Enrollment, Attendance and Surveys
   And I see no difference for "Workshop Overview"
 
   # Workshop Enrollment
-  And I click selector "button:contains('Enrollment')"
+  And I click selector "button:contains('Enrollment')" once I see it
   Then I wait until element "table[aria-label='Workshop enrollments']" is visible
   Then I wait until element "button[aria-label='Refresh enrollment table data']" is visible
   Then I wait until element "button[aria-label='Export all enrollment data as csv']" is visible
@@ -49,4 +49,4 @@ Scenario: Workshop Overview, Enrollment, Attendance and Surveys
 
   And I close my eyes
   And I clean up my records
-  
+

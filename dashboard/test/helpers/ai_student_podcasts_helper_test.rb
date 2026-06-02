@@ -121,6 +121,53 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     assert_includes error.message, 'status code 500'
   end
 
+  test "generate_podcast_script reuses an existing objectiveless script and skips OpenAI" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
+    empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
+    other_empty = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: [{'voice_id' => 'Sam', 'text' => 'lesson-level'}].to_json
+    )
+
+    AiStudentPodcastsHelper::OpenaiClient.expects(:new).never
+    AiSystemPrompts::StudentPodcastPromptHelper.expects(:get_openai_system_prompt).never
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(empty_podcast)
+
+    assert_equal other_empty.podcast_script, result
+    assert_equal other_empty.podcast_script, empty_podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script does not reuse an objective-bearing script for an objectiveless podcast" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
+    empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
+    with_objective = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: 'should-not-be-used'
+    )
+    with_objective.ai_student_podcast_objectives.create!(objective_id: @objective.id)
+
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    fresh_script = [{'voice_id' => 'Dan', 'text' => 'fresh'}].to_json
+    openai_body = {choices: [{message: {content: {script: JSON.parse(fresh_script)}.to_json}}]}.to_json
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(openai_body)
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).returns(mock_response)
+    AiStudentPodcastsHelper::OpenaiClient.expects(:new).returns(mock_client)
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(empty_podcast)
+
+    assert_equal fresh_script, result
+  end
+
   # *****
   # create_and_save_to_s3 tests
   # *****
@@ -156,7 +203,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(generated_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(@podcast.id),
+      AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
     )
@@ -175,7 +222,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(existing_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(@podcast.id),
+      AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
     )
@@ -190,10 +237,20 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   test "retrieve_podcast_from_s3 delegates to AWS::S3.download_from_bucket" do
     AWS::S3.expects(:download_from_bucket).with(
       AiStudentPodcastsHelper::PODCAST_BUCKET,
-      AiStudentPodcastsHelper.s3_filename(42)
+      AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns('mp3-bytes')
 
-    assert_equal 'mp3-bytes', AiStudentPodcastsHelper.retrieve_podcast_from_s3(42)
+    assert_equal 'mp3-bytes',
+      AiStudentPodcastsHelper.retrieve_podcast_from_s3(@lesson.id, [@objective.id])
+  end
+
+  test "exists_in_s3? checks the bucket for the lesson + objective key" do
+    AWS::S3.expects(:exists_in_bucket).with(
+      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
+    ).returns(true)
+
+    assert AiStudentPodcastsHelper.exists_in_s3?(@lesson.id, [@objective.id])
   end
 
   # *****
@@ -268,9 +325,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # s3_filename tests
   # *****
 
-  test "s3_filename returns folder-prefixed mp3 filename including the podcast id" do
-    assert_equal 'student_podcasts/student_podcast_42.mp3',
-      AiStudentPodcastsHelper.s3_filename(42)
+  test "s3_filename builds a folder-prefixed key from lesson_id and sorted objective_ids" do
+    assert_equal 'student_podcasts/student_podcast_7-3-5-9.mp3',
+      AiStudentPodcastsHelper.s3_filename(7, [9, 3, 5])
   end
 
   # *****

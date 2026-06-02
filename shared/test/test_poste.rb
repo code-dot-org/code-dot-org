@@ -1,7 +1,5 @@
 require_relative 'test_helper'
-# rubocop:disable CustomCops/PegasusRequires
-require_relative '../../pegasus/test/sequel_test_case'
-# rubocop:enable CustomCops/PegasusRequires
+require_relative '../../lib/test/sequel_test_case'
 require 'mocha/mini_test'
 require 'cdo/poste'
 require 'digest/md5'

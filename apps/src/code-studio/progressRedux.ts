@@ -7,7 +7,7 @@ import {
   createSlice,
 } from '@reduxjs/toolkit';
 import $ from 'jquery';
-import _ from 'lodash';
+import _, {debounce} from 'lodash';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -31,6 +31,7 @@ import {
   PeerReviewLevelInfo,
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
@@ -420,6 +421,18 @@ export function sendProgressReport(
   };
 }
 
+// Send a debounced 'LEVEL_STARTED' progress report if the
+// user has not already started the level.
+export function sendStartedReportIfNotStarted(
+  appType: string
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    if (getCurrentLevel(getState())?.status === LevelStatus.not_tried) {
+      debouncedSendStartedReport(dispatch, getState, appType);
+    }
+  };
+}
+
 export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},
@@ -506,6 +519,20 @@ function sendReportHelper(
     extraData
   );
 }
+
+const debouncedSendStartedReport = debounce(
+  (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState,
+    appType: string
+  ) => {
+    // Re-check after debounce: a prior send may have already flipped the status.
+    if (getCurrentLevel(getState())?.status === LevelStatus.not_tried) {
+      dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
+    }
+  },
+  100
+);
 
 function sendReportForLevel(
   levelId: string,

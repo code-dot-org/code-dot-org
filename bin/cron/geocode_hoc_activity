@@ -7,7 +7,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require_relative '../../pegasus/helpers/properties'
+require 'cdo/pegasus/properties'
 
 BATCH_SIZE = 5000
 
