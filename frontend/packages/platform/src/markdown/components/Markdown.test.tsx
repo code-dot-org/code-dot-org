@@ -1,0 +1,270 @@
+import {fireEvent, render as renderDom, screen} from '@testing-library/react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {describe, expect, it, vi} from 'vitest';
+
+import type {MarkdownExtension} from '../extension';
+import {
+  blockly,
+  callout,
+  clickableText,
+  embeds,
+  expandableImages,
+  inlineStyles,
+} from '../extensions';
+
+import Markdown from './Markdown';
+
+const render = (markdown: string, extensions?: MarkdownExtension[]) =>
+  renderToStaticMarkup(<Markdown content={markdown} extensions={extensions} />);
+
+// Minimal tree node shared by the trivial inline plugins below.
+interface TreeNode {
+  type: string;
+  value?: string;
+  children?: TreeNode[];
+}
+
+describe('Markdown', () => {
+  it('renders basic markdown', () => {
+    const html = render('# Title\n\nHello **world**.');
+    expect(html).toContain('Title');
+    expect(html).toContain('<h1');
+    expect(html).toContain('<strong');
+    expect(html).toContain('>world</strong>');
+  });
+
+  it('reads from children when content is absent', () => {
+    const html = renderToStaticMarkup(<Markdown>{'plain text'}</Markdown>);
+    expect(html).toContain('plain text');
+  });
+
+  describe('localization wrappers', () => {
+    it('isolates paragraphs for translation', () => {
+      const html = render('a paragraph');
+      expect(html).toContain('data-isolate="true"');
+    });
+
+    it('marks links for url localization', () => {
+      const html = render('[code.org](https://code.org)');
+      expect(html).toContain('data-lz-url="true"');
+      expect(html).toContain('data-localize="markdown-url"');
+      expect(html).toContain('href="https://code.org"');
+    });
+  });
+
+  describe('sanitization', () => {
+    it('strips script tags', () => {
+      const html = render('hi <script>alert(1)</script> there');
+      expect(html).not.toContain('<script');
+      expect(html).not.toContain('alert(1)');
+    });
+
+    it('strips event-handler attributes', () => {
+      const html = render('<img src="x" onerror="alert(1)" />');
+      expect(html).not.toContain('onerror');
+    });
+
+    it('strips javascript: urls', () => {
+      const html = render('[click](javascript:alert(1))');
+      expect(html).not.toContain('javascript:');
+    });
+  });
+
+  describe('extensions', () => {
+    it('strips an extension element when the extension is not enabled', () => {
+      const html = render('<callout variant="tip">heads up</callout>');
+      expect(html).not.toContain('<aside');
+      expect(html).not.toContain('data-variant');
+      // sanitization drops the unknown element but keeps its text content
+      expect(html).toContain('heads up');
+    });
+
+    it('renders an extension element only when enabled', () => {
+      const html = render('<callout variant="tip">heads up</callout>', [
+        callout,
+      ]);
+      expect(html).toContain('<aside');
+      expect(html).toContain('data-variant="tip"');
+      expect(html).toContain('heads up');
+    });
+
+    it('runs extension remark plugins (markdown syntax stage)', () => {
+      const shout: MarkdownExtension = {
+        name: 'shout',
+        remarkPlugins: [
+          () => (tree: TreeNode) => {
+            const walk = (node: TreeNode) => {
+              if (node.type === 'text' && node.value) {
+                node.value = node.value.toUpperCase();
+              }
+              node.children?.forEach(walk);
+            };
+            walk(tree);
+          },
+        ],
+      };
+      expect(render('hello', [shout])).toContain('HELLO');
+      // ...and is inert when not enabled
+      expect(render('hello')).not.toContain('HELLO');
+    });
+
+    it('runs extension rehype plugins (html tree stage)', () => {
+      const tag: MarkdownExtension = {
+        name: 'tag',
+        rehypePlugins: [
+          () => (tree: TreeNode) => {
+            tree.children = [
+              ...(tree.children ?? []),
+              {type: 'text', value: ' [rehype-ran]'},
+            ];
+          },
+        ],
+      };
+      expect(render('content', [tag])).toContain('[rehype-ran]');
+    });
+
+    it('layers multiple extensions together', () => {
+      const html = render('<callout>note</callout>\n\nbody', [callout]);
+      expect(html).toContain('<aside');
+      // base behavior (paragraph localization) still applies alongside it
+      expect(html).toContain('data-isolate="true"');
+    });
+  });
+
+  describe('legacy schema allowances', () => {
+    it('inlineStyles permits style attributes', () => {
+      const md = '<span style="color:red">x</span>';
+      expect(render(md)).not.toContain('color');
+      expect(render(md, [inlineStyles])).toContain('color:red');
+    });
+
+    it('embeds permits iframes', () => {
+      const md = '<iframe src="https://e.org" title="t"></iframe>';
+      expect(render(md)).not.toContain('<iframe');
+      const html = render(md, [embeds]);
+      expect(html).toContain('<iframe');
+      expect(html).toContain('src="https://e.org"');
+    });
+
+    it('blockly permits xml/block tags and preserves ids', () => {
+      const md = '<xml><block type="foo" id="bar"></block></xml>';
+      const without = render(md);
+      expect(without).not.toContain('<xml');
+      expect(without).not.toContain('<block');
+
+      const html = render(md, [blockly]);
+      expect(html).toContain('<xml');
+      expect(html).toContain('<block');
+      // clobberPrefix cleared: the id is not rewritten to user-content-bar
+      expect(html).toContain('id="bar"');
+      expect(html).not.toContain('user-content-');
+    });
+  });
+
+  describe('clickableText (interactive)', () => {
+    const md = '<b data-id="play">Go</b>';
+
+    it('activates with the id on click', () => {
+      const onActivate = vi.fn();
+      renderDom(
+        <Markdown content={md} extensions={[clickableText({onActivate})]} />,
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'Go'}));
+      expect(onActivate).toHaveBeenCalledWith('play');
+    });
+
+    it('activates on Enter and Space', () => {
+      const onActivate = vi.fn();
+      renderDom(
+        <Markdown content={md} extensions={[clickableText({onActivate})]} />,
+      );
+      const button = screen.getByRole('button', {name: 'Go'});
+      fireEvent.keyDown(button, {key: 'Enter'});
+      fireEvent.keyDown(button, {key: ' '});
+      expect(onActivate).toHaveBeenCalledTimes(2);
+    });
+
+    it('renders plain bold when no handler is supplied', () => {
+      renderDom(<Markdown content={md} extensions={[clickableText()]} />);
+      expect(screen.queryByRole('button')).toBeNull();
+      expect(screen.getByText('Go').tagName).toBe('B');
+    });
+
+    it('supports the [label](#clickable=id) markdown syntax', () => {
+      const onActivate = vi.fn();
+      renderDom(
+        <Markdown
+          content="press [Go](#clickable=play) now"
+          extensions={[clickableText({onActivate})]}
+        />,
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'Go'}));
+      expect(onActivate).toHaveBeenCalledWith('play');
+    });
+
+    it('leaves ordinary links alone', () => {
+      renderDom(
+        <Markdown
+          content="[home](https://code.org)"
+          extensions={[clickableText({onActivate: vi.fn()})]}
+        />,
+      );
+      expect(screen.queryByRole('button')).toBeNull();
+      expect(screen.getByRole('link', {name: 'home'})).toBeTruthy();
+    });
+  });
+
+  describe('expandableImages (interactive)', () => {
+    const md = '<span data-url="https://img/cat.png">A cat</span>';
+
+    it('expands with url and alt on click', () => {
+      const onExpand = vi.fn();
+      renderDom(
+        <Markdown content={md} extensions={[expandableImages({onExpand})]} />,
+      );
+      fireEvent.click(screen.getByRole('button', {name: /A cat/}));
+      expect(onExpand).toHaveBeenCalledWith('https://img/cat.png', 'A cat');
+    });
+
+    it('renders the image with the span text as alt', () => {
+      const onExpand = vi.fn();
+      renderDom(
+        <Markdown content={md} extensions={[expandableImages({onExpand})]} />,
+      );
+      const image = screen.getByRole('img', {name: 'A cat'});
+      expect(image.getAttribute('src')).toBe('https://img/cat.png');
+    });
+
+    it('renders a non-interactive image when no handler is supplied', () => {
+      renderDom(<Markdown content={md} extensions={[expandableImages()]} />);
+      expect(screen.queryByRole('button')).toBeNull();
+      expect(screen.getByRole('img').getAttribute('src')).toBe(
+        'https://img/cat.png',
+      );
+    });
+
+    it('supports the ![alt expandable](url) markdown syntax', () => {
+      const onExpand = vi.fn();
+      renderDom(
+        <Markdown
+          content="![A cat expandable](https://img/cat.png)"
+          extensions={[expandableImages({onExpand})]}
+        />,
+      );
+      fireEvent.click(screen.getByRole('button', {name: /A cat/}));
+      expect(onExpand).toHaveBeenCalledWith('https://img/cat.png', 'A cat');
+      expect(screen.getByRole('img').getAttribute('alt')).toBe('A cat');
+    });
+
+    it('leaves ordinary images alone', () => {
+      renderDom(
+        <Markdown
+          content="![just a cat](https://img/cat.png)"
+          extensions={[expandableImages({onExpand: vi.fn()})]}
+        />,
+      );
+      expect(screen.queryByRole('button')).toBeNull();
+      expect(screen.getByRole('img', {name: 'just a cat'})).toBeTruthy();
+    });
+  });
+});
