@@ -138,8 +138,7 @@ clone:
 services:
   - name: ci-tests-redis
     image: redis
-    ports:
-      - 6379
+    network_mode: host
 
 steps:
   - name: bin/drone/shell
@@ -181,8 +180,7 @@ steps:
   - name: ci-tests-mysql
     image: mysql:8.0
     detach: true
-    ports:
-      - 3306
+    network_mode: host
     volumes:
       - name: mysql
         path: /var/lib/mysql
@@ -233,6 +231,10 @@ steps:
     # see: docker/ci/Dockerfile
     image: codedotorg/cdo-ci:1.23
     pull: always
+    # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
+    # on the worker's primary ENI, reachable from Device Farm's Chrome via
+    # VPC peering.
+    network_mode: host
     environment:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
@@ -254,6 +256,11 @@ steps:
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
+      # With network_mode: host on this step and on both services, the
+      # docker service-DNS names do not resolve. Point them at
+      # 127.0.0.1 where the daemons now bind on the host.
+      - echo "127.0.0.1 ci-tests-redis" | sudo tee -a /etc/hosts
+      - echo "127.0.0.1 ci-tests-mysql" | sudo tee -a /etc/hosts
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -367,6 +374,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 936ffb252e7466b1fa882aa979e9416024d9fc37f088c54c1ca8d9a9157f90d2
+hmac: 35bd33e4fe7a663359f332ab5df93923309b33c7b089faa08fb804155c255883
 
 ...
