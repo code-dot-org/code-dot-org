@@ -50,7 +50,7 @@ export const TempRebrandBanner: React.FC<TempRebrandBannerProps> = ({
         backgroundColor="#6A62D9"
         className={style.heroBannerSection}
         buttonProps={{
-          href: 'https://code.org/en-US/codeai#faq',
+          href: 'https://code.org/codeai#faq',
           children: i18n.rebrandBannerButton(),
           color: 'secondary',
           size: 'small',
