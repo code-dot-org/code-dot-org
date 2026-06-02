@@ -28,7 +28,8 @@ const getRelativeFilePath = (
     return file.name;
   }
   const folderPath = getFolderPath(file.folderId, folders);
-  return `${folderPath.slice(1)}/${file.name}`;
+  const fullPath = `${folderPath}/${file.name}`;
+  return fullPath.startsWith('/') ? fullPath.substring(1) : fullPath;
 };
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
