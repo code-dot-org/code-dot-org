@@ -158,7 +158,7 @@ module Cdo
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
+    def studio_url(path = '', scheme = default_scheme, ge_region: Cdo::GlobalEdition.current_region)
       site_url('studio.code.org', path, scheme, ge_region:)
     end
 

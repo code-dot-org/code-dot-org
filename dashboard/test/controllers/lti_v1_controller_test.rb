@@ -296,7 +296,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   def get_valid_payload(aud_is_array = false)
     # an example redirect URI, any URI should work here.
-    target_link_uri = CDO.studio_url('/', CDO.default_scheme)
+    target_link_uri = CDO.studio_url('/')
     aud = if aud_is_array
             [@integration.client_id]
           else
@@ -574,7 +574,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - given target_link_uri with existing query params, redirect preserves and merges params' do
     payload = get_valid_payload
-    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = "#{CDO.studio_url('/courses', CDO.default_scheme)}?foo=bar"
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = "#{CDO.studio_url('/courses')}?foo=bar"
     jwt = create_jwt_and_stub(payload)
     create_preexisting_user(payload)
 
