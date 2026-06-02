@@ -21,6 +21,7 @@ export const syncAiTutorAssetToProject =
   (asset: ChatAsset, assetUrl: string) =>
   (dispatch: AppDispatch, getState: () => RootState): void => {
     if (asset.source !== AssetSource.PROJECT) return;
+    if (asset.filename.endsWith('.pdf')) return;
 
     const source = getState().lab2Project.projectSources?.source as
       | MultiFileSource
