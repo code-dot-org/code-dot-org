@@ -11,11 +11,6 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-24.04
-    env:
-      # Required for both yarn install (reads @code-dot-org/* from GitHub Packages)
-      # and yarn npm publish. GITHUB_TOKEN has read:packages + write:packages in
-      # this org without any additional setup.
-      YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,6 +21,15 @@ jobs:
 
       - name: Build
         run: yarn turbo run build --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+
+      # Inject GitHub Packages auth scoped to npm.pkg.github.com.
+      # `npmScopes` was removed from .yarnrc.yml to avoid redirecting all
+      # @code-dot-org/* installs (some resolve from npm.org, not GitHub Packages).
+      - name: Configure GitHub Packages auth
+        run: |
+          yarn config set npmRegistries --json \
+            '{"https://npm.pkg.github.com":{"npmAlwaysAuth":true,"npmAuthToken":"${{ secrets.GITHUB_TOKEN }}"}}'
         working-directory: ./frontend
 
       - name: Publish
