@@ -25,6 +25,7 @@ async function transcribeThroughGateway(
   const {model, audio, ...restOptions} = options;
   const modelString = getModelString(model);
 
+  let schemaErrorReported = false;
   try {
     const [token, turnstileToken] = await Promise.all([
       fetchAccessToken(),
@@ -61,6 +62,7 @@ async function transcribeThroughGateway(
         modelString,
         {'error.category': 'schema-mismatch'}
       );
+      schemaErrorReported = true;
       if (process.env.NODE_ENV === 'development') {
         throw parseResult.error;
       }
@@ -74,7 +76,9 @@ async function transcribeThroughGateway(
       warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
     } as unknown as TranscriptionResult;
   } catch (error) {
-    await reportGatewayError(error, 'transcribeThroughGateway', modelString);
+    if (!schemaErrorReported) {
+      await reportGatewayError(error, 'transcribeThroughGateway', modelString);
+    }
     throw error;
   }
 }

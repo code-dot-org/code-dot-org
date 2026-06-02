@@ -79,6 +79,7 @@ const generateTextThroughGateway = async <
   const {model, ...restOptions} = options;
   const modelString = getModelString(model);
 
+  let schemaErrorReported = false;
   try {
     const serializedOutput = await serializeOutputSchema(options.output);
 
@@ -116,6 +117,7 @@ const generateTextThroughGateway = async <
         modelString,
         {'error.category': 'schema-mismatch'}
       );
+      schemaErrorReported = true;
 
       if (process.env.NODE_ENV === 'development') {
         throw parseResult.error;
@@ -127,7 +129,13 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
-    await reportGatewayError(error, 'generateTextThroughGateway', modelString);
+    if (!schemaErrorReported) {
+      await reportGatewayError(
+        error,
+        'generateTextThroughGateway',
+        modelString
+      );
+    }
     throw error;
   }
 };
