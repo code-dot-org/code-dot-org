@@ -1,8 +1,10 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {Slider, Typography} from '@mui/material';
-import React, {useCallback, useEffect, useId, useRef, useState} from 'react';
+import {Slider} from '@mui/material';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
+
+import ToolbarSection from '../components/ToolbarSection';
 
 import styles from './rotation-group.module.scss';
 import sharedStyles from '../element-toolbar.module.scss';
@@ -31,7 +33,6 @@ export default function RotationGroup({
   onChange,
   disabled = false,
 }: RotationGroupProps) {
-  const groupLabelId = useId();
   // Persisted node data may include out-of-range numbers, which would
   // trigger an MUI min/max warning and odd thumb behavior on the Slider.
   // Therefore, we normalize the value before passing it to the Slider.
@@ -134,18 +135,7 @@ export default function RotationGroup({
   );
 
   return (
-    <div
-      className={sharedStyles.section}
-      role="group"
-      aria-labelledby={groupLabelId}
-    >
-      <Typography
-        id={groupLabelId}
-        variant="overline3"
-        className={sharedStyles.sectionTitle}
-      >
-        Rotation
-      </Typography>
+    <ToolbarSection title="Rotation">
       {/*
        * React Flow opts elements out of canvas panning when they (or their
        * descendants) carry the `nopan` class. Without it a slider drag pans
@@ -163,7 +153,7 @@ export default function RotationGroup({
           onChange={handleSliderChange}
           valueLabelDisplay="auto"
           valueLabelFormat={sliderValue => `${sliderValue}°`}
-          aria-labelledby={groupLabelId}
+          aria-label="Rotation"
           getAriaValueText={sliderValue => `${sliderValue} degrees`}
         />
         <TextField
@@ -180,6 +170,6 @@ export default function RotationGroup({
           className={sharedStyles.smallInput}
         />
       </div>
-    </div>
+    </ToolbarSection>
   );
 }
