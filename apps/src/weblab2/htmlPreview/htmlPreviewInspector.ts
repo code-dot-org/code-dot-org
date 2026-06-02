@@ -197,7 +197,7 @@ class InspectorOverlay implements InspectorController {
     this.label.textContent = formatLabel(getElementInfo(element));
     this.label.style.display = 'block';
     const labelRect = this.label.getBoundingClientRect();
-    const position = computeLabelPosition(
+    const {top, left, pinned} = computeLabelPosition(
       box,
       {width: labelRect.width, height: labelRect.height},
       {
@@ -205,8 +205,17 @@ class InspectorOverlay implements InspectorController {
         height: this.currentWindow ? this.currentWindow.innerHeight : 0,
       }
     );
-    this.label.style.top = `${position.top + scrollY}px`;
-    this.label.style.left = `${position.left + scrollX}px`;
+    // When pinned (the box fits neither above nor below), stick the label to the
+    // viewport with `fixed` so the browser holds it during scroll.
+    if (pinned) {
+      this.label.style.position = 'fixed';
+      this.label.style.top = `${top}px`;
+      this.label.style.left = `${left}px`;
+    } else {
+      this.label.style.position = 'absolute';
+      this.label.style.top = `${top + scrollY}px`;
+      this.label.style.left = `${left + scrollX}px`;
+    }
 
     this.activeElement = element;
   }

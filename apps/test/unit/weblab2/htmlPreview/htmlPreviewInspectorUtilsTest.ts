@@ -26,6 +26,7 @@ describe('htmlPreviewInspectorUtils', () => {
       expect(computeLabelPosition(box, LABEL, VIEWPORT)).toEqual({
         top: 380,
         left: 200,
+        pinned: false,
       });
     });
 
@@ -35,6 +36,7 @@ describe('htmlPreviewInspectorUtils', () => {
       expect(computeLabelPosition(box, LABEL, VIEWPORT)).toEqual({
         top: 60,
         left: 200,
+        pinned: false,
       });
     });
 
@@ -44,6 +46,7 @@ describe('htmlPreviewInspectorUtils', () => {
       expect(computeLabelPosition(box, LABEL, VIEWPORT)).toEqual({
         top: 10,
         left: 200,
+        pinned: true,
       });
     });
 
@@ -53,6 +56,7 @@ describe('htmlPreviewInspectorUtils', () => {
       expect(computeLabelPosition(box, LABEL, VIEWPORT)).toEqual({
         top: 0,
         left: 0,
+        pinned: true,
       });
     });
 
@@ -63,6 +67,7 @@ describe('htmlPreviewInspectorUtils', () => {
       expect(computeLabelPosition(box, LABEL, VIEWPORT)).toEqual({
         top: 380,
         left: 900,
+        pinned: false,
       });
     });
   });

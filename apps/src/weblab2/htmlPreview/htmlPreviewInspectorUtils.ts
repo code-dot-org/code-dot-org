@@ -112,18 +112,21 @@ interface Size {
 // Places the inspector label just outside the highlighted box: above it by
 // default, below it when there isn't room above in the viewport, or, when it
 // fits in neither, pinned to the top-left-most visible point of the box.
-// Inputs/outputs are viewport-relative px (the caller adds scroll offsets); the
-// result is constrained to keep the label on screen.
+// Coordinates are viewport-relative px and constrained to stay on screen. When
+// `pinned`, the label should track the viewport (CSS `position: fixed`) so it
+// stays put during scroll; otherwise the caller adds scroll offsets and anchors
+// it to the element (`position: absolute`), which scrolls with the page.
 export function computeLabelPosition(
   box: {top: number; bottom: number; left: number},
   label: Size,
   viewport: Size
-): {top: number; left: number} {
+): {top: number; left: number; pinned: boolean} {
   const fitsAbove = box.top - label.height >= 0;
   const fitsBelow = box.bottom + label.height <= viewport.height;
 
   let top: number;
   let left: number;
+  let pinned = false;
   if (fitsAbove) {
     top = box.top - label.height;
     left = box.left;
@@ -131,6 +134,7 @@ export function computeLabelPosition(
     top = box.bottom;
     left = box.left;
   } else {
+    pinned = true;
     top = Math.max(box.top, 0);
     left = Math.max(box.left, 0);
   }
@@ -138,5 +142,6 @@ export function computeLabelPosition(
   return {
     top: constrainToRange(top, 0, Math.max(0, viewport.height - label.height)),
     left: constrainToRange(left, 0, Math.max(0, viewport.width - label.width)),
+    pinned,
   };
 }
