@@ -146,6 +146,8 @@ namespace :ci do
     end
     use_device_farm = !(non_chrome_tagged || CI::Utils.tagged?(USE_SAUCELABS_TAG))
     ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
+    # local webdriver only supports Chrome.
+    skip_local_webdriver = CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) || non_chrome_tagged
 
     # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
     needs_sauce_connect = !use_device_farm
@@ -193,7 +195,7 @@ namespace :ci do
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+          "#{skip_local_webdriver ? '' : '--first-run-local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -209,7 +211,7 @@ namespace :ci do
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+            "#{skip_local_webdriver ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
