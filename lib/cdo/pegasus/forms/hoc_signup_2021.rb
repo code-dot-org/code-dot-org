@@ -1,4 +1,4 @@
-require pegasus_dir 'forms/hoc_signup_2020'
+require 'cdo/pegasus/forms/hoc_signup_2020'
 
 # HOC Sign up form for 2021.
 # Most of the logic hasn't changed since the 2017 form, but the 2020 form added

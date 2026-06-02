@@ -1,4 +1,4 @@
-require pegasus_dir 'helper_modules/forms'
+require 'cdo/pegasus/helper_modules/forms'
 
 class ClassSubmission < Form
   def self.normalize(data)

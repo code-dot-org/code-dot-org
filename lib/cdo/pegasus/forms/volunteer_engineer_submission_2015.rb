@@ -1,4 +1,4 @@
-require pegasus_dir 'helper_modules/forms'
+require 'cdo/pegasus/helper_modules/forms'
 
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # Ability for volunteers to have a custom unsubscribe preference from teacher

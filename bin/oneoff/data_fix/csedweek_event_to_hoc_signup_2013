@@ -10,7 +10,7 @@
 
 require File.expand_path('../../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/db'
-require src_dir 'forms'
+require 'cdo/pegasus/src/forms'
 
 $stdout.sync = true
 

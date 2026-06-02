@@ -4,7 +4,7 @@ require_relative './test_helper'
 require_relative 'fixtures/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 require_relative '../../lib/test/sequel_test_case'
-require pegasus_dir 'helper_modules/forms'
+require 'cdo/pegasus/helper_modules/forms'
 
 class FormRoutesTest < SequelTestCase
   include SetupTest

@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(File.read(pegasus_dir('config/sites/hourofcode.com/countries.json')))
+  JSON.parse(File.read(lib_dir('cdo/pegasus/config/hoc_countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
