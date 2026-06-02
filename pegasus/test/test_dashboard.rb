@@ -1,7 +1,7 @@
 # Tests for the Dashboard helpers module, including the User helper object
 
 require_relative './test_helper'
-require_relative '../helper_modules/dashboard'
+require 'cdo/pegasus/helper_modules/dashboard'
 require_relative 'fixtures/fake_dashboard'
 
 class DashboardTest < Minitest::Test
