@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/oceans-lab",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "Code.org AI for Oceans lab",
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/oceans/#readme",
   "bugs": {
