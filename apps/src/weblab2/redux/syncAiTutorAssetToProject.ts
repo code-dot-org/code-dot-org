@@ -1,4 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {uniqueFileName} from '@codebridge/utils/uniqueFileName';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -13,7 +14,8 @@ export const AI_TUTOR_UPLOADS_FOLDER = 'aitutor_uploads';
 /**
  * After a successful AI Tutor chat upload, add image to the project's sources
  * under a top-level folder named aitutor_uploads, without opening
- * the file in the editor. Duplicate filenames replace the existing entry, so re-uploads overwrite in place.
+ * the file in the editor. Duplicate filenames are renamed with a numeric suffix
+ * (e.g. photo_1.png) so existing entries are never overwritten.
  * Chat uploads use a cleaned-up version of the original filename in the assets bucket.
  * Only project-sourced uploads are synced; level starter assets are left alone.
  */
@@ -51,38 +53,25 @@ export const syncAiTutorAssetToProject =
 
     const folderId = targetFolder.id;
 
-    const existingFile = Object.values(updatedSource.files).find(
-      f => f.name === asset.filename && f.folderId === folderId
-    );
+    const existingNames = Object.values(updatedSource.files)
+      .filter(f => f.folderId === folderId)
+      .map(f => f.name);
+    const filename = uniqueFileName(asset.filename, existingNames);
 
-    if (existingFile) {
-      if (existingFile.url === assetUrl) return; // no-op
-      updatedSource = {
-        ...updatedSource,
-        files: {
-          ...updatedSource.files,
-          [existingFile.id]: {
-            ...updatedSource.files[existingFile.id],
-            url: assetUrl,
-          },
+    const fileId = getNextFileId(Object.values(updatedSource.files));
+    updatedSource = {
+      ...updatedSource,
+      files: {
+        ...updatedSource.files,
+        [fileId]: {
+          id: fileId,
+          name: filename,
+          contents: '',
+          folderId,
+          url: assetUrl,
         },
-      };
-    } else {
-      const fileId = getNextFileId(Object.values(updatedSource.files));
-      updatedSource = {
-        ...updatedSource,
-        files: {
-          ...updatedSource.files,
-          [fileId]: {
-            id: fileId,
-            name: asset.filename,
-            contents: '',
-            folderId,
-            url: assetUrl,
-          },
-        },
-      };
-    }
+      },
+    };
 
     dispatch(setAndSaveSource(updatedSource));
   };
