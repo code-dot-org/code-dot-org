@@ -93,6 +93,8 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
+      # Fail fast on a .gitattributes/LFS mismatch in the post-merge tree.
+      - ./bin/drone/check-lfs-pointers
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
@@ -374,6 +376,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 35bd33e4fe7a663359f332ab5df93923309b33c7b089faa08fb804155c255883
+hmac: 34c317ad67effd188e0f01187640f1d877642ad2f6ca31f87f6eb9498262a008
 
 ...
