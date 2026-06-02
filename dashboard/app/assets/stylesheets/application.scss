@@ -1936,6 +1936,7 @@ a.download-video {
       width: $field-width;
       height: 40px;
       padding: 0 6px;
+      flex-shrink: 0;
     }
     input {
       background-color: $neutral_light;
@@ -1944,7 +1945,8 @@ a.download-video {
     label {
       color: $neutral_dark;
       font-size: 1em;
-      max-width: 20%;
+      width: 20%;
+      flex-shrink: 0;
       line-height: 1.2;
       @include main-font-semi-bold;
     }
