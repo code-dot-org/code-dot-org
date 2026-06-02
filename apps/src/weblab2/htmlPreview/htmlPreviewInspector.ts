@@ -31,6 +31,10 @@ export interface InspectorController {
 // id of the hidden node that aria-describedby points at on focus.
 const DESCRIPTION_ID = 'weblab2-inspector-description';
 
+// Zero-width space appended to alternate live-region updates so a screen reader
+// re-announces text identical to the previous announcement.
+const ZERO_WIDTH_SPACE = '\u200B';
+
 // Owns the overlay nodes, listeners, and mutable state for one inner document.
 class InspectorOverlay implements InspectorController {
   private readonly currentDocument: Document;
@@ -164,9 +168,16 @@ class InspectorOverlay implements InspectorController {
   }
 
   private untagSubtree(root: Element): void {
-    this.taggedElements.delete(root);
+    this.untag(root);
     for (const element of root.querySelectorAll('*')) {
-      this.taggedElements.delete(element);
+      this.untag(element);
+    }
+  }
+
+  // Drop our reference to an element and remove the tabindex we added.
+  private untag(element: Element): void {
+    if (this.taggedElements.delete(element)) {
+      element.removeAttribute('tabindex');
     }
   }
 
@@ -199,7 +210,8 @@ class InspectorOverlay implements InspectorController {
     // triggers a live-region announcement.
     this.liveToggle = !this.liveToggle;
     this.liveRegion.textContent =
-      formatDescription(getElementInfo(element)) + (this.liveToggle ? '​' : '');
+      formatDescription(getElementInfo(element)) +
+      (this.liveToggle ? ZERO_WIDTH_SPACE : '');
   }
 
   private describeForFocus(element: Element): void {
