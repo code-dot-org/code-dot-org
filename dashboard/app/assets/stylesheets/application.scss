@@ -37,10 +37,10 @@
 @import "style-constants";
 
 // Bootstrap Variables
-$baseFontFamily: $main-font;
-$headingsFontWeight: $regular-font-weight;
-$btnPrimaryBackground: $orange;
-$btnPrimaryBackgroundHighlight: $orange;
+$font-family-base: $main-font;
+$headings-font-weight: $regular-font-weight;
+$btn-primary-bg: $orange;
+$btn-primary-background-highlight: $orange;
 
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
@@ -77,13 +77,30 @@ p,pre,span {
   @include selectable;
 }
 
-body {
-  -webkit-tap-highlight-color: transparent;
-  padding: 0;
-  margin: 0;
-  font-style: normal;
-  font-family: "Figtree", "Noto Sans", "Noto Sans Arabic", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC", "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR", "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", "Noto Sans Math", sans-serif;
+$gradient-border: rgba(0, 0, 0, 0.1);
+$gradient-border-bottom: rgba(0, 0, 0, 0.25);
+$gradient-text-shadow: rgba(0, 0, 0, 0.25);
+$gradient-box-shadow-inner: rgba(255, 255, 255, 0.2);
+$gradient-box-shadow-outer: rgba(0, 0, 0, 0.05);
+
+.btn {
+  @include box-shadow(inset 0 1px 0 $gradient-box-shadow-inner, 0 1px 2px $gradient-box-shadow-outer);
+  border-color: $gradient-border $gradient-border $gradient-border $gradient-border-bottom;
   line-height: 20px;
+  text-shadow: 0 -1px 0 $gradient-text-shadow;
+}
+
+.btn-lg {
+  font-size: 17.5px;
+  padding: 11px 19px;
+}
+
+body {
+  font-style: normal;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body.pin_bottom {
