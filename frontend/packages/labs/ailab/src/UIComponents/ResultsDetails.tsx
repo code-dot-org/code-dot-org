@@ -1,19 +1,21 @@
 /* React component to handle displaying accuracy results. */
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useCallback} from 'react';
 import {connect} from 'react-redux';
-import {setShowResultsDetails, RootState} from '../redux';
 import {Dispatch} from 'redux';
-import {ResultsData} from '../types';
+
+import {ResultsGrades, styles} from '../constants';
 import {
   getPercentCorrect,
   getCorrectResults,
   getIncorrectResults,
 } from '../helpers/accuracy';
-import {ResultsGrades, styles} from '../constants';
-import ResultsToggle from './ResultsToggle';
+import {setShowResultsDetails, RootState} from '../redux';
+import {ResultsData} from '../types';
+
 import ResultsTable from './ResultsTable';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import ResultsToggle from './ResultsToggle';
 
 interface ResultsDetailsProps {
   resultsTab: string;

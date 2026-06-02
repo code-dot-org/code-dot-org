@@ -1,14 +1,16 @@
 /* React component to handle displaying accuracy results. */
 import {useEffect, useCallback} from 'react';
 import {connect} from 'react-redux';
-import {styles} from '../constants';
-import {UnconnectedStatement} from './Statement';
-import {setShowResultsDetails, setResultsPhase, RootState} from '../redux';
 import {Dispatch} from 'redux';
+
+import {styles} from '../constants';
+import I18n from '../i18n';
+import {setShowResultsDetails, setResultsPhase, RootState} from '../redux';
 import {HistoricResult} from '../types';
+
 import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
-import I18n from '../i18n';
+import {UnconnectedStatement} from './Statement';
 
 interface ResultsProps {
   historicResults: HistoricResult[];

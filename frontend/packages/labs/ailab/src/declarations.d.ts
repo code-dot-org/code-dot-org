@@ -1,27 +1,5 @@
-declare module '*.png' {
-  const src: string;
-  export default src;
-}
-
-declare module '*.jpg' {
-  const src: string;
-  export default src;
-}
-
-declare module '@public/*.png' {
-  const src: string;
-  export default src;
-}
-
-declare module '@public/*.jpg' {
-  const src: string;
-  export default src;
-}
-
-declare module '*.css' {
-  const content: Record<string, string>;
-  export default content;
-}
+// Asset module types (`*.png`, `*.jpg`, `*.css`, …) come from `vite/client`,
+// which is listed in `tsconfig.app.json`'s compiler `types`.
 
 declare module 'react-chartjs-2' {
   export const Bar: import('react').ComponentType<{
@@ -46,16 +24,6 @@ declare module 'ml-knn' {
     predict(dataset: number[][]): (number | string)[];
     toJSON(): object;
   }
-}
-
-declare module 'react-papaparse' {
-  export const CSVReader: import('react').ComponentType<{
-    onFileLoaded?: (data: Record<string, string>[], fileInfo: object) => void;
-    onError?: (error: Error) => void;
-    parserOptions?: object;
-    cssClass?: string;
-    label?: string;
-  }>;
 }
 
 declare module 'query-string' {

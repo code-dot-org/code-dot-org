@@ -1,15 +1,16 @@
 /* React component to handle displaying imported data. */
 import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
+
+import {styles} from '../constants';
+import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
 import {
   getTableData,
   setCurrentColumn,
   setHighlightColumn,
   RootState,
 } from '../redux';
-import {Dispatch} from 'redux';
-import {styles} from '../constants';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {getLocalizedValue} from '../helpers/valueDetails';
 import {DataRow} from '../types';
 
 interface DataTableProps {

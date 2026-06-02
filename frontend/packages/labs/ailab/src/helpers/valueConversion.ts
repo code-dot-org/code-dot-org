@@ -3,9 +3,10 @@
   convert categorical strings into ordinal integers to pass to the algorithm and
   likewise convert the returned integers back into human-readable strings.
 */
-import {isEmpty, getKeyByValue} from './utils';
-import {getSelectedCategoricalColumns} from '../selectors';
 import {RootState} from '../redux';
+import {getSelectedCategoricalColumns} from '../selectors';
+
+import {isEmpty, getKeyByValue} from './utils';
 
 // Take a ML-friendly integer and convert to human-readable string.
 export function convertValueForDisplay(

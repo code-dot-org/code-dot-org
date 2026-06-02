@@ -1,16 +1,19 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef, useCallback} from 'react';
 import {connect} from 'react-redux';
-import {getTableData, readyToTrain, RootState} from '../redux';
-import {styles, getFadeOpacity} from '../constants';
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
+
 import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
+import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
 import blueScanner from '@public/images/ai-bot/blue-scanner.png';
 import background from '@public/images/results-background-light.jpg';
-import DataTable from './DataTable';
-import {TestingAnimationDescription} from './AnimationDescriptions';
+
+import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
+import {getTableData, readyToTrain, RootState} from '../redux';
 import {DataRow} from '../types';
+
+import {TestingAnimationDescription} from './AnimationDescriptions';
+import DataTable from './DataTable';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -73,7 +76,7 @@ const GenerateResults = ({
     return () => {
       clearInterval(animationTimer);
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const getShowItemsFadingOut = () => {
     return data.length > maxNumItems;

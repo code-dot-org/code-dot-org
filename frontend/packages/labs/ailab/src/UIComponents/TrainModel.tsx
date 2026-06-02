@@ -1,17 +1,20 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
-import {store} from '../index';
-import train from '../train';
-import {getTableData, readyToTrain, RootState} from '../redux';
-import {styles, getFadeOpacity} from '../constants';
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
+
 import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
+import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
 import background from '@public/images/results-background-light.jpg';
-import DataTable from './DataTable';
-import {TrainingAnimationDescription} from './AnimationDescriptions';
+
+import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
+import {store} from '../index';
+import {getTableData, readyToTrain, RootState} from '../redux';
+import train from '../train';
 import {DataRow} from '../types';
+
+import {TrainingAnimationDescription} from './AnimationDescriptions';
+import DataTable from './DataTable';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;

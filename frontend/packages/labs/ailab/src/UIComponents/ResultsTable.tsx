@@ -1,12 +1,13 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
 import {useCallback} from 'react';
 import {connect} from 'react-redux';
-import {isRegression, setResultsHighlightRow, RootState} from '../redux';
 import {Dispatch} from 'redux';
+
 import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
-import I18n from '../i18n';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import I18n from '../i18n';
+import {isRegression, setResultsHighlightRow, RootState} from '../redux';
 import {ResultsData} from '../types';
 
 interface ResultsTableProps {

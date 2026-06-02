@@ -1,6 +1,6 @@
 import I18n from '../i18n';
-import {DatasetDetails} from '../types';
 import {RootState} from '../redux';
+import {DatasetDetails} from '../types';
 
 /* Helper functions for getting information about the selected dataset. */
 
