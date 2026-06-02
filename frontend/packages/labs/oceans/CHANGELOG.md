@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.1.0-alpha.2](https://github.com/code-dot-org/code-dot-org/compare/@code-dot-org/oceans-lab@0.1.0-alpha.1...${npm.name}@0.1.0-alpha.2) (2026-06-02)
+
 ## [0.1.0-alpha.1](https://github.com/code-dot-org/code-dot-org/compare/@code-dot-org/oceans-lab@0.1.0-alpha.0...${npm.name}@0.1.0-alpha.1) (2026-06-02)
 
 ### Bug Fixes
