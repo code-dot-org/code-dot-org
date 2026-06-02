@@ -16,7 +16,7 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?(@regional_partner.name)
     assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"CodeAI\" <noreply@code.org>", email['from'].to_s
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 
   test 'confirmation email sends without regional partner' do
@@ -37,7 +37,7 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?('Your Administrator/School Leader has approved your application')
     assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"CodeAI\" <noreply@code.org>", email['from'].to_s
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 
   test 'admin approval teacher receipt email sends without regional partner' do
@@ -59,6 +59,6 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?('Congratulations from')
     assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"CodeAI\" <noreply@code.org>", email['from'].to_s
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 end

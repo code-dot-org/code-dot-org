@@ -24,7 +24,7 @@ class DeviseMailerTest < ActionMailer::TestCase
 
     mail = Devise::Mailer.reset_password_instructions(user, 'faketoken')
 
-    assert_equal "CodeAI reset password instructions", mail.subject
+    assert_equal "Code.org reset password instructions", mail.subject
     assert_equal [user.email], mail.to
     assert_equal ["noreply@code.org"], mail.from
 
