@@ -26,6 +26,7 @@
 // passed here — it renders a div before the wrapper, shifting :first-child.
 .heroBannerSection > div:first-child {
   padding: 32px 24px 16px;
+  border-radius: 4px;
 }
 
 .heading {
@@ -41,13 +42,12 @@
   top: 0;
   right: 0;
   color: var(--text-neutral-white-fixed);
-  background-color: rgb(0 0 0 / 25%);
   border-radius: 4px;
-  padding: 2px;
+  margin: 4px;
   z-index: 1;
 
   &:hover,
   &:active {
-    color: var(--text-neutral-white-fixed);
+    color: var(--text-neutral-placeholder);
   }
 }
