@@ -1,34 +1,27 @@
 {
-  "name": "@code-dot-org/ml-playground",
+  "name": "@code-dot-org/ailab",
   "version": "0.0.52",
-  "private": false,
+  "private": true,
+  "description": "Code.org AI Lab (ML Playground)",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/ailab/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/code-dot-org/ml-playground.git"
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/ailab"
   },
   "license": "MIT",
   "author": "",
   "main": "dist/main.js",
-  "files": [
-    "dist/**/!(mainDev.js)",
-    "i18n/mlPlayground.json",
-    "public/datasets/*.json",
-    "public/*.json"
-  ],
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --static public --host 0.0.0.0 --allowed-hosts all",
     "lint": "eslint --ext .ts,.tsx src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "start": "yarn run dev",
     "test": "yarn run lint && jest",
-    "test:unit": "jest ./test/unit/*.js",
-    "typecheck": "tsc -b --noEmit",
-    "preversion": "yarn install && yarn run test",
-    "version": "yarn run build",
-    "postversion": "git push && git push --tags && yarn publish"
+    "test:unit": "jest ./test/unit/*.js"
   },
   "prettier": "./index.mjs",
   "jest": {
