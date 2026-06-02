@@ -84,7 +84,7 @@ const generateTextThroughGateway = async <
 
     const payload = {
       ...restOptions,
-      model: getModelString(model),
+      model: modelString,
       output: serializedOutput,
     };
 
