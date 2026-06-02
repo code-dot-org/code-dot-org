@@ -94,3 +94,49 @@ export function isTabindexEligible(element: Element): boolean {
     !element.matches(NATURALLY_FOCUSABLE)
   );
 }
+
+// Constrains `value` to the inclusive range [min, max].
+export function constrainToRange(
+  value: number,
+  min: number,
+  max: number
+): number {
+  return Math.min(Math.max(value, min), max);
+}
+
+interface Size {
+  width: number;
+  height: number;
+}
+
+// Places the inspector label just outside the highlighted box: above it by
+// default, below it when there isn't room above in the viewport, or, when it
+// fits in neither, pinned to the top-left-most visible point of the box.
+// Inputs/outputs are viewport-relative px (the caller adds scroll offsets); the
+// result is constrained to keep the label on screen.
+export function computeLabelPosition(
+  box: {top: number; bottom: number; left: number},
+  label: Size,
+  viewport: Size
+): {top: number; left: number} {
+  const fitsAbove = box.top - label.height >= 0;
+  const fitsBelow = box.bottom + label.height <= viewport.height;
+
+  let top: number;
+  let left: number;
+  if (fitsAbove) {
+    top = box.top - label.height;
+    left = box.left;
+  } else if (fitsBelow) {
+    top = box.bottom;
+    left = box.left;
+  } else {
+    top = Math.max(box.top, 0);
+    left = Math.max(box.left, 0);
+  }
+
+  return {
+    top: constrainToRange(top, 0, Math.max(0, viewport.height - label.height)),
+    left: constrainToRange(left, 0, Math.max(0, viewport.width - label.width)),
+  };
+}

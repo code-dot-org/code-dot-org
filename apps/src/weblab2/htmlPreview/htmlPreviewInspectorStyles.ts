@@ -12,8 +12,11 @@ export const HIGHLIGHT_STYLE: Partial<CSSStyleDeclaration> = {
   width: '0',
   height: '0',
   boxSizing: 'border-box',
-  border: '2px solid #1b75d0',
-  backgroundColor: 'rgba(27, 117, 208, 0.15)',
+  // #1892E3 = var(--background-info-primary). We use the literal hex because the
+  // student iframe doesn't load our design-system CSS variables, so the var
+  // would not resolve there.
+  border: '2px solid #1892E3',
+  backgroundColor: 'rgba(24, 146, 227, 0.1)', // #1892E3 at 10% opacity
   pointerEvents: 'none',
   zIndex: '2147483646',
   display: 'none',
@@ -30,7 +33,7 @@ export const LABEL_STYLE: Partial<CSSStyleDeclaration> = {
   display: 'none',
   font: '12px/1.4 monospace',
   color: '#fff',
-  backgroundColor: '#1b75d0',
+  backgroundColor: '#1892E3',
   padding: '1px 4px',
   borderRadius: '2px',
   whiteSpace: 'nowrap',

@@ -16,6 +16,7 @@ import {
 } from './htmlPreviewInspectorStyles';
 import {
   asElement,
+  computeLabelPosition,
   formatDescription,
   formatLabel,
   getElementInfo,
@@ -182,20 +183,31 @@ class InspectorOverlay implements InspectorController {
   }
 
   private paintOverlay(element: Element): void {
-    const rect = element.getBoundingClientRect();
     const scrollX = this.currentWindow ? this.currentWindow.scrollX : 0;
     const scrollY = this.currentWindow ? this.currentWindow.scrollY : 0;
-    const top = `${rect.top + scrollY}px`;
-    const left = `${rect.left + scrollX}px`;
-    this.highlight.style.top = top;
-    this.highlight.style.left = left;
-    this.highlight.style.width = `${rect.width}px`;
-    this.highlight.style.height = `${rect.height}px`;
+    const box = element.getBoundingClientRect();
+
+    this.highlight.style.top = `${box.top + scrollY}px`;
+    this.highlight.style.left = `${box.left + scrollX}px`;
+    this.highlight.style.width = `${box.width}px`;
+    this.highlight.style.height = `${box.height}px`;
     this.highlight.style.display = 'block';
+
+    // Show the label, measure it, then place it just outside the box.
     this.label.textContent = formatLabel(getElementInfo(element));
-    this.label.style.top = top;
-    this.label.style.left = left;
     this.label.style.display = 'block';
+    const labelRect = this.label.getBoundingClientRect();
+    const position = computeLabelPosition(
+      box,
+      {width: labelRect.width, height: labelRect.height},
+      {
+        width: this.currentWindow ? this.currentWindow.innerWidth : 0,
+        height: this.currentWindow ? this.currentWindow.innerHeight : 0,
+      }
+    );
+    this.label.style.top = `${position.top + scrollY}px`;
+    this.label.style.left = `${position.left + scrollX}px`;
+
     this.activeElement = element;
   }
 
