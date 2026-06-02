@@ -239,15 +239,6 @@ const InnerHTMLPreview = () => {
     // (the iframe reloads and re-fires onLoad).
   }, [inspectorEnabled, docLoadedTick]);
 
-  // Backstop teardown on unmount.
-  useEffect(
-    () => () => {
-      inspectorControllerRef.current?.teardown();
-      inspectorControllerRef.current = null;
-    },
-    []
-  );
-
   const getPreview = useCallback(() => {
     if (swWarmedUp && currentFile && !isLevelLoading) {
       return (
