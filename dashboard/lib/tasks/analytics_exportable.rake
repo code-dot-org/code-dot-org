@@ -6,7 +6,7 @@
 #   * `export AWS_PROFILE=codeorg-admin`
 #   * ensure `CDO.redshift_username` is set to a SQL user that has permissions to CREATE/DROP/REFRESH Materialized Views
 #  in the `dev.learning_platform_production` and `dev.learning_platform_production_pii` schemas (the views live in the
-#  `dev` database; see `Cdo::Aws::Redshift::MaterializedViewGenerator::MATERIALIZED_VIEW_DATABASE`), and also the ability
+#  `dev` database; see `Cdo::Aws::Redshift::MaterializedViewManager::MATERIALIZED_VIEW_DATABASE`), and also the ability
 #  to query Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the
 #  target Zero ETL databases.
 #
@@ -36,7 +36,7 @@ namespace :analytics_export do
   task :provision_materialized_views, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:provision_materialized_views[environment_type]" if args[:environment_type].blank?
 
-    require 'cdo/aws/redshift/materialized_view_generator'
+    require 'cdo/aws/redshift/materialized_view_manager'
     require 'cdo/aws/redshift/client'
 
     Rails.application.eager_load!
@@ -54,9 +54,9 @@ namespace :analytics_export do
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
 
-    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
+    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
 
-    plan = Cdo::Aws::Redshift::MaterializedViewGenerator.provision_all_views(
+    plan = Cdo::Aws::Redshift::MaterializedViewManager.provision_all_views(
       client: client,
       environment_type: env,
       models: models,
@@ -100,7 +100,7 @@ namespace :analytics_export do
     puts "\nSubmitting..."
     started_at = Time.now
 
-    result = Cdo::Aws::Redshift::MaterializedViewGenerator.provision_all_views(
+    result = Cdo::Aws::Redshift::MaterializedViewManager.provision_all_views(
       client: client,
       environment_type: env,
       models: models
@@ -127,8 +127,7 @@ namespace :analytics_export do
 
     puts "\nWaiting for #{statements.length} statement(s) to complete (polls every 10s, Ctrl-C to detach — statements keep running on Redshift)..."
 
-    wait_result = Cdo::Aws::Redshift::MaterializedViewGenerator.wait_for_statements(
-      client: client,
+    wait_result = client.wait_for_statements(
       statements: statements
     ) do |event, fqn, detail|
       case event
@@ -156,7 +155,7 @@ namespace :analytics_export do
   task :refresh_materialized_views, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:refresh_materialized_views[environment_type]" if args[:environment_type].blank?
 
-    require 'cdo/aws/redshift/materialized_view_generator'
+    require 'cdo/aws/redshift/materialized_view_manager'
     require 'cdo/aws/redshift/client'
 
     Rails.application.eager_load!
@@ -174,14 +173,14 @@ namespace :analytics_export do
     env = args[:environment_type].to_sym
     dry_run = ENV['DRY_RUN'].present?
 
-    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
+    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
 
     # Phase 1: dry-run preview — group models into stale / fresh / no_views
     # without touching Redshift beyond the SVV_MV_INFO catalog read.
     would_refresh = {}
     skipped = []
     no_views = []
-    Cdo::Aws::Redshift::MaterializedViewGenerator.refresh_all_views(
+    Cdo::Aws::Redshift::MaterializedViewManager.refresh_all_views(
       client: client, environment_type: env, models: models, dry_run: true
     ) do |event, table_name, payload|
       case event
@@ -218,7 +217,7 @@ namespace :analytics_export do
     puts "\nSubmitting REFRESH for #{would_refresh.length} model(s)..."
     started_at = Time.now
 
-    result = Cdo::Aws::Redshift::MaterializedViewGenerator.refresh_all_views(
+    result = Cdo::Aws::Redshift::MaterializedViewManager.refresh_all_views(
       client: client, environment_type: env, models: models
     ) do |event, payload, extra|
       case event
@@ -239,8 +238,8 @@ namespace :analytics_export do
 
     puts "\nWaiting for #{statements.length} statement(s) to complete (polls every 10s, Ctrl-C to detach — statements keep running on Redshift)..."
 
-    wait_result = Cdo::Aws::Redshift::MaterializedViewGenerator.wait_for_statements(
-      client: client, statements: statements
+    wait_result = client.wait_for_statements(
+      statements: statements
     ) do |event, fqn, detail|
       case event
       when :finished
@@ -268,7 +267,7 @@ namespace :analytics_export do
   task :materialized_view_status, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:materialized_view_status[environment_type]" if args[:environment_type].blank?
 
-    require 'cdo/aws/redshift/materialized_view_generator'
+    require 'cdo/aws/redshift/materialized_view_manager'
     require 'cdo/aws/redshift/client'
     require 'csv'
 
@@ -277,8 +276,8 @@ namespace :analytics_export do
     env = args[:environment_type].to_s
     hours_back = ENV.fetch('HOURS_BACK', '24').to_i
 
-    client = Cdo::Aws::Redshift::MaterializedViewGenerator.redshift_client
-    rows = Cdo::Aws::Redshift::MaterializedViewGenerator.view_status(
+    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
+    rows = Cdo::Aws::Redshift::MaterializedViewManager.view_status(
       client: client,
       environment_type: env,
       models: AnalyticsExportable.valid_exported_models,

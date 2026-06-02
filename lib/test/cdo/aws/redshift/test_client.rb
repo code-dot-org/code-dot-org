@@ -302,6 +302,48 @@ class TestRedshiftClient < Minitest::Test
     assert_includes error.message, 'CREATE MATERIALIZED VIEW'
   end
 
+  def test_wait_for_statements_polls_and_partitions_finished_and_failed
+    @redshift.stubs(:status).with('id-a').returns('STARTED', 'FINISHED')
+    @redshift.stubs(:status).with('id-b').returns('STARTED', 'STARTED', 'FAILED')
+    @redshift.stubs(:describe_statement).with('id-b').returns(stub('desc', error: "Bad query\nwith details", sub_statements: []))
+
+    events = []
+    result = @redshift.wait_for_statements(
+      statements: {'a' => 'id-a', 'b' => 'id-b'}, poll_interval: 0
+    ) {|event, key, _| events << [event, key]}
+
+    assert_equal ['a'], result[:finished]
+    assert_equal [['b', 'Bad query']], result[:failed]
+    assert_includes events, [:finished, 'a']
+    assert_includes events, [:failed, 'b']
+  end
+
+  def test_wait_for_statements_raises_on_timeout
+    @redshift.stubs(:status).returns('STARTED')
+
+    assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
+      @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0, timeout: 0)
+    end
+  end
+
+  def test_wait_for_statements_returns_immediately_for_empty_set
+    @redshift.expects(:status).never
+
+    result = @redshift.wait_for_statements(statements: {}, poll_interval: 0)
+
+    assert_empty result[:finished]
+    assert_empty result[:failed]
+  end
+
+  def test_wait_for_statements_treats_aborted_as_failed
+    @redshift.stubs(:status).with('id-a').returns('ABORTED')
+    @redshift.stubs(:describe_statement).with('id-a').returns(stub('desc', error: nil, sub_statements: []))
+
+    result = @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0)
+
+    assert_equal [['a', '(ABORTED)']], result[:failed]
+  end
+
   private def create_field(str: nil, lng: nil, bool: nil, dbl: nil, blb: nil, is_null: false)
     f = mock
     f.stubs(:string_value).returns(str)

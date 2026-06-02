@@ -1,5 +1,5 @@
 require_relative '../../../test_helper'
-require_relative '../../../../cdo/aws/redshift/materialized_view_generator'
+require_relative '../../../../cdo/aws/redshift/materialized_view_manager'
 require 'erb'
 require 'fileutils'
 require 'tmpdir'
@@ -31,7 +31,7 @@ module Cdo
         end
       end
 
-      describe MaterializedViewGenerator do
+      describe MaterializedViewManager do
         def mock_column(name, type)
           col = stub
           col.stubs(:name).returns(name)
@@ -65,38 +65,38 @@ module Cdo
 
         describe '#generate_pii_ddl' do
           it 'includes all columns in the SELECT clause' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             all_columns.each {|col| assert_includes ddl, col.name}
           end
 
           it 'uses ERB template variable in the pii schema name' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'learning_platform_<%=environment_type%>_pii.users'
           end
 
           it 'uses ERB template variables in the source table path' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
           it 'uses the primary key as the distkey (double-quoted)' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("id")'
           end
 
           it 'disables backup and automated refresh' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'BACKUP NO'
             assert_includes ddl, 'AUTO REFRESH NO'
           end
 
           it 'returns nil when the model has no columns' do
             model.stubs(:columns).returns([])
-            assert_nil MaterializedViewGenerator.new(model).generate_pii_ddl
+            assert_nil MaterializedViewManager.new(model).generate_pii_ddl
           end
 
           it 'renders to the correct production schema when ERB is evaluated' do
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             environment_type = 'production'
             rendered = ERB.new(ddl).result(binding)
             assert_includes rendered, 'learning_platform_production_pii.users'
@@ -105,7 +105,7 @@ module Cdo
         end
 
         describe '#generate_non_pii_ddl' do
-          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:generator) {MaterializedViewManager.new(model)}
 
           it 'excludes string columns' do
             ddl = generator.generate_non_pii_ddl
@@ -162,12 +162,12 @@ module Cdo
         end
 
         describe '#save_ddl_templates' do
-          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:generator) {MaterializedViewManager.new(model)}
           let(:tmpdir) {Dir.mktmpdir}
 
           before do
-            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
-            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
           end
 
           after do
@@ -185,7 +185,7 @@ module Cdo
           it 'writes valid ERB templates that render correctly' do
             generator.save_ddl_templates
             pii_path = File.join(tmpdir, 'users_pii.sql.erb')
-            rendered = MaterializedViewGenerator.render_ddl(pii_path, environment_type: 'production')
+            rendered = MaterializedViewManager.render_ddl(pii_path, environment_type: 'production')
             assert_includes rendered, 'learning_platform_production_pii.users'
             assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
           end
@@ -210,12 +210,12 @@ module Cdo
         describe '.redshift_client' do
           it 'builds a client pinned to the materialized-view database (dev)' do
             Cdo::Aws::Redshift::Client.expects(:new).with(database: 'dev').returns(:client)
-            assert_equal :client, MaterializedViewGenerator.redshift_client
+            assert_equal :client, MaterializedViewManager.redshift_client
           end
 
           it 'uses MATERIALIZED_VIEW_DATABASE as the database' do
-            Cdo::Aws::Redshift::Client.expects(:new).with(database: MaterializedViewGenerator::MATERIALIZED_VIEW_DATABASE)
-            MaterializedViewGenerator.redshift_client
+            Cdo::Aws::Redshift::Client.expects(:new).with(database: MaterializedViewManager::MATERIALIZED_VIEW_DATABASE)
+            MaterializedViewManager.redshift_client
           end
         end
 
@@ -229,26 +229,26 @@ module Cdo
           it 'renders environment_type into the template' do
             template_path = File.join(tmpdir, 'test_template.sql.erb')
             File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
-            result = MaterializedViewGenerator.render_ddl(template_path, environment_type: 'production')
+            result = MaterializedViewManager.render_ddl(template_path, environment_type: 'production')
             assert_equal 'SELECT * FROM production_db.table;', result
           end
 
           it 'accepts symbol environment_type' do
             template_path = File.join(tmpdir, 'test_template.sql.erb')
             File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
-            result = MaterializedViewGenerator.render_ddl(template_path, environment_type: :test)
+            result = MaterializedViewManager.render_ddl(template_path, environment_type: :test)
             assert_equal 'SELECT * FROM test_db.table;', result
           end
         end
 
         describe '#create_or_replace_views' do
-          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:generator) {MaterializedViewManager.new(model)}
           let(:client) {mock('redshift_client')}
           let(:tmpdir) {Dir.mktmpdir}
 
           before do
-            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
-            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
           end
 
           after do
@@ -394,7 +394,7 @@ module Cdo
             model.stubs(:name).returns('User')
             model.stubs(:columns).returns([name_col]) # PII-only model → single view variant.
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -416,7 +416,7 @@ module Cdo
             model.stubs(:name).returns('User')
             model.stubs(:columns).returns([name_col])
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
             assert_nil rows.find {|r| r.view_type == 'pii'}.error
@@ -448,7 +448,7 @@ module Cdo
 
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -478,7 +478,7 @@ module Cdo
             model.stubs(:name).returns('User')
             model.stubs(:columns).returns([name_col]) # PII-only model
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -502,7 +502,7 @@ module Cdo
 
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -519,7 +519,7 @@ module Cdo
             client.stubs(:list_statements).returns(pageable([]))
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -539,7 +539,7 @@ module Cdo
 
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -564,7 +564,7 @@ module Cdo
 
             model.stubs(:name).returns('User')
 
-            MaterializedViewGenerator.view_status(
+            MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model], hours_back: 24
             )
           end
@@ -582,7 +582,7 @@ module Cdo
             client.stubs(:list_statements).returns(pageable([]))
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -603,7 +603,7 @@ module Cdo
             client.stubs(:list_statements).returns(pageable([]))
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -630,7 +630,7 @@ module Cdo
 )
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -652,7 +652,7 @@ module Cdo
             )
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -666,7 +666,7 @@ module Cdo
             client.stubs(:list_statements).returns(pageable([]))
             model.stubs(:name).returns('User')
 
-            rows = MaterializedViewGenerator.view_status(
+            rows = MaterializedViewManager.view_status(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -678,7 +678,7 @@ module Cdo
         end
 
         describe '#refresh_views' do
-          let(:generator) {MaterializedViewGenerator.new(model)}
+          let(:generator) {MaterializedViewManager.new(model)}
           let(:client) {mock('redshift_client')}
 
           it 'submits one async REFRESH per view and returns statement IDs by FQN' do
@@ -742,7 +742,7 @@ module Cdo
           it 'submits async REFRESH for every model and returns merged statement IDs' do
             client.stubs(:execute_async).returns('id-1', 'id-2', 'id-3', 'id-4')
 
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model, activities_model]
             )
 
@@ -766,7 +766,7 @@ module Cdo
             client.expects(:execute_async).never
 
             events = []
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model]
             ) {|event, payload, _| events << [event, payload]}
 
@@ -785,7 +785,7 @@ module Cdo
             calls = []
             client.stubs(:execute_async).with {|sql| calls << sql; true}.returns('id-1')
 
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -798,7 +798,7 @@ module Cdo
             client.stubs(:execute).returns([])
             client.stubs(:execute_async).returns('id-1', 'id-2')
 
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -809,7 +809,7 @@ module Cdo
             client.stubs(:execute_async).returns('id-a', 'id-b')
 
             events = []
-            MaterializedViewGenerator.refresh_all_views(
+            MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model]
             ) {|event, payload, extra| events << [event, payload, extra]}
 
@@ -829,7 +829,7 @@ module Cdo
             client.expects(:execute_async).never
 
             events = []
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [empty_model]
             ) {|event, payload, _| events << [event, payload]}
 
@@ -846,7 +846,7 @@ module Cdo
             end.returns('id-2', 'id-3')
 
             events = []
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model, activities_model]
             ) {|event, payload, extra| events << [event, payload, extra]}
 
@@ -863,7 +863,7 @@ module Cdo
           it 'returns empty result for an empty model set' do
             client.expects(:execute_async).never
 
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: []
             )
 
@@ -881,7 +881,7 @@ module Cdo
             client.expects(:execute_async).never
 
             events = []
-            result = MaterializedViewGenerator.refresh_all_views(
+            result = MaterializedViewManager.refresh_all_views(
               client: client, environment_type: :production, models: [model], dry_run: true
             ) {|event, table, payload| events << [event, table, payload]}
 
@@ -900,20 +900,20 @@ module Cdo
           it 'uses the first element of a composite primary key (double-quoted)' do
             model.stubs(:primary_key).returns(%w[user_id activity_id])
             model.stubs(:columns).returns([mock_column('user_id', :integer), mock_column('activity_id', :integer)])
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("user_id")'
           end
 
           it 'falls back to DISTSTYLE AUTO when primary_key is nil' do
             model.stubs(:primary_key).returns(nil)
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'DISTSTYLE AUTO'
             refute_includes ddl, 'DISTKEY'
           end
 
           it 'falls back to DISTSTYLE AUTO when primary_key is blank' do
             model.stubs(:primary_key).returns('')
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, 'DISTSTYLE AUTO'
             refute_includes ddl, 'DISTKEY'
           end
@@ -927,7 +927,7 @@ module Cdo
             model.stubs(:primary_key).returns(%w[school_id school_year])
             model.stubs(:columns).returns([string_pk_col, year_col, int_col])
 
-            non_pii = MaterializedViewGenerator.new(model).generate_non_pii_ddl
+            non_pii = MaterializedViewManager.new(model).generate_non_pii_ddl
             assert_includes non_pii, 'DISTSTYLE AUTO'
             refute_includes non_pii, 'DISTKEY'
           end
@@ -939,7 +939,7 @@ module Cdo
             end_col   = mock_column('end', :datetime)
             model.stubs(:columns).returns([id_col, group_col, end_col])
 
-            ddl = MaterializedViewGenerator.new(model).generate_pii_ddl
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             assert_includes ddl, '"id"'
             assert_includes ddl, '"group"'
             assert_includes ddl, '"end"'
@@ -948,47 +948,47 @@ module Cdo
 
         describe '#expected_view_fqns' do
           it 'returns both PII and non-PII FQNs when non-pii columns exist' do
-            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:production)
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:production)
             assert_equal %w[learning_platform_production_pii.users learning_platform_production.users], fqns
           end
 
           it 'returns only PII FQN when all columns are text' do
             model.stubs(:columns).returns([name_col, bio_col])
-            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:test)
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:test)
             assert_equal %w[learning_platform_test_pii.users], fqns
           end
 
           it 'returns empty array when model has no columns' do
             model.stubs(:columns).returns([])
-            fqns = MaterializedViewGenerator.new(model).expected_view_fqns(:production)
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:production)
             assert_empty fqns
           end
 
           it 'accepts string environment_type' do
-            fqns = MaterializedViewGenerator.new(model).expected_view_fqns('test')
+            fqns = MaterializedViewManager.new(model).expected_view_fqns('test')
             assert_equal %w[learning_platform_test_pii.users learning_platform_test.users], fqns
           end
         end
 
         describe '.describe_mv_state' do
           it 'maps documented SVV_MV_INFO state codes to descriptions' do
-            assert_equal 'Refreshes by full recompute', MaterializedViewGenerator.describe_mv_state(0)
-            assert_equal 'Refreshes incrementally', MaterializedViewGenerator.describe_mv_state(1)
-            assert_includes MaterializedViewGenerator.describe_mv_state(101), 'column was dropped'
-            assert_includes MaterializedViewGenerator.describe_mv_state(105), 'schema was renamed'
+            assert_equal 'Refreshes by full recompute', MaterializedViewManager.describe_mv_state(0)
+            assert_equal 'Refreshes incrementally', MaterializedViewManager.describe_mv_state(1)
+            assert_includes MaterializedViewManager.describe_mv_state(101), 'column was dropped'
+            assert_includes MaterializedViewManager.describe_mv_state(105), 'schema was renamed'
           end
 
           it 'falls back to a generic rebuild message for undocumented state >= 100' do
-            assert_includes MaterializedViewGenerator.describe_mv_state(199), 'rebuild required'
-            assert_includes MaterializedViewGenerator.describe_mv_state(199), '199'
+            assert_includes MaterializedViewManager.describe_mv_state(199), 'rebuild required'
+            assert_includes MaterializedViewManager.describe_mv_state(199), '199'
           end
 
           it 'reports unknown for an undocumented state < 100' do
-            assert_includes MaterializedViewGenerator.describe_mv_state(42), 'Unknown'
+            assert_includes MaterializedViewManager.describe_mv_state(42), 'Unknown'
           end
 
           it 'returns nil for a nil state' do
-            assert_nil MaterializedViewGenerator.describe_mv_state(nil)
+            assert_nil MaterializedViewManager.describe_mv_state(nil)
           end
         end
 
@@ -999,8 +999,8 @@ module Cdo
           let(:activities_model) {stub}
 
           before do
-            MaterializedViewGenerator.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
-            MaterializedViewGenerator.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
 
             activities_model.extend(FakeClassification)
             activities_model.stubs(:table_name).returns('activities')
@@ -1016,7 +1016,7 @@ module Cdo
             client.stubs(:execute).returns([])
             client.stubs(:batch_execute_async)
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1035,7 +1035,7 @@ module Cdo
             )
             client.stubs(:batch_execute_async)
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1056,7 +1056,7 @@ module Cdo
             )
             client.stubs(:batch_execute_async)
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1072,7 +1072,7 @@ module Cdo
               "id-#{id_seq}"
             end
 
-            result = MaterializedViewGenerator.provision_all_views(
+            result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1092,7 +1092,7 @@ module Cdo
               "id-#{submitted.length}"
             end
 
-            result = MaterializedViewGenerator.provision_all_views(
+            result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model]
             )
 
@@ -1114,13 +1114,13 @@ module Cdo
               "id-#{drop_batches.length}"
             end
 
-            result = MaterializedViewGenerator.provision_all_views(
+            result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model]
             )
 
             drop_only = drop_batches.select {|sqls| sqls.all? {|s| s.start_with?('DROP MATERIALIZED VIEW')}}
             assert_equal [40, 40, 15], drop_only.map(&:length)
-            assert(drop_only.all? {|sqls| sqls.length <= MaterializedViewGenerator::MAX_BATCH_STATEMENTS})
+            assert(drop_only.all? {|sqls| sqls.length <= MaterializedViewManager::MAX_BATCH_STATEMENTS})
             drop_keys = result[:statements].keys.select {|k| k.start_with?('__drop_orphans__')}
             assert_equal 3, drop_keys.length
           end
@@ -1131,7 +1131,7 @@ module Cdo
             )
             client.expects(:batch_execute_async).never
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model], dry_run: true
             )
 
@@ -1146,7 +1146,7 @@ module Cdo
             )
 
             events = []
-            MaterializedViewGenerator.provision_all_views(
+            MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model], dry_run: true
             ) {|event, _, _| events << event}
 
@@ -1158,7 +1158,7 @@ module Cdo
             client.stubs(:batch_execute_async).returns('id-1', 'id-2')
 
             events = []
-            MaterializedViewGenerator.provision_all_views(
+            MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             ) {|event, payload, extra| events << [event, payload, extra]}
 
@@ -1178,7 +1178,7 @@ module Cdo
             client.stubs(:batch_execute_async).returns('id')
 
             drop_events = []
-            MaterializedViewGenerator.provision_all_views(
+            MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model]
             ) {|event, payload, _| drop_events << payload if event == :drop_batch_submitted}
 
@@ -1192,7 +1192,7 @@ module Cdo
             client.stubs(:batch_execute_async).returns('id')
 
             events = []
-            MaterializedViewGenerator.provision_all_views(
+            MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             ) {|event, _payload, _| events << event}
 
@@ -1209,7 +1209,7 @@ module Cdo
             end
 
             events = []
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model, activities_model]
             ) {|event, payload, extra| events << [event, payload, extra]}
 
@@ -1227,7 +1227,7 @@ module Cdo
             client.stubs(:execute).returns([])
             client.stubs(:batch_execute_async)
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1235,7 +1235,7 @@ module Cdo
           end
 
           it 'skips models whose existing comment hash matches the desired DDL' do
-            generator = MaterializedViewGenerator.new(model)
+            generator = MaterializedViewManager.new(model)
             desired = generator.rendered_ddls(environment_type: :production)
 
             client.stubs(:execute).returns(
@@ -1247,7 +1247,7 @@ module Cdo
             client.expects(:batch_execute_async).never
 
             events = []
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             ) {|event, payload, _| events << [event, payload]}
 
@@ -1268,7 +1268,7 @@ module Cdo
             submitted = []
             client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1289,7 +1289,7 @@ module Cdo
             submitted = []
             client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
             )
 
@@ -1301,7 +1301,7 @@ module Cdo
             client.stubs(:execute).returns([])
             client.stubs(:batch_execute_async)
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model, activities_model]
             )
 
@@ -1318,7 +1318,7 @@ module Cdo
             )
             client.stubs(:batch_execute_async).returns('id')
 
-            plan = MaterializedViewGenerator.provision_all_views(
+            plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: []
             )
 
@@ -1328,60 +1328,142 @@ module Cdo
           end
         end
 
-        describe '.wait_for_statements' do
+        describe '.view_status_summary' do
+          # ViewStatusRow factory; defaults to a healthy, freshly-refreshed non-PII view.
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          let(:now) {Time.now}
+
+          it 'classifies a FAILED provision statement as failed_provisioning' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: 'CREATE', status: 'FAILED', error: 'Schema "x" does not exist')], now: now
+            )
+            assert_equal 1, summary[:error_views].length
+            assert_equal :failed_provisioning, summary[:error_views].first[:condition]
+          end
+
+          it 'classifies state >= 100 as unrefreshable' do
+            summary = MaterializedViewManager.view_status_summary([status_row(state: 101)], now: now)
+            assert_equal :unrefreshable, summary[:error_views].first[:condition]
+          end
+
+          it 'classifies an expected-but-absent view as missing' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)],
+              now: now
+            )
+            assert_equal :missing, summary[:error_views].first[:condition]
+          end
+
+          it 'treats a stale-but-healthy view as stale, not an error' do
+            summary = MaterializedViewManager.view_status_summary([status_row(is_stale: true)], now: now)
+            assert_empty summary[:error_views]
+            assert_equal 1, summary[:stale_views].length
+          end
+
+          it 'reports total and the max age / duration across REFRESH rows only' do
+            rows = [
+              status_row(executed_at: now - 100, duration_seconds: 3.0),
+              status_row(executed_at: now - 3600, duration_seconds: 42.0),
+              status_row(operation: 'CREATE', executed_at: now - 999_999, duration_seconds: nil)
+            ]
+            summary = MaterializedViewManager.view_status_summary(rows, now: now)
+            assert_equal 3, summary[:total]
+            assert_equal 3600, summary[:max_seconds_since_last_refresh]
+            assert_equal 42.0, summary[:max_refresh_duration_seconds]
+          end
+
+          it 'returns nil age/duration when no REFRESH has been observed' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: 'CREATE', duration_seconds: nil)], now: now
+            )
+            assert_nil summary[:max_seconds_since_last_refresh]
+            assert_nil summary[:max_refresh_duration_seconds]
+          end
+        end
+
+        describe '.emit_view_status_metrics' do
           let(:client) {mock('redshift_client')}
 
-          it 'polls every statement and returns finished/failed FQN partitions' do
-            client.stubs(:status).with('id-a').returns('STARTED', 'FINISHED')
-            client.stubs(:status).with('id-b').returns('STARTED', 'STARTED', 'FAILED')
-            client.stubs(:describe_statement).with('id-b').returns(stub('desc', error: "Bad query\nwith details", sub_statements: []))
-
-            events = []
-            result = MaterializedViewGenerator.wait_for_statements(
-              client: client,
-              statements: {'a' => 'id-a', 'b' => 'id-b'},
-              poll_interval: 0
-            ) {|event, fqn, _| events << [event, fqn]}
-
-            assert_equal ['a'], result[:finished]
-            assert_equal [['b', 'Bad query']], result[:failed]
-            assert_includes events, [:finished, 'a']
-            assert_includes events, [:failed, 'b']
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
           end
 
-          it 'raises QueryError when the timeout is exceeded' do
-            client.stubs(:status).returns('STARTED')
+          # Captures Cdo::Metrics.put calls. Mocha delivers the `unit:` kwarg as a trailing
+          # positional hash, so args = [namespace, name, value, dimensions, {unit:}].
+          def capture_metrics(&)
+            calls = []
+            Cdo::Metrics.stubs(:put).with {|*args| calls << args; true}
+            yield
+            calls.to_h {|args| [args[1], {value: args[2], dims: args[3], unit: args[4][:unit], ns: args[0]}]}
+          end
 
-            assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
-              MaterializedViewGenerator.wait_for_statements(
-                client: client,
-                statements: {'a' => 'id-a'},
-                poll_interval: 0,
-                timeout: 0
+          it 'emits a metric per name (with Environment dimension and Count/Seconds units) and logs each error view' do
+            rows = [
+              status_row(operation: 'CREATE', status: 'FAILED', error: 'boom', table_name: 'levels'),
+              status_row(is_stale: true)
+            ]
+            MaterializedViewManager.stubs(:view_status).returns(rows)
+            CDO.log.expects(:error).at_least_once
+
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
               )
             end
+
+            assert_equal 1, metrics['ViewsInErrorState'][:value]
+            assert_equal 1, metrics['ViewsStale'][:value]
+            assert_equal 2, metrics['ViewsTotal'][:value]
+            assert_equal 'ZeroEtlMaterializedViews', metrics['ViewsInErrorState'][:ns]
+            assert_equal 'Count', metrics['ViewsInErrorState'][:unit]
+            assert_equal({Environment: CDO.rack_env.to_s}, metrics['ViewsInErrorState'][:dims])
+            assert_equal 'Seconds', metrics['MaxSecondsSinceLastRefresh'][:unit]
           end
 
-          it 'returns immediately for an empty statement set without polling' do
-            client.expects(:status).never
-
-            result = MaterializedViewGenerator.wait_for_statements(
-              client: client, statements: {}, poll_interval: 0
-            )
-
-            assert_empty result[:finished]
-            assert_empty result[:failed]
+          it 'emits 0 for ViewsInErrorState when every view is healthy' do
+            MaterializedViewManager.stubs(:view_status).returns([status_row])
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
+              )
+            end
+            assert_equal 0, metrics['ViewsInErrorState'][:value]
           end
 
-          it 'treats ABORTED as a failed terminal state' do
-            client.stubs(:status).with('id-a').returns('ABORTED')
-            client.stubs(:describe_statement).with('id-a').returns(stub('desc', error: nil, sub_statements: []))
+          it 'skips nil-valued metrics rather than emitting them' do
+            MaterializedViewManager.stubs(:view_status).returns([status_row(operation: 'CREATE', duration_seconds: nil)])
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
+              )
+            end
+            refute_includes metrics.keys, 'MaxSecondsSinceLastRefresh'
+            refute_includes metrics.keys, 'MaxRefreshDurationSeconds'
+          end
 
-            result = MaterializedViewGenerator.wait_for_statements(
-              client: client, statements: {'a' => 'id-a'}, poll_interval: 0
+          it 'flushes the metrics buffer so short-lived callers (the cron) deliver all metrics' do
+            MaterializedViewManager.stubs(:view_status).returns([status_row])
+            Cdo::Metrics.stubs(:put)
+            Cdo::Metrics.expects(:flush!).once
+
+            MaterializedViewManager.emit_view_status_metrics(
+              client: client, environment_type: :test, models: [Object.new], now: Time.now
             )
-
-            assert_equal [['a', '(ABORTED)']], result[:failed]
           end
         end
       end

@@ -2,7 +2,7 @@
 # classification describes how sensitive an attribute's data is, which lets features
 # across the platform make consistent decisions about it. The first consumer is the
 # MySQL -> Redshift analytics export (`AnalyticsExportable` /
-# `Cdo::Aws::Redshift::MaterializedViewGenerator`), which uses classifications to decide
+# `Cdo::Aws::Redshift::MaterializedViewManager`), which uses classifications to decide
 # whether a column belongs in the PII Materialized View, the non-PII View, or neither.
 # Future consumers include `DeleteAccountsHelper` (which attributes to wipe/deidentify
 # when purging a user) and a possible default SELECT scope. Because classification is

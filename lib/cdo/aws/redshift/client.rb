@@ -133,6 +133,58 @@ module Cdo
           end
         end
 
+        # Polls for completion of every statement in the given `{key => statement_id}` map, where
+        # `key` is any caller-chosen label (e.g., a materialized view's fully-qualified name). Polls
+        # until all statements reach a terminal status (FINISHED / FAILED / ABORTED) or `timeout`
+        # seconds elapse. Each pass calls `status` for every still-pending statement, sleeps
+        # `poll_interval` seconds, and repeats. Unlike `wait_for_completion` (one statement, raises
+        # on failure), this waits on many and reports per-key outcomes instead of raising.
+        #
+        # Yielded progress events (block optional):
+        #   yield(:finished, key, duration_seconds)     # statement completed successfully
+        #   yield(:failed, key, error_message)          # statement FAILED or ABORTED
+        #
+        # @param statements [Hash{Object => String}] key => Redshift statement_id
+        # @param poll_interval [Integer] seconds between polling passes
+        # @param timeout [Integer, nil] cap on total wait; raises QueryError when crossed.
+        #   Defaults to nil (poll forever — statements have ~24h Data API retention).
+        # @return [Hash] :finished => [key, ...], :failed => [[key, error_msg], ...]
+        def wait_for_statements(statements:, poll_interval: 10, timeout: nil)
+          pending = statements.dup
+          finished = []
+          failed = []
+          start_times = Hash.new {|h, k| h[k] = Time.now}
+          waited_at = Time.now
+
+          until pending.empty?
+            if timeout && (Time.now - waited_at) > timeout
+              raise QueryError, "Timed out after #{timeout}s waiting on #{pending.length} statement(s)"
+            end
+
+            pending.dup.each do |key, statement_id|
+              start_times[key] # touch to record start on first observation
+              current = status(statement_id)
+              case current
+              when 'FINISHED'
+                duration = (Time.now - start_times[key]).round(1)
+                pending.delete(key)
+                finished << key
+                yield(:finished, key, duration) if block_given?
+              when 'FAILED', 'ABORTED'
+                desc = describe_statement(statement_id)
+                msg = desc.error.to_s.lines.first&.strip || "(#{current})"
+                pending.delete(key)
+                failed << [key, msg]
+                yield(:failed, key, msg) if block_given?
+              end
+            end
+
+            sleep poll_interval unless pending.empty?
+          end
+
+          {finished: finished, failed: failed}
+        end
+
         # Retrieves the results of a FINISHED statement.
         # @param statement_id [String] The Redshift Data API statement ID.
         # @return [Array<Hash>] Array (one element per row in the ResultSet) of hashes.

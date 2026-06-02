@@ -2,15 +2,14 @@ require 'digest'
 require 'erb'
 require 'fileutils'
 require 'cdo/aws/redshift/client'
+require 'cdo/aws/metrics'
 
 module Cdo
   module Aws
     module Redshift
-      # Given a Learning Platform ActiveRecord Model, generate SQL (DDL) for a Materialized View in Redshift that sources
-      # data from the target Redshift database table where that Model's transactional MySQL data is exported to via Zero-ETL.
-      # One row of `view_status` output: the most recent CREATE/DROP/REFRESH
-      # the Redshift Data API knows about for one materialized view FQN,
-      # plus the view's current freshness as reported by SVV_MV_INFO.
+      # One row of `MaterializedViewManager.view_status` output: the most recent CREATE/DROP/REFRESH
+      # the Redshift Data API knows about for one materialized view FQN, plus the view's current
+      # freshness as reported by SVV_MV_INFO.
       ViewStatusRow = Struct.new(
         :model_name,
         :table_name,
@@ -28,7 +27,34 @@ module Cdo
         keyword_init: true
       )
 
-      class MaterializedViewGenerator
+      # Manages the lifecycle of the Redshift materialized views that sit over Learning Platform
+      # MySQL tables replicated into Redshift via Zero-ETL. A single instance wraps one ActiveRecord
+      # model and generates that model's view DDL; the class methods operate over a whole set of
+      # models to provision, refresh, and report on the fleet of views.
+      #
+      # The public API, by phase:
+      #
+      #   GENERATE (instance — one model's DDL)
+      #     expected_view_fqns / generate_pii_ddl / generate_non_pii_ddl / rendered_ddls /
+      #     save_ddl_templates / create_or_replace_views / refresh_views
+      #     self.render_ddl / self.ddl_hash
+      #
+      #   PROVISION & REFRESH (class — across a set of models, via the Redshift Data API)
+      #     self.provision_all_views   # DROP+CREATE+COMMENT changed views; drop orphans (chunked)
+      #     self.refresh_all_views     # REFRESH stale views
+      #     self.redshift_client       # client pinned to MATERIALIZED_VIEW_DATABASE
+      #   (poll submitted statements with Cdo::Aws::Redshift::Client#wait_for_statements.)
+      #
+      #   MONITOR (class — read-only health)
+      #     self.view_status           # one ViewStatusRow per (model, view variant) + orphans
+      #     self.view_status_summary   # pure roll-up of rows (error / stale / age / duration)
+      #     self.emit_view_status_metrics  # CloudWatch metrics + per-error-view logs
+      #     self.error_condition_for / self.describe_mv_state
+      #
+      # The phases share internals on purpose (the Data API client, the schema/FQN conventions, the
+      # SVV_MV_INFO catalog reads, ViewStatusRow), which is why they live in one cohesive class
+      # rather than being split apart.
+      class MaterializedViewManager
         # Which `DataClassification` levels reach each Redshift view. The non-PII view
         # carries only data safe for broad analytics access; the PII view carries
         # everything except secrets (:highly_restricted), which reach neither view.
@@ -214,7 +240,7 @@ module Cdo
         # ON MATERIALIZED VIEW) so subsequent `provision_all_views` runs can skip rebuilds
         # when the DDL is unchanged.
         #
-        # Use `Cdo::Aws::Redshift::Client#status` / `MaterializedViewGenerator.wait_for_statements`
+        # Use `Cdo::Aws::Redshift::Client#status` / `Cdo::Aws::Redshift::Client#wait_for_statements`
         # to poll for completion. CREATE MATERIALIZED VIEW populates synchronously on
         # Redshift, so large source tables can take many minutes — much longer than
         # the synchronous Data API client timeout, which is why this method does not
@@ -241,7 +267,7 @@ module Cdo
         # Submits REFRESH MATERIALIZED VIEW for this model's PII and non-PII
         # views asynchronously and returns the resulting statement IDs without
         # waiting. Each view is submitted as its own single-statement async call
-        # so callers can track completion per FQN (e.g., via `.wait_for_statements`).
+        # so callers can track completion per FQN (e.g., via `client.wait_for_statements`).
         # REFRESH on a Zero ETL-sourced view can take longer than the synchronous
         # client timeout when many INSERT/UPDATE/DELETE rows have streamed in
         # since the last refresh, which is why this method does not wait.
@@ -278,7 +304,7 @@ module Cdo
         # submits a single consolidated DROP batch (async) for any orphaned views
         # that no longer correspond to a model in the set. Returns the resulting
         # statement IDs without waiting — pass `:statements` from the result to
-        # `.wait_for_statements` (interactive) or hand them off to a follow-up
+        # `client.wait_for_statements` (interactive) or hand them off to a follow-up
         # status check (cron).
         #
         # To avoid re-populating large views unnecessarily, each model's rendered
@@ -362,62 +388,9 @@ module Cdo
           plan
         end
 
-        # Polls the Redshift Data API for completion of every statement in the
-        # given `{fqn => statement_id}` map. Polls until all statements have
-        # reached a terminal status (FINISHED / FAILED / ABORTED) or `timeout`
-        # seconds have elapsed. Each pass calls `client.status` for every still-
-        # pending statement, sleeps `poll_interval` seconds, and repeats.
-        #
-        # Yielded progress events (block optional):
-        #   yield(:finished, fqn, duration_seconds)     # statement completed successfully
-        #   yield(:failed, fqn, error_message)          # statement FAILED or ABORTED
-        #
-        # @param client [Cdo::Aws::Redshift::Client]
-        # @param statements [Hash{String => String}] fqn => Redshift statement_id
-        # @param poll_interval [Integer] seconds between polling passes
-        # @param timeout [Integer, nil] cap on total wait; raises QueryError when crossed.
-        #   Defaults to nil (poll forever — statements have ~24h Data API retention).
-        # @return [Hash] :finished => [fqn, ...], :failed => [[fqn, error_msg], ...]
-        def self.wait_for_statements(client:, statements:, poll_interval: 10, timeout: nil)
-          pending = statements.dup
-          finished = []
-          failed = []
-          start_times = Hash.new {|h, k| h[k] = Time.now}
-          waited_at = Time.now
-
-          until pending.empty?
-            if timeout && (Time.now - waited_at) > timeout
-              raise Cdo::Aws::Redshift::Client::QueryError,
-                "Timed out after #{timeout}s waiting on #{pending.length} statement(s)"
-            end
-
-            pending.dup.each do |fqn, statement_id|
-              start_times[fqn] # touch to record start on first observation
-              current = client.status(statement_id)
-              case current
-              when 'FINISHED'
-                duration = (Time.now - start_times[fqn]).round(1)
-                pending.delete(fqn)
-                finished << fqn
-                yield(:finished, fqn, duration) if block_given?
-              when 'FAILED', 'ABORTED'
-                desc = client.describe_statement(statement_id)
-                msg = desc.error.to_s.lines.first&.strip || "(#{current})"
-                pending.delete(fqn)
-                failed << [fqn, msg]
-                yield(:failed, fqn, msg) if block_given?
-              end
-            end
-
-            sleep poll_interval unless pending.empty?
-          end
-
-          {finished: finished, failed: failed}
-        end
-
         # Submits REFRESH MATERIALIZED VIEW asynchronously for every PII and
         # non-PII view across the given set of models, and returns the resulting
-        # statement IDs without waiting. Pair with `.wait_for_statements` to
+        # statement IDs without waiting. Pair with `client.wait_for_statements` to
         # gate downstream analytics work on REFRESH completion.
         #
         # Skips views that Redshift reports as not stale (`SVV_MV_INFO.is_stale = 'f'`):
@@ -669,6 +642,95 @@ module Cdo
           end
 
           rows
+        end
+
+        METRICS_NAMESPACE = 'ZeroEtlMaterializedViews'.freeze
+
+        # A view is "in an error state" — needs human attention — when it failed to provision
+        # (its most recent CREATE/DROP statement FAILED/ABORTED, or carries an error), when Redshift
+        # reports it as unrefreshable due to source schema drift (SVV_MV_INFO.state >= 100), or when
+        # it is expected but absent (no recent Data API statement and not in SVV_MV_INFO). Staleness
+        # (`is_stale`) is NOT an error — it is normal between refreshes — so it is reported separately.
+        FAILED_STATEMENT_STATUSES = %w[FAILED ABORTED].freeze
+        MV_UNREFRESHABLE_STATE = 100 # SVV_MV_INFO.state >= 100 => can't refresh, rebuild required.
+
+        # Classifies one ViewStatusRow's error condition, or nil if the view is not in an error state.
+        # @return [Symbol, nil] :failed_provisioning | :unrefreshable | :missing | nil
+        def self.error_condition_for(row)
+          return :failed_provisioning if FAILED_STATEMENT_STATUSES.include?(row.status) || row.error.present?
+          return :unrefreshable if row.state && row.state >= MV_UNREFRESHABLE_STATE
+          # Expected but absent: no recent statement AND not found in SVV_MV_INFO (is_stale nil).
+          return :missing if row.status == '(no recent)' && row.is_stale.nil?
+          nil
+        end
+
+        # @param rows [Array<ViewStatusRow>]
+        # @param now [Time] reference time for "seconds since last refresh".
+        # @return [Hash] :error_views (rows + :condition), :stale_views, :total,
+        #   :max_seconds_since_last_refresh (nil if no refresh seen), :max_refresh_duration_seconds (nil).
+        def self.view_status_summary(rows, now:)
+          error_views = rows.filter_map do |row|
+            condition = error_condition_for(row)
+            {row: row, condition: condition} if condition
+          end
+
+          stale_views = rows.select(&:is_stale)
+
+          refresh_ages = rows.filter_map do |row|
+            next unless row.operation == 'REFRESH' && row.executed_at
+            (now - row.executed_at).to_i
+          end
+          refresh_durations = rows.filter_map do |row|
+            row.duration_seconds if row.operation == 'REFRESH' && row.duration_seconds
+          end
+
+          {
+            error_views: error_views,
+            stale_views: stale_views,
+            total: rows.length,
+            max_seconds_since_last_refresh: refresh_ages.max,
+            max_refresh_duration_seconds: refresh_durations.max
+          }
+        end
+
+        # Computes `view_status` for the given models, emits CloudWatch metrics (one set per
+        # environment) via `Cdo::Metrics`, and logs one structured line per error-state view to
+        # CloudWatch via `CDO.log.error`. Returns the summary so callers (the monitor cron) can
+        # build a human-readable alert. Metrics are emitted even when healthy (value 0) so alarms
+        # can distinguish "no problems" from "monitor didn't run".
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @param models [Enumerable<Class>]
+        # @param now [Time]
+        # @return [Hash] the `view_status_summary`.
+        def self.emit_view_status_metrics(client:, environment_type:, models:, now: Time.now)
+          rows = view_status(client: client, environment_type: environment_type, models: models)
+          summary = view_status_summary(rows, now: now)
+
+          summary[:error_views].each do |error|
+            row = error[:row]
+            CDO.log.error(
+              "[zeroetl] materialized view in error state " \
+              "env=#{environment_type} condition=#{error[:condition]} " \
+              "mysql_table=#{row.table_name} model=#{row.model_name} view_type=#{row.view_type} " \
+              "status=#{row.status} state=#{row.state} state_description=#{row.state_description.inspect} " \
+              "statement_id=#{row.statement_id} error=#{row.error.inspect}"
+            )
+          end
+
+          dimensions = {Environment: CDO.rack_env.to_s}
+          put = lambda do |name, value, unit|
+            Cdo::Metrics.put(METRICS_NAMESPACE, name, value, dimensions, unit: unit) unless value.nil?
+          end
+          put.call('ViewsInErrorState', summary[:error_views].length, 'Count')
+          put.call('ViewsStale', summary[:stale_views].length, 'Count')
+          put.call('ViewsTotal', summary[:total], 'Count')
+          put.call('MaxSecondsSinceLastRefresh', summary[:max_seconds_since_last_refresh], 'Seconds')
+          put.call('MaxRefreshDurationSeconds', summary[:max_refresh_duration_seconds], 'Seconds')
+          Cdo::Metrics.flush! # Ensure background thread flushes Metrics before the caller exits.
+
+          summary
         end
 
         # Queries Redshift for the freshness of the materialized views
