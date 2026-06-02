@@ -232,7 +232,7 @@ export function useLineToolbar({
     [updateLineEdgeLockState]
   );
 
-  const applyLineEdgeRotation = useCallback(
+  const setLineEdgeRotation = useCallback(
     (edgeId: string, rotation: number) => {
       updateLineEdge(edgeId, edge => {
         const currentRotation = edge.data?.rotation ?? DEFAULT_ROTATION;
@@ -313,13 +313,6 @@ export function useLineToolbar({
       });
     },
     [nodes, setNodes, updateLineEdge]
-  );
-
-  const setLineEdgeRotation = useCallback(
-    (edgeId: string, rotation: number) => {
-      applyLineEdgeRotation(edgeId, rotation);
-    },
-    [applyLineEdgeRotation]
   );
 
   return {
