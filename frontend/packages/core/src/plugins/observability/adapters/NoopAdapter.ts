@@ -1,4 +1,4 @@
-import type {ObservabilityConfig} from '../types';
+import type {ObservabilityConfig, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
@@ -22,9 +22,11 @@ export class NoopAdapter extends BaseAdapter {
   recordError(
     error: unknown,
     context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
   ): string | undefined {
     void error;
     void context;
+    void tags;
     return undefined;
   }
 

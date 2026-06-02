@@ -5,9 +5,16 @@ import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
 import {ExecutionType, InputMessageType} from '@cdo/apps/javalab/constants';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
+import {splitForLevelbuilderSave} from './sourceConverter';
 import {JavalabLevelProperties} from './types';
 
 // Module-local cache so onStop can close the active connection.
@@ -43,7 +50,7 @@ export async function handleRunClick(
     levelProperties.csaViewMode &&
     levelProperties.csaViewMode !== 'console'
   ) {
-    // Neighborhood and theater are deferred to a later phase.
+    // Neighborhood and theater are not yet supported.
     writeToConsole(
       `[JAVALAB] csaViewMode='${levelProperties.csaViewMode}' is not yet supported in Java Lab 2; running as console.`
     );
@@ -58,6 +65,19 @@ export async function handleRunClick(
     .getProjectManager()
     ?.getChannelId();
 
+  // Levelbuilder edit modes (start / exemplar) and any read-only viewer
+  // don't have a channel id. Send the in-memory source as override sources instead.
+  // Strip validation files: they aren't part of the program being executed.
+  const useOverrideSources =
+    getIsStartMode() ||
+    getAppOptionsEditingExemplar() ||
+    isReadOnlyWorkspace(state);
+  const overrideSources = useOverrideSources
+    ? splitForLevelbuilderSave(
+        state.lab2Project.projectSources?.source as MultiFileSource | undefined
+      ).startSources
+    : null;
+
   // Return a promise that stays pending until JavabuilderConnection signals
   // the program has finished (via its setIsRunning(false) callback, fired
   // from onExit / onClose / onError / onTimeout). This enables the run/stop
@@ -70,7 +90,7 @@ export async function handleRunClick(
       resolve();
     };
 
-    // Phase 1 wires the bare minimum: console output, no mini-app, no captcha
+    // Bare-minimum wiring for now: console output, no mini-app, no captcha
     // handling, no validation result reporting.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
@@ -92,7 +112,11 @@ export async function handleRunClick(
       channelId
     );
 
-    activeConnection.connectJavabuilder();
+    if (overrideSources) {
+      activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
+    } else {
+      activeConnection.connectJavabuilder();
+    }
   });
 }
 

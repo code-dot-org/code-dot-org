@@ -1,12 +1,11 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import backgroundPattern from '../../../../../static/rebrand_banner/teacher_dashboard_gradient_bg.png';
-import bannerImage from '../../../../../static/rebrand_banner/teacher_dashboard_hero.png';
+import bannerImage from '../../../../../static/rebrand_banner/rebrand_banner_hero.png';
 
 import style from './tempRebrandBanner.module.scss';
 
@@ -41,11 +40,6 @@ export const TempRebrandBanner: React.FC<TempRebrandBannerProps> = ({
       id="rebrand-announcement-banner"
       className={style.container}
       style={{
-        backgroundImage: `url(${backgroundPattern})`,
-        backgroundPositionX: '0%',
-        backgroundPositionY: '0%',
-        backgroundSize: '200px 200px',
-        backgroundRepeat: 'repeat-x',
         display: displayBanner ? 'flex' : 'none',
       }}
     >
@@ -56,12 +50,23 @@ export const TempRebrandBanner: React.FC<TempRebrandBannerProps> = ({
       />
       <div className={style.textStyle}>
         <div>
-          <Typography color="textPrimary" variant="h2">
-            {i18n.rebrandBannerHeader()}
+          <Typography variant="h2" className={style.textStyleFontHeaders}>
+            {i18n.rebrandBannerSubheader()}
           </Typography>
-          <Typography variant="h4">{i18n.rebrandBannerSubheader()}</Typography>
         </div>
-        <Typography variant="body3">{i18n.rebrandBannerText()}</Typography>
+        <Typography variant="body3" className={style.textStyleFontBody}>
+          {i18n.rebrandBannerText()}
+        </Typography>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="small"
+          type="button"
+          href="https://code.org/en-US/codeai#faq"
+          className={style.linkButtonStyle}
+        >
+          {i18n.rebrandBannerButton()}
+        </Button>
       </div>
       <CloseButton
         aria-label="close rebrand notification"
