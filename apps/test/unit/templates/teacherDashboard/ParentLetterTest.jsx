@@ -1,6 +1,6 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
 import {render, screen} from '@testing-library/react';
-import {CdoTheme} from '@code-dot-org/component-library/themes';
 import React from 'react';
 
 import {UnconnectedParentLetter as ParentLetter} from '@cdo/apps/templates/teacherDashboard/ParentLetter';

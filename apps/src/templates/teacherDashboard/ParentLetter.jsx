@@ -114,7 +114,9 @@ class ParentLetter extends React.Component {
               researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
-          <Typography variant="h1">{i18n.parentLetterStudentPrivacy()}</Typography>
+          <Typography variant="h1">
+            {i18n.parentLetterStudentPrivacy()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({
               pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
@@ -287,8 +289,11 @@ const SignInInstructions = ({
               })}
             />
           </li>
+
           <li>
-            <Typography component="span">{i18n.parentLetterClever2()}</Typography>
+            <Typography component="span">
+              {i18n.parentLetterClever2()}
+            </Typography>
             <br />
             <Box
               component="img"
@@ -306,10 +311,14 @@ const SignInInstructions = ({
         <ol>
           <GoToSignIn />
           <li>
-            <Typography component="span">{i18n.parentLetterGoogle1()}</Typography>
+            <Typography component="span">
+              {i18n.parentLetterGoogle1()}
+            </Typography>
           </li>
           <li>
-            <Typography component="span">{i18n.parentLetterGoogle2()}</Typography>
+            <Typography component="span">
+              {i18n.parentLetterGoogle2()}
+            </Typography>
           </li>
         </ol>
       );
