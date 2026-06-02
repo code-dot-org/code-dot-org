@@ -32,14 +32,88 @@ Teachers serve as guides supporting **design thinking, encouraging responsible A
 **Total Duration:** Approximately 3 weeks
 **Structure:** Eleven 45-minute lessons and one 5-day culminating project
 
-<img src="https://images.code.org/64f9fd216d8674befc3da54e558ff1fc-image-1768411220399.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+*Class schedule can be adapted and customized for your schedule.* 
+
+<!-- Lesson Calendar: Weeks 1–3 -->
+<div style=" max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #5c2d91; color: #fff; font-weight: 700; font-size: 15px; writing-mode: horizontal-tb; display: flex; align-items: center; justify-content: center; min-width: 80px; padding: 16px 10px; text-align: center; letter-spacing: 0.5px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #ede7f6; gap: 8px; padding: 12px;">
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Intro to Loops
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Counted Repetition
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        Open-Ended Repetition
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Displaying Arrays as List Views
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Displaying Objects as Cards
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #5c2d91; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; min-width: 80px; padding: 16px 10px; text-align: center; letter-spacing: 0.5px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #ede7f6; gap: 8px; padding: 12px;">
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Filtering and Transparency
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Pure Functions vs Side Effects
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Copy, Don't Mutate
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Inclusive Filters and Clear Labels
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c5a8e8; border-radius: 8px; padding: 10px 12px; flex: 1 1 130px; min-width: 120px; font-size: 13px; color: #2d1b4e; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#7c3aed; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Schema Design for Simple Features
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #5c2d91; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; min-width: 80px; padding: 16px 10px; text-align: center; letter-spacing: 0.5px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; background: #ede7f6; padding: 12px;">
+      <div style="background: #fff; border: 2px solid #7c3aed; border-radius: 8px; padding: 14px 20px; flex: 1; font-size: 14px; color: #2d1b4e; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 600; letter-spacing: 0.2px;">
+        <span style="display:inline-block; background:#7c3aed; color:#fff; font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.6px; white-space:nowrap;">Lesson 11</span>
+        Interactive Data Dashboard Project
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
 
 
-## Next up
 
-Let's begin with the end in mind and take a look at the final project. 
 
 
 MARKDOWN

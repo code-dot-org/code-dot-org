@@ -5,11 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing AI Chat Lab 
 
-Let’s try using an AI tool in a low-stress way.
+<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
+
 
 You have likely used AI before, maybe even daily. For your first time in this series, you will use Code.org’s AI Chat program, **AI Chat Lab**.
-
-<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
 
 Code.org created **AI Chat Lab**, a safe, student-friendly chatbot built into the Code.org platform. It allows students and teachers to explore generative AI in a secure way without leaving the platform.
 

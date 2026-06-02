@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "generate_outline": "Generate a two lesson progression on rendering 2d graphics inside web lab 2.  Target middle-schoolers.",
+      "generate_outline": "Generate a two lesson progression on making a web page about your pet fish.  Target middle-schoolers.",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-28 18:17:56 UTC",
+    "serialized_at": "2026-06-01 18:44:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -46,33 +46,33 @@
   ],
   "lessons": [
     {
-      "key": "intro-2d-graphics",
-      "name": "Introduction to 2D Graphics",
+      "key": "intro-web-fish",
+      "name": "My Pet Fish Webpage: Part 1 - Getting Started",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "generate_outline": "This lesson introduces students to the concept of 2D graphics and how they are rendered on a computer screen within Web Lab. Students will learn about the coordinate system used in Web Lab, understanding how x and y values determine position. They will practice drawing basic geometric shapes such as rectangles and circles using fundamental drawing commands. By the end, students should be able to accurately position and draw simple shapes on the Web Lab canvas."
+        "generate_outline": "This lesson introduces students to what a web page is and its basic structure using HTML. Students will learn how to create a simple HTML file, add a title to their web page, and include a main heading for their pet fish's name using the <h1> tag. They will also add a paragraph describing their pet fish using the <p> tag. By the end, students will have a basic web page displaying their pet fish's name and a short description."
       },
       "seeding_key": {
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
     },
     {
-      "key": "color-and-lines",
-      "name": "Drawing with Color and Lines",
+      "key": "add-images-fish",
+      "name": "My Pet Fish Webpage: Part 2 - Pictures and Personality",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "generate_outline": "Building on the previous lesson, students will now explore how to add color and modify line properties for their 2D graphics in Web Lab. They will learn to set fill colors for shapes and adjust the stroke color and thickness for outlines. Students will apply these new techniques to create more visually engaging and diverse drawings. By the end, they should be able to create colorful shapes with customized borders and lines on the Web Lab canvas."
+        "generate_outline": "Building on the previous lesson, students will enhance their pet fish web page by adding images and more detailed information. This lesson teaches how to insert an image of their pet fish using the <img> tag, including important attributes like src and alt. Students will also add additional descriptive paragraphs to share more about their fish's personality or tank setup. By the end, students will have a more complete web page featuring their pet fish's name, a description, and an image."
       },
       "seeding_key": {
-        "lesson.key": "color-and-lines",
+        "lesson.key": "add-images-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
@@ -80,14 +80,14 @@
   ],
   "lesson_activities": [
     {
-      "key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78",
+      "key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
       "position": 1,
       "properties": {
         "duration": 0
       },
       "seeding_key": {
-        "lesson_activity.key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78",
-        "lesson.key": "intro-2d-graphics",
+        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
@@ -95,14 +95,14 @@
   ],
   "activity_sections": [
     {
-      "key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca",
+      "key": "df4d80a5-4c44-4211-980c-3952c42630f0",
       "position": 1,
       "properties": {
         "duration": 0
       },
       "seeding_key": {
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca",
-        "lesson_activity.key": "cd05d0f6-0a4c-4aa9-8ed2-aa68b21f1c78"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0",
+        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8"
       }
     }
   ],
@@ -117,15 +117,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-2d-intro-2d-graphics"
+          "test-brendan-what-is-a-webpage"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       },
       "level_keys": [
-        "test-brendan-2d-intro-2d-graphics"
+        "test-brendan-what-is-a-webpage"
       ]
     },
     {
@@ -138,15 +138,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-2d-understanding-coordinates"
+          "test-brendan-html-structure-title"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       },
       "level_keys": [
-        "test-brendan-2d-understanding-coordinates"
+        "test-brendan-html-structure-title"
       ]
     },
     {
@@ -159,15 +159,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-2d-draw-first-rectangle"
+          "test-brendan-pet-name-heading"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       },
       "level_keys": [
-        "test-brendan-2d-draw-first-rectangle"
+        "test-brendan-pet-name-heading"
       ]
     },
     {
@@ -180,15 +180,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-2d-draw-first-circle"
+          "test-brendan-pet-description-paragraph"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       },
       "level_keys": [
-        "test-brendan-2d-draw-first-circle"
+        "test-brendan-pet-description-paragraph"
       ]
     },
     {
@@ -201,110 +201,77 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-2d-position-and-draw-shapes"
+          "test-brendan-review-first-page"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       },
       "level_keys": [
-        "test-brendan-2d-position-and-draw-shapes"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-brendan-2d-review-2d-basics"
-        ],
-        "lesson.key": "intro-2d-graphics",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
-      },
-      "level_keys": [
-        "test-brendan-2d-review-2d-basics"
+        "test-brendan-review-first-page"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "test-brendan-2d-intro-2d-graphics",
+        "level.key": "test-brendan-what-is-a-webpage",
         "script_level.level_keys": [
-          "test-brendan-2d-intro-2d-graphics"
+          "test-brendan-what-is-a-webpage"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-2d-understanding-coordinates",
+        "level.key": "test-brendan-html-structure-title",
         "script_level.level_keys": [
-          "test-brendan-2d-understanding-coordinates"
+          "test-brendan-html-structure-title"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-2d-draw-first-rectangle",
+        "level.key": "test-brendan-pet-name-heading",
         "script_level.level_keys": [
-          "test-brendan-2d-draw-first-rectangle"
+          "test-brendan-pet-name-heading"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-2d-draw-first-circle",
+        "level.key": "test-brendan-pet-description-paragraph",
         "script_level.level_keys": [
-          "test-brendan-2d-draw-first-circle"
+          "test-brendan-pet-description-paragraph"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-2d-position-and-draw-shapes",
+        "level.key": "test-brendan-review-first-page",
         "script_level.level_keys": [
-          "test-brendan-2d-position-and-draw-shapes"
+          "test-brendan-review-first-page"
         ],
-        "lesson.key": "intro-2d-graphics",
+        "lesson.key": "intro-web-fish",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-brendan-2d-review-2d-basics",
-        "script_level.level_keys": [
-          "test-brendan-2d-review-2d-basics"
-        ],
-        "lesson.key": "intro-2d-graphics",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "b9ce82ca-9167-484e-8022-f45f0e07a8ca"
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
       }
     }
   ],
