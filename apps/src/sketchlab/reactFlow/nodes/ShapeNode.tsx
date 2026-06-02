@@ -236,7 +236,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} shapeType={shapeType} />
+      <ConnectionHandles visible={showHandles} />
     </div>
   );
 }
