@@ -82,7 +82,7 @@ describe('Congrats', () => {
 
     const congratsPageText = wrapper.text();
 
-    expect(congratsPageText).to.include('Teach with Code.org');
+    expect(congratsPageText).to.include('Teach with CodeAI');
     expect(congratsPageText).to.include('Professional Learning');
   });
 
@@ -90,7 +90,7 @@ describe('Congrats', () => {
     const wrapper = shallow(<Congrats {...hocProps} userType="teacher" />);
     const congratsPageText = wrapper.text();
 
-    expect(congratsPageText).to.include('Teach with Code.org');
+    expect(congratsPageText).to.include('Teach with CodeAI');
     expect(congratsPageText).to.include('Professional Learning');
   });
 
@@ -98,7 +98,7 @@ describe('Congrats', () => {
     const wrapper = shallow(<Congrats {...hocProps} userType="student" />);
     const congratsPageText = wrapper.text();
 
-    expect(congratsPageText).to.not.include('Teach with Code.org');
+    expect(congratsPageText).to.not.include('Teach with CodeAI');
   });
 
   it('renders self paced next options for self-paced k5 course', () => {

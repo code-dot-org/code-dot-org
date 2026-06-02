@@ -61,7 +61,7 @@ describe('metaTagDescription() for valid urls', () => {
     <head>
       <meta name="keywords" content="">
       <meta name="description" content="Valid Description Here">
-      <title>Code.org Documentation</title>
+      <title>CodeAI Documentation</title>
       <link rel="shortcut icon" href="https://curriculum.code.org/static/img/favicon.ico">
     </head>
 
@@ -72,7 +72,7 @@ describe('metaTagDescription() for valid urls', () => {
   const bodyTextWithoutTag = `<html lang="en">
     <head>
       <meta name="keywords" content="">
-      <title>Code.org Documentation</title>
+      <title>CodeAI Documentation</title>
       <link rel="shortcut icon" href="https://curriculum.code.org/static/img/favicon.ico">
     </head>
 

@@ -1,6 +1,6 @@
 # Environment
 
-Students are working on an integrated development environment on Code.org which allows them to create HTML, CSS and JavaScript applications in the browser. The tool has 3 main areas:
+Students are working on an integrated development environment on CodeAI which allows them to create HTML, CSS and JavaScript applications in the browser. The tool has 3 main areas:
 
 - Resource Panel
 - Files area

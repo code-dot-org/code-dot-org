@@ -21,8 +21,8 @@ const AiTutorEnglishOnlyWarning: React.FunctionComponent = () => {
     <>
       {showEnglishOnlyWarning && (
         <p className={styles.message}>
-          This Code.org AI chat tool only supports English; use in other
-          languages is not currently recommended.
+          This CodeAI AI chat tool only supports English; use in other languages
+          is not currently recommended.
         </p>
       )}
     </>

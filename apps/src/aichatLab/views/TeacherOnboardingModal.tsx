@@ -32,7 +32,7 @@ const TeacherOnboardingModal: React.FunctionComponent<
         <div className={moduleStyles.warning}>
           <Typography variant="body2" gutterBottom>
             {
-              "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption."
+              "While CodeAI's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption."
             }
           </Typography>
         </div>

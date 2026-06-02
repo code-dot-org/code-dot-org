@@ -310,7 +310,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     if (sortUnrestrictedPacksByType) {
       const soundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
       possibleSoundEntries.sort((a, b) => {
-        if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {
+        if (a.folder.artist === 'CodeAI' && b.folder.artist === 'CodeAI') {
           const aOrder = soundTypes.indexOf(a.sound.type);
           const bOrder = soundTypes.indexOf(b.sound.type);
           return aOrder - bOrder;
