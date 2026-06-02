@@ -11,6 +11,7 @@ The following scenarios highlight real classroom and school-based examples that 
 
 <!-- Scenario 1 -->
 <div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+  
 <img 
   src="https://images.code.org/30831693a9af52d9b35e411a5f7d73d0-Screenshot 2026-05-28 at 3.22.41 PM.png" 
   alt="Illustrated classroom scenario involving AI use" 
@@ -22,6 +23,11 @@ The following scenarios highlight real classroom and school-based examples that 
     margin-bottom:10px;
     background:#ececec;
   ">
+
+<div style="font-size:18px; font-weight:700; margin-bottom:12px; color:#333;">
+Academic Integrity
+</div>
+  
 <p style="font-size:14px;">
 A 10th-grade student submits a polished history essay on the Civil Rights Movement that was generated almost entirely by AI. During peer review, classmates ask questions about specific events and sources mentioned in the essay. The student struggles to explain key events or arguments from the essay.
 </p>
@@ -40,6 +46,9 @@ A 10th-grade student submits a polished history essay on the Civil Rights Moveme
     margin-bottom:10px;
     background:#ececec;
   ">
+<div style="font-size:18px; font-weight:700; margin-bottom:12px; color:#333;">
+Differentiated Instruction
+</div>
 <p style="font-size:14px;">
 A 4th-grade science teacher uses AI to generate reading passages about ecosystems at multiple reading levels, including simplified texts and vocabulary supports for English learners. The teacher reviews and edits the content to ensure accuracy and appropriateness. Students work on the same topic while accessing materials that match their reading ability.
 </p>
@@ -58,6 +67,9 @@ A 4th-grade science teacher uses AI to generate reading passages about ecosystem
     margin-bottom:10px;
     background:#ececec;
   ">
+<div style="font-size:18px; font-weight:700; margin-bottom:12px; color:#333;">
+Algorithmic Bias
+</div>
 <p style="font-size:14px;">
 A high school student uses AI to generate examples for a career research assignment about healthcare careers. Across multiple prompts, the AI consistently describes doctors as men and nurses as women. The student begins noticing the repeated patterns and stereotypes.
 </p>
@@ -77,6 +89,9 @@ A high school student uses AI to generate examples for a career research assignm
     margin-bottom:10px;
     background:#ececec;
   ">
+<div style="font-size:18px; font-weight:700; margin-bottom:12px; color:#333;">
+Misinformation
+</div>
 <p style="font-size:14px;">
 A middle school social studies teacher uses AI to help generate background information for a lesson on a current events topic. The AI provides several confident but incorrect or outdated facts mixed in with accurate information. Without carefully verifying the content, the teacher includes some of the misinformation in the lesson materials shared with students.</p>
 </div>
