@@ -223,12 +223,13 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               color="tertiary"
               size="extraSmall"
               className={
-                debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
+                debugPanelOpen ? moduleStyles.activeToggleButton : undefined
               }
               onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
               aria-label={
                 debugPanelOpen ? 'Close debug panel' : 'Open debug panel'
               }
+              aria-pressed={debugPanelOpen}
               type="button"
             >
               <FontAwesomeV6Icon iconName="bug" />
@@ -247,9 +248,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               color="tertiary"
               size="extraSmall"
               className={
-                inspectorEnabled
-                  ? moduleStyles.activeInspectorButton
-                  : undefined
+                inspectorEnabled ? moduleStyles.activeToggleButton : undefined
               }
               onClick={() => dispatch(setInspectorEnabled(!inspectorEnabled))}
               aria-label={
@@ -258,7 +257,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               aria-pressed={inspectorEnabled}
               type="button"
             >
-              <FontAwesomeV6Icon iconName="magnifying-glass" />
+              <FontAwesomeV6Icon iconName="arrow-pointer" />
             </MuiIconButton>
           </WithTooltip>
           <ToggleFullScreenButton

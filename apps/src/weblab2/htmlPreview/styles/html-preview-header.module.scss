@@ -78,20 +78,10 @@
   border-radius: 0.25rem 0.25rem 0 0;
 }
 
-
-.closeDebugPanelButton.closeDebugPanelButton {
+.activeToggleButton.activeToggleButton {
   background-color: var(--background-brand-teal-primary);
   color: var(--text-neutral-white-fixed);
-
-  &:hover {
-    background-color: var(--background-brand-teal-strong);
-    color: var(--text-neutral-white-fixed);
-  }
-}
-
-.activeInspectorButton.activeInspectorButton {
-  background-color: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
+  border: 1px transparent solid;
 
   &:hover {
     background-color: var(--background-brand-teal-strong);
