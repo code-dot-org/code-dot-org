@@ -91,6 +91,13 @@ class InspectorOverlay implements InspectorController {
               this.tagSubtree(element);
             }
           });
+          // Drop references to detached subtrees.
+          mutation.removedNodes.forEach(node => {
+            const element = asElement(node);
+            if (element) {
+              this.untagSubtree(element);
+            }
+          });
         }
       });
       this.observer.observe(currentDocument.body, {
@@ -153,6 +160,13 @@ class InspectorOverlay implements InspectorController {
         element.setAttribute('tabindex', '0');
         this.taggedElements.add(element);
       }
+    }
+  }
+
+  private untagSubtree(root: Element): void {
+    this.taggedElements.delete(root);
+    for (const element of root.querySelectorAll('*')) {
+      this.taggedElements.delete(element);
     }
   }
 
@@ -242,14 +256,16 @@ class InspectorOverlay implements InspectorController {
   };
 
   private onMouseOut = (event: Event): void => {
-    if (this.focusedElement) {
+    // Moving between elements is handled by the next mouseover; only act when
+    // leaving to nothing (off the document) or onto our overlay.
+    const relatedElement = asElement((event as MouseEvent).relatedTarget);
+    if (relatedElement && !isOurNode(relatedElement)) {
       return;
     }
-    // Hide only when leaving to nothing (off the document) or onto our overlay;
-    // moving between elements is handled by the next mouseover.
-    const relatedElement = asElement((event as MouseEvent).relatedTarget);
-    if (!relatedElement || isOurNode(relatedElement)) {
-      this.hoveredElement = null;
+    // Clear hover state even while focused, so a later blur does not fall back
+    // to an element the pointer has already left.
+    this.hoveredElement = null;
+    if (!this.focusedElement) {
       this.hideOverlay();
     }
   };

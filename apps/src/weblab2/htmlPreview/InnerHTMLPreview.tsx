@@ -236,7 +236,9 @@ const InnerHTMLPreview = () => {
       inspectorControllerRef.current?.teardown();
       inspectorControllerRef.current = null;
     };
-  }, [inspectorEnabled, docLoadedTick, currentFile]);
+    // docLoadedTick bumps on every iframe onLoad, which covers file changes
+    // (the iframe reloads and re-fires onLoad).
+  }, [inspectorEnabled, docLoadedTick]);
 
   // Backstop teardown on unmount.
   useEffect(

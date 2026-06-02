@@ -191,6 +191,24 @@ describe('htmlPreviewInspector', () => {
 
       controller.teardown();
     });
+
+    it('hides on blur instead of snapping back to a hover the pointer has left', () => {
+      const doc = makeDoc('<div id="a">a</div><div id="b">b</div>');
+      const controller = installInspector(doc);
+      const a = doc.getElementById('a') as Element;
+      const b = doc.getElementById('b') as Element;
+
+      mouseOver(a); // hover a
+      focusIn(b); // focus b takes over the overlay from hover
+      mouseOut(a, null); // pointer then leaves the document entirely
+      focusOut(b); // blur b
+
+      // Pointer and focus are both gone, so the overlay hides rather than
+      // falling back to the no-longer-hovered <div id="a">.
+      expect(highlightOf(doc).style.display).toBe('none');
+
+      controller.teardown();
+    });
   });
 
   describe('tabbability', () => {
