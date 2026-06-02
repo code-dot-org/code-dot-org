@@ -1,6 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {uniqueFileName} from '@codebridge/utils/uniqueFileName';
 
+import {updateStagedFileFilename} from '@cdo/apps/aichat/redux';
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -72,6 +73,18 @@ export const syncAiTutorAssetToProject =
         },
       },
     };
+
+    // If the filename was deduplicated, update the staged file so that
+    // onAssetRemoved receives the correct name when the user removes it.
+    if (filename !== asset.filename) {
+      const stagedFiles = getState().aichat.stagedFiles;
+      const stagedFile = [...stagedFiles]
+        .reverse()
+        .find(f => f.asset.filename === asset.filename);
+      if (stagedFile) {
+        dispatch(updateStagedFileFilename({key: stagedFile.key, filename}));
+      }
+    }
 
     dispatch(setAndSaveSource(updatedSource));
   };

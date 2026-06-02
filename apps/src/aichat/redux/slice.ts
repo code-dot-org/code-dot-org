@@ -191,6 +191,15 @@ const aichatSlice = createSlice({
       );
       state.stagedFilesAlert = undefined;
     },
+    updateStagedFileFilename(
+      state,
+      action: PayloadAction<{key: string; filename: string}>
+    ) {
+      const file = state.stagedFiles.find(f => f.key === action.payload.key);
+      if (file) {
+        file.asset.filename = action.payload.filename;
+      }
+    },
     clearStagedFiles(state) {
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
@@ -263,6 +272,7 @@ export const {
   addStagedFile,
   stagedFileUploadFinished,
   removeStagedFile,
+  updateStagedFileFilename,
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
