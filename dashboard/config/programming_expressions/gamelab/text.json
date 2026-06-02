@@ -26,7 +26,7 @@
     {
       "name": "No line wrap vs. line wrap",
       "description": "Use parameters four and five to create a text box with line wrapping.",
-      "code": "```\n// No text wrapping\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 100);\r\n\r\n// Use parameters four and five to create a text box with line wrapping.\r\n// This will wrap text in a 100 by 100 box\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 200, 110, 300);\n```",
+      "code": "```\n// No text wrapping\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 100);\n\n// Use parameters four and five to create a text box with line wrapping.\n// This will wrap text in a 100 by 100 box\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 200, 100, 100);\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

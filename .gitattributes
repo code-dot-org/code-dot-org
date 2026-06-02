@@ -48,7 +48,6 @@ dashboard/public/**/README.md !text !filter !merge !diff
 dashboard/test/fixtures/**/*.tsv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.csv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.json !text !filter !merge !diff
-lib/test/fixtures/**/*.json !text !filter !merge !diff
 dashboard/test/fixtures/**/*.course !text !filter !merge !diff
 dashboard/test/fixtures/**/*.script_json !text !filter !merge !diff
 dashboard/test/fixtures/**/*.level !text !filter !merge !diff
@@ -67,14 +66,17 @@ pegasus/sites*/**/*.partial !text !filter !merge !diff
 pegasus/sites*/**/*.redirect !text !filter !merge !diff
 pegasus/sites*/**/*.scss !text !filter !merge !diff
 
-# INCLUDE these binary file types in Git LFS no matter where they occur:
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.pdf filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.ttf filter=lfs diff=lfs merge=lfs -text
-*.whl filter=lfs diff=lfs merge=lfs -text
-*.zip filter=lfs diff=lfs merge=lfs -text
+# INCLUDE these binary file types in Git LFS no matter where they occur.
+# Extensions are matched case-insensitively (e.g. both .png and .PNG) via
+# character classes, so files do not slip past LFS on case-sensitive
+# filesystems (git attribute matching is case-sensitive on Linux).
+*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[pP][dD][fF] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
+*.[wW][hH][lL] filter=lfs diff=lfs merge=lfs -text
+*.[zZ][iI][pP] filter=lfs diff=lfs merge=lfs -text
 
 # Small list of very common text file types to EXCLUDE from Git LFS:
 *.css !text !filter !merge !diff

@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import {useState, ChangeEvent} from 'react';
+import {vi} from 'vitest';
 
 import TextField, {TextFieldProps} from './../index';
 
@@ -43,7 +43,7 @@ describe('Design System - TextField', () => {
 
   it('changes value via keyboard input', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderTextField({label: 'TextField label', onChange: spyOnChange});
 
@@ -58,7 +58,7 @@ describe('Design System - TextField', () => {
 
   it("doesn't change value when disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderTextField({
       label: 'TextField label',
@@ -78,7 +78,7 @@ describe('Design System - TextField', () => {
 
   it("doesn't change value when readOnly", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderTextField({
       label: 'TextField label',

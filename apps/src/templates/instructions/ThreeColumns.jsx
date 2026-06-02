@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import moduleStyles from './three-columns.module.scss';
+
 /**
  * A component that lays out children in three columns (left, center, right),
  * where left/right widths are specified and center is the remainder. This is
@@ -46,7 +48,10 @@ const ThreeColumns = props => {
 
   return (
     <div style={{...defaultStyles.container, ...styles.container}}>
-      <div style={{...defaultStyles.middle, ...styles.middle}}>
+      <div
+        className={moduleStyles.hiddenScrollbar}
+        style={{...defaultStyles.middle, ...styles.middle}}
+      >
         {children[1]}
       </div>
       <div style={{...defaultStyles.left, ...styles.left}}>{children[0]}</div>
