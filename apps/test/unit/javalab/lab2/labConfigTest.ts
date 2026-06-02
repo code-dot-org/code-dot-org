@@ -19,9 +19,9 @@ describe('javalab2 deriveLabConfig', () => {
     expect(deriveLabConfig('console', channelLabConfig)).toBe(channelLabConfig);
   });
 
-  it('returns undefined for non-neighborhood modes with no channel config', () => {
+  it('returns undefined for non-neighborhood or theater modes with no channel config', () => {
     expect(deriveLabConfig('console', undefined)).toBeUndefined();
-    expect(deriveLabConfig('theater', undefined)).toBeUndefined();
+    expect(deriveLabConfig('theater', undefined)).not.toBeUndefined();
     expect(deriveLabConfig(undefined, undefined)).toBeUndefined();
   });
 });
