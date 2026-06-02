@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux';
 import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
+import {resumeLearnHowToEvaluateTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -86,6 +87,10 @@ const StudentSnapshot: React.FC = () => {
   );
 
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
+
+  useEffect(() => {
+    resumeLearnHowToEvaluateTour();
+  }, []);
 
   useEffect(() => {
     if (selectedUnitId) {

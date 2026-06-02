@@ -20,7 +20,7 @@ describe('JoinSectionArea', () => {
         initialJoinedStudentSections={joinedSections}
       />
     );
-    expect(wrapper.find('Connect(JoinSection)').length).toBe(1);
+    expect(wrapper.find('JoinSection').length).toBe(1);
     expect(wrapper.find('ParticipantSections').length).toBe(1);
     expect(wrapper.find('ParticipantSections').props().isTeacher).toBe(false);
   });
@@ -33,7 +33,7 @@ describe('JoinSectionArea', () => {
         isPlSections={true}
       />
     );
-    expect(wrapper.find('Connect(JoinSection)').length).toBe(1);
+    expect(wrapper.find('JoinSection').length).toBe(1);
     expect(wrapper.find('ParticipantSections').length).toBe(1);
     expect(wrapper.find('ParticipantSections').props().isTeacher).toBe(true);
   });
@@ -46,7 +46,7 @@ describe('JoinSectionArea', () => {
         isPlSections={true}
       />
     );
-    expect(wrapper.find('Connect(JoinSection)').length).toBe(1);
+    expect(wrapper.find('JoinSection').length).toBe(1);
     expect(wrapper.find('ParticipantSections').length).toBe(1);
     expect(wrapper.find('ParticipantSections').props().isTeacher).toBe(true);
   });

@@ -216,7 +216,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     subject(:root_url_helper) {root_url}
 
     it 'returns canonical studio root URL' do
-      _root_url_helper.must_equal CDO.studio_url('/', CDO.default_scheme)
+      _root_url_helper.must_equal CDO.studio_url('/')
     end
   end
 

@@ -135,7 +135,7 @@ namespace :test do
 
   desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
   timed_task_with_logging :lighthouse do
-    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
+    Lighthouse.report CDO.studio_url('')
   end
 
   # Run the four deploy-time UI suites in parallel: SauceLabs Safari and
@@ -152,7 +152,7 @@ namespace :test do
   end
 
   timed_task_with_logging :wait_for_test_server do
-    RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
+    RakeUtils.wait_for_url CDO.studio_url('')
   end
 
   timed_task_with_logging ui_live: [

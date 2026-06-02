@@ -3,13 +3,13 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  CURRENT_SCHEMA_VERSION,
   GatewayGenerateTextResponseV1Schema,
   type GatewayGenerateTextResponseV1,
 } from './contract/gatewaySchemas';
-import {getErrorLogData} from './logHelper';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
-import {LOG} from './turnstile/constants';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -76,14 +76,16 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
-  try {
-    const {model, ...restOptions} = options;
+  const {model, ...restOptions} = options;
+  const modelString = getModelString(model);
 
+  let schemaErrorReported = false;
+  try {
     const serializedOutput = await serializeOutputSchema(options.output);
 
     const payload = {
       ...restOptions,
-      model: getModelString(model),
+      model: modelString,
       output: serializedOutput,
     };
 
@@ -94,6 +96,7 @@ const generateTextThroughGateway = async <
 
     const headers = {
       'Content-Type': 'application/json',
+      'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
       ...turnstileHeaders(turnstileToken),
     };
 
@@ -108,10 +111,14 @@ const generateTextThroughGateway = async <
     const parseResult =
       GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
     if (!parseResult.success) {
-      console.error(
-        `${LOG} generateText response schema mismatch:`,
-        parseResult.error.errors
+      await reportGatewayError(
+        parseResult.error,
+        'generateTextThroughGateway',
+        modelString,
+        {'error.category': 'schema-mismatch'}
       );
+      schemaErrorReported = true;
+
       if (process.env.NODE_ENV === 'development') {
         throw parseResult.error;
       }
@@ -122,8 +129,13 @@ const generateTextThroughGateway = async <
 
     return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
-    const logData = await getErrorLogData(error);
-    console.error('Fetch error in generateTextThroughGateway:', logData);
+    if (!schemaErrorReported) {
+      await reportGatewayError(
+        error,
+        'generateTextThroughGateway',
+        modelString
+      );
+    }
     throw error;
   }
 };

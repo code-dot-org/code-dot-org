@@ -11,6 +11,7 @@ Other times, data will change and users need a way to recover when they make a m
 ## When should we copy data?
 
 Copy data when you want to try something (like filtering, sorting, or editing) without losing the original.
+
 **This is especially important when:**
 
 - Users might want to undo an action
@@ -28,6 +29,7 @@ Copy data when you want to try something (like filtering, sorting, or editing) w
 ## Real-world examples: Undo and Reset
 
 Think about tools like word processors, drawing apps, or photo editors.
+
 **They work because they support recovery:**
 
 - Undo lets you step back one change at a time

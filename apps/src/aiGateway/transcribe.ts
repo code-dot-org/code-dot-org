@@ -6,13 +6,13 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  CURRENT_SCHEMA_VERSION,
   GatewayTranscribeResponseV1Schema,
   type GatewayTranscribeResponseV1,
 } from './contract/gatewaySchemas';
-import {getErrorLogData} from './logHelper';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
-import {LOG} from './turnstile/constants';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -22,9 +22,11 @@ type TranscribeOptions = Parameters<typeof transcribe>[0];
 async function transcribeThroughGateway(
   options: TranscribeOptions
 ): Promise<TranscriptionResult> {
-  try {
-    const {model, audio, ...restOptions} = options;
+  const {model, audio, ...restOptions} = options;
+  const modelString = getModelString(model);
 
+  let schemaErrorReported = false;
+  try {
     const [token, turnstileToken] = await Promise.all([
       fetchAccessToken(),
       fetchTurnstileTokenIfEnabled(),
@@ -44,17 +46,23 @@ async function transcribeThroughGateway(
       `${AI_GATEWAY_URL}/transcribe`,
       formData,
       false,
-      turnstileHeaders(turnstileToken)
+      {
+        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+        ...turnstileHeaders(turnstileToken),
+      }
     );
 
     const rawResponse = await response.json();
     const parseResult =
       GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
     if (!parseResult.success) {
-      console.error(
-        `${LOG} transcribe response schema mismatch:`,
-        parseResult.error.errors
+      await reportGatewayError(
+        parseResult.error,
+        'transcribeThroughGateway',
+        modelString,
+        {'error.category': 'schema-mismatch'}
       );
+      schemaErrorReported = true;
       if (process.env.NODE_ENV === 'development') {
         throw parseResult.error;
       }
@@ -68,8 +76,9 @@ async function transcribeThroughGateway(
       warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
     } as unknown as TranscriptionResult;
   } catch (error) {
-    const logData = await getErrorLogData(error);
-    console.error('Fetch error in transcribeThroughGateway:', logData);
+    if (!schemaErrorReported) {
+      await reportGatewayError(error, 'transcribeThroughGateway', modelString);
+    }
     throw error;
   }
 }
