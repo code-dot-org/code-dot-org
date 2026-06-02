@@ -17,14 +17,15 @@ export const AI_TUTOR_UPLOADS_FOLDER = 'aitutor_uploads';
  * under a top-level folder named aitutor_uploads, without opening
  * the file in the editor. Duplicate filenames are renamed with a numeric suffix
  * (e.g. photo_1.png) so existing entries are never overwritten.
- * Chat uploads use a cleaned-up version of the original filename in the assets bucket.
+ * The filename stored in project sources is a cleaned-up version of the original upload name,
+ * while the underlying asset URL may use a unique bucket key.
  * Only project-sourced uploads are synced; level starter assets are left alone.
  */
 export const syncAiTutorAssetToProject =
   (asset: ChatAsset, assetUrl: string) =>
   (dispatch: AppDispatch, getState: () => RootState): void => {
     if (asset.source !== AssetSource.PROJECT) return;
-    if (asset.filename.endsWith('.pdf')) return;
+    if (asset.filename.toLowerCase().endsWith('.pdf')) return;
 
     const source = getState().lab2Project.projectSources?.source as
       | MultiFileSource
@@ -117,17 +118,21 @@ export const removeAiTutorAssetFromProject =
     const remainingFiles = {...source.files};
     delete remainingFiles[existingFile.id];
 
-    // If no files remain in the uploads folder, remove it too.
-    const folderStillUsed = Object.values(remainingFiles).some(
+    // If no files remain in the uploads folder, remove it too (but only if it has no subfolders).
+    const folderHasFiles = Object.values(remainingFiles).some(
       f => f.folderId === targetFolder.id
     );
-    const remainingFolders = folderStillUsed
-      ? source.folders
-      : Object.fromEntries(
+    const folderHasSubfolders = Object.values(source.folders).some(
+      f => f.parentId === targetFolder.id
+    );
+    const shouldRemoveFolder = !folderHasFiles && !folderHasSubfolders;
+    const remainingFolders = shouldRemoveFolder
+      ? Object.fromEntries(
           Object.entries(source.folders).filter(
             ([id]) => id !== targetFolder.id
           )
-        );
+        )
+      : source.folders;
 
     const updatedSource: MultiFileSource = {
       ...source,
