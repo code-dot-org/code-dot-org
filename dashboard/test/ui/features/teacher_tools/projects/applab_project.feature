@@ -16,7 +16,7 @@ Scenario: Applab Flow
   And I type "Code Ninja" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title includes "Code Ninja - App Lab - CodeAI"
+  Then I should see title includes "Code Ninja - App Lab - Code.org"
 
   # Thumbnail is required to publish the project
   And I press "runButton"
