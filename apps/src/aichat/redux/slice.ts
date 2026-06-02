@@ -197,7 +197,7 @@ const aichatSlice = createSlice({
     ) {
       const file = state.stagedFiles.find(f => f.key === action.payload.key);
       if (file) {
-        file.asset.filename = action.payload.filename;
+        file.projectFilename = action.payload.filename;
       }
     },
     clearStagedFiles(state) {
