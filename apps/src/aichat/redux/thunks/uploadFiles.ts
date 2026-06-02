@@ -3,6 +3,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createAppAsyncThunk} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
 import {AssetSource, ChatAsset, UploadStatus} from '../../types';
@@ -65,10 +66,12 @@ export const uploadFiles = createAppAsyncThunk<
       .slice(0, numAllowedFiles)
       .map<[string, ChatAsset, File]>(file => {
         const validFilename = cleanUploadFilename(file.name);
+        const lastDot = validFilename.lastIndexOf('.');
+        const ext = lastDot > 0 ? validFilename.slice(lastDot) : '';
+        const bucketKey = `${createUuid()}${ext}`;
         return [
-          // Create a unique key for each upload in case the same file is uploaded more than once.
           `${validFilename}-${Date.now()}`,
-          {filename: validFilename, source: AssetSource.PROJECT},
+          {filename: validFilename, source: AssetSource.PROJECT, bucketKey},
           file,
         ];
       });
