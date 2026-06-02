@@ -1,6 +1,6 @@
 class TeacherMailer < ApplicationMailer
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
-  default reply_to: 'Code.org <support@code.org>'
+  default reply_to: 'CodeAI <support@code.org>'
 
   def delete_teacher_email(teacher, removed_students)
     @teacher = teacher

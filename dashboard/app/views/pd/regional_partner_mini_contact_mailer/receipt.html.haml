@@ -2,7 +2,7 @@
 %p Thank you for your interest in supporting computer science education in your region!
 
 -if @regional_partner
-  %p= "Code.org's Regional Partner, #{@regional_partner.name}, will get back to you."
+  %p= "CodeAI's Regional Partner, #{@regional_partner.name}, will get back to you."
 -else
   %p
     Unfortunately we do not have a local Regional Partner in your region at this time.
@@ -16,10 +16,10 @@
     to a Regional Partner in your community if and when they become available.
   %p
     In the meantime, take a look
-    = link_to 'here for the K-12 Code.org curriculum options', CDO.studio_url('/courses', CDO.default_scheme)
+    = link_to 'here for the K-12 CodeAI curriculum options', CDO.studio_url('/courses', CDO.default_scheme)
     available for no cost to all schools.
 
-- recipient_alias = @regional_partner ? 'your Regional Partner' : 'Code.org'
+- recipient_alias = @regional_partner ? 'your Regional Partner' : 'CodeAI'
 %p= "Below is a confirmation of the information you sent to #{recipient_alias}:"
 = render partial: 'form_body'
 
@@ -31,5 +31,5 @@
   %br
   Sam Morris
   %br
-  Regional Partner Network Manager, Code.org
+  Regional Partner Network Manager, CodeAI
 
