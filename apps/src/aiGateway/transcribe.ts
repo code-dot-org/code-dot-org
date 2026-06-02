@@ -14,7 +14,6 @@ import {
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
-import {LOG} from './turnstile/constants';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -27,6 +26,7 @@ async function transcribeThroughGateway(
   const {model, audio, ...restOptions} = options;
   const modelString = getModelString(model);
 
+  let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
       const [token, turnstileToken] = await Promise.all([
@@ -58,16 +58,13 @@ async function transcribeThroughGateway(
       const parseResult =
         GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
       if (!parseResult.success) {
-        console.error(
-          `${LOG} transcribe response schema mismatch:`,
-          parseResult.error.errors
-        );
         await reportGatewayError(
           parseResult.error,
           'transcribeThroughGateway',
           modelString,
           {'error.category': 'schema-mismatch'}
         );
+        schemaErrorReported = true;
         if (process.env.NODE_ENV === 'development') {
           throw parseResult.error;
         }
@@ -81,7 +78,13 @@ async function transcribeThroughGateway(
         warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
       } as unknown as TranscriptionResult;
     } catch (error) {
-      await reportGatewayError(error, 'transcribeThroughGateway', modelString);
+      if (!schemaErrorReported) {
+        await reportGatewayError(
+          error,
+          'transcribeThroughGateway',
+          modelString
+        );
+      }
       throw error;
     }
   };

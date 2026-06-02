@@ -11,7 +11,6 @@ import {
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
-import {LOG} from './turnstile/constants';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -80,15 +79,17 @@ const generateTextThroughGateway = async <
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const modelString = getModelString(model);
-  const promptLength = (options as {prompt?: string}).prompt?.length ?? 0;
+  const promptLength =
+    typeof options.prompt === 'string' ? options.prompt.length : 0;
 
+  let schemaErrorReported = false;
   const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
     try {
       const serializedOutput = await serializeOutputSchema(options.output);
 
       const payload = {
         ...restOptions,
-        model: getModelString(model),
+        model: modelString,
         output: serializedOutput,
       };
 
@@ -114,16 +115,13 @@ const generateTextThroughGateway = async <
       const parseResult =
         GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
       if (!parseResult.success) {
-        console.error(
-          `${LOG} generateText response schema mismatch:`,
-          parseResult.error.errors
-        );
         await reportGatewayError(
           parseResult.error,
           'generateTextThroughGateway',
           modelString,
           {'error.category': 'schema-mismatch'}
         );
+        schemaErrorReported = true;
 
         if (process.env.NODE_ENV === 'development') {
           throw parseResult.error;
@@ -135,11 +133,13 @@ const generateTextThroughGateway = async <
 
       return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
     } catch (error) {
-      await reportGatewayError(
-        error,
-        'generateTextThroughGateway',
-        modelString
-      );
+      if (!schemaErrorReported) {
+        await reportGatewayError(
+          error,
+          'generateTextThroughGateway',
+          modelString
+        );
+      }
       throw error;
     }
   };
