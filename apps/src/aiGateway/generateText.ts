@@ -3,6 +3,8 @@ import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import AichatContextManager from '../aichat/aichatContextManager';
+
 import {
   CURRENT_SCHEMA_VERSION,
   GatewayGenerateTextResponseV1Schema,
@@ -81,6 +83,7 @@ const generateTextThroughGateway = async <
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
+  const clientType = AichatContextManager.getContext().clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
@@ -152,6 +155,7 @@ const generateTextThroughGateway = async <
       attributes: {
         'ai.model': modelString,
         'ai.prompt_length': promptLength,
+        'ai.client_type': clientType,
         feature: 'ai-gateway',
       },
     },

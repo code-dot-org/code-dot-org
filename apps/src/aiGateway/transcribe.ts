@@ -6,6 +6,8 @@ import {
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import AichatContextManager from '../aichat/aichatContextManager';
+
 import {
   CURRENT_SCHEMA_VERSION,
   GatewayTranscribeResponseV1Schema,
@@ -25,6 +27,7 @@ async function transcribeThroughGateway(
 ): Promise<TranscriptionResult> {
   const {model, audio, ...restOptions} = options;
   const modelString = getModelString(model);
+  const clientType = AichatContextManager.getContext().clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
@@ -95,6 +98,7 @@ async function transcribeThroughGateway(
       op: 'ai.transcribe',
       attributes: {
         'ai.model': modelString,
+        'ai.client_type': clientType,
         feature: 'ai-gateway',
       },
     },
