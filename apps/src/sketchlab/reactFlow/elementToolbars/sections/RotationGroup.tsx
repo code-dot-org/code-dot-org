@@ -40,25 +40,30 @@ export default function RotationGroup({
   // zeros) without the normalized value overriding their input mid-edit.
   const [inputValue, setInputValue] = useState(String(normalizedValue));
   const [isFocused, setIsFocused] = useState(false);
+  // Coalesce rapid slider/input events so rotation work runs at most once
+  // per paint, always using the latest requested angle.
   const queuedRotationRef = useRef<number | null>(null);
-  const frameRef = useRef<number | null>(null);
+  const animationFrameIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     return () => {
-      if (frameRef.current !== null) {
-        cancelAnimationFrame(frameRef.current);
+      // Unmount can happen before the scheduled frame fires.
+      if (animationFrameIdRef.current !== null) {
+        cancelAnimationFrame(animationFrameIdRef.current);
       }
     };
   }, []);
 
+  // Queue the latest requested angle and flush it on the next animation
+  // frame so callers do not do full rotation work for every input event.
   const emitRotationChange = useCallback(
     (nextValue: number) => {
       queuedRotationRef.current = nextValue;
-      if (frameRef.current !== null) {
+      if (animationFrameIdRef.current !== null) {
         return;
       }
-      frameRef.current = requestAnimationFrame(() => {
-        frameRef.current = null;
+      animationFrameIdRef.current = requestAnimationFrame(() => {
+        animationFrameIdRef.current = null;
         const queued = queuedRotationRef.current;
         queuedRotationRef.current = null;
         if (queued !== null) {
