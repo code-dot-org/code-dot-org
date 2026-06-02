@@ -34,6 +34,7 @@ remark-gfm              GFM syntax
 remark-rehype           mdast          → hast        (allowDangerousHtml)
 rehype-raw              reparse raw HTML in the source
 <extension rehype plugins>             ← transform the HTML TREE
+rehypeLocalize          translate block text         ← if a translator is registered
 rehype-sanitize         enforce the allowlist        ← SECURITY BOUNDARY
 rehype-react            hast           → React elements (component map)
 ```
@@ -188,11 +189,41 @@ post-process the parsed mdast (rewriting matched nodes via `data.hName` /
 `hProperties` / `hChildren`) rather than extending the tokenizer; the equivalent
 raw HTML (`<b data-id>`, `<span data-url>`) is accepted too.
 
+## Localization
+
+Translation is built in and wired directly to the core localization plugin
+(`@code-dot-org/core/plugins/localization`). There is **no host setup** beyond
+having that plugin in play, which apps already do at bootstrap — every
+`Markdown` localizes automatically and re-renders on locale change.
+
+When LocalizeJS is loaded, `rehypeLocalize` translates block text **at build
+time** and marks the paragraph `data-notranslate`. Until then — and on a host
+that never loads LocalizeJS — localization is a no-op with no per-render cost,
+and paragraphs carry `data-isolate` for the runtime translation path.
+
+### Why a plugin, and what it solves
+
+Our translation engine refuses to translate a paragraph that contains Blockly
+XML (`<xml>`, `<block>`, ...) or other non-phrasing elements, and mishandles
+`<code>`. `rehypeLocalize` works around this on the hast tree, before
+sanitization:
+
+1. Within each block (default `<p>`), elements the translator can't handle are
+   hidden behind empty placeholder spans and stashed verbatim; elements it
+   mishandles (default `<code>`) are renamed to a tag it accepts.
+2. The block's inner HTML is serialized and handed to the injected `translate`.
+3. The result is reparsed and the placeholders / renamed tags are restored —
+   the stashed elements come back byte-for-byte.
+
+The stashed and reparsed nodes still pass through sanitization, so the trust
+boundary is unchanged. This replaces the legacy approach of building a detached
+DOM tree from rendered React and walking it back, which was fragile.
+
 ## Notes
 
 - **Memoization.** The processor is rebuilt when the `extensions` array
-  _identity_ changes. Define the array once (module scope, or `useMemo`); do not
-  pass a fresh literal on every render.
+  _identity_ changes, or when localization becomes active. Define the array once
+  (module scope, or `useMemo`); do not pass a fresh literal on every render.
 - **Trust boundary.** This component is for rendering markdown safely. Do not
   reach around the sanitizer (e.g. by mapping a tag to a component that injects
   `dangerouslySetInnerHTML`); that defeats the one guarantee it provides.

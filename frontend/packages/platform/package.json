@@ -49,6 +49,8 @@
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "classnames": "catalog:",
+    "hast-util-from-html": "^2.0.3",
+    "hast-util-to-html": "^9.0.5",
     "lodash": "^4.17.21",
     "markdown-to-txt": "^2.0.1",
     "query-string": "^9.2.2",

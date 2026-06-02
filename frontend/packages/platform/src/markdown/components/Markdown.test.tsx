@@ -1,6 +1,8 @@
 import {fireEvent, render as renderDom, screen} from '@testing-library/react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {describe, expect, it, vi} from 'vitest';
+import {afterEach, describe, expect, it, vi} from 'vitest';
+
+import {localization} from '@code-dot-org/core/plugins/localization';
 
 import type {MarkdownExtension} from '../extension';
 import {
@@ -11,8 +13,34 @@ import {
   expandableImages,
   inlineStyles,
 } from '../extensions';
+import {translateHtml} from '../localization';
 
 import Markdown from './Markdown';
+
+/*
+ * Make the core localization plugin look loaded, with a translate that
+ * uppercases text nodes (preserving structure). Returns the list of HTML
+ * fragments the translator was handed, so tests can assert what was concealed.
+ */
+const activateLocalization = (): string[] => {
+  const seen: string[] = [];
+  vi.spyOn(localization, 'isLocalizeJS').mockReturnValue(true);
+  vi.spyOn(localization, 'translate').mockImplementation(input => {
+    if (input && typeof input === 'object' && 'childNodes' in input) {
+      const element = input as unknown as HTMLElement;
+      seen.push(element.innerHTML);
+      const walk = (node: Node) => {
+        if (node.nodeType === 3) {
+          node.textContent = (node.textContent ?? '').toUpperCase();
+        }
+        node.childNodes.forEach(walk);
+      };
+      walk(element);
+    }
+    return input;
+  });
+  return seen;
+};
 
 const render = (markdown: string, extensions?: MarkdownExtension[]) =>
   renderToStaticMarkup(<Markdown content={markdown} extensions={extensions} />);
@@ -265,6 +293,60 @@ describe('Markdown', () => {
       );
       expect(screen.queryByRole('button')).toBeNull();
       expect(screen.getByRole('img', {name: 'just a cat'})).toBeTruthy();
+    });
+  });
+
+  describe('localization', () => {
+    afterEach(() => vi.restoreAllMocks());
+
+    it('uses the runtime data-isolate path when LocalizeJS is not loaded', () => {
+      // core reports inactive in the test environment
+      const html = render('hello world');
+      expect(html).toContain('data-isolate="true"');
+      expect(html).not.toContain('data-notranslate');
+    });
+
+    it('translateHtml is a no-op while inactive', () => {
+      expect(translateHtml('<b>hi</b>')).toBe('<b>hi</b>');
+    });
+
+    it('translates text and marks the paragraph data-notranslate when active', () => {
+      activateLocalization();
+      const html = render('hello world');
+      expect(html).toContain('HELLO WORLD');
+      expect(html).toContain('data-notranslate="true"');
+      expect(html).not.toContain('data-isolate');
+    });
+
+    it('hides Blockly XML from the translator and restores it verbatim', () => {
+      const seen = activateLocalization();
+      const html = render(
+        'Press <xml><block type="foo" id="bar"></block></xml> now',
+        [blockly],
+      );
+      // the translator never saw the raw Blockly tags...
+      expect(seen.join('')).not.toContain('<xml');
+      expect(seen.join('')).not.toContain('<block');
+      expect(seen.join('')).toContain('data-localize-token');
+      // ...but the output preserves them, ids intact
+      expect(html).toContain('<xml');
+      expect(html).toContain('<block');
+      expect(html).toContain('id="bar"');
+    });
+
+    it('renames <code> for translation and restores it', () => {
+      const seen = activateLocalization();
+      const html = render('run `print` please');
+      expect(seen.join('')).not.toContain('<code');
+      expect(seen.join('')).toContain('data-localize-rename');
+      expect(html).toContain('<code');
+    });
+
+    it('preserves inline formatting through translation', () => {
+      activateLocalization();
+      const html = render('a **bold** and [link](https://code.org)');
+      expect(html).toContain('<strong');
+      expect(html).toContain('href="https://code.org"');
     });
   });
 });

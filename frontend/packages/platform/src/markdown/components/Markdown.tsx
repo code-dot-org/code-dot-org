@@ -1,6 +1,11 @@
 import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
-import {useMemo, type ComponentType, type ReactNode} from 'react';
+import {
+  useMemo,
+  useSyncExternalStore,
+  type ComponentType,
+  type ReactNode,
+} from 'react';
 import {Fragment, jsx, jsxs} from 'react/jsx-runtime';
 import rehypeRaw from 'rehype-raw';
 import rehypeReact from 'rehype-react';
@@ -27,6 +32,13 @@ import {
   composeSanitizeSchema,
   type MarkdownExtension,
 } from '../extension';
+import {
+  getLocalizationVersion,
+  isLocalizationActive,
+  subscribeLocalization,
+  translateHtml,
+} from '../localization';
+import rehypeLocalize from '../rehypeLocalize';
 
 import moduleStyles from './markdown.module.scss';
 
@@ -59,7 +71,11 @@ const LOCALIZE_LINK_ATTRS = {
   'data-lz-url': 'true',
   'data-localize': 'markdown-url',
 };
+// data-isolate marks a paragraph as a runtime translation unit; data-notranslate
+// marks one already translated at build time by rehypeLocalize, so the runtime
+// engine leaves it alone.
 const LOCALIZE_PARAGRAPH_ATTRS = {'data-isolate': 'true'};
+const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
 
 const MarkdownLink: Components['a'] = ({children, href, className}) => (
   <Link href={href} className={className} {...LOCALIZE_LINK_ATTRS}>
@@ -70,19 +86,25 @@ const MarkdownLink: Components['a'] = ({children, href, className}) => (
 /*
  * Paragraphs render through the base Typography component rather than the
  * generated `BodyTwoText`: the generated typography elements drop unknown props,
- * which would silently strip the `data-isolate` localization attribute. The base
- * component forwards rest props to the underlying element.
+ * which would silently strip the localization attribute. The base component
+ * forwards rest props to the underlying element.
+ *
+ * When localization is active, rehypeLocalize has already translated the
+ * content at build time, so we mark the paragraph data-notranslate. Otherwise we
+ * mark it data-isolate for the runtime translation path.
  */
-const MarkdownParagraph: Components['p'] = ({children, className}) => (
-  <Typography
-    semanticTag="p"
-    visualAppearance="body-two"
-    className={className}
-    {...LOCALIZE_PARAGRAPH_ATTRS}
-  >
-    {children}
-  </Typography>
-);
+const makeParagraph =
+  (localized: boolean): Components['p'] =>
+  ({children, className}) => (
+    <Typography
+      semanticTag="p"
+      visualAppearance="body-two"
+      className={className}
+      {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
+    >
+      {children}
+    </Typography>
+  );
 
 /*
  * The design-system typography components require `children`, but rehype-react's
@@ -95,7 +117,7 @@ const styledText =
     <Element className={className}>{children}</Element>
   );
 
-const defaultComponents: Partial<Components> = {
+const baseComponents = (localized: boolean): Partial<Components> => ({
   h1: styledText(Heading1),
   h2: styledText(Heading2),
   h3: styledText(Heading3),
@@ -103,8 +125,8 @@ const defaultComponents: Partial<Components> = {
   strong: styledText(StrongText),
   em: styledText(EmText),
   a: MarkdownLink,
-  p: MarkdownParagraph,
-};
+  p: makeParagraph(localized),
+});
 
 const NO_EXTENSIONS: MarkdownExtension[] = [];
 
@@ -114,9 +136,16 @@ const NO_EXTENSIONS: MarkdownExtension[] = [];
  * rehype plugins run after raw-HTML reparsing but before sanitization, so their
  * output is still constrained by the (extension-widened) allowlist; extension
  * components are merged over the base mappings.
+ *
+ * When a translator is registered, rehypeLocalize runs last among the rehype
+ * tree transforms (still before sanitization) so it sees the final structure,
+ * including any elements the extensions introduced.
  */
-const buildProcessor = (extensions: MarkdownExtension[]) =>
-  unified()
+const buildProcessor = (
+  extensions: MarkdownExtension[],
+  localized: boolean,
+) => {
+  const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(collectRemarkPlugins(extensions))
@@ -125,14 +154,21 @@ const buildProcessor = (extensions: MarkdownExtension[]) =>
     // raw HTML is constrained to safe tags/attributes.
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
-    .use(collectRehypePlugins(extensions))
+    .use(collectRehypePlugins(extensions));
+
+  if (localized) {
+    processor.use(rehypeLocalize, {translate: translateHtml});
+  }
+
+  return processor
     .use(rehypeSanitize, composeSanitizeSchema(defaultSchema, extensions))
     .use(rehypeReact, {
       Fragment,
       jsx,
       jsxs,
-      components: composeComponents(defaultComponents, extensions),
+      components: composeComponents(baseComponents(localized), extensions),
     });
+};
 
 /**
  * Renders markdown-flavored rich text as sanitized HTML mapped onto
@@ -140,6 +176,9 @@ const buildProcessor = (extensions: MarkdownExtension[]) =>
  *
  * Provide the markdown as the `content` prop or as a single string child. Pass
  * `extensions` to enable additional syntax, tags, or behaviors a la carte.
+ *
+ * When a translator has been registered with `setMarkdownLocalization`, content
+ * is localized in place and re-translated on locale change.
  */
 const Markdown = ({
   content,
@@ -147,7 +186,20 @@ const Markdown = ({
   extensions = NO_EXTENSIONS,
   children,
 }: MarkdownProps) => {
-  const processor = useMemo(() => buildProcessor(extensions), [extensions]);
+  // Re-render (and re-run the synchronous translate) when LocalizeJS loads or
+  // the locale changes. Inactive until then — the runtime data-isolate path,
+  // with no per-render translation cost.
+  useSyncExternalStore(
+    subscribeLocalization,
+    getLocalizationVersion,
+    getLocalizationVersion,
+  );
+  const localized = isLocalizationActive();
+
+  const processor = useMemo(
+    () => buildProcessor(extensions, localized),
+    [extensions, localized],
+  );
 
   const rendered = processor.processSync(content ?? children ?? '').result;
 
