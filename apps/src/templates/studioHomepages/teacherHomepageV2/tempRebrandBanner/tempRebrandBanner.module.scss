@@ -1,58 +1,42 @@
 @font-face {
-  font-family: Geist;
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype'), local('?');
-}
-
-@font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 500;
   src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'), local('?');
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  height: 200px;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
-  justify-content: space-between;
-  border-radius: 4px;
-  background-color: #6A62D9;
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
-.imageStyle {
- border-radius: 4px 0 0 4px;
- height: stretch;
+.heroBannerSection {
+  padding: 0;
 }
 
-.textStyle {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  flex: 1 0 0;
+// Targets HeroBanner's inner wrapper div. announcementBannerProps must never be
+// passed here — it renders a div before the wrapper, shifting :first-child.
+.heroBannerSection > div:first-child {
+  padding: 32px 24px 16px;
 }
 
-.textStyleFontHeaders {
-  font-family: 'Space Grotesk', sans-serif !important;
+.heading {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.textStyleFontBody {
-  font-family: Geist, sans-serif !important;
-}
-
-.linkButtonStyle {
-  align-self: flex-end;
-  margin-top: 8px !important;
-}
-
-.dismissButtonStyle {
+.bannerWrapper .dismissButtonStyle {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: var(--text-neutral-white-fixed);
-  align-self: flex-start;
-  margin-top: 4px;
-  margin-right: 4px;
+  background-color: rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  padding: 2px;
+  z-index: 1;
+
+  &:hover,
+  &:active {
+    color: var(--text-neutral-white-fixed);
+  }
 }
