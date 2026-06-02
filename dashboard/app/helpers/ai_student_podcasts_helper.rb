@@ -3,7 +3,7 @@ class OpenaiStudentPodcastTimeout < StandardError; end
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
   OPENAI_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
