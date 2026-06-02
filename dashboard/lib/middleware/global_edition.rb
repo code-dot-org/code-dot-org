@@ -223,18 +223,6 @@ module Middleware
           request.cookies[LOCALE_KEY] = region_locale
           response.set_cdo_cookie(LOCALE_KEY, region_locale)
         end
-
-        Metrics::Events.log_event(
-          event_name: 'Global Edition Region Changed',
-          user: request.user,
-          session: request.session,
-          metadata: {
-            old_region: original_region,
-            old_locale: original_locale,
-            new_region:,
-            new_locale: region_locale,
-          },
-        )
       end
 
       private def existing_route?
