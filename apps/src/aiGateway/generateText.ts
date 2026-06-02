@@ -10,7 +10,6 @@ import {
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
-import {LOG} from './turnstile/constants';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -111,10 +110,6 @@ const generateTextThroughGateway = async <
     const parseResult =
       GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
     if (!parseResult.success) {
-      console.error(
-        `${LOG} generateText response schema mismatch:`,
-        parseResult.error.errors
-      );
       await reportGatewayError(
         parseResult.error,
         'generateTextThroughGateway',

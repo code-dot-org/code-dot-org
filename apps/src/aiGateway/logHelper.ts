@@ -82,10 +82,7 @@ export const reportGatewayError = async (
     {
       feature: 'ai-gateway',
       'error.category':
-        tags?.['error.category'] ??
-        (status !== undefined
-          ? inferGatewayErrorCategory(status)
-          : 'unhandled'),
+        status !== undefined ? inferGatewayErrorCategory(status) : 'unhandled',
       ...tags,
     }
   );
