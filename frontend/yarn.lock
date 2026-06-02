@@ -1550,6 +1550,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/oceans-lab@workspace:packages/labs/oceans"
   dependencies:
+    "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/redactable-markdown": "npm:^0.4.0"
@@ -1557,6 +1558,7 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
     "@fortawesome/react-fontawesome": "npm:^0.1.7"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
     "@tensorflow-models/knn-classifier": "npm:~1.1.0"
     "@tensorflow-models/mobilenet": "npm:^2.0.4"
     "@tensorflow/tfjs": "npm:^1.3.1"
@@ -1564,6 +1566,7 @@ __metadata:
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    clean-package: "npm:^2.2.0"
     eslint: "catalog:"
     jsdom: "catalog:"
     lodash: "npm:^4.17.5"
@@ -1576,6 +1579,7 @@ __metadata:
     react-dom: "catalog:"
     react-typist: "npm:^2.0.5"
     rehype-react: "npm:^4.0.1"
+    release-it: "catalog:"
     remark-parse: "npm:^7.0.2"
     remark-rehype: "npm:^5.0.0"
     typescript: "catalog:"

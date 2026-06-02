@@ -1,7 +1,6 @@
 {
   "name": "@code-dot-org/oceans-lab",
   "version": "0.0.0",
-  "private": true,
   "description": "Code.org AI for Oceans lab",
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/oceans/#readme",
   "bugs": {
@@ -19,16 +18,27 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./styles.css": "./dist/oceans-lab.css"
+    "./styles.css": "./dist/oceans-lab.css",
+    "./i18n": {
+      "types": "./i18n/oceans.d.ts",
+      "default": "./i18n/oceans.json"
+    }
   },
+  "files": [
+    "dist",
+    "i18n"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
+    "release": "release-it",
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
@@ -39,7 +49,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/redactable-markdown": "^0.4.0",
     "@code-dot-org/svm": "^0.1.1",
     "@tensorflow-models/knn-classifier": "~1.1.0",
@@ -52,14 +61,18 @@
     "remark-rehype": "^5.0.0"
   },
   "devDependencies": {
+    "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@testing-library/dom": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "clean-package": "^2.2.0",
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "lodash": "^4.17.5",
@@ -69,6 +82,7 @@
     "query-string": "4.1.0",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "release-it": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
@@ -82,5 +96,9 @@
     "lodash": "^4.17.5",
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "clean-package": "./clean-package.config.cjs"
 }

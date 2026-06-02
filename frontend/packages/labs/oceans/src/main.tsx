@@ -37,9 +37,21 @@ function getInitialMode(): AppModeValue {
  * added for local development and Playwright testing without changing the
  * dimensions or box-model of the embedded lab.
  */
+/** Read locale strings from ?strings= URL param (base64-encoded JSON object). */
+function getStringsParam(): Record<string, string> | undefined {
+  const raw = new URLSearchParams(window.location.search).get('strings');
+  if (!raw) return undefined;
+  try {
+    return JSON.parse(atob(raw)) as Record<string, string>;
+  } catch {
+    return undefined;
+  }
+}
+
 function DemoShell() {
   const [appMode, setAppMode] = useState<AppModeValue>(getInitialMode);
   const params = new URLSearchParams(window.location.search);
+  const strings = getStringsParam();
 
   /** Advance to next mode in APP_MODES sequence when the user completes one. */
   function handleContinue() {
@@ -109,6 +121,7 @@ function DemoShell() {
             appMode={appMode}
             guides={params.get('guides') ?? undefined}
             textToSpeechLocale={params.get('tts') ?? undefined}
+            strings={strings}
             onContinue={handleContinue}
           />
         </div>

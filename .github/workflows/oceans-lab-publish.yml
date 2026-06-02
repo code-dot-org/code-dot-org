@@ -1,0 +1,30 @@
+name: Oceans Lab — Publish to GitHub Packages
+
+on:
+  push:
+    tags:
+      - '@code-dot-org/oceans-lab@*'
+
+permissions:
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/oceans-lab
+        working-directory: ./frontend
+
+      - name: Publish
+        run: yarn workspace @code-dot-org/oceans-lab npm publish
+        working-directory: ./frontend
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

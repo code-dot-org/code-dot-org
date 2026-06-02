@@ -10,16 +10,27 @@ type CompiledMessages = Record<
 let messages: CompiledMessages | undefined;
 
 /**
- * Initialises the i18n runtime with optional caller-supplied message overrides.
+ * Initialises the i18n runtime with optional consumer-supplied raw strings and locale.
+ *
+ * The English base catalog is compiled first with `locale`'s plural rules.
+ * `rawStrings` overrides per-key with the same locale's rules; omitted keys
+ * fall back to English. `preCompiled` layered last for backward-compat callers
+ * that supply already-compiled functions.
  *
  * Must be called before `t`. Subsequent calls reset the message registry.
- *
- * @param i18n - Optional compiled message overrides keyed by message id.
  */
-const initI18n = (i18n: CompiledMessages = {}): void => {
-  // English pluralisation rules are used for all locales for now.
-  const mf = new MessageFormat('en');
-  messages = {...(mf.compile(data) as unknown as CompiledMessages), ...i18n};
+const initI18n = (
+  rawStrings: Record<string, string> = {},
+  locale = 'en',
+  preCompiled: CompiledMessages = {},
+): void => {
+  const mf = new MessageFormat(locale);
+  const baseEn = mf.compile(data) as unknown as CompiledMessages;
+  const localized =
+    Object.keys(rawStrings).length > 0
+      ? (mf.compile(rawStrings) as unknown as CompiledMessages)
+      : {};
+  messages = {...baseEn, ...localized, ...preCompiled};
 };
 
 /**

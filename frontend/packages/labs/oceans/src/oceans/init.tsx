@@ -15,8 +15,11 @@ export interface InitAllOptions {
   onContinue?: () => void;
   guides?: string;
   textToSpeechLocale?: string;
+  /** Raw locale strings keyed by message id; compiled with the active locale's plural rules. */
+  strings?: Record<string, string>;
   playSound: (id: string, options?: {volume?: number}) => void;
   registerSound: (descriptor: {id: string; mp3: string}) => void;
+  /** Pre-compiled message functions; layered on top of any compiled strings. */
   i18n?: Record<string, (opts?: Record<string, unknown>) => string>;
 }
 
@@ -43,7 +46,11 @@ export const initAll = function (options: InitAllOptions): void {
 
   soundLibrary.loadSounds();
 
-  I18n.initI18n(options.i18n);
+  I18n.initI18n(
+    options.strings ?? {},
+    options.textToSpeechLocale ?? 'en',
+    options.i18n ?? {},
+  );
 
   // Set initial state for UI elements.
   setInitialState({
