@@ -86,7 +86,6 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.SET_BLOCK_NETWORK) {
         setBlockNetwork(!!data.block);
       } else if (data.type === IframeMessageType.SET_INSPECTOR_ENABLED) {
-        // Toggle without reloading so the student keeps their page state.
         setInspectorEnabled(!!data.enabled);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
@@ -218,7 +217,7 @@ const InnerHTMLPreview = () => {
   }, [serviceWorkerReady, isLevelLoading, previewKey, currentFile]);
 
   // Install or remove the element inspector on the inner document. Re-runs when
-  // the toggle changes (no reload) and when docLoadedTick bumps after the iframe
+  // the toggle changes and when docLoadedTick bumps after the iframe
   // remounts, so we always attach to the live, same-origin contentDocument.
   useEffect(() => {
     inspectorControllerRef.current?.teardown();
