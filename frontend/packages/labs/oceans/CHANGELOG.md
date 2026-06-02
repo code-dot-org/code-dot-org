@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.0-alpha.1](https://github.com/code-dot-org/code-dot-org/compare/@code-dot-org/oceans-lab@0.1.0-alpha.0...${npm.name}@0.1.0-alpha.1) (2026-06-02)
+
+### Bug Fixes
+
+- **oceans-lab:** strip bundled deps from published manifest; add install auth ([85ea840](https://github.com/code-dot-org/code-dot-org/commit/85ea8403e46d70b16235be4fb75b940b546b6f2a))
+
 ## 0.1.0-alpha.0 (2026-06-02)
 
 ### Bug Fixes
