@@ -103,7 +103,7 @@ describe('WorkshopAssignmentLoader', () => {
     it('Queries only fit workshops', () => {
       expect(sandbox.server.requests).to.have.length(1);
       expect(sandbox.server.requests[0].url).to.include(
-        '/api/v1/pd/workshops/filter?state=Not+Started&course=CS+Discoveries&subject=CodeAI+Facilitator+Weekend'
+        '/api/v1/pd/workshops/filter?state=Not+Started&course=CS+Discoveries&subject=Code.org+Facilitator+Weekend'
       );
     });
 
