@@ -1,7 +1,7 @@
 # Tests for the routes in form_routes.rb
 
 require_relative './test_helper'
-require_relative 'fixtures/fake_dashboard'
+require_relative '../../lib/test/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 require_relative '../../lib/test/sequel_test_case'
 require 'cdo/pegasus/helper_modules/forms'

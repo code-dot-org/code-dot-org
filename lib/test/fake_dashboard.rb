@@ -198,7 +198,7 @@ module FakeDashboard
     ActiveRecord::Base.establish_connection
     ActiveRecord::Schema.verbose = false
     # rubocop:disable CustomCops/DashboardRequires
-    require_relative('../../../dashboard/db/schema')
+    require dashboard_dir('db/schema')
     # rubocop:enable CustomCops/DashboardRequires
 
     # Reuse the same connection in Sequel to share access to the temporary tables.

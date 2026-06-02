@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
-require_relative 'fixtures/fake_dashboard'
+require_relative '../../lib/test/fake_dashboard'
 require_relative 'fixtures/mock_pegasus'
 require 'cdo/poste'
 

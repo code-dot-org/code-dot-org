@@ -1,7 +1,7 @@
-require 'cdo/pegasus/helper_modules/dashboard'
 require_relative './test_helper'
+require 'cdo/pegasus/helper_modules/dashboard'
 require 'cdo/pegasus/helpers/email_preference_helpers'
-require_relative '../../lib/test/sequel_test_case'
+require_relative 'sequel_test_case'
 require 'timecop'
 
 # rubocop:disable CustomCops/DashboardDbUsage

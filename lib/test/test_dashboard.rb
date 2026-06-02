@@ -2,7 +2,7 @@
 
 require_relative './test_helper'
 require 'cdo/pegasus/helper_modules/dashboard'
-require_relative 'fixtures/fake_dashboard'
+require_relative 'fake_dashboard'
 
 class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
