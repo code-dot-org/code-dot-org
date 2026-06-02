@@ -70,11 +70,12 @@ const highlightAttachedElement = (selector: string) => ({
   },
 });
 
-// ── High school steps ────────────────────────────────────────────────────────
+// ── Shared steps ─────────────────────────────────────────────────────────────
 
 const createHighSchoolHomepageSteps = (
   tour: Tour,
-  sessionStorageKey: string
+  sessionStorageKey: string,
+  unitOverviewStartStepId: string
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -126,7 +127,7 @@ const createHighSchoolHomepageSteps = (
           );
 
           lessonClickHandler = () => {
-            trySetSessionStorage(sessionStorageKey, UNIT_BREADCRUMB_STEP_ID);
+            trySetSessionStorage(sessionStorageKey, unitOverviewStartStepId);
             dropdownItems.forEach(el =>
               el.removeEventListener('click', lessonClickHandler!)
             );
@@ -158,7 +159,7 @@ const createHighSchoolHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        'If admin asks what standards you’re covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here.'
+        "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
       ),
       buttons: [nextButton(tour)],
       when: highlightAttachedElement('#teacher-resources-dropdown'),
@@ -180,54 +181,50 @@ const QUIZ_LEVEL_QUESTION = `
   <div class="quiz-feedback" aria-live="polite"></div>
 `;
 
-const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
-  const controller = new AbortController();
-  tour.on('cancel', () => controller.abort());
-  tour.on('complete', () => controller.abort());
+const QUIZ_LEVEL_QUESTION_MIDDLE = `
+  <div class="onboarding-step-content">
+    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
+    <span class="onboarding-step-text">When you're prepping a lesson, you don&#8217;t have time to review every single level &#8212; and you don&#8217;t need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
+  </div>
+  <div class="quiz-options-grid">
+    <button class="quiz-option" data-answer="correct" type="button">Level 4</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 5</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 8</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 11</button>
+  </div>
+  <div class="quiz-feedback" aria-live="polite"></div>
+`;
 
+// Shared across high school and middle school unit overview tours.
+const createBreadcrumbStep = (
+  tour: Tour,
+  controller: AbortController
+): StepOptions => {
   let breadcrumbClickHandler: ((e: Event) => void) | null = null;
 
-  return [
-    {
-      id: UNIT_BREADCRUMB_STEP_ID,
-      attachTo: {
-        element: UNIT_BREADCRUMB_SELECTOR,
-        on: 'bottom',
-      },
-      text: withSparkle(
-        'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
-      ),
-      buttons: [nextButton(tour)],
-      beforeShowPromise: () =>
-        waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
-      // No advanceOn: we prevent default on the anchor click so the celebration
-      // popup can appear before navigation, then let the tour buttons decide
-      // where to go.
-      when: {
-        show() {
-          document
-            .querySelector(UNIT_BREADCRUMB_SELECTOR)
-            ?.classList.add('tour-step-highlight');
+  return {
+    id: UNIT_BREADCRUMB_STEP_ID,
+    attachTo: {
+      element: UNIT_BREADCRUMB_SELECTOR,
+      on: 'bottom',
+    },
+    text: withSparkle(
+      'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
+    ),
+    buttons: [nextButton(tour)],
+    beforeShowPromise: () =>
+      waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
+    // No advanceOn: we prevent default on the anchor click so the celebration
+    // popup can appear before navigation, then let the tour buttons decide
+    // where to go.
+    when: {
+      show() {
+        document
+          .querySelector(UNIT_BREADCRUMB_SELECTOR)
+          ?.classList.add('tour-step-highlight');
 
-          breadcrumbClickHandler = (e: Event) => {
-            e.preventDefault();
-            document
-              .querySelector(UNIT_BREADCRUMB_SELECTOR)
-              ?.classList.remove('tour-step-highlight');
-            if (breadcrumbClickHandler !== null) {
-              document
-                .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-                ?.removeEventListener('click', breadcrumbClickHandler);
-            }
-            breadcrumbClickHandler = null;
-            tour.next();
-          };
-
-          document
-            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-            ?.addEventListener('click', breadcrumbClickHandler);
-        },
-        hide() {
+        breadcrumbClickHandler = (e: Event) => {
+          e.preventDefault();
           document
             .querySelector(UNIT_BREADCRUMB_SELECTOR)
             ?.classList.remove('tour-step-highlight');
@@ -235,11 +232,39 @@ const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
             document
               .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
               ?.removeEventListener('click', breadcrumbClickHandler);
-            breadcrumbClickHandler = null;
           }
-        },
+          breadcrumbClickHandler = null;
+          tour.next();
+        };
+
+        document
+          .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
+          ?.addEventListener('click', breadcrumbClickHandler);
+      },
+      hide() {
+        document
+          .querySelector(UNIT_BREADCRUMB_SELECTOR)
+          ?.classList.remove('tour-step-highlight');
+        if (breadcrumbClickHandler !== null) {
+          document
+            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
+            ?.removeEventListener('click', breadcrumbClickHandler);
+          breadcrumbClickHandler = null;
+        }
       },
     },
+  };
+};
+
+// ── High school steps ────────────────────────────────────────────────────────
+
+const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
+  const controller = new AbortController();
+  tour.on('cancel', () => controller.abort());
+  tour.on('complete', () => controller.abort());
+
+  return [
+    createBreadcrumbStep(tour, controller),
     {
       id: 'quiz-level-priority',
       attachTo: {
@@ -272,6 +297,84 @@ const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
   ];
 };
 
+// ── Middle school steps ───────────────────────────────────────────────────────
+
+const createMiddleSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
+  const controller = new AbortController();
+  tour.on('cancel', () => controller.abort());
+  tour.on('complete', () => controller.abort());
+
+  return [
+    createBreadcrumbStep(tour, controller),
+    {
+      id: 'quiz-level-priority',
+      attachTo: {
+        element: '#progress-lesson-3',
+        on: 'left',
+      },
+      text: QUIZ_LEVEL_QUESTION_MIDDLE,
+      buttons: [],
+      beforeShowPromise: () =>
+        waitForElement('#progress-lesson-3', controller.signal),
+      when: createQuizWhenHandlers(
+        tour,
+        'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
+      ),
+    },
+    {
+      id: 'lesson-resources-intro',
+      attachTo: {
+        element: '#uitest-lesson-plan',
+        on: 'bottom',
+      },
+      text: withSparkle(
+        'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement('#uitest-lesson-plan', controller.signal),
+    },
+    createCompletionStep(tour, 'Review the Syllabus', 'Stay on this page'),
+  ];
+};
+
+// ── Elementary school steps ───────────────────────────────────────────────────
+
+const createElementaryUnitOverviewSteps = (tour: Tour): StepOptions[] => {
+  const controller = new AbortController();
+  tour.on('cancel', () => controller.abort());
+  tour.on('complete', () => controller.abort());
+
+  return [
+    {
+      id: 'teacher-resources-dropdown',
+      attachTo: {
+        element: '#teacher-resources-dropdown',
+        on: 'bottom',
+      },
+      text: withSparkle(
+        "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
+      ),
+      buttons: [nextButton(tour)],
+      when: highlightAttachedElement('#teacher-resources-dropdown'),
+    },
+    {
+      id: 'lesson-resources-intro',
+      attachTo: {
+        element: '#uitest-lesson-plan',
+        on: 'bottom',
+      },
+      text: withSparkle(
+        'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement('#uitest-lesson-plan', controller.signal),
+    },
+    createCompletionStep(tour, 'Review the Syllabus', 'Stay on this page'),
+  ];
+};
+
 // ── Public API ───────────────────────────────────────────────────────────────
 
 // Steps shown on the teacher homepage before navigating to a lesson.
@@ -282,7 +385,18 @@ export const createReviewSyllabusHomepageSteps = (
 ): StepOptions[] => {
   switch (demoType) {
     case 'high':
-      return createHighSchoolHomepageSteps(tour, sessionStorageKey);
+    case 'middle':
+      return createHighSchoolHomepageSteps(
+        tour,
+        sessionStorageKey,
+        UNIT_BREADCRUMB_STEP_ID
+      );
+    case 'elementary':
+      return createHighSchoolHomepageSteps(
+        tour,
+        sessionStorageKey,
+        'teacher-resources-dropdown'
+      );
     default:
       return [];
   }
@@ -296,6 +410,10 @@ export const createReviewSyllabusUnitOverviewSteps = (
   switch (demoType) {
     case 'high':
       return createHighSchoolUnitOverviewSteps(tour);
+    case 'middle':
+      return createMiddleSchoolUnitOverviewSteps(tour);
+    case 'elementary':
+      return createElementaryUnitOverviewSteps(tour);
     default:
       return [];
   }
