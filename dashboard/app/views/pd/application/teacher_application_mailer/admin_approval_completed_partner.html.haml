@@ -8,7 +8,7 @@
   = @application.applicant_full_name + '.'
   You can view
   = @application.teacher_first_name + "'s"
-  = link_to('application here', CDO.studio_url("/pd/application_dashboard/#{@application.id}", CDO.default_scheme)) + '.'
+  = link_to('application here', CDO.studio_url("/pd/application_dashboard/#{@application.id}")) + '.'
 
 %p
   Best,

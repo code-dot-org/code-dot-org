@@ -9,7 +9,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}"}
 
     let(:tutorial_code) {'tutorial_code'}
-    let(:tutorial_url) {CDO.studio_url('/expected/tutorial_url', CDO.default_scheme)}
+    let(:tutorial_url) {CDO.studio_url('/expected/tutorial_url')}
     let(:tutorial_primary_ref) {OpenStruct.new(fields: {primary_target: tutorial_url})}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: tutorial_primary_ref)}
 
