@@ -11,6 +11,11 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-24.04
+    env:
+      # Required for both yarn install (reads @code-dot-org/* from GitHub Packages)
+      # and yarn npm publish. GITHUB_TOKEN has read:packages + write:packages in
+      # this org without any additional setup.
+      YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,5 +31,3 @@ jobs:
       - name: Publish
         run: yarn workspace @code-dot-org/oceans-lab npm publish
         working-directory: ./frontend
-        env:
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
