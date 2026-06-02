@@ -90,6 +90,7 @@ export interface ObservabilityClient {
   recordError(
     error: unknown,
     context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
   ): string | undefined;
   startSpan<T>(options: SpanOptions, callback: () => T): T;
   logger: ObservabilityLogger;

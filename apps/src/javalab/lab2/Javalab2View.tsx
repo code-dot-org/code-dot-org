@@ -1,5 +1,8 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {useSource} from '@codebridge/hooks/useSource';
+import {
+  LevelbuilderSaveOverrides,
+  useSource,
+} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
@@ -7,6 +10,7 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {
@@ -26,8 +30,13 @@ import {
   stopJavaCode,
 } from './javabuilderRunUtils';
 import HorizontalLayout from './layout/HorizontalLayout';
-import {flatToMultiFile} from './sourceConverter';
-import {JavalabFlatSource, JavalabLevelProperties} from './types';
+import {
+  flatToMultiFile,
+  mergeValidationIntoStart,
+  multiFileToFlat,
+  splitForLevelbuilderSave,
+} from './sourceConverter';
+import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -50,10 +59,9 @@ const defaultConfig: ConfigType = {
   },
 };
 
-// Java Lab 2 — minimal Phase 1 lab2 shell. Loads a level, edits code in
-// codebridge, runs against Javabuilder, prints stdout/stderr to the
-// codebridge console. Validation, neighborhood, theater, captcha, backpack,
-// and start_sources edit mode are TODOs.
+// Java Lab 2 — lab2 shell. Loads a level, edits code in codebridge,
+// runs against Javabuilder, prints stdout/stderr to the codebridge
+// console. Open TODOs in the README.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
@@ -74,15 +82,18 @@ const Javalab2View: React.FunctionComponent<
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
   // Convert here before passing to codebridge.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
-    const flatStart = levelProperties.startSources as
-      | JavalabFlatSource
-      | undefined;
-    const flatTemplate = levelProperties.templateSources as
-      | JavalabFlatSource
-      | undefined;
-    const flatExemplar = levelProperties.exemplarSources as
-      | JavalabFlatSource
-      | undefined;
+    const flatTemplate = flatSourceFromLevelProperties(
+      levelProperties.templateSources
+    );
+    const flatExemplar = flatSourceFromLevelProperties(
+      levelProperties.exemplarSources
+    );
+    const flatStartRaw = flatSourceFromLevelProperties(
+      levelProperties.startSources
+    );
+    const flatStart = getIsStartMode()
+      ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
+      : flatStartRaw;
 
     return {
       ...levelProperties,
@@ -92,10 +103,28 @@ const Javalab2View: React.FunctionComponent<
     };
   }, [levelProperties]);
 
+  // Levelbuilder save needs Javalab's flat shape, not codebridge's
+  // MultiFileSource. For start mode, split validation files off into a
+  // separate `validation` field, for consistency with legacy.
+  const levelbuilderSaveOverrides = useMemo<LevelbuilderSaveOverrides>(
+    () => ({
+      buildStartSavePayload: source => {
+        const {startSources: startFlat, validation} =
+          splitForLevelbuilderSave(source);
+        return {start_sources: startFlat, validation};
+      },
+      buildExemplarSavePayload: source => ({
+        exemplar_sources: multiFileToFlat(source),
+      }),
+    }),
+    []
+  );
+
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     codebridgeLevelProperties,
-    initialSources
+    initialSources,
+    levelbuilderSaveOverrides
   );
 
   const sourceLevelId = useAppSelector(
