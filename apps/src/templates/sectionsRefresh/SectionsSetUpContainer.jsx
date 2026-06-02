@@ -50,8 +50,10 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(() => {
     if (section) return [section];
+    const isStudentSection = queryParams('participantType') === 'student';
     const gradesTeaching =
-      getStore().getState()?.currentUser?.gradesTeaching || [];
+      isStudentSection &&
+      (getStore().getState()?.currentUser?.gradesTeaching || []);
     return [
       {
         pairingAllowed: true,
@@ -61,7 +63,7 @@ const useSections = section => {
         course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
         avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
         avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
-        grades: gradesTeaching,
+        ...(isStudentSection && {grades: gradesTeaching}),
       },
     ];
   });
