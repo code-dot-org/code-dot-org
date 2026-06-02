@@ -16,13 +16,16 @@ import {
 import {sendAnalytics} from './sendAnalytics';
 
 // Strip characters not allowed in Codebridge project filenames.
-// Preserves the extension; replaces anything other than word chars or hyphens
-// in the base name with an underscore.
+// Replaces anything other than word chars or hyphens in the file name with an underscore.
+// Extension will be valid since it is already validated in either file input's accept attribute
+// or paste handler's mime-type filter.
 const cleanUploadFilename = (name: string): string => {
   const lastDot = name.lastIndexOf('.');
-  const base = lastDot >= 0 ? name.slice(0, lastDot) : name;
-  const ext = lastDot >= 0 ? name.slice(lastDot) : '';
-  return base.replace(/[^\w-]/g, '_') + ext;
+  const hasExt = lastDot > 0;
+  const base = hasExt ? name.slice(0, lastDot) : name;
+  const ext = hasExt ? name.slice(lastDot) : '';
+  const cleanBase = base.replace(/[^\w-]/g, '_');
+  return `${cleanBase}${ext}`;
 };
 
 export const uploadFiles = createAppAsyncThunk<

@@ -12,11 +12,9 @@ export const AI_TUTOR_UPLOADS_FOLDER = 'aitutor_uploads';
 
 /**
  * After a successful AI Tutor chat upload, add image to the project's sources
- * under a top-level folder named uploads, without opening
- * the file in the editor. Duplicate filenames replace the existing entry for now.
- * Chat uploads reuse the original filename in the assets bucket, so re-uploads
- * overwrite in place.
- * TODO: Consider unique asset keys (e.g. UUID) if we need separate copies per upload instead of replacing.
+ * under a top-level folder named aitutor_uploads, without opening
+ * the file in the editor. Duplicate filenames replace the existing entry, so re-uploads overwrite in place.
+ * Chat uploads use a cleaned-up version of the original filename in the assets bucket.
  * Only project-sourced uploads are synced; level starter assets are left alone.
  */
 export const syncAiTutorAssetToProject =

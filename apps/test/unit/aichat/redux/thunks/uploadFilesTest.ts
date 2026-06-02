@@ -143,4 +143,61 @@ describe('uploadFiles', () => {
       expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe('onAssetUploaded callback', () => {
+    it('invokes onAssetUploaded with the sanitized filename and resolved URL on success', async () => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('my photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        {filename: 'my_photo.png', source: AssetSource.PROJECT},
+        '/files/my_photo.png'
+      );
+    });
+
+    it('does not invoke onAssetUploaded when upload fails', async () => {
+      mockHttpClient.put.mockRejectedValue(new Error('network error'));
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('filename sanitization', () => {
+    it.each([
+      ['.png', '_png', '/files/_png'],
+      ['my file (1).png', 'my_file__1_.png', '/files/my_file__1_.png'],
+      ['hello world.jpg', 'hello_world.jpg', '/files/hello_world.jpg'],
+    ])(
+      'normalizes "%s" to "%s"',
+      async (inputName, expectedFilename, expectedUrl) => {
+        const onAssetUploaded = jest.fn();
+        const file = makeFile(inputName);
+
+        await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+          dispatch,
+          makeGetState(),
+          undefined
+        );
+
+        expect(onAssetUploaded).toHaveBeenCalledWith(
+          {filename: expectedFilename, source: AssetSource.PROJECT},
+          expectedUrl
+        );
+      }
+    );
+  });
 });
