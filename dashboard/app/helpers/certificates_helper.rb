@@ -18,7 +18,7 @@ module CertificatesHelper
   end
 
   def certificate_image_url_for(name)
-    CDO.studio_url("blockly/media/certificates/#{name}", CDO.default_scheme)
+    CDO.studio_url("blockly/media/certificates/#{name}")
   end
 
   def certificate_image_url(name, course, donor)

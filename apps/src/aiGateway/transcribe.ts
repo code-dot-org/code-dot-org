@@ -12,6 +12,7 @@ import {
   type GatewayTranscribeResponseV1,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 

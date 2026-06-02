@@ -763,7 +763,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1")
     )
   end
 
@@ -775,7 +775,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1")
     )
   end
 
