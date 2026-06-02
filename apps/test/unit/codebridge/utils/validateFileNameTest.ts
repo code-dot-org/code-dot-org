@@ -191,5 +191,19 @@ describe('validateFileName', function () {
         selectedFileType: 'txt',
       })
     ).toBeUndefined();
+
+    // With the dropdown supplying the extension, a period in the base name is
+    // invalid: "My.Class" + "java" would otherwise create "My.Class.java".
+    expect(
+      validateFileName({
+        fileName: 'My.Class',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toEqual(codebridgeI18n.invalidNameError());
   });
 });

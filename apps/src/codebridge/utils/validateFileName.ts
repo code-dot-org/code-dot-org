@@ -67,7 +67,10 @@ export const validateFileName = ({
     }
   }
 
-  if (!isValidFileName(fileName)) {
+  // When the extension comes from the dropdown, the base name must not carry
+  // its own period — otherwise "My.Class" + dropdown "java" yields the
+  // nonsense "My.Class.java". Passing hasDropdown enforces the no-period rule.
+  if (!isValidFileName(fileName, Boolean(selectedFileType))) {
     return codebridgeI18n.invalidNameError();
   }
 
