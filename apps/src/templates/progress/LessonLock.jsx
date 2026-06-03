@@ -1,12 +1,12 @@
 /**
  * A button that opens our LessonLockDialog component
  */
-
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 const LessonLock = ({unitId, lessonId, isHidden}) => {
@@ -15,13 +15,16 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
   return (
     <div style={styles.main}>
       <div style={styles.buttonContainer} className="uitest-locksettings">
-        <Button
+        <MuiButton
+          size="small"
+          variant="outlined"
+          color="secondary"
+          sx={styles.button}
           onClick={() => setDialogOpen(true)}
-          color={Button.ButtonColor.gray}
-          text={i18n.lockSettings()}
-          icon="lock"
-          style={styles.button}
-        />
+        >
+          <FontAwesomeV6Icon iconName="lock" />
+          {i18n.lockSettings()}
+        </MuiButton>
       </div>
       {dialogOpen && (
         <LessonLockDialog
