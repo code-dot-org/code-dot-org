@@ -16,6 +16,7 @@ $widget-height: $default-footerless-height;
 div#visualization {
   height: 562.5px;
   width: 400px;
+  box-sizing: content-box;
 }
 
 div#visualization.with_padding {
