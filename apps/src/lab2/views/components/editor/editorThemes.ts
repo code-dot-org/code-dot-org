@@ -31,7 +31,7 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: darkBackground,
+      backgroundColor: 'var(--background-neutral-primary)',
     },
     '.cm-content': {
       caretColor: cursor,
@@ -58,7 +58,7 @@ export const darkTheme = EditorView.theme(
       outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
-      backgroundColor: darkBackground,
+      backgroundColor: 'var(--background-neutral-primary)',
       color: stone,
       border: 'none',
       paddingInline: '0.25rem',
@@ -167,13 +167,11 @@ export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 // The default light theme styles for codemirror
 export const lightTheme = EditorView.theme(
   {
-    // Sets the background color for the main editor area
     '&': {
-      backgroundColor: color.white,
+      backgroundColor: 'var(--background-neutral-primary)',
     },
-    // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
-      backgroundColor: color.white,
+      backgroundColor: 'var(--background-neutral-primary)',
       border: 'none',
       paddingInline: '0.25rem',
     },
