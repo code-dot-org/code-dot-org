@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-01T18:43:20.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-review-first-page-20c32626-0bc8-4e70-ac05-c921f954aad0",
+        "text": "You've built the foundation of your pet fish's web page! Remember, HTML uses tags like `<html>`, `<head>`, and `<body>` to organize content.",
+        "imageUrl": "https://images.code.org/518331302a42af0863d2d1650e2b9ae5-test-brendan-review-first-page-panel-1-661f5bd1-f586-4844-934a-fc83007410bc.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-review-first-page-c7152e40-8e91-4609-9248-31c3a34e3df8",
+        "text": "You used the `<h1>` tag to give your pet fish a starring role, making its name the biggest heading on the page!",
+        "imageUrl": "https://images.code.org/7a2ccbee29237248e30956445818a5b0-test-brendan-review-first-page-panel-2-7d3eab8a-c7d8-4753-97a5-3b7668126a96.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-review-first-page-6a4deb1d-2b52-48ec-b10f-bb94acddfbfa",
+        "text": "And you added a `<p>` tag to describe your finned friend, adding details like its personality or favorite activities.",
+        "imageUrl": "https://images.code.org/a0eadbe0f8d7e9face282e25d7a9a2d8-test-brendan-review-first-page-panel-3-2fc02b4e-194d-43b4-9956-e6c37fdb4f1d.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-review-first-page-cc923f67-38a7-499f-bf6e-9f445b523dc0",
+        "text": "Look at what you created! A real web page, all about your amazing pet fish!",
+        "imageUrl": "https://images.code.org/31a48b88a2b9a48d97bc42f6e9145a92-test-brendan-review-first-page-panel-4-235ec6ad-236c-4eb8-8d40-f679953a4f75.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-review-first-page-c626fe8c-67ed-48ac-a687-a4f9eb83f507",
+        "text": "Now go check out your very own pet fish web page in the browser. You're a web developer!",
+        "imageUrl": "https://images.code.org/4c8441cb84a495c6ba241233bdbd43a3-test-brendan-review-first-page-panel-5-b571b314-b2c6-40b0-9834-6cb4090971d5.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Summarize what students learned about HTML structure, `<h1>`, and `<p>` tags. Show an example of the completed basic pet fish web page and encourage them to view their own creation."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-01 18:44:10 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:44:11 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -117,7 +117,7 @@ describe('DemoSectionOptionsDropdown', () => {
 
     expect(handleNavigationClick).toHaveBeenCalledWith(
       TEACHER_NAVIGATION_PATHS.settings,
-      EVENTS.SECTION_CARD_SETTINGS_CLICKED
+      EVENTS.DEMO_SECTION_CARD_SETTINGS_CLICKED
     );
     expect(createSectionForAction).not.toHaveBeenCalled();
   });
@@ -131,7 +131,7 @@ describe('DemoSectionOptionsDropdown', () => {
 
     expect(handleNavigationClick).toHaveBeenCalledWith(
       TEACHER_NAVIGATION_PATHS.loginInfo,
-      EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED
+      EVENTS.DEMO_SECTION_CARD_LOGIN_CARDS_CLICKED
     );
   });
 
@@ -143,7 +143,7 @@ describe('DemoSectionOptionsDropdown', () => {
     await act(async () => await new Promise(process.nextTick));
 
     expect(createSectionForAction).toHaveBeenCalledWith(
-      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      EVENTS.DEMO_SECTION_CARD_PRINT_CERTIFICATES_CLICKED,
       'certificates'
     );
     expect(handleNavigationClick).not.toHaveBeenCalled();
@@ -170,7 +170,7 @@ describe('DemoSectionOptionsDropdown', () => {
     await act(async () => await new Promise(process.nextTick));
 
     expect(createSectionForAction).toHaveBeenCalledWith(
-      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      EVENTS.DEMO_SECTION_CARD_PRINT_CERTIFICATES_CLICKED,
       'certificates'
     );
     expect(fetchSpy).not.toHaveBeenCalled();

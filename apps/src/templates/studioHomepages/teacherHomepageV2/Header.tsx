@@ -16,11 +16,7 @@ import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
 import RosterDialog from '../../teacherDashboard/RosterDialog';
-import {
-  beginEditingSection,
-  createDemoSection,
-} from '../../teacherDashboard/teacherSectionsRedux';
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
 import {ArchivedToggleOption} from './TeacherHomepage';
@@ -143,21 +139,6 @@ export const Header: React.FC<HeaderProps> = ({
                     },
                   ]
                 : []),
-              // TEST-ONLY: create a demo section of each preset type. Remove
-              // once demo-section QA is finished.
-              ...(['elementary', 'middle', 'high'] as DemoType[]).map(type => ({
-                label: `TEST: create ${type} demo section`,
-                icon: {iconName: 'flask', iconStyle: 'solid' as const},
-                value: `test-create-demo-${type}`,
-                onClick: () => {
-                  dispatch(createDemoSection(type)).catch(error => {
-                    console.error(
-                      `Failed to create ${type} demo section`,
-                      error
-                    );
-                  });
-                },
-              })),
             ]}
             useIconButton
             triggerButtonProps={{

@@ -65,6 +65,8 @@ const prefixes = {
 };
 
 const live = [
+  '/courses/csd-2024',
+  '/courses/self-paced-pl-csd-2024',
   '/courses/k5-unplugged',
   '/courses/ai-ethics-2023',
   '/courses/express-2024',

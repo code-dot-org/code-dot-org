@@ -179,4 +179,20 @@ class Javalab < Level
   def get_starter_code
     properties["start_sources"]
   end
+
+  # Replace the camelized `encryptedValidation` blob with a usable
+  # `validation` field. Only levelbuilders get the decrypted source —
+  # matches legacy Javalab, where the decrypted source is only sent by
+  # levels_controller#edit_blocks (levelbuilder-only). For everyone
+  # else, emit a names-only stub `{filename => ""}` so the frontend can
+  # still detect filename collisions without seeing solution code.
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    level_properties.delete('encryptedValidation')
+    if validation
+      is_levelbuilder = current_user&.permission?(UserPermission::LEVELBUILDER)
+      level_properties['validation'] = is_levelbuilder ? validation : validation.transform_values {''}
+    end
+    level_properties
+  end
 end

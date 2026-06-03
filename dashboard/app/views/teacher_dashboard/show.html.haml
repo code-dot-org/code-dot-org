@@ -3,9 +3,26 @@
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
 
+-# Server-side DCDO flag for the codeai logo morph animation. Defaults
+-# to false (animation enabled); flip the DCDO key to true to disable
+-# the feature site-wide without a deploy if something goes wrong.
+- logo_transition_enabled = Cdo::Brand.current_brand_code(request) == Cdo::Brand::BRAND_CODEAI && !DCDO.get('hide-teacher-dashboard-logo-animation', false)
+
+-# When the codeai-brand logo morph animation will run on initial load,
+-# pre-hide the Rails-rendered header logo so users don't see it flash
+-# before the React modal mounts. Emit into <head> via content_for so the
+-# rule is parsed before the header markup; otherwise the browser paints
+-# the logo and *then* hides it. LogoTransition removes the tag when its
+-# useLayoutEffect runs.
+- if logo_transition_enabled && request.path.end_with?('/teacher_dashboard/home')
+  - content_for :head do
+    %style#logo-transition-pre-hide
+      :plain
+        #header_logo_container img { visibility: hidden; }
+
 :ruby
   teacher_dashboard_data = {}
-  teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
+  teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('')
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:sectionOrder] = @section_order
   teacher_dashboard_data[:section] = @section_summary
@@ -17,6 +34,7 @@
   teacher_dashboard_data[:hasCompletedPersonalizationQuiz] = @current_user.present? && TeachingProfileData.find_by(user: @current_user).present?
   teacher_dashboard_data[:providers] = @current_user.providers
   teacher_dashboard_data[:flash] = @flash if @flash.present?
+  teacher_dashboard_data[:logoTransitionEnabled] = true if logo_transition_enabled
 
 = render partial: 'shared/emulate_print_media'
 

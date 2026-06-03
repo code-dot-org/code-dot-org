@@ -10,24 +10,22 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
   let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
 
   before do
+    allow(Cdo::GlobalEdition).to receive(:target_host?).and_call_original
     allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
-    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test.code.org').and_return(true)
-    allow(Metrics::Events).to receive(:log_event)
 
     cookies[:ge_region] = ge_region
   end
 
   describe 'oauth' do
-    let(:omniauth_test_mode) {OmniAuth.config.test_mode}
+    around do |test|
+      original_omniauth_test_mode = OmniAuth.config.test_mode
 
-    before do
       # Disables OmniAuth test mode to generate real OAuth URLs.
       OmniAuth.config.test_mode = false
-    end
 
-    after do
-      # Restores the initial OmniAuth test mode configuration.
-      OmniAuth.config.test_mode = omniauth_test_mode
+      test.call
+    ensure
+      OmniAuth.config.test_mode = original_omniauth_test_mode
     end
 
     {

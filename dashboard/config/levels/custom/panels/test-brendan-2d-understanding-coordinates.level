@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T18:13:46.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2d-understanding-coordinates-1f94f352-bf0c-4679-8481-08176903c51b",
+        "text": "Just like you use a map to find places in real life, a computer needs a 'map' to know where to draw things on your canvas.",
+        "imageUrl": "https://images.code.org/935ec6b96ace87b5a20ccc4b842917c1-test-brendan-2d-understanding-coordinates-panel-1-6f7ecaf5-e5d7-455f-9022-7f74c7b44038.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2d-understanding-coordinates-bb0da7b2-944d-41c6-834b-3bc2701acebe",
+        "text": "This map uses a special starting point called the 'origin.' In Web Lab, the origin (0,0) is always at the *top-left corner* of your canvas.",
+        "imageUrl": "https://images.code.org/fb3075d2c55a4f3e9e369d213ff27617-test-brendan-2d-understanding-coordinates-panel-2-c3569586-34c7-4088-9e29-15987c15f9ce.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-brendan-2d-understanding-coordinates-e4bb9700-8a8e-41fb-8e6e-241dfa8a52d3",
+        "text": "The first number, 'x', tells the computer how far to move *right* from the origin. The larger the 'x' value, the further right your drawing will appear.",
+        "imageUrl": "https://images.code.org/2a82480cc69e9976d3b1296d14a643f5-test-brendan-2d-understanding-coordinates-panel-3-9bd3c3c7-81fb-42e2-8423-b8dd8915eb6e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-2d-understanding-coordinates-3a2f940e-0d98-4f52-a16b-ce0f5a048cb1",
+        "text": "The second number, 'y', tells the computer how far to move *down* from the origin. A bigger 'y' value means your drawing will appear lower on the canvas.",
+        "imageUrl": "https://images.code.org/42da60abafe3c28e5e05021968b8af4d-test-brendan-2d-understanding-coordinates-panel-4-e6e2448e-c5c7-4af6-9a33-ffc6d9eb07af.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "test-brendan-2d-understanding-coordinates-4587479f-01cc-4b54-98bc-1b2293418d49",
+        "text": "By giving both an 'x' and a 'y' value, you can tell the computer the exact spot on the canvas where you want your shapes to go!",
+        "imageUrl": "https://images.code.org/ae0818feb58e6b175fe94d54555a6df4-test-brendan-2d-understanding-coordinates-panel-5-5ad51821-d1c0-43c3-9059-96aa02010c5a.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Explain the Web Lab's 2D coordinate system for middle schoolers. Illustrate that (0,0) is at the top-left, X increases to the right, and Y increases downwards, showing how x and y values determine position."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 18:14:39 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 18:14:39 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

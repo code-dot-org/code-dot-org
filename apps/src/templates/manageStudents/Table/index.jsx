@@ -251,8 +251,10 @@ class ManageStudentsTable extends Component {
 
   passwordFormatter(loginType, {rowData}) {
     const {sectionId} = this.props;
-    const resetDisabled = this.isTeacher(rowData.userType);
-    const secretLoginDisabled = this.isTeacher(rowData.userType);
+    const isTeacherRow = this.isTeacher(rowData.userType);
+    const isDemoStudent = !!rowData.isDemoStudent;
+    const resetDisabled = isTeacherRow || isDemoStudent;
+    const secretLoginDisabled = isTeacherRow;
     return (
       <div>
         {!rowData.isEditing && (
@@ -263,6 +265,7 @@ class ManageStudentsTable extends Component {
                 sectionId={sectionId}
                 studentId={rowData.id}
                 resetDisabled={resetDisabled}
+                isDemoStudent={isDemoStudent}
                 setPasswordLengthFailure={isFailing =>
                   this.setState({showPasswordLengthFailure: isFailing})
                 }
@@ -277,6 +280,8 @@ class ManageStudentsTable extends Component {
                 id={rowData.id}
                 sectionId={sectionId}
                 secretLoginDisabled={secretLoginDisabled}
+                resetDisabled={resetDisabled}
+                isDemoStudent={isDemoStudent}
               />
             )}
           </div>

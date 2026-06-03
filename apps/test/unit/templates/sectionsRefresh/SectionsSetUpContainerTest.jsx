@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -44,6 +45,17 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find(MuiButton).last().props().children).to.equal(
       'Finish creating sections'
     );
+  });
+
+  it('renders the "Why create a class section" Link to the support article', () => {
+    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+    const link = wrapper.find(Link);
+
+    expect(link.length).to.equal(1);
+    expect(link.prop('href')).to.include(
+      'support.code.org/hc/en-us/articles/115000488132'
+    );
+    expect(link.prop('openInNewTab')).to.equal(true);
   });
 
   it('renders edit header and save button', () => {
@@ -117,20 +129,18 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-down');
+    const coteacherToggle = () => wrapper.find('#uitest-expandable-coteacher');
+
+    expect(caretIcon(coteacherToggle())).to.equal('caret-right');
+    coteacherToggle().simulate('click', {preventDefault: () => {}});
+    expect(caretIcon(coteacherToggle())).to.equal('caret-down');
   });
 
   it('renders advanced settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     wrapper
-      .find(MuiButton)
-      .at(1)
+      .find('#uitest-expandable-settings')
       .simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
@@ -140,12 +150,11 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
 
     const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
+    const advancedToggle = () => wrapper.find('#uitest-expandable-settings');
+
+    expect(caretIcon(advancedToggle())).to.equal('caret-right');
+    advancedToggle().simulate('click', {preventDefault: () => {}});
+    expect(caretIcon(advancedToggle())).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {

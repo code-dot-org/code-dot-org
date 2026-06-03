@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import {ChangeEvent, useState} from 'react';
+import {vi} from 'vitest';
 
 import Toggle, {ToggleProps} from './../index';
 
@@ -43,7 +43,7 @@ describe('Design System - Toggle', () => {
 
   it('changes checked state on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderToggle({
       label: 'Toggle label',
@@ -68,7 +68,7 @@ describe('Design System - Toggle', () => {
 
   it("renders disabled toggle, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderToggle({
       label: 'Toggle label',
