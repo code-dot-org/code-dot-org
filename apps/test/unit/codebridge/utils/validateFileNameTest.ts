@@ -1,12 +1,9 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DEFAULT_FOLDER_ID, INVALID_NAME_ERROR} from '@codebridge/constants';
 import {validateFileName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import {testProject, validationFile} from '../test-files';
-
-const INVALID_NAME_ERROR =
-  'Names must be only letters, numbers, dashes, or underscores';
 
 describe('validateFileName', function () {
   it('can validateFileName', function () {

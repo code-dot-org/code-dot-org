@@ -1,3 +1,4 @@
+import {INVALID_NAME_ERROR} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -68,7 +69,7 @@ export const validateFileName = ({
   }
 
   if (!isValidFileName(fileName)) {
-    return 'Names must be only letters, numbers, dashes, or underscores';
+    return INVALID_NAME_ERROR;
   }
 
   const duplicateFileError = isDuplicateFileName({
