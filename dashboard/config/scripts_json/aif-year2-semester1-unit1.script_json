@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-31 23:43:56 UTC",
+    "serialized_at": "2026-06-03 04:27:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -687,7 +687,18 @@
       "key": "d711d8fb-8a96-48ad-aed9-f755bc1990d0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2.\n- Level 1: Students use AI Chat to explore different disciplines that have contributed to AI’s development and complete the “Exploring AI Milestones” page of their Activity Guide based on their interests.\n- Level 2: Students complete the formative assessment.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through Level 1, help students find a discipline and technology they’re interested in. Each discipline could lead to multiple technologies that students could explore: remind students that they don’t need to know about all of the technologies yet, they only need to pick one that looks interesting to them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2.\n- Level 1: Students use AI Chat to explore different disciplines that have contributed to AI’s development and complete the “Exploring AI Milestones” page of their Activity Guide based on their interests.\n- Level 2: Students complete the formative assessment.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through Level 1, help students find a discipline and technology they’re interested in. Each discipline could lead to multiple technologies that students could explore: remind students that they don’t need to know about all of the technologies yet, they only need to pick one that looks interesting to them."
+      },
+      "seeding_key": {
+        "activity_section.key": "d711d8fb-8a96-48ad-aed9-f755bc1990d0",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6",
+      "position": 6,
+      "properties": {
+        "progression_name": "Contributions to AI",
         "tips": [
           {
             "type": "teachingTip",
@@ -700,13 +711,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "d711d8fb-8a96-48ad-aed9-f755bc1990d0",
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6",
         "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
       }
     },
     {
       "key": "ab14d672-c620-4b6f-bec0-bbf1a208fe90",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students consider predictions for the future of AI and make their own predictions. The goal is to help students see that today’s technology is not the end state for AI: technology continues to improve and develop, and students are encouraged to imagine what that might look like.",
         "duration": "10",
@@ -719,7 +730,7 @@
     },
     {
       "key": "e67f4586-3310-4a54-b9b5-9b4269fd0007",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "AI is still being developed, and it might look very different a few years from now than it does today.",
         "remarks": true
@@ -731,7 +742,7 @@
     },
     {
       "key": "74d65fc9-5147-4ef2-910f-eea42156d725",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find a partner and direct students to the “Predict the Future” page of their Activity Guide."
       },
@@ -742,7 +753,7 @@
     },
     {
       "key": "9c5aef15-bcf5-44ba-ac7a-92e7f4da43b4",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "Everyone has different ideas for what AI might look like in the future. Some of those predictions might come true soon, some might take a long time, and others might not happen at all.",
         "remarks": true
@@ -754,7 +765,7 @@
     },
     {
       "key": "d6cd0c03-92ba-4a51-8b70-d7cca13f327d",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the “Predict the Future” page of their Activity Guide.\n- Students will first read a set of predictions about the future of AI. In pairs, they should discuss what predictions they think are realistic or unrealistic. They should also talk about what predictions they are excited by.\n- Then, students make their own prediction for what they want to see in the future of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As pairs fill in the activity guide, check on how students are thinking about the future and how they imagine it to be. When students are making their own prediction, this may be where students are most likely to provide vague answers like “scientists need to figure it out” or “we need better computers.” Help them get specific by drawing on the first activity: each step in AI’s history came from someone solving a particular problem in a particular discipline. What discipline could contribute to this innovation? What questions might people in that discipline need to ask?",
         "tips": [
@@ -782,10 +793,42 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Contributions to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson2-level1-2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson2-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6"
+      }
+    }
   ],
   "resources": [
 

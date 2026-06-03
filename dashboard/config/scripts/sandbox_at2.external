@@ -3,21 +3,19 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<div style="
-  background: #f1f3f4;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-">
-  <iframe
-    src="https://docs.google.com/document/d/e/2PACX-1vRSfpmhEN_OXd7Tj1Tg4u9y0QZzC-d8T6DKDCaVPC0CjW0NgGRp1BMR4tEYnshun2l5KmW76GN6s_US/pub?embedded=true"
-    style="
-      width: 794px;
-      height: 1123px;
-      border: 2px solid black;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    ">
-  </iframe>
-</div>
+# Computational Thinking
+
+**Computational thinking** is a problem-solving process that involves breaking down complex challenges, identifying patterns, generalizing principles, and designing step-by-step algorithms. 
+
+## Vocabulary Practice
+
+Use the cards below to test your knowledge of computational thinking!
+
+<iframe
+  src="https://atrejo-code.github.io/demo_embeddings"
+  title="Computational Thinking Vocabulary Flashcards"
+  width="100%"
+  height="560"
+  frameborder="0">
+</iframe>
 MARKDOWN

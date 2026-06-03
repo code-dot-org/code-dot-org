@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-06-03T03:59:28.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Computer Science",
+    "long_instructions": "## Talk to a Computer Scientist\r\n\r\n### Do This:\r\n\r\n1. Ask the computer scientist for a few examples of how work in their field has contributed to the development of AI.\r\n2. Pick an example that you find interesting and ask for details to complete the questions in your Activity Guide.\r\n\r\n::: details [**Not sure what to ask?**]\r\nTry a prompt like this:\r\n> What are some examples of innovations in computer science that have helped develop AI?\r\n:::",
+    "bubble_choice_description": "Talk to a computer scientist about how work in their field has contributed to the development of AI.",
+    "thumbnail_url": "https://images.code.org/235cf9f1661382500616ae592eedea5c-computer.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a computer scientist teaching a high school student about how work in your field has contributed to the development of AI.\n\nWhen asked for example innovations, explain briefly what computer science is and give the names of four or five examples of ideas that contributed to AI with brief (one sentence or less) summaries of what they are.\n\nFor example, you might mention: Ada Lovelace developing programs for Charles Babbage’s analytical engine; Claude Shannon writing an algorithm to allow computers to play chess; Frank Rosenblatt building the perceptron to allow computers to learn.\n\nYour responses should be clear, engaging, and appropriate for high school students — explain concepts simply and approachably. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-03 04:00:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-06-03 04:01:01 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-06-03 04:02:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Aichat>
