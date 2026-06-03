@@ -30,6 +30,16 @@ const Callout = ({variant, className, children}: CalloutProps) => (
  * sanitization allowlist to permit its custom element and the single attribute
  * it reads, and supplies the component that renders it. Nothing here leaks into
  * a `Markdown` that does not enable it.
+ *
+ * Authoring note: this is a block-level element, so write the opening tag on
+ * its own line:
+ *
+ *     <callout variant="tip">
+ *     ...content...
+ *     </callout>
+ *
+ * An inline `<callout>...</callout>` would be parsed as inline HTML and wrapped
+ * in a paragraph, and `<aside>` cannot nest inside `<p>`.
  */
 export const callout: MarkdownExtension = {
   name: 'callout',

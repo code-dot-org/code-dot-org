@@ -108,12 +108,16 @@ describe('Markdown', () => {
     });
 
     it('renders an extension element only when enabled', () => {
-      const html = render('<callout variant="tip">heads up</callout>', [
+      // opening tag on its own line so the block-level callout is not wrapped
+      // in a paragraph (an <aside> cannot nest in a <p>)
+      const html = render('<callout variant="tip">\nheads up\n</callout>', [
         callout,
       ]);
       expect(html).toContain('<aside');
       expect(html).toContain('data-variant="tip"');
       expect(html).toContain('heads up');
+      // the aside is not nested inside a paragraph
+      expect(html).not.toMatch(/<p[^>]*>\s*<aside/);
     });
 
     it('runs extension remark plugins (markdown syntax stage)', () => {
@@ -152,9 +156,9 @@ describe('Markdown', () => {
     });
 
     it('layers multiple extensions together', () => {
-      const html = render('<callout>note</callout>\n\nbody', [callout]);
+      const html = render('<callout>\nnote\n</callout>\n\nbody', [callout]);
       expect(html).toContain('<aside');
-      // base behavior (paragraph localization) still applies alongside it
+      // base behavior (paragraph localization) still applies to the body
       expect(html).toContain('data-isolate="true"');
     });
   });

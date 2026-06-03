@@ -1,5 +1,5 @@
 import type {Decorator, Meta, StoryObj} from '@storybook/react-vite';
-import {useEffect, type ReactNode} from 'react';
+import {useEffect, useMemo, useState, type ReactNode} from 'react';
 import {fn} from 'storybook/test';
 
 import {localization} from '@code-dot-org/core/plugins/localization';
@@ -54,9 +54,14 @@ export const Sanitization: Story = {
 };
 
 export const Callout: Story = {
+  // The opening tag is on its own line so the callout parses as a block: an
+  // inline custom element would be wrapped in a <p>, and <aside> can't nest in
+  // a paragraph.
   render: () => (
     <Markdown
-      content={'<callout variant="tip">Heads up — this is a callout.</callout>'}
+      content={
+        '<callout variant="tip">\nHeads up — this is a callout.\n</callout>'
+      }
       extensions={[extensions.callout]}
     />
   ),
@@ -105,13 +110,64 @@ export const ClickableText: Story = {
   ),
 };
 
+/*
+ * The component delegates the actual expansion to the consumer's `onExpand`
+ * handler (the package ships no modal of its own). This demo wires a minimal
+ * lightbox so clicking the thumbnail visibly enlarges it — a sample of what a
+ * host would provide. The extensions array is memoized so toggling the lightbox
+ * does not rebuild the markdown processor.
+ */
+const ExpandableImagesDemo = () => {
+  const [expanded, setExpanded] = useState<{url: string; alt: string} | null>(
+    null,
+  );
+  const exts = useMemo(
+    () => [
+      extensions.expandableImages({
+        onExpand: (url, alt) => setExpanded({url, alt}),
+      }),
+    ],
+    [],
+  );
+
+  return (
+    <div>
+      <Markdown
+        content={
+          '![A photo expandable](https://picsum.photos/seed/markdown/480/320)'
+        }
+        extensions={exts}
+      />
+      {expanded && (
+        <button
+          type="button"
+          aria-label="Close expanded image"
+          onClick={() => setExpanded(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: 0,
+            padding: 0,
+            background: 'rgba(0, 0, 0, 0.7)',
+            cursor: 'zoom-out',
+          }}
+        >
+          <img
+            src={expanded.url}
+            alt={expanded.alt}
+            style={{maxWidth: '90vw', maxHeight: '90vh'}}
+          />
+        </button>
+      )}
+    </div>
+  );
+};
+
 export const ExpandableImages: Story = {
-  render: () => (
-    <Markdown
-      content={'![A photo expandable](https://picsum.photos/240/160)'}
-      extensions={[extensions.expandableImages({onExpand: fn()})]}
-    />
-  ),
+  render: () => <ExpandableImagesDemo />,
 };
 
 /*

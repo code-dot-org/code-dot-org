@@ -124,8 +124,11 @@ export const callout: MarkdownExtension = {
 ```
 
 ```tsx
+// Block-level elements (anything rendering to non-phrasing content like
+// <aside>) must start the opening tag on its own line, or markdown parses them
+// as inline HTML and wraps them in a paragraph — and <aside> can't nest in <p>.
 <Markdown
-  content='<callout variant="tip">Heads up</callout>'
+  content={'<callout variant="tip">\nHeads up\n</callout>'}
   extensions={[callout]}
 />
 ```
