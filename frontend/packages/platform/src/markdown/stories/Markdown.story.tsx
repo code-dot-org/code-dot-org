@@ -134,6 +134,31 @@ export const VisualCodeBlock: Story = {
   ),
 };
 
+const VOCAB: Record<string, {definition: string}> = {
+  'lossy compression': {
+    definition: 'Reducing file size by permanently discarding some data.',
+  },
+  algorithm: {definition: 'A list of steps to finish a task.'},
+};
+
+export const VocabularyDefinition: Story = {
+  name: 'Vocabulary definitions',
+  // Hover a defined term for its definition (native title tooltip). The
+  // injected lookup stands in for the eventual API; unknown terms fall back to
+  // plain text.
+  render: () => (
+    <Markdown
+      content={
+        'A method like [v lossy compression] follows an [v algorithm]. ' +
+        'An [v unknown term] falls back to plain text.'
+      }
+      extensions={[
+        extensions.vocabularyDefinition({lookup: term => VOCAB[term]}),
+      ]}
+    />
+  ),
+};
+
 export const ClickableText: Story = {
   render: () => (
     <Markdown

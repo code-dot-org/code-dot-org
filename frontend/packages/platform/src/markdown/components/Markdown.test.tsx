@@ -15,6 +15,7 @@ import {
   externalLinks,
   inlineStyles,
   visualCodeBlock,
+  vocabularyDefinition,
 } from '../extensions';
 import {translateHtml} from '../localization';
 
@@ -380,6 +381,55 @@ describe('Markdown', () => {
       const html = render('plain `code` here', [visualCodeBlock]);
       expect(html).toContain('<code');
       expect(html).not.toContain('background-color');
+    });
+  });
+
+  describe('vocabularyDefinition', () => {
+    const lookup = (term: string) =>
+      term === 'lossy compression'
+        ? {definition: 'Reducing file size by discarding data.'}
+        : undefined;
+
+    it('resolves a known term to a definition tooltip', () => {
+      const spy = vi.fn(lookup);
+      const html = render('Use [v lossy compression] here.', [
+        vocabularyDefinition({lookup: spy}),
+      ]);
+      expect(spy).toHaveBeenCalledWith('lossy compression');
+      expect(html).toContain('title="Reducing file size by discarding data."');
+      expect(html).toContain('lossy compression');
+      expect(html).not.toContain('[v lossy compression]');
+    });
+
+    it('uses the provided display word when given', () => {
+      const html = render('See [v lc].', [
+        vocabularyDefinition({
+          lookup: () => ({word: 'Lossy Compression', definition: 'def'}),
+        }),
+      ]);
+      expect(html).toContain('Lossy Compression');
+    });
+
+    it('falls back to the bare term when unknown', () => {
+      const html = render('An [v unknown term] here.', [
+        vocabularyDefinition({lookup}),
+      ]);
+      expect(html).toContain('<span>unknown term</span>');
+      expect(html).not.toContain('title=');
+    });
+
+    it('leaves the syntax literal when not enabled', () => {
+      expect(render('Use [v lossy compression] here.')).toContain(
+        '[v lossy compression]',
+      );
+    });
+
+    it('does not resolve the syntax inside code', () => {
+      const html = render('`[v lossy compression]`', [
+        vocabularyDefinition({lookup}),
+      ]);
+      expect(html).toContain('[v lossy compression]');
+      expect(html).not.toContain('title=');
     });
   });
 

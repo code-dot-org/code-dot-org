@@ -7,3 +7,8 @@ export {expandableImages} from './expandableImages';
 export {externalLinks} from './externalLinks';
 export {inlineStyles} from './inlineStyles';
 export {visualCodeBlock} from './visualCodeBlock';
+export {
+  vocabularyDefinition,
+  type VocabularyLookup,
+  type VocabularyTerm,
+} from './vocabularyDefinition';
