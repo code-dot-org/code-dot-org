@@ -1,0 +1,8 @@
+name 'iterating-with-ai-lesson3-level1-2026'
+display_name 'Be the Game Engineer - Debug an AI\'s Game Loop'
+description 'Choose one of the web apps below. Identify and fix the buggy while loop.'
+
+sublevels
+level 'Iterating-with-ai-lesson3-level1a-v1-2026'
+level 'Iterating-with-ai-lesson3-level1b-v1-2026'
+level 'Iterating-with-ai-lesson3-level1c-v1-2026'
