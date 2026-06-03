@@ -175,10 +175,12 @@ const exts = [
 | Extension          | Kind    | Behavior                                                                        | Caveat                                                                                                                                                   |
 | ------------------ | ------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `callout`          | object  | `<callout variant>` → styled aside                                              | Reference example.                                                                                                                                       |
+| `details`          | object  | `::: details [summary] … :::` → `<details>`/`<summary>` disclosure              | Legacy syntax with flexible spacing; summary and body are markdown. Raw `<details>` HTML also works without it.                                          |
 | `inlineStyles`     | object  | permits `style` + `className` on any element                                    | The sanitizer does not inspect style _contents_; inline styles are an authoring smell. Ported verbatim from legacy.                                      |
 | `clickableText`    | factory | `[label](#clickable=id)` → button calling `onActivate(id)` on click/Enter/Space | Without `onActivate`, renders plain bold.                                                                                                                |
 | `expandableImages` | factory | `![alt expandable](url)` → image calling `onExpand(url, alt)` on click          | Without `onExpand`, renders an inline, non-interactive image.                                                                                            |
 | `visualCodeBlock`  | object  | `` `text`(#rrggbb) `` → inline code with that background color                  | Color is validated hex, applied by the component (not sanitized CSS). Plain inline code is unaffected.                                                   |
+| `externalLinks`    | factory | opens links in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)      | Defaults to all links (legacy `openExternalLinksInNewTab`); pass `isExternal` to scope.                                                                  |
 | `embeds`           | object  | permits `<iframe>` and its attributes                                           | Enable **only** for non-student audiences; the caller owns that gating.                                                                                  |
 | `blockly`          | object  | permits Blockly XML tags (`<xml>`, `<block>`, ...)                              | Clears `clobberPrefix` document-wide so `id`/`name` are not rewritten — enable only for trusted Blockly content. Renders each tag as its custom element. |
 
@@ -192,6 +194,20 @@ features reuse existing markdown (links, images), those transformers
 post-process the parsed mdast (rewriting matched nodes via `data.hName` /
 `hProperties` / `hChildren`) rather than extending the tokenizer; the equivalent
 raw HTML (`<b data-id>`, `<span data-url>`) is accepted too.
+
+### Native / sugar notes
+
+- **Collapsible details.** `<details>`/`<summary>` are in the default allowlist,
+  so collapsible content works by writing the raw HTML directly (keep the block
+  contiguous — a blank line ends the HTML block). The legacy `::: details
+[summary]` sugar — with its flexible spacing — is provided by the `details`
+  extension, which rewrites it to that HTML before parsing.
+- **Blockly block vs. inline (`xmlAsTopLevelBlock`).** Modern micromark already
+  treats an `<xml>` whose opening tag is alone on its line as a top-level block,
+  and an inline `<xml>` as paragraph content — the same distinction the legacy
+  plugin existed to create. Author for the placement you want (see the `callout`
+  block-level note above); enable the `blockly` extension for the tags to survive
+  sanitization.
 
 ## Localization
 

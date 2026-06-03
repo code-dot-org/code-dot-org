@@ -25,6 +25,13 @@ export interface MarkdownExtension {
   /** Unique name. Aids debugging and de-duplication. */
   name: string;
   /**
+   * Raw-source preprocessor, run before parsing. Use only for syntax that does
+   * not fit markdown's block structure and so cannot be handled by a remark
+   * plugin — e.g. rewriting a bespoke fenced block into HTML. Prefer a remark
+   * plugin whenever the syntax reuses existing markdown.
+   */
+  preprocess?: (markdown: string) => string;
+  /**
    * remark (mdast) plugins, run after the base parser and before the
    * markdown-to-HTML transform. Use for new markdown *syntax*.
    */
@@ -120,3 +127,14 @@ export const collectRemarkPlugins = (
 export const collectRehypePlugins = (
   extensions: MarkdownExtension[],
 ): PluggableList => extensions.flatMap(e => e.rehypePlugins ?? []);
+
+/** Run the markdown source through every extension's preprocessor, in order. */
+export const preprocessMarkdown = (
+  markdown: string,
+  extensions: MarkdownExtension[],
+): string =>
+  extensions.reduce(
+    (source, extension) =>
+      extension.preprocess ? extension.preprocess(source) : source,
+    markdown,
+  );

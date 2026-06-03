@@ -101,6 +101,29 @@ export const Blockly: Story = {
   ),
 };
 
+export const ExternalLinks: Story = {
+  name: 'Links in a new tab',
+  render: () => (
+    <Markdown
+      content={'An [external link](https://example.com) opens in a new tab.'}
+      extensions={[extensions.externalLinks()]}
+    />
+  ),
+};
+
+export const Details: Story = {
+  name: 'Details (::: sugar)',
+  // The `::: details [summary]` sugar (legacy syntax, flexible spacing). The
+  // summary and body are both markdown. Raw <details> HTML also works without
+  // the extension.
+  render: () => (
+    <Markdown
+      content={'::: details [**Show a hint**]\nThe answer is *42*.\n:::'}
+      extensions={[extensions.details]}
+    />
+  ),
+};
+
 export const VisualCodeBlock: Story = {
   name: 'Visual code blocks',
   render: () => (

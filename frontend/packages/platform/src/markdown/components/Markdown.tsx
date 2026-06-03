@@ -30,6 +30,7 @@ import {
   collectRemarkPlugins,
   composeComponents,
   composeSanitizeSchema,
+  preprocessMarkdown,
   type MarkdownExtension,
 } from '../extension';
 import {
@@ -77,8 +78,15 @@ const LOCALIZE_LINK_ATTRS = {
 const LOCALIZE_PARAGRAPH_ATTRS = {'data-isolate': 'true'};
 const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
 
-const MarkdownLink: Components['a'] = ({children, href, className}) => (
-  <Link href={href} className={className} {...LOCALIZE_LINK_ATTRS}>
+const MarkdownLink: Components['a'] = ({children, href, className, target}) => (
+  // A `target="_blank"` on the node (set by the externalLinks extension) maps to
+  // the design-system Link's openInNewTab, which also applies rel=noopener.
+  <Link
+    href={href}
+    className={className}
+    openInNewTab={target === '_blank'}
+    {...LOCALIZE_LINK_ATTRS}
+  >
     {children}
   </Link>
 );
@@ -157,7 +165,12 @@ const buildProcessor = (
     .use(collectRehypePlugins(extensions));
 
   if (localized) {
-    processor.use(rehypeLocalize, {translate: translateHtml});
+    // `summary` is included so details summaries (inline content after
+    // unwrapping) are translated like paragraph text.
+    processor.use(rehypeLocalize, {
+      translate: translateHtml,
+      blockTags: ['p', 'summary'],
+    });
   }
 
   return processor
@@ -202,7 +215,8 @@ const Markdown = ({
     [extensions, localized],
   );
 
-  const rendered = processor.processSync(content ?? children ?? '').result;
+  const source = preprocessMarkdown(content ?? children ?? '', extensions);
+  const rendered = processor.processSync(source).result;
 
   return (
     <div className={classNames(moduleStyles.markdownContainer, className)}>

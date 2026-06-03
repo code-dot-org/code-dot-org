@@ -9,8 +9,10 @@ import {
   blockly,
   callout,
   clickableText,
+  details,
   embeds,
   expandableImages,
+  externalLinks,
   inlineStyles,
   visualCodeBlock,
 } from '../extensions';
@@ -298,6 +300,60 @@ describe('Markdown', () => {
       );
       expect(screen.queryByRole('button')).toBeNull();
       expect(screen.getByRole('img', {name: 'just a cat'})).toBeTruthy();
+    });
+  });
+
+  describe('details', () => {
+    const block = ['::: details [**Hint**]', 'Body text.', ':::'].join('\n');
+
+    it('renders the ::: details sugar as a disclosure', () => {
+      const html = render(block, [details]);
+      expect(html).toContain('<details');
+      expect(html).toContain('<summary>');
+      // markdown in the summary is parsed, and the summary stays inline (no <p>)
+      expect(html).toContain('<strong');
+      expect(html).toContain('Hint');
+      expect(html).not.toMatch(/<summary>\s*<p/);
+      expect(html).toContain('Body text.');
+      // the fence markers are consumed
+      expect(html).not.toContain(':::');
+    });
+
+    it('accepts the no-space spelling (:::details [x])', () => {
+      const html = render(':::details [Hi]\nBody.\n:::', [details]);
+      expect(html).toContain('<details');
+      expect(html).toContain('Hi');
+    });
+
+    it('leaves the syntax as literal text when not enabled', () => {
+      const html = render(block);
+      expect(html).not.toContain('<details');
+      expect(html).toContain(':::');
+    });
+  });
+
+  describe('externalLinks', () => {
+    const md = '[code.org](https://code.org)';
+
+    it('opens links in a new tab when enabled', () => {
+      const html = render(md, [externalLinks()]);
+      expect(html).toContain('target="_blank"');
+      expect(html).toContain('rel="noopener noreferrer"');
+    });
+
+    it('does not open links in a new tab by default', () => {
+      const html = render(md);
+      expect(html).not.toContain('target="_blank"');
+    });
+
+    it('scopes to external hrefs when given a predicate', () => {
+      const isExternal = (href: string) => !href.includes('code.org');
+      expect(render(md, [externalLinks({isExternal})])).not.toContain(
+        'target="_blank"',
+      );
+      expect(
+        render('[ex](https://example.com)', [externalLinks({isExternal})]),
+      ).toContain('target="_blank"');
     });
   });
 
