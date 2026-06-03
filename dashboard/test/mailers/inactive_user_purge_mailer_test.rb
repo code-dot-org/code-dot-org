@@ -15,13 +15,13 @@ class InactiveUserPurgeMailerTest < ActionMailer::TestCase
     end
 
     it 'has correct sender address' do
-      _(mail[:from].decoded).must_equal '"CodeAI" <noreply@code.org>'
+      _(mail[:from].decoded).must_equal 'CodeAI <noreply@code.org>'
       _(mail.from).must_equal ['noreply@code.org']
     end
 
     it 'has correct reply address' do
       _(mail.reply_to).must_equal ['support@code.org']
-      _(mail[:reply_to].decoded).must_equal '"CodeAI" <support@code.org>'
+      _(mail[:reply_to].decoded).must_equal 'CodeAI <support@code.org>'
     end
 
     it 'includes inactivity notice and instructions in body' do
