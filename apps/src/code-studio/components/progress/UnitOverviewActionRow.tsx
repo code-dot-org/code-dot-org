@@ -186,6 +186,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
               <ActionDropdown
                 name="printing-options-dropdown"
                 labelText={i18n.printingOptions()}
+                size="s"
                 useIconButton={false}
                 triggerButtonProps={{
                   variant: 'outlined',
