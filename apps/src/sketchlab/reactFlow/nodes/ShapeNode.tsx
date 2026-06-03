@@ -8,7 +8,11 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
+import {
+  useIsAnchorDragging,
+  usePushSnapshot,
+  useSketchLabReadOnly,
+} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -108,8 +112,10 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
 
   const [isHovered, setIsHovered] = useState(false);
   const connection = useConnection();
+  const isAnchorDragging = useIsAnchorDragging();
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles = selected || (isHovered && connection.inProgress);
+  const showHandles =
+    selected || isAnchorDragging || (isHovered && connection.inProgress);
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
