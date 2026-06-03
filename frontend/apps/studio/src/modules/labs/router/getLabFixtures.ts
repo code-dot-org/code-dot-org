@@ -15,6 +15,23 @@ const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = {
 };
 
 /**
+ * Derives the conventional fixtures export name for a lab key. Each lab
+ * exports `<Lab>Fixtures` in PascalCase (e.g. MusicFixtures,
+ * DancePartyFixtures). Lab keys are kebab-cased by convention
+ * (`dance-party`), so PascalCase each hyphen-delimited segment.
+ */
+export function labFixturesExportName(labType: string): string {
+  return `${labType
+    .split('-')
+    .map(segment =>
+      segment.length > 0
+        ? `${segment[0].toUpperCase()}${segment.slice(1)}`
+        : segment,
+    )
+    .join('')}Fixtures`;
+}
+
+/**
  * Resolves the named-export fixtures for a lab — `MusicFixtures`,
  * `MazeFixtures`, etc. Returns `undefined` for unknown lab types or labs
  * that don't expose a `./mocks` subpath yet.
@@ -28,17 +45,8 @@ export async function getLabFixtures(
   if (!loader) return undefined;
 
   const mod = await loader();
-  // Convention: each lab exports `<Lab>Fixtures` in PascalCase (e.g.
-  // MusicFixtures, DancePartyFixtures). Lab keys are kebab-cased by
-  // convention (`dance-party`), so PascalCase each hyphen-delimited segment.
-  // Fall back to the default export.
-  const exportName = `${labType
-    .split('-')
-    .map(segment =>
-      segment.length > 0
-        ? `${segment[0].toUpperCase()}${segment.slice(1)}`
-        : segment,
-    )
-    .join('')}Fixtures`;
-  return (mod[exportName] ?? mod.default) as LabFixtures | undefined;
+  // Falls back to the default export when the named export is absent.
+  return (mod[labFixturesExportName(labType)] ?? mod.default) as
+    | LabFixtures
+    | undefined;
 }
