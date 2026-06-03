@@ -3,6 +3,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 import {
   entriesMatch,
   getElementForEntry,
@@ -43,8 +44,7 @@ export function useFocusManagement(
       if (
         target.closest('.react-flow__node') ||
         target.closest('.react-flow__edge') ||
-        target.closest('.react-flow__node-toolbar') ||
-        target.closest('.react-flow__edge-toolbar')
+        target.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;
       }
@@ -114,9 +114,9 @@ export function useFocusManagement(
         });
       } else {
         const focusTarget = event.target as HTMLElement;
-        const inToolbar =
-          focusTarget.closest('.react-flow__node-toolbar') ||
-          focusTarget.closest('.react-flow__edge-toolbar');
+        const inToolbar = focusTarget.closest(
+          `.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`
+        );
         if (!inToolbar) {
           // Focus moved to a non-node/edge element (e.g. Controls buttons).
           // Clear visual selection but preserve lastFocusedEntry so the

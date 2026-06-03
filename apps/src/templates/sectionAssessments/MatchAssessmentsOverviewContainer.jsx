@@ -1,3 +1,5 @@
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -15,6 +17,8 @@ import {
   ALL_STUDENT_FILTER,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
+
+import moduleStyles from './match-overview-container.module.scss';
 
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {
@@ -43,26 +47,30 @@ class MatchAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER && (
           <div>
-            <h2>
+            <Typography variant="h2">
               {i18n.matchQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
                 numStudents: totalStudentCount,
               })}
-            </h2>
+            </Typography>
             {questionAnswerData.map((question, index) => (
               <div key={index}>
-                <div style={styles.text}>
+                <div className={moduleStyles.questionLabel}>
                   {`${question.questionNumber}. ${question.question.slice(
                     0,
                     QUESTION_CHARACTER_LIMIT
                   )}`}
-                  <a
-                    onClick={() => {
+                  <Link
+                    size="s"
+                    onClick={e => {
+                      // Link defaults href to "#"; suppress the page-top jump
+                      // since this opens a modal rather than navigating.
+                      e.preventDefault();
                       this.selectQuestion(question.questionNumber - 1);
                     }}
                   >
-                    <span>{i18n.seeFullQuestion()}</span>
-                  </a>
+                    {i18n.seeFullQuestion()}
+                  </Link>
                 </div>
                 <MatchAssessmentsOverviewTable
                   questionAnswerData={question.options}
@@ -75,14 +83,6 @@ class MatchAssessmentsOverviewContainer extends Component {
     );
   }
 }
-
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-};
 
 export const UnconnectedMatchAssessmentsOverviewContainer =
   MatchAssessmentsOverviewContainer;

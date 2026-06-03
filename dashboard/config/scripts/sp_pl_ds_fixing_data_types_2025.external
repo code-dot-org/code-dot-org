@@ -6,10 +6,10 @@ markdown <<MARKDOWN
 # Converting Data Types
 
 
-#### Sometimes Pandas does not assign the correct data type and we need to update these types to work with our data. 
+Sometimes Pandas does not assign the correct data type and we need to update these types to work with our data. 
 
 
-#### Look at the output on the console here. What do you notice about the data types?
+Look at the output on the console here. What do you notice about the data types?
 
    <table border="1" width="100%" cellpadding="10">
         <tr>
@@ -27,9 +27,9 @@ markdown <<MARKDOWN
 
 ## The astype() function
 
-#### Since **'Age'** is typically represented as a **Int** and not a **Float**, we will make that change using the **astype()** function. 
+Since **'Age'** is typically represented as a **Int** and not a **Float**, we will make that change using the **astype()** function. 
 
-#### We will also convert **'Date'** to the **datetime** variable in Pandas.
+We will also convert **'Date'** to the **datetime** variable in Pandas.
         
    <table border="1" width="100%" cellpadding="10">
         <tr>

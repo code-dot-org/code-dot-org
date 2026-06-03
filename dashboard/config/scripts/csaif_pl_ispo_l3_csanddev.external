@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The IPSO Model 
 
-#### The IPSO model describes how a computer system works in four steps:
+The IPSO model describes how a computer system works in four steps:
 
 
 <br>
@@ -56,14 +56,14 @@ markdown <<MARKDOWN
 
 ---
 
-#### Together, these steps allow a computer system to take in information, process it, store it, and produce useful results.
+Together, these steps allow a computer system to take in information, process it, store it, and produce useful results.
 
 <img src="https://images.code.org/1cb9b1b8758e284d818deb82bb7d7aad-image-1742232231538.png" alt="diagram showing input processing storage and output" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### The next level covers different types of **hardware.**
+The next level covers different types of **hardware.**
 
-#### ▶️ As you click through the panels, consider which part of the **IPSO model** each part belongs to.  
+▶️ As you click through the panels, consider which part of the **IPSO model** each part belongs to.  
 
 
 MARKDOWN

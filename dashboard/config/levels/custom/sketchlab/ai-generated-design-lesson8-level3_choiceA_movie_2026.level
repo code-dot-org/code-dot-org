@@ -15,43 +15,22 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  }",
               "backgroundColor": "#f0fdf5",
               "strokeColor": "var(--sketchlab-stroke-green)",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left",
+              "fontSize": 30
             },
             "position": {
-              "x": 278,
-              "y": 269.6999969482422
+              "x": 257.6379160387614,
+              "y": -366.45378230161634
             },
-            "width": 238,
-            "height": 287,
+            "width": 621,
+            "height": 1263,
             "measured": {
-              "width": 238,
-              "height": 287
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "667d85e5-f03d-41f4-a177-54374bd585ae",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "var(--sketchlab-stroke-blue)",
-              "showHandles": false
-            },
-            "position": {
-              "x": 529.8495685777075,
-              "y": 269.3274333016435
-            },
-            "width": 238,
-            "height": 287,
-            "measured": {
-              "width": 238,
-              "height": 287
+              "width": 621,
+              "height": 1263
             },
             "resizing": false,
             "dragging": false
@@ -61,15 +40,166 @@
 
         ],
         "viewport": {
-          "x": -201.24829558002966,
-          "y": -369.2261959283095,
-          "zoom": 1.9296781204465019
+          "x": 199.31239961440986,
+          "y": 188.07443545018964,
+          "zoom": 0.48945547716984333
         }
       }
     },
-    "long_instructions": "## **Plan a Movie Filter**\r\n\r\n### Do This:\r\n\r\n1. Choose one filter to plan:\r\n\r\n   * **Comedy**\r\n   * **Recent Movies**\r\n   * **High Rated**\r\n\r\n2. Annotate one of the movie objects:\r\n\r\n   * Circle the **property** your filter will check.\r\n   * Underline the **value** your filter will compare.\r\n\r\n3. Decide: Should this movie be **Kept** or **Removed**?\r\n\r\n4. Write how your filter works in your own words.\r\n\r\n5. Complete the code condition for your filter:\r\n\r\n6. Save this sketch to your **Backpack**.\r\n\r\n"
+    "long_instructions": "## **Plan a Movie Filter**\r\n\r\n### Do This:\r\n\r\n1. Choose one filter to plan:\r\n\r\n   * **Comedy**\r\n   * **Recent Movies**\r\n   * **High Rated**\r\n\r\n2. Annotate one of the movie objects:\r\n\r\n   * Circle the **property** your filter will check.\r\n   * Underline the **value** your filter will compare.\r\n\r\n3. Decide: Should this movie be **Kept** or **Removed**?\r\n\r\n4. Write how your filter works in your own words.\r\n\r\n5. Complete the code condition for your filter:\r\n\r\n6. Save this sketch to your **Backpack**.\r\n\r\n",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "584614f1-6172-4696-bb09-62210720e612",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  }",
+              "fontSize": 26,
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "textAlign": "left",
+              "showHandles": false
+            },
+            "position": {
+              "x": 144.49188541401622,
+              "y": -444.3903938469398
+            },
+            "width": 492,
+            "height": 1074,
+            "measured": {
+              "width": 492,
+              "height": 1074
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "81242420-54fb-4738-9fcc-893b186dcae5",
+            "type": "text",
+            "data": {
+              "text": "Comedy Filter:\nChecks if genre == \"Comedy\"\n\nThis would remove the first and second movie and keep the third movie.",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "position": {
+              "x": 667.3085734680993,
+              "y": -440.1772765788448
+            },
+            "measured": {
+              "width": 309,
+              "height": 254
+            },
+            "width": 309,
+            "height": 254,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "77fc601a-2ef7-40e7-a7f3-e7f54f5669c2",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-red)",
+              "showHandles": false
+            },
+            "position": {
+              "x": 157.04411436771093,
+              "y": -308.1973038946185
+            },
+            "width": 221,
+            "height": 60,
+            "measured": {
+              "width": 221,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "fb13c9bc-8dcf-4f6d-88d1-b8b5c171b850",
+            "type": "lineAnchor",
+            "position": {
+              "x": 256.5441157666694,
+              "y": -270.19730664248084
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "310c0ef5-a899-43c3-a1b6-7f9e877894c1",
+            "type": "lineAnchor",
+            "position": {
+              "x": 332.5347764573567,
+              "y": -270.02574793336373
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "99ede094-32e9-42d3-a971-727da514dae6",
+            "source": "fb13c9bc-8dcf-4f6d-88d1-b8b5c171b850",
+            "target": "310c0ef5-a899-43c3-a1b6-7f9e877894c1",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            },
+            "zIndex": 1,
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "source": "77fc601a-2ef7-40e7-a7f3-e7f54f5669c2",
+            "sourceHandle": "bottom-source",
+            "target": "77fc601a-2ef7-40e7-a7f3-e7f54f5669c2",
+            "targetHandle": "bottom-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__77fc601a-2ef7-40e7-a7f3-e7f54f5669c2bottom-source-77fc601a-2ef7-40e7-a7f3-e7f54f5669c2bottom-target"
+          }
+        ],
+        "viewport": {
+          "x": 130.5810716389616,
+          "y": 259.72513491251107,
+          "zoom": 0.5391103445436204
+        }
+      }
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-07 20:05:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:24:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:51:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:09:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:15:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:17:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:19:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:20:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-08 16:27:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-08 16:39:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-07 20:05:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:24:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 20:51:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:09:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:15:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:17:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:19:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 21:20:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-08 16:27:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-08 16:39:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:05:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:05:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:06:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:07:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:08:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:09:06 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:09:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:09:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

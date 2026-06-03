@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Framing AI in Education
 
-#### When we talk about using AI in education, we’re typically referring to two approaches: *Teaching with AI* and *Teaching about AI*.
+When we talk about using AI in education, we’re typically referring to two approaches: *Teaching with AI* and *Teaching about AI*.
 
 
 <div style="text-align:center;">
@@ -19,9 +19,9 @@ markdown <<MARKDOWN
 *Image: TeachAI*
 
 
-#### The chart below highlights examples of each of these approaches. 
+The chart below highlights examples of each of these approaches. 
 
-#### In this module, we’ll focus on specific aspects of Teaching with AI - particularly the areas highlighted in red: using AI to support teaching practice and to assist with school operations.
+In this module, we’ll focus on specific aspects of Teaching with AI - particularly the areas highlighted in red: using AI to support teaching practice and to assist with school operations.
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <div style="max-width:980px; margin:0 auto;">
@@ -112,7 +112,7 @@ markdown <<MARKDOWN
 </div>
 </body>
 
-#### We begin here because many educators benefit from first using AI tools themselves before integrating them into instruction or asking students to engage with them. The goal is to help you build confidence using AI tools personally before applying them in your classroom.
+We begin here because many educators benefit from first using AI tools themselves before integrating them into instruction or asking students to engage with them. The goal is to help you build confidence using AI tools personally before applying them in your classroom.
 
-#### In Module 4, Bringing AI to the Classroom, we’ll continue exploring both Teaching with AI and Teaching about AI in greater depth.
+In Module 4, Bringing AI to the Classroom, we’ll continue exploring both Teaching with AI and Teaching about AI in greater depth.
 MARKDOWN

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing the CIA Triad
 
-#### Let's take a look at a few short short tech scenarios. For each one, think about how much you would trust it - yes, no, or maybe.
+Let's take a look at a few short short tech scenarios. For each one, think about how much you would trust it - yes, no, or maybe.
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
 
@@ -36,15 +36,15 @@ markdown <<MARKDOWN
 </div>
 
 
-#### All these situations point to the same risks. You could lose privacy, lose control of your stuff, or lose access to it. In cybersecurity, those are the three big things we try to protect. We call them Confidentiality, Integrity, and Availability, or the CIA Triad.
+All these situations point to the same risks. You could lose privacy, lose control of your stuff, or lose access to it. In cybersecurity, those are the three big things we try to protect. We call them Confidentiality, Integrity, and Availability, or the CIA Triad.
 
-#### The CIA Triad is a set of core rules for protecting information and stands for **Confidentiality, Integrity, and Availability**.
+The CIA Triad is a set of core rules for protecting information and stands for **Confidentiality, Integrity, and Availability**.
 
-* #### **Confidentiality** is keeping information private so only the right people can see it.
-* #### **Integrity** is ensuring that information stays correct and hasn't been changed without permission.
-* #### **Availability** is making information accessible to the people who need it, when they need it.
+* **Confidentiality** is keeping information private so only the right people can see it.
+* **Integrity** is ensuring that information stays correct and hasn't been changed without permission.
+* **Availability** is making information accessible to the people who need it, when they need it.
 
-#### This means that data should be kept private, accurate, and easy to access when needed.
+This means that data should be kept private, accurate, and easy to access when needed.
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;">🚀 Additional Teacher Resource: <a href='https://www.canva.com/design/DAGvNt-cbGk/1hBKgfCeiM1NKJX9WIX7Ag/view?utm_content=DAGvNt-cbGk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4745770232#4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>The CIA Triad</a></p>
 MARKDOWN

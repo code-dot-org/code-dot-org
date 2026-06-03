@@ -57,7 +57,7 @@
         "2": {
           "id": "2",
           "name": "planning.md",
-          "contents": "## Project Overview\n\n**App Idea:**\nWhat is your app about? What does it do?\n\n\n**Main Interaction:**\nWhat will the user do, and what should happen as a result?",
+          "contents": "Project Overview\n\nApp Idea:\nWhat is your app about? What does it do?\n\n\n\n---\n\nMain Interaction:\nWhat will the user do, and what should happen as a result?\n\n\n",
           "folderId": "0",
           "active": true
         }
@@ -68,6 +68,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T06:22:02.480+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-template-test_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-template-test_2026\"},{\"changed_at\":\"2026-04-20 06:23:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T06:22:02.480+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-template-test_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-template-test_2026\"},{\"changed_at\":\"2026-04-20 06:23:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-20 06:35:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-16 19:22:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

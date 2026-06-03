@@ -1,17 +1,18 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-20T23:46:23.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "\r\n## AND Logic\r\n\r\n**Do This:**\r\n\r\n1. Before checking both boxes, predict when the result will say **\"Access granted.\"**\r\n2. Then, toggle both checkboxes to test every combination. Notice which combination(s) make the result turn green.\r\n3. In your Activity Guide, complete all 4 rows of the AND (`&&`) truth table and write one sentence explaining what you observed about how the AND operator works.",
+    "long_instructions": "## Do This:\r\n\r\n1. Before checking both boxes, predict when the result will say **\"Access granted.\"**\r\n\r\n2. Then, toggle both checkboxes to test every combination.\r\n\r\n3. In your [activity guide](https://docs.google.com/document/d/1dteOFH87IUJcqI7yIELgu7OkU9QNxVUCwlxKMxf9k_c/edit?usp=drive_link), complete all four rows of the AND (`&&`) truth table.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
-    "initial_view_mode": "preview",
+    "initial_view_mode": "split",
     "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
@@ -60,9 +61,25 @@
         "2"
       ]
     },
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:23.654+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:23.654+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level1_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level1_2025\"},{\"changed_at\":\"2026-05-16 17:25:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:26:30 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

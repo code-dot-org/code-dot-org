@@ -5,8 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # AI vs. Humans
 
-* #### AI is great at structured, data-driven tasks (e.g., solving math).
-* #### AI struggles with reasoning, creativity, and common sense.
-* #### AI may provide misinformation or fake quotes that sound real.
+* AI is great at structured, data-driven tasks (e.g., solving math).
+* AI struggles with reasoning, creativity, and common sense.
+* AI may provide misinformation or fake quotes that sound real.
 
 MARKDOWN

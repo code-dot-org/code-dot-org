@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Is It Biased?
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Examine how identity-based prompts influence chatbot responses.
-* #### Reflect on the potential impact of biased AI outputs in the real world.
-* #### Explain how training data shapes the patterns and representations in generative AI.
-* #### Analyze AI-generated responses for signs of bias, stereotypes, or assumptions.
+* Examine how identity-based prompts influence chatbot responses.
+* Reflect on the potential impact of biased AI outputs in the real world.
+* Explain how training data shapes the patterns and representations in generative AI.
+* Analyze AI-generated responses for signs of bias, stereotypes, or assumptions.
 
 ## Resources
 

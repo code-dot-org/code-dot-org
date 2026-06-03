@@ -5,19 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Schema Design for Simple Features
 
-#### The unit wraps up by investigating how inconsistent field names and data types can lead to misinterpretation by both humans and AI in real-world datasets.
+The unit wraps up by investigating how inconsistent field names and data types can lead to misinterpretation by both humans and AI in real-world datasets.
 
-#### When the schema isn’t clear, different people (and systems) may read the same data in totally different ways.
+When the schema isn’t clear, different people (and systems) may read the same data in totally different ways.
 
 ## Same Fields, Different Interpretations
 
-#### Look at how three different users interpret the same three fields:
+Look at how three different users interpret the same three fields:
 
-- #### Title
+- Title
 
-- #### Experience
+- Experience
 
-- #### Payment
+- Payment
 
 <img src="https://images.code.org/f7bf83ba1632cbdd5e20352851fbb680-image-1770054965407.png" alt="Three users interpreting Title, Experience, and Payment differently" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
 
@@ -28,17 +28,17 @@ markdown <<MARKDOWN
 
 ## Why this is important
 
-#### Inconsistent schemas can cause:
+Inconsistent schemas can cause:
 
-- #### Filters that “miss” items because the field names don’t match
+- Filters that “miss” items because the field names don’t match
 
-- #### Incorrect comparisons (like sorting numbers that are stored as text)
+- Incorrect comparisons (like sorting numbers that are stored as text)
 
-- #### AI outputs that sound confident but are based on messy, unclear data
+- AI outputs that sound confident but are based on messy, unclear data
 
-- ####User confusion (because labels don’t match what people expect)
+- User confusion (because labels don’t match what people expect)
 
-#### 👉A consistent schema helps your app behave in ways users can understand and trust.
+👉A consistent schema helps your app behave in ways users can understand and trust.
 
 ---
 
@@ -47,13 +47,13 @@ markdown <<MARKDOWN
 ## Career Connection: Database Architect
 
 
-#### A Database Architect plans how data is stored and labeled so that:
+A Database Architect plans how data is stored and labeled so that:
 
-- #### Systems can use it correctly
+- Systems can use it correctly
 
-- #### People do not get confused
+- People do not get confused
 
-- #### New features are easier to build
+- New features are easier to build
 
 <div style="clear:both;"></div>
 
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 
 ## Next up
 
-#### Let’s review how these concepts get put together in the final project.
+Let’s review how these concepts get put together in the final project.
 
 
 MARKDOWN

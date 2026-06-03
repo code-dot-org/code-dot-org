@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Printing Objects 
 
-#### When printing an object, the toString() method of the Object class is called.
+When printing an object, the toString() method of the Object class is called.
 
-#### The `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.
+The `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.
 
 ---
 
@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ## Writing a toString() Method 
 
-#### The method signature is the same as the `toString()` method in the Object class. It has the same return type, name, and no parameters.
+The method signature is the same as the `toString()` method in the Object class. It has the same return type, name, and no parameters.
 
 <br><br>
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### In the body of the `toString()` method, we return a String that contains information about the object.
+In the body of the `toString()` method, we return a String that contains information about the object.
 
 <div style="clear:both;"></div>
 

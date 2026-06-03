@@ -14,8 +14,8 @@ markdown <<MARKDOWN
 
 ## Key Understandings:
 
-* #### The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.
-* #### The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.
-* #### The "frames" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.
-* #### You should only have one draw loop in your program.
+* The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.
+* The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.
+* The "frames" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.
+* You should only have one draw loop in your program.
 MARKDOWN

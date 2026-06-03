@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:31.000Z",
   "level_num": "custom",
@@ -63,9 +64,11 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZeHicSbd8Y\n3A6nPl/wGUTjydig03SSFhywdBPiMHDPEtcefGf2pvNj1Oh6cH0rUlh94/R/\nO8WARNGs2FVNfdP4OaitJlbEU2CJyz/M839NEwBX48Izt17OBbY93rqnrsKB\nNyZl041xCAuGKMcSQ18b2CKU96+v48dj4JoaKjrIoUxWsP/xFDfL4LcH5V9w\nGkYfSwyFNERhxqQKq6mKUrAC4ez8yLXFAIIHJVYNFmuQ4GebDfgGbQFneWUf\n5zSYZLstf4stbqAPW3iHDBa9jQROmGH3EqJ5hRUBcj8xqEjZkO+k5Um3d0vx\n0Bl1k5gSq6mzfHHzh6JhI7rXN5aFjw6vrmwlj4yoXDyxDdnPuiu3OJ+snLl4\n1lbG42DfJAdooH0IXBjf0qXXq3W4tSHjFuAOdG5Cmg3KF1d4DzyK9Pi9Z5oD\n1gzcDp8h5rnbuKEld85NcydNwKnDNnE4BJrZuGubTvQK8FJ4qja/l4rRs/YT\ndcFfNLZbe/fQBZ2Bfoton2AokvCcnIXvnSOg31shPAG4U8l40h80Qoh+55X4\nhmpD0AbRRFki5jXRFTLiraWQ7XTqa8NzkUZll7NLVQbC1r8Qp/y+BDRB9xAx\nntkckm3JGDnaV+k+0tzvAtxRbPWx5uOfRW8jt4pQXSLvV4t5Tudeijc34vO8\nkBiaqAU5J+nR+basjcWn+G/C1jiRLT0uNxbC6sS+NgHqlwW1HSLdmzOt1Svt\n2EJ319h9/+dg0pljNfLqYYjogdqWrCQFBcvQQ9K1NkSFjS83JItNdFbcrQFH\n1Nn970dJ7LxYLQ0lb0jDd31Gmod4/iTr98+9X5KW4cTcdJBu1LBax+SkLjch\nGXFFa2DsV2ww2gUHFSw/9xK8GJUMepd4tWMZAQYgR/AjTmKuOtHPIi2F21C+\nozk1Iaum7NEec7O8FlULP4UEYUe3uHvX6VAvGuUexWuWF87PNlJSuCqHQ9dm\nVNhj6rZ5mUZkC9RVOSO3ZlTFwfCjbgSULCVEbZuZ/c1NWFjHB9+NvipyBoXI\noXZSva4wyYDXRwVQravInHLDC+tJOVUEK7nDJ8/04Kq8DF1jSTK+wxAejLfk\nQvJe98NeIZzvhiPgzjSNyc2J9ug4EO2LN/0hRe/Wt1/4b9Cq36CHZwwCCa39\nTTX97y5a40VxuW471QGbahm4BEZKNUiFkFbSeUyzbSsIzQoCtInsFB0q/BMh\na5lmnzm4ewytytk5uYV9pUcELLGt\n",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:31.951+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L3-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:31.951+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L18-L3-2025\"},{\"changed_at\":\"2026-05-19 21:02:08 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 21:02:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

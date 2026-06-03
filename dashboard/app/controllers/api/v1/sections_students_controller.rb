@@ -8,7 +8,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
 
   # GET /sections/<section_id>/students
   def index
-    summaries = @section.students.includes(:latest_parental_permission_request).map do |student|
+    summaries = @section.students.includes(:primary_contact_info, :latest_parental_permission_request).map do |student|
       # Student depends on this section for login if student's account is
       # teacher managed and only belongs to the one section.
       student.summarize.merge(
@@ -35,7 +35,8 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # PATCH /sections/<section_id>/students/<id>
   def update
     # Teachers aren't allowed to update other teachers' information, even if the teacher is
-    # a student in a section.
+    # a student in a section. Demo students are also blocked here via the
+    # `:manage, User` ability rule, which excludes them from teacher management.
     return head :forbidden unless can?(:manage, @student) && !@student.teacher?
 
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS

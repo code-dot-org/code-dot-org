@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Click Event\n\nThe `\"click\"` event happens when a user clicks an element on the page. Use it with `addEventListener()` to make buttons, icons, images, or other elements respond when clicked.",
+  "examples": "[{\"name\":\"Run Code on Click\",\"description\":\"This changes the button text when the button is clicked.\",\"code\":\"```\\nconst buttonOne = document.getElementById(\\\"buttonOne\\\");\\n\\nbuttonOne.addEventListener(\\\"click\\\", () =\\u003e {\\n  buttonOne.textContent = \\\"Clicked!\\\";\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "click-event",
+  "name": "Click Event",
+  "syntax": "`buttonOne.addEventListener(\"click\", () => { ... });`",
+  "tips": "- Write `\"click\"` in quotation marks inside `addEventListener()`.\n- Use the `\"click\"` event for buttons and other elements the user can click.\n- The code after `\"click\"` is the event handler. It runs after the click happens.\n- Make sure the element is selected before adding a click event to it.\n- In Web Lab, `\"click\"` often appears in code that changes text, updates styles, or shows a response after a button press.",
+  "methods": [
+
+  ]
+}

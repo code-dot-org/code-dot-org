@@ -38,9 +38,13 @@ export default class JavabuilderConnection {
     onValidationPassed,
     onValidationFailed,
     onConnectDone,
-    setIsCaptchaDialogOpen
+    setIsCaptchaDialogOpen,
+    // Optional. Callers (e.g. Lab2-based labs) that don't initialize the
+    // legacy `project` singleton can pass the channel id explicitly. Legacy
+    // callers omit it and fall back to project.getCurrentId().
+    channelId
   ) {
-    this.channelId = project.getCurrentId();
+    this.channelId = channelId ?? project.getCurrentId();
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
@@ -66,10 +70,15 @@ export default class JavabuilderConnection {
     this.hadWebsocketConnectionError = false;
 
     if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+      // Route console output through the mini app as PARTIAL_LOG signals,
+      // as Javabuilder includes an explicit newline at the end.
+      // Codebridge will add an extra newline for CONSOLE_LOG signals,
+      // so we use PARTIAL_LOG to avoid double newlines. Java Lab ignores
+      // PARTIAL_LOG vs CONSOLE_LOG and will add newlines whenever it sees an explicit newline.
       this.onOutputMessage = message => {
         if (this.miniApp.isRunning()) {
           this.miniApp.handleSignal({
-            value: ConsoleSignalType.CONSOLE_LOG,
+            value: ConsoleSignalType.PARTIAL_LOG,
             detail: message,
           });
         } else {
@@ -80,7 +89,7 @@ export default class JavabuilderConnection {
       this.onNewlineMessage = () => {
         if (this.miniApp.isRunning()) {
           this.miniApp.handleSignal({
-            value: ConsoleSignalType.CONSOLE_LOG,
+            value: ConsoleSignalType.PARTIAL_LOG,
             detail: '\n',
           });
         } else {
@@ -155,7 +164,7 @@ export default class JavabuilderConnection {
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (checkProjectEdited && project.getCurrentId() === undefined) {
+    if (checkProjectEdited && !this.channelId) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }

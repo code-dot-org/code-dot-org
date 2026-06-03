@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Class List\n\nThe `classList` property lets JavaScript change the CSS classes on a selected element. Use it to add a class, remove a class, or replace one class with another.",
+  "examples": "[{\"name\":\"Show and Hide Icons\",\"description\":\"This adds and removes the `hidden class` to switch which heart icon is visible.\",\"code\":\"```\\nconst heartEmpty = document.getElementById(\\\"heartEmpty\\\");\\nconst heartFull = document.getElementById(\\\"heartFull\\\");\\n\\nheartEmpty.classList.add(\\\"hidden\\\");\\nheartFull.classList.remove(\\\"hidden\\\");\\n```\"},{\"name\":\"Switch a Theme\",\"description\":\"This replaces the `light` class with the `dark` class.\",\"code\":\"```\\nconst body = document.querySelector(\\\"body\\\");\\n\\nbody.classList.replace(\\\"light\\\", \\\"dark\\\");\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "class-list",
+  "name": "Class List",
+  "syntax": "`heartEmpty.classList.add(\"hidden\");`",
+  "tips": "- Use `classList.add()` to add a class to an element.\n- Use `classList.remove()` to remove a class from an element.\n- Use `classList.replace()` to switch one class for another.\n- Put class names in quotation marks, like `\"hidden\"` or `\"dark\"`.\n- In Web Lab, `classList` often appears inside event handlers that show, hide, favorite, or switch themes.",
+  "methods": [
+
+  ]
+}

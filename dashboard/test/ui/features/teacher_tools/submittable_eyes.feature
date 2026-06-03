@@ -6,6 +6,7 @@ Scenario: Submittable level
   When I open my eyes to test "submittable level"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/3?noautoplay=true"
   And I wait to see ".submitButton"
+  And The header is finished animating
   And I see no difference for "initial load"
   And I click selector ".answerbutton[index=0]"
   And I click selector ".submitButton"
@@ -13,6 +14,7 @@ Scenario: Submittable level
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/3?noautoplay=true"
   Then I reload the page
   And I wait until element ".unsubmitButton" is visible
+  And The header is finished animating
   And I see no difference for "submitted puzzle"
   And I close my eyes
 
@@ -26,6 +28,7 @@ Scenario: Lockable level
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1"
   And I wait to see ".submitButton"
+  And The header is finished animating
   And I see no difference for "locked level on level page"
   Then I click selector ".header_popup_link" once I see it
   And I wait to see ".react_stage"

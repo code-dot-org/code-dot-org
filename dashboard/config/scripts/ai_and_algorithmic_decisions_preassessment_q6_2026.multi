@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-preassessment-q6_2026'
 
-question 'A workout app shows your total steps for the day. Each time you walk more, the number on the screen goes up automatically. What is happening in the app when that number increases?'
+question 'A QA Engineer reports: "Steps to reproduce: open app, click Start, click Pause. Expected: timer stops. Actual: timer keeps running." What part of the bug report is most useful to a developer trying to fix it?'
 
-wrong 'The app is redrawing the background design every few seconds.'
-wrong 'The app is downloading a new version of itself from the internet.'
-right 'The app is changing a variable\'s value and updating the screen to match it.'
-wrong 'The app is turning off old features to save battery.'
+wrong 'The QA Engineer''s job title.'
+right 'The exact steps to reproduce the bug and the gap between expected and actual behavior.'
+wrong 'How long the QA Engineer spent finding it.'
+wrong 'A guess about which library is broken.'
 
 allow_multiple_attempts true
 

@@ -1,0 +1,320 @@
+{
+  "script": {
+    "name": "test-brendan",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "generate_outline": "Generate a two lesson progression on making a web page about your pet fish.  Target middle-schoolers.",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-06-01 18:44:11 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "test-brendan"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "test-brendan"
+      }
+    },
+    {
+      "key": "outlines",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lessons"
+      },
+      "seeding_key": {
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "intro-web-fish",
+      "name": "My Pet Fish Webpage: Part 1 - Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "generate_outline": "This lesson introduces students to what a web page is and its basic structure using HTML. Students will learn how to create a simple HTML file, add a title to their web page, and include a main heading for their pet fish's name using the <h1> tag. They will also add a paragraph describing their pet fish using the <p> tag. By the end, students will have a basic web page displaying their pet fish's name and a short description."
+      },
+      "seeding_key": {
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    },
+    {
+      "key": "add-images-fish",
+      "name": "My Pet Fish Webpage: Part 2 - Pictures and Personality",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "generate_outline": "Building on the previous lesson, students will enhance their pet fish web page by adding images and more detailed information. This lesson teaches how to insert an image of their pet fish using the <img> tag, including important attributes like src and alt. Students will also add additional descriptive paragraphs to share more about their fish's personality or tank setup. By the end, students will have a more complete web page featuring their pet fish's name, a description, and an image."
+      },
+      "seeding_key": {
+        "lesson.key": "add-images-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "df4d80a5-4c44-4211-980c-3952c42630f0",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0",
+        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-what-is-a-webpage"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      },
+      "level_keys": [
+        "test-brendan-what-is-a-webpage"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-html-structure-title"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      },
+      "level_keys": [
+        "test-brendan-html-structure-title"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-pet-name-heading"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      },
+      "level_keys": [
+        "test-brendan-pet-name-heading"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-pet-description-paragraph"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      },
+      "level_keys": [
+        "test-brendan-pet-description-paragraph"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-review-first-page"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      },
+      "level_keys": [
+        "test-brendan-review-first-page"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-what-is-a-webpage",
+        "script_level.level_keys": [
+          "test-brendan-what-is-a-webpage"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-html-structure-title",
+        "script_level.level_keys": [
+          "test-brendan-html-structure-title"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-pet-name-heading",
+        "script_level.level_keys": [
+          "test-brendan-pet-name-heading"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-pet-description-paragraph",
+        "script_level.level_keys": [
+          "test-brendan-pet-description-paragraph"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-review-first-page",
+        "script_level.level_keys": [
+          "test-brendan-review-first-page"
+        ],
+        "lesson.key": "intro-web-fish",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

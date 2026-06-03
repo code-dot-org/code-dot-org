@@ -13,7 +13,7 @@
     "parent_level_id": 26676,
     "name_suffix": "_2025",
     "encrypted": "false",
-    "long_instructions": "#### Video from Course C - Lesson 12, Level 1:  Build a Flappy Game."
+    "long_instructions": "Video from Course C - Lesson 12, Level 1:  Build a Flappy Game."
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-04-06T19:55:20.561+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-Events-Video_2024\\\"\"],\"cloned_from\":\"OPD-K5-Events-Video_2024\"},{\"changed_at\":\"2025-05-07 17:00:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",

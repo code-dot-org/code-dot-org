@@ -12,7 +12,7 @@
     "display_name": "Video: Introduction to Sprites",
     "parent_level_id": 20681,
     "name_suffix": "_self-paced-unit3",
-    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to sprites in Game Lab. \r\n\r\n## As you watch the video, consider the following:\r\n* #### What is a sprite? \r\n* #### How will my students use sprites to create more detailed and interesting images? \r\n",
+    "long_instructions": "##### This video is included in the CS Discoveries curriculum to introduce students to sprites in Game Lab. \r\n\r\n## As you watch the video, consider the following:\r\n* What is a sprite? \r\n* How will my students use sprites to create more detailed and interesting images? \r\n",
     "encrypted": "false"
   },
   "published": true,

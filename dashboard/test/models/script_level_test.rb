@@ -52,6 +52,26 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.lesson_total
   end
 
+  test 'summarize_for_lesson_edit includes per-level type and generateOutline' do
+    # The /generate page reads `type` and `generateOutline` for each level
+    # to decide whether the lab type is supported and to pre-populate the
+    # description box. Pin the shape.
+    panels_level = create(:panels, name: 'panels-summary')
+    panels_level.update!(properties: panels_level.properties.merge('generate_outline' => 'tell the story'))
+    weblab2_level = create(:weblab2, name: 'weblab2-summary')
+    sl = create_script_level_with_ancestors(levels: [panels_level])
+    other = create(:script_level, lesson: sl.lesson, script: sl.script, levels: [weblab2_level])
+
+    panels_summary = sl.summarize_for_lesson_edit[:levels].first
+    assert_equal panels_level.id.to_s, panels_summary[:id]
+    assert_equal 'Panels', panels_summary[:type]
+    assert_equal 'tell the story', panels_summary[:generateOutline]
+
+    weblab2_summary = other.summarize_for_lesson_edit[:levels].first
+    assert_equal 'Weblab2', weblab2_summary[:type]
+    assert_nil weblab2_summary[:generateOutline]
+  end
+
   class InstructorInTrainingTests < ActiveSupport::TestCase
     setup do
       @authorized_teacher = create(:authorized_teacher)
@@ -179,7 +199,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
+      assert_equal ["https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
                    sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
     end
 
@@ -188,7 +208,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
+      assert_equal ["https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
                    sl.get_example_solutions(level, @authorized_teacher, 5, unit_group_unit: script.original_unit_group_unit)
     end
 

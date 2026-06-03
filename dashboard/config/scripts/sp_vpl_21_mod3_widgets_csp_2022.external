@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Widgets
 
-#### **Widgets** are small digital tools that act as a playground for exploring and experimenting with a CS concept. Widgets are meant to promote discovery and creativity within a fairly narrow scope where there are typically no right or wrong answers.
+**Widgets** are small digital tools that act as a playground for exploring and experimenting with a CS concept. Widgets are meant to promote discovery and creativity within a fairly narrow scope where there are typically no right or wrong answers.
 
 ### **Pixelation Widget**
 

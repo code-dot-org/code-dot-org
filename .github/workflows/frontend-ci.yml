@@ -10,6 +10,13 @@ on:
     paths:
       - "frontend/**"
       - ".github/**"
+  push:
+    branches:
+      - staging
+      - staging-next
+    paths:
+      - "frontend/**"
+      - ".github/**"
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -21,6 +28,7 @@ jobs:
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
+      oceans-changed: ${{ steps.changes.outputs.oceans }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -41,6 +49,12 @@ jobs:
               - 'frontend/apps/studio/**'
               - 'frontend/*'
               - '.github/**'
+            oceans:
+              - 'frontend/packages/labs/oceans/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/*'
+              - '.github/**'
 
   # Start the studio app CI workflow
   studio:
@@ -56,10 +70,17 @@ jobs:
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
 
+  # Start the oceans lab CI workflow
+  oceans:
+    if: ${{ needs.setup.outputs.oceans-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/oceans-ci.yml
+    secrets: inherit
+
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library]
+    needs: [setup, component-library, oceans]
     if: always()
     runs-on: ubuntu-24.04
     steps:

@@ -56,10 +56,10 @@ markdown <<MARKDOWN
 ---
 ## Conclusion
 
-#### By the end of this chapter, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
-#### In the next chapter, students will explore data science using Python and the Pandas library to explore and analyze data. 
+By the end of this chapter, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
+In the next chapter, students will explore data science using Python and the Pandas library to explore and analyze data. 
 
-#### *Previous Python experience is not necessary to complete the chapter.*
+*Previous Python experience is not necessary to complete the chapter.*
 
 
 

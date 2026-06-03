@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app(/*path)", to: "app#index"
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -415,6 +415,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
@@ -474,6 +475,8 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        get 'generate', to: 'scripts#generate'
+        put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do
@@ -481,6 +484,10 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'slides/generate', to: 'lessons/slides#generate'
+        get 'slides', to: 'lessons/slides#show'
+        get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -580,6 +587,11 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :generate
+        get 'slides/generate', to: 'lessons/slides#generate', as: 'generate_slides'
+        get 'slides', to: 'lessons/slides#show', as: 'slides'
+        get 'slides/edit', to: 'lessons/slides#edit', as: 'slides_edit'
+        put 'slides_data', to: 'lessons/slides#update'
         post :clone
       end
     end
@@ -1203,6 +1215,15 @@ Dashboard::Application.routes.draw do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
         get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
         get :request_ai_lesson_summaries, controller: :ai_lesson_summaries, action: :request_ai_lesson_summaries # GET ai_lesson_summaries/request_ai_lesson_summaries?unit_id=1 [optional: &lesson_id=1]
+      end
+    end
+
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [] do
+      collection do
+        get :show # GET /ai_student_podcasts?lesson_id=1&objective_ids[]=2
+        post :generate_podcast
+        get :retrieve_podcast_from_s3
       end
     end
 

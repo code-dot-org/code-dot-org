@@ -24,7 +24,7 @@ module AiLessonSummariesHelper
   end
 
   # Retrieves existing AiLessonSummary with the desired response_format if it exists, otherwise generates and saves it it.
-  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, generate_script)
+  def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, generate_script, credits_available)
     summary_record = AiLessonSummary.find_or_create_by(
       user_id: user_id,
       lesson_id: lesson_id
@@ -47,11 +47,10 @@ module AiLessonSummariesHelper
       ).where.not(script: nil)&.first
       new_script = if existing_script
                      existing_script.script
-                   else
+                   elsif credits_available
                      JSON.parse(generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json])['podcast_script']
                    end
     end
-
     summary_record.update!(lesson_summary: new_lesson_summary, script: new_script)
     return summary_record
   end
@@ -66,7 +65,8 @@ module AiLessonSummariesHelper
     request = {
       user_id: user_id,
       lesson_ids: lesson_ids,
-      unit_id: unit.id
+      unit_id: unit.id,
+      credits_available: false,
     }
     AiLessonSummariesJob.perform_later(request: request)
   end
@@ -76,7 +76,8 @@ module AiLessonSummariesHelper
       request = {
         user_id: user_id,
         lesson_ids: [lesson.id],
-        unit_id: unit.id
+        unit_id: unit.id,
+        credits_available: false,
       }
       AiLessonSummariesJob.perform_later(request: request)
     end

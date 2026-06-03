@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. The Problem Solving with AI unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. The Problem Solving with AI unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
 
-#### See what educators are saying about teaching the **Problem Solving with AI** unit. 
+See what educators are saying about teaching the **Problem Solving with AI** unit. 
 
 <!-- Flexbox Section 1 -->
 <div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">

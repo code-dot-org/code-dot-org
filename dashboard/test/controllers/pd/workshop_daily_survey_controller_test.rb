@@ -1,4 +1,4 @@
-require_relative '../../../../shared/test/spy_newrelic_agent'
+require_relative '../../../../shared/test/observability_test_recorder'
 require 'test_helper'
 
 module Pd
@@ -101,7 +101,7 @@ module Pd
 
       sign_in @facilitator
       get "/pd/workshop_survey/new_facilitator_post?workshop_id=#{@byo_workshop.id}"
-      assert_redirected_to CDO.studio_url BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY, CDO.default_scheme
+      assert_redirected_to CDO.studio_url(BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY)
     end
 
     test 'daily workshop survey displays not enrolled message when not enrolled' do

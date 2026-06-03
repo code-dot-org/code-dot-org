@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
 import {
   faBackward,
   faForward,
@@ -6,7 +5,6 @@ import {
   faPlay,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Radium from 'radium';
 import * as React from 'react';
 
 import {Body, Button} from '@/oceans/components/common';
@@ -15,8 +13,6 @@ import {$time, currentRunTime, finishMovement} from '@/oceans/helpers';
 import I18n from '@/oceans/i18n';
 import modeHelpers from '@/oceans/modeHelpers';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
-import {mergeStyles} from '@/oceans/styles/mergeStyles';
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
@@ -31,10 +27,7 @@ interface PredictState {
   timeScale: number;
 }
 
-const UnwrappedPredict = class Predict extends React.Component<
-  Record<string, never>,
-  PredictState
-> {
+class Predict extends React.Component<Record<string, never>, PredictState> {
   state: PredictState = {
     displayControls: false,
     timeScale: defaultTimeScale,
@@ -108,54 +101,64 @@ const UnwrappedPredict = class Predict extends React.Component<
       selectedControl = MediaControl.FastForward;
     }
 
+    const rewindClassName =
+      selectedControl === MediaControl.Rewind
+        ? 'ocean-media-control ocean-media-control--selected'
+        : 'ocean-media-control';
+    const fastForwardClassName =
+      selectedControl === MediaControl.FastForward
+        ? 'ocean-media-control ocean-media-control--selected'
+        : 'ocean-media-control';
+
     return (
       <Body>
         {this.state.displayControls && (
-          <div style={styles.mediaControls} id="uitest-media-ctrl">
-            <span
+          <div className="ocean-media-controls" id="uitest-media-ctrl">
+            <button
+              type="button"
+              aria-label="Rewind"
               onClick={() => this.onScaleTime(true)}
-              style={mergeStyles(
-                styles.mediaControl,
-                selectedControl === MediaControl.Rewind &&
-                  styles.selectedControl,
-              )}
+              className={rewindClassName}
               key={MediaControl.Rewind}
             >
-              <span style={styles.timeScale}>
+              <span className="ocean-media-control__time-scale">
                 {selectedControl === MediaControl.Rewind &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-              <FontAwesomeIcon icon={faBackward} />
-            </span>
-            <span
+              <FontAwesomeIcon icon={faBackward} aria-hidden />
+            </button>
+            <button
+              type="button"
+              aria-label={state.isRunning ? 'Pause' : 'Play'}
               onClick={this.onPressPlay}
-              style={styles.mediaControl}
+              className="ocean-media-control"
               key={MediaControl.Play}
             >
-              <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
-            </span>
-            <span
+              <FontAwesomeIcon
+                icon={state.isRunning ? faPause : faPlay}
+                aria-hidden
+              />
+            </button>
+            <button
+              type="button"
+              aria-label="Fast forward"
               onClick={() => this.onScaleTime(false)}
-              style={mergeStyles(
-                styles.mediaControl,
-                selectedControl === MediaControl.FastForward &&
-                  styles.selectedControl,
-              )}
+              className={fastForwardClassName}
               key={MediaControl.FastForward}
             >
-              <FontAwesomeIcon icon={faForward} />
-              <span style={styles.timeScale}>
+              <FontAwesomeIcon icon={faForward} aria-hidden />
+              <span className="ocean-media-control__time-scale">
                 {selectedControl === MediaControl.FastForward &&
                   this.state.timeScale !== defaultTimeScale &&
                   `x${this.state.timeScale}`}
               </span>
-            </span>
+            </button>
           </div>
         )}
         {!state.isRunning && !state.isPaused && (
           <Button
-            style={styles.continueButton}
+            className="ocean-button--continue"
             onClick={this.onRun}
             id="uitest-run-btn"
           >
@@ -165,7 +168,7 @@ const UnwrappedPredict = class Predict extends React.Component<
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
           <Button
-            style={styles.continueButton}
+            className="ocean-button--continue"
             onClick={this.onContinue}
             id="uitest-continue-btn"
           >
@@ -175,5 +178,5 @@ const UnwrappedPredict = class Predict extends React.Component<
       </Body>
     );
   }
-};
-export default Radium(UnwrappedPredict);
+}
+export default Predict;

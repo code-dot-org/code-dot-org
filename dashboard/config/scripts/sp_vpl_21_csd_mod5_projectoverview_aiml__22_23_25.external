@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 1 Project: Make a Machine Learning App
 
-#### In this one or two day project, students apply their skills from the first half of the unit to **create a machine learning app using real-world data**. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. 
+In this one or two day project, students apply their skills from the first half of the unit to **create a machine learning app using real-world data**. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. 
 
-#### This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
 
 ## Sample Student Projects
 
@@ -24,13 +24,13 @@ markdown <<MARKDOWN
 
 ## Pacing Recommendation
 
-#### If you are short on time, this mini project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+If you are short on time, this mini project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
 
 ## Project Resources
 
-* #### <a href="https://studio.code.org/s/csd7-2024/lessons/16" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* #### <a href="https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit" target="blank" rel="noopener noreferrer" >Project Guide</a> 
-* #### <a href="https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+* <a href="https://studio.code.org/s/csd7-2024/lessons/16" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* <a href="https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* <a href="https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 
 MARKDOWN

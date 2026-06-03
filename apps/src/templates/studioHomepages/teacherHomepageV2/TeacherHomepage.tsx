@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -20,16 +21,21 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
+import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
 import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
+import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -38,23 +44,40 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+  logoTransitionEnabled?: boolean;
 }
 
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
-const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+  logoTransitionEnabled,
+}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
   // TODO: replace with real data once teacher grade level is stored on the platform
   const isElementaryTeacher = true;
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
+    const demo = Object.values(sections).find(
+      s => s.demoType !== null && s.demoType !== undefined
+    );
+    return demo?.demoType ?? null;
+  }, [sections]);
+
   const tour = useCreateSectionTour(isElementaryTeacher);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
+
+  const showRebrandBanner = DCDO.get('codeai-rebrand-banner', false);
 
   const [personaData, setPersonaData] = React.useState<{
     hasMatchedPersona: boolean | null;
@@ -208,8 +231,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
-  const sections = useAppSelector(state => state.teacherSections.sections);
-
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
@@ -237,6 +258,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   return (
     <div className={styles.teacherHomepage}>
+      {logoTransitionEnabled && <LogoTransition />}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName
@@ -245,6 +267,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {showRebrandBanner && (
+              <TempRebrandBanner showBanner={showRebrandBanner === true} />
+            )}
             {shouldShowPersonalizationAlert && (
               <Alert
                 aria-labelledby="feedback-banner-title"
@@ -272,6 +297,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 }}
               />
             )}
+
+            <LatamGeRegionNotice />
+
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
@@ -281,8 +309,13 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled && (
-              <OnboardingChecklist createSectionTour={tour} />
+            {!!isMiniTutorialEnabled && demoSectionDemoType !== null && (
+              <OnboardingChecklist
+                createSectionTour={tour}
+                reviewSyllabusTour={reviewSyllabusTour}
+                learnHowToEvaluateTour={learnHowToEvaluateTour}
+                demoType={demoSectionDemoType}
+              />
             )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
@@ -294,7 +327,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 />
               )
             ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={showHiddenOnly}

@@ -29,6 +29,7 @@
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
     "@sentry/browser": "catalog:",
+    "@tanstack/react-query": "catalog:",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
     "ky": "catalog:",
