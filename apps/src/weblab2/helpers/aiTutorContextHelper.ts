@@ -19,8 +19,8 @@ interface AiTutorWebLab2Params {
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
 
-// Returns the relative path used in HTML src/href attributes.
-const getRelativeFilePath = (
+// Returns the file path used in HTML src/href attributes.
+const getFilePath = (
   file: ProjectFile,
   folders: MultiFileSource['folders']
 ): string => {
@@ -28,8 +28,7 @@ const getRelativeFilePath = (
     return file.name;
   }
   const folderPath = getFolderPath(file.folderId, folders);
-  const fullPath = `${folderPath}/${file.name}`;
-  return fullPath.startsWith('/') ? fullPath.substring(1) : fullPath;
+  return `${folderPath}/${file.name}`;
 };
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
@@ -54,7 +53,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
               )
           )
           .map(file => {
-            const filePath = getRelativeFilePath(file, source.folders);
+            const filePath = getFilePath(file, source.folders);
             // Image/binary files are stored as asset URLs with no text contents.
             if (file.url) {
               return `image: ${filePath}`;
