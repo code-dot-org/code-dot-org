@@ -14,6 +14,7 @@ export interface MdastNode {
   type: string;
   url?: string;
   alt?: string;
+  value?: string;
   children?: MdastNode[];
   data?: {
     hName?: string;

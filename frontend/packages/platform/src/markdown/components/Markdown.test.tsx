@@ -12,6 +12,7 @@ import {
   embeds,
   expandableImages,
   inlineStyles,
+  visualCodeBlock,
 } from '../extensions';
 import {translateHtml} from '../localization';
 
@@ -297,6 +298,32 @@ describe('Markdown', () => {
       );
       expect(screen.queryByRole('button')).toBeNull();
       expect(screen.getByRole('img', {name: 'just a cat'})).toBeTruthy();
+    });
+  });
+
+  describe('visualCodeBlock', () => {
+    const md = '`playSound()`(#fff176)';
+
+    it('renders a colored code block from the syntax', () => {
+      const html = render(md, [visualCodeBlock]);
+      expect(html).toContain('<code');
+      expect(html).toContain('playSound()');
+      expect(html).toContain('background-color:#fff176');
+      // the (#hex) marker is consumed, not left as text
+      expect(html).not.toContain('(#fff176)');
+    });
+
+    it('leaves the syntax as literal text when not enabled', () => {
+      const html = render(md);
+      expect(html).toContain('playSound()');
+      expect(html).toContain('(#fff176)');
+      expect(html).not.toContain('background-color');
+    });
+
+    it('does not color plain inline code', () => {
+      const html = render('plain `code` here', [visualCodeBlock]);
+      expect(html).toContain('<code');
+      expect(html).not.toContain('background-color');
     });
   });
 

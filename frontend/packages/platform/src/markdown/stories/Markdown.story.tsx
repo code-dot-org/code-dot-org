@@ -101,6 +101,16 @@ export const Blockly: Story = {
   ),
 };
 
+export const VisualCodeBlock: Story = {
+  name: 'Visual code blocks',
+  render: () => (
+    <Markdown
+      content={'First `playSound()`(#fff176), then `get nectar`(#00b0bd).'}
+      extensions={[extensions.visualCodeBlock]}
+    />
+  ),
+};
+
 export const ClickableText: Story = {
   render: () => (
     <Markdown
