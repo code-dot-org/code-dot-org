@@ -531,7 +531,8 @@ const debouncedSendStartedReport = debounce(
       dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
     }
   },
-  100
+  100,
+  {leading: true}
 );
 
 function sendReportForLevel(
@@ -577,24 +578,40 @@ function sendReportForLevel(
       'content-type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then(response => {
-    if (response.ok && levelId !== null) {
-      // Update the progress store by merging in this
-      // particular result immediately.
-      dispatch(mergeResults({[levelId]: result}));
-      dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
-      // If the level is the sublevel of a bubble level,
-      // also update the status of the parent level.
-      if (currentLevel.parentLevelId) {
-        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
-        const parentId = parseInt(currentLevel.parentLevelId);
-        dispatch(mergeUnitProgress({levelId: parentId, result}));
-      }
+  })
+    .then(response => {
+      if (response.ok && levelId !== null) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: result}));
+        dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
+        // If the level is the sublevel of a bubble level,
+        // also update the status of the parent level.
+        if (currentLevel.parentLevelId) {
+          dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+          const parentId = parseInt(currentLevel.parentLevelId);
+          dispatch(mergeUnitProgress({levelId: parentId, result}));
+        }
 
-      // After we log the reported time we should update the start time of the milestone
-      // otherwise if we don't leave the page we are compounding the total time
-      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
-    }
+        // After we log the reported time we should update the start time of the milestone
+        // otherwise if we don't leave the page we are compounding the total time
+        Lab2ProgressTimer.getInstance().resetMilestoneTimer();
+      }
+    })
+    .catch((error: Error) => logMilestoneReportError(url, error));
+}
+
+// A rejected fetch (e.g. Safari's "Load failed" or Chrome's "Failed to fetch")
+// means the milestone POST never reached the server: the request failed at the
+// network layer rather than returning an HTTP error. This is commonly a dropped
+// connection or the user navigating away mid-request, and is usually benign.
+// Catch it so it is recorded rather than surfacing as an uncaught promise
+// rejection in onunhandledrejection.
+function logMilestoneReportError(url: string, error: Error) {
+  Lab2Registry.getInstance().getMetricsReporter().logWarning({
+    message: 'Failed to send milestone report',
+    url,
+    error: error.message,
   });
 }
 
