@@ -1,5 +1,8 @@
 @no_mobile
 Feature: Using the teacher homepage
+  Background:
+    Given I am on "http://studio.code.org"
+    Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
 
   Scenario: Teacher can access section pages from section options dropdown
     Given I create a teacher named "Teacher Hank"
@@ -42,8 +45,6 @@ Feature: Using the teacher homepage
     Then I wait until element "#certificate-batch" is visible
 
   Scenario: Teacher can archive and restore sections from the section options dropdown
-    Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
     Given I am a teacher
     And I create a new student section
     And I am on "http://studio.code.org/teacher_dashboard/home"
