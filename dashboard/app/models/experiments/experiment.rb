@@ -30,6 +30,25 @@
 MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    created_at: :public,
+    updated_at: :public,
+    name: :confidential,
+    type: :confidential,
+    start_at: :confidential,
+    end_at: :confidential,
+    section_id: :public,
+    min_user_id: :public,
+    max_user_id: :public,
+    overflow_max_user_id: :public,
+    earliest_section_at: :confidential,
+    latest_section_at: :confidential,
+    script_id: :public,
+  )
+
   belongs_to :script, class_name: 'Unit', optional: true
 
   validates :name, presence: true

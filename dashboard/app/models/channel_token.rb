@@ -19,6 +19,19 @@
 #
 
 class ChannelToken < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    storage_app_id: :public,
+    level_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    storage_id: :public,
+    script_id: :public,
+    deleted_at: :public,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true

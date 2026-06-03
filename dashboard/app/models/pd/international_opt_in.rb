@@ -20,6 +20,16 @@ require 'services/international_opt_in/school_data/chile'
 require 'services/international_opt_in/school_data/uzbekistan'
 
 class Pd::InternationalOptIn < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    form_data: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   include Pd::Form
 
   belongs_to :user

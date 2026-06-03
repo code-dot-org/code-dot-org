@@ -15,6 +15,17 @@
 #  index_lti_deployments_on_lti_integration_id  (lti_integration_id)
 #
 class LtiDeployment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    deployment_id: :confidential,
+    lti_integration_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    name: :confidential,
+  )
+
   belongs_to :lti_integration
   has_and_belongs_to_many :lti_user_identities
 

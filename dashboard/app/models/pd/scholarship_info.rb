@@ -21,6 +21,20 @@
 #
 
 class Pd::ScholarshipInfo < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    application_year: :restricted,
+    scholarship_status: :restricted,
+    pd_application_id: :public,
+    pd_enrollment_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    course: :restricted,
+  )
+
   include Pd::Application::ActiveApplicationModels
   include Pd::Application::ApplicationConstants
   include Pd::WorkshopConstants

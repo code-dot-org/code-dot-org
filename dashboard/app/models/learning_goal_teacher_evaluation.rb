@@ -21,6 +21,22 @@
 #  index_learning_goal_teacher_evaluations_on_user_and_teacher_id  (user_id,teacher_id)
 #
 class LearningGoalTeacherEvaluation < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    teacher_id: :public,
+    learning_goal_id: :public,
+    project_id: :public,
+    project_version: :confidential,
+    understanding: :public,
+    feedback: :restricted,
+    submitted_at: :confidential,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :learning_goal
   belongs_to :user
   belongs_to :teacher, class_name: 'User'

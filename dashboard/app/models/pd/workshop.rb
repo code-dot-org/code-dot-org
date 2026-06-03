@@ -42,6 +42,38 @@
 #
 
 class Pd::Workshop < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    organizer_id: :public,
+    location_name: :restricted,
+    location_address: :restricted,
+    processed_location: :restricted,
+    course: :restricted,
+    subject: :restricted,
+    capacity: :public,
+    notes: :restricted,
+    section_id: :public,
+    started_at: :restricted,
+    ended_at: :restricted,
+    created_at: :public,
+    updated_at: :public,
+    processed_at: :restricted,
+    deleted_at: :public,
+    regional_partner_id: :public,
+    on_map: :public,
+    funded: :public,
+    funding_type: :restricted,
+    properties: :restricted,
+    module: :restricted,
+    name: :restricted,
+    participant_group_type: :restricted,
+    description: :restricted,
+    registration_link: :restricted,
+    hidden: :public,
+  )
+
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants

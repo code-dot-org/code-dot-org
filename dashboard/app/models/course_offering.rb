@@ -33,6 +33,33 @@
 #
 
 class CourseOffering < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    key: :confidential,
+    display_name: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    is_featured: :public,
+    assignable: :public,
+    curriculum_type: :confidential,
+    marketing_initiative: :confidential,
+    grade_levels: :confidential,
+    header: :confidential,
+    image: :confidential,
+    cs_topic: :confidential,
+    school_subject: :confidential,
+    device_compatibility: :confidential,
+    description: :confidential,
+    professional_learning_program: :confidential,
+    video: :confidential,
+    published_date: :confidential,
+    self_paced_pl_course_offering_id: :public,
+    ai_teaching_assistant_available: :public,
+    facilitator_course_permissions: :confidential,
+  )
+
   include Curriculum::SharedCourseConstants
   include Localizable
 

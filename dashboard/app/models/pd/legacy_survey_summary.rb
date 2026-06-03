@@ -12,5 +12,17 @@
 #
 
 class Pd::LegacySurveySummary < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    facilitator_id: :public,
+    course: :restricted,
+    subject: :restricted,
+    data: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :facilitator, class_name: 'User', optional: true
 end

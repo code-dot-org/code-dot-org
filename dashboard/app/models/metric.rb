@@ -16,4 +16,19 @@
 #
 
 class Metric < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    created_at: :public,
+    updated_at: :public,
+    computed_on: :confidential,
+    computed_by: :confidential,
+    metric_on: :confidential,
+    course: :confidential,
+    breakdown: :confidential,
+    metric: :confidential,
+    submetric: :confidential,
+    value: :public,
+  )
 end

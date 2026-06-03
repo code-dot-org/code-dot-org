@@ -17,6 +17,19 @@
 #
 
 class UserSchoolInfo < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    start_date: :restricted,
+    end_date: :restricted,
+    school_info_id: :public,
+    last_confirmation_date: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   validates_presence_of :start_date, :last_confirmation_date
 
   belongs_to :user

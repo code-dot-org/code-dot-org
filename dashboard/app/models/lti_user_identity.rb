@@ -18,6 +18,18 @@
 #  index_lti_user_identities_on_user_id             (user_id)
 #
 class LtiUserIdentity < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    subject: :confidential,
+    lti_integration_id: :public,
+    user_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    deleted_at: :public,
+  )
+
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :user

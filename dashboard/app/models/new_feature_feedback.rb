@@ -16,6 +16,17 @@
 #  index_new_feature_feedbacks_on_user_id_and_form_key  (user_id,form_key) UNIQUE
 #
 class NewFeatureFeedback < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    form_key: :public,
+    satisfied: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
 
   validates :satisfied, inclusion: {in: [true, false]}

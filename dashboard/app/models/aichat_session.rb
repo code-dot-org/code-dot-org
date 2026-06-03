@@ -17,5 +17,19 @@
 #  index_acs_user_level_script  (user_id,level_id,script_id)
 #
 class AichatSession < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    level_id: :public,
+    script_id: :public,
+    project_id: :public,
+    model_customizations: :confidential,
+    messages: :confidential,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
 end

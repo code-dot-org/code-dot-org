@@ -20,6 +20,19 @@
 #
 
 class Pd::Attendance < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    pd_session_id: :public,
+    teacher_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    deleted_at: :public,
+    pd_enrollment_id: :public,
+    marked_by_user_id: :public,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id, optional: true

@@ -19,6 +19,17 @@
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::UserCourseEnrollment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    status: :confidential,
+    plc_course_id: :public,
+    user_id: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'
   has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy

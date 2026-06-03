@@ -16,6 +16,17 @@
 
 module Pd
   class SurveyQuestion < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :public,
+      form_id: :public,
+      questions: :restricted,
+      created_at: :public,
+      updated_at: :public,
+      last_submission_id: :public,
+    )
+
     # Sync question data for the specified form_id, upsert the DB row, and return the latest model instance
     # @param form_id [Integer]
     # @return [SurveyQuestion]

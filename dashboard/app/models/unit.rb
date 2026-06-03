@@ -39,6 +39,28 @@ require 'ruby-progressbar'
 
 # A sequence of Levels
 class Unit < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    wrapup_video_id: :public,
+    user_id: :public,
+    login_required: :public,
+    properties: :confidential,
+    new_name: :confidential,
+    family_name: :confidential,
+    published_state: :confidential,
+    instruction_type: :confidential,
+    instructor_audience: :confidential,
+    participant_audience: :confidential,
+    original_unit_group_id: :public,
+    hide_within_course: :public,
+    md5: :confidential,
+  )
+
   self.table_name = 'scripts'
 
   TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]

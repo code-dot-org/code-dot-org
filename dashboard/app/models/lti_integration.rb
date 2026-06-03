@@ -22,6 +22,23 @@
 #  index_lti_integrations_on_platform_id  (platform_id)
 #
 class LtiIntegration < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :confidential,
+    platform_id: :confidential,
+    issuer: :confidential,
+    client_id: :confidential,
+    platform_name: :confidential,
+    auth_redirect_url: :confidential,
+    jwks_url: :confidential,
+    access_token_url: :confidential,
+    admin_email: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   validates :platform_id, uniqueness: true
   validates :issuer, presence: true
   validates :client_id, presence: true

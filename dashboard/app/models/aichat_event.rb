@@ -24,5 +24,20 @@
 #  index_aichat_events_on_request_id  (request_id)
 #
 class AichatEvent < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    level_id: :public,
+    script_id: :public,
+    project_id: :public,
+    aichat_event: :restricted,
+    created_at: :public,
+    updated_at: :public,
+    request_id: :public,
+    lesson_id: :public,
+  )
+
   belongs_to :user
 end

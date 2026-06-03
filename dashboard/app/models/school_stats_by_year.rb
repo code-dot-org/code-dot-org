@@ -45,6 +45,47 @@
 #
 
 class SchoolStatsByYear < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    school_id: :confidential,
+    school_year: :confidential,
+    grades_offered_lo: :confidential,
+    grades_offered_hi: :confidential,
+    grade_pk_offered: :public,
+    grade_kg_offered: :public,
+    grade_01_offered: :public,
+    grade_02_offered: :public,
+    grade_03_offered: :public,
+    grade_04_offered: :public,
+    grade_05_offered: :public,
+    grade_06_offered: :public,
+    grade_07_offered: :public,
+    grade_08_offered: :public,
+    grade_09_offered: :public,
+    grade_10_offered: :public,
+    grade_11_offered: :public,
+    grade_12_offered: :public,
+    grade_13_offered: :public,
+    virtual_status: :confidential,
+    students_total: :public,
+    student_am_count: :public,
+    student_as_count: :public,
+    student_hi_count: :public,
+    student_bl_count: :public,
+    student_wh_count: :public,
+    student_hp_count: :public,
+    student_tr_count: :public,
+    title_i_status: :confidential,
+    frl_eligible_total: :public,
+    created_at: :public,
+    updated_at: :public,
+    community_type: :confidential,
+    student_female: :public,
+    student_male: :public,
+    status: :confidential,
+  )
+
   SCHOOL_STATUSES = [
     STATUS_OPEN = '1-Open'.freeze,
     STATUS_CLOSED = '2-Closed'.freeze,

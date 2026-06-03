@@ -19,5 +19,21 @@
 #  index_feedback_on_learning_goal_ai_evaluation  (learning_goal_ai_evaluation_id)
 #
 class LearningGoalAiEvaluationFeedback < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    learning_goal_ai_evaluation_id: :public,
+    teacher_id: :public,
+    ai_feedback_approval: :public,
+    false_positive: :public,
+    false_negative: :public,
+    vague: :public,
+    feedback_other: :public,
+    other_content: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :learning_goal_ai_evaluation
 end

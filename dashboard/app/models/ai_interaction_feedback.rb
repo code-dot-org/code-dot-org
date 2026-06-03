@@ -19,5 +19,21 @@
 #  index_ai_interaction_feedbacks_on_ai_interaction  (ai_interaction_type,ai_interaction_id)
 #
 class AiInteractionFeedback < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    level_id: :public,
+    script_id: :public,
+    thumbs_up: :public,
+    school_year: :restricted,
+    metadata: :restricted,
+    ai_interaction_type: :restricted,
+    ai_interaction_id: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :ai_interaction, polymorphic: true
 end

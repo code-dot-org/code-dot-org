@@ -22,6 +22,23 @@
 #
 
 class UserScript < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    script_id: :public,
+    started_at: :confidential,
+    completed_at: :confidential,
+    assigned_at: :confidential,
+    last_progress_at: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    properties: :confidential,
+    deleted_at: :public,
+    unit_group_id: :public,
+  )
+
   include SerializedProperties
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

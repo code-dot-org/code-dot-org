@@ -19,6 +19,18 @@
 
 module Pd
   class MiscSurvey < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :public,
+      form_id: :public,
+      submission_id: :public,
+      answers: :restricted,
+      user_id: :public,
+      created_at: :public,
+      updated_at: :public,
+    )
+
     include JotFormBackedForm
 
     belongs_to :user, optional: true

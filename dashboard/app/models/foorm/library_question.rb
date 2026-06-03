@@ -17,6 +17,19 @@
 #
 
 class Foorm::LibraryQuestion < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    library_name: :restricted,
+    library_version: :public,
+    question_name: :restricted,
+    question: :restricted,
+    created_at: :public,
+    updated_at: :public,
+    published: :public,
+  )
+
   include Seeded
 
   class InvalidFoormConfigurationError < StandardError; end

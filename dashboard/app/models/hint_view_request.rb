@@ -19,6 +19,19 @@
 require 'dynamic_config/gatekeeper'
 
 class HintViewRequest < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    script_id: :public,
+    level_id: :public,
+    feedback_type: :public,
+    feedback_xml: :confidential,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :user
   belongs_to :script, class_name: 'Unit'
   belongs_to :level

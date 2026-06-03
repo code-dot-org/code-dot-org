@@ -44,6 +44,42 @@
 # type field set. Always use one of the derived types to save a submission.
 #
 class Census::CensusSubmission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    type: :confidential,
+    submitter_email_address: :restricted,
+    submitter_name: :restricted,
+    submitter_role: :confidential,
+    school_year: :public,
+    how_many_do_hoc: :confidential,
+    how_many_after_school: :confidential,
+    how_many_10_hours: :confidential,
+    how_many_20_hours: :confidential,
+    other_classes_under_20_hours: :public,
+    topic_blocks: :public,
+    topic_text: :public,
+    topic_robots: :public,
+    topic_internet: :public,
+    topic_security: :public,
+    topic_data: :public,
+    topic_web_design: :public,
+    topic_game_design: :public,
+    topic_other: :public,
+    topic_other_description: :confidential,
+    topic_do_not_know: :public,
+    class_frequency: :confidential,
+    tell_us_more: :restricted,
+    pledged: :public,
+    created_at: :public,
+    updated_at: :public,
+    share_with_regional_partners: :public,
+    topic_ethical_social: :public,
+    inaccuracy_reported: :public,
+    inaccuracy_comment: :restricted,
+  )
+
   has_and_belongs_to_many :school_infos
 
   validates :school_infos, presence: true

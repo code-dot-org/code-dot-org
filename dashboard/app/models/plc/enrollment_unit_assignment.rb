@@ -23,6 +23,18 @@
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::EnrollmentUnitAssignment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    plc_user_course_enrollment_id: :public,
+    plc_course_unit_id: :public,
+    status: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    user_id: :public,
+  )
+
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked'.freeze,
     IN_PROGRESS = 'in_progress'.freeze,

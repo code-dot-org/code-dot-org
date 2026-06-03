@@ -21,6 +21,24 @@
 #  index_aidiff_threads_on_user_id  (user_id)
 #
 class AidiffThread < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    external_id: :restricted,
+    llm_version: :restricted,
+    title: :restricted,
+    unit_id: :public,
+    lesson_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    session_created: :restricted,
+    course_id: :public,
+    level_id: :public,
+    context_type: :restricted,
+  )
+
   belongs_to :user
   has_one :aidiff_artifact
   has_many :aidiff_messages, dependent: :destroy

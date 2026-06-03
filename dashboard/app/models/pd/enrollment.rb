@@ -32,6 +32,28 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Pd::Enrollment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    pd_workshop_id: :public,
+    name: :restricted,
+    first_name: :restricted,
+    last_name: :restricted,
+    email: :restricted,
+    created_at: :public,
+    updated_at: :public,
+    school: :restricted,
+    code: :restricted,
+    user_id: :public,
+    survey_sent_at: :restricted,
+    completed_survey_id: :public,
+    school_info_id: :public,
+    deleted_at: :public,
+    properties: :restricted,
+    application_id: :public,
+  )
+
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants

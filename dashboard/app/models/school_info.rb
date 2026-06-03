@@ -26,6 +26,26 @@
 #
 
 class SchoolInfo < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    country: :confidential,
+    school_type: :confidential,
+    zip: :public,
+    state: :confidential,
+    school_district_id: :public,
+    school_district_other: :public,
+    school_district_name: :confidential,
+    school_id: :confidential,
+    school_other: :public,
+    school_name: :confidential,
+    full_address: :confidential,
+    created_at: :public,
+    updated_at: :public,
+    validation_type: :confidential,
+  )
+
   SCHOOL_TYPES = [
     SCHOOL_TYPE_CHARTER = "charter".freeze,
     SCHOOL_TYPE_PRIVATE = "private".freeze,

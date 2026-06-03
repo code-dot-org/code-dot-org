@@ -14,5 +14,14 @@
 #
 
 class SignIn < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    user_id: :public,
+    sign_in_at: :confidential,
+    sign_in_count: :public,
+  )
+
   belongs_to :user, optional: true
 end

@@ -11,6 +11,17 @@
 #
 
 class Foorm::Submission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    form_name: :restricted,
+    form_version: :public,
+    answers: :restricted,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   include Pd::Foorm::Constants
 
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
