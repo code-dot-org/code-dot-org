@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-28 15:31:56 UTC",
+    "serialized_at": "2026-06-03 04:27:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -60,12 +60,15 @@
     },
     {
       "key": "lesson-2",
-      "name": "Lesson 2",
+      "name": "AI’s Past, Present, and Future",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**How did AI become what it is today?**\n\nIn this lesson, students explore the history of AI and some of the major milestones and innovations in the story of its development. They also consider ways in which AI is still developing and brainstorm what it might look like in the future. By the end of the lesson, students are able to place AI in historical context and recognize how individuals have contributed to its progress.",
+        "preparation": "- Print copies of the AI Innovations handout (one for each student)",
+        "student_overview": "**How did AI become what it is today?**\n\nExplore milestones in the history of AI and consider what AI might look like in the future."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -263,6 +266,48 @@
       "seeding_key": {
         "lesson_activity.key": "a6b703fc-1e0f-48ed-ac0e-6f2abd5c810e",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "6e7f0096-f270-421a-bdba-088c9ca33cfe",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e7f0096-f270-421a-bdba-088c9ca33cfe",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "42e15a05-46ba-4120-acb6-06452cf97fc9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42e15a05-46ba-4120-acb6-06452cf97fc9",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1"
       }
@@ -555,13 +600,235 @@
         "activity_section.key": "7b7b3081-df64-41f3-9a00-54c277bcb4eb",
         "lesson_activity.key": "a6b703fc-1e0f-48ed-ac0e-6f2abd5c810e"
       }
+    },
+    {
+      "key": "ce333c25-a39c-4414-8d6f-856761533292",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up with a partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner about one of the examples of AI on the slide. Students should discuss what each example is capable of and what they think makes each example work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As pairs discuss AI technologies with each other, listen for ways that students talk about intelligence.\n- If students describe a technology mostly in terms of output (e.g. “voice assistants answer questions”), consider prompting them to think about other intelligent parts of the process (e.g. How does the voice assistant know what words you said? How does it understand what your question means?)\n- To help students think about what inventions led to a technology, prompt students to think: “What does the computer have to figure out, step by step?” or “What had to exist before someone could build this?”\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What problems did people have to solve to create AI tools?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI is not a single idea or innovation, but involves solutions to many different problems. It’s okay if students don’t yet have a precise sense for those problems. If students struggle to identify problems, encourage them to brainstorm based on the different features of the AI tools: for example, a voice assistant needs to “listen to your voice” and “understand your question” and “speak an answer.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce333c25-a39c-4414-8d6f-856761533292",
+        "lesson_activity.key": "6e7f0096-f270-421a-bdba-088c9ca33cfe"
+      }
+    },
+    {
+      "key": "487cdf57-5012-4fe9-a475-0b0fb844b624",
+      "position": 2,
+      "properties": {
+        "description": "Today, we’ll be exploring some of these ideas in AI to understand where they came from and what problems they solved.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "487cdf57-5012-4fe9-a475-0b0fb844b624",
+        "lesson_activity.key": "6e7f0096-f270-421a-bdba-088c9ca33cfe"
+      }
+    },
+    {
+      "key": "cb332a33-8790-4c60-8115-0813ff43c4d9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb332a33-8790-4c60-8115-0813ff43c4d9",
+        "lesson_activity.key": "6e7f0096-f270-421a-bdba-088c9ca33cfe"
+      }
+    },
+    {
+      "key": "a7b263f9-494d-4ece-8fb4-0e188f4dd375",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students explore different disciplines and technologies in AI’s history. The goal is to help students see that AI has come from work and research across many areas, to give students context for key milestones in AI’s development, and to give students the chance to consider how those milestones impacted today’s technology.",
+        "duration": "20",
+        "name": "Pioneers and Ideas"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7b263f9-494d-4ece-8fb4-0e188f4dd375",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "535d7ff4-79eb-479c-b5fa-a9a6f2be43d2",
+      "position": 2,
+      "properties": {
+        "description": "AI isn’t just one idea or algorithm: it’s the result of many years of development and problem solving. The innovations that made AI possible came from research and ideas in multiple different fields.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "535d7ff4-79eb-479c-b5fa-a9a6f2be43d2",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "e5f739e6-4818-4ace-a6b8-af6c6cde9024",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *interdisciplinary* and describe AI as the result of interdisciplinary research.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show some of the fields that have contributed to research in AI.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI Innovations Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e5f739e6-4818-4ace-a6b8-af6c6cde9024",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "434527ec-5b6c-40e1-9b3c-e49c0b7c29bb",
+      "position": 4,
+      "properties": {
+        "description": "There are a lot of milestones in the history of AI. In this activity, you should pick one innovation related to AI that you’re excited about and learn more about it.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "434527ec-5b6c-40e1-9b3c-e49c0b7c29bb",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "d711d8fb-8a96-48ad-aed9-f755bc1990d0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2.\n- Level 1: Students use AI Chat to explore different disciplines that have contributed to AI’s development and complete the “Exploring AI Milestones” page of their Activity Guide based on their interests.\n- Level 2: Students complete the formative assessment.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through Level 1, help students find a discipline and technology they’re interested in. Each discipline could lead to multiple technologies that students could explore: remind students that they don’t need to know about all of the technologies yet, they only need to pick one that looks interesting to them."
+      },
+      "seeding_key": {
+        "activity_section.key": "d711d8fb-8a96-48ad-aed9-f755bc1990d0",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6",
+      "position": 6,
+      "properties": {
+        "progression_name": "Contributions to AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Level 1 is a choice level where students can choose a discipline of interest to them. If students finish early, they can explore another discipline to get a different perspective on other innovations that contributed to the development of AI. Or if students are excited about a different discipline or technology not covered in the level, you can encourage them to do their own independent research to complete the activity.\n- If time permits and if you have space in your classroom, students can draw or write about their chosen innovation in AI on a post-it note or on a sheet of paper and add it to an “AI Timeline” poster that can be hung in the classroom as a visual representation of the progression of AI."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Review student responses to the formative assessment to check that students can identify one or more ways that AI has developed in its history."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "ab14d672-c620-4b6f-bec0-bbf1a208fe90",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students consider predictions for the future of AI and make their own predictions. The goal is to help students see that today’s technology is not the end state for AI: technology continues to improve and develop, and students are encouraged to imagine what that might look like.",
+        "duration": "10",
+        "name": "Future of AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab14d672-c620-4b6f-bec0-bbf1a208fe90",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "e67f4586-3310-4a54-b9b5-9b4269fd0007",
+      "position": 8,
+      "properties": {
+        "description": "AI is still being developed, and it might look very different a few years from now than it does today.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e67f4586-3310-4a54-b9b5-9b4269fd0007",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "74d65fc9-5147-4ef2-910f-eea42156d725",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find a partner and direct students to the “Predict the Future” page of their Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "74d65fc9-5147-4ef2-910f-eea42156d725",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "9c5aef15-bcf5-44ba-ac7a-92e7f4da43b4",
+      "position": 10,
+      "properties": {
+        "description": "Everyone has different ideas for what AI might look like in the future. Some of those predictions might come true soon, some might take a long time, and others might not happen at all.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c5aef15-bcf5-44ba-ac7a-92e7f4da43b4",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "d6cd0c03-92ba-4a51-8b70-d7cca13f327d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the “Predict the Future” page of their Activity Guide.\n- Students will first read a set of predictions about the future of AI. In pairs, they should discuss what predictions they think are realistic or unrealistic. They should also talk about what predictions they are excited by.\n- Then, students make their own prediction for what they want to see in the future of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As pairs fill in the activity guide, check on how students are thinking about the future and how they imagine it to be. When students are making their own prediction, this may be where students are most likely to provide vague answers like “scientists need to figure it out” or “we need better computers.” Help them get specific by drawing on the first activity: each step in AI’s history came from someone solving a particular problem in a particular discipline. What discipline could contribute to this innovation? What questions might people in that discipline need to ask?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The questions in the “Predict the Future” section of the Activity Guide can be used to check student understanding of the lesson objectives. Check for whether students articulate their vision for a future of AI and what technical or societal advancements would make it possible."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6cd0c03-92ba-4a51-8b70-d7cca13f327d",
+        "lesson_activity.key": "a78f88ad-fa92-4421-9e89-616cdbe82d1b"
+      }
+    },
+    {
+      "key": "879e0782-61b8-47ca-8107-4c0d72d0dd3e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Logic-Based AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In their Unit Guide, students answer the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "879e0782-61b8-47ca-8107-4c0d72d0dd3e",
+        "lesson_activity.key": "42e15a05-46ba-4120-acb6-06452cf97fc9"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Contributions to AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson2-level1-2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson2-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "92b30b86-0a39-44a9-b7f6-16433e7e4fe6"
+      }
+    }
   ],
   "resources": [
 
@@ -587,6 +854,16 @@
       }
     },
     {
+      "key": "interdisciplinary",
+      "word": "interdisciplinary",
+      "definition": "using knowledge and ideas from different fields of study",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "interdisciplinary"
+      }
+    },
+    {
       "key": "turing_test",
       "word": "Turing test",
       "definition": "a test in which a machine is considered intelligent if you can’t tell it apart from a human in conversation",
@@ -609,6 +886,12 @@
         "lesson.key": "lesson-1",
         "vocabulary.key": "turing_test"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "interdisciplinary"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -623,6 +906,26 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "3e06f2c7-669b-4699-9db0-61a19d2c19bb"
+      }
+    },
+    {
+      "key": "44c701d4-6e0b-49ba-933a-96e31b25f074",
+      "properties": {
+        "description": "Explain how key milestones in the history of AI have contributed to today’s technology."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "44c701d4-6e0b-49ba-933a-96e31b25f074"
+      }
+    },
+    {
+      "key": "87e5012a-0b0b-4505-a56e-ed1941b874ed",
+      "properties": {
+        "description": "Develop predictions for future directions and capabilities of AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "87e5012a-0b0b-4505-a56e-ed1941b874ed"
       }
     },
     {

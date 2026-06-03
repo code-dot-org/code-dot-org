@@ -4,7 +4,7 @@
 # true for CSA levels and false for levels in all other curricula.
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 count_levels_updated = 0
 count_sublevels_updated = 0

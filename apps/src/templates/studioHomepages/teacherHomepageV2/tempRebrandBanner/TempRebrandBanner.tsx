@@ -1,68 +1,61 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Typography} from '@mui/material';
-import React, {useCallback, useEffect, useState} from 'react';
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
+import React, {useEffect, useState} from 'react';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import backgroundPattern from '../../../../../static/rebrand_banner/teacher_dashboard_gradient_bg.png';
-import bannerImage from '../../../../../static/rebrand_banner/teacher_dashboard_hero.png';
+import bannerImage from '../../../../../static/rebrand_banner/rebrand_banner_hero.png';
 
 import style from './tempRebrandBanner.module.scss';
+
+const BANNER_STORAGE_KEY = '2026-codeai-rebrand-banner';
 
 interface TempRebrandBannerProps {
   showBanner: boolean;
 }
+
 export const TempRebrandBanner: React.FC<TempRebrandBannerProps> = ({
   showBanner,
 }) => {
-  const bannerLocalStorageKey = '2026-codeai-rebrand-banner';
-  const [displayBanner, setDisplayBanner] = useState(showBanner);
-
-  const getLocalStorageBannerKey = useCallback(() => {
-    return `${bannerLocalStorageKey}`;
-  }, [bannerLocalStorageKey]);
+  // Start hidden to avoid a flash when localStorage says the user already dismissed.
+  const [displayBanner, setDisplayBanner] = useState(false);
 
   useEffect(() => {
-    const bannerKey = getLocalStorageBannerKey();
-    const displayBannerValue = tryGetLocalStorage(bannerKey, 'true');
-    setDisplayBanner(displayBannerValue !== 'false');
-  }, [getLocalStorageBannerKey]);
+    if (!showBanner) return;
+    const stored = tryGetLocalStorage(BANNER_STORAGE_KEY, 'true');
+    setDisplayBanner(stored !== 'false');
+  }, [showBanner]);
 
   const onDismiss = () => {
-    const bannerKey = getLocalStorageBannerKey();
-    trySetLocalStorage(bannerKey, 'false');
+    trySetLocalStorage(BANNER_STORAGE_KEY, 'false');
     setDisplayBanner(false);
   };
 
+  if (!displayBanner) return null;
+
   return (
-    <div
-      data-theme={'Dark'}
-      id="rebrand-announcement-banner"
-      className={style.container}
-      style={{
-        backgroundImage: `url(${backgroundPattern})`,
-        backgroundPositionX: '0%',
-        backgroundPositionY: '0%',
-        backgroundSize: '200px 200px',
-        backgroundRepeat: 'repeat-x',
-        display: displayBanner ? 'flex' : 'none',
-      }}
-    >
-      <img
-        src={bannerImage}
-        alt="two students working on laptops"
-        className={style.imageStyle}
+    <div id="rebrand-announcement-banner" className={style.bannerWrapper}>
+      <HeroBanner
+        data-theme="Dark"
+        heading={
+          <span className={style.heading}>{i18n.rebrandBannerSubheader()}</span>
+        }
+        description={i18n.rebrandBannerText()}
+        imageProps={{
+          src: bannerImage,
+          alt: 'two students working on laptops',
+        }}
+        hideImageOnSmallScreen
+        backgroundColor="#6A62D9"
+        className={style.heroBannerSection}
+        buttonProps={{
+          href: 'https://code.org/codeai#faq',
+          children: i18n.rebrandBannerButton(),
+          color: 'secondary',
+          size: 'small',
+        }}
       />
-      <div className={style.textStyle}>
-        <div>
-          <Typography color="textPrimary" variant="h2">
-            {i18n.rebrandBannerHeader()}
-          </Typography>
-          <Typography variant="h4">{i18n.rebrandBannerSubheader()}</Typography>
-        </div>
-        <Typography variant="body3">{i18n.rebrandBannerText()}</Typography>
-      </div>
       <CloseButton
         aria-label="close rebrand notification"
         onClick={onDismiss}

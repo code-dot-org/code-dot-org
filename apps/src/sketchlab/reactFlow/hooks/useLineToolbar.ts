@@ -1,9 +1,17 @@
 import {MarkerType} from '@xyflow/react';
 import React, {useCallback, useMemo} from 'react';
 
-import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
+import {
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+} from '@cdo/apps/lab2/types';
 
-import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
+import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
+  DEFAULT_ROTATION,
+  LINE_ANCHOR_SIZE_PX,
+} from '../constants';
 import {ToolbarTarget} from '../context';
 import {
   DEFAULT_LINE_WIDTH,
@@ -13,9 +21,29 @@ import {
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
 import {ArrowHeadValue} from '../types';
+import {anchorHandleFlowPosition} from '../utils/lineAnchors';
+
+function rotatePoint(
+  point: {x: number; y: number},
+  center: {x: number; y: number},
+  radians: number
+) {
+  const cos = Math.cos(radians);
+  const sin = Math.sin(radians);
+  const dx = point.x - center.x;
+  const dy = point.y - center.y;
+  return {
+    x: center.x + dx * cos - dy * sin,
+    y: center.y + dx * sin + dy * cos,
+  };
+}
 
 interface UseLineToolbarOptions {
+  nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
   openToolbarTarget: ToolbarTarget | null;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
@@ -24,7 +52,9 @@ interface UseLineToolbarOptions {
 }
 
 export function useLineToolbar({
+  nodes,
   edges,
+  setNodes,
   openToolbarTarget,
   setEdges,
   pushSnapshot,
@@ -202,6 +232,76 @@ export function useLineToolbar({
     [updateLineEdgeLockState]
   );
 
+  const setLineEdgeRotation = useCallback(
+    (edgeId: string, rotation: number) => {
+      updateLineEdge(edgeId, edge => {
+        const currentRotation = edge.data?.rotation ?? DEFAULT_ROTATION;
+        const deltaRadians = ((rotation - currentRotation) * Math.PI) / 180;
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const bothEndpointsAreAnchors =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+        if (bothEndpointsAreAnchors) {
+          const sourceHandle = anchorHandleFlowPosition(
+            sourceNode.position,
+            'source'
+          );
+          const targetHandle = anchorHandleFlowPosition(
+            targetNode.position,
+            'target'
+          );
+          const center = {
+            x: (sourceHandle.x + targetHandle.x) / 2,
+            y: (sourceHandle.y + targetHandle.y) / 2,
+          };
+          const rotatedSourceHandle = rotatePoint(
+            sourceHandle,
+            center,
+            deltaRadians
+          );
+          const rotatedTargetHandle = rotatePoint(
+            targetHandle,
+            center,
+            deltaRadians
+          );
+          setNodes(currentNodes =>
+            currentNodes.map(node => {
+              if (node.id === sourceNode.id) {
+                return {
+                  ...node,
+                  position: {
+                    x: rotatedSourceHandle.x - LINE_ANCHOR_SIZE_PX,
+                    y: rotatedSourceHandle.y - LINE_ANCHOR_SIZE_PX / 2,
+                  },
+                };
+              }
+              if (node.id === targetNode.id) {
+                return {
+                  ...node,
+                  position: {
+                    x: rotatedTargetHandle.x,
+                    y: rotatedTargetHandle.y - LINE_ANCHOR_SIZE_PX / 2,
+                  },
+                };
+              }
+              return node;
+            })
+          );
+        }
+
+        return {
+          ...edge,
+          data: {
+            ...(edge.data || {}),
+            rotation,
+          },
+        };
+      });
+    },
+    [nodes, setNodes, updateLineEdge]
+  );
+
   return {
     openLineEdge,
     setLineEdgeColor,
@@ -209,6 +309,7 @@ export function useLineToolbar({
     setLineEdgeStrokeStyle,
     setLineEdgeType,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeLocked,
   };
 }

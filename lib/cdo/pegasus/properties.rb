@@ -1,6 +1,8 @@
 require 'cdo/db'
 require 'cdo/cache'
+# rubocop:disable CustomCops/PegasusDbUsage
 DB = PEGASUS_DB
+# rubocop:enable CustomCops/PegasusDbUsage
 
 # A wrapper class around the PEGASUS_DB[:properties] table.
 class Properties

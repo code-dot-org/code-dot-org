@@ -68,12 +68,22 @@ export const validateFileName = ({
     }
   }
 
-  if (!isValidFileName(fileName)) {
+  // When the extension comes from the dropdown, the base name must not carry
+  // its own period — otherwise "My.Class" + dropdown "java" yields the
+  // nonsense "My.Class.java". Passing hasDropdown enforces the no-period rule.
+  if (!isValidFileName(fileName, Boolean(selectedFileType))) {
     return INVALID_NAME_ERROR;
   }
 
+  // When the extension comes from the dropdown, `fileName` is just the base
+  // name. The duplicate check compares against full file names, so recombine
+  // before checking.
+  const fullFileName = selectedFileType
+    ? `${fileName}.${selectedFileType}`
+    : fileName;
+
   const duplicateFileError = isDuplicateFileName({
-    fileName,
+    fileName: fullFileName,
     folderId,
     projectFiles,
     isStartMode,
@@ -82,9 +92,9 @@ export const validateFileName = ({
 
   if (duplicateFileError) {
     if (duplicateFileError === DuplicateFileError.DUPLICATE_SUPPORT_FILE) {
-      return codebridgeI18n.duplicateSupportFileError({fileName});
+      return codebridgeI18n.duplicateSupportFileError({fileName: fullFileName});
     } else {
-      return codebridgeI18n.duplicateFileError({fileName});
+      return codebridgeI18n.duplicateFileError({fileName: fullFileName});
     }
   }
 };

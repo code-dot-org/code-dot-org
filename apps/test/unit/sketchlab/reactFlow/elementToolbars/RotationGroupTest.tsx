@@ -46,6 +46,18 @@ function getSlider(): HTMLInputElement {
 }
 
 describe('RotationGroup', () => {
+  beforeEach(() => {
+    jest.spyOn(window, 'requestAnimationFrame').mockImplementation(callback => {
+      callback(0);
+      return 1;
+    });
+    jest.spyOn(window, 'cancelAnimationFrame').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   describe('value normalization', () => {
     it('passes the value through unchanged when already in [0, 359]', () => {
       renderGroup({value: 90});

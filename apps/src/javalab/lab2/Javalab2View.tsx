@@ -29,6 +29,7 @@ import {
   sendJavaConsoleInput,
   stopJavaCode,
 } from './javabuilderRunUtils';
+import {deriveLabConfig} from './labConfig';
 import HorizontalLayout from './layout/HorizontalLayout';
 import {
   flatToMultiFile,
@@ -64,9 +65,16 @@ const defaultConfig: ConfigType = {
 // console. Open TODOs in the README.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
-> = ({levelProperties, initialSources}) => {
+> = ({levelProperties, initialSources, channel}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
+
+  // Derive the labConfig (which sets the mini app in codebridge) from
+  // the channel or the level's csaViewMode.
+  const labConfig = useMemo(
+    () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
+    [levelProperties.csaViewMode, channel?.labConfig]
+  );
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button
@@ -97,11 +105,23 @@ const Javalab2View: React.FunctionComponent<
 
     return {
       ...levelProperties,
+      miniApp: labConfig?.miniApp?.name,
       startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
       templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
       exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
     };
-  }, [levelProperties]);
+  }, [levelProperties, labConfig]);
+
+  // A loaded project's sources come from the flat S3 shape, which carries no
+  // labConfig. Merge it back in so codebridge shows the mini-app for existing
+  // miniApp-based projects.
+  const initialSourcesWithLabConfig = useMemo(
+    () =>
+      initialSources && labConfig
+        ? {...initialSources, labConfig}
+        : initialSources,
+    [initialSources, labConfig]
+  );
 
   // Levelbuilder save needs Javalab's flat shape, not codebridge's
   // MultiFileSource. For start mode, split validation files off into a
@@ -123,7 +143,7 @@ const Javalab2View: React.FunctionComponent<
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     codebridgeLevelProperties,
-    initialSources,
+    initialSourcesWithLabConfig,
     levelbuilderSaveOverrides
   );
 
@@ -144,7 +164,11 @@ const Javalab2View: React.FunctionComponent<
     // Javabuilder reads source from S3. Flush the in-memory editor first so
     // S3 reflects what the user sees before the WS connection opens.
     await Lab2Registry.getInstance().getProjectManager()?.flushSave();
-    await handleRunClick(dispatch, levelProperties);
+    await handleRunClick(
+      dispatch,
+      levelProperties.id,
+      labConfig?.miniApp?.name || 'console'
+    );
   };
 
   return (
