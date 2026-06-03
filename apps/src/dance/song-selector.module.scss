@@ -9,6 +9,15 @@ $preview-button-gap: 8px;
   .selectStyle {
     flex: 1;
     min-width: 0;
+
+    // SimpleDropdown's container is inline-flex and its inner arrow-div is
+    // content-width unless styleAsFormField is set. Force it to fill so the
+    // select spans the row and the preview button sits right beside it
+    // (otherwise the grown label leaves dead space and the button drifts
+    // to the far right).
+    > div {
+      width: 100%;
+    }
   }
 
   .previewSongButton {
