@@ -34,7 +34,7 @@ remark-gfm              GFM syntax
 remark-rehype           mdast          → hast        (allowDangerousHtml)
 rehype-raw              reparse raw HTML in the source
 <extension rehype plugins>             ← transform the HTML TREE
-rehypeLocalize          translate block text         ← if a translator is registered
+rehypeLocalize          translate block text         ← when localization is active
 rehype-sanitize         enforce the allowlist        ← SECURITY BOUNDARY
 rehype-react            hast           → React elements (component map)
 ```
@@ -209,8 +209,11 @@ XML (`<xml>`, `<block>`, ...) or other non-phrasing elements, and mishandles
 sanitization:
 
 1. Within each block (default `<p>`), elements the translator can't handle are
-   hidden behind empty placeholder spans and stashed verbatim; elements it
-   mishandles (default `<code>`) are renamed to a tag it accepts.
+   replaced by a `<code>` placeholder carrying a stash index and stashed
+   verbatim; elements it mishandles (default `<code>`) are renamed to a tag it
+   accepts (default `<span>`). The translator ignores `<code>`, so the
+   placeholder and its index survive untouched — the same blind spot that makes
+   renaming real `<code>` necessary.
 2. The block's inner HTML is serialized and handed to the injected `translate`.
 3. The result is reparsed and the placeholders / renamed tags are restored —
    the stashed elements come back byte-for-byte.

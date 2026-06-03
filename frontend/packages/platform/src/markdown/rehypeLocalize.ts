@@ -11,9 +11,12 @@ import {toHtml} from 'hast-util-to-html';
  * before sanitization:
  *
  *   1. Within each block (default `<p>`), every element the translator cannot
- *      handle is hidden behind an empty placeholder span and stashed verbatim;
- *      every element it mishandles (default `<code>`) is renamed to a tag it
- *      accepts (default `<span>`), to be restored afterward.
+ *      handle is replaced by a `<code>` placeholder carrying its stash index,
+ *      and the original is stashed verbatim. The translator ignores `<code>`,
+ *      so the placeholder — and the token index inside it — survive untouched
+ *      and can't be localized by accident. (That same blind spot is why real
+ *      `<code>` is *renamed*, default to `<span>`, so its own text still gets
+ *      translated.)
  *   2. The block's inner HTML is serialized and handed to the injected
  *      `translate`.
  *   3. The translated HTML is reparsed and the placeholders / renamed tags are
@@ -75,6 +78,11 @@ const DEFAULT_INLINE_TAGS = [
 const TOKEN_PROP = 'dataLocalizeToken';
 const RENAME_PROP = 'dataLocalizeRename';
 
+// Placeholder element for stashed content. <code> is deliberate: the translator
+// leaves <code> untouched, so the placeholder and its token survive verbatim
+// and the token index is never localized.
+const TOKEN_TAG = 'code';
+
 const isElement = (node: ElementContent): node is Element =>
   node.type === 'element';
 
@@ -109,9 +117,9 @@ const rehypeLocalize = (options: RehypeLocalizeOptions) => (tree: Root) => {
       stash.push(node);
       return {
         type: 'element',
-        tagName: 'span',
+        tagName: TOKEN_TAG,
         properties: {[TOKEN_PROP]: String(index)},
-        children: [],
+        children: [{type: 'text', value: String(index)}],
       };
     }
     return {

@@ -327,8 +327,9 @@ describe('Markdown', () => {
       // the translator never saw the raw Blockly tags...
       expect(seen.join('')).not.toContain('<xml');
       expect(seen.join('')).not.toContain('<block');
-      expect(seen.join('')).toContain('data-localize-token');
-      // ...but the output preserves them, ids intact
+      // ...just a <code> placeholder (which the translator leaves untouched)
+      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
+      // ...but the output preserves the originals, ids intact
       expect(html).toContain('<xml');
       expect(html).toContain('<block');
       expect(html).toContain('id="bar"');

@@ -137,8 +137,8 @@ const NO_EXTENSIONS: MarkdownExtension[] = [];
  * output is still constrained by the (extension-widened) allowlist; extension
  * components are merged over the base mappings.
  *
- * When a translator is registered, rehypeLocalize runs last among the rehype
- * tree transforms (still before sanitization) so it sees the final structure,
+ * When localization is active, rehypeLocalize runs last among the rehype tree
+ * transforms (still before sanitization) so it sees the final structure,
  * including any elements the extensions introduced.
  */
 const buildProcessor = (
@@ -177,8 +177,9 @@ const buildProcessor = (
  * Provide the markdown as the `content` prop or as a single string child. Pass
  * `extensions` to enable additional syntax, tags, or behaviors a la carte.
  *
- * When a translator has been registered with `setMarkdownLocalization`, content
- * is localized in place and re-translated on locale change.
+ * Localization is automatic: when the core localization plugin has loaded
+ * LocalizeJS, content is translated in place and re-translated on locale change
+ * (see `localization.ts`); otherwise it is a no-op.
  */
 const Markdown = ({
   content,
