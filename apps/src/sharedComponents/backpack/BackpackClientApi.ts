@@ -212,10 +212,12 @@ export default class BackpackClientApi {
         onSuccess?.();
       } else {
         this.sendUploadFailedEvent(filename);
+        const error = new Error('Failed to fetch file from url');
         if (onError) {
-          onError(new Error(`Failed to fetch file from url`));
+          onError(error);
           return;
         }
+        throw error;
       }
     } catch (error) {
       this.sendUploadFailedEvent(filename);
