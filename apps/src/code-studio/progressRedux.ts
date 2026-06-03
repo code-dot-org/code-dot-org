@@ -531,7 +531,8 @@ const debouncedSendStartedReport = debounce(
       dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
     }
   },
-  100
+  100,
+  {leading: true, trailing: false}
 );
 
 function sendReportForLevel(
@@ -577,25 +578,37 @@ function sendReportForLevel(
       'content-type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then(response => {
-    if (response.ok && levelId !== null) {
-      // Update the progress store by merging in this
-      // particular result immediately.
-      dispatch(mergeResults({[levelId]: result}));
-      dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
-      // If the level is the sublevel of a bubble level,
-      // also update the status of the parent level.
-      if (currentLevel.parentLevelId) {
-        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
-        const parentId = parseInt(currentLevel.parentLevelId);
-        dispatch(mergeUnitProgress({levelId: parentId, result}));
-      }
+  })
+    .then(response => {
+      if (response.ok && levelId !== null) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: result}));
+        dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
+        // If the level is the sublevel of a bubble level,
+        // also update the status of the parent level.
+        if (currentLevel.parentLevelId) {
+          dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+          const parentId = parseInt(currentLevel.parentLevelId);
+          dispatch(mergeUnitProgress({levelId: parentId, result}));
+        }
 
-      // After we log the reported time we should update the start time of the milestone
-      // otherwise if we don't leave the page we are compounding the total time
-      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
-    }
-  });
+        // After we log the reported time we should update the start time of the milestone
+        // otherwise if we don't leave the page we are compounding the total time
+        Lab2ProgressTimer.getInstance().resetMilestoneTimer();
+      }
+    })
+    .catch((error: unknown) => {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      // The promise will resolve for non-2xx status codes. We will only hit this for network errors/
+      // navigation away/etc. Log as warnings.
+      Lab2Registry.getInstance().getMetricsReporter().logWarning({
+        message: 'Failed to send milestone report',
+        url,
+        error: errorMessage,
+      });
+    });
 }
 
 /**

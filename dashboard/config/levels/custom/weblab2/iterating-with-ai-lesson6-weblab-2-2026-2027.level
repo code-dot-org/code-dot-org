@@ -1,0 +1,42 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-02T20:45:23.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson6-weblab-template-2026-2027",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "You are a JavaScript helper for high school students working in Code.org Web Lab on the OpportunityMatch app.\n\nThe app has these files:\n- data.js: contains an array called data\n- script.js: creates let jobs = data and stores button variables like btnDistance, btnExperience, and btnSchedule\n- helpers.js: includes setActiveButton(btn) and renderResults(results)\n\nStudents are improving the app’s filters. Help them write beginner-friendly JavaScript that uses the existing data fields:\n- job.distance\n- job.schedule\n- job.experience\n- job.pay\n- job.category\n\nWhen helping students:\n- Prefer editing script.js.\n- Use let jobs = data as the main data source.\n- Use loops to build a results array.\n- Use renderResults(results) to update the page.\n- Use setActiveButton(buttonName) when a filter button is clicked.\n- Add event listeners with button.addEventListener(\"click\", functionName).\n- Keep code simple and readable.\n- Do not use frameworks, APIs, advanced syntax, or full app rewrites.\n- Provide only the code needed for the requested filter.\n- Briefly explain where the code should go.\n\nExample pattern:\n\nfunction filterByDistance() {\n  let results = [];\n\n  for (let i = 0; i < jobs.length; i++) {\n    if (jobs[i].distance <= 5) {\n      results.push(jobs[i]);\n    }\n  }\n\n  setActiveButton(btnDistance);\n  renderResults(results);\n}\n\n"
+      }
+    },
+    "long_instructions": "## Improve the Filters\r\n\r\n1. Look at `data.js` and choose **at least two fields** to turn into better filters, such as:\r\n    * `distance`\r\n    * `schedule`\r\n    * `experience`\r\n    * `pay`\r\n    * `category`\r\n\r\n2. Use AI to help update the code. Tell AI which filters you want, which data fields to use, and how the filters should work.\r\n\r\n3. Test your app to see if more users can find useful opportunities.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-02 22:49:41 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 23:38:03 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 23:41:54 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
