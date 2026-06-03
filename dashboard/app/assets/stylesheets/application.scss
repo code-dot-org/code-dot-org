@@ -95,6 +95,14 @@ $gradient-box-shadow-outer: rgba(0, 0, 0, 0.05);
   padding: 11px 19px;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  line-height: 20px;
+}
+
 body {
   font-style: normal;
   line-height: 20px;
@@ -2666,6 +2674,7 @@ a.download-video {
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
+    box-sizing: content-box;
   }
   .match_questions {
     list-style-type: none;
@@ -2744,7 +2753,7 @@ a.download-video {
     }
   }
   .match_correctmarkscolumn {
-    width: 20px;
+    width: 40px;
     padding-right: 20px;
   }
   .match_correctmarks {
