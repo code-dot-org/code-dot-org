@@ -1921,7 +1921,6 @@ a.download-video {
 
 #signin,
 #change-password {
-  $field-width: 310px;
   $button-width: 324px;
 
   min-width: 450px;
@@ -1940,8 +1939,8 @@ a.download-video {
     justify-content: space-between;
 
     input[type=text], input[type=password] {
-      width: $field-width;
-      height: 40px;
+      width: $button-width;
+      height: 42px;
       padding: 0 6px;
     }
     input {
