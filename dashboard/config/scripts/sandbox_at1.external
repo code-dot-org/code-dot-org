@@ -3,5 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/wo258nwk13lpjech" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;padding:8px 8px 8px 0"><a href="https://padlet.com?ref=embed" style="display:flex;align-items:center;gap:5px;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><span aria-hidden style="color:#9E9E9E;font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1">Made with</span><img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" height="12" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none;display:block" alt="Made with Padlet"></a></div></div>
+# Lesson 1 - Prompting AI
+
+**Prompting AI** is the kickoff lesson for Thinking Critically About AI, and sets the scene for students to begin engaging thoughtfully with AI-generated content. 
+
+## Preparing to Deliver
+
+Scroll through the slide deck below. Consider the teaching moves that you'll implement to deliver this content for your students. Specifically, how might you help students come to a consensus about what AI is?
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTu8WqLFe7f5jQPj5Ugnl5BuaMgKKp12sudvDgRX-WxRTEZv-1lyASx-czSSzubuH9kW_w8A2BnFoAv/pubembed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 80%; height: 45vw; display: block; margin: 0 auto;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 MARKDOWN
