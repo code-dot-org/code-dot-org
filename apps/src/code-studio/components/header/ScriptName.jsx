@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import headerVignetteStyles from './HeaderVignette';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 class ScriptName extends React.Component {
@@ -49,7 +48,7 @@ class ScriptName extends React.Component {
     this.setDesiredWidth();
   };
 
-  renderScriptLink() {
+  renderScriptLink(linkStyle) {
     let className = 'header_text';
     if (this.props.smallText) {
       className += ' small_font_on_tablet';
@@ -58,11 +57,7 @@ class ScriptName extends React.Component {
       <a
         href={this.props.href}
         className={className}
-        style={
-          this.props.showProjectUpdatedAt
-            ? {...styles.scriptLinkWithUpdatedAt}
-            : {}
-        }
+        style={linkStyle}
         title={this.props.name}
       >
         {this.props.name}
@@ -73,13 +68,17 @@ class ScriptName extends React.Component {
   render() {
     const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
+    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
 
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
+    const ellipsisStyle = isTruncated
+      ? {
+          display: 'block',
+          width: actualWidth,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }
+      : {};
 
     if (!this.props.showProjectUpdatedAt) {
       return (
@@ -89,9 +88,8 @@ class ScriptName extends React.Component {
             ref="scriptName"
             style={styles.headerInner}
           >
-            {this.renderScriptLink()}
+            {this.renderScriptLink(ellipsisStyle)}
           </div>
-          <div className="vignette" style={vignetteStyle} />
         </div>
       );
     }
@@ -105,14 +103,17 @@ class ScriptName extends React.Component {
         >
           <div style={styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
-              {this.renderScriptLink()}
+              {this.renderScriptLink({
+                ...styles.scriptLinkWithUpdatedAt,
+                ...ellipsisStyle,
+                ...(isTruncated ? {alignSelf: 'flex-start'} : {}),
+              })}
               <ProjectUpdatedAt
                 onContentUpdated={this.onProjectUpdatedAtContentUpdated}
               />
             </div>
           </div>
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }

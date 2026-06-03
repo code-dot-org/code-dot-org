@@ -2,8 +2,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import headerVignetteStyles from './HeaderVignette';
-
 export default class HeaderFinish extends React.Component {
   static propTypes = {
     lessonData: PropTypes.object,
@@ -43,17 +41,21 @@ export default class HeaderFinish extends React.Component {
   }
 
   render() {
-    const {lessonData, isRtl} = this.props;
+    const {lessonData} = this.props;
 
     const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
+    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
 
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
+    const ellipsisStyle = isTruncated
+      ? {
+          display: 'block',
+          width: actualWidth,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }
+      : {};
 
     return (
       <div style={styles.headerContainer}>
@@ -63,12 +65,15 @@ export default class HeaderFinish extends React.Component {
           style={styles.headerInner}
         >
           <div className="header_finished_link" style={styles.finishedLink}>
-            <a href={lessonData.finishLink} title={lessonData.finishText}>
+            <a
+              href={lessonData.finishLink}
+              title={lessonData.finishText}
+              style={ellipsisStyle}
+            >
               {lessonData.finishText}
             </a>
           </div>
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
