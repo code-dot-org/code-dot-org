@@ -28,12 +28,7 @@ export default defineConfig({
       rollupTypes: false, // Disable rolling up types to a single file
       entryRoot: 'src',
       insertTypesEntry: false, // Prevent inserting a single types entry
-      exclude: [
-        '**/__tests__/**',
-        '**/*.test.tsx',
-        '**/stories/**',
-        '**/*.story.tsx',
-      ],
+      exclude: ['**/__tests__/**', '**/*.test.tsx'],
     }),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.

@@ -1,13 +1,7 @@
 {
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    // Resolve self-imports (e.g. from stories) to source, mirroring the
-    // `@code-dot-org/platform` -> src alias the Storybook host applies.
-    "paths": {
-      "@/*": ["src/*"],
-      "@code-dot-org/platform/*": ["src/*"]
-    }
+    "baseUrl": "."
   },
   "include": ["src"]
 }
