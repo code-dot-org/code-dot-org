@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import {useMemo, useState, type ReactNode} from 'react';
 
 import {Markdown, extensions} from '../src';
 
@@ -28,7 +28,86 @@ const VOCAB: Record<string, {definition: string}> = {
   algorithm: {definition: 'A list of steps to finish a task.'},
 };
 
-const noop = () => {};
+/*
+ * Clickable text delegates to the consumer's `onActivate(id)`. This shows the
+ * activated id as feedback. The feedback is absent until activation, so the
+ * visual baseline (the initial render) is unaffected.
+ */
+const ClickableTextScenario = () => {
+  const [activated, setActivated] = useState<string | null>(null);
+  const exts = useMemo(
+    () => [extensions.clickableText({onActivate: id => setActivated(id)})],
+    [],
+  );
+
+  return (
+    <>
+      <Markdown
+        content={'Now [run your program](#clickable=run) to see the result.'}
+        extensions={exts}
+      />
+      {activated !== null && (
+        <p role="status" style={{color: '#1a7f37', marginTop: 8}}>
+          Activated: <code>{activated}</code>
+        </p>
+      )}
+    </>
+  );
+};
+
+/*
+ * Expandable images delegate the actual expand to the consumer's `onExpand`
+ * handler. This wires a minimal lightbox so clicking the thumbnail visibly
+ * enlarges it — a sample of what a host provides. The initial render is just the
+ * thumbnail (the overlay is fixed-position and absent until clicked), so the
+ * visual baseline is unaffected.
+ */
+const ExpandableImagesScenario = () => {
+  const [expanded, setExpanded] = useState<{url: string; alt: string} | null>(
+    null,
+  );
+  const exts = useMemo(
+    () => [
+      extensions.expandableImages({
+        onExpand: (url, alt) => setExpanded({url, alt}),
+      }),
+    ],
+    [],
+  );
+
+  return (
+    <>
+      <Markdown
+        content={`![A blue box expandable](${IMAGE})`}
+        extensions={exts}
+      />
+      {expanded && (
+        <button
+          type="button"
+          aria-label="Close expanded image"
+          onClick={() => setExpanded(null)}
+          style={{
+            alignItems: 'center',
+            background: 'rgba(0, 0, 0, 0.7)',
+            border: 0,
+            cursor: 'zoom-out',
+            display: 'flex',
+            inset: 0,
+            justifyContent: 'center',
+            padding: 0,
+            position: 'fixed',
+          }}
+        >
+          <img
+            src={expanded.url}
+            alt={expanded.alt}
+            style={{maxHeight: '90vh', maxWidth: '90vw'}}
+          />
+        </button>
+      )}
+    </>
+  );
+};
 
 export const scenarios: Scenario[] = [
   {
@@ -151,21 +230,11 @@ export const scenarios: Scenario[] = [
   {
     id: 'clickable-text',
     name: 'Clickable text',
-    render: () => (
-      <Markdown
-        content={'Now [run your program](#clickable=run) to see the result.'}
-        extensions={[extensions.clickableText({onActivate: noop})]}
-      />
-    ),
+    render: () => <ClickableTextScenario />,
   },
   {
     id: 'expandable-images',
     name: 'Expandable images',
-    render: () => (
-      <Markdown
-        content={`![A blue box expandable](${IMAGE})`}
-        extensions={[extensions.expandableImages({onExpand: noop})]}
-      />
-    ),
+    render: () => <ExpandableImagesScenario />,
   },
 ];
