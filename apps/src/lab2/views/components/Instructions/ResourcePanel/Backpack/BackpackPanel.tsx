@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton, Snackbar, Fade} from '@mui/material';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {TransitionGroup} from 'react-transition-group';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -71,14 +71,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<{
     [key: string]: string[];
   }>({PRIMARY_BACKPACK_KEY: []});
-  const [uploadingFileAlertIds, setUploadingFileAlertIds] = useState<{
-    [key: string]: number;
-  }>({});
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const uploadingFileAlertIdsRef = useRef<{
+    [key: string]: number;
+  }>({});
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -157,6 +157,17 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     }
   }, [backpackRefreshKey, loadBackpackFiles]);
 
+  const removeUploadingAlert = useCallback(
+    (appKey: string, filename: string) => {
+      const alertId = uploadingFileAlertIdsRef.current[`${appKey}_${filename}`];
+      if (alertId !== undefined) {
+        removeAlert(alertId);
+        delete uploadingFileAlertIdsRef.current[`${appKey}_${filename}`];
+      }
+    },
+    [removeAlert]
+  );
+
   useEffect(() => {
     const eventListener =
       (appKey: string) => (event: BackpackEvent, filename: string) => {
@@ -176,16 +187,11 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             `Uploading ${filename} to your Backpack...`,
             false
           );
-          setUploadingFileAlertIds(prev => ({...prev, [filename]: alertId}));
+          uploadingFileAlertIdsRef.current[`${appKey}_${filename}`] = alertId;
           return;
         } else if (event === BackpackEvent.UploadFailed) {
           // Client handles showing upload failed alert where it makes the most sense for the lab.
-          removeAlert(uploadingFileAlertIds[filename]);
-          setUploadingFileAlertIds(prev => {
-            const copy = {...prev};
-            delete copy[filename];
-            return copy;
-          });
+          removeUploadingAlert(appKey, filename);
           return;
         }
 
@@ -206,12 +212,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             }
             return {...prevFiles, [appKey]: [...previousListForApp, filename]};
           });
-          removeAlert(uploadingFileAlertIds[filename]);
-          setUploadingFileAlertIds(prev => {
-            const copy = {...prev};
-            delete copy[filename];
-            return copy;
-          });
+          removeUploadingAlert(appKey, filename);
           setTimeout(() => {
             setRecentlyAddedFiles(prevFiles => {
               let previousListForApp = prevFiles[appKey];
@@ -255,7 +256,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     secondaryBackpackApis,
     addAlert,
     removeAlert,
-    uploadingFileAlertIds,
   ]);
 
   const isBackpackEmpty = useMemo(() => {

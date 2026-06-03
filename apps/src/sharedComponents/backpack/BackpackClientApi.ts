@@ -453,7 +453,7 @@ export default class BackpackClientApi {
       Object.values(this.eventListeners).forEach(listener =>
         listener(requestType, filename)
       );
-    } else {
+    } else if (requestType === BackpackEvent.FileAdded) {
       this.sendUploadFailedEvent(filename);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
