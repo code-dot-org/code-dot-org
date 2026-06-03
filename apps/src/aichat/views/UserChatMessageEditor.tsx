@@ -86,7 +86,11 @@ const UserChatMessageEditor: React.FunctionComponent<
     state => state.aichatLab.saveInProgress
   );
   const chatAssets = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file => file.asset)
+    state.aichat.stagedFiles.map(file =>
+      file.projectFilename
+        ? {...file.asset, filename: file.projectFilename}
+        : file.asset
+    )
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
