@@ -195,6 +195,7 @@ export default class BackpackClientApi {
       if (!this.channelId) {
         throw new Error('Missing channel id for backpack');
       }
+      this.sendUploadStartedEvent(filename);
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
         const responseBlob = await fileResponse.blob();
@@ -207,6 +208,7 @@ export default class BackpackClientApi {
         );
       }
     } catch (error) {
+      this.sendUploadFailedEvent(filename);
       if (onError) {
         onError(error as Error);
         return;
@@ -230,10 +232,12 @@ export default class BackpackClientApi {
       onError();
       return;
     }
+    this.sendUploadStartedEvent(filename);
     try {
       await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
     } catch (error) {
       onError(error as Error);
+      this.sendUploadFailedEvent(filename);
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
@@ -310,9 +314,6 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = files[filename].text;
-      Object.values(this.eventListeners).forEach(listener =>
-        listener(BackpackEvent.UploadStarted, filename)
-      );
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,
@@ -335,6 +336,7 @@ export default class BackpackClientApi {
       onError();
       return;
     }
+    this.sendUploadStartedEvent(filename);
     try {
       await HttpClient.put(
         `${rootUrl(this.channelId)}/${filename}`,
@@ -452,9 +454,7 @@ export default class BackpackClientApi {
         listener(requestType, filename)
       );
     } else {
-      Object.values(this.eventListeners).forEach(listener =>
-        listener(BackpackEvent.UploadFailed, filename)
-      );
+      this.sendUploadFailedEvent(filename);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
@@ -473,5 +473,17 @@ export default class BackpackClientApi {
     if (this.eventListeners[id]) {
       delete this.eventListeners[id];
     }
+  }
+
+  sendUploadStartedEvent(filename: string) {
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.UploadStarted, filename)
+    );
+  }
+
+  sendUploadFailedEvent(filename: string) {
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.UploadFailed, filename)
+    );
   }
 }

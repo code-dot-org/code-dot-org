@@ -181,14 +181,15 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         } else if (event === BackpackEvent.UploadFailed) {
           addAlert(
             'danger',
-            `Upload of ${filename} to your Backpack failed. Please try again.`
+            `Upload of ${filename} to your Backpack failed. Please try again.`,
+            false
           );
+          removeAlert(uploadingFileAlertIds[filename]);
           setUploadingFileAlertIds(prev => {
             const copy = {...prev};
             delete copy[filename];
             return copy;
           });
-          removeAlert(uploadingFileAlertIds[filename]);
           return;
         }
 
@@ -209,12 +210,12 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             }
             return {...prevFiles, [appKey]: [...previousListForApp, filename]};
           });
+          removeAlert(uploadingFileAlertIds[filename]);
           setUploadingFileAlertIds(prev => {
             const copy = {...prev};
             delete copy[filename];
             return copy;
           });
-          removeAlert(uploadingFileAlertIds[filename]);
           setTimeout(() => {
             setRecentlyAddedFiles(prevFiles => {
               let previousListForApp = prevFiles[appKey];
