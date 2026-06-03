@@ -143,6 +143,8 @@ class ManageStudentsTable extends Component {
     this.familyNameFormatter = this.familyNameFormatter.bind(this);
     this.actionsFormatter = this.actionsFormatter.bind(this);
     this.actionsHeaderFormatter = this.actionsHeaderFormatter.bind(this);
+    this.projectSharingHeaderFormatter =
+      this.projectSharingHeaderFormatter.bind(this);
     this.getSortingColumns = this.getSortingColumns.bind(this);
     this.onSort = this.onSort.bind(this);
     this.getColumns = this.getColumns.bind(this);
@@ -829,7 +831,11 @@ class ManageStudentsTable extends Component {
                     effect="solid"
                     place="top"
                   >
-                    <div>{i18n.demoSectionAddStudentsDisabled()}</div>
+                    <div>
+                      {
+                        'Students cannot be added to or removed from a demo section'
+                      }
+                    </div>
                   </ReactTooltip>
                 )}
               </span>
@@ -855,7 +861,7 @@ class ManageStudentsTable extends Component {
                     effect="solid"
                     place="top"
                   >
-                    <div>{i18n.demoSectionActionDisabled()}</div>
+                    <div>{'Not available for demo sections'}</div>
                   </ReactTooltip>
                 )}
               </span>
@@ -881,7 +887,7 @@ class ManageStudentsTable extends Component {
                     effect="solid"
                     place="top"
                   >
-                    <div>{i18n.demoSectionActionDisabled()}</div>
+                    <div>{'Not available for demo sections'}</div>
                   </ReactTooltip>
                 )}
               </span>

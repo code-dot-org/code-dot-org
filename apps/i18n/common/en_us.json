@@ -1226,8 +1226,6 @@
   "duplicate_email_error_message": "This email is already taken",
   "duration": "Duration",
   "durationLabel": "Duration: {duration}",
-  "demoSectionActionDisabled": "Not available for demo sections",
-  "demoSectionAddStudentsDisabled": "Students cannot be added to or removed from a demo section",
   "edit": "Edit",
   "editAll": "Edit all",
   "editAvatar": "Edit avatar",

@@ -347,7 +347,7 @@ class WordOrPictureLogins extends React.Component {
                 effect="solid"
                 place="top"
               >
-                <div>{i18n.demoSectionActionDisabled()}</div>
+                <div>{'Not available for demo sections'}</div>
               </ReactTooltip>
             )}
             <br />
