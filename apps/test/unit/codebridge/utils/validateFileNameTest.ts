@@ -160,9 +160,7 @@ describe('validateFileName', function () {
         validFileTypes,
         selectedFileType: 'txt',
       })
-    ).toEqual(
-      codebridgeI18n.duplicateFileError({fileName: 'testFile1.txt'})
-    );
+    ).toEqual(codebridgeI18n.duplicateFileError({fileName: 'testFile1.txt'}));
 
     // A duplicate support file is likewise detected via the recombined name.
     expect(
