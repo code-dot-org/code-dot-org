@@ -100,6 +100,10 @@ function arraysMatch(a: string[], b: string[]): boolean {
   return a.length === b.length && a.every((value, index) => value === b[index]);
 }
 
+function normalizeIdList(ids: string[]): string[] {
+  return [...ids].sort();
+}
+
 function stripDisplayFields<T extends object>(item: T): T {
   const result = {...item} as Record<string, unknown>;
   delete result.domAttributes;
@@ -143,10 +147,20 @@ export default function ReactFlowCanvas({
 
   useEffect(() => {
     setSelectedNodeIds(currentIds =>
-      currentIds.filter(id => nodes.some(node => node.id === id))
+      (() => {
+        const nextIds = currentIds.filter(id =>
+          nodes.some(node => node.id === id)
+        );
+        return arraysMatch(currentIds, nextIds) ? currentIds : nextIds;
+      })()
     );
     setSelectedEdgeIds(currentIds =>
-      currentIds.filter(id => edges.some(edge => edge.id === id))
+      (() => {
+        const nextIds = currentIds.filter(id =>
+          edges.some(edge => edge.id === id)
+        );
+        return arraysMatch(currentIds, nextIds) ? currentIds : nextIds;
+      })()
     );
   }, [nodes, edges]);
 
@@ -173,6 +187,19 @@ export default function ReactFlowCanvas({
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
   const [selectedNodeIds, setSelectedNodeIds] = useState<string[]>([]);
   const [selectedEdgeIds, setSelectedEdgeIds] = useState<string[]>([]);
+  const selectedGroupableNodeIds = useMemo(
+    () =>
+      normalizeIdList(
+        nodes
+          .filter(
+            node =>
+              Boolean((node as SketchLabNode & {selected?: boolean}).selected) &&
+              isGroupableNode(node)
+          )
+          .map(node => node.id)
+      ),
+    [nodes]
+  );
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
 
@@ -352,7 +379,7 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
-    if (selectedNodeIds.length > 1 && selectedEdgeIds.length === 0) {
+    if (selectedGroupableNodeIds.length > 1) {
       closeToolbar();
       return;
     }
@@ -376,8 +403,7 @@ export default function ReactFlowCanvas({
     nodeOrEdgeFocused,
     lastFocusedEntry,
     closeToolbar,
-    selectedNodeIds,
-    selectedEdgeIds,
+    selectedGroupableNodeIds,
   ]);
 
   // Close the toolbar when its owning node/edge is deleted.
@@ -440,17 +466,7 @@ export default function ReactFlowCanvas({
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
         activeEntry?.type === type && activeEntry.id === item.id;
-      const isReactFlowSelected =
-        type === 'node'
-          ? selectedNodeIds.includes(item.id)
-          : selectedEdgeIds.includes(item.id);
-      const isSelected =
-        isReactFlowSelected ||
-        (nodeOrEdgeFocused &&
-          lastFocusedEntry?.type === type &&
-          lastFocusedEntry.id === item.id);
       return {
-        selected: isSelected && !readOnly,
         domAttributes: {tabIndex: isTabTarget ? 0 : -1},
       };
     };
@@ -475,12 +491,11 @@ export default function ReactFlowCanvas({
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
-        const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const {domAttributes} = applyDisplayProps(node, 'node');
         const locked =
           node.data?.locked === true || lockedLineAnchorIds.has(node.id);
         return {
           ...node,
-          selected,
           ...(locked && {
             draggable: false,
             connectable: false,
@@ -499,10 +514,9 @@ export default function ReactFlowCanvas({
       }),
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
-        const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
+        const {domAttributes} = applyDisplayProps(edge, 'edge');
         return {
           ...edge,
-          selected,
           ...(locked && {deletable: false}),
           ariaLabel: getEdgeLabel(
             edge,
@@ -529,11 +543,6 @@ export default function ReactFlowCanvas({
     edges,
     activeEntry?.type,
     activeEntry?.id,
-    nodeOrEdgeFocused,
-    lastFocusedEntry?.type,
-    lastFocusedEntry?.id,
-    selectedNodeIds,
-    selectedEdgeIds,
     connectingFrom,
     readOnly,
     focusEntry,
@@ -760,10 +769,14 @@ export default function ReactFlowCanvas({
 
   const handleSelectionChange = useCallback<OnSelectionChangeFunc>(
     ({nodes: selectedNodes, edges: selectedEdges}) => {
-      const nextSelectedNodeIds = selectedNodes
-        .filter(node => node.type !== 'lineAnchor')
-        .map(node => node.id);
-      const nextSelectedEdgeIds = selectedEdges.map(edge => edge.id);
+      const nextSelectedNodeIds = normalizeIdList(
+        selectedNodes
+          .filter(node => node.type !== 'lineAnchor')
+          .map(node => node.id)
+      );
+      const nextSelectedEdgeIds = normalizeIdList(
+        selectedEdges.map(edge => edge.id)
+      );
 
       setSelectedNodeIds(currentIds =>
         arraysMatch(currentIds, nextSelectedNodeIds)
@@ -780,13 +793,9 @@ export default function ReactFlowCanvas({
   );
 
   const handleGroupNodes = useCallback(() => {
-    const groupableSelectedNodeIds = selectedNodeIds.filter(selectedId => {
-      const selectedNode = nodes.find(node => node.id === selectedId);
-      return !!selectedNode && isGroupableNode(selectedNode);
-    });
     const result = groupSelectedNodes(
       nodes,
-      groupableSelectedNodeIds,
+      selectedGroupableNodeIds,
       createUuid()
     );
     if (!result) {
@@ -804,7 +813,7 @@ export default function ReactFlowCanvas({
     }, FOCUS_DELAY_MS);
   }, [
     nodes,
-    selectedNodeIds,
+    selectedGroupableNodeIds,
     pushSnapshot,
     closeToolbar,
     setNodes,
@@ -907,11 +916,7 @@ export default function ReactFlowCanvas({
                   setNodes={setNodes}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
-                  selectedNodeIds={selectedNodeIds.filter(selectedId =>
-                    nodes.some(
-                      node => node.id === selectedId && isGroupableNode(node)
-                    )
-                  )}
+                  selectedNodeIds={selectedGroupableNodeIds}
                   onClearSelection={clearSelection}
                   onGroupNodes={handleGroupNodes}
                   onUngroupNode={handleUngroupNode}
