@@ -428,12 +428,29 @@ export default function ReactFlowCanvas({
       }
     });
 
+    // Endpoint handles on line anchor nodes are shown via a CSS class when
+    // the associated edge is focused.
+    const focusedEdgeId =
+      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
+        ? lastFocusedEntry.id
+        : null;
+    const focusedEdgeEndpointIds = new Set<string>();
+    if (focusedEdgeId) {
+      const focusedEdge = edges.find(e => e.id === focusedEdgeId);
+      if (focusedEdge) {
+        focusedEdgeEndpointIds.add(focusedEdge.source);
+        focusedEdgeEndpointIds.add(focusedEdge.target);
+      }
+    }
+
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected, domAttributes} = applyDisplayProps(node, 'node');
         const locked =
           node.data?.locked === true || lockedLineAnchorIds.has(node.id);
+        const isAnchorForFocusedEdge =
+          node.type === 'lineAnchor' && focusedEdgeEndpointIds.has(node.id);
         return {
           ...node,
           selected,
@@ -446,7 +463,10 @@ export default function ReactFlowCanvas({
           // wrapper div for line anchors so it reads as "Line endpoint" instead
           // of "Line endpoint node".
           ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
-          className: isConnectSource ? styles.connectSource : undefined,
+          className: classNames(
+            isConnectSource && styles.connectSource,
+            isAnchorForFocusedEdge && styles.lineAnchorOnSelectedEdge
+          ),
           domAttributes: {
             ...domAttributes,
             ...(isConnectSource && {'aria-selected': true}),

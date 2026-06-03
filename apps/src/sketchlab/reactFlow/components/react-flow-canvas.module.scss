@@ -39,13 +39,19 @@
   }
 
   :global(.react-flow__node-lineAnchor:focus .react-flow__handle) {
-    // Override the hidden-handle styling (opacity 0 / pointer-events none)
-    // applied by LineAnchorNode when data.showHandles is false. Without this
-    // a focused anchor with hidden handles would leave keyboard focus
-    // invisible, which is confusing.
+    // Override the hidden-handle styling so a focused anchor stays visible.
     opacity: 1;
     pointer-events: auto;
     box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
+  }
+
+  // Show endpoint handles when the associated line edge is selected.
+  // ReactFlowCanvas adds this class to anchor nodes of the focused edge.
+  .lineAnchorOnSelectedEdge {
+    :global(.react-flow__handle) {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   // Controls panel: themed background and text.

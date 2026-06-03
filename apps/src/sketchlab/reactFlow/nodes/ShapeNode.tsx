@@ -1,4 +1,9 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {
+  NodeResizer,
+  useConnection,
+  useReactFlow,
+  type NodeProps,
+} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
@@ -101,8 +106,10 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const labelRef = useRef<HTMLDivElement>(null);
   const labelAtEditStart = useRef<string>('');
 
+  const [isHovered, setIsHovered] = useState(false);
+  const connection = useConnection();
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles = data.showHandles !== false;
+  const showHandles = selected || (isHovered && connection.inProgress);
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
@@ -188,6 +195,8 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       className={styles.shapeNode}
       aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <NodeResizer
         isVisible={selected && !data.locked}
