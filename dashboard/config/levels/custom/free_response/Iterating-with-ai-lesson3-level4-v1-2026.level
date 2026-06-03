@@ -9,8 +9,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
-    "title": "Reflect on the Career",
-    "long_instructions": "## **Reflect on the Career**\r\n\r\n> ##### How did being the Game Engineer who has to review AI’s code change how you thought about while loops?\r\n>\r\n\r\n",
+    "title": "Game Engineer",
+    "long_instructions": "## **Reflect on the Career**\r\n\r\n> #### How did being the Game Engineer who has to review AI’s code change how you thought about while loops?\r\n>\r\n\r\n",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "allow_user_uploads": "false",
@@ -19,7 +19,7 @@
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 16:20:47 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
