@@ -28,12 +28,17 @@ export async function getLabFixtures(
   if (!loader) return undefined;
 
   const mod = await loader();
-  // Convention: each lab exports `<Lab>Fixtures` (e.g. MusicFixtures). Fall
-  // back to default export, then the first LabFixtures-shaped value.
-  return (
-    labType.length > 0
-      ? (mod[`${labType[0].toUpperCase()}${labType.slice(1)}Fixtures`] ??
-        mod.default)
-      : mod.default
-  ) as LabFixtures | undefined;
+  // Convention: each lab exports `<Lab>Fixtures` in PascalCase (e.g.
+  // MusicFixtures, DancePartyFixtures). Lab keys are kebab-cased by
+  // convention (`dance-party`), so PascalCase each hyphen-delimited segment.
+  // Fall back to the default export.
+  const exportName = `${labType
+    .split('-')
+    .map(segment =>
+      segment.length > 0
+        ? `${segment[0].toUpperCase()}${segment.slice(1)}`
+        : segment,
+    )
+    .join('')}Fixtures`;
+  return (mod[exportName] ?? mod.default) as LabFixtures | undefined;
 }
