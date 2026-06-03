@@ -40,7 +40,11 @@ const SnackbarPassthrough = React.forwardRef<
   {children?: React.ReactNode}
 >(({children}, ref) => <div ref={ref}>{children}</div>);
 
-type AlertConfig = {id: number; type: 'success' | 'danger'; message: string};
+type AlertConfig = {
+  id: number;
+  type: 'success' | 'danger' | 'info';
+  message: string;
+};
 const ALERT_AUTO_HIDE_MS = 3000;
 let nextAlertId = 0;
 
@@ -132,7 +136,11 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }, []);
 
   const addAlert = useCallback(
-    (type: 'success' | 'danger', message: string, autoHide: boolean = true) => {
+    (
+      type: 'success' | 'danger' | 'info',
+      message: string,
+      autoHide: boolean = true
+    ) => {
       const id = nextAlertId++;
       setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
       openPanelCallback();
@@ -183,7 +191,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 
         if (event === BackpackEvent.UploadStarted) {
           const alertId = addAlert(
-            'success',
+            'info',
             `Uploading ${filename} to your Backpack...`,
             false
           );
