@@ -13,6 +13,9 @@ export default defineConfig({
       enabled: true,
       headless: true,
       provider: playwright({}),
+      // Viewport must be wider than the 600px scene, else the scene overflows
+      // the test iframe and the screenshot is clipped on the right.
+      viewport: {width: 900, height: 700},
       instances: [{browser: 'chromium'}],
     },
   },

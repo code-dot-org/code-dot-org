@@ -1,5 +1,8 @@
 .markdownContainer {
-  align-items: flex-start;
+  // Block children fill the container width so text wraps; `flex-start` would
+  // size each child to its content, leaving long paragraphs unwrapped and
+  // clipped.
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
