@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
-import {store} from '../index';
 import type {RootState} from '../redux';
 import {getTableData} from '../redux';
+import {store} from '../store';
 import train from '../train';
 import type {DataRow} from '../types';
 

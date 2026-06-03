@@ -8,10 +8,9 @@
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
 import type {RootState} from '../redux';
-import {isRegression} from '../redux';
 import type {ResultsData, DataRow} from '../types';
 
-import {getExtrema} from './columnDetails';
+import {getExtrema, isRegression} from './columnDetails';
 import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,

@@ -5,10 +5,10 @@ import KNN from 'ml-knn';
 import type {Store} from 'redux';
 
 import {getPercentCorrect} from '../helpers/accuracy';
+import {isRegression} from '../helpers/columnDetails';
 import {logFirehoseMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
 import {
-  isRegression,
   setKValue,
   setTrainedModel,
   setPrediction,

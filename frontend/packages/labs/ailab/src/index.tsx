@@ -1,6 +1,5 @@
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
 
 import App from './App';
 import {TestDataLocations} from './constants';
@@ -9,7 +8,7 @@ import type {Dataset} from './datasetManifest';
 import {getDatasets} from './datasetManifest';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
-import rootReducer, {
+import {
   setMode,
   setCurrentPanel,
   setSelectedCSV,
@@ -20,14 +19,13 @@ import rootReducer, {
   setInstructionsDismissed,
   setFirehoseMetricsLogger,
 } from './redux';
+import {store} from './store';
 import type {Mode, ModelDataToSave, SaveResponse} from './types';
 
 // Re-export the consumer-facing asset-path setter from the package entry so
 // embedders get the whole public API (`initAll`, `instructionsDismissed`,
 // `setAssetPath`) from a single import.
 export {setAssetPath} from './assetPath';
-
-export const store = createStore(rootReducer);
 
 let saveTrainedModel:
   | ((

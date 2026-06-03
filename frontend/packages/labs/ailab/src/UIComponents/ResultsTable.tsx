@@ -4,11 +4,11 @@ import {connect} from 'react-redux';
 import type {Dispatch} from 'redux';
 
 import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
 import type {RootState} from '../redux';
-import {isRegression, setResultsHighlightRow} from '../redux';
+import {setResultsHighlightRow} from '../redux';
 import type {ResultsData} from '../types';
 
 interface ResultsTableProps {

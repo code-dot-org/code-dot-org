@@ -11,7 +11,7 @@ import {
   getSummaryStat,
   getResultsDataInDataTableForm,
 } from './helpers/accuracy';
-import {isColumnNumerical, getColumnDataToSave} from './helpers/columnDetails';
+import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
 import {reportPanelView} from './helpers/metrics';
 import {
@@ -839,10 +839,6 @@ export function getTableData(
   } else {
     return state.data;
   }
-}
-
-export function isRegression(state: RootState): boolean {
-  return isColumnNumerical(state, state.labelColumn!);
 }
 
 /* Functions for processing data about a trained model to save. */

@@ -9,9 +9,8 @@ import {
   setColumnsByDataType,
   setRemovedRowsCount,
 } from './redux';
+import {store} from './store';
 import type {DataRow} from './types';
-
-import {store} from './index';
 
 export const parseCSV = (
   csvfile: string,

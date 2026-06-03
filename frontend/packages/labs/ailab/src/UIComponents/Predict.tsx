@@ -9,7 +9,6 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
-import {store} from '../index';
 import type {RootState} from '../redux';
 import {setTestData, getPredictAvailable} from '../redux';
 import {
@@ -18,6 +17,7 @@ import {
   getUniqueOptionsByColumn,
   getExtremaByColumn,
 } from '../selectors';
+import {store} from '../store';
 import train from '../train';
 
 import ScrollableContent from './ScrollableContent';

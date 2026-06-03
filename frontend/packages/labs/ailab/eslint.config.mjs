@@ -23,10 +23,6 @@ export default [
       // papaparse), so they flag correct default imports. Off for this package.
       'import-x/default': 'off',
       'import-x/no-named-as-default-member': 'off',
-      // Deferred: the store singleton created in `index.tsx` forms circular
-      // imports with the component tree it pulls in. Breaking them is tracked
-      // separately; until then, silence the rule.
-      'import-x/no-cycle': 'off',
     },
   },
 ];
