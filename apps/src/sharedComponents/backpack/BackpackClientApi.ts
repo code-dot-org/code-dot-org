@@ -24,7 +24,10 @@ const getCacheBustSuffix = () => `?t=${Date.now()}`;
 export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
+  UploadStarted = 'uploadStarted',
+  UploadFailed = 'uploadFailed',
 }
+
 type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
@@ -307,6 +310,9 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = files[filename].text;
+      Object.values(this.eventListeners).forEach(listener =>
+        listener(BackpackEvent.UploadStarted, filename)
+      );
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,
@@ -444,6 +450,10 @@ export default class BackpackClientApi {
     if (!failedFileList.includes(filename)) {
       Object.values(this.eventListeners).forEach(listener =>
         listener(requestType, filename)
+      );
+    } else {
+      Object.values(this.eventListeners).forEach(listener =>
+        listener(BackpackEvent.UploadFailed, filename)
       );
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {

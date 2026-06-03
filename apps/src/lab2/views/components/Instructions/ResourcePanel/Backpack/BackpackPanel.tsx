@@ -71,6 +71,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<{
     [key: string]: string[];
   }>({PRIMARY_BACKPACK_KEY: []});
+  const [uploadingFileAlertIds, setUploadingFileAlertIds] = useState<{
+    [key: string]: number;
+  }>({});
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
   const viewingOldVersion = useAppSelector(
@@ -129,11 +132,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }, []);
 
   const addAlert = useCallback(
-    (type: 'success' | 'danger', message: string) => {
+    (type: 'success' | 'danger', message: string, autoHide: boolean = true) => {
       const id = nextAlertId++;
       setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
       openPanelCallback();
-      setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+      if (autoHide) {
+        setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+      }
+      return id;
     },
     [openPanelCallback, removeAlert]
   );
@@ -163,6 +169,30 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             ? setFileList
             : (fileList: string[]) =>
                 setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
+
+        if (event === BackpackEvent.UploadStarted) {
+          const alertId = addAlert(
+            'success',
+            `Uploading ${filename} to your Backpack...`,
+            false
+          );
+          setUploadingFileAlertIds(prev => ({...prev, [filename]: alertId}));
+          return;
+        } else if (event === BackpackEvent.UploadFailed) {
+          addAlert(
+            'danger',
+            `Upload of ${filename} to your Backpack failed. Please try again.`
+          );
+          setUploadingFileAlertIds(prev => {
+            const copy = {...prev};
+            delete copy[filename];
+            return copy;
+          });
+          removeAlert(uploadingFileAlertIds[filename]);
+          return;
+        }
+
+        // If we are here, the event was either FileAdded or FileDeleted, so we need to reload the backpack file list.
         // We don't show the load view here to avoid the screen flickering when the backpack updates.
         setLoadError(false);
         loadForApi(clientToLoad, listCallback, false);
@@ -179,6 +209,12 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             }
             return {...prevFiles, [appKey]: [...previousListForApp, filename]};
           });
+          setUploadingFileAlertIds(prev => {
+            const copy = {...prev};
+            delete copy[filename];
+            return copy;
+          });
+          removeAlert(uploadingFileAlertIds[filename]);
           setTimeout(() => {
             setRecentlyAddedFiles(prevFiles => {
               let previousListForApp = prevFiles[appKey];
@@ -216,7 +252,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         });
       }
     };
-  }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis, addAlert]);
+  }, [
+    loadBackpackFiles,
+    primaryBackpackApi,
+    secondaryBackpackApis,
+    addAlert,
+    removeAlert,
+    uploadingFileAlertIds,
+  ]);
 
   const isBackpackEmpty = useMemo(() => {
     const emptyPrimaryBackpack =
