@@ -242,7 +242,6 @@ export function useLineToolbar({
         const bothEndpointsAreAnchors =
           sourceNode?.type === 'lineAnchor' &&
           targetNode?.type === 'lineAnchor';
-        const style = {...edge.style};
         if (bothEndpointsAreAnchors) {
           const sourceHandle = anchorHandleFlowPosition(
             sourceNode.position,
@@ -289,17 +288,6 @@ export function useLineToolbar({
               return node;
             })
           );
-          delete style.transform;
-          delete style.transformBox;
-          delete style.transformOrigin;
-        } else if (rotation === DEFAULT_ROTATION) {
-          delete style.transform;
-          delete style.transformBox;
-          delete style.transformOrigin;
-        } else {
-          style.transform = `rotate(${rotation}deg)`;
-          style.transformBox = 'fill-box';
-          style.transformOrigin = 'center';
         }
 
         return {
@@ -308,7 +296,6 @@ export function useLineToolbar({
             ...(edge.data || {}),
             rotation,
           },
-          style,
         };
       });
     },
