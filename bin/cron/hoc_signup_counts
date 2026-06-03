@@ -5,7 +5,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script performs aggregation queries on the pegasus.forms table, specifically HOC signup
 # forms, saving the results to the pegasus.properties table.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/sequel'
 require 'cdo/db'
 require 'cdo/pegasus/properties'

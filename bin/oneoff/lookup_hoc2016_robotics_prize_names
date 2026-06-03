@@ -5,9 +5,9 @@
 # and dumps the results into a _output.csv file: one row per source row, with name and
 # either nothing (no matches), a single matching email, or a set of data representing multiple potential matches.
 
-require_relative '../../pegasus/src/env'
+require_relative '../../lib/cdo/pegasus/src/env'
 require 'cdo/sequel'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 PEGASUS_REPORTING_DB = Cdo::Sequel.database_connection_pool CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
 

@@ -1,0 +1,37 @@
+name 'pl_sandbox_embed-javascript-code-stylist'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Unit 3 
+Context:
+This level would come after a text based level that explains the 5 steps for helping students get started with coding with AI. Students often get overwhelmed when they see significant amounts of starter code and tend to jump in to asking the AI for something without taking time to see the big picture and get fuller understanding. 
+
+This simulation, walks the teacher through the steps to guide students on how to code with AI. It takes the perspective of a teacher helping a student at each step of the protocol. 
+1. Understand the starter code
+2. Locoate the TODO or where they need to write the new code
+3. Plan the behavior - in words first to grasp understanding
+4. Prompt the AI
+5. Test and Refine. 
+
+It would sequentially come after a text-based level covering the steps and a web lab level where the teachers attept the activity.
+
+<div style="width:100%; max-width:900px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(124,58,237,0.2); border:1px solid #2d3350;">
+  <iframe 
+    src="https://amandadennard-dotcom.github.io/Unit4_testing/stylist_protocol_activity.html"
+    width="100%" 
+    height="780" 
+    frameborder="0">
+  </iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+MARKDOWN
