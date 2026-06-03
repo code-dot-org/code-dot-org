@@ -426,7 +426,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (error: string) =>
-              addAlert('danger', error)
+              addAlert('danger', error, false)
             )
           }
           type="button"

@@ -330,13 +330,16 @@ export default class BackpackClientApi {
     fileContents: string,
     onError: ErrorCallback,
     onSuccess: () => void,
-    retryCount: number
+    retryCount: number,
+    sendUploadStartedEvent: boolean = true
   ) {
     if (!this.channelId) {
       onError();
       return;
     }
-    this.sendUploadStartedEvent(filename);
+    if (sendUploadStartedEvent) {
+      this.sendUploadStartedEvent(filename);
+    }
     try {
       await HttpClient.put(
         `${rootUrl(this.channelId)}/${filename}`,
@@ -357,7 +360,8 @@ export default class BackpackClientApi {
           fileContents,
           onError,
           onSuccess,
-          retryCount - 1
+          retryCount - 1,
+          false /* don't resend upload started event on retry */
         );
       } else {
         // Record failure and check if all files are done attempting upload/uploading
