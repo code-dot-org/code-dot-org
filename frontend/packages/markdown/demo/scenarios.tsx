@@ -1,4 +1,6 @@
-import {useMemo, useState, type ReactNode} from 'react';
+import {useEffect, useMemo, useState, type ReactNode} from 'react';
+
+import {localization} from '@code-dot-org/core/plugins/localization';
 
 import {Markdown, extensions} from '../src';
 
@@ -106,6 +108,63 @@ const ExpandableImagesScenario = () => {
         </button>
       )}
     </>
+  );
+};
+
+/*
+ * Localization runs against the core localization plugin, which is inactive
+ * unless LocalizeJS is loaded. This patches the singleton to simulate a loaded
+ * translator that uppercases text, so you can see translation happen — the
+ * Blockly XML is hidden from the translator and restored, and code is preserved.
+ * Patching is in an effect (and a 'change' event re-renders), restored on
+ * unmount. (@testing-library's render flushes effects, so the visual screenshot
+ * captures the translated result deterministically.)
+ */
+const LocalizedScenario = () => {
+  useEffect(() => {
+    const patchable = localization as unknown as {
+      isLocalizeJS: () => boolean;
+      translate: (element: unknown) => unknown;
+    };
+    const original = {
+      isLocalizeJS: patchable.isLocalizeJS,
+      translate: patchable.translate,
+    };
+    patchable.isLocalizeJS = () => true;
+    patchable.translate = element => {
+      if (element && typeof element === 'object' && 'childNodes' in element) {
+        const walk = (node: Node) => {
+          if (node.nodeType === 3) {
+            node.textContent = (node.textContent ?? '').toUpperCase();
+          }
+          node.childNodes.forEach(walk);
+        };
+        walk(element as Node);
+      }
+      return element;
+    };
+    localization.emit('change', {
+      locale: localization.locale,
+      rtl: localization.rtl,
+    });
+    return () => {
+      Object.assign(localization, original);
+      localization.emit('change', {
+        locale: localization.locale,
+        rtl: localization.rtl,
+      });
+    };
+  }, []);
+
+  return (
+    <Markdown
+      content={
+        'Press <xml><block type="x" id="b1"></block></xml> then read the ' +
+        '`print` block. Text is uppercased by the simulated translator; the ' +
+        'Blockly XML and inline code are preserved.'
+      }
+      extensions={[extensions.blockly]}
+    />
   );
 };
 
@@ -236,5 +295,10 @@ export const scenarios: Scenario[] = [
     id: 'expandable-images',
     name: 'Expandable images',
     render: () => <ExpandableImagesScenario />,
+  },
+  {
+    id: 'localized',
+    name: 'Localized (simulated)',
+    render: () => <LocalizedScenario />,
   },
 ];
