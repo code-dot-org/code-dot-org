@@ -532,7 +532,7 @@ const debouncedSendStartedReport = debounce(
     }
   },
   100,
-  {leading: true}
+  {leading: true, trailing: false}
 );
 
 function sendReportForLevel(
@@ -598,15 +598,17 @@ function sendReportForLevel(
         Lab2ProgressTimer.getInstance().resetMilestoneTimer();
       }
     })
-    .catch((error: Error) =>
+    .catch((error: unknown) => {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
       // The promise will resolve for non-2xx status codes. We will only hit this for network errors/
       // navigation away/etc. Log as warnings.
       Lab2Registry.getInstance().getMetricsReporter().logWarning({
         message: 'Failed to send milestone report',
         url,
-        error: error.message,
-      })
-    );
+        error: errorMessage,
+      });
+    });
 }
 
 /**
