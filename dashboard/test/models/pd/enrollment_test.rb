@@ -120,7 +120,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     byo_workshop = create(:byo_workshop, :ended)
     byo_enrollment = create(:pd_enrollment, workshop: byo_workshop)
 
-    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    studio_url = ->(path) {CDO.studio_url(path)}
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{byo_enrollment.code}"], byo_enrollment.exit_survey_url

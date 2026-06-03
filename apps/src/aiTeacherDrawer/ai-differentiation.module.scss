@@ -395,7 +395,7 @@ $sidebar-tooltip-z-index: 2010;
   height: 100%;
 }
 
-.chatListContainer {
+.sidebarContainer {
   width: 242px;
   flex: 0 0 242px;
   background-color: var(--background-neutral-secondary);
@@ -404,7 +404,13 @@ $sidebar-tooltip-z-index: 2010;
   border-right: 1px solid $neutral_dark;
   transition: all 0.2s ease-in-out;
 
-  &.chatListContainerFullWidth {
+  &.sidebarContainerCollapsed {
+    width: 64px;
+    flex: 0 0 64px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.sidebarContainerFullWidth {
     flex: 1;
     width: 100%;
     border-right: none;
@@ -493,7 +499,6 @@ $sidebar-tooltip-z-index: 2010;
 .sidebarManageLink {
   margin-left: 8px;
 }
-
 
 .artifactButtons {
   button {

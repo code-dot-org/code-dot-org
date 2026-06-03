@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T17:01:13.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-scale-objects-intro-6584237a-d3e5-4eb3-9e9c-8d575b9603e1",
+        "text": "Beyond just moving objects, we can also change their size and shape! This is called **scaling**, and it works by adjusting how big an object appears along each of our X, Y, and Z axes.",
+        "imageUrl": "https://images.code.org/c0797061394f841e71480ebf4440e3ec-test-brendan-scale-objects-intro-panel-1-74fd2dc0-6560-441e-8c3e-252067c05de5.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-scale-objects-intro-6014c226-d7a4-4ddd-be79-47fe2c259f50",
+        "text": "By modifying the **X-scaling factor**, we can make an object wider or narrower. A factor greater than 1 makes it wider, while less than 1 makes it thinner.",
+        "imageUrl": "https://images.code.org/b94d701b7924e7c75e22c5c1aa3d3725-test-brendan-scale-objects-intro-panel-2-b50d08d3-2dfc-49bf-bd38-1d29b5b1626b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-scale-objects-intro-ad644263-d9a0-4a2b-a519-fb9614578665",
+        "text": "Similarly, the **Y-scaling factor** controls an object's height. Increase it to make the object taller, decrease it to make it shorter.",
+        "imageUrl": "https://images.code.org/9e75cb2d367ee7633e98aa29a3d62fc7-test-brendan-scale-objects-intro-panel-3-68399a81-21ad-411f-b79c-c62ce119a62a.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-scale-objects-intro-278719fe-9542-4621-9ce2-9fee782a0583",
+        "text": "And the **Z-scaling factor** adjusts its depth, making it thicker or flatter along the front-to-back axis.",
+        "imageUrl": "https://images.code.org/b727f6ebc676a9afaf99771f73bbbe13-test-brendan-scale-objects-intro-panel-4-316e6ea9-32b4-4dcb-ae6d-56ae54da10a9.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-brendan-scale-objects-intro-db5749ef-0151-4f7f-8f63-479b5e146741",
+        "text": "When all three scaling factors are equal, the object simply grows or shrinks proportionally. But if they're different, you can create interesting, non-uniform shapes!",
+        "imageUrl": "https://images.code.org/3e8dbd4c96f77786ad191380148fe763-test-brendan-scale-objects-intro-panel-5-7e364541-3c54-4b25-9edc-9f64bd2cf91b.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Introduce the concept of scaling objects in 3D space. Explain how scaling factors for X, Y, and Z dimensions affect the size and shape of a 3D model."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 17:01:57 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 17:01:57 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

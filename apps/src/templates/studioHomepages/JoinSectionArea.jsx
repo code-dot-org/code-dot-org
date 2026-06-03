@@ -11,20 +11,24 @@ import JoinSectionNotifications from './JoinSectionNotifications';
 import ParticipantSections from './ParticipantSections';
 import shapes from './shapes';
 
+const INITIAL_SECTION_RESULTS = {
+  action: null,
+  result: null,
+  resultName: null,
+  resultId: null,
+  sectionCapacity: null,
+  joiningPlSection: false,
+};
+
 export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
   isTeacher = false,
   isPlSections = false,
 }) {
-  const [sectionResults, setSectionResults] = useState({
-    action: null,
-    result: null,
-    resultName: null,
-    resultId: null,
-    sectionCapacity: null,
-    joiningPlSection: false,
-  });
+  const [sectionResults, setSectionResults] = useState(INITIAL_SECTION_RESULTS);
+
+  const clearSectionResults = () => setSectionResults(INITIAL_SECTION_RESULTS);
   const [joinedPlSections, setJoinedPlSections] = useState(
     initialJoinedPlSections
   );
@@ -65,6 +69,7 @@ export default function JoinSectionArea({
           sectionCapacity={sectionResults.sectionCapacity}
           showingPlSections={isPlSections}
           joiningPlSection={sectionResults.joiningPlSection}
+          onDismiss={clearSectionResults}
         />
         <JoinSection
           enrolledInASection={true}

@@ -77,8 +77,8 @@ that format.
 ## Run flow
 
 `javabuilderRunner.ts` reuses the legacy
-`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port can
-come in a later phase. Differences from legacy use:
+`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port is
+still on the TODO list. Differences from legacy use:
 
 - The legacy class reads `project.getCurrentId()` from the legacy
   project singleton, which is not initialized in lab2. The constructor
@@ -95,9 +95,9 @@ come in a later phase. Differences from legacy use:
   so Javabuilder reads fresh source from S3 instead of a stale version.
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
-  is supported in Phase 1).
+  is supported so far).
 
-## Phase 1 (current status of conversion)
+## Current Status of Conversion
 
 - Per-level `uses_lab2` opt-in for `Javalab` (`dancelab` pattern).
 - Horizontal layout (`layout/HorizontalLayout.tsx`)
@@ -112,18 +112,18 @@ come in a later phase. Differences from legacy use:
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
   and committing a named version for free.
+- Can create/edit start sources and exemplars.
 
-## Deferred to later phases
+## To Dos
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
+- **Support locked starter files** you can lock starter files in start mode,
+but we don't persist that information yet.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **start_sources and exemplar edit modes** — currently trying
-  to edit start sources will break things, as it will save the MultiFileSource
-  version of the code.
 - **Starter assets** and image asset support in general.
 - **TS port of `JavabuilderConnection`** — currently imported from
   `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the

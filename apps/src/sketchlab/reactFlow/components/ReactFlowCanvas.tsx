@@ -1,7 +1,6 @@
 import {
   addEdge,
   Background,
-  Controls,
   type IsValidConnection,
   type OnEdgesChange,
   type OnNodesChange,
@@ -72,6 +71,7 @@ import {
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
+import CanvasControls from './CanvasControls';
 import Toolbar from './Toolbar';
 
 import styles from './react-flow-canvas.module.scss';
@@ -726,14 +726,7 @@ export default function ReactFlowCanvas({
               onMouseLeave={handleMouseLeave}
             >
               {!readOnly && (
-                <Toolbar
-                  onAddNode={handleAddNode}
-                  levelName={levelName}
-                  onUndo={handleUndo}
-                  canUndo={canUndo}
-                  onRedo={handleRedo}
-                  canRedo={canRedo}
-                />
+                <Toolbar onAddNode={handleAddNode} levelName={levelName} />
               )}
               <div aria-live="assertive" className={styles.srOnly}>
                 {connectAnnouncement}
@@ -786,11 +779,18 @@ export default function ReactFlowCanvas({
                 <CornerToolbarPanel
                   nodes={nodes}
                   edges={edges}
+                  setNodes={setNodes}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
                 />
                 <Background />
-                <Controls position="bottom-right" />
+                <CanvasControls
+                  onUndo={handleUndo}
+                  onRedo={handleRedo}
+                  canUndo={canUndo}
+                  canRedo={canRedo}
+                  isReadOnly={readOnly}
+                />
               </ReactFlow>
             </div>
           </PushSnapshotProvider>

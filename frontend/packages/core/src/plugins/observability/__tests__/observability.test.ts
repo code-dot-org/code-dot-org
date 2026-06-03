@@ -160,6 +160,25 @@ describe('observability plugin', () => {
 
     expect(Sentry.captureException).toHaveBeenCalledWith(error, {
       extra: {lab: 'music'},
+      tags: undefined,
+    });
+  });
+
+  it('passes per-event tags directly to captureException on recordError', async () => {
+    observabilityPlugin.onCoreReady({
+      observability: {
+        provider: 'sentry',
+        sentry: {dsn: 'https://test@sentry.io/1'},
+      },
+    } as PluginConfig);
+    await vi.dynamicImportSettled();
+
+    const error = new Error('tagged error');
+    recordError(error, {lab: 'music'}, {appType: 'studio'});
+
+    expect(Sentry.captureException).toHaveBeenCalledWith(error, {
+      extra: {lab: 'music'},
+      tags: {appType: 'studio'},
     });
   });
 
