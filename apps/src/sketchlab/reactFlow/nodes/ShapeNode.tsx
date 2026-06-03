@@ -110,12 +110,10 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const labelRef = useRef<HTMLDivElement>(null);
   const labelAtEditStart = useRef<string>('');
 
-  const [isHovered, setIsHovered] = useState(false);
   const connection = useConnection();
   const isAnchorDragging = useIsAnchorDragging();
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles =
-    selected || isAnchorDragging || (isHovered && connection.inProgress);
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
@@ -201,8 +199,6 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
       className={styles.shapeNode}
       aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <NodeResizer
         isVisible={selected && !data.locked}

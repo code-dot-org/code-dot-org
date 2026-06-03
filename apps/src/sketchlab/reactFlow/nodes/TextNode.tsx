@@ -31,12 +31,10 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const textRef = useRef<HTMLDivElement>(null);
   const textAtEditStart = useRef<string>('');
 
-  const [isHovered, setIsHovered] = useState(false);
   const connection = useConnection();
   const isAnchorDragging = useIsAnchorDragging();
   const {text} = data;
-  const showHandles =
-    selected || isAnchorDragging || (isHovered && connection.inProgress);
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const textStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -109,8 +107,6 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       className={styles.textNode}
       aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <NodeResizer
         isVisible={selected && !data.locked}

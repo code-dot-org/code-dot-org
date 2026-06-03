@@ -1,5 +1,5 @@
 import {NodeResizer, useConnection, type NodeProps} from '@xyflow/react';
-import React, {memo, useMemo, useState} from 'react';
+import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useIsAnchorDragging} from '../context';
@@ -11,11 +11,9 @@ import styles from './image-node.module.scss';
 
 function ImageNode({data, selected}: NodeProps<ImageNodeType>) {
   const {src, altText} = data;
-  const [isHovered, setIsHovered] = useState(false);
   const connection = useConnection();
   const isAnchorDragging = useIsAnchorDragging();
-  const showHandles =
-    selected || isAnchorDragging || (isHovered && connection.inProgress);
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
     () => ({transform: `rotate(${rotation}deg)`}),
@@ -23,12 +21,7 @@ function ImageNode({data, selected}: NodeProps<ImageNodeType>) {
   );
 
   return (
-    <div
-      className={styles.imageNode}
-      aria-label={altText || 'Image node'}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className={styles.imageNode} aria-label={altText || 'Image node'}>
       <NodeResizer
         isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
