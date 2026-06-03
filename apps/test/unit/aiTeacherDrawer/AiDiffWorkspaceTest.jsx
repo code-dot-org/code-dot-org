@@ -9,6 +9,9 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -17,9 +20,6 @@ import {
   MINI_LESSON_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
-import {setThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
-import AiDiffWorkspace from '@cdo/apps/aiTeacherDrawer/AiDiffWorkspace';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,
