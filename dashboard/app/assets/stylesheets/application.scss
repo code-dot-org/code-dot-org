@@ -53,19 +53,7 @@ $selectUserTypeButtonTextColorSelected: #fff;
 $contrastTealHeader: #00818f;
 
 @import "bootstrap";
-
-// Redefine some variables and redeclare some styles from Bootstrap v2.3.22
-// which were removed in v3.x but which we still rely on
-// https://github.com/twbs/bootstrap-sass/blob/v2.3.2.2/templates/project/_variables.scss
-$blue: #049cdb;
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-}
-
-h1, h2, h3 {
-  line-height: 40px;
-}
+@import "bootstrap-v2-to-v3";
 
 label, input, button, select, textarea {
   font-size: 14px;
@@ -77,38 +65,9 @@ p,pre,span {
   @include selectable;
 }
 
-$gradient-border: rgba(0, 0, 0, 0.1);
-$gradient-border-bottom: rgba(0, 0, 0, 0.25);
-$gradient-text-shadow: rgba(0, 0, 0, 0.25);
-$gradient-box-shadow-inner: rgba(255, 255, 255, 0.2);
-$gradient-box-shadow-outer: rgba(0, 0, 0, 0.05);
-
-.btn {
-  @include box-shadow(inset 0 1px 0 $gradient-box-shadow-inner, 0 1px 2px $gradient-box-shadow-outer);
-  border-color: $gradient-border $gradient-border $gradient-border $gradient-border-bottom;
-  line-height: 20px;
-  text-shadow: 0 -1px 0 $gradient-text-shadow;
-}
-
-.btn-lg {
-  font-size: 17.5px;
-  padding: 11px 19px;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  line-height: 20px;
-}
-
 body {
-  font-style: normal;
-  line-height: 20px;
-  margin: 0;
-  padding: 0;
   -webkit-tap-highlight-color: transparent;
+  font-style: normal;
 }
 
 body.pin_bottom {
