@@ -1,9 +1,11 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
 import React, {useState, useCallback, ChangeEvent} from 'react';
 
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 import {SongData} from '@cdo/apps/dance/types';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 import moduleStyles from '@cdo/apps/dance/song-selector.module.scss';
@@ -77,36 +79,37 @@ const SongSelector: React.FC<SongSelectorProps> = ({
       id="song-selector-wrapper"
       className={moduleStyles.songSelectorWrapper}
     >
-      <label htmlFor="song_selector">
-        <b>{commonI18n.selectSong()}</b>
-      </label>
-
-      <select
+      <SimpleDropdown
         id="song_selector"
+        name="song_selector"
         className={moduleStyles.selectStyle}
+        labelText={commonI18n.selectSong()}
+        items={songKeys.map(option => ({
+          value: option,
+          text: songData[option].title,
+        }))}
+        selectedValue={selectedSong}
         onChange={changeSong}
-        value={selectedSong}
         disabled={!enableSongSelection}
-      >
-        {songKeys.map((option, i) => (
-          <option key={i} value={option}>
-            {songData[option].title}
-          </option>
-        ))}
-      </select>
+        size="s"
+        color="black"
+      />
 
-      <Button
+      <MuiIconButton
         type="button"
+        variant="outlined"
+        color="secondary"
+        size="small"
         className={classnames(
           moduleStyles.previewSongButton,
           !levelIsRunning && songInPreview && moduleStyles.previewActiveButton
         )}
         disabled={levelIsRunning}
-        color={Button.ButtonColor.neutralDark}
-        icon=" fa-solid fa-play-pause"
         aria-label={songInPreview ? 'Pause' : 'Play'}
         onClick={onPreviewBtnClick}
-      />
+      >
+        <FontAwesomeV6Icon iconName="play-pause" />
+      </MuiIconButton>
     </div>
   );
 };
