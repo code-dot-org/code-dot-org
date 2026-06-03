@@ -9,6 +9,7 @@ import {useAppSelector} from '../util/reduxHooks';
 import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
 import AiDiffWorkSpace from './AiDiffWorkspace';
+import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
@@ -34,6 +35,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 }) => {
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
+  const [activeNav, setActiveNav] = useState('Home');
   const {personalizationData} = useTeachingProfileData();
 
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
@@ -85,6 +87,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
           unreadNotificationCount={unreadNotificationCount}
+          showSidebar={activeNav === 'Chats'}
+          onSidebarChatSelect={() => setActiveNav('Home')}
         />
       );
     }
@@ -110,6 +114,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
         />
         <div className={style.fabBackgroundDrawer}>{content}</div>
+        <BottomNav activeLabel={activeNav} onNavChange={setActiveNav} />
       </FocusLock>
     </Drawer>
   );
