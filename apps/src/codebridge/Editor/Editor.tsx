@@ -144,6 +144,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         // eslint configuration
         const config = {
           ...js.configs.recommended,
+          rules: {
+            // no-unused-vars can fire confusingly if the variable is used in another file.
+            'no-unused-vars': 'off',
+          },
           languageOptions: {
             globals: {
               ...globals.browser,
