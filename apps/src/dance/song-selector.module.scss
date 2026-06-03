@@ -6,6 +6,10 @@ $preview-button-gap: 8px;
   align-items: flex-end;
   gap: $preview-button-gap;
 
+  // Restore the bottom spacing the original layout got from the preview
+  // button's `margin: 0 0 10px 0`.
+  margin-bottom: 10px;
+
   .selectStyle {
     flex: 1;
     min-width: 0;
