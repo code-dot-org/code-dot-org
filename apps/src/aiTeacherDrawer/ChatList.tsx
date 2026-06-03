@@ -1,5 +1,4 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import classNames from 'classnames';
 import {
   Box,
   List,
@@ -9,6 +8,7 @@ import {
   Typography,
   Button as MuiButton,
 } from '@mui/material';
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
