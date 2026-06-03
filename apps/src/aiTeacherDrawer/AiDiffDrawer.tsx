@@ -36,6 +36,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const [activeNav, setActiveNav] = useState('Home');
+  const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
 
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
@@ -87,8 +88,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
           unreadNotificationCount={unreadNotificationCount}
-          showSidebar={activeNav === 'Chats'}
-          onSidebarChatSelect={() => setActiveNav('Home')}
+          showSidebar={showChatList}
+          onSidebarChatSelect={() => setShowChatList(false)}
         />
       );
     }
@@ -114,7 +115,13 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
         />
         <div className={style.fabBackgroundDrawer}>{content}</div>
-        <BottomNav activeLabel={activeNav} onNavChange={setActiveNav} />
+        <BottomNav
+          activeLabel={activeNav}
+          onNavChange={label => {
+            setActiveNav(label);
+            setShowChatList(label === 'Chats');
+          }}
+        />
       </FocusLock>
     </Drawer>
   );
