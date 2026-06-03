@@ -42,6 +42,7 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/platform": "workspace:*",
     "@dotenv-run/cli": "^1.3.6",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",

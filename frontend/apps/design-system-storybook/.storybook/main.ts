@@ -19,6 +19,7 @@ function getAbsolutePath(value: string) {
 const config: StorybookConfig = {
   stories: [
     '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
+    '../../../packages/platform/src/**/stories/*.story.@(ts|tsx)',
   ],
   addons: [
     getAbsolutePath('@storybook/addon-a11y'),
@@ -36,6 +37,20 @@ const config: StorybookConfig = {
         ...(config.resolve?.alias || {}),
         '@': resolve(__dirname, '../../../packages/component-library/src'),
         '@public': resolve(__dirname, '../src'),
+        // Resolve the platform package to its source so stories hot-reload on
+        // edits to platform code (rather than its built dist).
+        '@code-dot-org/platform': resolve(
+          __dirname,
+          '../../../packages/platform/src',
+        ),
+        // Resolve component-library to source too, so design-system components
+        // pulled in transitively (e.g. by platform's Markdown) bring their SCSS
+        // module styles with them — matching how component-library's own
+        // stories render.
+        '@code-dot-org/component-library': resolve(
+          __dirname,
+          '../../../packages/component-library/src',
+        ),
       },
     };
 
