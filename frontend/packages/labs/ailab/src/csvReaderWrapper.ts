@@ -1,28 +1,44 @@
 import Papa, {ParseResult} from 'papaparse';
-import {store} from './index';
+
+import {ColumnTypes} from './constants';
+import {containsOnlyNumbers} from './helpers/columnDetails';
 import {
   setImportedData,
   setInvalidData,
   setColumnsByDataType,
   setRemovedRowsCount,
 } from './redux';
-import {containsOnlyNumbers} from './helpers/columnDetails';
-import {ColumnTypes} from './constants';
 import {DataRow} from './types';
+
+import {store} from './index';
 
 export const parseCSV = (
   csvfile: string,
   download: boolean,
   useDefaultColumnDataType: boolean,
 ): void => {
-  Papa.parse(csvfile, {
-    complete: (result: ParseResult<Record<string, string>>) => {
-      updateData(result, useDefaultColumnDataType, !download);
-    },
-    header: true,
-    download: download,
-    skipEmptyLines: true,
-  });
+  // `csvfile` is either a URL to fetch (download) or a raw CSV string. These
+  // are distinct papaparse overloads — `download: true` selects the remote
+  // config, a plain string selects the local config — so the runtime branch
+  // is also what lets each call type-check (a single config carrying a
+  // non-literal `download` matches neither overload).
+  const complete = (result: ParseResult<Record<string, string>>) => {
+    updateData(result, useDefaultColumnDataType, !download);
+  };
+  if (download) {
+    Papa.parse(csvfile, {
+      complete,
+      header: true,
+      download: true,
+      skipEmptyLines: true,
+    });
+  } else {
+    Papa.parse<Record<string, string>>(csvfile, {
+      complete,
+      header: true,
+      skipEmptyLines: true,
+    });
+  }
 };
 
 export const MIN_CSV_ROWS = 2;

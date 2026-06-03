@@ -6,6 +6,7 @@ import {
   isCurrentColumnReadOnly,
   currentColumnContainsOnlyNumbers,
 } from '../../src/selectors/currentColumnSelectors';
+
 import {
   classificationState,
   allNumericalState,

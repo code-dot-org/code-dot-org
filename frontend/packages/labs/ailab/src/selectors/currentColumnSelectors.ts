@@ -1,4 +1,6 @@
 import {createSelector} from 'reselect';
+
+import {ColumnTypes} from '../constants';
 import {
   getUniqueOptions,
   getExtrema,
@@ -8,6 +10,7 @@ import {
   tooManyUniqueOptions,
   containsOnlyNumbers,
 } from '../helpers/columnDetails';
+import {RootState} from '../redux';
 import {
   getSelectedColumns,
   getData,
@@ -15,8 +18,6 @@ import {
   getMetadata,
   getTrainedModelDetails,
 } from '../selectors';
-import {ColumnTypes} from '../constants';
-import {RootState} from '../redux';
 import {
   DataRow,
   Metadata,

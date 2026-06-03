@@ -1,11 +1,12 @@
-import {store} from './index';
+import {ColumnTypes} from './constants';
 import {
   setImportedMetadata,
   setColumnsByDataType,
   setLabelColumn,
 } from './redux';
-import {ColumnTypes} from './constants';
 import {Metadata} from './types';
+
+import {store} from './index';
 
 export const parseJSON = (jsonfile: string): void => {
   const rawFile = new XMLHttpRequest();

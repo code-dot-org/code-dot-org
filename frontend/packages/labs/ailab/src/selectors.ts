@@ -1,4 +1,5 @@
 import {createSelector} from 'reselect';
+
 import {ColumnTypes} from './constants';
 import {
   filterColumnsByType,

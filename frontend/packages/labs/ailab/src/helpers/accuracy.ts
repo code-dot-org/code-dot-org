@@ -7,13 +7,14 @@
 */
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
+import {isRegression, RootState} from '../redux';
+import {ResultsData, DataRow} from '../types';
+
 import {getExtrema} from './columnDetails';
 import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,
 } from './valueConversion';
-import {isRegression, RootState} from '../redux';
-import {ResultsData, DataRow} from '../types';
 
 // Return results data so that it looks like regular data provided to the
 // DataTable.

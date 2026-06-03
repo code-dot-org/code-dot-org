@@ -1,23 +1,25 @@
 /* React component to handle predicting and displaying predictions. */
 import React from 'react';
 import {connect} from 'react-redux';
-import {store} from '../index';
-import train from '../train';
-import {setTestData, getPredictAvailable, RootState} from '../redux';
 import {Dispatch} from 'redux';
+
+import {imageUrl} from '../assetPath';
+import {styles} from '../constants';
+import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
+import {getLocalizedValue} from '../helpers/valueDetails';
+import I18n from '../i18n';
+import {store} from '../index';
+import {setTestData, getPredictAvailable, RootState} from '../redux';
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
   getExtremaByColumn,
 } from '../selectors';
-import {styles} from '../constants';
-import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
+import train from '../train';
+
 import ScrollableContent from './ScrollableContent';
-import I18n from '../i18n';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {getLocalizedValue} from '../helpers/valueDetails';
 
 interface PredictProps {
   labelColumn: string;
@@ -127,7 +129,7 @@ const Predict = ({
             <img
               className="ailab-image-hover"
               style={styles.predictBot}
-              src={aiBotBorder}
+              src={imageUrl('ai-bot/ai-bot-border.png')}
               alt={I18n.t('aiBotAltText')}
             />
           </div>
