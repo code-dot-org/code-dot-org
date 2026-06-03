@@ -101,15 +101,16 @@ export default function ScrapbookGallery({userName}: Props) {
 
   return (
     <div className={moduleStyles.page}>
-      <h1 className={moduleStyles.title}>{userName}&rsquo;s 💡 Aha! Moments</h1>
+      <h1 className={moduleStyles.title}>{userName}&rsquo;s Scrapbook</h1>
       {error && <div className={moduleStyles.error}>{error}</div>}
       {!error && entries === null && (
         <div className={moduleStyles.loading}>Loading...</div>
       )}
       {!error && entries !== null && entries.length === 0 && (
         <div className={moduleStyles.empty}>
-          No Aha! moments saved yet. Click the +Scrapbook button on any level to
-          add one.
+          No key learning moments saved yet. Click the{' '}
+          <FontAwesomeV6Icon iconName="thumbtack" /> button on any level to add
+          one.
         </div>
       )}
       {!error && entries !== null && entries.length > 0 && (

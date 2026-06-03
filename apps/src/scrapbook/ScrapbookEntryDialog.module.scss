@@ -11,7 +11,11 @@
 
 .screenshots {
   display: flex;
-  gap: 16px;
+  // Indent by the stem-row label column (80px min-width + 12px gap) so the
+  // images line up with the textareas below rather than starting at the
+  // dialog's left edge.
+  padding-inline-start: 92px;
+  gap: 10px;
 }
 
 .screenshotSlot {
@@ -32,24 +36,11 @@
 
 .screenshotImg {
   width: 100%;
-  height: 140px;
+  height: 220px;
   object-fit: cover;
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px;
   background-color: var(--background-neutral-secondary);
-}
-
-.screenshotPlaceholder {
-  width: 100%;
-  height: 140px;
-  border: 1px dashed var(--borders-neutral-strong);
-  border-radius: 4px;
-  background-color: var(--background-neutral-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
 }
 
 .stems {
@@ -74,9 +65,45 @@
 
 .stemField {
   flex: 1;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  resize: vertical;
+  box-shadow: none;
+
+  &:focus {
+    outline: 2px solid var(--borders-brand-primary);
+    outline-offset: -1px;
+  }
+
+  &:disabled {
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-secondary);
+  }
 }
 
 .error {
   color: var(--text-error);
   font-size: 13px;
+}
+
+.experimentChipRow {
+  // Anchored to top-left of the dialog itself (the dialog has position:relative
+  // so absolute positioning here lands on its top-left padded area). This puts
+  // the chip on the same vertical line as the centered "Add to Scrapbook"
+  // heading rather than below it in the customContent flow.
+  position: absolute;
+  inset-block-start: 2.25rem;
+  inset-inline-start: 3.5rem;
+}
+
+.experimentChip {
+  background: #e0d4f5 !important;
+  color: #4b2a8a !important;
+  border: none !important;
 }

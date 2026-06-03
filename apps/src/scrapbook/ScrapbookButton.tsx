@@ -37,7 +37,7 @@ export default function ScrapbookButton() {
         )}
         onClick={() => setDialogOpen(true)}
       >
-        <FontAwesomeV6Icon iconName="lightbulb" />
+        <FontAwesomeV6Icon iconName="thumbtack" />
       </button>
       <ScrapbookEntryDialog
         isOpen={dialogOpen}

@@ -1,11 +1,9 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
-import {Button as MuiButton, TextField} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import {Button as MuiButton, Chip as MuiChip} from '@mui/material';
+import React, {useEffect, useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-import captureLevelScreenshot from './captureLevelScreenshot';
-import RegionSelector, {SelectionRect} from './RegionSelector';
 
 import moduleStyles from './ScrapbookEntryDialog.module.scss';
 
@@ -32,6 +30,19 @@ interface ExistingEntry {
 
 const EMPTY_FORM: FormState = {atFirst: '', butThen: '', andNow: ''};
 
+// Cap uploaded images at ~5MB pre-base64 so we don't blow up the JSON payload
+// to the scrapbook_entries endpoint.
+const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
+
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = () => reject(reader.error || new Error('file read failed'));
+    reader.readAsDataURL(file);
+  });
+}
+
 export default function ScrapbookEntryDialog({
   isOpen,
   onClose,
@@ -43,9 +54,6 @@ export default function ScrapbookEntryDialog({
   const [afterUrl, setAfterUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [capturingSlot, setCapturingSlot] = useState<'before' | 'after' | null>(
-    null
-  );
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -86,25 +94,6 @@ export default function ScrapbookEntryDialog({
 
   if (!isOpen) return null;
 
-  if (capturingSlot) {
-    return (
-      <RegionSelector
-        onSelect={async (rect: SelectionRect) => {
-          const slot = capturingSlot;
-          const captured = await captureLevelScreenshot(rect);
-          setCapturingSlot(null);
-          if (!captured) {
-            setError('Could not capture screenshot.');
-            return;
-          }
-          if (slot === 'before') setBeforeUrl(captured);
-          else setAfterUrl(captured);
-        }}
-        onCancel={() => setCapturingSlot(null)}
-      />
-    );
-  }
-
   const handleChange =
     (field: keyof FormState) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -119,9 +108,27 @@ export default function ScrapbookEntryDialog({
     onClose();
   };
 
-  const handleRecapture = (slot: 'before' | 'after') => {
+  const handleFileSelected = async (
+    slot: 'before' | 'after',
+    file: File | null
+  ) => {
+    if (!file) return;
     setError(null);
-    setCapturingSlot(slot);
+    if (!file.type.startsWith('image/')) {
+      setError('Please choose an image file.');
+      return;
+    }
+    if (file.size > MAX_UPLOAD_BYTES) {
+      setError('Image is too large. Please choose one under 5 MB.');
+      return;
+    }
+    try {
+      const dataUrl = await readFileAsDataUrl(file);
+      if (slot === 'before') setBeforeUrl(dataUrl);
+      else setAfterUrl(dataUrl);
+    } catch {
+      setError('Could not read the selected file.');
+    }
   };
 
   const handleSave = async () => {
@@ -160,7 +167,7 @@ export default function ScrapbookEntryDialog({
 
   const canSave = !saving && !loading && !!scriptId && !!levelId;
 
-  return (
+  return createPortal(
     <Dialog
       title="Add to Scrapbook"
       onClose={handleClose}
@@ -176,17 +183,24 @@ export default function ScrapbookEntryDialog({
       }}
       customContent={
         <div className={moduleStyles.content}>
+          <div className={moduleStyles.experimentChipRow}>
+            <MuiChip
+              label="experiment"
+              size="small"
+              className={moduleStyles.experimentChip}
+            />
+          </div>
           <div className={moduleStyles.screenshots}>
             <ScreenshotSlot
               label="Before"
               url={beforeUrl}
-              onRecapture={() => handleRecapture('before')}
+              onFileSelected={file => handleFileSelected('before', file)}
               disabled={saving || loading}
             />
             <ScreenshotSlot
               label="After"
               url={afterUrl}
-              onRecapture={() => handleRecapture('after')}
+              onFileSelected={file => handleFileSelected('after', file)}
               disabled={saving || loading}
             />
           </div>
@@ -198,15 +212,12 @@ export default function ScrapbookEntryDialog({
             ].map(({label, field}) => (
               <div key={field} className={moduleStyles.stemRow}>
                 <span className={moduleStyles.stemLabel}>{label}</span>
-                <TextField
+                <textarea
                   className={moduleStyles.stemField}
-                  fullWidth
-                  multiline
                   rows={2}
+                  maxLength={500}
                   value={form[field]}
                   onChange={handleChange(field)}
-                  inputProps={{maxLength: 500}}
-                  size="small"
                   disabled={loading}
                 />
               </div>
@@ -215,40 +226,54 @@ export default function ScrapbookEntryDialog({
           {error && <div className={moduleStyles.error}>{error}</div>}
         </div>
       }
-    />
+    />,
+    document.body
   );
 }
 
 function ScreenshotSlot({
   label,
   url,
-  onRecapture,
+  onFileSelected,
   disabled,
 }: {
   label: string;
   url: string | null;
-  onRecapture: () => void;
+  onFileSelected: (file: File | null) => void;
   disabled: boolean;
 }) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
     <div className={moduleStyles.screenshotSlot}>
       <span className={moduleStyles.screenshotLabel}>{label}</span>
-      {url ? (
-        <img
-          src={url}
-          alt={`${label} screenshot`}
-          className={moduleStyles.screenshotImg}
-        />
-      ) : (
-        <div className={moduleStyles.screenshotPlaceholder}>no screenshot</div>
-      )}
+      <img
+        src={
+          url ||
+          'https://studio.code.org/lab_resources/html-placeholder-image.avif'
+        }
+        alt={url ? `${label} screenshot` : `${label} placeholder`}
+        className={moduleStyles.screenshotImg}
+      />
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/*"
+        hidden
+        onChange={e => {
+          const file = e.target.files?.[0] || null;
+          onFileSelected(file);
+          // Reset so picking the same file twice still fires onChange.
+          e.target.value = '';
+        }}
+      />
       <MuiButton
         variant="text"
         size="small"
-        onClick={onRecapture}
+        onClick={() => inputRef.current?.click()}
         disabled={disabled}
       >
-        {url ? 'Recapture' : 'Capture now'}
+        {url ? 'Replace' : 'Upload image'}
       </MuiButton>
     </div>
   );

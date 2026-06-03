@@ -456,6 +456,7 @@ en:
       label: 'Hi %{username}'
       stats: 'Code Studio'
       my_projects: 'My projects'
+      my_scrapbook: 'My scrapbook'
       settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
