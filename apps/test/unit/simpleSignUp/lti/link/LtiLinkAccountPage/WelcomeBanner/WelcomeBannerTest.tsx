@@ -35,7 +35,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
         // Should render provider image
         screen.getByAltText('LMS');
         // Should render code.org logo
-        screen.getByAltText(i18n.codeLogo());
+        screen.getByAltText(i18n.codeAiLogo());
       });
 
       it('should render a header', () => {

@@ -17,7 +17,7 @@ const AccountBanner: React.FunctionComponent<{
   <div className={styles.bannerContainer}>
     {showLogo && (
       <div className={styles.iconContainer}>
-        <img src={codeLogo} alt={i18n.codeLogo()} />
+        <img src={codeLogo} alt={i18n.codeAiLogo()} />
       </div>
     )}
 

@@ -143,7 +143,7 @@ export default connect(state => ({
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeLogo()} />
+      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeAiLogo()} />
     </header>
   );
 };
@@ -290,7 +290,7 @@ const SignInInstructions = ({
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
-              alt={i18n.codeLogoClever()}
+              alt={i18n.codeAiLogoClever()}
             />
           </li>
         </ol>

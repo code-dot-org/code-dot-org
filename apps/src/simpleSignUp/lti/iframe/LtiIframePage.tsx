@@ -37,7 +37,7 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
   return (
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
-        <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
+        <img className={styles.logo} src={logoUrl} alt={i18n.codeAiLogo()} />
         <Typography className={styles.description} variant="body1" gutterBottom>
           {textContent}
         </Typography>
