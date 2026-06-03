@@ -4,7 +4,7 @@ import type {ReactNode} from 'react';
 
 import type {MarkdownExtension} from '../extension';
 
-import moduleStyles from './callout.module.scss';
+import moduleStyles from './callout.module.css';
 
 interface CalloutProps {
   /** Visual flavor, e.g. "tip" or "warning". Surfaced as a data attribute. */

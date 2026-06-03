@@ -5,7 +5,7 @@ import {type CSSProperties, type ReactNode} from 'react';
 import type {MarkdownExtension} from '../extension';
 
 import {type MdastNode, visit} from './mdast';
-import moduleStyles from './expandableImages.module.scss';
+import moduleStyles from './expandableImages.module.css';
 
 const EXPANDABLE_SUFFIX = 'expandable';
 

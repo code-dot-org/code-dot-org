@@ -41,7 +41,7 @@ import {
 } from '../localization';
 import rehypeLocalize from '../rehypeLocalize';
 
-import moduleStyles from './markdown.module.scss';
+import moduleStyles from './markdown.module.css';
 
 export interface MarkdownProps {
   /** Markdown content. Used instead of `children` when both are provided. */

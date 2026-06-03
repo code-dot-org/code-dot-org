@@ -4,7 +4,7 @@ import type {ReactNode} from 'react';
 
 import type {MarkdownExtension} from '../extension';
 
-import moduleStyles from './vocabularyDefinition.module.scss';
+import moduleStyles from './vocabularyDefinition.module.css';
 
 /** A resolved vocabulary term. */
 export interface VocabularyTerm {
