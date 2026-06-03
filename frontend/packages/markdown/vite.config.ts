@@ -38,15 +38,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@code-dot-org/platform': path.resolve(__dirname, './src'),
+      '@code-dot-org/markdown': path.resolve(__dirname, './src'),
     },
   },
   build: {
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts', 'src/markdown/index.ts'],
-      name: 'platform',
+      entry: ['src/index.ts'],
+      name: 'markdown',
     },
     rollupOptions: {
       output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],

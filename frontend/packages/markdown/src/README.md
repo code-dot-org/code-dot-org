@@ -5,7 +5,7 @@ components. Safe to use on untrusted input: output passes through a
 `rehype-sanitize` allowlist before it reaches React.
 
 ```tsx
-import {Markdown} from '@code-dot-org/platform/markdown';
+import {Markdown} from '@code-dot-org/markdown';
 
 <Markdown content="# Hello\n\nSome **bold** text." />
 // or, equivalently, as a single string child:
@@ -158,11 +158,11 @@ renders its targets as plain bold, `expandableImages()` as inline images.
 
 ## Shipped extensions
 
-Import from `@code-dot-org/platform/markdown` as `extensions`. Plain-object
+Import from `@code-dot-org/markdown` as `extensions`. Plain-object
 extensions go straight into the array; factories are called first:
 
 ```ts
-import {Markdown, extensions} from '@code-dot-org/platform/markdown';
+import {Markdown, extensions} from '@code-dot-org/markdown';
 
 const exts = [
   extensions.inlineStyles,                       // object
