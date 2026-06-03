@@ -2,8 +2,8 @@
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
 import I18n from '../i18n';
-import {RootState} from '../redux';
-import {
+import type {RootState} from '../redux';
+import type {
   DataRow,
   Metadata,
   MetadataField,

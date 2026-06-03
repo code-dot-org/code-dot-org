@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 import {styles} from '../constants';
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import I18n from '../i18n';
-import {RootState} from '../redux';
-import {Metadata, DatasetDetails} from '../types';
+import type {RootState} from '../redux';
+import type {Metadata, DatasetDetails} from '../types';
 
 import ScrollableContent from './ScrollableContent';
 

@@ -2,12 +2,12 @@
 https://github.com/mljs/knn */
 
 import KNN from 'ml-knn';
-import {Store} from 'redux';
+import type {Store} from 'redux';
 
 import {getPercentCorrect} from '../helpers/accuracy';
 import {logFirehoseMetric} from '../helpers/metrics';
+import type {RootState} from '../redux';
 import {
-  RootState,
   isRegression,
   setKValue,
   setTrainedModel,
@@ -15,7 +15,7 @@ import {
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
 } from '../redux';
-import {KNNTrainedModelDetails} from '../types';
+import type {KNNTrainedModelDetails} from '../types';
 
 export default class KNNTrainer {
   private store: Store<RootState>;

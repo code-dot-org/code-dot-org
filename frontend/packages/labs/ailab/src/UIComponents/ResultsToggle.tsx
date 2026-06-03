@@ -5,7 +5,8 @@ import {connect} from 'react-redux';
 
 import {ResultsGrades, styles} from '../constants';
 import I18n from '../i18n';
-import {setResultsTab, RootState} from '../redux';
+import type {RootState} from '../redux';
+import {setResultsTab} from '../redux';
 
 interface ResultsToggleProps {
   resultsTab?: string;

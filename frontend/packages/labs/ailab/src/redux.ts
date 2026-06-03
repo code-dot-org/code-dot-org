@@ -1,4 +1,4 @@
-import KNN from 'ml-knn';
+import type KNN from 'ml-knn';
 
 import {
   ColumnTypes,
@@ -18,7 +18,7 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
-import {
+import type {
   DataRow,
   Metadata,
   Mode,
@@ -121,6 +121,11 @@ export interface RootState {
 // package entry) is nameable in the emitted declaration file.
 export interface ReduxAction {
   type: string;
+  // Actions carry arbitrary, per-type payloads keyed by name, which the
+  // reducer reads by field (~60 sites). A discriminated union over all ~40
+  // action creators would remove this `any`, but that is a larger refactor
+  // tracked separately.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 

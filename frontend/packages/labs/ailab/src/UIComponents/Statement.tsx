@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import I18n from '../i18n';
-import {setLabelColumn, removeSelectedFeature, RootState} from '../redux';
+import type {RootState} from '../redux';
+import {setLabelColumn, removeSelectedFeature} from '../redux';
 
 interface StatementProps {
   shouldShow?: boolean;
@@ -23,7 +24,6 @@ interface StatementProps {
 const Statement = ({
   shouldShow,
   smallFont,
-  data,
   currentPanel,
   labelColumn,
   selectedFeatures,
@@ -130,7 +130,7 @@ const Statement = ({
     .filter((part: string) => part);
   // Swap the OUTPUT and INPUTS placeholders with React components.
   const predictionStatementComponents = predictionStatementParts
-    .map((part: string, index: number) => {
+    .map((part: string) => {
       if (part === OUTPUT_KEY) {
         return labelHTML(labelColumn!, currentPanel!);
       } else if (part === INPUTS_KEY) {

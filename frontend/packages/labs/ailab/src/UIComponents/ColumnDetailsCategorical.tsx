@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import {colors, styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
-import {CategoricalColumnDetails} from '../types';
+import type {CategoricalColumnDetails} from '../types';
 
 interface ColumnDetailsCategoricalProps {
   columnDetails: CategoricalColumnDetails;

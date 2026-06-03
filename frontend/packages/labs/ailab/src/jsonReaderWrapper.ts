@@ -4,7 +4,7 @@ import {
   setColumnsByDataType,
   setLabelColumn,
 } from './redux';
-import {Metadata} from './types';
+import type {Metadata} from './types';
 
 import {store} from './index';
 

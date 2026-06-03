@@ -3,7 +3,7 @@
   convert categorical strings into ordinal integers to pass to the algorithm and
   likewise convert the returned integers back into human-readable strings.
 */
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getSelectedCategoricalColumns} from '../selectors';
 
 import {isEmpty, getKeyByValue} from './utils';

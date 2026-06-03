@@ -1,7 +1,7 @@
 /* React component to handle predicting and displaying predictions. */
-import React from 'react';
+import type React from 'react';
 import {connect} from 'react-redux';
-import {Dispatch} from 'redux';
+import type {Dispatch} from 'redux';
 
 import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
@@ -10,7 +10,8 @@ import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
 import {store} from '../index';
-import {setTestData, getPredictAvailable, RootState} from '../redux';
+import type {RootState} from '../redux';
+import {setTestData, getPredictAvailable} from '../redux';
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,

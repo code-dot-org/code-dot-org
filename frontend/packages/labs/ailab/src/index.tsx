@@ -5,7 +5,8 @@ import {createStore} from 'redux';
 import App from './App';
 import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
-import {getDatasets, Dataset} from './datasetManifest';
+import type {Dataset} from './datasetManifest';
+import {getDatasets} from './datasetManifest';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
 import rootReducer, {
@@ -19,7 +20,7 @@ import rootReducer, {
   setInstructionsDismissed,
   setFirehoseMetricsLogger,
 } from './redux';
-import {Mode, ModelDataToSave, SaveResponse} from './types';
+import type {Mode, ModelDataToSave, SaveResponse} from './types';
 
 // Re-export the consumer-facing asset-path setter from the package entry so
 // embedders get the whole public API (`initAll`, `instructionsDismissed`,
