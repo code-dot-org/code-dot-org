@@ -179,11 +179,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           setUploadingFileAlertIds(prev => ({...prev, [filename]: alertId}));
           return;
         } else if (event === BackpackEvent.UploadFailed) {
-          addAlert(
-            'danger',
-            `Upload of ${filename} to your Backpack failed. Please try again.`,
-            false
-          );
+          // Client handles showing upload failed alert where it makes the most sense for the lab.
           removeAlert(uploadingFileAlertIds[filename]);
           setUploadingFileAlertIds(prev => {
             const copy = {...prev};
