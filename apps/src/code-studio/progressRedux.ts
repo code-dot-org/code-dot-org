@@ -598,21 +598,15 @@ function sendReportForLevel(
         Lab2ProgressTimer.getInstance().resetMilestoneTimer();
       }
     })
-    .catch((error: Error) => logMilestoneReportError(url, error));
-}
-
-// A rejected fetch (e.g. Safari's "Load failed" or Chrome's "Failed to fetch")
-// means the milestone POST never reached the server: the request failed at the
-// network layer rather than returning an HTTP error. This is commonly a dropped
-// connection or the user navigating away mid-request, and is usually benign.
-// Catch it so it is recorded rather than surfacing as an uncaught promise
-// rejection in onunhandledrejection.
-function logMilestoneReportError(url: string, error: Error) {
-  Lab2Registry.getInstance().getMetricsReporter().logWarning({
-    message: 'Failed to send milestone report',
-    url,
-    error: error.message,
-  });
+    .catch((error: Error) =>
+      // The promise will resolve for non-2xx status codes. We will only hit this for network errors/
+      // navigation away/etc. Log as warnings.
+      Lab2Registry.getInstance().getMetricsReporter().logWarning({
+        message: 'Failed to send milestone report',
+        url,
+        error: error.message,
+      })
+    );
 }
 
 /**
