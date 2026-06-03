@@ -1,34 +1,25 @@
-$preview-button-size: 32px;
-$preview-button-gap: 8px;
+$preview-button-width: 32px;
+$preview-button-margin-left: 8px;
 
 .songSelectorWrapper {
   display: flex;
   align-items: flex-end;
-  gap: $preview-button-gap;
-
-  // Restore the bottom spacing the original layout got from the preview
-  // button's `margin: 0 0 10px 0`.
   margin-bottom: 10px;
 
   .selectStyle {
     flex: 1;
-    min-width: 0;
 
-    // SimpleDropdown's container is inline-flex and its inner arrow-div is
-    // content-width unless styleAsFormField is set. Force it to fill so the
-    // select spans the row and the preview button sits right beside it
-    // (otherwise the grown label leaves dead space and the button drifts
-    // to the far right).
+    // SimpleDropdown's inner wrapper is content-width unless styleAsFormField.
     > div {
       width: 100%;
     }
   }
 
   .previewSongButton {
-    height: $preview-button-size;
-    width: $preview-button-size;
-    flex-shrink: 0;
+    height: 32px;
+    width: $preview-button-width;
     padding: 0;
+    margin-inline-start: $preview-button-margin-left;
 
     &.previewActiveButton {
       color: var(--text-neutral-white-fixed);
