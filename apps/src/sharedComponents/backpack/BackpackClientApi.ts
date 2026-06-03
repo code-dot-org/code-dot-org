@@ -206,6 +206,16 @@ export default class BackpackClientApi {
           `${rootUrl(this.channelId)}/${filename}`,
           fileToUpload
         );
+        Object.values(this.eventListeners).forEach(listener =>
+          listener(BackpackEvent.FileAdded, filename)
+        );
+        onSuccess?.();
+      } else {
+        this.sendUploadFailedEvent(filename);
+        if (onError) {
+          onError(new Error(`Failed to fetch file from url`));
+          return;
+        }
       }
     } catch (error) {
       this.sendUploadFailedEvent(filename);
@@ -216,10 +226,6 @@ export default class BackpackClientApi {
         throw error;
       }
     }
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded, filename)
-    );
-    onSuccess?.();
   }
 
   async saveBlobFile(
