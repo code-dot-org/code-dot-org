@@ -29,7 +29,7 @@ describe('validateFolderName', function () {
         parentId: DEFAULT_FOLDER_ID,
         projectFolders: testProject.folders,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual('Names must be only letters, numbers, dashes, or underscores');
 
     const duplicateFolderName = 'testfolder1';
 

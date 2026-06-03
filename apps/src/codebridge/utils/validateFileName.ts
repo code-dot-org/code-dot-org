@@ -68,7 +68,7 @@ export const validateFileName = ({
   }
 
   if (!isValidFileName(fileName)) {
-    return codebridgeI18n.invalidNameError();
+    return 'Names must be only letters, numbers, dashes, or underscores';
   }
 
   const duplicateFileError = isDuplicateFileName({

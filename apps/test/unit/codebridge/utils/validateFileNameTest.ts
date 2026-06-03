@@ -5,6 +5,9 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import {testProject, validationFile} from '../test-files';
 
+const INVALID_NAME_ERROR =
+  'Names must be only letters, numbers, dashes, or underscores';
+
 describe('validateFileName', function () {
   it('can validateFileName', function () {
     expect(
@@ -35,7 +38,7 @@ describe('validateFileName', function () {
         validationFile,
         isStartMode: false,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     expect(
       validateFileName({
@@ -133,7 +136,7 @@ describe('validateFileName', function () {
         isStartMode: false,
         validFileTypes,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     // Valid file name/type has no return.
     expect(
