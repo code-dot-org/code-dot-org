@@ -2,9 +2,9 @@
 
 # This script populates the hashed_email column of the pegasus contacts table.
 
-require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'digest/md5'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 if ARGV.length != 3
   puts 'Usage: ./bin/oneoff/backfill_data/contacts_hashed_email ' \

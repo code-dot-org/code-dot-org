@@ -1,6 +1,6 @@
 require 'cdo/poste'
 require 'cdo/regexp'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require lib_dir 'forms/pegasus_form_errors'
 require lib_dir 'forms/pegasus_form_validation'
 require 'active_support/core_ext/string/inflections'

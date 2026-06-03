@@ -811,6 +811,6 @@ class ScriptLevel < ApplicationRecord
   end
 
   private def build_exemplar_url(path)
-    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
+    CDO.studio_url(path) + '?exemplar=true'
   end
 end
