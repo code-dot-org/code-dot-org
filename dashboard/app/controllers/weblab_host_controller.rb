@@ -1,7 +1,7 @@
 class WeblabHostController < ApplicationController
   BRAMBLE_URL = 'https://downloads.computinginthecore.org/bramble_0.1.33'
   BRAMBLE_LOCALHOST_URL = 'http://127.0.0.1:8000/src'
-  STUDIO_URL = CDO.studio_url('', CDO.default_scheme)
+  STUDIO_URL = CDO.studio_url('')
 
   def index
     @dev_mode = false # Change to true to point to Bramble running on localhost
