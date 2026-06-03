@@ -1,0 +1,25 @@
+.groupNode {
+  width: 100%;
+  height: 100%;
+}
+
+.groupFrame {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--border-neutral-primary);
+  border-radius: 12px;
+  background: var(--background-neutral-secondary);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.groupLabel {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

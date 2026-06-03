@@ -3,14 +3,19 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {getAbsoluteNodePosition} from './grouping';
+
 /**
  * Compare two nodes by position: top-to-bottom (y), then left-to-right (x).
  */
 function compareByPosition(
   a: SketchlabReactFlowNode,
-  b: SketchlabReactFlowNode
+  b: SketchlabReactFlowNode,
+  nodeMap: Map<string, SketchlabReactFlowNode>
 ): number {
-  return a.position.y - b.position.y || a.position.x - b.position.x;
+  const aPosition = getAbsoluteNodePosition(a, nodeMap);
+  const bPosition = getAbsoluteNodePosition(b, nodeMap);
+  return aPosition.y - bPosition.y || aPosition.x - bPosition.x;
 }
 
 /**
@@ -93,7 +98,9 @@ function orderComponent(
       queue.push(id);
     }
   }
-  queue.sort((a, b) => compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!));
+  queue.sort((a, b) =>
+    compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!, nodeMap)
+  );
 
   const result: string[] = [];
   const visited = new Set<string>();
@@ -116,14 +123,16 @@ function orderComponent(
       }
     }
     queue.push(...newlyAvailable);
-    queue.sort((a, b) => compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!));
+    queue.sort((a, b) =>
+      compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!, nodeMap)
+    );
   }
 
   // Cycle fallback: any unvisited nodes in the component, sorted by position.
   if (visited.size < componentIds.size) {
     const remaining = Array.from(componentIds).filter(id => !visited.has(id));
     remaining.sort((a, b) =>
-      compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!)
+      compareByPosition(nodeMap.get(a)!, nodeMap.get(b)!, nodeMap)
     );
     result.push(...remaining);
   }
@@ -212,7 +221,7 @@ export function computeTabOrder(
     orderComponent(comp, nodeMap, outgoing)
   );
   componentOrders.sort((a, b) =>
-    compareByPosition(nodeMap.get(a[0])!, nodeMap.get(b[0])!)
+    compareByPosition(nodeMap.get(a[0])!, nodeMap.get(b[0])!, nodeMap)
   );
 
   const nodeOrder = componentOrders.flat();
@@ -252,7 +261,7 @@ export function computeTabOrder(
   // Orphan nodes: not part of any edge.
   const orphans = nodes
     .filter(node => !connectedIds.has(node.id))
-    .sort(compareByPosition);
+    .sort((a, b) => compareByPosition(a, b, nodeMap));
   for (const orphan of orphans) {
     result.push({type: 'node', id: orphan.id});
   }

@@ -221,4 +221,31 @@ describe('computeTabOrder', () => {
     const allIds = result.map(e => `${e.type}:${e.id}`);
     expect(allIds).toHaveLength(new Set(allIds).size);
   });
+
+  it('sorts grouped nodes by absolute position', () => {
+    const nodes: SketchlabReactFlowNode[] = [
+      {
+        id: 'group',
+        type: 'group',
+        position: {x: 300, y: 0},
+        width: 200,
+        height: 200,
+        data: {},
+      },
+      {
+        id: 'inside-group',
+        type: 'text',
+        parentId: 'group',
+        position: {x: 20, y: 20},
+        data: {text: ''},
+      },
+      makeNode('left', 0, 0),
+    ];
+
+    expect(ids(computeTabOrder(nodes, []))).toEqual([
+      'node:left',
+      'node:group',
+      'node:inside-group',
+    ]);
+  });
 });

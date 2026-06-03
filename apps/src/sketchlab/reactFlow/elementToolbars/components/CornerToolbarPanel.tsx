@@ -8,9 +8,12 @@ import {
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '@cdo/apps/sketchlab/reactFlow/constants';
 import {useToolbarVisibility} from '@cdo/apps/sketchlab/reactFlow/context';
 import {useLineToolbar} from '@cdo/apps/sketchlab/reactFlow/hooks/useLineToolbar';
+import {isGroupNode} from '@cdo/apps/sketchlab/reactFlow/utils/grouping';
 
+import GroupNodeToolbar from '../GroupNodeToolbar';
 import ImageNodeToolbar from '../ImageNodeToolbar';
 import LineEdgeToolbar from '../LineEdgeToolbar';
+import MultiNodeSelectionToolbar from '../MultiNodeSelectionToolbar';
 import ShapeNodeToolbar from '../ShapeNodeToolbar';
 import TextNodeToolbar from '../TextNodeToolbar';
 
@@ -24,6 +27,10 @@ interface CornerToolbarPanelProps {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  selectedNodeIds: string[];
+  onClearSelection: () => void;
+  onGroupNodes: () => void;
+  onUngroupNode: (groupId: string) => void;
 }
 
 /**
@@ -37,6 +44,10 @@ export default function CornerToolbarPanel({
   setNodes,
   setEdges,
   pushSnapshot,
+  selectedNodeIds,
+  onClearSelection,
+  onGroupNodes,
+  onUngroupNode,
 }: CornerToolbarPanelProps) {
   const {openToolbarTarget} = useToolbarVisibility();
   const {
@@ -58,10 +69,28 @@ export default function CornerToolbarPanel({
   });
 
   const body = useMemo(() => {
+    if (selectedNodeIds.length > 1) {
+      return (
+        <MultiNodeSelectionToolbar
+          selectedCount={selectedNodeIds.length}
+          onClose={onClearSelection}
+          onGroupNodes={onGroupNodes}
+        />
+      );
+    }
+
     if (openToolbarTarget?.type === 'node') {
       const node = nodes.find(
         candidate => candidate.id === openToolbarTarget.id
       );
+      if (node && isGroupNode(node)) {
+        return (
+          <GroupNodeToolbar
+            nodeId={node.id}
+            onUngroup={() => onUngroupNode(node.id)}
+          />
+        );
+      }
       if (node?.type === 'shape') {
         return <ShapeNodeToolbar nodeId={node.id} />;
       }
@@ -105,6 +134,10 @@ export default function CornerToolbarPanel({
     setLineEdgeRotation,
     setLineEdgeLocked,
     setLineEdgeType,
+    selectedNodeIds,
+    onClearSelection,
+    onGroupNodes,
+    onUngroupNode,
   ]);
 
   if (!body) return null;

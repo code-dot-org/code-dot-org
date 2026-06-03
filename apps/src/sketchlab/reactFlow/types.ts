@@ -20,6 +20,13 @@ export type NodeDataBase = {
   locked?: boolean;
 };
 
+export type GroupPadding = {
+  top: number;
+  right: number;
+  bottom: number;
+  left: number;
+};
+
 // Typed runtime data shapes for each custom node.
 export type ShapeNodeData = NodeDataBase & {
   shapeType: ShapeType;
@@ -47,6 +54,10 @@ export type LineAnchorNodeData = NodeDataBase & {
   lineAnchorRole: 'source' | 'target';
 };
 
+export type GroupNodeData = NodeDataBase & {
+  padding?: GroupPadding;
+};
+
 export type AddNodeRequest =
   | {type: 'shape'; data: ShapeNodeData}
   | {type: 'text'; data: TextNodeData}
@@ -57,10 +68,12 @@ export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
 export type ImageNodeType = Node<ImageNodeData, 'image'>;
 export type LineAnchorNodeType = Node<LineAnchorNodeData, 'lineAnchor'>;
+export type GroupNodeType = Node<GroupNodeData, 'group'>;
 export type SketchLabNode =
   | ShapeNodeType
   | TextNodeType
   | ImageNodeType
-  | LineAnchorNodeType;
+  | LineAnchorNodeType
+  | GroupNodeType;
 
 export type ArrowHeadValue = 'none' | 'start' | 'end' | 'both';

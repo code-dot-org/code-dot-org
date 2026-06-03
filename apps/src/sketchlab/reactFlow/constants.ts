@@ -23,6 +23,7 @@ export const LINE_RECONNECT_SNAP_RADIUS_PX = 20;
 export const SAVE_DEBOUNCE_MS = 300;
 
 export const DEFAULT_PASTE_OFFSET_PX = 30;
+export const GROUP_PADDING_PX = 24;
 
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';

@@ -4,6 +4,7 @@ import {
   type IsValidConnection,
   type OnEdgesChange,
   type OnNodesChange,
+  type OnSelectionChangeFunc,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -50,6 +51,7 @@ import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
+import GroupNode from '../nodes/GroupNode';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
@@ -64,6 +66,12 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
+import {
+  groupSelectedNodes,
+  isGroupableNode,
+  syncGroupBounds,
+  ungroupNode,
+} from '../utils/grouping';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
@@ -77,6 +85,7 @@ import Toolbar from './Toolbar';
 import styles from './react-flow-canvas.module.scss';
 
 const NODE_TYPES = {
+  group: GroupNode,
   shape: ShapeNode,
   image: ImageNode,
   text: TextNode,
@@ -86,6 +95,10 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
+
+function arraysMatch(a: string[], b: string[]): boolean {
+  return a.length === b.length && a.every((value, index) => value === b[index]);
+}
 
 function stripDisplayFields<T extends object>(item: T): T {
   const result = {...item} as Record<string, unknown>;
@@ -128,6 +141,15 @@ export default function ReactFlowCanvas({
     syncRefs(nodes, edges);
   }, [nodes, edges, syncRefs]);
 
+  useEffect(() => {
+    setSelectedNodeIds(currentIds =>
+      currentIds.filter(id => nodes.some(node => node.id === id))
+    );
+    setSelectedEdgeIds(currentIds =>
+      currentIds.filter(id => edges.some(edge => edge.id === id))
+    );
+  }, [nodes, edges]);
+
   const handleUndo = useCallback(() => {
     const snapshot = undo();
     if (!snapshot) return;
@@ -149,6 +171,8 @@ export default function ReactFlowCanvas({
     trapFocus: boolean;
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
+  const [selectedNodeIds, setSelectedNodeIds] = useState<string[]>([]);
+  const [selectedEdgeIds, setSelectedEdgeIds] = useState<string[]>([]);
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
 
@@ -191,6 +215,10 @@ export default function ReactFlowCanvas({
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
+  }, []);
+  const clearSelection = useCallback(() => {
+    setSelectedNodeIds([]);
+    setSelectedEdgeIds([]);
   }, []);
   const {
     tabOrder,
@@ -324,6 +352,10 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
+    if (selectedNodeIds.length > 1 && selectedEdgeIds.length === 0) {
+      closeToolbar();
+      return;
+    }
     // If the user is actively interacting with the toolbar (mouse or keyboard
     // focus inside it), keep it open regardless of where the focus-tracking
     // state currently points.
@@ -339,7 +371,14 @@ export default function ReactFlowCanvas({
     ) {
       closeToolbar();
     }
-  }, [openToolbarTarget, nodeOrEdgeFocused, lastFocusedEntry, closeToolbar]);
+  }, [
+    openToolbarTarget,
+    nodeOrEdgeFocused,
+    lastFocusedEntry,
+    closeToolbar,
+    selectedNodeIds,
+    selectedEdgeIds,
+  ]);
 
   // Close the toolbar when its owning node/edge is deleted.
   useEffect(() => {
@@ -401,10 +440,15 @@ export default function ReactFlowCanvas({
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
         activeEntry?.type === type && activeEntry.id === item.id;
+      const isReactFlowSelected =
+        type === 'node'
+          ? selectedNodeIds.includes(item.id)
+          : selectedEdgeIds.includes(item.id);
       const isSelected =
-        nodeOrEdgeFocused &&
-        lastFocusedEntry?.type === type &&
-        lastFocusedEntry.id === item.id;
+        isReactFlowSelected ||
+        (nodeOrEdgeFocused &&
+          lastFocusedEntry?.type === type &&
+          lastFocusedEntry.id === item.id);
       return {
         selected: isSelected && !readOnly,
         domAttributes: {tabIndex: isTabTarget ? 0 : -1},
@@ -488,6 +532,8 @@ export default function ReactFlowCanvas({
     nodeOrEdgeFocused,
     lastFocusedEntry?.type,
     lastFocusedEntry?.id,
+    selectedNodeIds,
+    selectedEdgeIds,
     connectingFrom,
     readOnly,
     focusEntry,
@@ -591,6 +637,10 @@ export default function ReactFlowCanvas({
     });
   }, [edges, setNodes]);
 
+  useEffect(() => {
+    setNodes(currentNodes => syncGroupBounds(currentNodes));
+  }, [nodes, setNodes]);
+
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       pushSnapshot();
@@ -686,14 +736,18 @@ export default function ReactFlowCanvas({
   );
 
   const handleNodeClick = useCallback(
-    (_event: React.MouseEvent, node: {id: string}) => {
+    (event: React.MouseEvent, node: {id: string}) => {
       // Only open the toolbar in editable mode, and for nodes that aren't line anchors.
       // Mouse opens don't trap focus so resize handles and contenteditable text stay usable.
+      if (event.shiftKey) {
+        closeToolbar();
+        return;
+      }
       if (!readOnly && !isLineAnchorNodeId(node.id, nodes)) {
         openToolbar({type: 'node', id: node.id}, {trapFocus: false});
       }
     },
-    [readOnly, openToolbar, nodes]
+    [readOnly, openToolbar, nodes, closeToolbar]
   );
 
   const handleEdgeClick = useCallback(
@@ -702,6 +756,76 @@ export default function ReactFlowCanvas({
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },
     [readOnly, openToolbar]
+  );
+
+  const handleSelectionChange = useCallback<OnSelectionChangeFunc>(
+    ({nodes: selectedNodes, edges: selectedEdges}) => {
+      const nextSelectedNodeIds = selectedNodes
+        .filter(node => node.type !== 'lineAnchor')
+        .map(node => node.id);
+      const nextSelectedEdgeIds = selectedEdges.map(edge => edge.id);
+
+      setSelectedNodeIds(currentIds =>
+        arraysMatch(currentIds, nextSelectedNodeIds)
+          ? currentIds
+          : nextSelectedNodeIds
+      );
+      setSelectedEdgeIds(currentIds =>
+        arraysMatch(currentIds, nextSelectedEdgeIds)
+          ? currentIds
+          : nextSelectedEdgeIds
+      );
+    },
+    []
+  );
+
+  const handleGroupNodes = useCallback(() => {
+    const groupableSelectedNodeIds = selectedNodeIds.filter(selectedId => {
+      const selectedNode = nodes.find(node => node.id === selectedId);
+      return !!selectedNode && isGroupableNode(selectedNode);
+    });
+    const result = groupSelectedNodes(
+      nodes,
+      groupableSelectedNodeIds,
+      createUuid()
+    );
+    if (!result) {
+      return;
+    }
+
+    pushSnapshot();
+    closeToolbar();
+    setNodes(result.nodes);
+    setSelectedNodeIds([result.groupId]);
+    setSelectedEdgeIds([]);
+    setTimeout(() => {
+      focusEntry({type: 'node', id: result.groupId});
+      openToolbar({type: 'node', id: result.groupId}, {trapFocus: false});
+    }, FOCUS_DELAY_MS);
+  }, [
+    nodes,
+    selectedNodeIds,
+    pushSnapshot,
+    closeToolbar,
+    setNodes,
+    focusEntry,
+    openToolbar,
+  ]);
+
+  const handleUngroupNode = useCallback(
+    (groupId: string) => {
+      const nextNodes = ungroupNode(nodes, groupId);
+      if (nextNodes === nodes) {
+        return;
+      }
+
+      pushSnapshot();
+      closeToolbar();
+      clearSelection();
+      setNodes(nextNodes);
+      canvasContainerRef.current?.focus();
+    },
+    [nodes, pushSnapshot, closeToolbar, clearSelection, setNodes]
   );
 
   return (
@@ -739,6 +863,7 @@ export default function ReactFlowCanvas({
                 onNodeClick={handleNodeClick}
                 onEdgeClick={handleEdgeClick}
                 onPaneClick={handlePaneClick}
+                onSelectionChange={handleSelectionChange}
                 onConnect={onConnect}
                 onReconnectStart={handleReconnectStart}
                 onReconnect={handleReconnect}
@@ -782,6 +907,14 @@ export default function ReactFlowCanvas({
                   setNodes={setNodes}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
+                  selectedNodeIds={selectedNodeIds.filter(selectedId =>
+                    nodes.some(
+                      node => node.id === selectedId && isGroupableNode(node)
+                    )
+                  )}
+                  onClearSelection={clearSelection}
+                  onGroupNodes={handleGroupNodes}
+                  onUngroupNode={handleUngroupNode}
                 />
                 <Background />
                 <CanvasControls
