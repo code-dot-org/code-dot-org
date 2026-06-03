@@ -256,6 +256,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     secondaryBackpackApis,
     addAlert,
     removeAlert,
+    removeUploadingAlert,
   ]);
 
   const isBackpackEmpty = useMemo(() => {
