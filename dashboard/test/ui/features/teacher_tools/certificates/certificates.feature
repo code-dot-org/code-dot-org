@@ -52,7 +52,7 @@ Feature: Certificate page features
     When I press the first "#uitest-certificate img" element to load a new page
     And I wait until current URL contains "/certificates/"
     Then I wait to see an image "/certificate_images/"
-  # This page is a pure image certificate with no FA icons.
+    # This page is a pure image certificate with no FA icons.
     And I see no difference for "certificate page" without waiting for Font Awesome to load
 
     When I press the first "#certificate-share img" element to load a new page
