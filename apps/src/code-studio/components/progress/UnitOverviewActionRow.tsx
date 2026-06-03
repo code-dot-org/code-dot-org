@@ -1,14 +1,14 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {Version} from '@cdo/apps/templates/courseOverview/TeacherCourseOverview';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -74,8 +74,7 @@ const compilePdfDropdownOptions = (
   return options;
 };
 
-const navigateToPdf = (e: React.MouseEvent, url: string) => {
-  e.preventDefault();
+const navigateToPdf = (url: string) => {
   window.location.href = url;
 };
 
@@ -184,26 +183,28 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
             )}
           {displayPrintingOptionsDropdown && viewAs === ViewType.Instructor && (
             <div className={styles.printingOptions}>
-              <DropdownButton
-                customText={
-                  <div>
-                    <span className={styles.customText}>
+              <ActionDropdown
+                name="printing-options-dropdown"
+                labelText={i18n.printingOptions()}
+                useIconButton={false}
+                triggerButtonProps={{
+                  variant: 'outlined',
+                  color: 'secondary',
+                  size: 'small',
+                  children: (
+                    <>
+                      <FontAwesomeV6Icon iconName="caret-down" />
                       {i18n.printingOptions()}
-                    </span>
-                  </div>
-                }
-                color={Button.ButtonColor.blue}
-              >
-                {pdfDropdownOptions.map(option => (
-                  <a
-                    key={option.key}
-                    href={option.url}
-                    onClick={e => navigateToPdf(e, option.url)}
-                  >
-                    {option.name}
-                  </a>
-                ))}
-              </DropdownButton>
+                    </>
+                  ),
+                }}
+                options={pdfDropdownOptions.map(option => ({
+                  value: option.key,
+                  label: option.name,
+                  onClick: () => navigateToPdf(option.url),
+                  icon: {iconName: 'file-pdf'},
+                }))}
+              />
             </div>
           )}
 

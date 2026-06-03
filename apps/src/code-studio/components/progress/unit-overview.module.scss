@@ -1,4 +1,3 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .heading {
@@ -23,7 +22,7 @@
 .versionLabel {
   @include main-font-semi-bold;
   font-size: 15;
-  color: $charcoal;
+  color: var(--text-neutral-primary);
 }
 
 .versionDropdown {
@@ -31,7 +30,25 @@
 }
 
 .description {
-  width: 700;
+  width: 700px;
+  color: var(--text-neutral-primary);
+  font-weight: 400;
+
+  // SafeMarkdown renders link markdown to raw <a> elements. Without this rule
+  // they pick up the browser default (blue) which doesn't match the rest of
+  // the page. Route them through the same brand-purple semantic token used
+  // elsewhere on .main anchors.
+  a,
+  a:link,
+  a:visited {
+    color: var(--text-brand-purple-primary);
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:active {
+    color: var(--text-brand-purple-secondary);
+  }
 }
 
 .actionRow {
@@ -77,6 +94,7 @@
   @include main-font-semi-bold;
   font-size: 16px;
   margin-bottom: 0;
+  color: var(--text-neutral-primary);
 }
 
 .viewAs {
@@ -111,7 +129,7 @@
 .navLink {
   font-size: 14px;
   line-height: 22px;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
 }
 .navArea {
   padding: '10px 0px';
