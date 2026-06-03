@@ -16,10 +16,8 @@ export default class HeaderFinish extends React.Component {
   }
 
   setDesiredWidth() {
-    // Report back to our parent how wide we would like to be.
-    if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(this.getFullWidth());
-    }
+    if (!this.props.setDesiredWidth || this._isTruncated) return;
+    this.props.setDesiredWidth(this.getFullWidth());
   }
 
   componentDidMount() {
@@ -46,6 +44,7 @@ export default class HeaderFinish extends React.Component {
     const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
     const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
+    this._isTruncated = isTruncated;
 
     const ellipsisStyle = isTruncated
       ? {

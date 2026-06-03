@@ -22,10 +22,11 @@ class ScriptName extends React.Component {
   }
 
   setDesiredWidth() {
-    // Report back to our parent how wide we would like to be.
-    if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(this.getFullWidth());
-    }
+    // Skip when truncated: the <a> has width: actualWidth applied, so
+    // getFullWidth() would return actualWidth instead of the natural text
+    // width, permanently locking the parent's desired-width to the capped value.
+    if (!this.props.setDesiredWidth || this._isTruncated) return;
+    this.props.setDesiredWidth(this.getFullWidth());
   }
 
   componentDidMount() {
@@ -69,6 +70,8 @@ class ScriptName extends React.Component {
     const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
     const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
+    this._isTruncated = isTruncated;
+    const {isRtl} = this.props;
 
     const ellipsisStyle = isTruncated
       ? {
@@ -77,6 +80,7 @@ class ScriptName extends React.Component {
           overflow: 'hidden',
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap',
+          ...(isRtl ? {direction: 'rtl'} : {}),
         }
       : {};
 
@@ -106,7 +110,9 @@ class ScriptName extends React.Component {
               {this.renderScriptLink({
                 ...styles.scriptLinkWithUpdatedAt,
                 ...ellipsisStyle,
-                ...(isTruncated ? {alignSelf: 'flex-start'} : {}),
+                ...(isTruncated
+                  ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
+                  : {}),
               })}
               <ProjectUpdatedAt
                 onContentUpdated={this.onProjectUpdatedAtContentUpdated}
