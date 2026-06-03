@@ -5,43 +5,62 @@ import {defineConfig, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
-const DATASETS_SRC = path.resolve(__dirname, 'public/datasets');
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
-// The dataset CSV/JSON files (and their thumbnail JPGs) are NOT imported as
-// modules — they are fetched at runtime from `<assetPath>datasets/<file>`,
-// where the consumer sets `<assetPath>` via `setAssetPath(...)` (dashboard
-// points it at `/blockly/media/skins/ailab/`). So they must land in the build
-// output as plain files for the consumer to serve. Emit them under
-// `dist/assets/datasets/`; the dashboard Gruntfile copies `dist/assets/**`
-// into `media/skins/ailab/`, yielding `…/skins/ailab/datasets/<file>`.
-function emitDatasets(): Plugin {
+// Subdirectories of `public/` whose files are fetched at runtime from
+// `<assetPath><dir>/<file>` (the consumer sets `<assetPath>` via
+// `setAssetPath(...)`) rather than imported into the bundle:
+//   datasets/ — the CSV/JSON data and thumbnail JPGs
+//   images/   — the UI sprites; these are emitted rather than inlined because
+//               library mode always inlines imported assets as base-64 (it
+//               ignores `assetsInlineLimit` and can't know the deploy URL),
+//               which would add ~600 KB to the entry and lose separate caching
+// They are emitted as plain files under `dist/assets/<dir>/`; the dashboard
+// Gruntfile copies `dist/assets/**` into `media/skins/ailab/`, yielding
+// `…/skins/ailab/<dir>/<file>`.
+const RUNTIME_ASSET_DIRS = ['datasets', 'images'];
+
+function emitRuntimeAssets(): Plugin {
   return {
-    name: 'emit-datasets',
+    name: 'emit-runtime-assets',
     generateBundle() {
-      for (const name of fs.readdirSync(DATASETS_SRC)) {
-        this.emitFile({
-          type: 'asset',
-          fileName: `assets/datasets/${name}`,
-          source: fs.readFileSync(path.join(DATASETS_SRC, name)),
-        });
+      const walk = (dir: string): void => {
+        for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+          const full = path.join(dir, entry.name);
+          if (entry.isDirectory()) {
+            walk(full);
+          } else {
+            this.emitFile({
+              type: 'asset',
+              fileName: `assets/${path.relative(PUBLIC_DIR, full)}`,
+              source: fs.readFileSync(full),
+            });
+          }
+        }
+      };
+      for (const dir of RUNTIME_ASSET_DIRS) {
+        walk(path.join(PUBLIC_DIR, dir));
       }
     },
   };
 }
 
-// In dev there is no consumer to serve the datasets, and `publicDir` is off
+// In dev there is no consumer to serve those files, and `publicDir` is off
 // (see below), so the standalone host page (setAssetPathDev seeds `./`) would
-// 404 on `/datasets/*`. Serve them straight off disk during `vite` / `vite
-// preview`, mirroring the production layout.
-function devDatasets(): Plugin {
+// 404 on `/datasets/*` and `/images/*`. Serve them straight off disk during
+// `vite` / `vite preview`, mirroring the production layout. The request path
+// is decoded, resolved, and confirmed to stay under `public/` so a `../`
+// request cannot escape the served roots.
+function devRuntimeAssets(): Plugin {
   return {
-    name: 'dev-datasets',
+    name: 'dev-runtime-assets',
     configureServer(server) {
       server.middlewares.use((req, _res, next) => {
-        const prefix = '/datasets/';
-        if (req.url?.startsWith(prefix)) {
-          const file = path.join(DATASETS_SRC, req.url.slice(prefix.length));
-          if (fs.existsSync(file)) {
+        const url = req.url ?? '';
+        if (RUNTIME_ASSET_DIRS.some(dir => url.startsWith(`/${dir}/`))) {
+          const rel = decodeURIComponent(url.slice(1).split('?')[0]);
+          const file = path.resolve(PUBLIC_DIR, rel);
+          if (file.startsWith(PUBLIC_DIR + path.sep) && fs.existsSync(file)) {
             req.url = `/@fs${file}`;
           }
         }
@@ -57,34 +76,28 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
-  // Disable Vite's public-directory handling. `public/` here holds the
-  // runtime-fetched datasets (emitted explicitly above, served in dev by the
-  // middleware above) and the five small UI images, which ARE imported as
-  // modules via the `@public` alias and get inlined into the bundle. Leaving
-  // `publicDir` on would (a) warn on those module imports and (b) copy the
-  // ~12 MB datasets tree wholesale into `dist/`.
+  // Disable Vite's public-directory handling. `public/` here holds only the
+  // runtime-fetched assets (datasets + UI images), which are emitted
+  // explicitly above and served in dev by the middleware above. Leaving
+  // `publicDir` on would copy that ~12 MB tree wholesale into `dist/`.
   publicDir: false,
   plugins: [
     react(),
-    emitDatasets(),
-    devDatasets(),
+    emitRuntimeAssets(),
+    devRuntimeAssets(),
     // Emit `.d.ts` from the library entry.
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
-    // Externalize peerDependencies only (react, react-dom, redux, react-redux,
-    // lodash) so the consumer's single instances are used at runtime; bundle
-    // everything else (chart.js, ml-knn, papaparse, messageformat, …).
+    // Externalize peerDependencies only (react, react-dom, redux,
+    // react-redux) so the consumer's single instances are used at runtime;
+    // bundle everything else (chart.js, ml-knn, papaparse, messageformat, …).
     externalizeDeps({deps: false}),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@public': path.resolve(__dirname, './public'),
     },
   },
   build: {
-    // Library mode inlines imported assets as data URIs (it cannot know the
-    // deploy base URL). The five UI images are small, so this is exactly what
-    // we want — they ride along in the JS with no runtime path dependency.
     lib: {
       entry: ['src/index.tsx'],
       name: 'ailab',

@@ -5,7 +5,7 @@
 // datasets. In dev the standalone index.html IS the consumer, so we inline
 // the assignment here.
 //
-// Import this FIRST in indexDev.tsx so the global is set before the direct
+// Import this FIRST in main.tsx so the global is set before the direct
 // readers in `index.tsx` / `SelectDataset.tsx` build dataset URLs from it.
 // ESM guarantees depth-first evaluation in import order, so this module's
 // body runs before any later import is evaluated.

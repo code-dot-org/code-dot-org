@@ -1,8 +1,7 @@
 /* React component to handle displaying the model card. */
 import {connect} from 'react-redux';
 
-import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
-
+import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
 import {getPercentCorrect} from '../helpers/accuracy';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -50,7 +49,7 @@ const ModelCard = ({
       <Statement />
       <div style={styles.summaryScreenBot}>
         <img
-          src={aiBotBorder}
+          src={imageUrl('ai-bot/ai-bot-border.png')}
           className="ailab-image-hover"
           style={styles.summaryScreenBotImage}
           alt={I18n.t('aiBotAltText')}

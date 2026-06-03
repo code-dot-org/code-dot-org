@@ -2,10 +2,7 @@
 import {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
-import background from '@public/images/results-background-light.jpg';
-
+import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
 import {store} from '../index';
@@ -138,7 +135,8 @@ const TrainModel = ({
         justifyContent: 'center',
         backgroundSize: 'cover',
         backgroundPosition: '50% 50%',
-        backgroundImage: 'url(' + background + ')',
+        backgroundImage:
+          'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
       <div style={styles.statementWithBackgroundAbsolute}>
@@ -174,7 +172,7 @@ const TrainModel = ({
       <div style={styles.trainModelBotContainer}>
         <div className="ailab-image-hover" style={styles.trainBot}>
           <img
-            src={aiBotHead}
+            src={imageUrl('ai-bot/ai-bot-head.png')}
             style={{
               ...styles.trainBotHead,
               ...(headOpen && styles.trainBotOpen),
@@ -182,7 +180,7 @@ const TrainModel = ({
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img
-            src={aiBotBody}
+            src={imageUrl('ai-bot/ai-bot-body.png')}
             style={styles.trainBotBody}
             alt={I18n.t('aiBotBodyAltText')}
           />

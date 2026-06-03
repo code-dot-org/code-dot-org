@@ -3,8 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
 
-import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
-
+import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
@@ -130,7 +129,7 @@ const Predict = ({
             <img
               className="ailab-image-hover"
               style={styles.predictBot}
-              src={aiBotBorder}
+              src={imageUrl('ai-bot/ai-bot-border.png')}
               alt={I18n.t('aiBotAltText')}
             />
           </div>

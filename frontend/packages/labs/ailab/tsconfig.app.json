@@ -13,9 +13,8 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "paths": {
-      "@/*": ["src/*"],
-      "@public/*": ["public/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "public/datasets-manifest.json", "i18n/mlPlayground.json"]
 }
