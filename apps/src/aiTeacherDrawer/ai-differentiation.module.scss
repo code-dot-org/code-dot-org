@@ -34,6 +34,19 @@ $sidebar-tooltip-z-index: 2010;
   fabOriginY: $fab-bottom + $fab-height + 16;
 }
 
+// Styles for AI diff drawer
+.aiDiffDrawer {
+  position: fixed;
+  left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 400px;
+}
+
 .fabBackgroundDrawer {
   display: flex;
   flex-direction: column;
@@ -395,6 +408,12 @@ $sidebar-tooltip-z-index: 2010;
     width: 64px;
     flex: 0 0 64px;
     transition: all 0.2s ease-in-out;
+  }
+
+  &.sidebarContainerFullWidth {
+    flex: 1;
+    width: 100%;
+    border-right: none;
   }
 
   .expandedNewChatButton {
