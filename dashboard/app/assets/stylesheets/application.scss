@@ -91,10 +91,10 @@ body:has(#lab2-container) {
 h1 {
   @include main-font-bold;
   font-size: 32px;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
 
   &.text-black {
-    color: $light_black;
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -103,7 +103,7 @@ h2 {
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
-  color: $teal;
+  color: var(--text-brand-teal-primary);
 }
 
 h3 {
@@ -205,10 +205,14 @@ img.video_thumbnail {
     background-color: $contrastTealHeader;
     color: $header_text;
     a:link {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
     a:visited {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
 
     .small_font_on_tablet {
