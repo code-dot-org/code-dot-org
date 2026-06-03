@@ -243,6 +243,17 @@ The stashed and reparsed nodes still pass through sanitization, so the trust
 boundary is unchanged. This replaces the legacy approach of building a detached
 DOM tree from rendered React and walking it back, which was fragile.
 
+## Development
+
+- **`yarn dev`** runs a standalone demo app (`demo/`) with a radio selector to
+  switch between scenarios — handy for iterating on the component and extensions.
+- **`yarn test`** runs the jsdom unit tests; **`yarn test:visual`** runs the
+  browser-based visual-regression tests, and **`yarn test:visual:update`**
+  regenerates their baselines.
+
+The demo and the visual tests share one scenario list (`demo/scenarios.tsx`), so
+adding a scenario there surfaces it in both.
+
 ## Notes
 
 - **Memoization.** The processor is rebuilt when the `extensions` array

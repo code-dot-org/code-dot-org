@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "vite build && tsc --noEmit",
-    "dev": "vite",
+    "dev": "vite --config vite.demo.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -57,9 +57,12 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@testing-library/react": "catalog:",
     "@types/node": "^20",
+    "@vitejs/plugin-react": "catalog:",
     "@vitest/browser-playwright": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
