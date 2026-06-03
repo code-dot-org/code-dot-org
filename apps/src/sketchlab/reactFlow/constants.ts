@@ -34,3 +34,6 @@ export const MIN_ZOOM = 0.1;
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
+
+// Padding (px) added around child nodes when computing initial group bounds.
+export const GROUP_PADDING_PX = 24;

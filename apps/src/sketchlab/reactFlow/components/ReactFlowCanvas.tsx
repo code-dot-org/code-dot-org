@@ -50,6 +50,7 @@ import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
+import GroupNode from '../nodes/GroupNode';
 import ImageNode from '../nodes/ImageNode';
 import LineAnchorNode from '../nodes/LineAnchorNode';
 import ShapeNode from '../nodes/ShapeNode';
@@ -64,6 +65,7 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
+import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
@@ -81,6 +83,7 @@ const NODE_TYPES = {
   image: ImageNode,
   text: TextNode,
   lineAnchor: LineAnchorNode,
+  group: GroupNode,
 };
 
 // Offset added per new node so they don't stack exactly on top of each other.
@@ -152,6 +155,10 @@ export default function ReactFlowCanvas({
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
 
+  const [multiSelectedNodeIds, setMultiSelectedNodeIds] = useState<Set<string>>(
+    () => new Set()
+  );
+
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
       setOpenToolbarInfo({
@@ -165,6 +172,23 @@ export default function ReactFlowCanvas({
   const closeToolbar = useCallback(() => {
     setOpenToolbarInfo({target: null, trapFocus: false});
   }, []);
+
+  const handleGroupNodes = useCallback(() => {
+    const selectedIds = [...multiSelectedNodeIds];
+    pushSnapshot();
+    setNodes(current => groupSelectedNodes(selectedIds, current));
+    setMultiSelectedNodeIds(new Set());
+    closeToolbar();
+  }, [multiSelectedNodeIds, pushSnapshot, setNodes, closeToolbar]);
+
+  const handleUngroupNode = useCallback(
+    (groupId: string) => {
+      pushSnapshot();
+      setNodes(current => ungroupNode(groupId, current));
+      closeToolbar();
+    },
+    [pushSnapshot, setNodes, closeToolbar]
+  );
 
   const toolbarVisibility = useMemo(
     () => ({
@@ -191,6 +215,7 @@ export default function ReactFlowCanvas({
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
+    setMultiSelectedNodeIds(new Set());
   }, []);
   const {
     tabOrder,
@@ -431,7 +456,11 @@ export default function ReactFlowCanvas({
     return {
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
-        const {selected, domAttributes} = applyDisplayProps(node, 'node');
+        const {selected: singleSelected, domAttributes} = applyDisplayProps(
+          node,
+          'node'
+        );
+        const selected = singleSelected || multiSelectedNodeIds.has(node.id);
         const locked =
           node.data?.locked === true || lockedLineAnchorIds.has(node.id);
         return {
@@ -492,6 +521,7 @@ export default function ReactFlowCanvas({
     readOnly,
     focusEntry,
     handleEdgeMouseDown,
+    multiSelectedNodeIds,
   ]);
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -686,14 +716,32 @@ export default function ReactFlowCanvas({
   );
 
   const handleNodeClick = useCallback(
-    (_event: React.MouseEvent, node: {id: string}) => {
-      // Only open the toolbar in editable mode, and for nodes that aren't line anchors.
-      // Mouse opens don't trap focus so resize handles and contenteditable text stay usable.
-      if (!readOnly && !isLineAnchorNodeId(node.id, nodes)) {
-        openToolbar({type: 'node', id: node.id}, {trapFocus: false});
+    (event: React.MouseEvent, node: {id: string}) => {
+      if (readOnly) return;
+      const nodeType = nodes.find(n => n.id === node.id)?.type;
+      if (isLineAnchorNodeId(node.id, nodes)) return;
+
+      // Shift+click: toggle this node in the multi-selection. Group nodes are
+      // excluded — they are manipulated via their own toolbar, not grouped again.
+      if (event.shiftKey && nodeType !== 'group') {
+        setMultiSelectedNodeIds(prev => {
+          const next = new Set(prev);
+          if (next.has(node.id)) {
+            next.delete(node.id);
+          } else {
+            next.add(node.id);
+          }
+          return next;
+        });
+        closeToolbar();
+        return;
       }
+
+      // Plain click: clear any multi-selection and open the element toolbar.
+      setMultiSelectedNodeIds(new Set());
+      openToolbar({type: 'node', id: node.id}, {trapFocus: false});
     },
-    [readOnly, openToolbar, nodes]
+    [readOnly, openToolbar, closeToolbar, nodes]
   );
 
   const handleEdgeClick = useCallback(
@@ -756,6 +804,9 @@ export default function ReactFlowCanvas({
                 fitView={!initialViewport}
                 colorMode={colorMode}
                 deleteKeyCode={readOnly ? null : 'Delete'}
+                // We implement our own shift+click multi-selection; disable
+                // React Flow's built-in so it doesn't fight our selection state.
+                multiSelectionKeyCode={null}
                 proOptions={{hideAttribution: true}}
                 nodesDraggable={!readOnly}
                 nodesConnectable={!readOnly}
@@ -782,6 +833,9 @@ export default function ReactFlowCanvas({
                   setNodes={setNodes}
                   setEdges={setEdges}
                   pushSnapshot={pushSnapshot}
+                  multiSelectedNodeIds={[...multiSelectedNodeIds]}
+                  onGroupNodes={handleGroupNodes}
+                  onUngroupNode={handleUngroupNode}
                 />
                 <Background />
                 <CanvasControls
