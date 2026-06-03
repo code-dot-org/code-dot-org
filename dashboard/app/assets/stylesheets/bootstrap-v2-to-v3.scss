@@ -69,3 +69,9 @@ strong {
 img {
   height: auto;
 }
+
+$code-border-color: #e1e1e8;
+code {
+  font-size: 12px;
+  border: 1px solid $code-border-color;
+}
