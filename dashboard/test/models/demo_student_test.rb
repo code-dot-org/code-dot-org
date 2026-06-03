@@ -233,4 +233,72 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert_raises(DemoStudent::ProtectedRecord) {student.clear_user_and_mark_purged}
     assert_nil student.reload.purged_at
   end
+
+  # Login hard-stop: even if some future path restores credentials onto a demo
+  # student row, every authentication entry point must still refuse the login.
+  # These tests forcibly re-populate the stripped fields with raw SQL/skip-
+  # validation writes to simulate that drift, then assert each path rejects.
+
+  test 'valid_password? returns false for a demo student even with a real password' do
+    student = create(:student, :in_email_section, password: 'foosbars', password_confirmation: 'foosbars')
+    original_hash = student.encrypted_password
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+    # Restore the pre-strip password hash directly (bypassing the strip).
+    student.update_columns(encrypted_password: original_hash)
+
+    refute student.valid_password?('foosbars'), 'demo student must not authenticate by password'
+  end
+
+  test 'active_for_authentication? returns false for a demo student' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    refute student.active_for_authentication?
+    # :invalid maps to "Invalid email or password" — matches the generic
+    # message used by valid_password? failures and the OAuth controller guard.
+    assert_equal :invalid, student.inactive_message
+  end
+
+  test 'active_for_authentication? hard-stop survives a stale per-process cache' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    refute Policies::DemoSections.demo_student?(student.id)
+    refute student.active_for_authentication?
+  end
+
+  test 'authenticate_with_section_and_secret_words returns nil for a demo student' do
+    student = create(:student_in_word_section, secret_words: 'cat dog')
+    section = student.sections_as_student.first
+    DemoStudent.create!(user: student, demo_type: 'middle')
+    Policies::DemoSections.reset_cache!
+    # Re-populate secret_words to simulate credentials drifting back onto the row.
+    student.update_columns(secret_words: 'cat dog')
+
+    result = User.authenticate_with_section_and_secret_words(
+      section: section,
+      params: {user_id: student.id, secret_words: 'cat dog'},
+    )
+    assert_nil result
+  end
+
+  test 'authenticate_with_section_and_secret_picture returns nil for a demo student' do
+    student = create(:student_in_picture_section)
+    section = student.sections_as_student.first
+    picture_id = SecretPicture.first.id
+    DemoStudent.create!(user: student, demo_type: 'elementary')
+    Policies::DemoSections.reset_cache!
+    # Re-populate secret_picture_id to simulate credentials drifting back
+    # onto the row after the strip.
+    student.update_columns(secret_picture_id: picture_id)
+
+    result = User.authenticate_with_section_and_secret_picture(
+      section: section,
+      params: {user_id: student.id, secret_picture_id: picture_id},
+    )
+    assert_nil result
+  end
 end

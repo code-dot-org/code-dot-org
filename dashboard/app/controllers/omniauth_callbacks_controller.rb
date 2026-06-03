@@ -584,6 +584,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def sign_in_user(user)
+    # Hard stop: never sign in demo students, regardless of how this code
+    # path resolved them. User#active_for_authentication? also blocks
+    # this, but a controller-level guard removes any reliance on Devise
+    # internals calling the hook on manual sign-in paths.
+    if user&.persisted? && Policies::DemoSections.demo_student_durable?(user.id)
+      flash[:alert] = I18n.t('devise.failure.invalid')
+      return redirect_to new_user_session_path
+    end
+
     flash.notice = I18n.t('auth.signed_in')
 
     sign_in_and_redirect user

@@ -879,6 +879,12 @@ class User < ApplicationRecord
   # https://github.com/plataformatec/devise/blob/master/lib/devise/models/database_authenticatable.rb#L46
   def valid_password?(password)
     return false if encrypted_password.blank?
+    # Hard stop: demo students can never sign in, even if a stray credential is
+    # ever restored on the row. Uses the durable DB check to bypass per-worker
+    # cache staleness. Checked after the blank? short-circuit so the common
+    # case (no restored hash, including all demo students post-strip) costs
+    # no query.
+    return false if Policies::DemoSections.demo_student_durable?(id)
     bcrypt = ::BCrypt::Password.new(encrypted_password)
     # check with the pepper
     spicy_password = ::BCrypt::Engine.hash_secret("#{password}#{self.class.pepper}", bcrypt.salt)
@@ -895,6 +901,26 @@ class User < ApplicationRecord
     end
 
     return false
+  end
+
+  # Devise checks this during sign_in (database_authenticatable and the
+  # standard OAuth path through sign_in_and_redirect). Returning false
+  # blocks the sign-in regardless of credential state, so a demo student
+  # row that somehow regrew a password / oauth uid still cannot log in.
+  # Section logins go through bypass_sign_in and skip this hook, so we
+  # also guard authenticate_with_section_and_secret_* directly.
+  def active_for_authentication?
+    return false if Policies::DemoSections.demo_student_durable?(id)
+    super
+  end
+
+  # Devise's FailureApp renders this via t('devise.failure.{symbol}'). We
+  # reuse :invalid so demo students see the same generic "invalid email or
+  # password" string as a real credential mismatch — no disclosure that the
+  # account is a demo, and no missing-translation fallback to worry about.
+  def inactive_message
+    return :invalid if Policies::DemoSections.demo_student_durable?(id)
+    super
   end
 
   def reset_secrets
@@ -1461,6 +1487,9 @@ class User < ApplicationRecord
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
+    # Hard stop: bypass_sign_in skips Devise's active_for_authentication?
+    # check, so block demo students here directly.
+    return if Policies::DemoSections.demo_student_durable?(params[:user_id])
 
     user = User.joins(:sections_as_student).find_by(
       id: params[:user_id],
@@ -1475,6 +1504,7 @@ class User < ApplicationRecord
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
+    return if Policies::DemoSections.demo_student_durable?(params[:user_id])
 
     User.joins(:sections_as_student).find_by(
       id: params[:user_id],
