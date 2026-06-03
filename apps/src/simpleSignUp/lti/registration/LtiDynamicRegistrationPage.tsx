@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import i18n from '@cdo/locale';
 
 import styles from './styles.module.scss';
@@ -65,16 +66,19 @@ export const LtiDynamicRegistrationPage = ({
         <div>
           <form onSubmit={handleSubmit}>
             <div className={styles.inputContainer}>
-              <label className={styles.formLabel}>
-                <strong>{i18n.email()}</strong>
+              <FormFieldWrapper
+                label={i18n.email()}
+                className={styles.inlineField}
+              >
                 <input
                   className={styles.input}
                   type="email"
+                  name="email"
                   value={email}
                   onChange={handleChange}
                   required
                 />
-              </label>
+              </FormFieldWrapper>
             </div>
           </form>
         </div>
