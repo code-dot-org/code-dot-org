@@ -17,20 +17,20 @@
     "packages/labs/*"
   ],
   "scripts": {
-    "build": "TURBO_TELEMETRY_DISABLED=1 turbo build",
-    "clean": "TURBO_TELEMETRY_DISABLED=1 turbo clean",
-    "dev": "TURBO_TELEMETRY_DISABLED=1 turbo watch dev --filter @code-dot-org/studio",
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo watch dev --filter @code-dot-org/studio",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",
-    "lint": "TURBO_TELEMETRY_DISABLED=1 turbo lint",
-    "lint:fix": "TURBO_TELEMETRY_DISABLED=1 turbo lint:fix",
-    "release:dryrun": "TURBO_TELEMETRY_DISABLED=1 turbo release:dryrun",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "release:dryrun": "turbo release:dryrun",
     "start": "yarn dev",
-    "test": "TURBO_TELEMETRY_DISABLED=1 turbo test",
-    "test:ui:ci": "TURBO_TELEMETRY_DISABLED=1 turbo test:ui:ci",
-    "test:ui:local": "TURBO_TELEMETRY_DISABLED=1 turbo test:ui:local",
+    "test": "turbo test",
+    "test:ui:ci": "turbo test:ui:ci",
+    "test:ui:local": "turbo test:ui:local",
     "test:unit": "yarn test",
-    "typecheck": "TURBO_TELEMETRY_DISABLED=1 turbo typecheck"
+    "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "resolutions": {
