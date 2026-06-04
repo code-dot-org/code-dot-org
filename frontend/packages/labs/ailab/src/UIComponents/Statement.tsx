@@ -12,7 +12,6 @@ import {setLabelColumn, removeSelectedFeature} from '../redux';
 interface StatementProps {
   shouldShow?: boolean;
   smallFont?: boolean;
-  data?: Record<string, string | number>[];
   currentPanel?: string;
   labelColumn?: string;
   selectedFeatures?: string[];
@@ -159,7 +158,6 @@ export const UnconnectedStatement = Statement;
 export default connect(
   (state: RootState) => ({
     shouldShow: state.data.length !== 0,
-    data: state.data,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
