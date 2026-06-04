@@ -204,6 +204,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 # Target the same version of Bootstrap as we use in Javascript while we work on
 # moving all assets into the JS pipeline.
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
 

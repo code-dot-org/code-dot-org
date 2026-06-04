@@ -1398,6 +1398,7 @@ DEPENDENCIES
   ruby-prof (>= 1.7.0)
   ruby-progressbar
   rubyzip
+  sass (~> 3.2)
   sass-rails (~> 6.0.0)
   sassc-rails!
   scenic
