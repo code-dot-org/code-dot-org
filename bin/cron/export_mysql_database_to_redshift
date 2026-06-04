@@ -8,6 +8,8 @@ exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org
 require 'cdo/aws/dms'
 require 'cdo/chat_client'
 require 'cdo/redshift_import'
+require 'cdo/aws/redshift/client'
+require 'cdo/aws/redshift/materialized_view_manager'
 
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
@@ -15,8 +17,61 @@ TASK_STATUS_DELAY = 10.minutes
 DAILY_TASK_MAX_EXECUTION_TIME = 20.hours
 # As of early 2020, the Task that exports 'level_sources' takes about 30 hours to complete.
 WEEKLY_TASK_MAX_EXECUTION_TIME = 40.hours
+# Cap on how long to wait for the post-export materialized view REFRESH before giving up. An
+# incremental REFRESH of the Zero-ETL-backed views settles in minutes; this is a generous backstop
+# so a stuck refresh can't block this daily job indefinitely.
+REFRESH_MAX_WAIT_TIME = 4.hours
 # We want to notify the RED team about the export status.
 NOTIFICATION_CHANNEL = 'data-alerts'
+
+# Refresh the Redshift materialized views once the daily export has settled. The views project the
+# continuously-replicated Zero-ETL tables (a separate replication path from this DMS export), so
+# this is a REFRESH, not a re-import; we trigger it here only to align the views' freshness with the
+# rest of the daily pipeline the RED team consumes.
+#
+# Deliberately decoupled from the export: the export has already succeeded by the time we get here,
+# so a refresh problem logs and alerts the RED team but never raises — it must not fail the export
+# job, and a slow refresh must not block it (hence REFRESH_MAX_WAIT_TIME). Refresh status is also
+# tracked independently by the hourly `monitor_mysql_to_redshift_zeroetl_integration` cron.
+def refresh_materialized_views
+  Rails.application.eager_load!
+  models = AnalyticsExportable.valid_exported_models
+  return if models.empty?
+
+  client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
+  result = Cdo::Aws::Redshift::MaterializedViewManager.refresh_all_views(
+    client: client,
+    environment_type: CDO.rack_env,
+    models: models
+  )
+
+  statements = result[:statements] || {}
+  if statements.empty? && result[:failed].empty?
+    ChatClient.message NOTIFICATION_CHANNEL, 'Redshift materialized views already fresh; nothing to refresh.'
+    return
+  end
+
+  wait_result = statements.empty? ?
+    {finished: [], failed: []} :
+    client.wait_for_statements(statements: statements, timeout: REFRESH_MAX_WAIT_TIME.to_i)
+
+  submit_failures = result[:failed]
+  refresh_failures = wait_result[:failed].map(&:first)
+  if submit_failures.empty? && refresh_failures.empty?
+    ChatClient.message NOTIFICATION_CHANNEL, "Refreshed #{wait_result[:finished].length} Redshift materialized view(s)."
+  else
+    CDO.log.error(
+      "[mv-refresh] submit failures: #{submit_failures.join(', ')}; refresh failures: #{refresh_failures.join(', ')}"
+    )
+    ChatClient.message NOTIFICATION_CHANNEL,
+      "#{submit_failures.length + refresh_failures.length} Redshift materialized view(s) failed to refresh " \
+        '(see CloudWatch logs).', color: 'red'
+  end
+rescue StandardError => exception
+  CDO.log.error("[mv-refresh] materialized view refresh failed: #{exception.message}")
+  ChatClient.message NOTIFICATION_CHANNEL,
+    "Error refreshing Redshift materialized views after daily export: #{exception}", color: 'red'
+end
 
 def main
   ChatClient.message NOTIFICATION_CHANNEL, 'Beginning daily export from Aurora MySQL database to Redshift.'
@@ -35,6 +90,10 @@ def main
   RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
 
   ChatClient.message NOTIFICATION_CHANNEL, "Completed daily export from Aurora MySQL database to Redshift."
+
+  # Refresh the Zero-ETL-backed Redshift materialized views now that the daily pipeline has settled.
+  # Decoupled (never raises) so a refresh problem cannot mark this export job failed.
+  refresh_materialized_views
 
   # Use the daily execution of this process on Friday nights Pacific Time (Saturday UTC) to kick off execution of tasks
   # that can only be run once a week, such as the export of the level_sources table which takes > 1 day.
