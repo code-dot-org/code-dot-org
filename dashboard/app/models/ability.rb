@@ -405,6 +405,13 @@ class Ability
       can [:tools], :ai_iteration
     end
 
+    # The image-safety eval drives the live aichat image pipeline (gateway image
+    # generation + Azure moderation), which requires ENABLED aichat access.
+    # can_use_ai_iteration_tools? (levelbuilder) guarantees that.
+    if user.persisted? && user.can_use_ai_iteration_tools?
+      can [:image_safety_eval], :ai_iteration
+    end
+
     if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample

@@ -35,4 +35,32 @@ class AiIterationControllerTest < ActionController::TestCase
   user: :levelbuilder,
   method: :get,
   response: :success
+
+  # Anonymous, signed-out user cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "no_user_no_image_safety_eval_access_test",
+  user: nil,
+  method: :get,
+  response: :redirect
+
+  # Student cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "student_no_image_safety_eval_access_test",
+  user: :student,
+  method: :get,
+  response: :forbidden
+
+  # Teacher cannot access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "teacher_no_image_safety_eval_access_test",
+  user: :teacher,
+  method: :get,
+  response: :forbidden
+
+  # Levelbuilder can access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "levelbuilder_image_safety_eval_access_test",
+  user: :levelbuilder,
+  method: :get,
+  response: :success
 end
