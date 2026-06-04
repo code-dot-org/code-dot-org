@@ -4,7 +4,6 @@ require 'cdo/poste'
 require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
-require src_dir 'forms'
 require src_dir 'abort_email_error'
 require 'observability/opentelemetry'
 
