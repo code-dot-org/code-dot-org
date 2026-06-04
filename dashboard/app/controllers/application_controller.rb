@@ -33,6 +33,22 @@ class ApplicationController < ActionController::Base
 
   around_action :with_global_current_user
 
+  around_action :render_localizejs_page_in_english
+
+  # Pages served by LocalizeJS are rendered in English -- the source language --
+  # so the widget can swap in the visitor's language client-side. The matching
+  # project key is exposed to the layout (see the i18n/_localizejs partial),
+  # which loads the widget only on these pages. The visitor's stored locale
+  # preference (the `language_` cookie) is left untouched.
+  def render_localizejs_page_in_english(&action)
+    @localizejs_project_key = Cdo::I18n.localize_project_key(request.path)
+    if @localizejs_project_key
+      I18n.with_locale(I18n.default_locale, &action)
+    else
+      yield
+    end
+  end
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&

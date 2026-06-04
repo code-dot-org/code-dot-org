@@ -1,0 +1,6 @@
+-# Loads the LocalizeJS widget, but only on LocalizeJS pages. The backend
+-# renders these pages in English (see ApplicationController) and hands the
+-# widget its project key here; the widget swaps in the visitor's language
+-# client-side. @localizejs_project_key is nil on all other pages.
+- if @localizejs_project_key
+  %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => '', data: {localizejs: {projectKey: @localizejs_project_key}.to_json}}
