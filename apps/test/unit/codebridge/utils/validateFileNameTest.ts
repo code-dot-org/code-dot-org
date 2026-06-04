@@ -202,6 +202,6 @@ describe('validateFileName', function () {
         validFileTypes,
         selectedFileType: 'txt',
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
   });
 });
