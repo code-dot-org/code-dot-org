@@ -1,0 +1,11 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.teaching_profile_data
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "individual_data",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.teaching_profile_data;

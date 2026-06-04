@@ -1,0 +1,8 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.user_project_storage_ids
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.user_project_storage_ids;

@@ -1,0 +1,12 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.frameworks
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "shortcode",
+  "name",
+  "properties",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.frameworks;

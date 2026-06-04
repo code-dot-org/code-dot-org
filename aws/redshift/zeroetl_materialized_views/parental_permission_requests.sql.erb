@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.parental_permission_requests
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "uuid",
+  "reminders_sent",
+  "created_at",
+  "updated_at",
+  "resends_sent"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.parental_permission_requests;

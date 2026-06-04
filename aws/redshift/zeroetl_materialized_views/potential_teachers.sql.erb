@@ -1,0 +1,11 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.potential_teachers
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "script_id",
+  "created_at",
+  "updated_at",
+  "receives_marketing"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.potential_teachers;

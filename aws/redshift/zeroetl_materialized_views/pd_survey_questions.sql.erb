@@ -1,0 +1,11 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.pd_survey_questions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "form_id",
+  "created_at",
+  "updated_at",
+  "last_submission_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_survey_questions;

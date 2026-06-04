@@ -1,0 +1,15 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.unit_groups
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "name",
+  "properties",
+  "created_at",
+  "updated_at",
+  "published_state",
+  "instruction_type",
+  "instructor_audience",
+  "participant_audience"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.unit_groups;

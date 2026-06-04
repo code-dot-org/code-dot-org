@@ -1,0 +1,42 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.school_stats_by_years
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("school_id")
+  AUTO REFRESH NO
+AS SELECT
+  "school_id",
+  "school_year",
+  "grades_offered_lo",
+  "grades_offered_hi",
+  "grade_pk_offered",
+  "grade_kg_offered",
+  "grade_01_offered",
+  "grade_02_offered",
+  "grade_03_offered",
+  "grade_04_offered",
+  "grade_05_offered",
+  "grade_06_offered",
+  "grade_07_offered",
+  "grade_08_offered",
+  "grade_09_offered",
+  "grade_10_offered",
+  "grade_11_offered",
+  "grade_12_offered",
+  "grade_13_offered",
+  "virtual_status",
+  "students_total",
+  "student_am_count",
+  "student_as_count",
+  "student_hi_count",
+  "student_bl_count",
+  "student_wh_count",
+  "student_hp_count",
+  "student_tr_count",
+  "title_i_status",
+  "frl_eligible_total",
+  "created_at",
+  "updated_at",
+  "community_type",
+  "student_female",
+  "student_male",
+  "status"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.school_stats_by_years;

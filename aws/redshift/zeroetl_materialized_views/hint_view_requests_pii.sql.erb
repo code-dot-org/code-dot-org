@@ -1,0 +1,14 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.hint_view_requests
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "script_id",
+  "level_id",
+  "feedback_type",
+  "feedback_xml",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.hint_view_requests;

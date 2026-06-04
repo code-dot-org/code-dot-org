@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.lti_user_identities
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "subject",
+  "lti_integration_id",
+  "user_id",
+  "created_at",
+  "updated_at",
+  "deleted_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.lti_user_identities;

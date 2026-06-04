@@ -1,0 +1,14 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.section_instructors
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "instructor_id",
+  "section_id",
+  "invited_by_id",
+  "deleted_at",
+  "status",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.section_instructors;

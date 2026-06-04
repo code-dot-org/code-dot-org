@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.plc_enrollment_unit_assignments
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "plc_user_course_enrollment_id",
+  "plc_course_unit_id",
+  "status",
+  "created_at",
+  "updated_at",
+  "user_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.plc_enrollment_unit_assignments;

@@ -1,0 +1,14 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.email_preferences
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "email",
+  "opt_in",
+  "ip_address",
+  "source",
+  "form_kind",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.email_preferences;

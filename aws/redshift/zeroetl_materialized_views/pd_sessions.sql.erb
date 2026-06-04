@@ -1,0 +1,12 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.pd_sessions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "pd_workshop_id",
+  "created_at",
+  "updated_at",
+  "deleted_at",
+  "session_format"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_sessions;

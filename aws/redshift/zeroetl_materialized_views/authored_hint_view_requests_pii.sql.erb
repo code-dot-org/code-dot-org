@@ -1,0 +1,27 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.authored_hint_view_requests
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "user_id",
+  "script_id",
+  "level_id",
+  "hint_id",
+  "hint_class",
+  "hint_type",
+  "prev_time",
+  "prev_attempt",
+  "prev_test_result",
+  "prev_level_source_id",
+  "next_time",
+  "next_attempt",
+  "next_test_result",
+  "next_level_source_id",
+  "final_time",
+  "final_attempt",
+  "final_test_result",
+  "final_level_source_id",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.authored_hint_view_requests;

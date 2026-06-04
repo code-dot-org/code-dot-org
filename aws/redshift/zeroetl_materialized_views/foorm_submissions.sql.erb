@@ -1,0 +1,10 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.foorm_submissions
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "form_version",
+  "created_at",
+  "updated_at"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.foorm_submissions;

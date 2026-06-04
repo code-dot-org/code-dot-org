@@ -1,0 +1,16 @@
+CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.teacher_feedbacks
+  BACKUP NO
+  DISTSTYLE KEY DISTKEY ("id")
+  AUTO REFRESH NO
+AS SELECT
+  "id",
+  "student_id",
+  "level_id",
+  "teacher_id",
+  "created_at",
+  "updated_at",
+  "deleted_at",
+  "student_visit_count",
+  "script_id",
+  "analytics_section_id"
+FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.teacher_feedbacks;
