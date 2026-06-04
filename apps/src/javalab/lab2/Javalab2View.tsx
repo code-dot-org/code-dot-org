@@ -198,6 +198,7 @@ const Javalab2View: React.FunctionComponent<
           onStop={stopJavaCode}
           sendConsoleInput={sendJavaConsoleInput}
           levelProperties={codebridgeLevelProperties}
+          allowMultipleValidationFiles={true}
         />
       )}
     </div>

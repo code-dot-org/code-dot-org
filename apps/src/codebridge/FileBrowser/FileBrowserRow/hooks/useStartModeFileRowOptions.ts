@@ -19,7 +19,7 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  * There can only be one validation file in a project; the option to set a file
  * as validation will only be shown if there is no validation file in the project.
  * @param file - The ProjectFile object representing the file for which options are generated.
- * @param hasValidationFile - Whether the file has a corresponding validation file.
+ * @param hasValidationFile - Whether the project has a corresponding validation file.
  * @returns In start mode, an array of objects representing the context menu options.
  *   If not in start mode, returns an empty array.
  *   Each object has the following properties:
@@ -30,7 +30,8 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  */
 export const useStartModeFileRowOptions = (
   file: ProjectFile,
-  projectHasValidationFile: boolean
+  projectHasValidationFile: boolean,
+  allowMultipleValidationFiles?: boolean
 ) => {
   const dispatch = useAppDispatch();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -69,7 +70,9 @@ export const useStartModeFileRowOptions = (
         ? []
         : [
             {
-              condition: !projectHasValidationFile,
+              condition:
+                !projectHasValidationFile ||
+                (allowMultipleValidationFiles ?? false),
               iconName: 'flask',
               labelText: codebridgeI18n.makeValidation(),
               clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
@@ -99,7 +102,13 @@ export const useStartModeFileRowOptions = (
               id: 'uitest-make-locked-starter',
             },
           ],
-    [file.type, isStartMode, handleSetFileType, projectHasValidationFile]
+    [
+      isStartMode,
+      projectHasValidationFile,
+      allowMultipleValidationFiles,
+      file.type,
+      handleSetFileType,
+    ]
   );
 
   return dropdownOptions;
