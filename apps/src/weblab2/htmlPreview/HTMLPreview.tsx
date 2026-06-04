@@ -147,6 +147,9 @@ export const HTMLPreview: React.FC = () => {
   const blockNetwork = useAppSelector(
     state => state.weblab2Network.networkRequestsBlocked
   );
+  const inspectorEnabled = useAppSelector(
+    state => state.weblab2.inspectorEnabled
+  );
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
@@ -468,6 +471,19 @@ export const HTMLPreview: React.FC = () => {
       );
     }
   }, [isIframeLoaded, previewUrl, blockNetwork]);
+
+  // Keep inner preview's element inspector in sync with the header toggle.
+  useEffect(() => {
+    if (isIframeLoaded && iframeRef.current && previewUrl) {
+      iframeRef.current.contentWindow?.postMessage(
+        {
+          type: IframeMessageType.SET_INSPECTOR_ENABLED,
+          enabled: inspectorEnabled,
+        },
+        previewUrl
+      );
+    }
+  }, [isIframeLoaded, previewUrl, inspectorEnabled]);
 
   return (
     <PanelContainer
