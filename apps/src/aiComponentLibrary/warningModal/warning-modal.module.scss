@@ -1,42 +1,21 @@
-@import 'color';
-@import '@code-dot-org/component-library-styles/font';
-
+// Cap modal height; only the content section scrolls.
 .chatWarningModal {
   max-height: calc(95vh - 100px);
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 
-  hr {
-    margin: 1rem 0;
-    border-color: $light_gray_200;
-  }
-
-  a {
-    @include main-font-semi-bold;
-    font-size: 1rem;
-    color: $brand_secondary_default;
-    margin: 1rem 0;
-    text-decoration: underline;
-    transition: color ease-in-out .2s;
-
-    &:hover {
-      color: $brand_secondary_dark;
-    }
+  // modalContentSection — second div child (between the two hr dividers).
+  > div:nth-of-type(2) {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: auto;
+    align-self: stretch;
   }
 }
 
-.headerContainer {
+.warningContent {
   display: flex;
-  height: 2rem;
-}
-
-.warningModuleTextContainer {
-  display: flex;
-  overflow-y: auto;
   flex-direction: column;
-}
-
-.bottomSection {
-  display: flex;
-  justify-content: flex-end;
+  gap: 0.5rem;
+  text-align: start;
 }
