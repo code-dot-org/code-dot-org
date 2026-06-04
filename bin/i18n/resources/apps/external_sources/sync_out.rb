@@ -2,7 +2,6 @@
 
 require 'json'
 
-require_relative '../../../../../pegasus/helpers/pegasus_languages'
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_out_base'
 require_relative '../external_sources'

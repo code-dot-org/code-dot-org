@@ -573,6 +573,9 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    js-routes (2.3.7)
+      railties (>= 5)
+      sorbet-runtime
     json (2.7.2)
     json-jwt (1.15.3.1)
       activesupport (>= 4.2)
@@ -1120,6 +1123,7 @@ GEM
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
+    sorbet-runtime (0.6.13261)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -1314,6 +1318,7 @@ DEPENDENCIES
   jmespath (~> 1.4)
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
+  js-routes (~> 2.3)
   json-jwt (~> 1.15)
   json-schema (~> 4.3)
   jumphash

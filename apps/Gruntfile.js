@@ -370,6 +370,7 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
+    generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
@@ -395,6 +396,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:static',
   ]);
 
@@ -545,6 +547,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
