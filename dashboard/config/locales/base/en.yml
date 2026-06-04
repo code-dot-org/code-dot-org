@@ -1572,7 +1572,6 @@ en:
       cn: China
       cz: Czech Republic
       de: Germany
-      es: Spain
       fa: Farsi
       fr: France
       id: Indonesia
@@ -1586,10 +1585,6 @@ en:
       ro: Romania
       ru: Russia
       sk: Slovakia
-      th: Thailand
-      tr: Türkiye
-      tw: Taiwan
-      ua: Ukraine
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes
