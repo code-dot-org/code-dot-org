@@ -2,7 +2,6 @@ import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
 import {PythonValidationResult} from '@cdo/apps/pythonlab/types';
 
-// Populated in bulk from a pyodide test run (see pyodideRunner).
 export default class PythonValidationTracker extends ValidationResultsTracker {
   private static _instance: PythonValidationTracker;
 
