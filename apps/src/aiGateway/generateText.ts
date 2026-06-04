@@ -1,6 +1,9 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
@@ -78,66 +81,86 @@ const generateTextThroughGateway = async <
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const modelString = getModelString(model);
+  const promptLength =
+    typeof options.prompt === 'string' ? options.prompt.length : 0;
+  const clientType = AichatContextManager.getContext().clientType;
 
   let schemaErrorReported = false;
-  try {
-    const serializedOutput = await serializeOutputSchema(options.output);
+  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+    try {
+      const serializedOutput = await serializeOutputSchema(options.output);
 
-    const payload = {
-      ...restOptions,
-      model: modelString,
-      output: serializedOutput,
-    };
+      const payload = {
+        ...restOptions,
+        model: modelString,
+        output: serializedOutput,
+      };
 
-    const [token, turnstileToken] = await Promise.all([
-      fetchAccessToken(),
-      fetchTurnstileTokenIfEnabled(),
-    ]);
+      const [token, turnstileToken] = await Promise.all([
+        fetchAccessToken(),
+        fetchTurnstileTokenIfEnabled(),
+      ]);
 
-    const headers = {
-      'Content-Type': 'application/json',
-      'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
-      ...turnstileHeaders(turnstileToken),
-    };
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+        ...turnstileHeaders(turnstileToken),
+      };
 
-    const response = await HttpClient.post(
-      AI_GATEWAY_URL,
-      JSON.stringify({...payload, token}),
-      false,
-      headers
-    );
-
-    const rawResponse = await response.json();
-    const parseResult =
-      GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
-    if (!parseResult.success) {
-      await reportGatewayError(
-        parseResult.error,
-        'generateTextThroughGateway',
-        modelString,
-        {'error.category': 'schema-mismatch'}
+      const response = await HttpClient.post(
+        AI_GATEWAY_URL,
+        JSON.stringify({...payload, token}),
+        false,
+        headers
       );
-      schemaErrorReported = true;
 
-      if (process.env.NODE_ENV === 'development') {
-        throw parseResult.error;
+      const rawResponse = await response.json();
+      const parseResult =
+        GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+      if (!parseResult.success) {
+        await reportGatewayError(
+          parseResult.error,
+          'generateTextThroughGateway',
+          modelString,
+          {'error.category': 'schema-mismatch'}
+        );
+        schemaErrorReported = true;
+
+        if (process.env.NODE_ENV === 'development') {
+          throw parseResult.error;
+        }
       }
-    }
-    const wire = parseResult.success
-      ? parseResult.data
-      : (rawResponse as GatewayGenerateTextResponseV1);
+      const wire = parseResult.success
+        ? parseResult.data
+        : (rawResponse as GatewayGenerateTextResponseV1);
 
-    return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
-  } catch (error) {
-    if (!schemaErrorReported) {
-      await reportGatewayError(
-        error,
-        'generateTextThroughGateway',
-        modelString
-      );
+      return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
+    } catch (error) {
+      if (!schemaErrorReported) {
+        await reportGatewayError(
+          error,
+          'generateTextThroughGateway',
+          modelString
+        );
+      }
+      throw error;
     }
-    throw error;
-  }
+  };
+
+  // Start a Sentry span around the entire gateway call for better observability.
+  return Observability.startSpan(
+    {
+      name: 'ai-gateway.generateText',
+      op: 'ai.generateText',
+      attributes: {
+        'ai.model': modelString,
+        'ai.prompt_length': promptLength,
+        'ai.client_type': clientType,
+        feature: 'ai-gateway',
+      },
+    },
+    execute
+  );
 };
 
 export default generateTextThroughGateway;

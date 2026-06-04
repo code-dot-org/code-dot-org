@@ -405,6 +405,9 @@ gem 'statsig', '~> 2.5.5'
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
 
+# Used for generating js file that defines all Rails named routes as js helper functions.
+gem 'js-routes', '~> 2.3', require: false
+
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 

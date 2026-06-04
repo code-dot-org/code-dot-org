@@ -1,13 +1,15 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
+  setStudioOrigin,
   pegasus,
   studio,
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
+import {config, configure} from '@cdo/generated-scripts/studioRoutes';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
+import {stubWindowDashboard} from '../../../util/testUtils';
 
 describe('pegasus()', () => {
   describe('from dashboard', () => {
@@ -33,24 +35,42 @@ describe('pegasus()', () => {
 });
 
 describe('studio()', () => {
-  describe('from pegasus', () => {
-    stubWindowPegasus({
-      STUDIO_URL: '//test-studio.code.org',
+  const originalStudioRoutesConfig = config();
+  const origin = 'http://localhost-studio.code.org';
+  const path = '/relative-path?param=test#anchor';
+
+  afterEach(() => {
+    configure(originalStudioRoutesConfig);
+  });
+
+  it('returns an absolute studio URL', () => {
+    expect(studio(path)).to.equal(`${origin}${path}`);
+  });
+
+  describe('with new origin', () => {
+    const newOrigin = 'https://localhost.example.com:3000/scrip_name';
+
+    beforeEach(() => {
+      setStudioOrigin(newOrigin);
     });
 
-    it('gives an absolute studio url', () => {
-      expect(studio('/relative-path')).to.equal(
-        '//test-studio.code.org/relative-path'
-      );
+    it('includes the script_name prefix in generated URLs', () => {
+      expect(studio(path)).to.equal(`${newOrigin}${path}`);
     });
   });
 
-  describe('from studio', () => {
-    stubWindowPegasus(undefined);
+  describe('with default_url_options.script_name route config', () => {
+    const script_name = '/test_prefix';
 
-    it('returns a relative URL', () => {
-      expect(window.pegasus).to.be.undefined;
-      expect(studio('/relative-path')).to.equal('/relative-path');
+    beforeEach(() => {
+      configure({
+        ...originalStudioRoutesConfig,
+        default_url_options: {script_name},
+      });
+    });
+
+    it('includes the script_name prefix in generated URLs', () => {
+      expect(studio(path)).to.equal(`${origin}${script_name}${path}`);
     });
   });
 });

@@ -121,7 +121,6 @@ still on the TODO list. Differences from legacy use:
   and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
 
 ## To Dos
-- **File name validation** there are no checks for invalid file names yet.
 - **Support locked starter files** you can lock starter files in start mode,
 but we don't persist that information yet.
 - **Neighborhood mini-app**
