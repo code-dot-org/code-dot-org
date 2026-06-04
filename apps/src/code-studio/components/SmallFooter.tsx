@@ -235,8 +235,8 @@ const SmallFooter = (props: SmallFooterProps) => {
     if (menuItems && menuItems.length > 0) {
       const caretIcon =
         menuState === MenuStates.EXPANDED
-          ? 'fa fa-caret-down'
-          : 'fa fa-caret-up';
+          ? 'fa-solid fa-caret-down'
+          : 'fa-solid fa-caret-up';
       // FND-1169: Copyright should be a <button>, not a <a>
       return (
         <button type="button" className="more-link" onClick={clickBaseMenu}>
