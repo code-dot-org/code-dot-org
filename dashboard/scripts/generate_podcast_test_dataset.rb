@@ -264,7 +264,7 @@ def main
           LESSON_ID,
           OBJECTIVE_IDS.join('-'),
           markers.join(';'),
-          script.to_json,
+          {podcast_script: script}.to_json,
           transcript(script),
         ]
         csv.flush
