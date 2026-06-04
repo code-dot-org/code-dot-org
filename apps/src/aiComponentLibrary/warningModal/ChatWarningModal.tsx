@@ -22,6 +22,7 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
     title={i18n.aiWarningModalHeader()}
     onClose={onClose}
     closeLabel={i18n.closeDialog()}
+    closeButtonId="ui-close-dialog"
     customContent={
       <div id="dsco-dialog-description" className={moduleStyles.warningContent}>
         <Typography variant="body2" gutterBottom>
