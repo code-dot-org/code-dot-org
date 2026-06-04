@@ -165,6 +165,10 @@ $tabs-default-spacing: 4px;
   gap: 0.75rem;
   align-items: flex-start;
   min-width: 0;
+
+  &:empty {
+    display: none;
+  }
 }
 
 .alertLink {

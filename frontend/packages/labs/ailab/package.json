@@ -1,0 +1,91 @@
+{
+  "name": "@code-dot-org/ailab",
+  "version": "0.0.52",
+  "private": true,
+  "description": "Code.org AI Lab (ML Playground)",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/ailab/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/ailab"
+  },
+  "license": "MIT",
+  "author": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx src",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "yarn run lint && jest",
+    "test:unit": "jest ./test/unit/*.js"
+  },
+  "prettier": "./index.mjs",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleNameMapper": {
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
+      "^@public(.*)$": "<rootDir>/public/$1"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.0",
+    "chart.js": "^2.9.4",
+    "react-chartjs-2": "^2.11.1",
+    "reselect": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/eslint-parser": "^7.28.6",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.58.1",
+    "@typescript-eslint/parser": "^8.58.1",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^10.1.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3",
+    "css-loader": "^7.1.4",
+    "eslint": "^8.57.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "messageformat": "^2.3.0",
+    "ml-knn": "^3.0.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-packagejson": "^2.5.5",
+    "query-string": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-papaparse": "^3.8.0",
+    "react-redux": "^8.1.3",
+    "redux": "^4.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.2",
+    "webpack": "^5.106.0",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "engines": {
+    "node": ">=22.21",
+    "npm": ">=3.10.8"
+  }
+}
