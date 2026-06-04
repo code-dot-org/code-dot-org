@@ -37,12 +37,18 @@ class ApplicationController < ActionController::Base
 
   # Pages served by LocalizeJS are rendered in English -- the source language --
   # so the widget can swap in the visitor's language client-side. The matching
-  # project key is exposed to the layout (see the i18n/_localizejs partial),
-  # which loads the widget only on these pages. The visitor's stored locale
-  # preference (the `language_` cookie) is left untouched.
+  # project key and the language to switch to are exposed to the layout (see the
+  # i18n/_localizejs partial), which loads the widget only on these pages.
+  #
+  # We capture the locale the request already resolved to (from the `language_`
+  # cookie / Global Edition region, e.g. es-LA for the LatAm edition) before
+  # forcing English, and hand the frontend its LocalizeJS code so the widget
+  # initializes to that language rather than English. Only the render locale is
+  # overridden; the `language_` and `ge_region` cookies are left untouched.
   def render_localizejs_page_in_english(&action)
     @localizejs_project_key = Cdo::I18n.localize_project_key(request.path)
     if @localizejs_project_key
+      @localizejs_language = Cdo::I18n.localize_locale_code(I18n.locale)
       I18n.with_locale(I18n.default_locale, &action)
     else
       yield

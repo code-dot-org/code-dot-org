@@ -12,7 +12,11 @@
 
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const {projectKey} = getScriptData('localizejs');
+// `projectKey` selects the LocalizeJS project; `language` is the LocalizeJS
+// code for the locale the backend resolved (from the `language_` cookie /
+// Global Edition region, e.g. `es-LA` for the LatAm edition). The page itself
+// is rendered in English so the widget can swap to `language` client-side.
+const {projectKey, language} = getScriptData('localizejs');
 
 function loadLocalize() {
   !(function (a) {
@@ -132,8 +136,12 @@ function loadLocalize() {
   // our custom code which also ensures the site dropdowns match
   Localize.setLanguage = Localize.cdoSetLanguage;
 
-  // Ensure we are setting the correct direction on our <html> tag
-  Localize.cdoSetLanguage(Localize.getLanguage());
+  // Switch to the language the backend resolved (e.g. a Global Edition locale
+  // like es-LA), falling back to whatever LocalizeJS remembers when the page is
+  // already in English. This also sets the correct direction on our <html> tag.
+  const initialLanguage =
+    language && !language.startsWith('en') ? language : Localize.getLanguage();
+  Localize.cdoSetLanguage(initialLanguage);
 
   // Forcibly hide the widget for good measure
   Localize.hideWidget();

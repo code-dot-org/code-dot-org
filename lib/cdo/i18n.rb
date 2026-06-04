@@ -31,6 +31,12 @@ module Cdo
       locales[cdo_language[:localize_code_s]] = cdo_language[:locale_s] if cdo_language[:localize_code_s]
     end.freeze
 
+    # Mapping normalized I18n locale codes to LocalizeJS locale codes (e.g., 'zh-CN' => 'zh-Hans').
+    # The inverse of LOCALIZE_TO_I18N_LOCALES.
+    I18N_TO_LOCALIZE_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
+      locales[cdo_language[:locale_s]] = cdo_language[:localize_code_s] if cdo_language[:localize_code_s]
+    end.freeze
+
     # Mapping of LocalizeJS project keys to the URL path prefixes they serve.
     # Pages matching a prefix render in English and load the LocalizeJS widget.
     LOCALIZE_PROJECTS = YAML.load_file(CDO.dir('config/i18n/localizejs.yml')).freeze
@@ -100,6 +106,18 @@ module Cdo
           end
         end
         nil
+      end
+
+      # Returns the LocalizeJS locale code for the given I18n locale (e.g.
+      # 'zh-CN' => 'zh-Hans', 'es-LA' => 'es-LA'), so the frontend can ask
+      # LocalizeJS to switch to the language the backend resolved from the
+      # `language_` cookie / Global Edition region. Falls back to the locale
+      # itself when no explicit LocalizeJS code is configured.
+      #
+      # @param locale [String, Symbol] a normalized I18n locale (e.g. 'es-LA')
+      # @return [String] the corresponding LocalizeJS locale code
+      def localize_locale_code(locale)
+        I18N_TO_LOCALIZE_LOCALES[locale.to_s] || locale.to_s
       end
 
       # @param cdo_language [CdoLanguage] CDO language record
