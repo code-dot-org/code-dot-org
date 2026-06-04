@@ -42,6 +42,7 @@ $headings-font-weight: $regular-font-weight;
 $btn-primary-bg: $orange;
 $btn-primary-background-highlight: $orange;
 $code-bg: #f7f7f9;
+$blue: #049cdb;
 
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
@@ -54,7 +55,6 @@ $selectUserTypeButtonTextColorSelected: #fff;
 $contrastTealHeader: #00818f;
 
 @import "bootstrap";
-@import "bootstrap-v2-to-v3";
 
 label, input, button, select, textarea {
   font-size: 14px;

@@ -2,11 +2,6 @@
 @import "font";
 @import "mixins";
 
-// Redefine some variables and redeclare some styles from Bootstrap v2.3.22
-// which were removed in v3.x but which we still rely on
-// https://github.com/twbs/bootstrap-sass/blob/v2.3.2.2/templates/project/_variables.scss
-$blue: #049cdb;
-
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
