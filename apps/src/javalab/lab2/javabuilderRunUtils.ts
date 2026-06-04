@@ -10,6 +10,7 @@ import ProgressManager, {
 } from '@cdo/apps/lab2/progress/ProgressManager';
 import {
   getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
   getIsStartMode,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -86,6 +87,7 @@ export async function handleRunClick(
   const useOverrideSources =
     getIsStartMode() ||
     getAppOptionsEditingExemplar() ||
+    getAppOptionsViewingExemplar() ||
     isReadOnlyWorkspace(state);
   const overrideSources = useOverrideSources
     ? splitForLevelbuilderSave(
@@ -152,8 +154,7 @@ export async function handleRunClick(
     // derived from lab2System.isRunning. Nothing awaits true completion here,
     // so resolve now rather than leaving the promise pending forever.
     // Validation runs are the exception: their output goes to the console,
-    // not the mini-app, and we must wait for program exit to collect the
-    // per-test results, so we let finishRun fire on exit as usual.
+    // not the mini-app, so we let finishRun fire on exit as usual.
     if (miniApp && !runTests) {
       finishRun();
     }
@@ -162,7 +163,7 @@ export async function handleRunClick(
 
 export function stopJavaCode(): void {
   // If the neighborhood exists, stop it. This prevents extra animation
-  // from occuring after stop.
+  // from occurring after stop.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
   if (activeConnection) {
     activeConnection.closeConnection();
