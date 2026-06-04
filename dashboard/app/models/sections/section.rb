@@ -330,6 +330,15 @@ class Section < ApplicationRecord
     self.code = unused_random_code unless code
   end
 
+  before_save :clear_demo_section_code
+  # Demo sections never have a join code — students are pre-enrolled at
+  # creation and no one else is permitted to join. Normalize the invariant on
+  # every save rather than erroring, so the code is always nil regardless of
+  # caller; defense-in-depth against any path that might try to set one.
+  def clear_demo_section_code
+    self.code = nil if demo_section?
+  end
+
   after_save :ensure_owner_is_active_instructor
   def ensure_owner_is_active_instructor
     return if user.blank? || user.deleted?
