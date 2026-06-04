@@ -83,7 +83,7 @@ export function onTestResult(data, callback, miniAppType, levelId) {
 // Human-readable name for a test, used as the validation table row label.
 function testName({className, methodName}) {
   if (className && methodName) {
-    return `${className}.${methodName}`;
+    return `${className} > ${methodName}`;
   }
   return methodName || className || 'unknown';
 }

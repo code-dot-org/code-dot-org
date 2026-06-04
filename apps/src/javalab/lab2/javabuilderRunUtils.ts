@@ -126,7 +126,7 @@ export async function handleRunClick(
       /* options */ {},
       writeNewline,
       /* setIsRunning */ finishRun,
-      /* setIsTesting */ () => {},
+      /* setIsTesting */ finishRun,
       runTests ? ExecutionType.TEST : ExecutionType.RUN,
       miniAppType,
       state.currentUser,

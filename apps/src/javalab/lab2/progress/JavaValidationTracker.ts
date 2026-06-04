@@ -4,7 +4,7 @@ import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 // validation run. Populated from Javabuilder's TEST_RESULT messages (see
 // javabuilderRunUtils) and read by JavaValidator and the Lab2 ValidationTable.
 export default class JavaValidationTracker {
-  private validationResults: ValidationResult[] = [];
+  private validationResults: ValidationResult[] | undefined = undefined;
 
   private static _instance: JavaValidationTracker;
 
@@ -19,7 +19,7 @@ export default class JavaValidationTracker {
     JavaValidationTracker._instance = new JavaValidationTracker();
   }
 
-  getValidationResults(): ValidationResult[] {
+  getValidationResults(): ValidationResult[] | undefined {
     return this.validationResults;
   }
 
@@ -32,6 +32,10 @@ export default class JavaValidationTracker {
   // handed to Redux (via ProgressManager.getValidationResults) where Immer
   // deep-freezes it, so mutating it would throw.
   addValidationResult(result: ValidationResult) {
+    if (!this.validationResults) {
+      this.validationResults = [result];
+      return;
+    }
     const index = this.validationResults.findIndex(
       r => r.message === result.message
     );
@@ -46,13 +50,13 @@ export default class JavaValidationTracker {
 
   reset(isChangingLevels: boolean = false) {
     if (isChangingLevels) {
-      this.validationResults = [];
+      this.validationResults = undefined;
     } else {
       // If we are not changing levels, keep the test names but set all results to
       // pending. This lets us show the user the test names in the table while the
       // tests are running. Since tests are defined on the level, they can't change
       // in a single page load.
-      this.validationResults = this.validationResults.map(result => ({
+      this.validationResults = this.validationResults?.map(result => ({
         message: result.message,
         result: 'PENDING',
       }));
