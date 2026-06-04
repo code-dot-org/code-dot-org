@@ -47,8 +47,8 @@ zM53S8yC4TNgU: # AI Foundations
   - /courses/how-ai-works-2023
   - /courses/problem-solving-with-ai-2025
 
-XJXXkBlsAbHVD: # Dashboard / teacher tools
-  - /home
-  - /users
-  - /sections
-  - /teacher_dashboard
+#XJXXkBlsAbHVD: # Dashboard / teacher tools
+  #- /home
+  #- /users
+  #- /sections
+  #- /teacher_dashboard
