@@ -98,63 +98,10 @@ function loadLocalize() {
     document
       .querySelector('html')
       .setAttribute('dir', ['fa'].includes(lang) ? 'rtl' : 'ltr');
-
-    const cdoLanguage = language === 'source' ? 'en' : language;
-
-    const ensureSelector = cdoLanguage => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        const optionIndex =
-          localeSelect.querySelector("option[value='" + cdoLanguage + "']")
-            ?.index || 0;
-        localeSelect.selectedIndex = optionIndex;
-      }
-    };
-
-    // This function ensures that the dropdowns show the requested language
-    const handleChange = event => {
-      event.stopPropagation();
-      event.preventDefault();
-      Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
-    };
-
-    // When the site loads, ensure the language selector has the correct value
-    const onDOMLoad = () => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        // Remove all options and replace them with the LocalizeJS options we have
-        Localize.getAvailableLanguages((err, data) => {
-          localeSelect.innerHTML = '';
-          data.forEach(info => {
-            const option = document.createElement('option');
-            option.value = info.code;
-            option.textContent = info.name;
-            localeSelect.append(option);
-          });
-        });
-        localeSelect.removeAttribute('onchange');
-        localeSelect.addEventListener('change', handleChange);
-      }
-      ensureSelector(cdoLanguage);
-    };
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', onDOMLoad);
-    } else {
-      // 'interactive' or 'complete' — DOMContentLoaded has already fired
-      onDOMLoad();
-    }
-
-    // Translate everything in the Blockly message pool
-    ensureSelector(cdoLanguage);
   };
 
-  // Just in case... any other calls to the Localize setLanguage will also hit
-  // our custom code which also ensures the site dropdowns match
+  // Just in case... any other calls to the Localize setLanguage also hit our
+  // custom code which keeps the <html> direction in sync.
   Localize.setLanguage = Localize.cdoSetLanguage;
 
   // Switch to the visitor's language from the `language_` cookie (e.g. a Global

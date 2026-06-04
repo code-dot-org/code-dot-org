@@ -50,8 +50,18 @@ module Middleware
             # locale here would clobber a region locale -- e.g. es-LA that GE just
             # set -- back to the browser/default locale, dropping the visitor out
             # of their Global Edition region on the next request.
+            #
+            # But do NOT mint a `language_` cookie for a visitor who never selected
+            # one just because we rendered in the default locale. A spurious cookie
+            # looks like an explicit choice to Global Edition, which would then
+            # bounce the visitor out of a region-prefixed URL (e.g. /fa/...) they
+            # have not opted into. Only persist a real selection: one resolved from
+            # the request, or a non-default locale assigned downstream by GE.
             locale = ::I18n.locale.to_s
-            set_cookies(locale) unless cookie_locale == locale
+            selected = cookie_locale || http_locale
+            if locale != cookie_locale && (selected.present? || locale != ::I18n.default_locale.to_s)
+              set_cookies(locale)
+            end
 
             response.finish
           end
