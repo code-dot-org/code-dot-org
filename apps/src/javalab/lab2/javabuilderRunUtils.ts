@@ -84,8 +84,9 @@ export async function handleRunClick(
   // Levelbuilder edit modes (start / exemplar) and any read-only viewer
   // don't have a channel id. Send the in-memory source as override sources instead.
   // Strip validation files: they aren't part of the program being executed.
+  const inStartMode = getIsStartMode();
   const useOverrideSources =
-    getIsStartMode() ||
+    inStartMode ||
     getAppOptionsEditingExemplar() ||
     getAppOptionsViewingExemplar() ||
     isReadOnlyWorkspace(state);
@@ -99,14 +100,13 @@ export async function handleRunClick(
   // saved to the level yet. When running tests, send them as override
   // validation so the levelbuilder can test before saving.
   const overrideValidation =
-    getIsStartMode() && runTests ? split?.validation : undefined;
+    inStartMode && runTests ? split?.validation : undefined;
 
-  // Validation runs: set every known test row to pending up front so the
-  // table shows test names while Javabuilder runs, then collect per-test
-  // results as TEST_RESULT messages arrive. Mirrors pythonlab's
-  // reset -> run -> updateProgress dance.
   if (runTests) {
-    progressManager?.resetValidation();
+    // In start mode, we fully reset validation as if we are changing levels
+    // in case the levelbuilder renamed a method. This prevents a confusing 'pending'
+    // result for a now-nonexistent test.
+    progressManager?.resetValidation(inStartMode);
     progressManager?.updateProgress();
   }
   const onValidationResult = (result: ValidationResult) => {
