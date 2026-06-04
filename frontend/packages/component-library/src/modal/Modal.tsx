@@ -34,8 +34,6 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
   /** Modal close button aria label */
   closeLabel?: string;
-  /** Optional id for the close button (e.g. for UI tests / legacy selectors). */
-  closeButtonId?: string;
   /** Modal image url */
   imageUrl?: string;
   /** Modal image alt */
@@ -72,7 +70,6 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   customBottomContent,
   onClose,
   closeLabel = 'Close modal',
-  closeButtonId,
   imageUrl,
   imageAlt,
   imagePlacement = 'top',
@@ -96,7 +93,6 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       )}
       onClose={onClose}
       closeLabel={closeLabel}
-      closeButtonId={closeButtonId}
       aria-label={title}
       {...HTMLAttributes}
     >

@@ -24,7 +24,6 @@ const TeacherOnboardingModal: React.FunctionComponent<
     title="Welcome to AI Chat Lab"
     onClose={onClose}
     closeLabel={i18n.closeDialog()}
-    closeButtonId="ui-close-dialog"
     customContent={
       <div
         id="dsco-dialog-description"

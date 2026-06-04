@@ -17,8 +17,6 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
   /** CustomDialog close button aria label */
   closeLabel?: string;
-  /** Optional id for the close button (e.g. for UI tests / legacy selectors). */
-  closeButtonId?: string;
   /** CustomDialog z-index for the background overlay. See variables.scss for default. */
   zIndex?: number;
   /** CustomDialog content */
@@ -44,7 +42,6 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   className,
   onClose,
   closeLabel = 'Close dialog',
-  closeButtonId,
   zIndex,
   children,
   ['aria-label']: ariaLabel,
@@ -102,7 +99,6 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
 
         {onClose && (
           <CloseButton
-            id={closeButtonId}
             aria-label={closeLabel}
             onClick={onClose}
             color={mode === 'light' ? 'dark' : 'light'}
