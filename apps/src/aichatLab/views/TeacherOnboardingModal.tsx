@@ -8,11 +8,9 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from './onboarding-modal.module.scss';
 
-const MODERATION_DISCLAIMER =
-  "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.";
-
-const TEACHER_CHAT_HISTORY_LEARN_MORE_URL =
-  'https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher';
+/**
+ * Renders a modal that warns the user to chat responsibly with AI.
+ */
 
 export interface TeacherOnboardingModalProps {
   onClose: () => void;
@@ -35,7 +33,9 @@ const TeacherOnboardingModal: React.FunctionComponent<
           type={alertTypes.danger}
           showIcon={false}
           isImmediateImportance={false}
-          text={MODERATION_DISCLAIMER}
+          text={
+            "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption."
+          }
         />
         <div className={moduleStyles.textContainer}>
           <Typography
@@ -81,7 +81,7 @@ const TeacherOnboardingModal: React.FunctionComponent<
     }}
     secondaryButtonProps={{
       children: i18n.learnMore(),
-      href: TEACHER_CHAT_HISTORY_LEARN_MORE_URL,
+      href: 'https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher',
       target: '_blank',
       rel: 'noopener noreferrer',
     }}

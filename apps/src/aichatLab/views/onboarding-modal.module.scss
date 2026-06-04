@@ -1,9 +1,7 @@
-// Root class passed to DSCO Modal. Cap modal height; only the content section scrolls.
 .teacherOnboardingModal {
   max-height: calc(95vh - 100px);
   overflow: hidden;
 
-  // modalContentSection — second div child (between the two hr dividers).
   > div:nth-of-type(2) {
     flex: 1 1 auto;
     min-height: 0;
