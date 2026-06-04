@@ -25,7 +25,8 @@ Healer so it stabilises a complete, clean test — not a partial one.
 Before reviewing, READ the playwright-best-practices skill (its SKILL.md, typically at
 .agents/skills/playwright-best-practices/SKILL.md, and any files it references). It is the SAME
 authority the generator authored against — use it so your best-practice findings match the standard
-the test was written to, not a divergent one.
+the test was written to, not a divergent one. If that path is absent, restore it first with
+`npx skills experimental_install` (repo root).
 
 CONSTRAINT — you may modify files ONLY under frontend/packages/apps-e2e-tests/. Never touch
 application code to make the test pass; report such cases instead.

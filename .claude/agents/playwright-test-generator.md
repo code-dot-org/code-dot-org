@@ -45,7 +45,8 @@ guides.
 1. READ the playwright-best-practices skill (its SKILL.md, typically at
    .agents/skills/playwright-best-practices/SKILL.md, and any files it references).
    REQUIRED — it is the Playwright authority; the conventions below are Code.org deltas on
-   top of it.
+   top of it. If that path is absent, restore it first: run
+   `npx skills experimental_install` from the repo root.
 2. Read the feature file and every referenced step definition in full. Step defs are not
    1:1: they compose other steps, embed assertions inline, and branch on params. A "When"
    that also asserts becomes a test assertion — capture all of it.

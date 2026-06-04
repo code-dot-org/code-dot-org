@@ -16,7 +16,8 @@ broken Playwright tests using a methodical approach.
 
 Before debugging, READ the playwright-best-practices skill (its SKILL.md, typically at
 .agents/skills/playwright-best-practices/SKILL.md, and any files it references) — the authority on
-resilient locators, waiting, and flake avoidance you apply throughout.
+resilient locators, waiting, and flake avoidance you apply throughout. If that path is
+absent, restore it first with `npx skills experimental_install` (repo root).
 
 CONSTRAINT — you may create, modify, or delete files ONLY under frontend/packages/apps-e2e-tests/.
 Never change application code, source, or config outside that package to make a test pass; a failure
