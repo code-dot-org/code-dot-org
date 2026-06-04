@@ -152,6 +152,73 @@ Fallback: http://matthewpaulmoore.com/post/5190436725/ruby-on-rails-code-quality
   Helpers shouldn't set instance variables. Prefer directly returning a value from the helper.
   <sup>[[link](#rails-instance-variables)]</sup>
 
+* <a name="rails-route-lookup"></a>
+  Use `rails routes` to find named Rails routes instead of guessing paths.
+  <sup>[[link](#rails-route-lookup)]</sup>
+
+  See the [Rails routing guide](https://guides.rubyonrails.org/v7.0.10/routing.html#listing-existing-routes).
+
+  Search Dashboard Rails routes from the repo root.
+
+  ```bash
+  cd dashboard && bundle exec rails routes -g script
+  cd dashboard && bundle exec rails routes -g script_lesson_script_level
+  cd dashboard && bundle exec rails routes -g '/s/'
+  ```
+
+  Route prefixes identify named Rails routes. For example:
+
+  ```text
+  Prefix: script_lesson_script_level
+  URI Pattern: /s/:script_id/lessons/:lesson_position/levels/:id
+  ```
+
+  Rails route helpers generated from that prefix are:
+
+  ```ruby
+  script_lesson_script_level_url(...)
+  script_lesson_script_level_path(...)
+  ```
+
+  The generated JavaScript helpers use the same names. See [Studio route helpers](#js-studio-route-helpers).
+
+* <a name="rails-route-helpers"></a>
+  Prefer Rails route helpers over `CDO.studio_url` when a named Dashboard Rails route exists.
+  Route helpers keep URL construction tied to `config/routes.rb`;
+  `CDO.studio_url` with a path string duplicates route knowledge in the caller.
+  <sup>[[link](#rails-route-helpers)]</sup>
+
+  ```ruby
+  # bad
+  overview_url = CDO.studio_url(script_path(unit))
+
+  # good
+  overview_url = script_url(unit)
+  ```
+
+  ```ruby
+  # bad
+  url = CDO.studio_url(
+    "/s/#{script.name}/lessons/#{lesson.absolute_position}/levels/#{script_level.position}"
+  )
+
+  # good
+  url = script_lesson_script_level_url(script, lesson, script_level)
+  ```
+
+  Use `_url` when the caller needs an absolute Studio URL. Use `_path` when only the path is needed.
+
+  In controllers, views, and helpers, Rails route helpers are normally available directly.
+  In models and service objects, include `Rails.application.routes.url_helpers` or call through that module.
+
+  ```ruby
+  # good, outside controllers and views
+  url = Rails.application.routes.url_helpers.script_url(unit)
+  ```
+
+  Use `CDO.studio_url` only for static assets, origin-only values, legacy paths,
+  or fully dynamic paths that do not map cleanly to a named Rails route.
+
 ## JavaScript
 
 Default: https://google.github.io/styleguide/javascriptguide.xml
@@ -269,6 +336,54 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
     foo: foo
   }
   ```
+
+* <a name="js-studio-route-helpers"></a>
+  Prefer generated Studio route helpers over manually assembled Studio URLs when a named Dashboard Rails route exists.
+  The helpers in `@cdo/generated-scripts/studioRoutes` are generated from Rails routes,
+  so Dashboard remains the source of truth for route paths.
+  <sup>[[link](#js-studio-route-helpers)]</sup>
+
+  See the [JsRoutes documentation](https://github.com/railsware/js-routes/blob/v2.3.7/Readme.md).
+  See [Rails route lookup](#rails-route-lookup) to find the route prefix.
+
+  ```javascript
+  // bad
+  const url = studio(
+      `/s/${scriptId}/lessons/${lessonPosition}/levels/${levelId}`);
+  ```
+
+  ```javascript
+  // good
+  import {
+    script_lesson_script_level_url
+  } from '@cdo/generated-scripts/studioRoutes';
+
+  const url = script_lesson_script_level_url({
+    script_id: 'coursea-2025',
+    lesson_position: 1,
+    id: 2
+  });
+  ```
+
+  Use `_url` when the caller needs an absolute Studio URL. Use `_path` when only the path is needed.
+
+  Prefer named params. Extra params that are not part of the route path are added as query params.
+
+  ```javascript
+  // good
+  const url = script_lesson_script_level_url({
+    script_id: 'coursea-2025',
+    lesson_position: 1,
+    id: 2,
+    section_id: 123,
+    user_type: 'teacher'
+  });
+
+  // okay, but named params are clearer.
+  const url = script_lesson_script_level_url('coursea-2025', 1, 2);
+  ```
+
+  Use `studio(relativeUrl)` only for legacy paths or fully dynamic paths that do not map cleanly to a named Rails route.
 
 * <a name="js-avoid-inlinejs"></a>
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is

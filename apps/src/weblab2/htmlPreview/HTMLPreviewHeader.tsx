@@ -11,7 +11,7 @@ import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/Autocompl
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import {setDebugPanelOpen} from '../weblab2Redux';
+import {setDebugPanelOpen, setInspectorEnabled} from '../weblab2Redux';
 
 import {PreviewViewMode} from './constants';
 
@@ -52,6 +52,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const isShareView = useAppSelector(state => state.lab.isShareView);
   const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
+  const inspectorEnabled = useAppSelector(
+    state => state.weblab2.inspectorEnabled
+  );
   const dispatch = useAppDispatch();
 
   // Supports our preview page "navigation" feature so the autocomplete suggestions
@@ -220,15 +223,41 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
               color="tertiary"
               size="extraSmall"
               className={
-                debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
+                debugPanelOpen ? moduleStyles.activeToggleButton : undefined
               }
               onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
               aria-label={
                 debugPanelOpen ? 'Close debug panel' : 'Open debug panel'
               }
+              aria-pressed={debugPanelOpen}
               type="button"
             >
               <FontAwesomeV6Icon iconName="bug" />
+            </MuiIconButton>
+          </WithTooltip>
+          <WithTooltip
+            tooltipProps={{
+              tooltipId: 'toggle-inspector',
+              direction: 'onBottom',
+              size: 'xs',
+              text: inspectorEnabled ? 'Stop inspecting' : 'Inspect elements',
+            }}
+          >
+            <MuiIconButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              className={
+                inspectorEnabled ? moduleStyles.activeToggleButton : undefined
+              }
+              onClick={() => dispatch(setInspectorEnabled(!inspectorEnabled))}
+              aria-label={
+                inspectorEnabled ? 'Stop inspecting' : 'Inspect elements'
+              }
+              aria-pressed={inspectorEnabled}
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="arrow-pointer" />
             </MuiIconButton>
           </WithTooltip>
           <ToggleFullScreenButton
