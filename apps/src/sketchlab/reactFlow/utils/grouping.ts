@@ -11,6 +11,10 @@ export function isGroupNode(node: SketchLabNode): node is GroupNodeType {
   return node.type === 'group';
 }
 
+export function isGroupedChildNode(node: SketchLabNode): boolean {
+  return Boolean(node.parentId);
+}
+
 export function getGroupChildren(
   groupId: string,
   nodes: SketchLabNode[]
@@ -25,8 +29,16 @@ function computeBounds(nodes: SketchLabNode[]) {
     maxY = -Infinity;
   for (const node of nodes) {
     const {x, y} = node.position;
-    const w = node.width ?? DEFAULT_NODE_WIDTH;
-    const h = node.height ?? DEFAULT_NODE_HEIGHT;
+    const w =
+      node.width ??
+      (typeof node.style?.width === 'number'
+        ? node.style.width
+        : DEFAULT_NODE_WIDTH);
+    const h =
+      node.height ??
+      (typeof node.style?.height === 'number'
+        ? node.style.height
+        : DEFAULT_NODE_HEIGHT);
     if (x < minX) minX = x;
     if (y < minY) minY = y;
     if (x + w > maxX) maxX = x + w;

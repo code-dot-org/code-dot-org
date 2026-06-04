@@ -65,10 +65,15 @@ import {
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
-import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
+import {
+  groupSelectedNodes,
+  isGroupedChildNode,
+  ungroupNode,
+} from '../utils/grouping';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
+  getStandaloneLineAnchorIds,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -213,9 +218,10 @@ export default function ReactFlowCanvas({
     useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
-  // Tracks the last plain-clicked node so the first Shift+click of a fresh
-  // multi-selection can include it automatically (standard anchor behavior).
-  const multiSelectAnchorRef = useRef<string | null>(null);
+  // Tracks the last plain-clicked groupable target so the first Shift+click of
+  // a fresh multi-selection can include it automatically. Standalone lines
+  // contribute both anchor-node ids here.
+  const multiSelectAnchorRef = useRef<string[] | null>(null);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     setMultiSelectedNodeIds(new Set());
@@ -467,11 +473,18 @@ export default function ReactFlowCanvas({
         const selected = singleSelected || multiSelectedNodeIds.has(node.id);
         const locked =
           node.data?.locked === true || lockedLineAnchorIds.has(node.id);
+        const groupedChild = isGroupedChildNode(node);
+        const moveBlocked = locked || groupedChild;
         return {
           ...node,
           selected,
-          ...(locked && {
+          ...(moveBlocked && {
             draggable: false,
+          }),
+          ...(groupedChild && {
+            deletable: false,
+          }),
+          ...(locked && {
             connectable: false,
             deletable: false,
           }),
@@ -731,16 +744,14 @@ export default function ReactFlowCanvas({
         setMultiSelectedNodeIds(prev => {
           const next = new Set(prev);
           // On the first Shift+click of a fresh selection, automatically include
-          // the anchor (last plain-clicked node) so plain-click → Shift+click
+          // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
           // selects two nodes in one extra click, matching standard UX.
           if (next.size === 0) {
-            const anchorId = multiSelectAnchorRef.current;
-            if (anchorId && anchorId !== node.id) {
-              const anchorType = nodes.find(n => n.id === anchorId)?.type;
-              if (anchorType !== 'lineAnchor' && anchorType !== 'group') {
+            multiSelectAnchorRef.current?.forEach(anchorId => {
+              if (anchorId !== node.id) {
                 next.add(anchorId);
               }
-            }
+            });
           }
           if (next.has(node.id)) {
             next.delete(node.id);
@@ -754,7 +765,7 @@ export default function ReactFlowCanvas({
       }
 
       // Plain click: record anchor, clear any multi-selection, open toolbar.
-      multiSelectAnchorRef.current = node.id;
+      multiSelectAnchorRef.current = nodeType === 'group' ? null : [node.id];
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'node', id: node.id}, {trapFocus: false});
     },
@@ -762,11 +773,45 @@ export default function ReactFlowCanvas({
   );
 
   const handleEdgeClick = useCallback(
-    (_event: React.MouseEvent, edge: {id: string}) => {
+    (event: React.MouseEvent, edge: {id: string}) => {
       if (readOnly) return;
+      if (event.shiftKey) {
+        const clickedEdge = edges.find(candidate => candidate.id === edge.id);
+        if (clickedEdge) {
+          const anchorIds = getStandaloneLineAnchorIds(clickedEdge, getNode);
+          if (anchorIds) {
+            setMultiSelectedNodeIds(prev => {
+              const next = new Set(prev);
+              if (next.size === 0) {
+                multiSelectAnchorRef.current?.forEach(anchorId => {
+                  if (!anchorIds.includes(anchorId)) {
+                    next.add(anchorId);
+                  }
+                });
+              }
+              const allSelected = anchorIds.every(id => next.has(id));
+              anchorIds.forEach(id => {
+                if (allSelected) {
+                  next.delete(id);
+                } else {
+                  next.add(id);
+                }
+              });
+              return next;
+            });
+            closeToolbar();
+            return;
+          }
+        }
+      }
+      const clickedEdge = edges.find(candidate => candidate.id === edge.id);
+      multiSelectAnchorRef.current = clickedEdge
+        ? getStandaloneLineAnchorIds(clickedEdge, getNode)
+        : null;
+      setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },
-    [readOnly, openToolbar]
+    [readOnly, edges, getNode, openToolbar, closeToolbar]
   );
 
   return (

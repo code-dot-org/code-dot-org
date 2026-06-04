@@ -22,6 +22,7 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
+import {isGroupedChildNode} from '../utils/grouping';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -267,12 +268,20 @@ export function useKeyboardNavigation({
       if (event.key !== 'x' || !(event.ctrlKey || event.metaKey)) return false;
       const entry = focusedEntry ?? lastFocusedEntry;
       if (!entry) return false;
+      if (entry.type === 'node') {
+        const node = getNode(entry.id);
+        if (node && isGroupedChildNode(node)) {
+          event.preventDefault();
+          event.stopPropagation();
+          return true;
+        }
+      }
       cutEntry(entry);
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [cutEntry, lastFocusedEntry]
+    [cutEntry, getNode, lastFocusedEntry]
   );
 
   const handlePaste = useCallback(
@@ -412,6 +421,12 @@ export function useKeyboardNavigation({
       if (!focusedNodeId) return false;
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
+      const focusedNode = getNode(focusedNodeId);
+      if (focusedNode && isGroupedChildNode(focusedNode)) {
+        event.preventDefault();
+        event.stopPropagation();
+        return true;
+      }
       event.preventDefault();
       event.stopPropagation();
       if (!event.repeat) pushSnapshot();
@@ -423,7 +438,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [pushSnapshot, setNodes, snapAnchorIfNearHandle]
+    [getNode, pushSnapshot, setNodes, snapAnchorIfNearHandle]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
