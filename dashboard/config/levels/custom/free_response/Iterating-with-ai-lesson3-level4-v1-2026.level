@@ -10,16 +10,17 @@
     "skip_sound": true,
     "encrypted": "false",
     "title": "Game Engineer",
-    "long_instructions": "## **Reflect on the Career**\r\n\r\n> #### How did being the Game Engineer who has to review AI’s code change how you thought about while loops?\r\n>\r\n\r\n",
+    "long_instructions": "## **Which loop?**\r\n\r\n> #### You're a Game Engineer reviewing two systems an AI wrote for your game:\r\n> 1. A boss fight that spawns enemies until the boss is defeated.\r\n> 2. A respawn timer that counts down for exactly ten seconds.\r\n>    \r\n> For each, would you use a for loop or a while loop? And what's one thing you'd check before accepting either as a Game Engineer?\r\n\r\n\r\n\r\n",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "false"
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "while — the loop runs based on a changing condition (the boss's health), not a fixed count.\r\n\r\nfor — the loop runs a fixed number of times (ten seconds)."
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 16:20:47 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 16:20:47 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 21:33:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
