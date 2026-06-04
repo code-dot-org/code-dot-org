@@ -23,12 +23,12 @@ $preview-button-margin-left: 8px;
 
     &.previewActiveButton {
       color: var(--text-neutral-white-fixed);
-      background-color: var(--background-brand-purple-primary);
-      border-color: var(--background-brand-purple-primary);
+      background-color: var(--background-brand-teal-primary);
+      border-color: var(--borders-brand-teal-primary);
 
       &:hover {
-        background-color: var(--background-brand-purple-strong);
-        border-color: var(--background-brand-purple-strong);
+        background-color: var(--background-brand-teal-strong);
+        border-color: var(--borders-brand-teal-strong);
       }
     }
   }
