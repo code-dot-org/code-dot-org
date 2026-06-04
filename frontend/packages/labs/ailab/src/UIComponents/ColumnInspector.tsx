@@ -7,9 +7,9 @@ import {connect} from 'react-redux';
 import {styles, ColumnTypes} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getCurrentColumnDetails} from '../selectors/currentColumnSelectors';
-import {CurrentColumnInspector} from '../types';
+import type {CurrentColumnInspector} from '../types';
 
 import AddFeatureButton from './AddFeatureButton';
 import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';

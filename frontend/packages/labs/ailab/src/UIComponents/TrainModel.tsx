@@ -5,10 +5,11 @@ import {connect} from 'react-redux';
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
-import {store} from '../index';
-import {getTableData, readyToTrain, RootState} from '../redux';
+import type {RootState} from '../redux';
+import {getTableData} from '../redux';
+import {store} from '../store';
 import train from '../train';
-import {DataRow} from '../types';
+import type {DataRow} from '../types';
 
 import {TrainingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
@@ -18,19 +19,10 @@ const maxNumItems = 7;
 
 interface TrainModelProps {
   data: DataRow[];
-  readyToTrain: boolean;
-  labelColumn: string | undefined;
-  selectedFeatures: string[];
   instructionsOverlayActive: boolean;
 }
 
-const TrainModel = ({
-  data,
-  readyToTrain: ready,
-  labelColumn,
-  selectedFeatures,
-  instructionsOverlayActive,
-}: TrainModelProps) => {
+const TrainModel = ({data, instructionsOverlayActive}: TrainModelProps) => {
   const [frame, setFrame] = useState(0);
   const [headOpen, setHeadOpen] = useState(false);
   const [, setFinished] = useState(false);
@@ -193,8 +185,5 @@ const TrainModel = ({
 
 export default connect((state: RootState) => ({
   data: getTableData(state, false),
-  readyToTrain: readyToTrain(state),
-  labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive,
 }))(TrainModel);

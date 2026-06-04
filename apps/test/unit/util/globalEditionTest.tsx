@@ -42,6 +42,8 @@ describe('globalEdition', () => {
         'te-IN',
         'mr-IN',
         'kn-IN',
+        'or-IN',
+        'gu-IN',
       ]);
     });
   });

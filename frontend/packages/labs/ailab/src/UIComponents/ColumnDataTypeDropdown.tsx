@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {ColumnTypes} from '../constants';
 import I18n from '../i18n';
-import {RootState, setColumnsByDataType} from '../redux';
+import {setColumnsByDataType} from '../redux';
 
 interface ColumnDataTypeDropdownProps {
   columnId?: string;
@@ -42,11 +42,8 @@ const ColumnDataTypeDropdown = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({}),
-  dispatch => ({
-    setColumnsByDataType(column: string, dataType: string) {
-      dispatch(setColumnsByDataType(column, dataType));
-    },
-  }),
-)(ColumnDataTypeDropdown);
+export default connect(null, dispatch => ({
+  setColumnsByDataType(column: string, dataType: string) {
+    dispatch(setColumnsByDataType(column, dataType));
+  },
+}))(ColumnDataTypeDropdown);

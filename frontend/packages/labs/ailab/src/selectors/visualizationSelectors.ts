@@ -6,14 +6,14 @@ import {
   getLocalizedColumnName,
 } from '../helpers/columnDetails';
 import {areArraysEqual} from '../helpers/utils';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {
   getLabelColumn,
   getData,
   getColumnsByDataType,
   getDatasetId,
 } from '../selectors';
-import {
+import type {
   Coordinate,
   ScatterPlotData,
   CrossTabResult,
