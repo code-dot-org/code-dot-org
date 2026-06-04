@@ -32,10 +32,7 @@ export const useStartModeFileRowOptions = (
 ) => {
   const dispatch = useAppDispatch();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // setFileType only gets called in start mode. The validation override that
-  // drives the progress manager is kept in sync with the project's validation
-  // files by useSyncValidationOverride, so we only handle the file type change
-  // and the levelbuilder banner here.
+
   const handleSetFileType = useMemo(
     () => (type: ProjectFileType) => {
       if (type === ProjectFileType.VALIDATION) {

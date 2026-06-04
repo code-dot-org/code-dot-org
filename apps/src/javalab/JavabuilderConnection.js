@@ -123,7 +123,7 @@ export default class JavabuilderConnection {
   // When getting the access token, send override sources to run instead of attempting to find
   // sources based on a channel id.
   // Optionally send override validation to run instead of the level's saved validation; this lets
-  // levelbuilder start mode (which has no channel id) test in-memory validation edits before saving.
+  // lab2 levelbuilder start mode (which has no channel id) test in-memory validation edits before saving.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrideSources(overrideSources, overrideValidation) {
     let requestData = this.getDefaultRequestData();
