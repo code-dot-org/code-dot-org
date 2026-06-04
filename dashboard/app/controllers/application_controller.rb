@@ -33,26 +33,19 @@ class ApplicationController < ActionController::Base
 
   around_action :with_global_current_user
 
-  around_action :render_localizejs_page_in_english
+  before_action :load_localize_js_config
 
-  # Pages served by LocalizeJS are rendered in English -- the source language --
-  # so the widget can swap in the visitor's language client-side. The matching
-  # project key and the language to switch to are exposed to the layout (see the
-  # i18n/_localizejs partial), which loads the widget only on these pages.
-  #
-  # We capture the locale the request already resolved to (from the `language_`
-  # cookie / Global Edition region, e.g. es-LA for the LatAm edition) before
-  # forcing English, and hand the frontend its LocalizeJS code so the widget
-  # initializes to that language rather than English. Only the render locale is
-  # overridden; the `language_` and `ge_region` cookies are left untouched.
-  def render_localizejs_page_in_english(&action)
-    @localizejs_project_key = Cdo::I18n.localize_project_key(request.path)
-    if @localizejs_project_key
-      @localizejs_language = Cdo::I18n.localize_locale_code(I18n.locale)
-      I18n.with_locale(I18n.default_locale, &action)
-    else
-      yield
-    end
+  # LocalizeJS pages are detected -- and switched into English rendering -- by
+  # Middleware::I18n::LocalizeJS, which runs inside Middleware::GlobalEdition so
+  # that Global Edition region/locale and their cookies stay intact. The
+  # middleware stashes the project key in the Rack env; we expose it to the
+  # i18n/_localizejs partial. The widget reads the visitor's language from the
+  # `language_` cookie itself, so nothing per-visitor is embedded here.
+  def load_localize_js_config
+    config = request.env[Middleware::I18n::LocalizeJS::ENV_KEY]
+    return unless config
+
+    @localizejs_project_key = config[:project_key]
   end
 
   def fix_crawlers_with_bad_accept_headers

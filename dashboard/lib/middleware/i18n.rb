@@ -40,10 +40,17 @@ module Middleware
 
           response.finish
         else
-          ::I18n.with_locale(locale = cookie_locale || http_locale) do
+          ::I18n.with_locale(cookie_locale || http_locale) do
             response.status, headers, response.body = app.call(env)
             response.headers.merge!(headers)
 
+            # Persist the locale this request actually resolved to, INCLUDING any
+            # change made downstream by Global Edition region coordination (which
+            # assigns `::I18n.locale` directly). Persisting the initially-resolved
+            # locale here would clobber a region locale -- e.g. es-LA that GE just
+            # set -- back to the browser/default locale, dropping the visitor out
+            # of their Global Edition region on the next request.
+            locale = ::I18n.locale.to_s
             set_cookies(locale) unless cookie_locale == locale
 
             response.finish
@@ -98,5 +105,40 @@ module Middleware
     end
 
     private_constant :RequestLocalizer
+
+    # Renders LocalizeJS pages in English -- the source language -- so the
+    # LocalizeJS widget can translate them client-side.
+    #
+    # This MUST be inserted inside Middleware::GlobalEdition (see
+    # dashboard/config/application.rb). Global Edition coordinates the region and
+    # the `language_` / `ge_region` cookies using the request's real locale (for
+    # example es-LA for the LatAm edition); if we switched to English any further
+    # out, GE would conclude the visitor isn't in their region and redirect them
+    # out of it. By running inside GE we change ONLY the downstream render.
+    #
+    # The project key is stashed in the Rack env for the i18n/_localizejs partial
+    # (see ApplicationController#load_localize_js_config). The frontend reads the
+    # visitor's language from the `language_` cookie itself, so nothing per-visitor
+    # is embedded in the (cacheable) page. The real locale is recorded as
+    # Cdo::I18n.intended_locale so backend code can still tell what the visitor
+    # intends even while we render in English.
+    class LocalizeJS
+      ENV_KEY = 'cdo.localize_js'
+
+      def initialize(app)
+        @app = app
+      end
+
+      def call(env)
+        project_key = Cdo::I18n.localize_project_key(Rack::Request.new(env).path)
+        return @app.call(env) unless project_key
+
+        env[ENV_KEY] = {project_key: project_key}
+        Cdo::I18n.intended_locale = ::I18n.locale
+        ::I18n.with_locale(::I18n.default_locale) {@app.call(env)}
+      ensure
+        Cdo::I18n.intended_locale = nil
+      end
+    end
   end
 end

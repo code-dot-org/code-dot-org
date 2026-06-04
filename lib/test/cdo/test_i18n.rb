@@ -51,27 +51,26 @@ class CdoI18nTest < Minitest::Test
     end
   end
 
-  def test_localize_locale_code_maps_i18n_locales_to_localizejs_codes
-    assert_equal 'zh-Hans', Cdo::I18n.localize_locale_code('zh-CN')
-    assert_equal 'fr', Cdo::I18n.localize_locale_code('fr-FR')
-    assert_equal 'en', Cdo::I18n.localize_locale_code('en-US')
+  def test_intended_locale_falls_back_to_i18n_locale_when_unset
+    Cdo::I18n.intended_locale = nil
+    assert_equal ::I18n.locale.to_s, Cdo::I18n.intended_locale
   end
 
-  def test_localize_locale_code_passes_global_edition_locales_through
-    # es-LA's LocalizeJS code is itself; this is the LatAm Global Edition.
-    assert_equal 'es-LA', Cdo::I18n.localize_locale_code('es-LA')
+  def test_intended_locale_returns_the_recorded_locale_over_i18n_locale
+    # Mirrors a LocalizeJS render: the intended locale (es-LA) is recorded even
+    # though the page itself renders in another (English) locale.
+    Cdo::I18n.intended_locale = 'es-LA'
+    assert_equal 'es-LA', Cdo::I18n.intended_locale
+    refute_equal ::I18n.locale.to_s, Cdo::I18n.intended_locale
+  ensure
+    Cdo::I18n.intended_locale = nil
   end
 
-  def test_localize_locale_code_accepts_symbols_and_falls_back_to_the_locale
-    assert_equal 'zh-Hans', Cdo::I18n.localize_locale_code(:'zh-CN')
-    # An unknown locale falls back to itself rather than raising.
-    assert_equal 'xx-YY', Cdo::I18n.localize_locale_code('xx-YY')
-  end
+  def test_intended_locale_setter_stringifies_symbols_and_clears
+    Cdo::I18n.intended_locale = :'es-LA'
+    assert_equal 'es-LA', Cdo::I18n.intended_locale
 
-  def test_localize_locale_code_is_the_inverse_of_the_localizejs_mapping
-    Cdo::I18n::LOCALIZE_TO_I18N_LOCALES.each do |localize_code, i18n_locale|
-      assert_equal localize_code, Cdo::I18n.localize_locale_code(i18n_locale),
-        "expected #{i18n_locale.inspect} to map back to #{localize_code.inspect}"
-    end
+    Cdo::I18n.intended_locale = nil
+    assert_equal ::I18n.locale.to_s, Cdo::I18n.intended_locale
   end
 end

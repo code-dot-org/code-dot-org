@@ -10,13 +10,34 @@
  * pages in English so the widget can swap in the visitor's language.
  */
 
-import getScriptData from '@cdo/apps/util/getScriptData';
+import {get} from 'js-cookie';
 
-// `projectKey` selects the LocalizeJS project; `language` is the LocalizeJS
-// code for the locale the backend resolved (from the `language_` cookie /
-// Global Edition region, e.g. `es-LA` for the LatAm edition). The page itself
-// is rendered in English so the widget can swap to `language` client-side.
-const {projectKey, language} = getScriptData('localizejs');
+import getScriptData from '@cdo/apps/util/getScriptData';
+import {
+  DefaultLocale,
+  LocalizeToI18nLocales,
+} from '@cdo/generated-scripts/sharedConstants';
+
+// `projectKey` selects the LocalizeJS project. It is the only thing the backend
+// embeds, so LocalizeJS pages stay identical for every visitor and cacheable.
+const {projectKey} = getScriptData('localizejs');
+
+// Map an I18n locale (the `language_` cookie, e.g. `es-LA` for the LatAm Global
+// Edition) to the code LocalizeJS expects (e.g. `zh-CN` -> `zh-Hans`). This is
+// the inverse of LocalizeToI18nLocales; the locale codes there are unique, so
+// the inverse is well-defined. We read the cookie here rather than have the
+// backend embed the code so the rendered page does not vary per visitor.
+const i18nToLocalizeCode = {};
+for (const [localizeCode, i18nLocale] of Object.entries(
+  LocalizeToI18nLocales
+)) {
+  i18nToLocalizeCode[i18nLocale] = localizeCode;
+}
+
+function localizeLanguage() {
+  const locale = get('language_') || DefaultLocale;
+  return i18nToLocalizeCode[locale] || locale;
+}
 
 function loadLocalize() {
   !(function (a) {
@@ -136,11 +157,14 @@ function loadLocalize() {
   // our custom code which also ensures the site dropdowns match
   Localize.setLanguage = Localize.cdoSetLanguage;
 
-  // Switch to the language the backend resolved (e.g. a Global Edition locale
-  // like es-LA), falling back to whatever LocalizeJS remembers when the page is
-  // already in English. This also sets the correct direction on our <html> tag.
-  const initialLanguage =
-    language && !language.startsWith('en') ? language : Localize.getLanguage();
+  // Switch to the visitor's language from the `language_` cookie (e.g. a Global
+  // Edition locale like es-LA), falling back to whatever LocalizeJS remembers
+  // when the page is already in English. This also sets the correct direction
+  // on our <html> tag.
+  const language = localizeLanguage();
+  const initialLanguage = !language.startsWith('en')
+    ? language
+    : Localize.getLanguage();
   Localize.cdoSetLanguage(initialLanguage);
 
   // Forcibly hide the widget for good measure
