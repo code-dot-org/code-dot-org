@@ -489,7 +489,7 @@ export default function ReactFlowCanvas({
           ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
           className: classNames(
             isConnectSource && styles.connectSource,
-            isAnchorForFocusedEdge && styles.lineAnchorOnSelectedEdge
+            isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
           ),
           domAttributes: {
             ...domAttributes,

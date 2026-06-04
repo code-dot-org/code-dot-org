@@ -45,11 +45,11 @@
     box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
   }
 
-  // Show endpoint handles when the associated line edge is selected.
+  // Show endpoint handles when the associated line edge is focused.
   // ReactFlowCanvas adds this class to anchor nodes of the focused edge.
   // pointer-events is intentionally not overridden: the handle is a visual
   // indicator only; the user drags the anchor node itself, not the handle.
-  .lineAnchorOnSelectedEdge {
+  .lineAnchorOnFocusedEdge {
     :global(.react-flow__handle) {
       opacity: 1;
     }
