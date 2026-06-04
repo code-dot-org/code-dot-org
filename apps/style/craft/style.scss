@@ -983,7 +983,7 @@ $height-to-width: math.div(434, 477);
 
     .run26 {
       @include scale-x-browser(2);
-      width: 6px;
+      width: 19px;
       height: 34px;
       margin: 16px -3px -18px 23px;
       padding-right: 13px;
@@ -1004,7 +1004,7 @@ $height-to-width: math.div(434, 477);
     & > div {
       margin-top: 4px;
       margin-left: 2px;
-      margin-right: 18px;
+      margin-right: 4px;
     }
 
     .toggle26 {
