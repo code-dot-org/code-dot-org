@@ -1,16 +1,16 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
+import type {Extrema} from '../helpers/columnDetails';
 import {
   getUniqueOptions,
   getExtrema,
-  Extrema,
   isColumnReadOnly,
   getColumnDescription,
   tooManyUniqueOptions,
   containsOnlyNumbers,
 } from '../helpers/columnDetails';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {
   getSelectedColumns,
   getData,
@@ -18,7 +18,7 @@ import {
   getMetadata,
   getTrainedModelDetails,
 } from '../selectors';
-import {
+import type {
   DataRow,
   Metadata,
   TrainedModelDetailsSave,

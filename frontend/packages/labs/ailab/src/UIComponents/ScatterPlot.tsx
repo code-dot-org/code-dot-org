@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {styles, colors} from '../constants';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getScatterPlotData} from '../selectors/visualizationSelectors';
 
 const scatterDataBase = {

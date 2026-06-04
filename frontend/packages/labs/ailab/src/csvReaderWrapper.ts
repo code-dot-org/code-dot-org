@@ -1,4 +1,5 @@
-import Papa, {ParseResult} from 'papaparse';
+import type {ParseResult} from 'papaparse';
+import Papa from 'papaparse';
 
 import {ColumnTypes} from './constants';
 import {containsOnlyNumbers} from './helpers/columnDetails';
@@ -8,9 +9,8 @@ import {
   setColumnsByDataType,
   setRemovedRowsCount,
 } from './redux';
-import {DataRow} from './types';
-
-import {store} from './index';
+import {store} from './store';
+import type {DataRow} from './types';
 
 export const parseCSV = (
   csvfile: string,

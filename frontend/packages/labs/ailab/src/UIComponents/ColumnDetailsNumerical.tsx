@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 
 import {styles} from '../constants';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
-import {NumericalColumnDetails} from '../types';
+import type {NumericalColumnDetails} from '../types';
 
 interface ColumnDetailsNumericalProps {
   columnDetails: NumericalColumnDetails;

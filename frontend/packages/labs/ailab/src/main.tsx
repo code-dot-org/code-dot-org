@@ -1,7 +1,7 @@
 import './setAssetPathDev';
 import queryString from 'query-string';
 
-import {ModelDataToSave, SaveResponse} from './types';
+import type {ModelDataToSave, SaveResponse} from './types';
 
 import {initAll, instructionsDismissed} from './index';
 

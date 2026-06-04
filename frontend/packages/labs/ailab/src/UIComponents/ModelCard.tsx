@@ -8,8 +8,9 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
-import {getLabelToSave, getFeaturesToSave, RootState} from '../redux';
-import {
+import type {RootState} from '../redux';
+import {getLabelToSave, getFeaturesToSave} from '../redux';
+import type {
   ModelCardColumn,
   TrainedModelDetailsSave,
   DatasetDetails,
