@@ -20,6 +20,23 @@ yarn dev   # same command — standalone when Rails is not running
 
 Standalone mode is supported by design: Studio is architected to be independently deployable and testable from the backend.
 
+### Mocked API (no Rails)
+
+For lab work that doesn't need a live backend, run Studio with MSW intercepting
+the Rails API:
+
+```bash
+VITE_API_MODE=msw yarn dev
+```
+
+Then visit `/app/projects/<labType>/<tag>/edit`, where `<tag>` is a fixture
+key registered by the lab (`simple`, `complex`, `error`, …). The route loader
+uses the `channelId` slot as the fixture tag.
+
+Each lab owns its fixtures under `packages/labs/<lab>/src/fixtures/` and
+exposes them via the `./mocks` export subpath. See
+`packages/core/src/api/mocks/README.md` for the handler/fixture model.
+
 ## Routes
 
 Routes are file-based under `src/routes/` using TanStack Router. Read `src/routeTree.gen.ts` or the files in `src/routes/` directly to see current routes — enumerating them here would go stale.
@@ -33,10 +50,11 @@ Route definitions use canonical paths (e.g. `/projects/$labType/$channelId/edit`
 
 ## Adding a lab
 
-See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full scaffolding steps. The short version — two Studio files must be updated:
+See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full scaffolding steps. The short version — two Studio files must be updated, and a third is optional:
 
 - `src/modules/labs/config/labs.ts` — add the lab key to `AVAILABLE_LABS`
 - `src/modules/labs/router/getLabEntrypoint.ts` — add the lazy import to `LabEntrypoints`
+- `src/modules/labs/router/getLabFixtures.ts` — _(optional, MSW mode)_ add a loader entry if the lab ships a `./mocks` subpath. Without an entry the lab still works against Rails and the MSW handlers' built-in defaults; the entry only matters if you want per-tag fixtures (`simple`, `complex`, …) at `/projects/<lab>/<tag>/edit`.
 
 ## Architecture
 

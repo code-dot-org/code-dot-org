@@ -167,11 +167,9 @@ export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 // The default light theme styles for codemirror
 export const lightTheme = EditorView.theme(
   {
-    // Sets the background color for the main editor area
     '&': {
       backgroundColor: color.white,
     },
-    // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
       backgroundColor: color.white,
       border: 'none',

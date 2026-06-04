@@ -186,7 +186,7 @@ module Cdo
         path = ::File.join('/', region, path)
       end
 
-      path
+      path.chomp('/')
     end
 
     def self.region_available?(region)

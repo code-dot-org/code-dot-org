@@ -24,7 +24,9 @@ export function getAssetUrl(
   levelName?: string
 ) {
   if (asset.source === 'project' && channelId) {
-    return `/v3/assets/${channelId}/${encodeURIComponent(asset.filename)}`;
+    return `/v3/assets/${channelId}/${encodeURIComponent(
+      asset.bucketKey ?? asset.filename
+    )}`;
   }
 
   if (asset.source === 'level' && levelName) {

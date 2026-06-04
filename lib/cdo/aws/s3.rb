@@ -77,6 +77,15 @@ module AWS
       connect_v2!
     end
 
+    # Returns the S3 bucket holding runtime-generated user content (podcasts,
+    # etc) for the current environment. See user_content_s3_bucket in
+    # config.yml.erb for per-env values. Returns nil in environments without a
+    # configured bucket (eg. development), in which case callers should treat
+    # the content as unavailable.
+    def self.user_content_bucket
+      CDO.user_content_s3_bucket
+    end
+
     # Returns the value of the specified S3 key in bucket.
     # @param [String] bucket
     # @param [String] key

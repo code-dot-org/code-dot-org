@@ -60,7 +60,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewProgressButton(),
       icon: 'chart-line',
       path: TEACHER_NAVIGATION_PATHS.progress,
-      eventName: EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_PROGRESS_CLICKED,
     });
   }
 
@@ -70,7 +70,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewLessonMaterialsButton(),
       icon: 'folder-open',
       path: TEACHER_NAVIGATION_PATHS.lessonMaterials,
-      eventName: EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
     });
   }
 
@@ -107,6 +107,32 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     [sections, showHiddenOnly]
   );
   const isLoadingDemoCard = totalSections === 0 && !demoPresetsAreLoaded;
+
+  // Fire once per mount when the card is visible to the teacher.
+  const hasLoggedViewRef = React.useRef(false);
+  React.useEffect(() => {
+    if (
+      !hasLoggedViewRef.current &&
+      numSections === 0 &&
+      totalSections === 0 &&
+      !!preset &&
+      demoPresetsAreLoaded
+    ) {
+      hasLoggedViewRef.current = true;
+      analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CARD_VIEWED, {
+        demoType,
+        hasGrades: gradesTeaching.length > 0,
+      });
+    }
+  }, [
+    numSections,
+    totalSections,
+    preset,
+    demoPresetsAreLoaded,
+    demoType,
+    gradesTeaching,
+  ]);
+
   const primaryActions = React.useMemo(
     () => (preset ? buildPrimaryActions(preset) : []),
     [preset]
@@ -152,7 +178,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       pendingActionRef.current = pendingKey;
       setPendingPath(pendingKey);
       setNotice(null);
-      analyticsReporter.sendEvent(eventName, {});
+      analyticsReporter.sendEvent(eventName, {demoType});
 
       try {
         const section = await dispatch(createDemoSection(demoType as DemoType));
@@ -160,14 +186,37 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
           return;
         }
 
+        analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_SUCCEEDED, {
+          demoType,
+          sectionId: section.id,
+          triggeringAction: pendingKey,
+        });
+
         return section;
       } catch (error) {
         if (error instanceof DemoSectionCreationError) {
+          if (error.errorType === 'conflict') {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_CONFLICT, {
+              demoType,
+              triggeringAction: pendingKey,
+            });
+          } else {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+              demoType,
+              triggeringAction: pendingKey,
+              errorType: 'generic',
+            });
+          }
           setNotice({
             text: error.message,
             type: error.errorType === 'conflict' ? 'warning' : 'danger',
           });
         } else {
+          analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+            demoType,
+            triggeringAction: pendingKey,
+            errorType: 'generic',
+          });
           setNotice({
             text: "Couldn't create your practice section.",
             type: 'danger',

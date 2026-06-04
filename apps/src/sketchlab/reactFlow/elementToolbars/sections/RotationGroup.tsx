@@ -1,8 +1,10 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {Slider, Typography} from '@mui/material';
-import React, {useCallback, useEffect, useId, useState} from 'react';
+import {Slider} from '@mui/material';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
+
+import ToolbarSection from '../components/ToolbarSection';
 
 import styles from './rotation-group.module.scss';
 import sharedStyles from '../element-toolbar.module.scss';
@@ -23,10 +25,14 @@ function normalizeRotation(raw: number): number {
 export interface RotationGroupProps {
   value: number;
   onChange: (degrees: number) => void;
+  disabled?: boolean;
 }
 
-export default function RotationGroup({value, onChange}: RotationGroupProps) {
-  const groupLabelId = useId();
+export default function RotationGroup({
+  value,
+  onChange,
+  disabled = false,
+}: RotationGroupProps) {
   // Persisted node data may include out-of-range numbers, which would
   // trigger an MUI min/max warning and odd thumb behavior on the Slider.
   // Therefore, we normalize the value before passing it to the Slider.
@@ -35,6 +41,39 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   // zeros) without the normalized value overriding their input mid-edit.
   const [inputValue, setInputValue] = useState(String(normalizedValue));
   const [isFocused, setIsFocused] = useState(false);
+  // Coalesce rapid slider/input events so rotation work runs at most once
+  // per paint, always using the latest requested angle.
+  const queuedRotationRef = useRef<number | null>(null);
+  const animationFrameIdRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      // Unmount can happen before the scheduled frame fires.
+      if (animationFrameIdRef.current !== null) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+      }
+    };
+  }, []);
+
+  // Queue the latest requested angle and flush it on the next animation
+  // frame so callers do not do full rotation work for every input event.
+  const emitRotationChange = useCallback(
+    (nextValue: number) => {
+      queuedRotationRef.current = nextValue;
+      if (animationFrameIdRef.current !== null) {
+        return;
+      }
+      animationFrameIdRef.current = requestAnimationFrame(() => {
+        animationFrameIdRef.current = null;
+        const queued = queuedRotationRef.current;
+        queuedRotationRef.current = null;
+        if (queued !== null) {
+          onChange(queued);
+        }
+      });
+    },
+    [onChange]
+  );
 
   // Sync display to the normalized value, but only while the input is not
   // focused.
@@ -59,10 +98,10 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
       }
       const normalized = normalizeRotation(parsed);
       if (normalized !== normalizedValue) {
-        onChange(normalized);
+        emitRotationChange(normalized);
       }
     },
-    [onChange, normalizedValue]
+    [emitRotationChange, normalizedValue]
   );
 
   const handleInputBlur = useCallback(() => {
@@ -79,9 +118,9 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
 
   const handleSliderChange = useCallback(
     (_: Event, sliderValue: number) => {
-      onChange(normalizeRotation(sliderValue));
+      emitRotationChange(normalizeRotation(sliderValue));
     },
-    [onChange]
+    [emitRotationChange]
   );
 
   const handleInputKeyDown = useCallback(
@@ -96,18 +135,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
   );
 
   return (
-    <div
-      className={sharedStyles.section}
-      role="group"
-      aria-labelledby={groupLabelId}
-    >
-      <Typography
-        id={groupLabelId}
-        variant="overline3"
-        className={sharedStyles.sectionTitle}
-      >
-        Rotation
-      </Typography>
+    <ToolbarSection title="Rotation">
       {/*
        * React Flow opts elements out of canvas panning when they (or their
        * descendants) carry the `nopan` class. Without it a slider drag pans
@@ -117,6 +145,7 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
         <Slider
           className={styles.rotationSlider}
           size="small"
+          disabled={disabled}
           min={ROTATION_MIN}
           max={ROTATION_MAX}
           step={ROTATION_STEP}
@@ -124,13 +153,14 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           onChange={handleSliderChange}
           valueLabelDisplay="auto"
           valueLabelFormat={sliderValue => `${sliderValue}°`}
-          aria-labelledby={groupLabelId}
+          aria-label="Rotation"
           getAriaValueText={sliderValue => `${sliderValue} degrees`}
         />
         <TextField
           name="rotation-degrees"
           aria-label="Rotation in degrees"
           inputType="number"
+          disabled={disabled}
           value={inputValue}
           onChange={handleInputChange}
           onFocus={() => setIsFocused(true)}
@@ -140,6 +170,6 @@ export default function RotationGroup({value, onChange}: RotationGroupProps) {
           className={sharedStyles.smallInput}
         />
       </div>
-    </div>
+    </ToolbarSection>
   );
 }
