@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
   SectionLoginType,
@@ -49,7 +50,8 @@ class ParentLetter extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-      code: PropTypes.string.isRequired,
+      code: PropTypes.string,
+      demoType: PropTypes.string,
     }).isRequired,
     loginTypeName: PropTypes.string,
     students: PropTypes.arrayOf(
@@ -77,7 +79,9 @@ class ParentLetter extends React.Component {
   render() {
     const {logoUrl, students, teacherName, section, loginTypeName, studentId} =
       this.props;
-    const sectionCode = section.code;
+    const sectionCode = section.demoType
+      ? DEMO_SECTION_CODE_PLACEHOLDER
+      : section.code;
     const loginType = section.loginType;
     const student =
       students.length !== 0 && studentId
