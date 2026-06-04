@@ -111,6 +111,7 @@ export async function handleRunClick(
   }
   const onValidationResult = (result: ValidationResult) => {
     JavaValidationTracker.getInstance().addValidationResult(result);
+    progressManager?.updateProgress();
   };
 
   // Return a promise that resolves when the run is settled, which enables the
