@@ -49,6 +49,33 @@ $default-spacing: 4px;
   .tabsContainer {
     background-color: var(--background-neutral-tertiary);
     padding: $default-spacing $default-spacing 0 $default-spacing;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      pointer-events: none;
+    }
+
+    ul {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
+
+      li button[role='tab'].selectedTab {
+        border-bottom-color: var(--background-neutral-primary);
+      }
+    }
   }
 
   .tabPanels {
