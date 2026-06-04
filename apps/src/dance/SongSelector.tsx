@@ -93,6 +93,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
         disabled={!enableSongSelection}
         size="s"
         color="black"
+        dropdownTextThickness="thin"
       />
 
       <MuiIconButton
