@@ -39,9 +39,83 @@ Check out the <a href="https://studio.code.org/s/aif5-2025" target="blank" rel="
 
 <div style="clear:both;"></div>
 
-<p align="center">
-<img src="https://images.code.org/f6b28b41ad1b4680f92938c23c1360a6-Screenshot 2025-03-17 at 1.04.19 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
-</p>
+<!-- Unit 8 Lesson Calendar -->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #c4c0f0;">
+
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 1 1 150px; min-width: 140px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Project: Innovation Simulation Part 1
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Data Policies and Privacy
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        The Value of Privacy
+      </div>
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Project: Innovation Simulation Part 2
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Security Risks Part 1
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Security Risks Part 2
+      </div>
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Project: Innovation Simulation Part 3
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Protecting Data Part 1
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Protecting Data Part 2
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 2 1 240px; min-width: 220px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#6a62d9; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Lesson 10</span>
+        Project: Innovation Simulation Part 4
+      </div>
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#6a62d9; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Lesson 11</span>
+        Assessment Day
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ Preview the full <a href='https://studio.code.org/s/aif5-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'> Unit</a>.
