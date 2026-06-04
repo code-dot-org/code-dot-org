@@ -1,4 +1,3 @@
-import {getSelectedColumns} from '../../src/selectors';
 import {
   getUniqueOptionsCurrentColumn,
   getExtremaCurrentColumn,

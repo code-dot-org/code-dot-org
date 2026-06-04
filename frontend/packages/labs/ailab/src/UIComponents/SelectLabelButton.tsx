@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {styles} from '../constants';
 import I18n from '../i18n';
-import {RootState, setLabelColumn} from '../redux';
+import {setLabelColumn} from '../redux';
 
 interface SelectLabelButtonProps {
   column?: string;
@@ -31,11 +31,8 @@ const SelectLabelButton = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({}),
-  dispatch => ({
-    setLabelColumn(column: string) {
-      dispatch(setLabelColumn(column));
-    },
-  }),
-)(SelectLabelButton);
+export default connect(null, dispatch => ({
+  setLabelColumn(column: string) {
+    dispatch(setLabelColumn(column));
+  },
+}))(SelectLabelButton);
