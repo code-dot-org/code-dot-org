@@ -25,9 +25,6 @@ export function isColumnNumerical(state: RootState, column: string): boolean {
   return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
 }
 
-// A regression problem is one whose label column holds numerical data. Lives
-// here (next to isColumnNumerical) rather than in redux so that redux and the
-// helpers/components that need it share a leaf module instead of cycling.
 export function isRegression(state: RootState): boolean {
   return isColumnNumerical(state, state.labelColumn!);
 }
