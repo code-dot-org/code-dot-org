@@ -213,9 +213,13 @@ export default function ReactFlowCanvas({
     useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
+  // Tracks the last plain-clicked node so the first Shift+click of a fresh
+  // multi-selection can include it automatically (standard anchor behavior).
+  const multiSelectAnchorRef = useRef<string | null>(null);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     setMultiSelectedNodeIds(new Set());
+    multiSelectAnchorRef.current = null;
   }, []);
   const {
     tabOrder,
@@ -726,6 +730,18 @@ export default function ReactFlowCanvas({
       if (event.shiftKey && nodeType !== 'group') {
         setMultiSelectedNodeIds(prev => {
           const next = new Set(prev);
+          // On the first Shift+click of a fresh selection, automatically include
+          // the anchor (last plain-clicked node) so plain-click → Shift+click
+          // selects two nodes in one extra click, matching standard UX.
+          if (next.size === 0) {
+            const anchorId = multiSelectAnchorRef.current;
+            if (anchorId && anchorId !== node.id) {
+              const anchorType = nodes.find(n => n.id === anchorId)?.type;
+              if (anchorType !== 'lineAnchor' && anchorType !== 'group') {
+                next.add(anchorId);
+              }
+            }
+          }
           if (next.has(node.id)) {
             next.delete(node.id);
           } else {
@@ -737,7 +753,8 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      // Plain click: clear any multi-selection and open the element toolbar.
+      // Plain click: record anchor, clear any multi-selection, open toolbar.
+      multiSelectAnchorRef.current = node.id;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'node', id: node.id}, {trapFocus: false});
     },
