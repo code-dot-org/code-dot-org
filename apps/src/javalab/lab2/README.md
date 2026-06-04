@@ -117,7 +117,7 @@ still on the TODO list. Differences from legacy use:
   Lab2 Validate button; clicking it runs the level's tests on Javabuilder
   (`ExecutionType.TEST`), streams per-test results into the Lab2
   validation table, and an all-pass run reports completion. Plumbed via
-  `get_validations` on `Javalab`, `JavaValidator`, `JavaValidationTracker`,
+  `get_validations` on `Javalab`, `TestResultValidator`, `ValidationTracker`,
   and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
 
 ## To Dos
@@ -161,8 +161,6 @@ which prevents running on Javabuilder. We should force a save before run is clic
 - `javabuilderRunner.ts` — `handleRunClick`, `stopJavaCode`,
   `sendJavaConsoleInput`. Wraps the legacy
   `JavabuilderConnection`.
-- `progress/JavaValidator.ts` — `Validator` subclass; passes when every
-  tracked test result is a passing status (`PASSED_ALL_TESTS`).
 - `progress/JavaValidationTracker.ts` — singleton holding the per-test
   `ValidationResult[]` from the latest validation run.
 - `codemirrorLangJava.d.ts` — minimal module declaration for
