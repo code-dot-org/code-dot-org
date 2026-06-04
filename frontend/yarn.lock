@@ -1739,6 +1739,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/block-shareable-procedures@npm:^6.0.10":
+  version: 6.0.12
+  resolution: "@blockly/block-shareable-procedures@npm:6.0.12"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/8821968add5e96c7c9569270fa37a62e096e9820ee447ea947059a69d328c62fae7abbb031491864251684fc5591bd05540e6b2ee95067da942ffaab438ec51c
+  languageName: node
+  linkType: hard
+
+"@blockly/field-colour@npm:^6.0.4":
+  version: 6.0.12
+  resolution: "@blockly/field-colour@npm:6.0.12"
+  dependencies:
+    "@blockly/field-grid-dropdown": "npm:^6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/e20e84ab8645a3d440a9e07142660a1fa83471806ac79fd8364ffe82044aa0c14854e7d402fac3d1f3bbcbc07103b5c78b43c04141101022dd5d9e4b949255aa
+  languageName: node
+  linkType: hard
+
+"@blockly/field-grid-dropdown@npm:^6.0.10, @blockly/field-grid-dropdown@npm:^6.0.3":
+  version: 6.0.10
+  resolution: "@blockly/field-grid-dropdown@npm:6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/bcd16b2d12548946ed2f9c7c1d6141aa863cd0ea820715d2db0f3793c56b47d85a94787dc03531028f2be9cb2c5ca307ea80e1d9f46b6131d789047cad330be1
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-dark@npm:^8.0.3":
+  version: 8.0.4
+  resolution: "@blockly/theme-dark@npm:8.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/c9a956df5628d42d9a3d8e2c90d7cfee8a7908889f3cd4ce6b4ff89abc12b58fd324fa308d6b40e84a2aab44c1d9d78c96e46ce127e831deb66aca58eb6baffb
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-highcontrast@npm:^7.0.3":
+  version: 7.0.4
+  resolution: "@blockly/theme-highcontrast@npm:7.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/860b8afc0bab67bc41574fd2046d95e78c1add780d36b943df7d338f6fef735287f67a074c1a1c0455e479ff93fbc137d684630f16d25fe1b64c497ff2b60b59
+  languageName: node
+  linkType: hard
+
 "@code-dot-org/ailab@workspace:packages/labs/ailab":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/ailab@workspace:packages/labs/ailab"
@@ -1778,6 +1825,59 @@ __metadata:
     react-dom: ^18.3.1 || ^19.0.0
     react-redux: ^8.1.3 || ^9.0.0
     redux: ^4.0.5 || ^5.0.0
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
+  dependencies:
+    "@blockly/block-shareable-procedures": "npm:^6.0.10"
+    "@blockly/field-colour": "npm:^6.0.4"
+    "@blockly/field-grid-dropdown": "npm:^6.0.3"
+    "@blockly/theme-dark": "npm:^8.0.3"
+    "@blockly/theme-highcontrast": "npm:^7.0.3"
+    "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/markdown": "workspace:*"
+    "@eslint/js": "catalog:"
+    "@mantine/hooks": "npm:^8.3.13"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    blockly: "npm:12.2.0"
+    classnames: "catalog:"
+    clean-package: "npm:^2.2.0"
+    eslint: "catalog:"
+    glob: "npm:^11.0.0"
+    globals: "catalog:"
+    hast-util-to-html: "npm:^9.0.5"
+    identity-obj-proxy: "npm:^3.0.0"
+    postcss: "npm:^8.4.49"
+    postcss-modules: "npm:^6.0.1"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    release-it: "catalog:"
+    rimraf: "catalog:"
+    schema-dts: "npm:^1.1.5"
+    stylelint: "catalog:"
+    swiper: "npm:^11.0.5"
+    typed-emitter: "npm:^2.1.0"
+    typescript: "catalog:"
+    typescript-eslint: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+    swiper: ^11.0.5
   languageName: unknown
   linkType: soft
 
@@ -2055,7 +2155,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/markdown@workspace:packages/markdown":
+"@code-dot-org/markdown@workspace:*, @code-dot-org/markdown@workspace:packages/markdown":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/markdown@workspace:packages/markdown"
   dependencies:
@@ -4986,6 +5086,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/hooks@npm:^8.3.13":
+  version: 8.3.18
+  resolution: "@mantine/hooks@npm:8.3.18"
+  peerDependencies:
+    react: ^18.x || ^19.x
+  checksum: 10c0/3767cb33a3e1c4469f18f12536c4c6e42d714ebf5f6da032c8b38ebb24db9ad399978437c69e263c5689a61ea97f17f145719dfe2cdcfa1aa70270711d993b19
+  languageName: node
+  linkType: hard
+
 "@mapbox/hast-util-table-cell-style@npm:^0.1.3":
   version: 0.1.3
   resolution: "@mapbox/hast-util-table-cell-style@npm:0.1.3"
@@ -7193,6 +7302,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/identity-obj-proxy@npm:^3":
+  version: 3.0.2
+  resolution: "@types/identity-obj-proxy@npm:3.0.2"
+  checksum: 10c0/9277c7bf75aaf3688b659ad86f33eb57bd9fab9a5ed342adfbab6b6a804b8f7ce2f0a9ce0394dc6e73b3128d61920c5d35d71b825b84bfe28a97f86f5360c7e3
+  languageName: node
+  linkType: hard
+
 "@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.1, @types/istanbul-lib-coverage@npm:^2.0.6":
   version: 2.0.6
   resolution: "@types/istanbul-lib-coverage@npm:2.0.6"
@@ -9337,6 +9453,15 @@ __metadata:
     buffers: "npm:~0.1.1"
     chainsaw: "npm:~0.1.0"
   checksum: 10c0/752c2c2ff9f23506b3428cc8accbfcc92fec07bf8a31a1953e9c7e2193eb5db8a67252034ab93e8adab2a1c43f3eeb3da0bacae0320e9814f3ca127942c55871
+  languageName: node
+  linkType: hard
+
+"blockly@npm:12.2.0":
+  version: 12.2.0
+  resolution: "blockly@npm:12.2.0"
+  dependencies:
+    jsdom: "npm:26.1.0"
+  checksum: 10c0/ef9fc45a354b163eeec00705a86905ab36d6c49398eeccf3bf4ba4f25e195c3d48161184eef01339dd00105e97854eac8a08f8d89a550a65cd6fdf66420e976b
   languageName: node
   linkType: hard
 
@@ -15735,7 +15860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^26.0.0":
+"jsdom@npm:26.1.0, jsdom@npm:^26.0.0":
   version: 26.1.0
   resolution: "jsdom@npm:26.1.0"
   dependencies:
@@ -17606,6 +17731,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.12":
+  version: 3.3.12
+  resolution: "nanoid@npm:3.3.12"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/ba142b7b39e11e80c16dd74b0365d407880c87c1cf7e1480956981ae940ee36060fa5b6f092cd1e315184dd19244c657bd017d03327bd3c62247d691c5e8edfb
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.8":
   version: 3.3.8
   resolution: "nanoid@npm:3.3.8"
@@ -18907,6 +19041,17 @@ __metadata:
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 10c0/f4142a4f56565f77c1831168e04e3effd9ffcc5aebaf0f538eee4b2d465adfd4b85a44257bb48418202a63806a7da7fe9f56c330aebb3cac898e46b4cbf49161
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.49":
+  version: 8.5.15
+  resolution: "postcss@npm:8.5.15"
+  dependencies:
+    nanoid: "npm:^3.3.12"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/7f2e63ae22fbe43aace1bf652bd99da4e90737c64194d49e51ddc9cd0f9e51ff2861a7d734379b494deffa03a880a5c65eec70bc29ee9ebaa7136dde3eee8f31
   languageName: node
   linkType: hard
 
@@ -20358,6 +20503,15 @@ __metadata:
   dependencies:
     queue-microtask: "npm:^1.2.2"
   checksum: 10c0/200b5ab25b5b8b7113f9901bfe3afc347e19bb7475b267d55ad0eb86a62a46d77510cb0f232507c9e5d497ebda569a08a9867d0d14f57a82ad5564d991588b39
+  languageName: node
+  linkType: hard
+
+"rxjs@npm:*":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/1fcd33d2066ada98ba8f21fcbbcaee9f0b271de1d38dc7f4e256bfbc6ffcdde68c8bfb69093de7eeb46f24b1fb820620bf0223706cff26b4ab99a7ff7b2e2c45
   languageName: node
   linkType: hard
 
@@ -22596,6 +22750,18 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/74253d7dc488eb28b6b2711cf31f5a9dcefc9c41b0681fd1c178ed0a1681b4468581a3626d39cd4df7aee3d3927ab62be06aa9ca74e5baf81827f61641445b77
+  languageName: node
+  linkType: hard
+
+"typed-emitter@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "typed-emitter@npm:2.1.0"
+  dependencies:
+    rxjs: "npm:*"
+  dependenciesMeta:
+    rxjs:
+      optional: true
+  checksum: 10c0/01fc354ba8e87bd39b1bf4fe1c96fe7ecff7fde83161003b0f8c7f4b285a368052e185ba655dd8c102c4445301b7a1e032c8972f181b440fc95bd810450f1314
   languageName: node
   linkType: hard
 
