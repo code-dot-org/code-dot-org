@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 import ScrapbookEntryDialog from './ScrapbookEntryDialog';
@@ -25,6 +26,9 @@ function readScrapbookData(): ScrapbookData | null {
 export default function ScrapbookButton() {
   const [dialogOpen, setDialogOpen] = useState(false);
 
+  if (!experiments.isEnabledAllowingQueryString(experiments.STUDENT_SCRAPBOOK)) {
+    return null;
+  }
   const data = readScrapbookData();
   if (!data || !data.isSignedIn) return null;
   const hasKey =

@@ -4,8 +4,9 @@
 #
 #  id               :bigint           not null, primary key
 #  user_id          :integer          not null
-#  script_id        :integer          not null
-#  level_id         :integer          not null
+#  script_id        :integer
+#  level_id         :integer
+#  channel_id       :string(255)
 #  before_asset_url :text(16777215)
 #  after_asset_url  :text(16777215)
 #  entry_text       :text(65535)
@@ -15,6 +16,7 @@
 # Indexes
 #
 #  index_scrapbook_entries_on_user_id                             (user_id)
+#  index_scrapbook_entries_on_user_id_and_channel_id              (user_id,channel_id) UNIQUE
 #  index_scrapbook_entries_on_user_id_and_script_id_and_level_id  (user_id,script_id,level_id) UNIQUE
 #
 class ScrapbookEntry < ApplicationRecord

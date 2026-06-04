@@ -75,6 +75,9 @@ experiments.USE_AI_GATEWAY = 'useAiGateway';
 experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 // Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
 experiments.EXCALIDRAW = 'excalidraw';
+// Student scrapbook entrypoint + "My scrapbook" dropdown link.
+// Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
+experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

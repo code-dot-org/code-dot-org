@@ -77,7 +77,10 @@
     %i.user_menu_arrow_up{class: "fa-solid fa-chevron-up", style: "display: none"}
     .user_options{style: 'display: none', dir: language_dir_class}
       %a.linktag#my-projects{href: CDO.studio_url('projects', ge_region: ge_region)}= I18n.t("#{loc_prefix}my_projects")
-      %a.linktag#my-scrapbook{href: CDO.studio_url('scrapbook', ge_region: ge_region)}= I18n.t("#{loc_prefix}my_scrapbook")
+      -# Gated on the 'student-scrapbook' frontend experiment; the inline JS
+      -# block below unhides this if the user has opted in via query param or
+      -# localStorage.
+      %a.linktag#my-scrapbook{href: CDO.studio_url('scrapbook', ge_region: ge_region), style: 'display: none'}= I18n.t("#{loc_prefix}my_scrapbook")
       -# rubocop:disable CustomCops/DashboardDbUsage
       - if current_user.can_pair?
         -# rubocop:enable CustomCops/DashboardDbUsage
@@ -113,6 +116,25 @@
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
   (function() {
+    // Unhide the 'My scrapbook' dropdown link if the student-scrapbook
+    // experiment is enabled. Mirrors the check in apps/src/util/experiments.js
+    // (query param, localStorage entry, or enableExperiments=) — kept inline
+    // because the header partial is loaded on every page and we want to avoid
+    // pulling in a webpack bundle just for this toggle.
+    var scrapbookLink = document.getElementById('my-scrapbook');
+    if (scrapbookLink) {
+      var enabled = false;
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('student-scrapbook')) enabled = true;
+        var enableList = (params.get('enableExperiments') || '').split(',');
+        if (enableList.indexOf('student-scrapbook') >= 0) enabled = true;
+        var stored = JSON.parse(localStorage.getItem('experimentsList') || '[]');
+        if (stored.some(function(e) { return e.key === 'student-scrapbook'; })) enabled = true;
+      } catch (e) {}
+      if (enabled) scrapbookLink.style.display = '';
+    }
+
     // Ideally would use environment_specific_cookie_name, but that's not currently
     // available to us in pegasus
     var cookieKey = '_shortName' + window.cookieEnvSuffix;
