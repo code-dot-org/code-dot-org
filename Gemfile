@@ -276,7 +276,7 @@ gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
-gem 'aws-sdk-rds'
+gem 'aws-sdk-rds', '>= 1.205.0'
 gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
@@ -404,6 +404,9 @@ gem 'statsig', '~> 2.5.5'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+# Used for generating js file that defines all Rails named routes as js helper functions.
+gem 'js-routes', '~> 2.3', require: false
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"

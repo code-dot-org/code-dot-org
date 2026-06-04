@@ -1,4 +1,4 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DEFAULT_FOLDER_ID, INVALID_NAME_ERROR} from '@codebridge/constants';
 import {validateFileName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -35,7 +35,7 @@ describe('validateFileName', function () {
         validationFile,
         isStartMode: false,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     expect(
       validateFileName({
@@ -133,7 +133,7 @@ describe('validateFileName', function () {
         isStartMode: false,
         validFileTypes,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     // Valid file name/type has no return.
     expect(
@@ -202,6 +202,6 @@ describe('validateFileName', function () {
         validFileTypes,
         selectedFileType: 'txt',
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
   });
 });

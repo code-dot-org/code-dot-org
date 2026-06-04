@@ -5,9 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>Reusable Routine: How to Test AI-Generated Loop Code</h1>
 
-<p style="font-size:14pt;">
 When students receive loop code from AI, encourage them to test it systematically. This routine helps students build debugging habits and develop confidence in evaluating AI-generated solutions.
-</p>
+
 
 ## Loop Verification Checklist 
 
@@ -77,7 +76,7 @@ When students receive loop code from AI, encourage them to test it systematicall
 
 <div style="background-color:#B7E0E5;border-radius:40px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
 
-<p style="font-size:18px;line-height:1.5;margin:0;">
+<p style="font-size:14px;line-height:1.5;margin:0;">
 <b>💡 Teacher Tip:</b> Encourage participants to use this routine every time they receive AI-generated loop code. Consistent use builds debugging habits, strengthens understanding of loop boundaries, and reinforces that AI-generated code should always be verified rather than accepted automatically.
 </p>
 

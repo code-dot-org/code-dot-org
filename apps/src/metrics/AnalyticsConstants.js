@@ -1,6 +1,4 @@
 // Analytics constants used within the apps directory.
-// (See pegasus/helpers/analytics_constants.rb for constants in the
-// pegasus directory)
 
 const EVENTS = {
   // Sign-up flow
@@ -700,9 +698,6 @@ const EVENTS = {
     'AI-generated feedback is successfully returned and displayed in the feedback text box',
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
-
-  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
-  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
 
   LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
   LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
