@@ -19,10 +19,14 @@ class CdoI18nTest < Minitest::Test
     assert_equal '3vPUSGZrdllW2', Cdo::I18n.localize_project_key('/es-MX/courses/coursea-2024/x')
   end
 
-  def test_localize_project_key_matches_dashboard_routes
-    assert_equal 'XJXXkBlsAbHVD', Cdo::I18n.localize_project_key('/home')
-    assert_equal 'XJXXkBlsAbHVD', Cdo::I18n.localize_project_key('/users/sign_in')
-    assert_equal 'XJXXkBlsAbHVD', Cdo::I18n.localize_project_key('/teacher_dashboard/sections/1')
+  def test_localize_project_key_does_not_match_disabled_dashboard_routes
+    # The "Dashboard / teacher tools" common-areas project (XJXXkBlsAbHVD) is
+    # commented out in config/i18n/localizejs.yml for now, so these routes do not
+    # resolve to a LocalizeJS project. Re-enable that entry -- and restore the
+    # XJXXkBlsAbHVD assertions -- when common areas are turned back on.
+    assert_nil Cdo::I18n.localize_project_key('/home')
+    assert_nil Cdo::I18n.localize_project_key('/users/sign_in')
+    assert_nil Cdo::I18n.localize_project_key('/teacher_dashboard/sections/1')
   end
 
   def test_localize_project_key_returns_nil_for_unlisted_paths
