@@ -1,13 +1,15 @@
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/pegasus'
 
 class FileUtilityTest < Minitest::Test
   def test_find_first_existing
-    assert_equal 'test/test_hash.rb',
+    # Paths are resolved relative to the cwd, which is lib/ when the lib test
+    # suite runs; test/test_helper.rb is a stable file that exists there.
+    assert_equal 'test/test_helper.rb',
       FileUtility.find_first_existing(
         [
           'test/does_not_exist',
-          'test/test_hash.rb',
+          'test/test_helper.rb',
           'test/also_does_not_exist',
         ]
       )

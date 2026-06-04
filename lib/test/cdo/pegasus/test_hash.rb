@@ -1,7 +1,9 @@
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/pegasus'
 
-class HashTest < Minitest::Test
+# Named PegasusHashTest to avoid colliding with the unrelated HashTest in
+# lib/test/cdo/test_hash.rb; the lib suite loads every test into one process.
+class PegasusHashTest < Minitest::Test
   def test_slice_keys
     assert_equal({a: 1, b: 2, c: 3}.slice_keys(:a).keys, [:a])
     assert_equal({a: 1, b: 2, c: 3}.slice_keys(:a, :d).keys, [:a])
