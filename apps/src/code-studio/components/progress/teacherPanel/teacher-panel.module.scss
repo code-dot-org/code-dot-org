@@ -1,7 +1,5 @@
-@import 'color.scss';
-
 .teacherPanelContainer {
-  color: $default_text;
+  color: var(--text-neutral-primary);
 }
 
 .sortDropdown {
