@@ -34,12 +34,14 @@ class JavabuilderSessionsController < ApplicationController
     override_sources = params[:overrideSources]
     # channel id is not required but can be included in order to retrieve assets
     channel_id = params[:channelId]
+    # validation is optional, used in start mode.
+    override_validation = params[:overrideValidation]
 
     session_id = SecureRandom.uuid
     encoded_payload = get_encoded_payload({sid: session_id})
 
     level_id = params[:levelId].to_i
-    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id, channel_id)
+    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id, channel_id, override_validation)
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 

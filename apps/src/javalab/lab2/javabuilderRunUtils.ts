@@ -89,11 +89,17 @@ export async function handleRunClick(
     getAppOptionsEditingExemplar() ||
     getAppOptionsViewingExemplar() ||
     isReadOnlyWorkspace(state);
-  const overrideSources = useOverrideSources
+  const split = useOverrideSources
     ? splitForLevelbuilderSave(
         state.lab2Project.projectSources?.source as MultiFileSource | undefined
-      ).startSources
+      )
     : null;
+  const overrideSources = split?.startSources ?? null;
+  // In start mode the validation files aren't always
+  // saved to the level yet. When running tests, send them as override
+  // validation so the levelbuilder can test before saving.
+  const overrideValidation =
+    getIsStartMode() && runTests ? split?.validation : undefined;
 
   // Validation runs: set every known test row to pending up front so the
   // table shows test names while Javabuilder runs, then collect per-test
@@ -143,7 +149,10 @@ export async function handleRunClick(
     );
 
     if (overrideSources) {
-      activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
+      activeConnection.connectJavabuilderWithOverrideSources(
+        overrideSources,
+        overrideValidation
+      );
     } else {
       activeConnection.connectJavabuilder();
     }

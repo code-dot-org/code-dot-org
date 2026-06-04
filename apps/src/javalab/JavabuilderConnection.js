@@ -122,12 +122,17 @@ export default class JavabuilderConnection {
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // When getting the access token, send override sources to run instead of attempting to find
   // sources based on a channel id.
+  // Optionally send override validation to run instead of the level's saved validation; this lets
+  // levelbuilder start mode (which has no channel id) test in-memory validation edits before saving.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilderWithOverrideSources(overrideSources) {
+  connectJavabuilderWithOverrideSources(overrideSources, overrideValidation) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
     // we include the channel id so that assets are available
     requestData.channelId = this.channelId;
+    if (overrideValidation) {
+      requestData.overrideValidation = overrideValidation;
+    }
 
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
