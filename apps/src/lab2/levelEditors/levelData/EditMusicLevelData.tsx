@@ -165,7 +165,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   {value: 'none', text: '(none)'},
                   {
                     value: DEFAULT_PACK,
-                    text: `[${DEFAULT_BPM}] CodeAI (Default)`,
+                    text: `[${DEFAULT_BPM}] Code.org (Default)`,
                   },
                   ...restrictedPackOptions,
                 ]}
@@ -265,7 +265,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           <Checkbox
             checked={!!levelData.sortUnrestrictedPacksByType}
             name="sortUnrestrictedPacksByType"
-            label="Sort unrestricted (CodeAI) packs by type in Sound Picker"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
             onChange={event => {
               const sortUnrestrictedPacksByType = event.target.checked;
               setLevelData({
