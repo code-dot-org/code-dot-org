@@ -8,7 +8,7 @@ export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
 }
 
-const PASSED_STATUSES = ['PASS', 'EXPECTED_FAILURE'];
+const PASSED_STATUSES = ['PASS'];
 
 // Validates a Java Lab 2 level by checking the results of the level's
 // validation tests, which are run by Javabuilder and reported into the

@@ -18,15 +18,15 @@ describe('JavaValidationTracker', () => {
     expect(tracker.getValidationResults()).toEqual(RESULTS);
   });
 
-  it('starts with no results', () => {
+  it('starts with undefined results', () => {
     const tracker = new JavaValidationTracker();
-    expect(tracker.getValidationResults()).toEqual([]);
+    expect(tracker.getValidationResults()).toEqual(undefined);
   });
 
   it('reset with isChangingLevels clears results', () => {
     const tracker = trackerWith(RESULTS);
     tracker.reset(true);
-    expect(tracker.getValidationResults()).toEqual([]);
+    expect(tracker.getValidationResults()).toEqual(undefined);
   });
 
   it('reset without isChangingLevels keeps names but sets results to PENDING', () => {
@@ -38,10 +38,10 @@ describe('JavaValidationTracker', () => {
     ]);
   });
 
-  it('reset without prior results leaves results empty', () => {
+  it('reset without prior results leaves results undefined', () => {
     const tracker = new JavaValidationTracker();
     tracker.reset(false);
-    expect(tracker.getValidationResults()).toEqual([]);
+    expect(tracker.getValidationResults()).toEqual(undefined);
   });
 
   it('updates a matching row in place rather than appending a duplicate', () => {
