@@ -145,13 +145,13 @@ class Policies::Lti
           type: "LtiResourceLinkRequest",
           label: "Launch CodeAI",
           placements: ["link_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo-codeai.svg', host: CDO.studio_url('')),
+          icon_uri: ApplicationController.helpers.image_url(Cdo::Brand.logo_filename, host: CDO.studio_url('')),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch CodeAI",
           placements: ["assignment_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo-codeai.svg', host: CDO.studio_url('')),
+          icon_uri: ApplicationController.helpers.image_url(Cdo::Brand.logo_filename, host: CDO.studio_url('')),
         }
       ]
     }
