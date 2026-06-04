@@ -72,11 +72,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/?lang=es'
     assert_equal 'es-ES', cookies[:language_]
 
+    cookies.delete('language_')
+    cookies.delete('ge_region')
+
     get '/s/frozen/lang/es'
     assert_redirected_to '/s/frozen?set_locale=es&lang=es'
     follow_redirect!
     assert_redirected_to '/s/frozen?lang=es'
     assert_equal 'es-ES', cookies[:language_]
+
+    cookies.delete('language_')
+    cookies.delete('ge_region')
 
     get "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1/lang/es"
     assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?set_locale=es&lang=es"
