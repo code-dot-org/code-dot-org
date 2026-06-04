@@ -1054,7 +1054,7 @@ $default-modal-width: 640px;
     top: 50px; // top of the dialog
 
     width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5);
+    margin-left: -($default-modal-width * 0.5 + 1);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -1070,7 +1070,7 @@ $default-modal-width: 640px;
 
 .dash_modal {
   width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5);
+  margin-left: -($default-modal-width * 0.5 + 1);
 }
 
 .dash_modal_body {
