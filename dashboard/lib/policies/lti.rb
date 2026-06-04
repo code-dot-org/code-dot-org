@@ -121,14 +121,14 @@ class Policies::Lti
     grant_types: ["client_credentials", "implicit"],
     initiate_login_uri: CDO.studio_url('/lti/v1/login'),
     redirect_uris: [CDO.studio_url('/lti/v1/authenticate')],
-    client_name: "Code.org",
+    client_name: "CodeAI",
     jwks_uri: CDO.studio_url('/oauth/jwks'),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
     scope: ALL_SCOPES.join(' '),
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
       domain: CDO.dashboard_site_host,
-      description: "Code.org LTI Integration",
+      description: "CodeAI LTI Integration",
       target_link_uri: DEFAULT_TARGET_LINK_URI,
       custom_parameters: {
         email: "$Person.email.primary",
@@ -143,15 +143,15 @@ class Policies::Lti
       messages: [
         {
           type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
+          label: "Launch CodeAI",
           placements: ["link_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('')),
+          icon_uri: ApplicationController.helpers.image_url('logo-codeai.svg', host: CDO.studio_url('')),
         },
         {
           type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
+          label: "Launch CodeAI",
           placements: ["assignment_selection"],
-          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('')),
+          icon_uri: ApplicationController.helpers.image_url('logo-codeai.svg', host: CDO.studio_url('')),
         }
       ]
     }
