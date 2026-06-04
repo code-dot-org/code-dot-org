@@ -1,11 +1,13 @@
 /* React component to show information about the currently-selected data set. */
 import {connect} from 'react-redux';
-import {RootState} from '../redux';
+
 import {styles} from '../constants';
-import ScrollableContent from './ScrollableContent';
-import I18n from '../i18n';
 import {getDatasetDetails} from '../helpers/datasetDetails';
+import I18n from '../i18n';
+import {RootState} from '../redux';
 import {Metadata, DatasetDetails} from '../types';
+
+import ScrollableContent from './ScrollableContent';
 
 interface DataCardProps {
   name?: string;

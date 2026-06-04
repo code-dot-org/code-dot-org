@@ -1,10 +1,11 @@
 /* React component to handle toggling between correct/incorrect test results */
-import {connect} from 'react-redux';
-import {setResultsTab, RootState} from '../redux';
-import {ResultsGrades, styles} from '../constants';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faTimes, faCheck} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {connect} from 'react-redux';
+
+import {ResultsGrades, styles} from '../constants';
 import I18n from '../i18n';
+import {setResultsTab, RootState} from '../redux';
 
 interface ResultsToggleProps {
   resultsTab?: string;

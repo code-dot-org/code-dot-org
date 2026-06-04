@@ -1,8 +1,7 @@
-import I18n from '../i18n';
-
 /* Helper functions for getting information about a column and its data. */
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
+import I18n from '../i18n';
 import {RootState} from '../redux';
 import {
   DataRow,

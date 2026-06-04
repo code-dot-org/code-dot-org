@@ -1,11 +1,12 @@
+import {localizeDatasets} from '../../src/datasetManifest';
+import I18n from '../../src/i18n';
+
 import {
   premadeDataset,
   premadeDatasets,
   premadeDatasetNameLocalized,
   premadeDatasetTranslations,
 } from './testData';
-import {localizeDatasets} from '../../src/datasetManifest';
-import I18n from '../../src/i18n';
 
 beforeEach(() => {
   I18n.initI18n();

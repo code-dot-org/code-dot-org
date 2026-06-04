@@ -37,17 +37,21 @@ since this performs a network request, but it relies on the backend server to
 be running and accessible. Other options offer different strategies that work
 well for offline or progressive situations, but may lack some features.
 
+For offline development without Rails, set `VITE_API_MODE=msw` and start the
+MSW worker before React renders. The real `kyTransport` is still used; MSW
+intercepts at the network boundary so the production code path runs. See
+`./mocks/README.md`.
+
 Here is a general way of determining a transport dynamically using an envionment
 variable:
 
 ```
 import {
   createHttpTransport,
-  createMockTransport,
   createReplayTransport,
 } from '@code-dot-org/core/api/transports';
 
-const apiMode = import.meta.env.VITE_API_MODE as 'rails' | 'mock' | 'replay' | 'auto';
+const apiMode = import.meta.env.VITE_API_MODE as 'rails' | 'msw' | 'replay' | 'auto';
 
 const http = createHttpTransport({
   baseUrl: '/api',
@@ -56,11 +60,10 @@ const http = createHttpTransport({
 });
 
 const transport =
-  apiMode === 'mock'
-    ? createMockTransport({routes: mockRoutes, baseUrl: '/api', latencyMs: {min: 20, max: 120}})
-    : apiMode === 'replay'
-      ? createReplayTransport({mode: 'replay', backingTransport: http, namespace: 'vite-labs'})
-      : apiMode === 'auto'
-        ? createReplayTransport({mode: 'auto', backingTransport: http, namespace: 'vite-labs'})
-        : http;
+  apiMode === 'replay'
+    ? createReplayTransport({mode: 'replay', backingTransport: http, namespace: 'vite-labs'})
+    : apiMode === 'auto'
+      ? createReplayTransport({mode: 'auto', backingTransport: http, namespace: 'vite-labs'})
+      : http;
+// `msw` mode uses `http` directly; the worker handles interception.
 ```

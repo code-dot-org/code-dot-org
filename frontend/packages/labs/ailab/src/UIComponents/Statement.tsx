@@ -1,11 +1,12 @@
 /* React component to display a statement about our model. */
-import {connect} from 'react-redux';
-import {setLabelColumn, removeSelectedFeature, RootState} from '../redux';
-import {styles} from '../constants';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
-import I18n from '../i18n';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {connect} from 'react-redux';
+
+import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import I18n from '../i18n';
+import {setLabelColumn, removeSelectedFeature, RootState} from '../redux';
 
 interface StatementProps {
   shouldShow?: boolean;
