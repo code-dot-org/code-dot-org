@@ -1,9 +1,9 @@
 .compareModelsModal {
+  align-self: stretch;
+  margin-inline: auto;
   max-height: calc(90vh - 100px);
-  width: 800px;
-  max-width: 800px;
+  overflow: hidden;
 
-  // Modal content section (title, hr, content, hr, actions)
   > div:nth-of-type(2) {
     flex: 1 1 auto;
     min-height: 0;
@@ -36,6 +36,7 @@
   overflow-y: hidden;
   flex: 1;
   min-height: 0;
+  min-width: 0;
 }
 
 .modelDescriptionContainer {
