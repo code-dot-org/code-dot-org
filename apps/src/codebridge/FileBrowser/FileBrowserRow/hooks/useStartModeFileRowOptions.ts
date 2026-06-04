@@ -3,8 +3,6 @@ import {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
-import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setFileTypeThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
@@ -34,27 +32,15 @@ export const useStartModeFileRowOptions = (
 ) => {
   const dispatch = useAppDispatch();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // setFileType only gets called in start mode. If we are setting a file to
-  // validation or changing a validation file to a non-validation file, also
-  // set the override validation to a passed all tests condition.
-  // This makes it so the progress manager gets updated accordingly and
-  // levelbuilders can run the new validation file and see results.
-  // All files are set to starter by default, so we will catch all new validation
-  // files with this method.
+  // setFileType only gets called in start mode. The validation override that
+  // drives the progress manager is kept in sync with the project's validation
+  // files by useSyncValidationOverride, so we only handle the file type change
+  // and the levelbuilder banner here.
   const handleSetFileType = useMemo(
     () => (type: ProjectFileType) => {
-      if (
-        file.type === ProjectFileType.VALIDATION &&
-        type !== ProjectFileType.VALIDATION
-      ) {
-        // If this was a validation file and we are changing it to a non-validation file,
-        // remove the override validation.
-        dispatch(setOverrideValidations([]));
-      } else if (type === ProjectFileType.VALIDATION) {
-        // If the new type is validation, use the passed all tests validation condition.
-        dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
-        // We also now want to show a banner to levelbuilders to remind them to lock any relevent start files.
-        // We only show the banner for 5 seconds.
+      if (type === ProjectFileType.VALIDATION) {
+        // Remind levelbuilders to lock any relevant start files. We only show
+        // the banner for a few seconds.
         dispatch(setShowLockedFilesBanner(true));
         setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }

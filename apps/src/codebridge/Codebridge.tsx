@@ -1,5 +1,9 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {
+  useFlaggedImage,
+  useSyncValidationOverride,
+  useZoomTracker,
+} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -194,6 +198,9 @@ export const Codebridge = React.memo(
 
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
+
+    // Keep the validation override in sync with the project's validation files.
+    useSyncValidationOverride();
 
     const dispatch = useAppDispatch();
 
