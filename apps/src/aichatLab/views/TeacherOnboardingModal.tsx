@@ -48,22 +48,38 @@ const TeacherOnboardingModal: React.FunctionComponent<
           <ul className={moduleStyles.componentsList}>
             <li>
               <Typography variant="body2" gutterBottom>
-                <SafeMarkdown markdown="**Instructions**: Clear directions and goals for each level." />
+                <SafeMarkdown
+                  markdown={
+                    '**Instructions**: Clear directions and goals for each level.'
+                  }
+                />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
-                <SafeMarkdown markdown="**Model Customizations** *(optional)*:  Clear directions and goals for each level." />
+                <SafeMarkdown
+                  markdown={
+                    '**Model Customizations** *(optional)*:  Clear directions and goals for each level.'
+                  }
+                />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
-                <SafeMarkdown markdown="**AI Chat**: The area where students can interact directly with the chatbot they've created." />
+                <SafeMarkdown
+                  markdown={
+                    "**AI Chat**: The area where students can interact directly with the chatbot they've created."
+                  }
+                />
               </Typography>
             </li>
             <li>
               <Typography variant="body2" gutterBottom>
-                <SafeMarkdown markdown="**User View** *(optional)*: Allows students to use the chatbot as a user, without the instructions or customization visible." />
+                <SafeMarkdown
+                  markdown={
+                    '**User View** *(optional)*: Allows students to use the chatbot as a user, without the instructions or customization visible.'
+                  }
+                />
               </Typography>
             </li>
           </ul>
