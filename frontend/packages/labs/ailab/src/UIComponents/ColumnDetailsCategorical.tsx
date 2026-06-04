@@ -1,11 +1,12 @@
 /* React component to handle showing details of categorical columns. */
-import {connect} from 'react-redux';
-import {RootState} from '../redux';
-import {colors, styles} from '../constants';
 import {Bar} from 'react-chartjs-2';
+import {connect} from 'react-redux';
+
+import {colors, styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
 import I18n from '../i18n';
+import {RootState} from '../redux';
+import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
 import {CategoricalColumnDetails} from '../types';
 
 interface ColumnDetailsCategoricalProps {

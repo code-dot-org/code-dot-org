@@ -1,14 +1,5 @@
-import {
-  uniqLabelFeaturesSelected,
-  prevNextButtons,
-} from './helpers/navigationValidation';
-import {reportPanelView} from './helpers/metrics';
-import {
-  getSummaryStat,
-  getResultsDataInDataTableForm,
-} from './helpers/accuracy';
-import {isColumnNumerical, getColumnDataToSave} from './helpers/columnDetails';
-import {getDatasetDetails} from './helpers/datasetDetails';
+import KNN from 'ml-knn';
+
 import {
   ColumnTypes,
   RegressionTrainer,
@@ -16,6 +7,17 @@ import {
   TestDataLocations,
   ResultsGrades,
 } from './constants';
+import {
+  getSummaryStat,
+  getResultsDataInDataTableForm,
+} from './helpers/accuracy';
+import {isColumnNumerical, getColumnDataToSave} from './helpers/columnDetails';
+import {getDatasetDetails} from './helpers/datasetDetails';
+import {reportPanelView} from './helpers/metrics';
+import {
+  uniqLabelFeaturesSelected,
+  prevNextButtons,
+} from './helpers/navigationValidation';
 import {
   DataRow,
   Metadata,
@@ -27,7 +29,6 @@ import {
   ModelDataToSave,
   PrevNextButtons,
 } from './types';
-import KNN from 'ml-knn';
 
 // Action types
 const RESET_STATE = 'RESET_STATE';
@@ -116,7 +117,9 @@ export interface RootState {
   mode?: Mode;
 }
 
-interface ReduxAction {
+// Exported so the inferred type of the `store` singleton (re-exported from the
+// package entry) is nameable in the emitted declaration file.
+export interface ReduxAction {
   type: string;
   [key: string]: any;
 }

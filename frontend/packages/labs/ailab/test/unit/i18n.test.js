@@ -1,5 +1,6 @@
-import I18n from '../../src/i18n';
 import MessageFormat from 'messageformat';
+
+import I18n from '../../src/i18n';
 
 let testTranslations = new MessageFormat('en').compile({
   hello: 'hello {name}',

@@ -1,31 +1,32 @@
+import {faSpinner} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
-import SelectDataset from './UIComponents/SelectDataset';
-import DataDisplay from './UIComponents/DataDisplay';
-import ColumnInspector from './UIComponents/ColumnInspector';
-import DataCard from './UIComponents/DataCard';
-import TrainModel from './UIComponents/TrainModel';
-import GenerateResults from './UIComponents/GenerateResults';
-import Results from './UIComponents/Results';
-import Predict from './UIComponents/Predict';
-import SaveModel from './UIComponents/SaveModel';
-import ModelCard from './UIComponents/ModelCard';
-import {styles} from './constants';
 import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
+
+import {styles} from './constants';
+import {
+  isSaveComplete,
+  shouldDisplaySaveStatus,
+} from './helpers/navigationValidation';
+import I18n from './i18n';
 import {
   getPanelButtons,
   setCurrentPanel,
   getTrainedModelDataToSave,
   RootState,
 } from './redux';
-import {
-  isSaveComplete,
-  shouldDisplaySaveStatus,
-} from './helpers/navigationValidation';
 import {PrevNextButtons, ModelDataToSave, SaveResponseData} from './types';
-import {Dispatch} from 'redux';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import I18n from './i18n';
+import ColumnInspector from './UIComponents/ColumnInspector';
+import DataCard from './UIComponents/DataCard';
+import DataDisplay from './UIComponents/DataDisplay';
+import GenerateResults from './UIComponents/GenerateResults';
+import ModelCard from './UIComponents/ModelCard';
+import Predict from './UIComponents/Predict';
+import Results from './UIComponents/Results';
+import SaveModel from './UIComponents/SaveModel';
+import SelectDataset from './UIComponents/SelectDataset';
+import TrainModel from './UIComponents/TrainModel';
 
 interface PanelButtonsProps {
   panelButtons: PrevNextButtons;

@@ -3,21 +3,23 @@
   for selected columns.
 */
 import {connect} from 'react-redux';
+
+import {styles, ColumnTypes} from '../constants';
+import {getLocalizedColumnName} from '../helpers/columnDetails';
+import I18n from '../i18n';
 import {RootState} from '../redux';
 import {getCurrentColumnDetails} from '../selectors/currentColumnSelectors';
-import {styles, ColumnTypes} from '../constants';
-import ScatterPlot from './ScatterPlot';
-import CrossTab from './CrossTab';
-import ScrollableContent from './ScrollableContent';
-import ColumnDetailsNumerical from './ColumnDetailsNumerical';
-import ColumnDetailsCategorical from './ColumnDetailsCategorical';
-import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';
+import {CurrentColumnInspector} from '../types';
+
 import AddFeatureButton from './AddFeatureButton';
+import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';
+import ColumnDetailsCategorical from './ColumnDetailsCategorical';
+import ColumnDetailsNumerical from './ColumnDetailsNumerical';
+import CrossTab from './CrossTab';
+import ScatterPlot from './ScatterPlot';
+import ScrollableContent from './ScrollableContent';
 import SelectLabelButton from './SelectLabelButton';
 import UniqueOptionsWarning from './UniqueOptionsWarning';
-import I18n from '../i18n';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {CurrentColumnInspector} from '../types';
 
 interface ColumnInspectorProps {
   currentColumnDetails: CurrentColumnInspector | undefined;

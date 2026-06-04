@@ -1,5 +1,6 @@
-import uiStrings from '../i18n/mlPlayground.json';
 import MessageFormat from 'messageformat';
+
+import uiStrings from '../i18n/mlPlayground.json';
 
 let messages: Record<string, unknown> | undefined;
 

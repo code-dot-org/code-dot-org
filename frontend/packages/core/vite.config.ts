@@ -47,6 +47,8 @@ export default defineConfig({
       entry: [
         'src/index.ts',
         'src/api/index.ts',
+        'src/api/mocks/index.ts',
+        'src/api/mocks/server.ts',
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',
       ],

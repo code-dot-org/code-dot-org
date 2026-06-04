@@ -9,6 +9,7 @@ import {
   getUniqueOptionsByColumn,
   getExtremaByColumn,
 } from '../../src/selectors';
+
 import {
   classificationState,
   allNumericalState,

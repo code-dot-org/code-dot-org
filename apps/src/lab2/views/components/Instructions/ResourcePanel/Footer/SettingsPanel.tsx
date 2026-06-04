@@ -1,5 +1,4 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useEffect, useState} from 'react';
 
@@ -23,9 +22,6 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   closePanel,
   appName,
 }) => {
-  const {theme} = useTheme();
-  // SimpleDropdown isn't themed properly, so we have to manually set the color.
-  const dropdownColor = theme === 'Dark' ? 'white' : 'gray';
   const locale = useLocalization();
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
@@ -105,7 +101,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             labelText={commonI18n.language()}
             isLabelVisible={true}
             size="s"
-            color={dropdownColor}
+            color="gray"
             dropdownTextThickness="thin"
             className={styles.dropdown}
             id={'settings-language-dropdown'}
@@ -121,7 +117,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             selectedValue={setting.selectedValue}
             name={setting.id}
             size="s"
-            color={dropdownColor}
+            color="gray"
             dropdownTextThickness="thin"
             className={styles.dropdown}
           />

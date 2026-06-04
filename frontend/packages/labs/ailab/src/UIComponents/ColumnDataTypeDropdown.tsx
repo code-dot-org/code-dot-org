@@ -1,8 +1,9 @@
 /* React component to handle setting datatype for selected columns. */
 import {connect} from 'react-redux';
-import {RootState, setColumnsByDataType} from '../redux';
+
 import {ColumnTypes} from '../constants';
 import I18n from '../i18n';
+import {RootState, setColumnsByDataType} from '../redux';
 
 interface ColumnDataTypeDropdownProps {
   columnId?: string;

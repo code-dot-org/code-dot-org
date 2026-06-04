@@ -1,0 +1,20 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "resolveJsonModule": true,
+    // The migrated ml-playground source predates two checks the shared base
+    // turns on: `verbatimModuleSyntax` (would require `import type` on ~110
+    // type-only imports) and `noUnusedLocals`/`noUnusedParameters` (~16
+    // pre-existing unused bindings). Relaxed here so the toolchain swap stays
+    // mechanical; restoring them is a tracked follow-up cleanup.
+    "verbatimModuleSyntax": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "public/datasets-manifest.json", "i18n/mlPlayground.json"]
+}

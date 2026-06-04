@@ -1,8 +1,9 @@
 import './setAssetPathDev';
-import './setPublicPath';
-import {initAll, instructionsDismissed} from './index';
 import queryString from 'query-string';
+
 import {ModelDataToSave, SaveResponse} from './types';
+
+import {initAll, instructionsDismissed} from './index';
 
 interface SampleMode {
   datasets?: string[];

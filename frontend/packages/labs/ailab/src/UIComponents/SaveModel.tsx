@@ -1,20 +1,22 @@
 /* React component to handle saving a trained model. */
+import KNN from 'ml-knn';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import {setTrainedModelDetail, RootState} from '../redux';
 import {Dispatch} from 'redux';
+
+import {styles, ModelNameMaxLength} from '../constants';
+import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   getDatasetDescription,
   isUserUploadedDataset,
 } from '../helpers/datasetDetails';
-import {getSelectedColumnsDescriptions} from '../selectors';
-import {styles, ModelNameMaxLength} from '../constants';
-import Statement from './Statement';
-import ScrollableContent from './ScrollableContent';
 import I18n from '../i18n';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {setTrainedModelDetail, RootState} from '../redux';
+import {getSelectedColumnsDescriptions} from '../selectors';
 import {TrainedModelDetailsSave} from '../types';
-import KNN from 'ml-knn';
+
+import ScrollableContent from './ScrollableContent';
+import Statement from './Statement';
 
 interface SaveModelProps {
   trainedModel: KNN | undefined;

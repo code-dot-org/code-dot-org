@@ -1,7 +1,11 @@
 /* Training and prediction using a multiclassification KNN machine learning model from
 https://github.com/mljs/knn */
 
+import KNN from 'ml-knn';
 import {Store} from 'redux';
+
+import {getPercentCorrect} from '../helpers/accuracy';
+import {logFirehoseMetric} from '../helpers/metrics';
 import {
   RootState,
   isRegression,
@@ -11,9 +15,6 @@ import {
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
 } from '../redux';
-import {getPercentCorrect} from '../helpers/accuracy';
-import {logFirehoseMetric} from '../helpers/metrics';
-import KNN from 'ml-knn';
 import {KNNTrainedModelDetails} from '../types';
 
 export default class KNNTrainer {

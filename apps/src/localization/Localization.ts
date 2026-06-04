@@ -177,7 +177,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
    * Returns true if LocalizeJS has been properly initialized and is available.
    */
   isLocalizeJS(): boolean {
-    return !!this.Localize;
+    return !!window.LocalizeLoader;
   }
 
   async waitUntilLoaded(): Promise<boolean> {
