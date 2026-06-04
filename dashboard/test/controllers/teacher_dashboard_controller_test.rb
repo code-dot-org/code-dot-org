@@ -55,4 +55,20 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: cotaught_section.id}
     assert_response :success
   end
+
+  test 'get_drawer_data: showDiversitySurvey is true when the teacher is eligible' do
+    sign_in @section_owner
+    @controller.stubs(:show_diversity_survey?).with(SurveyResult::DIVERSITY_2026).returns(true)
+    get :get_drawer_data
+    assert_response :success
+    assert_equal true, JSON.parse(@response.body)['showDiversitySurvey']
+  end
+
+  test 'get_drawer_data: showDiversitySurvey is false when the teacher is not eligible' do
+    sign_in @section_owner
+    @controller.stubs(:show_diversity_survey?).with(SurveyResult::DIVERSITY_2026).returns(false)
+    get :get_drawer_data
+    assert_response :success
+    assert_equal false, JSON.parse(@response.body)['showDiversitySurvey']
+  end
 end

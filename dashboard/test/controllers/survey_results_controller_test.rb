@@ -22,6 +22,31 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_equal 3, survey_result["properties"]["diversity_farm"].to_i
   end
 
+  test 'post Diversity2026 survey results via the legacy param shape' do
+    assert_creates(SurveyResult) do
+      post :create,
+        params: {
+          survey: {
+            kind: SurveyResult::DIVERSITY_2026,
+            diversity_asian: 5,
+            diversity_black: 4,
+            diversity_hispanic: 3,
+            diversity_american_indian: 2,
+            diversity_hawaiian: 1,
+            diversity_white: 6,
+            diversity_tr: 7
+          }
+        },
+        format: :json
+    end
+
+    survey_result = SurveyResult.where(user: @teacher).last
+    assert survey_result
+    assert_equal SurveyResult::DIVERSITY_2026, survey_result.kind
+    assert_equal 5, survey_result['properties']['diversity_asian'].to_i
+    assert_equal 7, survey_result['properties']['diversity_tr'].to_i
+  end
+
   test 'post net promoter score survey results' do
     nps_value = 10
     nps_comment = "Rock on"

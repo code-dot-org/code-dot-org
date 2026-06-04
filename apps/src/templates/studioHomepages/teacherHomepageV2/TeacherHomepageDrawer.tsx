@@ -16,6 +16,9 @@ import i18n from '@cdo/locale';
 
 import SchoolDataInputs from '../../SchoolDataInputs';
 
+import DiversitySurveyContainer, {
+  DiversitySurveyHandle,
+} from './DiversitySurveyContainer';
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
 import NpsSurveyContainer from './NpsSurveyContainer';
 import {SchoolInfo} from './TeacherHomepageConstants';
@@ -31,6 +34,7 @@ interface TeacherHomepageDrawerProps {
   afeOpenInitially: boolean;
   npsOpenInitially: boolean;
   npsProps: string;
+  diversityOpenInitially: boolean;
   onCloseCallback: () => void;
 }
 
@@ -41,6 +45,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   afeOpenInitially,
   npsOpenInitially,
   npsProps,
+  diversityOpenInitially,
   onCloseCallback,
 }) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
@@ -53,6 +58,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
   const [NPSSuccess, setNPSSuccess] = React.useState(false);
+  const [diversityOpen, setDiversityOpen] = React.useState(
+    diversityOpenInitially
+  );
+  const [diversitySuccess, setDiversitySuccess] = React.useState(false);
+
+  const diversitySurveyRef = React.useRef<DiversitySurveyHandle>(null);
 
   const isOpen = React.useMemo<boolean>(
     () =>
@@ -61,7 +72,9 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       success ||
       AFEDrawerOpen ||
       NPSOpen ||
-      NPSSuccess,
+      NPSSuccess ||
+      diversityOpen ||
+      diversitySuccess,
     [
       schoolInfoInterstitialOpen,
       schoolInfoConfirmationOpen,
@@ -69,6 +82,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       AFEDrawerOpen,
       NPSOpen,
       NPSSuccess,
+      diversityOpen,
+      diversitySuccess,
     ]
   );
 
@@ -90,6 +105,11 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setNPSSuccess(true);
   };
 
+  const DiversitySurveyComplete = () => {
+    setDiversityOpen(false);
+    setDiversitySuccess(true);
+  };
+
   const headerText: () => string = () => {
     if (schoolInfoInterstitialOpen) {
       return i18n.censusHeading();
@@ -103,6 +123,10 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.helpUsImprove();
     } else if (NPSSuccess) {
       return i18n.NPSSuccessHeader();
+    } else if (diversityOpen) {
+      return i18n.diversitySurveyHeading();
+    } else if (diversitySuccess) {
+      return i18n.diversitySurveySuccessHeading();
     }
   };
 
@@ -119,6 +143,10 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.afeBannerParagraph();
     } else if (NPSSuccess) {
       return i18n.NPSSuccessBody();
+    } else if (diversityOpen) {
+      return i18n.diversitySurveyBody();
+    } else if (diversitySuccess) {
+      return i18n.diversitySurveySuccessBody();
     }
   };
 
@@ -145,6 +173,15 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
               onCompleteCallback={NpsSurveyComplete}
             />
           )}
+        </div>
+      );
+    } else if (diversityOpen) {
+      return (
+        <div className={styles.drawerContent}>
+          <DiversitySurveyContainer
+            ref={diversitySurveyRef}
+            onCompleteCallback={DiversitySurveyComplete}
+          />
         </div>
       );
     } else {
@@ -204,6 +241,30 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           {i18n.learnMore()}
         </MuiButton>
       );
+    } else if (diversityOpen) {
+      return (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={() => diversitySurveyRef.current?.submit()}
+          type="button"
+        >
+          {i18n.diversitySurveyContinue()}
+        </MuiButton>
+      );
+    } else if (diversitySuccess) {
+      return (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={() => onDrawerClose()}
+          type="button"
+        >
+          {i18n.diversitySurveyClose()}
+        </MuiButton>
+      );
     }
   };
 
@@ -232,6 +293,20 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           type="button"
         >
           {i18n.notInterested()}
+        </MuiButton>
+      );
+    } else if (diversitySuccess) {
+      return null;
+    } else if (diversityOpen) {
+      return (
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="medium"
+          onClick={() => onDrawerClose()}
+          type="button"
+        >
+          {i18n.diversitySurveyAskMeLater()}
         </MuiButton>
       );
     } else {
@@ -332,6 +407,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setAFEDrawerOpen(false);
     setNPSOpen(false);
     setNPSSuccess(false);
+    setDiversityOpen(false);
+    setDiversitySuccess(false);
     onCloseCallback();
   };
 
@@ -352,7 +429,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         />
       </div>
       <div className={styles.drawerText}>
-        {(success || NPSSuccess) && (
+        {(success || NPSSuccess || diversitySuccess) && (
           <img
             className={styles.drawerImage}
             src={drawerConfirmationImage}

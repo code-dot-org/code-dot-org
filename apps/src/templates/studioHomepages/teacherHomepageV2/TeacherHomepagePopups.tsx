@@ -18,6 +18,7 @@ interface DrawerData {
   existingSchoolInfo: SchoolInfo;
   afeEligible: boolean;
   showNps: boolean;
+  showDiversitySurvey: boolean;
 }
 
 /**
@@ -41,6 +42,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(false);
   const [NPSDrawerOpen, setNPSDrawerOpen] = React.useState(false);
   const [NPSProps, setNPSProps] = React.useState('');
+  const [diversityOpen, setDiversityOpen] = React.useState(false);
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 
@@ -55,7 +57,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
       searchParams.has('showSchoolInfoInterstitial') ||
       searchParams.has('showSchoolInfoConfirmation') ||
       searchParams.has('showAFE') ||
-      searchParams.has('showNPS')
+      searchParams.has('showNPS') ||
+      searchParams.has('showDiversitySurvey')
     ) {
       return null;
     }
@@ -86,6 +89,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
         setAFEDrawerOpen(data.value.afeEligible);
+        setDiversityOpen(data.value.showDiversitySurvey);
         if (data.value.showNps) {
           HttpClient.fetchJson<{props: string}>(
             '/form/nps_survey/configuration'
@@ -112,6 +116,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           setAFEDrawerOpen(true);
         } else if (searchParams.get('showNPS') === 'true') {
           setNPSDrawerOpen(true);
+        } else if (searchParams.get('showDiversitySurvey') === 'true') {
+          setDiversityOpen(true);
         }
         setIsLoading(false);
       })
@@ -128,7 +134,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
       schoolInfoInterstitialOpen ||
       schoolInfoConfirmationOpen ||
       AFEDrawerOpen ||
-      NPSDrawerOpen
+      NPSDrawerOpen ||
+      diversityOpen
     ) {
       return (
         <TeacherHomepageDrawer
@@ -138,6 +145,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           afeOpenInitially={AFEDrawerOpen}
           npsOpenInitially={NPSDrawerOpen}
           npsProps={NPSProps}
+          diversityOpenInitially={diversityOpen}
           onCloseCallback={onClosePopup}
         />
       );
@@ -151,6 +159,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     AFEDrawerOpen,
     NPSDrawerOpen,
     NPSProps,
+    diversityOpen,
     existingSchoolInfo,
     onClosePopup,
     hasSeenPopup,

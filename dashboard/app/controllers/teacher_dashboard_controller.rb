@@ -53,6 +53,7 @@ class TeacherDashboardController < ApplicationController
     end
 
     show_nps = show_nps_survey?
+    show_diversity = show_diversity_survey?(SurveyResult::DIVERSITY_2026)
 
     SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
 
@@ -61,7 +62,8 @@ class TeacherDashboardController < ApplicationController
       showSchoolInfoConfirmation: show_school_info_confirmation,
       existingSchoolInfo: school_info,
       afeEligible: afe_eligible,
-      showNps: show_nps
+      showNps: show_nps,
+      showDiversitySurvey: show_diversity
     }
   end
 
