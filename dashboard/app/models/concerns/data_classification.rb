@@ -8,14 +8,24 @@
 # when purging a user) and a possible default SELECT scope. Because classification is
 # foundational and not analytics-specific, it lives in its own concern.
 #
-# The four classifications, least to most sensitive:
-#   :public            - safe to show anyone, including anonymous/guest users.
-#   :confidential      - primarily the creating user's own content; the app warns users
-#                        not to store personal information here.
-#   :restricted        - personally identifiable / compliance-regulated data.
-#   :highly_restricted - secrets (e.g. users.hashed_password, authentication_options.token).
+# The four classifications, least to most sensitive. Each column gets exactly one.
 #
-# Declare only the exceptions. Any column you don't classify falls back to a fail-safe,
+# * :public - Safe to share with anyone, including anonymous/guest users of our Learning Platform
+#   and external parties. For information meant to be shared publicly.
+#   Examples: Level.name, Lesson.lockable, User.created_at, Project.id
+#
+# * :confidential - Should hold no personal information, though a user might store sensitive data
+#   here against our guidance. Not shared publicly without careful review.
+#   Examples: UserScript.properties
+#
+# * :restricted - Personally identifiable / compliance-regulated data: name, home address,
+#   birthdate, SSN, phone number, email address, IP address, etc.
+#   Examples: User.email, LevelSource.data, Project.updated_ip, Project.uuid
+#
+# * :highly_restricted - Extremely sensitive secrets, guarded with the strongest protections.
+#   Examples: User.encrypted_password, User.reset_password_token, User.secret_words
+#
+# Any column you don't classify falls back to a fail-safe,
 # type-based default (see `effective_data_classification`): text and most date/time
 # columns are assumed :restricted; created_at/updated_at/deleted_at and scalar types
 # (integer, boolean, float, ...) are :public.
