@@ -101,9 +101,8 @@ export async function handleRunClick(
     progressManager?.resetValidation();
     progressManager?.updateProgress();
   }
-  const validationResults: ValidationResult[] = [];
   const onValidationResult = (result: ValidationResult) => {
-    validationResults.push(result);
+    JavaValidationTracker.getInstance().addValidationResult(result);
   };
 
   // Return a promise that resolves when the run is settled, which enables the
@@ -114,9 +113,6 @@ export async function handleRunClick(
       if (running || resolved) return;
       resolved = true;
       if (runTests && progressManager) {
-        JavaValidationTracker.getInstance().setValidationResults(
-          validationResults
-        );
         progressManager.updateProgress();
       }
       resolve();

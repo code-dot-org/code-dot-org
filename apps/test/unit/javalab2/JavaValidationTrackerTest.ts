@@ -7,22 +7,30 @@ describe('JavaValidationTracker', () => {
     {message: 'Test.two', result: 'FAIL'},
   ];
 
-  it('stores and returns validation results', () => {
+  function trackerWith(results: ValidationResult[]): JavaValidationTracker {
     const tracker = new JavaValidationTracker();
-    tracker.setValidationResults(RESULTS);
+    results.forEach(result => tracker.addValidationResult(result));
+    return tracker;
+  }
+
+  it('accumulates added results in order', () => {
+    const tracker = trackerWith(RESULTS);
     expect(tracker.getValidationResults()).toEqual(RESULTS);
   });
 
-  it('reset with isChangingLevels clears results', () => {
+  it('starts with no results', () => {
     const tracker = new JavaValidationTracker();
-    tracker.setValidationResults(RESULTS);
+    expect(tracker.getValidationResults()).toEqual([]);
+  });
+
+  it('reset with isChangingLevels clears results', () => {
+    const tracker = trackerWith(RESULTS);
     tracker.reset(true);
-    expect(tracker.getValidationResults()).toBeUndefined();
+    expect(tracker.getValidationResults()).toEqual([]);
   });
 
   it('reset without isChangingLevels keeps names but sets results to PENDING', () => {
-    const tracker = new JavaValidationTracker();
-    tracker.setValidationResults(RESULTS);
+    const tracker = trackerWith(RESULTS);
     tracker.reset(false);
     expect(tracker.getValidationResults()).toEqual([
       {message: 'Test.one', result: 'PENDING'},
@@ -30,9 +38,31 @@ describe('JavaValidationTracker', () => {
     ]);
   });
 
-  it('reset without prior results leaves results undefined', () => {
+  it('reset without prior results leaves results empty', () => {
     const tracker = new JavaValidationTracker();
     tracker.reset(false);
-    expect(tracker.getValidationResults()).toBeUndefined();
+    expect(tracker.getValidationResults()).toEqual([]);
+  });
+
+  it('updates a matching row in place rather than appending a duplicate', () => {
+    // Simulates a re-run: results from the first run, reset to PENDING, then
+    // fresh results stream back in for the same tests.
+    const tracker = trackerWith(RESULTS);
+    tracker.reset(false);
+    tracker.addValidationResult({message: 'Test.one', result: 'PASS'});
+    tracker.addValidationResult({message: 'Test.two', result: 'PASS'});
+    expect(tracker.getValidationResults()).toEqual([
+      {message: 'Test.one', result: 'PASS'},
+      {message: 'Test.two', result: 'PASS'},
+    ]);
+  });
+
+  it('appends a result whose test name has not been seen', () => {
+    const tracker = trackerWith(RESULTS);
+    tracker.addValidationResult({message: 'Test.three', result: 'PASS'});
+    expect(tracker.getValidationResults()).toEqual([
+      ...RESULTS,
+      {message: 'Test.three', result: 'PASS'},
+    ]);
   });
 });

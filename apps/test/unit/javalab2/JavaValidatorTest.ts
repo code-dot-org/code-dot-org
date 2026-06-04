@@ -21,37 +21,29 @@ describe('JavaValidator', () => {
     },
   ];
 
-  it('meets the passed condition if all tests pass', () => {
+  function trackerWith(results: ValidationResult[]): JavaValidationTracker {
     const tracker = new JavaValidationTracker();
-    const validator = new JavaValidator(tracker);
-    tracker.setValidationResults(PASSED_TESTS);
+    results.forEach(result => tracker.addValidationResult(result));
+    return tracker;
+  }
+
+  it('meets the passed condition if all tests pass', () => {
+    const validator = new JavaValidator(trackerWith(PASSED_TESTS));
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(true);
   });
 
   it('does not meet the passed condition if some tests fail', () => {
-    const tracker = new JavaValidationTracker();
-    const validator = new JavaValidator(tracker);
-    tracker.setValidationResults(SOME_FAILED_TESTS);
+    const validator = new JavaValidator(trackerWith(SOME_FAILED_TESTS));
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 
-  it('does not meet the passed condition if results are undefined', () => {
-    const tracker = new JavaValidationTracker();
-    const validator = new JavaValidator(tracker);
-    expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
-  });
-
-  it('does not meet the passed condition if results are an empty list', () => {
-    const tracker = new JavaValidationTracker();
-    const validator = new JavaValidator(tracker);
-    tracker.setValidationResults([]);
+  it('does not meet the passed condition if there are no results', () => {
+    const validator = new JavaValidator(trackerWith([]));
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 
   it('returns the tracker results from getValidationResults', () => {
-    const tracker = new JavaValidationTracker();
-    const validator = new JavaValidator(tracker);
-    tracker.setValidationResults(PASSED_TESTS);
+    const validator = new JavaValidator(trackerWith(PASSED_TESTS));
     expect(validator.getValidationResults()).toEqual(PASSED_TESTS);
   });
 });
