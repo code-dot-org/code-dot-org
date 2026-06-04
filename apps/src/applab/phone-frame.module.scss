@@ -1,5 +1,3 @@
-@use 'color.scss';
-
 $border-radius: 30px;
 $frame-height: 60px;
 
@@ -12,10 +10,10 @@ $min-viz-height: 280px;
 .phoneFrame {
   display: block;
   height: $frame-height;
-  background-color: color.$lighter_gray;
+  background-color: var(--background-neutral-quinary);
 
   &Dark {
-    background-color: color.$charcoal;
+    background-color: var(--background-neutral-octonary);
   }
 
   &Top {
@@ -46,7 +44,7 @@ $min-viz-height: 280px;
 }
 
 .paused {
-  color: color.$white;
+  color: var(--text-neutral-white-fixed);
   font-size: 20px;
 }
 
@@ -91,8 +89,8 @@ $min-viz-height: 280px;
     }
 
     :global(#topResetButton) {
-      border-color: color.$brand_secondary_default;
-      background-color: color.$brand_secondary_default;
+      border-color: var(--borders-brand-purple-primary);
+      background-color: var(--background-brand-purple-primary);
     }
   }
 
