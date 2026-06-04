@@ -125,6 +125,7 @@ still on the TODO list. Differences from legacy use:
 but we don't persist that information yet.
 - **Support run before edit** Right now we only save the project on first edit,
 which prevents running on Javabuilder. We should force a save before run is clicked.
+- **Fix stop button** The stop button doesn't actually stop the program or validation run right now.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**
