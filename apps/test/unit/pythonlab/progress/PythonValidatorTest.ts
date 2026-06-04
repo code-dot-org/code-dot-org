@@ -1,8 +1,8 @@
+import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {Condition} from '@cdo/apps/lab2/types';
 import PythonValidationTracker from '@cdo/apps/pythonlab/progress/PythonValidationTracker';
-import PythonValidator from '@cdo/apps/pythonlab/progress/PythonValidator';
 
-describe('PythonValidator', () => {
+describe('TestResultValidator with a PythonValidationTracker', () => {
   const PASSED_TESTS = [
     {name: 'test1', result: 'PASS'},
     {name: 'test2', result: 'PASS'},
@@ -22,27 +22,27 @@ describe('PythonValidator', () => {
 
   it('should meet all passed condition if all tests pass', () => {
     const validationTracker = new PythonValidationTracker();
-    const validator = new PythonValidator(validationTracker);
+    const validator = new TestResultValidator(validationTracker);
     validationTracker.setValidationResults(PASSED_TESTS);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(true);
   });
 
   it('should not meet all passed condition if some tests failed', () => {
     const validationTracker = new PythonValidationTracker();
-    const validator = new PythonValidator(validationTracker);
+    const validator = new TestResultValidator(validationTracker);
     validationTracker.setValidationResults(SOME_FAILED_TESTS);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 
   it('should not meet all passed condition if tests results are null', () => {
     const validationTracker = new PythonValidationTracker();
-    const validator = new PythonValidator(validationTracker);
+    const validator = new TestResultValidator(validationTracker);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 
   it('should meet all passed condition if test results are an empty list', () => {
     const validationTracker = new PythonValidationTracker();
-    const validator = new PythonValidator(validationTracker);
+    const validator = new TestResultValidator(validationTracker);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 });

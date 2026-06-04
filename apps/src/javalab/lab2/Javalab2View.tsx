@@ -11,6 +11,7 @@ import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -33,7 +34,6 @@ import {
 import {deriveLabConfig} from './labConfig';
 import HorizontalLayout from './layout/HorizontalLayout';
 import JavaValidationTracker from './progress/JavaValidationTracker';
-import JavaValidator from './progress/JavaValidator';
 import {
   flatToMultiFile,
   mergeValidationIntoStart,
@@ -78,7 +78,7 @@ const Javalab2View: React.FunctionComponent<
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'javalab') {
       progressManager.setValidator(
-        new JavaValidator(JavaValidationTracker.getInstance())
+        new TestResultValidator(JavaValidationTracker.getInstance())
       );
     }
   }, [progressManager, levelProperties.appName]);

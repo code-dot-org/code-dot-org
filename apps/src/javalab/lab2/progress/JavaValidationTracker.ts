@@ -1,11 +1,9 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
+import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
 
-// Holds the per-test validation results for the most recent Java Lab 2
-// validation run. Populated from Javabuilder's TEST_RESULT messages (see
-// javabuilderRunUtils) and read by JavaValidator and the Lab2 ValidationTable.
-export default class JavaValidationTracker {
-  private validationResults: ValidationResult[] | undefined = undefined;
-
+// Populated from Javabuilder's TEST_RESULT messages (see javabuilderRunUtils),
+// one test at a time via addValidationResult.
+export default class JavaValidationTracker extends ValidationResultsTracker {
   private static _instance: JavaValidationTracker;
 
   public static getInstance(): JavaValidationTracker {
@@ -17,10 +15,6 @@ export default class JavaValidationTracker {
 
   public static create() {
     JavaValidationTracker._instance = new JavaValidationTracker();
-  }
-
-  getValidationResults(): ValidationResult[] | undefined {
-    return this.validationResults;
   }
 
   // Record a single test's result. On a re-run, `reset` leaves the prior
@@ -45,21 +39,6 @@ export default class JavaValidationTracker {
       );
     } else {
       this.validationResults = [...this.validationResults, result];
-    }
-  }
-
-  reset(isChangingLevels: boolean = false) {
-    if (isChangingLevels) {
-      this.validationResults = undefined;
-    } else {
-      // If we are not changing levels, keep the test names but set all results to
-      // pending. This lets us show the user the test names in the table while the
-      // tests are running. Since tests are defined on the level, they can't change
-      // in a single page load.
-      this.validationResults = this.validationResults?.map(result => ({
-        message: result.message,
-        result: 'PENDING',
-      }));
     }
   }
 }

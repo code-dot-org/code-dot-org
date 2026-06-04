@@ -1,9 +1,9 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
+import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
 import {PythonValidationResult} from '@cdo/apps/pythonlab/types';
 
-export default class PythonValidationTracker {
-  private validationResults: ValidationResult[] | undefined = undefined;
-
+// Populated in bulk from a pyodide test run (see pyodideRunner).
+export default class PythonValidationTracker extends ValidationResultsTracker {
   private static _instance: PythonValidationTracker;
 
   public static getInstance(): PythonValidationTracker {
@@ -17,10 +17,6 @@ export default class PythonValidationTracker {
     PythonValidationTracker._instance = new PythonValidationTracker();
   }
 
-  getValidationResults(): ValidationResult[] | undefined {
-    return this.validationResults;
-  }
-
   setValidationResults(results: PythonValidationResult[]) {
     if (results) {
       this.validationResults = results.map(result => ({
@@ -29,20 +25,6 @@ export default class PythonValidationTracker {
       }));
     } else {
       this.validationResults = undefined;
-    }
-  }
-
-  reset(isChangingLevels: boolean = false) {
-    if (isChangingLevels) {
-      this.validationResults = undefined;
-    } else {
-      // If we are not changing levels, keep the test names but set all results to pending.
-      // This lets us show the user the test names in the table while the tests are running.
-      // Since tests are defined on the level, they can't change in a single page load.
-      this.validationResults = this.validationResults?.map(result => ({
-        message: result.message,
-        result: 'PENDING',
-      }));
     }
   }
 }
