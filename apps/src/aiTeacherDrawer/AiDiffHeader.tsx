@@ -10,7 +10,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import style from './ai-differentiation.module.scss';
 
-const AI_DIFF_HEADER_TEXT = commonI18n.aiDifferentiation_header() + ' 2.0';
+const AI_DIFF_HEADER_TEXT = commonI18n.aiDifferentiation_header();
 
 interface AiDiffHeaderProps {
   closeTutor?: () => void;
