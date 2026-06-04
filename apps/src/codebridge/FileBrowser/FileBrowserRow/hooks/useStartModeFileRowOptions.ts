@@ -56,8 +56,9 @@ export const useStartModeFileRowOptions = (
         : [
             {
               condition:
-                !projectHasValidationFile ||
-                (allowMultipleValidationFiles ?? false),
+                file.type !== ProjectFileType.VALIDATION &&
+                (!projectHasValidationFile ||
+                  (allowMultipleValidationFiles ?? false)),
               iconName: 'flask',
               labelText: codebridgeI18n.makeValidation(),
               clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
