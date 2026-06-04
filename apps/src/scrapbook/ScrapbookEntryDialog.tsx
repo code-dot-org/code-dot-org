@@ -6,29 +6,24 @@ import {createPortal} from 'react-dom';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import moduleStyles from './ScrapbookEntryDialog.module.scss';
+import {EntryText, SCRAPBOOK_STEMS} from './stems';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
   scriptId: number | undefined;
   levelId: number | undefined;
-}
-
-interface FormState {
-  atFirst: string;
-  butThen: string;
-  andNow: string;
+  channelId: string | undefined;
 }
 
 interface ExistingEntry {
   before_asset_url: string | null;
   after_asset_url: string | null;
-  at_first_text: string | null;
-  but_then_text: string | null;
-  and_now_text: string | null;
+  entry_text: EntryText | null;
 }
 
-const EMPTY_FORM: FormState = {atFirst: '', butThen: '', andNow: ''};
+const emptyForm = (): EntryText =>
+  Object.fromEntries(SCRAPBOOK_STEMS.map(s => [s.key, '']));
 
 // Cap uploaded images at ~5MB pre-base64 so we don't blow up the JSON payload
 // to the scrapbook_entries endpoint.
@@ -48,36 +43,40 @@ export default function ScrapbookEntryDialog({
   onClose,
   scriptId,
   levelId,
+  channelId,
 }: Props) {
-  const [form, setForm] = useState<FormState>(EMPTY_FORM);
+  const [form, setForm] = useState<EntryText>(emptyForm);
   const [beforeUrl, setBeforeUrl] = useState<string | null>(null);
   const [afterUrl, setAfterUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const hasKey = !!channelId || (!!scriptId && !!levelId);
+  const lookupQuery = channelId
+    ? `channel_id=${encodeURIComponent(channelId)}`
+    : `script_id=${scriptId}&level_id=${levelId}`;
+
   useEffect(() => {
-    if (!isOpen || !scriptId || !levelId) return;
+    if (!isOpen || !hasKey) return;
     let cancelled = false;
     setLoading(true);
     setError(null);
 
     HttpClient.fetchJson<ExistingEntry[]>(
-      `/api/v1/scrapbook_entries?script_id=${scriptId}&level_id=${levelId}`
+      `/api/v1/scrapbook_entries?${lookupQuery}`
     )
       .then(({value: existingEntries}) => {
         if (cancelled) return;
         const existing = existingEntries[0] || null;
         if (existing) {
-          setForm({
-            atFirst: existing.at_first_text || '',
-            butThen: existing.but_then_text || '',
-            andNow: existing.and_now_text || '',
-          });
+          const blank = emptyForm();
+          const saved = existing.entry_text || {};
+          setForm({...blank, ...saved});
           setBeforeUrl(existing.before_asset_url);
           setAfterUrl(existing.after_asset_url);
         } else {
-          setForm(EMPTY_FORM);
+          setForm(emptyForm());
           setBeforeUrl(null);
           setAfterUrl(null);
         }
@@ -90,18 +89,18 @@ export default function ScrapbookEntryDialog({
     return () => {
       cancelled = true;
     };
-  }, [isOpen, scriptId, levelId]);
+  }, [isOpen, hasKey, lookupQuery]);
 
   if (!isOpen) return null;
 
   const handleChange =
-    (field: keyof FormState) =>
+    (key: string) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setForm(prev => ({...prev, [field]: e.target.value}));
+      setForm(prev => ({...prev, [key]: e.target.value}));
     };
 
   const handleClose = () => {
-    setForm(EMPTY_FORM);
+    setForm(emptyForm());
     setBeforeUrl(null);
     setAfterUrl(null);
     setError(null);
@@ -132,17 +131,17 @@ export default function ScrapbookEntryDialog({
   };
 
   const handleSave = async () => {
-    if (!scriptId || !levelId) return;
+    if (!hasKey) return;
     setSaving(true);
     setError(null);
     try {
+      const keying = channelId
+        ? {channel_id: channelId}
+        : {script_id: scriptId, level_id: levelId};
       const payload = {
-        script_id: scriptId,
-        level_id: levelId,
+        ...keying,
         scrapbook_entry: {
-          at_first_text: form.atFirst,
-          but_then_text: form.butThen,
-          and_now_text: form.andNow,
+          entry_text: form,
           ...(beforeUrl !== null ? {before_asset_url: beforeUrl} : {}),
           ...(afterUrl !== null ? {after_asset_url: afterUrl} : {}),
         },
@@ -165,7 +164,7 @@ export default function ScrapbookEntryDialog({
     }
   };
 
-  const canSave = !saving && !loading && !!scriptId && !!levelId;
+  const canSave = !saving && !loading && hasKey;
 
   return createPortal(
     <Dialog
@@ -205,19 +204,15 @@ export default function ScrapbookEntryDialog({
             />
           </div>
           <div className={moduleStyles.stems}>
-            {[
-              {label: 'At first...', field: 'atFirst' as const},
-              {label: 'But then...', field: 'butThen' as const},
-              {label: 'And now...', field: 'andNow' as const},
-            ].map(({label, field}) => (
-              <div key={field} className={moduleStyles.stemRow}>
+            {SCRAPBOOK_STEMS.map(({key, label}) => (
+              <div key={key} className={moduleStyles.stemRow}>
                 <span className={moduleStyles.stemLabel}>{label}</span>
                 <textarea
                   className={moduleStyles.stemField}
                   rows={2}
                   maxLength={500}
-                  value={form[field]}
-                  onChange={handleChange(field)}
+                  value={form[key] || ''}
+                  onChange={handleChange(key)}
                   disabled={loading}
                 />
               </div>

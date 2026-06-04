@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_13_140000) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_28_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2207,9 +2207,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_13_140000) do
     t.integer "level_id", null: false
     t.text "before_asset_url", size: :medium
     t.text "after_asset_url", size: :medium
-    t.text "at_first_text"
-    t.text "but_then_text"
-    t.text "and_now_text"
+    t.text "entry_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id", "script_id", "level_id"], name: "index_scrapbook_entries_on_user_id_and_script_id_and_level_id", unique: true

@@ -23,19 +23,19 @@ import React, {useEffect, useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import moduleStyles from './ScrapbookGallery.module.scss';
+import {EntryText, SCRAPBOOK_STEMS} from './stems';
 
 interface ScrapbookEntry {
   id: number;
-  script_id: number;
-  level_id: number;
+  script_id: number | null;
+  level_id: number | null;
+  channel_id: string | null;
   script_title: string | null;
   level_name: string | null;
   level_url: string | null;
   before_asset_url: string | null;
   after_asset_url: string | null;
-  at_first_text: string | null;
-  but_then_text: string | null;
-  and_now_text: string | null;
+  entry_text: EntryText | null;
 }
 
 interface Props {
@@ -216,18 +216,23 @@ function SortableEntryCard({
       </div>
       <div className={moduleStyles.cardBody}>
         <div className={moduleStyles.meta}>
-          {entry.script_title || `Script ${entry.script_id}`}
+          {entry.script_title ||
+            (entry.channel_id ? 'Standalone project' : `Script ${entry.script_id}`)}
         </div>
-        <Stem heading="At first..." text={entry.at_first_text} />
-        <Stem heading="But then..." text={entry.but_then_text} />
-        <Stem heading="And now..." text={entry.and_now_text} />
+        {SCRAPBOOK_STEMS.map(({key, label}) => (
+          <Stem
+            key={key}
+            heading={label}
+            text={entry.entry_text?.[key] || null}
+          />
+        ))}
         {entry.level_url && (
           <MuiLink
             href={entry.level_url}
             className={moduleStyles.levelLink}
             underline="hover"
           >
-            View level &rarr;
+            {entry.channel_id ? 'View project' : 'View level'} &rarr;
           </MuiLink>
         )}
       </div>

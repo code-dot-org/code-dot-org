@@ -27,6 +27,15 @@
     #instructor_in_training_tag= 'Viewing As Instructor'
     :javascript
       $("#instructor_in_training_tag").click(function() {$("#instructor_in_training_tag").hide();});
+- elsif @level
+  -# Standalone projects (no script_level): mount the scrapbook entrypoint and
+  -# key entries on channel_id. Direct /level/N views with neither script_level
+  -# nor channel will fall through with both ids absent — the button just won't
+  -# render in that case.
+  - level_data = {level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level}
+  - scrapbook_data = {channelId: view_options[:channel], isSignedIn: !current_user.nil?}
+  %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json, scrapbookData: scrapbook_data.to_json }}
 
 
 -#

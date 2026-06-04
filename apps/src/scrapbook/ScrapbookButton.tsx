@@ -8,9 +8,12 @@ import ScrapbookEntryDialog from './ScrapbookEntryDialog';
 
 import moduleStyles from './ScrapbookButton.module.scss';
 
+// An entry is keyed either by (scriptId, levelId) for in-curriculum levels,
+// or by channelId for standalone projects.
 interface ScrapbookData {
-  scriptId: number;
-  levelId: number;
+  scriptId?: number;
+  levelId?: number;
+  channelId?: string;
   isSignedIn: boolean;
 }
 
@@ -24,6 +27,9 @@ export default function ScrapbookButton() {
 
   const data = readScrapbookData();
   if (!data || !data.isSignedIn) return null;
+  const hasKey =
+    !!data.channelId || (!!data.scriptId && !!data.levelId);
+  if (!hasKey) return null;
 
   return (
     <>
@@ -44,6 +50,7 @@ export default function ScrapbookButton() {
         onClose={() => setDialogOpen(false)}
         scriptId={data.scriptId}
         levelId={data.levelId}
+        channelId={data.channelId}
       />
     </>
   );
