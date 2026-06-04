@@ -66,6 +66,16 @@ strong {
   padding: 4px 6px;
 }
 
+select.form-control {
+  height: 30px;
+}
+
+input,
+textarea,
+.uneditable-input {
+  width: 220px;
+}
+
 img {
   height: auto;
 }

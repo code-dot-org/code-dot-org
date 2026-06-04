@@ -21,6 +21,7 @@ export default class ElementSelect extends React.Component {
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
         <select
+          className="form-control"
           value={selected}
           onChange={this.handleChange}
           style={{width: '150px'}}
