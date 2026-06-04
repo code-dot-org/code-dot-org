@@ -26,13 +26,15 @@ function readScrapbookData(): ScrapbookData | null {
 export default function ScrapbookButton() {
   const [dialogOpen, setDialogOpen] = useState(false);
 
-  if (!experiments.isEnabledAllowingQueryString(experiments.STUDENT_SCRAPBOOK)) {
+  if (
+    
+  
+    !experiments.isEnabledAllowingQueryString(experiments.STUDENT_SCRAPBOOK)
+  ) {
     return null;
   }
-  const data = readScrapbookData();
-  if (!data || !data.isSignedIn) return null;
-  const hasKey =
-    !!data.channelId || (!!data.scriptId && !!data.levelId);
+  const data = rf (!data || !data.isSignedIn) return null;
+  const hasKey = !!data.channelId || (!!data.scriptId && !!data.levelId);
   if (!hasKey) return null;
 
   return (

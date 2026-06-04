@@ -22,8 +22,10 @@ import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import moduleStyles from './ScrapbookGallery.module.scss';
+import ScrapbookEntryDialog from './ScrapbookEntryDialog';
 import {EntryText, SCRAPBOOK_STEMS} from './stems';
+
+import moduleStyles from './ScrapbookGallery.module.scss';
 
 interface ScrapbookEntry {
   id: number;
@@ -49,8 +51,9 @@ export default function ScrapbookGallery({userName}: Props) {
     null
   );
   const [deleting, setDeleting] = useState(false);
+  const [editingEntry, setEditingEntry] = useState<ScrapbookEntry | null>(null);
 
-  useEffect(() => {
+  const fetchEntries = () => {
     let cancelled = false;
     HttpClient.fetchJson<ScrapbookEntry[]>('/api/v1/scrapbook_entries')
       .then(({value}) => {
@@ -62,7 +65,9 @@ export default function ScrapbookGallery({userName}: Props) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  };
+
+  useEffect(fetchEntries, []);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 8}}),
@@ -109,8 +114,8 @@ export default function ScrapbookGallery({userName}: Props) {
       {!error && entries !== null && entries.length === 0 && (
         <div className={moduleStyles.empty}>
           No key learning moments saved yet. Click the{' '}
-          <FontAwesomeV6Icon iconName="thumbtack" /> button on any level to add
-          one.
+          <FontAwesomeV6Icon iconName="thumbtack" /> button on any level or
+          project to add one.
         </div>
       )}
       {!error && entries !== null && entries.length > 0 && (
@@ -128,6 +133,7 @@ export default function ScrapbookGallery({userName}: Props) {
                 <SortableEntryCard
                   key={entry.id}
                   entry={entry}
+                  onEditRequested={() => setEditingEntry(entry)}
                   onDeleteRequested={() => setPendingDelete(entry)}
                 />
               ))}
@@ -153,15 +159,27 @@ export default function ScrapbookGallery({userName}: Props) {
           }}
         />
       )}
+      <ScrapbookEntryDialog
+        isOpen={!!editingEntry}
+        onClose={() => {
+          setEditingEntry(null);
+          fetchEntries();
+        }}
+        scriptId={editingEntry?.script_id ?? undefined}
+        levelId={editingEntry?.level_id ?? undefined}
+        channelId={editingEntry?.channel_id ?? undefined}
+      />
     </div>
   );
 }
 
 function SortableEntryCard({
   entry,
+  onEditRequested,
   onDeleteRequested,
 }: {
   entry: ScrapbookEntry;
+  onEditRequested: () => void;
   onDeleteRequested: () => void;
 }) {
   const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
@@ -205,6 +223,15 @@ function SortableEntryCard({
           </button>
           <button
             type="button"
+            className={moduleStyles.iconButton}
+            onClick={onEditRequested}
+            aria-label="Edit entry"
+            title="Edit entry"
+          >
+            <FontAwesomeV6Icon iconName="pen-to-square" />
+          </button>
+          <button
+            type="button"
             className={moduleStyles.deleteButton}
             onClick={onDeleteRequested}
             aria-label="Delete entry"
@@ -217,7 +244,9 @@ function SortableEntryCard({
       <div className={moduleStyles.cardBody}>
         <div className={moduleStyles.meta}>
           {entry.script_title ||
-            (entry.channel_id ? 'Standalone project' : `Script ${entry.script_id}`)}
+            (entry.channel_id
+              ? 'Standalone project'
+              : `Script ${entry.script_id}`)}
         </div>
         {SCRAPBOOK_STEMS.map(({key, label}) => (
           <Stem

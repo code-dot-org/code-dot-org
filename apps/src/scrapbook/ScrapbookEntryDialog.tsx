@@ -5,8 +5,9 @@ import {createPortal} from 'react-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import moduleStyles from './ScrapbookEntryDialog.module.scss';
 import {EntryText, SCRAPBOOK_STEMS} from './stems';
+
+import moduleStyles from './ScrapbookEntryDialog.module.scss';
 
 interface Props {
   isOpen: boolean;
@@ -33,7 +34,8 @@ function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result as string);
-    reader.onerror = () => reject(reader.error || new Error('file read failed'));
+    reader.onerror = () =>
+      reject(reader.error || new Error('file read failed'));
     reader.readAsDataURL(file);
   });
 }
