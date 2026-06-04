@@ -58,36 +58,6 @@ const DiversitySurveyContainer = React.forwardRef<
 
   React.useImperativeHandle(ref, () => ({submit}), [submit]);
 
-  // The mock lays the ethnicities out column-major: the first four in the left
-  // column, the remaining three in the right column.
-  // const columns = [ETHNICITIES.slice(0, 4), ETHNICITIES.slice(4)];
-
-  /*const renderRow = ({key, label}: {key: string; label: () => string}) => (
-    <div className={styles.diversitySurveyRow} key={key}>
-      <TextField
-        className={styles.diversitySurveyInput}
-        name={`diversity_${key}`}
-        inputType="number"
-        value={counts[key] ?? ''}
-        placeholder="0"
-        maxLength={3}
-        aria-label={label()}
-        onChange={e => onChange(key, e.target.value)}
-      />
-      <Typography variant="body2">{label()}</Typography>
-    </div>
-  );
-
-  return (
-    <div className={styles.diversitySurveyColumns}>
-      {columns.map((column, index) => (
-        <div className={styles.diversitySurveyColumn} key={index}>
-          {column.map(renderRow)}
-        </div>
-      ))}
-    </div>
-  );*/
-
   return (
     <div className={styles.diversitySurveyContainer}>
       <Typography

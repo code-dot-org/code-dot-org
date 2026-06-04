@@ -624,33 +624,20 @@
   font-weight: bold;
 }
 
-.diversitySurveyColumns {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-}
-
-.diversitySurveyColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-}
-
 .diversitySurveyRow {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 
-.diversitySurveyInput {
-  flex: none;
-  min-width: 60px;
+  .diversitySurveyInput {
+    flex: none;
+    min-width: 60px;
 
-  input {
-    width: 60px;
-    box-sizing: border-box;
-    padding: 5px 10px;
+    input {
+      width: 60px;
+      box-sizing: border-box;
+      padding: 5px 10px;
+    }
   }
-}
 }
