@@ -3,8 +3,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import i18n from '@cdo/locale';
 
 import {handleShareSetting} from './manageStudentsRedux';
@@ -38,14 +38,12 @@ class SharingControlActionsHeaderCell extends Component {
         label: i18n.projectSharingEnableAll(),
         icon: {iconName: 'circle-check'},
         onClick: this.onEnableAll,
-        isOptionDisabled: isDemoSection,
       },
       {
         value: 'disable-all-sharing',
         label: i18n.projectSharingDisableAll(),
         icon: {iconName: 'circle-xmark'},
         onClick: this.onDisableAll,
-        isOptionDisabled: isDemoSection,
       },
       {
         value: 'learn-more-sharing',
@@ -57,16 +55,16 @@ class SharingControlActionsHeaderCell extends Component {
 
     return (
       <div>
-        <span
-          data-for="demo-sharing-header-tooltip"
-          data-tip=""
-          style={{display: 'inline-block'}}
+        <DemoSectionTooltip
+          isDemoSection={isDemoSection}
+          tooltipId="demo-sharing-header-tooltip"
         >
           <ActionDropdown
             name="sharing-control-actions"
             labelText={i18n.actions()}
             size="s"
             menuPlacement="right"
+            disabled={isDemoSection}
             options={options}
             triggerButtonProps={{
               color: 'tertiary',
@@ -74,17 +72,7 @@ class SharingControlActionsHeaderCell extends Component {
               children: <FontAwesomeV6Icon iconName="gear" />,
             }}
           />
-        </span>
-        {isDemoSection && (
-          <ReactTooltip
-            id="demo-sharing-header-tooltip"
-            role="tooltip"
-            effect="solid"
-            place="top"
-          >
-            <div>{'Not available for demo sections'}</div>
-          </ReactTooltip>
-        )}
+        </DemoSectionTooltip>
       </div>
     );
   }

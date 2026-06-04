@@ -2,17 +2,17 @@ import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import {
-  DEMO_SECTION_CODE_PLACEHOLDER,
   isDemoSection as isDemoSectionSelector,
+  sectionCode as sectionCodeSelector,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -44,10 +44,13 @@ class SectionLoginInfo extends React.Component {
     }).isRequired,
     students: PropTypes.array.isRequired,
     isDemoSection: PropTypes.bool,
+    // From the sectionCode selector, which substitutes the demo placeholder
+    // for demo sections so null never reaches rendered strings.
+    sectionCode: PropTypes.string,
   };
 
   render() {
-    const {studioUrlPrefix, section, isDemoSection} = this.props;
+    const {studioUrlPrefix, section, isDemoSection, sectionCode} = this.props;
     const singleStudentId = queryParams('studentId');
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
@@ -55,12 +58,6 @@ class SectionLoginInfo extends React.Component {
           student => student.id.toString() === singleStudentId
         )
       : this.props.students;
-    // Demo sections have no real join code; use the placeholder everywhere
-    // section.code would be rendered so teachers see a coherent placeholder
-    // rather than null/undefined.
-    const displayCode = isDemoSection
-      ? DEMO_SECTION_CODE_PLACEHOLDER
-      : section.code;
 
     return (
       <div id="ui-test-section-login-info">
@@ -70,7 +67,7 @@ class SectionLoginInfo extends React.Component {
           <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
             section={section}
-            sectionCode={displayCode}
+            sectionCode={sectionCode}
             students={students}
             autoPrint={autoPrint}
             isDemoSection={isDemoSection}
@@ -80,9 +77,16 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && !isDemoSection && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            sectionCode={displayCode}
+            sectionCode={sectionCode}
             sectionId={section.id}
           />
+        )}
+        {section.loginType === SectionLoginType.email && isDemoSection && (
+          <p>
+            {'This demo section comes with pre-enrolled demo students, so ' +
+              'there is no sign-in or join information to share. Students ' +
+              'cannot join a demo section.'}
+          </p>
         )}
         {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
           section.loginType
@@ -105,6 +109,7 @@ export default connect(state => {
     section: state.teacherSections.sections[selectedSectionId],
     students: state.teacherSections.selectedStudents,
     isDemoSection: isDemoSectionSelector(state, selectedSectionId),
+    sectionCode: sectionCodeSelector(state, selectedSectionId),
   };
 })(SectionLoginInfo);
 
@@ -326,10 +331,9 @@ class WordOrPictureLogins extends React.Component {
         )}
         {students.length >= 1 && (
           <span>
-            <span
-              data-for="demo-print-login-cards-tooltip"
-              data-tip=""
-              style={{display: 'inline-block'}}
+            <DemoSectionTooltip
+              isDemoSection={this.props.isDemoSection}
+              tooltipId="demo-print-login-cards-tooltip"
             >
               <PrintLoginCards
                 sectionId={section.id}
@@ -339,17 +343,7 @@ class WordOrPictureLogins extends React.Component {
                 }
                 disabled={this.props.isDemoSection}
               />
-            </span>
-            {this.props.isDemoSection && (
-              <ReactTooltip
-                id="demo-print-login-cards-tooltip"
-                role="tooltip"
-                effect="solid"
-                place="top"
-              >
-                <div>{'Not available for demo sections'}</div>
-              </ReactTooltip>
-            )}
+            </DemoSectionTooltip>
             <br />
             <div id="printArea" style={styles.container}>
               {studentsOnly.map(student => (

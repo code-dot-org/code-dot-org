@@ -60,9 +60,24 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     }, 5000);
   };
 
-  // Demo sections have no real join code, so always render the N/A path.
-  return !isDemoSection &&
-    loginType &&
+  // Demo sections have no real join code; show the placeholder the caller
+  // passes as sectionCode (matching the demo card preview). Not copyable —
+  // there is nothing to join.
+  if (isDemoSection) {
+    return (
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-demo-section-code"
+      >
+        <Typography variant="overline1" gutterBottom>
+          <span>{i18n.sectionCodeWithColon()}</span>{' '}
+          <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
+        </Typography>
+      </div>
+    );
+  }
+
+  return loginType &&
     (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
     hidden ? (
       <Typography variant="overline1" gutterBottom>
@@ -116,23 +131,18 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       >
         <Typography variant="overline1" gutterBottom>
           {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
-          {!isDemoSection && (
-            <button
-              onClick={() => showSectionCodeDialog()}
-              id="uitest-why-link"
-              className={styles.noSectionCode}
-              aria-label={i18n.whyWithQuestionMark()}
-              type="button"
-            >
-              <FontAwesomeV6Icon
-                iconName="circle-question"
-                iconStyle="regular"
-              />
-            </button>
-          )}
+          <button
+            onClick={() => showSectionCodeDialog()}
+            id="uitest-why-link"
+            className={styles.noSectionCode}
+            aria-label={i18n.whyWithQuestionMark()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="circle-question" iconStyle="regular" />
+          </button>
         </Typography>
       </div>
-      {!isDemoSection && shouldShowDialog && (
+      {shouldShowDialog && (
         <Dialog
           title={i18n.noSectionDialogHeader({classroom: classroomType})}
           description={i18n.noSectionDialogBody({classroom: classroomType})}

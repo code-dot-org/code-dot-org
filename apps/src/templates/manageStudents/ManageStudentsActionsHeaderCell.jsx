@@ -3,8 +3,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import i18n from '@cdo/locale';
 
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
@@ -35,14 +35,13 @@ class ManageStudentsActionsHeaderCell extends Component {
   };
 
   buildOptions() {
-    const {isShareColumnVisible, hideSharingColumn, isDemoSection} = this.props;
+    const {isShareColumnVisible, hideSharingColumn} = this.props;
     const options = [
       {
         value: 'edit-all',
         label: i18n.editAll(),
         icon: {iconName: 'pen'},
         onClick: this.onEditAll,
-        isOptionDisabled: isDemoSection,
       },
     ];
     if (!isShareColumnVisible) {
@@ -51,7 +50,6 @@ class ManageStudentsActionsHeaderCell extends Component {
         label: i18n.controlProjectSharing(),
         icon: {iconName: 'share-nodes'},
         onClick: this.openProjectSharingDialog,
-        isOptionDisabled: isDemoSection,
       });
     } else {
       options.push({
@@ -59,7 +57,6 @@ class ManageStudentsActionsHeaderCell extends Component {
         label: i18n.hideProjectSharingColumn(),
         icon: {iconName: 'eye-slash'},
         onClick: hideSharingColumn,
-        isOptionDisabled: isDemoSection,
       });
     }
     return options;
@@ -69,16 +66,16 @@ class ManageStudentsActionsHeaderCell extends Component {
     const {isDemoSection} = this.props;
     return (
       <div>
-        <span
-          data-for="demo-actions-header-tooltip"
-          data-tip=""
-          style={{display: 'inline-block'}}
+        <DemoSectionTooltip
+          isDemoSection={isDemoSection}
+          tooltipId="demo-actions-header-tooltip"
         >
           <ActionDropdown
             name="student-header-actions"
             labelText={i18n.actions()}
             size="s"
             menuPlacement="right"
+            disabled={isDemoSection}
             options={this.buildOptions()}
             triggerButtonProps={{
               color: 'tertiary',
@@ -86,17 +83,7 @@ class ManageStudentsActionsHeaderCell extends Component {
               children: <FontAwesomeV6Icon iconName="gear" />,
             }}
           />
-        </span>
-        {isDemoSection && (
-          <ReactTooltip
-            id="demo-actions-header-tooltip"
-            role="tooltip"
-            effect="solid"
-            place="top"
-          >
-            <div>{'Not available for demo sections'}</div>
-          </ReactTooltip>
-        )}
+        </DemoSectionTooltip>
         <ControlProjectSharingDialog
           isDialogOpen={this.state.isProjectSharingDialogOpen}
           closeDialog={this.closeProjectSharingDialog}

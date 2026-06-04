@@ -95,8 +95,11 @@ class MoveStudents extends Component {
     const isExternallyRostered = !NON_LMS_LOGIN_TYPES.includes(
       section.loginType
     );
+    // Demo sections have a fixed roster and no join code; the server rejects
+    // transfers into them.
+    const isDemoSection = !!section.demoType;
 
-    return !isSameAsSource && !isExternallyRostered;
+    return !isSameAsSource && !isExternallyRostered && !isDemoSection;
   };
 
   getOptions = () => {

@@ -15,6 +15,7 @@ import Notification, {
 } from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
@@ -732,13 +733,9 @@ class ManageStudentsTable extends Component {
   }
 
   onPrintLoginCards() {
-    const {sectionId, isDemoSection} = this.props;
-    // Do not auto-open the print dialog for demo sections — teachers should
-    // be able to review the cards first (and the print button on the
-    // login_info page is separately disabled for demo sections).
-    const url = isDemoSection
-      ? teacherDashboardUrl(sectionId, '/login_info')
-      : teacherDashboardUrl(sectionId, '/login_info') + '?autoPrint=true';
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 
@@ -815,36 +812,21 @@ class ManageStudentsTable extends Component {
         <div className={moduleStyles.additionalControlsContainer}>
           <div className={moduleStyles.additionalControlsButtonsRow}>
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <span
-                data-for="demo-add-students-tooltip"
-                data-tip=""
-                style={{display: 'inline-block'}}
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-add-students-tooltip"
+                text="Students cannot be added to or removed from a demo section"
               >
                 <AddMultipleStudents
                   sectionId={this.props.sectionId}
                   disabled={this.props.isDemoSection}
                 />
-                {this.props.isDemoSection && (
-                  <ReactTooltip
-                    id="demo-add-students-tooltip"
-                    role="tooltip"
-                    effect="solid"
-                    place="top"
-                  >
-                    <div>
-                      {
-                        'Students cannot be added to or removed from a demo section'
-                      }
-                    </div>
-                  </ReactTooltip>
-                )}
-              </span>
+              </DemoSectionTooltip>
             )}
             {this.isMoveStudentsEnabled() && (
-              <span
-                data-for="demo-move-students-tooltip"
-                data-tip=""
-                style={{display: 'inline-block'}}
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-move-students-tooltip"
               >
                 <MoveStudents
                   studentData={this.studentDataMinusBlanks().filter(
@@ -854,23 +836,12 @@ class ManageStudentsTable extends Component {
                   transferStatus={transferStatus}
                   disabled={this.props.isDemoSection}
                 />
-                {this.props.isDemoSection && (
-                  <ReactTooltip
-                    id="demo-move-students-tooltip"
-                    role="tooltip"
-                    effect="solid"
-                    place="top"
-                  >
-                    <div>{'Not available for demo sections'}</div>
-                  </ReactTooltip>
-                )}
-              </span>
+              </DemoSectionTooltip>
             )}
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <span
-                data-for="demo-print-login-cards-manage-tooltip"
-                data-tip=""
-                style={{display: 'inline-block'}}
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-print-login-cards-manage-tooltip"
               >
                 <PrintLoginCards
                   sectionId={this.props.sectionId}
@@ -880,17 +851,7 @@ class ManageStudentsTable extends Component {
                   onPrintLoginCards={this.onPrintLoginCards}
                   disabled={this.props.isDemoSection}
                 />
-                {this.props.isDemoSection && (
-                  <ReactTooltip
-                    id="demo-print-login-cards-manage-tooltip"
-                    role="tooltip"
-                    effect="solid"
-                    place="top"
-                  >
-                    <div>{'Not available for demo sections'}</div>
-                  </ReactTooltip>
-                )}
-              </span>
+              </DemoSectionTooltip>
             )}
             <GlobalEditionWrapper
               component={() => (

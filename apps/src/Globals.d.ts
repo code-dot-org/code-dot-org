@@ -73,4 +73,3 @@ declare module '@cdo/locale';
 declare module '@code-dot-org/maze';
 declare module 'eslint-linter-browserify';
 declare module '@replit/codemirror-css-color-picker';
-declare module 'react-tooltip';

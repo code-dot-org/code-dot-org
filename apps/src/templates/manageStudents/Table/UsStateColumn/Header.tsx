@@ -1,8 +1,8 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useState} from 'react';
-import ReactTooltip from 'react-tooltip';
 
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import BulkSetModal from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/BulkSetModal';
 import i18n from '@cdo/locale';
 
@@ -19,23 +19,22 @@ const Header: React.FC<HeaderProps> = ({isDemoSection = false}) => {
     <div className={styles.verticalAlign}>
       <span>{i18n.usState()}</span>
 
-      <span
-        data-for="demo-us-state-header-tooltip"
-        data-tip=""
-        style={{display: 'inline-block'}}
+      <DemoSectionTooltip
+        isDemoSection={isDemoSection}
+        tooltipId="demo-us-state-header-tooltip"
       >
         <ActionDropdown
           name="us-state-header-actions"
           labelText={i18n.actions()}
           size="s"
           menuPlacement="right"
+          disabled={isDemoSection}
           options={[
             {
               value: 'bulk-set-us-state',
               label: i18n.studentUsStateUpdatesModal_title(),
               icon: {iconName: 'pen-to-square'},
               onClick: () => setBulkSetModalOpened(true),
-              isOptionDisabled: isDemoSection,
             },
           ]}
           triggerButtonProps={{
@@ -44,17 +43,7 @@ const Header: React.FC<HeaderProps> = ({isDemoSection = false}) => {
             children: <FontAwesomeV6Icon iconName="gear" />,
           }}
         />
-      </span>
-      {isDemoSection && (
-        <ReactTooltip
-          id="demo-us-state-header-tooltip"
-          role="tooltip"
-          effect="solid"
-          place="top"
-        >
-          <div>{'Not available for demo sections'}</div>
-        </ReactTooltip>
-      )}
+      </DemoSectionTooltip>
 
       <BulkSetModal
         isOpen={bulkSetModalOpened}

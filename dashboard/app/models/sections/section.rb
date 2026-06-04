@@ -317,10 +317,16 @@ class Section < ApplicationRecord
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  # Demo sections have a fixed roster of pre-enrolled demo students and no
+  # join code; rosters and join codes are managed only at creation.
+  def demo_section?
+    demo_type.present?
+  end
+
   def assign_code
     # Demo sections have no join code — students are pre-enrolled at creation
     # and no one else is permitted to join.
-    return if demo_type.present?
+    return if demo_section?
     self.code = unused_random_code unless code
   end
 
@@ -400,6 +406,14 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student, added_by = nil)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
+    # Demo sections only ever enroll demo students (done at creation by
+    # create_demo). Guard here, at the shared chokepoint, so every present
+    # and future enrollment path is covered. Uses the durable (uncached)
+    # demo-student check: this is a guard, and the table is small.
+    if demo_section? && !Policies::DemoSections.demo_student_durable?(student.id)
+      return ADD_STUDENT_FORBIDDEN
+    end
 
     return ADD_STUDENT_FAILURE if user_id == student.id
     return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
