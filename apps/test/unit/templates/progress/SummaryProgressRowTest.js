@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -195,7 +196,9 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
+      expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
+        'lock'
+      );
     });
   });
 
@@ -252,7 +255,9 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
+      expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
+        'lock'
+      );
     });
 
     it('has a lock icon when lockable and locked for section', () => {
@@ -262,7 +267,9 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForAllStudents: () => true,
       });
 
-      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
+      expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
+        'lock'
+      );
     });
 
     it('has an eye slash icon when hidden for participants', () => {
@@ -270,7 +277,7 @@ describe('SummaryProgressRow', () => {
         lessonIsHiddenForStudents: true,
       });
 
-      expect(wrapper.find('FontAwesome').first().props().icon).toEqual(
+      expect(wrapper.find(FontAwesomeV6Icon).first().props().iconName).toEqual(
         'eye-slash'
       );
     });
@@ -282,7 +289,9 @@ describe('SummaryProgressRow', () => {
         lesson: fakeLesson('Maze', 1, true),
       });
 
-      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('unlock');
+      expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
+        'unlock'
+      );
     });
   });
 });

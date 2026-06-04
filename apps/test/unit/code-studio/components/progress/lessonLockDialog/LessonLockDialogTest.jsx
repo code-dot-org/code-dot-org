@@ -1,3 +1,4 @@
+import Modal from '@code-dot-org/component-library/modal';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -31,8 +32,24 @@ const MINIMUM_PROPS = {
   refetchSectionLockStatus: () => {},
 };
 
-// Helper function to get the list of rows in the student table.
 const getStudentRows = wrapper => wrapper.find(StudentRow);
+
+// Buttons no longer sit at fixed indices: DSCO Modal wraps the dialog and
+// renders Save / Cancel via primaryButtonProps / secondaryButtonProps, so the
+// flat `wrapper.find('button').at(N)` order is brittle. Look them up by their
+// visible text instead — survives layout changes and is more readable.
+const findButtonByText = (wrapper, text) =>
+  wrapper
+    .find('button')
+    .filterWhere(n => n.text().trim() === text)
+    .first();
+
+// Save lives on Modal's primaryButtonProps; the rendered <button> shows the
+// "Saving..." label while in-flight, so look it up by either label.
+const findSaveButton = wrapper => {
+  const save = findButtonByText(wrapper, i18n.save());
+  return save.length ? save : findButtonByText(wrapper, i18n.saving());
+};
 
 describe('LessonLockDialog with stubbed section selector', () => {
   let store;
@@ -44,24 +61,38 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
   afterEach(() => {
     restoreRedux();
+    if (lessonLockDataApi.useGetLockState.restore) {
+      lessonLockDataApi.useGetLockState.restore();
+    }
+    if (lessonLockDataApi.saveLockState.restore) {
+      lessonLockDataApi.saveLockState.restore();
+    }
   });
 
   it('renders with minimal props', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper).not.to.be.null;
-    expect(wrapper.text()).not.to.be.empty;
+    expect(wrapper.find(Modal)).to.have.length(1);
   });
 
   it('does not display hidden warning if lesson not hidden', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
-    expect(wrapper.text()).not.to.include(i18n.hiddenAssessmentWarning());
+    // The dialog body lives in Modal's customContent prop — render it to
+    // inspect children.
+    const content = shallow(
+      <div>{wrapper.find(Modal).prop('customContent')}</div>
+    );
+    expect(content.text()).not.to.include(i18n.hiddenAssessmentWarning());
   });
 
   it('displays hidden warning if lesson is hidden', () => {
     const wrapper = shallow(
       <LessonLockDialog {...MINIMUM_PROPS} lessonIsHidden={true} />
     );
-    expect(wrapper.text().includes(i18n.hiddenAssessmentWarning()));
+    const content = shallow(
+      <div>{wrapper.find(Modal).prop('customContent')}</div>
+    );
+    expect(content.text()).to.include(i18n.hiddenAssessmentWarning());
   });
 
   it('renders student row with name and lock status', () => {
@@ -80,8 +111,6 @@ describe('LessonLockDialog with stubbed section selector', () => {
     const studentRow = getStudentRows(wrapper).at(0);
     expect(studentRow.props().name).to.equal('fakeName');
     expect(studentRow.props().lockStatus).to.equal(LockStatus.Locked);
-
-    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Allow editing" sets all statuses to Editable', () => {
@@ -103,16 +132,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
 
-    const allowEditingButton = wrapper.find('button').at(1);
-    expect(allowEditingButton.text() === 'Allow editing');
-    allowEditingButton.simulate('click');
+    findButtonByText(wrapper, i18n.allowEditing()).simulate('click');
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
-
-    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Lock lesson" sets all statuses to Locked', () => {
@@ -134,16 +159,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const lockLessonButton = wrapper.find('button').at(2);
-    expect(lockLessonButton.text() === 'Lock lesson');
-    lockLessonButton.simulate('click');
+    findButtonByText(wrapper, i18n.lockStage()).simulate('click');
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
-
-    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Show answers" sets all statuses to ReadOnlyAnswers', () => {
@@ -165,16 +186,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const showAnswersButton = wrapper.find('button').at(3);
-    expect(showAnswersButton.text() === 'Show answers');
-    showAnswersButton.simulate('click');
+    findButtonByText(wrapper, i18n.showAnswers()).simulate('click');
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
       expect(row.props().lockStatus).to.equal(LockStatus.ReadonlyAnswers);
     });
-
-    lessonLockDataApi.useGetLockState.restore();
   });
 
   describe('viewSection callback', () => {
@@ -188,9 +205,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
         </Provider>
       );
 
-      const viewSectionButton = wrapper.find('button').at(5);
-      expect(viewSectionButton.text() === 'View section');
-      viewSectionButton.simulate('click');
+      findButtonByText(wrapper, i18n.viewSection()).simulate('click');
       wrapper.update();
 
       expect(window.open).to.have.been.calledOnce.and.calledWith(
@@ -224,14 +239,10 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(2);
-    expect(lockLessonButton.text() === 'Lock lesson');
-    lockLessonButton.simulate('click');
+    findButtonByText(wrapper, i18n.lockStage()).simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(7);
-    expect(saveButton.text() === 'Save');
-    saveButton.simulate('click');
+    findSaveButton(wrapper).simulate('click');
     wrapper.update();
 
     await setTimeout(() => {}, 50);
@@ -240,9 +251,6 @@ describe('LessonLockDialog with stubbed section selector', () => {
     expect(refetchStub).to.have.been.called;
     await setTimeout(() => {}, 50);
     expect(handleCloseSpy).to.have.been.called;
-
-    lessonLockDataApi.useGetLockState.restore();
-    lessonLockDataApi.saveLockState.restore();
   });
 
   it('handleSave shows default error if failed with no message', async () => {
@@ -270,27 +278,19 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(2);
-    expect(lockLessonButton.text() === 'Lock lesson');
     act(() => {
-      lockLessonButton.simulate('click');
+      findButtonByText(wrapper, i18n.lockStage()).simulate('click');
       wrapper.update();
     });
 
-    const saveButton = wrapper.find('button').at(7);
     await act(() => {
-      expect(saveButton.text() === 'Save');
-      saveButton.simulate('click');
+      findSaveButton(wrapper).simulate('click');
       wrapper.update();
     });
 
     expect(lessonLockSaveStub).to.have.been.called;
-
     expect(wrapper.text().includes(i18n.errorSavingLockStatus())).to.be.true;
     expect(handleCloseSpy).to.not.be.called;
-
-    lessonLockDataApi.useGetLockState.restore();
-    lessonLockDataApi.saveLockState.restore();
   });
 
   it('handleSave shows error message from server if provided', async () => {
@@ -323,14 +323,10 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(2);
-    expect(lockLessonButton.text() === 'Lock lesson');
-    lockLessonButton.simulate('click');
+    findButtonByText(wrapper, i18n.lockStage()).simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(7);
-    expect(saveButton.text() === 'Save');
-    saveButton.simulate('click');
+    findSaveButton(wrapper).simulate('click');
     wrapper.update();
 
     await setTimeout(() => {}, 50);
@@ -339,8 +335,5 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
     expect(wrapper.text().includes('Error message from server')).to.be.true;
     expect(handleCloseSpy).to.not.be.called;
-
-    lessonLockDataApi.useGetLockState.restore();
-    lessonLockDataApi.saveLockState.restore();
   });
 });
