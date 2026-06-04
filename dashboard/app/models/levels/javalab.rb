@@ -176,11 +176,9 @@ class Javalab < Level
     properties['encrypted_validation'].present?
   end
 
-  # Return the validation condition for the lab2 progress system. When the
-  # level ships validation files, the sole condition is that every test
-  # passed; Javabuilder runs the tests and the frontend JavaValidator
-  # reports the result. Levels without validation have no conditions.
-  # Mirrors Pythonlab#get_validations.
+  # Return the validation condition for this level.
+  # If the level has at least one validation file, the condition
+  # is that all tests passed. If there are no validation files, there are no conditions.
   def get_validations
     return nil unless validated?
     [{

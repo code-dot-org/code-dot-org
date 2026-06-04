@@ -16,10 +16,9 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  * Dropdown options for the file dropdown in start mode.
  * In start mode levelbuilders can set the file type to starter, locked starter,
  * support, or validation.
- * There can only be one validation file in a project; the option to set a file
- * as validation will only be shown if there is no validation file in the project.
  * @param file - The ProjectFile object representing the file for which options are generated.
- * @param hasValidationFile - Whether the project has a corresponding validation file.
+ * @param projectHasValidationFile - Whether the project has a corresponding validation file.
+ * @param allowMultipleValidationFiles - Whether to allow multiple validation files in the project.
  * @returns In start mode, an array of objects representing the context menu options.
  *   If not in start mode, returns an empty array.
  *   Each object has the following properties:

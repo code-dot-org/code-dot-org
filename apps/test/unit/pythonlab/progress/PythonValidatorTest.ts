@@ -40,7 +40,7 @@ describe('TestResultValidator with a PythonValidationTracker', () => {
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 
-  it('should meet all passed condition if test results are an empty list', () => {
+  it('should not meet all passed condition if test results are an empty list', () => {
     const validationTracker = new PythonValidationTracker();
     const validator = new TestResultValidator(validationTracker);
     validationTracker.setValidationResults([]);

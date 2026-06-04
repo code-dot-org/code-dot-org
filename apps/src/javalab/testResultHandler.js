@@ -25,7 +25,7 @@ export function onTestResult(data, callback, miniAppType, levelId) {
   let successful = true;
   // Per-test result for the Lab2 validation table. Only populated for
   // TEST_STATUS messages, where the test name and outcome are known.
-  // `result` is a Lab2 TestStatus (see lab2/progress/ProgressManager).
+  // `result` is a Lab2 TestStatus.
   let validationResult = null;
   switch (data.value) {
     case UserTestResultSignalType.TEST_STATUS:

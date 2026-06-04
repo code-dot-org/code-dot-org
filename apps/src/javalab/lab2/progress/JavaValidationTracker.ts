@@ -1,7 +1,7 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
 
-// Populated from Javabuilder's TEST_RESULT messages (see javabuilderRunUtils),
+// Populated from Javabuilder's TEST_RESULT messages,
 // one test at a time via addValidationResult.
 export default class JavaValidationTracker extends ValidationResultsTracker {
   private static _instance: JavaValidationTracker;

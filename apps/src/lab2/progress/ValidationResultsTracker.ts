@@ -1,9 +1,7 @@
 import {ValidationResult} from './ProgressManager';
 
 // Holds the per-test validation results for the most recent validation run of
-// a lab. Subclasses add the lab-specific way results arrive (incrementally vs.
-// in bulk) and the singleton accessor. Read by TestResultValidator and the
-// Lab2 ValidationTable.
+// a lab.
 export default abstract class ValidationResultsTracker {
   protected validationResults: ValidationResult[] | undefined = undefined;
 
