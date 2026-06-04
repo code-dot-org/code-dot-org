@@ -10,7 +10,6 @@ $default-spacing: 4px;
   box-sizing: border-box;
 }
 
-// Textarea/input styling aligned with DSCO TextField (no multiline TextField yet).
 %dsco-field-base {
   @extend %full-width;
   box-sizing: border-box;
