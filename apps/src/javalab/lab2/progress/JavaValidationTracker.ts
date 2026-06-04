@@ -25,16 +25,22 @@ export default class JavaValidationTracker {
 
   // Record a single test's result. On a re-run, `reset` leaves the prior
   // rows in place as PENDING (so the table keeps showing the test names),
-  // so update the matching row in place rather than appending a duplicate.
-  // Tests not seen before (or a first run) are appended.
+  // so update the matching row rather than appending a duplicate. Tests not
+  // seen before (or a first run) are appended.
+  //
+  // Builds a new array/objects rather than mutating in place: the array is
+  // handed to Redux (via ProgressManager.getValidationResults) where Immer
+  // deep-freezes it, so mutating it would throw.
   addValidationResult(result: ValidationResult) {
-    const existing = this.validationResults.find(
+    const index = this.validationResults.findIndex(
       r => r.message === result.message
     );
-    if (existing) {
-      existing.result = result.result;
+    if (index >= 0) {
+      this.validationResults = this.validationResults.map((r, i) =>
+        i === index ? {...r, result: result.result} : r
+      );
     } else {
-      this.validationResults.push(result);
+      this.validationResults = [...this.validationResults, result];
     }
   }
 
