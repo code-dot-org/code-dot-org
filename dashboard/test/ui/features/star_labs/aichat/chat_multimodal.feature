@@ -7,8 +7,8 @@ Feature: Multimodal chat using gpt-4o-mini as base model in AI Chat Lab
   Background:
     Given I create a levelbuilder named "Simone"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/6"
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
     And I dismiss the teacher panel
 
 # Simple text response with OpenAI as base model
