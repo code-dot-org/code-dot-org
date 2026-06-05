@@ -1,11 +1,18 @@
-# Get the SCSS color constant for a given status.
+# RGB values for the DSCO semantic tokens that paint progress bubbles. Resolved
+# from the cdo brand theme in frontend/packages/component-library-styles —
+# primitiveColors.css (hex) + colors.css (token → primitive mapping):
+#   --background-success-primary       = --sentiment-success-50  = #3ea33e
+#   --background-success-extra-light   = --sentiment-success-10  = #e2f6e2
+#   --background-neutral-primary       = --neutral-base-white    = #ffffff
+#   --borders-neutral-primary          = --neutral-gray-20       = #d4dae1
+#   --background-brand-purple-primary  = --brand-purple-50       = #9657c7
 def color_string(key)
   {
-    perfect: 'rgb(14, 190, 14)',        # $level_perfect
-    passed: 'rgb(159, 212, 159)',       # $level_passed
-    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
-    lighter_gray: 'rgb(198, 202, 205)',
-    assessment: 'rgb(140, 82, 186)'
+    perfect: 'rgb(62, 163, 62)',        # --background-success-primary
+    passed: 'rgb(226, 246, 226)',       # --background-success-extra-light
+    not_tried: 'rgb(255, 255, 255)',    # --background-neutral-primary
+    lighter_gray: 'rgb(212, 218, 225)', # --borders-neutral-primary
+    assessment: 'rgb(150, 87, 199)'     # --background-brand-purple-primary
   }[key.to_sym]
 end
 

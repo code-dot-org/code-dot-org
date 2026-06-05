@@ -22,7 +22,7 @@ Scenario: Lock settings for retake not submit scenario
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is gone
 
   # now unlocked/not tried for student
 
@@ -42,7 +42,7 @@ Scenario: Lock settings for retake not submit scenario
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I lock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is gone
 
   # now locked/not submitted for student
 
@@ -58,7 +58,7 @@ Scenario: Lock settings for retake not submit scenario
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is gone
 
   # now editable, and student can submit
 
@@ -99,7 +99,7 @@ Scenario: Lock settings for retake after submit scenario
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is gone
 
   # student submits
 
@@ -131,7 +131,7 @@ Scenario: Lock settings for retake after submit scenario
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is gone
 
   # now editable, and student can see unsubmit button
 
