@@ -1,9 +1,18 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {
+  NodeResizer,
+  useConnection,
+  useReactFlow,
+  type NodeProps,
+} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
+import {
+  useIsAnchorDragging,
+  usePushSnapshot,
+  useSketchLabReadOnly,
+} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -22,8 +31,10 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const textRef = useRef<HTMLDivElement>(null);
   const textAtEditStart = useRef<string>('');
 
+  const connection = useConnection();
+  const isAnchorDragging = useIsAnchorDragging();
   const {text} = data;
-  const showHandles = data.showHandles !== false;
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const textStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
