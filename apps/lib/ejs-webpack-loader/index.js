@@ -25,10 +25,10 @@
 /**
  * This is a fork of https://github.com/rorkflash/ejs-webpack-loader
  *
- * This fork can be removed when Code.org removes the usage of EJS in the code base.
+ * This fork can be removed when CodeAI removes the usage of EJS in the code base.
  *
- * Code.org changes:
- * 1. Remove dependency on HTML minifier (not used by Code.org)
+ * CodeAI changes:
+ * 1. Remove dependency on HTML minifier (not used by CodeAI)
  * 2. Update to be compatible with webpack v5
  * 3. Update loader-utils to 2.x
  */

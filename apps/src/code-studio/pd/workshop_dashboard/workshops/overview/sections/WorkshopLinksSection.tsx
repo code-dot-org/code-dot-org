@@ -111,7 +111,7 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
                 <Box>
                   <Typography variant="body4">
                     Participants must use this link to enroll in this workshop
-                    on Code.org after registering through your system. This
+                    on CodeAI after registering through your system. This
                     ensures they're counted for attendance, surveys, and
                     certificates.
                   </Typography>

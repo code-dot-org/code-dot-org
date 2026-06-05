@@ -189,10 +189,10 @@ const PrincipalApprovalComponent = props => {
               name="shareApScores"
               required={false}
               label={`I am authorized to release student data and give permission for the College
-            Board to send de-identified AP scores for Code.org classes directly to Code.org for
+            Board to send de-identified AP scores for CodeAI classes directly to CodeAI for
             the 2019 to 2022 school Years. I understand that the de-identified data cannot be
             tied to individual students, will not be used to evaluate teachers, and will greatly
-            help Code.org evaluate its program effectiveness.`}
+            help CodeAI evaluate its program effectiveness.`}
             />
 
             <br />
@@ -216,7 +216,7 @@ const PrincipalApprovalComponent = props => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Code.org's Professional Learning Program
+              CodeAI's Professional Learning Program
             </a>{' '}
             in order to teach the{' '}
             <a
@@ -227,9 +227,9 @@ const PrincipalApprovalComponent = props => {
               {teacherApplication.course} curriculum
             </a>{' '}
             during the {Year} school Year. This program is delivered by our
-            local Code.org Regional Partner
+            local CodeAI Regional Partner
             {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
-            teachers are asked to commit to Code.org’s year long Professional
+            teachers are asked to commit to CodeAI’s year long Professional
             Learning Program starting in the summer and concluding the following
             spring/summer. Workshops can be held in-person, virtually, or
             combination of both throughout the Year.
@@ -273,7 +273,7 @@ const PrincipalApprovalComponent = props => {
               [TextFields.otherWithText]: 'other',
             }}
             label={`Do you approve of ${teacherApplication.name} participating
-                  in Code.org's ${Year} Professional Learning Program${
+                  in CodeAI's ${Year} Professional Learning Program${
               regionalPartner ? ` with ${regionalPartner.name}` : ''
             }?`}
           />
@@ -289,7 +289,7 @@ const PrincipalApprovalComponent = props => {
               <span>
                 {PageLabels.confirmPrincipal.replace(
                   '[regional partner]',
-                  regionalPartner?.name || 'my local Code.org Regional Partner'
+                  regionalPartner?.name || 'my local CodeAI Regional Partner'
                 )}{' '}
                 <a onClick={openPrivacyDialog}>Learn more.</a>
               </span>

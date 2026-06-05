@@ -55,7 +55,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           Where should we start?
         </Typography>
         <Typography variant="body2">
-          Teaching Assistant can help you get started with Code.org
+          Teaching Assistant can help you get started with CodeAI
         </Typography>
         <div className={styles.onboardingChecklistButtons}>
           {CHECKLIST_ITEMS.map(({id, label, completed}) => (

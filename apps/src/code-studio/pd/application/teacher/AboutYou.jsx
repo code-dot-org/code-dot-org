@@ -48,9 +48,9 @@ const AboutYou = props => {
           <LabeledUsPhoneNumberInput name="phone" />
 
           <p>
-            Code.org or your Regional Partner may need to ship workshop
-            materials to you. Please provide the address where you can receive
-            mail when school is not in session.
+            CodeAI or your Regional Partner may need to ship workshop materials
+            to you. Please provide the address where you can receive mail when
+            school is not in session.
           </p>
           <LabeledInput name="streetAddress" />
           <LabeledInput name="city" />
