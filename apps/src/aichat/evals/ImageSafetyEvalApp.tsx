@@ -62,6 +62,33 @@ const styles: Record<string, React.CSSProperties> = {
     maxHeight: 80,
     border: '1px solid #ccc',
     borderRadius: 4,
+    display: 'block',
+  },
+  thumbButton: {
+    padding: 0,
+    border: 'none',
+    background: 'none',
+    cursor: 'zoom-in',
+  },
+  // Full-screen click-to-close lightbox. A <button> so it is keyboard
+  // accessible (Esc/click/Enter all dismiss) without navigating to a data: URL.
+  lightboxOverlay: {
+    position: 'fixed',
+    inset: 0,
+    width: '100vw',
+    height: '100vh',
+    border: 'none',
+    background: 'rgba(0, 0, 0, 0.82)',
+    cursor: 'zoom-out',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1000,
+  },
+  lightboxImage: {
+    maxWidth: '92vw',
+    maxHeight: '92vh',
+    boxShadow: '0 0 24px rgba(0, 0, 0, 0.6)',
   },
 };
 
@@ -231,6 +258,8 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const [summary, setSummary] = useState<EvalSummary | null>(null);
   const [showImages, setShowImages] = useState(false);
   const [throttle, setThrottle] = useState<ThrottleEvent | null>(null);
+  // data: URL of the image shown in the full-size lightbox, or null.
+  const [lightbox, setLightbox] = useState<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
   const handleFile = useCallback(
@@ -479,17 +508,18 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
                   {showImages && (
                     <td style={styles.td}>
                       {r.imageDataUrl ? (
-                        <a
-                          href={r.imageDataUrl}
-                          target="_blank"
-                          rel="noreferrer"
+                        <button
+                          type="button"
+                          style={styles.thumbButton}
+                          title="Click to view full size"
+                          onClick={() => setLightbox(r.imageDataUrl ?? null)}
                         >
                           <img
                             src={r.imageDataUrl}
                             alt="generated"
                             style={styles.thumb}
                           />
-                        </a>
+                        </button>
                       ) : null}
                     </td>
                   )}
@@ -498,6 +528,21 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             </tbody>
           </table>
         </>
+      )}
+
+      {lightbox && (
+        <button
+          type="button"
+          style={styles.lightboxOverlay}
+          title="Click to close"
+          onClick={() => setLightbox(null)}
+        >
+          <img
+            src={lightbox}
+            alt="generated (full size)"
+            style={styles.lightboxImage}
+          />
+        </button>
       )}
     </div>
   );
