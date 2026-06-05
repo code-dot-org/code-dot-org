@@ -34,9 +34,9 @@ describe('TestResultValidator', () => {
   }
 
   it('meets the passed condition if all tests pass', () => {
-    expect(validatorWith(PASSED_TESTS).conditionsMet(PASSED_TESTS_CONDITION)).toBe(
-      true
-    );
+    expect(
+      validatorWith(PASSED_TESTS).conditionsMet(PASSED_TESTS_CONDITION)
+    ).toBe(true);
   });
 
   it('does not meet the passed condition if some tests fail', () => {
