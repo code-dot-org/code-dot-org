@@ -13,7 +13,7 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   openResource = url => {
-    window.open(url, 'noopener', 'noreferrer');
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   render() {
@@ -45,12 +45,8 @@ export default class ResourcesDropdown extends React.Component {
             variant: 'outlined',
             color: 'secondary',
             size: 'small',
-            children: (
-              <>
-                <FontAwesomeV6Icon iconName="caret-down" />
-                {labelText}
-              </>
-            ),
+            startIcon: <FontAwesomeV6Icon iconName="caret-down" />,
+            children: labelText,
           }}
         />
       </div>

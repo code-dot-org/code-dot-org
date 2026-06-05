@@ -131,14 +131,6 @@ const styles = {
     marginTop: 8,
     marginBottom: 8,
   },
-  copyButton: {
-    width: 48,
-    height: 48,
-    borderRadius: 0,
-    backgroundColor: 'primary.main',
-    color: 'primary.contrastText',
-    '&:hover': {backgroundColor: 'primary.dark'},
-  },
   buttonLabel: {
     paddingLeft: 16,
   },

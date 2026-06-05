@@ -21,8 +21,8 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
           color="secondary"
           sx={styles.button}
           onClick={() => setDialogOpen(true)}
+          startIcon={<FontAwesomeV6Icon iconName="lock" />}
         >
-          <FontAwesomeV6Icon iconName="lock" />
           {i18n.lockSettings()}
         </MuiButton>
       </div>

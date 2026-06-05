@@ -30,10 +30,10 @@ export default class UnitCalendarDialog extends Component {
   }
 
   generateDropdownItems = () => {
-    let options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
-    if (!options.includes(this.props.weeklyInstructionalMinutes)) {
-      options.push(this.props.weeklyInstructionalMinutes);
-    }
+    const current = this.props.weeklyInstructionalMinutes;
+    const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.includes(current)
+      ? [...WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS]
+      : [...WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS, current];
     options.sort((a, b) => a - b);
     return options.map(val => ({
       value: String(val),
@@ -57,7 +57,10 @@ export default class UnitCalendarDialog extends Component {
         title={i18n.weeklyLessonLayout()}
         customContent={
           <>
-            <div style={styles.minutesPerWeekWrapper}>
+            <div
+              id="dsco-dialog-description"
+              style={styles.minutesPerWeekWrapper}
+            >
               <SimpleDropdown
                 name="instructionalMinutes"
                 labelText={i18n.instructionalMinutesPerWeek()}

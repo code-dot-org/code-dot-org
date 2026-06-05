@@ -192,12 +192,8 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                   variant: 'outlined',
                   color: 'secondary',
                   size: 'small',
-                  children: (
-                    <>
-                      <FontAwesomeV6Icon iconName="caret-down" />
-                      {i18n.printingOptions()}
-                    </>
-                  ),
+                  startIcon: <FontAwesomeV6Icon iconName="caret-down" />,
+                  children: i18n.printingOptions(),
                 }}
                 options={pdfDropdownOptions.map(option => ({
                   value: option.key,
