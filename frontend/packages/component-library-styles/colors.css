@@ -134,6 +134,7 @@
    which UI surfaces are using DSCO tokens and which are not.
 */
 /* stylelint-disable color-hex-length */
+[data-brand='codeai-next']:root,
 [data-brand='codeai-next'][data-theme='Light'],
 [data-brand='codeai-next'] [data-theme='Light'] {
   --background-accent-orange-light: #fff0f7;
