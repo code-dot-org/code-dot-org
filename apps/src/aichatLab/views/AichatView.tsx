@@ -35,6 +35,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
@@ -292,6 +293,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     hasSubmittedPredictResponse,
   });
 
+  const settings = [useThemeSetting(levelProperties.appName)];
+
   const chatWorkspaceRef = useRef<ChatWorkspaceHandle>(null);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
@@ -393,6 +396,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                         );
                       }
                     )}
+                    settings={settings}
                     backpackProps={backpackProps}
                   />
                 </div>
@@ -496,7 +500,7 @@ const renderInstructionsHeaderRight = (
       label={'About AI Chat Lab'}
       icon={{iconName: 'message-question', iconStyle: 'solid'}}
       variant="text"
-      color="secondary"
+      color="tertiary"
       size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"

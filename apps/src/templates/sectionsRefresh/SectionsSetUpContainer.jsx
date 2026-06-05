@@ -48,21 +48,25 @@ const NEW = 'New';
 //   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
   // added "default properties" for any new section
-  const [sections, setSections] = useState(
-    section
-      ? [section]
-      : [
-          {
-            pairingAllowed: true,
-            restrictSection: false,
-            ttsAutoplayEnabled: false,
-            lessonExtras: true,
-            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
-            avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
-            avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
-          },
-        ]
-  );
+  const [sections, setSections] = useState(() => {
+    if (section) return [section];
+    const isStudentSection = queryParams('participantType') === 'student';
+    const gradesTeaching =
+      isStudentSection &&
+      (getStore().getState()?.currentUser?.gradesTeaching || []);
+    return [
+      {
+        pairingAllowed: true,
+        restrictSection: false,
+        ttsAutoplayEnabled: false,
+        lessonExtras: true,
+        course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+        avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
+        avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
+        ...(isStudentSection && {grades: gradesTeaching}),
+      },
+    ];
+  });
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {

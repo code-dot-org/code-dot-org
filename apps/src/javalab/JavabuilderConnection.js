@@ -70,10 +70,15 @@ export default class JavabuilderConnection {
     this.hadWebsocketConnectionError = false;
 
     if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+      // Route console output through the mini app as PARTIAL_LOG signals,
+      // as Javabuilder includes an explicit newline at the end.
+      // Codebridge will add an extra newline for CONSOLE_LOG signals,
+      // so we use PARTIAL_LOG to avoid double newlines. Java Lab ignores
+      // PARTIAL_LOG vs CONSOLE_LOG and will add newlines whenever it sees an explicit newline.
       this.onOutputMessage = message => {
         if (this.miniApp.isRunning()) {
           this.miniApp.handleSignal({
-            value: ConsoleSignalType.CONSOLE_LOG,
+            value: ConsoleSignalType.PARTIAL_LOG,
             detail: message,
           });
         } else {
@@ -84,7 +89,7 @@ export default class JavabuilderConnection {
       this.onNewlineMessage = () => {
         if (this.miniApp.isRunning()) {
           this.miniApp.handleSignal({
-            value: ConsoleSignalType.CONSOLE_LOG,
+            value: ConsoleSignalType.PARTIAL_LOG,
             detail: '\n',
           });
         } else {

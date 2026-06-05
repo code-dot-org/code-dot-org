@@ -28543,24 +28543,18 @@ en:
           title: Teaching AI Generated Design
           description_audience: ''
           description_short: ''
-          description: |+
-            ## Welcome
-            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
 
-            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
 
-            #### **Suggested Time: 60 minutes**
+            **Suggested time:** 60 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
 
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
 
-          student_description: |+
-            ## Welcome
-            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
-
-            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
-
-            #### **Suggested Time: 60 minutes**
-
-
+            **Suggested time:** 60 minutes
         self-paced-pl-teaching-ai-and-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28577,18 +28571,18 @@ en:
           title: Teaching Data-Driven Systems
           description_audience: ''
           description_short: ''
-          description: |2
+          description: |
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
 
-            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
-            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
 
-            #### **Suggested Time: 75 minutes**
-          student_description: |2
+             **Suggested time:** 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
 
-            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
-            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
 
-            #### **Suggested Time: 75 minutes**
+             **Suggested time:** 75 minutes
         self-paced-pl-teaching-iterating-with-ai-2026:
           lessons: {}
           lesson_groups: {}
@@ -28951,15 +28945,17 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested tme:** 20 minutes
           student_description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested time:** 20 minute
         self-paced-pl-teaching-ai-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28967,20 +28963,18 @@ en:
           title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: |2-
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
 
-            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
 
-            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+             **Suggested time**: 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
 
-            #### **Suggested Time: 75 minutes**
-          student_description: |2-
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
 
-            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
-
-            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
-
-            #### **Suggested Time: 75 minutes**
+             **Suggested time**: 75 minutes
         pl-embeddings:
           lessons:
             lesson-1:

@@ -117,7 +117,6 @@ still on the TODO list. Differences from legacy use:
 ## To Dos
 - **Validation** (`get_validations` override on `Javalab`,
   `JavaValidator`, `JavaValidationTracker`, test-result handling).
-- **File name validation** there are no checks for invalid file names yet.
 - **Support locked starter files** you can lock starter files in start mode,
 but we don't persist that information yet.
 - **Neighborhood mini-app**

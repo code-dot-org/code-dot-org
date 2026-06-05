@@ -45,7 +45,7 @@
     "lint-staged": "catalog:",
     "prettier": "catalog:",
     "rimraf": "catalog:",
-    "turbo": "^2.6.3",
+    "turbo": "^2.9.14",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"
   },

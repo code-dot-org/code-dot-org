@@ -1,11 +1,9 @@
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'retryable'
 require 'cdo/poste'
 require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
-require src_dir 'forms'
-require src_dir 'abort_email_error'
 require 'observability/opentelemetry'
 
 # Initialize the OpenTelemetry SDK so the tracer below has somewhere to send
@@ -71,7 +69,7 @@ class DeliverPosteMessagesProcess
           )
           deliverer.reset_connection
           sent_at = 0
-        rescue AbortEmailError, Psych::SyntaxError => exception
+        rescue Psych::SyntaxError => exception
           Honeybadger.notify(
             exception,
             error_message: "Abandoning delivery of #{delivery[:id]} because '#{exception.message.to_s.strip}'",

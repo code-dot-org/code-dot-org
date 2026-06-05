@@ -1,22 +1,68 @@
 import {Handle, Position} from '@xyflow/react';
 import React from 'react';
 
+import {ShapeType} from '../types';
+
 import styles from './connection-handles.module.scss';
 
 interface ConnectionHandlesProps {
   /** When false, handles stay in the DOM (so edges keep their anchors)
    *  but are visually hidden and non-interactive. */
   visible?: boolean;
+  shapeType?: ShapeType;
 }
+
+// Triangle SVG points: '50,5 95,95 5,95' in a 100×100 viewBox.
+// Midpoints of the three sides as percentages of the node's bounding box.
+const TRIANGLE_SIDE_MIDPOINTS = [
+  {id: 'side-left', position: Position.Left, left: '27.5%', top: '50%'},
+  {id: 'side-right', position: Position.Right, left: '72.5%', top: '50%'},
+  {id: 'side-bottom', position: Position.Bottom, left: '50%', top: '95%'},
+] as const;
 
 /**
  * Paired source + target handles on all four sides of a node.
+ * For triangles, handles are placed at the midpoints of the three sides instead.
  * Target renders first so the source handle sits on top (grabbed when dragging).
  */
 export default function ConnectionHandles({
   visible = true,
+  shapeType,
 }: ConnectionHandlesProps) {
   const className = visible ? undefined : styles.hidden;
+
+  if (shapeType === 'triangle') {
+    return (
+      <>
+        {TRIANGLE_SIDE_MIDPOINTS.map(({id, position, left, top}) => {
+          const handleStyle: React.CSSProperties = {
+            top,
+            left,
+            transform: 'translate(-50%, -50%)',
+          };
+          return (
+            <React.Fragment key={id}>
+              <Handle
+                type="target"
+                position={position}
+                id={`${id}-target`}
+                className={className}
+                style={handleStyle}
+              />
+              <Handle
+                type="source"
+                position={position}
+                id={`${id}-source`}
+                className={className}
+                style={handleStyle}
+              />
+            </React.Fragment>
+          );
+        })}
+      </>
+    );
+  }
+
   return (
     <>
       <Handle
