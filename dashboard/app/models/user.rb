@@ -1467,9 +1467,7 @@ class User < ApplicationRecord
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
-    # Hard stop: bypass_sign_in skips Devise's active_for_authentication?
-    # check, so block demo students here directly.
-    return if Policies::DemoSections.demo_student_durable?(params[:user_id])
+    return if Policies::DemoSections.demo_student?(params[:user_id])
 
     user = User.joins(:sections_as_student).find_by(
       id: params[:user_id],
@@ -1484,7 +1482,7 @@ class User < ApplicationRecord
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if params[:secret_picture_id].blank?
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
-    return if Policies::DemoSections.demo_student_durable?(params[:user_id])
+    return if Policies::DemoSections.demo_student?(params[:user_id])
 
     User.joins(:sections_as_student).find_by(
       id: params[:user_id],
