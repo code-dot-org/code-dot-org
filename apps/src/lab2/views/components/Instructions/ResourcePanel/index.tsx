@@ -197,6 +197,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
+  const [showAiTutorNotificationDot, setShowAiTutorNotificationDot] =
+    useState(true);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isFloatingSettingsOpen, setIsFloatingSettingsOpen] = useState(false);
   const hasAutoCollapsedNoTabs = useRef(false);
@@ -473,6 +475,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
+    setShowAiTutorNotificationDot(true);
   }, [levelId, viewAsUserId]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
@@ -519,6 +522,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           resourcePanelTabClickedTo: tab,
           resourcePanelTabClickedFrom: currentTab,
         });
+      }
+      if (tab === Tabs.AiTutor) {
+        setShowAiTutorNotificationDot(false);
       }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
@@ -631,7 +637,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   hideOnFirstLeave={true}
                   key={`tooltip-${tab}`}
                 >
-                  <div id={`resource-panel-tab-${tab}`}>
+                  <div
+                    id={`resource-panel-tab-${tab}`}
+                    className={
+                      tab === Tabs.AiTutor
+                        ? styles.tabWithNotificationDot
+                        : undefined
+                    }
+                  >
                     <MuiIconButton
                       variant="text"
                       color="tertiary"
@@ -654,6 +667,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         }
                       />
                     </MuiIconButton>
+                    {tab === Tabs.AiTutor &&
+                      aiTutorVisible &&
+                      showAiTutorNotificationDot && (
+                        <span
+                          className={classNames(
+                            styles.tabNotificationDot,
+                            styles.tabNotificationDotPulsing
+                          )}
+                          aria-hidden="true"
+                        />
+                      )}
                   </div>
                 </WithTooltip>
               ))}
