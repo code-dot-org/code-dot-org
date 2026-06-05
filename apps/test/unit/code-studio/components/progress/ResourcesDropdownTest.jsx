@@ -22,7 +22,7 @@ describe('ResourcesDropdown', () => {
     ]);
     // trigger uses neutral secondary styling for both audiences
     expect(dropdown.prop('triggerButtonProps').color).toEqual('secondary');
-    expect(dropdown.prop('size')).toEqual('m');
+    expect(dropdown.prop('size')).toEqual('s');
   });
 
   it('renders resources for student', () => {
@@ -37,6 +37,6 @@ describe('ResourcesDropdown', () => {
       'Vocabulary',
     ]);
     expect(dropdown.prop('triggerButtonProps').color).toEqual('secondary');
-    expect(dropdown.prop('size')).toEqual('m');
+    expect(dropdown.prop('size')).toEqual('s');
   });
 });
