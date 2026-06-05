@@ -38,6 +38,7 @@
   // they pick up the browser default (blue) which doesn't match the rest of
   // the page. Route them through the same brand-purple semantic token used
   // elsewhere on .main anchors.
+  // TODO: remove these styles once SafeMarkdown uses DSCO typography and components
   a,
   a:link,
   a:visited {
