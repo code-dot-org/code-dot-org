@@ -151,6 +151,7 @@ class UnitOverviewHeader extends Component {
         {displayVerifiedResources && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <NotificationBanner
+            className="announcement-notification"
             variant="warning"
             icon={WARNING_ICON}
             title={i18n.redirectCourseVersionWarningDetails()}
@@ -159,6 +160,7 @@ class UnitOverviewHeader extends Component {
         )}
         {versionWarningDetails && (
           <NotificationBanner
+            className="announcement-notification"
             variant="warning"
             icon={WARNING_ICON}
             title={i18n.wrongCourseVersionWarningNotice()}
@@ -168,6 +170,7 @@ class UnitOverviewHeader extends Component {
         )}
         {showHiddenUnitWarning && (
           <NotificationBanner
+            className="announcement-notification"
             variant="warning"
             icon={WARNING_ICON}
             title={i18n.hiddenUnitWarningNotice()}

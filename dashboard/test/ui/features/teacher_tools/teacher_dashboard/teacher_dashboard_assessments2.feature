@@ -18,7 +18,7 @@ Feature: Using the assessments tab in the teacher dashboard
     And I wait until element "span:contains(Example CSP Assessment)" is visible
     And I open the lesson lock dialog for lockable lesson 3
     And I unlock the lesson for students
-    And I wait until element "[role='dialog']" is gone
+    And I wait until element "[role='dialog']" is not visible
 
     And I sign in as "Sally" and go home
     And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/3/levels/1/page/3"
