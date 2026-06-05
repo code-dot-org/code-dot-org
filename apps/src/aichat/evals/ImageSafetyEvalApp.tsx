@@ -32,9 +32,13 @@ const styles: Record<string, React.CSSProperties> = {
   table: {borderCollapse: 'collapse', width: '100%', margin: '8px 0'},
   th: {
     textAlign: 'left',
-    borderBottom: '2px solid #ccc',
+    borderBottom: '2px solid #bbb',
     padding: '6px 8px',
-    background: '#f5f5f5',
+    background: '#e4e4e7',
+    // Explicit dark color so the dashboard's global table styles can't render
+    // these headers as low-contrast white-on-grey.
+    color: '#1b1b1b',
+    fontWeight: 700,
   },
   td: {
     borderBottom: '1px solid #eee',
