@@ -600,6 +600,7 @@
   "codeIntroduced": "Code Introduced",
   "codeLogo": "CodeAI logo",
   "codeLogoClever": "Example of CodeAI logo on Clever",
+  "codeLogoClever": "Example of Code.org logo on Clever",
   "codeMode": "Code",
   "codeReviewAutoDisableMessage": "Code review will be automatically disabled in {daysLeft} days. To reset this time, disable and re-enable code review.",
   "codeReviewGroups": "Code Review Groups",

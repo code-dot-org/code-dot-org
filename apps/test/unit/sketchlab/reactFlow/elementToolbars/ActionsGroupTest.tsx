@@ -73,15 +73,6 @@ describe('ActionsGroup', () => {
     });
   });
 
-  describe('handles toggle', () => {
-    it('does not render the handles button when handlesToggle is omitted', () => {
-      render(<ActionsGroup />);
-      expect(
-        screen.queryByRole('button', {name: /connection handles/})
-      ).not.toBeInTheDocument();
-    });
-  });
-
   describe('click handlers', () => {
     it('fires the matching callback when each button is clicked', async () => {
       mockGetIsStartMode.mockReturnValue(true);
@@ -90,7 +81,6 @@ describe('ActionsGroup', () => {
       const onBringToFront = jest.fn();
       const onSendToBack = jest.fn();
       const onDuplicate = jest.fn();
-      const onToggle = jest.fn();
       render(
         <ActionsGroup
           onDelete={onDelete}
@@ -98,7 +88,6 @@ describe('ActionsGroup', () => {
           onBringToFront={onBringToFront}
           onSendToBack={onSendToBack}
           onDuplicate={onDuplicate}
-          handlesToggle={{visible: true, onToggle}}
         />
       );
       const user = userEvent.setup();
@@ -106,15 +95,11 @@ describe('ActionsGroup', () => {
       await user.click(screen.getByRole('button', {name: 'Bring to front'}));
       await user.click(screen.getByRole('button', {name: 'Send to back'}));
       await user.click(screen.getByRole('button', {name: 'Lock element'}));
-      await user.click(
-        screen.getByRole('button', {name: 'Hide connection handles'})
-      );
       await user.click(screen.getByRole('button', {name: 'Delete'}));
       expect(onDuplicate).toHaveBeenCalledTimes(1);
       expect(onBringToFront).toHaveBeenCalledTimes(1);
       expect(onSendToBack).toHaveBeenCalledTimes(1);
       expect(onLock).toHaveBeenCalledTimes(1);
-      expect(onToggle).toHaveBeenCalledTimes(1);
       expect(onDelete).toHaveBeenCalledTimes(1);
     });
   });

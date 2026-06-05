@@ -341,7 +341,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         <AiDiffChatHeader
           onSuggestPrompts={onSuggestPrompts}
           messages={threadMessages}
-          threadTitle={'copy' + threadTitle}
+          threadTitle={threadTitle}
           personalizationData={personalizationData}
         />
       )}
