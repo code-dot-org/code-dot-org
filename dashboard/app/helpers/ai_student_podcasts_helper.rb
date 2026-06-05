@@ -14,17 +14,56 @@ module AiStudentPodcastsHelper
   def self.create_and_save_to_s3(student_podcast_data)
     bucket = AWS::S3.user_content_bucket
     filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
-    return if AWS::S3.exists_in_bucket(bucket, filename)
+
+    if AWS::S3.exists_in_bucket(bucket, filename)
+      # S3 already has the audio for this (lesson, objectives) key, generated
+      # for some other user. Mirror that user's script onto this record so its
+      # podcast_script field doesn't lag the playable audio.
+      copy_matching_script_from_peer(student_podcast_data) if student_podcast_data.podcast_script.nil?
+      return
+    end
+
     return unless elevenlabs_client.available_credits
 
-    podcast_script = if student_podcast_data.podcast_script
-                       student_podcast_data.podcast_script
-                     else
-                       generate_podcast_script(student_podcast_data)
-                     end
-
+    podcast_script = student_podcast_data.podcast_script || generate_podcast_script(student_podcast_data)
     podcast = get_podcast_from_script(podcast_script)
     AWS::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
+  end
+
+  def self.copy_matching_script_from_peer(student_podcast_data)
+    peer = find_matching_script_record(student_podcast_data)
+    student_podcast_data.update!(podcast_script: peer.podcast_script) if peer
+  end
+
+  # Returns another AiStudentPodcast covering the same lesson + objective set
+  # whose podcast_script has already been generated, or nil if none exists.
+  # Used for both proactive deduplication (skip OpenAI when a peer has the
+  # script) and backfill (sync this record's script after the S3 file is
+  # already up).
+  def self.find_matching_script_record(student_podcast_data)
+    objective_ids = student_podcast_data.objective_ids
+    if objective_ids.empty?
+      # An objectiveless podcast has no join rows, so the INNER JOIN
+      # aggregation below can never match it; look it up by their absence.
+      AiStudentPodcast.
+        where(lesson_id: student_podcast_data.lesson_id).
+        where.not(podcast_script: nil).
+        where.missing(:ai_student_podcast_objectives).
+        first
+    else
+      AiStudentPodcast.
+        joins(:ai_student_podcast_objectives).
+        where(lesson_id: student_podcast_data.lesson_id).
+        where.not(podcast_script: nil).
+        group('ai_student_podcasts.id').
+        having(
+          'COUNT(ai_student_podcast_objectives.objective_id) = ? AND SUM(ai_student_podcast_objectives.objective_id IN (?)) = ?',
+          objective_ids.size,
+          objective_ids,
+          objective_ids.size
+        ).
+        first
+    end
   end
 
   def self.retrieve_podcast_from_s3(lesson_id, objective_ids)
@@ -48,38 +87,14 @@ module AiStudentPodcastsHelper
   end
 
   def self.generate_podcast_script(student_podcast_data)
-    objective_ids = student_podcast_data.objective_ids
-    existing_script_podcast =
-      if objective_ids.empty?
-        # An objectiveless podcast has no join rows, so the INNER JOIN
-        # aggregation below can never match it; look it up by their absence.
-        AiStudentPodcast.
-          where(lesson_id: student_podcast_data.lesson_id).
-          where.not(podcast_script: nil).
-          where.missing(:ai_student_podcast_objectives).
-          first
-      else
-        AiStudentPodcast.
-          joins(:ai_student_podcast_objectives).
-          where(lesson_id: student_podcast_data.lesson_id).
-          where.not(podcast_script: nil).
-          group('ai_student_podcasts.id').
-          having(
-            'COUNT(ai_student_podcast_objectives.objective_id) = ? AND SUM(ai_student_podcast_objectives.objective_id IN (?)) = ?',
-            objective_ids.size,
-            objective_ids,
-            objective_ids.size
-          ).
-          first
-      end
+    existing_script_podcast = find_matching_script_record(student_podcast_data)
 
     if existing_script_podcast
-      student_podcast_data.podcast_script = existing_script_podcast.podcast_script
-      student_podcast_data.save!
+      student_podcast_data.update!(podcast_script: existing_script_podcast.podcast_script)
       return existing_script_podcast.podcast_script
     end
 
-    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, objective_ids, student_podcast_data.user_id)
+    prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, student_podcast_data.objective_ids, student_podcast_data.user_id)
 
     MAX_TOXICITY_RETRIES.times do
       podcast_script = request_openai_podcast_script(prompt)

@@ -237,6 +237,35 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
   end
 
+  test "create_and_save_to_s3 backfills podcast_script from a peer record when S3 already has the audio" do
+    peer_script = [{'voice_id' => 'Dan', 'text' => 'shared content'}].to_json
+    peer = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: peer_script
+    )
+    peer.ai_student_podcast_objectives.create!(objective_id: @objective.id)
+
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).never
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+
+    assert_equal peer_script, @podcast.reload.podcast_script
+  end
+
+  test "create_and_save_to_s3 leaves podcast_script alone when S3 has the audio and the record already has a script" do
+    @podcast.update!(podcast_script: 'already-saved')
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:find_matching_script_record).never
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+
+    assert_equal 'already-saved', @podcast.reload.podcast_script
+  end
+
   test "create_and_save_to_s3 short-circuits without generating script when ElevenLabs credits unavailable" do
     AWS::S3.stubs(:exists_in_bucket).returns(false)
     AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(false)
