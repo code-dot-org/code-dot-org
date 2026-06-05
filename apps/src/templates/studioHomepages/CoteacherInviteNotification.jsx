@@ -74,6 +74,7 @@ const CoteacherInviteNotification = ({
       // which is the closest match to the legacy `collaborate` type's
       // light_secondary_500 (purple) coloring.
       variant="primary"
+      className={styles.notificationContainer}
       icon={COLLABORATE_ICON}
       // Preserve the legacy `tooltipText` affordance via a small info-circle
       // trigger trailing the title text — legacy `Notification` rendered it

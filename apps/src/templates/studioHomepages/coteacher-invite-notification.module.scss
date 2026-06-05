@@ -15,3 +15,13 @@
     color: var(--text-neutral-primary);
   }
 }
+
+.notificationContainer {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  h3 {
+    display: flex;
+    align-items: center;
+  }
+}
