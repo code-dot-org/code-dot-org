@@ -250,26 +250,6 @@ class DemoStudentTest < ActiveSupport::TestCase
     refute student.valid_password?('foosbars'), 'demo student must not authenticate by password'
   end
 
-  test 'active_for_authentication? returns false for a demo student' do
-    student = create(:student, :in_email_section)
-    DemoStudent.create!(user: student, demo_type: 'high')
-    Policies::DemoSections.reset_cache!
-
-    refute student.active_for_authentication?
-    # :invalid maps to "Invalid email or password" — matches the generic
-    # message used by valid_password? failures and the OAuth controller guard.
-    assert_equal :invalid, student.inactive_message
-  end
-
-  test 'active_for_authentication? hard-stop survives a stale per-process cache' do
-    student = create(:student, :in_email_section)
-    DemoStudent.create!(user: student, demo_type: 'high')
-    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
-
-    refute Policies::DemoSections.demo_student?(student.id)
-    refute student.active_for_authentication?
-  end
-
   test 'authenticate_with_section_and_secret_words returns nil for a demo student' do
     student = create(:student_in_word_section, secret_words: 'cat dog')
     section = student.sections_as_student.first

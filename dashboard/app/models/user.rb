@@ -903,26 +903,6 @@ class User < ApplicationRecord
     return false
   end
 
-  # Devise checks this during sign_in (database_authenticatable and the
-  # standard OAuth path through sign_in_and_redirect). Returning false
-  # blocks the sign-in regardless of credential state, so a demo student
-  # row that somehow regrew a password / oauth uid still cannot log in.
-  # Section logins go through bypass_sign_in and skip this hook, so we
-  # also guard authenticate_with_section_and_secret_* directly.
-  def active_for_authentication?
-    return false if Policies::DemoSections.demo_student_durable?(id)
-    super
-  end
-
-  # Devise's FailureApp renders this via t('devise.failure.{symbol}'). We
-  # reuse :invalid so demo students see the same generic "invalid email or
-  # password" string as a real credential mismatch — no disclosure that the
-  # account is a demo, and no missing-translation fallback to worry about.
-  def inactive_message
-    return :invalid if Policies::DemoSections.demo_student_durable?(id)
-    super
-  end
-
   def reset_secrets
     generate_secret_picture
     generate_secret_words

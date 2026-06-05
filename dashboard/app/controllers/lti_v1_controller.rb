@@ -191,6 +191,16 @@ class LtiV1Controller < ApplicationController
       session[:user_return_to] = destination_url
 
       if user
+        # Hard stop: never sign in demo students, regardless of how the LTI
+        # launch resolved them. Uses the durable (uncached) check so a stale
+        # per-worker cache cannot reopen the hole. This is the LTI launch's
+        # own entry-point guard; the rest of the auth surface guards itself
+        # (User#valid_password?, authenticate_with_section_and_secret_*,
+        # OmniauthCallbacksController#sign_in_user).
+        if Policies::DemoSections.demo_student_durable?(user.id)
+          return log_unauthorized('Demo student blocked from LTI sign-in', {user_id: user.id})
+        end
+
         sign_in user
 
         metadata = {
