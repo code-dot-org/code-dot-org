@@ -4,6 +4,16 @@ import {aggregateResults, formatRate, GATE_LABELS} from './evalScoring';
 import {EvalOutcome, EvalPrompt, EvalResult, EvalSummary} from './evalTypes';
 import {runEval} from './imageSafetyEval';
 import {parseEvalCsv} from './parseEvalCsv';
+import {ThrottleEvent} from './rateLimit';
+
+// Each prompt makes up to ~4 calls (2 text-safety + image generation +
+// moderation). Used to estimate load before a run.
+const CALLS_PER_PROMPT = 4;
+// Confirm before launching runs larger than this, to avoid accidentally firing
+// thousands of calls at the shared gateway.
+const LARGE_RUN_THRESHOLD = 150;
+// Politeness cap on concurrency against shared production infrastructure.
+const MAX_CONCURRENCY = 6;
 
 const styles: Record<string, React.CSSProperties> = {
   page: {maxWidth: 1100, margin: '0 auto', padding: 24, fontSize: 14},
@@ -220,6 +230,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const [results, setResults] = useState<EvalResult[]>([]);
   const [summary, setSummary] = useState<EvalSummary | null>(null);
   const [showImages, setShowImages] = useState(false);
+  const [throttle, setThrottle] = useState<ThrottleEvent | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
   const handleFile = useCallback(
@@ -242,11 +253,25 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   );
 
   const handleRun = useCallback(async () => {
+    // Guard against accidentally firing thousands of calls at shared infra.
+    if (
+      prompts.length > LARGE_RUN_THRESHOLD &&
+      !window.confirm(
+        `This will run ${prompts.length} prompts (up to ~${
+          prompts.length * CALLS_PER_PROMPT
+        } calls to the shared AI gateway + Azure moderation) at concurrency ` +
+          `${concurrency}. It can take a while and uses shared capacity. Continue?`
+      )
+    ) {
+      return;
+    }
+
     const controller = new AbortController();
     abortRef.current = controller;
     setRunning(true);
     setResults([]);
     setSummary(null);
+    setThrottle(null);
     setProgress({completed: 0, total: prompts.length});
 
     const collected: EvalResult[] = [];
@@ -254,6 +279,9 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       await runEval(prompts, {
         concurrency,
         signal: controller.signal,
+        // Surface gateway throttling; a throttle cools down the whole run.
+        onThrottle: setThrottle,
+        onResume: () => setThrottle(null),
         onResult: (result, completed, total) => {
           collected.push(result);
           setResults([...collected]);
@@ -263,6 +291,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       });
     } finally {
       setRunning(false);
+      setThrottle(null);
       abortRef.current = null;
     }
   }, [prompts, concurrency]);
@@ -289,10 +318,17 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
           <input
             type="number"
             min={1}
-            max={8}
+            max={MAX_CONCURRENCY}
             value={concurrency}
             disabled={running}
-            onChange={e => setConcurrency(Number(e.target.value) || 1)}
+            onChange={e =>
+              setConcurrency(
+                Math.min(
+                  MAX_CONCURRENCY,
+                  Math.max(1, Number(e.target.value) || 1)
+                )
+              )
+            }
             style={{width: 56}}
           />
         </label>
@@ -309,7 +345,15 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       {fileName && (
         <p>
           Loaded <strong>{fileName}</strong>: {prompts.length} prompt
-          {prompts.length === 1 ? '' : 's'}.
+          {prompts.length === 1 ? '' : 's'}
+          {prompts.length > 0 && (
+            <>
+              {' '}
+              — up to ~{prompts.length * CALLS_PER_PROMPT} gateway/moderation
+              calls
+            </>
+          )}
+          .
         </p>
       )}
       {parseError && <div style={styles.err}>{parseError}</div>}
@@ -387,6 +431,15 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
           </>
         )}
       </div>
+
+      {throttle && (
+        <div style={styles.warn}>
+          ⏳ Being throttled by the gateway — backing off{' '}
+          {Math.round(throttle.waitMs / 1000)}s (×{throttle.consecutive}
+          {throttle.status ? `, HTTP ${throttle.status}` : ''}). The run pauses
+          and continues automatically; you can Cancel.
+        </div>
+      )}
 
       {summary && <SummaryView summary={summary} />}
 

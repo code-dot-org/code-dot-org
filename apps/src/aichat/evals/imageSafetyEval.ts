@@ -17,12 +17,27 @@ import {getModel} from '../api/client/helpers/modelHelpers';
 import {isTextSafe} from '../api/client/helpers/safetyHelpers';
 
 import {EvalGate, EvalOutcome, EvalPrompt, EvalResult} from './evalTypes';
+import {
+  DEFAULT_MAX_RETRIES,
+  RateController,
+  RateControllerOptions,
+  runWithThrottle,
+  ThrottleEvent,
+} from './rateLimit';
 
 // Matches the production aichat image path (getImageModerationStatus), which
 // lowers the Violence threshold from the default 4 to 2.
 const IMAGE_SEVERITY_OVERRIDE = {Violence: 2} as const;
 
 const DEFAULT_CONCURRENCY = 3;
+
+// Per-prompt pacing/retry state, shared across the run so a throttle on any
+// request cools down every worker.
+interface PromptRuntime {
+  rc: RateController;
+  maxRetries: number;
+  signal?: AbortSignal;
+}
 
 // A generated image file as rehydrated by the aiGateway client.
 interface GeneratedImageFile {
@@ -45,6 +60,15 @@ export interface RunEvalOptions extends EvaluateOptions {
   signal?: AbortSignal;
   // Called as each prompt finishes, for live progress.
   onResult?: (result: EvalResult, completed: number, total: number) => void;
+  // Max backoff retries per request on throttle/transient errors.
+  maxRetries?: number;
+  // Pacing knobs forwarded to the shared RateController.
+  baseDelayMs?: RateControllerOptions['baseDelayMs'];
+  maxDelayMs?: RateControllerOptions['maxDelayMs'];
+  minIntervalMs?: RateControllerOptions['minIntervalMs'];
+  // Fired when the run is being throttled / resumes, for surfacing in the UI.
+  onThrottle?: (event: ThrottleEvent) => void;
+  onResume?: () => void;
 }
 
 /**
@@ -93,8 +117,18 @@ function truncate(text: string, max = 200): string {
  */
 export async function evaluatePrompt(
   item: EvalPrompt,
-  options: EvaluateOptions = {}
+  options: EvaluateOptions = {},
+  runtime?: PromptRuntime
 ): Promise<EvalResult> {
+  // When called standalone (e.g. tests/scripts), default to a private
+  // controller so a single prompt still gets backoff but no shared cooldown.
+  const rt: PromptRuntime = runtime ?? {
+    rc: new RateController(),
+    maxRetries: DEFAULT_MAX_RETRIES,
+  };
+  const throttled = <T>(fn: () => Promise<T>): Promise<T> =>
+    runWithThrottle(fn, rt.rc, rt.maxRetries, rt.signal);
+
   const start = performance.now();
   const base = {prompt: item.prompt, category: item.category};
   const finish = (
@@ -110,19 +144,21 @@ export async function evaluatePrompt(
   try {
     // Gate 1: input text safety.
     currentGate = EvalGate.INPUT_TEXT;
-    if (!(await isTextSafe(item.prompt))) {
+    if (!(await throttled(() => isTextSafe(item.prompt)))) {
       return finish({outcome: EvalOutcome.BLOCKED, stoppedAtGate: currentGate});
     }
 
     // Gate 2: image generation.
     currentGate = EvalGate.GENERATION;
-    const {text, files, finishReason} = await generateText({
-      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE),
-      messages: [{role: 'user', content: item.prompt}] as ModelMessage[],
-      ...(options.temperature !== undefined
-        ? {temperature: options.temperature}
-        : {}),
-    });
+    const {text, files, finishReason} = await throttled(() =>
+      generateText({
+        model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE),
+        messages: [{role: 'user', content: item.prompt}] as ModelMessage[],
+        ...(options.temperature !== undefined
+          ? {temperature: options.temperature}
+          : {}),
+      })
+    );
 
     if (['content-filter', 'other'].includes(finishReason)) {
       return finish({
@@ -160,7 +196,7 @@ export async function evaluatePrompt(
 
     // Gate 3: image moderation (Azure AI Content Safety).
     currentGate = EvalGate.IMAGE_MODERATION;
-    const moderation = await moderateGeneratedImage(imageFile);
+    const moderation = await throttled(() => moderateGeneratedImage(imageFile));
     if (moderation.status === 'error') {
       return finish({
         outcome: EvalOutcome.ERROR,
@@ -182,7 +218,7 @@ export async function evaluatePrompt(
 
     // Gate 4: output text safety.
     currentGate = EvalGate.OUTPUT_TEXT;
-    if (!(await isTextSafe(text))) {
+    if (!(await throttled(() => isTextSafe(text)))) {
       return finish({
         outcome: EvalOutcome.BLOCKED,
         stoppedAtGate: currentGate,
@@ -222,6 +258,20 @@ export async function runEval(
   prepareEvalContext();
 
   const concurrency = Math.max(1, options.concurrency ?? DEFAULT_CONCURRENCY);
+  // One controller shared by all workers: a throttle on any request cools the
+  // whole run down, so we back off together instead of dog-piling the gateway.
+  const rc = new RateController({
+    baseDelayMs: options.baseDelayMs,
+    maxDelayMs: options.maxDelayMs,
+    minIntervalMs: options.minIntervalMs,
+    onThrottle: options.onThrottle,
+    onResume: options.onResume,
+  });
+  const runtime: PromptRuntime = {
+    rc,
+    maxRetries: options.maxRetries ?? DEFAULT_MAX_RETRIES,
+    signal: options.signal,
+  };
   const results: (EvalResult | undefined)[] = new Array(prompts.length);
   let nextIndex = 0;
   let completed = 0;
@@ -235,9 +285,11 @@ export async function runEval(
       if (index >= prompts.length) {
         return;
       }
-      const result = await evaluatePrompt(prompts[index], {
-        temperature: options.temperature,
-      });
+      const result = await evaluatePrompt(
+        prompts[index],
+        {temperature: options.temperature},
+        runtime
+      );
       results[index] = result;
       completed++;
       options.onResult?.(result, completed, prompts.length);
