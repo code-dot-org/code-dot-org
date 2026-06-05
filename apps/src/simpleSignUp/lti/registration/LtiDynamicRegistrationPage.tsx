@@ -58,7 +58,7 @@ export const LtiDynamicRegistrationPage = ({
   return (
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
-        <img className={styles.logo} src={logoUrl} alt={i18n.codeAiLogo()} />
+        <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
         <Typography className={styles.description} variant="body1" gutterBottom>
           {hasError ? errorMsg : i18n.ltiDynamicRegistrationDescription()}
         </Typography>

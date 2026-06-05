@@ -118,7 +118,7 @@ class SignInOrAgeDialog extends Component {
                 <Button
                   __useDeprecatedTag
                   href={`/users/sign_in?user_return_to=${location.pathname}`}
-                  text={i18n.signinCodeAi()}
+                  text={i18n.signinCodeOrg()}
                   color={Button.ButtonColor.gray}
                 />
               </div>

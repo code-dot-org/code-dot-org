@@ -34,9 +34,9 @@ class TeachersBeyondHoc extends Component {
 
     const cards = [
       {
-        title: i18n.congratsTeacherCodeAiTitle(),
-        description: i18n.congratsTeacherCodeAiDesc(),
-        buttonText: i18n.congratsTeacherCodeAiButton(),
+        title: i18n.congratsTeacherCodeOrgTitle(),
+        description: i18n.congratsTeacherCodeOrgDesc(),
+        buttonText: i18n.congratsTeacherCodeOrgButton(),
         link: '/catalog',
         image: codeorgTeacherImage,
       },

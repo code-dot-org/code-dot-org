@@ -41,7 +41,7 @@ const LtiWelcomeBanner = () => {
             className={styles.exchangeIcon}
             iconName={'exchange'}
           />
-          <img src={codeLogo} alt={i18n.codeAiLogo()} />
+          <img src={codeLogo} alt={i18n.codeLogo()} />
         </div>
       )}
       <div className={styles.titleContainer}>

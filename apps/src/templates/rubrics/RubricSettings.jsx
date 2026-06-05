@@ -383,7 +383,7 @@ function RubricSettings({
             >
               <Typography variant="body3" gutterBottom>
                 <Typography variant="strong">
-                  {i18n.useAiFeaturesOnCodeAi()}
+                  {i18n.useAiFeaturesOnCodeOrg()}
                 </Typography>
               </Typography>
               <Toggle

@@ -22,14 +22,14 @@ describe('AccountBanner', () => {
 
   it('renders the logo when showLogo is true', () => {
     render(<AccountBanner {...defaultProps} showLogo={true} />);
-    const logo = screen.getByRole('img', {name: i18n.codeAiLogo()});
+    const logo = screen.getByRole('img', {name: i18n.codeLogo()});
     expect(logo).toBeInTheDocument();
   });
 
   it('does not render the logo when showLogo is false', () => {
     render(<AccountBanner {...defaultProps} showLogo={false} />);
     expect(
-      screen.queryByRole('img', {name: i18n.codeAiLogo()})
+      screen.queryByRole('img', {name: i18n.codeLogo()})
     ).not.toBeInTheDocument();
   });
 
