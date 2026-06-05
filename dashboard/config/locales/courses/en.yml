@@ -1523,7 +1523,7 @@ en:
             - This course has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [CSD Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information
 
             - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
-          version_title: "'25-'26"
+          version_title: DEPRECATED '25-'26
         computer-science-and-artificial-intelligence-foundations-2025:
           title: CS and AI Foundations (CSAIF)
           description_short: ''
@@ -7170,17 +7170,49 @@ en:
           version_title: "'26-'27"
         teaching-designing-and-building-with-ai-2026:
           title: 'Teaching AI Foundations: Designing & Building with AI Curriculum'
-          description_short: 'This short professional learning module introduces you to the concepts in AI Foundations: Designing & Building with AI course— a curriculum where students code alongside AI to build real-world interactive projects.'
-          description_student: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+          description_short: 'This professional learning module prepares you to teach AI Foundations: Designing and Building with AI, a course where high school students learn to code alongside AI and build real-world interactive web apps. No prior programming experience is required to teach it.'
+          description_student: |2+
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
-          description_teacher: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+            This professional learning module prepares you to teach AI Foundations: Designing and Building with AI, a course where high school students learn to code alongside AI and build real-world interactive web apps. No prior programming experience is required to teach it.
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+            Each module covers one unit of the curriculum. You will explore the key concepts, see how lessons connect, practice the tools and techniques your students will use, and pick up pedagogical strategies for facilitating discussions, supporting diverse learners, and guiding students through open-ended creative work.
+
+            ##  Prerequisites
+
+            This professional learning series is designed for educators at any level of computer science experience. No prior programming background is needed.
+
+            If you are new to teaching CS, start with the intro module before moving through the unit modules in order. If you have prior experience, you can jump to any unit module that is relevant to where you are in the curriculum.
+
+            ## Work at your own pace
+            These modules are self-paced and available any time. Each one includes an estimated completion time and can be done in a single sitting or across multiple sessions. You do not need to finish one module before starting to teach the corresponding unit.
+
+            ---
+
+            <p style="font-size: 14px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #6a62d9; display: inline-block;">
+                Start with the intro module for an orientation to the full course, then work through each unit module in order ahead of or alongside your teaching.
+            </p>
+
+
+          description_teacher: |2-
+
+            This professional learning module prepares you to teach AI Foundations: Designing and Building with AI, a course where high school students learn to code alongside AI and build real-world interactive web apps. No prior programming experience is required to teach it.
+
+            Each module covers one unit of the curriculum. You will explore the key concepts, see how lessons connect, practice the tools and techniques your students will use, and pick up pedagogical strategies for facilitating discussions, supporting diverse learners, and guiding students through open-ended creative work.
+
+            ##  Prerequisites
+
+            This professional learning series is designed for educators at any level of computer science experience. No prior programming background is needed.
+
+            If you are new to teaching CS, start with the intro module before moving through the unit modules in order. If you have prior experience, you can jump to any unit module that is relevant to where you are in the curriculum.
+
+            ## Work at your own pace
+            These modules are self-paced and available any time. Each one includes an estimated completion time and can be done in a single sitting or across multiple sessions. You do not need to finish one module before starting to teach the corresponding unit.
+
+            ---
+
+            <p style="font-size: 14px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #6a62d9; display: inline-block;">
+                Start with the intro module for an orientation to the full course, then work through each unit module in order ahead of or alongside your teaching.
+            </p>
           version_title: "'26-'27"
         tools-ai-enabled-classroom-facilitators-2026:
           title: tools-ai-enabled-classroom-facilitators-2026

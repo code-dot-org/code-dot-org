@@ -2,6 +2,7 @@
 Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
+    Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
 
 @no_device_farm
 Scenario: Teacher can open and close Icon Key and details

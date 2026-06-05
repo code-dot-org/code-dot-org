@@ -71,7 +71,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
 
     try {
       const section = await createSectionForAction(
-        EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+        EVENTS.DEMO_SECTION_CARD_PRINT_CERTIFICATES_CLICKED,
         CERTIFICATES_ACTION_KEY
       );
       if (!section) {
@@ -93,7 +93,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           onClick={() =>
             handleNavigationClick(
               TEACHER_NAVIGATION_PATHS.settings,
-              EVENTS.SECTION_CARD_SETTINGS_CLICKED
+              EVENTS.DEMO_SECTION_CARD_SETTINGS_CLICKED
             )
           }
         >
@@ -109,7 +109,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           onClick={() =>
             handleNavigationClick(
               TEACHER_NAVIGATION_PATHS.roster,
-              EVENTS.SECTION_CARD_ROSTER_CLICKED
+              EVENTS.DEMO_SECTION_CARD_ROSTER_CLICKED
             )
           }
         >
@@ -125,7 +125,7 @@ const DemoSectionOptionsDropdown: React.FC<DemoSectionOptionsDropdownProps> = ({
           onClick={() =>
             handleNavigationClick(
               TEACHER_NAVIGATION_PATHS.loginInfo,
-              EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED
+              EVENTS.DEMO_SECTION_CARD_LOGIN_CARDS_CLICKED
             )
           }
         >

@@ -1,12 +1,20 @@
 import {useEffect, useState} from 'react';
 
 import {CodeStudioConfig} from '@code-dot-org/core';
-import {DashboardApiClient} from '@code-dot-org/core/api';
+import {
+  registerLevelKindSchema,
+  DashboardApiClient,
+} from '@code-dot-org/core/api';
 import type {
   LevelPropertiesMap,
   UserThemeSettings,
 } from '@code-dot-org/core/api';
 import * as Observability from '@code-dot-org/core/plugins/observability';
+
+import {LevelKindSchema} from './schema';
+
+// Register the {...levelData} properties for the LevelProperties API validation
+registerLevelKindSchema('music', LevelKindSchema);
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +33,8 @@ function App() {
       source: 'music-lab',
     });
 
+    // Right now, presume a level id. This is one that will match any mock
+    // fixture we provide, if using the mock service worker (VITE_API_MODE=msw)
     DashboardApiClient.levels
       .getLevelProperties({levelId: 46446})
       .then(res => setLevelProperties(res));

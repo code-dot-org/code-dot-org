@@ -29,8 +29,12 @@ export class JavalabSourcesStore extends SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
+    // Drop labConfig from what we write to S3 to maintain legacy compatibility.
+    // labConfig is persisted on the channel instead.
+    const rest = {...sources};
+    delete rest.labConfig;
     const flat = {
-      ...sources,
+      ...rest,
       source: multiFileToFlat(sources.source as MultiFileSource),
     } as unknown as ProjectSources;
     return super.save(channelId, flat, projectType, forceNewVersion);

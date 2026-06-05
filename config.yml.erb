@@ -316,6 +316,23 @@ libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
+# S3 bucket for runtime-generated user content (podcasts, etc). The bucket is
+# created by the stack's s3.yml.erb CloudFormation template, named from the
+# stack's studio_subdomain rather than the user-facing dashboard hostname, so
+# we enumerate per env here instead of deriving at runtime. Adhocs and other
+# environments override this in locals.yml as needed.
+#
+# Planned: rename the prod bucket to org.code.studio.user-content (matching the
+# user-facing FQDN) so this map collapses to a single value derivable from env.
+user_content_s3_bucket: <%=
+  {
+    'production'   => 'org.code.autoscale-prod-studio.user-content',
+    'staging'      => 'org.code.staging-studio.user-content',
+    'test'         => 'org.code.test-studio.user-content',
+    'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+  }[env]
+%>
+
 # Dashboard Redis instance (uses ElastiCache on prod)
 #
 # Please use the CDO.redis_url instance for all your dashboard Redis needs, just use
