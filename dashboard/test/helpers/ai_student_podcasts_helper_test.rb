@@ -19,6 +19,10 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
     DCDO.stubs(:get).with('openai_http_open_timeout', 5).returns(5)
     DCDO.stubs(:get).with('openai_http_read_timeout', 30).returns(30)
+
+    # Default to a passing toxicity verdict so tests that don't care about the
+    # filter aren't forced to wire it up. Toxicity-specific tests override.
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns(nil)
   end
 
   teardown do
@@ -166,6 +170,57 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     result = AiStudentPodcastsHelper.generate_podcast_script(empty_podcast)
 
     assert_equal fresh_script, result
+  end
+
+  test "generate_podcast_script regenerates and returns the second script when the first fails toxicity" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    toxic_script = [{'voice_id' => 'Dan', 'text' => 'bad'}].to_json
+    clean_script = [{'voice_id' => 'Dan', 'text' => 'good'}].to_json
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).twice.returns(
+      openai_response_for(toxic_script),
+      openai_response_for(clean_script),
+    )
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns({text: 'bad', blocked_by: 'openai', details: {}}).then.returns(nil)
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+
+    assert_equal clean_script, result
+    assert_equal clean_script, @podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script raises StudentPodcastToxicityRetriesExceeded after MAX_TOXICITY_RETRIES failed attempts" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    toxic_script = [{'voice_id' => 'Dan', 'text' => 'bad'}].to_json
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).
+      times(AiStudentPodcastsHelper::MAX_TOXICITY_RETRIES).
+      returns(openai_response_for(toxic_script))
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns({text: 'bad', blocked_by: 'openai', details: {}})
+
+    assert_raises(StudentPodcastToxicityRetriesExceeded) do
+      AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+    end
+    assert_nil @podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script passes joined dialog text and role='Model' to the toxicity filter" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    script_array = [
+      {'voice_id' => 'Dan', 'text' => 'first line'},
+      {'voice_id' => 'Sam', 'text' => 'second line'}
+    ]
+    mock_client = mock('client')
+    mock_client.stubs(:request_podcast_script).returns(openai_response_for(script_array.to_json))
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.expects(:find_toxicity).with("first line\nsecond line", 'Model').returns(nil)
+
+    AiStudentPodcastsHelper.generate_podcast_script(@podcast)
   end
 
   # *****
@@ -417,5 +472,13 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
     AiStudentPodcastsHelper::OpenaiClient.new(@openai_api_key, AiStudentPodcastsHelper::OPENAI_MODEL).
       request_podcast_script('prompt-here')
+  end
+
+  private def openai_response_for(script_json)
+    body = {choices: [{message: {content: {script: JSON.parse(script_json)}.to_json}}]}.to_json
+    response = mock('response')
+    response.stubs(:code).returns(200)
+    response.stubs(:body).returns(body)
+    response
   end
 end

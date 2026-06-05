@@ -1,4 +1,5 @@
 class OpenaiStudentPodcastTimeout < StandardError; end
+class StudentPodcastToxicityRetriesExceeded < StandardError; end
 
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
@@ -6,6 +7,9 @@ module AiStudentPodcastsHelper
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
+  # Caps the regenerate-until-clean loop so a stuck prompt or model can't run
+  # OpenAI calls (and the bill) without bound.
+  MAX_TOXICITY_RETRIES = 5
 
   def self.create_and_save_to_s3(student_podcast_data)
     bucket = AWS::S3.user_content_bucket
@@ -77,6 +81,19 @@ module AiStudentPodcastsHelper
 
     prompt = AiSystemPrompts::StudentPodcastPromptHelper.get_openai_system_prompt(student_podcast_data.lesson_id, objective_ids, student_podcast_data.user_id)
 
+    MAX_TOXICITY_RETRIES.times do
+      podcast_script = request_openai_podcast_script(prompt)
+      next if script_toxic?(podcast_script)
+
+      student_podcast_data.podcast_script = podcast_script
+      student_podcast_data.save!
+      return podcast_script
+    end
+
+    raise StudentPodcastToxicityRetriesExceeded.new("AI student podcast script failed toxicity filter after #{MAX_TOXICITY_RETRIES} attempts")
+  end
+
+  def self.request_openai_podcast_script(prompt)
     begin
       response = openai_client.request_podcast_script(prompt)
     rescue Net::ReadTimeout, Net::OpenTimeout
@@ -88,10 +105,15 @@ module AiStudentPodcastsHelper
     raise StandardError.new("Received status code #{response.code} when generating AI student podcast script: #{response.body}") unless response.code == 200
 
     content = JSON.parse(response.body).dig('choices', 0, 'message', 'content')
-    podcast_script = JSON.parse(content).fetch('script').to_json
-    student_podcast_data.podcast_script = podcast_script
-    student_podcast_data.save!
-    return podcast_script
+    JSON.parse(content).fetch('script').to_json
+  end
+
+  # Concatenates the spoken dialog and routes it through the podcast-specific
+  # toxicity detector. The role tag is 'Model' because the text under review
+  # is AI-generated output, not user input.
+  def self.script_toxic?(podcast_script)
+    dialog_text = JSON.parse(podcast_script).map {|entry| entry['text']}.join("\n")
+    !AiPodcastsSafetyHelper.find_toxicity(dialog_text, 'Model').nil?
   end
 
   def self.get_podcast_from_script(podcast_script)
