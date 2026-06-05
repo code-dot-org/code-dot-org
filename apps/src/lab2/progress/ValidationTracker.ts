@@ -2,7 +2,7 @@ import {ValidationResult} from './ProgressManager';
 
 // Holds the per-test validation results for the most recent validation run of
 // a lab.
-export default abstract class ValidationResultsTracker {
+export default abstract class ValidationTracker {
   protected validationResults: ValidationResult[] | undefined = undefined;
 
   getValidationResults(): ValidationResult[] | undefined {

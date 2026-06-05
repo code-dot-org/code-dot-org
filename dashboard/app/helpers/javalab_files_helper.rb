@@ -52,7 +52,7 @@ module JavalabFilesHelper
   #   "validation": <all validation code for a project, in json format>
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
-  def self.get_project_files_with_override_sources(sources, level_id, channel_id, override_validation = nil)
+  def self.get_project_files_with_overrides(sources, level_id, channel_id, override_validation = nil)
     all_files = get_level_files(level_id)
     all_files["sources"]["main.json"] = {source: sources}.to_json
     all_files["validation"] = {source: override_validation}.to_json if override_validation

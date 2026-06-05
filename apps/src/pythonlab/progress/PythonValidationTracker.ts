@@ -1,8 +1,8 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
-import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
+import ValidationTracker from '@cdo/apps/lab2/progress/ValidationTracker';
 import {PythonValidationResult} from '@cdo/apps/pythonlab/types';
 
-export default class PythonValidationTracker extends ValidationResultsTracker {
+export default class PythonValidationTracker extends ValidationTracker {
   private static _instance: PythonValidationTracker;
 
   public static getInstance(): PythonValidationTracker {

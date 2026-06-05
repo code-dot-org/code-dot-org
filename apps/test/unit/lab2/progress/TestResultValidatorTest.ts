@@ -1,11 +1,11 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
-import ValidationResultsTracker from '@cdo/apps/lab2/progress/ValidationResultsTracker';
+import ValidationTracker from '@cdo/apps/lab2/progress/ValidationTracker';
 import {Condition} from '@cdo/apps/lab2/types';
 
 // Minimal concrete tracker so the test exercises TestResultValidator against the
-// ValidationResultsTracker contract without depending on a specific lab's tracker.
-class TestTracker extends ValidationResultsTracker {
+// ValidationTracker contract without depending on a specific lab's tracker.
+class TestTracker extends ValidationTracker {
   setValidationResults(results: ValidationResult[]) {
     this.validationResults = results;
   }

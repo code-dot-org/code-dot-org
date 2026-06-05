@@ -150,7 +150,7 @@ export async function handleRunClick(
     );
 
     if (overrideSources) {
-      activeConnection.connectJavabuilderWithOverrideSources(
+      activeConnection.connectJavabuilderWithOverrides(
         overrideSources,
         overrideValidation
       );

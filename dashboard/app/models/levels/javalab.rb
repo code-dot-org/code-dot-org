@@ -179,6 +179,7 @@ class Javalab < Level
   # Return the validation condition for this level.
   # If the level has at least one validation file, the condition
   # is that all tests passed. If there are no validation files, there are no conditions.
+  # Follows the same logic as pythonlab.rb.
   def get_validations
     return nil unless validated?
     [{

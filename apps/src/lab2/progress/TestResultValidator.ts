@@ -1,7 +1,7 @@
 import {Condition} from '@cdo/apps/lab2/types';
 
 import {Validator, ValidationResult} from './ProgressManager';
-import ValidationResultsTracker from './ValidationResultsTracker';
+import ValidationTracker from './ValidationTracker';
 
 // Conditions a TestResultValidator supports.
 export enum ConditionType {
@@ -17,7 +17,7 @@ const PASSED_STATUSES: ValidationResult['result'][] = [
 // a tracker by the lab's runner. The PASSED_ALL_TESTS condition is met only
 // when there is at least one result and every result has a passing status.
 export default class TestResultValidator extends Validator {
-  constructor(private readonly tracker: ValidationResultsTracker) {
+  constructor(private readonly tracker: ValidationTracker) {
     super();
   }
 
