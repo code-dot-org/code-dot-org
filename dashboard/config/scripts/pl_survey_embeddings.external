@@ -14,4 +14,8 @@ markdown <<MARKDOWN
 ## Pulse Check
 
 <iframe src="https://micahkennedy.github.io/pulse_check/?page=mod1level5&content=ai-example-1&type=video" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
+
+<br>
+
+<iframe src="https://micahkennedy.github.io/pulse_check/?page=mod1level5&content=ai-example-1&type=activity" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
 MARKDOWN
