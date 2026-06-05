@@ -81,10 +81,10 @@ $debug-area-initial-height: 43px;
   bottom: $debug-area-initial-height;
 }
 
-$debug-commands-column-width: 270px;
+$debug-header-border-width: 1px;
+$debug-commands-column-width: 270px + $debug-header-border-width;
 $debug-console-min-column-width: 130px;
 $debug-watch-max-column-width: 200px;
-$debug-header-border-width: 1px;
 
 #debug-commands-header {
   width: $debug-commands-column-width;
