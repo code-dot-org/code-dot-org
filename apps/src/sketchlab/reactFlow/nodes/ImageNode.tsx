@@ -1,7 +1,8 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {NodeResizer, useConnection, type NodeProps} from '@xyflow/react';
 import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {useIsAnchorDragging} from '../context';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -10,7 +11,9 @@ import styles from './image-node.module.scss';
 
 function ImageNode({data, selected}: NodeProps<ImageNodeType>) {
   const {src, altText} = data;
-  const showHandles = data.showHandles !== false;
+  const connection = useConnection();
+  const isAnchorDragging = useIsAnchorDragging();
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
     () => ({transform: `rotate(${rotation}deg)`}),

@@ -3,6 +3,8 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+This is the first iteration of an interactive debugging scenario created in Claude. 
+
 <div style="width:100%; max-width:900px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(124,58,237,0.2); border:1px solid #2d3350;">
   <iframe 
     src="https://amandadennard-dotcom.github.io/Unit4_testing/loop_testing_activity.html"

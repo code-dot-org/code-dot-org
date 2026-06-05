@@ -3,6 +3,8 @@ import {
   getDatasetDescription,
   getDatasetDetails,
 } from '../../src/helpers/datasetDetails';
+import I18n from '../../src/i18n';
+
 import {
   userUploadedDatasetState,
   premadeDatasetState,
@@ -16,7 +18,6 @@ import {
   batDatasetMisuses,
   batDatasetMisusesLocalized,
 } from './testData';
-import I18n from '../../src/i18n';
 
 beforeEach(() => {
   I18n.initI18n();

@@ -1,4 +1,3 @@
-import {getSelectedColumns} from '../../src/selectors';
 import {
   getUniqueOptionsCurrentColumn,
   getExtremaCurrentColumn,
@@ -6,6 +5,7 @@ import {
   isCurrentColumnReadOnly,
   currentColumnContainsOnlyNumbers,
 } from '../../src/selectors/currentColumnSelectors';
+
 import {
   classificationState,
   allNumericalState,

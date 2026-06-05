@@ -118,7 +118,6 @@ export function convertExcalidrawToReactFlow(
           text: el.text,
           fontColor: el.strokeColor,
           fontSize: el.fontSize,
-          showHandles: false,
         },
       };
       nodes.push(node);
@@ -140,7 +139,7 @@ export function convertExcalidrawToReactFlow(
         type: 'image',
         position: {x: el.x, y: el.y},
         style: {width: el.width, height: el.height},
-        data: {src, altText: '', showHandles: false},
+        data: {src, altText: ''},
       };
       nodes.push(node);
       emittedNodeById.set(el.id, node);

@@ -119,8 +119,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   test 'show returns correct content type and headers for podcast from S3' do
     sign_in @teacher
 
-    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_123_podcast.mp3').returns(true)
-    AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_123_podcast.mp3').returns(@test_audio_data)
+    AWS::S3.stubs(:exists_in_bucket).with(AWS::S3.user_content_bucket, 'podcasts/lesson_123_podcast.mp3').returns(true)
+    AWS::S3.stubs(:download_from_bucket).with(AWS::S3.user_content_bucket, 'podcasts/lesson_123_podcast.mp3').returns(@test_audio_data)
 
     get :show, params: {
       lesson_id: '123'
@@ -136,8 +136,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     different_audio_data = "different_mp3_binary_content"
-    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_456_podcast.mp3').returns(true)
-    AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_456_podcast.mp3').returns(different_audio_data)
+    AWS::S3.stubs(:exists_in_bucket).with(AWS::S3.user_content_bucket, 'podcasts/lesson_456_podcast.mp3').returns(true)
+    AWS::S3.stubs(:download_from_bucket).with(AWS::S3.user_content_bucket, 'podcasts/lesson_456_podcast.mp3').returns(different_audio_data)
 
     get :show, params: {
       lesson_id: '456'
@@ -150,7 +150,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   test 'show returns not_found when podcast does not exist in S3' do
     sign_in @teacher
 
-    AWS::S3.stubs(:exists_in_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_789_podcast.mp3').returns(false)
+    AWS::S3.stubs(:exists_in_bucket).with(AWS::S3.user_content_bucket, 'podcasts/lesson_789_podcast.mp3').returns(false)
 
     get :show, params: {
       lesson_id: '789'

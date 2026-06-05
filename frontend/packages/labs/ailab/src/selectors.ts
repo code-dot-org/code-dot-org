@@ -1,4 +1,5 @@
 import {createSelector} from 'reselect';
+
 import {ColumnTypes} from './constants';
 import {
   filterColumnsByType,
@@ -7,8 +8,8 @@ import {
   getColumnDescription,
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
-import {RootState} from './redux';
-import {DataRow, Metadata, TrainedModelDetailsSave} from './types';
+import type {RootState} from './redux';
+import type {DataRow, Metadata, TrainedModelDetailsSave} from './types';
 
 export const getData = (state: RootState): DataRow[] => state.data;
 export const getColumnsByDataType = (

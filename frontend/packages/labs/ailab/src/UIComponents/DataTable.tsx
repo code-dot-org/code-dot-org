@@ -1,16 +1,13 @@
 /* React component to handle displaying imported data. */
 import {connect} from 'react-redux';
-import {
-  getTableData,
-  setCurrentColumn,
-  setHighlightColumn,
-  RootState,
-} from '../redux';
-import {Dispatch} from 'redux';
+import type {Dispatch} from 'redux';
+
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import {getTableData, setCurrentColumn, setHighlightColumn} from '../redux';
+import type {DataRow} from '../types';
 
 interface DataTableProps {
   currentPanel: string;
@@ -94,7 +91,7 @@ const DataTable = ({
             (!noLabel && labelColumn === key) || selectedFeatures.includes(key)
           );
         })
-        .sort((key1, key2) => {
+        .sort(key1 => {
           return labelColumn === key1 ? 1 : -1;
         });
     }

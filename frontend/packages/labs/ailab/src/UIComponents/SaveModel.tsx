@@ -1,29 +1,29 @@
 /* React component to handle saving a trained model. */
-import React, {useState} from 'react';
+import type React from 'react';
+import {useState} from 'react';
 import {connect} from 'react-redux';
-import {setTrainedModelDetail, RootState} from '../redux';
-import {Dispatch} from 'redux';
+import type {Dispatch} from 'redux';
+
+import {styles, ModelNameMaxLength} from '../constants';
+import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   getDatasetDescription,
   isUserUploadedDataset,
 } from '../helpers/datasetDetails';
-import {getSelectedColumnsDescriptions} from '../selectors';
-import {styles, ModelNameMaxLength} from '../constants';
-import Statement from './Statement';
-import ScrollableContent from './ScrollableContent';
 import I18n from '../i18n';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {TrainedModelDetailsSave} from '../types';
-import KNN from 'ml-knn';
+import type {RootState} from '../redux';
+import {setTrainedModelDetail} from '../redux';
+import {getSelectedColumnsDescriptions} from '../selectors';
+
+import ScrollableContent from './ScrollableContent';
+import Statement from './Statement';
 
 interface SaveModelProps {
-  trainedModel: KNN | undefined;
   setTrainedModelDetail: (
     field: string,
     value: string,
     isColumn: boolean,
   ) => void;
-  trainedModelDetails: TrainedModelDetailsSave;
   labelColumn: string | undefined;
   columnDescriptions: {id: string; description: string | null}[];
   dataDescription: string | undefined;
@@ -32,9 +32,7 @@ interface SaveModelProps {
 }
 
 const SaveModel = ({
-  trainedModel,
   setTrainedModelDetail,
-  trainedModelDetails,
   labelColumn,
   columnDescriptions,
   dataDescription,
@@ -254,8 +252,6 @@ const SaveModel = ({
 
 export default connect(
   (state: RootState) => ({
-    trainedModel: state.trainedModel,
-    trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnsDescriptions(state),
     dataDescription: getDatasetDescription(state),

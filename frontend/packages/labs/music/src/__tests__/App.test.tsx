@@ -15,35 +15,9 @@ vi.mock('@code-dot-org/core/plugins/observability', () => ({
   metrics: {count: vi.fn()},
 }));
 
-// Replace the DashboardApiClient singleton with one backed by a mock
-// transport. Other exports (createApiClient, createMockTransport, schemas,
-// React hooks, etc.) pass through untouched via importActual.
-vi.mock('@code-dot-org/core/api', async () => {
-  const actual = await vi.importActual<typeof import('@code-dot-org/core/api')>(
-    '@code-dot-org/core/api',
-  );
-
-  const transport = actual.createMockTransport({
-    baseUrl: '',
-    routes: [
-      {
-        method: 'GET',
-        url: '/levels/46446/level_properties',
-        handler: () => ({}),
-      },
-      {
-        method: 'GET',
-        url: '/user_preference/theme',
-        handler: () => ({theme: {}}),
-      },
-    ],
-  });
-
-  return {
-    ...actual,
-    DashboardApiClient: actual.createApiClient(transport),
-  };
-});
+// The MSW node server (configured in `setup.ts`) intercepts the App's calls
+// to `/levels/.../level_properties` and `/user_preference/theme`, so the
+// real `DashboardApiClient` singleton runs end to end here.
 
 it('renders without crashing', async () => {
   const {container} = render(<App />);

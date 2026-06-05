@@ -182,7 +182,7 @@
 
   select {
     color: var(--text-neutral-primary);
-    border-color: var(--neutral-gray-40);
+    border-color: var(--borders-neutral-strong);
     background-color: var(--background-neutral-primary);
 
     &.hasError {

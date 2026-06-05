@@ -1,10 +1,9 @@
-import I18n from '../i18n';
-
 /* Helper functions for getting information about a column and its data. */
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
-import {RootState} from '../redux';
-import {
+import I18n from '../i18n';
+import type {RootState} from '../redux';
+import type {
   DataRow,
   Metadata,
   MetadataField,
@@ -24,6 +23,10 @@ export function isColumnCategorical(state: RootState, column: string): boolean {
 
 export function isColumnNumerical(state: RootState, column: string): boolean {
   return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
+}
+
+export function isRegression(state: RootState): boolean {
+  return isColumnNumerical(state, state.labelColumn!);
 }
 
 export function filterColumnsByType(

@@ -1,24 +1,25 @@
 /* React component to handle displaying accuracy results. */
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useCallback} from 'react';
 import {connect} from 'react-redux';
-import {setShowResultsDetails, RootState} from '../redux';
-import {Dispatch} from 'redux';
-import {ResultsData} from '../types';
+import type {Dispatch} from 'redux';
+
+import {ResultsGrades, styles} from '../constants';
 import {
   getPercentCorrect,
   getCorrectResults,
   getIncorrectResults,
 } from '../helpers/accuracy';
-import {ResultsGrades, styles} from '../constants';
-import ResultsToggle from './ResultsToggle';
+import type {RootState} from '../redux';
+import {setShowResultsDetails} from '../redux';
+import type {ResultsData} from '../types';
+
 import ResultsTable from './ResultsTable';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import ResultsToggle from './ResultsToggle';
 
 interface ResultsDetailsProps {
   resultsTab: string;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   percentCorrect: string;
   setShowResultsDetails: (show: boolean) => void;
   correctResults: ResultsData;
@@ -27,8 +28,6 @@ interface ResultsDetailsProps {
 
 const ResultsDetails = ({
   resultsTab,
-  selectedFeatures,
-  labelColumn,
   percentCorrect,
   setShowResultsDetails,
   correctResults,
@@ -63,8 +62,6 @@ const ResultsDetails = ({
 export default connect(
   (state: RootState) => ({
     resultsTab: state.resultsTab,
-    selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn,
     percentCorrect: getPercentCorrect(state),
     correctResults: getCorrectResults(state),
     incorrectResults: getIncorrectResults(state),
