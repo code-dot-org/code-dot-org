@@ -1882,11 +1882,7 @@
   "low": "low",
   "ltiDynamicRegistrationDescription": "Please provide your administrator email address to install CodeAI",
   "ltiDynamicRegistrationSubmit": "Create Registration",
-<<<<<<< HEAD
   "ltiIframeDescription": "Please click the button below to continue to CodeAI",
-=======
-  "ltiIframeDescription": "Please click the button below to continue to Code.org",
->>>>>>> cf8b0d9160a (update account linking branding)
   "ltiIframeCallToAction": "Continue to CodeAI",
   "ltiIframeRefresh": "Code.org was successfully launched in a new tab. Please refresh the page to access Code.org again.",
   "ltiIframeTimedOut": "Your session has timed out. Please refresh the page to access Code.org.",
