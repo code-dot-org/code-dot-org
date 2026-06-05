@@ -20,10 +20,8 @@ on:
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
-  # Single source of truth for the Playwright container image tag. Version must
-  # match the catalog pin in frontend/.yarnrc.yml; variant (noble/jammy) must
-  # match the runner's Ubuntu release. Passed to reusable workflows so both are
-  # updated in one place on upgrade.
+  # Playwright container image tag. Version must match the catalog pin in
+  # frontend/.yarnrc.yml; variant (noble/jammy) must match the runner's Ubuntu release.
   PLAYWRIGHT_IMAGE_TAG: 'v1.59.1-noble'
 
 jobs:

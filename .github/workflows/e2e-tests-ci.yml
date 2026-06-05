@@ -1,13 +1,7 @@
-# Playwright end-to-end suite for studio.code.org, run against the always-on
-# test-studio.code.org deployment.
+# Playwright end-to-end suite for studio.code.org.
 #
-# Reusable workflow invoked by frontend-ci.yml as an UNGATED child (unlike the
-# path-gated per-package jobs), so it runs on every frontend PR alongside the
-# remaining Drone UI tests during the strangler-fig migration.
-#
-# Scope: this checks the DEPLOYED test-studio, not the PR's own code — it is a
-# continuous health check of the migrated suite, not a per-PR regression gate.
-# To gate a PR's code, deploy that PR to an adhoc and set TARGET_URL to it.
+# Runs against test-studio.code.org by default. Set TARGET_URL to run against
+# a different deployment.
 name: E2E-Tests-CI
 
 on:
