@@ -40,7 +40,7 @@ export default class ResourcesDropdown extends React.Component {
           labelText={labelText}
           options={options}
           useIconButton={false}
-          size="m"
+          size="s"
           triggerButtonProps={{
             variant: 'outlined',
             color: 'secondary',
