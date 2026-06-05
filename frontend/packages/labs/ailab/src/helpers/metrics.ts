@@ -1,9 +1,10 @@
 /*
   Functions for logging analytics metrics via Google Analytics and Firehose.
 */
-import {isUserUploadedDataset} from './datasetDetails';
+import type {RootState} from '../redux';
+
 import {getPercentCorrect} from './accuracy';
-import {RootState} from '../redux';
+import {isUserUploadedDataset} from './datasetDetails';
 
 function getModelMetrics(state: RootState): Record<string, unknown> {
   const modelMetrics: Record<string, unknown> = {};

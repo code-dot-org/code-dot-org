@@ -1,29 +1,31 @@
 import {createSelector} from 'reselect';
+
+import {ColumnTypes} from '../constants';
+import {
+  getUniqueOptions,
+  getLocalizedColumnName,
+} from '../helpers/columnDetails';
+import {areArraysEqual} from '../helpers/utils';
+import type {RootState} from '../redux';
 import {
   getLabelColumn,
   getData,
   getColumnsByDataType,
   getDatasetId,
 } from '../selectors';
-import {
-  getCurrentColumn,
-  currentColumnIsCategorical,
-  currentColumnIsNumerical,
-} from './currentColumnSelectors';
-import {
-  getUniqueOptions,
-  getLocalizedColumnName,
-} from '../helpers/columnDetails';
-import {areArraysEqual} from '../helpers/utils';
-import {ColumnTypes} from '../constants';
-import {
+import type {
   Coordinate,
   ScatterPlotData,
   CrossTabResult,
   CrossTabData,
   DataRow,
 } from '../types';
-import {RootState} from '../redux';
+
+import {
+  getCurrentColumn,
+  currentColumnIsCategorical,
+  currentColumnIsNumerical,
+} from './currentColumnSelectors';
 
 export const getScatterPlotData = createSelector(
   [

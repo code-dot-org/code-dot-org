@@ -5,6 +5,7 @@ import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,
 } from '../../src/helpers/valueConversion';
+
 import {classificationState} from './testData';
 
 describe('converting categorical values', () => {

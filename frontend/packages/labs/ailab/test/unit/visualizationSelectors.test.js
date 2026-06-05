@@ -1,3 +1,8 @@
+import I18n from '../../src/i18n';
+import {
+  currentColumnIsNumerical,
+  currentColumnIsCategorical,
+} from '../../src/selectors/currentColumnSelectors';
 import {
   getScatterPlotData,
   getCrossTabData,
@@ -5,12 +10,8 @@ import {
   labelColumnIsCategorical,
   getUniqueOptionsLabelColumn,
 } from '../../src/selectors/visualizationSelectors';
-import {
-  currentColumnIsNumerical,
-  currentColumnIsCategorical,
-} from '../../src/selectors/currentColumnSelectors';
+
 import {allNumericalState, classificationState} from './testData';
-import I18n from '../../src/i18n';
 
 beforeEach(() => {
   I18n.initI18n();

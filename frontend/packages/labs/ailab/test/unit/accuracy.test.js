@@ -1,3 +1,4 @@
+import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
   getAccuracyRegression,
   getAccuracyClassification,
@@ -7,8 +8,8 @@ import {
   getResultsDataInDataTableForm,
   getSummaryStat,
 } from '../../src/helpers/accuracy';
+
 import {classificationState, regressionState} from './testData';
-import {ResultsGrades, MLTypes} from '../../src/constants';
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,

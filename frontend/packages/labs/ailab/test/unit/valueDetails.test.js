@@ -1,9 +1,10 @@
 import {getLocalizedValue} from '../../src/helpers/valueDetails';
+import I18n from '../../src/i18n';
+
 import {
   premadeDatasetValueLocalized,
   premadeDatasetTranslations,
 } from './testData';
-import I18n from '../../src/i18n';
 
 beforeEach(() => {
   I18n.initI18n();

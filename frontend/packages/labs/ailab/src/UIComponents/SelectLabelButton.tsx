@@ -1,8 +1,9 @@
 /* React component to handle selecting a column as the label. */
 import {connect} from 'react-redux';
-import {RootState, setLabelColumn} from '../redux';
+
 import {styles} from '../constants';
 import I18n from '../i18n';
+import {setLabelColumn} from '../redux';
 
 interface SelectLabelButtonProps {
   column?: string;
@@ -30,11 +31,8 @@ const SelectLabelButton = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({}),
-  dispatch => ({
-    setLabelColumn(column: string) {
-      dispatch(setLabelColumn(column));
-    },
-  }),
-)(SelectLabelButton);
+export default connect(null, dispatch => ({
+  setLabelColumn(column: string) {
+    dispatch(setLabelColumn(column));
+  },
+}))(SelectLabelButton);

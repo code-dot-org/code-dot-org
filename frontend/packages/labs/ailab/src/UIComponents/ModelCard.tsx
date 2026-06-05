@@ -1,19 +1,22 @@
 /* React component to handle displaying the model card. */
 import {connect} from 'react-redux';
+
+import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
-import {getLabelToSave, getFeaturesToSave, RootState} from '../redux';
 import {getPercentCorrect} from '../helpers/accuracy';
-import {getDatasetDetails} from '../helpers/datasetDetails';
-import Statement from './Statement';
-import aiBotBorder from '@public/images/ai-bot/ai-bot-border.png';
-import I18n from '../i18n';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {
+import I18n from '../i18n';
+import type {RootState} from '../redux';
+import {getLabelToSave, getFeaturesToSave} from '../redux';
+import type {
   ModelCardColumn,
   TrainedModelDetailsSave,
   DatasetDetails,
 } from '../types';
+
+import Statement from './Statement';
 
 interface ModelCardProps {
   trainedModelDetails: TrainedModelDetailsSave;
@@ -47,7 +50,7 @@ const ModelCard = ({
       <Statement />
       <div style={styles.summaryScreenBot}>
         <img
-          src={aiBotBorder}
+          src={imageUrl('ai-bot/ai-bot-border.png')}
           className="ailab-image-hover"
           style={styles.summaryScreenBotImage}
           alt={I18n.t('aiBotAltText')}

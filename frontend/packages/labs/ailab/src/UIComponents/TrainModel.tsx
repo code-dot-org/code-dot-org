@@ -1,36 +1,28 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
-import {store} from '../index';
-import train from '../train';
-import {getTableData, readyToTrain, RootState} from '../redux';
+
+import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
-import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
-import background from '@public/images/results-background-light.jpg';
-import DataTable from './DataTable';
-import {TrainingAnimationDescription} from './AnimationDescriptions';
 import I18n from '../i18n';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import {getTableData} from '../redux';
+import {store} from '../store';
+import train from '../train';
+import type {DataRow} from '../types';
+
+import {TrainingAnimationDescription} from './AnimationDescriptions';
+import DataTable from './DataTable';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
 
 interface TrainModelProps {
   data: DataRow[];
-  readyToTrain: boolean;
-  labelColumn: string | undefined;
-  selectedFeatures: string[];
   instructionsOverlayActive: boolean;
 }
 
-const TrainModel = ({
-  data,
-  readyToTrain: ready,
-  labelColumn,
-  selectedFeatures,
-  instructionsOverlayActive,
-}: TrainModelProps) => {
+const TrainModel = ({data, instructionsOverlayActive}: TrainModelProps) => {
   const [frame, setFrame] = useState(0);
   const [headOpen, setHeadOpen] = useState(false);
   const [, setFinished] = useState(false);
@@ -135,7 +127,8 @@ const TrainModel = ({
         justifyContent: 'center',
         backgroundSize: 'cover',
         backgroundPosition: '50% 50%',
-        backgroundImage: 'url(' + background + ')',
+        backgroundImage:
+          'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
       <div style={styles.statementWithBackgroundAbsolute}>
@@ -171,7 +164,7 @@ const TrainModel = ({
       <div style={styles.trainModelBotContainer}>
         <div className="ailab-image-hover" style={styles.trainBot}>
           <img
-            src={aiBotHead}
+            src={imageUrl('ai-bot/ai-bot-head.png')}
             style={{
               ...styles.trainBotHead,
               ...(headOpen && styles.trainBotOpen),
@@ -179,7 +172,7 @@ const TrainModel = ({
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img
-            src={aiBotBody}
+            src={imageUrl('ai-bot/ai-bot-body.png')}
             style={styles.trainBotBody}
             alt={I18n.t('aiBotBodyAltText')}
           />
@@ -192,8 +185,5 @@ const TrainModel = ({
 
 export default connect((state: RootState) => ({
   data: getTableData(state, false),
-  readyToTrain: readyToTrain(state),
-  labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive,
 }))(TrainModel);

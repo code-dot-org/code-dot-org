@@ -1,16 +1,17 @@
 /* React component to display a statement about our model. */
-import {connect} from 'react-redux';
-import {setLabelColumn, removeSelectedFeature, RootState} from '../redux';
-import {styles} from '../constants';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
-import I18n from '../i18n';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {connect} from 'react-redux';
+
+import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import I18n from '../i18n';
+import type {RootState} from '../redux';
+import {setLabelColumn, removeSelectedFeature} from '../redux';
 
 interface StatementProps {
   shouldShow?: boolean;
   smallFont?: boolean;
-  data?: Record<string, string | number>[];
   currentPanel?: string;
   labelColumn?: string;
   selectedFeatures?: string[];
@@ -22,7 +23,6 @@ interface StatementProps {
 const Statement = ({
   shouldShow,
   smallFont,
-  data,
   currentPanel,
   labelColumn,
   selectedFeatures,
@@ -129,7 +129,7 @@ const Statement = ({
     .filter((part: string) => part);
   // Swap the OUTPUT and INPUTS placeholders with React components.
   const predictionStatementComponents = predictionStatementParts
-    .map((part: string, index: number) => {
+    .map((part: string) => {
       if (part === OUTPUT_KEY) {
         return labelHTML(labelColumn!, currentPanel!);
       } else if (part === INPUTS_KEY) {
@@ -158,7 +158,6 @@ export const UnconnectedStatement = Statement;
 export default connect(
   (state: RootState) => ({
     shouldShow: state.data.length !== 0,
-    data: state.data,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,

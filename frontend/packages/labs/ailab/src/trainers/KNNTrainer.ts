@@ -1,20 +1,21 @@
 /* Training and prediction using a multiclassification KNN machine learning model from
 https://github.com/mljs/knn */
 
-import {Store} from 'redux';
+import KNN from 'ml-knn';
+import type {Store} from 'redux';
+
+import {getPercentCorrect} from '../helpers/accuracy';
+import {isRegression} from '../helpers/columnDetails';
+import {logFirehoseMetric} from '../helpers/metrics';
+import type {RootState} from '../redux';
 import {
-  RootState,
-  isRegression,
   setKValue,
   setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
 } from '../redux';
-import {getPercentCorrect} from '../helpers/accuracy';
-import {logFirehoseMetric} from '../helpers/metrics';
-import KNN from 'ml-knn';
-import {KNNTrainedModelDetails} from '../types';
+import type {KNNTrainedModelDetails} from '../types';
 
 export default class KNNTrainer {
   private store: Store<RootState>;

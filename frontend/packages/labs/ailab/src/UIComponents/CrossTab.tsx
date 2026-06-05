@@ -5,13 +5,15 @@
 */
 import {useCallback} from 'react';
 import {connect} from 'react-redux';
-import {RootState} from '../redux';
-import {getCrossTabData} from '../selectors/visualizationSelectors';
+
 import {styles} from '../constants';
-import ScrollableContent from './ScrollableContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
-import {CrossTabData} from '../types';
+import type {RootState} from '../redux';
+import {getCrossTabData} from '../selectors/visualizationSelectors';
+import type {CrossTabData} from '../types';
+
+import ScrollableContent from './ScrollableContent';
 
 interface CrossTabProps {
   crossTabData: CrossTabData | null;
