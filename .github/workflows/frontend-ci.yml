@@ -34,6 +34,7 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
+      apps-e2e-tests-changed: ${{ steps.changes.outputs.apps-e2e-tests }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -60,6 +61,9 @@ jobs:
               - 'frontend/packages/lint-config/**'
               - 'frontend/*'
               - '.github/**'
+            apps-e2e-tests:
+              - 'frontend/packages/apps-e2e-tests/**'
+              - '.github/workflows/apps-e2e-tests-ci.yml'
 
   # Start the studio app CI workflow
   studio:
@@ -84,10 +88,10 @@ jobs:
     uses: ./.github/workflows/oceans-ci.yml
     secrets: inherit
 
-  # Start the apps-e2e-tests Playwright suite. UNGATED (no change filter): it
-  # replaces the legacy Drone dashboard/test/ui path and runs whenever frontend
-  # CI runs, since end-to-end behavior can change from anywhere.
+  # Start the apps-e2e-tests Playwright suite when test code or its CI config changes.
   apps-e2e-tests:
+    if: ${{ needs.setup.outputs.apps-e2e-tests-changed == 'true' }}
+    needs: setup
     uses: ./.github/workflows/apps-e2e-tests-ci.yml
     with:
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
