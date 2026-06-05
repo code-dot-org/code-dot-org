@@ -135,7 +135,7 @@ const getOrganizer = (
 ): Organization => {
   return {
     '@type': 'Organization',
-    name: organizer?.name || regional_partner_name || 'Code.org',
+    name: organizer?.name || regional_partner_name || 'CodeAI',
     email: organizer?.email,
   };
 };

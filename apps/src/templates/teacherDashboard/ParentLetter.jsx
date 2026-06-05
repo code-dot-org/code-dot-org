@@ -29,7 +29,7 @@ const LOGIN_TYPE_NAMES = {
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
- * helping kids continue working on Code.org at home.
+ * helping kids continue working on CodeAI at home.
  * Designed to be rendered by itself on a page, ready for printing or PDF
  * generation.
  *

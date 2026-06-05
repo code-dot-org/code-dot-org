@@ -98,7 +98,7 @@ describe('CurriculumCatalog', () => {
   it('renders page subtitle', () => {
     renderDefault();
 
-    screen.getByText('Code.org courses, tutorials, and more', {exact: false});
+    screen.getByText('CodeAI courses, tutorials, and more', {exact: false});
   });
 
   it('does not render language filter row when in English locale', () => {
