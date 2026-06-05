@@ -26,7 +26,6 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
-  isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
@@ -45,7 +44,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
-  isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
   disabledState,
@@ -63,7 +61,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isCollapsedByDefault, isPredictLevel});
+  } = useInstructionsDrawer({isPredictLevel});
 
   return (
     <div ref={containerRef} className={styles.container}>
