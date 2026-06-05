@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -43,7 +44,7 @@ function SectionSelector({
 
   return (
     <select
-      className="uitest-sectionselect"
+      className={classNames('uitest-sectionselect', 'form-control')}
       name="sections"
       aria-label={i18n.selectSection()}
       style={{
