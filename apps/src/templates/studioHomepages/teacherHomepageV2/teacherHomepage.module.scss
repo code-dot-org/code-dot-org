@@ -56,6 +56,7 @@
   flex-direction: column;
   gap: 16px;
   margin: 0;
+  padding: 0;
 }
 
 // SectionCard
@@ -350,7 +351,7 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  height: 38px;
+  height: 40px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
