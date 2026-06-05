@@ -1,16 +1,16 @@
 {
-  "name": "@code-dot-org/apps-e2e-tests",
+  "name": "@code-dot-org/e2e-tests",
   "version": "0.0.0",
   "private": true,
   "description": "Playwright end-to-end test suite for studio.code.org",
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/apps-e2e-tests/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/e2e-tests/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/apps-e2e-tests"
+    "directory": "frontend/packages/e2e-tests"
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {

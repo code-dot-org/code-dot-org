@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 
 /**
- * Smoke test for the apps-e2e-tests harness. Confirms Playwright can reach
+ * Smoke test for the e2e-tests harness. Confirms Playwright can reach
  * test-studio.code.org (baseURL), launch a browser, navigate, and assert.
  * Not a product test — it proves the foundation works end to end.
  */

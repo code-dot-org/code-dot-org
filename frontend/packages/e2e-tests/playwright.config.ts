@@ -4,7 +4,7 @@ const isCI = !!process.env.CI;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
 /**
- * Playwright config for the apps-e2e-tests suite.
+ * Playwright config for the e2e-tests suite.
  *
  * Target host defaults to https://test-studio.code.org (always-on test env); set
  * TARGET_URL to point at another deployment — e.g. a PR's adhoc — so a PR run

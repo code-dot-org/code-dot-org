@@ -8,7 +8,7 @@
 # Scope: this checks the DEPLOYED test-studio, not the PR's own code — it is a
 # continuous health check of the migrated suite, not a per-PR regression gate.
 # To gate a PR's code, deploy that PR to an adhoc and set TARGET_URL to it.
-name: Apps-E2E-Tests-CI
+name: E2E-Tests-CI
 
 on:
   workflow_call:
@@ -47,15 +47,15 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn workspace @code-dot-org/apps-e2e-tests test:ui:ci
+        run: yarn workspace @code-dot-org/e2e-tests test:ui:ci
         working-directory: ./frontend
 
       - name: Upload Playwright Report
         if: failure() || cancelled()
         uses: actions/upload-artifact@v4
         with:
-          name: apps-e2e-tests-report
+          name: e2e-tests-report
           path: |
-            frontend/packages/apps-e2e-tests/playwright-report/
-            frontend/packages/apps-e2e-tests/test-results/
+            frontend/packages/e2e-tests/playwright-report/
+            frontend/packages/e2e-tests/test-results/
           retention-days: 7

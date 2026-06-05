@@ -1329,19 +1329,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/apps-e2e-tests@workspace:packages/apps-e2e-tests":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/apps-e2e-tests@workspace:packages/apps-e2e-tests"
-  dependencies:
-    "@code-dot-org/lint-config": "workspace:*"
-    "@playwright/test": "catalog:"
-    "@types/node": "catalog:"
-    eslint: "catalog:"
-    prettier: "catalog:"
-    typescript: "catalog:"
-  languageName: unknown
-  linkType: soft
-
 "@code-dot-org/changelogs@workspace:*, @code-dot-org/changelogs@workspace:packages/changelogs":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/changelogs@workspace:packages/changelogs"
@@ -1498,6 +1485,19 @@ __metadata:
     typescript: "catalog:"
     vitest: "catalog:"
     wait-on: "npm:^8.0.1"
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/e2e-tests@workspace:packages/e2e-tests":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/e2e-tests@workspace:packages/e2e-tests"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@playwright/test": "catalog:"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    prettier: "catalog:"
+    typescript: "catalog:"
   languageName: unknown
   linkType: soft
 
