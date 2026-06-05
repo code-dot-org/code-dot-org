@@ -9,7 +9,10 @@ $preview-button-margin-left: 8px;
   .selectStyle {
     flex: 1;
 
-    // SimpleDropdown's inner wrapper is content-width unless styleAsFormField.
+    // flex:1 grows this label to fill the row, but SimpleDropdown's
+    // select-wrapper (the div around the select) stays content-width on its
+    // own, so force it to fill. Otherwise the preview button drifts right of
+    // the short select.
     > div {
       width: 100%;
     }
