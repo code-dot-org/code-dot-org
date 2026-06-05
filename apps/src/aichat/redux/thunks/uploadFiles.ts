@@ -3,6 +3,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createAppAsyncThunk} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
 import {AssetSource, ChatAsset, UploadStatus} from '../../types';
@@ -15,6 +16,19 @@ import {
 
 import {sendAnalytics} from './sendAnalytics';
 
+// Strip characters not allowed in Codebridge project filenames.
+// Replaces anything other than word chars or hyphens in the file name with an underscore.
+// Extension will be valid since it is already validated in either file input's accept attribute
+// or paste handler's mime-type filter.
+const cleanUploadFilename = (name: string): string => {
+  const lastDot = name.lastIndexOf('.');
+  const hasExt = lastDot > 0;
+  const base = hasExt ? name.slice(0, lastDot) : name;
+  const ext = hasExt ? name.slice(lastDot) : '';
+  const cleanBase = base.replace(/[^\w-]/g, '_');
+  return `${cleanBase}${ext}`;
+};
+
 export const uploadFiles = createAppAsyncThunk<
   void,
   {
@@ -22,10 +36,15 @@ export const uploadFiles = createAppAsyncThunk<
     buildAssetUrl: (asset: ChatAsset) => string;
     /** Callback invoked when an upload finishes. If provided, the in-chat alert UI will be hidden for non-successful uploads. */
     onUploadFinished?: (status: UploadStatus) => void;
+    /** Callback invoked after each successful asset upload with the asset and its resolved URL. */
+    onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   }
 >(
   'aichat/uploadFiles',
-  async ({files, buildAssetUrl, onUploadFinished}, {dispatch, getState}) => {
+  async (
+    {files, buildAssetUrl, onUploadFinished, onAssetUploaded},
+    {dispatch, getState}
+  ) => {
     const notifyUploadFinished = (key: string, status: UploadStatus) => {
       dispatch(
         stagedFileUploadFinished({key, status, hideAlert: !!onUploadFinished})
@@ -45,12 +64,17 @@ export const uploadFiles = createAppAsyncThunk<
 
     const allowedFiles = Array.from(files)
       .slice(0, numAllowedFiles)
-      .map<[string, ChatAsset, File]>(file => [
-        // Create a unique key for each upload in case the same file is uploaded more than once.
-        `${file.name}-${Date.now()}`,
-        {filename: file.name, source: AssetSource.PROJECT},
-        file,
-      ]);
+      .map<[string, ChatAsset, File]>(file => {
+        const validFilename = cleanUploadFilename(file.name);
+        const lastDot = validFilename.lastIndexOf('.');
+        const ext = lastDot > 0 ? validFilename.slice(lastDot) : '';
+        const bucketKey = `${createUuid()}${ext}`;
+        return [
+          `${validFilename}-${Date.now()}`,
+          {filename: validFilename, source: AssetSource.PROJECT, bucketKey},
+          file,
+        ];
+      });
 
     for (const [key, asset] of allowedFiles) {
       dispatch(addStagedFile({key, asset}));
@@ -82,9 +106,11 @@ export const uploadFiles = createAppAsyncThunk<
       }
 
       try {
-        await HttpClient.put(buildAssetUrl(asset), file);
+        const assetUrl = buildAssetUrl(asset);
+        await HttpClient.put(assetUrl, file);
         uploadSuccessCount += 1;
         notifyUploadFinished(key, 'uploaded');
+        onAssetUploaded?.(asset, assetUrl);
       } catch (error) {
         let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
         if (error instanceof NetworkError && error.response.status === 413) {

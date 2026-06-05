@@ -3948,13 +3948,17 @@ __metadata:
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
     tldts: "npm:^7.0.23"
-    zod: "npm:^4.3.6"
   peerDependencies:
     "@sentry/browser": ^10.51.0
     "@tanstack/react-query": "*"
     ky: ^1.14.3
+    msw: ^2.7.0
     react: ^18.0.0 || ^19.0.0
     uuid: ">=8.3.2"
+    zod: ^4.3.6
+  peerDependenciesMeta:
+    msw:
+      optional: true
   languageName: node
   linkType: soft
 

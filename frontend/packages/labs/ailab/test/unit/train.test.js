@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
-import train from '../../src/train';
-import {ResultsGrades} from '../../src/constants';
+
 import {ColumnTypes} from '../../src/constants';
+import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import rootReducer, {
   setFirehoseMetricsLogger,
   setInstructionsKeyCallback,
@@ -11,7 +11,7 @@ import rootReducer, {
   setColumnsByDataType,
   setTestData,
 } from '../../src/redux';
-import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
+import train from '../../src/train';
 
 describe('train functions', () => {
   test('train and predict with numerical data', async () => {

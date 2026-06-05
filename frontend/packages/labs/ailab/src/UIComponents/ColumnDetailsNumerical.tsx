@@ -1,10 +1,11 @@
 /* React component to handle showing details of numerical columns. */
 import {connect} from 'react-redux';
-import {RootState} from '../redux';
+
 import {styles} from '../constants';
-import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
 import I18n from '../i18n';
-import {NumericalColumnDetails} from '../types';
+import type {RootState} from '../redux';
+import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
+import type {NumericalColumnDetails} from '../types';
 
 interface ColumnDetailsNumericalProps {
   columnDetails: NumericalColumnDetails;

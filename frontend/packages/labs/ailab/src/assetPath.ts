@@ -1,24 +1,28 @@
-// Consumer-facing setter for the ml-playground asset base path.
+// Consumer-facing setter for the asset base path used to fetch the lab's
+// runtime assets (datasets and UI images).
 //
-// The function writes a single property on the shared page global,
-// which the main bundle reads at startup (see `setPublicPath.ts`) to
-// assign webpack's `__webpack_public_path__`. That assignment is what
-// controls image and chunk URLs at runtime.
+// The function writes a single property on the shared page global. The
+// runtime asset loaders read it back to build `<path>datasets/<file>` and
+// `<path>images/<file>` URLs against wherever the consumer serves them
+// (dashboard: a media-skins path); see `getAssetPath` / `imageUrl` below and
+// the dataset loaders in `index.tsx` / `SelectDataset.tsx`.
 //
-// Ordering: call this BEFORE the ml-playground main bundle is loaded
-// (i.e. before `require('@code-dot-org/ml-playground')` or any import
-// that resolves through the main entry). Asset URLs are computed when
-// each asset module first evaluates, so a late call can't retroactively
-// rewrite them. The natural CommonJS pattern (`setAssetPath(...); const
-// ml = require('@code-dot-org/ml-playground'); ...`) is correct;
-// pure-ESM consumers should call this then `await import(...)` the
-// main entry.
-//
-// No module-init side effect on purpose — the fallback for "consumer
-// never set it" lives in `setPublicPath.ts` as `|| './'`, so there's
-// one place to look when chasing publicPath behavior.
+// Ordering: the value is consumed lazily — at `initAll(...)` time and on
+// render / user dataset selection — not at module-evaluation time, so simply
+// call this before `initAll(...)`.
 export const setAssetPath = (path: string): void => {
   (
     global as unknown as Record<string, unknown>
   ).__ml_playground_asset_public_path__ = path;
 };
+
+// Read the base path back. Empty string if the consumer never set it, in which
+// case URLs resolve relative to the host page.
+export const getAssetPath = (): string =>
+  (global as unknown as Record<string, string | undefined>)
+    .__ml_playground_asset_public_path__ ?? '';
+
+// Runtime URL for a bundled UI image. The host serves the `images/` tree
+// (emitted to `dist/assets/images/`) under the same base as the datasets.
+export const imageUrl = (relativePath: string): string =>
+  getAssetPath() + 'images/' + relativePath;

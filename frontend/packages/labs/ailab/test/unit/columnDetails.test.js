@@ -1,3 +1,4 @@
+import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../../src/constants';
 import {
   isColumnCategorical,
   isColumnNumerical,
@@ -10,6 +11,8 @@ import {
   containsOnlyNumbers,
   getColumnDescription,
 } from '../../src/helpers/columnDetails';
+import I18n from '../../src/i18n';
+
 import {
   classificationState,
   allNumericalState,
@@ -21,8 +24,6 @@ import {
   mosquitoDescription,
   premadeDatasetTranslations,
 } from './testData';
-import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../../src/constants';
-import I18n from '../../src/i18n';
 
 beforeEach(() => {
   I18n.initI18n();

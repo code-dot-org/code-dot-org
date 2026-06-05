@@ -1,22 +1,22 @@
 /* Generic machine learning handlers that route to the selected trainer. */
 
-import {Store} from 'redux';
-import KNNTrainer from './trainers/KNNTrainer';
+import type {Store} from 'redux';
 
+import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
+import {getRandomInt} from './helpers/utils';
+import {convertValueForTraining} from './helpers/valueConversion';
+import type {RootState} from './redux';
 import {
-  RootState,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
 } from './redux';
-import {DataRow} from './types';
 import {getSelectedCategoricalColumns} from './selectors';
-import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
-import {getRandomInt} from './helpers/utils';
-import {convertValueForTraining} from './helpers/valueConversion';
+import KNNTrainer from './trainers/KNNTrainer';
+import type {DataRow} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.

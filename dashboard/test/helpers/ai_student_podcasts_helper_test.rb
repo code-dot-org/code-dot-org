@@ -202,7 +202,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(generated_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -221,7 +221,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(existing_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -236,7 +236,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
   test "retrieve_podcast_from_s3 delegates to AWS::S3.download_from_bucket" do
     AWS::S3.expects(:download_from_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns('mp3-bytes')
 
@@ -246,7 +246,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
   test "exists_in_s3? checks the bucket for the lesson + objective key" do
     AWS::S3.expects(:exists_in_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns(true)
 

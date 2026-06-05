@@ -1,11 +1,13 @@
 /* React component to handle displaying imported data. */
 import {connect} from 'react-redux';
-import {RootState} from '../redux';
-import Statement from './Statement';
-import DataTable from './DataTable';
+
 import {styles} from '../constants';
 import I18n from '../i18n';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import type {DataRow} from '../types';
+
+import DataTable from './DataTable';
+import Statement from './Statement';
 
 interface DataDisplayProps {
   data: DataRow[];

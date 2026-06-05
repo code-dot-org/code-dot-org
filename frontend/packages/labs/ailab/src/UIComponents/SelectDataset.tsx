@@ -1,6 +1,14 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import {useState} from 'react';
 import {connect} from 'react-redux';
+import type {Dispatch} from 'redux';
+
+import {styles} from '../constants';
+import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
+import {getDatasets, getAvailableDatasets} from '../datasetManifest';
+import I18n from '../i18n';
+import {parseJSON} from '../jsonReaderWrapper';
+import type {RootState} from '../redux';
 import {
   setSelectedName,
   setSelectedCSV,
@@ -8,15 +16,9 @@ import {
   resetState,
   getSpecifiedDatasets,
   setHighlightDataset,
-  RootState,
 } from '../redux';
-import {Dispatch} from 'redux';
-import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
-import {parseJSON} from '../jsonReaderWrapper';
-import {getDatasets, getAvailableDatasets} from '../datasetManifest';
-import {styles} from '../constants';
+
 import ScrollableContent from './ScrollableContent';
-import I18n from '../i18n';
 
 interface SelectDatasetProps {
   setSelectedName: (name: string) => void;

@@ -1,33 +1,27 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef, useCallback} from 'react';
 import {connect} from 'react-redux';
-import {getTableData, readyToTrain, RootState} from '../redux';
+
+import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
-import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
-import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
-import blueScanner from '@public/images/ai-bot/blue-scanner.png';
-import background from '@public/images/results-background-light.jpg';
-import DataTable from './DataTable';
-import {TestingAnimationDescription} from './AnimationDescriptions';
 import I18n from '../i18n';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import {getTableData} from '../redux';
+import type {DataRow} from '../types';
+
+import {TestingAnimationDescription} from './AnimationDescriptions';
+import DataTable from './DataTable';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
 
 interface GenerateResultsProps {
   data: DataRow[];
-  readyToTrain: boolean;
-  labelColumn: string | undefined;
-  selectedFeatures: string[];
   instructionsOverlayActive: boolean;
 }
 
 const GenerateResults = ({
   data,
-  readyToTrain,
-  labelColumn,
-  selectedFeatures,
   instructionsOverlayActive,
 }: GenerateResultsProps) => {
   const [frame, setFrame] = useState(0);
@@ -73,7 +67,7 @@ const GenerateResults = ({
     return () => {
       clearInterval(animationTimer);
     };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const getShowItemsFadingOut = () => {
     return data.length > maxNumItems;
@@ -136,7 +130,8 @@ const GenerateResults = ({
         justifyContent: 'center',
         backgroundSize: 'cover',
         backgroundPosition: '50% 50%',
-        backgroundImage: 'url(' + background + ')',
+        backgroundImage:
+          'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
       <div style={styles.statementWithBackgroundAbsolute}>
@@ -188,18 +183,18 @@ const GenerateResults = ({
       >
         <div className="ailab-image-hover" style={styles.trainBot}>
           <img
-            src={aiBotHead}
+            src={imageUrl('ai-bot/ai-bot-head.png')}
             style={styles.trainBotHead}
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img
-            src={aiBotBody}
+            src={imageUrl('ai-bot/ai-bot-body.png')}
             style={styles.trainBotBody}
             alt={I18n.t('aiBotBodyAltText')}
           />
           <div style={{width: 150, position: 'absolute', top: 140, zIndex: -1}}>
             <img
-              src={blueScanner}
+              src={imageUrl('ai-bot/blue-scanner.png')}
               style={{width: '100%', opacity: tableOpacity}}
               alt={I18n.t('aiBotBeamAltText')}
             />
@@ -213,8 +208,5 @@ const GenerateResults = ({
 
 export default connect((state: RootState) => ({
   data: getTableData(state, true),
-  readyToTrain: readyToTrain(state),
-  labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive,
 }))(GenerateResults);

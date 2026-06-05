@@ -1,6 +1,6 @@
 import I18n from '../i18n';
-import {RootState} from '../redux';
-import {NavButton, PrevNextButtons} from '../types';
+import type {RootState} from '../redux';
+import type {NavButton, PrevNextButtons} from '../types';
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation

@@ -1,9 +1,10 @@
 /* React component to handle showing warning for excessive unique options. */
 import {connect} from 'react-redux';
-import {RootState} from '../redux';
+
 import {styles, UNIQUE_OPTIONS_MAX} from '../constants';
-import {hasTooManyUniqueOptions} from '../selectors/currentColumnSelectors';
 import I18n from '../i18n';
+import type {RootState} from '../redux';
+import {hasTooManyUniqueOptions} from '../selectors/currentColumnSelectors';
 
 interface UniqueOptionsWarningProps {
   showWarning?: boolean;
