@@ -29,7 +29,6 @@ interface ShapeNodeToolbarProps {
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
   const {backgroundColor, strokeColor, fontSize, fontColor, textAlign} = data;
-  const handlesVisible = data.showHandles !== false;
 
   return (
     <ToolbarShell
@@ -75,13 +74,7 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <NodeActionsGroup
-            nodeId={nodeId}
-            handlesVisible={handlesVisible}
-            onToggleHandles={() =>
-              patchNodeData({showHandles: !handlesVisible})
-            }
-          />
+          <NodeActionsGroup nodeId={nodeId} />
         </>
       )}
     </ToolbarShell>

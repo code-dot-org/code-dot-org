@@ -190,7 +190,7 @@
             "id": "cg_0JRG_zlONx_THocKYO",
             "type": "shape",
             "position": {
-              "x": 1498.7638451270545,
+              "x": 1700.7638451270545,
               "y": 217.82676716353865
             },
             "style": {
@@ -204,11 +204,14 @@
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 1846,
-              "height": 1373
+              "width": 1384,
+              "height": 1071
             },
             "dragging": false,
-            "zIndex": -1
+            "zIndex": -1,
+            "width": 1384,
+            "height": 1071,
+            "resizing": false
           },
           {
             "id": "zT9JMSRwh8iu64gEuAjE8",
@@ -238,8 +241,8 @@
             "id": "t4aGT98qTNqjaM1F3bdEF",
             "type": "shape",
             "position": {
-              "x": 2400.051016071575,
-              "y": 1283.6863146096573
+              "x": 2378.7791850856593,
+              "y": 1041.9609624969812
             },
             "style": {
               "width": 192.80010986328122,
@@ -256,14 +259,15 @@
             "measured": {
               "width": 193,
               "height": 85
-            }
+            },
+            "dragging": false
           },
           {
             "id": "Dp4rOe-iPiE_nzzbd3Ckg",
             "type": "shape",
             "position": {
-              "x": 2300.0702217598587,
-              "y": 948.1727486580154
+              "x": 2281.699094999295,
+              "y": 821.5086641509731
             },
             "style": {
               "width": 386.6180947548282,
@@ -280,14 +284,15 @@
             "measured": {
               "width": 387,
               "height": 176
-            }
+            },
+            "dragging": false
           },
           {
             "id": "Bpa3bu_mK8Qsem-vbUAI1",
             "type": "text",
             "position": {
-              "x": 2405.0219015288385,
-              "y": 1033.2213441184279
+              "x": 2376.981760683768,
+              "y": 902.6896539775829
             },
             "data": {
               "text": "pushups == goal?",
@@ -298,14 +303,15 @@
             "measured": {
               "width": 192,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "VwVwJBDH8jcCjQWwOx85T",
             "type": "shape",
             "position": {
               "x": 2342.1366932841734,
-              "y": 511.13779619822935
+              "y": 482.13075394470826
             },
             "style": {
               "width": 192.80010986328122,
@@ -332,8 +338,8 @@
             "id": "Wzl8JmlkDyGPBd8nvH5f2",
             "type": "shape",
             "position": {
-              "x": 2773.2560520528914,
-              "y": 981.0019806981602
+              "x": 2709.440559095145,
+              "y": 855.3047975995686
             },
             "style": {
               "width": 334.4355755709155,
@@ -357,8 +363,8 @@
             "id": "k63QLQif0oaOaDa09dxdk",
             "type": "shape",
             "position": {
-              "x": 2399.1572594920135,
-              "y": 1466.078253083696
+              "x": 2379.8192313229997,
+              "y": 1176.0078305484847
             },
             "style": {
               "width": 192.80010986328122,
@@ -382,8 +388,8 @@
             "id": "ne7bAjtMGfeupq-vhmhHR",
             "type": "text",
             "position": {
-              "x": 1591.0635636888996,
-              "y": 463.10602213754305
+              "x": 1705.035325351311,
+              "y": 383.1457833941584
             },
             "data": {
               "text": "for (pushups = 0; pushups < goal; pushups ++) {\n      doPushup()\n}",
@@ -402,8 +408,8 @@
             "id": "gX9ugx9AluPEM7pgtWujf",
             "type": "shape",
             "position": {
-              "x": 2719.6467636269717,
-              "y": 503.72370224200756
+              "x": 2648.563367957747,
+              "y": 480.39946303804317
             },
             "style": {
               "width": 202.29915687557042,
@@ -420,14 +426,15 @@
             "measured": {
               "width": 202,
               "height": 97
-            }
+            },
+            "dragging": false
           },
           {
             "id": "3-MoP4VlZPuhqgnDd2IXP",
             "type": "shape",
             "position": {
-              "x": 2352.0476410653314,
-              "y": 735.4964703751939
+              "x": 2343.162216606678,
+              "y": 693.3805818257741
             },
             "style": {
               "width": 192.80010986328122,
@@ -454,8 +461,8 @@
             "id": "Hlk4T2FxwOWhhP09_25si",
             "type": "shape",
             "position": {
-              "x": 2723.5896404889886,
-              "y": 727.0934690347462
+              "x": 2656.0408381065467,
+              "y": 688.0675204088175
             },
             "style": {
               "width": 202.29915687557042,
@@ -472,14 +479,15 @@
             "measured": {
               "width": 202,
               "height": 97
-            }
+            },
+            "dragging": false
           },
           {
             "id": "77srxHtMnMGO9YSUucmh9",
             "type": "text",
             "position": {
-              "x": 2734.0193370434304,
-              "y": 610.2727759387024
+              "x": 2735.130015100762,
+              "y": 427.0108964789818
             },
             "data": {
               "text": "Start value",
@@ -490,14 +498,15 @@
             "measured": {
               "width": 124,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "pwp3ihhFWEm2H1yAqqIvY",
             "type": "text",
             "position": {
-              "x": 2747.2964681344156,
-              "y": 833.8047838562079
+              "x": 2753.188794683636,
+              "y": 639.2635031865506
             },
             "data": {
               "text": "Stop value",
@@ -508,14 +517,15 @@
             "measured": {
               "width": 123,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "m2Tk82qqJsNngAZSVblxJ",
             "type": "text",
             "position": {
-              "x": 2630.426712794998,
-              "y": 1489.9770529481639
+              "x": 2582.0816423724627,
+              "y": 1184.4362078777415
             },
             "data": {
               "text": "Step",
@@ -526,42 +536,47 @@
             "measured": {
               "width": 65,
               "height": 47
-            }
+            },
+            "dragging": false
           },
           {
             "id": "60QRL4cPi6p7IM147Ef--",
             "type": "text",
             "position": {
-              "x": 2606.4728704101826,
-              "y": 930.7762872687533
+              "x": 2536.855969001732,
+              "y": 820.5495267053731
             },
             "data": {
-              "text": "Stop \ncondition",
+              "text": "Stop condition",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 111,
-              "height": 75
-            }
+              "width": 178,
+              "height": 60
+            },
+            "dragging": false,
+            "width": 178,
+            "height": 60,
+            "resizing": false
           },
           {
             "id": "WEDqEb7ZL_TpoOR54nao6",
             "type": "text",
             "position": {
-              "x": 1614.1715197616554,
-              "y": 301.4270580040886
+              "x": 1706.241710654914,
+              "y": 327.8482659238763
             },
             "data": {
               "text": "Model",
               "fontColor": "#1e1e1e",
-              "fontSize": "large",
+              "fontSize": "extra-large",
               "showHandles": false
             },
             "measured": {
-              "width": 79,
-              "height": 47
+              "width": 101,
+              "height": 57
             },
             "dragging": false
           },
@@ -611,8 +626,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 2694.763846941715,
-              "y": 1043.915680462288
+              "x": 2629.0145511670676,
+              "y": 925.9537086313021
             },
             "measured": {
               "width": 58,
@@ -628,8 +643,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 2490.763846941715,
-              "y": 1175.915680462288
+              "x": 2483.0286356741094,
+              "y": 984.4692015890485
             },
             "measured": {
               "width": 58,
@@ -724,9 +739,14 @@
             "target": "Dp4rOe-iPiE_nzzbd3Ckg",
             "targetHandle": "left-target",
             "markerEnd": {
-              "type": "arrowclosed"
+              "type": "arrowclosed",
+              "strokeWidth": 1
             },
-            "id": "xy-edge__k63QLQif0oaOaDa09dxdkleft-source-Dp4rOe-iPiE_nzzbd3Ckgleft-target"
+            "id": "xy-edge__k63QLQif0oaOaDa09dxdkleft-source-Dp4rOe-iPiE_nzzbd3Ckgleft-target",
+            "type": "smoothstep",
+            "style": {
+              "strokeWidth": 1
+            }
           },
           {
             "source": "Dp4rOe-iPiE_nzzbd3Ckg",
@@ -740,9 +760,9 @@
           }
         ],
         "viewport": {
-          "x": -428.90285852945135,
-          "y": 560.5251614778404,
-          "zoom": 0.5
+          "x": -319.47872572128745,
+          "y": 520.640883821452,
+          "zoom": 0.38672237697307354
         }
       }
     },
@@ -2849,6 +2869,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:54.768+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level4-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level4-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:29:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:39:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:54.768+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level4-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level4-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:29:37 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:39:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-04 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 17:55:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 18:00:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 18:04:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 18:04:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>
