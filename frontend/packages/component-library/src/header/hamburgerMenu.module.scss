@@ -55,6 +55,16 @@
     &:hover {
       background: none;
     }
+
+    // On press, CustomDropdown turns an active row's span white and its caret
+    // teal (its teal "pressed" state). Our rows keep prod's gray highlight, so
+    // pin the label + chevron dark to stay legible and match the legacy header.
+    &:active {
+      span,
+      i::before {
+        color: var(--text-neutral-primary);
+      }
+    }
   }
 
   // App-nav, support links, and their dividers: shown only below the top-nav
