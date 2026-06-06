@@ -21,6 +21,9 @@
   color: var(--text-neutral-primary);
   white-space: nowrap;
   font-size: 14px;
+  // Pin to 20px (prod); the inherited 1.48 ratio gives 20.72px, adding ~1px
+  // per row and overshooting the menu height.
+  line-height: 20px;
   font-weight: 500;
 
   &:visited,
