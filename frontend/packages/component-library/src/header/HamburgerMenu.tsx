@@ -1,12 +1,13 @@
 import Collapse from '@mui/material/Collapse';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import {useState, type FunctionComponent} from 'react';
+import {Fragment, useState, type FunctionComponent} from 'react';
 
+import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import CustomDropdown from '@/dropdown/CustomDropdown';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './hamburgerMenu.module.scss';
+
+const DROPDOWN_NAME = 'hamburger';
 
 interface MenuItem {
   label: string;
@@ -52,7 +53,6 @@ const GLOBAL_NAV: GlobalNavEntry[] = [
   {label: 'Districts', href: '//code.org/administrators'},
   {label: 'Stats', href: '//code.org/promote'},
   {label: 'Donate', href: '//code.org/donate'},
-  {label: 'Incubator', href: '//code.org/incubator'},
   {
     label: 'About',
     subEntries: [
@@ -95,34 +95,31 @@ interface HamburgerMenuProps {
   userType?: 'student' | 'teacher' | 'admin';
 }
 
-/** Expandable section within the drawer global nav. */
+/** Expandable section: a chevron trigger plus an indented sub-link list. */
 const ExpandableSection: FunctionComponent<{
   entry: GlobalNavEntry;
   expanded: boolean;
   onToggle: () => void;
 }> = ({entry, expanded, onToggle}) => (
-  <li>
+  <li className={moduleStyles.expandableWrapper}>
     <button
       className={moduleStyles.expandTrigger}
       onClick={onToggle}
       type="button"
     >
-      <Typography variant="body3" component="span">
-        {entry.label}
-      </Typography>
+      <span className={moduleStyles.expandText}>{entry.label}</span>
       <FontAwesomeV6Icon
         iconName={expanded ? 'chevron-up' : 'chevron-down'}
         iconStyle="solid"
+        className={moduleStyles.chevron}
       />
     </button>
     <Collapse in={expanded} unmountOnExit>
       <ul className={moduleStyles.subList}>
         {entry.subEntries?.map(sub => (
           <li key={sub.label}>
-            <a href={sub.href} className={moduleStyles.subLink}>
-              <Typography variant="body3" component="span">
-                {sub.label}
-              </Typography>
+            <a href={sub.href} className={moduleStyles.link}>
+              {sub.label}
             </a>
           </li>
         ))}
@@ -132,125 +129,139 @@ const ExpandableSection: FunctionComponent<{
 );
 
 /**
- * Always-visible hamburger icon that opens a right-anchored drawer.
- * The drawer always shows app nav items (fixing the legacy 1024–1060px gap
- * where nav was inaccessible in neither the top bar nor the old hamburger).
+ * Panel body. Mounted only while the dropdown is open — CustomDropdown keeps
+ * children mounted, but the global nav (Learn, …) would otherwise duplicate the
+ * top-bar nav items in the DOM. Hosting the accordion state here also collapses
+ * sections when the panel closes.
  */
-const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
+const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
   menuItems,
   userType,
 }) => {
-  const [open, setOpen] = useState(false);
+  const {activeDropdownName} = useDropdownContext();
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  if (activeDropdownName !== DROPDOWN_NAME) {
+    return null;
+  }
 
   const toggleSection = (label: string) =>
     setExpandedSection(prev => (prev === label ? null : label));
 
   const supportLinks = getSupportLinks(userType);
 
+  // Prod lists Incubator once, in the global-nav region after Donate (not in
+  // the app-nav block). Pull it out of `menuItems` and re-inject it there.
+  const incubator = menuItems.find(item => item.label === 'Incubator');
+  const appNavItems = menuItems.filter(item => item.label !== 'Incubator');
+
   return (
-    <>
-      <IconButton
-        aria-label="Open navigation menu"
-        onClick={() => setOpen(true)}
-        sx={{
-          '&&': {
-            color: 'var(--neutral-base-white)',
-            paddingLeft: '14px',
-            paddingRight: '6px',
-            paddingTop: '18px',
-            paddingBottom: '20px',
-            minWidth: 0,
-            minHeight: 0,
-          },
-          '&&:hover, &&:active, &&:focus-visible': {
-            backgroundColor: 'transparent',
-          },
-        }}
-      >
-        <span className={moduleStyles.barsIcon} />
-      </IconButton>
+    <ul className={moduleStyles.list}>
+      {/* App nav — gated below the top-nav breakpoint (prod .show-mobile) */}
+      {appNavItems.map(item => (
+        <li key={item.label} className={moduleStyles.mobileOnly}>
+          <a href={item.href} className={moduleStyles.link}>
+            {item.label}
+          </a>
+        </li>
+      ))}
 
-      <Drawer
-        anchor="right"
-        open={open}
-        onClose={() => setOpen(false)}
-        PaperProps={{className: moduleStyles.drawerPaper}}
-      >
-        <div className={moduleStyles.drawerHeader}>
-          <IconButton
-            aria-label="Close navigation menu"
-            onClick={() => setOpen(false)}
-            sx={{
-              '&&': {color: 'var(--neutral-base-white)', padding: '0.375rem'},
-              '&&:hover': {backgroundColor: 'rgba(255,255,255,0.1)'},
-            }}
+      <li className={moduleStyles.mobileOnly} aria-hidden>
+        <hr className={moduleStyles.divider} />
+      </li>
+
+      {/* Support links — gated below the top-nav breakpoint */}
+      {supportLinks.map(link => (
+        <li key={link.label} className={moduleStyles.mobileOnly}>
+          <a
+            href={link.href}
+            className={moduleStyles.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-          </IconButton>
-        </div>
+            {link.label}
+          </a>
+        </li>
+      ))}
 
-        <nav aria-label="Site navigation">
-          {/* App-specific nav — always present, fixes the legacy 1024–1060px gap */}
-          <ul className={moduleStyles.section}>
-            {menuItems.map(item => (
-              <li key={item.label}>
-                <a href={item.href} className={moduleStyles.navLink}>
-                  <Typography variant="body3" component="span">
-                    {item.label}
-                  </Typography>
+      <li className={moduleStyles.mobileOnly} aria-hidden>
+        <hr className={moduleStyles.divider} />
+      </li>
+
+      {/* Global site nav — always visible. Incubator is re-injected after
+          Donate (app-nav-gated), matching prod's single listing. */}
+      {GLOBAL_NAV.map(entry => {
+        const row = entry.subEntries ? (
+          <ExpandableSection
+            entry={entry}
+            expanded={expandedSection === entry.label}
+            onToggle={() => toggleSection(entry.label)}
+          />
+        ) : (
+          <li>
+            <a href={entry.href} className={moduleStyles.link}>
+              {entry.label}
+            </a>
+          </li>
+        );
+        if (entry.label === 'Donate' && incubator) {
+          return (
+            <Fragment key={entry.label}>
+              {row}
+              <li className={moduleStyles.mobileOnly}>
+                <a href={incubator.href} className={moduleStyles.link}>
+                  {incubator.label}
                 </a>
               </li>
-            ))}
-          </ul>
-
-          <hr className={moduleStyles.divider} />
-
-          {/* Support links */}
-          <ul className={moduleStyles.section}>
-            {supportLinks.map(link => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className={moduleStyles.navLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Typography variant="body3" component="span">
-                    {link.label}
-                  </Typography>
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <hr className={moduleStyles.divider} />
-
-          {/* Global site nav */}
-          <ul className={moduleStyles.section}>
-            {GLOBAL_NAV.map(entry =>
-              entry.subEntries ? (
-                <ExpandableSection
-                  key={entry.label}
-                  entry={entry}
-                  expanded={expandedSection === entry.label}
-                  onToggle={() => toggleSection(entry.label)}
-                />
-              ) : (
-                <li key={entry.label}>
-                  <a href={entry.href} className={moduleStyles.navLink}>
-                    <Typography variant="body3" component="span">
-                      {entry.label}
-                    </Typography>
-                  </a>
-                </li>
-              ),
-            )}
-          </ul>
-        </nav>
-      </Drawer>
-    </>
+            </Fragment>
+          );
+        }
+        return <Fragment key={entry.label}>{row}</Fragment>;
+      })}
+    </ul>
   );
 };
+
+/**
+ * Hamburger (☰) dropdown — a CustomDropdown submenu panel matching the legacy
+ * #hamburger-contents. The app-nav, support links, Incubator, and their
+ * dividers are gated to widths below the top-nav breakpoint (the dev analog of
+ * prod's .show-mobile), where the top bar's nav collapses; the global nav is
+ * always shown. Accordion toggles stay inside the panel, so CustomDropdown's
+ * click-outside handler leaves the panel open.
+ */
+const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
+  menuItems,
+  userType,
+}) => (
+  <CustomDropdown
+    name={DROPDOWN_NAME}
+    labelText="Open navigation menu"
+    size="m"
+    menuPlacement="right"
+    aria-label="Open navigation menu"
+    useMuiIconButtonAsTrigger
+    triggerButtonProps={{
+      'aria-label': 'Open navigation menu',
+      sx: {
+        '&&': {
+          color: 'var(--neutral-base-white)',
+          paddingLeft: '14px',
+          paddingRight: '6px',
+          paddingTop: '18px',
+          paddingBottom: '20px',
+          minWidth: 0,
+          minHeight: 0,
+        },
+        '&&:hover, &&:active, &&:focus-visible': {
+          backgroundColor: 'transparent',
+        },
+      },
+      children: <span className={moduleStyles.barsIcon} />,
+    }}
+  >
+    <HamburgerPanel menuItems={menuItems} userType={userType} />
+  </CustomDropdown>
+);
 
 export default HamburgerMenu;
