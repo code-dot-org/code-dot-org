@@ -1,4 +1,8 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  Stack as MuiStack,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -52,15 +56,13 @@ export default class VersionRow extends React.Component {
     let buttons = [];
     if (this.props.isLatest) {
       buttons.push(
-        <MuiButton
+        <MuiTypography
           key={'latest-version-message'}
-          type="button"
-          color="secondary"
-          variant="text"
-          disabled
+          variant="body1"
+          color="text.secondary"
         >
           {msg.latestVersion()}
-        </MuiButton>
+        </MuiTypography>
       );
     } else if (!this.props.isReadOnly) {
       const variant = this.props.isSelectedVersion ? 'contained' : 'outlined';
@@ -95,15 +97,13 @@ export default class VersionRow extends React.Component {
       );
     } else {
       buttons.push(
-        <MuiButton
+        <MuiTypography
           key={'disabled-view-button'}
-          type="button"
-          color="secondary"
-          variant="text"
-          disabled
+          variant="body1"
+          color="text.secondary"
         >
           {msg.view()}
-        </MuiButton>
+        </MuiTypography>
       );
     }
 
@@ -121,8 +121,15 @@ export default class VersionRow extends React.Component {
             })}
           </MuiTypography>
         </td>
-        <td width="275" height="52" style={{textAlign: 'right'}}>
-          {buttons}
+        <td width="275" height="52">
+          <MuiStack
+            direction="row"
+            spacing={1}
+            justifyContent="flex-end"
+            alignItems="center"
+          >
+            {buttons}
+          </MuiStack>
         </td>
       </tr>
     );
