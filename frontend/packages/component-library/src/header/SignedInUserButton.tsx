@@ -121,7 +121,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         ),
       }}
     >
-      <ul>
+      <ul className={moduleStyles.list}>
         {menuItems.map(item => (
           <li key={item.label}>
             <Link
