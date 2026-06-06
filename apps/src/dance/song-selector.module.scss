@@ -1,6 +1,3 @@
-$preview-button-width: 32px;
-$preview-button-margin-left: 8px;
-
 .songSelectorWrapper {
   display: flex;
   align-items: flex-end;
@@ -20,9 +17,9 @@ $preview-button-margin-left: 8px;
 
   .previewSongButton {
     height: 32px;
-    width: $preview-button-width;
+    width: 32px;
     padding: 0;
-    margin-inline-start: $preview-button-margin-left;
+    margin-inline-start: 8px;
 
     &.previewActiveButton {
       color: var(--text-neutral-white-fixed);
