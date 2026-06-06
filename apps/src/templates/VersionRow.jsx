@@ -82,30 +82,30 @@ export default class VersionRow extends React.Component {
 
     if (!this.props.isSelectedVersion) {
       buttons.push(
-        <MuiButton
+        <a
           key={'not-selected-version-button'}
-          component="a"
-          color="primary"
-          variant="contained"
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
           }
           target="_blank"
           rel="noopener noreferrer"
         >
-          {msg.view()}
-        </MuiButton>
+          <MuiButton type="button" color="primary" variant="contained">
+            {msg.view()}
+          </MuiButton>
+        </a>
       );
     } else {
       buttons.push(
-        <MuiTypography
+        <MuiButton
           key={'disabled-view-button'}
-          component="span"
-          variant="body1"
-          color="text.secondary"
+          type="button"
+          color="secondary"
+          variant="outlined"
+          disabled
         >
           {msg.view()}
-        </MuiTypography>
+        </MuiButton>
       );
     }
 
