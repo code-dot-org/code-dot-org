@@ -1,4 +1,3 @@
-import Typography from '@mui/material/Typography';
 import type {FunctionComponent} from 'react';
 
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
@@ -15,7 +14,11 @@ import moduleStyles from './signedInUserButton.module.scss';
  * before `beforeLoad` completes.
  */
 export type UserAuthProp =
-  | {status: 'signed-in'; display_name: string}
+  | {
+      status: 'signed-in';
+      display_name: string;
+      user_type: 'student' | 'teacher' | 'admin';
+    }
   | {status: 'signed-out'}
   | {status: 'loading'}
   | {status: 'error'};
@@ -26,14 +29,15 @@ export interface SignedInUserButtonProps {
   userAuth: Extract<UserAuthProp, {status: 'signed-in'}>;
 }
 
-/** Navigation links shown inside the signed-in account dropdown. */
-const SUB_MENU_ITEMS = [
-  {label: 'My projects', href: '/projects'},
-  // TODO: wire up pair programming URL
-  {label: 'Pair programming', href: '#'},
-  {label: 'Account settings', href: '/users/edit'},
-  {label: 'Sign out', href: '/users/sign_out'},
-] as const;
+/** Pair programming is student-only; teachers and admins don't see it. */
+function buildMenuItems(userType: 'student' | 'teacher' | 'admin') {
+  return [
+    {label: 'My projects', href: '/projects'},
+    ...(userType === 'student' ? [{label: 'Pair programming', href: '#'}] : []),
+    {label: 'Account settings', href: '/users/edit'},
+    {label: 'Sign out', href: '/users/sign_out'},
+  ];
+}
 
 /**
  * Chevron icon that reflects the open/closed state of the signed-in dropdown.
@@ -60,23 +64,36 @@ const triggerSx = {
     borderRadius: '4px',
     boxShadow: 'none',
     textTransform: 'none' as const,
+    columnGap: '8.46875px',
     maxWidth: '120px',
     minWidth: 0,
+    height: '35px',
+    marginTop: '-1px',
     paddingLeft: '1rem',
-    paddingRight: '0.5rem',
+    paddingRight: '1rem',
+    paddingTop: '6.5px',
+    paddingBottom: '6.5px',
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: 1.5,
   },
   '&&:hover, &&:active, &&:focus-visible': {
     backgroundColor: 'var(--background-brand-teal-primary)',
     color: 'var(--neutral-base-white)',
     boxShadow: 'none',
   },
-  '&& .MuiButton-endIcon': {color: 'var(--neutral-base-white)'},
+  '&& .MuiButton-endIcon, && .MuiButton-endIcon i': {
+    color: 'var(--neutral-base-white)',
+    fontSize: '14px',
+    width: 'auto',
+  },
 };
 
 /** Dropdown button showing the signed-in user's display name with an account menu. */
 const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   userAuth,
 }) => {
+  const menuItems = buildMenuItems(userAuth.user_type);
   return (
     <CustomDropdown
       name="signed-in-user"
@@ -91,11 +108,8 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         sx: triggerSx,
         endIcon: <ChevronIcon />,
         children: (
-          <Typography
-            variant="body3"
-            component="span"
-            color="inherit"
-            sx={{
+          <span
+            style={{
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
@@ -104,12 +118,12 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
             }}
           >
             {userAuth.display_name}
-          </Typography>
+          </span>
         ),
       }}
     >
       <ul>
-        {SUB_MENU_ITEMS.map(item => (
+        {menuItems.map(item => (
           <li key={item.label}>
             <Link
               text={item.label}

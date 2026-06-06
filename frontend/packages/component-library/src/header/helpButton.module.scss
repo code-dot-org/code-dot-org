@@ -1,14 +1,17 @@
-// Double-class specificity [0,2,0] beats the Link module's single-class
-// link-body-common mixin that applies semi-bold.
-.menuItem.menuItem {
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  min-width: 12rem;
+}
+
+.link {
   display: block;
-  width: 100%;
   padding: 0.625rem 1rem;
-  font-size: 14px;
-  font-weight: normal;
   text-decoration: none;
   color: var(--text-neutral-primary);
   white-space: nowrap;
+  font-size: 14px;
 
   &:visited,
   &:hover,

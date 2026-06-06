@@ -10,17 +10,17 @@ interface NavLogoProps {
   brandName?: string;
 }
 
-/** MUI sx styles for the logo image container. */
+/**
+ * Logo is a wide wordmark (≈ 5.9:1 ratio); fix height and let width flow
+ * from the image's natural aspect ratio instead of constraining to a square.
+ */
 const logoBoxSx = {
-  width: '2.375rem',
-  height: '2.375rem',
+  height: '22px',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
   '& img': {
-    width: '100%',
     height: '100%',
-    objectFit: 'contain',
+    width: 'auto',
     display: 'block',
   },
 };
@@ -29,8 +29,8 @@ const logoBoxSx = {
 const logoIconButtonSx = {
   marginLeft: 0,
   p: 0,
-  paddingLeft: 1.5,
-  paddingRight: 1.5,
+  paddingLeft: '14px',
+  paddingRight: '14px',
 };
 
 /** Branded home logo button linking to the site root. */

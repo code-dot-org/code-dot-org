@@ -1,12 +1,8 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import type {FunctionComponent} from 'react';
 
-/**
- * MUI sx styles for the Sign In button.
- * Uses `&&` double-class specificity to beat MUI's per-variant overrides.
- */
+/** Sign In button — full-height stretch to match prod's header_button anchor style. */
 const signInSx = {
   '&&': {
     backgroundColor: 'transparent',
@@ -18,6 +14,10 @@ const signInSx = {
     minWidth: 0,
     paddingLeft: '1rem',
     paddingRight: '1rem',
+    paddingTop: 0,
+    paddingBottom: 0,
+    alignSelf: 'stretch',
+    fontSize: '16px',
   },
   '&&:hover, &&:active, &&:focus-visible': {
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -25,10 +25,7 @@ const signInSx = {
   },
 };
 
-/**
- * MUI sx styles for the Create Account button.
- * Uses `&&` double-class specificity to beat MUI's per-variant overrides.
- */
+/** Create Account button — full-height stretch to match prod's header_button anchor style. */
 const createAccountSx = {
   '&&': {
     backgroundColor: 'var(--neutral-base-white)',
@@ -39,6 +36,10 @@ const createAccountSx = {
     minWidth: 0,
     paddingLeft: '1rem',
     paddingRight: '1rem',
+    paddingTop: 0,
+    paddingBottom: 0,
+    alignSelf: 'stretch',
+    fontSize: '16px',
   },
   '&&:hover, &&:active, &&:focus-visible': {
     backgroundColor: 'rgba(255, 255, 255, 0.85)',
@@ -48,20 +49,18 @@ const createAccountSx = {
 
 /** Sign In and Create Account buttons shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
-  <Box sx={{display: 'flex', gap: 1, alignItems: 'center'}}>
+  <Box
+    sx={{display: 'flex', gap: 1, alignSelf: 'stretch', alignItems: 'stretch'}}
+  >
     <Button href="/users/sign_in" disableElevation sx={signInSx}>
-      <Typography variant="body3" component="span" color="inherit">
-        Sign In
-      </Typography>
+      Sign in
     </Button>
     <Button
       href="/users/sign_up/account_type"
       disableElevation
       sx={createAccountSx}
     >
-      <Typography variant="body3" component="span" color="inherit">
-        Create Account
-      </Typography>
+      Create account
     </Button>
   </Box>
 );

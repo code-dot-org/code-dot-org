@@ -3,6 +3,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import type {FunctionComponent} from 'react';
 
+import {HEADER_BREAKPOINTS} from './breakpoints';
+
 /** A single navigation link entry. */
 interface MenuItem {
   /** Display label for the link. */
@@ -17,24 +19,29 @@ interface NavMenuProps {
   menuItems: MenuItem[];
 }
 
-/** MUI sx styles for the horizontal menu list. */
-const menuListSx = {display: 'flex', flexDirection: 'row', p: 0, m: 0};
+/** Hidden below desktopNav breakpoint; the hamburger drawer covers that range. */
+const menuListSx = {
+  display: 'none',
+  [`@media (min-width:${HEADER_BREAKPOINTS.desktopNav}px)`]: {display: 'flex'},
+  flexDirection: 'row',
+  alignItems: 'center',
+  p: 0,
+  m: 0,
+  marginLeft: '16px',
+  gap: '36px',
+};
 
 /** MUI sx styles for each list item — shrinks to content width. */
 const menuListItemSx = {width: 'auto', p: 0};
 
-/** MUI sx styles for each nav link — fills the list item and highlights on hover. */
+/** MUI sx styles for each nav link — text-width anchor, full toolbar height for the underline. */
 const menuListItemLinkSx = {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
   height: '100%',
-  paddingLeft: 2,
-  paddingRight: 2,
   textDecoration: 'none',
-  '&:hover': {
-    backgroundColor: 'var(--background-brand-teal-strong)',
+  '&:hover, &:active': {
+    boxShadow: 'inset 0 -2px 0 #ffa400',
   },
   fontWeight: 'normal',
 };

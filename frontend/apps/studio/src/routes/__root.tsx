@@ -9,24 +9,93 @@ import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import Header from '@code-dot-org/component-library/header';
+import Header, {
+  type CreateMenuItem,
+} from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import StudioFooter from '@/components/footer';
-import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
+import CodeAILogo from '@/config/brand/assets/logo-codeai-inverse.svg';
 import {fetchAuthOutcome, useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 
-/** Top-level navigation items shared across all routes. */
-const MENU_ITEMS = [
-  {label: 'Learn', href: '/students'},
-  {label: 'Teach', href: '/teach'},
-  {label: 'Districts', href: '/administrators'},
-  {label: 'Stats', href: '/promote'},
-  {label: 'Donate', href: '/donate'},
-  {label: 'Incubator', href: '/incubator'},
-  {label: 'About', href: '/about'},
+const STUDENT_MENU_ITEMS = [
+  {label: 'My Dashboard', href: '/home'},
+  {label: 'Course Catalog', href: '//code.org/students'},
+  {label: 'Projects', href: '/projects'},
+  {label: 'Incubator', href: '//code.org/incubator'},
+];
+
+const TEACHER_MENU_ITEMS = [
+  {label: 'My Dashboard', href: '/home'},
+  {label: 'Course Catalog', href: '/catalog'},
+  {label: 'Projects', href: '/projects'},
+  {label: 'Professional Learning', href: '/my-professional-learning'},
+  {label: 'Incubator', href: '//code.org/incubator'},
+];
+
+const CREATE_MENU_ITEMS: CreateMenuItem[] = [
+  {
+    id: 'music_dance_ai',
+    label: 'Mix & Move with AI',
+    href: '//code.org/mix-move-ai',
+    iconUrl: '/shared/images/fill-70x70/courses/music-dance-ai-icon.png',
+  },
+  {
+    id: 'spritelab',
+    label: 'Sprite Lab',
+    href: '/projects/spritelab/new',
+    iconUrl: '/shared/images/fill-70x70/courses/sprite-lab-icon.png',
+  },
+  {
+    id: 'applab',
+    label: 'App Lab',
+    href: '/projects/applab/new',
+    iconUrl: '/shared/images/fill-70x70/courses/app-lab-icon.png',
+  },
+  {
+    id: 'gamelab',
+    label: 'Game Lab',
+    href: '/projects/gamelab/new',
+    iconUrl: '/shared/images/fill-70x70/courses/game-lab-icon.png',
+  },
+  {
+    id: 'weblab2',
+    label: 'Web Lab (New)',
+    href: '/projects/weblab2/new',
+    iconUrl: '/shared/images/fill-70x70/courses/web-lab-icon.png',
+  },
+  {
+    id: 'music',
+    label: 'Music Lab',
+    href: '/projects/music/new',
+    iconUrl: '/shared/images/fill-70x70/courses/music-lab-icon.png',
+  },
+  {
+    id: 'pythonlab',
+    label: 'Python Lab',
+    href: '/projects/pythonlab/new',
+    iconUrl: '/shared/images/fill-70x70/courses/python-lab-icon.png',
+  },
+  {
+    id: 'artist',
+    label: 'Artist',
+    href: '/projects/artist/new',
+    iconUrl: '/shared/images/fill-70x70/courses/artist-icon.png',
+  },
+  {
+    id: 'dance',
+    label: 'Dance',
+    href: '/projects/dance/new',
+    iconUrl: '/shared/images/fill-70x70/courses/dance-icon.png',
+  },
+  {
+    id: 'view_all',
+    label: 'View all projects...',
+    href: '/projects',
+    iconUrl: '/shared/images/courses/header-all-projects-icon.png',
+  },
 ];
 
 /**
@@ -69,13 +138,19 @@ function RootContent() {
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
 
+  const menuItems =
+    auth.status === 'signed-in' && auth.user_type === 'teacher'
+      ? TEACHER_MENU_ITEMS
+      : STUDENT_MENU_ITEMS;
+
   return (
     <>
       <Header
-        logoImageUrl={CdoLogo}
-        brandName="Code.org"
-        menuItems={MENU_ITEMS}
+        logoImageUrl={CodeAILogo}
+        brandName="CodeAI"
+        menuItems={menuItems}
         userAuth={auth}
+        createMenuItems={CREATE_MENU_ITEMS}
       />
       {renderRouteArea(auth, onRetry)}
       <StudioFooter />

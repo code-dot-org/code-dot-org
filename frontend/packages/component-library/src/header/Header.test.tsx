@@ -27,7 +27,11 @@ describe('Header', () => {
     render(
       <Header
         {...BASE_PROPS}
-        userAuth={{status: 'signed-in', display_name: 'Alice'}}
+        userAuth={{
+          status: 'signed-in',
+          display_name: 'Alice',
+          user_type: 'student',
+        }}
       />,
     );
     expect(screen.getByText('Alice')).toBeInTheDocument();
@@ -44,7 +48,11 @@ describe('Header', () => {
 
   it('renders brand and menu items in every auth state', () => {
     const states = [
-      {status: 'signed-in' as const, display_name: 'Alice'},
+      {
+        status: 'signed-in' as const,
+        display_name: 'Alice',
+        user_type: 'student' as const,
+      },
       {status: 'signed-out' as const},
       {status: 'error' as const},
     ];

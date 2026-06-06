@@ -1,0 +1,38 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  min-width: 15rem;
+
+  li {
+    display: block;
+  }
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem;
+  text-decoration: none;
+  color: var(--text-neutral-primary);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+}

@@ -11,13 +11,10 @@ interface UserAuthAreaProps {
   userAuth: UserAuthProp;
 }
 
-/** MUI sx styles for the right-aligned auth container in the toolbar. */
+/** Auth container — layout (margin, padding) is owned by the Header toolbar. */
 const containerSx = {
-  marginLeft: 'auto',
   display: 'flex',
   alignItems: 'center',
-  paddingRight: 2,
-  backgroundColor: 'var(--background-brand-teal-primary)',
 };
 
 /**
