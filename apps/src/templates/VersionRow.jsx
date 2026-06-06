@@ -58,6 +58,7 @@ export default class VersionRow extends React.Component {
       buttons.push(
         <MuiTypography
           key={'latest-version-message'}
+          component="span"
           variant="body1"
           color="text.secondary"
         >
@@ -99,6 +100,7 @@ export default class VersionRow extends React.Component {
       buttons.push(
         <MuiTypography
           key={'disabled-view-button'}
+          component="span"
           variant="body1"
           color="text.secondary"
         >
@@ -127,6 +129,7 @@ export default class VersionRow extends React.Component {
             spacing={1}
             justifyContent="flex-end"
             alignItems="center"
+            useFlexGap
           >
             {buttons}
           </MuiStack>
