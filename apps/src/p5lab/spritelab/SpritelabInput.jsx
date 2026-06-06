@@ -1,3 +1,4 @@
+import Typography from '@mui/material/Typography';
 import memoize from 'memoize-one';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -147,7 +148,9 @@ class SpritelabInput extends React.Component {
                   onClick={this.onMultipleChoiceSubmit}
                   disabled={disabled}
                 >
-                  {choice}
+                  <Typography variant="body2" component="span">
+                    {choice}
+                  </Typography>
                 </button>
               )
             )}
@@ -170,7 +173,9 @@ class SpritelabInput extends React.Component {
               </strong>
             </span>
           )}
-          <div style={styles.promptText}>{promptText}</div>
+          <Typography variant="body2" component="div" style={styles.promptText}>
+            {promptText}
+          </Typography>
           <a onClick={this.toggleCollapsed}>
             <span style={styles.icon} className="fa-stack">
               <i className={`fa fa-${icon} fa-stack-2x`} />
@@ -185,14 +190,16 @@ class SpritelabInput extends React.Component {
 
 const styles = {
   container: {
-    background: 'rgba(34, 42, 51, 0.85)',
+    // No semantic alpha token exists; primitive is the closest match to the
+    // legacy rgba(34, 42, 51, 0.85) translucent overlay.
+    background: 'var(--neutral-black-alpha-80)',
     textAlign: 'center',
     position: 'absolute',
     bottom: 0,
     width: '100%',
   },
   prompt: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
     fontSize: 15,
   },
   promptText: {
@@ -205,7 +212,7 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
   },
   inputRow: {
     padding: 0,
@@ -228,7 +235,7 @@ const styles = {
     fontSize: 11,
   },
   number: {
-    color: 'rgb(34, 42, 51)',
+    color: 'var(--text-neutral-primary)',
     fontSize: 9,
   },
   choiceButton: {
