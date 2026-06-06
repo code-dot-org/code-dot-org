@@ -43,7 +43,7 @@ const triggerSx = {
     whiteSpace: 'nowrap',
   },
   '&&:hover, &&:active, &&:focus-visible': {
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'transparent',
     boxShadow: 'none',
   },
   '&& .MuiButton-endIcon, && .MuiButton-endIcon i': {

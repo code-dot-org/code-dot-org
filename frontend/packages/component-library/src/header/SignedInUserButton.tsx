@@ -65,7 +65,6 @@ const triggerSx = {
     boxShadow: 'none',
     textTransform: 'none' as const,
     columnGap: '8.46875px',
-    maxWidth: '120px',
     minWidth: 0,
     height: '35px',
     marginTop: '-1px',
@@ -110,11 +109,11 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         children: (
           <span
             style={{
+              width: '120px',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
-              minWidth: 0,
-              flex: '1 1 auto',
+              flexShrink: 0,
             }}
           >
             {userAuth.display_name}
