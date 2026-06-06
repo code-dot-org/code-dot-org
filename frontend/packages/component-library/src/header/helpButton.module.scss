@@ -1,17 +1,27 @@
-.list {
+// Triple-class specificity [0,3,0] beats CustomDropdown's
+// `._dropdownContainer ._dropdownMenuContainer ul` [0,2,1], which otherwise
+// forces padding to 0.25rem 0.
+.list.list.list {
   list-style: none;
   margin: 0;
-  padding: 0.25rem 0;
-  min-width: 12rem;
+  // 6px inset + 228px content + 1px container border = 242px, matching the
+  // legacy header help menu (.help_contents).
+  padding: 6px;
+  min-width: 240px;
 }
 
 .link {
   display: block;
-  padding: 0.625rem 1rem;
+  // Fill the row so the hover highlight spans full width; the parent li is a
+  // flex item, which would otherwise shrink the link to its text width.
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
   text-decoration: none;
   color: var(--text-neutral-primary);
   white-space: nowrap;
   font-size: 14px;
+  font-weight: 500;
 
   &:visited,
   &:hover,
@@ -19,7 +29,8 @@
     color: var(--text-neutral-primary);
   }
 
+  // Legacy header hover gray (rgb(231,232,234)); no design token matches.
   &:hover {
-    background-color: var(--background-brand-teal-extra-light);
+    background-color: #e7e8ea;
   }
 }
