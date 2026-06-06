@@ -1,0 +1,10 @@
+.actionCell {
+  padding-right: 16px;
+}
+
+.disabledViewButton {
+  &.Mui-disabled {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-primary);
+  }
+}

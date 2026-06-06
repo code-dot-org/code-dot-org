@@ -11,7 +11,7 @@ import React from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import msg from '@cdo/locale';
 
-import styles from './versionRow.module.scss';
+import styles from './versionHistory.module.scss';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -61,7 +61,7 @@ export default class VersionRow extends React.Component {
         <MuiTypography
           key={'latest-version-message'}
           component="span"
-          variant="body1"
+          variant="body2"
         >
           {msg.latestVersion()}
         </MuiTypography>
@@ -104,6 +104,7 @@ export default class VersionRow extends React.Component {
           color="secondary"
           variant="contained"
           disabled
+          className={styles.disabledViewButton}
         >
           {msg.view()}
         </MuiButton>

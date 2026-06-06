@@ -10,6 +10,8 @@ import * as utils from '../utils';
 
 import VersionRow from './VersionRow';
 
+import styles from './versionHistory.module.scss';
+
 /**
  * A component for viewing project version history.
  */
@@ -205,7 +207,11 @@ export default class VersionHistory extends React.Component {
                         {i18n.versionHistory_initialVersion_label()}
                       </MuiTypography>
                     </td>
-                    <td width="250" style={{textAlign: 'right'}}>
+                    <td
+                      width="275"
+                      style={{textAlign: 'right'}}
+                      className={styles.actionCell}
+                    >
                       <MuiButton
                         type="button"
                         color="error"
