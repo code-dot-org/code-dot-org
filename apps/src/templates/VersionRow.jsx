@@ -1,3 +1,4 @@
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -51,58 +52,58 @@ export default class VersionRow extends React.Component {
     let buttons = [];
     if (this.props.isLatest) {
       buttons.push(
-        <button
+        <MuiButton
           key={'latest-version-message'}
           type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', background: 'none', border: 'none'}}
+          color="secondary"
+          variant="text"
+          disabled
         >
           {msg.latestVersion()}
-        </button>
+        </MuiButton>
       );
     } else if (!this.props.isReadOnly) {
-      const className = this.props.isSelectedVersion
-        ? 'btn-info'
-        : 'img-upload';
+      const variant = this.props.isSelectedVersion ? 'contained' : 'outlined';
       buttons.push(
-        <button
+        <MuiButton
           key={'restore-version-button'}
           type="button"
-          className={className}
+          color="primary"
+          variant={variant}
           onClick={this.props.onChoose}
         >
           {msg.restore()}
-        </button>
+        </MuiButton>
       );
     }
 
     if (!this.props.isSelectedVersion) {
       buttons.push(
-        <a
+        <MuiButton
           key={'not-selected-version-button'}
+          component="a"
+          color="primary"
+          variant="contained"
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
           }
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button type="button" className="btn-info">
-            {msg.view()}
-          </button>
-        </a>
+          {msg.view()}
+        </MuiButton>
       );
     } else {
       buttons.push(
-        <button
+        <MuiButton
           key={'disabled-view-button'}
           type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', color: 'white'}}
+          color="secondary"
+          variant="text"
+          disabled
         >
           {msg.view()}
-        </button>
+        </MuiButton>
       );
     }
 
@@ -114,11 +115,11 @@ export default class VersionRow extends React.Component {
         })}
       >
         <td>
-          <p>
+          <MuiTypography variant="body1">
             {msg.versionHistory_versionLabel({
               timestamp: this.getLastModifiedTimestamp(),
             })}
-          </p>
+          </MuiTypography>
         </td>
         <td width="275" height="52" style={{textAlign: 'right'}}>
           {buttons}

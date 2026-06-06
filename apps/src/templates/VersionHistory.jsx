@@ -1,3 +1,4 @@
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -138,29 +139,34 @@ export default class VersionHistory extends React.Component {
       title = i18n.versionHistory_clearProgress_header();
       body = (
         <div>
-          <p>{i18n.versionHistory_clearProgress_prompt()}</p>
+          <MuiTypography variant="body1">
+            {i18n.versionHistory_clearProgress_prompt()}
+          </MuiTypography>
           {this.props.isProjectTemplateLevel && (
-            <p className="template-level-warning">
+            <MuiTypography variant="body1" className="template-level-warning">
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
-            </p>
+            </MuiTypography>
           )}
-          <button
+          <MuiButton
             type="button"
-            className="btn-danger"
+            color="error"
+            variant="contained"
             id="start-over-button"
             style={{marginLeft: 0}}
             onClick={this.onClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_confirm()}
-          </button>
-          <button
+          </MuiButton>
+          <MuiButton
             type="button"
+            color="secondary"
+            variant="outlined"
             id="again-button"
             style={{float: 'right'}}
             onClick={this.onCancelClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_cancel()}
-          </button>
+          </MuiButton>
         </div>
       );
     } else {
@@ -195,17 +201,20 @@ export default class VersionHistory extends React.Component {
                 {!this.props.isReadOnly && (
                   <tr>
                     <td>
-                      <p>{i18n.versionHistory_initialVersion_label()}</p>
+                      <MuiTypography variant="body1">
+                        {i18n.versionHistory_initialVersion_label()}
+                      </MuiTypography>
                     </td>
                     <td width="250" style={{textAlign: 'right'}}>
-                      <button
+                      <MuiButton
                         type="button"
-                        className="btn-danger"
+                        color="error"
+                        variant="contained"
                         onClick={this.onConfirmClearPuzzle}
                         style={{float: 'right'}}
                       >
                         {i18n.versionHistory_clearProgress_confirm()}
-                      </button>
+                      </MuiButton>
                     </td>
                   </tr>
                 )}
@@ -218,9 +227,13 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <h5 className="dialog-title">{title}</h5>
+        <MuiTypography variant="h5" className="dialog-title">
+          {title}
+        </MuiTypography>
         {body}
-        <p className="caption-text">{this.state.statusMessage}</p>
+        <MuiTypography variant="body2" className="caption-text">
+          {this.state.statusMessage}
+        </MuiTypography>
       </div>
     );
   }
