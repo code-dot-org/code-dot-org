@@ -66,9 +66,24 @@ class UnitOverviewHeader extends Component {
     children: PropTypes.node,
   };
 
+  // Local dismissal state. The legacy `sharedComponents/Notification` component
+  // tracked this internally; the DSCO `NotificationBanner` we migrated to does
+  // not, so we have to hide the banner ourselves on close. Each flag gates one
+  // of the warning banners below.
+  state = {
+    redirectWarningDismissed: false,
+    versionWarningDismissed: false,
+  };
+
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
+
+  handleDismissRedirectWarning = () => {
+    const {courseName, scriptName} = this.props;
+    onDismissRedirectWarning(courseName || scriptName);
+    this.setState({redirectWarningDismissed: true});
+  };
 
   onDismissVersionWarning = () => {
     const {scriptId, courseId} = this.props;
@@ -89,6 +104,7 @@ class UnitOverviewHeader extends Component {
         data: JSON.stringify({version_warning_dismissed: true}),
       });
     }
+    this.setState({versionWarningDismissed: true});
   };
 
   render() {
@@ -120,7 +136,8 @@ class UnitOverviewHeader extends Component {
 
     const displayVersionWarning =
       showRedirectWarning &&
-      !dismissedRedirectWarning(courseName || scriptName);
+      !dismissedRedirectWarning(courseName || scriptName) &&
+      !this.state.redirectWarningDismissed;
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -155,10 +172,10 @@ class UnitOverviewHeader extends Component {
             variant="warning"
             icon={WARNING_ICON}
             title={i18n.redirectCourseVersionWarningDetails()}
-            onClose={() => onDismissRedirectWarning(courseName || scriptName)}
+            onClose={this.handleDismissRedirectWarning}
           />
         )}
-        {versionWarningDetails && (
+        {versionWarningDetails && !this.state.versionWarningDismissed && (
           <NotificationBanner
             className="announcement-notification"
             variant="warning"
