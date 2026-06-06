@@ -3,7 +3,7 @@
 }
 
 .disabledViewButton {
-  &.Mui-disabled {
+  &:global(.Mui-disabled) {
     background-color: var(--background-neutral-tertiary) !important;
     color: var(--text-neutral-primary) !important;
   }
