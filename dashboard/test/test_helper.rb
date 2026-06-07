@@ -1,23 +1,11 @@
-require 'test_reporter'
 require 'faker'
+require 'minitest/autorun'
 
 require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
 end
-
-# This is a workaround for https://github.com/kern/minitest-reporters/issues/230
-Minitest.load_plugins
-Minitest.extensions.delete('rails')
-Minitest.extensions.unshift('rails')
-
-reporters = [CowReporter.new]
-if CI::Utils.ci_job_ui_tests?
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
-end
-# Skip this if the tests are run in RubyMine
-Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -79,6 +67,7 @@ require 'testing/spec_syntax'
 require 'testing/capture_queries'
 require 'testing/cdo_contentful'
 require 'testing/honeybadger'
+require 'testing/reporters'
 require 'testing/rspec_mocks'
 require 'testing/vcr_cassettes'
 
