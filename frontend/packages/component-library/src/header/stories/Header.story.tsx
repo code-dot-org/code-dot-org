@@ -1,4 +1,4 @@
-import logoImage from '@public/images/cdo-logo-inverse.svg';
+import logoImage from '@public/images/logo-codeai-inverse.svg';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect, userEvent, waitFor} from 'storybook/test';
 
