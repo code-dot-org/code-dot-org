@@ -134,6 +134,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       cmScroller.setAttribute('id', 'uitest-codebridge-editor');
       cmScroller.setAttribute('aria-label', i18n.codeEditorDescription());
 
+      // CodeMirror hardcodes aria-hidden="true" on the gutter container.
+      // Line numbers are informative content so we expose them to AT.
+      const cmGutters = document.querySelector(
+        '.cm-gutters'
+      ) as HTMLElement | null;
+      cmGutters?.removeAttribute('aria-hidden');
+
       // Keydown handler for cmScroller
       const onScrollerKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Enter') {
