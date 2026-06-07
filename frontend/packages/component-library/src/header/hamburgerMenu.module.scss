@@ -56,13 +56,19 @@
       background: none;
     }
 
-    // On press, CustomDropdown turns an active row's span white and its caret
-    // teal (its teal "pressed" state). Our rows keep prod's gray highlight, so
-    // pin the label + chevron dark to stay legible and match the legacy header.
+    // On press, CustomDropdown's teal "pressed" state turns an active row's
+    // label white and recolors the icon glyph, and gives the glyph a white
+    // background "chip". Our rows keep prod's gray highlight, so on that gray
+    // the white chip is a stray box and white text is illegible — pin the
+    // label + chevron dark and clear the chip.
     &:active {
-      span,
+      span {
+        color: var(--text-neutral-primary);
+      }
+
       i::before {
         color: var(--text-neutral-primary);
+        background: none;
       }
     }
   }
