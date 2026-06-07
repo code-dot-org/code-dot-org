@@ -73,6 +73,8 @@ gem 'google-apis-analytics_v3'
 gem 'google-apis-classroom_v1'
 gem 'google-apis-youtube_v3'
 
+gem 'google-protobuf', '~> 4.26'
+
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
