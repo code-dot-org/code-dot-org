@@ -9,13 +9,12 @@ import styles from './group-node.module.scss';
 
 function GroupNode({selected, data}: NodeProps<GroupNodeType>) {
   const readOnly = useSketchLabReadOnly();
+  const showResizer = selected && !readOnly && !data.locked;
   return (
     <div className={styles.groupNode} aria-label="Group">
-      <NodeResizer
-        isVisible={selected && !readOnly && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
+      {showResizer && (
+        <NodeResizer minWidth={MIN_NODE_WIDTH} minHeight={MIN_NODE_HEIGHT} />
+      )}
     </div>
   );
 }
