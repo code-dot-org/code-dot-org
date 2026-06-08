@@ -1302,7 +1302,6 @@ DEPENDENCIES
   google-apis-classroom_v1
   google-apis-core
   google-apis-youtube_v3
-  google-protobuf (~> 4.26)
   google_drive
   haml (~> 5.2.0)
   haml-rails

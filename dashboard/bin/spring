@@ -7,6 +7,14 @@ unless defined?(Spring)
   require 'rubygems'
   require 'bundler'
 
+  # This binstub can run before `dashboard/config/boot.rb`. When a command is launched from `dashboard/`,
+  # RubyGems may point `BUNDLE_GEMFILE` at the `dashboard/Gemfile` symlink instead of the real repo-root `Gemfile`.
+  # Bundler then treats `dashboard/` as the bundle root and rewrites the shared `Gemfile.lock` with path gems
+  # relative to `dashboard/` (`remote: ..`), which also drops locked platform-specific gem variants.
+  # Normalize symlinked root-Gemfile paths to the real root path before Bundler reads settings or the lockfile;
+  # then `Bundler.root` and `Bundler.default_lockfile` match the canonical repo-root bundle used by `dashboard/bin/bundle`.
+  require File.expand_path('bundle', __FILE__)
+
   # Spring breaks when Bundler is running in deployment mode (ie, on the
   # managed test server), but fortunately it also doesn't offer any benefits to
   # us on our deployed servers so we can safely skip it in that situation.
