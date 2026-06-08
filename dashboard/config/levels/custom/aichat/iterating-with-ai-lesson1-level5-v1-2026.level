@@ -7,7 +7,7 @@
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Turn Your Flowchart into Pseudocode\r\n\r\nDownload either your **for loop** (Level 2) or **while loop** (Level 3) flowchart. Upload it to the AI chat with a prompt to turn your flowchart into pseudocode that represents a loop. \r\n\r\nDouble check the AI output, making sure there are clear start, stop, and step values. ",
+    "long_instructions": "## Turn Your Flowchart into Pseudocode\r\n\r\nAdd either your **for loop** (Level 2) or **while loop** (Level 3) flowchart from your Backpack to the AI chat with a prompt to turn your flowchart into pseudocode that represents a loop. \r\n\r\nDouble check the AI output, making sure there are clear start, stop, and step values. ",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,6 +47,6 @@
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-04T20:56:08.909+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-ai-chat-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-ai-chat-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-04 20:56:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-04T20:56:08.909+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-ai-chat-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-ai-chat-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-04 20:56:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 18:46:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
