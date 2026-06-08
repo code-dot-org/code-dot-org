@@ -27,8 +27,6 @@ const logToCloud = require('@cdo/apps/logToCloud');
 const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
 const SERVER_WAIT_TIME_MS = 10000;
 
-// A neighborhood or theater mini app. Theater is still untyped JS, so this
-// captures just the surface JavabuilderConnection drives.
 interface MiniApp {
   isRunning(): boolean;
   handleSignal(signal: {value: string; detail?: unknown} | null): void;
@@ -36,14 +34,14 @@ interface MiniApp {
   onClose?(): void;
 }
 
-// Shape of the JSON messages Javabuilder sends over the websocket. `detail`
-// fields are message-type specific; only those the connection reads are listed.
+// Shape of the JSON messages Javabuilder sends over the websocket. Not all
+// fields are used in every message.
 interface MessageDetail {
-  progressTime: string | number;
-  totalTime: string | number;
-  lockout_type: string;
-  remaining: string | number;
-  period: string;
+  progressTime?: string | number;
+  totalTime?: string | number;
+  lockout_type?: string;
+  remaining?: string | number;
+  period?: string;
 }
 
 interface WebSocketMessage {
@@ -68,17 +66,17 @@ interface AccessTokenResponse {
   token: string;
 }
 
-// The jqXHR object jQuery rejects an ajax call with.
-interface AjaxError {
-  status?: number;
-  responseText?: string;
-  responseJSON?: {
-    captcha_required?: boolean;
-    type?: string;
-    value?: string;
-    detail?: MessageDetail;
-  };
+// Body of an error response from Javabuilder's access-token endpoints.
+interface JavabuilderErrorResponse {
+  captcha_required?: boolean;
+  type?: string;
+  value?: string;
+  detail?: MessageDetail;
 }
+
+type AjaxError = Omit<JQuery.jqXHR, 'responseJSON'> & {
+  responseJSON?: JavabuilderErrorResponse;
+};
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -381,12 +379,12 @@ export default class JavabuilderConnection {
         break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
-          progressTime: detail!.progressTime,
+          progressTime: detail?.progressTime ?? '',
         });
         lineBreakCount = 1;
         break;
       case StatusMessageType.SENDING_VIDEO:
-        message = javalabMsg.sendingVideo({totalTime: detail!.totalTime});
+        message = javalabMsg.sendingVideo({totalTime: detail?.totalTime ?? ''});
         lineBreakCount = 1;
         break;
       case StatusMessageType.TIMEOUT_WARNING:
@@ -590,9 +588,7 @@ export default class JavabuilderConnection {
 
   // Closes web socket connection
   closeConnection() {
-    console.log('in closeConnection');
     if (this.socket) {
-      console.log('found socket, closing');
       this.socket.close();
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
@@ -618,15 +614,15 @@ export default class JavabuilderConnection {
         message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        if (detail!.lockout_type === JavabuilderLockoutType.PERMANENT) {
+        if (detail?.lockout_type === JavabuilderLockoutType.PERMANENT) {
           message = javalabMsg.authorizerNearLimit({
-            attemptsLeft: detail!.remaining,
-            lockoutPeriod: detail!.period.toLowerCase(),
+            attemptsLeft: detail.remaining ?? '',
+            lockoutPeriod: detail.period?.toLowerCase() ?? '',
           });
         } else {
           message = javalabMsg.authorizerNearLimitTemporary({
-            attemptsLeft: detail!.remaining,
-            lockoutPeriod: detail!.period.toLowerCase(),
+            attemptsLeft: detail?.remaining ?? '',
+            lockoutPeriod: detail?.period?.toLowerCase() ?? '',
           });
         }
         break;
