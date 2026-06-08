@@ -2,7 +2,6 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   getNextFileId,
@@ -17,25 +16,24 @@ import {TEARDOWN_CODE} from './patches';
 // Returns the cleanup code to be run after the user's code.
 export function getCleanupCode(source: MultiFileSource) {
   const cleanupCode = TEARDOWN_CODE;
-  return cleanupCode + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
+  return cleanupCode + deleteCachedUserModules(source);
 }
 
 // Pyodide uses the same interpreter for the lifetime of the browser tab.
 // In order to ensure we get updated user code for each run, we delete the
-// modules created by the user code from the sys.modules cache.
-export function deleteCachedUserModules(
-  source: MultiFileSource,
-  excludedFileName: string
-) {
+// modules created by the user code from the sys.modules cache. We must purge
+// main.py too: the Run path executes it as the entry script (so it never
+// enters sys.modules and the guard below makes its delete a no-op), but test
+// and validation code imports it as the `main` module, and a cached copy would
+// run a stale version of the student's solution.
+export function deleteCachedUserModules(source: MultiFileSource) {
   const result = ['import sys'];
   for (const file of Object.values(source.files)) {
-    if (file.name !== excludedFileName) {
-      const filePath = getModuleName(file.id, source);
-      result.push(`
+    const filePath = getModuleName(file.id, source);
+    result.push(`
 if "${filePath}" in sys.modules:
   del sys.modules['${filePath}']
 `);
-    }
   }
   return '\n' + result.join('\n') + '\n';
 }
