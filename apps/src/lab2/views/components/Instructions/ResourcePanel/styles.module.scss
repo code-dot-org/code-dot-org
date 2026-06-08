@@ -237,14 +237,14 @@
 
 .tabNotificationDot {
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: 8px;
+  right: 8px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: var(--background-brand-aqua-strong);
   pointer-events: none;
-  z-index: 3;
+  z-index: 1;
 }
 
 @keyframes tab-notification-ring-expand {
