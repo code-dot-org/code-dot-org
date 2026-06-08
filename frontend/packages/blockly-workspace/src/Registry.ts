@@ -76,7 +76,7 @@ class Registry<T extends Environment = Environment> {
     this.environment = environment;
     this.renderer = renderer || ThrasosRenderer;
 
-    if (!renderer?.name) {
+    if (!this.renderer?.name) {
       throw new Error(
         "Renderer needs to have a string for a 'name' field that uniquely identifies the renderer",
       );
@@ -268,7 +268,12 @@ class Registry<T extends Environment = Environment> {
    * Registers a block field implementation.
    */
   private registerField(fieldPlugin: FieldPlugin) {
-    if (!Blockly.Extensions.isRegistered(fieldPlugin.name)) {
+    // Fields live in the FIELD registry, whether registered via a field class
+    // or by an initialize() that registers one itself; that — not the unrelated
+    // Extensions registry — is what tells us whether it is already present.
+    if (
+      !Blockly.registry.hasItem(Blockly.registry.Type.FIELD, fieldPlugin.name)
+    ) {
       if (fieldPlugin.field) {
         Blockly.fieldRegistry.register(fieldPlugin.name, fieldPlugin.field);
       } else {
@@ -322,6 +327,7 @@ class Registry<T extends Environment = Environment> {
       };
 
       Blockly.Extensions.registerMutator(name, newMutator);
+      this.mutators.push(mutator);
     }
   }
 
@@ -357,6 +363,8 @@ class Registry<T extends Environment = Environment> {
    */
   private registerGlobal(globalPlugin: GlobalPlugin) {
     globalPlugin.initialize();
+    // Track it so unregister()/unregisterAll() can run its uninitialize().
+    this.registered.push(globalPlugin);
   }
 
   /**
@@ -432,8 +440,10 @@ class Registry<T extends Environment = Environment> {
    * Unregisters a previously registered field plugin.
    */
   private unregisterField(fieldPlugin: FieldPlugin) {
-    // De-construct field plugins
-    if (Blockly.Extensions.isRegistered(fieldPlugin.name)) {
+    // De-construct field plugins (mirror the FIELD-registry guard used to register).
+    if (
+      Blockly.registry.hasItem(Blockly.registry.Type.FIELD, fieldPlugin.name)
+    ) {
       if (fieldPlugin.field) {
         Blockly.fieldRegistry.unregister(fieldPlugin.name);
       }
@@ -479,8 +489,9 @@ class Registry<T extends Environment = Environment> {
    * Unregisters any plugins that were registered by the class.
    */
   unregisterAll() {
-    // Unregister generic plugins
-    this.registered.forEach(plugin => this.unregister(plugin));
+    // Unregister generic plugins. Iterate a copy: unregister() splices
+    // this.registered, which would skip entries if we walked it directly.
+    [...this.registered].forEach(plugin => this.unregister(plugin));
     this.registered = [];
 
     // Unregister block extensions
