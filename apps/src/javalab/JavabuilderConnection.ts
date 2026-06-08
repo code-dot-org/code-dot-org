@@ -549,7 +549,7 @@ export default class JavabuilderConnection {
     );
     this.onNewlineMessage();
     this.handleExecutionFinished();
-    const errorMessage = (error as ErrorEvent).message;
+    const errorMessage = (error as ErrorEvent).message || 'unknown error';
     console.error(`[error] ${errorMessage}`);
     this.reportWebSocketConnectionError(errorMessage);
   }
