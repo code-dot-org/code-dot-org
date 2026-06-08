@@ -27,6 +27,7 @@ import {
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
+  WEBLAB2_WELCOME_CHAT_MESSAGE,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
@@ -212,6 +213,7 @@ const Weblab2View: React.FC<
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
+          aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
         />
       )}
     </div>

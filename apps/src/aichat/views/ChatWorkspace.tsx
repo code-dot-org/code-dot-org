@@ -97,6 +97,10 @@ interface ChatWorkspaceProps {
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
+
+  // If provided, displayed as an assistant chat bubble when the user has no prior chat history.
+  // Not sent to the model.
+  initialWelcomeMessage?: string;
 }
 
 /**
@@ -123,6 +127,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       disabledState,
       disableSendingMessages,
       renderLastMessagePostText,
+      initialWelcomeMessage,
     },
     ref
   ) => {
@@ -222,6 +227,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             isOwnHistory: true,
             channelId,
             lessonId,
+            initialWelcomeMessage: disabled ? undefined : initialWelcomeMessage,
           })
         );
       }
@@ -232,6 +238,8 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       selectedStudent,
       channelId,
       lessonId,
+      initialWelcomeMessage,
+      disabled,
     ]);
 
     useEffect(() => {

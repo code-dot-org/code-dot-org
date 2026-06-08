@@ -31,6 +31,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  initialWelcomeMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -49,6 +50,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
+  initialWelcomeMessage,
 }) => {
   const {
     containerRef,
@@ -130,6 +132,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             disabledState={disabledState}
             onAssetUploaded={onAssetUploaded}
             onAssetRemoved={onAssetRemoved}
+            initialWelcomeMessage={initialWelcomeMessage}
           />
         </div>
       </div>

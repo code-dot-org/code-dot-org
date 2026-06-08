@@ -55,6 +55,7 @@ type CodebridgeProps = {
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
 };
 
 export const Codebridge = React.memo(
@@ -77,6 +78,7 @@ export const Codebridge = React.memo(
     secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -229,6 +231,7 @@ export const Codebridge = React.memo(
           aiTutorDisabled,
           onAssetUploaded,
           onAssetRemoved,
+          aiTutorInitialWelcomeMessage,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>
