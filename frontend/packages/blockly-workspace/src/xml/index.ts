@@ -129,14 +129,12 @@ function parseBlockXml(blockEl: Element): BlockState {
         break;
 
       case 'mutation':
-        // Place attributes into extra state
+        // Place attributes into extra state, coerced and remapped to the
+        // canonical JSON keys their mutators read (see mutationEntry).
         for (const attr of Array.from(child.attributes)) {
           block.extraState ??= {};
-          if (attr.name === 'elseif') {
-            block.extraState['elseIfCount'] = attr.value;
-          } else {
-            block.extraState[attr.name] = attr.value;
-          }
+          const [key, value] = mutationEntry(attr.name, attr.value);
+          block.extraState[key] = value;
         }
 
         // Look for procedure arguments
@@ -150,15 +148,18 @@ function parseBlockXml(blockEl: Element): BlockState {
           block.extraState.params.push(name);
         }
 
-        // Some specific legacy mutators also pull in attributes from the next sibling
+        // Some specific legacy mutators also pull in attributes from the next
+        // sibling; elseif overwrites, the rest only fill gaps (preserving the
+        // original precedence).
         for (const attr of Array.from(
           child.nextElementSibling?.attributes || [],
         )) {
           block.extraState ??= {};
+          const [key, value] = mutationEntry(attr.name, attr.value);
           if (attr.name === 'elseif') {
-            block.extraState['elseIfCount'] = attr.value;
+            block.extraState[key] = value;
           } else {
-            block.extraState[attr.name] ??= attr.value;
+            block.extraState[key] ??= value;
           }
         }
         break;
@@ -173,6 +174,25 @@ function parseBlockXml(blockEl: Element): BlockState {
 // a preceding sibling such as a <shadow> default.
 function directChildBlock(container: Element): Element | undefined {
   return Array.from(container.children).find(el => el.tagName === 'block');
+}
+
+// Translate a legacy <mutation> attribute into its canonical extraState entry.
+// Values are coerced, so numeric/boolean attributes deserialize as numbers and
+// booleans rather than strings (matching how block attributes are handled and
+// what mutators' loadExtraState expects). controls_if's legacy attribute names
+// are remapped to the keys its JSON mutator reads: `elseif` -> `elseIfCount`
+// (a count) and `else` -> `hasElse` (a boolean flag).
+function mutationEntry(
+  name: string,
+  value: string,
+): [string, string | number | boolean] {
+  if (name === 'elseif') {
+    return ['elseIfCount', parseValue(value)];
+  }
+  if (name === 'else') {
+    return ['hasElse', Boolean(parseValue(value))];
+  }
+  return [name, parseValue(value)];
 }
 
 function parseValue(value: string): string | number | boolean {

@@ -199,13 +199,25 @@ describe('convertBlocklyXmlToJson', () => {
   });
 
   describe('mutation', () => {
-    it('lifts mutation attributes into extraState, renaming elseif', () => {
+    it('remaps controls_if mutation attrs to canonical extraState', () => {
       const block = firstBlock(
         '<xml><block type="controls_if">' +
           '<mutation elseif="2" else="1"/>' +
           '</block></xml>',
       );
-      expect(block.extraState).toMatchObject({elseIfCount: '2', else: '1'});
+      // elseif -> elseIfCount (a number), else -> hasElse (a boolean): the keys
+      // and types controls_if's loadExtraState reads.
+      expect(block.extraState).toEqual({elseIfCount: 2, hasElse: true});
+      expect(typeof block.extraState.elseIfCount).toBe('number');
+    });
+
+    it('coerces generic mutation attribute values', () => {
+      const block = firstBlock(
+        '<xml><block type="custom_block">' +
+          '<mutation count="3" enabled="true" mode="fast"/>' +
+          '</block></xml>',
+      );
+      expect(block.extraState).toEqual({count: 3, enabled: true, mode: 'fast'});
     });
 
     it('collects procedure arg names into extraState.params', () => {
