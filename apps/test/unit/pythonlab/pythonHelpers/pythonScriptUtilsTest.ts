@@ -1,3 +1,5 @@
+import {PyodideInterface} from 'pyodide';
+
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   deleteCachedUserModules,
@@ -111,10 +113,8 @@ describe('pythonScriptUtils', () => {
           mkdir: (path: string) => {
             madeDirs.push(path);
           },
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } as any,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } as any;
+        },
+      } as unknown as PyodideInterface;
       return {pyodide, writtenFiles, madeDirs};
     }
 
@@ -186,10 +186,8 @@ describe('pythonScriptUtils', () => {
           mkdir: (path: string) => {
             madeDirs.push(path);
           },
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } as any,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } as any;
+        },
+      } as unknown as PyodideInterface;
       return {pyodide, unlinked, removedDirs, madeDirs};
     }
 
@@ -370,8 +368,9 @@ describe('pythonScriptUtils', () => {
         },
       };
       const loadPackagesFromImports = jest.fn().mockResolvedValue(undefined);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const pyodide = {loadPackagesFromImports} as any;
+      const pyodide = {
+        loadPackagesFromImports,
+      } as unknown as PyodideInterface;
 
       await importPackagesFromFiles(source, pyodide);
 
@@ -395,8 +394,7 @@ describe('pythonScriptUtils', () => {
             deleted.push(key);
           },
         },
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } as any;
+      } as unknown as PyodideInterface;
 
       resetGlobals(pyodide, originalGlobals);
 
