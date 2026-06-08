@@ -1,12 +1,17 @@
-# Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL →
-# Redshift materialized view" pipeline.
+# Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
+#  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
+#  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
+#  analytics_export:provision_materialized_views[environment_type]            # Provision Redshift Materialized Views for each Model which should be `exported_to_analytics`.
+#  analytics_export:refresh_materialized_views[environment_type]              # REFRESH each Model's Redshift Materialized Views if they are stale.
+#  analytics_export:materialized_view_status[environment_type]                # Output a CSV describing the status of each Model's Materialized View.
 #
-# IMPORTANT: These tasks must be executed by an engineer with administrative permissions to AWS on their local
-# development environment.
+# IMPORTANT: These tasks should be executed by an engineer with administrative permissions to AWS on their local
+# development environment because these tasks View/Update Relational Database Service Zero ETL Integrations and authenticate
+# as a Redshift SQL user that has permissions to CREATE/DROP/REFRESH the target Zero ETL databases/tables in Redshift.
 #   * `export AWS_PROFILE=codeorg-admin`
 #   * ensure `CDO.redshift_username` is set to a SQL user that has permissions to CREATE/DROP/REFRESH Materialized Views
-#  in the `dev.learning_platform_production` and `dev.learning_platform_production_pii` schemas (the views live in the
-#  `dev` database; see `Cdo::Aws::Redshift::MaterializedViewManager::MATERIALIZED_VIEW_DATABASE`), and also the ability
+#  in the `dev.learning_platform_test/production` and `dev.learning_platform_test/production_pii` schemas (the views live
+#  in the `dev` database; see `Cdo::Aws::Redshift::MaterializedViewManager::MATERIALIZED_VIEW_DATABASE`), and also the ability
 #  to query Redshift system tables that store Zero ETL Integration status, Materialized View refresh status, and the
 #  target Zero ETL databases.
 #
@@ -30,9 +35,48 @@ Rake::Task['db:migrate'].enhance do
 end
 
 namespace :analytics_export do
+  # bundle exec rake 'analytics_export:zero_etl_data_filter[production]'
+  desc "Print the table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL."
+  task :zero_etl_data_filter, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:zero_etl_data_filter[environment_type]" if args[:environment_type].blank?
+    puts AnalyticsExportable.zero_etl_data_filter(db_name: "dashboard_#{args[:environment_type]}")
+  end
+
+  # bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
+  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
+  desc "Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`."
+  task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
+
+    dry_run = ENV['DRY_RUN'].present?
+    result = AnalyticsExportable.update_zero_etl_integration!(
+      integration_arn: args[:integration_arn],
+      db_name: "dashboard_#{args[:environment_type]}",
+      dry_run: dry_run
+    )
+
+    if result[:to_remove].any?
+      puts "Remove:"
+      result[:to_remove].each {|r| puts "  - #{r}"}
+    end
+
+    if result[:to_add].any?
+      puts "Add:"
+      result[:to_add].each {|r| puts "  + #{r}"}
+    end
+
+    if result[:to_add].empty? && result[:to_remove].empty?
+      puts "No changes needed."
+    elsif dry_run
+      puts "\n[DRY RUN] No changes applied."
+    else
+      puts "\nIntegration updated."
+    end
+  end
+
   # bundle exec rake 'analytics_export:provision_materialized_views[production]'
   # DRY_RUN=1 bundle exec rake 'analytics_export:provision_materialized_views[test]'
-  desc "Provision (create/update/drop) Redshift materialized views for all exported models. Set DRY_RUN=1 to preview."
+  desc "Provision Redshift Materialized Views for each Model which should be `exported_to_analytics`."
   task :provision_materialized_views, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:provision_materialized_views[environment_type]" if args[:environment_type].blank?
 
@@ -151,7 +195,7 @@ namespace :analytics_export do
 
   # bundle exec rake 'analytics_export:refresh_materialized_views[production]'
   # DRY_RUN=1 bundle exec rake 'analytics_export:refresh_materialized_views[test]'
-  desc "Refresh Redshift materialized views for stale models. Skips views Redshift reports as not stale. Set DRY_RUN=1 to preview."
+  desc "REFRESH each Model's Redshift Materialized Views if they are stale."
   task :refresh_materialized_views, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:refresh_materialized_views[environment_type]" if args[:environment_type].blank?
 
@@ -263,7 +307,7 @@ namespace :analytics_export do
   # bundle exec rake 'analytics_export:materialized_view_status[production]'
   # HOURS_BACK=12 bundle exec rake 'analytics_export:materialized_view_status[production]'
   # bundle exec rake 'analytics_export:materialized_view_status[production]' > status.csv
-  desc "Emit CSV (stdout) describing the most recent CREATE/DROP/REFRESH per Materialized View."
+  desc "Output a CSV describing the status of each Model's Materialized View."
   task :materialized_view_status, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:materialized_view_status[environment_type]" if args[:environment_type].blank?
 
@@ -338,45 +382,6 @@ namespace :analytics_export do
           r.error
         ]
       end
-    end
-  end
-
-  # bundle exec rake 'analytics_export:zero_etl_data_filter[production]'
-  desc "Print the Maxwell filter expression for the dashboard database in the given environment."
-  task :zero_etl_data_filter, [:environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:zero_etl_data_filter[environment_type]" if args[:environment_type].blank?
-    puts AnalyticsExportable.zero_etl_data_filter(db_name: "dashboard_#{args[:environment_type]}")
-  end
-
-  # bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
-  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
-  desc "Reconcile Zero ETL integration excludes for the dashboard database. Set DRY_RUN=1 to preview."
-  task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
-
-    dry_run = ENV['DRY_RUN'].present?
-    result = AnalyticsExportable.update_zero_etl_integration!(
-      integration_arn: args[:integration_arn],
-      db_name: "dashboard_#{args[:environment_type]}",
-      dry_run: dry_run
-    )
-
-    if result[:to_remove].any?
-      puts "Remove:"
-      result[:to_remove].each {|r| puts "  - #{r}"}
-    end
-
-    if result[:to_add].any?
-      puts "Add:"
-      result[:to_add].each {|r| puts "  + #{r}"}
-    end
-
-    if result[:to_add].empty? && result[:to_remove].empty?
-      puts "No changes needed."
-    elsif dry_run
-      puts "\n[DRY RUN] No changes applied."
-    else
-      puts "\nIntegration updated."
     end
   end
 end
