@@ -199,7 +199,7 @@ describe('Applab Exporter,', function () {
       authoredHintViewRequestsUrl: '/authored_hint_view_requests.json',
       serverLevelId: 2176,
       gameDisplayName: 'App Lab',
-      appName: 'Code.org',
+      appName: 'CodeAI',
       publicCaching: false,
       is13Plus: true,
       hasContainedLevels: false,

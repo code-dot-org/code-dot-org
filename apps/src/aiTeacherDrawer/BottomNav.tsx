@@ -7,14 +7,13 @@ import style from './bottom-nav.module.scss';
 interface NavItem {
   label: string;
   iconName: string;
-  iconStyle: 'solid' | 'regular';
 }
 
 const NAV_ITEMS: NavItem[] = [
-  {label: 'Home', iconName: 'house', iconStyle: 'solid'},
-  {label: 'Chats', iconName: 'comment', iconStyle: 'regular'},
-  {label: 'Learn', iconName: 'file-lines', iconStyle: 'regular'},
-  {label: 'Alerts', iconName: 'bell', iconStyle: 'regular'},
+  {label: 'Home', iconName: 'house'},
+  {label: 'Chats', iconName: 'comment'},
+  {label: 'Learn', iconName: 'file-lines'},
+  {label: 'Alerts', iconName: 'bell'},
 ];
 
 interface BottomNavProps {
@@ -24,24 +23,24 @@ interface BottomNavProps {
 
 const BottomNav: React.FC<BottomNavProps> = ({activeLabel, onNavChange}) => (
   <nav className={style.nav} aria-label="Main navigation">
-    {NAV_ITEMS.map(({label, iconName, iconStyle}) => (
-      <button
-        key={label}
-        type="button"
-        className={classNames(
-          style.item,
-          label === activeLabel && style.active
-        )}
-        onClick={() => onNavChange(label)}
-      >
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle={iconStyle}
-          className={style.icon}
-        />
-        <span className={style.label}>{label}</span>
-      </button>
-    ))}
+    {NAV_ITEMS.map(({label, iconName}) => {
+      const active = label === activeLabel;
+      return (
+        <button
+          key={label}
+          type="button"
+          className={classNames(style.item, active && style.active)}
+          onClick={() => onNavChange(label)}
+        >
+          <FontAwesomeV6Icon
+            iconName={iconName}
+            iconStyle={active ? 'solid' : 'regular'}
+            className={style.icon}
+          />
+          <span className={style.label}>{label}</span>
+        </button>
+      );
+    })}
   </nav>
 );
 

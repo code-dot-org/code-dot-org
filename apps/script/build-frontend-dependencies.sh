@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script builds dependencies for the `apps` (Code.org Studio) directory which reside in the `frontend` directory.
+# This script builds dependencies for the `apps` (CodeAI Studio) directory which reside in the `frontend` directory.
 # At present, the following dependencies are consumed:
 # 1. **@code-dot-org/component-library**: Component Library
 # 2. **@code-dot-org/fonts**: Fonts

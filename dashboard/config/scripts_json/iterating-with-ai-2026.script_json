@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-04 20:57:53 UTC",
+    "serialized_at": "2026-06-08 06:44:38 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1294,8 +1294,20 @@
       }
     },
     {
-      "key": "3838c715-04a5-43c7-b88c-32848c59054e",
+      "key": "7a357bf8-0dc6-4a3f-ab50-c7015ded3ba7",
       "position": 6,
+      "properties": {
+        "name": "New Level",
+        "progression_name": "New Checking for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a357bf8-0dc6-4a3f-ab50-c7015ded3ba7",
+        "lesson_activity.key": "cf2494c4-9561-49e5-8df6-6c3ae493f1d5"
+      }
+    },
+    {
+      "key": "3838c715-04a5-43c7-b88c-32848c59054e",
+      "position": 7,
       "properties": {
         "progression_name": "Vocab: Off-By-One Error",
         "tips": [
@@ -1316,7 +1328,7 @@
     },
     {
       "key": "c64ee729-654b-42a5-a8d9-2d8b5e7f31ed",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -1326,7 +1338,7 @@
     },
     {
       "key": "9cbe2f45-bcb3-4475-b74a-d6a0e813cfcb",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *off-by-one error*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide demonstrate the exact mechanics of a for-loop and identify an off-by-one error when the count runs one time too many.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *To prevent off-by-one errors, why is testing the loop's start value, last value, and the stop condition more critical than testing a number in the middle of the loop's range?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that off-by-one errors happen at the boundaries. They should connect testing the start and stop conditions to checking the edges where a single change, like using < instead of <=, determines whether the loop runs one time too many or one time too few.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 6.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Read students' AI prompts and push them to be specific: \"From what number to what number?\" \"Should it go up or down?\" \"How much should it change each time?\" Watch their tests and ask, \"Did it stop exactly where you wanted?\" to surface off-by-one errors.",
         "progression_name": "Add Counted Repetition",
@@ -1879,8 +1891,20 @@
       }
     },
     {
-      "key": "d8d4f69e-b1a0-4669-9251-b68462fa54b5",
+      "key": "22be7047-3300-4440-b12c-f314baabaf1d",
       "position": 6,
+      "properties": {
+        "name": "new explore levels",
+        "progression_name": "Explore Missing Data and Labels"
+      },
+      "seeding_key": {
+        "activity_section.key": "22be7047-3300-4440-b12c-f314baabaf1d",
+        "lesson_activity.key": "c3fdebc0-9a26-42d2-a63d-42d5a3572439"
+      }
+    },
+    {
+      "key": "d8d4f69e-b1a0-4669-9251-b68462fa54b5",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *fallback value*.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students make a plan for fallback values.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to return to Level 1 and review their diagrams. Have them identify any fields that might be null or missing in real data (for example, no `imageURL`, no `rating`). Have them jot a clear fallback idea next to each, and also mark any fields that should be hidden entirely if missing.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who want to hide missing data in ways that could confuse or mislead users. Prompt them with questions like: How will the user know that information is missing? and Is your fallback easy to understand?",
         "tips": [
@@ -1901,7 +1925,7 @@
     },
     {
       "key": "427f3b14-bec9-4b70-9a83-0c84c180188b",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -1911,7 +1935,7 @@
     },
     {
       "key": "5fe2bb8b-30eb-4473-b90b-91b3ba5c4c84",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now you are going to turn your card diagrams from Sketch Lab into working code. You will code a loop to go through each object in the dataset and build a card using the fields and fallbacks you decided on.",
         "remarks": true
@@ -1923,7 +1947,7 @@
     },
     {
       "key": "10eeebb3-d915-4dfd-8e2b-8ee348a7a71a",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete Levels 4 and 5. Remind students to refer back to their diagrams on Level 1 when deciding which fields belong in the card.\n- Level 4: Students use a loop to render each record in the dataset as a card and add simple fallbacks.\n- Level 5: Students analyze three sample cards and respond to prompts about bias and transparency. Encourage students to be specific in their written responses about what feels biased or unclear, and to write a transparency label that would help a user understand how the cards are ordered or selected.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students:\n- Place field values in the intended card areas.\n- Use conditionals or checks when a value is missing or null.\n- Use fallback values for missing data. Ask: What should this card show if rating is null? and How could you make that clear to the user?",
         "progression_name": "Displaying a Schema with Cards"
@@ -1935,7 +1959,7 @@
     },
     {
       "key": "cff0df5c-fcdb-4da6-b5a2-2ef1a979204e",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Free Response: Bias & Transparency Labels",
         "tips": [
@@ -1952,7 +1976,7 @@
     },
     {
       "key": "ede29e87-1a30-48b5-86e4-9a6a86a45a3c",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1962,7 +1986,7 @@
     },
     {
       "key": "e7f2cc8c-18a4-4264-bad6-def5a2286d7f",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does each version of the card influence your perception?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the difference between the three versions:\n- Version 1: Neutral: shows a plain rating (for example, \"Rating: 2.5/5 stars\").\n- Version 2: Biased: uses hype language (for example, \"Top Value Pick!\").\n- Version 3: Hidden Info: leaves the rating off.\n\nHelp students recognize that tone, label choice (like \"Top Value Pick!\"), and hiding information (like leaving off a low rating) can bias user perception.",
         "tips": [
@@ -3517,10 +3541,10 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "While Loop Flowchart"
+        "progression": "For Loop Flowchart"
       },
       "bonus": false,
       "seeding_key": {
@@ -3530,7 +3554,7 @@
         "lesson.key": "Lesson 1: Intro to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "60f064e3-3cee-4a20-84dd-01b40fe63d49"
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
       },
       "level_keys": [
         "iterating-with-ai-lesson1-level7-test_2025-pilot_2026"
@@ -3539,32 +3563,10 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson1-level4-v2-2026"
-        ],
-        "lesson.key": "Lesson 1: Intro to Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "09ac6dd1-5b5f-4db0-938c-73661155b935"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson1-level4-v2-2026"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Loops in Pseudocode"
+        "progression": "For Loop Flowchart"
       },
       "bonus": false,
       "seeding_key": {
@@ -3574,10 +3576,32 @@
         "lesson.key": "Lesson 1: Intro to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "4fdaae5c-a747-4eda-b5af-77862b14c483"
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
       },
       "level_keys": [
         "iterating-with-ai-lesson1-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "For Loop Flowchart"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level4-v2-2026"
+        ],
+        "lesson.key": "Lesson 1: Intro to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-level4-v2-2026"
       ]
     },
     {
@@ -3608,6 +3632,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "New Checking for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 2: Counted Repetition",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "7a357bf8-0dc6-4a3f-ab50-c7015ded3ba7"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Add Counted Repetition"
       },
       "bonus": false,
@@ -3625,7 +3671,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3647,7 +3693,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3669,7 +3715,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3691,7 +3737,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -3713,7 +3759,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3735,7 +3781,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3757,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3779,7 +3825,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3801,8 +3847,52 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Missing Data and Labels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 5: Displaying Objects as Cards",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "22be7047-3300-4440-b12c-f314baabaf1d"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Missing Data and Labels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Lesson 5: Displaying Objects as Cards",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "22be7047-3300-4440-b12c-f314baabaf1d"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3823,8 +3913,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 3,
+      "chapter": 21,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3845,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3867,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3889,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3911,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3933,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3955,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3977,9 +4067,31 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 7: Pure Functions vs Side Effects",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "c9f9cdc3-084c-47f0-b66b-04b03e91a3d6"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Check For Understanding"
@@ -3999,31 +4111,31 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 3,
+      "chapter": 30,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging Challenge"
+        "progression": "Reset and Undo User Journey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+          "iterating-with-ai-lesson8-level1-v1-2026"
         ],
-        "lesson.key": "Lesson 7: Pure Functions vs Side Effects",
+        "lesson.key": "Lesson 8: Copy, Don't Mutate",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "5171d7ec-3cff-44a3-9912-32d64d6ad428"
+        "activity_section.key": "c86dc8c9-ef10-44dd-bd58-50b3649b7546"
       },
       "level_keys": [
-        "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+        "iterating-with-ai-lesson8-level1-v1-2026"
       ]
     },
     {
-      "chapter": 27,
-      "position": 1,
-      "activity_section_position": 1,
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Reset and Undo User Journey"
@@ -4043,8 +4155,30 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 2,
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reset and Undo User Journey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level3-v1-2026"
+        ],
+        "lesson.key": "Lesson 8: Copy, Don't Mutate",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "c86dc8c9-ef10-44dd-bd58-50b3649b7546"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson8-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4065,8 +4199,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 3,
+      "chapter": 34,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4087,8 +4221,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 4,
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4109,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4131,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4153,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4175,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4197,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4241,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4263,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4285,7 +4419,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4307,7 +4441,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4329,7 +4463,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4397,19 +4531,7 @@
         "lesson.key": "Lesson 1: Intro to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "60f064e3-3cee-4a20-84dd-01b40fe63d49"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson1-level4-v2-2026",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson1-level4-v2-2026"
-        ],
-        "lesson.key": "Lesson 1: Intro to Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "09ac6dd1-5b5f-4db0-938c-73661155b935"
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
       }
     },
     {
@@ -4421,7 +4543,19 @@
         "lesson.key": "Lesson 1: Intro to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "4fdaae5c-a747-4eda-b5af-77862b14c483"
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-level4-v2-2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level4-v2-2026"
+        ],
+        "lesson.key": "Lesson 1: Intro to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "823ba1ea-0676-4e21-8b42-568f61eebc7e"
       }
     },
     {
@@ -4434,6 +4568,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
         "activity_section.key": "e7ffe3b7-c62c-44e7-9b87-77b779745a44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-level2-v1-2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 2: Counted Repetition",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "7a357bf8-0dc6-4a3f-ab50-c7015ded3ba7"
       }
     },
     {
@@ -4546,6 +4692,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level2-v1-2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Lesson 5: Displaying Objects as Cards",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "22be7047-3300-4440-b12c-f314baabaf1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level3-v1-2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Lesson 5: Displaying Objects as Cards",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "22be7047-3300-4440-b12c-f314baabaf1d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "iterating-with-ai-lesson5-level5-test_2025-pilot_2026",
         "script_level.level_keys": [
           "iterating-with-ai-lesson5-level5-test_2025-pilot_2026"
@@ -4642,6 +4812,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-level7-test_2025-pilot_2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 7: Pure Functions vs Side Effects",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "c9f9cdc3-084c-47f0-b66b-04b03e91a3d6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "iterating-with-ai-lesson7-level6-CFU-test_2025-pilot_2026",
         "script_level.level_keys": [
           "iterating-with-ai-lesson7-level6-CFU-test_2025-pilot_2026"
@@ -4654,14 +4836,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "iterating-with-ai-lesson7-level7-test_2025-pilot_2026",
+        "level.key": "iterating-with-ai-lesson8-level1-v1-2026",
         "script_level.level_keys": [
-          "iterating-with-ai-lesson7-level7-test_2025-pilot_2026"
+          "iterating-with-ai-lesson8-level1-v1-2026"
         ],
-        "lesson.key": "Lesson 7: Pure Functions vs Side Effects",
+        "lesson.key": "Lesson 8: Copy, Don't Mutate",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "5171d7ec-3cff-44a3-9912-32d64d6ad428"
+        "activity_section.key": "c86dc8c9-ef10-44dd-bd58-50b3649b7546"
       }
     },
     {
@@ -4669,6 +4851,18 @@
         "level.key": "iterating-with-ai-lesson8-level1-test_2025-pilot_v2_2026",
         "script_level.level_keys": [
           "iterating-with-ai-lesson8-level1-test_2025-pilot_v2_2026"
+        ],
+        "lesson.key": "Lesson 8: Copy, Don't Mutate",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "c86dc8c9-ef10-44dd-bd58-50b3649b7546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson8-level3-v1-2026",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level3-v1-2026"
         ],
         "lesson.key": "Lesson 8: Copy, Don't Mutate",
         "lesson_group.key": "lessonGroup-3",
