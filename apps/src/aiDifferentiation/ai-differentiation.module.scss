@@ -186,7 +186,11 @@ $sidebar-tooltip-z-index: 2010;
 
   span {
     @include main-font-medium;
-    color: var(--text-neutral-primary);
+    // `-fixed` because the parent `.taOverlayHeader` background is
+    // `--background-brand-aqua-primary` which stays bright aqua in both
+    // Light and Dark cdo themes. A theme-following text token would resolve
+    // to white in Dark mode and lose contrast on the aqua background.
+    color: var(--text-neutral-black-fixed);
     font-size: 8px;
     font-style: normal;
     line-height: 100%;
