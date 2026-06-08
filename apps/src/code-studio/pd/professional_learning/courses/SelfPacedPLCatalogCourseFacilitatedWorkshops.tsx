@@ -59,7 +59,7 @@ const SelfPacedPLCatalogCourseFacilitatedWorkshops: React.FC<
             <Typography variant="strong">Teach with confidence</Typography>
           </Typography>
           <Typography variant="body4">
-            Experience Code.org’s curriculum firsthand in interactive workshops
+            Experience CodeAI’s curriculum firsthand in interactive workshops
             that prepare you to teach with confidence. Connect with fellow
             educators and leave ready to inspire your students!
           </Typography>

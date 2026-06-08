@@ -1,65 +1,51 @@
-@import 'color';
+.compareModelsModal {
+  align-self: stretch;
+  margin-inline: auto;
+  max-height: calc(90vh - 100px);
+  overflow: hidden;
 
-hr {
-  margin: 1rem 0;
-  border-color: $light_gray_200;
+  > div:nth-of-type(2) {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    align-self: stretch;
+  }
 }
 
 .textContainer {
-  background-color: $light_gray_50;
-  border-radius: 4px;
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 0.25rem;
 }
 
 .modelText {
-  padding-left: 10px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
 }
 
 .modelDescriptionPanelContainer {
   flex: 1;
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
   display: flex;
   flex-direction: column;
-}
-
-div.modelComparisonDialog {
-  max-height: calc(90vh - 100px);
-  width: 800px;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
+  min-width: 0;
 }
 
 .modelComparisonContainer {
   display: flex;
-  position: relative;
+  gap: 1rem;
   overflow-y: hidden;
   flex: 1;
-}
-
-.viewMoreButton {
-  width: fit-content;
-  float: right;
-}
-
-.rightAlign {
-  display: flex;
-  justify-content: flex-end;
+  min-height: 0;
+  min-width: 0;
 }
 
 .modelDescriptionContainer {
   overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .compareModelsDropdown {
   width: 100%;
   display: inline-block;
 }
-
-.headerContainer {
-  display: flex;
-  justify-content: center;
-}
-

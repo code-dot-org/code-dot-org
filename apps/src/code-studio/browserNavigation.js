@@ -91,6 +91,6 @@ export function setWindowTitle(progressStoreState, newLevelId) {
 
   document.title =
     numLessons > 1
-      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - Code.org`
-      : `${lessonName} #${lessonIndex} - Code.org`;
+      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - CodeAI`
+      : `${lessonName} #${lessonIndex} - CodeAI`;
 }

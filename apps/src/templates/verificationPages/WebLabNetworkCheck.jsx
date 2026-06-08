@@ -260,8 +260,8 @@ class WebLabNetworkCheck extends Component {
           </ul>
           <br />
           <p>
-            Note: You do not need to be logged in to Code.org for this test to
-            be successful.
+            Note: You do not need to be logged in to CodeAI for this test to be
+            successful.
           </p>
           <label htmlFor="connect">
             Click "Connect" to check whether your school's network and device

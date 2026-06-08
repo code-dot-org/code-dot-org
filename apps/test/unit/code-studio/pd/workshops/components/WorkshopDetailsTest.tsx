@@ -87,7 +87,7 @@ describe('WorkshopDetails', () => {
       screen.getByRole('heading', {name: /data sharing notice/i})
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/Code\.org works closely with local Regional Partners/i)
+      screen.getByText(/CodeAI works closely with local Regional Partners/i)
     ).toBeInTheDocument();
     const anchorTarget = screen
       .getByRole('heading', {
