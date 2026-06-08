@@ -109,7 +109,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         children: (
           <span
             style={{
-              width: '120px',
+              maxWidth: '120px',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
