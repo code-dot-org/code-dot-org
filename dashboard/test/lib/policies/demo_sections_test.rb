@@ -152,6 +152,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 5, view[:avatar_emoji]
     assert_equal 'email', view[:login_type]
     assert_equal 'student', view[:participant_type]
+    assert_equal %w[9 10 11 12], view[:grades]
     assert_equal({name: 'allthethings', display_name: 'All the Things!'}, view[:unit])
     assert_equal(
       {name: 'original-allthethings-course', display_name: 'original-allthethings-course'},
