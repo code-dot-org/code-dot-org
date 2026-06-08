@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Getting Data Online
 
 
-#### When your code asks for data from the internet, it doesn’t get the answer instantly. Just like ordering something online, there’s a waiting period before you know what happened.
+When your code asks for data from the internet, it doesn’t get the answer instantly. Just like ordering something online, there’s a waiting period before you know what happened.
 
 
 ---
@@ -15,8 +15,8 @@ markdown <<MARKDOWN
 
 ## Scenario: The Mystery Mailbox
 
-#### Imagine you ordered a **mystery box** online.  
-#### You walk to the mailbox to check it.
+Imagine you ordered a **mystery box** online.  
+You walk to the mailbox to check it.
 
 
 <div style="clear:both;"></div>

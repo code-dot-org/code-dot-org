@@ -8,4 +8,7 @@ export const MAZE_FILE_NAME = 'serialized_maze.txt';
 
 export type LayoutKey = 'horizontal' | 'vertical';
 
-export const codebridgeLabsWithConsole = ['pythonlab'];
+export const codebridgeLabsWithConsole = ['pythonlab', 'javalab'];
+
+export const INVALID_NAME_ERROR =
+  'Names must be only letters, numbers, dashes, or underscores.';

@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-05-15T05:33:45.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflect on Inclusivity in Your Dataset",
+    "long_instructions": "Reflect on the search, filter, or sort features you added.\r\n\r\n* What is one fix or improvement you made after testing your features?\r\n* What is one feature or improvement you would add next?\r\n* How could your search, filter, or sort choices affect which items users see first, hide, or prioritize?\r\n* Who might be unintentionally left out, hidden, or prioritized because of those choices?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Accessibility and Clarity",
+    "thumbnail_url": "https://images.code.org/464e75ae884ae65e09f919f71795b8a8-thought-leadership.png",
+    "bubble_choice_description": "Reflect on your app interface, identify what is clear or confusing, and choose one improvement to make your data easier for users to understand.",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T05:33:45.403+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level7-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level7-v1-2026\"},{\"changed_at\":\"2026-05-15 05:33:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

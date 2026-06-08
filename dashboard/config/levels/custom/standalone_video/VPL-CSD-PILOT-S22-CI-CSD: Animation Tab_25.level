@@ -12,7 +12,7 @@
     "display_name": "Video: The Animation Tab",
     "parent_level_id": 20685,
     "name_suffix": "_25",
-    "long_instructions": "#### This video is included in the CS Discoveries curriculum to introduce students to the animation tab in Game Lab.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n#### What are the steps to adding an image to a sprite?\r\n",
+    "long_instructions": "This video is included in the CS Discoveries curriculum to introduce students to the animation tab in Game Lab.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\nWhat are the steps to adding an image to a sprite?\r\n",
     "encrypted": "false"
   },
   "published": true,

@@ -4,12 +4,26 @@ import {
   ProductTour,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
 const makeLevelProperties = (
   appName: string,
   overrides: Partial<LevelProperties> = {}
 ): LevelProperties =>
   ({appName, id: 0, name: 'test', ...overrides} as LevelProperties);
+
+// Sketch Lab tours are gated on the EXCALIDRAW experiment. Default to
+// enabled so the non-gating tests can focus on tour-selection logic;
+// individual tests below override this to verify the gating itself.
+beforeEach(() => {
+  jest
+    .spyOn(experiments, 'isEnabledAllowingQueryString')
+    .mockImplementation(key => key === experiments.EXCALIDRAW);
+});
+
+afterEach(() => {
+  jest.restoreAllMocks();
+});
 
 describe('isTourEnabledOnLevel', () => {
   describe('when the tour is not available for the lab', () => {
@@ -114,6 +128,32 @@ describe('isTourEnabledOnLevel', () => {
           })
         )
       ).toBe(true);
+    });
+  });
+
+  describe('when the lab is sketchlab', () => {
+    it('returns true when the EXCALIDRAW experiment is enabled', () => {
+      jest
+        .spyOn(experiments, 'isEnabledAllowingQueryString')
+        .mockImplementation(key => key === experiments.EXCALIDRAW);
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.SketchlabIntro,
+          makeLevelProperties('sketchlab')
+        )
+      ).toBe(true);
+    });
+
+    it('returns false when the EXCALIDRAW experiment is not enabled', () => {
+      jest
+        .spyOn(experiments, 'isEnabledAllowingQueryString')
+        .mockReturnValue(false);
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.SketchlabIntro,
+          makeLevelProperties('sketchlab')
+        )
+      ).toBe(false);
     });
   });
 

@@ -1,0 +1,46 @@
+{
+  "name": "shoe_survey_toy",
+  "card": {
+    "description": "Survey about your preferences to help recommend what kind of shoes you should wear.",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Recommend a pair of shoes based on personal questions.",
+      "potentialMisuses": "Anything other than the intended uses."
+    }
+  },
+  "fields": [
+    {
+      "id": "spend time",
+      "type": "categorical",
+      "description": "Where will you spending most of your time today?"
+    },
+    {
+      "id": "weather",
+      "type": "categorical",
+      "description": "What is the weather like today?"
+    },
+    {
+      "id": "socks",
+      "type": "categorical",
+      "description": "Will you be wearing socks?"
+    },
+    {
+      "id": "day",
+      "type": "categorical",
+      "description": "How would you describe your day today?"
+    },
+    {
+      "id": "notice shoes",
+      "type": "categorical",
+      "description": "Do you care if people notice your shoes?"
+    },
+    {
+      "id": "shoe",
+      "type": "categorical",
+      "description": "What kind of shoes are you planning on wearing today?"
+    }
+  ],
+  "defaultLabelColumn": "shoe"
+}

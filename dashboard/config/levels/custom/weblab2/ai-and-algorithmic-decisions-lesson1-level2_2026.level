@@ -69,7 +69,7 @@
         "4"
       ]
     },
-    "long_instructions": "## Explore the Improved App\r\n\r\nTry to use the app in the same way you did in Level 2.\r\n\r\nRefer to your activity guide to compare this version to Level 2 and record your ideas.",
+    "long_instructions": "## Do This:\r\n\r\nFollow the instructions in the **Document Design Flaws** section of your [Interactivity in Web Apps](https://docs.google.com/document/d/1AtRRufIl4mUbldpHK-seyaVGiGvaUAX3IZwcpw7Ymgo/edit?usp=sharing) activity guide.\r\n",
     "name_suffix": "_2026",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
@@ -78,8 +78,10 @@
       "answerTypeCustomizations": {
         "ask": "Students are using a more functional version of the app and comparing it to Level 2 to determine which interactions better support the user. Ask questions that prompt them to notice what works more smoothly or clearly in this version and how that affects the user experience, without telling them which version is better."
       }
-    }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.373+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2_2025\"},{\"changed_at\":\"2026-03-27 23:25:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-29 22:14:31 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:40:26.373+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2_2025\"},{\"changed_at\":\"2026-03-27 23:25:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-29 22:14:31 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 01:59:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

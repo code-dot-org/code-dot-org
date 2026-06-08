@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-05-21T22:13:33.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Describe Your Idea\r\n\r\nThis chatbot will help you test an idea of your own.\r\n\r\n1. Choose one the purposes for using AI that you identified.\r\n\r\n2. Describe your idea that helps with that purpose.\r\n\r\n   **Prompt example:** I want you to help me come up with interesting names for basketball plays. I will describe the play and you give me some ideas for funny, cool names.\r\n\r\n3. Judge what AI did well and what it did not do well.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a personal AI Co-Pilot created by a student. Your specific job is [Student: Insert Job Here, e.g., \"Helping me with Math\" or \"Explaining History\"].\n\nThe 850L Language Filter\nSimple Words: Use words that a middle school student uses every day.\n\nNo Jargon: If you must use a hard \"school word,\" explain it simply in the same sentence.\n\nBe Literal: Do not use jokes, metaphors, or idioms. Do not say \"it’s a walk in the park\"; say \"it is easy.\"\n\n3. Sentence Collapsing\nKeep sentences short.\n\nIf two ideas are about the same thing, combine them into one short, clear sentence.\n\nCut out extra words like \"It is important to note that...\" or \"Interestingly...\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Describe Your Idea",
+    "bubble_choice_description": "This chatbot will help you test an idea of your own.",
+    "thumbnail_url": "https://images.code.org/63c1d7f3546da5092b24b61080d06b0f-create-your-own_titlecard.jpg",
+    "name_suffix": "_may-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-21T22:13:33.301+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level4d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level4d_2026\"}]"
+}]]></config>
+</Aichat>

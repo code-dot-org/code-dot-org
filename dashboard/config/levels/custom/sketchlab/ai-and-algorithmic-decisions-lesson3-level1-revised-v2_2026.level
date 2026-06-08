@@ -1,7 +1,8 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-08T06:21:19.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -23,7 +24,8 @@
             "data": {
               "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson3-level1-revised-v2_2026/uuid/59e13b80f3694a1432c93a7a5cb37662fbe98678.png",
               "altText": "",
-              "showHandles": false
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 1429,
@@ -38,8 +40,8 @@
             "id": "4zr8acwdX20Pxh-EwqVCb",
             "type": "shape",
             "position": {
-              "x": 3725.7172569606555,
-              "y": 402.19547636007457
+              "x": 3823.9957528478467,
+              "y": 425.0509405198866
             },
             "style": {
               "width": 496.62337416741866,
@@ -48,28 +50,25 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
-              "width": 209,
-              "height": 191
+              "width": 97,
+              "height": 85
             },
             "dragging": false,
-            "width": 209,
-            "height": 191,
-            "resizing": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "width": 97,
+            "height": 85,
+            "resizing": false
           },
           {
             "id": "F0M7bJmFZKBrLLcDPbBN3",
             "type": "shape",
             "position": {
-              "x": 3711.585224234573,
-              "y": 799.5196476019347
+              "x": 3829.157492154667,
+              "y": 794.6712339709123
             },
             "style": {
               "width": 496.62337416741866,
@@ -78,15 +77,16 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
-              "width": 209,
-              "height": 183
+              "width": 80,
+              "height": 64
             },
-            "width": 209,
-            "height": 183,
+            "width": 80,
+            "height": 64,
             "resizing": false,
             "dragging": false
           },
@@ -94,8 +94,8 @@
             "id": "2La-uVSnTFsgDfTIkl1Et",
             "type": "shape",
             "position": {
-              "x": 3711.263698744071,
-              "y": 1175.6986765255342
+              "x": 3841.539844454999,
+              "y": 1168.8420372775906
             },
             "style": {
               "width": 496.62337416741866,
@@ -104,24 +104,25 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
-              "width": 209,
-              "height": 187
+              "width": 80,
+              "height": 67
             },
             "dragging": false,
-            "width": 209,
-            "height": 187,
+            "width": 80,
+            "height": 67,
             "resizing": false
           },
           {
             "id": "NwbKvZ5hsQSX9W_vHmh1Y",
             "type": "shape",
             "position": {
-              "x": 3707.7172569606555,
-              "y": 1565.2125833433088
+              "x": 3835.7078562556026,
+              "y": 1562.9270369273274
             },
             "style": {
               "width": 496.62337416741866,
@@ -130,21 +131,18 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false
             },
             "measured": {
-              "width": 191,
-              "height": 185
+              "width": 80,
+              "height": 72
             },
-            "width": 191,
-            "height": 185,
+            "width": 80,
+            "height": 72,
             "resizing": false,
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "4S7FgUeiboK9ICX3o5FZ1",
@@ -160,8 +158,10 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 1152,
@@ -181,19 +181,15 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 337,
-              "height": 161
+              "width": 336,
+              "height": 160
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "4hA6fdVImHawpGlUqPfx3",
@@ -209,8 +205,10 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 1144,
@@ -235,8 +233,10 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 1138,
@@ -261,8 +261,10 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e",
+              "showHandles": false,
+              "locked": true
             },
             "measured": {
               "width": 1130,
@@ -282,19 +284,15 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 337,
-              "height": 161
+              "width": 336,
+              "height": 160
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "QL-9IpyFkSuFimSjdbCFK",
@@ -305,19 +303,15 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 337,
-              "height": 161
+              "width": 336,
+              "height": 160
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "UgefCEtDcFO25EKvuGLJg",
@@ -328,17 +322,13 @@
             },
             "data": {
               "text": "The value right now is ...\n\nIt might change when the user ...\n\nThe value might change to ....",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 337,
-              "height": 161
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
+              "width": 336,
+              "height": 160
             },
             "dragging": false
           }
@@ -347,9 +337,9 @@
 
         ],
         "viewport": {
-          "x": -1132.4292971294453,
-          "y": -138.110083489099,
-          "zoom": 0.5
+          "x": -1182.5416828331104,
+          "y": -136.04516485879378,
+          "zoom": 0.5643905565810076
         }
       }
     },
@@ -851,9 +841,8 @@
       }
     },
     "name_suffix": "_2026",
-    "long_instructions": "# Exploring Conditionals\r\n\r\n### **Do This:**\r\n\r\n1. Explore the gaming dashboard and find values that can change, like health or username.\r\n2. Place a circle by each variable and match it to one of the colored prompts on the right. Fill in the prompts by describing:\r\n    - What the value is right now\r\n    - What user action could change it\r\n    - What it might change to"
+    "long_instructions": "## Do This:\r\n\r\n1. Find values that can change in this gaming dashboard, like health or username.\r\n\r\n2. Place one of the circles by each variable.\r\n\r\n3. Complete each variable's matching box by answering the following:\r\n\r\n   - The value right now is _ _ _\r\n\r\n   - It might change when the user _ _ _\r\n\r\n   - The value might change to _ _ _"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:23:50 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-08T06:21:19.133+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-08 06:21:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-08 06:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-09 16:48:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-17 01:25:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:26:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:28:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-17 01:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-21 04:44:59 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 07:23:50 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 12:55:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-10 11:34:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:36:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:38:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-10 11:39:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Sketchlab>

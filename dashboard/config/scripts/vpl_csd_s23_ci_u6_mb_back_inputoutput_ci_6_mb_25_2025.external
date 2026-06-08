@@ -5,15 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Input and Output Features on the Back
 
-#### Let's explore the input and output features on the back of the micro:bit! 
+Let's explore the input and output features on the back of the micro:bit! 
 <br>
 
 <div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 15px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> 
 
 ### **Key Vocabulary**
 
-* #### **Input** - the information computers get from users, devices, or other computers.
-* #### **Output** - the information computers give to users, devices, or other computers.
+* **Input** - the information computers get from users, devices, or other computers.
+* **Output** - the information computers give to users, devices, or other computers.
 </p></div>
 
 
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **temperature sensor** checks the temperature and shows it in Fahrenheit or Celsius.
+The **temperature sensor** checks the temperature and shows it in Fahrenheit or Celsius.
 
 </p></div>
 </details>
@@ -37,7 +37,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **USB connector** allows you to plug the micro:bit in. Plugging it in lets you communicate with the board in App Lab, but it also provides electricity to the board so that it can do things like turn on the LED Display.
+The **USB connector** allows you to plug the micro:bit in. Plugging it in lets you communicate with the board in App Lab, but it also provides electricity to the board so that it can do things like turn on the LED Display.
 
 </p></div>
 </details>
@@ -47,7 +47,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **single yellow LED** can't be controlled through code, but lets you know if the board is getting electricity. If this LED is off, don't expect anything on your board to work. The LED flashes when you are downloading a program to the micro:bit.
+The **single yellow LED** can't be controlled through code, but lets you know if the board is getting electricity. If this LED is off, don't expect anything on your board to work. The LED flashes when you are downloading a program to the micro:bit.
 
 </p></div>
 </details>
@@ -57,7 +57,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **reset button** allows you to to restart your micro:bit programs.
+The **reset button** allows you to to restart your micro:bit programs.
 
 </p></div>
 </details>
@@ -67,7 +67,7 @@ markdown <<MARKDOWN
     <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### The **battery socket** allows you to power your micro:bit from the battery pack instead of a computer. App Lab requires the micro:bit to be plugged into the computer the entire time. After completing this unit, if you decide to continue and use a different programming environment (like Microsoft MakeCode or Circuit Python), then the battery pack can be used to take programs on the go.
+The **battery socket** allows you to power your micro:bit from the battery pack instead of a computer. App Lab requires the micro:bit to be plugged into the computer the entire time. After completing this unit, if you decide to continue and use a different programming environment (like Microsoft MakeCode or Circuit Python), then the battery pack can be used to take programs on the go.
 
 </p></div>
 </details>

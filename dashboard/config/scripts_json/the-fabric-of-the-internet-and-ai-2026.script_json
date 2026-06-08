@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 11:09:43 UTC",
+    "serialized_at": "2026-06-03 22:43:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5363,7 +5363,8 @@
       "url": "https://docs.google.com/document/d/150G3lk1TrgG7rocBL2s8ALxht6CECffaTLRKy7f9RHk/edit?usp=drivesdk",
       "key": "_exemplar_gallery_walk_info_tracker",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5455,7 +5456,8 @@
       "url": "https://docs.google.com/document/d/1BCVxoMP30cx5KxF5Nn_Tr_TMs5y4XIkXUbZ-atLh1aA/edit?usp=drivesdk",
       "key": "_key_the_fabric_of_the_internet_and_ai_unit_guide",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5489,7 +5491,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -5873,7 +5876,8 @@
       "url": "https://docs.google.com/document/d/1yn_Z-uroLVk7Lo5-wp9BjonpRRjnnliIUmGpoRv_2Ls/edit?usp=drivesdk",
       "key": "persona_fact_sheet",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6069,7 +6073,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6921,6 +6926,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
@@ -6970,6 +6989,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-37"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to the Internet",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
@@ -6991,6 +7031,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-34"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 2: Sending Bits",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
@@ -7005,6 +7059,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Sending Bits",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-34"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Sending Bits",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: IP Addresses",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-02"
@@ -7015,6 +7083,20 @@
         "lesson.key": "Lesson 3: IP Addresses",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: IP Addresses",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-34"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: IP Addresses",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
       }
     },
     {
@@ -7026,6 +7108,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 4: Routers and Redundancy",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-34"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Routers and Redundancy",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 5: Packets",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-02"
@@ -7036,6 +7132,13 @@
         "lesson.key": "Lesson 5: Packets",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Packets",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
       }
     },
     {
@@ -7057,6 +7160,27 @@
         "lesson.key": "Lesson 6: HTTP and DNS",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-34"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
       }
     },
     {
@@ -7089,6 +7213,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: The Internet's Hidden Barriers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-41"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: The Internet's Hidden Barriers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-36"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: The Internet's Hidden Barriers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-37"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-26"
@@ -7110,6 +7255,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HI-39"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-36"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-37"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 9: Network Security",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-26"
@@ -7120,6 +7286,27 @@
         "lesson.key": "Lesson 9: Network Security",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Network Security",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Network Security",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Network Security",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
       }
     }
   ],

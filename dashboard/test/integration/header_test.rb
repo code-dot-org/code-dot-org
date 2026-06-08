@@ -54,13 +54,13 @@ class HeaderTest < ActionDispatch::IntegrationTest
       it 'renders new project links' do
         must_select '#header_create_menu[role="button"]', /New project/ do
           {
-            'Sprite Lab'        => '//test-studio.code.org/projects/spritelab/new',
-            'Artist'            => '//test-studio.code.org/projects/artist/new',
-            'App Lab'           => '//test-studio.code.org/projects/applab/new',
-            'Game Lab'          => '//test-studio.code.org/projects/gamelab/new',
+            'Sprite Lab'        => 'https://test-studio.code.org/projects/spritelab/new',
+            'Artist'            => 'https://test-studio.code.org/projects/artist/new',
+            'App Lab'           => 'https://test-studio.code.org/projects/applab/new',
+            'Game Lab'          => 'https://test-studio.code.org/projects/gamelab/new',
             'Music Lab'         => '//test.code.org/music',
-            'Dance Party'       => '//test-studio.code.org/projects/dance/new',
-            /View all projects/ => '//test-studio.code.org/projects'
+            'Dance Party'       => 'https://test-studio.code.org/projects/dance/new',
+            /View all projects/ => 'https://test-studio.code.org/projects'
           }.each do |text, href|
             must_select 'a[href=?]', href, text
           end
@@ -69,13 +69,13 @@ class HeaderTest < ActionDispatch::IntegrationTest
 
       it 'renders sign in button' do
         must_select '#signin_button[href=?]',
-                    '//test-studio.code.org/users/sign_in',
+                    'https://test-studio.code.org/users/sign_in',
                     'Sign in'
       end
 
       it 'renders Sign in button' do
         must_select '#create_account_button[href=?]',
-                    '//test-studio.code.org/users/sign_up/account_type',
+                    'https://test-studio.code.org/users/sign_up/account_type',
                     'Create account'
       end
 
@@ -105,7 +105,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
           must_select '#educate_entries-items' do
             {
               'Educator Overview'      => '//test.code.org/teach',
-              'Course Catalog'         => '//test-studio.code.org/catalog',
+              'Course Catalog'         => 'https://test-studio.code.org/catalog',
               'Elementary School'      => '//test.code.org/educate/curriculum/elementary-school',
               'Middle School'          => '//test.code.org/educate/curriculum/middle-school',
               'High School'            => '//test.code.org/educate/curriculum/high-school',
@@ -145,7 +145,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
             {
               'Privacy Policy'   => '//test.code.org/privacy',
               'Cookie Notice'    => '//test.code.org/cookies',
-              'Terms of Service' => '//test.code.org/tos'
+              'Terms of Service' => '//test.code.org/terms-of-service'
             }.each do |text, href|
               must_select 'a[href=?]', href, text
             end
@@ -191,10 +191,10 @@ class HeaderTest < ActionDispatch::IntegrationTest
 
       it 'renders links' do
         {
-          'My Dashboard'          => '//test-studio.code.org/home',
-          'Course Catalog'        => '//test-studio.code.org/catalog',
-          'Projects'              => '//test-studio.code.org/projects',
-          'Professional Learning' => '//test-studio.code.org/my-professional-learning',
+          'My Dashboard'          => 'https://test-studio.code.org/home',
+          'Course Catalog'        => 'https://test-studio.code.org/catalog',
+          'Projects'              => 'https://test-studio.code.org/projects',
+          'Professional Learning' => 'https://test-studio.code.org/my-professional-learning',
           'Incubator'             => '//test.code.org/incubator'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
@@ -216,9 +216,9 @@ class HeaderTest < ActionDispatch::IntegrationTest
       it 'renders account links' do
         must_select '#header_user_menu[role="button"]', Regexp.new(teacher.short_name) do
           {
-            'My projects'      => '//test-studio.code.org/projects',
-            'Account settings' => '//test-studio.code.org/users/edit',
-            'Sign out'         => '//test-studio.code.org/users/sign_out'
+            'My projects'      => 'https://test-studio.code.org/projects',
+            'Account settings' => 'https://test-studio.code.org/users/edit',
+            'Sign out'         => 'https://test-studio.code.org/users/sign_out'
           }.each do |text, href|
             must_select 'a[href=?]', href, text
           end
@@ -267,9 +267,9 @@ class HeaderTest < ActionDispatch::IntegrationTest
 
       it 'renders links' do
         {
-          'My Dashboard'          => '//test-studio.code.org/home',
+          'My Dashboard'          => 'https://test-studio.code.org/home',
           'Course Catalog'        => '//test.code.org/students',
-          'Projects'              => '//test-studio.code.org/projects',
+          'Projects'              => 'https://test-studio.code.org/projects',
           'Incubator'             => '//test.code.org/incubator'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
@@ -291,9 +291,9 @@ class HeaderTest < ActionDispatch::IntegrationTest
       it 'renders account links' do
         must_select '#header_user_menu[role="button"]', Regexp.new(student.short_name) do
           {
-            'My projects'      => '//test-studio.code.org/projects',
-            'Account settings' => '//test-studio.code.org/users/edit',
-            'Sign out'         => '//test-studio.code.org/users/sign_out'
+            'My projects'      => 'https://test-studio.code.org/projects',
+            'Account settings' => 'https://test-studio.code.org/users/edit',
+            'Sign out'         => 'https://test-studio.code.org/users/sign_out'
           }.each do |text, href|
             must_select 'a[href=?]', href, text
           end
@@ -332,10 +332,10 @@ class HeaderTest < ActionDispatch::IntegrationTest
           must_select 'a[href^="https://support.code.org/hc/en-us/requests/new"]', 'Report a problem'
 
           {
-            'Sprite Lab Documentation' => '//test-studio.code.org/docs/spritelab',
+            'Sprite Lab Documentation' => 'https://test-studio.code.org/docs/spritelab',
             'Sprite Lab Tutorials'     => '//test.code.org/educate/spritelab',
             'Help and support'         => 'https://support.code.org',
-            'Report abuse'             => '//test-studio.code.org/report_abuse'
+            'Report abuse'             => 'https://test-studio.code.org/report_abuse'
           }.each do |text, href|
             must_select 'a[href=?]', href, text
           end

@@ -1,0 +1,17 @@
+name 'ai-and-algorithmic-decisions-lesson7-cfu_2026'
+title 'Check for Understanding'
+
+question 'Perceivable'
+answer 'When the volume slider moves, a screen-reader user hears the new volume announced.'
+
+question 'Operable'
+answer 'Every interactive element can be reached and triggered with the keyboard alone.'
+
+question 'Understandable'
+answer 'The button label "Send my message" tells the user exactly what will happen.'
+
+question 'Robust'
+answer 'The app still works when the user has reduced motion turned on or is on an older phone.'
+
+allow_multiple_attempts true
+height '100'

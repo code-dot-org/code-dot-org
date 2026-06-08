@@ -1,5 +1,5 @@
 import {useReactFlow, type XYPosition} from '@xyflow/react';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   SketchlabReactFlowEdge,
@@ -62,6 +62,7 @@ export function useLineEdgeDrag({
     SketchlabReactFlowEdge
   >();
   const draggingLineEdgeRef = useRef<DragState | null>(null);
+  const [isLineDragging, setIsLineDragging] = useState(false);
 
   const handleLineEdgeMouseMove = useCallback(
     (event: MouseEvent) => {
@@ -98,6 +99,9 @@ export function useLineEdgeDrag({
         );
         dragState.pendingDetaches = [];
       }
+      if (!dragState.hasMoved) {
+        setIsLineDragging(true);
+      }
       dragState.hasMoved = true;
 
       const currentPointer = screenToFlowPosition({
@@ -132,6 +136,7 @@ export function useLineEdgeDrag({
     (event?: MouseEvent) => {
       const dragState = draggingLineEdgeRef.current;
       draggingLineEdgeRef.current = null;
+      setIsLineDragging(false);
       window.removeEventListener('mousemove', handleLineEdgeMouseMove);
       window.removeEventListener('mouseup', stopLineEdgeDrag);
 
@@ -241,5 +246,5 @@ export function useLineEdgeDrag({
     };
   }, [handleLineEdgeMouseMove, stopLineEdgeDrag]);
 
-  return {handleEdgeMouseDown};
+  return {handleEdgeMouseDown, isLineDragging};
 }

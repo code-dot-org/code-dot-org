@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Property: Value\n\nThe `.value` property represents the current value inside an input element. Use it when JavaScript needs to read what a user typed, chose, or selected with a control.",
+  "examples": "[{\"name\":\"Read a Slider Value\",\"description\":\"This stores the current value of a slider in a variable.\",\"code\":\"```\\nconst slider = document.getElementById(\\\"temperatureSlider\\\");\\n\\nlet temperature = slider.value;\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "property-value",
+  "name": "Property: Value",
+  "syntax": "`let temperature = slider.value;`",
+  "tips": "- Use `.value` to get the current value from an input, slider, or dropdown.\n- Make sure the input element has been selected before reading its `.value`.\n- A value read from the page may be treated like text, even if it looks like a number.\n- Use `Number()` if you need to do math with a value from an input or slider.\n- In Web Lab, `.value` often appears inside event handlers for sliders, text inputs, and other controls.",
+  "methods": [
+
+  ]
+}

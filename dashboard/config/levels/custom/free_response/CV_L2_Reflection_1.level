@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# What Community?\r\n\r\n#### Describe a community you belong to and a potential problem within that community that you discussed with your group.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# What Community?\r\n\r\nDescribe a community you belong to and a potential problem within that community that you discussed with your group.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

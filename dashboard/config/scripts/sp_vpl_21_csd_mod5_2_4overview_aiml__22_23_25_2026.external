@@ -5,23 +5,23 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 2-4
 
-#### In Lesson 2, students are introduced to AI and machine learning by training AI Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. 
+In Lesson 2, students are introduced to AI and machine learning by training AI Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. 
 
-#### By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
+By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
 <div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
 ### **Key Terms**
 
-* #### **Model** - a computer program designed to make a decision.
-* #### **Features** - the inputs that a model uses to make decisions.
-* #### **Label** - the output you are trying to decide or predict with a model.
-* #### **Training** - giving examples to a model so it can learn.
+* **Model** - a computer program designed to make a decision.
+* **Features** - the inputs that a model uses to make decisions.
+* **Label** - the output you are trying to decide or predict with a model.
+* **Training** - giving examples to a model so it can learn.
 </p></div>
 
 ## Purpose of Unplugged Activities 
 
-#### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
+The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
 
 ## Overview of Lessons 2 - 4
 
@@ -33,16 +33,16 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="150px" style="float:left; margin: 0 20px 0px 20px;">
 
-#### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/2/lessons/3" target="blank" rel="noopener noreferrer">Lesson 2 Link</a>
+<a href="https://studio.code.org/courses/ai-discoveries-2026/units/2/lessons/3" target="blank" rel="noopener noreferrer">Lesson 2 Link</a>
 
-#### **Question of the Day:** What are the different types of machine learning? 
+**Question of the Day:** What are the different types of machine learning? 
 
 ### **Lesson Overview:**
 
-#### In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
 
 ### **Students will be able to:** 
-* #### Describe the differences between supervised and unsupervised learning.
+* Describe the differences between supervised and unsupervised learning.
 </p></div>
 </details>
 
@@ -56,14 +56,14 @@ markdown <<MARKDOWN
 
 ### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/2/lessons/4" target="blank" rel="noopener noreferrer">Lesson 3 Link</a>
 
-#### **Question of the Day:** How is AI helping to solve problems around the world?
+**Question of the Day:** How is AI helping to solve problems around the world?
 
 ### **Lesson Overview:**
 
-#### In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
 
 ### **Students will be able to:**
-* #### Describe how Artificial Intelligence is having an impact on society
+* Describe how Artificial Intelligence is having an impact on society
 </p></div>
 </details>
 
@@ -77,15 +77,15 @@ markdown <<MARKDOWN
 
 ### <a href="https://studio.code.org/courses/ai-discoveries-2026/units/2/lessons/5" target="blank" rel="noopener noreferrer">Lesson 4 Link</a>
 
-#### **Question of the Day:** What strategies do computer models use to make decisions?
+**Question of the Day:** What strategies do computer models use to make decisions?
 
 ### **Lesson Overview:**
 
-#### In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
 
 ### **Students will be able to:**
-* #### Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)
-* #### Look for patterns in data to help make a decision
+* Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)
+* Look for patterns in data to help make a decision
 </p></div>
 </details>
 

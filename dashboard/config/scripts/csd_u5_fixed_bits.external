@@ -3,7 +3,7 @@ title 'Find the Numbers'
 description 'description here'
 markdown <<MARKDOWN
 # Decode the Ages
-#### Three students encoded the ages of two of their cousins in binary below.
+Three students encoded the ages of two of their cousins in binary below.
 ## Student 1
 <table>
 <tr>
@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 </table>
 
 <br />
-#### The third student didn't put spaces between the different cousins' ages.  Can you still figure out the ages of the cousins?
+The third student didn't put spaces between the different cousins' ages.  Can you still figure out the ages of the cousins?
 
 ## Student 3
 

@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 # HTTP Cache configuration.
 
 # Provides application-specific cache configuration used by all our various
@@ -52,7 +54,7 @@ class HttpCache
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
-    'language_',
+    Cdo::I18n::LOCALE_COOKIE_KEY,
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.

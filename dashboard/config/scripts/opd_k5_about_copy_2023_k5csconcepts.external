@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 
 
-#### The Computer Science Teacher Association (CSTA) defines computer science as, “The study of computers and **algorithmic processes**, including their principles, their **hardware and software designs**, their implementation, and their impact on society.”
+The Computer Science Teacher Association (CSTA) defines computer science as, “The study of computers and **algorithmic processes**, including their principles, their **hardware and software designs**, their implementation, and their impact on society.”
 
 ##Computer Science includes:
 
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 
 ##Computer Science is more than coding
-#### Computer science is like the big umbrella that covers all the theories, experiments, and the nuts and bolts of how computers work. Think of **coding** as a special tool in this big kit—it's all about getting hands-on and **writing programs to fix specific problems**. Think of it this way: while **every coder dips into the pool of computer science, not everyone studying computer science decides to pick up coding** as their thing.
+Computer science is like the big umbrella that covers all the theories, experiments, and the nuts and bolts of how computers work. Think of **coding** as a special tool in this big kit—it's all about getting hands-on and **writing programs to fix specific problems**. Think of it this way: while **every coder dips into the pool of computer science, not everyone studying computer science decides to pick up coding** as their thing.
 
 
 ## In this module, we are going to breakdown foundational concepts in coding and practice building these skills with **block code** in Maze lab. 

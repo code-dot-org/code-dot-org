@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-05-07T15:27:11.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
@@ -47,7 +46,7 @@
             },
             "data": {
               "text": "Add wireframe components or pre-built sections\nto create your pages below",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -71,8 +70,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -88,7 +88,7 @@
             },
             "data": {
               "text": "Page 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -106,7 +106,7 @@
             },
             "data": {
               "text": "Page 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -124,7 +124,7 @@
             },
             "data": {
               "text": "Images, Videos, & Icons",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -143,7 +143,7 @@
             },
             "data": {
               "text": "Wireframe Components",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -162,7 +162,7 @@
             },
             "data": {
               "text": "Gallery Card",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -181,7 +181,7 @@
             },
             "data": {
               "text": "Buttons & Inputs",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -203,7 +203,7 @@
             },
             "data": {
               "text": "Hero Section",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -228,7 +228,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -314,7 +314,7 @@
             },
             "data": {
               "text": "(Title)",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -333,7 +333,7 @@
             },
             "data": {
               "text": "(Body Text)",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -352,7 +352,7 @@
             },
             "data": {
               "text": "Text Blocks",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -371,7 +371,7 @@
             },
             "data": {
               "text": "Navigation / Header",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -395,8 +395,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -462,7 +462,7 @@
               "shapeType": "rectangle",
               "label": "Logo",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 165,
@@ -479,7 +479,7 @@
             },
             "data": {
               "text": "Header",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -498,7 +498,7 @@
             },
             "data": {
               "text": "Navigation",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -517,7 +517,7 @@
             },
             "data": {
               "text": "Link",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -542,7 +542,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 102,
@@ -559,7 +559,7 @@
             },
             "data": {
               "text": "Pre-Built Wireframe Sections",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -578,7 +578,7 @@
             },
             "data": {
               "text": "Navigation Bar",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -592,8 +592,8 @@
             "id": "8wL8poS6eu7jWRG8Ogk_G",
             "type": "shape",
             "position": {
-              "x": 109.12522922771834,
-              "y": 1184.7202617620967
+              "x": 60.50068281474432,
+              "y": 1183.0435532650977
             },
             "style": {
               "width": 627.0448853689527,
@@ -602,8 +602,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -615,7 +615,7 @@
             "id": "w2Y8wG77b6jvGTfmveaDD",
             "type": "shape",
             "position": {
-              "x": 789.4981840805675,
+              "x": 779.4379330985728,
               "y": 1179.7481520502772
             },
             "style": {
@@ -625,8 +625,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -644,7 +644,7 @@
             },
             "data": {
               "text": "Footer",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -663,7 +663,7 @@
             },
             "data": {
               "text": "Page 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -681,7 +681,7 @@
             },
             "data": {
               "text": "Page 4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1669,8 +1669,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -741.3944918913262,
-              "y": 1908.7387386277355
+              "x": -737.70679752636,
+              "y": 1906.0965580854108
             },
             "width": 665,
             "height": 381,
@@ -1690,8 +1690,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -767.7082435602179,
-              "y": 1524.6486184675214
+              "x": -773.5537323988075,
+              "y": 1522.8804652857364
             },
             "width": 715,
             "height": 168,
@@ -1818,8 +1818,8 @@
           }
         ],
         "viewport": {
-          "x": 640.9327825925013,
-          "y": 40.62134230150093,
+          "x": 597.0176195748577,
+          "y": 52.84826499427527,
           "zoom": 0.5964065917180912
         }
       }
@@ -9757,6 +9757,7 @@
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-07T15:27:11.878+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-07 15:27:47 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-07T15:27:11.878+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2026\"},{\"changed_at\":\"2026-05-07 15:27:47 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:14:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

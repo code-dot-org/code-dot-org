@@ -772,6 +772,33 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 'high', section.summarize[:demo_type]
   end
 
+  test 'demo section code is cleared to nil on save' do
+    section = create(:section, demo_type: 'high')
+    assert_nil section.code
+
+    section.code = 'ABC123'
+    assert section.save
+    assert_nil section.reload.code
+  end
+
+  test 'non-demo section code can be changed' do
+    section = create(:section)
+    refute_nil section.code
+
+    section.code = 'ZZZ999'
+    assert section.save
+    assert_equal 'ZZZ999', section.reload.code
+  end
+
+  test 'demo section saves other field changes' do
+    section = create(:section, demo_type: 'high')
+
+    section.name = 'renamed demo section'
+    assert section.save
+    assert_equal 'renamed demo section', section.reload.name
+    assert_nil section.code
+  end
+
   test 'selected_section_summarize: section with no script' do
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     CourseOffering.add_course_offering(unit_group)
@@ -927,14 +954,14 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        linkToProgress: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         courseVersionName: 'somecourse',
         numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        linkToStudents: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -989,14 +1016,14 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        linkToProgress: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'Jigsaw',
         linkToAssigned: '/courses/jigsaw',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/courses/jigsaw/units/1',
         courseVersionName: 'jigsaw',
         numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        linkToStudents: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -1056,14 +1083,14 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        linkToProgress: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: '',
-        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
+        linkToAssigned: 'https://test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         courseVersionName: nil,
         numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        linkToStudents: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -1125,14 +1152,14 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        linkToProgress: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/courses/somecourse/units/1',
         courseVersionName: 'somecourse',
         numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        linkToStudents: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -1184,14 +1211,14 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        linkToProgress: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: '',
-        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
+        linkToAssigned: 'https://test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         courseVersionName: nil,
         numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        linkToStudents: "https://test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -1712,5 +1739,76 @@ class SectionTest < ActiveSupport::TestCase
     MailJet.expects(:create_contact_and_add_to_course_list).with(@teacher, 'hoai-web-design-pilot-v2').once
 
     create(:section, teacher: @teacher, course_id: unit_group.id)
+  end
+
+  # suggested_lesson
+
+  test 'suggested_lesson_stale? returns true when suggested_lesson is nil' do
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true when timestamp is missing' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601})
+    refute @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true for a stale timestamp' do
+    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601})
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'compute_suggested_lesson does nothing when section has no students' do
+    unit = create(:script, :in_single_unit_course)
+    section = create(:section, teacher: @teacher, script: unit)
+    section.compute_suggested_lesson
+    assert_nil section.reload.suggested_lesson
+  end
+
+  test 'compute_suggested_lesson suggests first lesson when no students have passed any level' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson suggests next lesson after majority completes one' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson sets completed_unit when all lessons are completed' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    data = section.reload.suggested_lesson
+    assert data['completed_unit']
+    assert_nil data['lesson_id']
+  end
+
+  test 'compute_suggested_lesson writes a timestamp' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert section.reload.suggested_lesson['timestamp'].present?
+  end
+
+  private def build_suggested_lesson_section
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    sl2 = create(:script_level, lesson: lesson2, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    [unit, lesson1, lesson2, sl1, sl2, section, student]
   end
 end

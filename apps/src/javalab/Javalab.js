@@ -440,7 +440,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
   ) {
     const overrideSources = getSources(getStore().getState());
     connectToJavabuilder = () =>
-      this.javabuilderConnection.connectJavabuilderWithOverrideSources(
+      this.javabuilderConnection.connectJavabuilderWithOverrides(
         overrideSources
       );
   } else if (this.isStartMode && executionType === ExecutionType.TEST) {

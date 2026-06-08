@@ -61,9 +61,9 @@ I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
-Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
-Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
-Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
+Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
+Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
+Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
 
 require 'rails/test_help'
 
@@ -97,6 +97,9 @@ class ActiveSupport::TestCase
 
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
+
+    url_protocol = Dashboard::Application.routes.default_url_options[:protocol]
+    CDO.stubs(default_scheme: "#{url_protocol}:") if url_protocol.present?
 
     set_env :test
 
@@ -284,15 +287,15 @@ class ActiveSupport::TestCase
   end
 
   def set_request_locale(locale)
-    request.env['cdo.locale'] = locale
+    I18n.locale = locale
   end
 
   def with_default_locale(locale)
     original_locale = I18n.default_locale
-    request.env['cdo.locale'] = I18n.default_locale = locale
+    I18n.locale = I18n.default_locale = locale
     yield
   ensure
-    request.env['cdo.locale'] = I18n.default_locale = original_locale
+    I18n.locale = I18n.default_locale = original_locale
   end
 
   # Based on assert_difference http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html#method-i-assert_difference
@@ -427,7 +430,7 @@ class ActionController::TestCase
   setup do
     ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
-    request.env['cdo.locale'] = 'en-US'
+    I18n.locale = 'en-US'
   end
 
   # As `current_user` is not accessible from controller tests (only from within the controller),
@@ -635,8 +638,9 @@ class ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    https!
-    host! CDO.canonical_hostname('studio.code.org')
+    app_url_options = Dashboard::Application.routes.default_url_options
+    host! app_url_options[:host]
+    https! if app_url_options[:protocol].to_s.include?('https')
   end
 
   def signed_in_user_id

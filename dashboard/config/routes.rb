@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app(/*path)", to: "app#index"
+  get "frontend-studio(/*path)", to: "frontend_studio#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -218,6 +218,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          get 'suggested_lesson'
         end
         collection do
           get 'membership'
@@ -414,6 +415,7 @@ Dashboard::Application.routes.draw do
     resources :levels do
       collection do
         get 'get_filtered_levels'
+        get 'by_name'
       end
       member do
         get 'get_rubric'
@@ -473,6 +475,8 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        get 'generate', to: 'scripts#generate'
+        put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do
@@ -480,6 +484,10 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'slides/generate', to: 'lessons/slides#generate'
+        get 'slides', to: 'lessons/slides#show'
+        get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -579,6 +587,11 @@ Dashboard::Application.routes.draw do
       member do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
+        get :generate
+        get 'slides/generate', to: 'lessons/slides#generate', as: 'generate_slides'
+        get 'slides', to: 'lessons/slides#show', as: 'slides'
+        get 'slides/edit', to: 'lessons/slides#edit', as: 'slides_edit'
+        put 'slides_data', to: 'lessons/slides#update'
         post :clone
       end
     end
@@ -1202,6 +1215,15 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Student Podcast routes
+    resources :ai_student_podcasts, only: [] do
+      collection do
+        get :show # GET /ai_student_podcasts?lesson_id=1&objective_ids[]=2
+        post :generate_podcast
+        get :retrieve_podcast_from_s3
+      end
+    end
+
     # AI Lesson Summary Podcasts routes
     resources :ai_lesson_summary_podcasts, only: [:show] do
       collection do
@@ -1243,6 +1265,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census

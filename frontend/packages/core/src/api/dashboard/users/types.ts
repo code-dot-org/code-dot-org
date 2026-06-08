@@ -1,1 +1,1 @@
-export * from './userPreference/types';
+export * from './currentUserTypes';

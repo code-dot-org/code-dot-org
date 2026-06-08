@@ -547,14 +547,14 @@ img.video_thumbnail {
   a:link, a:visited, a:hover, a:active {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
       @include main-font-bold;
-      color: $brand_secondary_default;
+      color: var(--text-brand-purple-primary);
       background-color: transparent;
       text-decoration: underline;
     }
   }
   a:hover {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
       text-decoration: underline;
     }
   }
@@ -1054,7 +1054,7 @@ $default-modal-width: 640px;
     top: 50px; // top of the dialog
 
     width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5);
+    margin-left: -($default-modal-width * 0.5 + 1);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -1070,7 +1070,7 @@ $default-modal-width: 640px;
 
 .dash_modal {
   width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5);
+  margin-left: -($default-modal-width * 0.5 + 1);
 }
 
 .dash_modal_body {
@@ -1179,6 +1179,39 @@ $default-modal-width: 640px;
 
   a:hover {
     background-color: transparent;
+  }
+}
+
+// CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
+// don't apply. Center it vertically inside the 50px header instead.
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  .header-wrapper .header .header_logo,
+  .header_logo {
+    width: auto;
+    max-width: none;
+    height: 50px;
+    margin-top: 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 22px;
+      width: auto;
+      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+      // reserves ~130px wide before fetch, preventing horizontal CLS.
+      aspect-ratio: 591.15 / 100;
+      display: block;
+    }
+  }
+
+  // Wider logo recovers space in the nav gap instead of bumping the collapse
+  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+  // doesn't force links into the hamburger any earlier than the code brand.
+  .header-wrapper .header .headerlinks {
+    @media (min-width: 1024px) and (max-width: 1268px) {
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -2715,8 +2748,32 @@ a.download-video {
   }
 }
 
+.free-response {
+  li {
+    font-size: 16px;
+  }
+}
+
+#level_markdown_textarea_preview.external.content-level,
+#level_long_instructions_preview.external.content-level,
 .external .content-level {
   overflow: hidden;
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
+  }
 }
 
 .external-video-container {
@@ -2884,6 +2941,22 @@ a.download-video {
 
   &-full-width {
     width: unset;
+  }
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
   }
 }
 
@@ -3592,8 +3665,6 @@ $width: 400px;
   display: inline-block;
   top: 10px;
   left: 10px;
-  text-align: center;
-  font-size: 1.275em;
   position: fixed;
   z-index: 1000;
 
@@ -3604,12 +3675,18 @@ $width: 400px;
     }
   }
 
-  #logo-container {
-    padding: 4px;
-    background-color: $light_gray;
-    width: 60px;
-    border-radius: 0;
-    margin-bottom: 4px;
+  #logo-img {
+    height: 22px;
+    width: auto;
+    display: block;
+  }
+}
+
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  #main-logo #logo-img {
+    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+    // reserves ~130px wide before fetch, preventing horizontal CLS.
+    aspect-ratio: 591.15 / 100;
   }
 }
 

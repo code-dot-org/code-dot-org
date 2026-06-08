@@ -1,16 +1,16 @@
 name 'ai-and-algorithmic-decisions-postassessment-q15_2026'
 
-question 'A student is testing their interactive story app. When they press a button, nothing happens. They ask an AI assistant for help, and it suggests changing one line of code. What\'s the most responsible next step before accepting the AI\'s fix?'
+question 'A student asks AI: "Make my page accessible." AI confidently returns code that adds an `alt` attribute to every image on the page, with the value "image" each time. The code runs with no errors. The page is no easier for a screen-reader user to understand. Which AI failure mode best describes what happened?'
 
-right 'Test the change and check if it actually fixes the issue without breaking other parts of the app.'
-wrong 'Replace the entire code with the AI\'s version to be safe.'
-wrong 'Copy and paste the AI\'s answer immediately so they can move on faster.'
-wrong 'Delete the button from the app since it\'s not working correctly anyway.'
+right 'Over-literal interpretation — AI did exactly what the student asked (add alt attributes) instead of what they meant (write alt text that actually describes each image).'
+wrong 'Hallucination — AI invented an HTML attribute that does not exist.'
+wrong 'Context blindness — AI refused to generate the code because it could not see the page.'
+wrong 'A syntax error in the AI''s code that prevented it from running.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lessons 2-6
+Lesson 2
 MARKDOWN
 
 markdown <<MARKDOWN

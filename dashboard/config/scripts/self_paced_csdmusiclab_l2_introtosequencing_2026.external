@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Sequencing in Music Lab
 
-#### The next section of the professional learning module will give you hands-on practice with sequencing in Music Lab. We'll introduce each computer science concept (sequencing, loops, and functions), and walk you through a selection of student coding challenges.
+The next section of the professional learning module will give you hands-on practice with sequencing in Music Lab. We'll introduce each computer science concept (sequencing, loops, and functions), and walk you through a selection of student coding challenges.
 
 <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
     <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What is Sequencing?</p>
@@ -21,17 +21,17 @@ markdown <<MARKDOWN
      alt="" 
      style="width: 25%; border-radius: 5px; margin: 0px 0px 20px 20px; float: right;">
 
-#### While we'll help you learn the coding concepts, **you'll still need to read the lesson plans and walk through all of the coding challenges before teaching**. We've included somewhere between 2 to 6 coding challenges from each lesson (Explore-Practice-Synthesize), but not all of them! However, we think this is a great primer.
+While we'll help you learn the coding concepts, **you'll still need to read the lesson plans and walk through all of the coding challenges before teaching**. We've included somewhere between 2 to 6 coding challenges from each lesson (Explore-Practice-Synthesize), but not all of them! However, we think this is a great primer.
 
-#### We've covered the sequencing chunk of lesson plans in a previous level of this module. We will also review the mini-project at the end of this section.
+We've covered the sequencing chunk of lesson plans in a previous level of this module. We will also review the mini-project at the end of this section.
 
 ## Up Next
 
-#### Ready? Let's dive in to sequencing. You'll learn the following:
+Ready? Let's dive in to sequencing. You'll learn the following:
 
-* #### **From Lesson 2:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play together</code> block to play music at the same time
-* #### **From Lesson 3:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play sequential</code> block to play music sequentially and how to use the <code style="background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">rest</code> block to offset tracks
-* #### **From Lesson 4:** How to use effects to change up the sound of your music
+* **From Lesson 2:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play together</code> block to play music at the same time
+* **From Lesson 3:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play sequential</code> block to play music sequentially and how to use the <code style="background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">rest</code> block to offset tracks
+* **From Lesson 4:** How to use effects to change up the sound of your music
 
 ### The next level you'll see will be in Music Lab. Make sure you read all the text in the instructions panel!
 MARKDOWN

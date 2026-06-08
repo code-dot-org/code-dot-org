@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-preassessment-q12_2026'
 
-question 'A fitness tracker gives you a "Workout Complete!" badge only if you finish 10,000 steps and log a stretching session. What kind of logic is the app using to decide when to award the badge?'
+question 'A fitness tracker awards a "Daily Goal" badge if the user takes 10,000 steps AND stretches for at least 5 minutes. Which logical operator does the code need?'
 
-right 'It uses an AND operator to check that both conditions are true.'
-wrong 'It uses an OR operator so only one condition has to be true.'
-wrong 't shows the badge randomly to keep users surprised.'
-wrong 'It skips checking conditions and just adds badges every day.'
+wrong 'OR — either condition is enough on its own.'
+right 'AND — both conditions must be true at the same time.'
+wrong 'NOT — only one condition must be false.'
+wrong 'No operator — either step count or stretching alone awards the badge.'
 
 allow_multiple_attempts true
 

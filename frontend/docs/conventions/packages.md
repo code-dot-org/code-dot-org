@@ -59,7 +59,7 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Choose the preset that matches the package type:
   - React apps and component libraries → `@code-dot-org/lint-config/eslint/react.mjs`
   - Node.js tooling or config-only packages → `@code-dot-org/lint-config/eslint/node.mjs`
-  - Jest test files → add `@code-dot-org/lint-config/eslint/jest.mjs` as an overlay
+  - Vitest test files → add `@code-dot-org/lint-config/eslint/vitest.mjs` as an overlay
 
 ```js
 // eslint.config.mjs — React package
@@ -83,6 +83,7 @@ export default cdoStylelint;
 
 - Use Vitest (not Jest — Jest is for the legacy `apps/` bundle)
 - Test files: `src/**/__tests__/*.test.ts` or `*.test.tsx`
+- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`)
 
 ## Lint-staged
 
@@ -106,10 +107,51 @@ Run from `frontend/`:
 yarn turbo gen lab
 ```
 
-The generator creates all scaffold files and automatically registers the lab in
-Studio (updates `labs.ts`, `getLabEntrypoint.ts`, and `apps/studio/package.json`).
+The generator creates all scaffold files and automatically registers the lab
+in Studio:
+
+- `apps/studio/src/modules/labs/config/labs.ts` — adds the lab key
+- `apps/studio/src/modules/labs/router/getLabEntrypoint.ts` — adds the lazy
+  component import
+- `apps/studio/src/modules/labs/router/getLabFixtures.ts` — adds the MSW
+  fixtures loader
+- `apps/studio/package.json` — adds the workspace dependency
 
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
+
+### Mock fixtures (MSW mode)
+
+The generator scaffolds a seed `src/fixtures/{simple.ts,index.ts}` and wires
+the lab into Studio's MSW loader. When Studio runs with `VITE_API_MODE=msw`
+(no Rails), `:channelId` doubles as the _fixture tag_ —
+`/app/projects/<lab>/simple/edit` activates the `simple` scenario,
+`/app/projects/<lab>/complex/edit` would activate `complex`, and so on.
+
+The seed barrel looks like:
+
+```ts
+// src/fixtures/index.ts
+import type {LabFixtures} from '@code-dot-org/core/api/mocks';
+import simple from './simple';
+
+export const MyLabFixtures: LabFixtures = {simple};
+```
+
+Each fixture is a `LabFixture` (channel, sources, levelProperties, theme —
+all optional). Add per-tag files (`complex.ts`, `error.ts`, …) and reference
+them from the barrel as the lab grows.
+
+The lab's `package.json` `./mocks` subpath and `vite.config.ts`
+`lib.entry: {index, 'fixtures/index'}` are part of the scaffold so the
+fixtures emit as `dist/fixtures/index.*` at build time.
+
+If a lab has no MSW story, delete `src/fixtures/` and remove the lab's
+entry from `getLabFixtures.ts`. MSW mode still works against the lab; the
+handlers fall back to a generic default channel, empty sources, an empty
+levelProperties map, and so on.
+
+See `packages/core/src/api/mocks/README.md` for the handler/registry model
+and the `scenarioStore` write-through behavior.
 
 ### Standalone dev server
 

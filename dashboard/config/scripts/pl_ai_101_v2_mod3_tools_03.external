@@ -5,17 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Below are a few examples of AI tools developed specificaly for educational use to support teachers and administrators.
+Below are a few examples of AI tools developed specificaly for educational use to support teachers and administrators.
 
-#### Each tool below includes a brief description. Take some time to learn more about these tools to explore the types of support AI tools can provide.
+Each tool below includes a brief description. Take some time to learn more about these tools to explore the types of support AI tools can provide.
 
 ## Educator's Choice
 
-#### Choose one or more of these tools to try out. Try using the tool for a real task—such as drafting a lesson plan, creating an assessment, or writing a parent email.
+Choose one or more of these tools to try out. Try using the tool for a real task—such as drafting a lesson plan, creating an assessment, or writing a parent email.
 
-#### 👉 Click on the logo to go directly to the tool's webpage. Spend as much time exploring as you find helpful.
+👉 Click on the logo to go directly to the tool's webpage. Spend as much time exploring as you find helpful.
 
-#### **Note**: These tools vary in cost and access. If one doesn’t meet your needs, try another.
+**Note**: These tools vary in cost and access. If one doesn’t meet your needs, try another.
 
 
 <div style="display: grid; gap:16px; max-width:900px; margin:auto;">
@@ -143,6 +143,6 @@ style="max-width:180px; max-height:80px; object-fit:contain;">
 
 <br>
 
->#### **💬 Quick Reflection:** What's one way you can integrate one tool you tried today into your regular teaching practice?
+>**💬 Quick Reflection:** What's one way you can integrate one tool you tried today into your regular teaching practice?
 
 MARKDOWN

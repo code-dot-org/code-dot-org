@@ -412,6 +412,8 @@ en:
               name: Sketch Lab
             lesson-58:
               name: Unplugged level
+            lesson-59:
+              name: Java Lab2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1944,6 +1946,13 @@ en:
           student_description: This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
         allthettsthings:
           lesson_groups: {}
+          lessons: {}
+          name: allthettsthings
+          title: All The TTS Things
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         express-2017:
           title: Express Course
           assignment_family_title: Express Course
@@ -24226,8 +24235,8 @@ en:
           title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
-          description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
-          student_description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          description: "##### This professional learning module is designed to help you prepare to teach CodeAI's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          student_description: "##### This professional learning module is designed to help you prepare to teach CodeAI's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
         self-paced-pl-teaching-csd-unit0-2025:
           lessons: {}
           lesson_groups:
@@ -24267,7 +24276,7 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
 
             **In this professional learning module, you will:**
 
@@ -24278,7 +24287,7 @@ en:
 
             **Suggested time**: 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
 
             **In this professional learning module, you will:**
 
@@ -24306,8 +24315,8 @@ en:
           title: Preparing to Teach Interactive Animations and Games
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
         self-paced-pl-teaching-csd-unit4-0-2025:
           lessons: {}
           lesson_groups:
@@ -25048,7 +25057,7 @@ en:
           description_short: ''
           description: |-
             #### **In this unit, you will:**
-            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Learn Java programming basics in CodeAI's Java Lab.
             - #### Understand Variables in Java.
             - #### Practice making conditional statements in Java.
             - #### Read, write, and debug for loops in Java.
@@ -25056,7 +25065,7 @@ en:
             #### **Estimated time:** 2.5 hours
           student_description: |-
             ####**In this unit, you will:**
-            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Learn Java programming basics in CodeAI's Java Lab.
             - #### Understand Variables in Java.
             - #### Practice making conditional statements in Java.
             - #### Read, write, and debug for loops in Java.
@@ -27426,6 +27435,8 @@ en:
           student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
+          lessons: {}
+          name: csd5-2026
         csd6a-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27487,7 +27498,7 @@ en:
             You can view the [Implementation Guide](https://docs.google.com/document/d/1Tcgo0xYq4kCWXm5gOjARltvSR3xBH7nWVGMHamnvWC8/edit?usp=sharing)for more information about this unit.
             :::
             ::: details [**Professional Development**]
-            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
+            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/teaching-programming-with-music-lab-2026/). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
             :::
 
             ## Finished Teaching This Unit?
@@ -27495,6 +27506,8 @@ en:
           student_description: Learn how to program by creating music!
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
           description_audience: ''
+          lessons: {}
+          name: programming-with-music-lab-2026
         hoai-web-design-pilot-v1:
           lessons: {}
           lesson_groups: {}
@@ -27528,7 +27541,7 @@ en:
             lessonGroup-4:
               display_name: End of Unit Survey
           title: Web Development
-          description: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a web page to meet a user's needs.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n* How do web developers create web pages for users?\n* How can text communicate a web page's content, structure, and style?\n* How do I safely and appropriately create content for the Internet?\n* What strategies can I use when coding to find and fix issues?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a website that solves a problem.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n* How can websites be used to address problems in the world?\n* What strategies can teams use to work better together?\n* How do I know what information can be trusted online?\n:::\n\n\n::: details [**Implementation Guidance for Web Development**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Web Development Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit2-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went."
+          description: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a web page to meet a user's needs.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n* How do web developers create web pages for users?\n* How can text communicate a web page's content, structure, and style?\n* How do I safely and appropriately create content for the Internet?\n* What strategies can I use when coding to find and fix issues?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n* Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n* Create a website that solves a problem.\n* Use different programming languages to solve different problems.\n* Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n* How can websites be used to address problems in the world?\n* What strategies can teams use to work better together?\n* How do I know what information can be trusted online?\n:::\n\n\n::: details [**Implementation Guidance for Web Development**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Web Development Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-web-dev-2026/units/1). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went."
           student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
@@ -27554,6 +27567,10 @@ en:
             - Describe how data and human decisions influence AI behavior.
             - Make responsible choices about when and how to use AI.
             - Articulate personal and shared norms for ethical and productive AI use.
+
+            ::: details [**Professional Development**]
+            If you are interested in teaching this course, we recommend completing the free [Thinking Critically About AI Professional Development Module](https://studio.code.org/courses/teaching-thinking-critically-about-ai-2026/units/1). The module is designed to take about 70 minutes to complete. No previous experience with coding or AI is assumed.
+            :::
           student_description: |-
             In this unit, you develop the conceptual foundation and habits of mind you'll need to engage with AI thoughtfully. You examine how AI systems work at a high level, why they can fail, and how human choices shape both their risks and benefits. You investigate real examples of bias, misinformation, and misuse alongside AI's genuine potential to support learning and creativity. Rather than treating AI as magic or as a threat, you develop a balanced, questioning stance: learning to evaluate AI outputs critically, make intentional decisions about when and how to use AI, and articulate shared norms for responsible use. By the end of the unit, you have a durable lens for thinking about AI.
 
@@ -27580,10 +27597,12 @@ en:
             lessonGroup-5:
               display_name: End of Unit Survey
           title: 'AI and Machine Learning '
-          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-aiml-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-ai-ml-2026/units/1). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description_audience: ''
+          lessons: {}
+          name: ai-and-machine-learning-2026
         interactive-animations-and-games-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27593,10 +27612,12 @@ en:
             lessonGroup-4:
               display_name: End of Unit Survey
           title: 'Interactive Animations and Games '
-          description: "In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students build up toward programming interactive animations in the Game Lab environment.  They begin with simple shapes and sprite objects, then use loops to create flipbook style animations.  Next, they learn to use booleans and conditionals to respond to user input.  At the end of the chapter, students design and create an interactive animation that they can share with the world.\n\n**Goals:**\n* Create an interactive animation that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* View yourself as a computer programmer, and see programming as a fun and creative form of expression.\n\n\n**Big Questions:**\n* What is a computer program?\n* What are the core features of most programming languages?\n* How does programming enable creativity and individual expression?\n* What practices and strategies will help me as I write programs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter students combine the constructs that they learned in the first chapter to program more complex movement and collisions in their sprites.  As they create more complex programs, they begin to use functions to organize their code.  In the end, students use a design process to create an original game.\n\n**Goals:**\n* Create an interactive game that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* Work with others to break down programming projects using sprites and functions.\n\n**Big Questions:**\n* How do software developers manage complexity and scale?\n* How can programs be organized so that common problems only need to be solved once?\n* How can I build on previous solutions to create even more complex behavior?\n:::\n\n::: details [**Implementation Guidance for Interactive Animations and Games**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Interactive Animations and Games Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit3-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went."
+          description: "In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students build up toward programming interactive animations in the Game Lab environment.  They begin with simple shapes and sprite objects, then use loops to create flipbook style animations.  Next, they learn to use booleans and conditionals to respond to user input.  At the end of the chapter, students design and create an interactive animation that they can share with the world.\n\n**Goals:**\n* Create an interactive animation that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* View yourself as a computer programmer, and see programming as a fun and creative form of expression.\n\n\n**Big Questions:**\n* What is a computer program?\n* What are the core features of most programming languages?\n* How does programming enable creativity and individual expression?\n* What practices and strategies will help me as I write programs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter students combine the constructs that they learned in the first chapter to program more complex movement and collisions in their sprites.  As they create more complex programs, they begin to use functions to organize their code.  In the end, students use a design process to create an original game.\n\n**Goals:**\n* Create an interactive game that includes basic programming concepts such as control structures, variables, user input, and randomness. \n* Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n* Work with others to break down programming projects using sprites and functions.\n\n**Big Questions:**\n* How do software developers manage complexity and scale?\n* How can programs be organized so that common problems only need to be solved once?\n* How can I build on previous solutions to create even more complex behavior?\n:::\n\n::: details [**Implementation Guidance for Interactive Animations and Games**]\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Interactive Animations and Games Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-interactive-animations-and-games-2026/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went."
           student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: Learn to program animations, interactive art, and games in Game Lab.
           description_audience: ''
+          lessons: {}
+          name: interactive-animations-and-games-2026
         the-design-process-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27606,10 +27627,12 @@ en:
             lessonGroup-4:
               display_name: End of Unit Survey
           title: 'The Design Process '
-          description: "The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps.\n\n**Goals:** \n* See the design process as a form of problem solving that prioritizes the needs of a user. \n* Identify user needs and assess how well different designs address them. \n* Develop paper prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n\n**Big Questions:**\n* How do designers identify the needs of their user?\n* How can we ensure that a user's needs are met by our designs?\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype. Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue. This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing.\n\n\n**Goals:**\n* Develop digital prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n* Understand other roles in software development, such as product management, marketing, design, and testing, and how to use what they have learned about computer science as a tool for social impact.\n\n**Big Questions:**\n* How do teams effectively work together to develop software?\n* What roles beyond programming are necessary to design and develop software?\n* How do designers incorporate feedback into multiple iterations of a product?\n:::\n\n::: details [**Implementation Guidance for The Design Process**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Design Process Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-csd-unit4-2025/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
+          description: "The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter introduces the design process as a specific version of the problem solving process in which empathy for a user's needs is consistently integrated. Students learn strategies for identifying user needs and assessing how well different designs address them. In particular they learn how to develop a paper prototype, how to gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps.\n\n**Goals:** \n* See the design process as a form of problem solving that prioritizes the needs of a user. \n* Identify user needs and assess how well different designs address them. \n* Develop paper prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n\n**Big Questions:**\n* How do designers identify the needs of their user?\n* How can we ensure that a user's needs are met by our designs?\n* What processes will best allow us to efficiently create, test, and iterate upon our designs?\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter is focused on a long running group project that allows students to apply all they've learned about User-Centered Design to develop an app prototype. Working in teams, students identify a social issue that they care about and design and prototype an app to address that issue. This is an opportunity for students to explore other roles in software development, such as product management, marketing, design, and testing.\n\n\n**Goals:**\n* Develop digital prototypes, gather and respond to feedback about a prototype, and consider ways different user interfaces do or do not affect the usability of their apps. \n* Understand other roles in software development, such as product management, marketing, design, and testing, and how to use what they have learned about computer science as a tool for social impact.\n\n**Big Questions:**\n* How do teams effectively work together to develop software?\n* What roles beyond programming are necessary to design and develop software?\n* How do designers incorporate feedback into multiple iterations of a product?\n:::\n\n::: details [**Implementation Guidance for The Design Process**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Design Process Self-Paced Professional Learning Module](https://studio.code.org/courses/teaching-design-process-2026/). The module is designed to take 2 hours to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) to let the Code.org curriculum team know how the unit went."
           student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: Learn how to design a program that meets the needs of your users.
           description_audience: ''
+          lessons: {}
+          name: the-design-process-2026
         data-and-society-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27619,10 +27642,12 @@ en:
             lessonGroup-4:
               display_name: End of Unit Survey
           title: 'Data and Society '
-          description: "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.\n\n\n**Goals:**\n* Understand the role of data and data representation in solving information problems. \n* Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code. \n\n\n**Big Questions:**\n* Why is representation important in problem solving?\n* What features does a representation system need to be useful?\n* What is necessary to create usable binary representation systems?\n* How can we combine systems together to get more complex information?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students explore how data can be used to answer interesting questions and solve problems.  Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving.  After learning ways that computers use data in the real world, students choose their own problem and use data to address it.\n\n\n**Goals:**\n* Investigate and understand how humans and computers use data differently.\n* Design and implement a data-based solution to a given problem and determine how the different aspects of the problem solving process could be automated.\n\n\n\n**Big Questions:**\n* How does data help us to solve problems?\n* How do computers and humans use data differently?\n* What parts of the data problem solving process can be automated?\n* What kinds of problems do computers use data to solve in the real world?\n\n:::\n\n\n::: details [**Implementation Guidance for Data and Society**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-unit5-2025/). The module is designed to take 70 minutes to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went."
+          description: "The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This chapter focuses on data representation and its role in solving information problems.  Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems.  For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.\n\n\n**Goals:**\n* Understand the role of data and data representation in solving information problems. \n* Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code. \n\n\n**Big Questions:**\n* Why is representation important in problem solving?\n* What features does a representation system need to be useful?\n* What is necessary to create usable binary representation systems?\n* How can we combine systems together to get more complex information?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students explore how data can be used to answer interesting questions and solve problems.  Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving.  After learning ways that computers use data in the real world, students choose their own problem and use data to address it.\n\n\n**Goals:**\n* Investigate and understand how humans and computers use data differently.\n* Design and implement a data-based solution to a given problem and determine how the different aspects of the problem solving process could be automated.\n\n\n\n**Big Questions:**\n* How does data help us to solve problems?\n* How do computers and humans use data differently?\n* What parts of the data problem solving process can be automated?\n* What kinds of problems do computers use data to solve in the real world?\n\n:::\n\n\n::: details [**Implementation Guidance for Data and Society**]\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-data-and-society-2026). The module is designed to take 70 minutes to complete. No previous experience with coding is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went."
           student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
+          lessons: {}
+          name: data-and-society-2026
         creating-apps-with-devices-circuit-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27634,7 +27659,7 @@ en:
             lessonGroup-5:
               display_name: End of Unit Survey
           title: Creating Apps with Devices (Circuit Playground)
-          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit](/s/csd6b-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/maker/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-physical-computing-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [(Option B) Creating Apps with Devices unit](/s/csd6b-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/maker/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-creating-apps-with-devices-circuit-2026/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
@@ -27651,7 +27676,7 @@ en:
             lessonGroup-5:
               display_name: End of Unit Survey
           title: Creating Apps with Devices (micro:bit)
-          description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-csd-microbit-2025/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/teaching-creating-apps-with-devices-microbit-2026/). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
           description_audience: ''
@@ -27898,6 +27923,8 @@ en:
             - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: building-data-driven-systems-with-ai-2026
         iterating-with-ai-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27933,6 +27960,8 @@ en:
             - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: iterating-with-ai-2026
         designing-reliable-apps-with-ai-and-apis-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27968,6 +27997,8 @@ en:
             - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: designing-reliable-apps-with-ai-and-apis-2026
         web-apps-with-ai-capstone-project-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28001,6 +28032,8 @@ en:
             - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: web-apps-with-ai-capstone-project-2026
         hoai-web-design-pilot-v2:
           lessons: {}
           lesson_groups: {}
@@ -28211,30 +28244,44 @@ en:
 
             **Suggested time:** 120 minutes
         self-paced-pl-thinking-critically-about-ai-2026:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: 'Big Idea 1: AI is Powerful and Unreliable'
+            lesson-3:
+              name: 'Big Idea 2: AI Use Requires Testing & Evidence'
+            lesson-4:
+              name: 'Big Idea 3: Context Matters'
+            lesson-5:
+              name: 'Big Idea 4: Responsible Use Includes Risk Awareness'
+            lesson-6:
+              name: Unit Projects
           lesson_groups: {}
           name: self-paced-pl-thinking-critically-about-ai-2026
-          title: 'Educator Module: Thinking Critically about AI'
+          title: Teaching Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
-            ## Welcome!
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
 
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+            In this professional learning module, you will be able to:
 
-            ##### Find the learning that works for you:
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
-            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+            **Suggested time:** 70 minutes
           student_description: |-
-            ## Welcome!
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
 
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+            In this professional learning module, you will be able to:
 
-            ##### Find the learning that works for you:
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
-            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+            **Suggested time:** 70 minutes
         intro-to-web-lab:
           lessons: {}
           lesson_groups: {}
@@ -28284,9 +28331,9 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach Web Development.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to Web Development.
             * Practice key concepts included in the unit.
@@ -28295,9 +28342,9 @@ en:
 
             **Suggested time**: 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach Web Development.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to Web Development.
             * Practice key concepts included in the unit.
@@ -28312,8 +28359,28 @@ en:
           title: Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
-          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
-          student_description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Programming with Music Lab.
+
+            In this professional learning module, you will:
+
+            * Code sequences, loops, and functions in Music Lab.
+            * Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
+            * Implement the unit with students with diverse learning needs.
+            * Guide students through unit projects to synthesize their learning.
+
+            **Suggested Time**: 120 minutes
         self-paced-pl-teaching-data-and-society-2026:
           lessons: {}
           lesson_groups: {}
@@ -28321,19 +28388,37 @@ en:
           title: Teaching Data and Society
           description_audience: "'26-'27"
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          description: |-
+            This professional learning module is designed to help you prepare to teach Data and Society.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Data and Society.
+            * Practice key concepts included in the unit.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 70 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Data and Society.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Data and Society.
+            * Practice key concepts included in the unit.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 70 minutes
         self-paced-pl-teaching-design-process-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-design-process-2026
-          title: Preparing to Teach the Design Process
+          title: Teaching The Design Process
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach the Design Process.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to The Design Process.
             * Practice key concepts included in the unit.
@@ -28342,9 +28427,9 @@ en:
 
             **Suggested time:** 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+            This professional learning module is designed to help you prepare to teach the Design Process.
 
-            **In this professional learning module, you will:**
+            In this professional learning module, you will:
 
             * Get an introduction to The Design Process.
             * Practice key concepts included in the unit.
@@ -28356,55 +28441,79 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: Preparing to Teach Interactive Animations and Games
+          title: Teaching Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description: |-
+            This professional learning module is designed to help you prepare to teach Interactive Animations and Games.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Interactive Animations and Games.
+            * Practice key concepts included in the unit.
+            * Engage with Game Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Interactive Animations and Games.
+
+            In this professional learning module, you will:
+
+            * Get an introduction to Interactive Animations and Games.
+            * Practice key concepts included in the unit.
+            * Engage with Game Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
         self-paced-pl-teaching-creating-apps-with-devices-circuit-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-circuit-2026
-          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          title: Teaching Creating Apps for Devices (Circuit Playground)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-creating-apps-with-devices-microbit-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
-          title: 'Preparing to Teach: Creating Apps with Devices (micro:bit)'
+          title: Teaching Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
         self-paced-pl-teaching-ai-and-ml-2026:
           lessons:
             lesson-6:
               name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
-          title: 'Preparing to Teach AI and Machine Learning '
+          title: 'Teaching AI and Machine Learning '
           description_audience: ''
           description_short: ''
           description: |-
-            **In this professional learning module, you will:**
+            This professional learning module is designed to help you prepare to teach AI and Machine Learning.
+
+            In this professional learning module, you will:
 
             * Get an introduction to artificial intelligence and machine learning.
             * Practice key concepts included in the unit.
             * Engage with AI Lab and App Lab.
-            * Explore end of chapter projects.
+            * Explore end-of-chapter projects.
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
           student_description: |-
-            **In this professional learning module, you will:**
+            This professional learning module is designed to help you prepare to teach AI and Machine Learning.
+
+            In this professional learning module, you will:
 
             * Get an introduction to artificial intelligence and machine learning.
             * Practice key concepts included in the unit.
             * Engage with AI Lab and App Lab.
-            * Explore end of chapter projects.
+            * Explore end-of-chapter projects.
             * Make a plan for implementing the unit with your students.
 
             **Suggested Time:** 100 minutes
@@ -28412,20 +28521,40 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-intro-to-teaching-exploring-ai-computing-2026
-          title: Getting Started Teaching Exploring AI & Computing
+          title: Preparing to Teach the Exploring AI & CS Curriculum
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
+          student_description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
         self-paced-pl-teaching-ai-generated-design-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-generated-design-2026
-          title: Preparing to Teach AI Generated Design
+          title: Teaching AI Generated Design
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
+
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
+
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
+
+            **Suggested time:** 60 minutes
         self-paced-pl-teaching-ai-and-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28439,11 +28568,21 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-data-driven-systems-2026
-          title: 'Preparing to Teach: Data-Driven Systems'
+          title: Teaching Data-Driven Systems
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
+
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
+
+             **Suggested time:** 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
+
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
+
+             **Suggested time:** 75 minutes
         self-paced-pl-teaching-iterating-with-ai-2026:
           lessons: {}
           lesson_groups: {}
@@ -28456,6 +28595,12 @@ en:
         self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026
+          title: 'Preparing to Teach: Designing Reliable Apps with AI and APIs'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026:
           lessons: {}
           lesson_groups: {}
@@ -28502,6 +28647,8 @@ en:
             '
           description_short: Learn how humans work with computers to solve problems.
           description_audience: ''
+          lessons: {}
+          name: problem-solving-and-computing-2026
         csd3a-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28526,6 +28673,8 @@ en:
           student_description: Learn how to program by creating music!
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
           description_audience: ''
+          lessons: {}
+          name: csd3a-2026
         foundations-of-ai-programming-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28584,8 +28733,659 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Unit 1
+            lessonGroup-3:
+              display_name: Unit 2
           name: aif-advisory-council-preview
           title: AIF Advisory Council Preview
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csa1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa1-2026
+          title: 'Module 1: Welcome'
+          description_audience: This module is for any educator preparing to teach AP CSA.
+          description_short: ''
+          description: |-
+            This module is for any educator preparing to teach AP CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 1 hour
+          student_description: |-
+            This module is for any educator preparing to teach AP CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 1 hour
+        self-paced-pl-csa2-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa2-2026
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 1 hour\n"
+          student_description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 1 hour\n"
+        self-paced-pl-csa3-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa3-2026
+          title: 'Module 3: Support for Text-Based Programming'
+          description_audience: ''
+          description_short: ''
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 6 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 6 hours
+        self-paced-pl-csa4-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa4-2026
+          title: 'Module 4: Getting to know the Painter Class'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+            * Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            * Instantiate an object
+            * Call methods from the `Painter` class
+            * Learn how to use UML diagrams
+
+
+
+            **Estimated Time:** 2 hours
+          student_description: |-
+            This module is for any teacher who is familiar with Java OR has done Module 3, but who want introduction to the student-facing tools Code.org's in CSA Curriculum.
+
+            **You will:**
+            * Use Object Oriented Programming concepts in Code.org’s Neighborhood
+            * Instantiate an object
+            * Call methods from the `Painter` class
+            * Learn how to use UML diagrams
+
+
+
+            **Estimated Time:** 2 hours
+        self-paced-pl-teaching-problem-solving-with-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-problem-solving-with-ai-2026
+          title: Teaching Problem-Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026
+          title: Teaching AI and the Systems that Power It
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-fabric-of-the-internet-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-fabric-of-the-internet-2026
+          title: Teaching the Fabric of the Internet and AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-ai-powered-threats-and-defenses-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-and-defenses-2026
+          title: Teaching AI-Powered Threats and Defenses
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-insights-from-data-and-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-insights-from-data-and-ai-2026
+          title: Teaching Insights from Data and AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-foundations-of-ai-programming-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-foundations-of-ai-programming-2026
+          title: Teaching Foundations of AI Programming
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5).
+
+            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-intro-to-designing-and-building-with-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-intro-to-designing-and-building-with-ai-2026
+          title: 'Teaching AIF: Designing & Building with AI'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
+
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested tme:** 20 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
+
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested time:** 20 minute
+        self-paced-pl-teaching-ai-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-algorithmic-decisions-2026
+          title: Teaching AI and Algorithmic Decisions
+          description_audience: ''
+          description_short: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
+
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
+
+             **Suggested time**: 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
+
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
+
+             **Suggested time**: 75 minutes
+        pl-embeddings:
+          lessons:
+            lesson-1:
+              name: Amanda's Corner
+            lesson-2:
+              name: Aryanna's Corner
+            lesson-3:
+              name: Micah's Corner
+          lesson_groups: {}
+          name: pl-embeddings
+          title: PL Embedding Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-cs-discoveries1-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-cs-discoveries1-2026
+          title: 'Module 1: Welcome'
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+        self-paced-pl-cs-discoveries3-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
+          name: self-paced-pl-cs-discoveries3-2026
+          title: 'Module 3: Overview of CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-cs-discoveries2-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          name: self-paced-pl-cs-discoveries2-2026
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+        self-paced-pl-cs-discoveries4-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching and Learning CS Discoveries
+          name: self-paced-pl-cs-discoveries4-2026
+          title: 'Module 4: Teaching and Learning CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+        self-paced-pl-cs-discoveries5-2026:
+          lessons: {}
+          lesson_groups: {}
+        virtual-pl-csd-summer-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csd-summer-2026
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2026-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csd-summer-2026-day2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2026-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csd-summer-2026-day3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2026-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csd-summer-2026-day5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2026-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csd-summer-2026-day4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-summer-2026-day1:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 1
+          name: pl-csd-summer-2026-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-summer-2026-day2:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 2
+          name: pl-csd-summer-2026-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-summer-2026-day3:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 3
+          name: pl-csd-summer-2026-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-summer-2026-day4:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 4
+          name: pl-csd-summer-2026-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-summer-2026-day5:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Day 5
+          name: pl-csd-summer-2026-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit1:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+          lesson_groups: {}
+          name: aif-year2-semester1-unit1
+          title: Logic-Based AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
+
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
+          student_description: |-
+            In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
+
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
+        aif-year2-semester1-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit2
+          title: AIF Year 2 Semester 1 Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-ai-101-mod1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod1-2026
+          title: Introducing AI for Educators
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe AI fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-ai-101-mod2-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod2-2026
+          title: Understanding AI
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to build your foundational understanding of AI.\n\n**You will:**\n* Define artificial intelligence and explain its fundamental concepts.\n* Explain what Large Language Models are and how they work. \n* Identify common misconceptions about AI use and connect them to underlying concepts of how AI works.\n\n**Suggested time:** 60 minutes"
+          student_description: "TThis module is designed to build your foundational understanding of AI.\n\n**You will:**\n* Define artificial intelligence and explain its fundamental concepts.\n* Explain what Large Language Models are and how they work. \n* Identify common misconceptions about AI use and connect them to underlying concepts of how AI works.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-ai-101-mod3-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod3-2026
+          title: Transforming Teaching with AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to help you learn how to use AI to support your role as an educator.
+
+            **You will:**
+
+            * Explain key principles for using AI effectively and responsibly in an educational context.
+            * Identify ways AI can support teaching practice across planning, communication, and reflection.
+            * Develop and refine prompts to improve the quality and usefulness of AI outputs.
+            * Practice using AI tools to support common instructional tasks.
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to help you learn how to use AI to support your role as an educator.
+
+            **You will:**
+
+            * Explain key principles for using AI effectively and responsibly in an educational context.
+            * Identify ways AI can support teaching practice across planning, communication, and reflection.
+            * Develop and refine prompts to improve the quality and usefulness of AI outputs.
+            * Practice using AI tools to support common instructional tasks.
+
+            **Suggested time:** 60 minutes
+        self-paced-pl-ai-101-mod5-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod5-2026
+          title: Ensuring a Responsible Approach to AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
+
+            **You will:**
+            * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
+            * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
+            * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
+            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to help you learn how to ensure that you and your students are using AI responsibly.
+
+            **You will:**
+            * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
+            * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
+            * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
+            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+
+
+            **Suggested time:** 60 minutes
+        self-paced-pl-ai-101-mod4-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-mod4-2026
+          title: Bringing AI to the Classroom
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module is designed to help you learn how to bring AI to the students in your classroom.
+
+            **You will:**
+
+            * Explore the AI Literacy Framework.
+            * Plan ways to integrate AI into your teaching practice that support diverse learners and instructional goals.
+            * Identify strategies for using AI with students while maintaining academic integrity and supporting meaningful assessment.
+            * Explore the resources available to teach with and about AI in your classroom.
+
+            **Suggested time:** 60 minutes
+          student_description: |-
+            This module is designed to help you learn how to bring AI to the students in your classroom.
+
+            **You will:**
+
+            * Explore the AI Literacy Framework.
+            * Plan ways to integrate AI into your teaching practice that support diverse learners and instructional goals.
+            * Identify strategies for using AI with students while maintaining academic integrity and supporting meaningful assessment.
+            * Explore the resources available to teach with and about AI in your classroom.
+
+            **Suggested time:** 60 minutes
+        aif-year2-semester1-unit3:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit3
+          title: AIF Year 2 Semester 1 Unit 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit4:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit4
+          title: AIF Year 2 Semester 1 Unit 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit5:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit5
+          title: AIF Year 2 Semester 1 Unit 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif-year2-semester1-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: aif-year2-semester1-unit6
+          title: AIF Year 2 Semester 1 Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-thinking-critically-about-ai-2026:
+          lessons:
+            lesson-3:
+              name: Big Ideas in Thinking Critically About AI
+          lesson_groups: {}
+          name: self-paced-pl-teaching-thinking-critically-about-ai-2026
+          title: Teaching Thinking Critically about AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Thinking Critically About AI.
+
+            In this professional learning module, you will be able to:
+
+            * Explain how the unit helps students develop critical thinking habits around AI systems.
+            * Facilitate classroom discussions that move students beyond binary thinking (“AI is good” or “AI is bad”).
+            * Support students in collecting evidence, identifying patterns in AI behavior, and using those findings to build claims and recommendations.
+            * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
+
+            **Suggested time:** 70 minutes
+        test-brendan:
+          lessons: {}
+          lesson_groups: {}
+          name: test-brendan
+          title: test brendan
           description_audience: ''
           description_short: ''
           description: ''

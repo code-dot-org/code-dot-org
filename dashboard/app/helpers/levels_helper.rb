@@ -77,7 +77,7 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, unit_group_unit: unit_group_unit, **params))
   end
 
-  def url_from_path(path, scheme = '')
+  def url_from_path(path, scheme = CDO.default_scheme)
     CDO.studio_url(path, scheme)
   end
 

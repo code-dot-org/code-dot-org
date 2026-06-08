@@ -107,22 +107,22 @@ When designing apps, it’s important to keep users informed about what’s happ
 <img src="https://images.code.org/abe7409544e61552fc76f7f141a86e13-image-1772733806258.png" alt="Iwebpage loading symbol" width="300px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
 
-- #### **Loading State:** The app is fetching data. 
-#### *(Show a spinner, empty layout, or simple loading message.)*
+- **Loading State:** The app is fetching data. 
+*(Show a spinner, empty layout, or simple loading message.)*
 
-- #### **Empty State:** No results were found
-#### *(Show a helpful message or "Try Again" button.)*
+- **Empty State:** No results were found
+*(Show a helpful message or "Try Again" button.)*
 
-- #### **Error State:** Something went wrong. 
-#### (Briefly explain the issue and what the user should do.)
+- **Error State:** Something went wrong. 
+(Briefly explain the issue and what the user should do.)
 
 <div style="clear:both;"></div>
 
 ##Handeling States
 
-#### Every time your app makes a request to an API, it needs to handle these three scenarios. You never want to leave a user looking at a blank screen or a broken page. Handling these states is what makes an app feel professional and reliable.
+Every time your app makes a request to an API, it needs to handle these three scenarios. You never want to leave a user looking at a blank screen or a broken page. Handling these states is what makes an app feel professional and reliable.
 
-#### **Remember:** loading the page perfectly (the “Happy Path”) is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.
+**Remember:** loading the page perfectly (the “Happy Path”) is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.
 
 
 <div style="clear:both;"></div>

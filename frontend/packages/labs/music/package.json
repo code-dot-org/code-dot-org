@@ -18,6 +18,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./mocks": {
+      "types": "./dist/fixtures/index.d.ts",
+      "import": "./dist/fixtures/index.mjs",
+      "require": "./dist/fixtures/index.cjs"
     }
   },
   "scripts": {
@@ -52,7 +57,8 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "zod": "catalog:"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

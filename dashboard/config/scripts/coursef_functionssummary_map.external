@@ -2,7 +2,7 @@ name 'coursef_functionsSummary_map'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-#### You’ve done a lot of really awesome things today! 
+You’ve done a lot of really awesome things today! 
 
 As you’ve seen today, functions are really helpful for when you need to repeat something at specific times. 
 

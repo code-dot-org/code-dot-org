@@ -1,0 +1,79 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-15T05:29:47.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Add Search, Filter, or Sort\r\n\r\nIn this level, you’ll add interactive features that help users explore your dataset.\r\n\r\n## Do This:\r\n\r\n1. Choose at least two features to add:\r\n   - **Search:** Let users look for keywords or values in your data.\r\n   - **Filter:** Let users show only items that match a category or condition.\r\n   - **Sort:** Let users change the order of the items.\r\n\r\n2. Use AI Tutor to help you design and code each feature.\r\n\r\n3. Test each feature with different inputs or choices.\r\n\r\n4. Ask AI Tutor for three ways to check whether your features are working correctly.\r\n\r\nFocus on making your features clear, useful, and connected to your dataset.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-v1-2026",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T05:29:47.556+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level5-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level5-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-15 05:30:54 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

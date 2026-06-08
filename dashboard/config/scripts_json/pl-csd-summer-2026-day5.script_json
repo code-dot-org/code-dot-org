@@ -1,0 +1,364 @@
+{
+  "script": {
+    "name": "pl-csd-summer-2026-day5",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_verified_resources": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-05-19 13:57:50 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-csd-summer-2026-day5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Day 5"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Day 5",
+      "name": "Introduction to Day 5",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day. During this session the theme of the day is introduced: Preparing to Teach CSD.\n\n\n**Objectives:**\n* Participants understand the goals for the day\n* Participants have written down the questions they would like to have answered throughout the day\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Review the goals for the day\n* Write down the questions you would like to have answered throughout the day"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Day 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Preparing for the Year",
+      "name": "Preparing for the Year",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is rooted in the curriculum values. Participants have an opportunity to look back on the week to reflect on where they saw these values come through. Participants also begin to prepare for the year by setting up their class sections in Code Studio.\n\n\n**Objectives:**\n* Participants know how to submit feedback to Code.org\n* Participants have set up class sections on Code Studio\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n* Learn how to submit feedback to Code.org\n* Set up class sections on Code Studio"
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Assessment ",
+      "name": "Assessment ",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
+      },
+      "seeding_key": {
+        "lesson.key": "Assessment ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Revisit Topics from the Week",
+      "name": "Revisit Topics from the Week",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 95 minutes",
+        "student_overview": "**You will:**\n* Share implementation ideas with other teachers\n* Write down ideas you would like to implement in your classroom"
+      },
+      "seeding_key": {
+        "lesson.key": "Revisit Topics from the Week",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Community ",
+      "name": "Community ",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThe goal of this session is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. For some teachers, computer science can be isolating because CS teachers often do not have a built in community in their schools like math or english teachers naturally have. This session is about expanding our idea of community to include our local community and the national computer science community.\n\n\n**Objectives:**\n* Participants identify potential community resources that could be used to enhance the learning experience of their students and raise CS awareness within the community outside of the classroom\n* Participants identify ways to connect with CS educators outside of their school community\n* Participants know how to access and engage with the Code.org community through the Code.org forum\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Identify potential community resources that could be used to enhance the learning experience of your students and raise CS awareness within the community outside of your classroom\n* Identify ways to connect with CS educators outside of your school community\n* Learn how to access and engage with the Code.org community through the Code.org forum"
+      },
+      "seeding_key": {
+        "lesson.key": "Community ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Planning for the Year",
+      "name": "Planning for the Year",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nTeachers think about what questions they still have. Teachers are given time to take out their schedule and create a timeline for the course. They can think about assessment or other things they want to start digging into. Mostly work time.\n\n\n**Objectives:**\n* Make an action plan for getting through the first month of school\n* Teachers have time to prep for fall\n\n**Suggested Time:** 45 minutes",
+        "student_overview": "**You will:**\n* Make an action plan for getting through the first month of school\n* Prepare for the first day of class"
+      },
+      "seeding_key": {
+        "lesson.key": "Planning for the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "Closing Ceremonies",
+      "name": "Closing Ceremonies",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nCelebrate a wonderful week!\n\n\n**Objectives:**\n* Participants feel a part of the larger Code.org community\n* Participants celebrate the work they did throughout the week\n\n**Suggested Time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Celebrate the work you did throughout the week"
+      },
+      "seeding_key": {
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b2c51bb8-453f-4fed-9eee-b424133f7dd7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2c51bb8-453f-4fed-9eee-b424133f7dd7",
+        "lesson.key": "Introduction to Day 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "6fcb444a-fb32-47c0-9c83-6f0bd85a92aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6fcb444a-fb32-47c0-9c83-6f0bd85a92aa",
+        "lesson.key": "Preparing for the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "6a3d5a45-7520-47b8-931c-3b11bca1f1fc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a3d5a45-7520-47b8-931c-3b11bca1f1fc",
+        "lesson.key": "Assessment ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "1282faeb-f818-4c0b-b285-5bc57956f189",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1282faeb-f818-4c0b-b285-5bc57956f189",
+        "lesson.key": "Revisit Topics from the Week",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "e1d40b98-1232-49d5-954a-d188b1f903d0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1d40b98-1232-49d5-954a-d188b1f903d0",
+        "lesson.key": "Community ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "29d0122f-f469-47d3-bdab-1f81d192e062",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29d0122f-f469-47d3-bdab-1f81d192e062",
+        "lesson.key": "Planning for the Year",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    },
+    {
+      "key": "a85babed-6c73-4114-a3be-385bf49cd171",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a85babed-6c73-4114-a3be-385bf49cd171",
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2026-day5"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7acb3458-8d3a-43b1-af14-b6cfb9ab8b79",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7acb3458-8d3a-43b1-af14-b6cfb9ab8b79",
+        "lesson_activity.key": "b2c51bb8-453f-4fed-9eee-b424133f7dd7"
+      }
+    },
+    {
+      "key": "4c696b1c-1a02-4ef3-9341-3f6becc0f75b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4c696b1c-1a02-4ef3-9341-3f6becc0f75b",
+        "lesson_activity.key": "6fcb444a-fb32-47c0-9c83-6f0bd85a92aa"
+      }
+    },
+    {
+      "key": "65d258b5-a6f9-4a74-b1ef-68662d96fa12",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65d258b5-a6f9-4a74-b1ef-68662d96fa12",
+        "lesson_activity.key": "6a3d5a45-7520-47b8-931c-3b11bca1f1fc"
+      }
+    },
+    {
+      "key": "720621af-6768-40c0-94b0-f7f4d423960f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "720621af-6768-40c0-94b0-f7f4d423960f",
+        "lesson_activity.key": "1282faeb-f818-4c0b-b285-5bc57956f189"
+      }
+    },
+    {
+      "key": "15029ac1-2fb3-4792-88d3-3d26dc6261f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15029ac1-2fb3-4792-88d3-3d26dc6261f7",
+        "lesson_activity.key": "e1d40b98-1232-49d5-954a-d188b1f903d0"
+      }
+    },
+    {
+      "key": "0bd80498-0edd-41e3-9303-8f620d8794d0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0bd80498-0edd-41e3-9303-8f620d8794d0",
+        "lesson_activity.key": "29d0122f-f469-47d3-bdab-1f81d192e062"
+      }
+    },
+    {
+      "key": "47b2a529-dd02-468f-bd66-f2f2c74056ea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "47b2a529-dd02-468f-bd66-f2f2c74056ea",
+        "lesson_activity.key": "a85babed-6c73-4114-a3be-385bf49cd171"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

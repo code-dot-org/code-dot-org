@@ -13,7 +13,7 @@
     "parent_level_id": 29587,
     "name_suffix": "_2021",
     "encrypted": "false",
-    "long_instructions": "## Consider the following when watching this video:\r\n#### How might CS Journeys help my students feel like they belong in CS?"
+    "long_instructions": "## Consider the following when watching this video:\r\nHow might CS Journeys help my students feel like they belong in CS?"
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-05-18T02:55:14.245+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod3-CSJourneys-Vid\\\"\"],\"cloned_from\":\"SP-VPL-21-mod3-CSJourneys-Vid\"},{\"changed_at\":\"2023-05-18 02:55:22 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",

@@ -1,10 +1,18 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {
+  NodeResizer,
+  useConnection,
+  useReactFlow,
+  type NodeProps,
+} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {useSketchLabReadOnly} from '../context';
-import ShapeNodeToolbar from '../elementToolbars/ShapeNodeToolbar';
+import {
+  useIsAnchorDragging,
+  usePushSnapshot,
+  useSketchLabReadOnly,
+} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -97,16 +105,21 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
 function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
+  const pushSnapshot = usePushSnapshot();
   const [isEditing, setIsEditing] = useState(false);
   const labelRef = useRef<HTMLDivElement>(null);
+  const labelAtEditStart = useRef<string>('');
 
+  const connection = useConnection();
+  const isAnchorDragging = useIsAnchorDragging();
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles = data.showHandles !== false;
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
       return;
     }
+    labelAtEditStart.current = label;
     setIsEditing(true);
     setTimeout(() => {
       if (labelRef.current) {
@@ -119,13 +132,16 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly, data.locked]);
+  }, [isEditing, readOnly, data.locked, label]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
     const newLabel = labelRef.current?.textContent ?? '';
+    if (newLabel !== labelAtEditStart.current) {
+      pushSnapshot();
+    }
     updateNodeData(id, {label: newLabel});
-  }, [id, updateNodeData]);
+  }, [id, pushSnapshot, updateNodeData]);
 
   const handleLabelKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -190,8 +206,6 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         minHeight={MIN_NODE_HEIGHT}
       />
 
-      <ShapeNodeToolbar nodeId={id} />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}
         {isRectangle ? (
@@ -233,7 +247,7 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles} shapeType={shapeType} />
     </div>
   );
 }

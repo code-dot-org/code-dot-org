@@ -5,74 +5,151 @@ description 'description here'
 markdown <<MARKDOWN
 # Sorting
 
-#### Imagine opening an online gradebook and choosing **“Sort by highest score.”** Instantly, the list rearranges so the top scores appear first, even though the same students are still in the class.
+Imagine opening an online gradebook and choosing **“Sort by highest score.”** Instantly, the list rearranges so the top scores appear first, even though the same students are still in the class.
 
-<img src="https://images.code.org/9d89fcfba48f603f4e8cee8b91e29cb4-image-1767804967209.png" alt="cartoon depiction of sorting a class by highest score" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/9d89fcfba48f603f4e8cee8b91e29cb4-image-1767804967209.png" alt="cartoon depiction of sorting a class by highest score" width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
+## Choose the Order
 
-<br>
+Sorting does not remove anything from the list. It changes what appears first.
 
-<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
+**Before clicking each card, think about how the same data might feel different depending on the sort rule.**
 
-#### **Pause & Reflect**
+<div style="clear:both;"></div>
 
-- #### What changes when a list is sorted? The items, or just the order?
-- #### If two students have the same score, how should the gradebook decide which one appears first?
-- #### Who benefits from sorting a list one way instead of another?
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin:24px 0;">
 
-<br>
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🏆 Highest score first
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      This puts the strongest scores at the top.<br><br>
+      <strong>What stands out?</strong><br>
+      High performers are easiest to notice first.
+    </div>
+  </details>
 
-> #### You may have thought about things like: sorting changes the order, not the data itself; ties need a rule; and different sorting choices can highlight different people or outcomes.
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      📉 Lowest score first
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      This puts the lowest scores at the top.<br><br>
+      <strong>What stands out?</strong><br>
+      Students who may need support become easier to identify.
+    </div>
+  </details>
 
-#### 👉 The new order was created using a **sorting algorithm**.
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🔤 Name A to Z
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      This puts students in alphabetical order.<br><br>
+      <strong>What stands out?</strong><br>
+      The list feels neutral and easy to scan, but performance is not emphasized.
+    </div>
+  </details>
+
+  <details style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
+    <summary style="cursor:pointer;font-size:18px;font-weight:700;list-style:none;">
+      🕒 Most recent submission first
+    </summary>
+    <div style="margin-top:12px;font-size:16px;line-height:1.5;">
+      This puts the newest submissions at the top.<br><br>
+      <strong>What stands out?</strong><br>
+      Recent activity becomes easier to review first.
+    </div>
+  </details>
+
+</div>
+
+<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Key Idea:</strong> Sorting changes the order, not the items. The sort rule shapes what users notice first.
+</p>
+
+</div>
+
 ---
 
 ## What is a sorting algorithm?
 
-#### A **sorting algorithm** is a rule a program uses to put items in a particular order (like highest-to-lowest, A–Z, newest-to-oldest, or closest-to-farthest).
+A **sorting algorithm** is a rule a program uses to put items in a particular order, like highest-to-lowest, A–Z, newest-to-oldest, or closest-to-farthest.
 
-#### In JavaScript, sorting is often used with arrays (including arrays of objects) to organize data so it’s easier to read, compare, and make decisions like ordering scores, organizing names, or ranking search results.
+In JavaScript, sorting is often used with arrays, including arrays of objects, to organize data so it’s easier to read, compare, and make decisions.
 
 <br>
 
-<div style="text-align: center; width: 80%; margin: 0 auto;">
+<div style="text-align:center;width:80%;margin:0 auto;">
   <p style="
-    font-size: 18px; 
-    background-color: #F5F7F8; 
-    padding: 10px; 
-    border-left: 5px solid #8148B2; 
-    border-right: 5px solid #8148B2;
-    display: inline-block;
+    font-size:18px;
+    background-color:#F5F7F8;
+    padding:12px 18px;
+    border-left:5px solid #8148B2;
+    border-right:5px solid #8148B2;
+    display:inline-block;
+    line-height:1.5;
   ">
-   Every sort starts with an <b>order</b>. <br>
-      Every order is a <b>choice</b> that changes what stands out first.
+   Every sort starts with an <b>order</b>.<br>
+   Every order is a <b>choice</b> that changes what stands out first.
   </p>
 </div>
-
 
 ---
 
 ## What is a compare rule?
 
-#### When a computer sorts, it needs a way to decide which of two items should come first.
+When a computer sorts, it needs a way to decide which of two items should come first.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">↕️ <strong>Compare rule</strong> is the logic a program uses to decide which of two items should come first when sorting a list.</p>
+<div style="background-color:#B7E0E5;border-radius:10px;padding:15px;margin:20px auto;max-width:85%;box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word;">
+<p style="font-size:14pt;margin-top:12px;line-height:120%;">
+↕️ <strong>Compare rule</strong> is the logic a program uses to decide which of two items should come first when sorting a list.
+</p>
 </div>
 
-#### A compare rule might be based on:
-- #### Numbers (highest to lowest, lowest to highest)
-- #### Text (A–Z, Z–A)
-- #### Dates (newest first, oldest first)
-- #### A specific property inside an object (like `score`, `lastName`, or `timestamp`)
+A compare rule might be based on:
 
-#### In JavaScript, the `sort()` function uses a compare rule (a function you provide) to decide how items should be ordered.
+- Numbers, like highest to lowest  
+- Text, like A to Z  
+- Dates, like newest first  
+- A specific property inside an object, like <code>score</code>, <code>lastName</code>, or <code>timestamp</code>  
 
 ---
 
-## Next up
+## Quick Check
 
-#### Let’s take a look at how sorting works in JavaScript.
+Think back to the sorting rules above.
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+What changes when a list is sorted?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+The order changes, but the items stay the same. Sorting rearranges the data instead of removing or adding items.
+</div>
+</details>
+
+<br>
+
+<details>
+<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:12px 20px;font-size:17px;font-weight:600;border-radius:999px;list-style:none;">
+Why does the sort rule matter?
+</summary>
+
+<div style="margin-top:14px;background:#F5F7F8;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;">
+The sort rule changes what appears first, which can affect what users notice, compare, or act on.
+</div>
+</details>
+
+---
+
+## Next Up
+
+Let’s take a look at how sorting works in JavaScript.
 
 
 MARKDOWN

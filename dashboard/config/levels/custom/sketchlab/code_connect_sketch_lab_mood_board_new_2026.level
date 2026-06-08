@@ -18,17 +18,21 @@
             "type": "text",
             "data": {
               "text": "1. Describe your topic",
-              "showHandles": false
+              "showHandles": false,
+              "fontSize": "extra-large"
             },
             "position": {
-              "x": 743.0137462759951,
+              "x": 653.0137462759951,
               "y": 45.11461814712237
             },
             "measured": {
-              "width": 171,
-              "height": 38
+              "width": 270,
+              "height": 111
             },
-            "dragging": false
+            "dragging": false,
+            "width": 270,
+            "height": 111,
+            "resizing": false
           },
           {
             "id": "0a4bb13b-ed1d-47b8-8b1a-38a0349f62bb",
@@ -57,18 +61,19 @@
             "data": {
               "text": "2. Select a sample \nuser persona or \ncreate your own",
               "showHandles": false,
-              "textAlign": "left"
+              "textAlign": "left",
+              "fontSize": "extra-large"
             },
             "position": {
-              "x": 723.7520961658628,
-              "y": 309.5085543701705
+              "x": 630.6161234834159,
+              "y": 378.1488275457019
             },
             "measured": {
-              "width": 181,
-              "height": 67
+              "width": 281,
+              "height": 101
             },
-            "width": 181,
-            "height": 67,
+            "width": 281,
+            "height": 101,
             "resizing": false,
             "dragging": false
           },
@@ -100,11 +105,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Persona #1\n\nWho she is: Varsity winger \n+ part-time barista. Ten-\nminute passing periods are \nher whole window.\n\nHabits & prefs: Saves \nfavorite orders; lactose-\nsensitive; lives in Notes \nand Reminders; cracked \niPhone screen.\n\nNeeds: Speed, price \nclarity, and simple choices\nthat don’t derail her day.\n",
-              "showHandles": false
+              "showHandles": false,
+              "backgroundColor": "var(--sketchlab-bg-pink)"
             },
             "position": {
-              "x": 987.2922893816244,
-              "y": 336.3072814941406
+              "x": 979.4747487275956,
+              "y": 338.4506858699613
             },
             "width": 251,
             "height": 392,
@@ -113,7 +119,8 @@
               "height": 392
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "zIndex": 3
           },
           {
             "id": "288ece2c-849f-4316-b4ea-6c0ac31b662e",
@@ -122,7 +129,8 @@
               "shapeType": "rectangle",
               "label": "User Persona #2\n\nWho he is: Practices late, \nstudies later. Earbuds \nalways in, notifications \nmostly off.\n\nHabits & prefs: Dark mode, \nhaptics off, hates sudden \nsounds; likes quiet status \ncues.\n\nNeeds: Low-glare UI, gentle\nfeedback, and control over \nalerts.",
               "showHandles": false,
-              "fontSize": "medium"
+              "fontSize": "medium",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
             },
             "position": {
               "x": 1283.3333435058594,
@@ -135,7 +143,8 @@
               "height": 392
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "zIndex": 4
           },
           {
             "id": "6772b902-175a-4e3c-842e-f99a95929eb5",
@@ -144,7 +153,8 @@
               "shapeType": "rectangle",
               "label": "User Persona #3\n\nWho he is: Juggles class, \nwork, and family errands. \nBilingual \n(Spanish/English).\n\nHabits & prefs: Uses school\nChromebook + budget \nAndroid; watches how-to \nclips.\n\nNeeds: Step-by-step flows, \nbilingual support, works-\non-anything reliability.",
               "showHandles": false,
-              "fontSize": "medium"
+              "fontSize": "medium",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
             },
             "position": {
               "x": 1566.3333435058594,
@@ -157,20 +167,23 @@
               "height": 392
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "zIndex": 5
           },
           {
             "id": "c86cb34b-45a2-4558-9f2f-520a637623eb",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "User Persona #4\n\nWho they are:\n\nHabits & prefs: \n\nNeeds: ",
+              "label": "User Persona #4\n\nWho they are:\n\nHabits & preferences: \n\nNeeds: ",
               "showHandles": false,
-              "fontSize": "medium"
+              "fontSize": "medium",
+              "textAlign": "left",
+              "backgroundColor": "var(--sketchlab-bg-pink)"
             },
             "position": {
-              "x": 1869.6725612230202,
-              "y": 335.980673708978
+              "x": 1874.8957643323868,
+              "y": 340.1592361964711
             },
             "width": 251,
             "height": 392,
@@ -179,7 +192,8 @@
               "height": 392
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "zIndex": 2
           },
           {
             "id": "38900713-c079-4f19-9750-30152a36bc04",
@@ -187,17 +201,21 @@
             "data": {
               "text": "3. Build a mini brand kit with:\n   * 3–5 color swatches\n   * A font pair \n   * 1–2 descriptive style words\n   * At least one image\n\nConnect your design choices for \nyour hobby website back to \nthe sample user persona ",
               "showHandles": false,
-              "textAlign": "left"
+              "textAlign": "left",
+              "fontSize": "extra-large"
             },
             "position": {
-              "x": 636.5455079552253,
-              "y": 880.9558980769033
+              "x": 460.80885233394974,
+              "y": 925.5720756409988
             },
             "measured": {
-              "width": 255,
-              "height": 204
+              "width": 482,
+              "height": 297
             },
-            "dragging": false
+            "dragging": false,
+            "width": 482,
+            "height": 297,
+            "resizing": false
           },
           {
             "id": "f98f256d-1260-495d-95ea-68424e98ba95",
@@ -206,17 +224,17 @@
               "shapeType": "rectangle",
               "label": "",
               "showHandles": false,
-              "locked": true
+              "locked": false
             },
             "position": {
               "x": 936.996216357915,
               "y": 859.222137295709
             },
-            "width": 1596,
-            "height": 1731,
+            "width": 1590,
+            "height": 1636,
             "measured": {
-              "width": 1596,
-              "height": 1731
+              "width": 1590,
+              "height": 1636
             },
             "dragging": false,
             "resizing": false,
@@ -232,7 +250,8 @@
               "label": "My Hobby",
               "fontSize": "large",
               "backgroundColor": "var(--sketchlab-bg-pink)",
-              "showHandles": false
+              "showHandles": false,
+              "locked": false
             },
             "position": {
               "x": 1024.2441668901506,
@@ -245,7 +264,10 @@
               "height": 303
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "aab92ee3-27f6-46f6-b899-9057753d1003",
@@ -354,7 +376,8 @@
               "shapeType": "rectangle",
               "label": "My Persona\n\nDrag your persona from above to this space.",
               "showHandles": false,
-              "backgroundColor": "var(--sketchlab-bg-pink)"
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "locked": true
             },
             "position": {
               "x": 1021.0650833833831,
@@ -425,8 +448,8 @@
               "y": 1093.3148710376452
             },
             "measured": {
-              "width": 211,
-              "height": 59
+              "width": 212,
+              "height": 60
             },
             "dragging": false
           },
@@ -444,8 +467,8 @@
               "y": 1333.7163692140025
             },
             "measured": {
-              "width": 88,
-              "height": 38
+              "width": 89,
+              "height": 39
             },
             "dragging": false
           },
@@ -463,8 +486,8 @@
               "y": 1563.366574796391
             },
             "measured": {
-              "width": 184,
-              "height": 38
+              "width": 185,
+              "height": 39
             },
             "dragging": false
           },
@@ -517,17 +540,17 @@
             "type": "text",
             "data": {
               "text": "Image gallery",
-              "fontSize": "medium",
+              "fontSize": "extra-large",
               "textAlign": "left",
               "showHandles": false
             },
             "position": {
-              "x": 1025.227466491204,
-              "y": 1984.458868060163
+              "x": 1021.4263696531423,
+              "y": 1916.8316167906255
             },
             "measured": {
-              "width": 113,
-              "height": 38
+              "width": 197,
+              "height": 57
             },
             "dragging": false
           },
@@ -540,8 +563,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 1002.1380145241151,
-              "y": 2054.195638686496
+              "x": 1016.8324118076464,
+              "y": 1977.7847728121328
             },
             "width": 1468,
             "height": 473,
@@ -564,16 +587,19 @@
             },
             "position": {
               "x": 3034.5951274838358,
-              "y": 168.38305861333993
+              "y": 80.38305861333993
             },
-            "width": 1745,
-            "height": 2235,
+            "width": 1733,
+            "height": 2323,
             "measured": {
-              "width": 1745,
-              "height": 2235
+              "width": 1733,
+              "height": 2323
             },
             "dragging": false,
-            "resizing": false
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
           },
           {
             "id": "05008e65-1135-4ea2-8b14-750edc1b2a19",
@@ -617,6 +643,56 @@
               "height": 907
             },
             "dragging": false,
+            "resizing": false,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false
+          },
+          {
+            "id": "e688a526-3d8b-4ff2-9dc0-0670546e222e",
+            "type": "text",
+            "data": {
+              "text": "Example Brand Kit",
+              "fontSize": 76,
+              "locked": true
+            },
+            "position": {
+              "x": 3087.3338944447946,
+              "y": 112.5211622171159
+            },
+            "measured": {
+              "width": 793,
+              "height": 106
+            },
+            "dragging": false,
+            "zIndex": 1,
+            "draggable": false,
+            "connectable": false,
+            "deletable": false,
+            "width": 793,
+            "height": 106,
+            "resizing": false
+          },
+          {
+            "id": "07eea4f3-ed68-4bd2-956a-02f598e7f60a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 3063.713039972748,
+              "y": 99.57295400038123
+            },
+            "width": 865,
+            "height": 123,
+            "measured": {
+              "width": 865,
+              "height": 123
+            },
+            "dragging": false,
             "resizing": false
           }
         ],
@@ -624,14 +700,14 @@
 
         ],
         "viewport": {
-          "x": -543.4368983790837,
-          "y": 89.41096337497765,
-          "zoom": 0.864
+          "x": -101.5869771509582,
+          "y": 16.495506673366037,
+          "zoom": 0.24936910396446707
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-08 01:30:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-08 01:30:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 02:11:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-08 15:56:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
