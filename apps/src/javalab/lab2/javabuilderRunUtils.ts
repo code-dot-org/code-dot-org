@@ -24,11 +24,7 @@ import {splitForLevelbuilderSave} from './sourceConverter';
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
 
-// Set when stop is clicked before a connection exists (while the project saves
-// or the access token is fetched). handleRunClick checks this before connecting
-// so the stop cancels the run instead of being dropped. JavabuilderConnection
-// has its own interrupt flag for the later window between connection creation
-// and the socket opening.
+// Set when stop is clicked before a connection exists.
 let runInterrupted = false;
 
 // Javabuilder explicitly sends newline messages,
@@ -65,7 +61,7 @@ export async function handleRunClick(
   }
 
   // The user may have stopped during the save or token fetch, before a
-  // connection existed to interrupt. Bail before opening one.
+  // connection existed to interrupt.
   if (runInterrupted) {
     return;
   }

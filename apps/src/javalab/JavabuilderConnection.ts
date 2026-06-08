@@ -317,8 +317,8 @@ export default class JavabuilderConnection {
       this.resetRunState();
       this.establishWebsocketConnection(result.javabuilder_url, result.token);
     } catch (error) {
-      // The user may have stopped while the request was in flight. The failure
-      // is moot, and closeConnection already reported the stop.
+      // The user may have stopped while the request was in flight, no need to
+      // report the failure.
       if (this.interruptSignal) {
         return;
       }
@@ -624,9 +624,7 @@ export default class JavabuilderConnection {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
     );
     this.onNewlineMessage();
-    // Settle run/test state so callers awaiting completion (e.g. the Lab2 run
-    // promise) resolve and validation progress refreshes. A clean socket close
-    // does not flip this state on its own.
+    // Turn off run/test state so callers awaiting completion can resolve.
     this.turnOffRunningOrTesting();
   }
 
