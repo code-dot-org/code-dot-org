@@ -29,6 +29,7 @@ const makeMockTour = () => {
     }),
     addSteps: jest.fn(),
     next: jest.fn(),
+    show: jest.fn(),
     getCurrentStep: jest.fn(() => ({hide: jest.fn()})),
     steps,
     _trigger: (event: string) => handlers[event]?.forEach(cb => cb()),
@@ -257,6 +258,27 @@ describe('student-snapshot-step when handler', () => {
       STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
     );
     expect(mockTour.next).not.toHaveBeenCalled();
+  });
+
+  it('ai-insights step has two buttons that branch to cfu and feedback steps', () => {
+    document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
+    const steps = createLearnHowToEvaluateProgressSteps(
+      mockTour as unknown as Tour
+    );
+    const step = steps.find(
+      s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
+    )!;
+    const buttons = step.buttons as {text: string; action: () => void}[];
+
+    expect(buttons).toHaveLength(2);
+
+    buttons[0].action();
+    expect(mockTour.show).toHaveBeenCalledWith('student-snapshot-cfu-step');
+
+    buttons[1].action();
+    expect(mockTour.show).toHaveBeenCalledWith(
+      'student-snapshot-ai-feedback-step'
+    );
   });
 
   it('ai-insights step highlights the lesson insight widget on show and removes it on hide', () => {

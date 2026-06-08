@@ -249,14 +249,29 @@ export const createLearnHowToEvaluateProgressSteps = (
   }
 
   if (includeSnapshotFlow) {
+    const AI_FEEDBACK_STEP_ID = 'student-snapshot-ai-feedback-step';
+    const CFU_STEP_ID = 'student-snapshot-cfu-step';
+
     const aiInsightsStep: StepOptions = {
       id: STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
+      classes:
+        'custom-shepherd-onboarding-container onboarding-stacked-buttons',
       attachTo: {element: LESSON_INSIGHT_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        'AI Insights gives you an at-a-glance summary of how this student is progressing, any misconceptions detected, and suggested next steps.',
-        'Take a look, then click Next.'
+        'This is the "why" behind the data. The Lesson Insight synthesizes the student\'s work and flags where they might be hitting a wall, so you can decide what kind of support they actually need. From here you can:'
       ),
-      buttons: [nextButton(tour)],
+      buttons: [
+        {
+          text: 'Verify the student insight',
+          action: () => tour.show(CFU_STEP_ID),
+          classes: 'custom-shepherd-button-secondary',
+        },
+        {
+          text: 'Give the student feedback',
+          action: () => tour.show(AI_FEEDBACK_STEP_ID),
+          classes: 'custom-shepherd-button-secondary',
+        },
+      ],
       beforeShowPromise: () =>
         waitForElement(LESSON_INSIGHT_WIDGET_SELECTOR, controller.signal),
       when: {
@@ -274,11 +289,10 @@ export const createLearnHowToEvaluateProgressSteps = (
     };
 
     const aiFeedbackStep: StepOptions = {
-      id: 'student-snapshot-ai-feedback-step',
+      id: AI_FEEDBACK_STEP_ID,
       attachTo: {element: LESSON_FEEDBACK_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        'AI Feedback drafts personalized feedback for the student based on their work. You can edit it before sending it directly to the student.',
-        'Review it, then click Next.'
+        "The Teaching Assistant has already drafted feedback based on this student's work.  Review it, make it yours, and add a resource if they need extra support.  Then send it.  The student will see it the next time they log in."
       ),
       buttons: [nextButton(tour)],
       beforeShowPromise: () =>
@@ -298,11 +312,10 @@ export const createLearnHowToEvaluateProgressSteps = (
     };
 
     const cfuStep: StepOptions = {
-      id: 'student-snapshot-cfu-step',
+      id: CFU_STEP_ID,
       attachTo: {element: CFU_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        'The Check for Understanding section shows how the student performed on the knowledge-check questions in this lesson — helpful for spotting gaps before moving on.',
-        'Take a look, then click Next.'
+        "Before you look at their code, see what they understood or didn't.  Their answeres here often relveal the misonception underneath the bug"
       ),
       buttons: [nextButton(tour)],
       beforeShowPromise: () =>

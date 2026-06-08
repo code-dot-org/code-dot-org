@@ -71,6 +71,12 @@ const StudentSnapshot: React.FC = () => {
           .courseId
       : null
   );
+  const sectionDemoType = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          ?.demoType ?? null
+      : null
+  );
   const selectedUnitId = useSelector(getSelectedUnitId);
   const selectedUnitPosition = useAppSelector(state =>
     state.teacherSections.selectedSectionId
@@ -103,13 +109,20 @@ const StudentSnapshot: React.FC = () => {
           setLessons(lessonsData.lessons);
           setHasUnnumberedLessons(lessonsData.hasUnnumberedLessons);
           // When the Learn How to Evaluate tour has directed the user to this
-          // page, pre-select the third lesson (or the last if fewer exist) so
-          // the tour can highlight meaningful content without the teacher
-          // needing to pick a lesson manually.
+          // page, pre-select the lesson that the tour is focused on (which may not be the first lesson in the unit, depending on the section's demo type).
           if (isLearnToEvaluateTourOnSnapshotPage()) {
             const lessonList = lessonsData.lessons;
+            // TODO: Put in official lesson positions when available.
+            const tourLessonIndex =
+              sectionDemoType === 'high'
+                ? 1
+                : sectionDemoType === 'middle'
+                ? 3
+                : 0;
             const targetLesson =
-              lessonList[2] ?? lessonList[lessonList.length - 1] ?? null;
+              lessonList[tourLessonIndex] ??
+              lessonList[lessonList.length - 1] ??
+              null;
             if (targetLesson) setSelectedLessonId(targetLesson.id);
           }
         })
@@ -123,7 +136,13 @@ const StudentSnapshot: React.FC = () => {
         selectedUnitPosition
       );
     }
-  }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
+  }, [
+    sectionId,
+    selectedUnitId,
+    sectionCourseId,
+    selectedUnitPosition,
+    sectionDemoType,
+  ]);
 
   return (
     <div className={styles.snapshotContainer}>
