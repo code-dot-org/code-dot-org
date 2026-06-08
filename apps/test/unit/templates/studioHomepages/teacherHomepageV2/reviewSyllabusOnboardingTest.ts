@@ -139,22 +139,12 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     expect(ids).toContain('lesson-resources-intro');
   });
 
-  it('elementary unit overview includes teacher-resources-dropdown when element is in the DOM', () => {
-    document.body.innerHTML = '<div id="teacher-resources-dropdown"></div>';
+  it('elementary unit overview always includes teacher-resources-dropdown', () => {
     const tour = makeMockTour();
     const ids = createReviewSyllabusUnitOverviewSteps(tour, 'elementary').map(
       s => s.id
     );
     expect(ids).toContain('teacher-resources-dropdown');
-    document.body.innerHTML = '';
-  });
-
-  it('elementary unit overview omits teacher-resources-dropdown when element is absent', () => {
-    const tour = makeMockTour();
-    const ids = createReviewSyllabusUnitOverviewSteps(tour, 'elementary').map(
-      s => s.id
-    );
-    expect(ids).not.toContain('teacher-resources-dropdown');
   });
 
   it('high school quiz attaches to #progress-lesson-1', () => {
