@@ -167,6 +167,7 @@
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "catalog:",
     "@release-it/conventional-changelog": "^10.0.0",
