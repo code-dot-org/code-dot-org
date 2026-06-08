@@ -274,7 +274,6 @@ export default class JavabuilderConnection {
     usePostRequest?: boolean
   ) {
     this.interruptSignal = false;
-    this.programIsRunning = true;
 
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
@@ -286,6 +285,7 @@ export default class JavabuilderConnection {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
+    this.programIsRunning = true;
 
     const ajaxPayload: JQuery.AjaxSettings = usePostRequest
       ? {
@@ -333,6 +333,7 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         console.error(ajaxError.responseText);
       }
+      this.programIsRunning = false;
     }
   }
 
