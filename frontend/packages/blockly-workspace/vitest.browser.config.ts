@@ -16,6 +16,10 @@ export default defineConfig({
       provider: playwright({}),
       viewport: {width: 1024, height: 768},
       instances: [{browser: 'chromium'}],
+      // Don't drop generic capture-on-failure images into __screenshots__; that
+      // directory holds the intentional toMatchScreenshot baselines we commit.
+      // toMatchScreenshot still writes its own actual/diff on mismatch.
+      screenshotFailures: false,
     },
   },
 });
