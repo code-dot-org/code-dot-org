@@ -5,17 +5,16 @@ import {defineExtension} from './extensions/defineExtension';
 import {defineMixin} from './mixins/defineMixin';
 import {defineMutator} from './mutators/defineMutator';
 import {PluginType} from './plugins';
-import type {InjectPlugin, FieldPlugin} from './plugins';
+import type {InjectPlugin, FieldPlugin, GlobalPlugin} from './plugins';
 import Registry from './Registry';
-import ThrasosRenderer from './renderers/thrasos';
 import type {BlockDefinition, OldBlockDefinition} from './types';
 
 /*
  * Registry's job is bookkeeping against Blockly's global registries
- * (Blockly.Extensions / fieldRegistry) plus its own inject-instance map — none
- * of which needs a rendered workspace, so these run in jsdom. The risk is global
- * registry bleed across tests; afterEach tears everything down (and removes the
- * entries unregisterAll is known not to reach — see the note there).
+ * (Blockly.Extensions and the FIELD registry) plus its own inject-instance map —
+ * none of which needs a rendered workspace, so these run in jsdom. afterEach
+ * calls unregisterAll to undo every registration and keep the shared registries
+ * clean between tests.
  */
 
 // A field implementation to register; only `fromJson` is needed to be registrable.
@@ -58,29 +57,32 @@ const injectPlugin: InjectPlugin = {
   plugin: StubInjectPlugin,
 };
 
+// A global plugin whose initialize/uninitialize calls are counted, so the
+// registry running them at register/unregister time can be observed.
+let globalInitialized = 0;
+let globalUninitialized = 0;
+const globalPlugin: GlobalPlugin = {
+  type: PluginType.Global,
+  initialize: () => {
+    globalInitialized += 1;
+  },
+  uninitialize: () => {
+    globalUninitialized += 1;
+  },
+};
+
 let registry: Registry;
 
 beforeEach(() => {
   StubInjectPlugin.built = [];
-  // The renderer must be passed explicitly: the constructor validates the
-  // `renderer` argument rather than the resolved value, so its ThrasosRenderer
-  // default is never actually reachable.
-  registry = new Registry(undefined, undefined, ThrasosRenderer);
+  globalInitialized = 0;
+  globalUninitialized = 0;
+  // No renderer argument: exercises the ThrasosRenderer default.
+  registry = new Registry();
 });
 
 afterEach(() => {
   registry.unregisterAll();
-  // unregisterAll cleans tracked extensions/mixins, but it does not track
-  // mutators and the field-unregister guard checks the wrong registry, so those
-  // survive. Remove them by name to keep each test hermetic.
-  for (const name of [MUTATOR_NAME, 'blank']) {
-    if (Blockly.Extensions.isRegistered(name)) {
-      Blockly.Extensions.unregister(name);
-    }
-  }
-  if (Blockly.registry.hasItem(Blockly.registry.Type.FIELD, FIELD_NAME)) {
-    Blockly.fieldRegistry.unregister(FIELD_NAME);
-  }
 });
 
 describe('registerFromBlockDefinition', () => {
@@ -180,11 +182,25 @@ describe('inject plugins', () => {
   });
 });
 
+describe('global plugins', () => {
+  it('initializes on register and uninitializes on unregisterAll', () => {
+    registry.register(globalPlugin);
+    expect(globalInitialized).toBe(1);
+    expect(globalUninitialized).toBe(0);
+
+    registry.unregisterAll();
+    expect(globalUninitialized).toBe(1);
+  });
+});
+
 describe('unregisterAll', () => {
-  it('unregisters the block extensions and mixins it tracked', () => {
+  it('unregisters every tracked plugin kind in one pass', () => {
+    registry.register(globalPlugin);
     const definition = {
       type: 'registry_test_block',
       tooltip: '',
+      args0: [{type: fieldPlugin, name: 'FIELD'}],
+      mutator,
       extensions: [extension],
       mixins: [mixin],
     } as unknown as BlockDefinition;
@@ -192,6 +208,14 @@ describe('unregisterAll', () => {
 
     registry.unregisterAll();
 
+    // The field and the global both live in this.registered; iterating a copy
+    // ensures neither is skipped by unregister()'s splice. The mutator is now
+    // tracked, and the field's guard checks the registry it actually lives in.
+    expect(
+      Blockly.registry.hasItem(Blockly.registry.Type.FIELD, FIELD_NAME),
+    ).toBe(false);
+    expect(globalUninitialized).toBe(1);
+    expect(Blockly.Extensions.isRegistered(MUTATOR_NAME)).toBe(false);
     expect(Blockly.Extensions.isRegistered(EXTENSION_NAME)).toBe(false);
     expect(Blockly.Extensions.isRegistered(MIXIN_NAME)).toBe(false);
   });
