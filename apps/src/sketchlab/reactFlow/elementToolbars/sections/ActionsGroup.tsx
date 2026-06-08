@@ -8,19 +8,12 @@ import ToolbarSection from '../components/ToolbarSection';
 
 import styles from './actions-group.module.scss';
 
-interface HandlesToggle {
-  visible: boolean;
-  onToggle: () => void;
-}
-
 interface ActionsGroupProps {
   onDelete?: () => void;
   onLock?: () => void;
   onBringToFront?: () => void;
   onSendToBack?: () => void;
   onDuplicate?: () => void;
-  // Bundled so visible can't be supplied without onToggle.
-  handlesToggle?: HandlesToggle;
 }
 
 export default function ActionsGroup({
@@ -29,7 +22,6 @@ export default function ActionsGroup({
   onBringToFront,
   onSendToBack,
   onDuplicate,
-  handlesToggle,
 }: ActionsGroupProps) {
   const isStartMode = getIsStartMode();
 
@@ -82,34 +74,6 @@ export default function ActionsGroup({
                 onClick={onLock}
               >
                 <FontAwesomeV6Icon iconName="lock" />
-              </IconButton>
-            </Tooltip>
-          )}
-          {handlesToggle && (
-            <Tooltip
-              title={
-                handlesToggle.visible
-                  ? 'Hide connection handles'
-                  : 'Show connection handles'
-              }
-              placement="top"
-            >
-              <IconButton
-                size="extraSmall"
-                className={styles.actionButton}
-                aria-label={
-                  handlesToggle.visible
-                    ? 'Hide connection handles'
-                    : 'Show connection handles'
-                }
-                onClick={handlesToggle.onToggle}
-              >
-                <FontAwesomeV6Icon
-                  iconName={
-                    handlesToggle.visible ? 'handles-hidden' : 'handles-visible'
-                  }
-                  iconFamily="kit"
-                />
               </IconButton>
             </Tooltip>
           )}

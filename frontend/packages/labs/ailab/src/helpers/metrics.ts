@@ -1,7 +1,7 @@
 /*
   Functions for logging analytics metrics via Google Analytics and Firehose.
 */
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 
 import {getPercentCorrect} from './accuracy';
 import {isUserUploadedDataset} from './datasetDetails';

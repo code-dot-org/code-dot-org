@@ -10,7 +10,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
-import AiDiffSidebar from './AiDiffSidebar';
+import ChatList from './ChatList';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {ChatThread, chatThreadValidator, Context} from './types';
 
@@ -90,12 +90,9 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   if (showSidebar) {
     return (
       <div className={style.aiDiffWorkspace}>
-        <AiDiffSidebar
+        <ChatList
           context={context}
           threads={threads}
-          setShowNotifications={setShowNotifications}
-          showNotifications={showNotifications}
-          unreadNotificationCount={unreadNotificationCount}
           curriculumCourses={curriculumCourses}
           fullWidth
           onChatSelect={onSidebarChatSelect}
@@ -107,12 +104,9 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   return (
     <div className={style.aiDiffWorkspace}>
       {!drawerIsEnabled && (
-        <AiDiffSidebar
+        <ChatList
           context={context}
           threads={threads}
-          setShowNotifications={setShowNotifications}
-          showNotifications={showNotifications}
-          unreadNotificationCount={unreadNotificationCount}
           curriculumCourses={curriculumCourses}
         />
       )}

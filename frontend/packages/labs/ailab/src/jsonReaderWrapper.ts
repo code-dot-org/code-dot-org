@@ -4,9 +4,8 @@ import {
   setColumnsByDataType,
   setLabelColumn,
 } from './redux';
-import {Metadata} from './types';
-
-import {store} from './index';
+import {store} from './store';
+import type {Metadata} from './types';
 
 export const parseJSON = (jsonfile: string): void => {
   const rawFile = new XMLHttpRequest();

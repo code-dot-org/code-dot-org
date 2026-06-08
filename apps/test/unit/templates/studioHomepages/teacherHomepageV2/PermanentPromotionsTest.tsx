@@ -24,7 +24,7 @@ describe('PermanentPromotions', () => {
   });
 
   it('renders the second promotion with correct title, description, and link', () => {
-    expect(screen.getByText('Help improve Code.org')).toBeInTheDocument();
+    expect(screen.getByText('Help improve CodeAI')).toBeInTheDocument();
     expect(
       screen.getByText(
         'Participate in user research to help us improve our platform for everyone.'

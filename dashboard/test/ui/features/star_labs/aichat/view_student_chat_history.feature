@@ -14,8 +14,8 @@ Background:
 
   # Student interacts with model to create chat history for teacher to view.
   Given I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
-  And I click selector "#ui-close-dialog" once I see it
-  And I wait until element "#ui-close-dialog" is not visible
+  And I click selector "button[aria-label='Close']" once I see it
+  And I wait until element "button[aria-label='Close']" is not visible
   When I press keys "Hello" for element "#uitest-chat-textarea"
   And I wait until element "#uitest-chat-submit" is enabled
   And I click selector "#uitest-chat-submit"
@@ -36,8 +36,8 @@ Scenario: Teacher views student chat history and interacts with student model
   # Teacher can view chat history and provide feedback on messages flagged as inappropriate.
   Given I sign in as "Simone"
   And I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
-  When I click selector "#ui-close-dialog" once I see it
-  And I wait until element "#ui-close-dialog" is not visible
+  When I click selector "button[aria-label='Close']" once I see it
+  And I wait until element "button[aria-label='Close']" is not visible
   And I wait to see ".show-handle"
   And I click selector ".show-handle .fa-chevron-left"
   And I wait until element ".student-table" is visible

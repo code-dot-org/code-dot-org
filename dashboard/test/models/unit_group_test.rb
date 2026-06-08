@@ -1194,4 +1194,24 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert unit_group.has_ai_chat_tools?
     assert unit_group.requires_ai_chat_tools?
   end
+
+  describe '#link' do
+    subject(:link) {unit_group.link(**link_args)}
+
+    let(:unit_group) {build_stubbed(:unit_group)}
+    let(:link_args) {{}}
+
+    it 'returns course relative URL' do
+      _link.must_equal "/courses/#{unit_group.name}"
+    end
+
+    context 'when :section_id arg is provided' do
+      let(:section_id) {rand(1000..9999)}
+      let(:link_args) {{section_id:}}
+
+      it 'returns course relative URL with section_id query param' do
+        _link.must_equal "/courses/#{unit_group.name}?section_id=#{section_id}"
+      end
+    end
+  end
 end

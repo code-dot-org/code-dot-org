@@ -1,4 +1,4 @@
-import KNN from 'ml-knn';
+import type KNN from 'ml-knn';
 
 import {
   ColumnTypes,
@@ -11,14 +11,14 @@ import {
   getSummaryStat,
   getResultsDataInDataTableForm,
 } from './helpers/accuracy';
-import {isColumnNumerical, getColumnDataToSave} from './helpers/columnDetails';
+import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
 import {reportPanelView} from './helpers/metrics';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
-import {
+import type {
   DataRow,
   Metadata,
   Mode,
@@ -121,6 +121,11 @@ export interface RootState {
 // package entry) is nameable in the emitted declaration file.
 export interface ReduxAction {
   type: string;
+  // Actions carry arbitrary, per-type payloads keyed by name, which the
+  // reducer reads by field (~60 sites). A discriminated union over all ~40
+  // action creators would remove this `any`, but that is a larger refactor
+  // tracked separately.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -834,10 +839,6 @@ export function getTableData(
   } else {
     return state.data;
   }
-}
-
-export function isRegression(state: RootState): boolean {
-  return isColumnNumerical(state, state.labelColumn!);
 }
 
 /* Functions for processing data about a trained model to save. */

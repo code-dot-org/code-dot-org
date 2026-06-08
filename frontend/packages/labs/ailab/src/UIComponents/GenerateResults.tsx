@@ -5,8 +5,9 @@ import {connect} from 'react-redux';
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
 import I18n from '../i18n';
-import {getTableData, readyToTrain, RootState} from '../redux';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import {getTableData} from '../redux';
+import type {DataRow} from '../types';
 
 import {TestingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
@@ -16,17 +17,11 @@ const maxNumItems = 7;
 
 interface GenerateResultsProps {
   data: DataRow[];
-  readyToTrain: boolean;
-  labelColumn: string | undefined;
-  selectedFeatures: string[];
   instructionsOverlayActive: boolean;
 }
 
 const GenerateResults = ({
   data,
-  readyToTrain,
-  labelColumn,
-  selectedFeatures,
   instructionsOverlayActive,
 }: GenerateResultsProps) => {
   const [frame, setFrame] = useState(0);
@@ -213,8 +208,5 @@ const GenerateResults = ({
 
 export default connect((state: RootState) => ({
   data: getTableData(state, true),
-  readyToTrain: readyToTrain(state),
-  labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive,
 }))(GenerateResults);

@@ -6,8 +6,8 @@ import {RowData} from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/in
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 
-const UsStateColumn = () => {
-  const headerFormatter = () => <Header />;
+const UsStateColumn = (isDemoSection?: boolean) => {
+  const headerFormatter = () => <Header isDemoSection={isDemoSection} />;
 
   const cellFormatter = (usState: string, {rowData}: {rowData: RowData}) => (
     <Cell

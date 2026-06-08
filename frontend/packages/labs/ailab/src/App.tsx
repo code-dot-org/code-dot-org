@@ -1,8 +1,8 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import React from 'react';
+import type React from 'react';
 import {connect} from 'react-redux';
-import {Dispatch} from 'redux';
+import type {Dispatch} from 'redux';
 
 import {styles} from './constants';
 import {
@@ -10,13 +10,13 @@ import {
   shouldDisplaySaveStatus,
 } from './helpers/navigationValidation';
 import I18n from './i18n';
+import type {RootState} from './redux';
 import {
   getPanelButtons,
   setCurrentPanel,
   getTrainedModelDataToSave,
-  RootState,
 } from './redux';
-import {PrevNextButtons, ModelDataToSave, SaveResponseData} from './types';
+import type {PrevNextButtons, ModelDataToSave, SaveResponseData} from './types';
 import ColumnInspector from './UIComponents/ColumnInspector';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';

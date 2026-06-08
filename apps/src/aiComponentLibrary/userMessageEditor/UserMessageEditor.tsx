@@ -75,15 +75,40 @@ const UserMessageEditor = React.forwardRef<
       }
     };
 
-    useEffect(() => {
-      if (!internalInputRef.current) {
+    const recomputeTextareaHeight = useCallback(() => {
+      const textarea = internalInputRef.current;
+      if (!textarea) {
         return;
       }
+      textarea.style.height = 'auto'; // Need to reset height before update.
+      textarea.style.height = textarea.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
+    }, []);
 
-      internalInputRef.current.style.height = 'auto'; // Need to reset height before update.
-      internalInputRef.current.style.height =
-        internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
-    }, [userMessage]);
+    useEffect(() => {
+      recomputeTextareaHeight();
+    }, [userMessage, recomputeTextareaHeight]);
+
+    // Recompute height when the textarea's width changes (e.g., the resource
+    // panel collapses/expands and the textarea's container resizes). Without
+    // this, an initial measurement taken while the container is transiently
+    // narrow wraps the placeholder onto many lines and locks the textarea at
+    // an inflated height until the next userMessage change.
+    useEffect(() => {
+      const textarea = internalInputRef.current;
+      if (!textarea || typeof ResizeObserver === 'undefined') {
+        return;
+      }
+      let lastWidth = textarea.clientWidth;
+      const observer = new ResizeObserver(entries => {
+        const width = entries[0]?.contentRect.width ?? textarea.clientWidth;
+        if (width !== lastWidth) {
+          lastWidth = width;
+          recomputeTextareaHeight();
+        }
+      });
+      observer.observe(textarea);
+      return () => observer.disconnect();
+    }, [recomputeTextareaHeight]);
 
     const editorButtonCommonProps = {
       variant: 'contained' as const,

@@ -4,7 +4,6 @@ import {
   Position,
   useNodeConnections,
 } from '@xyflow/react';
-import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import {LineAnchorNodeType} from '../types';
@@ -22,13 +21,6 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
   // as we create two hidden nodes with an edge in between them.
   const isConnectable = connections.length === 0;
 
-  // When data.showHandles is false the handle is hidden via the .hidden
-  // class. The handle is re-shown when the wrapper .react-flow__node-lineAnchor
-  // has DOM :focus — see react-flow-canvas.module.scss. We rely on DOM
-  // focus rather than the `selected` prop so the override still applies in
-  // read-only mode (where displayNodes forces selected=false).
-  const showHandles = data.showHandles !== false;
-
   return (
     <div className={styles.anchorNode}>
       <Handle
@@ -36,9 +28,7 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
         id={lineAnchorHandleId(handleType)}
         position={handlePosition}
         isConnectable={isConnectable}
-        className={classNames(styles.anchorHandle, {
-          [styles.hidden]: !showHandles,
-        })}
+        className={`${styles.anchorHandle} ${styles.hidden}`}
       />
     </div>
   );

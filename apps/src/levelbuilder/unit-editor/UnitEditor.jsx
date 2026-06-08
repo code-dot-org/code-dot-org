@@ -553,7 +553,7 @@ class UnitEditor extends React.Component {
           {this.props.isLevelbuilder && (
             <div>
               <label>
-                Code.org Initiative
+                CodeAI Initiative
                 <select
                   style={styles.dropdown}
                   value={this.state.curriculumUmbrella}

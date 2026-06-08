@@ -9,9 +9,9 @@ import {connect} from 'react-redux';
 import {styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {getCrossTabData} from '../selectors/visualizationSelectors';
-import {CrossTabData} from '../types';
+import type {CrossTabData} from '../types';
 
 import ScrollableContent from './ScrollableContent';
 
