@@ -4,22 +4,32 @@
  * JSON offline for the purposes of compiling a cached version of a level file.
  */
 
+import type * as Blockly from 'blockly';
+
 import type {ToolboxFlyout} from '../toolbox/types';
 import type {BlocklySerialization} from '../types';
+
+type BlockState = Blockly.serialization.blocks.State;
+
+// Parse the root's direct <block> children into serialization state. Shared by
+// the JSON and toolbox conversions, which differ only in how they wrap them.
+function parseTopLevelBlocks(
+  parser: DOMParser,
+  xmlString: string,
+): BlockState[] {
+  const xml = parser.parseFromString(xmlString, 'text/xml');
+  return Array.from(xml.documentElement.children)
+    .filter(el => el.tagName === 'block')
+    .map(el => parseBlockXml(el));
+}
 
 export function convertBlocklyXmlToJson(
   parser: DOMParser,
   xmlString: string,
 ): BlocklySerialization {
-  const xml = parser.parseFromString(xmlString, 'text/xml');
-
-  const blocksArray = Array.from(xml.documentElement.children)
-    .filter(el => el.tagName === 'block')
-    .map(el => parseBlockXml(el));
-
   return {
     blocks: {
-      blocks: blocksArray,
+      blocks: parseTopLevelBlocks(parser, xmlString),
     },
   };
 }
@@ -29,15 +39,10 @@ export function convertBlocklyXmlToToolbox(
   xmlString: string,
   categoryName?: string,
 ): ToolboxFlyout {
-  const xml = parser.parseFromString(xmlString, 'text/xml');
-
-  const blocksArray = Array.from(xml.documentElement.children)
-    .filter(el => el.tagName === 'block')
-    .map(el => parseBlockXml(el))
-    .map(el => {
-      el['kind'] = 'block';
-      return el;
-    });
+  const blocksArray = parseTopLevelBlocks(parser, xmlString).map(block => ({
+    ...block,
+    kind: 'block',
+  }));
 
   return {
     name: categoryName || 'flyout',
@@ -45,17 +50,17 @@ export function convertBlocklyXmlToToolbox(
   };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseBlockXml(blockEl: Element): any {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const block: any = {
-    type: blockEl.getAttribute('type') || undefined,
+function parseBlockXml(blockEl: Element): BlockState {
+  const block: BlockState = {
+    type: blockEl.getAttribute('type') || '',
     id: blockEl.getAttribute('id') || undefined,
+    // deletable/movable are boolean attributes; coerce the parsed value to the
+    // boolean the serialization state expects.
     deletable: blockEl.hasAttribute('deletable')
-      ? parseValue(blockEl.getAttribute('deletable') || 'true')
+      ? Boolean(parseValue(blockEl.getAttribute('deletable') || 'true'))
       : undefined,
     movable: blockEl.hasAttribute('movable')
-      ? parseValue(blockEl.getAttribute('movable') || 'true')
+      ? Boolean(parseValue(blockEl.getAttribute('movable') || 'true'))
       : undefined,
   };
 
@@ -134,9 +139,13 @@ function parseBlockXml(blockEl: Element): any {
 
         // Look for procedure arguments
         for (const param of Array.from(child.querySelectorAll('arg'))) {
+          const name = param.getAttribute('name');
+          if (name === null) {
+            continue;
+          }
           block.extraState ??= {};
           block.extraState.params ??= [];
-          block.extraState.params.push(param.getAttribute('name'));
+          block.extraState.params.push(name);
         }
 
         // Some specific legacy mutators also pull in attributes from the next sibling
