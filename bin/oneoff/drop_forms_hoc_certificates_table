@@ -5,7 +5,7 @@
 # As of June 2016, this table exists on pegasus in the production environments,
 # but not other (local, staging, or test) environments.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/db'
 
 if PEGASUS_DB.table_exists?(:forms_hoc_certificates)

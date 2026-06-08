@@ -25,7 +25,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     load_pl_landing @teacher
 
     response = assigns(:landing_page_data)
-    assert_equal CDO.studio_url("/pd/workshop_survey/post/#{@ended_enrollment.code}", CDO.default_scheme),
+    assert_equal CDO.studio_url("/pd/workshop_survey/post/#{@ended_enrollment.code}"),
       response[:last_workshop_survey_url]
     assert_equal Pd::Workshop::COURSE_BUILD_YOUR_OWN, response[:last_workshop_survey_course]
   end

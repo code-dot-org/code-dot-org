@@ -13,13 +13,16 @@ export type BrandCode =
  * Resolve the current brand from the `data-brand` attribute on `<html>`,
  * which is set server-side in application.html.haml via Cdo::Brand.
  *
- * Returns the default Code.org brand when:
+ * Returns the default CodeAI brand when:
  *  - the attribute is absent (default brand / DCDO flag off)
  *  - the attribute contains an unrecognised value
  */
 export function getCurrentBrand(): BrandCode {
   try {
     const brand = document.documentElement.dataset.brand;
+    if (brand === BRAND_CODE_ORG) {
+      return BRAND_CODE_ORG;
+    }
     if (brand === BRAND_CODEAI) {
       return BRAND_CODEAI;
     }
@@ -30,7 +33,7 @@ export function getCurrentBrand(): BrandCode {
     // SSR or DOM access error — fall through to default
   }
 
-  return BRAND_CODE_ORG;
+  return BRAND_CODEAI;
 }
 
 /**

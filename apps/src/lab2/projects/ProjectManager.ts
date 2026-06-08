@@ -747,7 +747,7 @@ export default class ProjectManager {
   /**
    * Set the title of the page based on the channel name. We only do this for standalone project levels.
    * The title format is:
-   * {channel.name} - {project type display name} - Code.org [{environment}]. If we are on production,
+   * {channel.name} - {project type display name} - CodeAI [{environment}]. If we are on production,
    * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
    * @param channel
    */
@@ -760,7 +760,7 @@ export default class ProjectManager {
           : ` [${currentEnvironment}]`;
       const projectName = convertProjectTypeToDisplayName(channel.projectType);
       const projectString = projectName ? `${projectName} - ` : '';
-      document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
+      document.title = `${channel.name} - ${projectString}CodeAI${environmentSuffix}`;
     }
     // Otherwise, we will use the default document title from the server.
   }

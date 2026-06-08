@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-29 17:20:22 UTC",
+    "serialized_at": "2026-06-01 16:30:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -988,28 +988,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping Up (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U4-AITA-teaching-tools"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      },
-      "level_keys": [
-        "pl-aif-2-U4-AITA-teaching-tools"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 36,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
         "level_keys": [
           "pl-aif-2-U4-final-level"
         ],
@@ -1432,18 +1410,6 @@
         "level.key": "pl-aif-2-U4-lesson-resources-2",
         "script_level.level_keys": [
           "pl-aif-2-U4-lesson-resources-2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif-2-U4-AITA-teaching-tools",
-        "script_level.level_keys": [
-          "pl-aif-2-U4-AITA-teaching-tools"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

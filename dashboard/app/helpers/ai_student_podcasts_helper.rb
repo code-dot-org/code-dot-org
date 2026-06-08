@@ -3,14 +3,14 @@ class OpenaiStudentPodcastTimeout < StandardError; end
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
   OPENAI_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-  PODCAST_BUCKET = CDO.dashboard_hostname.split('.').reverse.join('.') + '.user-content'
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
 
   def self.create_and_save_to_s3(student_podcast_data)
+    bucket = AWS::S3.user_content_bucket
     filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
-    return if AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+    return if AWS::S3.exists_in_bucket(bucket, filename)
     return unless elevenlabs_client.available_credits
 
     podcast_script = if student_podcast_data.podcast_script
@@ -20,15 +20,15 @@ module AiStudentPodcastsHelper
                      end
 
     podcast = get_podcast_from_script(podcast_script)
-    AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
+    AWS::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
   end
 
   def self.retrieve_podcast_from_s3(lesson_id, objective_ids)
-    AWS::S3.download_from_bucket(PODCAST_BUCKET, s3_filename(lesson_id, objective_ids))
+    AWS::S3.download_from_bucket(AWS::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
   end
 
   def self.exists_in_s3?(lesson_id, objective_ids)
-    AWS::S3.exists_in_bucket(PODCAST_BUCKET, s3_filename(lesson_id, objective_ids))
+    AWS::S3.exists_in_bucket(AWS::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
   end
 
   VOICE_ID_MAP = {

@@ -362,7 +362,7 @@ class EvaluateRubricJob < ApplicationJob
     unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
       raise "CDO.ai_proxy_origin is required outside of development and test environments"
     end
-    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH)
   end
 
   private def validate_evaluations(evaluations, rubric)

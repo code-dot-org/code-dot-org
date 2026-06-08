@@ -15,7 +15,7 @@ module Poste
   end
 
   def self.emails_dir(*paths)
-    pegasus_dir 'emails', *paths
+    lib_dir 'cdo/poste/emails', *paths
   end
 
   def self.decrypt(encrypted)

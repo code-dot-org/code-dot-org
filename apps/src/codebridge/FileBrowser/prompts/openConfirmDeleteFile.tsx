@@ -2,7 +2,6 @@ import {DeleteFileFunction} from '@codebridge/codebridgeContext/types';
 import {ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -15,7 +14,6 @@ type OpenConfirmDeleteFileArgsType = {
     eventName: string,
     payload?: Record<string, string>
   ) => void;
-  cleanupValidationFile: () => void;
 };
 
 // this is ~technically~ not a prompt in that it's merely a confirmation dialog,
@@ -25,7 +23,6 @@ export const openConfirmDeleteFile = async ({
   dialogControl,
   deleteFile,
   sendLab2AnalyticsEvent,
-  cleanupValidationFile,
 }: OpenConfirmDeleteFileArgsType) => {
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericConfirmation,
@@ -36,11 +33,6 @@ export const openConfirmDeleteFile = async ({
   });
 
   if (results.type === 'confirm') {
-    // If we are deleting a validation file, we are in start mode, and we should
-    // ensure that the override validation is set to an empty list.
-    if (file.type === ProjectFileType.VALIDATION) {
-      cleanupValidationFile();
-    }
     deleteFile({fileId: file.id});
     sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, {
       fileType: getFileExtension(file.name),

@@ -32,10 +32,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     if (id === 'create-section') {
       createSectionTour?.start();
     } else if (id === 'review-syllabus') {
-      // Only start the review syllabus tour for high school teachers, since the onboarding steps are specific to the high school experience for now
-      if (demoType === 'high') {
-        reviewSyllabusTour?.start();
-      }
+      reviewSyllabusTour?.start();
     } else if (id === 'learn-to-evaluate') {
       learnHowToEvaluateTour?.start();
     }
@@ -55,7 +52,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           Where should we start?
         </Typography>
         <Typography variant="body2">
-          Teaching Assistant can help you get started with Code.org
+          Teaching Assistant can help you get started with CodeAI
         </Typography>
         <div className={styles.onboardingChecklistButtons}>
           {CHECKLIST_ITEMS.map(({id, label, completed}) => (

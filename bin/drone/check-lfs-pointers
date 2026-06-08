@@ -1,0 +1,49 @@
+#!/bin/sh
+# Guard both directions of a .gitattributes/Git LFS mismatch in the given ref
+# (default HEAD), printing direction-specific fix instructions on failure.
+
+ref="${1:-HEAD}"
+status=0
+
+# Direction 1: a file that .gitattributes marks as LFS is committed as content
+# instead of a pointer ("should have been a pointer, but wasn't"). This breaks
+# local checkouts. git-lfs detects it directly.
+if ! git lfs fsck --pointers "$ref"; then
+  cat >&2 <<'EOF'
+
+ERROR: Git LFS pointer mismatch (see above).
+A file that .gitattributes marks as LFS is committed as content, not a pointer.
+Fix it in your feature branch and commit the result:
+    git add --renormalize .
+EOF
+  status=1
+fi
+
+# Direction 2: a file is committed as an LFS pointer but .gitattributes no longer
+# tracks it as LFS. git never smudges it, so at runtime the file holds literal
+# pointer text -- a latent failure (e.g. JSON.parse of a manifest) that surfaces
+# only once a fresh checkout / rebuilt cache stops masking it.
+stranded=$(
+  git grep -I -l -e '^version https://git-lfs\.github\.com/spec/v1' "$ref" -- 2>/dev/null \
+    | sed 's/^[^:]*://' \
+    | git check-attr --stdin filter 2>/dev/null \
+    | grep -v ': filter: lfs$' \
+    | sed 's/: filter: [^:]*$//'
+)
+if [ -n "$stranded" ]; then
+  {
+    echo
+    echo "ERROR: stranded Git LFS pointer(s) -- committed as a pointer but not LFS-tracked:"
+    echo "$stranded" | sed 's/^/    /'
+    echo
+    echo "These files will hold literal pointer text at runtime instead of their content."
+    echo "Fix it in your feature branch and commit the result:"
+    echo "    git add --renormalize ."
+    echo "If your working tree only has the pointer text, restore the real content first"
+    echo "-- e.g. undo the .gitattributes change so the path is LFS-tracked again,"
+    echo "git restore the file, then renormalize."
+  } >&2
+  status=1
+fi
+
+exit $status

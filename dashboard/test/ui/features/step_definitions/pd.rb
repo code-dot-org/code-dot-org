@@ -517,7 +517,7 @@ def create_enrollment(workshop, name = nil)
         school_type: 'other',
         state: 'WA',
         zip: '98101',
-        school_name: 'Code.org'
+        school_name: 'CodeAI'
       }
     ),
     pd_workshop_id: workshop.id
