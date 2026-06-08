@@ -268,6 +268,9 @@ class Driver<
     }
 
     if (agent.workspace) {
+      // Dispose this workspace's inject plugins while it is still live, before
+      // Agent.deconstruct calls workspace.dispose().
+      this._registry.disposeInject(agent.workspace);
       this.emit(DriverEvent.Removed, agent.workspace);
     }
   }
