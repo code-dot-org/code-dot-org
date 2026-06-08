@@ -132,3 +132,6 @@ export const TUTOR_MODE_TO_ANSWER_TYPE: Record<
     'testCase',
   ],
 };
+
+export const WEBLAB2_WELCOME_CHAT_MESSAGE =
+  "Hi! I'm your AI Tutor. Ask me for help with this project, the level, brainstorming ideas, debugging, or anything else you're working on.";
