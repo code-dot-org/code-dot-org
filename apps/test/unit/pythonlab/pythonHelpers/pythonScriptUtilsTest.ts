@@ -299,7 +299,9 @@ describe('pythonScriptUtils', () => {
 
       const folder = Object.values(result.folders).find(f => f.name === 'pkg');
       expect(folder).toBeDefined();
-      const nested = Object.values(result.files).find(f => f.name === 'util.py');
+      const nested = Object.values(result.files).find(
+        f => f.name === 'util.py'
+      );
       expect(nested?.contents).toBe('b');
       expect(nested?.folderId).toBe(folder?.id);
       expect(unlinked).toContain('/Files/pkg/util.py');
