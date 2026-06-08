@@ -1,3 +1,4 @@
+@playwright
 Feature: Visiting a jigsaw page
 
 Background:
