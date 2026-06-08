@@ -146,6 +146,58 @@ describe('convertBlocklyXmlToJson', () => {
     });
   });
 
+  // The input/next block is the direct-child <block> of the container, never a
+  // <block> buried deeper in a preceding sibling such as a <shadow> default.
+  describe('direct-child block selection', () => {
+    it('selects the direct-child value block, skipping a shadow default', () => {
+      const block = firstBlock(
+        '<xml><block type="a"><value name="X">' +
+          '<shadow type="math_number"><field name="NUM">1</field></shadow>' +
+          '<block type="real"/>' +
+          '</value></block></xml>',
+      );
+      expect(block.inputs).toEqual({X: {block: {type: 'real'}}});
+    });
+
+    it('ignores a block nested inside a preceding shadow', () => {
+      // The shadow's own input holds a block; document order puts that nested
+      // block before the real direct child, so a descendant search would wrongly
+      // pick it. Direct-child selection takes the outer block.
+      const block = firstBlock(
+        '<xml><block type="a"><value name="X">' +
+          '<shadow type="wrapper">' +
+          '<value name="INNER"><block type="nested"/></value>' +
+          '</shadow>' +
+          '<block type="outer"/>' +
+          '</value></block></xml>',
+      );
+      expect(block.inputs).toEqual({X: {block: {type: 'outer'}}});
+    });
+
+    it('leaves the input unset when the only block is nested in a shadow', () => {
+      const block = firstBlock(
+        '<xml><block type="a"><value name="X">' +
+          '<shadow type="wrapper">' +
+          '<value name="INNER"><block type="deep"/></value>' +
+          '</shadow>' +
+          '</value></block></xml>',
+      );
+      expect(block).not.toHaveProperty('inputs');
+    });
+
+    it('selects the direct-child next block, not one nested in a shadow', () => {
+      const block = firstBlock(
+        '<xml><block type="a"><next>' +
+          '<shadow type="wrapper">' +
+          '<value name="INNER"><block type="nested"/></value>' +
+          '</shadow>' +
+          '<block type="outer"/>' +
+          '</next></block></xml>',
+      );
+      expect(block.next).toEqual({block: {type: 'outer'}});
+    });
+  });
+
   describe('mutation', () => {
     it('lifts mutation attributes into extraState, renaming elseif', () => {
       const block = firstBlock(
