@@ -7,6 +7,12 @@ import {defineConfig} from 'vitest/config';
 // tests so `yarn test` does not require launching a browser. Run with
 // `yarn test:browser` (or `:update` to refresh any screenshot baselines).
 export default defineConfig({
+  // Pre-bundle React entrypoints up front; otherwise the first test importing
+  // react-dom/client triggers an on-the-fly optimize + page reload mid-run,
+  // which vitest warns can flake.
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-dom/client'],
+  },
   test: {
     globals: true,
     include: ['**/*.browser.test.{ts,tsx}'],
