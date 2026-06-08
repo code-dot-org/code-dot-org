@@ -486,7 +486,9 @@ export default class JavabuilderConnection {
 
   // Closes web socket connection
   closeConnection() {
+    console.log('in closeConnection');
     if (this.socket) {
+      console.log('found socket, closing');
       this.socket.close();
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`

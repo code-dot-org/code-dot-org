@@ -23,6 +23,8 @@ import {splitForLevelbuilderSave} from './sourceConverter';
 
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
+let runInProgress = false;
+let interruptSignal = false;
 
 // Javabuilder explicitly sends newline messages,
 // so any other console output is written as a partial line
@@ -45,10 +47,16 @@ export async function handleRunClick(
   progressManager: ProgressManager | null
 ): Promise<void> {
   let csrfToken: string | null = null;
+  runInProgress = true;
+  interruptSignal = false;
   try {
     csrfToken = await getAuthenticityToken();
   } catch (e) {
     csrfToken = null;
+  }
+  // If the user stopped the program while we were fetching the token, interrupt here before we do any more work.
+  if (interruptSignal) {
+    return;
   }
 
   const state = getStore().getState();
@@ -102,6 +110,11 @@ export async function handleRunClick(
   const overrideValidation =
     inStartMode && runTests ? split?.validation : undefined;
 
+  // Check again for interruption before starting the run/resetting validation
+  if (interruptSignal) {
+    return;
+  }
+
   if (runTests) {
     // In start mode, we fully reset validation as if we are changing levels
     // in case the levelbuilder renamed a method. This prevents a confusing 'pending'
@@ -121,6 +134,8 @@ export async function handleRunClick(
     const finishRun = (running?: boolean) => {
       if (running || resolved) return;
       resolved = true;
+      runInProgress = false;
+      interruptSignal = false;
       if (runTests && progressManager) {
         progressManager.updateProgress();
       }
@@ -172,12 +187,17 @@ export async function handleRunClick(
 }
 
 export function stopJavaCode(): void {
+  console.log('in stopJavaCode');
   // If the neighborhood exists, stop it. This prevents extra animation
   // from occurring after stop.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
   if (activeConnection) {
+    console.log('found active connection, closing it');
     activeConnection.closeConnection();
     activeConnection = null;
+  } else if (runInProgress) {
+    interruptSignal = true;
+    writeToConsole('[JAVALAB] Program Stopped');
   }
 }
 
