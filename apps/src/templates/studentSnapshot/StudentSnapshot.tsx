@@ -7,7 +7,10 @@ import {useSelector} from 'react-redux';
 import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
-import {resumeLearnHowToEvaluateTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import {
+  isLearnToEvaluateTourOnSnapshotPage,
+  resumeLearnHowToEvaluateTour,
+} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -99,6 +102,16 @@ const StudentSnapshot: React.FC = () => {
         .then(lessonsData => {
           setLessons(lessonsData.lessons);
           setHasUnnumberedLessons(lessonsData.hasUnnumberedLessons);
+          // When the Learn How to Evaluate tour has directed the user to this
+          // page, pre-select the third lesson (or the last if fewer exist) so
+          // the tour can highlight meaningful content without the teacher
+          // needing to pick a lesson manually.
+          if (isLearnToEvaluateTourOnSnapshotPage()) {
+            const lessonList = lessonsData.lessons;
+            const targetLesson =
+              lessonList[2] ?? lessonList[lessonList.length - 1] ?? null;
+            if (targetLesson) setSelectedLessonId(targetLesson.id);
+          }
         })
         .finally(() => {
           setIsLessonsLoading(false);

@@ -8,9 +8,24 @@ import {
   createLearnHowToEvaluateHomepageSteps,
   createLearnHowToEvaluateProgressSteps,
   LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+  STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
 } from './learnHowToEvaluateOnboarding';
 
-export {LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY};
+export {
+  LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+  STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
+};
+
+// Returns true when the tour has navigated to the Student Snapshot page and
+// is waiting to show the snapshot-page steps.  Used by StudentSnapshot to
+// know it should auto-select a lesson and student.
+export const isLearnToEvaluateTourOnSnapshotPage = (): boolean => {
+  const saved = tryGetSessionStorage(
+    LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+    ''
+  );
+  return saved === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID;
+};
 
 // Call this on the section progress page to resume the tour after navigation.
 // Runs outside React so it works regardless of render mode.

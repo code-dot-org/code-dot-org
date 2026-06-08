@@ -3,6 +3,7 @@ import {StepOptions, Tour} from 'shepherd.js';
 import {
   createCompletionStep,
   createQuizWhenHandlers,
+  nextButton,
   withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
@@ -16,10 +17,15 @@ const VIEW_PROGRESS_SELECTOR =
   '#ui-test-demo-section-action-progress, [id^="task-button-View-progress-"]';
 const PROGRESS_TABLE_SELECTOR = '#ui-test-progress-table-v2';
 const STUDENT_SNAPSHOT_SELECTOR = 'a[href*="student_snapshot"]';
+const LESSON_INSIGHT_WIDGET_SELECTOR = '#ui-test-lesson-insight-widget';
+const LESSON_FEEDBACK_WIDGET_SELECTOR = '#ui-test-lesson-feedback-widget';
+const CFU_WIDGET_SELECTOR = '#ui-test-cfu-widget';
 const STUDENT_ROW_PREFIX = 'ui-test-student-row-unexpanded-';
 const CORRECT_STUDENT = 'Samir Patel';
 
 export const PROGRESS_TABLE_STEP_ID = 'progress-table-step';
+export const STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID =
+  'student-snapshot-ai-insights-step';
 
 const waitForElement = (
   selector: string,
@@ -156,9 +162,13 @@ export const createLearnHowToEvaluateProgressSteps = (
 
   let snapshotClickHandler: ((e: Event) => void) | null = null;
 
-  const hasStudentSnapshot = !!document.querySelector(
-    STUDENT_SNAPSHOT_SELECTOR
-  );
+  const hasSnapshotLink = !!document.querySelector(STUDENT_SNAPSHOT_SELECTOR);
+  // Include snapshot page steps when there is a link to navigate to (progress
+  // page with the feature enabled) OR when we have already navigated there
+  // (resume scenario: the link is gone but the snapshot widgets are present).
+  const isOnSnapshotPage =
+    window.location.pathname.includes('student_snapshot');
+  const includeSnapshotFlow = hasSnapshotLink || isOnSnapshotPage;
 
   const quizStep: StepOptions = {
     id: PROGRESS_TABLE_STEP_ID,
@@ -181,8 +191,8 @@ export const createLearnHowToEvaluateProgressSteps = (
 
   const steps: StepOptions[] = [quizStep];
 
-  if (hasStudentSnapshot) {
-    const snapshotStep: StepOptions = {
+  if (hasSnapshotLink) {
+    const snapshotLinkStep: StepOptions = {
       id: 'student-snapshot-step',
       attachTo: {
         element: STUDENT_SNAPSHOT_SELECTOR,
@@ -204,7 +214,7 @@ export const createLearnHowToEvaluateProgressSteps = (
           snapshotClickHandler = () => {
             trySetSessionStorage(
               LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
-              'onboarding-complete'
+              STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
             );
             document
               .querySelector(STUDENT_SNAPSHOT_SELECTOR)
@@ -235,7 +245,83 @@ export const createLearnHowToEvaluateProgressSteps = (
         },
       },
     };
-    steps.push(snapshotStep);
+    steps.push(snapshotLinkStep);
+  }
+
+  if (includeSnapshotFlow) {
+    const aiInsightsStep: StepOptions = {
+      id: STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
+      attachTo: {element: LESSON_INSIGHT_WIDGET_SELECTOR, on: 'bottom'},
+      text: withSparkle(
+        'AI Insights gives you an at-a-glance summary of how this student is progressing, any misconceptions detected, and suggested next steps.',
+        'Take a look, then click Next.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement(LESSON_INSIGHT_WIDGET_SELECTOR, controller.signal),
+      when: {
+        show() {
+          document
+            .querySelector(LESSON_INSIGHT_WIDGET_SELECTOR)
+            ?.classList.add('tour-step-highlight');
+        },
+        hide() {
+          document
+            .querySelector(LESSON_INSIGHT_WIDGET_SELECTOR)
+            ?.classList.remove('tour-step-highlight');
+        },
+      },
+    };
+
+    const aiFeedbackStep: StepOptions = {
+      id: 'student-snapshot-ai-feedback-step',
+      attachTo: {element: LESSON_FEEDBACK_WIDGET_SELECTOR, on: 'bottom'},
+      text: withSparkle(
+        'AI Feedback drafts personalized feedback for the student based on their work. You can edit it before sending it directly to the student.',
+        'Review it, then click Next.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement(LESSON_FEEDBACK_WIDGET_SELECTOR, controller.signal),
+      when: {
+        show() {
+          document
+            .querySelector(LESSON_FEEDBACK_WIDGET_SELECTOR)
+            ?.classList.add('tour-step-highlight');
+        },
+        hide() {
+          document
+            .querySelector(LESSON_FEEDBACK_WIDGET_SELECTOR)
+            ?.classList.remove('tour-step-highlight');
+        },
+      },
+    };
+
+    const cfuStep: StepOptions = {
+      id: 'student-snapshot-cfu-step',
+      attachTo: {element: CFU_WIDGET_SELECTOR, on: 'bottom'},
+      text: withSparkle(
+        'The Check for Understanding section shows how the student performed on the knowledge-check questions in this lesson — helpful for spotting gaps before moving on.',
+        'Take a look, then click Next.'
+      ),
+      buttons: [nextButton(tour)],
+      beforeShowPromise: () =>
+        waitForElement(CFU_WIDGET_SELECTOR, controller.signal),
+      when: {
+        show() {
+          document
+            .querySelector(CFU_WIDGET_SELECTOR)
+            ?.classList.add('tour-step-highlight');
+        },
+        hide() {
+          document
+            .querySelector(CFU_WIDGET_SELECTOR)
+            ?.classList.remove('tour-step-highlight');
+        },
+      },
+    };
+
+    steps.push(aiInsightsStep, aiFeedbackStep, cfuStep);
   }
 
   steps.push(
