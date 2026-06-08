@@ -18,6 +18,27 @@ module Cdo
       configs[region] = YAML.safe_load_file(CDO.dir('config', 'global_editions', "#{region}.yml"), aliases: true)&.deep_symbolize_keys || {}
     end.freeze
 
+    # Extends Rails route URL generation to automatically include the current Global Edition path
+    # as the request script name when one is not already provided.
+    #
+    # This module is intended to be prepended to Rails route URL helpers
+    # so that generated URLs preserve the active Global Edition region path.
+    #
+    # @example
+    #   Rails.application.routes.url_helpers.home_url => 'https://studio.code.org/in/en/home'
+    #
+    # @see https://github.com/rails/rails/blob/v7.0.10/actionpack/lib/action_dispatch/routing/route_set.rb#L801
+    module RouteSet
+      def url_for(options, ...)
+        if options.is_a?(Hash) && !options.key?(:script_name)
+          ge_region = Cdo::GlobalEdition.current_region
+          options = options.merge(script_name: Cdo::GlobalEdition.path(ge_region)) if ge_region
+        end
+
+        super
+      end
+    end
+
     # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
     def self.current_region=(region)
       if region.nil?
@@ -165,7 +186,7 @@ module Cdo
     #
     # @example Replace an existing Global Edition prefix
     #   path("fa", "/in/hi/home") => "/fa/home"
-    def self.path(region, *paths, locale: ::I18n.locale)
+    def self.path(region, *paths, locale: ::I18n.locale.to_s)
       region = region.to_s
 
       path = ::File.join('/', *paths)
@@ -240,3 +261,5 @@ module Cdo
     end
   end
 end
+
+ActionDispatch::Routing::RouteSet.prepend(Cdo::GlobalEdition::RouteSet) if defined?(ActionDispatch::Routing::RouteSet)

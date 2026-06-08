@@ -297,7 +297,7 @@ module Middleware
           # - `request.script_name` strips the prefix from the request path
           #   so the application processes requests as if it were running at the root level.
           # - `request.path_info` provides the specific path that should be handled by the application.
-          request.script_name = regional_path_for(url_region, original_script_name).chomp('/') unless excluded_path?(main_path)
+          request.script_name = regional_path_for(url_region, original_script_name) unless excluded_path?(main_path)
           request.path_info   = main_path
         end
 
