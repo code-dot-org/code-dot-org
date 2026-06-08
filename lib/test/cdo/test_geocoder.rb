@@ -1,7 +1,5 @@
-require_relative './test_helper'
-require_relative '../../lib/cdo/pegasus'
-require_relative '../../lib/cdo/pegasus/src/env'
-require_relative '../../lib/cdo/geocoder'
+require_relative '../test_helper'
+require 'cdo/geocoder'
 
 class GeocoderTest < Minitest::Test
   include SetupTest

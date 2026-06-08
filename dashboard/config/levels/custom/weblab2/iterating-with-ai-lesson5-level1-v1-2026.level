@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-05T21:31:49.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "notes.md",
+          "contents": "# AI Loop Notes\n\n## Prompt 1\n\n\n## Output 1\n\n\n## Prompt 2\n\n\n## Output 2\n\n\n\n## What changed between the two outputs?\n\n\n## Which words in your prompts may have changed the AI output?\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMr0g1yZX0Q26M4B3DGa\n2qcJbMI5iiqTunRwx5bm9b8FjPO3moygKWlL2cH6wXcJJ8n11aCltj8YTgrk\nHyTmexAoQpjJ376xgNWgQhyOyNZr3YPVJX785V1725NlAj403ioPvBTaZMtl\nU39jX2NF7GIw8r8yawq1YTVkUzIrdftzfn7QtZER3As3ej50E/e7gqnuj0Mi\ni4BPDQRR3GfliKAhWcj8eIX4Sk6JhfNFU1uAgq3/jse1+705Ha0CIzbghYA1\nw6VK3U3gouw///x/kJdf4uKtCX2yjptOLgyRQ0lHgIiA9bAgF4RoDcyGbkVH\nY6BmG44lkh+TSx+Vfj6j8kZErP0P7dx5Ato8P6vl1i9Okdoa1iQkY3jWFvii\nZE3gBLqJu3+XyrD7VErhACPDxEdZtx32svuXTOmye1iX8dL8M/As08CLX7ex\nJXdN78KKM8bnkbZdXZTdNwU2ZbuR2gMHogyWeWmEo17DKCstAmEEvAfMXgpn\nh6B8LLYkQBKTDfB1QPt9dzHdKjwA6XSEw3mBLu8uoP33RTM0/G8+c8Z7eP5K\nEONxiKBJ/jNK11MqelxvsdpbmaWWtSq968EYMa7oI6acbHxWu8cBVHhfLN+f\nWxjbh3tuM9/sDGLayctE9/Gf1HDvMvjcU0TVFF4hy9TeyB6VfLGdezMdW8ZB\nrx0lmidy/s3TFoulNC5UvaDdBI/XRPIYoW4DeQaQtd23+0By11gSRYornuTG\nGDBwCi5NPXPCBf1FrFeQrdQ1oGA/y0HuunXEMxj47dM9t4vaXhRQloay2tMf\nOteCH36XI8S/bPWEyp4LQrYl5Fv6D2oRAlOWD1FrJuAz5HDb+RCd8wNjR6g1\nEI15YR8PwM7fLcMXSy3vb9XpmZnC/lJ73dgIZ7qjKD1s23fDh2MWD3H1Jf7i\nWIW0GDKApebshdNapySqVpm+qbIG+SGMvLu7XDGUcCHkwSUwLEpGAQz19ixS\nER7dxpxSuXGCgWjfglFKh7MhRSOYBgFuAVLkdlm9EXJfC4LQfoUQQQCZfJWG\nzbmeILCCFJ39aRkSEFj/tEdhlq1jbIQP7aAbRKPUVrHkogBccp7geKGZ8F5K\nBasMpZ8J4fzEzHPTNxaQ8Dt2F67kkXGlluAvOsTRtWYcCBU2CLq8qCYIkuyf\nrdECFD6pCzqFnXpKKcCpnmHx41vnbBZMAoNOQZU1jTAU8iq16K80nJjF+T4t\nBXqteJuVzYhBViqnk8rNy+tzkIveTSH9fCScMUTG8uVVMXuYhQWgCn2DGaOr\nrBeTwYTTChxlikM68d8J/NOA32f8WvM+a2GD189YqgUAdEkSQrvnnMyc+UYY\nqzTfSYojGhSebc26uOv7eejxfw2+0ildvyHWbLP6K/FhmqqAuGPFJM5Dmcwv\n9NXcrN+bf/O5EuIMnt7BUP+DMqBsWdjzdh0f8GI4JslwWZ3BFuB64MlVYC92\ntLug694O4ETkOK/2A2lmGh8voEcHvN+5MP1f7lh2pzTrUzStD1sMmxhtxjYQ\nSgBfchTN9Hu6wF+BWR/aynQhPYV7/1j6ZU19FK0OSrJjnUcP6Q3ZoQjGXFAa\nVDrZ4v5FEd09BSixnTc0DRmjpXrrqQLZo1WiHHoUQsn5/FzbT4mR444FFypm\nVoOieCbFmn1kGGfzVHSFUgqoGjVHRaQ5du2FAQlI9LjKrIiL/TbXaJp3nYu8\n6gIvszpJsfSLL71yHNt44ut3BUNbDULEs0gFB0xsmH4gXxTj/dIOjDy/UTjB\nOReQ6o+6DK9GJZlO8GOheWmPnRzX4fqA0lJJqpmeLuNP+BhtKpG/msBntjwJ\n0AH/Qy6nTBLyEApi9Q==\n",
+    "encrypted": "false",
+    "long_instructions": "## Explore Two Loop Patterns\r\n\r\n**Goal:** Compare how different prompts lead to different loop examples.\r\n\r\n---\r\n\r\n**1. Prompt AI Tutor.**\r\n\r\n* Ask AI Tutor for a short loop example where a player takes 5 free throws.\r\n* Copy the output into `notes.md`.\r\n\r\n**2. Change your wording.**\r\n\r\n* Ask AI Tutor for a short loop example where a player keeps shooting until they make a basket.\r\n* Copy the output into `notes.md`.\r\n\r\n**3. Record what changed.**\r\n\r\n* In `notes.md`, record the prompts you used and what changed.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "For this lesson, the learner is comparing short loop examples, not building a complete app.\n\nWhen the learner asks for a short loop example, provide a small runnable JavaScript example that demonstrates the loop pattern.\n\nUse only basic for loops and while loops.\nDo not use for...of, forEach, map, filter, find, reduce, or other array methods.\n\nIf the learner prompt describes a set number of times, such as \"5 free throws,\" prefer a basic for loop.\nIf the learner prompt describes continuing until an event or condition, such as \"until they make a basket,\" prefer a while loop.\n\nWhen adding a second loop example, do not delete the first example. Add the new example below the existing code.\n\nKeep examples short and focused on the loop.\nDo not add HTML, CSS, DOM code, or app structure.\nDo not complete any larger programming task beyond the short loop example requested."
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-05T21:31:49.383+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level1-v1-2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level1-v1-2026\"}]"
+}]]></config>
+</Weblab2>

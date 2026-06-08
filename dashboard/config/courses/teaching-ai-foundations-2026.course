@@ -27,7 +27,7 @@
     "self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026",
     "self-paced-pl-teaching-insights-from-data-ai-s1-2026"
   ],
-  "published_state": "preview",
+  "published_state": "deprecated",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

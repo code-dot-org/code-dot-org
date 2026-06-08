@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "Think of two real-world tasks that repeat.\r\n\r\n> 1. Describe one task that would work best as a for loop.\r\n> \r\n> 3. Describe one task that would work best as a while loop.\r\n\r\nFor each one, explain how the loop knows when to stop.",
+    "long_instructions": "> ####Think of two real-world tasks that repeat.\r\n> 1. What is one task that would work best as a **for loop**. How does the loop know when to stop?\r\n> 2. What is one task that would work best as a **while loop**. How does the loop know when to stop>\r\n> 3. Choose one of those tasks and write a prompt you could give to an AI tool. What words in your prompt would help the AI choose the correct loop type?\r\n\r\n\r\n",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "enter response here...",
@@ -21,7 +21,7 @@
     "skip_sound": true,
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-04T20:20:34.278+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level5_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level5_2026\"},{\"changed_at\":\"2026-06-04 20:29:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 20:30:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-06-04T20:20:34.278+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level5_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level5_2026\"},{\"changed_at\":\"2026-06-04 20:29:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-04 20:30:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 18:41:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-05 18:59:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-05 19:03:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

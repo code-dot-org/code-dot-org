@@ -1,13 +1,13 @@
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/pegasus'
 
 class FileUtilityTest < Minitest::Test
   def test_find_first_existing
-    assert_equal 'test/test_hash.rb',
+    assert_equal 'test/cdo/pegasus/test_file_utility.rb',
       FileUtility.find_first_existing(
         [
           'test/does_not_exist',
-          'test/test_hash.rb',
+          'test/cdo/pegasus/test_file_utility.rb',
           'test/also_does_not_exist',
         ]
       )
