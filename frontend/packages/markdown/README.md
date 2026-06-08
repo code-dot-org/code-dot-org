@@ -204,12 +204,12 @@ raw HTML (`<b data-id>`, `<span data-url>`) is accepted too.
   contiguous — a blank line ends the HTML block). The legacy `::: details
 [summary]` sugar — with its flexible spacing — is provided by the `details`
   extension, which rewrites it to that HTML before parsing.
-- **Blockly block vs. inline (`xmlAsTopLevelBlock`).** Modern micromark already
-  treats an `<xml>` whose opening tag is alone on its line as a top-level block,
-  and an inline `<xml>` as paragraph content — the same distinction the legacy
+- **Custom element block vs. inline.** Modern micromark already treats a custom
+  element whose opening tag is alone on its line as a top-level block, and one
+  embedded mid-sentence as paragraph content — the same distinction the legacy
   plugin existed to create. Author for the placement you want (see the `callout`
-  block-level note above); enable the `blockly` extension for the tags to survive
-  sanitization.
+  block-level note above); a consumer extension still has to allowlist the tag
+  for it to survive sanitization.
 
 ## Localization
 
@@ -225,10 +225,10 @@ and paragraphs carry `data-isolate` for the runtime translation path.
 
 ### Why a plugin, and what it solves
 
-Our translation engine refuses to translate a paragraph that contains Blockly
-XML (`<xml>`, `<block>`, ...) or other non-phrasing elements, and mishandles
-`<code>`. `rehypeLocalize` works around this on the hast tree, before
-sanitization:
+Our translation engine refuses to translate a paragraph that contains
+non-phrasing elements (e.g. an embedded custom-XML widget such as the Blockly
+tags an extension may allowlist), and mishandles `<code>`. `rehypeLocalize`
+works around this on the hast tree, before sanitization:
 
 1. Within each block (default `<p>`), elements the translator can't handle are
    replaced by a `<code>` placeholder carrying a stash index and stashed

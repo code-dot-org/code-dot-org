@@ -553,6 +553,23 @@ describe('Markdown', () => {
       expect(html).not.toContain('data-isolate');
     });
 
+    it('hides a non-phrasing element from the translator and restores it', () => {
+      // rehypeLocalize stashes anything outside its inline allowlist behind a
+      // <code> placeholder the translator ignores, then restores it verbatim.
+      const widget: MarkdownExtension = {
+        name: 'widget',
+        sanitizeSchema: {tagNames: ['widget']},
+      };
+      const seen = activateLocalization();
+      const html = render('Press <widget></widget> now', [widget]);
+      // the translator never saw the stashed element...
+      expect(seen.join('')).not.toContain('<widget');
+      // ...just a <code> placeholder (which the translator leaves untouched)
+      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
+      // ...but the output preserves the original
+      expect(html).toContain('<widget');
+    });
+
     it('renames <code> for translation and restores it', () => {
       const seen = activateLocalization();
       const html = render('run `print` please');

@@ -52,6 +52,14 @@ class Registry<T extends Environment = Environment> {
   private mutators: Mutator[] = [];
   /** Registered input plugins */
   private inputs: InputPlugin[] = [];
+  /**
+   * Live inject-plugin instances, grouped by the workspace they were created
+   * for, so they can be disposed when that workspace is torn down.
+   */
+  private injectInstances: Map<
+    Blockly.WorkspaceSvg,
+    Array<{dispose?: () => void}>
+  > = new Map();
   /** The Blockly environment data */
   private environment?: T;
   /** Whether or not the procedure extensions were registered. */
@@ -360,8 +368,29 @@ class Registry<T extends Environment = Environment> {
     inline: boolean,
   ) {
     if (injectPlugin.useWithInline || !inline) {
-      new injectPlugin.plugin(workspace, this.theme);
+      // Retain the instance so its dispose() (if any) can run at teardown.
+      const instance = new injectPlugin.plugin(workspace, this.theme) as {
+        dispose?: () => void;
+      };
+      const instances = this.injectInstances.get(workspace) ?? [];
+      instances.push(instance);
+      this.injectInstances.set(workspace, instances);
     }
+  }
+
+  /**
+   * Disposes the inject-plugin instances created for the given workspace,
+   * invoking each instance's dispose() if it has one. Called as the workspace
+   * is torn down, before Blockly disposes it, so plugins clean up against a
+   * still-live workspace.
+   */
+  disposeInject(workspace: Blockly.WorkspaceSvg) {
+    const instances = this.injectInstances.get(workspace);
+    if (!instances) {
+      return;
+    }
+    this.injectInstances.delete(workspace);
+    instances.forEach(instance => instance.dispose?.());
   }
 
   /**
@@ -469,6 +498,13 @@ class Registry<T extends Environment = Environment> {
     // Input plugins do not have to be registered... the renderer is the only
     // object that is registered in this case.
     this.inputs = [];
+
+    // Dispose any inject-plugin instances still tracked (workspaces that were
+    // not individually torn down via disposeInject).
+    this.injectInstances.forEach(instances =>
+      instances.forEach(instance => instance.dispose?.()),
+    );
+    this.injectInstances.clear();
   }
 }
 

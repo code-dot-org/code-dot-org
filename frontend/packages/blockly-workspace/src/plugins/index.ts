@@ -117,24 +117,49 @@ export type InjectChangeFunction<T = never> = [T] extends [never]
   ? (event: Blockly.Events.Abstract) => void
   : (event: Blockly.Events.Abstract, data: T) => void;
 
-export interface CreateInjectPluginOptionsBase {
+/**
+ * A setup function run once after the workspace is injected and laid out. No
+ * change event fires on inject, so a plugin that paints initial state uses this
+ * rather than waiting for the first onChange. Receives the state from onInit.
+ */
+export type InjectReadyFunction<T = never> = [T] extends [never]
+  ? (workspace: Blockly.WorkspaceSvg, theme: Theme) => void
+  : (workspace: Blockly.WorkspaceSvg, theme: Theme, data: T) => void;
+
+/**
+ * A teardown function run as the workspace is disposed, before Blockly tears it
+ * down (so the workspace is still usable). The cleanup mirror of onReady:
+ * release anything onInit/onReady acquired. Receives the state from onInit.
+ */
+export type InjectDisposeFunction<T = never> = [T] extends [never]
+  ? (workspace: Blockly.WorkspaceSvg, theme: Theme) => void
+  : (workspace: Blockly.WorkspaceSvg, theme: Theme, data: T) => void;
+
+export interface CreateInjectPluginOptionsBase<T = never> {
   useWithInline?: boolean;
+  /**
+   * Run once after injection, deferred until the flyout and blocks are laid
+   * out. Use it to draw initial state that no change event would trigger.
+   */
+  onReady?: InjectReadyFunction<T>;
+  /** Run when the workspace is torn down; the cleanup mirror of onReady. */
+  onDispose?: InjectDisposeFunction<T>;
 }
 
 export interface CreateInjectPluginOptionsWithInitAndChange<T = never>
-  extends CreateInjectPluginOptionsBase {
+  extends CreateInjectPluginOptionsBase<T> {
   onInit?: InjectSetupFunction<T>;
   onChange?: InjectChangeFunction<T>;
 }
 
 export interface CreateInjectPluginOptionsWithInit<T = never>
-  extends CreateInjectPluginOptionsBase {
+  extends CreateInjectPluginOptionsBase<T> {
   onInit?: InjectSetupFunction<T>;
   onChange?: never;
 }
 
 export interface CreateInjectPluginOptionsWithChange<T = never>
-  extends CreateInjectPluginOptionsBase {
+  extends CreateInjectPluginOptionsBase<T> {
   onInit?: never;
   onChange?: InjectChangeFunction<T>;
 }
@@ -151,17 +176,22 @@ export type CreateInjectPluginOptions<T = never> =
  * create DOM elements, or perform other initialization that doesn't require
  * extending Blockly classes.
  *
- * The plugin must have either an onInit or an onChange or both.
+ * The plugin must have either an onInit or an onChange or both, and may add an
+ * onReady (initial paint after layout) and/or onDispose (cleanup). The state
+ * onInit returns is threaded to every other callback.
+ *
+ * Lifecycle: onInit (sync, at inject) → onReady (deferred, once the flyout and
+ * blocks are laid out) → onChange (per event) → onDispose (at teardown). The
+ * change listener is attached and detached for you; onReady is canceled if the
+ * workspace is torn down before it runs.
  *
  * @example
  * ```typescript
  * export const plugin = createInjectPlugin({
- *   onInit: (workspace, theme) => {
- *     return new Foo(workspace, theme);
- *   },
- *   onChange: (event, foo) => {
- *     foo.onChange(event);
- *   },
+ *   onInit: (workspace, theme) => new Foo(workspace, theme),
+ *   onReady: (workspace, theme, foo) => foo.draw(),
+ *   onChange: (event, foo) => foo.onChange(event),
+ *   onDispose: (workspace, theme, foo) => foo.dispose(),
  * });
  * ```
  */
@@ -172,14 +202,57 @@ export function createInjectPlugin<T = never>(
     type: PluginType.Inject,
     useWithInline: options?.useWithInline,
     plugin: class {
-      constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
-        const state = options.onInit?.(workspace, theme);
+      private readonly workspace: Blockly.WorkspaceSvg;
+      private readonly theme: Theme;
+      private readonly state: T;
+      private changeListener?: (event: Blockly.Events.Abstract) => void;
+      private readyTimer?: ReturnType<typeof setTimeout>;
+      private disposed = false;
 
-        if (options?.onChange) {
-          workspace.addChangeListener((e: Blockly.Events.Abstract) => {
-            options.onChange?.(e, state as unknown as T);
-          });
+      constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
+        this.workspace = workspace;
+        this.theme = theme;
+        this.state = options.onInit?.(workspace, theme) as T;
+
+        if (options.onChange) {
+          this.changeListener = (event: Blockly.Events.Abstract) => {
+            options.onChange?.(event, this.state);
+          };
+          workspace.addChangeListener(this.changeListener);
         }
+
+        if (options.onReady) {
+          // No event fires on inject, so a plugin that paints initial state
+          // would otherwise wait for the first change. Defer past this inject
+          // call stack so the flyout and blocks are laid out, then paint once.
+          this.readyTimer = setTimeout(() => {
+            this.readyTimer = undefined;
+            if (this.disposed) {
+              return;
+            }
+            options.onReady?.(this.workspace, this.theme, this.state);
+          }, 0);
+        }
+      }
+
+      // Called by the framework as the workspace is torn down (see
+      // Registry.disposeInject), while the workspace is still usable.
+      dispose() {
+        if (this.disposed) {
+          return;
+        }
+        this.disposed = true;
+
+        if (this.readyTimer !== undefined) {
+          clearTimeout(this.readyTimer);
+          this.readyTimer = undefined;
+        }
+        if (this.changeListener) {
+          this.workspace.removeChangeListener(this.changeListener);
+          this.changeListener = undefined;
+        }
+
+        options.onDispose?.(this.workspace, this.theme, this.state);
       }
     },
   };

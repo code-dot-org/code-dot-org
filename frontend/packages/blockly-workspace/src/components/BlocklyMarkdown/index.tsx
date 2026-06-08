@@ -2,13 +2,15 @@ import type {Element} from 'hast';
 import {toHtml} from 'hast-util-to-html';
 import {useMemo} from 'react';
 
-import {Markdown, extensions} from '@code-dot-org/markdown';
+import {Markdown} from '@code-dot-org/markdown';
 import type {MarkdownExtension, MarkdownProps} from '@code-dot-org/markdown';
 
 import type {Plugin} from '../../plugins';
 import type {Theme, Renderer, BlockDefinitions} from '../../types';
 import {convertBlocklyXmlToJson} from '../../xml';
 import BlocklyWorkspace from '../BlocklyWorkspace';
+
+import {blockly} from './blockly';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
   blocks?: BlockDefinitions;
@@ -87,7 +89,7 @@ const BlocklyMarkdown = ({
 }: BlocklyMarkdownProps) => {
   const markdownExtensions = useMemo(
     () => [
-      extensions.blockly,
+      blockly,
       workspaceExtension({blocks, renderer, plugins, theme}),
       ...(extraExtensions ?? []),
     ],
