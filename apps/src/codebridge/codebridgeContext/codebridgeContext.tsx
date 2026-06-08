@@ -41,6 +41,7 @@ export type CodebridgeContextType = {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   aiTutorInitialWelcomeMessage?: string;
+  allowMultipleValidationFiles?: boolean;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

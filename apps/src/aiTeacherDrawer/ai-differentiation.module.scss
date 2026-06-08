@@ -122,6 +122,7 @@ $sidebar-tooltip-z-index: 2010;
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 100%;
   flex: 1 1 0;
 
   .chatHeader {
@@ -395,7 +396,7 @@ $sidebar-tooltip-z-index: 2010;
   height: 100%;
 }
 
-.sidebarContainer {
+.chatListContainer {
   width: 242px;
   flex: 0 0 242px;
   background-color: var(--background-neutral-secondary);
@@ -404,13 +405,7 @@ $sidebar-tooltip-z-index: 2010;
   border-right: 1px solid $neutral_dark;
   transition: all 0.2s ease-in-out;
 
-  &.sidebarContainerCollapsed {
-    width: 64px;
-    flex: 0 0 64px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  &.sidebarContainerFullWidth {
+  &.chatListContainerFullWidth {
     flex: 1;
     width: 100%;
     border-right: none;
@@ -421,74 +416,46 @@ $sidebar-tooltip-z-index: 2010;
   }
 }
 
-.sidebarBox {
+.chatListBox {
   width: 100%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
 }
 
-.sidebarActions {
+.chatListActions {
   display: flex;
-  padding: 8px 16px 0;
-  align-items: flex-start;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   align-self: stretch;
 }
 
-.buttonWithUnreadDot {
-  position: relative;
-
-  &:after {
-    position: absolute;
-    left: 16px;
-    top: 3px;
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: var(--background-error-primary);
-    border-radius: 50%;
-    margin-left: 4px;
-  }
-}
-
-.sidebarBoxCollapsed {
-  .sidebarActions {
-    flex-direction: column;
-  }
-}
-
-html body .sidebarActionTooltip {
-  z-index: $sidebar-tooltip-z-index;
-}
-
-.sidebarContent {
+.chatListContent {
   display: flex;
   overflow-y: scroll;
   width: inherit;
-  margin-top: 16px;
-  margin-bottom: 16px;
   flex-direction: column;
 }
 
-.sidebarSectionTitle {
+.chatListSectionTitle {
   margin: 0 !important;
   padding: 8px 16px;
   color: var(--text-neutral-tertiary) !important;
 }
 
-.sidebarChatItem {
+.chatListChatItem {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-:global(.Mui-selected).sidebarChatButton {
+:global(.Mui-selected).chatListChatButton {
   background-color: var(--background-neutral-tertiary) !important;
 }
 
 //body text three
-.sidebarChatItemPrimary {
+.chatListChatItemPrimary {
   color: var(--text-neutral-primary) !important;
   font-family: Figtree, sans-serif !important;
   font-size: var(--font-size-body-sm) !important;
@@ -498,7 +465,7 @@ html body .sidebarActionTooltip {
   overflow: hidden;
 }
 
-.sidebarChatItemPrimarySelected {
+.chatListChatItemPrimarySelected {
   font-weight: 600 !important;
   color: var(--text-neutral-primary) !important;
   font-family: Figtree, sans-serif !important;
@@ -509,12 +476,12 @@ html body .sidebarActionTooltip {
   overflow: hidden;
 }
 
-.sidebarArtifactIconContainer {
+.chatListArtifactIconContainer {
   justify-content: space-between;
   display: flex;
 }
 
-.sidebarChatItemSecondary {
+.chatListChatItemSecondary {
   color: var(--text-neutral-tertiary) !important;
   font-family: Figtree, sans-serif !important;
   font-size: 0.688rem !important;
@@ -526,70 +493,6 @@ html body .sidebarActionTooltip {
 
 .sidebarManageLink {
   margin-left: 8px;
-}
-
-.sidebarCategories {
-  display: flex;
-  flex-direction: column;
-  gap: 0.125rem;
-
-  &:not(:empty) {
-    margin-top: 1rem;
-  }
-}
-
-.categoryActionButton {
-  background-color: inherit;
-  display: flex;
-  height: 32px;
-  align-items: center;
-  gap: 12px;
-  padding-left: 16px;
-  text-decoration: none;
-  color: var(--text-neutral-black-fixed);
-  border: 0;
-  font-size: var(--font-size-body-sm, 14px);
-  margin: 0;
-  min-height: 32px;
-  border-radius: 0;
-
-  & span {
-    flex-grow: 1;
-    text-align: start;
-  }
-
-  &.selected {
-    border-left: 4px solid var(--borders-brand-teal-primary);
-    background-color: var(--background-neutral-quaternary);
-    padding-left: 12px;
-    text-decoration: none;
-    color: var(--text-neutral-primary);
-    font-weight: 600;
-  }
-
-  &:active {
-    // !important necessary to override application.css
-    border: 0 !important;
-    border-left: 4px solid var(--borders-brand-teal-primary) !important;
-    background-color: var(--background-neutral-quaternary);
-    padding-left: 12px;
-    text-decoration: none;
-    color: var(--text-neutral-primary);
-  }
-
-  &:hover {
-    background-color: var(--background-neutral-tertiary);
-    text-decoration: none;
-  }
-
-  .readAt {
-    color: var(--background-error-primary);
-    font-size: 8px;
-    min-width: 8px;
-    margin-inline-start: 8px;
-    width: 8px;
-    line-height: var(--font-line-height-body-xxs, 17.6px);
-  }
 }
 
 .artifactButtons {

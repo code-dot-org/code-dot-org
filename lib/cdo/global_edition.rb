@@ -18,9 +18,42 @@ module Cdo
       configs[region] = YAML.safe_load_file(CDO.dir('config', 'global_editions', "#{region}.yml"), aliases: true)&.deep_symbolize_keys || {}
     end.freeze
 
-    TARGET_HOSTNAMES = Set[
-      CDO.dashboard_hostname,
+    # HTTP path prefixes to be excluded from Global Edition scope.
+    EXCLUDED_PATHS = Set[
+      '/assets/',
+      '/shared/',
+      # Exclude HoC legacy API routes from Global Edition scope.
+      '/api/hour/',
+      # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
+      # Instead of repeating this process for each new Global Edition region,
+      # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
+      # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
+      '/users/auth/',
+      # Exclude health check routes.
+      '/health_check',
+      '/home/health_check'
     ].freeze
+
+    # Extends Rails route URL generation to automatically include the current Global Edition path
+    # as the request script name when one is not already provided.
+    #
+    # This module is intended to be prepended to Rails route URL helpers
+    # so that generated URLs preserve the active Global Edition region path.
+    #
+    # @example
+    #   Rails.application.routes.url_helpers.home_url => 'https://studio.code.org/in/en/home'
+    #
+    # @see https://github.com/rails/rails/blob/v7.0.10/actionpack/lib/action_dispatch/routing/route_set.rb#L801
+    module RouteSet
+      def url_for(options, ...)
+        if options.is_a?(Hash) && !options.key?(:script_name)
+          ge_region = Cdo::GlobalEdition.current_region
+          options = options.merge(script_name: Cdo::GlobalEdition.path(ge_region)) if ge_region
+        end
+
+        super
+      end
+    end
 
     # @see `Middleware::GlobalEdition::RouteHandler#setup_region`
     def self.current_region=(region)
@@ -38,10 +71,6 @@ module Cdo
 
     def self.configuration_for(region)
       REGION_CONFIGS[region.to_s] || {}
-    end
-
-    def self.target_host?(hostname)
-      TARGET_HOSTNAMES.include?(hostname)
     end
 
     # Resolves the full I18n locale for a region from a locale value extracted from the request path.
@@ -148,6 +177,14 @@ module Cdo
       path_pattern.match(path)
     end
 
+    # Checks whether the given path starts with one of the excluded path prefixes.
+    #
+    # @param path [String] the path to check
+    # @return [Boolean] true if the path matches an excluded prefix, false otherwise
+    def self.excluded_path?(path)
+      path.start_with?(*EXCLUDED_PATHS)
+    end
+
     # Builds a Global Edition path for the given region and path components.
     #
     # If the joined path already includes a supported Global Edition prefix, that
@@ -173,12 +210,12 @@ module Cdo
     #
     # @example Replace an existing Global Edition prefix
     #   path("fa", "/in/hi/home") => "/fa/home"
-    def self.path(region, *paths, locale: ::I18n.locale)
-      region = region.to_s
-
+    def self.path(region, *paths, locale: ::I18n.locale.to_s)
       path = ::File.join('/', *paths)
       path = match_path(path)&.try(:[], :main_path) || path
+      return path.chomp('/') if excluded_path?(path)
 
+      region = region.to_s
       if regions_url_locales[region]
         locale = main_region_locale(region) unless locale_available?(region, locale)
         path = ::File.join('/', region, url_locale_segment(locale), path)
@@ -248,3 +285,5 @@ module Cdo
     end
   end
 end
+
+ActionDispatch::Routing::RouteSet.prepend(Cdo::GlobalEdition::RouteSet) if defined?(ActionDispatch::Routing::RouteSet)

@@ -9,7 +9,7 @@ Feature: Using the teacher homepage sections feature
     # After a teacher creates an account, they see the section create dialog
     Given I create a teacher who has never signed in named "Ariel" and go home
     And I wait until I am on "http://studio.code.org/home"
-    And I wait to see a modal containing text "Let's get you started teaching with Code.org!"
+    And I wait to see a modal containing text "Let's get you started teaching with CodeAI!"
 
     # Section Creation dialog is not displayed when reloaded
     Then I reload the page

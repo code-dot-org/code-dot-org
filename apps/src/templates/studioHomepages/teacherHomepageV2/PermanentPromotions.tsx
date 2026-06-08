@@ -27,7 +27,7 @@ const PermanentPromotions: React.FC = () => {
     },
     {
       id: 'static-2',
-      title: 'Help improve Code.org',
+      title: 'Help improve CodeAI',
       description:
         'Participate in user research to help us improve our platform for everyone.',
       buttonLabel: 'Join the user research program',

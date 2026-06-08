@@ -81,6 +81,7 @@ export const useFileRowOptions = (
     config: {supportedFileTypes},
     levelProperties,
     aiTutorDisabled,
+    allowMultipleValidationFiles,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -221,7 +222,8 @@ export const useFileRowOptions = (
 
   const startModeFileOptions = useStartModeFileRowOptions(
     file,
-    hasValidationFile
+    hasValidationFile,
+    allowMultipleValidationFiles
   );
 
   const allFileDropdownOptions = useMemo(

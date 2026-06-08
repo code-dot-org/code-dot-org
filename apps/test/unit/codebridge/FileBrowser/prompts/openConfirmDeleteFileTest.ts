@@ -16,36 +16,23 @@ const getDeleteFileMock = (): [ProjectFile, DeleteFileFunction] => {
   return [deleteFileData, mock];
 };
 
-const getCleaupValidationMock = (): [{called: boolean}, () => void] => {
-  const cleanupValidationFileData = {called: false};
-  const mock = () => {
-    cleanupValidationFileData.called = true;
-  };
-
-  return [cleanupValidationFileData, mock];
-};
-
 describe('openConfirmDeleteFile', function () {
   it('can successfully delete a file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const fileId = '4';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
-    const [cleanupValidationFileData, cleanupValidationFile] =
-      getCleaupValidationMock();
 
     await openConfirmDeleteFile({
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('confirm'),
       deleteFile: deleteFileDataMock,
       sendLab2AnalyticsEvent,
-      cleanupValidationFile,
     });
 
     expect(deleteFileData.id).toEqual(fileId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_DELETE_FILE);
-    expect(cleanupValidationFileData.called).toEqual(false);
   });
 
   it('can successfully delete a validation file', async function () {
@@ -53,21 +40,17 @@ describe('openConfirmDeleteFile', function () {
     const fileId = '7';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
-    const [cleanupValidationFileData, cleanupValidationFile] =
-      getCleaupValidationMock();
 
     await openConfirmDeleteFile({
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('confirm'),
       deleteFile: deleteFileDataMock,
       sendLab2AnalyticsEvent,
-      cleanupValidationFile,
     });
 
     expect(deleteFileData.id).toEqual(fileId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_DELETE_FILE);
-    expect(cleanupValidationFileData.called).toEqual(true);
   });
 
   it('can cancel deleting a file', async function () {
@@ -75,20 +58,16 @@ describe('openConfirmDeleteFile', function () {
     const fileId = '1';
 
     const [deleteFileData, deleteFileDataMock] = getDeleteFileMock();
-    const [cleanupValidationFileData, cleanupValidationFile] =
-      getCleaupValidationMock();
 
     await openConfirmDeleteFile({
       file: testProject.files[fileId],
       dialogControl: getDialogAlertMock('cancel'),
       deleteFile: deleteFileDataMock,
       sendLab2AnalyticsEvent,
-      cleanupValidationFile,
     });
 
     expect(deleteFileData.id).toBeUndefined();
 
     expect(analyticsData.event).toBeUndefined();
-    expect(cleanupValidationFileData.called).toEqual(false);
   });
 });

@@ -15,6 +15,7 @@ import Notification, {
 } from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
@@ -64,6 +65,7 @@ import {
   sectionCode,
   sectionName,
   sectionUnitName,
+  isDemoSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import experiments from '@cdo/apps/util/experiments';
@@ -128,6 +130,7 @@ class ManageStudentsTable extends Component {
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
     syncEnabled: PropTypes.bool,
+    isDemoSection: PropTypes.bool,
   };
 
   constructor(props) {
@@ -141,6 +144,8 @@ class ManageStudentsTable extends Component {
     this.familyNameFormatter = this.familyNameFormatter.bind(this);
     this.actionsFormatter = this.actionsFormatter.bind(this);
     this.actionsHeaderFormatter = this.actionsHeaderFormatter.bind(this);
+    this.projectSharingHeaderFormatter =
+      this.projectSharingHeaderFormatter.bind(this);
     this.getSortingColumns = this.getSortingColumns.bind(this);
     this.onSort = this.onSort.bind(this);
     this.getColumns = this.getColumns.bind(this);
@@ -407,6 +412,7 @@ class ManageStudentsTable extends Component {
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
+                isDemoSection={this.props.isDemoSection}
               />
             </div>
           </span>
@@ -436,7 +442,9 @@ class ManageStudentsTable extends Component {
           <div>{i18n.shareSettingMoreDetailsTooltip()}</div>
         </ReactTooltip>
         <div>
-          <SharingControlActionsHeaderCell />
+          <SharingControlActionsHeaderCell
+            isDemoSection={this.props.isDemoSection}
+          />
         </div>
       </span>
     );
@@ -521,7 +529,7 @@ class ManageStudentsTable extends Component {
     }
 
     if (this.props.currentUser?.isTeacher && this.props.currentUser?.inUSA) {
-      columns.push(UsStateColumn());
+      columns.push(UsStateColumn(this.props.isDemoSection));
     }
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
@@ -804,25 +812,46 @@ class ManageStudentsTable extends Component {
         <div className={moduleStyles.additionalControlsContainer}>
           <div className={moduleStyles.additionalControlsButtonsRow}>
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <AddMultipleStudents sectionId={this.props.sectionId} />
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-add-students-tooltip"
+                text="Students cannot be added to or removed from a demo section"
+              >
+                <AddMultipleStudents
+                  sectionId={this.props.sectionId}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
             )}
             {this.isMoveStudentsEnabled() && (
-              <MoveStudents
-                studentData={this.studentDataMinusBlanks().filter(
-                  s => !s.isDemoStudent
-                )}
-                transferData={transferData}
-                transferStatus={transferStatus}
-              />
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-move-students-tooltip"
+              >
+                <MoveStudents
+                  studentData={this.studentDataMinusBlanks().filter(
+                    s => !s.isDemoStudent
+                  )}
+                  transferData={transferData}
+                  transferStatus={transferStatus}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
             )}
             {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
-              <PrintLoginCards
-                sectionId={this.props.sectionId}
-                entryPointForMetrics={
-                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
-                }
-                onPrintLoginCards={this.onPrintLoginCards}
-              />
+              <DemoSectionTooltip
+                isDemoSection={this.props.isDemoSection}
+                tooltipId="demo-print-login-cards-manage-tooltip"
+              >
+                <PrintLoginCards
+                  sectionId={this.props.sectionId}
+                  entryPointForMetrics={
+                    PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                  }
+                  onPrintLoginCards={this.onPrintLoginCards}
+                  disabled={this.props.isDemoSection}
+                />
+              </DemoSectionTooltip>
             )}
             <GlobalEditionWrapper
               component={() => (
@@ -848,6 +877,7 @@ class ManageStudentsTable extends Component {
               loginType={loginType}
               studioUrlPrefix={this.props.studioUrlPrefix}
               sourceName="ManageStudentsTable"
+              isDemoSection={this.props.isDemoSection}
             />
           </div>
         </div>
@@ -979,6 +1009,10 @@ export default connect(
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
     syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
+    isDemoSection: isDemoSection(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
   }),
   dispatch => ({
     saveAllStudents() {
