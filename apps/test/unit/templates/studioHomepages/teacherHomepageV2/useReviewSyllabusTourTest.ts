@@ -74,7 +74,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   it('clears the step key and does not show when no steps are built for the demoType', () => {
     mockTryGetSessionStorage
       .mockReturnValueOnce('unit-breadcrumb-step')
-      .mockReturnValueOnce('middle'); // unsupported demoType — returns []
+      .mockReturnValueOnce('unknown' as 'high'); // unrecognized demoType — hits default case, returns []
 
     resumeReviewSyllabusOnboardingTour();
 

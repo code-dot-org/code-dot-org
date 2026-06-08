@@ -39,10 +39,10 @@ describe('SelectAccountType', () => {
     fireEvent.click(studentButton);
     fireEvent.click(teacherButton);
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
+      `http://localhost-studio.code.org/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
     );
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
+      `http://localhost-studio.code.org/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
     );
     expect(navigateToHrefMock).toHaveBeenCalledTimes(2);
   });
@@ -78,12 +78,12 @@ describe('SelectAccountType', () => {
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_student()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/finish_student_account'
+      'http://localhost-studio.code.org/users/sign_up/finish_student_account'
     );
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_teacher()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/finish_teacher_account'
+      'http://localhost-studio.code.org/users/sign_up/finish_teacher_account'
     );
 
     sessionStorage.clear();

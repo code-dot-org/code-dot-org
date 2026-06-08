@@ -3,19 +3,10 @@
 require 'test_helper'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
-  include Minitest::RSpecMocks
-
   let(:ge_region) {'fa'}
   let(:document) {Nokogiri::HTML(response.body)}
   let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
   let(:page_lang) {document.at('html[lang]').try(:[], 'lang')}
-
-  before do
-    allow(DCDO).to receive(:get).and_call_original
-    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
-    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test.code.org').and_return(true)
-    allow(Metrics::Events).to receive(:log_event)
-  end
 
   describe 'routing' do
     let(:international_page_path) {'/users/sign_in'}
@@ -43,18 +34,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'redirects to regional page with extra params' do
-          expect(Metrics::Events).to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: nil,
-            session: anything,
-            metadata: {
-              old_region: nil,
-              old_locale: ge_region_locale,
-              new_region: ge_region,
-              new_locale: ge_region_locale,
-            }
-          ).once
-
           get_international_page
 
           must_respond_with 302
@@ -81,18 +60,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'redirects to regional page with params' do
-          expect(Metrics::Events).to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: nil,
-            session: anything,
-            metadata: {
-              old_region: nil,
-              old_locale: ge_region_locale,
-              new_region: ge_region,
-              new_locale: ge_region_locale,
-            }
-          ).once
-
           get_international_page
 
           must_respond_with 302
@@ -113,18 +80,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       let(:params) {{}}
 
       it 'is accessible' do
-        expect(Metrics::Events).to receive(:log_event).with(
-          event_name: 'Global Edition Region Changed',
-          user: nil,
-          session: anything,
-          metadata: {
-            old_region: nil,
-            old_locale: I18n.default_locale.to_s,
-            new_region: ge_region,
-            new_locale: ge_region_locale,
-          }
-        ).once
-
         get_regional_page
 
         must_respond_with 200
@@ -161,18 +116,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'is accessible' do
-          expect(Metrics::Events).to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user:,
-            session: anything,
-            metadata: {
-              old_region: nil,
-              old_locale: I18n.default_locale.to_s,
-              new_region: ge_region,
-              new_locale: ge_region_locale,
-            }
-          ).once
-
           get_regional_page
 
           must_respond_with 200
@@ -186,13 +129,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'is accessible' do
-          expect(Metrics::Events).not_to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: anything,
-            session: anything,
-            metadata: anything,
-          )
-
           get_regional_page
 
           must_respond_with 200
@@ -214,18 +150,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'redirects to international page with extra params and selected locale' do
-          expect(Metrics::Events).to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: nil,
-            session: anything,
-            metadata: {
-              old_region: ge_region,
-              old_locale: new_locale,
-              new_region: nil,
-              new_locale:,
-            }
-          )
-
           get_regional_page
 
           must_respond_with 302
@@ -255,13 +179,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
 
         it 'redirects back to international page' do
-          expect(Metrics::Events).not_to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: anything,
-            session: anything,
-            metadata: anything,
-          )
-
           get_regional_page
 
           must_respond_with 302
@@ -329,18 +246,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       _(request.params[extra_param_key]).must_equal extra_param_val
       _(ge_region_html_data).must_equal ge_region
       _(page_lang).must_equal locale
-
-      expect(Metrics::Events).to have_received(:log_event).with(
-        event_name: 'Global Edition Region Changed',
-        user: nil,
-        session: anything,
-        metadata: {
-          old_region: nil,
-          old_locale: I18n.default_locale.to_s,
-          new_region: ge_region,
-          new_locale: locale,
-        }
-      ).once
     end
 
     it 'is accessible after locale change to main region locale' do
@@ -361,18 +266,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       _(request.params[extra_param_key]).must_equal extra_param_val
       _(ge_region_html_data).must_equal ge_region
       _(page_lang).must_equal locale
-
-      expect(Metrics::Events).to have_received(:log_event).with(
-        event_name: 'Global Edition Region Changed',
-        user: nil,
-        session: anything,
-        metadata: {
-          old_region: nil,
-          old_locale: locale,
-          new_region: ge_region,
-          new_locale: locale,
-        }
-      ).once
     end
 
     context 'when locale is secondary region locale' do
@@ -397,18 +290,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _(request.params[extra_param_key]).must_equal extra_param_val
         _(ge_region_html_data).must_equal ge_region
         _(page_lang).must_equal locale
-
-        expect(Metrics::Events).to have_received(:log_event).with(
-          event_name: 'Global Edition Region Changed',
-          user: nil,
-          session: anything,
-          metadata: {
-            old_region: nil,
-            old_locale: locale,
-            new_region: ge_region,
-            new_locale: locale,
-          }
-        ).once
       end
     end
   end

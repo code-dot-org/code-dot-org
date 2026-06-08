@@ -2,12 +2,12 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {useCallback, useContext} from 'react';
 
-import codeLogo from '@cdo/apps/templates/images/codeLogo.png';
+import codeaiLogo from '@cdo/apps/templates/images/codeaiLogo.svg';
 import i18n from '@cdo/locale';
 
 import canvas from '../../../assets/canvas.svg';
 import classlink from '../../../assets/classlink.png';
-import schoology from '../../../assets/schoology.svg';
+import powerschool from '../../../assets/powerschool.png';
 import {LtiProviderContext} from '../context';
 
 import styles from '../../../../link-account.module.scss';
@@ -22,7 +22,7 @@ const LtiWelcomeBanner = () => {
       case 'canvas_test_cloud':
         return canvas;
       case 'schoology':
-        return schoology;
+        return powerschool;
       case 'classlink':
         return classlink;
       default:
@@ -41,7 +41,7 @@ const LtiWelcomeBanner = () => {
             className={styles.exchangeIcon}
             iconName={'exchange'}
           />
-          <img src={codeLogo} alt={i18n.codeLogo()} />
+          <img src={codeaiLogo} alt={i18n.codeLogo()} />
         </div>
       )}
       <div className={styles.titleContainer}>

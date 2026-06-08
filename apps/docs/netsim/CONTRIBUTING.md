@@ -1,7 +1,7 @@
 # Contributing to Internet Simulator
 
 There is plenty of work to do on the Internet Simulator. If you are internal to
-Code.org you can pick up a task from the [Internet Simulator Pivotal project](https://www.pivotaltracker.com/n/projects/1407902). If not, please see
+CodeAI you can pick up a task from the [Internet Simulator Pivotal project](https://www.pivotaltracker.com/n/projects/1407902). If not, please see
 the [Contributing](../../README.md#contributing)
 section of our main README to get started.
 

@@ -4,7 +4,7 @@ class PeerReviewMailer < ApplicationMailer
 
   def review_completed_receipt(peer_review)
     @peer_review = peer_review
-    @submission_url = CDO.studio_url @peer_review.submission_path, CDO.default_scheme
+    @submission_url = CDO.studio_url(@peer_review.submission_path)
 
     mail(
       to: @peer_review.submitter.email,

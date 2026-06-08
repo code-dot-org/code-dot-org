@@ -51,6 +51,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # Used only for picture and word sections
   # POST /sections/<section_id>/students/bulk_add
   def bulk_add
+    if @section.demo_section?
+      return render json: {errors: 'Cannot add students to a demo section'}, status: :forbidden
+    end
     unless @section.login_type == Section::LOGIN_TYPE_WORD || @section.login_type == Section::LOGIN_TYPE_PICTURE
       return render json: {errors: 'Not a valid section type'}, status: :bad_request
     end
@@ -115,6 +118,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   # Remove a student from the section
   # POST /sections/:section_id/students/:id/remove
   def remove
+    if @section.demo_section?
+      return render json: {errors: 'Cannot remove students from a demo section'}, status: :forbidden
+    end
     follower = Follower.where(section: @section.id, student_user_id: @student.id).first
     return render_404 unless @student && follower
 

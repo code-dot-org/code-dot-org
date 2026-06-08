@@ -4,6 +4,14 @@
 @import '@code-dot-org/component-library-styles/mixins';
 
 #copyright-modal {
+    #ui-close-dialog {
+        &:focus,
+        &:focus-visible {
+            outline: 2px solid var(--borders-brand-teal-primary);
+            outline-offset: 2px;
+        }
+    }
+
     display: flex;
     min-width: 37.5rem;
     max-width: 50rem;
@@ -18,7 +26,7 @@
     overflow: hidden;
 
     hr {
-        border-color: $lighter_gray;
+        border-color: var(--borders-neutral-primary);
     }
 
     & p {
@@ -26,15 +34,15 @@
 
         & a {
             @include link-body-three;
-            color: $light_secondary_500;
+            color: var(--text-brand-purple-primary);
             text-decoration: underline;
 
             &:hover, :active, :visited {
-                color: $light_secondary_700;
+                color: var(--text-brand-purple-secondary);
             }
 
             &:focus-visible {
-                color: $light_secondary_500;
+                color: var(--text-brand-purple-primary);
             }
         }
 
