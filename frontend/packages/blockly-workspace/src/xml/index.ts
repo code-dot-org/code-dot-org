@@ -105,7 +105,9 @@ function parseBlockXml(blockEl: Element): BlockState {
       case 'statement':
         {
           const inputName = child.getAttribute('name');
-          const subBlock = child.querySelector('block');
+          // The connected block is the direct-child <block>; a descendant search
+          // could wrongly pick a <block> buried in a preceding <shadow>.
+          const subBlock = directChildBlock(child);
           if (inputName && subBlock) {
             block.inputs ??= {};
             block.inputs[inputName] = {
@@ -117,7 +119,7 @@ function parseBlockXml(blockEl: Element): BlockState {
 
       case 'next':
         {
-          const nextBlock = child.querySelector('block');
+          const nextBlock = directChildBlock(child);
           if (nextBlock) {
             block.next = {
               block: parseBlockXml(nextBlock),
@@ -164,6 +166,13 @@ function parseBlockXml(blockEl: Element): BlockState {
   }
 
   return block;
+}
+
+// The first direct-child <block> of a container element (<value>, <statement>,
+// <next>), or undefined. Unlike querySelector('block'), this never descends into
+// a preceding sibling such as a <shadow> default.
+function directChildBlock(container: Element): Element | undefined {
+  return Array.from(container.children).find(el => el.tagName === 'block');
 }
 
 function parseValue(value: string): string | number | boolean {
