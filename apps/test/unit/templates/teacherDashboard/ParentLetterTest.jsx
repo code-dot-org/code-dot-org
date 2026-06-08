@@ -29,6 +29,28 @@ describe('ParentLetter', () => {
     expect(loginStep).toBeInTheDocument();
   });
 
+  it('Demo section uses the placeholder code in the sign-in link', () => {
+    render(
+      <ParentLetter
+        section={{
+          id: 7,
+          code: null,
+          demoType: 'demo',
+          loginType: SectionLoginType.word,
+        }}
+        teacherName="Minerva McGonagall"
+      />
+    );
+
+    const sectionLink = screen
+      .getAllByRole('link')
+      .find(link => link.getAttribute('href')?.includes('/sections/'));
+    expect(sectionLink).toHaveAttribute(
+      'href',
+      expect.stringContaining('/sections/DEMO-123')
+    );
+  });
+
   it('Canvas section login type should have Canvas instructions', () => {
     render(
       <ParentLetter

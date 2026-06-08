@@ -1,4 +1,4 @@
-// A map of user locales supported by Code.org to locales provided by Blockly.
+// A map of user locales supported by CodeAI to locales provided by Blockly.
 // For more information, see: https://github.com/RaspberryPiFoundation/blockly/tree/master/msg/json
 export const blocklyLocaleMap = {
   'ar-sa': require('blockly/msg/ar'),

@@ -176,6 +176,24 @@ class Javalab < Level
     properties['encrypted_validation'].present?
   end
 
+  # Return the validation condition for this level.
+  # If the level has at least one validation file, the condition
+  # is that all tests passed. If there are no validation files, there are no conditions.
+  # Follows the same logic as pythonlab.rb.
+  def get_validations
+    return nil unless validated?
+    [{
+      conditions: [
+        {
+          name: 'PASSED_ALL_TESTS',
+          value: 'true',
+        }
+      ],
+      message: '',
+      next: true,
+    }]
+  end
+
   def get_starter_code
     properties["start_sources"]
   end
