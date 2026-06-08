@@ -1,4 +1,4 @@
-import {PyodideInterface} from 'pyodide';
+import type {PyodideInterface} from 'pyodide';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
