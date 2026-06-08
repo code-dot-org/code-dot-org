@@ -15,6 +15,7 @@ import {
   JavabuilderLockoutType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+import {JavalabFlatSource} from './lab2/types';
 import javalabMsg from './locale';
 import {onTestResult} from './testResultHandler';
 import {getUnsupportedMiniAppMessage} from './utils';
@@ -57,8 +58,8 @@ interface RequestData {
   useDashboardSources: boolean;
   miniAppType: string;
   channelId?: string;
-  overrideSources?: object;
-  overrideValidation?: object;
+  overrideSources?: JavalabFlatSource;
+  overrideValidation?: JavalabFlatSource;
 }
 
 interface AccessTokenResponse {
@@ -211,8 +212,8 @@ export default class JavabuilderConnection {
   // lab2 levelbuilder start mode (which has no channel id) test in-memory validation edits before saving.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrides(
-    overrideSources: object,
-    overrideValidation?: object
+    overrideSources: JavalabFlatSource,
+    overrideValidation?: JavalabFlatSource
   ) {
     const requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
@@ -236,7 +237,9 @@ export default class JavabuilderConnection {
   // When getting the access token, send override validation code to run instead of any existing validation
   // code on the level.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilderWithOverrideValidation(overrideValidation: object) {
+  connectJavabuilderWithOverrideValidation(
+    overrideValidation: JavalabFlatSource
+  ) {
     const requestData = this.getDefaultRequestData();
     requestData.channelId = this.channelId;
     requestData.overrideValidation = overrideValidation;
