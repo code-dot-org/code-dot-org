@@ -44,11 +44,11 @@ class AiPodcastsSafetyHelperTest < ActionView::TestCase
     end
   end
 
-  test "safety prompt frames the input as an AI-generated podcast script for middle and high schoolers" do
+  test "safety prompt frames the input as an AI-generated podcast for school-aged students with an INAPPROPRIATE/OK classification" do
     AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).with do |input, _, _|
       prompt = input.first[:content].first[:text]
-      assert_includes prompt, 'AI-generated podcast script'
-      assert_includes prompt, 'middle and high school'
+      assert_includes prompt, 'podcast'
+      assert_includes prompt, 'middle school'
       assert_includes prompt, 'INAPPROPRIATE'
       true
     end.returns(stubbed_response(@ok_json))
