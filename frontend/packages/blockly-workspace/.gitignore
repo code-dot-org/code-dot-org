@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Vitest browser-mode attachment store (transient actual/diff images from test
+# runs); committed baselines live in src/components/__screenshots__/.
+.vitest-attachments
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
