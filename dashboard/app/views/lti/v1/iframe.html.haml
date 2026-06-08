@@ -21,7 +21,7 @@
 
   :ruby
     script_data = {}
-    script_data[:logoUrl] = asset_path('logo-codeai.svg')
+    script_data[:logoUrl] = asset_path(Cdo::Brand.logo_filename)
     script_data[:authUrl] = @auth_url
 
   %script{src: webpack_asset_path('js/lti/v1/iframe.js'), data: {json: script_data.to_json}, 'data-ot-ignore' => ''}

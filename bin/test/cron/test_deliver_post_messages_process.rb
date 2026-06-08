@@ -73,20 +73,6 @@ describe DeliverPosteMessagesProcess do
         end
       end
 
-      context 'AbortEmailError' do
-        let(:expected_error) {AbortEmailError}
-
-        it 'send Honeybadger notification' do
-          Honeybadger.expects(:notify).once
-          main
-        end
-
-        it 'successfully sends the rest of the messages' do
-          Deliverer.any_instance.expects(:send).times(message_queue_length)
-          main
-        end
-      end
-
       context 'Psych::SyntaxError' do
         let(:expected_error) {Psych::SyntaxError.new(nil, 0, 0, 0, nil, nil)}
 

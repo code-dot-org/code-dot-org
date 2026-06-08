@@ -70,3 +70,11 @@ export const PushSnapshotProvider = PushSnapshotContext.Provider;
 export function usePushSnapshot(): () => void {
   return useContext(PushSnapshotContext);
 }
+
+const AnchorDraggingContext = createContext(false);
+
+export const AnchorDraggingProvider = AnchorDraggingContext.Provider;
+
+export function useIsAnchorDragging(): boolean {
+  return useContext(AnchorDraggingContext);
+}
