@@ -1205,14 +1205,12 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
     }
   }
 
-  // Wider logo also crowds the inline .headerlinks; bump the mobile
-  // collapse threshold so the whole bar drops into the hamburger sooner.
-  // (The tablet-level create_menu collapse lives in shared/css/user-menu.scss.)
-  .header-wrapper .header {
-    @media screen and (max-width: 1060px) {
-      .hide_on_tablet {
-        display: none !important;
-      }
+  // Wider logo recovers space in the nav gap instead of bumping the collapse
+  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+  // doesn't force links into the hamburger any earlier than the code brand.
+  .header-wrapper .header .headerlinks {
+    @media (min-width: 1024px) and (max-width: 1268px) {
+      gap: 1.5rem;
     }
   }
 }

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import headerVignetteStyles from './HeaderVignette';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 class ScriptName extends React.Component {
@@ -23,10 +22,11 @@ class ScriptName extends React.Component {
   }
 
   setDesiredWidth() {
-    // Report back to our parent how wide we would like to be.
-    if (this.props.setDesiredWidth) {
-      this.props.setDesiredWidth(this.getFullWidth());
-    }
+    // Skip when truncated: the <a> has width: actualWidth applied, so
+    // getFullWidth() would return actualWidth instead of the natural text
+    // width, permanently locking the parent's desired-width to the capped value.
+    if (!this.props.setDesiredWidth || this._isTruncated) return;
+    this.props.setDesiredWidth(this.getFullWidth());
   }
 
   componentDidMount() {
@@ -49,7 +49,7 @@ class ScriptName extends React.Component {
     this.setDesiredWidth();
   };
 
-  renderScriptLink() {
+  renderScriptLink(linkStyle) {
     let className = 'header_text';
     if (this.props.smallText) {
       className += ' small_font_on_tablet';
@@ -58,11 +58,7 @@ class ScriptName extends React.Component {
       <a
         href={this.props.href}
         className={className}
-        style={
-          this.props.showProjectUpdatedAt
-            ? {...styles.scriptLinkWithUpdatedAt}
-            : {}
-        }
+        style={linkStyle}
         title={this.props.name}
       >
         {this.props.name}
@@ -73,13 +69,20 @@ class ScriptName extends React.Component {
   render() {
     const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
+    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
+    this._isTruncated = isTruncated;
+    const {isRtl} = this.props;
 
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
+    const ellipsisStyle = isTruncated
+      ? {
+          display: 'block',
+          width: actualWidth,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+          ...(isRtl ? {direction: 'rtl'} : {}),
+        }
+      : {};
 
     if (!this.props.showProjectUpdatedAt) {
       return (
@@ -89,9 +92,8 @@ class ScriptName extends React.Component {
             ref="scriptName"
             style={styles.headerInner}
           >
-            {this.renderScriptLink()}
+            {this.renderScriptLink(ellipsisStyle)}
           </div>
-          <div className="vignette" style={vignetteStyle} />
         </div>
       );
     }
@@ -105,14 +107,19 @@ class ScriptName extends React.Component {
         >
           <div style={styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
-              {this.renderScriptLink()}
+              {this.renderScriptLink({
+                ...styles.scriptLinkWithUpdatedAt,
+                ...ellipsisStyle,
+                ...(isTruncated
+                  ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
+                  : {}),
+              })}
               <ProjectUpdatedAt
                 onContentUpdated={this.onProjectUpdatedAtContentUpdated}
               />
             </div>
           </div>
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
