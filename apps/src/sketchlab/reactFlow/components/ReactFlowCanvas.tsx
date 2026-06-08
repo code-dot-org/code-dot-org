@@ -73,7 +73,6 @@ import {
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
-  getStandaloneLineAnchorIds,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -773,45 +772,12 @@ export default function ReactFlowCanvas({
   );
 
   const handleEdgeClick = useCallback(
-    (event: React.MouseEvent, edge: {id: string}) => {
+    (_event: React.MouseEvent, edge: {id: string}) => {
       if (readOnly) return;
-      if (event.shiftKey) {
-        const clickedEdge = edges.find(candidate => candidate.id === edge.id);
-        if (clickedEdge) {
-          const anchorIds = getStandaloneLineAnchorIds(clickedEdge, getNode);
-          if (anchorIds) {
-            setMultiSelectedNodeIds(prev => {
-              const next = new Set(prev);
-              if (next.size === 0) {
-                multiSelectAnchorRef.current?.forEach(anchorId => {
-                  if (!anchorIds.includes(anchorId)) {
-                    next.add(anchorId);
-                  }
-                });
-              }
-              const allSelected = anchorIds.every(id => next.has(id));
-              anchorIds.forEach(id => {
-                if (allSelected) {
-                  next.delete(id);
-                } else {
-                  next.add(id);
-                }
-              });
-              return next;
-            });
-            closeToolbar();
-            return;
-          }
-        }
-      }
-      const clickedEdge = edges.find(candidate => candidate.id === edge.id);
-      multiSelectAnchorRef.current = clickedEdge
-        ? getStandaloneLineAnchorIds(clickedEdge, getNode)
-        : null;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },
-    [readOnly, edges, getNode, openToolbar, closeToolbar]
+    [readOnly, openToolbar]
   );
 
   return (

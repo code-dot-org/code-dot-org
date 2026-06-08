@@ -21,10 +21,7 @@ import {
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
 import {ArrowHeadValue} from '../types';
-import {
-  anchorHandleFlowPosition,
-  getStandaloneLineAnchorIds,
-} from '../utils/lineAnchors';
+import {anchorHandleFlowPosition} from '../utils/lineAnchors';
 
 function rotatePoint(
   point: {x: number; y: number},
@@ -240,13 +237,12 @@ export function useLineToolbar({
       updateLineEdge(edgeId, edge => {
         const currentRotation = edge.data?.rotation ?? DEFAULT_ROTATION;
         const deltaRadians = ((rotation - currentRotation) * Math.PI) / 180;
-        const standaloneAnchorIds = getStandaloneLineAnchorIds(edge, id =>
-          nodes.find(node => node.id === id)
-        );
-        if (standaloneAnchorIds) {
-          const [sourceAnchorId, targetAnchorId] = standaloneAnchorIds;
-          const sourceNode = nodes.find(node => node.id === sourceAnchorId)!;
-          const targetNode = nodes.find(node => node.id === targetAnchorId)!;
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const bothEndpointsAreAnchors =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+        if (bothEndpointsAreAnchors) {
           const sourceHandle = anchorHandleFlowPosition(
             sourceNode.position,
             'source'
