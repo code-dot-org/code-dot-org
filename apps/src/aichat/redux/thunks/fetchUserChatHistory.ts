@@ -2,14 +2,14 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {getUserChatHistory} from '../../aichatApi';
-import {
-  addEventToChatEventsCurrent,
-  setOwnChatHistory,
-  setStudentChatHistory,
-} from '../slice';
+import {isNotification, isUserActionEvent} from '../../types';
+import {setOwnChatHistory, setStudentChatHistory} from '../slice';
 import {getNewRemoveId} from '../utils';
+
+import {addChatEvent} from './addChatEvent';
 
 interface FetchUserChatHistoryParams {
   userId: number;
@@ -49,13 +49,23 @@ export const fetchUserChatHistory = createAsyncThunk(
         thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));
         if (initialWelcomeMessage) {
           const stateAfter = thunkAPI.getState() as RootState;
-          if (stateAfter.aichat.chatEventsCurrent.length === 0) {
-            thunkAPI.dispatch(
-              addEventToChatEventsCurrent({
+          const events = stateAfter.aichat.chatEventsCurrent;
+          const alreadyLogged = events.some(
+            e => isNotification(e) && e.notificationType === 'welcomeMessage'
+          );
+          const firstEvent = events[0];
+          const userCleared =
+            firstEvent !== undefined &&
+            isUserActionEvent(firstEvent) &&
+            firstEvent.descriptionKey === 'CLEAR_CHAT';
+          if (!alreadyLogged && !userCleared) {
+            (thunkAPI.dispatch as AppDispatch)(
+              addChatEvent({
                 timestamp: Date.now(),
                 removeId: getNewRemoveId(),
                 text: initialWelcomeMessage,
                 notificationType: 'welcomeMessage',
+                includeInChatHistory: true,
               })
             );
           }
@@ -67,16 +77,6 @@ export const fetchUserChatHistory = createAsyncThunk(
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError('Error in aichat chat history request', error as Error);
-      if (isOwnHistory && initialWelcomeMessage) {
-        thunkAPI.dispatch(
-          addEventToChatEventsCurrent({
-            timestamp: Date.now(),
-            removeId: getNewRemoveId(),
-            text: initialWelcomeMessage,
-            notificationType: 'welcomeMessage',
-          })
-        );
-      }
       return;
     }
   }
