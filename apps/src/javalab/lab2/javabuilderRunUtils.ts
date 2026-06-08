@@ -24,6 +24,13 @@ import {splitForLevelbuilderSave} from './sourceConverter';
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
 
+// Set when stop is clicked before a connection exists (while the project saves
+// or the access token is fetched). handleRunClick checks this before connecting
+// so the stop cancels the run instead of being dropped. JavabuilderConnection
+// has its own interrupt flag for the later window between connection creation
+// and the socket opening.
+let runInterrupted = false;
+
 // Javabuilder explicitly sends newline messages,
 // so any other console output is written as a partial line
 // to avoid extra newlines.
@@ -44,11 +51,23 @@ export async function handleRunClick(
   csaViewMode: string,
   progressManager: ProgressManager | null
 ): Promise<void> {
+  runInterrupted = false;
+
+  // Javabuilder reads source from S3. Flush the in-memory editor first so S3
+  // reflects what the user sees before the WS connection opens.
+  await Lab2Registry.getInstance().getProjectManager()?.flushSave();
+
   let csrfToken: string | null = null;
   try {
     csrfToken = await getAuthenticityToken();
   } catch (e) {
     csrfToken = null;
+  }
+
+  // The user may have stopped during the save or token fetch, before a
+  // connection existed to interrupt. Bail before opening one.
+  if (runInterrupted) {
+    return;
   }
 
   const state = getStore().getState();
@@ -172,6 +191,9 @@ export async function handleRunClick(
 }
 
 export function stopJavaCode(): void {
+  // Record the stop even when no connection exists yet (still saving or
+  // fetching the token); handleRunClick checks this before connecting.
+  runInterrupted = true;
   // If the neighborhood exists, stop it. This prevents extra animation
   // from occurring after stop.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();

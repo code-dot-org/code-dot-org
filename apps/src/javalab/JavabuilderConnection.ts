@@ -317,6 +317,11 @@ export default class JavabuilderConnection {
       this.resetRunState();
       this.establishWebsocketConnection(result.javabuilder_url, result.token);
     } catch (error) {
+      // The user may have stopped while the request was in flight. The failure
+      // is moot, and closeConnection already reported the stop.
+      if (this.interruptSignal) {
+        return;
+      }
       const ajaxError = error as AjaxError;
       if (ajaxError.status === 403) {
         if (ajaxError.responseJSON?.captcha_required === true) {
@@ -615,11 +620,14 @@ export default class JavabuilderConnection {
     } else {
       return;
     }
-    this.programIsRunning = false;
     this.onOutputMessage(
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
     );
     this.onNewlineMessage();
+    // Settle run/test state so callers awaiting completion (e.g. the Lab2 run
+    // promise) resolve and validation progress refreshes. A clean socket close
+    // does not flip this state on its own.
+    this.turnOffRunningOrTesting();
   }
 
   handleExecutionFinished() {

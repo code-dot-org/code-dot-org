@@ -158,6 +158,8 @@ describe('JavabuilderConnection', () => {
       expect(onOutputMessage).to.have.been.calledWith(
         `${STATUS_MESSAGE_PREFIX} Program stopped.`
       );
+      // Run state must settle so the caller's run promise resolves.
+      expect(setIsRunning).to.have.been.calledWith(false);
     });
 
     it('does nothing when no socket exists and no program is running', () => {
@@ -186,6 +188,23 @@ describe('JavabuilderConnection', () => {
       expect(connection.interruptSignal).to.be.true;
       expect(establishStub).not.to.have.been.called;
       $.ajax.restore();
+    });
+
+    it('does not report a connection error when interrupted during the token fetch', async () => {
+      const consoleError = sinon.stub(console, 'error');
+      // Reject the access-token request, but interrupt first to simulate a
+      // stop click while the request was in flight.
+      sinon.stub($, 'ajax').callsFake(() => {
+        connection.closeConnection();
+        return Promise.reject({status: 500, responseText: 'boom'});
+      });
+
+      await connection.initiateConnection('/url', {}, false);
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(consoleError).not.to.have.been.called;
+      $.ajax.restore();
+      consoleError.restore();
     });
   });
 
