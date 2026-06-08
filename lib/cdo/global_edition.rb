@@ -18,6 +18,22 @@ module Cdo
       configs[region] = YAML.safe_load_file(CDO.dir('config', 'global_editions', "#{region}.yml"), aliases: true)&.deep_symbolize_keys || {}
     end.freeze
 
+    # HTTP path prefixes to be excluded from Global Edition scope.
+    EXCLUDED_PATHS = Set[
+      '/assets/',
+      '/shared/',
+      # Exclude HoC legacy API routes from Global Edition scope.
+      '/api/hour/',
+      # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
+      # Instead of repeating this process for each new Global Edition region,
+      # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
+      # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
+      '/users/auth/',
+      # Exclude health check routes.
+      '/health_check',
+      '/home/health_check'
+    ].freeze
+
     # Extends Rails route URL generation to automatically include the current Global Edition path
     # as the request script name when one is not already provided.
     #
@@ -161,6 +177,14 @@ module Cdo
       path_pattern.match(path)
     end
 
+    # Checks whether the given path starts with one of the excluded path prefixes.
+    #
+    # @param path [String] the path to check
+    # @return [Boolean] true if the path matches an excluded prefix, false otherwise
+    def self.excluded_path?(path)
+      path.start_with?(*EXCLUDED_PATHS)
+    end
+
     # Builds a Global Edition path for the given region and path components.
     #
     # If the joined path already includes a supported Global Edition prefix, that
@@ -187,11 +211,11 @@ module Cdo
     # @example Replace an existing Global Edition prefix
     #   path("fa", "/in/hi/home") => "/fa/home"
     def self.path(region, *paths, locale: ::I18n.locale.to_s)
-      region = region.to_s
-
       path = ::File.join('/', *paths)
       path = match_path(path)&.try(:[], :main_path) || path
+      return path.chomp('/') if excluded_path?(path)
 
+      region = region.to_s
       if regions_url_locales[region]
         locale = main_region_locale(region) unless locale_available?(region, locale)
         path = ::File.join('/', region, url_locale_segment(locale), path)
