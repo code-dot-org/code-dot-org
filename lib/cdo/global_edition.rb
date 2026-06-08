@@ -18,10 +18,6 @@ module Cdo
       configs[region] = YAML.safe_load_file(CDO.dir('config', 'global_editions', "#{region}.yml"), aliases: true)&.deep_symbolize_keys || {}
     end.freeze
 
-    TARGET_HOSTNAMES = Set[
-      CDO.dashboard_hostname,
-    ].freeze
-
     # Extends Rails route URL generation to automatically include the current Global Edition path
     # as the request script name when one is not already provided.
     #
@@ -59,10 +55,6 @@ module Cdo
 
     def self.configuration_for(region)
       REGION_CONFIGS[region.to_s] || {}
-    end
-
-    def self.target_host?(hostname)
-      TARGET_HOSTNAMES.include?(hostname)
     end
 
     # Resolves the full I18n locale for a region from a locale value extracted from the request path.

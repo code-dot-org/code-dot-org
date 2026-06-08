@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 import {styles} from '../constants';
 import I18n from '../i18n';
-import {RootState} from '../redux';
-import {DataRow} from '../types';
+import type {RootState} from '../redux';
+import type {DataRow} from '../types';
 
 import DataTable from './DataTable';
 import Statement from './Statement';

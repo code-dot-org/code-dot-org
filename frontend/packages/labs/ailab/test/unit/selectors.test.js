@@ -10,11 +10,7 @@ import {
   getExtremaByColumn,
 } from '../../src/selectors';
 
-import {
-  classificationState,
-  allNumericalState,
-  premadeDatasetState,
-} from './testData';
+import {classificationState, allNumericalState} from './testData';
 
 describe('selecting columns by data type', () => {
   test('gets selected categorical features', async () => {

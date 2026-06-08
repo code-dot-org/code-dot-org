@@ -7,10 +7,10 @@
 */
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
-import {isRegression, RootState} from '../redux';
-import {ResultsData, DataRow} from '../types';
+import type {RootState} from '../redux';
+import type {ResultsData, DataRow} from '../types';
 
-import {getExtrema} from './columnDetails';
+import {getExtrema, isRegression} from './columnDetails';
 import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,

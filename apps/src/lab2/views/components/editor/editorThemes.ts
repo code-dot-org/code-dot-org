@@ -31,7 +31,7 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: 'var(--background-neutral-primary)',
+      backgroundColor: darkBackground,
     },
     '.cm-content': {
       caretColor: cursor,
@@ -58,7 +58,7 @@ export const darkTheme = EditorView.theme(
       outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
-      backgroundColor: 'var(--background-neutral-primary)',
+      backgroundColor: darkBackground,
       color: stone,
       border: 'none',
       paddingInline: '0.25rem',
@@ -168,10 +168,10 @@ export const darkMode = [darkTheme, syntaxHighlighting(darkHighlightStyle)];
 export const lightTheme = EditorView.theme(
   {
     '&': {
-      backgroundColor: 'var(--background-neutral-primary)',
+      backgroundColor: color.white,
     },
     '.cm-gutters': {
-      backgroundColor: 'var(--background-neutral-primary)',
+      backgroundColor: color.white,
       border: 'none',
       paddingInline: '0.25rem',
     },

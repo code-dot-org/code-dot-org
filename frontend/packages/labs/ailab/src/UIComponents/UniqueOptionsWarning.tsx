@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {styles, UNIQUE_OPTIONS_MAX} from '../constants';
 import I18n from '../i18n';
-import {RootState} from '../redux';
+import type {RootState} from '../redux';
 import {hasTooManyUniqueOptions} from '../selectors/currentColumnSelectors';
 
 interface UniqueOptionsWarningProps {

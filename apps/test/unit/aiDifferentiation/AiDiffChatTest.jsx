@@ -879,7 +879,7 @@ describe('AiDiffChat', () => {
     );
     expect(totalButtons1).toHaveLength(10);
     // Check the last new prompt is from the second set.
-    expect(totalButtons1.pop()).toHaveAccessibleName('Get help using Code.org');
+    expect(totalButtons1.pop()).toHaveAccessibleName('Get help using CodeAI');
 
     fireEvent.click(suggest_prompt);
     const createButtons = screen.getAllByRole('button', {name: /Create/i});

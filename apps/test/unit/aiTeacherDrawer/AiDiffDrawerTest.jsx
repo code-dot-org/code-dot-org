@@ -101,7 +101,7 @@ describe('AiDiffDrawer', () => {
     store.dispatch(setChatIsOpen(true));
 
     await waitFor(() => {
-      screen.getByText('AI Teaching Assistant');
+      screen.getByText(/AI Teaching Assistant/);
     });
   });
 
@@ -110,7 +110,7 @@ describe('AiDiffDrawer', () => {
     store.dispatch(setChatIsOpen(true));
 
     await waitFor(() => {
-      screen.getByText('AI Teaching Assistant');
+      screen.getByText(/AI Teaching Assistant/);
     });
   });
 
@@ -166,7 +166,7 @@ describe('AiDiffDrawer', () => {
 
     await waitFor(() => {
       // AiDiffArtifactSavePage is rendered instead of AiDiffWorkSpace
-      expect(screen.queryByText('AI Teaching Assistant')).toBeTruthy();
+      expect(screen.queryByText(/AI Teaching Assistant/)).toBeTruthy();
     });
   });
 

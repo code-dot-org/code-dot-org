@@ -1,4 +1,4 @@
-import KNN from 'ml-knn';
+import type KNN from 'ml-knn';
 
 export type DataRow = Record<string, string | number>;
 
