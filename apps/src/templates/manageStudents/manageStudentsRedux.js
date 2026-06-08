@@ -1,41 +1,16 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {
+  demoSecretPictureUrlFor,
+  demoSecretWordsFor,
+} from '@cdo/apps/templates/teacherDashboard/demoStudentSecrets';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
   sectionName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-import alienThumb from '@cdo/static/skins/studio/alien_thumb.png';
-import catThumb from '@cdo/static/skins/studio/cat_thumb.png';
-import dinosaurThumb from '@cdo/static/skins/studio/dinosaur_thumb.png';
-import dragonThumb from '@cdo/static/skins/studio/dragon_thumb.png';
-import knightThumb from '@cdo/static/skins/studio/knight_thumb.png';
-import robotThumb from '@cdo/static/skins/studio/robot_thumb.png';
-
-// Demo students have nil secret_words and secret_picture_id on the backend.
-// Pick a placeholder per student so a roster shows variety like a real classroom.
-const DEMO_SECRET_WORDS = [
-  'purple tiger',
-  'happy dragon',
-  'silver wolf',
-  'golden bird',
-  'brave knight',
-  'tiny robot',
-];
-const DEMO_SECRET_PICTURE_URLS = [
-  catThumb,
-  dragonThumb,
-  alienThumb,
-  dinosaurThumb,
-  knightThumb,
-  robotThumb,
-];
-
-// Stable positive modulo so a negative studentId still maps into [0, length).
-const demoIndex = (studentId, length) =>
-  ((studentId % length) + length) % length;
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
@@ -933,16 +908,10 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       genderTeacherInput: student.gender_teacher_input || '',
       secretWords:
         student.secret_words ??
-        (isDemoStudent
-          ? DEMO_SECRET_WORDS[demoIndex(student.id, DEMO_SECRET_WORDS.length)]
-          : null),
+        (isDemoStudent ? demoSecretWordsFor(student.id) : null),
       secretPictureUrl:
         student.secret_picture_url ??
-        (isDemoStudent
-          ? DEMO_SECRET_PICTURE_URLS[
-              demoIndex(student.id, DEMO_SECRET_PICTURE_URLS.length)
-            ]
-          : null),
+        (isDemoStudent ? demoSecretPictureUrlFor(student.id) : null),
       loginType: loginType,
       sectionId: sectionId,
       isDemoStudent: isDemoStudent,

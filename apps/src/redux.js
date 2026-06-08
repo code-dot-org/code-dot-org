@@ -126,7 +126,7 @@ export function hasReducer(key) {
 }
 
 /**
- * Creates a store configured for use the way we want for Code.org.
+ * Creates a store configured for use the way we want for CodeAI.
  * @see http://redux.js.org/docs/api/createStore.html
  * @param {!function} reducer
  * @return {Store} Configured Redux store, ready for use.
