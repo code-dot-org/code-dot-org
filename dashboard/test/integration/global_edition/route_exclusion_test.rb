@@ -3,16 +3,11 @@
 require 'test_helper'
 
 class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
-  include Minitest::RSpecMocks
-
   let(:ge_region) {'fa'}
   let(:document) {Nokogiri::HTML(response.body)}
   let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
 
   before do
-    allow(Cdo::GlobalEdition).to receive(:target_host?).and_call_original
-    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
-
     cookies[:ge_region] = ge_region
   end
 

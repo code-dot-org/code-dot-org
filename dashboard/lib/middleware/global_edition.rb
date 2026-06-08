@@ -94,7 +94,7 @@ module Middleware
       #
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
-        return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
+        return app.call(env) unless request.hostname == CDO.dashboard_hostname
         return app.call(env) if excluded_path?(request.path)
 
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
@@ -226,8 +226,6 @@ module Middleware
       end
 
       private def existing_route?
-        return false unless request.hostname == CDO.dashboard_hostname
-
         Dashboard::Application.routes.recognize_path_with_request(
           request,
           original_path_info,
