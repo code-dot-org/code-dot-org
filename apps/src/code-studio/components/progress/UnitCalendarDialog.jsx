@@ -1,8 +1,8 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
 
@@ -29,17 +29,16 @@ export default class UnitCalendarDialog extends Component {
     };
   }
 
-  generateDropdownOptions = () => {
-    let options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
-    if (!options.includes(this.props.weeklyInstructionalMinutes)) {
-      options.push(this.props.weeklyInstructionalMinutes);
-    }
+  generateDropdownItems = () => {
+    const current = this.props.weeklyInstructionalMinutes;
+    const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.includes(current)
+      ? [...WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS]
+      : [...WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS, current];
     options.sort((a, b) => a - b);
-    return options.map(val => (
-      <option value={parseInt(val)} key={`minutes-${val}`}>
-        {i18n.minutesLabel({number: val})}
-      </option>
-    ));
+    return options.map(val => ({
+      value: String(val),
+      text: i18n.minutesLabel({number: val}),
+    }));
   };
 
   changeMinutes = e => {
@@ -49,65 +48,46 @@ export default class UnitCalendarDialog extends Component {
 
   render() {
     const {isOpen, handleClose, lessons} = this.props;
+    if (!isOpen) {
+      return null;
+    }
     return (
-      <BaseDialog
-        isOpen={isOpen}
-        handleClose={handleClose}
-        style={styles.dialog}
-        useUpdatedStyles
-        hideCloseButton
-      >
-        <h2>{i18n.weeklyLessonLayout()}</h2>
-        <div style={styles.minutesPerWeekWrapper}>
-          <div style={styles.minutesPerWeekDescription}>
-            {i18n.instructionalMinutesPerWeek()}
-          </div>
-          <select
-            onChange={e => this.changeMinutes(e)}
-            value={this.state.instructionalMinutes}
-            style={styles.dropdown}
-          >
-            {this.generateDropdownOptions()}
-          </select>
-        </div>
-        <UnitCalendarGrid
-          lessons={lessons}
-          weeklyInstructionalMinutes={this.state.instructionalMinutes}
-          weekWidth={WEEK_WIDTH}
-        />
-        <Button
-          style={styles.button}
-          text={i18n.closeDialog()}
-          onClick={handleClose}
-          color={Button.ButtonColor.brandSecondaryDefault}
-        />
-      </BaseDialog>
+      <Modal
+        onClose={handleClose}
+        title={i18n.weeklyLessonLayout()}
+        customContent={
+          <>
+            <div
+              id="dsco-dialog-description"
+              style={styles.minutesPerWeekWrapper}
+            >
+              <SimpleDropdown
+                name="instructionalMinutes"
+                labelText={i18n.instructionalMinutesPerWeek()}
+                selectedValue={String(this.state.instructionalMinutes)}
+                onChange={this.changeMinutes}
+                items={this.generateDropdownItems()}
+                size="s"
+              />
+            </div>
+            <UnitCalendarGrid
+              lessons={lessons}
+              weeklyInstructionalMinutes={this.state.instructionalMinutes}
+              weekWidth={WEEK_WIDTH}
+            />
+          </>
+        }
+        primaryButtonProps={{
+          onClick: handleClose,
+          children: i18n.closeDialog(),
+        }}
+      />
     );
   }
 }
 
 const styles = {
-  dialog: {
-    textAlign: 'left',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  button: {
-    float: 'right',
-    marginTop: 30,
-  },
-  dropdown: {
-    width: 'fit-content',
-    marginBottom: 0,
-  },
   minutesPerWeekWrapper: {
-    display: 'flex',
-    marginBottom: 10,
-    alignItems: 'center',
-  },
-  minutesPerWeekDescription: {
-    fontWeight: 'bold',
-    marginRight: 10,
+    marginInline: '5px',
   },
 };
