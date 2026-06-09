@@ -72,18 +72,22 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
       </Button>
       <Menu
         id={menuId}
-        className={menuStyles.menu}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}
         disableScrollLock
+        marginThreshold={0}
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
-        slotProps={{paper: {elevation: 0}, list: {'aria-label': 'Account'}}}
+        slotProps={{
+          paper: {elevation: 0, className: menuStyles.paper},
+          list: {className: menuStyles.list, 'aria-label': 'Account'},
+        }}
       >
         {menuItems.map(item => (
           <MenuItem
             key={item.label}
+            className={menuStyles.item}
             component="a"
             href={item.href}
             onClick={() => setAnchorEl(null)}

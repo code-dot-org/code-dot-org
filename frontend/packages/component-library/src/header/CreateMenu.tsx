@@ -40,18 +40,22 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
       </Button>
       <Menu
         id={menuId}
-        className={moduleStyles.menu}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}
         disableScrollLock
+        marginThreshold={0}
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
-        slotProps={{paper: {elevation: 0}, list: {'aria-label': 'New project'}}}
+        slotProps={{
+          paper: {elevation: 0, className: moduleStyles.paper},
+          list: {className: moduleStyles.list, 'aria-label': 'New project'},
+        }}
       >
         {items.map(item => (
           <MenuItem
             key={item.id}
+            className={moduleStyles.item}
             component="a"
             href={item.href}
             onClick={() => setAnchorEl(null)}

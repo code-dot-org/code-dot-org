@@ -40,18 +40,22 @@ const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
       </span>
       <Menu
         id={menuId}
-        className={menuStyles.menu}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}
         disableScrollLock
+        marginThreshold={0}
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
-        slotProps={{paper: {elevation: 0}, list: {'aria-label': 'Help'}}}
+        slotProps={{
+          paper: {elevation: 0, className: menuStyles.paper},
+          list: {className: menuStyles.list, 'aria-label': 'Help'},
+        }}
       >
         {links.map(link => (
           <MenuItem
             key={link.label}
+            className={menuStyles.item}
             component="a"
             href={link.href}
             target="_blank"
