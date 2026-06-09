@@ -1,14 +1,63 @@
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import {styled} from '@mui/material/styles';
 import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {
+  headerMenuItemSx,
+  headerMenuListSx,
+  headerMenuPaperSx,
+  headerTriggerBase,
+} from './headerMenu';
 import type {UserType} from './types';
 
-import menuStyles from './headerMenu.module.scss';
-import moduleStyles from './signedInUserButton.module.scss';
+/**
+ * Account-menu trigger (teal pill with the display name + chevron). The compound
+ * `.MuiButton-root` selector beats MUI's per-variant defaults on specificity,
+ * not stylesheet order.
+ */
+const AccountTrigger = styled(Button)({
+  '&.MuiButton-root': {
+    ...headerTriggerBase,
+    minWidth: 0,
+    height: '35px',
+    // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
+    marginTop: '-1px',
+    padding: '6.5px 1rem',
+    columnGap: '8.4688px',
+    border: '1px solid var(--neutral-base-white)',
+    borderRadius: '4px',
+    backgroundColor: 'var(--background-brand-teal-primary)',
+    boxShadow: 'none',
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: 1.5,
+    textTransform: 'none',
+    '&:hover, &:active, &:focus-visible': {
+      backgroundColor: 'var(--background-brand-teal-primary)',
+      boxShadow: 'none',
+      color: 'var(--neutral-base-white)',
+    },
+    '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
+      width: 'auto',
+      color: 'var(--neutral-base-white)',
+      fontSize: '14px',
+    },
+  },
+});
+
+/** Display name: truncate to 120px so the button auto-sizes to prod's ~176px. */
+const accountNameSx = {
+  maxWidth: '120px',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  flexShrink: 0,
+};
 
 /**
  * Discriminated union of auth states consumed by header auth components.
@@ -53,8 +102,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
 
   return (
     <>
-      <Button
-        className={moduleStyles.trigger}
+      <AccountTrigger
         aria-label="Account menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -69,8 +117,10 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
           />
         }
       >
-        <span className={moduleStyles.name}>{userAuth.display_name}</span>
-      </Button>
+        <Box component="span" sx={accountNameSx}>
+          {userAuth.display_name}
+        </Box>
+      </AccountTrigger>
       <Menu
         id={menuId}
         anchorEl={anchorEl}
@@ -81,14 +131,14 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
-          paper: {elevation: 0, className: menuStyles.paper},
-          list: {className: menuStyles.list, 'aria-label': 'Account'},
+          paper: {elevation: 0, sx: headerMenuPaperSx},
+          list: {sx: headerMenuListSx, 'aria-label': 'Account'},
         }}
       >
         {menuItems.map(item => (
           <MenuItem
             key={item.label}
-            className={menuStyles.item}
+            sx={headerMenuItemSx}
             component="a"
             href={item.href}
             onClick={() => setAnchorEl(null)}

@@ -1,14 +1,15 @@
+import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
+import {styled} from '@mui/material/styles';
+import {visuallyHidden} from '@mui/utils';
 import {Fragment, useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {headerTriggerBase} from './headerMenu';
 import {getSupportLinks} from './supportLinks';
 import type {MenuItem, UserType} from './types';
-
-import moduleStyles from './hamburgerMenu.module.scss';
-import menuStyles from './headerMenu.module.scss';
 
 interface GlobalNavEntry {
   label: string;
@@ -76,30 +77,201 @@ interface HamburgerMenuProps {
 /** Shared `name` makes the sections a native exclusive accordion (one open at a time). */
 const ACCORDION_NAME = 'hamburger-section';
 
+/**
+ * 3-bar hamburger icon: 25×3px bars with 1px border-radius, 8px gaps. Carries a
+ * literal `barsIcon` class as a stable hook for layout tests/stories that query
+ * the glyph (the emotion class is hashed).
+ */
+const BarsIcon = styled('span')({
+  position: 'relative',
+  display: 'block',
+  width: '25px',
+  height: '3px',
+  borderRadius: '1px',
+  backgroundColor: 'currentColor',
+  '&::before, &::after': {
+    content: '""',
+    display: 'block',
+    position: 'absolute',
+    width: '25px',
+    height: '3px',
+    borderRadius: '1px',
+    backgroundColor: 'currentColor',
+  },
+  '&::before': {
+    top: '-8px',
+  },
+  '&::after': {
+    top: '8px',
+  },
+});
+
+/**
+ * Trigger: always visible (the hamburger shows at every width). Compound
+ * `.MuiIconButton-root` selector beats MUI's single-class defaults.
+ */
+const HamburgerTrigger = styled(IconButton)({
+  '&.MuiIconButton-root': {
+    ...headerTriggerBase,
+    minWidth: 0,
+    minHeight: 0,
+    // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.
+    padding: '18px 6px 20px 6px',
+    '&:hover, &:active': {
+      backgroundColor: 'transparent',
+    },
+  },
+});
+
+/**
+ * Popover surface (legacy #hamburger-contents). The compound `.MuiPaper-root`
+ * selector beats MUI's Paper defaults on specificity, not stylesheet order.
+ */
+const popoverSx = {
+  '& .MuiPaper-root': {
+    marginTop: '4px',
+    backgroundColor: 'var(--background-neutral-primary)',
+    border: '1px solid var(--borders-neutral-primary)',
+    borderRadius: '4px',
+    boxShadow:
+      'rgb(0 0 0 / 0.1) 0 10px 15px -3px, rgb(0 0 0 / 0.05) 0 4px 6px -2px',
+  },
+};
+
+/** 6px inset + 228px content + 1px border = 242px, matching #hamburger-contents. */
+const HamburgerList = styled('ul')({
+  minWidth: '240px',
+  margin: 0,
+  padding: '6px',
+  listStyle: 'none',
+});
+
+/**
+ * App-nav, support links, and their dividers: shown only below the top-nav
+ * breakpoint (1061px), where the top bar's nav collapses (prod's .show-mobile).
+ * Authored default-visible so jsdom (which ignores @media) keeps them testable.
+ * Carries a literal `mobileOnly` class as a stable hook for tests asserting the
+ * width gate (the emotion class is hashed).
+ */
+const MobileOnlyItem = styled('li')({
+  '@media (min-width: 1061px)': {
+    display: 'none',
+  },
+});
+
+const Divider = styled('li')({
+  height: '1px',
+  margin: '0.5rem 0',
+  padding: 0,
+  // Legacy header divider gray (rgb(209,212,216)); no design token matches.
+  background: '#d1d4d8',
+  '@media (min-width: 1061px)': {
+    display: 'none',
+  },
+});
+
+const linkSx = {
+  display: 'block',
+  boxSizing: 'border-box',
+  width: '100%',
+  padding: '8px',
+  color: 'var(--text-neutral-primary)',
+  fontSize: '14px',
+  fontWeight: 500,
+  lineHeight: '21px',
+  textDecoration: 'none',
+  '&:visited, &:active': {
+    color: 'var(--text-neutral-primary)',
+  },
+  // Legacy header hover gray (rgb(231,232,234)); prod rounds the hamburger
+  // highlight, unlike the square help/account hovers.
+  '&:hover': {
+    backgroundColor: '#e7e8ea',
+    borderRadius: '4px',
+    color: 'var(--text-neutral-primary)',
+  },
+};
+
+/**
+ * Native `<details>` section. The summary hides its UA marker; the chevron is
+ * the only open/closed cue, rotated via `[open]`. Toggling is instant (no JS, no
+ * animation — reduced-motion safe).
+ */
+const HamburgerSection = styled('details')({
+  '& summary': {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    boxSizing: 'border-box',
+    width: '100%',
+    padding: '8px',
+    listStyle: 'none',
+    cursor: 'pointer',
+    // Match the link rows' metrics — the UA summary default shifts the baseline.
+    fontSize: '14px',
+    lineHeight: '21px',
+    '&::-webkit-details-marker': {
+      display: 'none',
+    },
+    '&:hover': {
+      backgroundColor: '#e7e8ea',
+      borderRadius: '4px',
+    },
+  },
+  '& .chevron': {
+    color: 'var(--text-neutral-primary)',
+    fontSize: '14px',
+  },
+  '&[open] .chevron': {
+    transform: 'rotate(180deg)',
+  },
+});
+
+const expandTextSx = {
+  maxWidth: '210px',
+  overflow: 'hidden',
+  color: 'var(--text-neutral-primary)',
+  fontSize: '14px',
+  fontWeight: 500,
+  lineHeight: '21px',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+};
+
+/** Sub-list: 20px indent, no fill — indent is the only visual cue. */
+const subListSx = {
+  width: 'auto',
+  margin: '0 0 0 20px',
+  padding: 0,
+  listStyle: 'none',
+};
+
 /** Expandable section: a native `<details>` disclosure with an indented sub-link list. */
 const ExpandableSection: FunctionComponent<{entry: GlobalNavEntry}> = ({
   entry,
 }) => (
   <li>
-    <details name={ACCORDION_NAME} className={moduleStyles.section}>
-      <summary className={moduleStyles.expandTrigger}>
-        <span className={moduleStyles.expandText}>{entry.label}</span>
+    <HamburgerSection name={ACCORDION_NAME}>
+      <summary>
+        <Box component="span" sx={expandTextSx}>
+          {entry.label}
+        </Box>
         <FontAwesomeV6Icon
           iconName="chevron-down"
           iconStyle="solid"
-          className={moduleStyles.chevron}
+          className="chevron"
         />
       </summary>
-      <ul className={moduleStyles.subList}>
+      <Box component="ul" sx={subListSx}>
         {entry.subEntries?.map(sub => (
           <li key={sub.label}>
-            <a href={sub.href} className={moduleStyles.link}>
+            <Box component="a" href={sub.href} sx={linkSx}>
               {sub.label}
-            </a>
+            </Box>
           </li>
         ))}
-      </ul>
-    </details>
+      </Box>
+    </HamburgerSection>
   </li>
 );
 
@@ -121,40 +293,35 @@ const HamburgerPanel: FunctionComponent<
   const appNavItems = menuItems.filter(item => item.label !== 'Incubator');
 
   return (
-    <ul className={moduleStyles.list}>
+    <HamburgerList>
       {/* App nav — gated below the top-nav breakpoint (prod .show-mobile) */}
       {appNavItems.map(item => (
-        <li key={item.label} className={moduleStyles.mobileOnly}>
-          <a href={item.href} className={moduleStyles.link}>
+        <MobileOnlyItem key={item.label} className="mobileOnly">
+          <Box component="a" href={item.href} sx={linkSx}>
             {item.label}
-          </a>
-        </li>
+          </Box>
+        </MobileOnlyItem>
       ))}
 
-      <li
-        className={`${moduleStyles.divider} ${moduleStyles.mobileOnly}`}
-        role="separator"
-      />
+      <Divider className="mobileOnly" role="separator" />
 
       {/* Support links — gated below the top-nav breakpoint */}
       {supportLinks.map(link => (
-        <li key={link.label} className={moduleStyles.mobileOnly}>
-          <a
+        <MobileOnlyItem key={link.label} className="mobileOnly">
+          <Box
+            component="a"
             href={link.href}
-            className={moduleStyles.link}
+            sx={linkSx}
             target="_blank"
             rel="noopener noreferrer"
             aria-describedby={newTabId}
           >
             {link.label}
-          </a>
-        </li>
+          </Box>
+        </MobileOnlyItem>
       ))}
 
-      <li
-        className={`${moduleStyles.divider} ${moduleStyles.mobileOnly}`}
-        role="separator"
-      />
+      <Divider className="mobileOnly" role="separator" />
 
       {/* Global site nav — always visible. Incubator is re-injected after
           Donate (app-nav-gated), matching prod's single listing. */}
@@ -163,26 +330,26 @@ const HamburgerPanel: FunctionComponent<
           <ExpandableSection entry={entry} />
         ) : (
           <li>
-            <a href={entry.href} className={moduleStyles.link}>
+            <Box component="a" href={entry.href} sx={linkSx}>
               {entry.label}
-            </a>
+            </Box>
           </li>
         );
         if (entry.label === 'Donate' && incubator) {
           return (
             <Fragment key={entry.label}>
               {row}
-              <li className={moduleStyles.mobileOnly}>
-                <a href={incubator.href} className={moduleStyles.link}>
+              <MobileOnlyItem className="mobileOnly">
+                <Box component="a" href={incubator.href} sx={linkSx}>
                   {incubator.label}
-                </a>
-              </li>
+                </Box>
+              </MobileOnlyItem>
             </Fragment>
           );
         }
         return <Fragment key={entry.label}>{row}</Fragment>;
       })}
-    </ul>
+    </HamburgerList>
   );
 };
 
@@ -203,22 +370,21 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
 
   return (
     <>
-      <IconButton
-        className={moduleStyles.trigger}
+      <HamburgerTrigger
         aria-label="Open navigation menu"
         aria-haspopup="true"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         onClick={event => setAnchorEl(event.currentTarget)}
       >
-        <span className={moduleStyles.barsIcon} />
-      </IconButton>
-      <span id={newTabId} className={menuStyles.visuallyHidden}>
+        <BarsIcon className="barsIcon" />
+      </HamburgerTrigger>
+      <Box component="span" id={newTabId} sx={visuallyHidden}>
         Opens in a new tab
-      </span>
+      </Box>
       <Popover
         id={menuId}
-        className={moduleStyles.popover}
+        sx={popoverSx}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}
