@@ -11,15 +11,18 @@ import {lineAnchorHandleId} from '../utils/lineAnchors';
 
 import styles from './line-anchor-node.module.scss';
 
-function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
+function LineAnchorNode({
+  data,
+  isConnectable: nodeConnectable,
+}: NodeProps<LineAnchorNodeType>) {
   const isSourceAnchor = data.lineAnchorRole === 'source';
   const handleType = isSourceAnchor ? 'source' : 'target';
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
   const connections = useNodeConnections();
 
-  // This should become false immediately after a line is created,
-  // as we create two hidden nodes with an edge in between them.
-  const isConnectable = connections.length === 0;
+  // The free end of an unattached line accepts a connection; once attached it
+  // doesn't. If nodeConnectable is false, it never does.
+  const isConnectable = nodeConnectable && connections.length === 0;
 
   return (
     <div className={styles.anchorNode}>

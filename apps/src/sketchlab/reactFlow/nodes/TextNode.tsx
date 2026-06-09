@@ -23,7 +23,7 @@ import ConnectionHandles from './ConnectionHandles';
 
 import styles from './text-node.module.scss';
 
-function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
+function TextNode({id, data, selected, isConnectable}: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
@@ -132,7 +132,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
     </div>
   );
 }

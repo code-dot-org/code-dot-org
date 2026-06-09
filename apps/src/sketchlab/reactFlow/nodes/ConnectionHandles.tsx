@@ -9,6 +9,9 @@ interface ConnectionHandlesProps {
   /** When false, handles stay in the DOM (so edges keep their anchors)
    *  but are visually hidden and non-interactive. */
   visible?: boolean;
+  /** When false, handles can't start or accept a connection (e.g. the node
+   *  is locked or the canvas is read-only). Existing edges stay attached. */
+  isConnectable?: boolean;
   shapeType?: ShapeType;
 }
 
@@ -27,6 +30,7 @@ const TRIANGLE_SIDE_MIDPOINTS = [
  */
 export default function ConnectionHandles({
   visible = true,
+  isConnectable = true,
   shapeType,
 }: ConnectionHandlesProps) {
   const className = visible ? undefined : styles.hidden;
@@ -46,6 +50,7 @@ export default function ConnectionHandles({
                 type="target"
                 position={position}
                 id={`${id}-target`}
+                isConnectable={isConnectable}
                 className={className}
                 style={handleStyle}
               />
@@ -53,6 +58,7 @@ export default function ConnectionHandles({
                 type="source"
                 position={position}
                 id={`${id}-source`}
+                isConnectable={isConnectable}
                 className={className}
                 style={handleStyle}
               />
@@ -69,48 +75,56 @@ export default function ConnectionHandles({
         type="target"
         position={Position.Top}
         id="top-target"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="source"
         position={Position.Top}
         id="top-source"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="target"
         position={Position.Right}
         id="right-target"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="source"
         position={Position.Right}
         id="right-source"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="target"
         position={Position.Bottom}
         id="bottom-target"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="source"
         position={Position.Bottom}
         id="bottom-source"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="target"
         position={Position.Left}
         id="left-target"
+        isConnectable={isConnectable}
         className={className}
       />
       <Handle
         type="source"
         position={Position.Left}
         id="left-source"
+        isConnectable={isConnectable}
         className={className}
       />
     </>
