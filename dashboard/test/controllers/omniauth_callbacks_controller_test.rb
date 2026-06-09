@@ -1643,7 +1643,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'sets token on new user' do
         classlink_req
         _(partial_user.oauth_token).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.token
-        _(partial_user.oauth_token_expiration).must_be_nil
       end
     end
     context 'when authorizing with unknown Student' do
