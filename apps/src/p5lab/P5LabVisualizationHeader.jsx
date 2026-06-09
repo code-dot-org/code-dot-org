@@ -70,7 +70,7 @@ class P5LabVisualizationHeader extends React.Component {
       <div>
         {this.shouldShowPoemSelector() && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
-          <div id="playSpaceHeader">
+          <div style={styles.main} id="playSpaceHeader">
             <SegmentedButtons
               selectedButtonValue={interfaceMode}
               onChange={this.changeInterfaceMode}
@@ -110,6 +110,11 @@ class P5LabVisualizationHeader extends React.Component {
   }
 }
 
+const styles = {
+  main: {
+    marginBottom: 5,
+  },
+};
 export default connect(
   state => ({
     interfaceMode: state.interfaceMode,
