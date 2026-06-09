@@ -172,10 +172,8 @@ const Javalab2View: React.FunctionComponent<
   const hasSource = !!source;
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
-  // Javabuilder loads source from S3 by channel id. A brand-new project (no
-  // sources on the server, so initialSources is undefined) shows the level's
-  // start code in the editor, but the framework treats that start code as
-  // already-saved and never writes it to S3 until the user edits. Persist it
+  // Javabuilder loads source from S3 by channel id. A brand-new project shows the level's
+  // start code in the editor, but it won't be saved until the user edits. Persist it
   // once here so a first Run with no edits still has sources to fetch.
   const startCodeSavedForChannel = useRef<string | undefined>(undefined);
   useEffect(() => {
