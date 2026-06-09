@@ -174,6 +174,13 @@ export const FileTabContent = ({file}: {file: ProjectFile}) => {
         />
         <Typography variant="body4">{file.name}</Typography>
       </div>
+      <CloseButton
+        onClick={() => {}} // Maintain visual display but disable close button during drag
+        color={'light'}
+        aria-label={codebridgeI18n.closeFile({filename: file.name})}
+        className={moduleStyles.closeButton}
+        size="s"
+      />
     </div>
   );
 };

@@ -34,7 +34,7 @@
   white-space: nowrap;
   background-color: var(--background-neutral-secondary);
   border-radius: variables.$default-border-radius;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 
   .closeButton {
     outline-offset: 4px;
