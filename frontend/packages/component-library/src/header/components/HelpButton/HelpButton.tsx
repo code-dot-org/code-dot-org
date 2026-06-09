@@ -14,11 +14,11 @@ import {
   headerMenuPaperSx,
   headerTriggerBase,
 } from '../../shared/headerMenu';
-import {getSupportLinks} from '../../shared/supportLinks';
-import type {UserType} from '../../shared/types';
+import type {MenuItem as SupportLink} from '../../shared/types';
 
 interface HelpButtonProps {
-  userType?: UserType;
+  /** Help/support links rendered in the menu. */
+  supportLinks: SupportLink[];
 }
 
 /**
@@ -47,8 +47,7 @@ const helpTriggerSx: SxProps = {
 };
 
 /** "?" icon button with a support-links menu. Hidden below the desktop-nav breakpoint. */
-const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
-  const links = getSupportLinks(userType);
+const HelpButton: FunctionComponent<HelpButtonProps> = ({supportLinks}) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const menuId = useId();
@@ -83,7 +82,7 @@ const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
           list: {sx: headerMenuListSx, 'aria-label': 'Help'},
         }}
       >
-        {links.map(link => (
+        {supportLinks.map(link => (
           <MenuItem
             key={link.label}
             sx={headerMenuItemSx}

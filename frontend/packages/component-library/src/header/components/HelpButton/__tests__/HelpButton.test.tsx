@@ -4,8 +4,19 @@ import '@testing-library/jest-dom';
 
 import HelpButton from '../HelpButton';
 
+const SUPPORT_LINKS = [
+  {label: 'Help and support', href: 'https://support.code.org'},
+  {
+    label: 'Report a problem',
+    href: 'https://support.code.org/hc/en-us/requests/new',
+  },
+];
+const TEACHER_FORUM = {label: 'Teacher forum', href: 'https://forum.code.org'};
+
 function renderAs(userType: 'student' | 'teacher') {
-  render(<HelpButton userType={userType} />);
+  const supportLinks =
+    userType === 'teacher' ? [...SUPPORT_LINKS, TEACHER_FORUM] : SUPPORT_LINKS;
+  render(<HelpButton supportLinks={supportLinks} />);
   return screen.getByRole('button', {name: 'Help menu'});
 }
 

@@ -15,8 +15,34 @@ const TEACHER_MENU_ITEMS = [
   {label: 'Incubator', href: '//code.org/incubator'},
 ];
 
+// Donate must be present so the Incubator re-injection has its anchor; Teach
+// carries a sub-item to exercise the expandable-section path.
+const GLOBAL_NAV = [
+  {label: 'Learn', href: '//code.org/students'},
+  {
+    label: 'Teach',
+    subItems: [{label: 'Educator Overview', href: '//code.org/teach'}],
+  },
+  {label: 'Districts', href: '//code.org/administrators'},
+  {label: 'Donate', href: '//code.org/donate'},
+];
+
+const SUPPORT_LINKS = [
+  {label: 'Help and support', href: 'https://support.code.org'},
+  {
+    label: 'Report a problem',
+    href: 'https://support.code.org/hc/en-us/requests/new',
+  },
+];
+
 function renderMenu() {
-  render(<HamburgerMenu menuItems={TEACHER_MENU_ITEMS} userType="teacher" />);
+  render(
+    <HamburgerMenu
+      menuItems={TEACHER_MENU_ITEMS}
+      globalNavItems={GLOBAL_NAV}
+      supportLinks={SUPPORT_LINKS}
+    />,
+  );
   return screen.getByRole('button', {name: 'Open navigation menu'});
 }
 

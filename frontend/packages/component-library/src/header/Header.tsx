@@ -13,7 +13,7 @@ import NavMenu from './components/NavMenu/NavMenu';
 import {UserAuthProp} from './components/SignedInUserButton/SignedInUserButton';
 import UserAuthArea from './components/UserAuthArea/UserAuthArea';
 import {HEADER_BREAKPOINTS} from './shared/breakpoints';
-import type {MenuItem} from './shared/types';
+import type {GlobalNavItem, MenuItem} from './shared/types';
 
 export type {CreateMenuItem};
 
@@ -29,6 +29,10 @@ export interface HeaderProps {
   userAuth?: UserAuthProp;
   /** Project types shown in the "New project +" dropdown; omit to hide that button. */
   createMenuItems?: CreateMenuItem[];
+  /** Site-wide nav shown in the hamburger drawer; omit to hide that section. */
+  globalNavItems?: GlobalNavItem[];
+  /** Help/support links shown in the help menu and hamburger drawer. */
+  supportLinks?: MenuItem[];
 }
 
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
@@ -38,10 +42,9 @@ const Header: FunctionComponent<HeaderProps> = ({
   menuItems,
   userAuth,
   createMenuItems,
+  globalNavItems = [],
+  supportLinks = [],
 }) => {
-  const userType =
-    userAuth?.status === 'signed-in' ? userAuth.user_type : undefined;
-
   return (
     <Box component="header">
       <AppBar
@@ -88,9 +91,13 @@ const Header: FunctionComponent<HeaderProps> = ({
                 </Box>
               )}
             </Box>
-            <HelpButton userType={userType} />
+            <HelpButton supportLinks={supportLinks} />
             <Box sx={{flexShrink: 0}}>
-              <HamburgerMenu menuItems={menuItems} userType={userType} />
+              <HamburgerMenu
+                menuItems={menuItems}
+                globalNavItems={globalNavItems}
+                supportLinks={supportLinks}
+              />
             </Box>
           </Box>
         </Toolbar>

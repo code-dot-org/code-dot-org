@@ -71,10 +71,41 @@ const CREATE_MENU_ITEMS = [
   },
 ];
 
+const GLOBAL_NAV_ITEMS = [
+  {label: 'Learn', href: '//code.org/students'},
+  {
+    label: 'Teach',
+    subItems: [
+      {label: 'Educator Overview', href: '//code.org/teach'},
+      {label: 'Hour of Code', href: 'https://hourofcode.com'},
+    ],
+  },
+  {label: 'Districts', href: '//code.org/administrators'},
+  {label: 'Stats', href: '//code.org/promote'},
+  {label: 'Donate', href: '//code.org/donate'},
+  {
+    label: 'About',
+    subItems: [
+      {label: 'About Us', href: '//code.org/about'},
+      {label: 'Careers', href: '//code.org/about/jobs'},
+    ],
+  },
+];
+
+const SUPPORT_LINKS = [
+  {label: 'Help and support', href: 'https://support.code.org'},
+  {
+    label: 'Report a problem',
+    href: 'https://support.code.org/hc/en-us/requests/new',
+  },
+];
+
 const BASE = {
   logoImageUrl: logoImage,
   brandName: 'CodeAI',
   createMenuItems: CREATE_MENU_ITEMS,
+  globalNavItems: GLOBAL_NAV_ITEMS,
+  supportLinks: SUPPORT_LINKS,
 };
 
 // Desktop viewport so the >1200px "New project" trigger renders in the vitest
