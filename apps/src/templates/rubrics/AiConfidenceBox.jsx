@@ -1,8 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import i18n from '@cdo/locale';
 
@@ -35,18 +35,20 @@ export default function AiConfidenceBox({aiConfidence}) {
         ))}
       </div>
       <div className={style.aiConfidenceBoxText}>
-        <p className={style.labelThree}>
-          {aiConfidenceText}
-          <span data-tip data-for="info-tip">
+        <p className={style.labelThree}>{aiConfidenceText}</p>
+        <WithTooltip
+          tooltipProps={{
+            text: i18n.aiConfidenceTooltip(),
+            tooltipId: 'info-tip',
+          }}
+        >
+          <span>
             <FontAwesomeV6Icon
               iconName="circle-info"
               className={style.infoTipIcon}
             />
           </span>
-        </p>
-        <ReactTooltip id="info-tip" effect="solid">
-          <div className={style.infoTipText}>{i18n.aiConfidenceTooltip()}</div>
-        </ReactTooltip>
+        </WithTooltip>
       </div>
     </div>
   );

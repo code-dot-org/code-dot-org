@@ -56,6 +56,16 @@ fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
 const sectionId = 999;
 
+// The run-AI-assessment status text lives in a DSCO tooltip, which only mounts
+// its content while hovered. Hover the tooltip trigger before asserting on it.
+const showRunAiStatusTooltip = () => {
+  fireEvent.mouseEnter(
+    screen
+      .getByRole('button', {name: i18n.runAiAssessment()})
+      .closest('[aria-describedby]')
+  );
+};
+
 describe('RubricContainer', () => {
   let store;
   let fetchStub;
@@ -236,6 +246,7 @@ describe('RubricContainer', () => {
     );
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_not_attempted());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
@@ -276,6 +287,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_already_evaluated());
     const button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
@@ -414,6 +426,7 @@ describe('RubricContainer', () => {
     );
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_pending());
 
     stubFetch({evalStatusForUser: runningJson, tourStatus: {seen: true}});
@@ -425,6 +438,7 @@ describe('RubricContainer', () => {
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_in_progress());
 
     stubFetch({
@@ -440,6 +454,7 @@ describe('RubricContainer', () => {
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
     button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).toBeDisabled();
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_success());
 
     dropdownOption = screen
@@ -583,6 +598,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_error());
     expect(
       screen.getByRole('button', {
@@ -627,6 +643,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_pii_error());
     expect(
       screen.getByRole('button', {
@@ -671,6 +688,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_profanity_error());
     expect(
       screen.getByRole('button', {name: i18n.runAiAssessment()})
@@ -713,6 +731,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(i18n.aiEvaluationStatus_request_too_large());
     expect(
       screen.getByRole('button', {name: i18n.runAiAssessment()})
@@ -799,6 +818,7 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
+    showRunAiStatusTooltip();
     screen.getByText(
       i18n.aiEvaluationStatus_teacher_limit_exceeded({
         limit: RubricAiEvaluationLimits.TEACHER_LIMIT,

@@ -122,6 +122,49 @@ p.countText {
   font-variant-ligatures: no-common-ligatures;
 }
 
+.alertCloseButton {
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  box-shadow: none;
+
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem; // Logical property for right in LTR, left in RTL
+
+  i {
+    color: var(--text-neutral-quaternary);
+    font-size: 1.1875rem;
+    line-height: 1.4844rem;
+    width: 1.4844rem;
+  }
+
+  &:hover {
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+
+  &:focus {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+  }
+}
+
 .viewScoresButton {
   min-height: 35px;
   width: 286px;
@@ -648,10 +691,6 @@ p.errorMessage {
   color: var(--text-neutral-quaternary);
 }
 
-.infoTipText {
-  max-width: 500px;
-}
-
 .openedAiAssessment {
   padding: 1rem 1rem 0 1rem;
 }
@@ -732,6 +771,9 @@ p.aiAssessmentEvidenceBlock {
 }
 
 .aiConfidenceBoxText {
+  display: flex;
+  align-items: center;
+
   p.labelThree {
     @include label-three;
     white-space: nowrap;
