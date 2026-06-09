@@ -34,10 +34,8 @@ const MINIMUM_PROPS = {
 
 const getStudentRows = wrapper => wrapper.find(StudentRow);
 
-// Buttons no longer sit at fixed indices: DSCO Modal wraps the dialog and
-// renders Save / Cancel via primaryButtonProps / secondaryButtonProps, so the
-// flat `wrapper.find('button').at(N)` order is brittle. Look them up by their
-// visible text instead — survives layout changes and is more readable.
+// Look up modal buttons by their visible text rather than by position so the
+// tests stay readable and resilient to layout changes.
 const findButtonByText = (wrapper, text) =>
   wrapper
     .find('button')

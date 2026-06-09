@@ -249,54 +249,10 @@ describe('UnitOverviewTopRow', () => {
     ).toBe(false);
   });
 
-  it('does not render printing option dropdown for participants', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Participant}
-      />
-    );
-    // Printing options dropdown moved to UnitOverviewActionRow; this row
-    // no longer renders it at all.
-    expect(wrapper.find('ActionDropdown').length).toBe(0);
-  });
-
   it('renders RTL without errors', () => {
     expect(() => {
       shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
     }).not.toThrow();
-  });
-
-  it('does not render the printing options drop down if the course is in pilot', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        publishedState="pilot"
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
-    );
-    // Printing options dropdown moved to UnitOverviewActionRow; this row
-    // no longer renders it at all.
-    expect(wrapper.find('ActionDropdown').length).toBe(0);
-  });
-
-  it('does not render the printing options drop down if the course is in development', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        publishedState="in_development"
-        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
-        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
-      />
-    );
-    // Printing options dropdown moved to UnitOverviewActionRow; this row
-    // no longer renders it at all.
-    expect(wrapper.find('ActionDropdown').length).toBe(0);
   });
 
   it('renders student select dropdown if user is teacher', () => {
