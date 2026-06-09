@@ -5,31 +5,14 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {getSupportLinks} from './supportLinks';
+import type {UserType} from './types';
+
 import menuStyles from './headerMenu.module.scss';
 import moduleStyles from './helpButton.module.scss';
 
-interface SupportLink {
-  label: string;
-  href: string;
-}
-
-function getSupportLinks(
-  userType?: 'student' | 'teacher' | 'admin',
-): SupportLink[] {
-  return [
-    {label: 'Help and support', href: 'https://support.code.org'},
-    {
-      label: 'Report a problem',
-      href: 'https://support.code.org/hc/en-us/requests/new',
-    },
-    ...(userType === 'teacher'
-      ? [{label: 'Teacher forum', href: 'https://forum.code.org'}]
-      : []),
-  ];
-}
-
 interface HelpButtonProps {
-  userType?: 'student' | 'teacher' | 'admin';
+  userType?: UserType;
 }
 
 /** "?" icon button with a support-links menu. Hidden below the desktop-nav breakpoint. */

@@ -47,7 +47,8 @@ const NavLogo: FunctionComponent<NavLogoProps> = ({
     href="/"
   >
     <Box sx={logoBoxSx}>
-      <img src={logoImageUrl} alt={`${brandName} Logo`} />
+      {/* Decorative: the wrapping IconButton already names the link "<brand> Home". */}
+      <img src={logoImageUrl} alt="" />
     </Box>
   </IconButton>
 );

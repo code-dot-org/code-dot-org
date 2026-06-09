@@ -4,22 +4,16 @@ import {Fragment, useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {getSupportLinks} from './supportLinks';
+import type {MenuItem, UserType} from './types';
+
 import moduleStyles from './hamburgerMenu.module.scss';
-
-interface MenuItem {
-  label: string;
-  href: string;
-}
-
-interface SubEntry {
-  label: string;
-  href: string;
-}
+import menuStyles from './headerMenu.module.scss';
 
 interface GlobalNavEntry {
   label: string;
   href?: string;
-  subEntries?: SubEntry[];
+  subEntries?: MenuItem[];
 }
 
 const GLOBAL_NAV: GlobalNavEntry[] = [
@@ -74,22 +68,9 @@ const GLOBAL_NAV: GlobalNavEntry[] = [
   },
 ];
 
-function getSupportLinks(userType?: 'student' | 'teacher' | 'admin') {
-  return [
-    {label: 'Help and support', href: 'https://support.code.org'},
-    {
-      label: 'Report a problem',
-      href: 'https://support.code.org/hc/en-us/requests/new',
-    },
-    ...(userType === 'teacher'
-      ? [{label: 'Teacher forum', href: 'https://forum.code.org'}]
-      : []),
-  ];
-}
-
 interface HamburgerMenuProps {
   menuItems: MenuItem[];
-  userType?: 'student' | 'teacher' | 'admin';
+  userType?: UserType;
 }
 
 /** Shared `name` makes the sections a native exclusive accordion (one open at a time). */
@@ -129,10 +110,9 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavEntry}> = ({
  * shown. Mounted by the Popover only while open, so the global nav never
  * duplicates the top-bar nav items.
  */
-const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
-  menuItems,
-  userType,
-}) => {
+const HamburgerPanel: FunctionComponent<
+  HamburgerMenuProps & {newTabId: string}
+> = ({menuItems, userType, newTabId}) => {
   const supportLinks = getSupportLinks(userType);
 
   // Prod lists Incubator once, in the global-nav region after Donate (not in
@@ -164,6 +144,7 @@ const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
             className={moduleStyles.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-describedby={newTabId}
           >
             {link.label}
           </a>
@@ -218,6 +199,7 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const menuId = useId();
+  const newTabId = useId();
 
   return (
     <>
@@ -231,6 +213,9 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
       >
         <span className={moduleStyles.barsIcon} />
       </IconButton>
+      <span id={newTabId} className={menuStyles.visuallyHidden}>
+        Opens in a new tab
+      </span>
       <Popover
         id={menuId}
         className={moduleStyles.popover}
@@ -243,7 +228,11 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{paper: {elevation: 0}}}
       >
-        <HamburgerPanel menuItems={menuItems} userType={userType} />
+        <HamburgerPanel
+          menuItems={menuItems}
+          userType={userType}
+          newTabId={newTabId}
+        />
       </Popover>
     </>
   );

@@ -66,6 +66,13 @@ describe('HamburgerMenu', () => {
     );
   });
 
+  it('marks external support links as opening in a new tab', async () => {
+    await openPanel();
+    const help = screen.getByText('Help and support').closest('a');
+    expect(help).toHaveAttribute('target', '_blank');
+    expect(help).toHaveAccessibleDescription('Opens in a new tab');
+  });
+
   it('closes on Escape and restores focus to the trigger', async () => {
     const {user, trigger} = await openPanel();
     await user.keyboard('{Escape}');

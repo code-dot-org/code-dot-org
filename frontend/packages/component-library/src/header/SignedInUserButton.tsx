@@ -5,6 +5,8 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import type {UserType} from './types';
+
 import menuStyles from './headerMenu.module.scss';
 import moduleStyles from './signedInUserButton.module.scss';
 
@@ -18,7 +20,7 @@ export type UserAuthProp =
   | {
       status: 'signed-in';
       display_name: string;
-      user_type: 'student' | 'teacher' | 'admin';
+      user_type: UserType;
     }
   | {status: 'signed-out'}
   | {status: 'loading'}
@@ -31,7 +33,7 @@ export interface SignedInUserButtonProps {
 }
 
 /** Pair programming is student-only; teachers and admins don't see it. */
-function buildMenuItems(userType: 'student' | 'teacher' | 'admin') {
+function buildMenuItems(userType: UserType) {
   return [
     {label: 'My projects', href: '/projects'},
     ...(userType === 'student' ? [{label: 'Pair programming', href: '#'}] : []),

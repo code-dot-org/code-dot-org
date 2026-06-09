@@ -4,14 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import type {FunctionComponent} from 'react';
 
 import {HEADER_BREAKPOINTS} from './breakpoints';
-
-/** A single navigation link entry. */
-interface MenuItem {
-  /** Display label for the link. */
-  label: string;
-  /** Destination href. */
-  href: string;
-}
+import type {MenuItem} from './types';
 
 /** Props for {@link NavMenu}. */
 interface NavMenuProps {

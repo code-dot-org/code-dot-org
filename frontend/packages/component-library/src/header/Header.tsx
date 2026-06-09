@@ -10,17 +10,10 @@ import HelpButton from './HelpButton';
 import NavLogo from './NavLogo';
 import NavMenu from './NavMenu';
 import {UserAuthProp} from './SignedInUserButton';
+import type {MenuItem} from './types';
 import UserAuthArea from './UserAuthArea';
 
 export type {CreateMenuItem};
-
-/** A single navigation link entry. */
-interface MenuItem {
-  /** Display label for the link. */
-  label: string;
-  /** Destination href. */
-  href: string;
-}
 
 /** Props for {@link Header}. */
 export interface HeaderProps {

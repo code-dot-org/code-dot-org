@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
+import {visuallyHidden} from '@mui/utils';
 import type {FunctionComponent} from 'react';
 
 import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
@@ -28,14 +29,30 @@ const containerSx = {
 function renderUserAuth(userAuth: UserAuthProp) {
   switch (userAuth.status) {
     case 'loading':
-    case 'error':
       return (
         <Skeleton
           variant="rectangular"
           width={238}
           height={32}
           sx={{borderRadius: '4px'}}
+          role="status"
+          aria-label="Loading your account"
         />
+      );
+    case 'error':
+      return (
+        <>
+          <Skeleton
+            variant="rectangular"
+            width={238}
+            height={32}
+            sx={{borderRadius: '4px'}}
+            aria-hidden
+          />
+          <Box component="span" role="status" sx={visuallyHidden}>
+            Unable to load your account
+          </Box>
+        </>
       );
     case 'signed-in':
       return <SignedInUserButton userAuth={userAuth} />;
