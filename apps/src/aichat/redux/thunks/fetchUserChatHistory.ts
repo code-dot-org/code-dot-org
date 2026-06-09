@@ -5,7 +5,6 @@ import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {getUserChatHistory} from '../../aichatApi';
-import {isNotification, isUserActionEvent} from '../../types';
 import {setOwnChatHistory, setStudentChatHistory} from '../slice';
 import {getNewRemoveId} from '../utils';
 
@@ -49,16 +48,7 @@ export const fetchUserChatHistory = createAsyncThunk(
         thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));
         if (initialWelcomeMessage) {
           const stateAfter = thunkAPI.getState() as RootState;
-          const events = stateAfter.aichat.chatEventsCurrent;
-          const alreadyLogged = events.some(
-            e => isNotification(e) && e.notificationType === 'welcomeMessage'
-          );
-          const firstEvent = events[0];
-          const userCleared =
-            firstEvent !== undefined &&
-            isUserActionEvent(firstEvent) &&
-            firstEvent.descriptionKey === 'CLEAR_CHAT';
-          if (!alreadyLogged && !userCleared) {
+          if (stateAfter.aichat.chatEventsCurrent.length === 0) {
             (thunkAPI.dispatch as AppDispatch)(
               addChatEvent({
                 timestamp: Date.now(),
