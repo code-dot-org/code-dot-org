@@ -484,16 +484,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setShowAiTutorNotificationDot(true);
   }, [levelId, viewAsUserId]);
 
-  const hasInteractedWithAiTutor = useAppSelector(state => {
-    const currentLevel = getCurrentLevel(state);
-    return currentLevel ? currentLevel.status !== LevelStatus.not_tried : false;
-  });
+  const hasTriedLevel = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
 
   useEffect(() => {
-    if (hasInteractedWithAiTutor) {
+    if (hasTriedLevel) {
       setShowAiTutorNotificationDot(false);
     }
-  }, [hasInteractedWithAiTutor]);
+  }, [hasTriedLevel]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {

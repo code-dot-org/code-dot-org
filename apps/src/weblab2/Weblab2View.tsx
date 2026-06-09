@@ -9,6 +9,7 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -181,8 +182,9 @@ const Weblab2View: React.FC<
   useEffect(() => {
     if (hasEdited) {
       logLevelActivity();
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
     }
-  }, [hasEdited, logLevelActivity]);
+  }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
