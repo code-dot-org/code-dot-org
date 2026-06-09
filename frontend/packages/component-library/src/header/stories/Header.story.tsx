@@ -1,7 +1,6 @@
 import logoImage from '@public/images/logo-codeai-inverse.svg';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect, userEvent, waitFor} from 'storybook/test';
-import {page} from 'vitest/browser';
 
 import Header, {HeaderProps} from '../Header';
 
@@ -198,15 +197,25 @@ HamburgerLayout.play = async ({canvasElement}) => {
   });
 };
 
+// Desktop viewport so the >1200px "New project" trigger renders in the vitest
+// browser test and the Eyes snapshot (MINIMAL_VIEWPORTS has only narrow presets).
+const DESKTOP_LAYOUT_PARAMS = {
+  viewport: {
+    viewports: {
+      desktop: {name: 'Desktop', styles: {width: '1280px', height: '800px'}},
+    },
+    defaultViewport: 'desktop',
+  },
+  eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
+};
+
 // Purple-hover regression: CdoTheme defines no palette, so before color="inherit"
 // the DS button override resolved hover/focus to MUI's default primary purple
-// (rgb(150,87,199)). Both triggers must stay brand-white in every pointer state,
-// label and icon alike. Widen past the 1200px create-menu breakpoint so the
-// "New project" button renders (it's display:none at/below 1200px).
+// (rgb(150,87,199)). Both triggers must stay brand-white in every pointer state.
 export const HoverColorsLayout = Template.bind({});
 HoverColorsLayout.args = {...TEACHER_ARGS};
+HoverColorsLayout.parameters = DESKTOP_LAYOUT_PARAMS;
 HoverColorsLayout.play = async ({canvasElement}) => {
-  await page.viewport(1300, 800);
   const canvas = within(canvasElement);
   const white = 'rgb(255, 255, 255)';
 
@@ -268,13 +277,12 @@ HamburgerExpandedLayout.play = async ({canvasElement}) => {
   expect(inset).toBeGreaterThanOrEqual(10);
 };
 
-// Create-menu open state for Eyes. Widen past the 1200px breakpoint so the "New
-// project" trigger renders, then open its picker. Mirrors the other *Layout
-// stories' open-and-assert shape; the picker portals to document.body.
+// Create-menu open state for Eyes. Opens the "New project" picker (rendered at the
+// desktop viewport); mirrors the other *Layout stories. The picker portals to body.
 export const CreateMenuLayout = Template.bind({});
 CreateMenuLayout.args = {...TEACHER_ARGS};
+CreateMenuLayout.parameters = DESKTOP_LAYOUT_PARAMS;
 CreateMenuLayout.play = async ({canvasElement}) => {
-  await page.viewport(1300, 800);
   await userEvent.click(
     within(canvasElement).getByRole('button', {name: 'New project menu'}),
   );
@@ -286,11 +294,11 @@ CreateMenuLayout.play = async ({canvasElement}) => {
 };
 
 // WCAG 2.5.8 (Target Size, AA): every interactive header control is at least
-// 24x24px. Widen past the 1200px create breakpoint so all of them render.
+// 24x24px (rendered at the desktop viewport so the create trigger is present).
 export const TargetSizeLayout = Template.bind({});
 TargetSizeLayout.args = {...TEACHER_ARGS};
+TargetSizeLayout.parameters = DESKTOP_LAYOUT_PARAMS;
 TargetSizeLayout.play = async ({canvasElement}) => {
-  await page.viewport(1300, 800);
   const labels = [
     'CodeAI Home',
     'New project menu',
