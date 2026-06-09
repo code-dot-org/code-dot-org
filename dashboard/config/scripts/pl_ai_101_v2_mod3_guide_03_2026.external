@@ -5,211 +5,180 @@ description 'description here'
 markdown <<MARKDOWN
 # Evaluating AI Use
 
-Let's practice looking at some scenarios where a teacher, educator, or administrator may want to use AI. For each scenario, consider whether or not AI was used appropriately.
-
-You may choose to use the THINK framework to help you.
+Let's practice applying the THINK framework to a few scenarios.
 
 <br>
 
-<div style="width:60%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+<div style="width:50%; max-width:700px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
-<div style="border:1px solid #D9DDE3; border-radius:16px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+<div style="border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
 
 <!-- ROW -->
-<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
-<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+<div style="display:grid; grid-template-columns: 60px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center;">
 T
 </div>
-<div style="padding:16px;">
-<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Task & Purpose</div>
+<div style="padding:12px;">
+<div style="font-weight:800; font-size:15px;">Task & Purpose</div>
 </div>
 </div>
 
 <!-- ROW -->
-<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
-<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+<div style="display:grid; grid-template-columns: 60px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center;">
 H
 </div>
-<div style="padding:16px;">
-<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Human Oversight</div>
+<div style="padding:12px;">
+<div style="font-weight:800; font-size:15px;">Human Oversight</div>
 </div>
 </div>
 
 <!-- ROW -->
-<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
-<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+<div style="display:grid; grid-template-columns: 60px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center;">
 I
 </div>
-<div style="padding:16px;">
-<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Instructional Quality</div>
+<div style="padding:12px;">
+<div style="font-weight:800; font-size:15px;">Instructional Quality</div>
 </div>
 </div>
 
 <!-- ROW -->
-<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
-<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+<div style="display:grid; grid-template-columns: 60px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center;">
 N
 </div>
-<div style="padding:16px;">
-<div style="font-weight:800; font-size:18px; margin-bottom:6px;">No Sensitive Data</div>
+<div style="padding:12px;">
+<div style="font-weight:800; font-size:15px;">No Sensitive Data</div>
 </div>
 </div>
 
 <!-- ROW -->
-<div style="display:grid; grid-template-columns: 80px 1fr;">
-<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+<div style="display:grid; grid-template-columns: 60px 1fr;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center;">
 K
 </div>
-<div style="padding:16px;">
-<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Keep Professional Judgment First</div>
+<div style="padding:12px;">
+<div style="font-weight:800; font-size:15px;">Keep Professional Judgment First</div>
 </div>
 </div>
 
 </div>
 </div>
 
+<br>
 
-## Evaulation Scenarios
+👉 Click each scenario to see how it aligns with the THINK framework. Evaluate the scenario yourself before revealing the answer.
 
-👉 Click on the scenario to see how it does using the THINK framework.
+---
 
-> **💬 Quick Reflection:** Take a moment to evaluate each scenario on your own before clicking to show the answer.
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
 
-<div style="width:80%, max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
-
-<!-- Scenario F -->
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<!-- AI-Generated Assignment Design -->
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 <summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario A
-</div>
-<div style="font-size:14px; color:#555;">
+<div style="font-size:18px; font-weight:600; margin-bottom:10px;">Assignment Generation</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
 An 8th-grade ELA teacher uses AI to quickly generate a full argumentative writing assignment, including a prompt, model essay, and rubric. They skim the materials and assign them without making significant revisions, assuming the AI-generated content is ready to use.
 <br><br>
-As students begin working, issues emerge. The model essay includes weak reasoning, and students treat it as a strong example. The rubric emphasizes structure over argument quality, and the task doesn’t fully align with the intended standards. The assignment is completed, but it doesn’t produce the level of thinking the teacher was aiming for.</div>
+As students begin working, issues emerge. The model essay includes weak reasoning, and students treat it as a strong example. The rubric emphasizes structure over argument quality, and the task doesn’t fully align with the intended standards. The assignment is completed, but it doesn’t produce the level of thinking the teacher was aiming for.
+</div>
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-<p><strong>Task & Purpose clear? ✖︎</strong><br>
-AI replaces assignment design rather than supporting it.</p>
+<div style="width:340px; max-width:100%; margin:0 auto; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; background:#FFFFFF; font-size:14px; line-height:1.35; color:#555;">
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">T</div><div style="padding:6px 12px;"><strong>Task & Purpose</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">H</div><div style="padding:6px 12px;"><strong>Human Oversight</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">I</div><div style="padding:6px 12px;"><strong>Instructional Quality</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">N</div><div style="padding:6px 12px;"><strong>No Sensitive Data</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">K</div><div style="padding:6px 12px;"><strong>Professional Judgment</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+</div>
 
-<p><strong>Human oversight applied? ✖︎</strong><br>
-The materials are not meaningfully reviewed or revised.</p>
-
-<p><strong>Instructional quality maintained? ✖︎</strong><br>
-The task lacks rigor and alignment to standards.</p>
-
-<p><strong>No sensitive data used? ✔︎</strong><br>
-No student data is entered into the tool.</p>
-
-<p><strong>Keep professional judgment first? ✖︎</strong><br>
-AI output replaces teacher decision-making.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> Time is saved, but at the cost of instructional quality and alignment.</p>
-
+<p style="margin:16px 0 0 0; font-size:15px; line-height:1.45; color:#555;">
+<strong>Overall:</strong> AI helped generate materials quickly, but the teacher did not adequately review or revise them. As a result, the assignment lacked instructional rigor, alignment, and the level of thinking students were expected to demonstrate.
+</p>
 </div>
 </details>
 
-<!-- Scenario G -->
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<!-- Parent Communication and Privacy -->
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 <summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario B
-</div>
-<div style="font-size:14px; color:#555;">
-A 4th-grade teacher uses AI to draft an email to a parent about ongoing behavioral challenges. To get a more tailored response, they include specific details about recent incidents. The AI generates a clear, professional message, and the teacher sends it with only minor edits.<br><br>
+<div style="font-size:18px; font-weight:600; margin-bottom:10px;">Parent Communication</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
+A 4th-grade teacher uses AI to draft an email to a parent about ongoing behavioral challenges. To get a more tailored response, they include specific details about recent incidents. The AI generates a clear, professional message, and the teacher sends it with only minor edits.
+<br><br>
 Afterward, the teacher realizes the tone feels impersonal and doesn’t reflect their relationship with the family. Additionally, they shared more detailed student information with the AI tool than necessary, raising concerns about privacy.
 </div>
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-<p><strong>Task & Purpose clear? ✔︎</strong><br>
-AI is used to support communication.</p>
+<div style="width:340px; max-width:100%; margin:0 auto; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; background:#FFFFFF; font-size:14px; line-height:1.35; color:#555;">
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">T</div><div style="padding:6px 12px;"><strong>Task & Purpose</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">H</div><div style="padding:6px 12px;"><strong>Human Oversight</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">I</div><div style="padding:6px 12px;"><strong>Instructional Quality</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">N</div><div style="padding:6px 12px;"><strong>No Sensitive Data</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">K</div><div style="padding:6px 12px;"><strong>Professional Judgment</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+</div>
 
-<p><strong>Human oversight applied? ✖︎</strong><br>
-The message is not fully reviewed for tone and appropriateness.</p>
-
-<p><strong>Instructional quality maintained? ✖︎</strong><br>
-The communication lacks personalization and may impact relationships.</p>
-
-<p><strong>No sensitive data used? ✖︎</strong><br>
-Sensitive student information is entered into the AI tool.</p>
-
-<p><strong>Keep professional judgment first? ✖︎</strong><br>
-The teacher relies too heavily on AI-generated wording.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> Efficiency introduces privacy risks and weakens communication quality.</p>
-
+<p style="margin:16px 0 0 0; font-size:15px; line-height:1.45; color:#555;">
+<strong>Overall:</strong> AI supported efficient communication, but sensitive student information was shared unnecessarily and the message was not carefully personalized. The result was a professional-sounding response that introduced privacy concerns and weakened the teacher-family connection.
+</p>
 </div>
 </details>
 
-<!-- Scenario E -->
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<!-- Using AI as a Planning Partner -->
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 <summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario C
-</div>
-<div style="font-size:14px; color:#555;">
+<div style="font-size:18px; font-weight:600; margin-bottom:10px;">Planning Partner</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
 A middle school assistant principal is preparing a staff meeting focused on improving student writing. They use AI to generate a draft agenda with discussion questions and suggested strategies. While the output looks polished, it is very general and doesn’t reflect the school’s recent writing data or specific challenges, like supporting multilingual learners.
 <br><br>
-Before finalizing the agenda, the administrator revises it to include actual student work samples, recent assessment data, and a protocol teachers have already been trained on. They remove generic strategies and replace them with concrete next steps aligned to current school goals.</div>
+Before finalizing the agenda, the administrator revises it to include actual student work samples, recent assessment data, and a protocol teachers have already been trained on. They remove generic strategies and replace them with concrete next steps aligned to current school goals.
+</div>
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-<p><strong>Task & Purpose clear? ✔︎</strong><br>
-AI is used to generate a starting point for planning.</p>
+<div style="width:340px; max-width:100%; margin:0 auto; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; background:#FFFFFF; font-size:14px; line-height:1.35; color:#555;">
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">T</div><div style="padding:6px 12px;"><strong>Task & Purpose</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">H</div><div style="padding:6px 12px;"><strong>Human Oversight</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">I</div><div style="padding:6px 12px;"><strong>Instructional Quality</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">N</div><div style="padding:6px 12px;"><strong>No Sensitive Data</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">K</div><div style="padding:6px 12px;"><strong>Professional Judgment</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+</div>
 
-<p><strong>Human oversight applied? ✔︎</strong><br>
-The administrator revises the agenda to reflect real data and context.</p>
-
-<p><strong>Instructional quality maintained? ✔︎</strong><br>
-The final agenda is aligned, relevant, and actionable.</p>
-
-<p><strong>No sensitive data used? ✔︎</strong><br>
-No identifiable information is entered into the AI tool.</p>
-
-<p><strong>Keep professional judgment first? ✔︎</strong><br>
-Leadership decisions drive the final outcome.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> AI supports efficiency, but the final plan is grounded in context, data, and professional judgment.</p>
-
+<p style="margin:16px 0 0 0; font-size:15px; line-height:1.45; color:#555;">
+<strong>Overall:</strong> The administrator used AI appropriately as a starting point rather than a final product. By applying professional judgment and incorporating real school data, the final plan remained relevant, actionable, and aligned to school goals.
+</p>
 </div>
 </details>
 
-<!-- Scenario H -->
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
+<!-- Simplifying Without Oversimplifying -->
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 <summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario D
-</div>
-<div style="font-size:14px; color:#555;">
+<div style="font-size:18px; font-weight:600; margin-bottom:10px;">Differentiation</div>
+<div style="font-size:15px; line-height:1.45; color:#555;">
 A 9th-grade biology teacher uses AI to simplify a reading on cell division for students who need additional support. They distribute the simplified version without reviewing it closely, assuming it maintains the key ideas.
 <br><br>
-During the lesson, students using the adapted text struggle to use correct vocabulary and explain the process accurately. The AI version removed important terms and oversimplified key concepts, unintentionally lowering the rigor of the task.</div>
+During the lesson, students using the adapted text struggle to use correct vocabulary and explain the process accurately. The AI version removed important terms and oversimplified key concepts, unintentionally lowering the rigor of the task.
+</div>
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-<p><strong>Task & Purpose clear? ✔︎</strong><br>
-AI is used to support differentiation.</p>
+<div style="width:340px; max-width:100%; margin:0 auto; border:1px solid #D9DDE3; border-radius:12px; overflow:hidden; background:#FFFFFF; font-size:14px; line-height:1.35; color:#555;">
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">T</div><div style="padding:6px 12px;"><strong>Task & Purpose</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">H</div><div style="padding:6px 12px;"><strong>Human Oversight</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">I</div><div style="padding:6px 12px;"><strong>Instructional Quality</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px; border-bottom:1px solid #E8ECF0;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">N</div><div style="padding:6px 12px;"><strong>No Sensitive Data</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✔</div></div>
+<div style="display:grid; grid-template-columns:32px 1fr 32px;"><div style="background:#8C52BA; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center;">K</div><div style="padding:6px 12px;"><strong>Professional Judgment</strong></div><div style="display:flex; align-items:center; justify-content:center; font-size:16px;">✖</div></div>
+</div>
 
-<p><strong>Human oversight applied? ✖︎</strong><br>
-The adapted material is not reviewed or revised.</p>
-
-<p><strong>Instructional quality maintained? ✖︎</strong><br>
-Key content and rigor are lost in the simplification.</p>
-
-<p><strong>No sensitive data used? ✔︎</strong><br>
-No student data is entered.</p>
-
-<p><strong>Keep professional judgment first? ✖︎</strong><br>
-The teacher relies on AI output without ensuring alignment.</p>
-
-<p style="margin-top:12px;"><strong>Overall:</strong> The adaptation reduces access to learning rather than supporting it.</p>
-
+<p style="margin:16px 0 0 0; font-size:15px; line-height:1.45; color:#555;">
+<strong>Overall:</strong> AI was used with a worthwhile goal—making content more accessible—but the output was not reviewed carefully. Important concepts and vocabulary were lost, reducing the rigor of the task and limiting students' access to grade-level learning.
+</p>
 </div>
 </details>
 

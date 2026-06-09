@@ -104,7 +104,7 @@ class InactiveTeacherDeletionWarningMailer
         :inactive_teacher_deletion_warning,
         user.email,
         user.name,
-        vars: {first_name: user.given_name.presence || user.name.presence || "Code.org user"},
+        vars: {first_name: user.given_name.presence || user.name.presence || "CodeAI user"},
       )
     end
   end

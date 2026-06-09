@@ -264,7 +264,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                 unreadNotificationCount === 'loading' ||
                 unreadNotificationCount > 0
                   ? 'var(--background-error-primary)'
-                  : '#3CFFF8',
+                  : 'var(--background-brand-aqua-primary)',
               color:
                 unreadNotificationCount === 'loading' ||
                 unreadNotificationCount > 0

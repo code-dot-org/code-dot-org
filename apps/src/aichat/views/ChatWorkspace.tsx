@@ -70,6 +70,8 @@ interface ChatWorkspaceProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   // Multimodal support
   multimodalEnabled?: boolean;
@@ -82,9 +84,6 @@ interface ChatWorkspaceProps {
   // Optional callback to process the model's response before it is recorded in chat
   // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
-
-  // Optional callback to log level activity
-  logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
@@ -121,13 +120,14 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       onAssetRemoved,
       hideModelChangeMessage = false,
       responseCallback,
-      logLevelActivity,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
       disableSendingMessages,
       renderLastMessagePostText,
       initialWelcomeMessage,
+      sendDisabled = false,
+      onMessageSent,
     },
     ref
   ) => {
@@ -435,11 +435,12 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
               onAssetUploaded={onAssetUploaded}
-              logLevelActivity={logLevelActivity}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
               lessonId={lessonId}
               chatDisabled={disabled || disableSendingMessages}
+              sendDisabled={sendDisabled}
+              onMessageSent={onMessageSent}
             />
           )}
         </div>

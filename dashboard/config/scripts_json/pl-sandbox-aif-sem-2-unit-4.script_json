@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-01 16:30:16 UTC",
+    "serialized_at": "2026-06-08 16:12:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -938,6 +938,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
+      },
+      "level_keys": [
+        "pl-aif2-U4_debugging_loops-rebrand"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U4-reflect-wrap-3"
         ],
@@ -958,9 +980,9 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
-      "activity_section_position": 3,
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -983,9 +1005,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
-      "activity_section_position": 4,
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1386,6 +1408,18 @@
         "level.key": "pl-aif-2-U4-reuseable-routine-loops",
         "script_level.level_keys": [
           "pl-aif-2-U4-reuseable-routine-loops"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U4_debugging_loops-rebrand",
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

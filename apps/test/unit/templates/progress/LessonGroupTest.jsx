@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -25,10 +26,10 @@ const DEFAULT_PROPS = {
 describe('LessonGroup', () => {
   it('renders clickable lesson group info button when there is a description or big questions', () => {
     const wrapper = shallow(<LessonGroup {...DEFAULT_PROPS} />);
-    expect(wrapper.find('FontAwesome')).toHaveLength(2);
+    expect(wrapper.find(FontAwesomeV6Icon)).toHaveLength(2);
 
     expect(wrapper.state('lessonGroupInfoDialogOpen')).toBe(false);
-    wrapper.find('FontAwesome').at(1).simulate('click');
+    wrapper.find(FontAwesomeV6Icon).at(1).simulate('click');
     expect(wrapper.state('lessonGroupInfoDialogOpen')).toBe(true);
   });
   it('renders without lesson group info button when there is no description or big questions', () => {
@@ -44,7 +45,7 @@ describe('LessonGroup', () => {
       },
     };
     const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.find('FontAwesome')).toHaveLength(1);
+    expect(wrapper.find(FontAwesomeV6Icon)).toHaveLength(1);
   });
   it('does not render in participant view if there are no visible lessons', () => {
     const props = {
