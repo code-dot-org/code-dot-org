@@ -13,6 +13,7 @@ export default class PrintLoginCards extends Component {
       Object.values(PrintLoginCardsButtonMetricsCategory)
     ),
     onPrintLoginCards: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   onClick = () => {
@@ -26,6 +27,7 @@ export default class PrintLoginCards extends Component {
         color="tertiary"
         size="small"
         onClick={this.onClick}
+        disabled={this.props.disabled}
         type="button"
         startIcon={<FontAwesomeV6Icon iconName="print" />}
       >

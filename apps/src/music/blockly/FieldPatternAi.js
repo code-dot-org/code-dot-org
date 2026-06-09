@@ -162,13 +162,9 @@ class FieldPatternAi extends BlocklyCore.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      BlocklyCore.utils.dom.createSvgElement(
+      const rect = BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
-          fill:
-            graphNote.tick <= PATTERN_AI_NUM_SEED_EVENTS
-              ? '#fca401'
-              : color.ai_rubric_cyan,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
@@ -177,6 +173,14 @@ class FieldPatternAi extends BlocklyCore.Field {
         },
         this.backgroundElement
       );
+      // Use inline style (rather than the `fill` SVG attribute) so the
+      // DSCO `var(...)` token resolves and follows live theme changes.
+      // CSS custom properties aren't honored by SVG presentation attributes,
+      // only by computed style.
+      rect.style.fill =
+        graphNote.tick <= PATTERN_AI_NUM_SEED_EVENTS
+          ? '#fca401'
+          : 'var(--background-brand-aqua-primary)';
     });
 
     this.renderContent();

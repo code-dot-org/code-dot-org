@@ -3,7 +3,6 @@ import React from 'react';
 
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import DemoChip from '@cdo/apps/templates/DemoChip';
-import color from '@cdo/apps/util/color';
 
 const StudentRow = ({
   index,
@@ -88,14 +87,14 @@ const styles = {
   tableCell: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 10,
   },
   radioCell: {
     textAlign: 'center',
   },
   selectedCell: {
-    backgroundColor: color.lightest_teal,
+    backgroundColor: 'var(--background-brand-teal-extra-light)',
   },
 };
 

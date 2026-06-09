@@ -8,8 +8,8 @@ describe('brand utilities', () => {
   });
 
   describe('getCurrentBrand', () => {
-    it('returns "code" when data-brand is absent', () => {
-      expect(getCurrentBrand()).toBe('code');
+    it('returns "codeai" when data-brand is absent', () => {
+      expect(getCurrentBrand()).toBe('codeai');
     });
 
     it('returns "codeai" when data-brand is "codeai"', () => {
@@ -22,9 +22,9 @@ describe('brand utilities', () => {
       expect(getCurrentBrand()).toBe('codeai-next');
     });
 
-    it('returns "code" when data-brand has unknown value', () => {
+    it('returns "codeai" when data-brand has unknown value', () => {
       document.documentElement.dataset.brand = 'unknown';
-      expect(getCurrentBrand()).toBe('code');
+      expect(getCurrentBrand()).toBe('codeai');
     });
 
     it('returns "code" when data-brand is "code"', () => {

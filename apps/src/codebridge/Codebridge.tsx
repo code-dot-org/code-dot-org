@@ -1,5 +1,9 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {
+  useFlaggedImage,
+  useSyncValidationOverride,
+  useZoomTracker,
+} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -15,6 +19,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -52,6 +57,9 @@ type CodebridgeProps = {
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  allowMultipleValidationFiles?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -72,6 +80,9 @@ export const Codebridge = React.memo(
     aiTutorResponseSchemaSettings,
     tutorVideos,
     secondaryBackpackAppNames,
+    onAssetUploaded,
+    onAssetRemoved,
+    allowMultipleValidationFiles,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -188,6 +199,9 @@ export const Codebridge = React.memo(
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
+    // Keep the validation override in sync with the project's validation files.
+    useSyncValidationOverride();
+
     const dispatch = useAppDispatch();
 
     // Set view code to false if level is switched for any levels in widget view.
@@ -222,6 +236,9 @@ export const Codebridge = React.memo(
           aiTutorSystemPrompt,
           tutorVideos,
           aiTutorDisabled,
+          onAssetUploaded,
+          onAssetRemoved,
+          allowMultipleValidationFiles,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

@@ -17,6 +17,9 @@ import TextNodeToolbar from '../TextNodeToolbar';
 interface CornerToolbarPanelProps {
   nodes: SketchlabReactFlowNode[];
   edges: SketchlabReactFlowEdge[];
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
@@ -31,6 +34,7 @@ interface CornerToolbarPanelProps {
 export default function CornerToolbarPanel({
   nodes,
   edges,
+  setNodes,
   setEdges,
   pushSnapshot,
 }: CornerToolbarPanelProps) {
@@ -41,9 +45,17 @@ export default function CornerToolbarPanel({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeType,
     setLineEdgeLocked,
-  } = useLineToolbar({edges, openToolbarTarget, setEdges, pushSnapshot});
+  } = useLineToolbar({
+    nodes,
+    edges,
+    setNodes,
+    openToolbarTarget,
+    setEdges,
+    pushSnapshot,
+  });
 
   const body = useMemo(() => {
     if (openToolbarTarget?.type === 'node') {
@@ -73,6 +85,9 @@ export default function CornerToolbarPanel({
           onSelectArrowHeads={value =>
             setLineEdgeArrowHeads(openLineEdge.id, value)
           }
+          onSelectRotation={value =>
+            setLineEdgeRotation(openLineEdge.id, value)
+          }
           onSetLocked={value => setLineEdgeLocked(openLineEdge.id, value)}
           onSelectEdgeType={value => setLineEdgeType(openLineEdge.id, value)}
         />
@@ -87,6 +102,7 @@ export default function CornerToolbarPanel({
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeLocked,
     setLineEdgeType,
   ]);

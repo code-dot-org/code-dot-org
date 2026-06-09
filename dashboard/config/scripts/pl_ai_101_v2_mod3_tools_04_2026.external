@@ -15,7 +15,9 @@ Because these tools are embedded in familiar platforms, they are often:
 <br>
 <p style="text-align:center;"><img src="https://images.code.org/ef83184756d8640bcdc33a39a158315f-Screenshot 2026-04-21 at 2.23.54 PM.png" alt="Potential benefits and risks of AI in education."></p>
 
-*Image: Google*
+<div style="text-align:center;margin-top:10px; font-size:14px; color:#666; font-style:italic;">
+Image: Google
+</div>
 <br>
 
 However, unlike education-specific tools, these features may not always include the same guardrails, visibility, or controls. As a result, it’s especially important to apply the same principles you’ve explored in this module:

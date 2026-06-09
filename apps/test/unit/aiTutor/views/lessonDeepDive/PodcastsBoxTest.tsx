@@ -1,4 +1,4 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -30,40 +30,38 @@ const reflectionData: ReflectionData = {
 
 type ScriptLine = {voice_id: string; text: string};
 
-// Routes the two GETs PodcastsBox makes: the audio blob from
-// retrieve_podcast_from_s3 and the transcript JSON from the show route.
-function mockEndpoints(script: ScriptLine[] | null = null) {
-  mockGet.mockImplementation((url: string) => {
-    if (url.includes('retrieve_podcast_from_s3')) {
-      return Promise.resolve({
-        blob: () =>
-          Promise.resolve(new Blob(['mp3-bytes'], {type: 'audio/mpeg'})),
-      });
-    }
-    return Promise.resolve({
-      json: () =>
-        Promise.resolve({
-          podcast_script: script ? JSON.stringify(script) : null,
-        }),
-    });
+// Stubs the transcript GET. The audio bytes are loaded by the <audio> element
+// itself from a same-origin src URL — HttpClient is no longer in that path.
+function mockTranscript(script: ScriptLine[] | null = null) {
+  mockGet.mockResolvedValue({
+    json: () =>
+      Promise.resolve({
+        podcast_script: script ? JSON.stringify(script) : null,
+      }),
   });
 }
 
-function retrieveUrl(): string | undefined {
-  return mockGet.mock.calls
-    .map(call => call[0] as string)
-    .find(url => url.includes('retrieve_podcast_from_s3'));
+function audioElement(): HTMLAudioElement {
+  const el = document.querySelector('audio');
+  if (!el) throw new Error('No audio element rendered');
+  return el as HTMLAudioElement;
+}
+
+// Returns the literal value set on the src attribute, not the absolute URL
+// the browser would resolve from it.
+function audioSrc(): string {
+  const src = audioElement().getAttribute('src');
+  if (src === null) throw new Error('Audio element has no src attribute');
+  return src;
 }
 
 describe('PodcastsBox', () => {
   beforeEach(() => {
     mockGet.mockReset();
-    window.URL.createObjectURL = jest.fn(() => 'blob:mock-url');
-    window.URL.revokeObjectURL = jest.fn();
   });
 
-  it('requests the podcast for the lesson and the struggling objectives only', async () => {
-    mockEndpoints();
+  it('points the audio element at the controller URL with lesson + struggling objectives only', () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -72,17 +70,17 @@ describe('PodcastsBox', () => {
       />
     );
 
-    await waitFor(() => expect(retrieveUrl()).toBeDefined());
-    const url = retrieveUrl();
-    expect(url).toContain('lesson_id=42');
-    expect(url).toContain('objective_ids%5B%5D=10');
-    expect(url).toContain('objective_ids%5B%5D=20');
+    const src = audioSrc();
+    expect(src).toContain('/ai_student_podcasts/retrieve_podcast_from_s3');
+    expect(src).toContain('lesson_id=42');
+    expect(src).toContain('objective_ids%5B%5D=10');
+    expect(src).toContain('objective_ids%5B%5D=20');
     // The confident objective is not part of the podcast key.
-    expect(url).not.toContain('objective_ids%5B%5D=30');
+    expect(src).not.toContain('objective_ids%5B%5D=30');
   });
 
-  it('turns the fetched blob into an object URL and enables playback', async () => {
-    mockEndpoints();
+  it('enables playback once the audio element fires canplay', async () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -91,16 +89,15 @@ describe('PodcastsBox', () => {
       />
     );
 
-    // The play button is disabled until the audio source is ready, so it
-    // becoming enabled is the user-visible signal that the blob was wired up.
-    const playButton = await screen.findByRole('button', {name: 'Play'});
+    const playButton = screen.getByRole('button', {name: 'Play'});
+    expect(playButton).toBeDisabled();
+
+    fireEvent.canPlay(audioElement());
     await waitFor(() => expect(playButton).toBeEnabled());
-    expect(window.URL.createObjectURL).toHaveBeenCalledTimes(1);
-    expect(window.URL.createObjectURL).toHaveBeenCalledWith(expect.any(Blob));
   });
 
-  it('renders the script transcript in the description when ready', async () => {
-    mockEndpoints([
+  it('renders the script transcript once both the audio is ready and the transcript arrives', async () => {
+    mockTranscript([
       {voice_id: 'Dan', text: 'What is a variable?'},
       {voice_id: 'Sam', text: 'A named box for a value.'},
     ]);
@@ -112,14 +109,16 @@ describe('PodcastsBox', () => {
       />
     );
 
+    fireEvent.canPlay(audioElement());
+
     expect(await screen.findByText('What is a variable?')).toBeInTheDocument();
     expect(screen.getByText('A named box for a value.')).toBeInTheDocument();
     expect(screen.getByText('Dan')).toBeInTheDocument();
     expect(screen.getByText('Sam')).toBeInTheDocument();
   });
 
-  it('shows an unavailable message and disables controls when retrieval fails', async () => {
-    mockGet.mockRejectedValue(new Error('404 Not Found'));
+  it('shows an unavailable message and disables controls when the audio fails to load', async () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -128,14 +127,16 @@ describe('PodcastsBox', () => {
       />
     );
 
+    fireEvent.error(audioElement());
+
     expect(
       await screen.findByText(/podcast isn't ready yet/i)
     ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Play'})).toBeDisabled();
   });
 
-  it('requests the lesson-level podcast with no objective ids when nothing is struggling', async () => {
-    mockEndpoints();
+  it('uses no objective ids in the audio URL when nothing is struggling', () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -150,14 +151,13 @@ describe('PodcastsBox', () => {
       />
     );
 
-    await waitFor(() => expect(retrieveUrl()).toBeDefined());
-    const url = retrieveUrl();
-    expect(url).toContain('lesson_id=42');
-    expect(url).not.toContain('objective_ids');
+    const src = audioSrc();
+    expect(src).toContain('lesson_id=42');
+    expect(src).not.toContain('objective_ids');
   });
 
-  it('requests using all lesson objectives when reflectionData is null', async () => {
-    mockEndpoints();
+  it('uses all lesson objectives in the audio URL when reflectionData is null', () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -169,15 +169,14 @@ describe('PodcastsBox', () => {
       />
     );
 
-    await waitFor(() => expect(retrieveUrl()).toBeDefined());
-    const url = retrieveUrl();
-    expect(url).toContain('lesson_id=42');
-    expect(url).toContain('objective_ids%5B%5D=10');
-    expect(url).toContain('objective_ids%5B%5D=20');
+    const src = audioSrc();
+    expect(src).toContain('lesson_id=42');
+    expect(src).toContain('objective_ids%5B%5D=10');
+    expect(src).toContain('objective_ids%5B%5D=20');
   });
 
-  it('requests using all lesson objectives when the reflection was submitted with no ratings', async () => {
-    mockEndpoints();
+  it('uses all lesson objectives in the audio URL when the reflection was submitted with no ratings', () => {
+    mockTranscript();
     render(
       <PodcastsBox
         lessonId={LESSON_ID}
@@ -193,10 +192,9 @@ describe('PodcastsBox', () => {
       />
     );
 
-    await waitFor(() => expect(retrieveUrl()).toBeDefined());
-    const url = retrieveUrl();
-    expect(url).toContain('lesson_id=42');
-    expect(url).toContain('objective_ids%5B%5D=10');
-    expect(url).toContain('objective_ids%5B%5D=20');
+    const src = audioSrc();
+    expect(src).toContain('lesson_id=42');
+    expect(src).toContain('objective_ids%5B%5D=10');
+    expect(src).toContain('objective_ids%5B%5D=20');
   });
 });

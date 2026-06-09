@@ -37,10 +37,12 @@ const alerts = {
 
 interface StagedFilesPreviewProps {
   buildAssetUrl: (asset: ChatAsset) => string;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 }
 
 const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
   buildAssetUrl,
+  onAssetRemoved,
 }) => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
@@ -61,30 +63,39 @@ const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
     <div className={styles.container}>
       {stagedFiles.length > 0 && (
         <div className={styles.row}>
-          {stagedFiles.map(({key, asset, status, timestamp}) => {
-            const filename = asset.filename;
-            return (
-              <FilePreview
-                key={key}
-                type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-                url={`${buildAssetUrl(asset)}?t=${key}`}
-                timestamp={timestamp}
-                filename={filename}
-                isUploading={status === 'uploading'}
-                onRemove={() => dispatch(removeStagedFile(key))}
-                onLoadError={() => {
-                  dispatch(
-                    stagedFileUploadFinished({key, status: 'uploadFailed'})
-                  );
-                  Lab2Registry.getInstance()
-                    .getMetricsReporter()
-                    .logError('Error loading staged file', undefined, {
-                      asset,
-                    });
-                }}
-              />
-            );
-          })}
+          {stagedFiles.map(
+            ({key, asset, status, timestamp, projectFilename}) => {
+              const filename = asset.filename;
+              return (
+                <FilePreview
+                  key={key}
+                  type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
+                  url={`${buildAssetUrl(asset)}?t=${key}`}
+                  timestamp={timestamp}
+                  filename={filename}
+                  isUploading={status === 'uploading'}
+                  onRemove={() => {
+                    dispatch(removeStagedFile(key));
+                    onAssetRemoved?.(
+                      projectFilename
+                        ? {...asset, filename: projectFilename}
+                        : asset
+                    );
+                  }}
+                  onLoadError={() => {
+                    dispatch(
+                      stagedFileUploadFinished({key, status: 'uploadFailed'})
+                    );
+                    Lab2Registry.getInstance()
+                      .getMetricsReporter()
+                      .logError('Error loading staged file', undefined, {
+                        asset,
+                      });
+                  }}
+                />
+              );
+            }
+          )}
         </div>
       )}
       {alertMessage && style && (

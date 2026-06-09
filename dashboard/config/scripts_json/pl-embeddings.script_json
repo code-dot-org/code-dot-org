@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-29 17:48:46 UTC",
+    "serialized_at": "2026-06-08 16:08:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -68,7 +68,7 @@
       "name": "Micah's Corner",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -103,6 +103,18 @@
         "lesson_group.key": "",
         "script.name": "pl-embeddings"
       }
+    },
+    {
+      "key": "fc3201c0-3032-4569-9078-5cf912651621",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc3201c0-3032-4569-9078-5cf912651621",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings"
+      }
     }
   ],
   "activity_sections": [
@@ -124,6 +136,16 @@
       "seeding_key": {
         "activity_section.key": "e852b22d-8d7d-4436-bdf1-08a9b32557e6",
         "lesson_activity.key": "6c32cbb8-7389-4ca7-9383-e3923f4ca1d6"
+      }
+    },
+    {
+      "key": "67849bf1-b66d-4c34-8702-024d26d2a344",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344",
+        "lesson_activity.key": "fc3201c0-3032-4569-9078-5cf912651621"
       }
     }
   ],
@@ -159,27 +181,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl_sandbox_embed-debugging_loops"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-embeddings",
-        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
-      },
-      "level_keys": [
-        "pl_sandbox_embed-debugging_loops"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "pl-embed-sandbox-visualizer"
         ],
         "lesson.key": "lesson-1",
@@ -192,7 +193,112 @@
       ]
     },
     {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-pure-methods-vocab_sort"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl-pure-methods-vocab_sort"
+      ]
+    },
+    {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_embed-javascript-code-stylist"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl_sandbox_embed-javascript-code-stylist"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops_accessible_test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl_sandbox_embed-debugging_loops_accessible_test"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops_localize"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl_sandbox_embed-debugging_loops_localize"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops-rebrand"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl_sandbox_embed-debugging_loops-rebrand"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -213,7 +319,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -234,7 +340,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -253,6 +359,90 @@
       "level_keys": [
         "sandbox_AT3"
       ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-whatai-01_2026_embedding"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod1-whatai-01_2026_embedding"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-applications-04_2026-embeddings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod1-applications-04_2026-embeddings"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-opening-03_2026-embedding"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod1-opening-03_2026-embedding"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-survey-embeddings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      },
+      "level_keys": [
+        "pl-survey-embeddings"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -270,9 +460,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_embed-debugging_loops",
+        "level.key": "pl-embed-sandbox-visualizer",
         "script_level.level_keys": [
-          "pl_sandbox_embed-debugging_loops"
+          "pl-embed-sandbox-visualizer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -282,9 +472,57 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-embed-sandbox-visualizer",
+        "level.key": "pl-pure-methods-vocab_sort",
         "script_level.level_keys": [
-          "pl-embed-sandbox-visualizer"
+          "pl-pure-methods-vocab_sort"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_embed-javascript-code-stylist",
+        "script_level.level_keys": [
+          "pl_sandbox_embed-javascript-code-stylist"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_embed-debugging_loops_accessible_test",
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops_accessible_test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_embed-debugging_loops_localize",
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops_localize"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_embed-debugging_loops-rebrand",
+        "script_level.level_keys": [
+          "pl_sandbox_embed-debugging_loops-rebrand"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -326,6 +564,54 @@
         "lesson_group.key": "",
         "script.name": "pl-embeddings",
         "activity_section.key": "e852b22d-8d7d-4436-bdf1-08a9b32557e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod1-whatai-01_2026_embedding",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-whatai-01_2026_embedding"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod1-applications-04_2026-embeddings",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-applications-04_2026-embeddings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod1-opening-03_2026-embedding",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod1-opening-03_2026-embedding"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-survey-embeddings",
+        "script_level.level_keys": [
+          "pl-survey-embeddings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "67849bf1-b66d-4c34-8702-024d26d2a344"
       }
     }
   ],
