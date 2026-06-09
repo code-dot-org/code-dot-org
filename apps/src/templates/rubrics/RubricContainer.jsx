@@ -270,10 +270,10 @@ function RubricContainer({
             className={style.aiBotOutlineIcon}
             alt={i18n.rubricAiHeaderText()}
           />
-          <span>{i18n.rubricAiHeaderText()}</span>
+          <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
         </>
       ) : (
-        i18n.rubric()
+        <Typography variant="label2">{i18n.rubric()}</Typography>
       ),
     [teacherHasEnabledAi]
   );

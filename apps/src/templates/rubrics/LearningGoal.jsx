@@ -170,7 +170,9 @@ export default function LearningGoal({
     return (
       <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedback()}
+          </Typography>
           <textarea
             id="ui-teacherFeedback"
             className={style.inputTextbox}
@@ -181,19 +183,34 @@ export default function LearningGoal({
           />
         </label>
         {autosaveStatus === STATUS.IN_PROGRESS ? (
-          <span className={style.autosaveMessage}>{i18n.saving()}</span>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
+            {i18n.saving()}
+          </Typography>
         ) : (
           autosaveStatus === STATUS.FINISHED && (
-            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
+            <Typography
+              variant="inherit"
+              component="span"
+              id="ui-autosaveConfirm"
+              className={style.autosaveMessage}
+            >
               <FontAwesomeV6Icon iconName="circle-check" />{' '}
               {i18n.savedToGallery()}
-            </span>
+            </Typography>
           )
         )}
         {autosaveStatus === STATUS.ERROR && (
-          <span className={style.autosaveMessage}>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
             {i18n.feedbackSaveError()}
-          </span>
+          </Typography>
         )}
       </div>
     );
@@ -203,7 +220,9 @@ export default function LearningGoal({
     return (
       <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedback()}
+          </Typography>
           <textarea
             className={style.inputTextbox}
             name="teacherFeedback"

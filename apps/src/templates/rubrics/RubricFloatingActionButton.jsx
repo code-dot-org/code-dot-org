@@ -43,7 +43,7 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
           className={style.aiBotOutlineIcon}
           alt={i18n.rubricAiHeaderText()}
         />
-        <span>{i18n.rubricAiHeaderText()}</span>
+        <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
       </div>
       <div className={style.rubricHeaderRightSide}>
         <button
@@ -57,7 +57,7 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
     </div>
     <div className={classnames(style.fabBackground, style.fabErrorBackground)}>
       <div className={style.visibleRubricContent}>
-        <p>{i18n.rubricAiInternalError()}</p>
+        <Typography variant="body3">{i18n.rubricAiInternalError()}</Typography>
       </div>
     </div>
   </div>

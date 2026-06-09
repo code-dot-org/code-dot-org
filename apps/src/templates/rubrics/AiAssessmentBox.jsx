@@ -177,7 +177,9 @@ export default function AiAssessmentBox({
           </Typography>
           <ul>
             {aiEvidence.map((info, i) => (
-              <li key={i}>{renderEvidenceItem(info, i)}</li>
+              <li key={i}>
+                <Typography>{renderEvidenceItem(info, i)}</Typography>
+              </li>
             ))}
           </ul>
         </div>

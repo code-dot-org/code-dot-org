@@ -774,8 +774,7 @@ p.aiAssessmentEvidenceBlock {
   display: flex;
   align-items: center;
 
-  p.labelThree {
-    @include label-three;
+  .labelThree {
     white-space: nowrap;
     margin: 0;
   }
@@ -883,8 +882,7 @@ i.infoAlertIcon {
   gap: 0.125rem;
 }
 
-p.aiFeedbackRadioBoxText {
-  @include label-three;
+.aiFeedbackRadioBoxText {
   margin: 0;
   white-space: nowrap;
 }

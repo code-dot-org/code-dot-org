@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
@@ -103,9 +104,13 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
           />
         </label>
       </div>
-      <p className={style.aiFeedbackRadioBoxText}>
+      <Typography
+        variant="label3"
+        component="p"
+        className={style.aiFeedbackRadioBoxText}
+      >
         {i18n.aiAssessmentFeedbackAsk()}
-      </p>
+      </Typography>
     </div>
   );
 }
