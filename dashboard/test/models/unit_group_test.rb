@@ -500,7 +500,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit2.reload
       # unit2's original unit group removed
       assert_equal 1, new_unit_group.original_units.length
-      assert_equal nil, unit2.original_unit_group
+      assert_nil unit2.original_unit_group
     end
 
     test "remove UnitGroupUnits that cannot change course version from secondary unit groups" do
