@@ -20,10 +20,6 @@
     border-radius: variables.$default-border-radius;
     z-index: 10; // Ensure outline is visible above outline in aiTutorVersionActive
   }
-
-  *:has(> .active):focus-visible {
-    outline-color: var(--text-neutral-white-fixed);
-  }
 }
 
 .fileTab {
@@ -33,7 +29,8 @@
   gap: 0.375rem;
   height: 24px;
   padding-block: 0;
-  padding-inline: 0.5rem 0.25rem;
+  // 2px start = outline-offset, so the label's focus ring lands flush with the tab edge.
+  padding-inline: 1px 0.25rem;
   cursor: pointer;
   white-space: nowrap;
   background-color: var(--background-neutral-secondary);
@@ -49,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding-inline: 0.375rem 0.25rem;
 
   p {
     color: var(--text-neutral-tertiary);
@@ -64,9 +62,15 @@
     color: var(--text-neutral-white-fixed);
   }
 
+  // Light mode: black outline contrasts with both the teal tab (~4.9:1) and white page (21:1).
   *:focus-visible {
-    outline-color: var(--text-neutral-white-fixed);
+    outline-color: var(--text-neutral-black-fixed);
   }
+}
+
+// Dark mode: white outline contrasts with both the teal tab (~4.3:1) and charcoal page.
+:global([data-theme='Dark']) .active *:focus-visible {
+  outline-color: var(--text-neutral-white-fixed);
 }
 
 .aiTutorVersionActive {

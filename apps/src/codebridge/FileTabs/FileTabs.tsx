@@ -36,8 +36,7 @@ import {
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import FileTab from './FileTab';
-import Sortable from './Sortable';
+import FileTab, {FileTabContent} from './FileTab';
 
 import moduleStyles from './styles/fileTabs.module.scss';
 
@@ -160,18 +159,18 @@ export const FileTabs = React.memo(() => {
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable
-              id={f.id}
+            <FileTab
+              file={f}
               key={f.id}
               isDragging={f.id === draggingFileId}
               onKeyDown={event => handleTabActivation(event, f.id)}
-            >
-              <FileTab file={f} />
-            </Sortable>
+            />
           ))}
           <DragOverlay>
             {draggingFileId ? (
-              <FileTab file={files.find(f => f.id === draggingFileId)!} />
+              <FileTabContent
+                file={files.find(f => f.id === draggingFileId)!}
+              />
             ) : null}
           </DragOverlay>
         </SortableContext>

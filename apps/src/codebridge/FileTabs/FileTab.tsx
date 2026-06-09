@@ -2,10 +2,12 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
+import {useSortable} from '@dnd-kit/sortable';
+import {CSS} from '@dnd-kit/utilities';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -23,9 +25,11 @@ import moduleStyles from './styles/fileTabs.module.scss';
 
 type FileTabProps = {
   file: ProjectFile;
+  isDragging?: boolean;
+  onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
-const FileTab = ({file}: FileTabProps) => {
+const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   const activeFile = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
@@ -44,7 +48,32 @@ const FileTab = ({file}: FileTabProps) => {
     [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
     [moduleStyles.active]: isActive && !isAiTutorVersionFile,
   });
+
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    setActivatorNodeRef,
+    transform,
+    transition,
+  } = useSortable({id: file.id});
+
   const tabRef = useRef<HTMLDivElement>(null);
+
+  // Combine the scroll ref and dnd-kit's activator ref on the label element.
+  const labelRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      (tabRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      setActivatorNodeRef(node);
+    },
+    [setActivatorNodeRef]
+  );
+
+  const dndStyle = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.3 : 1.0,
+  };
 
   const scrollTabIntoView = () =>
     tabRef.current?.scrollIntoView({block: 'end', inline: 'start'});
@@ -80,12 +109,25 @@ const FileTab = ({file}: FileTabProps) => {
       });
     }
   };
+
+  // Merge tab-activation keydown with dnd-kit's drag keydown.
+  const handleLabelKeyDown = (event: React.KeyboardEvent) => {
+    if (onKeyDown) onKeyDown(event);
+    if (listeners?.onKeyDown) {
+      (listeners.onKeyDown as (e: React.KeyboardEvent) => void)(event);
+    }
+  };
+
   return (
-    <div className={className} key={file.id}>
+    <div className={className} key={file.id} ref={setNodeRef} style={dndStyle}>
+      {/* Drag handle: role="button" lives here, NOT wrapping the close button */}
       <div
+        ref={labelRef}
         className={moduleStyles.label}
         onClick={() => handleOnClick(file.id)}
-        ref={tabRef}
+        {...attributes}
+        {...listeners}
+        onKeyDown={handleLabelKeyDown}
       >
         <FontAwesomeV6Icon
           iconName={iconName}
@@ -101,6 +143,37 @@ const FileTab = ({file}: FileTabProps) => {
         className={moduleStyles.closeButton}
         size="s"
       />
+    </div>
+  );
+};
+
+// Visual-only clone used in DragOverlay (no DnD hooks, no close button).
+export const FileTabContent = ({file}: {file: ProjectFile}) => {
+  const activeFile = useAppSelector(state => {
+    const source = state.lab2Project.projectSources?.source as MultiFileSource;
+    return getActiveFileForSource(source);
+  });
+  const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
+  const iconClassName = isBrand ? 'fa-brands' : undefined;
+  const isActive = file.active || file === activeFile;
+  const isAiTutorVersionFile =
+    file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
+  const className = classNames(moduleStyles.fileTab, {
+    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersionFile,
+    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
+    [moduleStyles.active]: isActive && !isAiTutorVersionFile,
+  });
+
+  return (
+    <div className={className}>
+      <div className={moduleStyles.label}>
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          iconStyle={iconStyle}
+          className={iconClassName}
+        />
+        <Typography variant="body4">{file.name}</Typography>
+      </div>
     </div>
   );
 };
