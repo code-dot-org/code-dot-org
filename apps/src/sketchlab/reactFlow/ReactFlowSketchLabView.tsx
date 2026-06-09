@@ -17,8 +17,7 @@ import {
   ProjectSources,
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
-import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
-import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
+import WorkspaceAlerts from '@cdo/apps/lab2/views/alerts/workspaceAlerts';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -117,10 +116,6 @@ function ReactFlowSketchLabViewInner({
   const onClickDownload = useCallback(() => {
     void handleDownloadSketch(reactFlow, dialogControl);
   }, [reactFlow, dialogControl]);
-
-  const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId)
-  );
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -296,10 +291,7 @@ function ReactFlowSketchLabViewInner({
               </>
             }
           >
-            {teacherViewingStudent && (
-              <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-            )}
-            <PreviousVersionAlert />
+            <WorkspaceAlerts inWorkspaceContainer />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
