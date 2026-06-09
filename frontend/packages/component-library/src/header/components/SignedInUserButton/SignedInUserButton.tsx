@@ -22,10 +22,8 @@ const accountTriggerSx: SxProps = {
   ...headerTriggerBase,
   minWidth: 0,
   height: '35px',
-  // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
-  marginTop: '-1px',
   padding: '6.5px 1rem',
-  columnGap: '8.4688px',
+  columnGap: '8px',
   border: '1px solid var(--neutral-base-white)',
   borderRadius: '4px',
   backgroundColor: 'var(--background-brand-teal-primary)',
