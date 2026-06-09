@@ -159,9 +159,10 @@ const styles = {
     fontSize: 14,
   },
   helpText: {
-    // MUI Typography's root override sets its own color, so the white text
-    // color must live on the element itself rather than be inherited.
-    color: 'var(--text-neutral-white-fixed)',
+    // Dark text (the legacy design used white) for WCAG AA contrast on the
+    // gray fill - see SL-1896. Set on the element because MUI Typography's
+    // root color override beats an inherited color from the parent.
+    color: 'var(--text-neutral-primary)',
     position: 'relative',
     top: '50%',
     transform: 'translateY(-50%)',
