@@ -96,14 +96,6 @@ namespace :test do
     run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'Chrome + Firefox')
   end
 
-  timed_task_with_logging :devicefarm_mobile_ui do
-    # As of April 2026, our concurrency limit for remote access sessions on real
-    # mobile devices in Device Farm within our prod AWS account is 80. However,
-    # the devices take so long to spin up and shut down that we can saturate our
-    # Device Farm concurrency by setting parallelism equal to half of that limit.
-    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 40, label: 'Mobile')
-  end
-
   timed_task_with_logging :eyes_ui do
     ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
     eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
