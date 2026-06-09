@@ -159,9 +159,6 @@ const styles = {
     fontSize: 14,
   },
   helpText: {
-    // Dark text (the legacy design used white) for WCAG AA contrast on the
-    // gray fill - see SL-1896. Set on the element because MUI Typography's
-    // root color override beats an inherited color from the parent.
     color: 'var(--text-neutral-primary)',
     position: 'relative',
     top: '50%',
