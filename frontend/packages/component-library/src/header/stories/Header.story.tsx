@@ -1,3 +1,7 @@
+import allProjectsIcon from '@public/images/header-all-projects-icon.png';
+import appLabIcon from '@public/images/header-app-lab-icon.png';
+import gameLabIcon from '@public/images/header-game-lab-icon.png';
+import spriteLabIcon from '@public/images/header-sprite-lab-icon.png';
 import logoImage from '@public/images/logo-codeai-inverse.svg';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect, userEvent, waitFor} from 'storybook/test';
@@ -41,25 +45,25 @@ const CREATE_MENU_ITEMS = [
     id: 'spritelab',
     label: 'Sprite Lab',
     href: '/projects/spritelab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/sprite-lab-icon.png',
+    iconUrl: spriteLabIcon,
   },
   {
     id: 'applab',
     label: 'App Lab',
     href: '/projects/applab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/app-lab-icon.png',
+    iconUrl: appLabIcon,
   },
   {
     id: 'gamelab',
     label: 'Game Lab',
     href: '/projects/gamelab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/game-lab-icon.png',
+    iconUrl: gameLabIcon,
   },
   {
     id: 'view_all',
     label: 'View all projects...',
     href: '/projects',
-    iconUrl: '/shared/images/courses/header-all-projects-icon.png',
+    iconUrl: allProjectsIcon,
   },
 ];
 
