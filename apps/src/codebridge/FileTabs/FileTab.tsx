@@ -119,8 +119,8 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   };
 
   return (
-    <div className={className} key={file.id} ref={setNodeRef} style={dndStyle}>
-      {/* Drag handle: role="button" lives here, NOT wrapping the close button */}
+    <div className={className} ref={setNodeRef} style={dndStyle}>
+      {/* Drag handle stops here — CloseButton is a sibling, not nested, to avoid WCAG nested interactive controls violation */}
       <div
         ref={labelRef}
         className={moduleStyles.label}
