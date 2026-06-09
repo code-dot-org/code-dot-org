@@ -401,26 +401,16 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
-# Human-readable suite label used in Slack/log report headers and as
-# the status page <title> and <h1>. The provider (SauceLabs / Device
-# Farm) is no longer surfaced -- oncall sees a label that names the
-# suite by its browsers. Eyes runs are always "Eyes" (eyes only runs
-# on SauceLabs today). Non-eyes runs derive the label from their
-# active browser configs and append "UI" so it's clear the suite is
-# UI tests:
-#   -c Safari          => "Safari UI"
-#   -c Chrome,Firefox  => "Chrome + Firefox UI"
-#   -c iPhone,iPad     => "Mobile UI"
-#   -c iPad            => "iPad UI"
-#   -c iPhone          => "iPhone UI"
-# The "Mobile UI" collapse only applies when both mobile browsers are
-# present. A single-device run (such as a manual rerun copied from the
-# status page) keeps its device name.
+# Human-readable suite label used in Slack/log report headers and as the status
+# page <title> and <h1>. Eyes runs are always "Eyes". UI runs derive the label
+# from their browser config names and append "UI":
+#   -c Chrome             => "Chrome UI"
+#   -c iPhone             => "iPhone UI"
+#   -c Chrome,Firefox     => "Chrome + Firefox UI"
+#   -c Safari,iPad,iPhone => "Safari + iPad + iPhone UI"
 def test_type_label
   return test_type if eyes?
-  browser_names = $browsers.map {|b| b['name']}.uniq.sort
-  return 'Mobile UI' if browser_names.length > 1 && $browsers.all? {|b| mobile_browser?(b)}
-  "#{browser_names.join(' + ')} UI"
+  "#{$browsers.map {|b| b['name']}.join(' + ')} #{test_type}"
 end
 
 def eyes?
