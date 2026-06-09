@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import type {SxProps} from '@mui/material/styles';
-import {useId, useState, type FunctionComponent} from 'react';
+import {useId, useMemo, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -91,7 +91,10 @@ function buildMenuItems(userType: UserType) {
 const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   userAuth,
 }) => {
-  const menuItems = buildMenuItems(userAuth.user_type);
+  const menuItems = useMemo(
+    () => buildMenuItems(userAuth.user_type),
+    [userAuth.user_type],
+  );
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const menuId = useId();

@@ -2,7 +2,13 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import {visuallyHidden} from '@mui/utils';
-import {Fragment, useId, useState, type FunctionComponent} from 'react';
+import {
+  Fragment,
+  useId,
+  useMemo,
+  useState,
+  type FunctionComponent,
+} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -75,12 +81,16 @@ const HamburgerPanel: FunctionComponent<
   // Prod lists Incubator once, in the global-nav region after Donate (not in
   // the app-nav block). Pull it out of `menuItems` unless globalNavItems already
   // supplies one (avoids a double listing), and filter it out of the app nav.
-  const incubatorInGlobal = globalNavItems.some(e => e.label === 'Incubator');
-  const incubator = incubatorInGlobal
-    ? undefined
-    : menuItems.find(item => item.label === 'Incubator');
-  const appNavItems = menuItems.filter(item => item.label !== 'Incubator');
-  const donateIndex = globalNavItems.findIndex(e => e.label === 'Donate');
+  const {incubator, appNavItems, donateIndex} = useMemo(() => {
+    const incubatorInGlobal = globalNavItems.some(e => e.label === 'Incubator');
+    return {
+      incubator: incubatorInGlobal
+        ? undefined
+        : menuItems.find(item => item.label === 'Incubator'),
+      appNavItems: menuItems.filter(item => item.label !== 'Incubator'),
+      donateIndex: globalNavItems.findIndex(e => e.label === 'Donate'),
+    };
+  }, [menuItems, globalNavItems]);
 
   // Dividers only sit *between* non-empty sections (app nav | support | global).
   const hasGlobal = globalNavItems.length > 0 || incubator !== undefined;

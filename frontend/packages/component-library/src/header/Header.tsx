@@ -35,6 +35,30 @@ export interface HeaderProps {
   supportLinks?: MenuItem[];
 }
 
+const appBarSx = {backgroundColor: 'var(--background-brand-teal-primary)'};
+const toolbarSx = {'&&': {minHeight: '50px'}, alignItems: 'stretch'};
+const spacerSx = {flex: 1};
+// 6px gap keeps each icon target clear of its neighbor (WCAG 2.5.8 spacing);
+// prod packs these flush, so the space beside the name opens Help.
+const rightClusterSx = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '6px',
+  pr: '13px',
+};
+// Create + auth share an 8px gap between them, matching prod.
+const createAuthSx = {display: 'flex', alignItems: 'center', gap: 1};
+const hamburgerWrapSx = {flexShrink: 0};
+// Auth area is mobile-first hidden; it appears at the mobileAuth breakpoint.
+const authAreaSx = {
+  display: 'none',
+  [`@media (min-width:${HEADER_BREAKPOINTS.mobileAuth}px)`]: {
+    display: 'flex',
+    alignSelf: 'stretch',
+    alignItems: 'stretch',
+  },
+};
+
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
 const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
@@ -52,41 +76,23 @@ const Header: FunctionComponent<HeaderProps> = ({
         elevation={0}
         position="relative"
         aria-label="Main navigation"
-        sx={{backgroundColor: 'var(--background-brand-teal-primary)'}}
+        sx={appBarSx}
       >
-        <Toolbar
-          variant="dense"
-          disableGutters
-          sx={{'&&': {minHeight: '50px'}, alignItems: 'stretch'}}
-        >
+        <Toolbar variant="dense" disableGutters sx={toolbarSx}>
           <NavLogo logoImageUrl={logoImageUrl} brandName={brandName} />
           <NavMenu menuItems={menuItems} />
 
           {/* Flex spacer pushes right items to the edge */}
-          <Box sx={{flex: 1}} />
+          <Box sx={spacerSx} />
 
           {/* Right cluster: create → auth → help → hamburger (matches prod order) */}
-          {/* 6px gap keeps each icon target clear of its neighbor (WCAG 2.5.8
-              spacing); prod packs these flush, so the space beside the name opens Help. */}
-          <Box
-            sx={{display: 'flex', alignItems: 'center', gap: '6px', pr: '13px'}}
-          >
-            {/* Create + auth share an 8px gap between them, matching prod */}
-            <Box sx={{display: 'flex', alignItems: 'center', gap: 1}}>
+          <Box sx={rightClusterSx}>
+            <Box sx={createAuthSx}>
               {createMenuItems && createMenuItems.length > 0 && (
                 <CreateMenu items={createMenuItems} />
               )}
               {userAuth && (
-                <Box
-                  sx={{
-                    display: 'none',
-                    [`@media (min-width:${HEADER_BREAKPOINTS.mobileAuth}px)`]: {
-                      display: 'flex',
-                      alignSelf: 'stretch',
-                      alignItems: 'stretch',
-                    },
-                  }}
-                >
+                <Box sx={authAreaSx}>
                   <UserAuthArea userAuth={userAuth} />
                 </Box>
               )}
@@ -94,7 +100,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             {supportLinks.length > 0 && (
               <HelpButton supportLinks={supportLinks} />
             )}
-            <Box sx={{flexShrink: 0}}>
+            <Box sx={hamburgerWrapSx}>
               <HamburgerMenu
                 menuItems={menuItems}
                 globalNavItems={globalNavItems}

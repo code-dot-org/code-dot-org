@@ -76,13 +76,32 @@ const CREATE_MENU_ITEMS = [
   },
 ];
 
+// Mirrors studio's shipped global nav (apps/studio .../header/config.ts) so the
+// Eyes snapshot and the hamburger interaction test exercise the real structure —
+// every group + the full sub-link sets — not a trimmed sample.
 const GLOBAL_NAV_ITEMS = [
   {label: 'Learn', href: '//code.org/students'},
   {
     label: 'Teach',
     subItems: [
       {label: 'Educator Overview', href: '//code.org/teach'},
+      {
+        label: 'Elementary School',
+        href: '//code.org/educate/curriculum/elementary-school',
+      },
+      {
+        label: 'Middle School',
+        href: '//code.org/educate/curriculum/middle-school',
+      },
+      {label: 'High School', href: '//code.org/educate/curriculum/high-school'},
       {label: 'Hour of Code', href: 'https://hourofcode.com'},
+      {
+        label: 'Beyond Code.org',
+        href: '//code.org/educate/curriculum/3rd-party',
+      },
+      {label: 'Online Community', href: 'https://forum.code.org/'},
+      {label: 'Technical Requirements', href: '//code.org/educate/it'},
+      {label: 'Tools and Videos', href: '//code.org/educate/resources/videos'},
     ],
   },
   {label: 'Districts', href: '//code.org/administrators'},
@@ -92,7 +111,22 @@ const GLOBAL_NAV_ITEMS = [
     label: 'About',
     subItems: [
       {label: 'About Us', href: '//code.org/about'},
+      {label: 'Leadership', href: '//code.org/about/leadership'},
+      {label: 'Donors', href: '//code.org/about/donors'},
+      {label: 'Partners', href: '//code.org/about/partners'},
+      {label: 'Full Team', href: '//code.org/about/team'},
+      {label: 'Newsroom', href: '//code.org/about/news'},
       {label: 'Careers', href: '//code.org/about/jobs'},
+      {label: 'Contact Us', href: '//code.org/contact'},
+      {label: 'FAQs', href: '//code.org/faq'},
+    ],
+  },
+  {
+    label: 'Privacy & Legal',
+    subItems: [
+      {label: 'Privacy Policy', href: '//code.org/privacy'},
+      {label: 'Cookie Notice', href: '//code.org/cookies'},
+      {label: 'Terms of Service', href: '//code.org/terms-of-service'},
     ],
   },
 ];
