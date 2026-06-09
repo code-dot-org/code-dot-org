@@ -1,4 +1,4 @@
-// 3-bar hamburger icon: 25×3px bars with 1px border-radius, 5px equal gaps
+// 3-bar hamburger icon: 25×3px bars with 1px border-radius, 8px gaps.
 .barsIcon {
   position: relative;
   display: block;
@@ -27,105 +27,82 @@
   }
 }
 
-// Triple-class specificity [0,3,0] beats CustomDropdown's
-// `._dropdownContainer ._dropdownMenuContainer ul` [0,2,1], which forces ul
-// padding to 0.25rem 0. Item rules are nested here so `.list.list.list li`
-// [0,3,1] / `.list.list.list .mobileOnly` [0,4,0] also outrank CustomDropdown's
-// `... ul li` [0,2,2], which sets display/align on every row.
-.list.list.list {
-  list-style: none;
-  margin: 0;
-  // 6px inset + 228px content + 1px container border = 242px, matching the
-  // legacy header hamburger panel (#hamburger-contents).
-  padding: 6px;
+// Trigger: always visible (the hamburger shows at every width). Compound
+// `.MuiIconButton-root` selector beats MUI's single-class defaults.
+.trigger:global(.MuiIconButton-root) {
+  min-width: 0;
+  min-height: 0;
+  padding: 18px 6px 20px 14px;
+  color: var(--neutral-base-white);
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: -2px;
+  }
+}
+
+// Popover surface (legacy #hamburger-contents). :global beats MUI's Paper
+// defaults on specificity (descendant of `.popover`), not stylesheet order.
+.popover {
+  :global(.MuiPaper-root) {
+    margin-top: 4px;
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
+    border-radius: 4px;
+    box-shadow:
+      rgb(0 0 0 / 0.1) 0 10px 15px -3px,
+      rgb(0 0 0 / 0.05) 0 4px 6px -2px;
+  }
+}
+
+// 6px inset + 228px content + 1px border = 242px, matching #hamburger-contents.
+.list {
   min-width: 240px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
 
-  // Legacy #hamburger-contents .item: full-width row, flex layout.
-  li {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-
-    // Suppress CustomDropdown's `ul li:hover` fill. The hover highlight belongs
-    // on the inner link/trigger; without this, hovering a sub-link tints the
-    // whole enclosing expandable row (the sub-list is nested in its `li`).
-    &:hover {
-      background: none;
-    }
-
-    // On press, CustomDropdown's teal "pressed" state turns an active row's
-    // label white and recolors the icon glyph, and gives the glyph a white
-    // background "chip". Our rows keep prod's gray highlight, so on that gray
-    // the white chip is a stray box and white text is illegible — pin the
-    // label + chevron dark and clear the chip.
-    &:active {
-      span {
-        color: var(--text-neutral-primary);
-      }
-
-      i::before {
-        color: var(--text-neutral-primary);
-        background: none;
-      }
-    }
-  }
-
-  // App-nav, support links, and their dividers: shown only below the top-nav
-  // breakpoint (HEADER_BREAKPOINTS.desktopNav, 1061px), where the top bar's
-  // nav collapses. Mirrors prod's `.show-mobile`.
-  .mobileOnly {
+// App-nav, support links, and their dividers: shown only below the top-nav
+// breakpoint (1061px), where the top bar's nav collapses (prod's .show-mobile).
+// Authored default-visible so jsdom (which ignores @media) keeps them testable.
+.mobileOnly {
+  @media (min-width: 1061px) {
     display: none;
-
-    @media (max-width: 1060px) {
-      display: flex;
-    }
-  }
-
-  // Expandable section row stacks its trigger above the indented sub-list.
-  .expandableWrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  // Sub-list: 20px indent, no padding. Nested here so [0,3,0] beats
-  // CustomDropdown's `... ul` [0,2,1] (which sets `margin:0; padding:0.25rem 0`).
-  .subList {
-    margin: 0 0 0 20px;
-    padding: 0;
   }
 }
 
 .divider {
-  width: 100%;
   height: 1px;
-  border: none;
+  margin: 0.5rem 0;
+  padding: 0;
   // Legacy header divider gray (rgb(209,212,216)); no design token matches.
   background: #d1d4d8;
-  margin: 0.5rem 0;
 }
 
 .link {
   display: block;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   padding: 8px;
-  text-decoration: none;
   color: var(--text-neutral-primary);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
+  text-decoration: none;
 
   &:visited,
   &:active {
     color: var(--text-neutral-primary);
   }
 
-  // Legacy header hover gray (rgb(231,232,234)); no design token matches. Prod
-  // rounds the highlight (border-radius:4px), unlike the square help/account
-  // hovers.
+  // Legacy header hover gray (rgb(231,232,234)); prod rounds the hamburger
+  // highlight, unlike the square help/account hovers.
   &:hover {
     background-color: #e7e8ea;
     border-radius: 4px;
@@ -133,20 +110,24 @@
   }
 }
 
+// Native <details> section. The summary hides its UA marker; the chevron is the
+// only open/closed cue, rotated via [open]. Toggling is instant (no JS, no
+// animation — reduced-motion safe).
 .expandTrigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 8px;
-  background: none;
-  border: none;
+  list-style: none;
   cursor: pointer;
-  // Match the link rows' text metrics — the UA button default (13.33px /
-  // normal) shifts the baseline ~1px versus the `<a>` rows.
+  // Match the link rows' metrics — the UA summary default shifts the baseline.
   font-size: 14px;
   line-height: 21px;
-  font-family: inherit;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 
   &:hover {
     background-color: #e7e8ea;
@@ -155,26 +136,29 @@
 }
 
 .expandText {
+  max-width: 210px;
+  overflow: hidden;
+  color: var(--text-neutral-primary);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
-  color: var(--text-neutral-primary);
-  max-width: 210px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .chevron {
-  font-size: 14px;
   color: var(--text-neutral-primary);
+  font-size: 14px;
 }
 
-// Sub-list: 20px indent, no fill — indent is the only visual cue. Row layout
-// is inherited from the `.list.list.list li` rule.
+.section[open] .chevron {
+  transform: rotate(180deg);
+}
+
+// Sub-list: 20px indent, no fill — indent is the only visual cue.
 .subList {
-  list-style: none;
+  width: auto;
   margin: 0 0 0 20px;
   padding: 0;
-  width: auto;
+  list-style: none;
 }

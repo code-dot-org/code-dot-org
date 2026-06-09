@@ -1,13 +1,10 @@
-import Collapse from '@mui/material/Collapse';
-import {Fragment, useState, type FunctionComponent} from 'react';
+import IconButton from '@mui/material/IconButton';
+import Popover from '@mui/material/Popover';
+import {Fragment, useId, useState, type FunctionComponent} from 'react';
 
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
-import CustomDropdown from '@/dropdown/CustomDropdown';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './hamburgerMenu.module.scss';
-
-const DROPDOWN_NAME = 'hamburger';
 
 interface MenuItem {
   label: string;
@@ -95,26 +92,23 @@ interface HamburgerMenuProps {
   userType?: 'student' | 'teacher' | 'admin';
 }
 
-/** Expandable section: a chevron trigger plus an indented sub-link list. */
-const ExpandableSection: FunctionComponent<{
-  entry: GlobalNavEntry;
-  expanded: boolean;
-  onToggle: () => void;
-}> = ({entry, expanded, onToggle}) => (
-  <li className={moduleStyles.expandableWrapper}>
-    <button
-      className={moduleStyles.expandTrigger}
-      onClick={onToggle}
-      type="button"
-    >
-      <span className={moduleStyles.expandText}>{entry.label}</span>
-      <FontAwesomeV6Icon
-        iconName={expanded ? 'chevron-up' : 'chevron-down'}
-        iconStyle="solid"
-        className={moduleStyles.chevron}
-      />
-    </button>
-    <Collapse in={expanded} unmountOnExit>
+/** Shared `name` makes the sections a native exclusive accordion (one open at a time). */
+const ACCORDION_NAME = 'hamburger-section';
+
+/** Expandable section: a native `<details>` disclosure with an indented sub-link list. */
+const ExpandableSection: FunctionComponent<{entry: GlobalNavEntry}> = ({
+  entry,
+}) => (
+  <li>
+    <details name={ACCORDION_NAME} className={moduleStyles.section}>
+      <summary className={moduleStyles.expandTrigger}>
+        <span className={moduleStyles.expandText}>{entry.label}</span>
+        <FontAwesomeV6Icon
+          iconName="chevron-down"
+          iconStyle="solid"
+          className={moduleStyles.chevron}
+        />
+      </summary>
       <ul className={moduleStyles.subList}>
         {entry.subEntries?.map(sub => (
           <li key={sub.label}>
@@ -124,30 +118,21 @@ const ExpandableSection: FunctionComponent<{
           </li>
         ))}
       </ul>
-    </Collapse>
+    </details>
   </li>
 );
 
 /**
- * Panel body. Mounted only while the dropdown is open — CustomDropdown keeps
- * children mounted, but the global nav (Learn, …) would otherwise duplicate the
- * top-bar nav items in the DOM. Hosting the accordion state here also collapses
- * sections when the panel closes.
+ * Panel body. The app-nav, support links, Incubator, and their dividers are
+ * gated to widths below the top-nav breakpoint (the dev analog of prod's
+ * .show-mobile), where the top bar's nav collapses; the global nav is always
+ * shown. Mounted by the Popover only while open, so the global nav never
+ * duplicates the top-bar nav items.
  */
 const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
   menuItems,
   userType,
 }) => {
-  const {activeDropdownName} = useDropdownContext();
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-
-  if (activeDropdownName !== DROPDOWN_NAME) {
-    return null;
-  }
-
-  const toggleSection = (label: string) =>
-    setExpandedSection(prev => (prev === label ? null : label));
-
   const supportLinks = getSupportLinks(userType);
 
   // Prod lists Incubator once, in the global-nav region after Donate (not in
@@ -166,9 +151,10 @@ const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
         </li>
       ))}
 
-      <li className={moduleStyles.mobileOnly} aria-hidden>
-        <hr className={moduleStyles.divider} />
-      </li>
+      <li
+        className={`${moduleStyles.divider} ${moduleStyles.mobileOnly}`}
+        role="separator"
+      />
 
       {/* Support links — gated below the top-nav breakpoint */}
       {supportLinks.map(link => (
@@ -184,19 +170,16 @@ const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
         </li>
       ))}
 
-      <li className={moduleStyles.mobileOnly} aria-hidden>
-        <hr className={moduleStyles.divider} />
-      </li>
+      <li
+        className={`${moduleStyles.divider} ${moduleStyles.mobileOnly}`}
+        role="separator"
+      />
 
       {/* Global site nav — always visible. Incubator is re-injected after
           Donate (app-nav-gated), matching prod's single listing. */}
       {GLOBAL_NAV.map(entry => {
         const row = entry.subEntries ? (
-          <ExpandableSection
-            entry={entry}
-            expanded={expandedSection === entry.label}
-            onToggle={() => toggleSection(entry.label)}
-          />
+          <ExpandableSection entry={entry} />
         ) : (
           <li>
             <a href={entry.href} className={moduleStyles.link}>
@@ -223,45 +206,47 @@ const HamburgerPanel: FunctionComponent<HamburgerMenuProps> = ({
 };
 
 /**
- * Hamburger (☰) dropdown — a CustomDropdown submenu panel matching the legacy
- * #hamburger-contents. The app-nav, support links, Incubator, and their
- * dividers are gated to widths below the top-nav breakpoint (the dev analog of
- * prod's .show-mobile), where the top bar's nav collapses; the global nav is
- * always shown. Accordion toggles stay inside the panel, so CustomDropdown's
- * click-outside handler leaves the panel open.
+ * Hamburger (☰) menu — a Popover disclosure panel matching the legacy
+ * #hamburger-contents. Always visible; the panel's app-nav/support sections are
+ * width-gated. Sections are native `<details>` disclosures sharing a `name`, so
+ * the browser keeps one open at a time with no JS and native expand semantics.
  */
 const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
   menuItems,
   userType,
-}) => (
-  <CustomDropdown
-    name={DROPDOWN_NAME}
-    labelText="Open navigation menu"
-    size="m"
-    menuPlacement="right"
-    aria-label="Open navigation menu"
-    useMuiIconButtonAsTrigger
-    triggerButtonProps={{
-      'aria-label': 'Open navigation menu',
-      sx: {
-        '&&': {
-          color: 'var(--neutral-base-white)',
-          paddingLeft: '14px',
-          paddingRight: '6px',
-          paddingTop: '18px',
-          paddingBottom: '20px',
-          minWidth: 0,
-          minHeight: 0,
-        },
-        '&&:hover, &&:active, &&:focus-visible': {
-          backgroundColor: 'transparent',
-        },
-      },
-      children: <span className={moduleStyles.barsIcon} />,
-    }}
-  >
-    <HamburgerPanel menuItems={menuItems} userType={userType} />
-  </CustomDropdown>
-);
+}) => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const menuId = useId();
+
+  return (
+    <>
+      <IconButton
+        className={moduleStyles.trigger}
+        aria-label="Open navigation menu"
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        onClick={event => setAnchorEl(event.currentTarget)}
+      >
+        <span className={moduleStyles.barsIcon} />
+      </IconButton>
+      <Popover
+        id={menuId}
+        className={moduleStyles.popover}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={() => setAnchorEl(null)}
+        disableScrollLock
+        marginThreshold={0}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        slotProps={{paper: {elevation: 0}}}
+      >
+        <HamburgerPanel menuItems={menuItems} userType={userType} />
+      </Popover>
+    </>
+  );
+};
 
 export default HamburgerMenu;

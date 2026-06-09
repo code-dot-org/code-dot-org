@@ -1,8 +1,8 @@
-import {render, screen, within} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import Header from './Header';
+import HamburgerMenu from './HamburgerMenu';
 
 // Teacher menu items include Incubator in the app-nav list; the hamburger
 // re-injects it once into the global-nav region (regression: it used to
@@ -15,69 +15,63 @@ const TEACHER_MENU_ITEMS = [
   {label: 'Incubator', href: '//code.org/incubator'},
 ];
 
-const PROPS = {
-  logoImageUrl: '/logo.png',
-  brandName: 'CodeAI',
-  menuItems: TEACHER_MENU_ITEMS,
-  userAuth: {
-    status: 'signed-in' as const,
-    display_name: 'Ms. Rivera',
-    user_type: 'teacher' as const,
-  },
-};
+function renderMenu() {
+  render(<HamburgerMenu menuItems={TEACHER_MENU_ITEMS} userType="teacher" />);
+  return screen.getByRole('button', {name: 'Open navigation menu'});
+}
 
-async function openHamburger() {
+async function openPanel() {
   const user = userEvent.setup();
-  await user.click(screen.getByRole('button', {name: 'Open navigation menu'}));
-  return document.getElementById('hamburger-dropdown') as HTMLElement;
+  const trigger = renderMenu();
+  await user.click(trigger);
+  await screen.findByText('Districts');
+  return {user, trigger};
 }
 
 describe('HamburgerMenu', () => {
-  it('renders as a dropdown panel, not an MUI Drawer', async () => {
-    render(<Header {...PROPS} />);
-    const panel = await openHamburger();
-    expect(within(panel).getByText('Districts')).toBeInTheDocument();
+  it('opens a Popover panel (not a Drawer) on click', async () => {
+    await openPanel();
+    expect(screen.getByText('Districts')).toBeInTheDocument();
     expect(document.querySelector('.MuiDrawer-root')).toBeNull();
   });
 
   it('mounts the panel body only while open', async () => {
-    render(<Header {...PROPS} />);
-    // "Districts" is hamburger-only global nav; absent until the panel opens.
+    const trigger = renderMenu();
     expect(screen.queryByText('Districts')).not.toBeInTheDocument();
-    await openHamburger();
-    expect(screen.getByText('Districts')).toBeInTheDocument();
+    await userEvent.setup().click(trigger);
+    expect(await screen.findByText('Districts')).toBeInTheDocument();
   });
 
-  it('expands a section in place, keeping the panel open', async () => {
-    const user = userEvent.setup();
-    render(<Header {...PROPS} />);
-    const panel = await openHamburger();
-
-    expect(
-      within(panel).queryByText('Educator Overview'),
-    ).not.toBeInTheDocument();
-
-    await user.click(within(panel).getByRole('button', {name: 'Teach'}));
-    expect(within(panel).getByText('Educator Overview')).toBeInTheDocument();
-    // Panel stays open (toggling a section doesn't close the dropdown): a
-    // sibling row is still present.
-    expect(within(panel).getByText('Districts')).toBeInTheDocument();
+  it('renders global-nav sections as native exclusive-accordion disclosures', async () => {
+    await openPanel();
+    const teach = screen.getByText('Teach').closest('details');
+    expect(teach).toBeInTheDocument();
+    // Shared name → the browser keeps one section open at a time.
+    expect(teach).toHaveAttribute('name', 'hamburger-section');
+    expect(screen.getByText('Educator Overview')).toBeInTheDocument();
   });
 
   it('lists Incubator exactly once', async () => {
-    render(<Header {...PROPS} />);
-    const panel = await openHamburger();
-    expect(within(panel).getAllByText('Incubator')).toHaveLength(1);
+    await openPanel();
+    expect(screen.getAllByText('Incubator')).toHaveLength(1);
   });
 
-  it('gates app-nav items with the mobileOnly class but not global nav', async () => {
-    render(<Header {...PROPS} />);
-    const panel = await openHamburger();
-    expect(within(panel).getByText('My Dashboard').closest('li')).toHaveClass(
+  it('gates app-nav with the mobileOnly class but not global nav', async () => {
+    await openPanel();
+    expect(screen.getByText('My Dashboard').closest('li')).toHaveClass(
       'mobileOnly',
     );
-    expect(within(panel).getByText('Districts').closest('li')).not.toHaveClass(
+    expect(screen.getByText('Districts').closest('li')).not.toHaveClass(
       'mobileOnly',
     );
+  });
+
+  it('closes on Escape and restores focus to the trigger', async () => {
+    const {user, trigger} = await openPanel();
+    await user.keyboard('{Escape}');
+    await waitFor(() =>
+      expect(screen.queryByText('Districts')).not.toBeInTheDocument(),
+    );
+    expect(trigger).toHaveFocus();
   });
 });
