@@ -159,17 +159,6 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     };
   }, [handleClickOutside]);
 
-  // Close on resize: an open menu is anchored to its trigger, which may move or
-  // hide at a responsive breakpoint, orphaning the popup. Only listen while open.
-  useEffect(() => {
-    if (activeDropdownName !== name) {
-      return;
-    }
-    const closeOnResize = () => setActiveDropdownName('');
-    window.addEventListener('resize', closeOnResize);
-    return () => window.removeEventListener('resize', closeOnResize);
-  }, [activeDropdownName, name, setActiveDropdownName]);
-
   const useButtonTrigger =
     useMuiButtonAsTrigger ||
     useMuiIconButtonAsTrigger ||

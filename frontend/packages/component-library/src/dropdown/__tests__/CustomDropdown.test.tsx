@@ -1,5 +1,6 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 
 import {CustomDropdown} from './../index';
 
@@ -42,28 +43,6 @@ describe('Design System - Custom Dropdown Component', () => {
     await user.click(dropdownButton);
 
     // Dropdown should be closed again
-    expect(dropdownButton.parentElement).not.toHaveClass('open');
-  });
-
-  it('closes when the window is resized', async () => {
-    const user = userEvent.setup();
-    render(
-      <CustomDropdown name="test-dropdown" labelText="Dropdown label" size="m">
-        <div>Dropdown content</div>
-      </CustomDropdown>,
-    );
-
-    const dropdownButton = screen.getByRole('button', {
-      name: /test-dropdown filter dropdown/i,
-    });
-
-    await user.click(dropdownButton);
-    expect(dropdownButton.parentElement).toHaveClass('open');
-
-    act(() => {
-      fireEvent(window, new Event('resize'));
-    });
-
     expect(dropdownButton.parentElement).not.toHaveClass('open');
   });
 

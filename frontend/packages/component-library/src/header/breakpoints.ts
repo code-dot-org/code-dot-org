@@ -1,7 +1,8 @@
 /**
- * Pixel thresholds that drive header element visibility for the codeai brand.
- * Values mirror the max-width rules in application.scss (1060px) and
- * user-menu.scss (1200px) — see those files for the authoritative SCSS source.
+ * Pixel thresholds that drive header element visibility, matching the legacy
+ * header's own collapse points (application.scss @1060, user-menu.scss @1200).
+ * Header-specific and intentionally distinct from the MUI theme breakpoints
+ * (sm/md/lg) — do not fold these into `theme.breakpoints`.
  */
 export const HEADER_BREAKPOINTS = {
   /** Auth buttons (sign in / create account) appear at this width and above. */
