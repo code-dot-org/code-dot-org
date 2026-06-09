@@ -1,9 +1,9 @@
-import type {FunctionComponent} from 'react';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import {useId, useState, type FunctionComponent} from 'react';
 
-import CustomDropdown from '@/dropdown/CustomDropdown';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
-import {HEADER_BREAKPOINTS} from './breakpoints';
 
 import moduleStyles from './helpButton.module.scss';
 
@@ -31,64 +31,55 @@ interface HelpButtonProps {
   userType?: 'student' | 'teacher' | 'admin';
 }
 
-const triggerSx = {
-  '&&': {
-    display: 'none',
-    [`@media (min-width:${HEADER_BREAKPOINTS.desktopNav}px)`]: {
-      display: 'inline-flex',
-    },
-    color: 'var(--neutral-base-white)',
-    paddingLeft: '11px',
-    paddingRight: '2px',
-    paddingTop: '6.5px',
-    paddingBottom: '6.5px',
-    fontSize: '22px',
-    minWidth: 0,
-    minHeight: 0,
-  },
-  '&&:hover, &&:active, &&:focus-visible': {
-    backgroundColor: 'transparent',
-  },
-};
-
-/** "?" icon button with a support-links dropdown. Hidden below desktopNav breakpoint. */
+/** "?" icon button with a support-links menu. Hidden below the desktop-nav breakpoint. */
 const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
   const links = getSupportLinks(userType);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const menuId = useId();
+  const newTabId = useId();
+
   return (
-    <CustomDropdown
-      name="help-menu"
-      labelText="Help menu"
-      size="m"
-      menuPlacement="right"
-      aria-label="Help menu"
-      useMuiIconButtonAsTrigger
-      triggerButtonProps={{
-        'aria-label': 'Help menu',
-        sx: triggerSx,
-        children: (
-          <FontAwesomeV6Icon
-            iconName="circle-question"
-            iconStyle="solid"
-            style={{fontSize: '22px'}}
-          />
-        ),
-      }}
-    >
-      <ul className={moduleStyles.list}>
+    <>
+      <IconButton
+        className={moduleStyles.trigger}
+        aria-label="Help menu"
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        onClick={event => setAnchorEl(event.currentTarget)}
+      >
+        <FontAwesomeV6Icon iconName="circle-question" iconStyle="solid" />
+      </IconButton>
+      <span id={newTabId} className={moduleStyles.visuallyHidden}>
+        Opens in a new tab
+      </span>
+      <Menu
+        id={menuId}
+        className={moduleStyles.menu}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={() => setAnchorEl(null)}
+        disableScrollLock
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        slotProps={{paper: {elevation: 0}, list: {'aria-label': 'Help'}}}
+      >
         {links.map(link => (
-          <li key={link.label}>
-            <a
-              href={link.href}
-              className={moduleStyles.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.label}
-            </a>
-          </li>
+          <MenuItem
+            key={link.label}
+            component="a"
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-describedby={newTabId}
+            onClick={() => setAnchorEl(null)}
+          >
+            {link.label}
+          </MenuItem>
         ))}
-      </ul>
-    </CustomDropdown>
+      </Menu>
+    </>
   );
 };
 
