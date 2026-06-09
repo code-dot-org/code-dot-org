@@ -7,16 +7,17 @@ import {
   xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
+import toHtml from 'hast-util-to-html';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
 import rehypeRaw from 'rehype-raw';
 import rehypeReact from 'rehype-react';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
+import visit from 'unist-util-visit';
 
-import localization, {useLocalization} from '@cdo/apps/localization';
+import localization from '@cdo/apps/localization';
 
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
@@ -55,6 +56,19 @@ class SafeMarkdown extends React.Component {
      */
     allowEmbeds: PropTypes.bool,
   };
+
+  // Translation happens synchronously inside render() (see the
+  // localizeParagraphs rehype plugin below), so we must re-render whenever the
+  // active locale changes to pick up the new strings.
+  componentDidMount() {
+    localization.on('change', this.onLocaleChange);
+  }
+
+  componentWillUnmount() {
+    localization.off('change', this.onLocaleChange);
+  }
+
+  onLocaleChange = () => this.forceUpdate();
 
   render() {
     // We only open external links in a new tab if it's explicitly specified
@@ -156,157 +170,149 @@ blocklyTags.forEach(tag => {
   blocklyComponentWrappers[tag] = makeBlocklyWrapper(tag);
 });
 
-// Identify the <xml> blockly wrapper by reference, not by invoking it. This
-// avoids depending on the wrapper's runtime behavior and survives wrapping
-// it in memo/forwardRef/etc.
-const isXmlBlock = child => child?.type === blocklyComponentWrappers.xml;
+// Labels handed to our translation system to annotate the paragraph strings
+// for translators. See localization.translate.
+const LOCALIZATION_LABELS = ['markdown'];
 
-// Parse an inline CSS declaration string (e.g. "color: red; padding: 4px")
-// into the object form React requires for the `style` prop. Kebab-cased
-// property names are camelCased; vendor prefixes like `-webkit-transform`
-// land as `WebkitTransform` because the leading dash matches the first
-// kebab segment.
-//
-// We really only need this for the visualCodeBlock <code> elements. Those
-// are just a simple `background-color: xxx`, so this is sufficient for
-// those. But this implementation will cover anything that has one or
-// more simple rules.
-const parseInlineStyle = styleString => {
-  const obj = {};
-  styleString.split(';').forEach(decl => {
-    const colon = decl.indexOf(':');
-    if (colon < 0) return;
-    const key = decl.slice(0, colon).trim();
-    const value = decl.slice(colon + 1).trim();
-    if (!key) return;
-    obj[key.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = value;
-  });
-  return obj;
-};
+// A hast <xml> element is the wrapper our remark plugins emit around embedded
+// Blockly content. Its contents are not human language and must never be
+// handed to the translator.
+const isBlocklyXml = node => node.tagName === 'xml';
+
+// hast nodes are plain JSON, so a structural clone is just a round-trip
+// through JSON. We clone before mutating so the placeholder-swapping below
+// never touches the original tree.
+const cloneHast = node => JSON.parse(JSON.stringify(node));
 
 /**
- * Convert a translated DOM node back to a React element tree. Placeholder
- * spans (those carrying a `data-token` attribute) are swapped for the
- * original untranslated React element they stand in for; everything else is
- * recreated structurally so the translated text nodes land in the right place.
+ * Walk the translated DOM produced by localization.translate and rebuild an
+ * equivalent hast tree, which rehype-react then compiles to React. This is the
+ * inverse of the hast->DOM serialization in localizeParagraph:
+ *
+ *   - placeholder spans (carrying `data-token`) are swapped back for the
+ *     original, untranslated Blockly <xml> hast they stood in for;
+ *   - the <span data-code-element> markers become <code> again;
+ *   - `style` is left as a string — rehype-react parses it into the object
+ *     form React requires.
  */
-const domToReact = (node, key, placeholders) => {
-  if (node.nodeType === Node.TEXT_NODE) {
-    return node.nodeValue;
+const domToHast = (domNode, placeholders) => {
+  if (domNode.nodeType === Node.TEXT_NODE) {
+    return {type: 'text', value: domNode.nodeValue};
   }
 
-  if (node.nodeType !== Node.ELEMENT_NODE) {
+  if (domNode.nodeType !== Node.ELEMENT_NODE) {
     return null;
   }
 
-  if (node.hasAttribute('data-token')) {
-    const idx = Number(node.getAttribute('data-token'));
-    return React.cloneElement(placeholders[idx], {key: `xml-${idx}`});
+  if (domNode.hasAttribute('data-token')) {
+    return placeholders[Number(domNode.getAttribute('data-token'))];
   }
 
-  const isCode = node.hasAttribute('data-code-element');
-  if (isCode) {
-    node.removeAttribute('data-code-element');
-  }
+  const isCode = domNode.hasAttribute('data-code-element');
 
-  const props = {key};
-  for (const attr of node.attributes) {
-    if (attr.name === 'class') {
-      props.className = attr.value;
-    } else if (attr.name === 'style') {
-      props.style = parseInlineStyle(attr.value);
+  const properties = {};
+  for (const attr of domNode.attributes) {
+    if (attr.name === 'data-token' || attr.name === 'data-code-element') {
+      // Temporary markers used only on the way to the translator.
+      continue;
+    } else if (attr.name === 'class') {
+      properties.className = attr.value.split(/\s+/).filter(Boolean);
     } else {
-      props[attr.name] = attr.value;
+      properties[attr.name] = attr.value;
     }
   }
 
   const children = [];
-  node.childNodes.forEach((child, i) => {
-    const result = domToReact(child, i, placeholders);
-    if (result !== null) {
+  domNode.childNodes.forEach(child => {
+    const result = domToHast(child, placeholders);
+    if (result) {
       children.push(result);
     }
   });
 
-  return React.createElement(
-    isCode ? 'code' : node.tagName.toLowerCase(),
-    props,
-    ...children
-  );
+  return {
+    type: 'element',
+    tagName: isCode ? 'code' : domNode.tagName.toLowerCase(),
+    properties,
+    children,
+  };
 };
 
 /**
- * Localizes a 'complex' paragraph: one containing one or more <xml> blocks
- * that our translation engine would otherwise refuse to touch. The approach:
+ * Localize a single <p> hast node in place. Our translation engine works on
+ * real DOM, not hast, and refuses to touch <code> or Blockly <xml>, so:
  *
- *   1. Build a detached <p> DOM tree from the React children. Strings become
- *      text nodes, simple inline elements (<b>, <a>, <code>, ...) become real
- *      DOM so the translator can reason about their content, and each <xml>
- *      block is replaced by an empty `<span data-token="i">`
- *      placeholder while the original React element is stashed by index.
+ *   1. Clone the paragraph and, in the clone, swap each <xml> block for an
+ *      empty `<span data-token="i">` placeholder (stashing the original hast)
+ *      and retag each <code> as `<span data-code-element>` — our translator
+ *      does recognize <span>.
  *
- *   2. Hand the <p> to localization.translate, which returns an equivalent DOM
- *      tree with the text nodes translated.
+ *   2. Serialize the clone to HTML, hand the resulting <p> DOM tree to
+ *      localization.translate, and get back an equivalent DOM with the text
+ *      nodes translated.
  *
- *   3. Walk the translated DOM and rebuild a React tree, swapping each
- *      placeholder span back for its stashed XML element. The outer <p>
- *      inherits the original element's props plus `data-notranslate` so the
- *      translator doesn't try to re-translate the already-translated output.
+ *   3. Walk the translated DOM back into hast (domToHast), restoring the
+ *      stashed <xml> blocks and the <code> elements. The <p> keeps its
+ *      original properties plus `data-isolate`/`data-notranslate` so the
+ *      already-translated output is left alone when it lands on the page.
  */
-const LocalizedParagraph = ({p}) => {
-  useLocalization();
-
-  const childArray = React.Children.toArray(p.props.children);
+const localizeParagraph = node => {
   const placeholders = [];
+  const clone = cloneHast(node);
 
-  const container = document.createElement('p');
-  container.setAttribute('data-isolate', 'true');
-  childArray.forEach(item => {
-    if (typeof item === 'string' || typeof item === 'number') {
-      container.appendChild(document.createTextNode(String(item)));
-    } else if (isXmlBlock(item)) {
-      const span = document.createElement('span');
-      span.setAttribute('data-token', String(placeholders.length));
-      placeholders.push(item);
-      container.appendChild(span);
-    } else {
-      const tmp = document.createElement('template');
-      tmp.innerHTML = ReactDOMServer.renderToStaticMarkup(item);
-
-      // If this is a <code>...</code> element, replace with a <b>
-      // with a data-code-element attribute. Our translation system
-      // does not recognize `<code>` blocks.
-      const child = tmp.content.children?.[0];
-      if (child?.tagName?.toLowerCase() === 'code') {
-        const span = document.createElement('b');
-        span.innerHTML = child.innerHTML;
-        span.setAttribute('data-code-element', 'true');
-        for (const attr of child.attributes) {
-          span.setAttribute(attr.name, attr.value);
-        }
-        container.appendChild(span);
-      } else {
-        container.appendChild(tmp.content);
-      }
+  visit(clone, 'element', (el, index, parent) => {
+    if (isBlocklyXml(el) && parent && typeof index === 'number') {
+      parent.children[index] = {
+        type: 'element',
+        tagName: 'span',
+        properties: {dataToken: String(placeholders.length)},
+        children: [],
+      };
+      placeholders.push(el);
+      return [visit.SKIP, index];
+    }
+    if (el.tagName === 'code') {
+      el.tagName = 'span';
+      el.properties = {...(el.properties || {}), dataCodeElement: 'true'};
     }
   });
 
-  const translated = localization.translate(container, [
-    'blockly-instructions',
-  ]);
+  const domP = document.createElement('p');
+  domP.setAttribute('data-isolate', 'true');
+  domP.innerHTML = toHtml({type: 'root', children: clone.children});
 
-  const root = domToReact(translated, undefined, placeholders);
-  const {...truncatedProps} = p.props;
-  delete truncatedProps.children;
-  return React.cloneElement(root, {
-    // Send it all the props but none of the original children
-    ...truncatedProps,
-    'data-notranslate': 'true',
+  const translated = localization.translate(domP, LOCALIZATION_LABELS);
+
+  const children = [];
+  translated.childNodes.forEach(child => {
+    const result = domToHast(child, placeholders);
+    if (result) {
+      children.push(result);
+    }
   });
+
+  node.children = children;
+  node.properties = {
+    dataIsolate: 'true',
+    dataNotranslate: 'true',
+    ...(node.properties || {}),
+  };
 };
 
-LocalizedParagraph.propTypes = {
-  p: PropTypes.element,
+/**
+ * rehype plugin: localize the text of every paragraph in the rendered
+ * markdown. Runs after sanitization (so <code>/<xml> are real hast elements)
+ * and before rehype-react compiles the tree to React.
+ */
+const localizeParagraphs = () => tree => {
+  visit(tree, 'element', node => {
+    if (node.tagName !== 'p') {
+      return;
+    }
+    localizeParagraph(node);
+    // The rebuilt children are already translated; don't descend into them.
+    return visit.SKIP;
+  });
 };
 
 // These wrappers add context for Localize to better understand the markdown
@@ -315,22 +321,6 @@ const localizationComponentWrappers = {
   a: function (props) {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     return <a {...props} data-lz-url="true" data-localize="markdown-url" />;
-  },
-  p: function ({children, ...props}) {
-    // Wraps the paragraph rendering such that we send it for translation
-    // before rendering it to the screen.
-    return (
-      <LocalizedParagraph
-        p={
-          // Also ensure that it is not translated. This gets forcibly
-          // added to the props list anyway, but we definitely do not
-          // want to translate the content here.
-          <p data-notranslate="true" {...props}>
-            {children}
-          </p>
-        }
-      />
-    );
   },
 };
 
@@ -373,6 +363,7 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
     .use(rehypeSanitize, processorSchema)
+    .use(localizeParagraphs)
     .use(rehypeReact, {
       createElement: React.createElement,
       components: {
