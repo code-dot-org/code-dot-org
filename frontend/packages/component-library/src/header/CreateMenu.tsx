@@ -1,9 +1,9 @@
-import type {FunctionComponent} from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import {useId, useState, type FunctionComponent} from 'react';
 
-import CustomDropdown from '@/dropdown/CustomDropdown';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
-import {HEADER_BREAKPOINTS} from './breakpoints';
 
 import moduleStyles from './createMenu.module.scss';
 
@@ -18,68 +18,51 @@ interface CreateMenuProps {
   items: CreateMenuItem[];
 }
 
-const triggerSx = {
-  '&&': {
-    display: 'none',
-    [`@media (min-width:${HEADER_BREAKPOINTS.desktopFull}px)`]: {
-      display: 'inline-flex',
-    },
-    backgroundColor: 'transparent',
-    color: 'var(--neutral-base-white)',
-    border: '1px solid var(--neutral-base-white)',
-    borderRadius: '4px',
-    boxShadow: 'none',
-    textTransform: 'none' as const,
-    columnGap: '8.46875px',
-    height: '35px',
-    marginTop: '-1px',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    paddingTop: '6.5px',
-    paddingBottom: '6.5px',
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: 1.5,
-    whiteSpace: 'nowrap',
-  },
-  '&&:hover, &&:active, &&:focus-visible': {
-    backgroundColor: 'transparent',
-    boxShadow: 'none',
-  },
-  '&& .MuiButton-endIcon, && .MuiButton-endIcon i': {
-    fontSize: '14px',
-    width: 'auto',
-  },
-};
+/** "New project +" button with a project-type picker. Hidden below the desktop-full breakpoint. */
+const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const menuId = useId();
 
-/** "New project +" button with a project-type picker dropdown. Hidden below desktopFull breakpoint. */
-const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => (
-  <CustomDropdown
-    name="create-menu"
-    labelText="New project"
-    size="m"
-    menuPlacement="right"
-    aria-label="New project menu"
-    useMuiButtonAsTrigger
-    triggerButtonProps={{
-      'aria-label': 'New project menu',
-      disableElevation: true,
-      sx: triggerSx,
-      endIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
-      children: 'New project',
-    }}
-  >
-    <ul className={moduleStyles.list}>
-      {items.map(item => (
-        <li key={item.id}>
-          <a href={item.href} className={moduleStyles.tile}>
+  return (
+    <>
+      <Button
+        className={moduleStyles.trigger}
+        aria-label="New project menu"
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        disableElevation
+        onClick={event => setAnchorEl(event.currentTarget)}
+        endIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+      >
+        New project
+      </Button>
+      <Menu
+        id={menuId}
+        className={moduleStyles.menu}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={() => setAnchorEl(null)}
+        disableScrollLock
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        slotProps={{paper: {elevation: 0}, list: {'aria-label': 'New project'}}}
+      >
+        {items.map(item => (
+          <MenuItem
+            key={item.id}
+            component="a"
+            href={item.href}
+            onClick={() => setAnchorEl(null)}
+          >
             <img src={item.iconUrl} alt="" className={moduleStyles.icon} />
             <span>{item.label}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </CustomDropdown>
-);
+          </MenuItem>
+        ))}
+      </Menu>
+    </>
+  );
+};
 
 export default CreateMenu;
