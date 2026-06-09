@@ -32,7 +32,7 @@ namespace :test do
   end
 
   timed_task_with_logging :saucelabs_ui do
-    ChatClient.log 'Running <b>dashboard</b> Safari, iPad and iPhone UI tests...'
+    ChatClient.log 'Running <b>dashboard</b> Safari + iPad + iPhone UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
