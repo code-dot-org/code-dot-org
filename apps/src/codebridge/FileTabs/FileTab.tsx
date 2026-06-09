@@ -58,12 +58,12 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
     transition,
   } = useSortable({id: file.id});
 
-  const tabRef = useRef<HTMLDivElement>(null);
+  const tabRef = useRef<HTMLDivElement | null>(null);
 
   // Combine the scroll ref and dnd-kit's activator ref on the label element.
   const labelRef = useCallback(
     (node: HTMLDivElement | null) => {
-      (tabRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      tabRef.current = node;
       setActivatorNodeRef(node);
     },
     [setActivatorNodeRef]
