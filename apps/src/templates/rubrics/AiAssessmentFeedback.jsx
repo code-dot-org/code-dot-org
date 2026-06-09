@@ -1,10 +1,10 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -72,7 +72,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
     <div>
       {aiFeedbackReceived && (
         <Typography className={style.aiFeedbackReceived} variant="em">
-          <FontAwesome icon="circle-check" />
+          <FontAwesomeV6Icon iconName="circle-check" />
           {i18n.aiFeedbackReceived()}
         </Typography>
       )}

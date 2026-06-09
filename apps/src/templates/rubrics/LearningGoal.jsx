@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -185,7 +185,8 @@ export default function LearningGoal({
         ) : (
           autosaveStatus === STATUS.FINISHED && (
             <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
-              <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
+              <FontAwesomeV6Icon iconName="circle-check" />{' '}
+              {i18n.savedToGallery()}
             </span>
           )
         )}
@@ -259,9 +260,9 @@ export default function LearningGoal({
                 </Typography>
               )}
               {submittedEvaluation.feedback && (
-                <FontAwesome
-                  icon="message"
-                  className="fa-regular"
+                <FontAwesomeV6Icon
+                  iconName="message"
+                  iconStyle="regular"
                   title={i18n.feedback()}
                 />
               )}

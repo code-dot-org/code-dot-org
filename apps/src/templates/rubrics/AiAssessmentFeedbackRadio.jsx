@@ -1,8 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -51,13 +51,13 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_UP ? (
-              <FontAwesome
-                icon="thumbs-up"
+              <FontAwesomeV6Icon
+                iconName="thumbs-up"
                 aria-label={i18n.thumbsUpSelected()}
               />
             ) : (
-              <FontAwesome
-                icon="thumbs-up"
+              <FontAwesomeV6Icon
+                iconName="thumbs-up"
                 iconStyle="regular"
                 aria-label={i18n.thumbsUpUnselected()}
               />
@@ -81,13 +81,13 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             aria-hidden="true"
           >
             {aiFeedback === THUMBS_DOWN ? (
-              <FontAwesome
-                icon="thumbs-down"
+              <FontAwesomeV6Icon
+                iconName="thumbs-down"
                 aria-label={i18n.thumbsDownSelected()}
               />
             ) : (
-              <FontAwesome
-                icon="thumbs-down"
+              <FontAwesomeV6Icon
+                iconName="thumbs-down"
                 iconStyle="regular"
                 aria-label={i18n.thumbsDownUnselected()}
               />

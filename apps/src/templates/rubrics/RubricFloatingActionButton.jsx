@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -5,7 +6,6 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -51,7 +51,7 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
           onClick={_ => setIsOpen(!isOpen)}
           className={classnames(style.buttonStyle, style.closeButton)}
         >
-          <FontAwesome icon="xmark" />
+          <FontAwesomeV6Icon iconName="xmark" />
         </button>
       </div>
     </div>

@@ -1,10 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef, useMemo} from 'react';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -268,7 +268,8 @@ export default function LearningGoals({
         ) : (
           autosaveStatus === STATUS.FINISHED && (
             <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
-              <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
+              <FontAwesomeV6Icon iconName="circle-check" />{' '}
+              {i18n.savedToGallery()}
             </span>
           )
         )}
@@ -423,7 +424,7 @@ export default function LearningGoals({
             aria-label={i18n.rubricPreviousLearningGoal()}
             onClick={() => onCarouselPress(-1)}
           >
-            <FontAwesome icon="angle-left" />
+            <FontAwesomeV6Icon iconName="angle-left" />
           </button>
           <ProgressRing
             className={style.learningGoalRing}
@@ -483,9 +484,9 @@ export default function LearningGoals({
                 </Typography>
               )}
               {submittedEvaluation.feedback && (
-                <FontAwesome
-                  icon="message"
-                  className="fa-regular"
+                <FontAwesomeV6Icon
+                  iconName="message"
+                  iconStyle="regular"
                   title={i18n.feedback()}
                 />
               )}
@@ -501,7 +502,7 @@ export default function LearningGoals({
             aria-label={i18n.rubricNextLearningGoal()}
             onClick={() => onCarouselPress(1)}
           >
-            <FontAwesome icon="angle-right" />
+            <FontAwesomeV6Icon iconName="angle-right" />
           </button>
         </div>
       </div>

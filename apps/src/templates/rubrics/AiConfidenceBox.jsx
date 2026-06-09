@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import style from './rubrics.module.scss';
@@ -38,7 +38,10 @@ export default function AiConfidenceBox({aiConfidence}) {
         <p className={style.labelThree}>
           {aiConfidenceText}
           <span data-tip data-for="info-tip">
-            <FontAwesome icon="circle-info" className={style.infoTipIcon} />
+            <FontAwesomeV6Icon
+              iconName="circle-info"
+              className={style.infoTipIcon}
+            />
           </span>
         </p>
         <ReactTooltip id="info-tip" effect="solid">
