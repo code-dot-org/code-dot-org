@@ -15,6 +15,16 @@ import Header, {
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import StudioFooter from '@/components/footer';
+import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
+import ArtistIcon from '@/config/brand/assets/courses/artist-icon.webp';
+import DanceIcon from '@/config/brand/assets/courses/dance-party-icon.webp';
+import GameLabIcon from '@/config/brand/assets/courses/game-lab-icon.webp';
+import AllProjectsIcon from '@/config/brand/assets/courses/header-all-projects-icon.webp';
+import MusicDanceAiIcon from '@/config/brand/assets/courses/music-dance-ai-icon.webp';
+import MusicLabIcon from '@/config/brand/assets/courses/music-lab-icon.webp';
+import PythonLabIcon from '@/config/brand/assets/courses/python-lab-icon.webp';
+import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
+import WebLab2Icon from '@/config/brand/assets/courses/weblab2-icon.webp';
 import CodeAILogo from '@/config/brand/assets/logo-codeai-inverse.svg';
 import {fetchAuthOutcome, useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
@@ -40,61 +50,61 @@ const CREATE_MENU_ITEMS: CreateMenuItem[] = [
     id: 'music_dance_ai',
     label: 'Mix & Move with AI',
     href: '//code.org/mix-move-ai',
-    iconUrl: '/shared/images/fill-70x70/courses/music-dance-ai-icon.png',
+    iconUrl: MusicDanceAiIcon,
   },
   {
     id: 'spritelab',
     label: 'Sprite Lab',
     href: '/projects/spritelab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/sprite-lab-icon.png',
+    iconUrl: SpriteLabIcon,
   },
   {
     id: 'applab',
     label: 'App Lab',
     href: '/projects/applab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/app-lab-icon.png',
+    iconUrl: AppLabIcon,
   },
   {
     id: 'gamelab',
     label: 'Game Lab',
     href: '/projects/gamelab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/game-lab-icon.png',
+    iconUrl: GameLabIcon,
   },
   {
     id: 'weblab2',
     label: 'Web Lab (New)',
     href: '/projects/weblab2/new',
-    iconUrl: '/shared/images/fill-70x70/courses/web-lab-icon.png',
+    iconUrl: WebLab2Icon,
   },
   {
     id: 'music',
     label: 'Music Lab',
     href: '/projects/music/new',
-    iconUrl: '/shared/images/fill-70x70/courses/music-lab-icon.png',
+    iconUrl: MusicLabIcon,
   },
   {
     id: 'pythonlab',
     label: 'Python Lab',
     href: '/projects/pythonlab/new',
-    iconUrl: '/shared/images/fill-70x70/courses/python-lab-icon.png',
+    iconUrl: PythonLabIcon,
   },
   {
     id: 'artist',
     label: 'Artist',
     href: '/projects/artist/new',
-    iconUrl: '/shared/images/fill-70x70/courses/artist-icon.png',
+    iconUrl: ArtistIcon,
   },
   {
     id: 'dance',
     label: 'Dance',
     href: '/projects/dance/new',
-    iconUrl: '/shared/images/fill-70x70/courses/dance-icon.png',
+    iconUrl: DanceIcon,
   },
   {
     id: 'view_all',
     label: 'View all projects...',
     href: '/projects',
-    iconUrl: '/shared/images/courses/header-all-projects-icon.png',
+    iconUrl: AllProjectsIcon,
   },
 ];
 
