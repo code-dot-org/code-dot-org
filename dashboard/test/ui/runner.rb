@@ -538,10 +538,9 @@ def status_pages_navigation
   end
 end
 
-# Status page filename per suite. Eyes keeps a stable name across
-# providers (we only run eyes on SauceLabs). Other suites name their
-# page after the suite label so the four ui_all suites
-# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) get unique pages
+# Status page filename per suite. Eyes keeps a stable name across providers.
+# Other suites name their page after the suite label so each ui_all suite
+# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) gets unique pages
 # and don't overwrite each other in the shared S3 prefix or in
 # dashboard/public/ui_test/.
 def status_page_filename
