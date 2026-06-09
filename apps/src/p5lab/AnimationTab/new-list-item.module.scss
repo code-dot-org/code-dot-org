@@ -1,7 +1,3 @@
-@import "color.scss";
-
-$polar-blue: #0094ca;
-
 .tile {
   width: 95%;
   padding: 0 0 4px 0;
@@ -16,16 +12,16 @@ $polar-blue: #0094ca;
     box-shadow: none;
 
     .border {
-      background-color: $polar-blue;
-      border: solid 4px $polar-blue;
+      background-color: var(--background-brand-teal-primary);
+      border: solid 4px var(--borders-brand-teal-primary);
     }
 
     .addButton {
-      color: $white;
+      color: var(--text-neutral-white-fixed);
     }
 
     .animationName {
-      color: $white;
+      color: var(--text-neutral-white-fixed);
     }
   }
 }
@@ -43,14 +39,14 @@ $polar-blue: #0094ca;
   left: 0;
   right: 0;
   border-radius: 10px;
-  background-color: $white;
-  border: solid 2px $polar-blue;
+  background-color: var(--background-neutral-white-fixed);
+  border: solid 2px var(--borders-brand-teal-primary);
   text-align: center;
   padding-top: 50%;
 }
 
 .addButton {
-  color: $polar-blue;
+  color: var(--text-brand-teal-primary);
   font-size: 76px;
   margin-top: -45px;
 }
@@ -60,6 +56,6 @@ $polar-blue: #0094ca;
   text-align: center;
   user-select: none;
   font-weight: normal;
-  color: $polar-blue;
+  color: var(--text-brand-teal-primary);
   font-size: 14px;
 }
