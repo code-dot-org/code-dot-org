@@ -7,7 +7,7 @@ import {
   createSlice,
 } from '@reduxjs/toolkit';
 import $ from 'jquery';
-import _ from 'lodash';
+import _, {debounce} from 'lodash';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -31,6 +31,7 @@ import {
   PeerReviewLevelInfo,
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
@@ -420,6 +421,18 @@ export function sendProgressReport(
   };
 }
 
+// Send a debounced 'LEVEL_STARTED' progress report if the
+// user has not already started the level.
+export function sendStartedReportIfNotStarted(
+  appType: string
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    if (getCurrentLevel(getState())?.status === LevelStatus.not_tried) {
+      debouncedSendStartedReport(dispatch, getState, appType);
+    }
+  };
+}
+
 export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},
@@ -507,6 +520,21 @@ function sendReportHelper(
   );
 }
 
+const debouncedSendStartedReport = debounce(
+  (
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    getState: () => RootState,
+    appType: string
+  ) => {
+    // Re-check after debounce: a prior send may have already flipped the status.
+    if (getCurrentLevel(getState())?.status === LevelStatus.not_tried) {
+      dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
+    }
+  },
+  100,
+  {leading: true, trailing: false}
+);
+
 function sendReportForLevel(
   levelId: string,
   appType: string,
@@ -550,25 +578,37 @@ function sendReportForLevel(
       'content-type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then(response => {
-    if (response.ok && levelId !== null) {
-      // Update the progress store by merging in this
-      // particular result immediately.
-      dispatch(mergeResults({[levelId]: result}));
-      dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
-      // If the level is the sublevel of a bubble level,
-      // also update the status of the parent level.
-      if (currentLevel.parentLevelId) {
-        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
-        const parentId = parseInt(currentLevel.parentLevelId);
-        dispatch(mergeUnitProgress({levelId: parentId, result}));
-      }
+  })
+    .then(response => {
+      if (response.ok && levelId !== null) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: result}));
+        dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
+        // If the level is the sublevel of a bubble level,
+        // also update the status of the parent level.
+        if (currentLevel.parentLevelId) {
+          dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+          const parentId = parseInt(currentLevel.parentLevelId);
+          dispatch(mergeUnitProgress({levelId: parentId, result}));
+        }
 
-      // After we log the reported time we should update the start time of the milestone
-      // otherwise if we don't leave the page we are compounding the total time
-      Lab2ProgressTimer.getInstance().resetMilestoneTimer();
-    }
-  });
+        // After we log the reported time we should update the start time of the milestone
+        // otherwise if we don't leave the page we are compounding the total time
+        Lab2ProgressTimer.getInstance().resetMilestoneTimer();
+      }
+    })
+    .catch((error: unknown) => {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      // The promise will resolve for non-2xx status codes. We will only hit this for network errors/
+      // navigation away/etc. Log as warnings.
+      Lab2Registry.getInstance().getMetricsReporter().logWarning({
+        message: 'Failed to send milestone report',
+        url,
+        error: errorMessage,
+      });
+    });
 }
 
 /**

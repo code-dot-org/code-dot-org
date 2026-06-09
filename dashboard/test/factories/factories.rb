@@ -1437,7 +1437,15 @@ FactoryBot.define do
     description {'fake description'}
     s3_uri {'s3://fake-bucket/fake-path/video.json'}
     json_schema_version {1}
-    audience {'student'}
+    audience {'Student'}
+  end
+
+  factory :practice_problem do
+    sequence(:key) {|n| "practice_problem-#{n}"}
+    active {false}
+    problem_text {'fake problem text'}
+    problem_type {'multiple_choice_single_select'}
+    solution {{}}
   end
 
   factory :user_lesson_objective_reflection do

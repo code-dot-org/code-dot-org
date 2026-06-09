@@ -7,23 +7,23 @@ markdown <<MARKDOWN
 
 ## Where to Look for Evidence
 
-#### Assessment in this capstone goes beyond just grading the final software. Teachers should use a combination of student artifacts to assess the five core rubric categories:
+Assessment in this capstone goes beyond just grading the final software. Teachers should use a combination of student artifacts to assess the five core rubric categories:
 
-* #### **Project Guide**: Provides evidence for **Project Planning & Intentional Design** and **Responsible AI & Ethical Reflection**  
-* #### **Kanban Board**: Provides evidence for **Collaboration & Professional Practice**  
-* #### **Final App Version**: Provides evidence for **Functionality & Technical Implementation** and **User-Centered Design & Usability**  
-* #### **Final Reflection (Self-Assessment)**: Provides evidence of **synthesis, decision-making, and student growth over time**
+* **Project Guide**: Provides evidence for **Project Planning & Intentional Design** and **Responsible AI & Ethical Reflection**  
+* **Kanban Board**: Provides evidence for **Collaboration & Professional Practice**  
+* **Final App Version**: Provides evidence for **Functionality & Technical Implementation** and **User-Centered Design & Usability**  
+* **Final Reflection (Self-Assessment)**: Provides evidence of **synthesis, decision-making, and student growth over time**
 
 ---
 
 ## The Rubric Structure
 
-#### The provided rubric grades students on a scale of:
+The provided rubric grades students on a scale of:
 
-* #### **Extensive Evidence**
-* #### **Convincing Evidence**
-* #### **Limited Evidence**
-* #### **No Evidence**
+* **Extensive Evidence**
+* **Convincing Evidence**
+* **Limited Evidence**
+* **No Evidence**
 
 ---
 
@@ -33,16 +33,16 @@ markdown <<MARKDOWN
      alt="teacher evaluating students discussing process"  
      style="width: 30%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Assessment must value reasoned decisions and clarity, not just feature count.**
+**Assessment must value reasoned decisions and clarity, not just feature count.**
 
-#### When reviewing student work, prioritize evidence of:
+When reviewing student work, prioritize evidence of:
 
-* #### Thoughtful **planning**
-* #### Iterative **testing**
-* #### Clear **intentional tradeoffs**
-* #### Meaningful **reflection**
+* Thoughtful **planning**
+* Iterative **testing**
+* Clear **intentional tradeoffs**
+* Meaningful **reflection**
 
-#### Much of this evidence will be found in the **Project Guide**, not just the final product.
+Much of this evidence will be found in the **Project Guide**, not just the final product.
 
 
 MARKDOWN

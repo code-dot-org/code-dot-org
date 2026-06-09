@@ -1,0 +1,95 @@
+name 'self-paced-TCaAI-L2-BI4-Reflection'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Big Idea 1: AI is Powerful and (Sometimes) Unreliable
+
+One of the first major ideas students encounter in Thinking Critically About AI is that AI systems can produce outputs that feel convincing while still being incomplete, misleading, or incorrect.
+
+Throughout the unit, students move away from thinking about AI as “smart” or “always correct” and toward understanding that AI systems generate outputs by recognizing and predicting patterns from training data.
+
+## What Students Learn
+
+<div style="display:flex; justify-content:space-between; gap:14px; margin:25px 0px;">
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      AI predicts patterns
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students learn that AI generates outputs based on patterns in training data, not true understanding.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Confidence ≠ accuracy
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students explore how AI can sound extremely confident even when information is incorrect.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Training data matters
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students investigate how narrow or incomplete training data can shape biased or limited outputs.
+    </p>
+  </div>
+
+</div>
+
+## What Students Experience
+
+Students encounter this big idea through several hands-on investigations and discussions, including:
+
+* Generating AI images and discovering how changing prompt details changes outputs
+* Drawing “an apple” and realizing how shared assumptions shape training data
+* Investigating how AI image generators reinforce assumptions about concepts like “healthy food”
+* 
+Exploring examples of AI-generated misinformation that sounded convincing but were false
+
+Across these experiences, students begin noticing that AI systems do not “know” information in a human sense. Instead, they generate outputs that match patterns they have seen before.
+
+<div style="border-top: 1px solid #048899; margin: 30px 0px;"></div>
+
+<div style="background-color:#B7E0E5; padding:20px; border-radius:10px; margin:25px 0px; overflow:auto;">
+
+<img 
+src="https://images.code.org/3ef8d604cb8467ddd429fe467c731911-image-1779225064477.jpeg" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<p style="font-size:16px; font-weight:bold; margin-top:0;">
+CASE STUDY: When AI Invented Court Cases
+</p>
+
+<p style="font-size:16px;">
+In 2023, two lawyers used ChatGPT while preparing documents for a real court case. The AI generated legal cases and citations looked professional and convincing.
+</p>
+
+<p style="font-size:16px;">
+The problem? Several of the cases did not actually exist.
+</p>
+
+<p style="font-size:16px;">
+The lawyers submitted the fake citations to the court and were later fined $5,000. The judge explained that while AI can assist with professional work, humans are still responsible for checking whether information is accurate.
+</p>
+
+<p style="font-size:16px; margin-bottom:0;">
+This case became an early public example of how AI systems can sound extremely confident, even when the information they generate is completely wrong.
+</p>
+<br>
+
+<p style="font-size:14px; margin-bottom:0;">
+<b>Note</b>: This case study is included as part of the Warm-Up Activity in <a href="https://studio.code.org/courses/ai-discoveries-2026/units/1/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7: Verifying AI Output</a>.
+</p>
+
+
+</div>
+
+Students repeatedly encounter moments like this throughout the unit where AI outputs sound believable even when they are inaccurate, incomplete, or based on flawed assumptions.
+MARKDOWN

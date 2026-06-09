@@ -100,8 +100,8 @@
     "display_name": "Order Queue Buttons",
     "bubble_choice_description": "Use buttons to update the order queue array and re-render the list.",
     "project_template_level_name": "building-data-driven-systems-lesson6-level3a-template-v2-2026",
-    "thumbnail_url": "https://images.code.org/4591f39923f85e97475d6bd4cf99b30f-Screenshot 2026-05-04 212943.png"
+    "thumbnail_url": "https://images.code.org/9b7d15b0b0ccb5c6f6050bdf6317ad27-4a.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-05T04:37:30.008+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3a-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3a-v2-2026\"},{\"changed_at\":\"2026-05-05 04:41:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:45:40 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:47:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-05T04:37:30.008+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3a-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3a-v2-2026\"},{\"changed_at\":\"2026-05-05 04:41:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:45:40 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:47:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 03:56:07 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

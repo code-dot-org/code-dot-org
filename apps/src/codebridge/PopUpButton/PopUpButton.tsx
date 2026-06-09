@@ -240,6 +240,7 @@ export const PopUpButton = ({
                 return event.key === 'Tab' && event.shiftKey;
               },
               clickOutsideDeactivates: true,
+              preventScroll: true,
               fallbackFocus: initialFocusId
                 ? `#${initialFocusId}`
                 : '#fallback-element',

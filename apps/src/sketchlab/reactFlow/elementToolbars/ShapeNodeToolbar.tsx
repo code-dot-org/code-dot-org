@@ -3,25 +3,23 @@ import React from 'react';
 import {DEFAULT_ROTATION} from '../constants';
 import {ShapeNodeType} from '../types';
 
-import FontSizeGroup from './FontSizeGroup';
-import HandleVisibilityToggle from './HandleVisibilityToggle';
-import LockedNotice from './LockedNotice';
-import NodeActionsGroup from './NodeActionsGroup';
-import RotationGroup from './RotationGroup';
-import SwatchGroup from './SwatchGroup';
-import TextAlignGroup from './TextAlignGroup';
+import LockedNotice from './components/LockedNotice';
+import ToolbarSection from './components/ToolbarSection';
+import ToolbarShell from './components/ToolbarShell';
+import AlignmentDropdownRow from './sections/AlignmentDropdownRow';
+import ColorDropdownRow from './sections/ColorDropdownRow';
+import NodeActionsGroup from './sections/NodeActionsGroup';
+import RotationGroup from './sections/RotationGroup';
+import SizeDropdownRow from './sections/SizeDropdownRow';
 import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
   DEFAULT_FONT_COLOR,
   DEFAULT_FONT_SIZE,
-  DEFAULT_TEXT_ALIGN,
   DEFAULT_STROKE_COLOR,
-  FontSizeValue,
+  DEFAULT_TEXT_ALIGN,
   STROKE_FONT_PALETTE,
-  TextAlignValue,
 } from './toolbarPalettes';
-import ToolbarShell from './ToolbarShell';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ShapeNodeToolbarProps {
@@ -30,60 +28,53 @@ interface ShapeNodeToolbarProps {
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
-
   const {backgroundColor, strokeColor, fontSize, fontColor, textAlign} = data;
-  const handlesVisible = data.showHandles !== false;
 
   return (
     <ToolbarShell
       target={{type: 'node', id: nodeId}}
-      anchorNodeId={nodeId}
+      title="Shape"
       ariaLabel="Shape style"
     >
       {data.locked ? (
         <LockedNotice onUnlock={() => patchNodeData({locked: false})} />
       ) : (
         <>
-          <SwatchGroup
-            groupLabel="Background"
-            swatches={BACKGROUND_PALETTE}
-            selectedValue={backgroundColor ?? DEFAULT_BACKGROUND_COLOR}
-            onSelect={value => patchNodeData({backgroundColor: value})}
-          />
-          <SwatchGroup
-            groupLabel="Border"
-            swatches={STROKE_FONT_PALETTE}
-            selectedValue={strokeColor ?? DEFAULT_STROKE_COLOR}
-            onSelect={value => patchNodeData({strokeColor: value})}
-          />
-          <FontSizeGroup
-            selectedValue={fontSize ?? DEFAULT_FONT_SIZE}
-            onSelect={value =>
-              patchNodeData({fontSize: value as FontSizeValue})
-            }
-          />
-          <TextAlignGroup
-            selectedValue={textAlign ?? DEFAULT_TEXT_ALIGN}
-            onSelect={value =>
-              patchNodeData({textAlign: value as TextAlignValue})
-            }
-            isLongLabel={true}
-          />
-          <SwatchGroup
-            groupLabel="Font color"
-            swatches={STROKE_FONT_PALETTE}
-            selectedValue={fontColor ?? DEFAULT_FONT_COLOR}
-            onSelect={value => patchNodeData({fontColor: value})}
-          />
+          <ToolbarSection title="Appearance">
+            <ColorDropdownRow
+              label="Background"
+              swatches={BACKGROUND_PALETTE}
+              value={backgroundColor ?? DEFAULT_BACKGROUND_COLOR}
+              onSelect={next => patchNodeData({backgroundColor: next})}
+            />
+            <ColorDropdownRow
+              label="Border"
+              swatches={STROKE_FONT_PALETTE}
+              value={strokeColor ?? DEFAULT_STROKE_COLOR}
+              onSelect={next => patchNodeData({strokeColor: next})}
+            />
+          </ToolbarSection>
+          <ToolbarSection title="Text">
+            <SizeDropdownRow
+              value={fontSize ?? DEFAULT_FONT_SIZE}
+              onSelect={next => patchNodeData({fontSize: next})}
+            />
+            <AlignmentDropdownRow
+              value={textAlign ?? DEFAULT_TEXT_ALIGN}
+              onSelect={next => patchNodeData({textAlign: next})}
+            />
+            <ColorDropdownRow
+              label="Color"
+              swatches={STROKE_FONT_PALETTE}
+              value={fontColor ?? DEFAULT_FONT_COLOR}
+              onSelect={next => patchNodeData({fontColor: next})}
+            />
+          </ToolbarSection>
           <RotationGroup
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
           <NodeActionsGroup nodeId={nodeId} />
-          <HandleVisibilityToggle
-            visible={handlesVisible}
-            onToggle={() => patchNodeData({showHandles: !handlesVisible})}
-          />
         </>
       )}
     </ToolbarShell>

@@ -1,0 +1,88 @@
+name 'pl-aif-2-U4-reuseable-routine-loops'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Reusable Routine: How to Test AI-Generated Loop Code</h1>
+
+When students receive loop code from AI, encourage them to test it systematically. This routine helps students build debugging habits and develop confidence in evaluating AI-generated solutions.
+
+
+## Loop Verification Checklist 
+
+<div style="background:#F5F7F8;border-radius:14px;padding:24px;margin:24px 0;">
+
+  <div style="display:flex;align-items:flex-start;margin-bottom:18px;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      1
+    </div>
+    <div>
+      <strong style="font-size:15pt;">First Value Test</strong><br>
+      Does the loop start where expected?
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;margin-bottom:18px;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      2
+    </div>
+    <div>
+      <strong style="font-size:15pt;">Last Value Test</strong><br>
+      Does it stop at the correct final value?
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;margin-bottom:18px;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      3
+    </div>
+    <div>
+      <strong style="font-size:15pt;">Edge Test</strong><br>
+      What happens at the boundary?
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;margin-bottom:18px;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      4
+    </div>
+    <div>
+      <strong style="font-size:15pt;">Extra Iteration Check</strong><br>
+      Does the loop accidentally run one extra time?
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;margin-bottom:18px;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      5
+    </div>
+    <div>
+      <strong style="font-size:15pt;">Missing Iteration Check</strong><br>
+      Does it stop too early?
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;">
+    <div style="background:#6a62d9;color:white;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16pt;margin-right:16px;">
+      6
+    </div>
+    <div>
+      <strong style="font-size:15pt;">Match Check</strong><br>
+      Does the output actually match the requested behavior?
+    </div>
+  </div>
+
+</div>
+
+<div style="background-color:#dccbea;border-radius:40px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:14px;line-height:1.5;margin:0;">
+<b>💡 Teacher Tip:</b> Encourage participants to use this routine every time they receive AI-generated loop code. Consistent use builds debugging habits, strengthens understanding of loop boundaries, and reinforces that AI-generated code should always be verified rather than accepted automatically.
+</p>
+
+</div>
+
+## Next up
+
+Let's practice using the checklist to debug a loop. 
+MARKDOWN

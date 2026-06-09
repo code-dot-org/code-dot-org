@@ -6,42 +6,65 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
+import {
+  ARROW_MARKER_HEIGHT_PX,
+  ARROW_MARKER_WIDTH_PX,
+  DEFAULT_ROTATION,
+  LINE_ANCHOR_SIZE_PX,
+} from '../constants';
 import {ToolbarTarget} from '../context';
 import {
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
+  EdgeTypeValue,
   LineStrokeStyleValue,
   strokeDasharrayFromStyle,
 } from '../elementToolbars/toolbarPalettes';
-import {isLineEdge} from '../utils/lineEdges';
+import {ArrowHeadValue} from '../types';
+import {anchorHandleFlowPosition} from '../utils/lineAnchors';
 
-type ArrowHeadValue = 'start' | 'end' | 'both';
+function rotatePoint(
+  point: {x: number; y: number},
+  center: {x: number; y: number},
+  radians: number
+) {
+  const cos = Math.cos(radians);
+  const sin = Math.sin(radians);
+  const dx = point.x - center.x;
+  const dy = point.y - center.y;
+  return {
+    x: center.x + dx * cos - dy * sin,
+    y: center.y + dx * sin + dy * cos,
+  };
+}
 
 interface UseLineToolbarOptions {
-  edges: SketchlabReactFlowEdge[];
   nodes: SketchlabReactFlowNode[];
-  readOnly: boolean;
+  edges: SketchlabReactFlowEdge[];
+  setNodes: (
+    updater: (nodes: SketchlabReactFlowNode[]) => SketchlabReactFlowNode[]
+  ) => void;
   openToolbarTarget: ToolbarTarget | null;
-  openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+  pushSnapshot: () => void;
 }
 
 export function useLineToolbar({
-  edges,
   nodes,
-  readOnly,
+  edges,
+  setNodes,
   openToolbarTarget,
-  openToolbar,
   setEdges,
+  pushSnapshot,
 }: UseLineToolbarOptions) {
   const updateLineEdge = useCallback(
     (
       edgeId: string,
       updater: (edge: SketchlabReactFlowEdge) => SketchlabReactFlowEdge
     ) => {
+      pushSnapshot();
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
@@ -54,11 +77,12 @@ export function useLineToolbar({
         })
       );
     },
-    [setEdges]
+    [pushSnapshot, setEdges]
   );
 
   const updateLineEdgeLockState = useCallback(
     (edgeId: string, locked: boolean) => {
+      pushSnapshot();
       setEdges(currentEdges =>
         currentEdges.map(edge => {
           if (edge.id !== edgeId) {
@@ -74,34 +98,17 @@ export function useLineToolbar({
         })
       );
     },
-    [setEdges]
-  );
-
-  const handleEdgeClick = useCallback(
-    (_event: React.MouseEvent, edge: {id: string}) => {
-      if (readOnly) {
-        return;
-      }
-      const clickedEdge = edges.find(currentEdge => currentEdge.id === edge.id);
-      if (clickedEdge && isLineEdge(clickedEdge, nodes)) {
-        openToolbar({type: 'edge', id: clickedEdge.id}, {trapFocus: false});
-      }
-    },
-    [readOnly, edges, nodes, openToolbar]
+    [pushSnapshot, setEdges]
   );
 
   const openLineEdge = useMemo(() => {
     if (openToolbarTarget?.type !== 'edge') {
       return null;
     }
-    const edge = edges.find(
-      currentEdge => currentEdge.id === openToolbarTarget.id
+    return (
+      edges.find(currentEdge => currentEdge.id === openToolbarTarget.id) ?? null
     );
-    if (!edge || !isLineEdge(edge, nodes)) {
-      return null;
-    }
-    return edge;
-  }, [openToolbarTarget, edges, nodes]);
+  }, [openToolbarTarget, edges]);
 
   const updateLineEdgeStyle = useCallback(
     (
@@ -119,61 +126,48 @@ export function useLineToolbar({
     [updateLineEdge]
   );
 
-  const updateLineEdgeMarker = useCallback(
-    (edgeId: string, markerPatch: {color?: string; strokeWidth?: number}) => {
+  const setLineEdgeColor = useCallback(
+    (edgeId: string, strokeColor: string) => {
       updateLineEdge(edgeId, edge => {
         const markerStart =
           edge.markerStart && typeof edge.markerStart !== 'string'
-            ? edge.markerStart
-            : undefined;
+            ? {...edge.markerStart, color: strokeColor}
+            : edge.markerStart;
         const markerEnd =
           edge.markerEnd && typeof edge.markerEnd !== 'string'
-            ? edge.markerEnd
-            : undefined;
+            ? {...edge.markerEnd, color: strokeColor}
+            : edge.markerEnd;
         return {
           ...edge,
-          ...(markerStart
-            ? {
-                markerStart: {
-                  ...markerStart,
-                  ...markerPatch,
-                },
-              }
-            : {}),
-          ...(markerEnd
-            ? {
-                markerEnd: {
-                  ...markerEnd,
-                  ...markerPatch,
-                },
-              }
-            : {}),
+          style: {...edge.style, stroke: strokeColor},
+          markerStart,
+          markerEnd,
         };
       });
     },
     [updateLineEdge]
   );
 
-  const setLineEdgeColor = useCallback(
-    (edgeId: string, strokeColor: string) => {
-      updateLineEdgeStyle(edgeId, currentStyle => ({
-        ...currentStyle,
-        stroke: strokeColor,
-      }));
-      updateLineEdgeMarker(edgeId, {color: strokeColor});
-    },
-    [updateLineEdgeStyle, updateLineEdgeMarker]
-  );
-
   const setLineEdgeWidth = useCallback(
     (edgeId: string, strokeWidth: number) => {
-      updateLineEdgeStyle(edgeId, currentStyle => ({
-        ...currentStyle,
-        strokeWidth,
-      }));
-      updateLineEdgeMarker(edgeId, {strokeWidth});
+      updateLineEdge(edgeId, edge => {
+        const markerStart =
+          edge.markerStart && typeof edge.markerStart !== 'string'
+            ? {...edge.markerStart, strokeWidth}
+            : edge.markerStart;
+        const markerEnd =
+          edge.markerEnd && typeof edge.markerEnd !== 'string'
+            ? {...edge.markerEnd, strokeWidth}
+            : edge.markerEnd;
+        return {
+          ...edge,
+          style: {...edge.style, strokeWidth},
+          markerStart,
+          markerEnd,
+        };
+      });
     },
-    [updateLineEdgeStyle, updateLineEdgeMarker]
+    [updateLineEdge]
   );
 
   const setLineEdgeStrokeStyle = useCallback(
@@ -189,6 +183,13 @@ export function useLineToolbar({
       });
     },
     [updateLineEdgeStyle]
+  );
+
+  const setLineEdgeType = useCallback(
+    (edgeId: string, edgeType: EdgeTypeValue) => {
+      updateLineEdge(edgeId, edge => ({...edge, type: edgeType}));
+    },
+    [updateLineEdge]
   );
 
   const setLineEdgeArrowHeads = useCallback(
@@ -231,13 +232,84 @@ export function useLineToolbar({
     [updateLineEdgeLockState]
   );
 
+  const setLineEdgeRotation = useCallback(
+    (edgeId: string, rotation: number) => {
+      updateLineEdge(edgeId, edge => {
+        const currentRotation = edge.data?.rotation ?? DEFAULT_ROTATION;
+        const deltaRadians = ((rotation - currentRotation) * Math.PI) / 180;
+        const sourceNode = nodes.find(node => node.id === edge.source);
+        const targetNode = nodes.find(node => node.id === edge.target);
+        const bothEndpointsAreAnchors =
+          sourceNode?.type === 'lineAnchor' &&
+          targetNode?.type === 'lineAnchor';
+        if (bothEndpointsAreAnchors) {
+          const sourceHandle = anchorHandleFlowPosition(
+            sourceNode.position,
+            'source'
+          );
+          const targetHandle = anchorHandleFlowPosition(
+            targetNode.position,
+            'target'
+          );
+          const center = {
+            x: (sourceHandle.x + targetHandle.x) / 2,
+            y: (sourceHandle.y + targetHandle.y) / 2,
+          };
+          const rotatedSourceHandle = rotatePoint(
+            sourceHandle,
+            center,
+            deltaRadians
+          );
+          const rotatedTargetHandle = rotatePoint(
+            targetHandle,
+            center,
+            deltaRadians
+          );
+          setNodes(currentNodes =>
+            currentNodes.map(node => {
+              if (node.id === sourceNode.id) {
+                return {
+                  ...node,
+                  position: {
+                    x: rotatedSourceHandle.x - LINE_ANCHOR_SIZE_PX,
+                    y: rotatedSourceHandle.y - LINE_ANCHOR_SIZE_PX / 2,
+                  },
+                };
+              }
+              if (node.id === targetNode.id) {
+                return {
+                  ...node,
+                  position: {
+                    x: rotatedTargetHandle.x,
+                    y: rotatedTargetHandle.y - LINE_ANCHOR_SIZE_PX / 2,
+                  },
+                };
+              }
+              return node;
+            })
+          );
+        }
+
+        return {
+          ...edge,
+          data: {
+            ...(edge.data || {}),
+            rotation,
+          },
+        };
+      });
+    },
+    [nodes, setNodes, updateLineEdge]
+  );
+
   return {
-    handleEdgeClick,
     openLineEdge,
     setLineEdgeColor,
     setLineEdgeWidth,
     setLineEdgeStrokeStyle,
+    setLineEdgeType,
     setLineEdgeArrowHeads,
+    setLineEdgeRotation,
     setLineEdgeLocked,
   };
 }

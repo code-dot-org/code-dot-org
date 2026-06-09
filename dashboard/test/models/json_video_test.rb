@@ -12,8 +12,31 @@ class JSONVideoTest < ActiveSupport::TestCase
       description: 'A test video',
       s3_uri: 's3://bucket/test.json',
       json_schema_version: 1,
-      audience: 'student',
+      audience: 'Student',
     }.merge(overrides)
+  end
+
+  test 'valid audiences are accepted' do
+    JSONVideo::AUDIENCES.each do |audience|
+      video = build(:json_video, audience: audience)
+      assert video.valid?, "Expected #{audience.inspect} to be valid"
+    end
+  end
+
+  test 'invalid audience is rejected' do
+    video = build(:json_video, audience: 'student')
+    refute video.valid?
+    assert_includes video.errors[:audience], 'is not included in the list'
+  end
+
+  test 'summarize returns expected hash' do
+    video = create(:json_video, key: 'test-key', description: 'Test desc', audience: 'Student')
+    summary = video.summarize
+
+    assert_equal video.id, summary[:id]
+    assert_equal 'test-key', summary[:key]
+    assert_equal 'Test desc', summary[:description]
+    assert_equal 'Student', summary[:audience]
   end
 
   test 'seed_record creates a new video' do
@@ -26,7 +49,7 @@ class JSONVideoTest < ActiveSupport::TestCase
     assert_equal 'A test video', video.description
     assert_equal 's3://bucket/test.json', video.s3_uri
     assert_equal 1, video.json_schema_version
-    assert_equal 'student', video.audience
+    assert_equal 'Student', video.audience
   end
 
   test 'seed_record updates an existing video' do
@@ -68,6 +91,26 @@ class JSONVideoTest < ActiveSupport::TestCase
     JSONVideo.seed_record('config/json_videos/test-video.json')
 
     assert_equal 0, video.reload.objectives.count
+  end
+
+  test 'write_serialization writes a file readable by seed_record' do
+    Dir.mktmpdir do |tmpdir|
+      video = create(:json_video, key: 'write-test', description: 'Test', s3_uri: 's3://b/v.json', json_schema_version: 1, audience: 'Teacher')
+      video.objectives << @objective1
+
+      Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+      video.stubs(:file_path).returns(Pathname.new(tmpdir).join('write-test.json'))
+
+      video.write_serialization
+
+      written = JSON.parse(File.read(video.file_path))
+      assert_equal 'write-test', written['key']
+      assert_equal 'Test', written['description']
+      assert_equal 's3://b/v.json', written['s3_uri']
+      assert_equal 1, written['json_schema_version']
+      assert_equal 'Teacher', written['audience']
+      assert_equal [@objective1.key], written['objective_keys']
+    end
   end
 
   test 'seed_all skips bad files and continues seeding remaining files' do

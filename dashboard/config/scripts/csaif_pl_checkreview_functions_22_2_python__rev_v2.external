@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Reviewing Check for Understanding 
 
-#### The previous level asked you to **identify which option correctly defines a function for the painter to turn right**. 
+The previous level asked you to **identify which option correctly defines a function for the painter to turn right**. 
 
-####Let's take a look. 
+Let's take a look. 
 <table style="width: 100%; border-collapse: separate; border-spacing: 0 20px;">
   <tr>
     <td style="width: 33%;"><img src="https://images.code.org/b03c44dfc0415554771e2d9a0af9e7ec-image-1741367712750.png" alt="Image 1" style="width: 100%;"></td>

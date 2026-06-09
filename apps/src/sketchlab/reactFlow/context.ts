@@ -23,6 +23,8 @@ interface ToolbarVisibilityContextValue {
   trapFocus: boolean;
   openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   closeToolbar: () => void;
+  isAnyPopoverOpen: boolean;
+  setPopoverOpen: (open: boolean) => void;
 }
 
 const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
@@ -30,6 +32,8 @@ const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
   trapFocus: false,
   openToolbar: () => {},
   closeToolbar: () => {},
+  isAnyPopoverOpen: false,
+  setPopoverOpen: () => {},
 });
 
 export const ToolbarVisibilityProvider = ToolbarVisibilityContext.Provider;
@@ -57,4 +61,20 @@ export const ClipboardProvider = ClipboardContext.Provider;
 
 export function useClipboard(): ClipboardContextValue {
   return useContext(ClipboardContext);
+}
+
+const PushSnapshotContext = createContext<() => void>(() => {});
+
+export const PushSnapshotProvider = PushSnapshotContext.Provider;
+
+export function usePushSnapshot(): () => void {
+  return useContext(PushSnapshotContext);
+}
+
+const AnchorDraggingContext = createContext(false);
+
+export const AnchorDraggingProvider = AnchorDraggingContext.Provider;
+
+export function useIsAnchorDragging(): boolean {
+  return useContext(AnchorDraggingContext);
 }

@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Sustainable Systems Project Overview
 
 
-#### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**.
+In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**.
 
 >#### They will: 
 >- #### Demonstrate how hardware, software, and communication combine to create a computer system
@@ -25,9 +25,9 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### The diagram clearly shows how the system works, including user interactions, data flow, and processing.
-- #### Includes a problem statement to explain what the system is solving.
-- #### All parts of our diagram are clear and well-labeled.
+- The diagram clearly shows how the system works, including user interactions, data flow, and processing.
+- Includes a problem statement to explain what the system is solving.
+- All parts of our diagram are clear and well-labeled.
 .
 
 
@@ -40,9 +40,9 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Lists all the hardware used in my system (e.g., sensors, processors).
-- #### Explains how each hardware component interacts with other parts of the system.
-- #### Explanation includes how the hardware helps the system function.
+- Lists all the hardware used in my system (e.g., sensors, processors).
+- Explains how each hardware component interacts with other parts of the system.
+- Explanation includes how the hardware helps the system function.
 
 
 
@@ -55,9 +55,9 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Describes the software used in the system and how it processes data.
-- #### Explains how the software interacts with the hardware.
-- #### Includes features such as automation, AI, or interactive elements if applicable.
+- Describes the software used in the system and how it processes data.
+- Explains how the software interacts with the hardware.
+- Includes features such as automation, AI, or interactive elements if applicable.
 
 
 
@@ -70,9 +70,9 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Explains how data moves through the system.
-- #### Describes how different components connect and exchange information (e.g., Wi-Fi, Bluetooth, cloud).
-- #### Explanation makes it clear how the system transmits and retrieves data.
+- Explains how data moves through the system.
+- Describes how different components connect and exchange information (e.g., Wi-Fi, Bluetooth, cloud).
+- Explanation makes it clear how the system transmits and retrieves data.
 
 
 
@@ -86,8 +86,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Use AI tools for brainstorming, debugging, or refining code.
-- #### Reflect on AI’s role in the project and discuss its ethical implications.
+- Use AI tools for brainstorming, debugging, or refining code.
+- Reflect on AI’s role in the project and discuss its ethical implications.
 
 
 </p></div>
@@ -95,7 +95,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### Check out this <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Exemplar</a> project guide to see how these concepts come to life in the classroom.
+Check out this <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Exemplar</a> project guide to see how these concepts come to life in the classroom.
 
 <br>
  

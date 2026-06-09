@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:40:02.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -26,11 +26,7 @@
               "width": 122,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "vBD5gRNZrSuQG_RgXT23W",
@@ -82,8 +78,7 @@
             "width": 424,
             "height": 83,
             "resizing": false,
-            "dragging": false,
-            "selected": false
+            "dragging": false
           },
           {
             "id": "jNSQIOGk3APcBWcKWB2yB",
@@ -126,11 +121,7 @@
               "width": 172,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "whT1qS90ocmVrnCnRir-e",
@@ -185,24 +176,6 @@
             }
           },
           {
-            "id": "IQVjTK7mXUcXgGULQg79B",
-            "type": "text",
-            "position": {
-              "x": -676.4186682044269,
-              "y": 303.50642307029915
-            },
-            "data": {
-              "text": "let itemCount = 10;\n\nwhile (itemCount < 5) { \n    addNewItem();\n    itemCount--;\n}",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 253,
-              "height": 190
-            }
-          },
-          {
             "id": "wkLZ6P01jPzJW68tUdz2J",
             "type": "shape",
             "position": {
@@ -246,11 +219,7 @@
               "width": 72,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "c9AAtyofd7QH4-B-Rnp-g",
@@ -274,7 +243,7 @@
             "id": "IsGnYFAdogNVN0Hri2wRn",
             "type": "shape",
             "position": {
-              "x": -740.1275511625279,
+              "x": -661.1107659345516,
               "y": 264.19988835636497
             },
             "style": {
@@ -283,14 +252,21 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "let itemCount = 10;\n\nwhile (itemCount < 5) { \n    addNewItem();\n    itemCount--;\n}",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large",
+              "textAlign": "left"
             },
             "measured": {
-              "width": 499,
-              "height": 277
-            }
+              "width": 266,
+              "height": 261
+            },
+            "zIndex": -1,
+            "width": 266,
+            "height": 261,
+            "resizing": false,
+            "dragging": false
           },
           {
             "id": "79XrUaY8gf7WtdUP9OwEY",
@@ -309,17 +285,14 @@
               "width": 158,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "5fae6144-e872-4b17-827c-1ff99511ff9e",
             "type": "text",
             "data": {
-              "text": "No"
+              "text": "No",
+              "showHandles": false
             },
             "position": {
               "x": 355.881951164314,
@@ -328,10 +301,6 @@
             "measured": {
               "width": 74,
               "height": 60
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 74,
             "height": 60,
@@ -342,7 +311,8 @@
             "id": "1f620247-2454-492c-a997-4f11cb276ec0",
             "type": "text",
             "data": {
-              "text": "Yes"
+              "text": "Yes",
+              "showHandles": false
             },
             "position": {
               "x": 162.72980949592775,
@@ -351,10 +321,6 @@
             "measured": {
               "width": 58,
               "height": 39
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             },
             "dragging": false
           }
@@ -401,16 +367,6 @@
             }
           },
           {
-            "id": "e384e6e4-6e84-47c3-a179-d68e92601d42",
-            "source": "OGbYBr37xyD9LrJLq-bOz",
-            "target": "jNSQIOGk3APcBWcKWB2yB",
-            "sourceHandle": "top-source",
-            "targetHandle": "bottom-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
             "id": "fe63308f-6f15-4b28-b33e-f4d9b77ebc1c",
             "source": "whT1qS90ocmVrnCnRir-e",
             "target": "wkLZ6P01jPzJW68tUdz2J",
@@ -432,8 +388,8 @@
           }
         ],
         "viewport": {
-          "x": 811.7207926151049,
-          "y": 66.64168459044288,
+          "x": 783.4033335086596,
+          "y": 90.64168459044288,
           "zoom": 0.9111988015238581
         }
       }
@@ -1648,6 +1604,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:02.087+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level1b-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:52:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:02.087+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level1b-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:52:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:46:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

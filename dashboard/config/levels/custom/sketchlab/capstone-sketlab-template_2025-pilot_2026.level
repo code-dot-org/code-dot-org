@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:45:30.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -13,8 +13,8 @@
             "id": "VMyJecaL48mfs5sSGxsLH",
             "type": "shape",
             "position": {
-              "x": -1727.8010696726374,
-              "y": -1634.3533452720671
+              "x": -1564.8010696726374,
+              "y": -1621.3533452720671
             },
             "style": {
               "width": 449.2295912489633,
@@ -22,38 +22,37 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "page /state",
               "backgroundColor": "#b2f2bb",
               "strokeColor": "#495057"
             },
             "measured": {
-              "width": 449,
-              "height": 140
+              "width": 174,
+              "height": 88
             },
-            "dragging": false
+            "dragging": false,
+            "width": 174,
+            "height": 88,
+            "resizing": false
           },
           {
             "id": "NX3gDLvNNOZJyPfP5t0Q5",
             "type": "text",
             "position": {
-              "x": -1579.488978351952,
-              "y": -1611.5485362267436
+              "x": -1572.8223116852855,
+              "y": -1613.2152028934104
             },
             "data": {
-              "text": "page /state",
+              "text": "\n",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 131,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "oteAYGOvPAzOD6Z6qN-ZD",
@@ -72,11 +71,7 @@
               "width": 850,
               "height": 80
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "AwlcXIu4rh8QHhfiJyp3y",
@@ -95,11 +90,7 @@
               "width": 340,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "CFHtvjIDcykJ0Z-IDKBWl",
@@ -125,11 +116,7 @@
             "width": 669,
             "height": 675,
             "resizing": false,
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "N7bZsmkNhFit8rQ5uaF2g",
@@ -148,10 +135,6 @@
               "width": 182,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
@@ -165,15 +148,12 @@
               "text": "My app is for ... ",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 128,
               "height": 39
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -188,17 +168,14 @@
               "text": "It helps users ... ",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 130,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Y2cbAWfz6gnZf_YXWvSYx",
@@ -224,11 +201,7 @@
             "dragging": false,
             "width": 721,
             "height": 677,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
             "id": "sXBg-4POOTJsfmeIbm1hu",
@@ -247,10 +220,6 @@
               "width": 200,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
@@ -264,15 +233,12 @@
               "text": "Page Example:\n- Home\n",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 160,
               "height": 60
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 160,
             "height": 60,
@@ -290,15 +256,12 @@
               "text": "State Example:\n- Empty / Error\n",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 127,
               "height": 76
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 127,
             "height": 76,
@@ -329,11 +292,7 @@
             "dragging": false,
             "width": 765,
             "height": 677,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
             "id": "VNKIxjQMi-sroxvwPSeT7",
@@ -352,10 +311,6 @@
               "width": 185,
               "height": 47
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false
           },
           {
@@ -369,15 +324,12 @@
               "text": "Example:\n- When the user selects a category, the app should filter\nby that category\n",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 418,
               "height": 80
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -398,11 +350,7 @@
               "width": 676,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "oiO7g7fkTebCDiF7Qj7Uk",
@@ -421,11 +369,7 @@
               "width": 408,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "f6ogYF336kmk_X76Iy-Sw",
@@ -444,32 +388,25 @@
               "width": 650,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "acqNTQTIGgy4PXizbVis3",
             "type": "text",
             "position": {
-              "x": -312.54006877119537,
+              "x": -325.87340210452874,
               "y": -2602.638867992505
             },
             "data": {
               "text": "When the user __, the app should __.",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 275,
               "height": 39
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -494,14 +431,11 @@
               "width": 523,
               "height": 673
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "dragging": false,
             "width": 523,
             "height": 673,
-            "resizing": false
+            "resizing": false,
+            "zIndex": -1
           },
           {
             "id": "f9j5s0s_dizHVlcuVu1_1",
@@ -516,17 +450,18 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "1. App Pages / States",
               "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
             },
             "measured": {
-              "width": 522,
-              "height": 67
+              "width": 524,
+              "height": 87
             },
             "dragging": false,
-            "width": 522,
-            "height": 67,
+            "width": 524,
+            "height": 87,
             "resizing": false
           },
           {
@@ -537,20 +472,16 @@
               "y": -1735.4835739873365
             },
             "data": {
-              "text": "1. App Pages / States",
+              "text": "\n",
               "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 225,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "q9b2kh8G-kj1btR80n6q8",
@@ -573,14 +504,11 @@
               "width": 524,
               "height": 670
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 524,
             "height": 670,
             "resizing": false,
-            "dragging": false
+            "dragging": false,
+            "zIndex": -2
           },
           {
             "id": "Ka5Ek13_5-ESL05z9UqvM",
@@ -595,17 +523,18 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "2. User Actions",
               "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
             },
             "measured": {
               "width": 519,
-              "height": 77
+              "height": 93
             },
             "dragging": false,
             "width": 519,
-            "height": 77,
+            "height": 93,
             "resizing": false
           },
           {
@@ -616,27 +545,23 @@
               "y": -1728.7493321465631
             },
             "data": {
-              "text": "2. User Actions",
+              "text": "\n",
               "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 166,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "MNgfrlo7WW_bx9rxGSzMm",
             "type": "shape",
             "position": {
-              "x": -1138.8316568018663,
-              "y": -1644.0834585818432
+              "x": -1134.8316568018663,
+              "y": -1616.0834585818432
             },
             "style": {
               "width": 699.2706700595606,
@@ -644,7 +569,7 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "User does what?",
               "backgroundColor": "#a5d8ff",
               "strokeColor": "#495057"
             },
@@ -665,20 +590,16 @@
               "y": -1628.5512414647585
             },
             "data": {
-              "text": "User does what?",
+              "text": "\n",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 182,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "32H-cL9KQMPuBcYbXKPXa",
@@ -701,14 +622,11 @@
               "width": 545,
               "height": 664
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 545,
             "height": 664,
             "resizing": false,
-            "dragging": false
+            "dragging": false,
+            "zIndex": -3
           },
           {
             "id": "Fwi4N5JseiHukYwlcjNjL",
@@ -723,9 +641,10 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "3. What App Checks/Decides\n(logic or rules)",
               "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
             },
             "measured": {
               "width": 548,
@@ -735,32 +654,6 @@
             "height": 99,
             "resizing": false,
             "dragging": false
-          },
-          {
-            "id": "IzyPtRWCO3A1HyoEVulYy",
-            "type": "text",
-            "position": {
-              "x": -526.0200250003334,
-              "y": -1736.0300079842245
-            },
-            "data": {
-              "text": "3. What App Checks/Decides\n(logic or rules)",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 434,
-              "height": 83
-            },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
-            "width": 434,
-            "height": 83,
-            "resizing": false
           },
           {
             "id": "uhO1-_AhfJbp5wjgo5J3y",
@@ -782,10 +675,6 @@
             "measured": {
               "width": 497,
               "height": 76
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false,
             "width": 497,
@@ -815,10 +704,6 @@
               "height": 155
             },
             "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            },
             "width": 203,
             "height": 155,
             "resizing": false
@@ -844,14 +729,11 @@
               "width": 608,
               "height": 667
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 608,
             "height": 667,
             "resizing": false,
-            "dragging": false
+            "dragging": false,
+            "zIndex": -4
           },
           {
             "id": "rtRnNR5xQruNJGa3p3A5T",
@@ -866,9 +748,10 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "4. What the User Sees",
               "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "fontSize": "large"
             },
             "measured": {
               "width": 604,
@@ -887,20 +770,16 @@
               "y": -1718.4125097788478
             },
             "data": {
-              "text": "4. What the User Sees",
+              "text": "\n",
               "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 237,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "c9_avT9Cx1PyHA0aHTzq-",
@@ -915,7 +794,7 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "User sees what?",
               "backgroundColor": "#ffc9c9",
               "strokeColor": "#495057"
             },
@@ -936,20 +815,16 @@
               "y": -1589.9303329104384
             },
             "data": {
-              "text": "User sees what?",
+              "text": "\n",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
               "showHandles": false
             },
             "measured": {
-              "width": 179,
+              "width": 58,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "WjkfmMb4gtxReof85bx_3",
@@ -975,18 +850,14 @@
             "dragging": false,
             "width": 735,
             "height": 691,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
             "id": "mnhVqeHyJi21jeJFpCUuU",
             "type": "shape",
             "position": {
-              "x": -1163.014660326845,
-              "y": -678.2767209568084
+              "x": -1159.014660326845,
+              "y": -682.2767209568084
             },
             "style": {
               "width": 1803.616040796926,
@@ -1021,14 +892,10 @@
               "showHandles": false
             },
             "measured": {
-              "width": 375,
+              "width": 374,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "u3wivnd9qVnBADM8Y6ZGS",
@@ -1054,11 +921,7 @@
             "dragging": false,
             "width": 831,
             "height": 693,
-            "resizing": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "resizing": false
           },
           {
             "id": "_NrTLDQPAqzhAbjhhjbSy",
@@ -1103,11 +966,7 @@
               "width": 244,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "sgaK78qdjbBHvfDzJzE2w",
@@ -1126,10 +985,6 @@
               "width": 412,
               "height": 39
             },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            },
             "dragging": false
           },
           {
@@ -1143,15 +998,12 @@
               "text": "Example:\n- list of items\n- user selection stored in variables",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 262,
               "height": 80
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
             },
             "dragging": false,
             "resizing": false
@@ -1173,11 +1025,7 @@
               "width": 432,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "pL5n_mGBI_BVoM4mM-lL9",
@@ -1190,17 +1038,14 @@
               "text": "Example:\n- API request",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 112,
               "height": 60
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "Ra7WF6FbbGsY5Qmj3W3LV",
@@ -1219,11 +1064,7 @@
               "width": 416,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "1sWx0p3a4HYVRhc6_4NXy",
@@ -1239,14 +1080,10 @@
               "showHandles": false
             },
             "measured": {
-              "width": 1044,
+              "width": 1043,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           }
         ],
         "edges": [
@@ -1258,7 +1095,8 @@
             "targetHandle": "left-target",
             "markerEnd": {
               "type": "arrowclosed"
-            }
+            },
+            "zIndex": 1
           },
           {
             "id": "7c23f560-0e26-4759-afa7-ba38f889e42c",
@@ -1302,15 +1140,15 @@
           }
         ],
         "viewport": {
-          "x": 1199.206099114043,
-          "y": 1723.7268661061323,
-          "zoom": 0.6
+          "x": 989.2833624993436,
+          "y": 1412.5963502222003,
+          "zoom": 0.5
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:30.310+00:00\",\"changed\":[\"cloned from \\\"capstone-sketlab-template_2025-pilot\\\"\"],\"cloned_from\":\"capstone-sketlab-template_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:58:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:30.310+00:00\",\"changed\":[\"cloned from \\\"capstone-sketlab-template_2025-pilot\\\"\"],\"cloned_from\":\"capstone-sketlab-template_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:58:08 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:40:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 13:42:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

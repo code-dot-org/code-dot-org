@@ -18,11 +18,11 @@ markdown <<MARKDOWN
      alt="ADD ALT TEXT" 
      style="width: 25%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
 
-#### Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
+Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
 
-#### Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
+Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
 
-#### Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
+Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
 <br>
 
 ___
@@ -43,11 +43,11 @@ ___
      alt="ADD ALT TEXT" 
      style="width: 25%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
 
-#### Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
+Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
 
-#### Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
+Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
 
-#### Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
+Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
 
 
 MARKDOWN

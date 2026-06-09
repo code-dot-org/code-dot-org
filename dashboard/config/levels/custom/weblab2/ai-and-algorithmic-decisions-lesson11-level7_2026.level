@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-revised_2026",
-    "long_instructions": "## Complete Your App Logic\r\n\r\nIn this level, you’ll continue building your app and make sure everything works correctly.\r\n\r\n1. Open your project in WebLab.  \r\n2. Continue implementing your app’s logic based on your plan.  \r\n3. Use AI Tutor to help you debug, refine, and improve your code.  \r\n\r\nUse this checklist to guide your work:\r\n- All planned conditions and outcomes are implemented  \r\n- At least one combined condition is working  \r\n- User inputs update the app correctly  \r\n- Variables track and update state as expected  \r\n- Code is organized using functions and event listeners  \r\n\r\nFocus on making your app reliable and complete.",
+    "long_instructions": "## Complete Your App Logic\r\n\r\nContinue building your app and make sure everything works correctly. Use AI Tutor to help you debug, refine, and improve your code.  \r\n\r\nUse this checklist to guide your work:\r\n- All planned conditions and outcomes are implemented  \r\n- At least one combined condition is working  \r\n- User inputs update the app correctly  \r\n- Variables track and update state as expected  \r\n- Code is organized using functions and event listeners  \r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -38,6 +38,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-20T07:32:45.701+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level5-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level5-revised_2026\"},{\"changed_at\":\"2026-04-20 07:35:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-21 04:25:29 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T07:32:45.701+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level5-revised_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level5-revised_2026\"},{\"changed_at\":\"2026-04-20 07:35:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-04-21 04:25:29 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-16 19:35:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

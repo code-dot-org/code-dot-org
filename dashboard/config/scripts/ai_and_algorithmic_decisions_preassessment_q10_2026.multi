@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-preassessment-q10_2026'
 
-question 'A rideshare app decides whether to show a "Car on the way!" message or "No drivers available" based on who\'s nearby. Which of these best describes how the app makes that choice?'
+question 'You are designing a feature where tapping a heart icon either likes or unlikes a post. You decide to sketch a flowchart before writing any JavaScript. Why?'
 
-right 'It uses an if/else statement to check if any drivers are within range.'
-wrong 'It randomly decides which message to show every few seconds.'
-wrong 'It asks the user to refresh until a driver appears.'
-wrong 'It shows both messages at once so the user can choose which one to believe.'
+right 'The flowchart is a behavioral spec — it shows what should happen for every user action before any code is written.'
+wrong 'Flowcharts are required by the browser before code can run.'
+wrong 'Flowcharts replace the need for code entirely.'
+wrong 'Flowcharts make the app load faster.'
 
 allow_multiple_attempts true
 

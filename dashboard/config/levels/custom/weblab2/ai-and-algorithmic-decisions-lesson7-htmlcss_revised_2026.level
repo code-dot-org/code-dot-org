@@ -29,13 +29,18 @@
     "ai_tutor_prompt_settings": {
       "answerTypes": [
         "buildHTML",
-        "buildCSS"
+        "buildCSS",
+        "explainCode",
+        "documentation",
+        "buildJavaScript"
       ],
       "answerTypeCustomizations": {
+        "buildHTML": "Generate both the HTML and CSS at the same time.",
+        "buildJavaScript": "The student has planned a dynamic feature using these four parts:\n- Event: what the user does\n- State: what data is tracked\n- Logic: what decides the change\n- Update: what changes on the page\n\nAsk the student to share their plan for each of these four parts. Then, using their plan, generate the JavaScript in `script.js` that adds this feature to their existing HTML and CSS. \n\nKeep the code beginner-friendly:\n- Use clear variable names that match the student's plan\n- Use a single event listener and event handler\n- Include a variable for state, a condition if the logic needs one, and a function if it helps organize the update\n- Do not add features the student did not ask for\n\nAfter generating the code, briefly explain how the event, state, logic, and update appear in the code."
       }
     },
-    "long_instructions": "### **User Interface**\r\n\r\n#### **Do This:**\r\n\r\n1. Prompt AI with your app idea and generate the user interface using HTML and CSS.\r\n2. Run and test the user interface.\r\n"
+    "long_instructions": "## Do This:\r\n\r\n1. **Generate the UI:** Plan in `planning.md`, then prompt AI to create the content and styling.\r\n\r\n2. **Build the Feature:** Plan in `planning.md`, then prompt AI to add your dynamic feature.\r\n\r\n3. **Label:** In `script.js`, add comments to label the element selector, event listener, and event handler. Inside the handler, label any variable, condition, or function.\r\n\r\n4. **Evaluate:** Check your feature against POUR:\r\n   - Perceivable — Can users notice what changed?\r\n   - Operable — Can users trigger it easily?\r\n   - Understandable — Do users know what happened?\r\n   - Robust — Does it work reliably?\r\n\r\n5. **Improve:** Identify the weakest part and prompt AI to help you fix it.\r\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-17 01:29:52 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-17 01:40:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-17 01:29:52 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-17 01:40:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-16 01:31:40 +0000\",\"changed\":[\"ai_tutor_prompt_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 01:32:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -16,10 +16,10 @@ module AichatAiClientTypes
   FileMessagePartType = string("file")
   MessagePartType = TextMessagePartType | FileMessagePartType
 
-  # type FileMessageImageMimeType = "image/jpeg" | "image/png" | "image/gif"
+  # type FileMessageImageMimeType = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES (union)
   # type FileMessagePdfMimeType =  "application/pdf";
   # type FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType;
-  FileMessageImageMimeType = string("image/jpeg") | string("image/png") | string("image/gif")
+  FileMessageImageMimeType = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| string(t)}.reduce(:|)
   FileMessagePdfMimeType = string("application/pdf")
   FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType
 

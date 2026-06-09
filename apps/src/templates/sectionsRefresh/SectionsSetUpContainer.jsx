@@ -1,4 +1,6 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -6,8 +8,6 @@ import React, {useState, useCallback, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -48,21 +48,25 @@ const NEW = 'New';
 //   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
   // added "default properties" for any new section
-  const [sections, setSections] = useState(
-    section
-      ? [section]
-      : [
-          {
-            pairingAllowed: true,
-            restrictSection: false,
-            ttsAutoplayEnabled: false,
-            lessonExtras: true,
-            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
-            avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
-            avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
-          },
-        ]
-  );
+  const [sections, setSections] = useState(() => {
+    if (section) return [section];
+    const isStudentSection = queryParams('participantType') === 'student';
+    const gradesTeaching =
+      isStudentSection &&
+      (getStore().getState()?.currentUser?.gradesTeaching || []);
+    return [
+      {
+        pairingAllowed: true,
+        restrictSection: false,
+        ttsAutoplayEnabled: false,
+        lessonExtras: true,
+        course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+        avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
+        avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
+        ...(isStudentSection && {grades: gradesTeaching}),
+      },
+    ];
+  });
 
   const updateSection = (sectionIdx, keyToUpdate, val) => {
     const newSections = sections.map((section, idx) => {
@@ -290,21 +294,6 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const onURLClick = () => {
-    showVideoDialog(
-      {
-        autoplay: true,
-        download:
-          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
-        enable_fallback: true,
-        key: 'Gettting_Started_ClassSection',
-        name: 'Creating a Class Section',
-        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
-      },
-      true
-    );
-  };
-
   const renderChildAccountPolicyNotification = () => {
     const isEmailLoggin = queryParams('loginType') === 'email';
     const isStudentSection = queryParams('participantType') === 'student';
@@ -339,18 +328,19 @@ export default function SectionsSetUpContainer({
   ) => {
     return (
       <div className={moduleStyles.withBorderBottom}>
-        <Button
+        <MuiButton
           id={sectionId}
           className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret(isOpen)}
+          variant="text"
+          color="tertiary"
+          startIcon={<FontAwesomeV6Icon iconName={caret(isOpen)} />}
           onClick={toggleIsOpen}
           type="button"
         >
           <Typography variant="h3" gutterBottom>
             {sectionTitle()}
           </Typography>
-        </Button>
+        </MuiButton>
         <div>{isOpen && sectionContent()}</div>
       </div>
     );
@@ -422,11 +412,15 @@ export default function SectionsSetUpContainer({
           >
             {i18n.setUpClassSectionsSubheader()}
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-              {i18n.setUpClassSectionsSubheaderLink()}
-            </a>
-          </Typography>
+          <Link
+            size="m"
+            type="primary"
+            href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Class-Section"
+            openInNewTab
+            className={moduleStyles.whyCreateSectionLink}
+          >
+            {i18n.setUpClassSectionsSubheaderLink()}
+          </Link>
         </>
       )}
       {renderChildAccountPolicyNotification()}
@@ -483,33 +477,35 @@ export default function SectionsSetUpContainer({
             )}
           >
             {isNewSection && ( // Only show 'save and add another' button when creating a new section
-              <Button
+              <MuiButton
                 className={moduleStyles.buttonLeft}
-                icon="plus"
-                text={i18n.addAnotherClassSection()}
-                color={Button.ButtonColor.neutralDark}
+                variant="outlined"
+                color="tertiary"
+                startIcon={<FontAwesomeV6Icon iconName="plus" />}
                 onClick={() => saveSection(sections[0], true, coteachersToAdd)}
                 type="button"
-              />
+              >
+                {i18n.addAnotherClassSection()}
+              </MuiButton>
             )}
-            <Button
+            <MuiButton
               className={moduleStyles.buttonRight}
               id="uitest-save-section-changes"
-              text={
-                isSaveInProgress
-                  ? i18n.saving()
-                  : isNewSection
-                  ? i18n.finishCreatingSections()
-                  : i18n.save()
-              }
-              color={Button.ButtonColor.brandSecondaryDefault}
+              variant="contained"
+              color="primary"
               disabled={isSaveInProgress}
               onClick={() => {
                 setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
               type="button"
-            />
+            >
+              {isSaveInProgress
+                ? i18n.saving()
+                : isNewSection
+                ? i18n.finishCreatingSections()
+                : i18n.save()}
+            </MuiButton>
           </div>
         </>
       )}

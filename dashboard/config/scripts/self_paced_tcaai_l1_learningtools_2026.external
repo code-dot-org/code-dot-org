@@ -5,23 +5,44 @@ description 'description here'
 markdown <<MARKDOWN
 # Student Learning Tools
 
-## AI Chat Lab
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding-right: 12px; height: 150px; clear: both; margin: 0 10px 10px 0;">
+<img 
+src="https://images.code.org/b396acf416fce1cc693fa94b6ff4e452-image-1779211765174.26.23 AM.png" 
+alt="AI Chat Lab icon" 
+style="width:60px; height:60px; border-radius:12px;">
 
-#### Throughout Thinking Critically with AI, students will have the opportunity to interact with an AI Chatbot.
+<h2 style="margin:0;">
+AI Chat Lab
+</h2>
 
-#### Code.org has created an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
+</div>
 
-#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab:
+</div>
+
+Throughout Thinking Critically About AI, students interact with AI systems directly through **AI Chat Lab**.
+
+Code.org created AI Chat Lab specifically for classroom use so students can safely explore generative AI tools without needing external accounts or leaving the platform. Students use AI Chat Lab throughout the unit to:
+- generate and revise text
+- create AI-generated images
+- test prompts
+- collect evidence
+- investigate how AI systems behave
+
+Students repeatedly experiment with how changing prompts affects AI outputs, helping them build a deeper understanding of how AI systems generate responses and where those systems can succeed or fail.
+
+## Student Safety
+
+To support safe and appropriate use, students encounter a reminder message before entering AI Chat Lab:
 
 <div style="background-color: #FFFFFF; color: #000000; padding: 15px; border-radius: 5px; width: 70%; margin: 20px auto; border: 4px solid #000000; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); position: relative;">
     
     <!-- Close Button -->
     <span style="position: absolute; top: 10px; right: 10px; font-size: 20pt; font-weight: bold; border: 2px solid black; border-radius: 2px; padding: 0 10px; cursor: pointer; line-height: 1;">X</span>
     
-<h4><b>Remember to chat responsibly!</b></h4>
-    <hr>
+<p><b>Remember to chat responsibly!</b></p>
+
+<div style="border-top: 2px solid #000000; margin: 12px 0px;"></div>
 
 <div style="font-size: 12pt; line-height: 1.2; margin-top: 10px; padding-left: 10px;">
         <p style="font-size: 12pt;"><b>All messages you send will be visible to your teacher, including blocked messages.</b></p>
@@ -30,16 +51,20 @@ markdown <<MARKDOWN
         <p style="font-size: 12pt;">In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</p>
     </div>
 
-<hr>
+<div style="border-top: 2px solid #000000; margin: 12px 0px;"></div>
 
 <!-- Start Chatting Button -->
 <div align="right">
-  <a href="#start" style="background-color: #8c52ba; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 12pt; border-radius: 8px; display: inline-block;">
+  <a href="#start" style="background-color: #8148B2; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 12pt; border-radius: 8px; display: inline-block;">
     Start Chatting
   </a>
 </div>
 
 </div>
 
-#### **Up Next**: Try out AI Lab!
+Teachers can use AI Chat Lab as an opportunity to reinforce responsible AI habits, including verification, safe sharing practices, thoughtful prompt writing, and critical evaluation of both text and image outputs.
+
+<div style="clear: both;"></div>
+
+**Up Next:** Try chatting in an AI Chat Lab level!
 MARKDOWN

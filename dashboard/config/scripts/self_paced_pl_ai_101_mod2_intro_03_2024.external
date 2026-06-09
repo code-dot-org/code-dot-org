@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # The AI Landscape
 
-#### What about all the other things we’ve heard about - machine learning, natural language processing, how do all of these fit together?
+What about all the other things we’ve heard about - machine learning, natural language processing, how do all of these fit together?
 
-#### Take a look at the diagram below to get a better idea. Key terms are defined underneath. 
+Take a look at the diagram below to get a better idea. Key terms are defined underneath. 
 
 <p style="text-align:center;">
 <img src="https://images.code.org/6360156161735b4ffe0e2f19d74037d4-Screenshot 2024-04-15 at 1.36.49 PM.png" alt="Venn diagram of nested terms related to AI.">
@@ -21,7 +21,7 @@ Image Source: https://www.wondavr.com/ai-course/module-1
 >* #### **Large Language Models:** These are advanced deep learning models trained on extensive corpora of text data, capable of understanding and generating human-like text by predicting subsequent parts of text based on the input they receive.
 >* #### **ChatGPT:** ChatGPT is a prominent example of a large language model, developed by OpenAI, designed specifically for generating human-like responses in a conversational context by processing and producing text based on its training on a diverse dataset.
 
-#### Everything in this diagram falls under the larger umbrella of Data Science, so let’s define that term too.
+Everything in this diagram falls under the larger umbrella of Data Science, so let’s define that term too.
 
 >* #### **Data Science:** an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
 
@@ -30,7 +30,7 @@ Image Source: https://www.wondavr.com/ai-course/module-1
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### It’s okay if you didn’t catch all of that! Here are the same terms defined using non-technical language.
+It’s okay if you didn’t catch all of that! Here are the same terms defined using non-technical language.
 
 >* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
 >* #### **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.

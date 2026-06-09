@@ -5,24 +5,24 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Boolean
 
-#### Conditionals let your program make decisions. They check whether something is true or false and then choose what to do next.
+Conditionals let your program make decisions. They check whether something is true or false and then choose what to do next.
 
 <img src="https://images.code.org/1af7efc4c4b44eae9eb8969add99e2d4-image-1772738194332.png" alt="fork in the road" width="300px" style="display: block; float:right; margin: 40px 40px 40px 10px; border-radius:10px;">
 
 
 ## Think of it like a fork in the road
 
-#### Imagine you’re walking and you reach a fork in the road.
+Imagine you’re walking and you reach a fork in the road.
 
-#### There are only two possible paths:
+There are only two possible paths:
 
-- #### Go left
+- Go left
 
-- #### Go right
+- Go right
 
-#### You can’t go both ways at the same time. **You have to choose one.**
+You can’t go both ways at the same time. **You have to choose one.**
 
-#### That’s exactly how a Boolean works in programming.
+That’s exactly how a Boolean works in programming.
 
 
  <div style="clear:both;"></div>
@@ -34,12 +34,12 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-#### In programming, Booleans are often the result of comparison operations (like age>18) and are used to control the flow of your program. 
+In programming, Booleans are often the result of comparison operations (like age>18) and are used to control the flow of your program. 
 
 ---
 
 ## Next up
 
-#### Let's see how booleans help build flowcharts.
+Let's see how booleans help build flowcharts.
 
 MARKDOWN

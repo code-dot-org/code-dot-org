@@ -100,8 +100,8 @@
     "display_name": "Pickup Queue Buttons",
     "bubble_choice_description": "Use buttons to update the bike rental queue array and re-render the list.",
     "project_template_level_name": "building-data-driven-systems-lesson6-level3c-template-v2-2026",
-    "thumbnail_url": "https://images.code.org/5d9774b5d2d57eb4e98c9a0cbd360361-Screenshot 2026-05-04 213008.png"
+    "thumbnail_url": "https://images.code.org/b9e95f3eadbb880a38283f00ed5af24b-4c.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-05T04:43:01.700+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3c-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3c-v2-2026\"},{\"changed_at\":\"2026-05-05 04:43:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:47:29 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-05T04:43:01.700+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level3c-v2-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level3c-v2-2026\"},{\"changed_at\":\"2026-05-05 04:43:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-05 04:47:29 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-08 04:00:10 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

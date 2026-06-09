@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import VideosBox from '@cdo/apps/aiTutor/views/lessonDeepDive/VideosBox';
+import VideosBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VideosBox';
 
 const mockTutorVideo = jest.fn();
 

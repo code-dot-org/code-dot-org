@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:44:20.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -67,18 +67,14 @@
             "data": {
               "text": "Message: What will the user see?",
               "fontColor": "#000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 343,
-              "height": 47
+              "width": 254,
+              "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "tJAZKd_1uGRvY3P0KQP8T",
@@ -90,18 +86,14 @@
             "data": {
               "text": "Action: What should the user do next?",
               "fontColor": "#000000",
-              "fontSize": "large",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 394,
-              "height": 47
+              "width": 291,
+              "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "UB3_DVlBFUV71Hxn5fAQH",
@@ -119,10 +111,6 @@
             "measured": {
               "width": 182,
               "height": 47
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           },
@@ -158,18 +146,14 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "VEhkyD4LGr1McA5KAUYOg",
@@ -185,27 +169,23 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
               "width": 615,
               "height": 281
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           }
         ],
         "edges": [
 
         ],
         "viewport": {
-          "x": 1603.8509956812522,
-          "y": 749.215675031897,
-          "zoom": 0.5388489208633094
+          "x": 1855.5180454034403,
+          "y": 849.5637599894479,
+          "zoom": 0.6466187050359712
         }
       }
     },
@@ -252,6 +232,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.534+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:32:38 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.534+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:32:38 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:30:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

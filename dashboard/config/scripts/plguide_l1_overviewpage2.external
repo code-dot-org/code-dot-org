@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Module/Unit Overview Page
 
-#### The module/unit overview page consists of an overview of the module/unit on the top of the page and overviews of each lesson in boxes below. 
+The module/unit overview page consists of an overview of the module/unit on the top of the page and overviews of each lesson in boxes below. 
 
 <div style="text-align: center; margin: 20px auto;">
     <img src="https://images.code.org/297b2dd9b059a68570461144276585d5-image-1740602984859.49.39 PM.png" alt="The Getting Started Module overview page" style="width: 80%; border-radius: 10px;">
 </div>
 
-#### The module description should have a short overview of the module, plus its high-level objectives. This text is also H5 instead of H4.
+The module description should have a short overview of the module, plus its high-level objectives. This text is also H5 instead of H4.
 
 ___
 

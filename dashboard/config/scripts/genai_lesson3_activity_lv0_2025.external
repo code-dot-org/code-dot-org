@@ -12,9 +12,9 @@ markdown <<MARKDOWN
      style="width: 15%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
 -->
 
-#### We’ve been hired to help create a brand new language model called RecipeBot. This chatbot will help people discover new recipes or suggest different types of cuisines based on people's preferences. Our job is to curate the online data sources used to train the model. This means looking at a lot of food websites!
+We’ve been hired to help create a brand new language model called RecipeBot. This chatbot will help people discover new recipes or suggest different types of cuisines based on people's preferences. Our job is to curate the online data sources used to train the model. This means looking at a lot of food websites!
 
 ## Do This
 
-#### Use a search engine to find a website that can be used for this task. Look for websites with specific words and phrases that we want the chatbot to understand.
+Use a search engine to find a website that can be used for this task. Look for websites with specific words and phrases that we want the chatbot to understand.
 MARKDOWN

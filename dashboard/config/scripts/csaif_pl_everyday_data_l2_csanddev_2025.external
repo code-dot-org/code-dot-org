@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 # Types of Data
 
-#### Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
+Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
 
 <div style="clear:both;"></div>
 
@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 >- #### **Environmental data** comes from sensors that measure temperature, humidity, air quality, and other conditions, supporting applications in weather forecasting and smart home automation.
 >- #### **Biometric data** includes fingerprints, facial features, and heart rate, commonly used for security authentication and health monitoring.
 
-#### By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
+By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
 
 
 

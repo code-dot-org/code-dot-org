@@ -37,6 +37,7 @@ class JitPlExemplar < ApplicationRecord
       code_content: code_content,
       exemplar_type: exemplar_type,
       resources: resources.map(&:summarize_for_lesson_edit),
+      json_videos: json_videos.map(&:summarize),
     }
   end
 end

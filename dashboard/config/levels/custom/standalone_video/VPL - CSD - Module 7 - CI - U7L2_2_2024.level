@@ -13,7 +13,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "#### Watch the \"What is Machine Learning?\" (2:56) video.\r\n\r\n#### **Up Next**: Review the types of AI."
+    "long_instructions": "Watch the \"What is Machine Learning?\" (2:56) video.\r\n\r\n**Up Next**: Review the types of AI."
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:37.244+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 7 - CI - U7L2_2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 7 - CI - U7L2_2_2023\"},{\"changed_at\":\"2024-09-04 20:51:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",

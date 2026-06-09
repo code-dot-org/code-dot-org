@@ -1,6 +1,7 @@
 import React, {createContext, useContext} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -37,6 +38,9 @@ export type CodebridgeContextType = {
   aiTutorSystemPrompt?: string;
   tutorVideos?: JsonVideoFileMetadata[];
   aiTutorDisabled?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  allowMultipleValidationFiles?: boolean;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

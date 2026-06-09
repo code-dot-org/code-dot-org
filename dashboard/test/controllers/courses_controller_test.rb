@@ -45,8 +45,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       @unit_group_regular = create(:unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -59,8 +58,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Unit.stubs(:should_cache?).returns true
-      Unit.clear_cache
+      setup_script_cache
       UnitGroup.clear_cache
 
       ActiveRecord::Base.connection.disable_query_cache!
@@ -117,7 +115,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
     assert_includes(@response.body, "<title>Computer Science Principles (&#39;19-&#39;20) - Code.org [test]</title>")
     assert_includes(@response.body, "<meta property=\"description\" content=\"Learn foundational computer science concepts.\" />")
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2019\" />")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/csp-2019\" />")
   end
 
   test "canonical url points to the latest stable version" do
@@ -129,7 +127,7 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: ug2019}
 
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2020\" />")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/csp-2020\" />")
   end
 
   test "canonical url points to itself when it is the latest stable version" do
@@ -141,7 +139,7 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: ug2020}
 
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2020\" />")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/csp-2020\" />")
   end
 
   test "show: non existant course throws" do

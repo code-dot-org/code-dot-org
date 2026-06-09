@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -10,7 +11,6 @@ import DemoChip from '@cdo/apps/templates/DemoChip';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import {
@@ -79,8 +79,9 @@ function StudentColumn({
       aria-expanded={false}
       id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
-      <FontAwesome
-        icon="caret-right"
+      <FontAwesomeV6Icon
+        iconName="caret-right"
+        iconStyle="solid"
         title="caret"
         className={styles.studentColumnNameCaret}
       />
@@ -103,8 +104,9 @@ function StudentColumn({
         aria-expanded={true}
         id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
-        <FontAwesome
-          icon="caret-down"
+        <FontAwesomeV6Icon
+          iconName="caret-down"
+          iconStyle="solid"
           className={styles.studentColumnNameCaret}
         />
         <span className={styles.studentColumnNameText}>

@@ -1,5 +1,5 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Typography} from '@mui/material';
-import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
@@ -326,26 +326,17 @@ export default function CurriculumQuickAssign({
         </>
       ) : (
         <>
-          <div className={moduleStyles.input}>
-            <label
-              className={classnames(
-                moduleStyles.decideLater,
-                moduleStyles.typographyLabel
-              )}
-              htmlFor="decide-later"
-            >
-              {selectedCourseOffering
-                ? i18n.clearAssignedCurriculum()
-                : i18n.decideLater()}
-            </label>
-            <input
-              checked={decideLater}
-              className={classnames(
-                moduleStyles.inputBox,
-                moduleStyles.withBrandAccentColor
-              )}
-              type="checkbox"
+          <div>
+            <Checkbox
               id="decide-later"
+              name="decide-later"
+              className={moduleStyles.decideLaterCheckbox}
+              label={
+                selectedCourseOffering
+                  ? i18n.clearAssignedCurriculum()
+                  : i18n.decideLater()
+              }
+              checked={decideLater}
               onChange={toggleDecideLater}
             />
             <Typography variant="h3" gutterBottom>

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-05-06T19:13:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "1. In your own words, how does AI decide what to generate when you give it a prompt?\r\n\r\n2. What did you change in your first prompt after seeing the AI's output? Why?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "true",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aif-aac-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-06T19:13:35.902+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3-cfu_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3-cfu_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

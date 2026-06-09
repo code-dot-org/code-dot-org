@@ -158,7 +158,7 @@ export class RegionalPartnerMiniContact extends React.Component {
           className="regional-partner-mini-contact-form"
         >
           <div className={style.intro}>
-            Your local Code.org Regional Partner provides high quality Code.org
+            Your local CodeAI Regional Partner provides high quality CodeAI
             professional learning to teachers, and can help guide your school or
             district on implementation, certification, funding, and more. They
             are happy to answer any questions you may have about the program!

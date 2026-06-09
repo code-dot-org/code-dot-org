@@ -6,15 +6,22 @@ import {
   saveUserLessonReflection,
   saveUserLessonObjectiveReflection,
 } from '@cdo/apps/aiTutor/reflectionsApi';
-import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReflectionBox';
+import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
   saveUserLessonReflection: jest.fn(),
   saveUserLessonObjectiveReflection: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {post: jest.fn()},
+}));
+
 const saveReflectionMock = saveUserLessonReflection as jest.Mock;
 const saveObjectiveMock = saveUserLessonObjectiveReflection as jest.Mock;
+const postMock = HttpClient.post as jest.Mock;
 
 const LESSON_ID = 42;
 const OBJECTIVES = [
@@ -25,9 +32,11 @@ const OBJECTIVES = [
 function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
   render(
     <ReflectionBox
+      unitLabel={'unit 1'}
       lessonId={LESSON_ID}
       objectives={OBJECTIVES}
       onSubmitComplete={onSubmitComplete}
+      onNext={jest.fn()}
     />
   );
 }
@@ -37,27 +46,25 @@ describe('ReflectionBox submit button', () => {
     jest.clearAllMocks();
     saveReflectionMock.mockResolvedValue(undefined);
     saveObjectiveMock.mockResolvedValue(undefined);
+    postMock.mockResolvedValue(undefined);
   });
 
   it('renders the submit button', () => {
     renderReflectionBox();
     expect(
-      screen.getByRole('button', {name: /submit reflection/i})
+      screen.getByRole('button', {name: /start practicing/i})
     ).toBeInTheDocument();
   });
 
   it('calls saveUserLessonReflection with lessonId, success, and struggle on submit', async () => {
     renderReflectionBox();
 
-    fireEvent.change(screen.getByLabelText(/moment i felt successful/i), {
-      target: {value: 'I understood loops'},
-    });
-    fireEvent.change(screen.getByLabelText(/still confused/i), {
-      target: {value: 'Recursion is hard'},
-    });
+    const textboxes = screen.getAllByRole('textbox');
+    fireEvent.change(textboxes[0], {target: {value: 'I understood loops'}});
+    fireEvent.change(textboxes[1], {target: {value: 'Recursion is hard'}});
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveReflectionMock).toHaveBeenCalledWith(
@@ -71,7 +78,7 @@ describe('ReflectionBox submit button', () => {
     renderReflectionBox();
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).not.toHaveBeenCalled();
@@ -81,10 +88,10 @@ describe('ReflectionBox submit button', () => {
     renderReflectionBox();
 
     // Click Confident for the first objective only
-    fireEvent.click(screen.getAllByRole('button', {name: /confident/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(1);
@@ -93,16 +100,70 @@ describe('ReflectionBox submit button', () => {
   it('calls saveUserLessonObjectiveReflection for each selected objective', async () => {
     renderReflectionBox();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /confident/i})[0]);
-    fireEvent.click(screen.getAllByRole('button', {name: /lost/i})[1]);
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /struggling/i})[1]);
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /submit reflection/i}));
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
     expect(saveObjectiveMock).toHaveBeenCalledWith('1', 'confident');
     expect(saveObjectiveMock).toHaveBeenCalledWith('2', 'lost');
+  });
+
+  it('requests podcast generation for objectives rated struggling or getting there', async () => {
+    renderReflectionBox();
+
+    fireEvent.click(screen.getAllByRole('button', {name: /struggling/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /getting there/i})[1]);
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+    });
+
+    expect(postMock).toHaveBeenCalledTimes(1);
+    expect(postMock).toHaveBeenCalledWith(
+      '/ai_student_podcasts/generate_podcast',
+      JSON.stringify({lesson_id: LESSON_ID, objective_ids: ['1', '2']}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('requests podcast generation with an empty objective list when all objectives are rated "Got it"', async () => {
+    renderReflectionBox();
+
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
+    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[1]);
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+    });
+
+    expect(postMock).toHaveBeenCalledTimes(1);
+    expect(postMock).toHaveBeenCalledWith(
+      '/ai_student_podcasts/generate_podcast',
+      JSON.stringify({lesson_id: LESSON_ID, objective_ids: []}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('requests podcast generation with every lesson objective when no objective is rated', async () => {
+    renderReflectionBox();
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+    });
+
+    expect(postMock).toHaveBeenCalledTimes(1);
+    expect(postMock).toHaveBeenCalledWith(
+      '/ai_student_podcasts/generate_podcast',
+      JSON.stringify({lesson_id: LESSON_ID, objective_ids: ['1', '2']}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
   });
 
   it('disables the submit button while submitting and re-enables after', async () => {
@@ -114,7 +175,7 @@ describe('ReflectionBox submit button', () => {
     );
 
     renderReflectionBox();
-    const button = screen.getByRole('button', {name: /submit reflection/i});
+    const button = screen.getByRole('button', {name: /start practicing/i});
 
     await act(async () => {
       fireEvent.click(button);

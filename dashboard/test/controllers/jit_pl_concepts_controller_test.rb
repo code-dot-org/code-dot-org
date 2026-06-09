@@ -100,6 +100,31 @@ class JitPlConceptsControllerTest < ActionController::TestCase
     assert_equal [resource.id], @concept.resources.map(&:id)
   end
 
+  test 'json_videos are saved when updating a concept' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+
+    put :update, params: {id: @concept.id, name: @concept.name, json_video_ids: [video.id]}
+    assert_response :ok
+
+    @concept.reload
+    assert_equal [video.id], @concept.json_videos.map(&:id)
+  end
+
+  test 'json_videos are removed when updating a concept with empty json_video_ids' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    video = create(:json_video)
+    @concept.json_videos << video
+
+    put :update, params: {id: @concept.id, name: @concept.name, json_video_ids: []}
+    assert_response :ok
+
+    @concept.reload
+    assert_empty @concept.json_videos
+  end
+
   test 'resources are removed when updating a concept with empty resource_ids' do
     sign_in @levelbuilder
     JitPlConcept.any_instance.stubs(:write_serialization)

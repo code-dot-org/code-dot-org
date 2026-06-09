@@ -1,0 +1,78 @@
+.sectionCardWrapper {
+  touch-action: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
+
+  &draggable {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: var(--borders-neutral-primary);
+  }
+
+  &draggableOption {
+    display: inline-block;
+    background-color: var(--background-neutral-primary);
+    border: 1px solid;
+    border-color: var(--borders-neutral-primary);
+    color: var(--text-neutral-primary);
+    min-width: 30px;
+    text-align: center;
+    border-radius: 100px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 6px 12px;
+    text-wrap: auto;
+    cursor: pointer !important;
+  }
+
+  &correct {
+    border: 4px solid;
+    border-color: var(--borders-success-primary);
+  }
+
+  &incorrect {
+    border: 4px solid;
+    border-color: var(--borders-error-primary);
+  }
+
+  &:hover {
+    filter: brightness(1.15);
+    transform: scale(1.03);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #6b9fd4;
+    outline-offset: 3px;
+  }
+}
+
+.cardLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+.correctIcon {
+  color: var(--text-success-primary);
+  margin-left: auto;
+}
+
+.incorrectIcon {
+  color: var(--text-error-primary);
+  margin-left: auto;
+}

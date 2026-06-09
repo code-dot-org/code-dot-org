@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # Using Commas in Print 
 
 
-#### In the previous levels, you worked with **print statements** and strings.
+In the previous levels, you worked with **print statements** and strings.
 
 
 <img src="https://images.code.org/3253ee1e2dd9ddd8b176930b996dd13f-image-1745270250476.png" alt="python code declaring variables and print statements" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
@@ -17,12 +17,12 @@ markdown <<MARKDOWN
 
 ## Using a comma ',' in print()
 
-#### When you use commas inside a `print()` statement, Python treats each item as a separate argument. 
+When you use commas inside a `print()` statement, Python treats each item as a separate argument. 
 
-#### Here's what that means in simple terms:
+Here's what that means in simple terms:
 
-- #### Python will automatically convert each item into a string, if it's not already.
-- #### Python will also add a space between each item when it prints them.
+- Python will automatically convert each item into a string, if it's not already.
+- Python will also add a space between each item when it prints them.
 
 
 

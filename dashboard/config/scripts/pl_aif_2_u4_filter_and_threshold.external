@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Filters, Labels, and What Gets Seen
 
-#### When you browse a website or app, filters help narrow down large lists of items.
+When you browse a website or app, filters help narrow down large lists of items.
 
-### But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
+But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
 ## Two Websites, Same Goal
-#### Below are two websites that sell similar products.
-#### Both allow users to filter results, but they do it differently.
+Below are two websites that sell similar products.
+Both allow users to filter results, but they do it differently.
 
 <div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
@@ -94,13 +94,19 @@ markdown <<MARKDOWN
 
 ## Key Terms
 
-<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Threshold</strong> <p style="font-size:14pt;"> A <strong>threshold</strong> is a cutoff value used to decide which items pass a filter. </p> <p style="font-size:14pt;"> <strong>Example:</strong> An art site only features artists with at least <strong>500 followers</strong>. The threshold is 500. </p> </div>
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖A <strong>threshold</strong> is a cutoff value used to decide which items pass a filter. <br><hr> <strong>Example:</strong> An art site only features artists with at least <strong>500 followers</strong>. The threshold is 500.
+</p>
+</div>
 
-<div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Fallback value</strong> <p style="font-size:14pt;"> A <strong>fallback value</strong> is a default label or value used when data is missing or doesn’t match a category. </p> <p style="font-size:14pt;"> <strong>Example:</strong> If a user doesn’t enter an email, the app shows <em>Email: Not provided</em> instead of leaving it blank. </p> </div> </div>
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖  A <strong>fallback value</strong> is a default label or value used when data is missing or doesn’t match a category.<br><hr> <strong>Example:</strong> If a user doesn’t enter an email, the app shows <em>Email: Not provided</em> instead of leaving it blank. 
+</p>
+</div>
 
 
 
 ## Next up
-#### You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
+You’ll explore how filters and thresholds work in code, and how small design choices can have big impacts on who gets seen.
 
 MARKDOWN

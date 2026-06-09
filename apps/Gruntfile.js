@@ -130,6 +130,13 @@ module.exports = function (grunt) {
           src: ['**'],
           dest: 'build/package/media/skins/ailab',
         },
+        {
+          // ml-playground images are emitted to dist/images, not dist/assets.
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist',
+          src: ['images/**'],
+          dest: 'build/package/media/skins/ailab',
+        },
 
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
@@ -370,6 +377,7 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
+    generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
@@ -395,6 +403,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:static',
   ]);
 
@@ -545,6 +554,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',

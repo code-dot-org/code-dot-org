@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson Materials
 
-#### Students will use various resources throughout the Thinking Critically About AI unit. It is up to you whether you would like to **print** these materials, or have students access them **virtually**.
+Students will use various resources throughout the Thinking Critically About AI unit. It is up to you whether you would like to **print** these materials, or have students access them **virtually**.
 
 <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #048899; margin: 20px 0px"><b>⚠️ NOTE</b>: It is essential that students keep all materials for the duration of the unit, as each milestone builds on previous work and materials will be revisited and revised.
 </p>
@@ -17,15 +17,15 @@ markdown <<MARKDOWN
   alt="" 
   style="width: 30%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### Throughout the unit, the KWL chart serves as a living inquiry log and artifact of students' evolving understanding of AI. They will revisit their KWL charts routinely to document their thinking as they progress toward the final project.
+Throughout the unit, the KWL chart serves as a living inquiry log and artifact of students' evolving understanding of AI. They will revisit their KWL charts routinely to document their thinking as they progress toward the final project.
 
-#### You may choose to have the KWL chart be **individual**, or use an anchor chart and complete it **as a class**.
+You may choose to have the KWL chart be **individual**, or use an anchor chart and complete it **as a class**.
 
 ### **Implementation Tips:**
 
-* #### **Move Beyond "Filling it Out"**: KWL charts often fail when they are treated as an empty formality. Use the chart to make thinking visible by revisiting it at the start and end of every lesson.
-* #### **Focus on Agency**: Use the "W" column to empower students. If a student finds a red flag regarding privacy, that discovery should immediately be turned into a new "Want to Know" inquiry about data security.
-* #### **Evidence over Facts**: In the "L" column, prioritize evidence. Instead of writing "AI can be biased," students should record the specific result of an AI testing they conducted in their explorations.
+* **Move Beyond "Filling it Out"**: KWL charts often fail when they are treated as an empty formality. Use the chart to make thinking visible by revisiting it at the start and end of every lesson.
+* **Focus on Agency**: Use the "W" column to empower students. If a student finds a red flag regarding privacy, that discovery should immediately be turned into a new "Want to Know" inquiry about data security.
+* **Evidence over Facts**: In the "L" column, prioritize evidence. Instead of writing "AI can be biased," students should record the specific result of an AI testing they conducted in their explorations.
 
 <!-- Sustained Inquiry -->
 <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
@@ -47,15 +47,15 @@ markdown <<MARKDOWN
 
 
 
-#### Each milestone includes a Learning Log that spans its two-lesson arc. In their Learning Logs, students reflect on new understandings about AI and draft sections of their Responsible AI Use Guide, gradually building toward their final project.
+Each milestone includes a Learning Log that spans its two-lesson arc. In their Learning Logs, students reflect on new understandings about AI and draft sections of their Responsible AI Use Guide, gradually building toward their final project.
 
 ### **Implementation Tips**
 
-* #### **Set the Purpose Early**: Introduce the Learning Log as a working document, not a worksheet. Help students understand that this is where they will track evolving ideas, and draft their final project.
+* **Set the Purpose Early**: Introduce the Learning Log as a working document, not a worksheet. Help students understand that this is where they will track evolving ideas, and draft their final project.
 
-* #### **Model Thoughtful Reflection**: Show an example of a strong Learning Log entry. Demonstrate how to move beyond surface-level responses (“AI can be wrong”) to evidence-based reflection (“AI sounded confident but lacked source evidence, which made it less credible.”).
+* **Model Thoughtful Reflection**: Show an example of a strong Learning Log entry. Demonstrate how to move beyond surface-level responses (“AI can be wrong”) to evidence-based reflection (“AI sounded confident but lacked source evidence, which made it less credible.”).
 
-* #### **Use Logs as Formative Assessment**: Skim logs periodically to gauge understanding, misconceptions, and depth of reasoning.
+* **Use Logs as Formative Assessment**: Skim logs periodically to gauge understanding, misconceptions, and depth of reasoning.
 
 <!-- Reflection -->
 <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">

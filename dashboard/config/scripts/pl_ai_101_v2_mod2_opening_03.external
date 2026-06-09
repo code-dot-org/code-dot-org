@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # The AI Landscape
 
-#### Let's take a minute to summarize what you learned on the last level!
+Let's take a minute to summarize what you learned on the last level!
 
-#### Look at the diagram below to get a better idea of how these terms and concepts fit together. Key terms are defined underneath. 
+Look at the diagram below to get a better idea of how these terms and concepts fit together. Key terms are defined underneath. 
 
 <p style="text-align:center;">
 <img src="https://images.code.org/6360156161735b4ffe0e2f19d74037d4-Screenshot 2024-04-15 at 1.36.49 PM.png" alt="Venn diagram of nested terms related to AI.">
@@ -24,7 +24,7 @@ Image Source: https://www.wondavr.com/ai-course/module-1
 </div>
 
 
-#### Everything in this diagram falls under the larger umbrella of Data Science, so let’s define that term too.
+Everything in this diagram falls under the larger umbrella of Data Science, so let’s define that term too.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Science:</strong> an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.</p></div>
@@ -34,15 +34,15 @@ Image Source: https://www.wondavr.com/ai-course/module-1
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### It’s okay if you didn’t catch all of that! Here are the same terms defined using non-technical language.
+It’s okay if you didn’t catch all of that! Here are the same terms defined using non-technical language.
 
-* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
-* #### **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.
-* #### **Natural Language Processing (NLP):** Helps computers understand and respond to human language, like reading or listening. This is how Siri understands your questions.
-* #### **Deep Learning:** A method for computers to learn and make decisions by simulating the network of neurons in a human brain. Used to in facial recognition technology such as unlocking smartphones.
-* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
-* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
-* #### **Data Science:** The process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers to analyze sleep patterns
+* **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
+* **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.
+* **Natural Language Processing (NLP):** Helps computers understand and respond to human language, like reading or listening. This is how Siri understands your questions.
+* **Deep Learning:** A method for computers to learn and make decisions by simulating the network of neurons in a human brain. Used to in facial recognition technology such as unlocking smartphones.
+* **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
+* **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
+* **Data Science:** The process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers to analyze sleep patterns
 
 
 </p></div>

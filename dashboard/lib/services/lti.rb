@@ -249,7 +249,7 @@ module Services
       end
 
       # Prune teachers who have been removed from the section in the LMS
-      section.section_instructors.each do |section_instructor|
+      section.section_instructors.includes(:instructor).each do |section_instructor|
         instructor = section_instructor.instructor
         unless current_teachers.include?(instructor.id)
           section.remove_instructor(instructor)

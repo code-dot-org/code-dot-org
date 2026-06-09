@@ -1,0 +1,36 @@
+name 'pl-ai-101-V2-mod1-impact-04_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Impact on Educators
+
+Many educators are surprised by how well AI can help with tasks like drafting lesson plans, giving feedback on writing, and supporting creative activities such as storytelling or brainstorming project ideas.
+
+As the graphic below shows, teachers spend a significant portion of their roughly 50-hour workweek on preparation, grading, and administrative tasks, often outside of direct time with students. These are areas where AI can help save time while keeping teachers at the center of learning.
+
+<div style="width:100%; text-align:center;">
+
+<div style="display:inline-block; border:1px solid #d6d6d6; border-radius:18px; padding:24px 28px;">
+
+<h2 style="margin-top:0; margin-bottom:18px; color:#444;">
+Teacher Workday
+</h2>
+
+<img src="https://images.code.org/43c45055ef874764a0fdf2a7c1d0387a-Screenshot 2026-02-04 at 2.27.14 PM.png" alt="Pie chart showing 49% of a teacher's time in direct interaction with students." style="width:100%; max-width:700px; display:block; margin:auto; border-radius:12px;">
+
+<div style="margin-top:10px; font-size:14px; color:#666; font-style:italic;">
+Image: McKinsey 2020
+</div>
+
+</div>
+</div>
+
+<br>
+
+> **💬 Quick Reflection:** Does this graphic align with your experience as an educator?
+
+AI is unlikely to replace teachers. Instead, it works best as a teaching assistant that helps reduce workload and support daily tasks. By handling routine or time-consuming work, AI can give educators more time for instruction, coaching, and relationship-building. When used thoughtfully, AI may also help reduce teacher burnout and support schools facing staffing challenges.
+
+In Module 3, Transforming Teaching with AI, you’ll explore how educators can use AI to save time on preparation, grading, feedback, and administrative tasks.
+MARKDOWN

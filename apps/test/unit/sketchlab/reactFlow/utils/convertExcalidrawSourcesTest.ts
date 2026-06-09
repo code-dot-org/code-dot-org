@@ -109,8 +109,7 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       text: 'hello',
       fontColor: '#222222',
-      fontSize: 'medium',
-      showHandles: false,
+      fontSize: 16,
     });
   });
 
@@ -134,40 +133,8 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toMatchObject({
       label: 'inside',
       fontColor: '#ff0000',
-      fontSize: 'large',
+      fontSize: 22,
     });
-  });
-
-  it('maps fontSize px into the small/medium/large bands', () => {
-    const source: ExcalidrawSourceWithExternalFiles = {
-      elements: [
-        el({
-          type: 'text',
-          id: 'small',
-          text: '',
-          fontSize: 12,
-          containerId: null,
-        }),
-        el({
-          type: 'text',
-          id: 'medium',
-          text: '',
-          fontSize: 16,
-          containerId: null,
-        }),
-        el({
-          type: 'text',
-          id: 'large',
-          text: '',
-          fontSize: 22,
-          containerId: null,
-        }),
-      ],
-    };
-    const {nodes} = convertExcalidrawToReactFlow(source);
-    expect((nodes[0].data as {fontSize?: string}).fontSize).toBe('small');
-    expect((nodes[1].data as {fontSize?: string}).fontSize).toBe('medium');
-    expect((nodes[2].data as {fontSize?: string}).fontSize).toBe('large');
   });
 
   it('emits image nodes when the file id has an externalFiles url', () => {
@@ -191,7 +158,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'https://example.com/f1.png',
       altText: '',
-      showHandles: false,
     });
   });
 
@@ -220,7 +186,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'data:image/png;base64,AAAA',
       altText: '',
-      showHandles: false,
     });
   });
 

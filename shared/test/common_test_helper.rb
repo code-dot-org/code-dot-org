@@ -87,8 +87,6 @@ module SetupTest
       CDO.stubs("#{content_type}_s3_directory").returns("#{content_type}_test")
     end
 
-    CDO.stubs(newrelic_logging: true)
-
     VCR.use_cassette(cassette_name, record: record_mode) do
       # rubocop:disable CustomCops/PegasusDbUsage
       # rubocop:disable CustomCops/DashboardDbUsage

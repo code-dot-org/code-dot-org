@@ -1,13 +1,23 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import color from '@cdo/apps/util/color';
+import moduleStyles from './percent-answered-cell.module.scss';
 
 function calculateOpacity(answered) {
   return (answered + 10) / 100;
 }
+
+const defaultMainLayoutStyle = {
+  border: 'none',
+  display: 'flex',
+  justifyContent: 'space-between',
+  flexDirection: 'row',
+  alignItems: 'center',
+  boxSizing: 'border-box',
+  height: '100%',
+  padding: 10,
+};
 
 class PercentAnsweredCell extends Component {
   static propTypes = {
@@ -27,19 +37,25 @@ class PercentAnsweredCell extends Component {
       : `rgba(255, 99, 71, ${opacity})`;
   };
 
+  renderCorrectIcon() {
+    if (!this.props.isCorrectAnswer) return null;
+    return (
+      <FontAwesomeV6Icon
+        iconName="check-circle"
+        className={moduleStyles.correctIcon}
+      />
+    );
+  }
+
   render() {
-    const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
+    const {percentValue, displayAnswer} = this.props;
 
     // Display a cell with letters for answers.
     if (displayAnswer) {
       return (
-        <div style={styles.main}>
-          <div style={styles.value}>{displayAnswer}</div>
-          <div style={styles.icon}>
-            {isCorrectAnswer && (
-              <FontAwesome icon="check-circle" style={styles.icon} />
-            )}
-          </div>
+        <div style={defaultMainLayoutStyle}>
+          <div className={moduleStyles.value}>{displayAnswer}</div>
+          {this.renderCorrectIcon()}
         </div>
       );
     }
@@ -50,43 +66,19 @@ class PercentAnsweredCell extends Component {
     };
     return (
       <div style={{...this.props.mainLayoutStyle, ...backgroundCSS}}>
-        <div style={{...styles.value, ...this.props.valueLayoutStyle}}>
+        <div className={moduleStyles.value} style={this.props.valueLayoutStyle}>
           {percentValue >= 0 && <span>{`${percentValue}%`}</span>}
           {percentValue < 0 && <span>{'-'}</span>}
         </div>
-        <div style={styles.icon}>
-          {isCorrectAnswer && (
-            <FontAwesome icon="check-circle" style={styles.icon} />
-          )}
-        </div>
+        {this.renderCorrectIcon()}
       </div>
     );
   }
 }
 
-const styles = {
-  main: {
-    border: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    boxSizing: 'border-box',
-    height: '100%',
-    padding: 10,
-  },
-  icon: {
-    color: color.level_perfect,
-  },
-  value: {
-    color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
-  },
-};
-
 PercentAnsweredCell.defaultProps = {
   percentValue: -1,
-  mainLayoutStyle: styles.main,
+  mainLayoutStyle: defaultMainLayoutStyle,
   valueLayoutStyle: {marginRight: 10},
 };
 

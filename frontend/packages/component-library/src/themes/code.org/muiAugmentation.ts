@@ -1,8 +1,8 @@
 /**
  * Design-system MUI module augmentations: Button, IconButton, and
  * Breadcrumbs custom sizes, colors, and variants; anchor attrs on
- * ButtonOwnProps; and Typography variants matching the design-system
- * type scale.
+ * ButtonOwnProps; Typography variants matching the design-system type scale;
+ * and the MuiFooter custom component slot declarations.
  */
 
 import '@mui/material/Button';
@@ -111,6 +111,30 @@ declare module '@mui/material/Typography' {
     label4: true;
     strong: true;
     em: true;
+  }
+}
+
+import type {CSSInterpolation, Theme} from '@mui/material/styles';
+
+// Slot values accept either a plain style object or a theme callback.
+type SlotOverride =
+  | CSSInterpolation
+  | ((props: {theme: Theme}) => CSSInterpolation);
+
+declare module '@mui/material/styles' {
+  interface Components {
+    MuiFooter?: {
+      styleOverrides?: {
+        root?: SlotOverride;
+        grid?: SlotOverride;
+        links?: SlotOverride;
+        link?: SlotOverride;
+        localeSelect?: SlotOverride;
+        copyright?: SlotOverride;
+        fineprint?: SlotOverride;
+        imageLink?: SlotOverride;
+      };
+    };
   }
 }
 

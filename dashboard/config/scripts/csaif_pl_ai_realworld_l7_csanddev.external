@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # AI in the Real World
 
-#### After learning about analyzing data, students explore how AI models process data and the role of specialized hardware in optimizing performance. They analyze an AI model, learn about different processing units, and test their capabilities in various tasks. 
+After learning about analyzing data, students explore how AI models process data and the role of specialized hardware in optimizing performance. They analyze an AI model, learn about different processing units, and test their capabilities in various tasks. 
 
 ## Real-world Scenarios 
 
-#### AI systems use data to make decisions in real-world applications. 
-#### Let’s explore how different AI models function and what data they rely on.
+AI systems use data to make decisions in real-world applications. 
+Let’s explore how different AI models function and what data they rely on.
 
 <div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
 
@@ -54,7 +54,7 @@ markdown <<MARKDOWN
 
 ## AI and Data 
 
-#### Choose one of the scenarios above and consider:
+Choose one of the scenarios above and consider:
 
 >- #### What is the AI model doing in this scenario?
 >- #### What type of data is being input?
@@ -64,7 +64,7 @@ markdown <<MARKDOWN
 
 ## AI and Hardware
 
-#### After examining these real-world scenarios, students should recognize the importance of optimizing AI systems. Next, they’ll explore which types of hardware are best suited for powering and improving AI performance.
+After examining these real-world scenarios, students should recognize the importance of optimizing AI systems. Next, they’ll explore which types of hardware are best suited for powering and improving AI performance.
 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">

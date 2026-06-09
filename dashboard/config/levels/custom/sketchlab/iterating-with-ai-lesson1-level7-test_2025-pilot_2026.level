@@ -1,7 +1,8 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:39:55.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -23,7 +24,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
@@ -31,10 +32,7 @@
               "height": 1096
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "zIndex": -2
           },
           {
             "id": "m2ydmYUaLP8AF3slOa7_J",
@@ -73,11 +71,12 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "run shootBasket function\n\nset                      \nif user makes basket",
+              "label": "run shootBasket function\n\nset makeBasket = true\nif user makes basket",
               "backgroundColor": "#e9ecef",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
-              "fontSize": "large"
+              "fontSize": "large",
+              "textAlign": "center"
             },
             "measured": {
               "width": 422,
@@ -130,11 +129,7 @@
               "width": 231,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "NM68It5OWfW6bho4ZZBtP",
@@ -160,7 +155,6 @@
               "height": 101
             },
             "dragging": false,
-            "selected": false,
             "width": 298,
             "height": 101,
             "resizing": false
@@ -194,24 +188,21 @@
             "id": "53wLyhCbgFS62iXHqFY10",
             "type": "text",
             "position": {
-              "x": -928.9264279489277,
-              "y": 469.58892143885544
+              "x": -1170.9264279489275,
+              "y": 179.58892143885544
             },
             "data": {
               "text": "while (!makeBasket) { \n  keep shooting \n}",
               "fontColor": "#1e1e1e",
               "fontSize": "large",
-              "showHandles": false
+              "showHandles": false,
+              "textAlign": "left"
             },
             "measured": {
               "width": 234,
               "height": 104
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "oqz06Z7Q266d3UTluFn-1",
@@ -258,11 +249,7 @@
               "width": 124,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "JsS23i1gAVjshCwiXB4VV",
@@ -281,34 +268,7 @@
               "width": 111,
               "height": 75
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
-          },
-          {
-            "id": "qVZ-BbTsuF78bY6Q5H27e",
-            "type": "text",
-            "position": {
-              "x": -377.9570459979044,
-              "y": 949.3651636162523
-            },
-            "data": {
-              "text": "makeBasket = true",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 201,
-              "height": 47
-            },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "TZfeDEaRcSRSile79TFWq",
@@ -331,7 +291,7 @@
               "width": 406,
               "height": 635
             },
-            "selected": false
+            "zIndex": -1
           },
           {
             "id": "-kRCvGjmUWvMxk28JHfPA",
@@ -491,8 +451,8 @@
             "id": "a2k8mFjqMd2GePk__Mrw9",
             "type": "text",
             "position": {
-              "x": -854.8642085000973,
-              "y": 267.3665156240411
+              "x": -1126.8642085000974,
+              "y": 69.36651562404109
             },
             "data": {
               "text": "Model",
@@ -504,11 +464,7 @@
               "width": 79,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "941765cc-0d81-4df2-b71a-b872a09e678d",
@@ -552,7 +508,8 @@
             "id": "8d482d4a-8fa5-4678-9bff-dc5793d8202e",
             "type": "text",
             "data": {
-              "text": "Yes"
+              "text": "Yes",
+              "showHandles": false
             },
             "position": {
               "x": -139.657510165749,
@@ -562,17 +519,14 @@
               "width": 58,
               "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "bb1b4285-8806-4bb9-a212-bfb49be4ef83",
             "type": "text",
             "data": {
-              "text": "No"
+              "text": "No",
+              "showHandles": false
             },
             "position": {
               "x": -375.24629521247806,
@@ -582,11 +536,7 @@
               "width": 58,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           }
         ],
         "edges": [
@@ -671,13 +621,13 @@
           }
         ],
         "viewport": {
-          "x": 1051.7012517450908,
-          "y": 706.4102502803523,
-          "zoom": 0.5
+          "x": 1004.5199083933117,
+          "y": 683.0590197292067,
+          "zoom": 0.4984559501813161
         }
       }
     },
-    "long_instructions": "## Flowcharting a While Loop\r\n\r\nExplore the model **while loop** flowchart. Then create your own **while loop** flowchart to model something that is personally relevant to you. Label your start and stop conditions clearly, and make sure to update the value at some point to end the loop.\r\n\r\nChoose from the examples below or come up with your own:\r\n- Studying for a test\r\n- Responding to text messages\r\n- Playing Tic Tac Toe ",
+    "long_instructions": "## Flowcharting a While Loop\r\n\r\nExplore the model **while loop** flowchart. Then create your own **while loop** flowchart to model something that is personally relevant to you. \r\n\r\nLabel your start and stop conditions clearly, and make sure to update the value at some point to end the loop.\r\n\r\nSave your finished flowchart to your Backpack.\r\n\r\nChoose from the examples below or come up with your own:\r\n- Studying for a test\r\n- Responding to text messages\r\n- Playing Tic Tac Toe ",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -2345,7 +2295,6 @@
     },
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 14:50:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 14:50:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:42:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-05 18:44:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

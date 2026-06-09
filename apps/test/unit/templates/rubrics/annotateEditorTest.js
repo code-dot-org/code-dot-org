@@ -171,14 +171,17 @@ describe('annotateLines', () => {
     );
   });
 
-  it('should pass along a hex color', () => {
+  it('should pass along the DSCO rubric annotation color', () => {
     annotateLines('Line 55: This is a line of code `draw();`', observations);
+    // The annotator builds a `<style>` block with the color interpolated into
+    // a CSS `background: …` rule, so a `var(--…)` string resolves through the
+    // active theme instead of pinning to a fixed hex.
     sinon.assert.calledWith(
       annotateLineStub,
       sinon.match.any,
       sinon.match.any,
       sinon.match.any,
-      sinon.match('#')
+      sinon.match('var(--background-brand-aqua-primary)')
     );
   });
 
@@ -190,7 +193,7 @@ describe('annotateLines', () => {
       sinon.match.any,
       sinon.match.any,
       sinon.match.any,
-      sinon.match('#'),
+      sinon.match('var(--background-brand-aqua-primary)'),
       infoIconImage
     );
   });
@@ -214,9 +217,13 @@ describe('annotateLines', () => {
     sinon.assert.calledWith(highlightLineStub, 8);
   });
 
-  it('should highlight the line with a hex color', () => {
+  it('should highlight the line with the DSCO rubric annotation color', () => {
     annotateLines('Line 55: This is a line of code `draw();`', observations);
-    sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
+    sinon.assert.calledWith(
+      highlightLineStub,
+      8,
+      sinon.match('var(--background-brand-aqua-primary)')
+    );
   });
 
   it('should use the provided line numbers if the code snippet is empty', () => {

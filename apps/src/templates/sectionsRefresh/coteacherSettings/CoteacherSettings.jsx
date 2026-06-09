@@ -78,7 +78,9 @@ export default function CoteacherSettings({
 
   return (
     <div className={styles.expandedSection}>
-      {disabled ? i18n.coteacherLtiAddInfo() : i18n.coteacherAddInfo()}
+      <Typography variant="body2">
+        {disabled ? i18n.coteacherLtiAddInfo() : i18n.coteacherAddInfo()}
+      </Typography>
       <PrimaryTeacher
         primaryTeacher={primaryTeacher}
         numCoteachers={coteachers.length}

@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # CHAT Framework
-#### The CHAT framework gives you a clear, repeatable way to plan, improve, test, and reuse code while working with AI.
+The CHAT framework gives you a clear, repeatable way to plan, improve, test, and reuse code while working with AI.
 
  
 
@@ -64,11 +64,11 @@ markdown <<MARKDOWN
 
 ## Applying the CHAT Framework 
 
-#### After learning about objects and data sets, students will build a web app step by step in Lesson 6 using the CHAT framework. 
+After learning about objects and data sets, students will build a web app step by step in Lesson 6 using the CHAT framework. 
 
-#### This process helps students keep track of what they’re trying to build, document prompts that worked well, and make intentional changes to your code instead of guessing. 
+This process helps students keep track of what they’re trying to build, document prompts that worked well, and make intentional changes to your code instead of guessing. 
 
-#### As apps and code become more advanced, having a structured way to plan, test, and refine how you work with AI will help you use it efficiently and stay in control of your ideas.
+As apps and code become more advanced, having a structured way to plan, test, and refine how you work with AI will help you use it efficiently and stay in control of your ideas.
 
 
 

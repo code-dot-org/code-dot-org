@@ -447,6 +447,7 @@ class Ability
         JitPlMisconception,
         JitPlExemplar,
         JitPlTeachingTip,
+        JSONVideo,
         CourseOffering,
         UnitGroup,
         Resource,

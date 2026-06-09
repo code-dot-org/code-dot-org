@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Computational Thinking
 
-#### In the last couple of levels, you learned more about Explore-Practice-Synthesize-Project as a **structure** for a gradual release of responsibility for students.
+In the last couple of levels, you learned more about Explore-Practice-Synthesize-Project as a **structure** for a gradual release of responsibility for students.
 
-#### In this level, we introduce computational thinking. Computational thinking is an **approach** to computer science that centers around four key practices that students espouse when programming: **decomposition, pattern recognition, abstraction,** and **algorithms**.
+In this level, we introduce computational thinking. Computational thinking is an **approach** to computer science that centers around four key practices that students espouse when programming: **decomposition, pattern recognition, abstraction,** and **algorithms**.
 
 <div style="width: 100%; max-width: 100%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 0px 20px 0px;">
   <div style="width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #B7E0E5; border-radius: 10px; text-align: center;">
@@ -51,9 +51,9 @@ markdown <<MARKDOWN
 
 ## How do I know when to teach these habits?
 
-#### In later sections of this module, we'll call out each of the computational thinking practices when they're applied to get you in the habit of noticing them.
+In later sections of this module, we'll call out each of the computational thinking practices when they're applied to get you in the habit of noticing them.
 
-#### The curriculum also expertly includes instructional moves for you to model computational thinking for your students. You can find these in the lesson plans.
+The curriculum also expertly includes instructional moves for you to model computational thinking for your students. You can find these in the lesson plans.
 
 ___
 

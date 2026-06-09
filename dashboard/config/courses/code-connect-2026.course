@@ -1,0 +1,24 @@
+{
+  "name": "code-connect-2026",
+  "script_names": [
+    "code-connect-2026"
+  ],
+  "original_script_names": [
+    "code-connect-2026"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "code-connect-2026",
+    "pilot_experiment": "code-connect-2026",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,14 +1,14 @@
 name 'ai-and-algorithmic-decisions-postassessment-q14_2026'
 
-question 'A fitness tracking website adds bright, flashing progress bars to motivate users. Some users find it exciting, while others with light sensitivity complain it\'s hard to look at. What should the design team consider first when deciding whether to keep this feature?'
+question 'A student rewrites an eligibility rule to be more fair. Their teacher asks: "In a real product, who would have to approve a change like this before it ships?" Which answer best captures the idea that accountability is shared?'
 
-right 'Whether the design balances motivation with accessibility for all users'
-wrong 'Whether the animation makes the site feel more "modern"'
-wrong 'Whether users with light sensitivity can simply turn off their screens'
-wrong 'Whether the progress bars make the code easier for developers to write'
+wrong 'Only the engineer who wrote the code.'
+wrong 'Only the AI tool that suggested the rule.'
+wrong 'Only the user, after they complain.'
+right 'A combination of people — engineers, designers, legal review, and often the community affected by the rule.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lesson 1, 7
+Lesson 10
 MARKDOWN

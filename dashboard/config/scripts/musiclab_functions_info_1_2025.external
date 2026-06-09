@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Functions & Music
 
-#### As Henny Tha Bizness said, "[Music] is a series of patterns and sequences." Functions help simplify the music-making process by organizing those patterns. In this lesson, students will use functions to code their own music.
+As Henny Tha Bizness said, "[Music] is a series of patterns and sequences." Functions help simplify the music-making process by organizing those patterns. In this lesson, students will use functions to code their own music.
 
 
 <table style="width: 100%; margin: auto;">
@@ -60,7 +60,7 @@ markdown <<MARKDOWN
 
 
   
-#### 🧑‍🏫 Teacher Tip: Remind students that functions are defined once, but can be called many times.
+🧑‍🏫 Teacher Tip: Remind students that functions are defined once, but can be called many times.
 
 ![]()
 MARKDOWN

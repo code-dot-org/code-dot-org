@@ -42,7 +42,6 @@ const useOnboardingTour = ({
 
     tour.on('complete', () => {
       trySetSessionStorage(sessionStorageKey, '');
-      // TODO: persist completion to backend
       onComplete?.();
     });
 

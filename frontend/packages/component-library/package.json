@@ -223,6 +223,14 @@
       "import": "./dist/formFieldWrapper/index.mjs",
       "require": "./dist/formFieldWrapper/index.js"
     },
+    "./footer": {
+      "types": {
+        "import": "./dist/footer/index.d.ts",
+        "require": "./dist/footer/index.d.ts"
+      },
+      "import": "./dist/footer/index.mjs",
+      "require": "./dist/footer/index.js"
+    },
     "./header": {
       "types": {
         "import": "./dist/header/index.d.ts",
@@ -407,7 +415,7 @@
     "start": "yarn dev",
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
     "stylelint:fix": "yarn run stylelint --fix",
-    "test": "jest",
+    "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -428,29 +436,24 @@
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
     "@release-it/conventional-changelog": "^10.0.0",
-    "@swc/core": "^1.9.3",
-    "@swc/jest": "^0.2.37",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
-    "@types/identity-obj-proxy": "^3",
-    "@types/jest": "^29.5.14",
     "@types/lodash": "^4",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
     "classnames": "catalog:",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
-    "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-storybook": "^10.1.7",
     "glob": "^11.1.0",
     "globals": "catalog:",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
     "jscodeshift": "^0.15.2",
-    "postcss": "^8.4.49",
+    "jsdom": "catalog:",
+    "postcss": "^8.5.10",
     "postcss-modules": "^6.0.1",
     "react": "catalog:",
     "react-dom": "catalog:",
@@ -466,7 +469,8 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vite-plugin-lib-inject-css": "^2.2.2"
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",

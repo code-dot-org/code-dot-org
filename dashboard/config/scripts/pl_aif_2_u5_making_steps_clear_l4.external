@@ -6,9 +6,9 @@ markdown <<MARKDOWN
 # A clearer way to write Promise code
 
   
-#### You just learned how to use a promise chain with <code>.then()</code> to handle asynchronous code (like <code>fetch</code>).
+You just learned how to use a promise chain with <code>.then()</code> to handle asynchronous code (like <code>fetch</code>).
 
-####  Now, you’ll learn a different way to write the *same* logic so it reads more like normal, step-by-step code: **async** and **await**.
+Now, you’ll learn a different way to write the *same* logic so it reads more like normal, step-by-step code: **async** and **await**.
   
 
 ## Key Vocabulary 
@@ -25,12 +25,12 @@ markdown <<MARKDOWN
 
 
 
-#### **Important:** async/await does *not* make the code “less asynchronous.”
-#### It’s a cleaner way to write Promise logic you already understand.
+**Important:** async/await does *not* make the code “less asynchronous.”
+It’s a cleaner way to write Promise logic you already understand.
 
 ---
 ## Quick Check 
-#### (answer in your own words)
+(answer in your own words)
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 14pt; font-weight: bold;">1️⃣ Where are you allowed to use <code>await</code>?</summary>

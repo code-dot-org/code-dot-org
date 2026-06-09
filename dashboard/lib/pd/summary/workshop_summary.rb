@@ -28,7 +28,7 @@ module Pd::Summary
     end
 
     def workshop_url
-      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}", CDO.default_scheme)
+      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}")
     end
 
     def num_teachers

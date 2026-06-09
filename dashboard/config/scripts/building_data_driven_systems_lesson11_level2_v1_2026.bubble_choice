@@ -1,0 +1,9 @@
+name 'building-data-driven-systems-lesson11-level2-v1-2026'
+display_name 'Plan Your Dataset'
+description 'Use these levels to plan your dataset, organize your schema fields, and sketch how your data will appear in your app before you start building.'
+
+sublevels
+level 'building-data-driven-systems-lesson11-level2a-v1-2026'
+level 'building-data-driven-systems-lesson11-level2b-v1-2026'
+
+uses_lab2

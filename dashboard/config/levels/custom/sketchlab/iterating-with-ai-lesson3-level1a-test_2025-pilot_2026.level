@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:40:01.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
@@ -27,11 +27,7 @@
               "width": 122,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "D40pQOF9ZlpZSnieZKJ3-",
@@ -56,11 +52,7 @@
               "width": 334,
               "height": 108
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "QFHPqaswsi5ue2jvC_6UG",
@@ -84,10 +76,6 @@
             "measured": {
               "width": 507,
               "height": 160
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "width": 507,
             "height": 160,
@@ -136,11 +124,7 @@
               "width": 165,
               "height": 47
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "krOmS-PWoa7x267DLYjL3",
@@ -202,20 +186,16 @@
               "y": 114.76668462049037
             },
             "data": {
-              "text": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    gameRunning = true; \n  }\n}",
+              "text": "\n",
               "fontColor": "#1e1e1e",
               "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 512,
-              "height": 205
+              "width": 58,
+              "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "_eZNj1J0AYx0TeKdfwAO2",
@@ -240,10 +220,6 @@
               "width": 293,
               "height": 91
             },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 293,
             "height": 91,
             "resizing": false
@@ -265,11 +241,7 @@
               "width": 153,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "0RFHO9so67DqQxVVmdfRQ",
@@ -302,19 +274,17 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "",
+              "label": "let gameRunning = true;\n\nwhile (gameRunning) {\n  let answer = prompt(\"What must be broken before you can use it?\");\n  \n  if (answer.toLowerCase() === \"egg\") {\n    gameRunning = true; \n  }\n}",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "#1e1e1e",
+              "textAlign": "left"
             },
             "measured": {
               "width": 610,
               "height": 278
             },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            },
-            "dragging": false
+            "dragging": false,
+            "zIndex": -1
           },
           {
             "id": "-AVxOwaklr7SNaxYE7EEz",
@@ -333,37 +303,31 @@
               "width": 72,
               "height": 75
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "cc729853-fa96-4bf3-b480-76b5b3348a3e",
             "type": "text",
             "data": {
-              "text": "Yes"
+              "text": "Yes",
+              "showHandles": false
             },
             "position": {
-              "x": 391.7298205136672,
+              "x": 423.6829435333945,
               "y": 408.2436401949865
             },
             "measured": {
               "width": 58,
               "height": 39
             },
-            "dragging": false,
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": -1
-            }
+            "dragging": false
           },
           {
             "id": "8ea6f1ea-204a-490a-a123-d46def74bb79",
             "type": "text",
             "data": {
-              "text": "No"
+              "text": "No",
+              "showHandles": false
             },
             "position": {
               "x": 633.5915265646246,
@@ -372,10 +336,6 @@
             "measured": {
               "width": 58,
               "height": 39
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             },
             "dragging": false
           }
@@ -412,27 +372,6 @@
             }
           },
           {
-            "id": "8115e268-caef-4a90-b4ee-acab82e59bfe",
-            "source": "8Y2MhNQAv11n3Ur8q0xRt",
-            "target": "QFHPqaswsi5ue2jvC_6UG",
-            "sourceHandle": "bottom-source",
-            "targetHandle": "top-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
-          {
-            "id": "3b79da28-1751-4eef-aea8-2bad5478b2bf",
-            "source": "QFHPqaswsi5ue2jvC_6UG",
-            "target": "8Y2MhNQAv11n3Ur8q0xRt",
-            "sourceHandle": "top-source",
-            "targetHandle": "bottom-target",
-            "markerEnd": {
-              "type": "arrowclosed"
-            },
-            "selected": false
-          },
-          {
             "id": "420479dc-8790-404f-82f1-0b0748102a71",
             "source": "krOmS-PWoa7x267DLYjL3",
             "target": "_eZNj1J0AYx0TeKdfwAO2",
@@ -451,12 +390,22 @@
               "type": "arrowclosed"
             },
             "id": "xy-edge__QFHPqaswsi5ue2jvC_6UGleft-source-8Y2MhNQAv11n3Ur8q0xRtleft-target"
+          },
+          {
+            "source": "8Y2MhNQAv11n3Ur8q0xRt",
+            "sourceHandle": "bottom-source",
+            "target": "QFHPqaswsi5ue2jvC_6UG",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__8Y2MhNQAv11n3Ur8q0xRtbottom-source-QFHPqaswsi5ue2jvC_6UGtop-target"
           }
         ],
         "viewport": {
-          "x": 562.3394445627019,
-          "y": 250.62387855367865,
-          "zoom": 0.7198044455873753
+          "x": 551.5389679967267,
+          "y": 203.84865426441445,
+          "zoom": 0.8637653347048504
         }
       }
     },
@@ -1751,6 +1700,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:01.659+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level1a-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level1a-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:48:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:01.659+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level1a-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level1a-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:48:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:43:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 20:43:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Sketchlab>

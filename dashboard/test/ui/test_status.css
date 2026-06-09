@@ -47,6 +47,12 @@ td.rerun-command {
   float: right;
 }
 
+/* Keep the buttons together: when the row gets narrow, break between the
+ * timestamp and this group rather than splitting the buttons across lines. */
+#refresh-controls .button-group {
+  white-space: nowrap;
+}
+
 .progress-bar {
   margin-bottom: 0.5em;
   border-radius: 5px;

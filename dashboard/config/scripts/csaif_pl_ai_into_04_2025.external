@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Problem Solving with AI Unit Overview
  
-#### Teachers can use the Problem Solving with AI Unit as part of the AI Foundations course, or as a standalone resource for grades 9-12. It can also be integrated into existing computer science, math, or science curricula, offering scheduling flexibility.
+Teachers can use the Problem Solving with AI Unit as part of the AI Foundations course, or as a standalone resource for grades 9-12. It can also be integrated into existing computer science, math, or science curricula, offering scheduling flexibility.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <p>Students will:</p>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Investigate how AI generates responses.</li>
       <li>Critically evaluate AI-generated outputs.</li>
@@ -28,18 +28,100 @@ markdown <<MARKDOWN
 
 ## Unit Calendar 
 
-#### Take a quick look at the lessons included in this unit using the calendar tool.
+Take a quick look at the lessons included in this unit using the calendar tool.
 
-#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
 
-#### Check out the <a href="https://studio.code.org/s/aif1-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+Check out the <a href="https://studio.code.org/s/aif1-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
 
 <div style="clear:both;"></div>
 
-<p align="center">
-<img src="https://images.code.org/57a12e040fed89c1b48dcc56d396958b-Screenshot 2025-04-10 at 4.52.47 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
-</p>
+<!-- Unit 4 Lesson Calendar -->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #c4c0f0;">
+
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Talking to Machines
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Beyond Words
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        The AI's Brain
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Smart or Just Predictable?
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Uncovering Contradictions
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Understanding Bias
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        AI's Wild Imagination
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Debugging and Refining Outputs
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        AI as a Co-Creator
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Remixing, Creativity, and Originality
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
+        Ownership, Ethics, and Creativity
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 12</span>
+        AI's Role in Society
+      </div>
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 2 1 240px; min-width: 220px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#6a62d9; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Lesson 13</span>
+        AI Time Capsule Project
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ Preview the full <a href='https://studio.code.org/s/aif1-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.

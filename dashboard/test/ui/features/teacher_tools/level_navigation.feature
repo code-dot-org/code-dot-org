@@ -8,7 +8,7 @@ Scenario: External Video Level
   And I wait to see ".video-download"
   And I wait to see ".submitButton"
   Then I click ".submitButton" to load a new page
-  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1"
+  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/56/levels/1"
 
 Scenario: External Markdown Level
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/21/levels/1"

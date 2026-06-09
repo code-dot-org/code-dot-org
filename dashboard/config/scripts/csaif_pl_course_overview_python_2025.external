@@ -5,15 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # Foundations of AI Programming Curriculum Overview
  
-#### The **Foundations of AI Programming** curriculum unit introduces students to programming, algorithms, and ethical computing.
+The **Foundations of AI Programming** curriculum unit introduces students to programming, algorithms, and ethical computing.
 
-#### They learn how algorithms solve problems, how to design and debug Python programs with AI tools, and will consider the societal impact of computing. 
+They learn how algorithms solve problems, how to design and debug Python programs with AI tools, and will consider the societal impact of computing. 
 
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <p>Students will:</p>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li> Define, analyze, and improve algorithms using sequence, selection, and iteration.</li>&#8201;
     <li> Use variables, conditionals, loops, and functions to create, test, and refine modular programs.</li>&#8201;
@@ -35,16 +35,96 @@ markdown <<MARKDOWN
 
 ## Unit Calendar 
 
-#### Take a quick look at the lessons included in this unit using the calendar tool.
+Take a quick look at the lessons included in this unit using the calendar tool.
 
-#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
 
-#### Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
-<p align="center">
+<!-- Unit 5 Lesson Calendar -->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #c4c0f0;">
 
-<img src="https://images.code.org/075430f6f244afc930aa6f0398f07659-image-1741375452584.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
-</p>
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Computing Careers
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Computational Thinking
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        Designing Algorithms
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Variables and Data Flow
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Working with Objects
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Functions and Parameters
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Debugging Strategies
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Introduction to Loops
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Conditional Statements
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Algorithms IRL
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
+        Decomposition
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 12</span>
+        Two-Way and Nested Selection
+      </div>
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 2 1 240px; min-width: 220px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#6a62d9; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Lesson 13</span>
+        Pixels of Me Project
+      </div>
+    </div>
+  </div>
+
+</div>
+<br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/s/aif2-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.

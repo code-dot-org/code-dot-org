@@ -87,10 +87,10 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
             Review your information
           </Typography>
           <Typography variant="body3" gutterBottom>
-            This is your current Code.org account info. Make sure it matches
-            what you shared during registration — any updates you make here will
-            also update your account. You can update your account info at any
-            time in your account settings.
+            This is your current CodeAI account info. Make sure it matches what
+            you shared during registration — any updates you make here will also
+            update your account. You can update your account info at any time in
+            your account settings.
           </Typography>
           <MuiButton
             variant="contained"
@@ -181,7 +181,7 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
       <div className={style.joinWorkshopContent}>
         <AccountBanner
           heading="Join workshop"
-          desc="You've already registered with our partner — now complete your enrollment for this workshop on Code.org."
+          desc="You've already registered with our partner — now complete your enrollment for this workshop on CodeAI."
           showLogo={true}
         />
         <div className={style.statusContentContainer}>

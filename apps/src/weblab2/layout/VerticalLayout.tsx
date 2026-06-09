@@ -188,6 +188,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         />
 
         <div
+          id="workspace-with-header"
           className={classNames(
             lab2Styles.flexColumn,
             lab2Styles.shrinkAndGrow

@@ -148,6 +148,29 @@
         },
         {
           "type": "radiogroup",
+          "name": "current_level_ai_familiarity",
+          "title": "Which best describes your current level of familiarity with Artificial Intelligence (AI)?",
+          "choices": [
+            {
+              "value": "not_much",
+              "text": "I haven't used AI much"
+            },
+            {
+              "value": "few_times",
+              "text": "I have used AI a few times"
+            },
+            {
+              "value": "attended_pd",
+              "text": "I have attended professional development around using AI"
+            },
+            {
+              "value": "regularly_use",
+              "text": "I regularly use AI in my role"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
           "name": "current_level_cs_knowledge",
           "title": "Which best describes your current level of knowledge about computer science?",
           "choices": [

@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Project: Create a Personal Chatbot
 
-#### In the first project project of this unit, students **create a chatbot that represents their personality and is an expert on a specific interest they care about**. 
+In the first project project of this unit, students **create a chatbot that represents their personality and is an expert on a specific interest they care about**. 
 
-#### Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it.
+Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it.
 
 ---
 
@@ -22,9 +22,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/d091eac50ec7066a1e1a37aa95d5f6a7-Screenshot 2024-09-04 at 2.47.11 PM.png" alt="chatbot lab in 'user view' display" width="70%" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 
-#### Consider adding an collaborative opportunity for your class with an Optional **Gallery Walk** at the end of this project. This step allows students to showcase their chatbots in **User View** providing an opportunity for their peers to interact with and explore each other's work. By participating in this gallery walk, students can gain valuable insights and inspiration from their classmates.
+Consider adding an collaborative opportunity for your class with an Optional **Gallery Walk** at the end of this project. This step allows students to showcase their chatbots in **User View** providing an opportunity for their peers to interact with and explore each other's work. By participating in this gallery walk, students can gain valuable insights and inspiration from their classmates.
 
-#### Encourage your students to leave constructive feedback using post-it notes, starting with phrases like “I like…” or “I wish…”. This not only fosters a positive and supportive learning environment but also helps students develop their ability to give and receive feedback—an essential skill in both academic and professional settings. While this step is optional, it can significantly enhance the collaborative atmosphere in your classroom, making the learning experience more enriching for everyone.
+Encourage your students to leave constructive feedback using post-it notes, starting with phrases like “I like…” or “I wish…”. This not only fosters a positive and supportive learning environment but also helps students develop their ability to give and receive feedback—an essential skill in both academic and professional settings. While this step is optional, it can significantly enhance the collaborative atmosphere in your classroom, making the learning experience more enriching for everyone.
 
 
 MARKDOWN

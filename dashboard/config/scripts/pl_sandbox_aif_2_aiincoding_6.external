@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Generative AI in Coding: Real-World Impact & Examples
 
-#### Generative AI can help write, fix, and improve code. Instead of starting from scratch, coders can describe what they want in plain language, and AI suggests code that can be used, adapted, or improved.
+Generative AI can help write, fix, and improve code. Instead of starting from scratch, coders can describe what they want in plain language, and AI suggests code that can be used, adapted, or improved.
 
 
 ## How it’s used in the real world:
@@ -45,12 +45,12 @@ markdown <<MARKDOWN
 ## Why it matters for students:
 
 
-#### Learning to code with AI mirrors how real developers now work. Students get practice thinking through logic and design while learning to critically evaluate AI’s help—building skills that are both creative and future-ready. 
+Learning to code with AI mirrors how real developers now work. Students get practice thinking through logic and design while learning to critically evaluate AI’s help—building skills that are both creative and future-ready. 
  
  
 ## Selected Further Readings
 
-#### As AI reshapes software development, these readings help teachers see how it enhances coding, debugging, and creativity—insights they can bring directly to their classrooms.
+As AI reshapes software development, these readings help teachers see how it enhances coding, debugging, and creativity—insights they can bring directly to their classrooms.
 
 <table style="width: 100%; border-collapse: collapse; max-width: 1000px; margin: auto; font-size: 14pt; text-align: left;">
   <thead>

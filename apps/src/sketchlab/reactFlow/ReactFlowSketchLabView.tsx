@@ -17,6 +17,7 @@ import {
   ProjectSources,
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
+import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -35,6 +36,7 @@ import {
   convertExcalidrawToReactFlow,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
+import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
@@ -112,6 +114,9 @@ function ReactFlowSketchLabViewInner({
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
   }, [showStartOverDialog]);
+  const onClickDownload = useCallback(() => {
+    void handleDownloadSketch(reactFlow, dialogControl);
+  }, [reactFlow, dialogControl]);
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
@@ -252,6 +257,21 @@ function ReactFlowSketchLabViewInner({
             id="workspace"
             className={panelClassName}
             headerContent={<WorkspaceHeader.Content />}
+            leftHeaderContent={
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                onClick={onClickDownload}
+                aria-label="Download"
+                type="button"
+                startIcon={
+                  <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+                }
+              >
+                Download
+              </MuiButton>
+            }
             rightHeaderContent={
               <>
                 <WorkspaceHeader.TemplateIcon />
@@ -279,6 +299,7 @@ function ReactFlowSketchLabViewInner({
             {teacherViewingStudent && (
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
             )}
+            <PreviousVersionAlert />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}

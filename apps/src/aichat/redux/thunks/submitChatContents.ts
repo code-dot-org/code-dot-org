@@ -9,7 +9,6 @@ import {
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
-import {setChatMessageSent} from '@cdo/apps/aichatLab/redux/slice';
 import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
@@ -28,7 +27,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
-import supportsClientApi from '../../api/supportsClientApi';
+import shouldUseAiGateway from '../../api/shouldUseAiGateway';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -62,7 +61,6 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       responseCallback?: (response: string) => string;
-      logLevelActivity?: () => void;
       lessonId?: number;
     },
     thunkAPI
@@ -79,7 +77,6 @@ export const submitChatContents = createAsyncThunk(
       analyticsProperties,
       userAddedSelectionContext,
       responseCallback,
-      logLevelActivity,
       lessonId,
     } = newUserMessageInput;
 
@@ -123,12 +120,6 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
-    // TODO: Remove dependency on aichatLab redux slice.
-    dispatch(setChatMessageSent(true));
-
-    if (logLevelActivity) {
-      logLevelActivity();
-    }
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
@@ -180,7 +171,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (supportsClientApi(modelParameters.selectedModelId)) {
+      if (shouldUseAiGateway(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =

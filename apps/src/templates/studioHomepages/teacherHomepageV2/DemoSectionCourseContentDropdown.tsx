@@ -9,10 +9,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
-import {
-  CourseContentDropdownBase,
-  getLessonEventName,
-} from './CourseContentDropdown';
+import {CourseContentDropdownBase} from './CourseContentDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -42,7 +39,12 @@ export const DemoSectionCourseContentDropdown: React.FC<
           disabled={disabled}
           aria-label={`Create demo section and go to '${lesson.text}'`}
           onClick={() =>
-            beforeNavigate(lesson.value, getLessonEventName(lesson.value))
+            beforeNavigate(
+              lesson.value,
+              lesson.value.includes('/lessons/')
+                ? EVENTS.DEMO_SECTION_CARD_JUMP_TO_LESSON_CLICKED
+                : EVENTS.DEMO_SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
+            )
           }
         >
           <span>{lesson.text}</span>
@@ -57,7 +59,7 @@ export const DemoSectionCourseContentDropdown: React.FC<
         onClick={() =>
           beforeNavigate(
             `courses/${section.courseVersionName}`,
-            EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED
+            EVENTS.DEMO_SECTION_CARD_GO_TO_COURSE_CLICKED
           )
         }
       >
