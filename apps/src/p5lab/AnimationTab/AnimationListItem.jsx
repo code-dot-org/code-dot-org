@@ -1,10 +1,9 @@
 /** A single list item representing an animation. */
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
-import color from '@cdo/apps/util/color';
 
 import {P5LabInterfaceMode} from '../constants';
 import {
@@ -208,7 +207,7 @@ class AnimationListItem extends React.Component {
     if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
         ? {}
-        : {backgroundColor: color.lightest_red};
+        : {backgroundColor: 'var(--background-error-light)'};
       animationName = (
         <div style={styles.nameInputWrapper}>
           <input
@@ -220,7 +219,11 @@ class AnimationListItem extends React.Component {
         </div>
       );
     } else {
-      animationName = <div style={styles.nameLabel}>{name}</div>;
+      animationName = (
+        <Typography variant="body4" style={styles.nameLabel}>
+          {name}
+        </Typography>
+      );
     }
 
     const selectedStyle = isSelected ? styles.selectedTile : {};
@@ -282,7 +285,7 @@ const styles = {
     margin: '5px 0 0 0',
   },
   selectedTile: {
-    backgroundColor: color.purple,
+    backgroundColor: 'var(--background-brand-purple-primary)',
   },
   nameLabel: {
     marginLeft: 4,
@@ -311,7 +314,7 @@ const styles = {
     height: 0,
     borderTop: '10px solid transparent',
     borderBottom: '10px solid transparent',
-    borderLeft: '10px solid ' + color.purple,
+    borderLeft: '10px solid var(--background-brand-purple-primary)',
     position: 'absolute',
     right: '-10px',
     top: 80,

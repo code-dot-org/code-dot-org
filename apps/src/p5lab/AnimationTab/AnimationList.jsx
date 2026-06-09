@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {P5LabInterfaceMode} from '../constants';
@@ -94,11 +93,11 @@ class AnimationList extends React.Component {
 const styles = {
   root: {
     flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_gray,
-    borderBottom: 'solid thin ' + color.light_gray,
-    borderLeft: 'solid thin ' + color.light_gray,
+    borderTop: 'solid thin var(--borders-neutral-strong)',
+    borderBottom: 'solid thin var(--borders-neutral-strong)',
+    borderLeft: 'solid thin var(--borders-neutral-strong)',
     borderRight: 'none',
-    backgroundColor: color.lightest_gray,
+    backgroundColor: 'var(--background-neutral-tertiary)',
     paddingRight: 10,
     paddingLeft: 10,
   },
