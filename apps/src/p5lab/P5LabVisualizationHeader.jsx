@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import styleConstants from '@cdo/apps/styleConstants';
 import msg from '@cdo/locale';
 
 import * as utils from '../utils';
@@ -71,7 +70,7 @@ class P5LabVisualizationHeader extends React.Component {
       <div>
         {this.shouldShowPoemSelector() && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
-          <div style={styles.main} id="playSpaceHeader">
+          <div id="playSpaceHeader">
             <SegmentedButtons
               selectedButtonValue={interfaceMode}
               onChange={this.changeInterfaceMode}
@@ -111,11 +110,6 @@ class P5LabVisualizationHeader extends React.Component {
   }
 }
 
-const styles = {
-  main: {
-    height: styleConstants['workspace-headers-height'],
-  },
-};
 export default connect(
   state => ({
     interfaceMode: state.interfaceMode,
