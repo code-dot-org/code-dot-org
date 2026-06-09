@@ -1099,6 +1099,18 @@ p.aiTokenText {
   transform-origin: 50% 50%;
 }
 
+.progressRingTrack {
+  stroke: var(--borders-neutral-primary);
+}
+
+.progressRingCurrent {
+  stroke: var(--borders-neutral-strong);
+}
+
+.progressRingAssessed {
+  stroke: var(--borders-brand-teal-primary);
+}
+
 .progressRingText {
   text-anchor: middle;
   font-size: smaller;
