@@ -484,9 +484,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setShowAiTutorNotificationDot(true);
   }, [levelId, viewAsUserId]);
 
-  const hasInteractedWithAiTutor = useAppSelector(
-    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
-  );
+  const hasInteractedWithAiTutor = useAppSelector(state => {
+    const currentLevel = getCurrentLevel(state);
+    return currentLevel ? currentLevel.status !== LevelStatus.not_tried : false;
+  });
 
   useEffect(() => {
     if (hasInteractedWithAiTutor) {
