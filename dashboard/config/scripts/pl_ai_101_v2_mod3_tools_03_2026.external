@@ -3,20 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Practice
+# Exploring AI Tools
 
-Below are a few examples of AI tools developed specificaly for educational use to support teachers and administrators.
+Below are examples of AI tools designed to support educators and school leaders with tasks such as lesson planning, assessment creation, communication, and administrative work.
 
-Each tool below includes a brief description. Take some time to learn more about these tools to explore the types of support AI tools can provide.
+Choose one or more tools to try. Try using it for a real task, such as drafting a lesson plan, creating an assessment, or writing a parent email.
 
-## Educator's Choice
+👉 Click a logo to visit the tool's website and explore its features.
 
-Choose one or more of these tools to try out. Try using the tool for a real task—such as drafting a lesson plan, creating an assessment, or writing a parent email.
+**Note:** These tools vary in cost, features, and access. If one isn't a good fit, try another.
 
-👉 Click on the logo to go directly to the tool's webpage. Spend as much time exploring as you find helpful.
-
-**Note**: These tools vary in cost and access. If one doesn’t meet your needs, try another.
-
+---
 
 <div style="display: grid; gap:16px; max-width:900px; margin:auto;">
 
@@ -31,8 +28,9 @@ An AI-powered teaching assistant that helps teachers plan lessons, generate reso
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://www.khanmigo.ai/" target="_blank">
 <img src="https://images.code.org/2394a44142b1cc234151d18830035ca8-download.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -48,8 +46,9 @@ A classroom-focused AI platform that helps teachers create lessons, personalize 
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://schoolai.com/" target="_blank">
 <img src="https://images.code.org/09db31b0963c162ae3008608c31fecc5-downloadA.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -65,8 +64,9 @@ An AI writing assistant that supports educators by improving communication, gene
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://www.grammarly.com/" target="_blank">
 <img src="https://images.code.org/1748e5796ace9a6bd6725da1f2f7b70e-Screenshot 2026-03-26 at 2.33.25 PM.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -82,8 +82,9 @@ A teacher tool that generates and adapts instructional materials at different re
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://web.diffit.me/" target="_blank">
 <img src="https://images.code.org/ea9a04be044bb26a0ba429c07fda4c2c-Screenshot 2026-04-09 at 10.50.41 AM.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -93,14 +94,15 @@ style="max-width:180px; max-height:80px; object-fit:contain;">
 
 <div>
 <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Code.org AI Teaching Assistant</div>
-<div style="font-size:16px; line-height:1.5;"> https://code.org/en-US/artificial-intelligence/teaching-assistant
+<div style="font-size:16px; line-height:1.5;">
 An AI-powered thought partner for educators that supports lesson planning, differentiation, and assessment by providing curriculum-aligned guidance and automating feedback to save time and improve instruction.
 </div>
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://code.org/en-US/artificial-intelligence/teaching-assistant" target="_blank">
 <img src="https://images.code.org/f833ab32e9c90fdee6ef0049a557597d-Screenshot 2026-04-09 at 10.50.09 AM.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -116,8 +118,9 @@ AI-supported grading platform that helps teachers efficiently assess student wor
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://www.gradescope.com/" target="_blank">
 <img src="https://images.code.org/fe5d17d7b738585e1ec82f0a14bdff76-gradescope800x600.png" 
-style="max-width:350px; max-height:80px; object-fit:contain;">
+style="max-width:350px; max-height:120px; object-fit:contain;"></a>
 </div>
 
 </div>
@@ -133,8 +136,9 @@ AI-powered design and content creation platform that helps teachers generate pre
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center;">
+<a href="https://www.canva.com/education/" target="_blank">
 <img src="https://images.code.org/47a5f4bc82e29db11de9ff9bc42c43f7-Screenshot 2026-04-09 at 10.56.02 AM.png" 
-style="max-width:180px; max-height:80px; object-fit:contain;">
+style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 </div>
 
 </div>
