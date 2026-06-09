@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import {possibleHeaders} from '../../headerRedux';
 
-import headerVignetteStyles from './HeaderVignette';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
@@ -55,16 +54,6 @@ class ProjectInfo extends React.Component {
       return null;
     }
 
-    const fullWidth = this.getFullWidth();
-    const actualWidth = this.props.width;
-
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
-
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
       <div style={styles.headerContainer}>
@@ -75,7 +64,6 @@ class ProjectInfo extends React.Component {
         >
           <HeaderComponent onChangedWidth={() => this.onChangedWidth()} />
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }

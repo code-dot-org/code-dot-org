@@ -1,5 +1,5 @@
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/pegasus'
 
 class ObjectTest < Minitest::Test
   def test_nil_or_empty

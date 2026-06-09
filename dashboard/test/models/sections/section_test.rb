@@ -772,6 +772,33 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 'high', section.summarize[:demo_type]
   end
 
+  test 'demo section code is cleared to nil on save' do
+    section = create(:section, demo_type: 'high')
+    assert_nil section.code
+
+    section.code = 'ABC123'
+    assert section.save
+    assert_nil section.reload.code
+  end
+
+  test 'non-demo section code can be changed' do
+    section = create(:section)
+    refute_nil section.code
+
+    section.code = 'ZZZ999'
+    assert section.save
+    assert_equal 'ZZZ999', section.reload.code
+  end
+
+  test 'demo section saves other field changes' do
+    section = create(:section, demo_type: 'high')
+
+    section.name = 'renamed demo section'
+    assert section.save
+    assert_equal 'renamed demo section', section.reload.name
+    assert_nil section.code
+  end
+
   test 'selected_section_summarize: section with no script' do
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     CourseOffering.add_course_offering(unit_group)
