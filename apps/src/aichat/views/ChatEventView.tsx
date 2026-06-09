@@ -145,6 +145,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             ref={ref}
             tabIndex={tabIndex}
             onKeyDown={onKeyDown}
+            aria-label={`Assistant: ${text}`}
             className={styles.chatMessageOutline}
           >
             <ChatMessage role={Role.ASSISTANT} text={text} />
