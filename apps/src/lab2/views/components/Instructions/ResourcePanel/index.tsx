@@ -12,6 +12,7 @@ import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledSt
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -41,6 +42,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
@@ -481,6 +483,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
     setShowAiTutorNotificationDot(true);
   }, [levelId, viewAsUserId]);
+
+  const hasInteractedWithAiTutor = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
+
+  useEffect(() => {
+    if (hasInteractedWithAiTutor) {
+      setShowAiTutorNotificationDot(false);
+    }
+  }, [hasInteractedWithAiTutor]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
