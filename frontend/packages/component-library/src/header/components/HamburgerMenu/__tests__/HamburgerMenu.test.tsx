@@ -116,4 +116,74 @@ describe('HamburgerMenu', () => {
     );
     expect(trigger).toHaveFocus();
   });
+
+  it('renders no section dividers when support and global nav are empty', async () => {
+    const user = userEvent.setup();
+    render(
+      <HamburgerMenu
+        menuItems={[{label: 'My Dashboard', href: '/home'}]}
+        globalNavItems={[]}
+        supportLinks={[]}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('My Dashboard');
+    expect(screen.queryAllByRole('separator')).toHaveLength(0);
+  });
+
+  it('drops the support divider when there are no support links', async () => {
+    const user = userEvent.setup();
+    render(
+      <HamburgerMenu
+        menuItems={[{label: 'My Dashboard', href: '/home'}]}
+        globalNavItems={GLOBAL_NAV}
+        supportLinks={[]}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('Districts');
+    // app-nav | global -> a single divider, not two.
+    expect(screen.queryAllByRole('separator')).toHaveLength(1);
+  });
+
+  it('still lists Incubator once when no global-nav entry is labeled Donate', async () => {
+    const user = userEvent.setup();
+    const noDonate = GLOBAL_NAV.filter(e => e.label !== 'Donate');
+    render(
+      <HamburgerMenu
+        menuItems={TEACHER_MENU_ITEMS}
+        globalNavItems={noDonate}
+        supportLinks={SUPPORT_LINKS}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('Districts');
+    expect(screen.getAllByText('Incubator')).toHaveLength(1);
+  });
+
+  it('does not duplicate Incubator when global nav already supplies it', async () => {
+    const user = userEvent.setup();
+    const withIncubator = [
+      ...GLOBAL_NAV,
+      {label: 'Incubator', href: '//code.org/incubator'},
+    ];
+    render(
+      <HamburgerMenu
+        menuItems={TEACHER_MENU_ITEMS}
+        globalNavItems={withIncubator}
+        supportLinks={SUPPORT_LINKS}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('Districts');
+    expect(screen.getAllByText('Incubator')).toHaveLength(1);
+  });
 });

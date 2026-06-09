@@ -73,9 +73,28 @@ const HamburgerPanel: FunctionComponent<
   HamburgerMenuProps & {newTabId: string}
 > = ({menuItems, globalNavItems, supportLinks, newTabId}) => {
   // Prod lists Incubator once, in the global-nav region after Donate (not in
-  // the app-nav block). Pull it out of `menuItems` and re-inject it there.
-  const incubator = menuItems.find(item => item.label === 'Incubator');
+  // the app-nav block). Pull it out of `menuItems` unless globalNavItems already
+  // supplies one (avoids a double listing), and filter it out of the app nav.
+  const incubatorInGlobal = globalNavItems.some(e => e.label === 'Incubator');
+  const incubator = incubatorInGlobal
+    ? undefined
+    : menuItems.find(item => item.label === 'Incubator');
   const appNavItems = menuItems.filter(item => item.label !== 'Incubator');
+  const donateIndex = globalNavItems.findIndex(e => e.label === 'Donate');
+
+  // Dividers only sit *between* non-empty sections (app nav | support | global).
+  const hasGlobal = globalNavItems.length > 0 || incubator !== undefined;
+  const showAppNavDivider =
+    appNavItems.length > 0 && (supportLinks.length > 0 || hasGlobal);
+  const showSupportDivider = supportLinks.length > 0 && hasGlobal;
+
+  const incubatorItem = incubator ? (
+    <Box component="li" className="mobileOnly" sx={mobileOnlyItemSx}>
+      <Box component="a" href={incubator.href} sx={linkSx}>
+        {incubator.label}
+      </Box>
+    </Box>
+  ) : null;
 
   return (
     <Box component="ul" sx={hamburgerListSx}>
@@ -93,12 +112,14 @@ const HamburgerPanel: FunctionComponent<
         </Box>
       ))}
 
-      <Box
-        component="li"
-        className="mobileOnly"
-        role="separator"
-        sx={dividerSx}
-      />
+      {showAppNavDivider && (
+        <Box
+          component="li"
+          className="mobileOnly"
+          role="separator"
+          sx={dividerSx}
+        />
+      )}
 
       {/* Support links — gated below the top-nav breakpoint */}
       {supportLinks.map(link => (
@@ -121,16 +142,18 @@ const HamburgerPanel: FunctionComponent<
         </Box>
       ))}
 
-      <Box
-        component="li"
-        className="mobileOnly"
-        role="separator"
-        sx={dividerSx}
-      />
+      {showSupportDivider && (
+        <Box
+          component="li"
+          className="mobileOnly"
+          role="separator"
+          sx={dividerSx}
+        />
+      )}
 
-      {/* Global site nav — always visible. Incubator is re-injected after
-          Donate (app-nav-gated), matching prod's single listing. */}
-      {globalNavItems.map(entry => {
+      {/* Global site nav — always visible. Incubator (app-nav-gated) is placed
+          right after Donate to match prod's single listing. */}
+      {globalNavItems.map((entry, i) => {
         const row = entry.subItems ? (
           <ExpandableSection entry={entry} />
         ) : (
@@ -140,20 +163,19 @@ const HamburgerPanel: FunctionComponent<
             </Box>
           </li>
         );
-        if (entry.label === 'Donate' && incubator) {
+        if (i === donateIndex && incubatorItem) {
           return (
             <Fragment key={entry.label}>
               {row}
-              <Box component="li" className="mobileOnly" sx={mobileOnlyItemSx}>
-                <Box component="a" href={incubator.href} sx={linkSx}>
-                  {incubator.label}
-                </Box>
-              </Box>
+              {incubatorItem}
             </Fragment>
           );
         }
         return <Fragment key={entry.label}>{row}</Fragment>;
       })}
+
+      {/* No Donate entry to anchor it — append so Incubator never vanishes. */}
+      {donateIndex === -1 && incubatorItem}
     </Box>
   );
 };

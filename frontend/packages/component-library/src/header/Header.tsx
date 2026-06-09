@@ -91,7 +91,9 @@ const Header: FunctionComponent<HeaderProps> = ({
                 </Box>
               )}
             </Box>
-            <HelpButton supportLinks={supportLinks} />
+            {supportLinks.length > 0 && (
+              <HelpButton supportLinks={supportLinks} />
+            )}
             <Box sx={{flexShrink: 0}}>
               <HamburgerMenu
                 menuItems={menuItems}

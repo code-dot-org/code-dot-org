@@ -67,4 +67,11 @@ describe('Header', () => {
       unmount();
     }
   });
+
+  it('omits the Help menu when no support links are provided', () => {
+    render(<Header {...BASE_PROPS} userAuth={{status: 'signed-out'}} />);
+    expect(
+      screen.queryByRole('button', {name: 'Help menu', hidden: true}),
+    ).not.toBeInTheDocument();
+  });
 });
