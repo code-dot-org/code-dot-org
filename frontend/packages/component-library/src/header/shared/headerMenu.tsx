@@ -20,16 +20,24 @@ export const headerTriggerBase: CSSObject = {
  * stylesheet order or portal nesting. Reproduces the legacy header dropdown panel.
  */
 
+/**
+ * Dropdown/popover panel surface — shared by the Help/Account menus, the Create
+ * picker, and the hamburger Popover. Reused under different selectors (compound
+ * `&.MuiPaper-root` for menu paper slots, descendant `& .MuiPaper-root` for the
+ * Popover), so the declarations live here once.
+ */
+export const MENU_SURFACE: CSSObject = {
+  marginTop: '4px',
+  backgroundColor: 'var(--background-neutral-primary)',
+  border: '1px solid var(--borders-neutral-primary)',
+  borderRadius: '4px',
+  boxShadow:
+    'rgb(0 0 0 / 0.1) 0 10px 15px -3px, rgb(0 0 0 / 0.05) 0 4px 6px -2px',
+};
+
 /** Menu `paper` slot: the dropdown panel surface. Pass via `slotProps={{paper:{sx: headerMenuPaperSx}}}`. */
 export const headerMenuPaperSx: SxProps = {
-  '&.MuiPaper-root': {
-    marginTop: '4px',
-    backgroundColor: 'var(--background-neutral-primary)',
-    border: '1px solid var(--borders-neutral-primary)',
-    borderRadius: '4px',
-    boxShadow:
-      'rgb(0 0 0 / 0.1) 0 10px 15px -3px, rgb(0 0 0 / 0.05) 0 4px 6px -2px',
-  },
+  '&.MuiPaper-root': MENU_SURFACE,
 };
 
 /** Menu `list` slot. 6px inset + 228px content + 1px border = 242px, matching prod. */

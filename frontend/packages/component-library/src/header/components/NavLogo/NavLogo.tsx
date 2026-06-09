@@ -51,7 +51,7 @@ const NavLogo: FunctionComponent<NavLogoProps> = ({
   <IconButton
     size="large"
     color="inherit"
-    aria-label={`${brandName} Home`}
+    aria-label={brandName ? `${brandName} Home` : 'Home'}
     sx={logoIconButtonSx}
     href="/"
   >

@@ -36,6 +36,8 @@ const accountTriggerSx: SxProps = {
     backgroundColor: 'var(--background-brand-teal-primary)',
     boxShadow: 'none',
     color: 'var(--neutral-base-white)',
+    // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
+    border: '1px solid var(--neutral-base-white)',
   },
   '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
     width: 'auto',

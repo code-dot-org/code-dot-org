@@ -211,6 +211,15 @@ export const TeacherSignedIn: Story = {
     }
     expect(document.activeElement).toBe(account);
     expect(account.matches(':focus-visible')).toBe(true);
+
+    // :active (press-and-hold) keeps the white border — the theme's Button
+    // :active rule recolors it unless the trigger re-pins border in sx.
+    for (const btn of [newProject, account]) {
+      await userEvent.pointer({keys: '[MouseLeft>]', target: btn});
+      expect(getComputedStyle(btn).borderColor).toBe(white);
+      await userEvent.pointer({keys: '[/MouseLeft]'});
+      await userEvent.keyboard('{Escape}');
+    }
   },
 };
 

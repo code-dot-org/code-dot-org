@@ -8,6 +8,7 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
 import {
   headerMenuItemSx,
   headerMenuListSx,
@@ -34,7 +35,7 @@ const helpTriggerSx: SxProps = {
   // Symmetric padding centers the glyph so the focus ring frames it evenly.
   padding: '6.5px 5px',
   fontSize: '22px',
-  '@media (max-width: 1060px)': {
+  [`@media (max-width: ${HEADER_BREAKPOINTS.desktopNav - 1}px)`]: {
     display: 'none',
   },
   '&:hover, &:active': {

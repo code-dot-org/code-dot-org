@@ -7,7 +7,8 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {headerTriggerBase} from '../../shared/headerMenu';
+import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
+import {headerMenuPaperSx, headerTriggerBase} from '../../shared/headerMenu';
 
 export interface CreateMenuItem {
   id: string;
@@ -41,12 +42,14 @@ const createTriggerSx: SxProps = {
   lineHeight: 1.5,
   textTransform: 'none',
   whiteSpace: 'nowrap',
-  '@media (max-width: 1200px)': {
+  [`@media (max-width: ${HEADER_BREAKPOINTS.desktopFull - 1}px)`]: {
     display: 'none',
   },
   '&:hover, &:active, &:focus-visible': {
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
+    border: '1px solid var(--neutral-base-white)',
   },
   '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
     width: 'auto',
@@ -55,23 +58,11 @@ const createTriggerSx: SxProps = {
 };
 
 /**
- * Project-type picker. Same panel surface as the other header menus, but the
- * rows are icon + label tiles (heavier weight, neutral-tertiary hover). Applied
- * to the Menu's paper/list slots and each MenuItem, qualified by the MUI class
- * (compound, on-element) so it wins regardless of stylesheet order or portal
- * nesting.
+ * Project-type picker rows: icon + label tiles (heavier weight,
+ * neutral-tertiary hover). The panel surface reuses the shared headerMenuPaperSx;
+ * the list/tiles are qualified by the MUI class (compound, on-element) so they
+ * win regardless of stylesheet order or portal nesting.
  */
-const createPaperSx: SxProps = {
-  '&.MuiPaper-root': {
-    marginTop: '4px',
-    backgroundColor: 'var(--background-neutral-primary)',
-    border: '1px solid var(--borders-neutral-primary)',
-    borderRadius: '4px',
-    boxShadow:
-      'rgb(0 0 0 / 0.1) 0 10px 15px -3px, rgb(0 0 0 / 0.05) 0 4px 6px -2px',
-  },
-};
-
 const createListSx: SxProps = {
   '&.MuiList-root': {
     minWidth: '240px',
@@ -138,7 +129,7 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
-          paper: {elevation: 0, sx: createPaperSx},
+          paper: {elevation: 0, sx: headerMenuPaperSx},
           list: {sx: createListSx, 'aria-label': 'New project'},
         }}
       >

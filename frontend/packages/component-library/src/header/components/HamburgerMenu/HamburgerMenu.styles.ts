@@ -1,6 +1,7 @@
 import type {SxProps} from '@mui/material/styles';
 
-import {headerTriggerBase} from '../../shared/headerMenu';
+import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
+import {headerTriggerBase, MENU_SURFACE} from '../../shared/headerMenu';
 
 /**
  * 3-bar hamburger icon: 25×3px bars with 1px border-radius, 8px gaps. Carries a
@@ -48,14 +49,7 @@ export const hamburgerTriggerSx: SxProps = {
  * selector beats MUI's Paper defaults on specificity, not stylesheet order.
  */
 export const popoverSx = {
-  '& .MuiPaper-root': {
-    marginTop: '4px',
-    backgroundColor: 'var(--background-neutral-primary)',
-    border: '1px solid var(--borders-neutral-primary)',
-    borderRadius: '4px',
-    boxShadow:
-      'rgb(0 0 0 / 0.1) 0 10px 15px -3px, rgb(0 0 0 / 0.05) 0 4px 6px -2px',
-  },
+  '& .MuiPaper-root': MENU_SURFACE,
 };
 
 /** 6px inset + 228px content + 1px border = 242px, matching #hamburger-contents. */
@@ -74,7 +68,7 @@ export const hamburgerListSx: SxProps = {
  * width gate (the emotion class is hashed).
  */
 export const mobileOnlyItemSx: SxProps = {
-  '@media (min-width: 1061px)': {
+  [`@media (min-width: ${HEADER_BREAKPOINTS.desktopNav}px)`]: {
     display: 'none',
   },
 };
@@ -85,7 +79,7 @@ export const dividerSx: SxProps = {
   padding: 0,
   // Legacy header divider gray (rgb(209,212,216)); no design token matches.
   background: '#d1d4d8',
-  '@media (min-width: 1061px)': {
+  [`@media (min-width: ${HEADER_BREAKPOINTS.desktopNav}px)`]: {
     display: 'none',
   },
 };

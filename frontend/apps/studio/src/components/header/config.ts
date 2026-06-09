@@ -2,6 +2,7 @@ import type {
   CreateMenuItem,
   GlobalNavItem,
   MenuItem,
+  UserType,
 } from '@code-dot-org/component-library/header';
 
 import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
@@ -150,7 +151,7 @@ export const GLOBAL_NAV: GlobalNavItem[] = [
 ];
 
 /** Help/support links; teachers additionally get the forum. All open in a new tab. */
-export function buildSupportLinks(userType?: string): MenuItem[] {
+export function buildSupportLinks(userType?: UserType): MenuItem[] {
   return [
     {label: 'Help and support', href: 'https://support.code.org'},
     {

@@ -9,12 +9,10 @@ export interface MenuItem {
   href: string;
 }
 
-/** A top-level site-nav entry; either a direct link or a group with sub-links. */
-export interface GlobalNavItem {
-  /** Display label for the entry. */
-  label: string;
-  /** Destination href for a direct-link entry. */
-  href?: string;
-  /** Sub-links rendered in an expandable section; omit for a direct link. */
-  subItems?: MenuItem[];
-}
+/**
+ * A top-level site-nav entry: either a direct link (href) or a group that
+ * expands to sub-links (subItems). The two forms are mutually exclusive.
+ */
+export type GlobalNavItem =
+  | {label: string; href: string; subItems?: never}
+  | {label: string; subItems: MenuItem[]; href?: never};
