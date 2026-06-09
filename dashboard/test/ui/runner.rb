@@ -521,10 +521,9 @@ end
 # page is being generated, so the active entry can be rendered unlinked.
 # The four entries are the four suites rake test:ui_all dispatches.
 STATUS_PAGES_NAVIGATION = [
-  {filename: 'test_status_Safari_UI.html',         display_name: 'Safari UI'},
-  {filename: 'test_status_Chrome_Firefox_UI.html', display_name: 'Chrome + Firefox UI'},
-  {filename: 'test_status_Mobile_UI.html',         display_name: 'Mobile UI'},
-  {filename: 'test_status_Eyes.html',              display_name: 'Eyes'},
+  {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
+  {filename: 'test_status_Eyes.html',                  display_name: 'Eyes'},
 ].freeze
 
 def status_pages_navigation
@@ -542,7 +541,7 @@ end
 # Status page filename per suite. Eyes keeps a stable name across
 # providers (we only run eyes on SauceLabs). Other suites name their
 # page after the suite label so the four ui_all suites
-# (Safari UI, Chrome + Firefox UI, Mobile UI, Eyes) get unique pages
+# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) get unique pages
 # and don't overwrite each other in the shared S3 prefix or in
 # dashboard/public/ui_test/.
 def status_page_filename
