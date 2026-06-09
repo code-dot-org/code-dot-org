@@ -27,6 +27,32 @@ describe('HelpButton', () => {
     ).toBeInTheDocument();
   });
 
+  it('advertises a popup and wires aria-controls to the menu only when open', async () => {
+    const user = userEvent.setup();
+    const trigger = renderAs('student');
+    expect(trigger).toHaveAttribute('aria-haspopup', 'true');
+    expect(trigger).not.toHaveAttribute('aria-controls');
+
+    await user.click(trigger);
+    await screen.findByRole('menu');
+
+    const controls = trigger.getAttribute('aria-controls');
+    expect(controls).toBeTruthy();
+    expect(document.getElementById(controls!)).not.toBeNull();
+  });
+
+  it('moves focus to the next item on ArrowDown (MenuList roving tabindex)', async () => {
+    const user = userEvent.setup();
+    await user.click(renderAs('student'));
+    const menu = await screen.findByRole('menu');
+    const items = within(menu).getAllByRole('menuitem');
+    expect(items[0]).toHaveFocus();
+
+    await user.keyboard('{ArrowDown}');
+
+    expect(items[1]).toHaveFocus();
+  });
+
   it('includes Teacher forum for teachers', async () => {
     const user = userEvent.setup();
     await user.click(renderAs('teacher'));
@@ -66,5 +92,6 @@ describe('HelpButton', () => {
     });
     expect(item).toHaveAttribute('target', '_blank');
     expect(item.getAttribute('rel')).toContain('noopener');
+    expect(item).toHaveAccessibleDescription('Opens in a new tab');
   });
 });

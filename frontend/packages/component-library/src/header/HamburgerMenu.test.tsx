@@ -66,6 +66,15 @@ describe('HamburgerMenu', () => {
     );
   });
 
+  it('exposes the app-nav/support dividers as width-gated separators', async () => {
+    await openPanel();
+    const separators = screen.getAllByRole('separator');
+    expect(separators).toHaveLength(2);
+    separators.forEach(separator =>
+      expect(separator).toHaveClass('mobileOnly'),
+    );
+  });
+
   it('marks external support links as opening in a new tab', async () => {
     await openPanel();
     const help = screen.getByText('Help and support').closest('a');
