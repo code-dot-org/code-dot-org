@@ -5,6 +5,7 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import menuStyles from './headerMenu.module.scss';
 import moduleStyles from './helpButton.module.scss';
 
 interface SupportLink {
@@ -51,12 +52,12 @@ const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
       >
         <FontAwesomeV6Icon iconName="circle-question" iconStyle="solid" />
       </IconButton>
-      <span id={newTabId} className={moduleStyles.visuallyHidden}>
+      <span id={newTabId} className={menuStyles.visuallyHidden}>
         Opens in a new tab
       </span>
       <Menu
         id={menuId}
-        className={moduleStyles.menu}
+        className={menuStyles.menu}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}

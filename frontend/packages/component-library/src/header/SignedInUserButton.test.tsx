@@ -1,42 +1,65 @@
-import {render, screen, within} from '@testing-library/react';
+import {render, screen, within, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import Header from './Header';
-
-const BASE = {
-  logoImageUrl: '/logo.png',
-  brandName: 'CodeAI',
-  menuItems: [{label: 'Projects', href: '/projects'}],
-};
+import SignedInUserButton from './SignedInUserButton';
 
 function renderAs(user_type: 'student' | 'teacher') {
   render(
-    <Header
-      {...BASE}
+    <SignedInUserButton
       userAuth={{status: 'signed-in', display_name: 'Ms. Rivera', user_type}}
     />,
   );
-  return document.getElementById('signed-in-user-dropdown') as HTMLElement;
+  return screen.getByRole('button', {name: 'Account menu'});
 }
 
 describe('SignedInUserButton (account menu)', () => {
   it('shows the display name on the trigger', () => {
-    renderAs('teacher');
-    expect(screen.getByText('Ms. Rivera')).toBeInTheDocument();
+    expect(renderAs('teacher')).toHaveTextContent('Ms. Rivera');
   });
 
-  it('shows the shared items but omits Pair programming for teachers', () => {
-    const menu = renderAs('teacher');
-    expect(within(menu).getByText('My projects')).toBeInTheDocument();
-    expect(within(menu).getByText('Account settings')).toBeInTheDocument();
-    expect(within(menu).getByText('Sign out')).toBeInTheDocument();
+  it('opens the account menu with shared items, omitting Pair programming for teachers', async () => {
+    const user = userEvent.setup();
+    const trigger = renderAs('teacher');
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+
+    await user.click(trigger);
+
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    const menu = await screen.findByRole('menu');
     expect(
-      within(menu).queryByText('Pair programming'),
+      within(menu).getByRole('menuitem', {name: 'My projects'}),
+    ).toBeInTheDocument();
+    expect(
+      within(menu).getByRole('menuitem', {name: 'Account settings'}),
+    ).toBeInTheDocument();
+    expect(
+      within(menu).getByRole('menuitem', {name: 'Sign out'}),
+    ).toBeInTheDocument();
+    expect(
+      within(menu).queryByRole('menuitem', {name: 'Pair programming'}),
     ).not.toBeInTheDocument();
   });
 
-  it('includes Pair programming for students', () => {
-    const menu = renderAs('student');
-    expect(within(menu).getByText('Pair programming')).toBeInTheDocument();
+  it('includes Pair programming for students', async () => {
+    const user = userEvent.setup();
+    await user.click(renderAs('student'));
+    expect(
+      await screen.findByRole('menuitem', {name: 'Pair programming'}),
+    ).toBeInTheDocument();
+  });
+
+  it('closes on Escape and restores focus to the trigger', async () => {
+    const user = userEvent.setup();
+    const trigger = renderAs('teacher');
+    await user.click(trigger);
+    await screen.findByRole('menu');
+
+    await user.keyboard('{Escape}');
+
+    await waitFor(() =>
+      expect(screen.queryByRole('menu')).not.toBeInTheDocument(),
+    );
+    expect(trigger).toHaveFocus();
   });
 });

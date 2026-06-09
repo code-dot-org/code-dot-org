@@ -1,41 +1,49 @@
-// Triple-class specificity [0,3,0] beats CustomDropdown's
-// `._dropdownContainer ._dropdownMenuContainer ul` [0,2,1], which otherwise
-// forces padding to 0.25rem 0.
-.list.list.list {
-  list-style: none;
-  margin: 0;
-  // 6px inset + 228px content + 1px container border = 242px, matching the
-  // legacy header account menu (.user_options).
-  padding: 6px;
-  min-width: 240px;
+// Account-menu trigger (teal pill with the display name + chevron). The
+// compound `.MuiButton-root` selector beats MUI's per-variant defaults on
+// specificity, not stylesheet order. The menu surface is shared — see
+// headerMenu.module.scss.
+.trigger:global(.MuiButton-root) {
+  min-width: 0;
+  height: 35px;
+  // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
+  margin-top: -1px;
+  padding: 6.5px 1rem;
+  column-gap: 8.4688px;
+  border: 1px solid var(--neutral-base-white);
+  border-radius: 4px;
+  background-color: var(--background-brand-teal-primary);
+  box-shadow: none;
+  color: var(--neutral-base-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: none;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color: var(--background-brand-teal-primary);
+    box-shadow: none;
+    color: var(--neutral-base-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: 1px;
+  }
+
+  :global(.MuiButton-endIcon),
+  :global(.MuiButton-endIcon) i {
+    width: auto;
+    color: var(--neutral-base-white);
+    font-size: 14px;
+  }
 }
 
-// Double-class specificity [0,2,0] beats the Link module's single-class
-// link-body-common mixin that applies semi-bold.
-.menuItem.menuItem {
-  display: block;
-  // Fill the row so the hover highlight spans full width; the parent li is a
-  // flex item, which would otherwise shrink the link to its text width.
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 14px;
-  // Pin to 20px (prod); the inherited 1.48 ratio gives 20.72px, adding ~1px
-  // per row and overshooting the menu height.
-  line-height: 20px;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--text-neutral-primary);
+.name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-
-  &:visited,
-  &:hover,
-  &:active {
-    color: var(--text-neutral-primary);
-  }
-
-  // Legacy header hover gray (rgb(231,232,234)); no design token matches.
-  &:hover {
-    background-color: #e7e8ea;
-  }
+  flex-shrink: 0;
 }
