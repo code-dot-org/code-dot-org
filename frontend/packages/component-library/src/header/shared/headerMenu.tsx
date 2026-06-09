@@ -2,9 +2,8 @@ import type {CSSObject, SxProps} from '@mui/material/styles';
 
 /**
  * Shared header-trigger styling: white glyph/text on the teal bar plus the
- * brand-inverse focus ring. Spread into each trigger's compound MUI selector
- * (`&.MuiButton-root` / `&.MuiIconButton-root`); each adds its own specifics
- * (pill border, hover background, breakpoint gate).
+ * brand-inverse focus ring. Spread into each trigger's `sx`; each adds its own
+ * specifics (pill border, hover background, breakpoint gate).
  */
 export const headerTriggerBase: CSSObject = {
   color: 'var(--neutral-base-white)',

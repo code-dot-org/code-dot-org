@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {styled} from '@mui/material/styles';
+import type {SxProps} from '@mui/material/styles';
 import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
@@ -16,39 +16,35 @@ import {
 import type {UserType} from '../../shared/types';
 
 /**
- * Account-menu trigger (teal pill with the display name + chevron). The compound
- * `.MuiButton-root` selector beats MUI's per-variant defaults on specificity,
- * not stylesheet order.
+ * Account-menu trigger (teal pill with the display name + chevron).
  */
-const AccountTrigger = styled(Button)({
-  '&.MuiButton-root': {
-    ...headerTriggerBase,
-    minWidth: 0,
-    height: '35px',
-    // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
-    marginTop: '-1px',
-    padding: '6.5px 1rem',
-    columnGap: '8.4688px',
-    border: '1px solid var(--neutral-base-white)',
-    borderRadius: '4px',
+const accountTriggerSx: SxProps = {
+  ...headerTriggerBase,
+  minWidth: 0,
+  height: '35px',
+  // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
+  marginTop: '-1px',
+  padding: '6.5px 1rem',
+  columnGap: '8.4688px',
+  border: '1px solid var(--neutral-base-white)',
+  borderRadius: '4px',
+  backgroundColor: 'var(--background-brand-teal-primary)',
+  boxShadow: 'none',
+  fontSize: '14px',
+  fontWeight: 400,
+  lineHeight: 1.5,
+  textTransform: 'none',
+  '&:hover, &:active, &:focus-visible': {
     backgroundColor: 'var(--background-brand-teal-primary)',
     boxShadow: 'none',
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: 1.5,
-    textTransform: 'none',
-    '&:hover, &:active, &:focus-visible': {
-      backgroundColor: 'var(--background-brand-teal-primary)',
-      boxShadow: 'none',
-      color: 'var(--neutral-base-white)',
-    },
-    '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
-      width: 'auto',
-      color: 'var(--neutral-base-white)',
-      fontSize: '14px',
-    },
+    color: 'var(--neutral-base-white)',
   },
-});
+  '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
+    width: 'auto',
+    color: 'var(--neutral-base-white)',
+    fontSize: '14px',
+  },
+};
 
 /** Display name: truncate to 120px so the button auto-sizes to prod's ~176px. */
 const accountNameSx = {
@@ -102,7 +98,8 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
 
   return (
     <>
-      <AccountTrigger
+      <Button
+        sx={accountTriggerSx}
         aria-label="Account menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -120,7 +117,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         <Box component="span" sx={accountNameSx}>
           {userAuth.display_name}
         </Box>
-      </AccountTrigger>
+      </Button>
       <Menu
         id={menuId}
         anchorEl={anchorEl}

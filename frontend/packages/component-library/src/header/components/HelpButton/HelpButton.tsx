@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {styled} from '@mui/material/styles';
+import type {SxProps} from '@mui/material/styles';
 import {visuallyHidden} from '@mui/utils';
 import {useId, useState, type FunctionComponent} from 'react';
 
@@ -24,31 +24,27 @@ interface HelpButtonProps {
 /**
  * Help-menu trigger. Authored default-visible + hidden below the desktop-nav
  * breakpoint via a max-width query, so the button is present in jsdom (which
- * ignores @media) where the unit tests drive it. The compound
- * `.MuiIconButton-root` selector beats MUI's single-class defaults on
- * specificity, not stylesheet order.
+ * ignores @media) where the unit tests drive it.
  */
-const HelpTrigger = styled(IconButton)({
-  '&.MuiIconButton-root': {
-    ...headerTriggerBase,
-    display: 'inline-flex',
-    minWidth: 0,
-    minHeight: 0,
-    // Symmetric padding centers the glyph so the focus ring frames it evenly.
-    padding: '6.5px 5px',
-    fontSize: '22px',
-    '@media (max-width: 1060px)': {
-      display: 'none',
-    },
-    '&:hover, &:active': {
-      backgroundColor: 'transparent',
-    },
-    // Match prod's 22px "?" — the FA glyph otherwise renders at 16px.
-    '& i': {
-      fontSize: '22px',
-    },
+const helpTriggerSx: SxProps = {
+  ...headerTriggerBase,
+  display: 'inline-flex',
+  minWidth: 0,
+  minHeight: 0,
+  // Symmetric padding centers the glyph so the focus ring frames it evenly.
+  padding: '6.5px 5px',
+  fontSize: '22px',
+  '@media (max-width: 1060px)': {
+    display: 'none',
   },
-});
+  '&:hover, &:active': {
+    backgroundColor: 'transparent',
+  },
+  // Match prod's 22px "?" — the FA glyph otherwise renders at 16px.
+  '& i': {
+    fontSize: '22px',
+  },
+};
 
 /** "?" icon button with a support-links menu. Hidden below the desktop-nav breakpoint. */
 const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
@@ -60,7 +56,8 @@ const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
 
   return (
     <>
-      <HelpTrigger
+      <IconButton
+        sx={helpTriggerSx}
         aria-label="Help menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -68,7 +65,7 @@ const HelpButton: FunctionComponent<HelpButtonProps> = ({userType}) => {
         onClick={event => setAnchorEl(event.currentTarget)}
       >
         <FontAwesomeV6Icon iconName="circle-question" iconStyle="solid" />
-      </HelpTrigger>
+      </IconButton>
       <Box component="span" id={newTabId} sx={visuallyHidden}>
         Opens in a new tab
       </Box>

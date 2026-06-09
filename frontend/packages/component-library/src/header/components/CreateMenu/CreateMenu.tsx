@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {styled} from '@mui/material/styles';
 import type {SxProps} from '@mui/material/styles';
 import {useId, useState, type FunctionComponent} from 'react';
 
@@ -24,41 +23,38 @@ interface CreateMenuProps {
 /**
  * "New project" trigger (transparent outline pill on the teal bar). Authored
  * default-visible + hidden below the desktop-full breakpoint via a max-width
- * query so jsdom (which ignores @media) keeps the button testable. Compound
- * `.MuiButton-root` selector beats MUI's defaults on specificity.
+ * query so jsdom (which ignores @media) keeps the button testable.
  */
-const CreateTrigger = styled(Button)({
-  '&.MuiButton-root': {
-    ...headerTriggerBase,
-    display: 'inline-flex',
-    minWidth: 0,
-    height: '35px',
-    // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
-    marginTop: '-1px',
-    padding: '6.5px 1rem',
-    columnGap: '8.4688px',
-    border: '1px solid var(--neutral-base-white)',
-    borderRadius: '4px',
+const createTriggerSx: SxProps = {
+  ...headerTriggerBase,
+  display: 'inline-flex',
+  minWidth: 0,
+  height: '35px',
+  // -1px nudge aligns the 35px pill against the 50px bar, matching prod.
+  marginTop: '-1px',
+  padding: '6.5px 1rem',
+  columnGap: '8.4688px',
+  border: '1px solid var(--neutral-base-white)',
+  borderRadius: '4px',
+  backgroundColor: 'transparent',
+  boxShadow: 'none',
+  fontSize: '14px',
+  fontWeight: 400,
+  lineHeight: 1.5,
+  textTransform: 'none',
+  whiteSpace: 'nowrap',
+  '@media (max-width: 1200px)': {
+    display: 'none',
+  },
+  '&:hover, &:active, &:focus-visible': {
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: 1.5,
-    textTransform: 'none',
-    whiteSpace: 'nowrap',
-    '@media (max-width: 1200px)': {
-      display: 'none',
-    },
-    '&:hover, &:active, &:focus-visible': {
-      backgroundColor: 'transparent',
-      boxShadow: 'none',
-    },
-    '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
-      width: 'auto',
-      fontSize: '14px',
-    },
   },
-});
+  '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
+    width: 'auto',
+    fontSize: '14px',
+  },
+};
 
 /**
  * Project-type picker. Same panel surface as the other header menus, but the
@@ -121,7 +117,8 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
 
   return (
     <>
-      <CreateTrigger
+      <Button
+        sx={createTriggerSx}
         aria-label="New project menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -132,7 +129,7 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
         endIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
       >
         New project
-      </CreateTrigger>
+      </Button>
       <Menu
         id={menuId}
         anchorEl={anchorEl}

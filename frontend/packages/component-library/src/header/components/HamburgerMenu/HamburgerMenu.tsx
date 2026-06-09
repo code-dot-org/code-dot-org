@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
-import {styled} from '@mui/material/styles';
+import type {SxProps} from '@mui/material/styles';
 import {visuallyHidden} from '@mui/utils';
 import {Fragment, useId, useState, type FunctionComponent} from 'react';
 
@@ -82,7 +82,7 @@ const ACCORDION_NAME = 'hamburger-section';
  * literal `barsIcon` class as a stable hook for layout tests/stories that query
  * the glyph (the emotion class is hashed).
  */
-const BarsIcon = styled('span')({
+const barsIconSx: SxProps = {
   position: 'relative',
   display: 'block',
   width: '25px',
@@ -104,24 +104,19 @@ const BarsIcon = styled('span')({
   '&::after': {
     top: '8px',
   },
-});
+};
 
-/**
- * Trigger: always visible (the hamburger shows at every width). Compound
- * `.MuiIconButton-root` selector beats MUI's single-class defaults.
- */
-const HamburgerTrigger = styled(IconButton)({
-  '&.MuiIconButton-root': {
-    ...headerTriggerBase,
-    minWidth: 0,
-    minHeight: 0,
-    // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.
-    padding: '18px 6px 20px 6px',
-    '&:hover, &:active': {
-      backgroundColor: 'transparent',
-    },
+/** Trigger: always visible (the hamburger shows at every width). */
+const hamburgerTriggerSx: SxProps = {
+  ...headerTriggerBase,
+  minWidth: 0,
+  minHeight: 0,
+  // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.
+  padding: '18px 6px 20px 6px',
+  '&:hover, &:active': {
+    backgroundColor: 'transparent',
   },
-});
+};
 
 /**
  * Popover surface (legacy #hamburger-contents). The compound `.MuiPaper-root`
@@ -139,12 +134,12 @@ const popoverSx = {
 };
 
 /** 6px inset + 228px content + 1px border = 242px, matching #hamburger-contents. */
-const HamburgerList = styled('ul')({
+const hamburgerListSx: SxProps = {
   minWidth: '240px',
   margin: 0,
   padding: '6px',
   listStyle: 'none',
-});
+};
 
 /**
  * App-nav, support links, and their dividers: shown only below the top-nav
@@ -153,13 +148,13 @@ const HamburgerList = styled('ul')({
  * Carries a literal `mobileOnly` class as a stable hook for tests asserting the
  * width gate (the emotion class is hashed).
  */
-const MobileOnlyItem = styled('li')({
+const mobileOnlyItemSx: SxProps = {
   '@media (min-width: 1061px)': {
     display: 'none',
   },
-});
+};
 
-const Divider = styled('li')({
+const dividerSx: SxProps = {
   height: '1px',
   margin: '0.5rem 0',
   padding: 0,
@@ -168,7 +163,7 @@ const Divider = styled('li')({
   '@media (min-width: 1061px)': {
     display: 'none',
   },
-});
+};
 
 const linkSx = {
   display: 'block',
@@ -197,7 +192,7 @@ const linkSx = {
  * the only open/closed cue, rotated via `[open]`. Toggling is instant (no JS, no
  * animation — reduced-motion safe).
  */
-const HamburgerSection = styled('details')({
+const hamburgerSectionSx: SxProps = {
   '& summary': {
     display: 'flex',
     alignItems: 'center',
@@ -225,7 +220,7 @@ const HamburgerSection = styled('details')({
   '&[open] .chevron': {
     transform: 'rotate(180deg)',
   },
-});
+};
 
 const expandTextSx = {
   maxWidth: '210px',
@@ -251,7 +246,7 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavEntry}> = ({
   entry,
 }) => (
   <li>
-    <HamburgerSection name={ACCORDION_NAME}>
+    <Box component="details" name={ACCORDION_NAME} sx={hamburgerSectionSx}>
       <summary>
         <Box component="span" sx={expandTextSx}>
           {entry.label}
@@ -271,7 +266,7 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavEntry}> = ({
           </li>
         ))}
       </Box>
-    </HamburgerSection>
+    </Box>
   </li>
 );
 
@@ -293,21 +288,36 @@ const HamburgerPanel: FunctionComponent<
   const appNavItems = menuItems.filter(item => item.label !== 'Incubator');
 
   return (
-    <HamburgerList>
+    <Box component="ul" sx={hamburgerListSx}>
       {/* App nav — gated below the top-nav breakpoint (prod .show-mobile) */}
       {appNavItems.map(item => (
-        <MobileOnlyItem key={item.label} className="mobileOnly">
+        <Box
+          component="li"
+          key={item.label}
+          className="mobileOnly"
+          sx={mobileOnlyItemSx}
+        >
           <Box component="a" href={item.href} sx={linkSx}>
             {item.label}
           </Box>
-        </MobileOnlyItem>
+        </Box>
       ))}
 
-      <Divider className="mobileOnly" role="separator" />
+      <Box
+        component="li"
+        className="mobileOnly"
+        role="separator"
+        sx={dividerSx}
+      />
 
       {/* Support links — gated below the top-nav breakpoint */}
       {supportLinks.map(link => (
-        <MobileOnlyItem key={link.label} className="mobileOnly">
+        <Box
+          component="li"
+          key={link.label}
+          className="mobileOnly"
+          sx={mobileOnlyItemSx}
+        >
           <Box
             component="a"
             href={link.href}
@@ -318,10 +328,15 @@ const HamburgerPanel: FunctionComponent<
           >
             {link.label}
           </Box>
-        </MobileOnlyItem>
+        </Box>
       ))}
 
-      <Divider className="mobileOnly" role="separator" />
+      <Box
+        component="li"
+        className="mobileOnly"
+        role="separator"
+        sx={dividerSx}
+      />
 
       {/* Global site nav — always visible. Incubator is re-injected after
           Donate (app-nav-gated), matching prod's single listing. */}
@@ -339,17 +354,17 @@ const HamburgerPanel: FunctionComponent<
           return (
             <Fragment key={entry.label}>
               {row}
-              <MobileOnlyItem className="mobileOnly">
+              <Box component="li" className="mobileOnly" sx={mobileOnlyItemSx}>
                 <Box component="a" href={incubator.href} sx={linkSx}>
                   {incubator.label}
                 </Box>
-              </MobileOnlyItem>
+              </Box>
             </Fragment>
           );
         }
         return <Fragment key={entry.label}>{row}</Fragment>;
       })}
-    </HamburgerList>
+    </Box>
   );
 };
 
@@ -370,15 +385,16 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
 
   return (
     <>
-      <HamburgerTrigger
+      <IconButton
+        sx={hamburgerTriggerSx}
         aria-label="Open navigation menu"
         aria-haspopup="true"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         onClick={event => setAnchorEl(event.currentTarget)}
       >
-        <BarsIcon className="barsIcon" />
-      </HamburgerTrigger>
+        <Box component="span" className="barsIcon" sx={barsIconSx} />
+      </IconButton>
       <Box component="span" id={newTabId} sx={visuallyHidden}>
         Opens in a new tab
       </Box>
