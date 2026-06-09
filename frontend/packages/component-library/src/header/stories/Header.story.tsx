@@ -73,11 +73,36 @@ const BASE = {
   createMenuItems: CREATE_MENU_ITEMS,
 };
 
+// Desktop viewport so the >1200px "New project" trigger renders in the vitest
+// browser test and the Eyes snapshot (MINIMAL_VIEWPORTS has only narrow presets).
+const DESKTOP_LAYOUT_PARAMS = {
+  viewport: {
+    viewports: {
+      desktop: {name: 'Desktop', styles: {width: '1280px', height: '800px'}},
+    },
+    defaultViewport: 'desktop',
+  },
+  eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
+};
+
 export const StudentSignedIn = Template.bind({});
 StudentSignedIn.args = {
   ...BASE,
   menuItems: STUDENT_MENU_ITEMS,
   userAuth: {status: 'signed-in', display_name: 'Alex', user_type: 'student'},
+};
+// Opens the account menu and asserts its items render with prod-matched type
+// metrics (fontWeight 500, lineHeight 20px) that only resolve under real layout.
+StudentSignedIn.play = async ({canvasElement}) => {
+  const canvas = within(canvasElement);
+  await userEvent.click(canvas.getByRole('button', {name: 'Account menu'}));
+  // MUI Menu portals to document.body, outside canvasElement.
+  const item = await within(document.body).findByRole('menuitem', {
+    name: 'My projects',
+  });
+  const styles = getComputedStyle(item);
+  expect(styles.fontWeight).toBe('500');
+  expect(styles.lineHeight).toBe('20px');
 };
 
 export const TeacherSignedIn = Template.bind({});
@@ -89,6 +114,52 @@ TeacherSignedIn.args = {
     display_name: 'Ms. Rivera',
     user_type: 'teacher',
   },
+};
+TeacherSignedIn.parameters = DESKTOP_LAYOUT_PARAMS;
+// Resting-state guards, each a flat assert, ending with no menu open:
+//  - target size (WCAG 2.5.8 AA): every control is at least 24x24px.
+//  - hover colors: hovered New project + Account stay brand-white (label, icon,
+//    border) — CdoTheme has no palette, so a regression resolved hover to MUI's
+//    default primary purple. The white outline comes from var() in sx, not styled.
+//  - focus-visible (F-5): keyboard-tabbing to the Account button engages
+//    :focus-visible (programmatic .focus() does not, in Chromium).
+TeacherSignedIn.play = async ({canvasElement}) => {
+  const canvas = within(canvasElement);
+  const white = 'rgb(255, 255, 255)';
+
+  for (const label of [
+    'CodeAI Home',
+    'New project menu',
+    'Account menu',
+    'Help menu',
+    'Open navigation menu',
+  ]) {
+    const {width, height} = canvasElement
+      .querySelector(`[aria-label="${label}"]`)!
+      .getBoundingClientRect();
+    expect(width).toBeGreaterThanOrEqual(24);
+    expect(height).toBeGreaterThanOrEqual(24);
+  }
+
+  const newProject = canvas.getByRole('button', {name: 'New project menu'});
+  await userEvent.hover(newProject);
+  expect(getComputedStyle(newProject).color).toBe(white);
+  expect(getComputedStyle(newProject.querySelector('i')!).color).toBe(white);
+  expect(getComputedStyle(newProject).borderColor).toBe(white);
+
+  const account = canvas.getByRole('button', {name: 'Account menu'});
+  await userEvent.hover(account);
+  expect(getComputedStyle(account).color).toBe(white);
+  expect(getComputedStyle(account.querySelector('i')!).color).toBe(white);
+  expect(getComputedStyle(account).borderColor).toBe(white);
+
+  account.blur();
+  canvasElement.querySelector('a')?.focus();
+  for (let i = 0; i < 12 && document.activeElement !== account; i++) {
+    await userEvent.tab();
+  }
+  expect(document.activeElement).toBe(account);
+  expect(account.matches(':focus-visible')).toBe(true);
 };
 
 export const SignedInLongName = Template.bind({});
@@ -148,127 +219,42 @@ const TEACHER_ARGS = {
   },
 };
 
-// Layout-regression stories: open a menu and assert prod-matched metrics that
-// only resolve under real layout (jsdom can't). Hover/active *colors* still
-// need real pointer input and are covered by visual comparison, not here.
-
-export const AccountMenuLayout = Template.bind({});
-AccountMenuLayout.args = {...TEACHER_ARGS};
-AccountMenuLayout.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button', {name: 'Account menu'}));
-  // MUI Menu portals to document.body, outside canvasElement.
-  const item = await within(document.body).findByRole('menuitem', {
-    name: 'My projects',
-  });
-  const styles = getComputedStyle(item);
-  expect(styles.fontWeight).toBe('500');
-  expect(styles.lineHeight).toBe('20px');
-  // Full-row fill (prod ~228px content) is verified in the real app via pixel
-  // diffs; the headless Storybook test browser renders the portaled MUI menu
-  // narrower, so width isn't asserted here.
-};
-
-export const HelpMenuLayout = Template.bind({});
-HelpMenuLayout.args = {...TEACHER_ARGS};
-HelpMenuLayout.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button', {name: 'Help menu'}));
-  // MUI Menu portals to document.body, outside canvasElement.
-  const item = await within(document.body).findByRole('menuitem', {
-    name: 'Help and support',
-  });
-  const styles = getComputedStyle(item);
-  expect(styles.fontWeight).toBe('500');
-  expect(styles.lineHeight).toBe('20px');
-  // Full-row width verified in the real app via pixel diffs (see AccountMenuLayout).
-};
-
-export const HamburgerLayout = Template.bind({});
-HamburgerLayout.args = {...TEACHER_ARGS};
-HamburgerLayout.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
+// Create-menu open state for Eyes. Opens the "New project" picker (rendered at the
+// desktop viewport); the picker portals to body. Asserts the Sprite Lab item's
+// prod-matched fontWeight 600, which only resolves under real layout.
+export const CreateMenu = Template.bind({});
+CreateMenu.args = {...TEACHER_ARGS};
+CreateMenu.parameters = DESKTOP_LAYOUT_PARAMS;
+CreateMenu.play = async ({canvasElement}) => {
   await userEvent.click(
-    canvas.getByRole('button', {name: 'Open navigation menu'}),
+    within(canvasElement).getByRole('button', {name: 'New project menu'}),
   );
-  // Popover panel portals to document.body, outside canvasElement.
-  await waitFor(() => {
-    const panel = document.querySelector('.MuiPopover-paper') as HTMLElement;
-    expect(panel).not.toBeNull();
-    // Compact 242px panel matching prod #hamburger-contents (not a full-width
-    // Drawer).
-    expect(Math.round(panel.getBoundingClientRect().width)).toBe(242);
+  const item = await within(document.body).findByRole('menuitem', {
+    name: 'Sprite Lab',
   });
+  expect(getComputedStyle(item).fontWeight).toBe('600');
 };
 
-// Desktop viewport so the >1200px "New project" trigger renders in the vitest
-// browser test and the Eyes snapshot (MINIMAL_VIEWPORTS has only narrow presets).
-const DESKTOP_LAYOUT_PARAMS = {
-  viewport: {
-    viewports: {
-      desktop: {name: 'Desktop', styles: {width: '1280px', height: '800px'}},
-    },
-    defaultViewport: 'desktop',
-  },
-  eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
-};
-
-// Purple-hover regression: CdoTheme defines no palette, so before color="inherit"
-// the DS button override resolved hover/focus to MUI's default primary purple
-// (rgb(150,87,199)). Both triggers must stay brand-white in every pointer state.
-export const HoverColorsLayout = Template.bind({});
-HoverColorsLayout.args = {...TEACHER_ARGS};
-HoverColorsLayout.parameters = DESKTOP_LAYOUT_PARAMS;
-HoverColorsLayout.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
-  const white = 'rgb(255, 255, 255)';
-
-  const newProject = canvas.getByRole('button', {name: 'New project menu'});
-  await userEvent.hover(newProject);
-  expect(getComputedStyle(newProject).color).toBe(white);
-  expect(getComputedStyle(newProject.querySelector('i')!).color).toBe(white);
-
-  const account = canvas.getByRole('button', {name: 'Account menu'});
-  await userEvent.hover(account);
-  expect(getComputedStyle(account).color).toBe(white);
-  expect(getComputedStyle(account.querySelector('i')!).color).toBe(white);
-};
-
-// F-5 focus-visible: keyboard-reaching a trigger must engage :focus-visible so a
-// focus ring renders (the brand-white outline color is verified visually by Eyes
-// — the headless runner zeroes the computed outline width, so width/color are not
-// asserted here). Tab forward from the logo link until the Account button holds
-// focus; programmatic .focus() does not set :focus-visible in Chromium.
-export const FocusVisibleLayout = Template.bind({});
-FocusVisibleLayout.args = {...TEACHER_ARGS};
-FocusVisibleLayout.play = async ({canvasElement}) => {
-  const account = within(canvasElement).getByRole('button', {
-    name: 'Account menu',
-  });
-  account.blur();
-  canvasElement.querySelector('a')?.focus();
-  for (let i = 0; i < 12 && document.activeElement !== account; i++) {
-    await userEvent.tab();
-  }
-  expect(document.activeElement).toBe(account);
-  expect(account.matches(':focus-visible')).toBe(true);
-};
-
-// Caret-inset regression: the accordion summary needed box-sizing:border-box so
-// its 8px padding sits inside the 242px panel; without it the chevron rendered
-// flush to the panel edge (~0–1px inset). Open the hamburger, then assert the
-// first expandable summary's chevron is inset from the panel's right edge.
-export const HamburgerExpandedLayout = Template.bind({});
-HamburgerExpandedLayout.args = {...TEACHER_ARGS};
-HamburgerExpandedLayout.play = async ({canvasElement}) => {
+// Hamburger open + expanded state. Opens the panel and asserts the compact 242px
+// width matching prod #hamburger-contents (not a full-width Drawer), then expands
+// the first <details> summary. Caret-inset regression: the summary needs
+// box-sizing:border-box so its 8px padding sits inside the panel; without it the
+// chevron rendered flush to the panel edge (~0–1px inset).
+export const Hamburger = Template.bind({});
+Hamburger.args = {...TEACHER_ARGS};
+Hamburger.play = async ({canvasElement}) => {
   await userEvent.click(
     within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),
   );
+  // Popover panel portals to document.body, outside canvasElement. Retry the
+  // width assert until the MUI Grow transition settles (scale reaches 1).
   const panel = await waitFor(() => {
     const p = document.querySelector('.MuiPopover-paper') as HTMLElement;
     expect(p).not.toBeNull();
+    expect(Math.round(p.getBoundingClientRect().width)).toBe(242);
     return p;
   });
+
   const summary = panel.querySelector('summary') as HTMLElement;
   expect(getComputedStyle(summary).boxSizing).toBe('border-box');
 
@@ -279,42 +265,4 @@ HamburgerExpandedLayout.play = async ({canvasElement}) => {
   const inset =
     panel.getBoundingClientRect().right - chevron.getBoundingClientRect().right;
   expect(inset).toBeGreaterThanOrEqual(10);
-};
-
-// Create-menu open state for Eyes. Opens the "New project" picker (rendered at the
-// desktop viewport); mirrors the other *Layout stories. The picker portals to body.
-export const CreateMenuLayout = Template.bind({});
-CreateMenuLayout.args = {...TEACHER_ARGS};
-CreateMenuLayout.parameters = DESKTOP_LAYOUT_PARAMS;
-CreateMenuLayout.play = async ({canvasElement}) => {
-  await userEvent.click(
-    within(canvasElement).getByRole('button', {name: 'New project menu'}),
-  );
-  const item = await within(document.body).findByRole('menuitem', {
-    name: 'Sprite Lab',
-  });
-  const styles = getComputedStyle(item);
-  expect(styles.fontWeight).toBe('600');
-};
-
-// WCAG 2.5.8 (Target Size, AA): every interactive header control is at least
-// 24x24px (rendered at the desktop viewport so the create trigger is present).
-export const TargetSizeLayout = Template.bind({});
-TargetSizeLayout.args = {...TEACHER_ARGS};
-TargetSizeLayout.parameters = DESKTOP_LAYOUT_PARAMS;
-TargetSizeLayout.play = async ({canvasElement}) => {
-  const labels = [
-    'CodeAI Home',
-    'New project menu',
-    'Account menu',
-    'Help menu',
-    'Open navigation menu',
-  ];
-  for (const label of labels) {
-    const {width, height} = canvasElement
-      .querySelector(`[aria-label="${label}"]`)!
-      .getBoundingClientRect();
-    expect(width).toBeGreaterThanOrEqual(24);
-    expect(height).toBeGreaterThanOrEqual(24);
-  }
 };
