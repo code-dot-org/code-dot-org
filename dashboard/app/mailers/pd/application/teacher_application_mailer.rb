@@ -2,7 +2,7 @@ module Pd::Application
   class TeacherApplicationMailer < ApplicationMailer
     # This should be kept consistent with the signature in _partner_signature.html.haml
     CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = email_address_with_name('teacher@code.org', 'Nikki Navta')
-    default from: email_address_with_name('noreply@code.org', 'Code.org')
+    default from: email_address_with_name('noreply@code.org', 'CodeAI')
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
     def confirmation(teacher_application)
@@ -12,13 +12,13 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "#{@application.regional_partner.name} has received your application for Code.org's Professional Learning Program",
+          subject: "#{@application.regional_partner.name} has received your application for CodeAI's Professional Learning Program",
         )
       else
         mail(
           from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
           to: @application.formatted_applicant_email,
-          subject: "We've received your application for Code.org's Professional Learning Program!"
+          subject: "We've received your application for CodeAI's Professional Learning Program!"
         )
       end
     end
@@ -115,7 +115,7 @@ module Pd::Application
       mail(
         to: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Congratulations from #{congrats_from}Code.org!"
+        subject: "Congratulations from #{congrats_from}CodeAI!"
       )
     end
 
@@ -136,7 +136,7 @@ module Pd::Application
 
       mail(
         to: @application.formatted_applicant_email,
-        subject: "Reminder: Complete your application for Code.org's Professional Learning Program"
+        subject: "Reminder: Complete your application for CodeAI's Professional Learning Program"
       )
     end
 
@@ -145,7 +145,7 @@ module Pd::Application
 
       mail(
         to: @application.formatted_applicant_email,
-        subject: "Follow Up: Complete your application for Code.org's Professional Learning Program"
+        subject: "Follow Up: Complete your application for CodeAI's Professional Learning Program"
       )
     end
 

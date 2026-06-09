@@ -67,8 +67,8 @@ In **Unit 4**, students focus on how programs repeat logic across a collection. 
 ---
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; margin: 20px 0px;">
-  <p style="font-size: 16pt; font-weight: bold; margin: 0px 0px 10px 0px;">Why These Units May Feel Similar</p>
-  <p style="font-size: 14pt; line-height: 1.3; margin: 0px;">
+  <p style="font-size: 13pt; font-weight: bold; margin: 0px 0px 10px 0px;">Why These Units May Feel Similar</p>
+  <p style="font-size: 11pt; line-height: 1.3; margin: 0px;">
     Both units ask students to work with collections of data in JavaScript apps. The difference is that Unit 3 emphasizes <b>how data is structured and changed</b>, while Unit 4 emphasizes <b>how repeated logic is written and used</b> to process that data.
   </p>
 </div>
