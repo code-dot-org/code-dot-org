@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [zh-TW]
-locale_lock: true
 countries:
   - TW # Taiwan
   - HK # Hong Kong

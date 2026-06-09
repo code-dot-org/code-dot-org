@@ -3,7 +3,6 @@
 # The general region for Latin-America.
 
 locales: [es-LA]
-locale_lock: true
 countries: [MX, CR, SV, GT, HN, NI, PA, CU, DO, PR, AR, BO, CL, CO, EC, PY, PE, UY, VE]
 
 # The list of available project types

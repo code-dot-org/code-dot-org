@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [es-ES]
-locale_lock: true
 countries: [ES]
 
 # The list of available project types
