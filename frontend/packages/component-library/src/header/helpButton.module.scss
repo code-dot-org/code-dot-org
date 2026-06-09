@@ -26,4 +26,9 @@
     outline: 2px solid var(--text-neutral-inverse);
     outline-offset: 2px;
   }
+
+  // Match prod's 22px "?" — the FA glyph otherwise renders at 16px.
+  i {
+    font-size: 22px;
+  }
 }
