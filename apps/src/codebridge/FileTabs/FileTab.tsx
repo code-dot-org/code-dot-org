@@ -29,25 +29,36 @@ type FileTabProps = {
   onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
-const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
+function useFileTabState(file: ProjectFile) {
   const activeFile = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
   });
-  const dispatch = useAppDispatch();
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
-  const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
   const isAiTutorVersionFile =
     file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
-  const isAiTutorVersion = useAppSelector(
-    state => state.lab2Project.viewingAiTutorVersion
-  );
   const className = classNames(moduleStyles.fileTab, {
     [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersionFile,
     [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
     [moduleStyles.active]: isActive && !isAiTutorVersionFile,
   });
+  return {
+    iconName,
+    iconStyle,
+    iconClassName: isBrand ? ('fa-brands' as const) : undefined,
+    isActive,
+    className,
+  };
+}
+
+const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
+  const {iconName, iconStyle, iconClassName, isActive, className} =
+    useFileTabState(file);
+  const dispatch = useAppDispatch();
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
 
   const {
     attributes,
@@ -147,22 +158,9 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   );
 };
 
-// Visual-only clone used in DragOverlay (no DnD hooks, no close button).
-export const FileTabContent = ({file}: {file: ProjectFile}) => {
-  const activeFile = useAppSelector(state => {
-    const source = state.lab2Project.projectSources?.source as MultiFileSource;
-    return getActiveFileForSource(source);
-  });
-  const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
-  const iconClassName = isBrand ? 'fa-brands' : undefined;
-  const isActive = file.active || file === activeFile;
-  const isAiTutorVersionFile =
-    file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
-  const className = classNames(moduleStyles.fileTab, {
-    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersionFile,
-    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
-    [moduleStyles.active]: isActive && !isAiTutorVersionFile,
-  });
+// Visual-only clone used in DragOverlay (no DnD hooks, preventing double ID registration).
+export const FileTabDragClone = ({file}: {file: ProjectFile}) => {
+  const {iconName, iconStyle, iconClassName, className} = useFileTabState(file);
 
   return (
     <div className={className}>

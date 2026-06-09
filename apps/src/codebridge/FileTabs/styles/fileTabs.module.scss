@@ -65,15 +65,9 @@
     color: var(--text-neutral-white-fixed);
   }
 
-  // Light mode: black outline contrasts with both the teal tab (~4.9:1) and white page (21:1).
   *:focus-visible {
-    outline-color: var(--text-neutral-black-fixed);
+    outline-color: var(--text-neutral-primary);
   }
-}
-
-// Dark mode: white outline contrasts with both the teal tab (~4.3:1) and charcoal page.
-:global([data-theme='Dark']) .active *:focus-visible {
-  outline-color: var(--text-neutral-white-fixed);
 }
 
 .aiTutorVersionActive {

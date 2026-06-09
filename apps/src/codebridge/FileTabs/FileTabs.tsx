@@ -36,7 +36,7 @@ import {
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import FileTab, {FileTabContent} from './FileTab';
+import FileTab, {FileTabDragClone} from './FileTab';
 
 import moduleStyles from './styles/fileTabs.module.scss';
 
@@ -168,7 +168,7 @@ export const FileTabs = React.memo(() => {
           ))}
           <DragOverlay>
             {draggingFileId ? (
-              <FileTabContent
+              <FileTabDragClone
                 file={files.find(f => f.id === draggingFileId)!}
               />
             ) : null}
