@@ -1,6 +1,5 @@
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/mixins';
 
@@ -53,7 +52,7 @@
   padding: 0;
 
   border-width: 2px;
-  border-color: $background_gray;
+  border-color: var(--borders-neutral-light);
   border-radius: 15px;
   border-style: solid;
 }
@@ -65,7 +64,7 @@
 
   border-radius: 100px;
   border-width: 2px;
-  border-color: $background_gray;
+  border-color: var(--borders-neutral-light);
   border-style: solid;
 
   display: inline-flex;
@@ -76,7 +75,7 @@
   align-items: center;
   flex-shrink: 0;
 
-  background: var(--sentiment-error-50, #e5311a);
+  background: var(--background-error-primary);
 }
 
 p.countText {
@@ -107,8 +106,8 @@ p.countText {
   gap: 20px;
 
   border-radius: 4px;
-  border: 1px solid var(--neutral-gray-20, #d1d4d8);
-  background: var(--neutral-base-white, #fff);
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
 
   box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
 }
@@ -135,11 +134,11 @@ p.countText {
   flex: 1 0 0;
 
   border-radius: 4px;
-  background: var(--brand-aqua-50, #3cfff7) !important;
+  background: var(--background-brand-aqua-primary) !important;
 }
 
 .viewScoresText {
-  color: var(--light-black, #292f36);
+  color: var(--text-neutral-primary);
   font-variant-ligatures: no-common-ligatures;
 
   /* Button/Button 3 */
@@ -165,10 +164,10 @@ p.countText {
   gap: 16px;
 
   border-radius: 0 0 4px 4px;
-  border-right: 2px solid $neutral_dark;
-  border-bottom: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
-  background: $neutral_light;
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-bottom: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-secondary);
   box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
 
   h2 {
@@ -192,7 +191,7 @@ p.countText {
   align-items: flex-start;
   gap: 1rem;
   align-self: stretch;
-  border-bottom: 1px solid $light_gray_200;
+  border-bottom: 1px solid var(--borders-neutral-primary);
   padding-bottom: 1rem;
 
   p {
@@ -201,9 +200,9 @@ p.countText {
 }
 
 .rubricContent {
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
-  background: $neutral_light;
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-secondary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
   overflow-x: hidden;
@@ -212,7 +211,7 @@ p.countText {
 
   &:last-child {
     border-radius: 0 0 4px 4px;
-    border-bottom: 2px solid $neutral_dark;
+    border-bottom: 2px solid var(--borders-neutral-solid);
   }
 }
 
@@ -228,10 +227,10 @@ p.countText {
 }
 
 .rubricFooter {
-  background: $neutral_dark;
+  background: var(--background-neutral-black-fixed);
   border-radius: 0 0 4px 4px;
-  border-bottom: 2px solid $neutral_dark;
-  color: $neutral_white;
+  border-bottom: 2px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-white-fixed);
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -244,11 +243,11 @@ p.countText {
 
   input[type='checkbox'] {
     & + i::before {
-      background: $neutral_white;
+      background: var(--background-neutral-primary);
     }
 
     & ~ span {
-      color: $neutral_white;
+      color: var(--text-neutral-white-fixed);
     }
   }
 }
@@ -262,7 +261,7 @@ p.countText {
   align-self: stretch;
 
   p {
-    color: $neutral_white;
+    color: var(--text-neutral-white-fixed);
     line-height: 0.75rem;
     margin: 0;
     min-height: 0.75rem;
@@ -324,13 +323,13 @@ p.countText {
 
 .rubricHeader {
   border-radius: 4px 4px 0 0;
-  background: $neutral_dark;
-  color: $neutral_white;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
   // padding: 9px 15px 8px;
 
-  border-top: 2px solid $neutral_dark;
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  border-top: 2px solid var(--borders-neutral-solid);
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
 
   display: flex;
   height: 40px;
@@ -341,13 +340,13 @@ p.countText {
 
 .rubricHeaderRedesign {
   border-radius: 4px 4px 0 0;
-  background: $neutral_dark;
-  color: $neutral_white;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
   // padding: 9px 15px 8px;
 
-  border-top: 2px solid $neutral_dark;
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  border-top: 2px solid var(--borders-neutral-solid);
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
 
   padding-inline-start: 0.75rem;
 
@@ -396,8 +395,8 @@ button.buttonStyle {
   align-items: center;
   gap: 10px;
   align-self: stretch;
-  background-color: $neutral_dark;
-  color: $neutral_white;
+  background-color: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
 }
 
 button.rubricHeaderTab {
@@ -409,18 +408,18 @@ button.rubricHeaderTab {
 }
 
 .selectedTab {
-  background: $neutral_light;
+  background: var(--background-neutral-secondary);
   h6 {
     line-height: 1.1875;
     margin-bottom: 0;
-    color: $light_primary_700;
+    color: var(--text-brand-teal-secondary);
   }
 }
 
 .unselectedTab {
-  background: $neutral_dark70;
+  background: var(--background-neutral-septenary);
   h6 {
-    color: $neutral_white;
+    color: var(--text-neutral-white-fixed);
     margin-bottom: 0;
     line-height: 1.1875;
   }
@@ -433,14 +432,14 @@ button.rubricHeaderTab {
   justify-content: space-between;
   align-self: stretch;
   border-radius: 4px;
-  border: 1px solid $neutral_dark40;
-  background: $neutral_white;
+  border: 1px solid var(--borders-neutral-strong);
+  background: var(--background-neutral-primary);
 }
 
 .learningGoalRow {
   display: flex;
   align-self: stretch;
-  border-bottom: 1px solid $neutral_dark40;
+  border-bottom: 1px solid var(--borders-neutral-strong);
   min-height: 40px;
 
   // Directly target the <summary> child with the class
@@ -549,14 +548,14 @@ h2.studentName {
   display: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border: 1px solid $neutral_dark50;
-  background: $neutral_dark10;
+  border: 1px solid var(--borders-neutral-strong);
+  background: var(--background-neutral-secondary);
 
   // This is body three styles but the typography components don't work well with markdown support
   // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
   div {
     @include main-font-regular;
-    color: $neutral-dark;
+    color: var(--text-neutral-primary);
     font-size: 0.875rem;
     line-height: 1.54;
   }
@@ -578,7 +577,7 @@ h2.studentName {
 
 .evidenceLevelInnerDiv {
   padding: 1em;
-  border-left: 1px solid #a9acaf;
+  border-left: 1px solid var(--borders-neutral-strong);
   width: 100%;
 }
 
@@ -627,7 +626,7 @@ h2.studentName {
 
 .submittedEvaluationEvidenceLevel {
   border-radius: 4px;
-  background: $light_primary_100;
+  background: var(--background-brand-teal-light);
   height: 100%;
 }
 
@@ -636,7 +635,7 @@ h2.studentName {
 }
 
 p.errorMessage {
-  color: $product_negative_default;
+  color: var(--text-error-primary);
   margin-bottom: 0;
 }
 
@@ -646,7 +645,7 @@ p.errorMessage {
   margin-right: 5px;
   font-size: 0.75rem;
   vertical-align: middle;
-  color: gray;
+  color: var(--text-neutral-quaternary);
 }
 
 .infoTipText {
@@ -660,8 +659,8 @@ p.errorMessage {
 .aiAssessmentOuterBlock {
   padding: 0.75rem 0.75rem 1rem 1.25rem;
   border-radius: 0.25rem;
-  border: 1px solid $neutral_dark20;
-  background: $neutral_white;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
   position: relative;
 }
 
@@ -671,10 +670,10 @@ p.errorMessage {
   left: calc(50% - 0.5rem);
   width: 1rem;
   height: 1rem;
-  background: $neutral_white;
+  background: var(--background-neutral-primary);
   transform: rotate(45deg);
-  border-top: 1px solid $neutral_dark20;
-  border-left: 1px solid $neutral_dark20;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
 }
 
 .aiAssessmentBlock {
@@ -745,29 +744,29 @@ p.aiAssessmentEvidenceBlock {
   width: 3.25rem;
   height: 0.5rem;
   border-radius: 0.25rem;
-  background: $light_gray_200;
+  background: var(--background-neutral-quaternary);
   margin: 0;
 }
 
 .aiConfidenceBarLow {
   &:first-child {
-    background: $light_negative_500;
+    background: var(--background-error-primary);
   }
 }
 
 .aiConfidenceBarMedium {
   &:not(:last-child) {
-    background: $light_caution_500;
+    background: var(--background-warning-primary);
   }
 }
 
 .aiConfidenceBarHigh {
-  background: $light_affirmative_500;
+  background: var(--background-success-primary);
 }
 
 .aiAssessmentFeedback {
-  border-top: 1px solid $light_gray_200;
-  border-bottom: 1px solid $light_gray_200;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   padding: 1rem 0;
 
   label {
@@ -786,8 +785,8 @@ p.aiAssessmentEvidenceBlock {
   min-height: 2.375rem;
   padding: 0.5rem 0.625rem;
   border-radius: 0.25rem;
-  border: 1px solid $light_black;
-  color: $light_black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
   resize: vertical;
   overflow: auto;
 }
@@ -796,7 +795,7 @@ p.aiAssessmentEvidenceBlock {
   float: right;
   line-height: 100%;
   padding: 0;
-  color: #3ea33e;
+  color: var(--text-success-primary);
 }
 
 .feedbackArea {
@@ -811,7 +810,7 @@ p.aiAssessmentEvidenceBlock {
   align-self: stretch;
   justify-content: space-between;
   border-radius: 4px;
-  background: $light_info_100;
+  background: var(--background-info-extra-light);
 
   &:last-child {
     margin-bottom: 24px;
@@ -824,7 +823,7 @@ p.aiAssessmentEvidenceBlock {
 }
 
 i.infoAlertIcon {
-  color: $light-info-500;
+  color: var(--text-info-primary);
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
@@ -860,8 +859,8 @@ p.aiFeedbackRadioBoxText {
 }
 
 .aiFeedbackRadioLabelChecked {
-  background-color: $light_gray_100;
-  color: $light_gray_800;
+  background-color: var(--background-neutral-tertiary);
+  color: var(--text-neutral-tertiary);
 }
 
 .aiFeedbackRadioLabel {
@@ -872,8 +871,8 @@ p.aiFeedbackRadioBoxText {
   border-radius: 0.25rem;
 
   &:hover {
-    background-color: $light_gray_100;
-    color: $light_gray_800;
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-tertiary);
   }
 }
 
@@ -900,8 +899,8 @@ p.aiFeedbackRadioBoxText {
   overflow: auto;
   box-sizing: border-box;
   border-radius: 0.25rem;
-  border: 1px solid $light_black;
-  color: $light_black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
 }
 
 .submitFeedbackRow {
@@ -959,8 +958,8 @@ em.aiFeedbackReceived {
   justify-content: space-between;
   align-self: stretch;
   border-radius: 4px;
-  border: 1px solid $neutral_dark20;
-  background: $neutral_light;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
   width: auto;
 }
 
@@ -1005,7 +1004,7 @@ button.learningGoalButtonRight {
   position: relative;
   margin: 1rem 0 0 0;
   padding: 0 0 0.75rem 0;
-  border-bottom: 1px $light_gray_100 solid;
+  border-bottom: 1px var(--borders-neutral-light) solid;
   overflow: hidden;
 }
 
@@ -1066,7 +1065,7 @@ h5.learningGoalsHeaderTextBody {
   padding-left: 20px;
   padding-right: 20px;
   justify-content: space-between;
-  border-bottom: 1px $light_gray_100 solid;
+  border-bottom: 1px var(--borders-neutral-light) solid;
   margin: 1rem 1rem 0 1rem;
 }
 
@@ -1088,7 +1087,7 @@ h5.learningGoalsHeaderTextBody {
 }
 
 p.aiTokenText {
-  color: $light_black;
+  color: var(--text-neutral-primary);
   font-size: 0.7rem;
   line-height: 1rem;
   margin-bottom: 0;
@@ -1108,8 +1107,8 @@ p.aiTokenText {
 .learningGoalsTips {
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border: 1px solid $neutral_dark20;
-  background: $neutral_white;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
 }
 
 p.evidenceLevelHeaderText {
@@ -1154,41 +1153,41 @@ p.evidenceLevelHeaderText {
 }
 
 .evidenceLevelUnselected {
-  border-color: $light_black;
-  background: $neutral_white;
+  border-color: var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
 
   &:hover {
     box-shadow: none;
-    background-color: $light_gray_100;
+    background-color: var(--background-neutral-tertiary);
   }
 
   &:disabled {
-    border-color: $light_black;
-    background: $neutral_white;
+    border-color: var(--borders-neutral-solid);
+    background: var(--background-neutral-primary);
   }
 }
 
 .evidenceLevelSelected {
-  border-color: $light_primary_500;
-  background: $light_primary_500;
-  color: $light_white;
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
 
   &:hover {
     box-shadow: none;
-    background-color: $light_primary_700;
+    background-color: var(--background-brand-teal-strong);
   }
 
   &:disabled {
-    border-color: $light_primary_500;
-    background: $light_primary_500;
-    color: $light_white;
+    border-color: var(--borders-brand-teal-primary);
+    background: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
   }
 }
 
 .evidenceLevelSuggested {
   border-radius: 100px;
-  border: 1px solid $light_black;
-  background: $neutral_white;
+  border: 1px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
   gap: 10px;
   font-size: 0.875rem;
   height: 32px;
@@ -1196,13 +1195,13 @@ p.evidenceLevelHeaderText {
 
   &:hover {
     box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
-    background-color: $light_gray_100;
+    background-color: var(--background-neutral-tertiary);
   }
 
   &:disabled {
     border-radius: 100px;
-    border: 1px solid $light_black;
-    background: $neutral_white;
+    border: 1px solid var(--borders-neutral-solid);
+    background: var(--background-neutral-primary);
     gap: 10px;
     padding: 3px 16px 0;
     font-size: 0.875rem;
@@ -1216,9 +1215,9 @@ p.evidenceLevelHeaderText {
   flex-direction: column;
   gap: 28px;
   padding: 1rem;
-  border-right: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
-  background: $neutral_white;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
   overflow-x: hidden;
@@ -1226,7 +1225,7 @@ p.evidenceLevelHeaderText {
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
-    border-bottom: 0.125rem solid $neutral_dark;
+    border-bottom: 0.125rem solid var(--borders-neutral-solid);
   }
 
   h2 {
@@ -1235,8 +1234,8 @@ p.evidenceLevelHeaderText {
 }
 
 .fabErrorBackground {
-  background: $bootstrap_error_background !important;
-  color: $bootstrap_error_text !important;
+  background: var(--background-error-extra-light) !important;
+  color: var(--text-error-secondary) !important;
 }
 
 .sectionSelector {
@@ -1299,8 +1298,8 @@ button.infoAlertRight {
   justify-content: space-between;
   align-self: stretch;
   border-radius: 4px;
-  border: 1px solid $neutral_dark20;
-  background: $neutral_light;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
   gap: 15px;
   padding: 20px;
 
@@ -1355,7 +1354,7 @@ p.detailsHidden {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
 
   padding: 0.3125rem 1rem;
   gap: 16px;
@@ -1373,7 +1372,7 @@ p.detailsHidden {
   }
 
   &:hover {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
     text-decoration: none;
     box-shadow: none;
   }
@@ -1411,11 +1410,11 @@ p.detailsHidden {
 }
 
 .greenStatusBlob {
-  background-color: $light_affirmative_100;
+  background-color: var(--background-success-extra-light);
 }
 
 .yellowStatusBlob {
-  background-color: $lighter_yellow;
+  background-color: var(--background-warning-light);
 }
 
 .purpleStatusBlob {
@@ -1423,11 +1422,11 @@ p.detailsHidden {
 }
 
 .redStatusBlob {
-  background-color: $light_negative_100;
+  background-color: var(--background-error-extra-light);
 }
 
 .grayStatusBlob {
-  background-color: $light_gray_100;
+  background-color: var(--background-neutral-tertiary);
 }
 
 .announcementDialog {
