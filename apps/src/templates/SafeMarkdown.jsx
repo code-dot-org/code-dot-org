@@ -7,7 +7,6 @@ import {
   xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
-import toHtml from 'hast-util-to-html';
 import PropTypes from 'prop-types';
 import React from 'react';
 import rehypeRaw from 'rehype-raw';
@@ -15,13 +14,13 @@ import rehypeReact from 'rehype-react';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
-import visit from 'unist-util-visit';
 
 import localization from '@cdo/apps/localization';
 
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
 import externalLinks from './plugins/externalLinks';
+import localizeMarkdownParagraphs from './plugins/localizeMarkdownParagraphs';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -170,151 +169,6 @@ blocklyTags.forEach(tag => {
   blocklyComponentWrappers[tag] = makeBlocklyWrapper(tag);
 });
 
-// Labels handed to our translation system to annotate the paragraph strings
-// for translators. See localization.translate.
-const LOCALIZATION_LABELS = ['markdown'];
-
-// A hast <xml> element is the wrapper our remark plugins emit around embedded
-// Blockly content. Its contents are not human language and must never be
-// handed to the translator.
-const isBlocklyXml = node => node.tagName === 'xml';
-
-// hast nodes are plain JSON, so a structural clone is just a round-trip
-// through JSON. We clone before mutating so the placeholder-swapping below
-// never touches the original tree.
-const cloneHast = node => JSON.parse(JSON.stringify(node));
-
-/**
- * Walk the translated DOM produced by localization.translate and rebuild an
- * equivalent hast tree, which rehype-react then compiles to React. This is the
- * inverse of the hast->DOM serialization in localizeParagraph:
- *
- *   - placeholder spans (carrying `data-token`) are swapped back for the
- *     original, untranslated Blockly <xml> hast they stood in for;
- *   - the <span data-code-element> markers become <code> again;
- *   - `style` is left as a string — rehype-react parses it into the object
- *     form React requires.
- */
-const domToHast = (domNode, placeholders) => {
-  if (domNode.nodeType === Node.TEXT_NODE) {
-    return {type: 'text', value: domNode.nodeValue};
-  }
-
-  if (domNode.nodeType !== Node.ELEMENT_NODE) {
-    return null;
-  }
-
-  if (domNode.hasAttribute('data-token')) {
-    return placeholders[Number(domNode.getAttribute('data-token'))];
-  }
-
-  const isCode = domNode.hasAttribute('data-code-element');
-
-  const properties = {};
-  for (const attr of domNode.attributes) {
-    if (attr.name === 'data-token' || attr.name === 'data-code-element') {
-      // Temporary markers used only on the way to the translator.
-      continue;
-    } else if (attr.name === 'class') {
-      properties.className = attr.value.split(/\s+/).filter(Boolean);
-    } else {
-      properties[attr.name] = attr.value;
-    }
-  }
-
-  const children = [];
-  domNode.childNodes.forEach(child => {
-    const result = domToHast(child, placeholders);
-    if (result) {
-      children.push(result);
-    }
-  });
-
-  return {
-    type: 'element',
-    tagName: isCode ? 'code' : domNode.tagName.toLowerCase(),
-    properties,
-    children,
-  };
-};
-
-/**
- * Localize a single <p> hast node in place. Our translation engine works on
- * real DOM, not hast, and refuses to touch <code> or Blockly <xml>, so:
- *
- *   1. Clone the paragraph and, in the clone, swap each <xml> block for an
- *      empty `<span data-token="i">` placeholder (stashing the original hast)
- *      and retag each <code> as `<span data-code-element>` — our translator
- *      does recognize <span>.
- *
- *   2. Serialize the clone to HTML, hand the resulting <p> DOM tree to
- *      localization.translate, and get back an equivalent DOM with the text
- *      nodes translated.
- *
- *   3. Walk the translated DOM back into hast (domToHast), restoring the
- *      stashed <xml> blocks and the <code> elements. The <p> keeps its
- *      original properties plus `data-isolate`/`data-notranslate` so the
- *      already-translated output is left alone when it lands on the page.
- */
-const localizeParagraph = node => {
-  const placeholders = [];
-  const clone = cloneHast(node);
-
-  visit(clone, 'element', (el, index, parent) => {
-    if (isBlocklyXml(el) && parent && typeof index === 'number') {
-      parent.children[index] = {
-        type: 'element',
-        tagName: 'span',
-        properties: {dataToken: String(placeholders.length)},
-        children: [],
-      };
-      placeholders.push(el);
-      return [visit.SKIP, index];
-    }
-    if (el.tagName === 'code') {
-      el.tagName = 'span';
-      el.properties = {...(el.properties || {}), dataCodeElement: 'true'};
-    }
-  });
-
-  const domP = document.createElement('p');
-  domP.setAttribute('data-isolate', 'true');
-  domP.innerHTML = toHtml({type: 'root', children: clone.children});
-
-  const translated = localization.translate(domP, LOCALIZATION_LABELS);
-
-  const children = [];
-  translated.childNodes.forEach(child => {
-    const result = domToHast(child, placeholders);
-    if (result) {
-      children.push(result);
-    }
-  });
-
-  node.children = children;
-  node.properties = {
-    dataIsolate: 'true',
-    dataNotranslate: 'true',
-    ...(node.properties || {}),
-  };
-};
-
-/**
- * rehype plugin: localize the text of every paragraph in the rendered
- * markdown. Runs after sanitization (so <code>/<xml> are real hast elements)
- * and before rehype-react compiles the tree to React.
- */
-const localizeParagraphs = () => tree => {
-  visit(tree, 'element', node => {
-    if (node.tagName !== 'p') {
-      return;
-    }
-    localizeParagraph(node);
-    // The rebuilt children are already translated; don't descend into them.
-    return visit.SKIP;
-  });
-};
-
 // These wrappers add context for Localize to better understand the markdown
 // output. This also will enable URL localization for all links.
 const localizationComponentWrappers = {
@@ -363,7 +217,7 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
     .use(rehypeSanitize, processorSchema)
-    .use(localizeParagraphs)
+    .use(localizeMarkdownParagraphs)
     .use(rehypeReact, {
       createElement: React.createElement,
       components: {
