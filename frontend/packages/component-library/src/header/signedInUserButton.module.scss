@@ -28,8 +28,8 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--neutral-base-white);
-    outline-offset: 1px;
+    outline: 2px solid var(--text-neutral-inverse);
+    outline-offset: 2px;
   }
 
   :global(.MuiButton-endIcon),

@@ -284,3 +284,25 @@ CreateMenuLayout.play = async ({canvasElement}) => {
   const styles = getComputedStyle(item);
   expect(styles.fontWeight).toBe('600');
 };
+
+// WCAG 2.5.8 (Target Size, AA): every interactive header control is at least
+// 24x24px. Widen past the 1200px create breakpoint so all of them render.
+export const TargetSizeLayout = Template.bind({});
+TargetSizeLayout.args = {...TEACHER_ARGS};
+TargetSizeLayout.play = async ({canvasElement}) => {
+  await page.viewport(1300, 800);
+  const labels = [
+    'CodeAI Home',
+    'New project menu',
+    'Account menu',
+    'Help menu',
+    'Open navigation menu',
+  ];
+  for (const label of labels) {
+    const {width, height} = canvasElement
+      .querySelector(`[aria-label="${label}"]`)!
+      .getBoundingClientRect();
+    expect(width).toBeGreaterThanOrEqual(24);
+    expect(height).toBeGreaterThanOrEqual(24);
+  }
+};

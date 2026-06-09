@@ -27,10 +27,20 @@ const logoBoxSx = {
 
 /** MUI sx styles for the icon button wrapping the logo. */
 const logoIconButtonSx = {
-  marginLeft: 0,
-  p: 0,
-  paddingLeft: '14px',
-  paddingRight: '14px',
+  // Size to the wordmark, not the 50px bar: release the theme's 48px min-height and
+  // don't stretch. The 14px insets are non-clickable margin (prod's logo padding is
+  // inert), so the click target hugs the wordmark at prod's x=14; ~26px height keeps
+  // it >=24px (WCAG 2.5.8).
+  alignSelf: 'center',
+  minHeight: 0,
+  mx: '14px',
+  px: 0,
+  py: '2px',
+  // Brand-inverse ring; the theme's default teal IconButton ring is invisible on the teal bar.
+  '&:focus-visible, a&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
 };
 
 /** Branded home logo button linking to the site root. */
@@ -40,7 +50,6 @@ const NavLogo: FunctionComponent<NavLogoProps> = ({
 }) => (
   <IconButton
     size="large"
-    edge="start"
     color="inherit"
     aria-label={`${brandName} Home`}
     sx={logoIconButtonSx}

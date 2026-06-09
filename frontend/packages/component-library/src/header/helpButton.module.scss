@@ -8,7 +8,8 @@
   display: inline-flex;
   min-width: 0;
   min-height: 0;
-  padding: 6.5px 2px 6.5px 11px;
+  // Symmetric padding centers the glyph so the focus ring frames it evenly.
+  padding: 6.5px 5px;
   color: var(--neutral-base-white);
   font-size: 22px;
 
@@ -22,7 +23,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--neutral-base-white);
-    outline-offset: -2px;
+    outline: 2px solid var(--text-neutral-inverse);
+    outline-offset: 2px;
   }
 }

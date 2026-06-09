@@ -61,8 +61,11 @@ const Header: FunctionComponent<HeaderProps> = ({
           <Box sx={{flex: 1}} />
 
           {/* Right cluster: create → auth → help → hamburger (matches prod order) */}
-          {/* Outer box has no gap — prod has 0px between auth group and help/hamburger */}
-          <Box sx={{display: 'flex', alignItems: 'center', pr: '13px'}}>
+          {/* 6px gap keeps each icon target clear of its neighbor (WCAG 2.5.8
+              spacing); prod packs these flush, so the space beside the name opens Help. */}
+          <Box
+            sx={{display: 'flex', alignItems: 'center', gap: '6px', pr: '13px'}}
+          >
             {/* Create + auth share an 8px gap between them, matching prod */}
             <Box sx={{display: 'flex', alignItems: 'center', gap: 1}}>
               {createMenuItems && createMenuItems.length > 0 && (
