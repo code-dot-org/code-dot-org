@@ -47,8 +47,6 @@ describe('CoteacherInviteNotification', () => {
     expect(wrapper.find(NotificationBanner).length).toBe(0);
   });
 
-  // `title` is now a fragment (invited-by text + tooltip trigger), so we
-  // shallow-render it through a wrapping <div> to extract the visible text.
   const titleTextFor = banner =>
     shallow(<div>{banner.prop('title')}</div>).text();
 

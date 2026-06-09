@@ -17,9 +17,6 @@ import i18n from '@cdo/locale';
 
 import styles from './coteacher-invite-notification.module.scss';
 
-// Legacy Notification rendered the `collaborate` type with a 'users' icon
-// (see apps/src/sharedComponents/Notification.jsx). Keep the same glyph here
-// for visual continuity.
 const COLLABORATE_ICON = {iconName: 'users'};
 
 const CoteacherInviteNotification = ({
@@ -28,8 +25,6 @@ const CoteacherInviteNotification = ({
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
-  // Lets the consumer opt in to a re-load of section data that might remove
-  // entries (e.g. after declining an invite to a hidden section).
   destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
@@ -70,15 +65,9 @@ const CoteacherInviteNotification = ({
 
   return (
     <NotificationBanner
-      // variant="primary" in DSCO NotificationBanner paints brand-purple,
-      // which is the closest match to the legacy `collaborate` type's
-      // light_secondary_500 (purple) coloring.
       variant="primary"
       className={styles.notificationContainer}
       icon={COLLABORATE_ICON}
-      // Preserve the legacy `tooltipText` affordance via a small info-circle
-      // trigger trailing the title text — legacy `Notification` rendered it
-      // exactly here (apps/src/sharedComponents/Notification.jsx:106-115).
       title={
         <>
           {i18n.coteacherInvite({
