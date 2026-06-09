@@ -8,7 +8,10 @@ import React, {
   useState,
 } from 'react';
 
-import {ReflectionData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {
+  LessonDeepDiveData,
+  ReflectionData,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
@@ -25,6 +28,7 @@ function formatTime(seconds: number): string {
 interface PodcastsBoxProps {
   lessonId: number;
   reflectionData: ReflectionData | null;
+  objectives: LessonDeepDiveData['objectives'];
 }
 
 type PodcastStatus = 'loading' | 'ready' | 'unavailable';
@@ -32,13 +36,16 @@ type PodcastStatus = 'loading' | 'ready' | 'unavailable';
 // One line of the podcast transcript: who is speaking and what they say.
 type ScriptLine = {voice_id: string; text: string};
 
-const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
+const PodcastsBox: FC<PodcastsBoxProps> = ({
+  lessonId,
+  reflectionData,
+  objectives,
+}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [status, setStatus] = useState<PodcastStatus>('loading');
   const [scriptLines, setScriptLines] = useState<ScriptLine[] | null>(null);
   // The analyser feeds the live Waveform. It's created lazily on first play
@@ -48,8 +55,8 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
 
   // Routes the audio element through an AnalyserNode once. createMediaElement-
   // Source can only wrap an element a single time, so this is guarded by the
-  // analyser already existing. The blob object URL is same-origin, so the
-  // analyser reads real samples (a cross-origin source would read silence).
+  // analyser already existing. The audio src points at a same-origin route, so
+  // the analyser reads real samples (a cross-origin source would read silence).
   const setupAnalyser = useCallback(() => {
     if (analyser || !audioRef.current || !window.AudioContext) {
       return;
@@ -74,9 +81,15 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
 
   // The podcast is keyed by the objectives the student is still working on, so
   // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
+  // When the student bypassed reflection or submitted without rating anything
+  // we treat every lesson objective as struggling — matching the key the
+  // generation side uses for those same cases.
   const objectiveIds = useMemo(() => {
-    if (!reflectionData) {
-      return [];
+    if (
+      !reflectionData ||
+      Object.keys(reflectionData.objectiveReflections).length === 0
+    ) {
+      return objectives.map(o => o.id);
     }
     return Object.entries(reflectionData.objectiveReflections)
       .filter(
@@ -85,7 +98,35 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
           value === LessonObjectiveReflectionValues.UNSURE
       )
       .map(([objectiveId]) => objectiveId);
-  }, [reflectionData]);
+  }, [reflectionData, objectives]);
+
+  // Build the audio source URL and a query string we can reuse for the
+  // transcript fetch. The S3 key (and so the controller route) is keyed by the
+  // struggling-objective set. With a reflection, we request the student's
+  // struggling set (empty when they rated everything "Got it" — a valid
+  // lesson-level podcast). Without a reflection, objectiveIds above falls back
+  // to every lesson objective, so we request that podcast.
+  const {audioSrc, transcriptQuery} = useMemo(() => {
+    const params = new URLSearchParams();
+    params.set('lesson_id', String(lessonId));
+    objectiveIds.forEach(id => params.append('objective_ids[]', id));
+    const query = params.toString();
+    return {
+      audioSrc: `/ai_student_podcasts/retrieve_podcast_from_s3?${query}`,
+      transcriptQuery: query,
+    };
+  }, [lessonId, objectiveIds]);
+
+  // Reset playback + status whenever the source URL changes (e.g. the student
+  // jumps between reflections). The audio element fires canplay / error from
+  // its own events to drive status forward.
+  useEffect(() => {
+    setStatus('loading');
+    setScriptLines(null);
+    setIsPlaying(false);
+    setCurrentTime(0);
+    setDuration(0);
+  }, [audioSrc]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -93,68 +134,37 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
     const onTimeUpdate = () => setCurrentTime(audio.currentTime);
     const onDurationChange = () => setDuration(audio.duration || 0);
     const onEnded = () => setIsPlaying(false);
+    const onCanPlay = () => setStatus('ready');
+    const onError = () => setStatus('unavailable');
     audio.addEventListener('timeupdate', onTimeUpdate);
     audio.addEventListener('durationchange', onDurationChange);
     audio.addEventListener('ended', onEnded);
+    audio.addEventListener('canplay', onCanPlay);
+    audio.addEventListener('error', onError);
     return () => {
       audio.removeEventListener('timeupdate', onTimeUpdate);
       audio.removeEventListener('durationchange', onDurationChange);
       audio.removeEventListener('ended', onEnded);
+      audio.removeEventListener('canplay', onCanPlay);
+      audio.removeEventListener('error', onError);
     };
   }, []);
 
-  // Fetch the mp3 as a blob and hand the audio element an object URL. A blob
-  // keeps the scrubber and skip controls working, since the controller serves
-  // the file via send_data without HTTP range support.
-  //
-  // A podcast is generated whenever the student submits a reflection, keyed by
-  // their struggling objectives — an empty set when they rated everything "Got
-  // it", which is a valid lesson-level podcast. So we retrieve whenever a
-  // reflection exists; only the no-reflection case has nothing to fetch.
+  // The transcript lives on the podcast record — its podcast_script is a JSON
+  // string of {voice_id, text} lines — so fetch it from the show route.
   useEffect(() => {
-    if (!reflectionData) {
-      setStatus('unavailable');
-      return;
-    }
-
-    const params = new URLSearchParams();
-    params.set('lesson_id', String(lessonId));
-    objectiveIds.forEach(id => params.append('objective_ids[]', id));
-    const query = params.toString();
-
     let cancelled = false;
-    let objectUrl: string | null = null;
-    setStatus('loading');
-    setScriptLines(null);
-
-    HttpClient.get(`/ai_student_podcasts/retrieve_podcast_from_s3?${query}`)
-      .then(response => response.blob())
-      .then(blob => {
-        if (cancelled) return;
-        objectUrl = URL.createObjectURL(blob);
-        setAudioSrc(objectUrl);
-        setStatus('ready');
-      })
-      .catch(() => {
-        if (!cancelled) setStatus('unavailable');
-      });
-
-    // The transcript lives on the podcast record — its podcast_script is a JSON
-    // string of {voice_id, text} lines — so fetch it from the show route in
-    // parallel with the audio.
-    HttpClient.get(`/ai_student_podcasts?${query}`)
+    HttpClient.get(`/ai_student_podcasts?${transcriptQuery}`)
       .then(response => response.json())
       .then((data: {podcast_script?: string | null}) => {
         if (cancelled || !data.podcast_script) return;
         setScriptLines(JSON.parse(data.podcast_script) as ScriptLine[]);
       })
       .catch(() => {});
-
     return () => {
       cancelled = true;
-      if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
-  }, [lessonId, objectiveIds, reflectionData]);
+  }, [transcriptQuery]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -204,7 +214,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({lessonId, reflectionData}) => {
 
   return (
     <div className={styles.container}>
-      <audio ref={audioRef} src={audioSrc ?? undefined}>
+      <audio ref={audioRef} src={audioSrc} preload="auto">
         <track
           kind="captions"
           label="English captions"

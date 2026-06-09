@@ -128,7 +128,7 @@ describe('AiDiffWelcome', () => {
 
     expect(
       screen.getByRole('link', {
-        name: 'Take Code.org’s self-paced AI 101 professional learning course',
+        name: 'Take CodeAI’s self-paced AI 101 professional learning course',
       })
     ).toHaveAttribute('href', 'https://code.org/ai/pl/101');
 

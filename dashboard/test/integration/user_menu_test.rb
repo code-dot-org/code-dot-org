@@ -50,7 +50,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
+    assert_select 'a[href="https://test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
   test "don't show link to pair programming when not in a section" do

@@ -1,9 +1,11 @@
+import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
   SectionLoginType,
@@ -12,7 +14,6 @@ import i18n from '@cdo/locale';
 
 import {queryParams} from '../../code-studio/utils';
 import {studio, pegasus} from '../../lib/util/urlHelpers';
-import color from '../../util/color';
 
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
@@ -29,7 +30,7 @@ const LOGIN_TYPE_NAMES = {
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
- * helping kids continue working on Code.org at home.
+ * helping kids continue working on CodeAI at home.
  * Designed to be rendered by itself on a page, ready for printing or PDF
  * generation.
  *
@@ -49,7 +50,8 @@ class ParentLetter extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-      code: PropTypes.string.isRequired,
+      code: PropTypes.string,
+      demoType: PropTypes.string,
     }).isRequired,
     loginTypeName: PropTypes.string,
     students: PropTypes.arrayOf(
@@ -77,7 +79,9 @@ class ParentLetter extends React.Component {
   render() {
     const {logoUrl, students, teacherName, section, loginTypeName, studentId} =
       this.props;
-    const sectionCode = section.code;
+    const sectionCode = section.demoType
+      ? DEMO_SECTION_CODE_PLACEHOLDER
+      : section.code;
     const loginType = section.loginType;
     const student =
       students.length !== 0 && studentId
@@ -90,10 +94,10 @@ class ParentLetter extends React.Component {
     const secretWords = student ? student.secretWords : null;
 
     return (
-      <div id="printArea">
+      <Box id="printArea">
         <Header logoUrl={logoUrl} />
-        <article>
-          <p>{i18n.parentLetterHello()}</p>
+        <Box component="article">
+          <Typography component="p">{i18n.parentLetterHello()}</Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterIntro({
               homeLink: pegasus('/'),
@@ -108,13 +112,15 @@ class ParentLetter extends React.Component {
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <h1>{i18n.parentLetterWhy()}</h1>
+          <Typography variant="h1">{i18n.parentLetterWhy()}</Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterWhyDetails({
               researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
-          <h1>{i18n.parentLetterStudentPrivacy()}</h1>
+          <Typography variant="h1">
+            {i18n.parentLetterStudentPrivacy()}
+          </Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({
               pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
@@ -122,10 +128,10 @@ class ParentLetter extends React.Component {
               privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
             })}
           />
-          <p>{i18n.parentLetterClosing()}</p>
-          <p>{teacherName}</p>
-        </article>
-      </div>
+          <Typography component="p">{i18n.parentLetterClosing()}</Typography>
+          <Typography component="p">{teacherName}</Typography>
+        </Box>
+      </Box>
     );
   }
 }
@@ -140,18 +146,21 @@ export default connect(state => ({
   studentId: queryParams('studentId'),
 }))(ParentLetter);
 
-const Header = ({logoUrl}) => {
-  return (
-    <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeLogo()} />
-    </header>
-  );
-};
+const Header = ({logoUrl = '/shared/images/CodeLogo_White.png'}) => (
+  <Box
+    component="header"
+    sx={{backgroundColor: 'primary.main', marginBottom: 3.75}}
+  >
+    <Box
+      component="img"
+      src={logoUrl}
+      alt={i18n.codeLogo()}
+      sx={{height: 42, margin: '4px 16px'}}
+    />
+  </Box>
+);
 Header.propTypes = {
-  logoUrl: PropTypes.string.isRequired,
-};
-Header.defaultProps = {
-  logoUrl: '/shared/images/CodeLogo_White.png',
+  logoUrl: PropTypes.string,
 };
 
 const ParentLetterSteps = ({
@@ -165,15 +174,15 @@ const ParentLetterSteps = ({
   switch (loginType) {
     case SectionLoginType.lti_v1:
       return (
-        <div>
-          <h1>{i18n.parentLetterStep1()}</h1>
+        <Box>
+          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <h1>{i18n.parentLetterStep2()}</h1>
+          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
@@ -188,19 +197,19 @@ const ParentLetterSteps = ({
               loginTypeName: loginTypeName,
             })}
           />
-        </div>
+        </Box>
       );
     default: {
       return (
-        <div>
-          <h1>{i18n.parentLetterStep1()}</h1>
+        <Box>
+          <Typography variant="h1">{i18n.parentLetterStep1()}</Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
               videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
-          <h1>{i18n.parentLetterStep2()}</h1>
+          <Typography variant="h1">{i18n.parentLetterStep2()}</Typography>
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
@@ -216,13 +225,13 @@ const ParentLetterSteps = ({
               atHomeLink: pegasus('/athome'),
             })}
           />
-          <h1>{i18n.parentLetterStep3()}</h1>
+          <Typography variant="h1">{i18n.parentLetterStep3()}</Typography>
           <SafeMarkdown
             markdown={i18n.parentLetterStep3Details({
               accountEditLink: studio('/users/edit'),
             })}
           />
-        </div>
+        </Box>
       );
     }
   }
@@ -284,13 +293,17 @@ const SignInInstructions = ({
               })}
             />
           </li>
+
           <li>
-            {i18n.parentLetterClever2()}
+            <Typography component="span">
+              {i18n.parentLetterClever2()}
+            </Typography>
             <br />
-            <img
+            <Box
+              component="img"
               src="/shared/images/clever_code_org_logo.png"
-              style={styles.cleverCodeOrgLogo}
               alt={i18n.codeLogoClever()}
+              sx={{width: 60, margin: '10px'}}
             />
           </li>
         </ol>
@@ -301,8 +314,16 @@ const SignInInstructions = ({
       steps = (
         <ol>
           <GoToSignIn />
-          <li>{i18n.parentLetterGoogle1()}</li>
-          <li>{i18n.parentLetterGoogle2()}</li>
+          <li>
+            <Typography component="span">
+              {i18n.parentLetterGoogle1()}
+            </Typography>
+          </li>
+          <li>
+            <Typography component="span">
+              {i18n.parentLetterGoogle2()}
+            </Typography>
+          </li>
         </ol>
       );
       break;
@@ -315,20 +336,27 @@ const SignInInstructions = ({
             studentName={studentName}
           />
           <li>
-            {i18n.parentLetterPicturePassword()}
+            <Typography component="span">
+              {i18n.parentLetterPicturePassword()}
+            </Typography>
             {secretPictureUrl && (
               <span>
                 <br />
-                <img
+                <Box
+                  component="img"
                   src={secretPictureUrl}
-                  style={{width: 60, margin: 10}}
                   alt={i18n.parentLetterPicturePasswordImg()}
+                  sx={{width: 60, margin: '10px'}}
                 />
               </span>
             )}
           </li>
           {!secretPictureUrl && (
-            <li>{i18n.parentLetterForgotPicturePassword()}</li>
+            <li>
+              <Typography component="span">
+                {i18n.parentLetterForgotPicturePassword()}
+              </Typography>
+            </li>
           )}
         </ol>
       );
@@ -342,13 +370,19 @@ const SignInInstructions = ({
             studentName={studentName}
           />
           <li>
-            <p>
+            <Typography component="p">
               {i18n.parentLetterSecretWords({
                 secretWords: secretWords ? `(${secretWords})` : '',
               })}
-            </p>
+            </Typography>
           </li>
-          {!secretWords && <li>{i18n.parentLetterForgotPassword()}</li>}
+          {!secretWords && (
+            <li>
+              <Typography component="span">
+                {i18n.parentLetterForgotPassword()}
+              </Typography>
+            </li>
+          )}
         </ol>
       );
       break;
@@ -358,8 +392,16 @@ const SignInInstructions = ({
       steps = (
         <ol>
           <GoToSignIn />
-          <li>{i18n.parentLetterSignInEmail()}</li>
-          <li>{i18n.parentLetterForgotPasswordEmail()}</li>
+          <li>
+            <Typography component="span">
+              {i18n.parentLetterSignInEmail()}
+            </Typography>
+          </li>
+          <li>
+            <Typography component="span">
+              {i18n.parentLetterForgotPasswordEmail()}
+            </Typography>
+          </li>
         </ol>
       );
   }
@@ -368,14 +410,14 @@ const SignInInstructions = ({
     loginTypeName = LOGIN_TYPE_NAMES[loginType];
   }
   return (
-    <div>
+    <Box>
       <SafeMarkdown
         markdown={i18n.parentLetterLoginType({
           loginTypeName: loginTypeName,
         })}
       />
       {steps}
-    </div>
+    </Box>
   );
 };
 SignInInstructions.propTypes = {
@@ -412,10 +454,4 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
 GoToSectionSignIn.propTypes = {
   sectionCode: PropTypes.string.isRequired,
   studentName: PropTypes.string,
-};
-
-const styles = {
-  cleverCodeOrgLogo: {width: 60, margin: 10},
-  codeOrgLogo: {height: 42, margin: '4px 16px'},
-  header: {backgroundColor: color.teal, marginBottom: 30},
 };

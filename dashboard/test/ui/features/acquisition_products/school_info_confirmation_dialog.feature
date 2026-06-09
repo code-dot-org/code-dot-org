@@ -15,6 +15,8 @@ Feature: School Info Confirmation Dialog
 # confirm or update current school info.
 
 Scenario: School Info Confirmation Dialog
+  Given I am on "http://studio.code.org/home"
+  Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
   # Wait for homepage to load before reloading the page.

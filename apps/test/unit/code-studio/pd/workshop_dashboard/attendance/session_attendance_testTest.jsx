@@ -170,7 +170,7 @@ describe('SessionAttendance', () => {
             <th>Last Name</th>
             <th>Email</th>
             <th>Verified Teacher Account</th>
-            <th>Code.org Scholarship?</th>
+            <th>CodeAI Scholarship?</th>
             <th>Other Scholarship?</th>
             <th>Present</th>
           </tr>

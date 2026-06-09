@@ -1,0 +1,421 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
+import React, {useEffect, useRef, useState} from 'react';
+
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {
+  setThreadId,
+  addThreadMessage,
+  setThreadTitle,
+  setArtifactType,
+} from '@cdo/apps/aiDifferentiation/redux';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+  AiDiffArtifactType,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
+
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+import HttpClient from '../util/HttpClient';
+
+import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
+import AiDiffChatFooter from './AiDiffChatFooter';
+import AiDiffChatHeader from './AiDiffChatHeader';
+import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {DEFAULT_THREAD_TITLE} from './constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
+import {
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  Context,
+  SuggestPromptsType,
+} from './types';
+
+import style from './ai-differentiation.module.scss';
+
+const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
+const AIDIFF_CHAT_COMPLETION = 'chat_completion';
+
+interface AiDiffChatProps {
+  context: Context;
+  scriptName?: string;
+  chatResponseCallback?: () => void;
+  hideChatHeader?: boolean;
+  threadFetchCallback?: () => void;
+  personalizationData?: PersonalizationData;
+}
+
+const AiDiffArtifactLink: React.FC<{
+  artifact: AiArtifact | undefined;
+  callback: () => void;
+}> = ({artifact, callback}) => {
+  if (artifact) {
+    const title = artifact.title
+      ? artifact.title
+      : artifact.type === AiDiffArtifactType.EXIT_TICKET
+      ? `Exit Ticket`
+      : `Lesson Hook`;
+    return (
+      <div className={style.artifactShowButtons}>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          aria-label="Open artifact"
+          href={artifact.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={callback}
+          startIcon={<FontAwesomeV6Icon iconName="shapes" />}
+        >
+          {title}
+        </MuiButton>
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
+
+const AiDiffChat: React.FC<AiDiffChatProps> = ({
+  context,
+  scriptName,
+  chatResponseCallback = () => {},
+  hideChatHeader = false,
+  threadFetchCallback = () => {},
+  personalizationData,
+}) => {
+  const [userMessage, setUserMessage] = useState<string>('');
+  const [hasSentInitialPrompt, setHasSentInitialPrompt] =
+    useState<boolean>(false);
+  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+
+  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
+
+  const reportingData = React.useMemo(() => {
+    return {
+      chatContext: context,
+      scriptName,
+    };
+  }, [context, scriptName]);
+
+  const viewAsUserId = useAppSelector(state => {
+    return state.progress?.viewAsUserId || undefined;
+  });
+  const threadId = useAppSelector(state => state.aiDiffChat.threadId);
+  const threadTitle = useAppSelector(state => state.aiDiffChat.threadTitle);
+  const initialThreadPrompt = useAppSelector(
+    state => state.aiDiffChat.initialThreadPrompt
+  );
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
+  const artifactType = useAppSelector(state => state.aiDiffChat.artifactType);
+  const artifact = useAppSelector(state => state.aiDiffChat.artifact);
+
+  const dispatch = useAppDispatch();
+
+  const sendChatEvent = React.useCallback(
+    (role: string, prompt: string, preset: boolean, thread: number) => {
+      const responseEventData = {
+        ...reportingData,
+        role: role,
+        isPreset: preset,
+        text: prompt,
+        threadId: thread,
+        url: window.location.href,
+      };
+      analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_EVENT, responseEventData);
+    },
+    [reportingData]
+  );
+
+  const sendArtifactEvent = React.useCallback(
+    (
+      thread: number,
+      event: (typeof EVENTS)[keyof typeof EVENTS],
+      prompt?: string
+    ) => {
+      const responseEventData = {
+        ...reportingData,
+        artifactType: artifactType,
+        artifactId: artifact ? artifact.id : undefined,
+        threadId: thread,
+        url: window.location.href,
+        prompt: prompt,
+      };
+      analyticsReporter.sendEvent(event, responseEventData);
+    },
+    [reportingData, artifactType, artifact]
+  );
+
+  const getAIResponse = React.useCallback(
+    (prompt: string, isPreset: boolean, presetChipText: string | null) => {
+      setIsWaitingForResponse(true);
+
+      if (threadId !== 0) {
+        sendChatEvent(Role.USER, prompt, isPreset, threadId);
+      }
+
+      if (
+        artifactType &&
+        experiments.isEnabled(experiments.AI_ARTIFACT) &&
+        !isPreset
+      ) {
+        sendArtifactEvent(
+          threadId,
+          EVENTS.AI_ARTIFACT_PROMPT_RESPONDED,
+          prompt
+        );
+      }
+
+      const endpoint =
+        threadId === 0
+          ? `${AIDIFF_THREADS_ENDPOINT}`
+          : `${AIDIFF_THREADS_ENDPOINT}/${threadId}/${AIDIFF_CHAT_COMPLETION}`;
+
+      const body = JSON.stringify({
+        inputText: prompt,
+        isPreset,
+        presetChipText,
+        ...(threadId === 0 ? {context} : {}),
+        ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
+        ...(artifactType &&
+        experiments.isEnabled(experiments.AI_ARTIFACT) &&
+        !isPreset
+          ? {artifactType}
+          : {}),
+      });
+
+      HttpClient.post(endpoint, body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then(json => {
+          const newAiMessage = {
+            role: Role.ASSISTANT,
+            chatMessageText: json.chat_message_text,
+            status: json.status,
+            id: json.message_id,
+            isArtifactCandidate: json.is_artifact_candidate,
+            artifactCandidateType: json.artifact_candidate_type,
+          };
+
+          // logging here because on the first user message the threadID is 0
+          // we only get a threadID initialized in the response
+          if (threadId === 0) {
+            threadFetchCallback();
+            sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
+          }
+
+          sendChatEvent(
+            Role.ASSISTANT,
+            json.chat_message_text,
+            isPreset,
+            json.thread_id
+          );
+          if (json.thread_id) {
+            dispatch(setThreadId(json.thread_id));
+          }
+          dispatch(addThreadMessage(newAiMessage));
+        })
+        .catch(error => console.log(error))
+        .finally(() => {
+          setIsWaitingForResponse(false);
+          chatResponseCallback();
+          if (userMessageEditorRef && userMessageEditorRef.current) {
+            userMessageEditorRef.current?.focus();
+          }
+        });
+    },
+    [
+      threadId,
+      context,
+      viewAsUserId,
+      sendChatEvent,
+      sendArtifactEvent,
+      dispatch,
+      threadFetchCallback,
+      chatResponseCallback,
+      artifactType,
+    ]
+  );
+
+  const onMessageSend = React.useCallback(
+    (message: string) => {
+      const newUserMessage = {
+        role: Role.USER,
+        chatMessageText: message,
+        status: Status.OK,
+      };
+
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
+      ) {
+        dispatch(setThreadTitle(message.slice(0, 100)));
+      }
+
+      dispatch(addThreadMessage(newUserMessage));
+      getAIResponse(message, false, null);
+      setUserMessage('');
+    },
+    [threadTitle, dispatch, getAIResponse]
+  );
+
+  const onPromptSelect = React.useCallback(
+    (prompt: ChatPrompt) => {
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
+      ) {
+        dispatch(setThreadTitle(prompt.label));
+      }
+      if (prompt.response !== undefined) {
+        dispatch(
+          addThreadMessage({
+            role: Role.ASSISTANT,
+            chatMessageText: prompt.response ?? '',
+            status: Status.OK,
+          })
+        );
+      }
+      if (prompt.followUpPrompts !== undefined) {
+        dispatch(addThreadMessage(prompt.followUpPrompts));
+      }
+      if (!prompt.followUpPrompts && !prompt.response) {
+        getAIResponse(prompt.prompt, true, prompt.label);
+      }
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
+        sendArtifactEvent(
+          threadId,
+          EVENTS.AI_ARTIFACT_PROMPT_CLICKED,
+          prompt.label
+        );
+      }
+    },
+    [dispatch, getAIResponse, sendArtifactEvent, threadId, threadTitle]
+  );
+
+  React.useEffect(() => {
+    if (initialThreadPrompt && threadId === 0 && !hasSentInitialPrompt) {
+      setHasSentInitialPrompt(true);
+      onPromptSelect(initialThreadPrompt);
+    }
+  }, [initialThreadPrompt, threadId, hasSentInitialPrompt, onPromptSelect]);
+
+  const onSuggestPrompts = (promptType: SuggestPromptsType) => {
+    const aiInitialSuggestionsMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText:
+        SUGGESTED_PROMPTS_FOR_SELECTION[promptType].initialMessage,
+      status: Status.OK,
+    };
+    const newSuggestions =
+      SUGGESTED_PROMPTS_FOR_SELECTION[promptType].suggestedPrompts;
+
+    dispatch(addThreadMessage(aiInitialSuggestionsMessage));
+    dispatch(addThreadMessage(newSuggestions));
+  };
+
+  // Scroll to bottom of content when a new message comes in
+  const chatWindowRef = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    if (chatWindowRef.current) {
+      chatWindowRef.current?.scrollIntoView();
+    }
+  }, [threadMessages]);
+
+  return (
+    <div className={style.chatContainer}>
+      {!hideChatHeader && (
+        <AiDiffChatHeader
+          onSuggestPrompts={onSuggestPrompts}
+          messages={threadMessages}
+          threadTitle={threadTitle}
+          personalizationData={personalizationData}
+        />
+      )}
+      <div className={style.chatContent}>
+        {threadMessages.map((item: ChatItem, id: number) =>
+          Array.isArray(item) ? (
+            <AiDiffSuggestedPrompts
+              suggestedPrompts={item}
+              isLatest={id === threadMessages.length - 1}
+              onSubmit={onPromptSelect}
+              key={id}
+            />
+          ) : (
+            <ChatMessage
+              text={item.chatMessageText}
+              postText={
+                (item.isArtifactCandidate && (
+                  <AiDiffCreateArtifactButtons
+                    message={item}
+                    threadId={threadId}
+                    eventCallback={sendArtifactEvent}
+                  />
+                )) ||
+                (item.isArtifact && (
+                  <AiDiffArtifactLink
+                    artifact={artifact}
+                    callback={() => {
+                      sendArtifactEvent(
+                        threadId,
+                        EVENTS.AI_ARTIFACT_OPEN_FROM_THREAD
+                      );
+                    }}
+                  />
+                ))
+              }
+              role={item.role}
+              customStyles={style}
+              key={id}
+              isTA={true}
+              messageStyle={
+                item.status !== AiInteractionStatus.OK ? 'danger' : 'default'
+              }
+              footer={
+                item.role === Role.ASSISTANT && (
+                  <AiDiffBotMessageFooter
+                    message={item}
+                    reportingData={reportingData}
+                  />
+                )
+              }
+            />
+          )
+        )}
+        <div ref={chatWindowRef}>
+          <img
+            src="/blockly/media/aichat/typing-animation.gif"
+            alt={'Waiting for response'}
+            className={
+              isWaitingForResponse
+                ? style.waitingForResponse
+                : style.hideWaitingForResponse
+            }
+          />
+        </div>
+      </div>
+      <AiDiffChatFooter
+        userMessage={userMessage}
+        onChange={setUserMessage}
+        onSubmit={onMessageSend}
+        waiting={isWaitingForResponse}
+        userMessageEditorRef={userMessageEditorRef}
+      />
+    </div>
+  );
+};
+
+export default AiDiffChat;

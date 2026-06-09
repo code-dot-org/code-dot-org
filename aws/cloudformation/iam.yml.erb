@@ -926,31 +926,6 @@ roles.each do |name, config| %>
               - cloudwatch:GetMetricData
             Resource: '*'
 
-  # Used by FirehoseMicroservice Lambda function.
-  # TODO move to Data stack
-  FirehoseLambdaRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [lambda.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: root
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 'firehose:DescribeDeliveryStream'
-            - 'firehose:PutRecord'
-            - 'firehose:PutRecordBatch'
-            Resource:
-            # TODO provide this ARN through a CloudFormation stack output resource reference.
-            - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
   # Global managed-policy named role used by ECS.
   # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
   EcsTaskExecutionRole:
@@ -1218,10 +1193,6 @@ Outputs:
     Description: Developer Permissions
     Value: !Ref DevPermissions
     Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}
-  FirehoseLambdaRoleARN:
-    Description: Firehose Lambda Role ARN
-    Value: !GetAtt FirehoseLambdaRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
   SessionPermissions:
     Description: Session Permissions
     Value: !Ref SessionPermissions

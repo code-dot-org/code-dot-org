@@ -3,11 +3,11 @@ import React from 'react';
 import {DEFAULT_ROTATION} from '../constants';
 import {ImageNodeType} from '../types';
 
-import AltTextRow from './AltTextRow';
-import LockedNotice from './LockedNotice';
-import NodeActionsGroup from './NodeActionsGroup';
-import RotationGroup from './RotationGroup';
-import ToolbarShell from './ToolbarShell';
+import LockedNotice from './components/LockedNotice';
+import ToolbarShell from './components/ToolbarShell';
+import AltTextRow from './sections/AltTextRow';
+import NodeActionsGroup from './sections/NodeActionsGroup';
+import RotationGroup from './sections/RotationGroup';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
 interface ImageNodeToolbarProps {
@@ -16,7 +16,6 @@ interface ImageNodeToolbarProps {
 
 export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ImageNodeType>(nodeId);
-  const handlesVisible = data.showHandles !== false;
 
   return (
     <ToolbarShell
@@ -36,13 +35,7 @@ export default function ImageNodeToolbar({nodeId}: ImageNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <NodeActionsGroup
-            nodeId={nodeId}
-            handlesVisible={handlesVisible}
-            onToggleHandles={() =>
-              patchNodeData({showHandles: !handlesVisible})
-            }
-          />
+          <NodeActionsGroup nodeId={nodeId} />
         </>
       )}
     </ToolbarShell>

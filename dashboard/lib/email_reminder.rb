@@ -47,7 +47,7 @@ class EmailReminder
   # Increment the reminders_sent count.
   def send_permission_reminder_email(request_id)
     request = ParentalPermissionRequest.find(request_id)
-    permission_url = url_for(controller: :policy_compliance, action: :child_account_consent, host: CDO.studio_url('', CDO.default_scheme), token: request.uuid)
+    permission_url = url_for(controller: :policy_compliance, action: :child_account_consent, host: CDO.studio_url(''), token: request.uuid)
     mail = ParentMailer.parent_permission_reminder(request.parent_email, permission_url)
     unless @dry_run
       mail.deliver_now
