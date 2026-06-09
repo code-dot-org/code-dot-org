@@ -9,8 +9,8 @@ interface ConnectionHandlesProps {
   /** When false, handles stay in the DOM (so edges keep their anchors)
    *  but are visually hidden and non-interactive. */
   visible?: boolean;
-  /** When false, handles can't start or accept a connection (e.g. the node
-   *  is locked or the canvas is read-only). Existing edges stay attached. */
+  /** When false, handles can't start or accept a connection.
+   * Existing edges stay attached. */
   isConnectable?: boolean;
   shapeType?: ShapeType;
 }

@@ -94,7 +94,7 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.className;
   delete result.selected;
   // draggable/connectable/deletable are derived from data.locked/readOnly at render
-  // time; only data.locked is canonical, so don't persist the derived flags.
+  // time.
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
