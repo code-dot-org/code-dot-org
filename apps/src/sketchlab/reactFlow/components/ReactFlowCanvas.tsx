@@ -73,6 +73,7 @@ import {
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
+  getStandaloneLineAnchorIds,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -500,7 +501,18 @@ export default function ReactFlowCanvas({
       }),
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
-        const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
+        const {selected: singleSelected, domAttributes} = applyDisplayProps(
+          edge,
+          'edge'
+        );
+        // A standalone line (both endpoints are line anchors) is shown as
+        // selected when both its anchors are in the multi-selection.
+        const bothAnchorsSelected =
+          nodeMap.get(edge.source)?.type === 'lineAnchor' &&
+          nodeMap.get(edge.target)?.type === 'lineAnchor' &&
+          multiSelectedNodeIds.has(edge.source) &&
+          multiSelectedNodeIds.has(edge.target);
+        const selected = singleSelected || bothAnchorsSelected;
         return {
           ...edge,
           selected,
@@ -772,12 +784,46 @@ export default function ReactFlowCanvas({
   );
 
   const handleEdgeClick = useCallback(
-    (_event: React.MouseEvent, edge: {id: string}) => {
+    (event: React.MouseEvent, edge: {id: string}) => {
       if (readOnly) return;
+      const clickedEdge = edges.find(e => e.id === edge.id);
+      const anchorIds = clickedEdge
+        ? getStandaloneLineAnchorIds(clickedEdge, getNode)
+        : null;
+
+      if (event.shiftKey) {
+        if (anchorIds) {
+          // Shift+click on a standalone line: toggle both anchor nodes in the
+          // multi-selection, applying the same anchor-inclusion logic as nodes.
+          setMultiSelectedNodeIds(prev => {
+            const next = new Set(prev);
+            if (next.size === 0) {
+              multiSelectAnchorRef.current?.forEach(id => next.add(id));
+            }
+            const allSelected = anchorIds.every(id => next.has(id));
+            anchorIds.forEach(id => {
+              if (allSelected) {
+                next.delete(id);
+              } else {
+                next.add(id);
+              }
+            });
+            return next;
+          });
+          closeToolbar();
+        }
+        // Shift+click on an attached line: ignore so it doesn't disrupt
+        // a multi-selection in progress.
+        return;
+      }
+
+      // Plain click: record standalone line as anchor for subsequent Shift+clicks,
+      // clear any multi-selection, and open the edge toolbar.
+      multiSelectAnchorRef.current = anchorIds;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },
-    [readOnly, openToolbar]
+    [readOnly, edges, getNode, openToolbar, closeToolbar]
   );
 
   return (
