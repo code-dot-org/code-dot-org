@@ -136,8 +136,8 @@ module Cdo
     # Get the marketing URL for the current brand
     # @param ge_region [Symbol, nil] Optional global edition region
     # @return [String] Marketing URL
-    def self.marketing_url(ge_region: nil)
-      CDO.code_org_url('', '', ge_region: ge_region)
+    def self.marketing_url
+      CDO.code_org_url
     end
 
     private_class_method def self.resolve_brand(request)

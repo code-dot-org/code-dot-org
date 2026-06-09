@@ -7,7 +7,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     @fake_channel_id = get_project_channel_id(1, 1)
 
     JavalabFilesHelper.stubs(:get_project_files).returns({})
-    JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
+    JavalabFilesHelper.stubs(:get_project_files_with_overrides).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_validation).returns({})
     put_response = Net::HTTPResponse.new(nil, '200', nil)
     JavalabFilesHelper.stubs(:upload_project_files).returns(put_response)
@@ -66,6 +66,37 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     params: {channelId: get_project_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
+
+  test 'override sources route forwards override validation to helper when present' do
+    levelbuilder = create(:levelbuilder)
+    sign_in(levelbuilder)
+    JavalabFilesHelper.unstub(:get_project_files_with_overrides)
+    JavalabFilesHelper.expects(:get_project_files_with_overrides).
+      with("{'source': {}}", 0, nil, "{'MyClass.java': {}}").
+      returns({})
+    post :access_token_with_override_sources, params: {
+      overrideSources: "{'source': {}}",
+      overrideValidation: "{'MyClass.java': {}}",
+      executionType: 'TEST',
+      miniAppType: 'console'
+    }
+    assert_response :success
+  end
+
+  test 'override sources route omits override validation when not provided' do
+    levelbuilder = create(:levelbuilder)
+    sign_in(levelbuilder)
+    JavalabFilesHelper.unstub(:get_project_files_with_overrides)
+    JavalabFilesHelper.expects(:get_project_files_with_overrides).
+      with("{'source': {}}", 0, nil, nil).
+      returns({})
+    post :access_token_with_override_sources, params: {
+      overrideSources: "{'source': {}}",
+      executionType: 'RUN',
+      miniAppType: 'console'
+    }
+    assert_response :success
+  end
 
   test 'can decode jwt token' do
     levelbuilder = create(:levelbuilder)

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {GlobalEditionExcludedPaths} from '@cdo/generated-scripts/sharedConstants';
 import {configure, root_url} from '@cdo/generated-scripts/studioRoutes';
 
 /**
@@ -76,7 +77,11 @@ export function setPegasusOrigin(origin) {
  * Generated URL: https://studio.code.org/s/coursea-2025/lessons/1/levels/2
  */
 export function studio(relativeUrl) {
-  return root_url().replace(/\/$/, '') + relativeUrl;
+  const geExcluded = GlobalEditionExcludedPaths.some(excludedPath =>
+    relativeUrl.startsWith(excludedPath)
+  );
+  const rootUrl = geExcluded ? root_url({script_name: null}) : root_url();
+  return rootUrl.replace(/\/$/, '') + relativeUrl;
 }
 
 /**

@@ -154,19 +154,6 @@
     }
   }
 
-  // Keep the help button in sync with the .headerlinks collapse, which moves
-  // up to 1060px for codeai (see dashboard application.scss).
-  html[data-brand="codeai"] &,
-  html[data-brand="codeai-next"] & {
-    @media(max-width: 1060px) {
-      &.hide-mobile {
-        display: none;
-      }
-      .hide-mobile {
-        display: none;
-      }
-    }
-  }
 }
 
 .create_menu {

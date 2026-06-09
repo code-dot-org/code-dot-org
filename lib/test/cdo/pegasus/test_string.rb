@@ -1,5 +1,5 @@
-require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
+require_relative '../../test_helper'
+require 'cdo/pegasus'
 
 class StringTest < Minitest::Test
   def test_end_with
@@ -25,8 +25,8 @@ class StringTest < Minitest::Test
   end
 
   def test_to_bool
-    %w(true t yes y 1).each{|true_value| assert true_value.to_bool}
-    ['', 'false', 'f', 'no', 'n', '0'].each{|false_value| assert !false_value.to_bool}
+    %w(true t yes y 1).each {|true_value| assert true_value.to_bool}
+    ['', 'false', 'f', 'no', 'n', '0'].each {|false_value| assert !false_value.to_bool}
   end
 
   def test_utf8_to_iso_8859

@@ -3,17 +3,10 @@
 require 'test_helper'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
-  include Minitest::RSpecMocks
-
   let(:ge_region) {'fa'}
   let(:document) {Nokogiri::HTML(response.body)}
   let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
   let(:page_lang) {document.at('html[lang]').try(:[], 'lang')}
-
-  before do
-    allow(Cdo::GlobalEdition).to receive(:target_host?).and_call_original
-    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
-  end
 
   describe 'routing' do
     let(:international_page_path) {'/users/sign_in'}

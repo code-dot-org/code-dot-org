@@ -43,6 +43,8 @@ module JavalabFilesHelper
   # Get all files for the project to be executed as a hash, with source code provided as an argument.
   # Much of this can be constructed from the level where this project was created (get_level_files).
   # This method adds in code provided the sources argument.
+  # When override_validation is provided, it replaces any validation defined on the level. This lets
+  # a levelbuilder test in-memory validation edits before saving them to the level.
   # The returned hash is in the format below. All values are strings.
   # {
   #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
@@ -50,9 +52,10 @@ module JavalabFilesHelper
   #   "validation": <all validation code for a project, in json format>
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
-  def self.get_project_files_with_override_sources(sources, level_id, channel_id)
+  def self.get_project_files_with_overrides(sources, level_id, channel_id, override_validation = nil)
     all_files = get_level_files(level_id)
     all_files["sources"]["main.json"] = {source: sources}.to_json
+    all_files["validation"] = {source: override_validation}.to_json if override_validation
     get_assets_for_channel(channel_id, all_files) if channel_id
     all_files
   end
