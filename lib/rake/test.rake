@@ -32,15 +32,15 @@ namespace :test do
   end
 
   timed_task_with_logging :saucelabs_ui do
-    ChatClient.log 'Running <b>dashboard</b> Safari UI tests...'
+    ChatClient.log 'Running <b>dashboard</b> Safari, iPad and iPhone UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
-      '-c', 'Safari',
+      '-c', 'Safari,iPad,iPhone',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '20', # The total saucelabs concurrency budget is 65
+      '--parallel', '65', # The total saucelabs concurrency budget is 65
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
@@ -144,7 +144,7 @@ namespace :test do
   # complete, then make sure this task raises.
   timed_task_with_logging :ui_all do
     Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :devicefarm_mobile_ui],
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
       in_threads: 4,
     ) do |target|
       Rake::Task["test:#{target}"].invoke
