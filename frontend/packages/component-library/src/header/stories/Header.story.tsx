@@ -3,14 +3,14 @@ import appLabIcon from '@public/images/header-app-lab-icon.png';
 import gameLabIcon from '@public/images/header-game-lab-icon.png';
 import spriteLabIcon from '@public/images/header-sprite-lab-icon.png';
 import logoImage from '@public/images/logo-codeai-inverse.svg';
-import {Meta, StoryFn} from '@storybook/react-vite';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 import {within, expect, userEvent, waitFor} from 'storybook/test';
 
 // Render the built package (what studio ships), not the relative source.
 // @storybook/react-vite's bundling of the raw source drops the component's MUI
 // sx (var-colored borders, nested `& i` selectors); the dist build — where @mui
 // is external — resolves them. Eyes then snapshots the artifact consumers get.
-import Header, {HeaderProps} from '@code-dot-org/component-library/header';
+import Header from '@code-dot-org/component-library/header';
 
 export default {
   title: 'DesignSystem/Header',
@@ -32,9 +32,7 @@ export default {
   },
 } as Meta;
 
-const Template: StoryFn<HeaderProps> = (args: HeaderProps) => (
-  <Header {...args} />
-);
+type Story = StoryObj<typeof Header>;
 
 const STUDENT_MENU_ITEMS = [
   {label: 'My Dashboard', href: '/home'},
@@ -115,6 +113,16 @@ const BASE = {
   supportLinks: SUPPORT_LINKS,
 };
 
+const TEACHER_ARGS = {
+  ...BASE,
+  menuItems: TEACHER_MENU_ITEMS,
+  userAuth: {
+    status: 'signed-in' as const,
+    display_name: 'Ms. Rivera',
+    user_type: 'teacher' as const,
+  },
+};
+
 // Desktop viewport so the >1200px "New project" trigger renders in the vitest
 // browser test and the Eyes snapshot (MINIMAL_VIEWPORTS has only narrow presets).
 const DESKTOP_LAYOUT_PARAMS = {
@@ -127,37 +135,27 @@ const DESKTOP_LAYOUT_PARAMS = {
   eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
 };
 
-export const StudentSignedIn = Template.bind({});
-StudentSignedIn.args = {
-  ...BASE,
-  menuItems: STUDENT_MENU_ITEMS,
-  userAuth: {status: 'signed-in', display_name: 'Alex', user_type: 'student'},
-};
-// Opens the account menu and asserts its items render with prod-matched type
-// metrics (fontWeight 500, lineHeight 20px) that only resolve under real layout.
-StudentSignedIn.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button', {name: 'Account menu'}));
-  // MUI Menu portals to document.body, outside canvasElement.
-  const item = await within(document.body).findByRole('menuitem', {
-    name: 'My projects',
-  });
-  const styles = getComputedStyle(item);
-  expect(styles.fontWeight).toBe('500');
-  expect(styles.lineHeight).toBe('20px');
-};
-
-export const TeacherSignedIn = Template.bind({});
-TeacherSignedIn.args = {
-  ...BASE,
-  menuItems: TEACHER_MENU_ITEMS,
-  userAuth: {
-    status: 'signed-in',
-    display_name: 'Ms. Rivera',
-    user_type: 'teacher',
+export const StudentSignedIn: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {status: 'signed-in', display_name: 'Alex', user_type: 'student'},
+  },
+  // Opens the account menu and asserts its items render with prod-matched type
+  // metrics (fontWeight 500, lineHeight 20px) that only resolve under real layout.
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', {name: 'Account menu'}));
+    // MUI Menu portals to document.body, outside canvasElement.
+    const item = await within(document.body).findByRole('menuitem', {
+      name: 'My projects',
+    });
+    const styles = getComputedStyle(item);
+    expect(styles.fontWeight).toBe('500');
+    expect(styles.lineHeight).toBe('20px');
   },
 };
-TeacherSignedIn.parameters = DESKTOP_LAYOUT_PARAMS;
+
 // Resting-state guards, each a flat assert, ending with no menu open:
 //  - target size (WCAG 2.5.8 AA): every control is at least 24x24px.
 //  - hover colors: hovered New project + Account stay brand-white (label, icon,
@@ -165,116 +163,123 @@ TeacherSignedIn.parameters = DESKTOP_LAYOUT_PARAMS;
 //    default primary purple. The white outline comes from var() in sx, not styled.
 //  - focus-visible (F-5): keyboard-tabbing to the Account button engages
 //    :focus-visible (programmatic .focus() does not, in Chromium).
-TeacherSignedIn.play = async ({canvasElement}) => {
-  const canvas = within(canvasElement);
-  const white = 'rgb(255, 255, 255)';
+export const TeacherSignedIn: Story = {
+  args: {
+    ...BASE,
+    menuItems: TEACHER_MENU_ITEMS,
+    userAuth: {
+      status: 'signed-in',
+      display_name: 'Ms. Rivera',
+      user_type: 'teacher',
+    },
+  },
+  parameters: DESKTOP_LAYOUT_PARAMS,
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const white = 'rgb(255, 255, 255)';
 
-  for (const label of [
-    'CodeAI Home',
-    'New project menu',
-    'Account menu',
-    'Help menu',
-    'Open navigation menu',
-  ]) {
-    const {width, height} = canvasElement
-      .querySelector(`[aria-label="${label}"]`)!
-      .getBoundingClientRect();
-    expect(width).toBeGreaterThanOrEqual(24);
-    expect(height).toBeGreaterThanOrEqual(24);
-  }
+    for (const label of [
+      'CodeAI Home',
+      'New project menu',
+      'Account menu',
+      'Help menu',
+      'Open navigation menu',
+    ]) {
+      const {width, height} = canvasElement
+        .querySelector(`[aria-label="${label}"]`)!
+        .getBoundingClientRect();
+      expect(width).toBeGreaterThanOrEqual(24);
+      expect(height).toBeGreaterThanOrEqual(24);
+    }
 
-  const newProject = canvas.getByRole('button', {name: 'New project menu'});
-  await userEvent.hover(newProject);
-  expect(getComputedStyle(newProject).color).toBe(white);
-  expect(getComputedStyle(newProject.querySelector('i')!).color).toBe(white);
-  expect(getComputedStyle(newProject).borderColor).toBe(white);
+    const newProject = canvas.getByRole('button', {name: 'New project menu'});
+    await userEvent.hover(newProject);
+    expect(getComputedStyle(newProject).color).toBe(white);
+    expect(getComputedStyle(newProject.querySelector('i')!).color).toBe(white);
+    expect(getComputedStyle(newProject).borderColor).toBe(white);
 
-  const account = canvas.getByRole('button', {name: 'Account menu'});
-  await userEvent.hover(account);
-  expect(getComputedStyle(account).color).toBe(white);
-  expect(getComputedStyle(account.querySelector('i')!).color).toBe(white);
-  expect(getComputedStyle(account).borderColor).toBe(white);
+    const account = canvas.getByRole('button', {name: 'Account menu'});
+    await userEvent.hover(account);
+    expect(getComputedStyle(account).color).toBe(white);
+    expect(getComputedStyle(account.querySelector('i')!).color).toBe(white);
+    expect(getComputedStyle(account).borderColor).toBe(white);
 
-  account.blur();
-  canvasElement.querySelector('a')?.focus();
-  for (let i = 0; i < 12 && document.activeElement !== account; i++) {
-    await userEvent.tab();
-  }
-  expect(document.activeElement).toBe(account);
-  expect(account.matches(':focus-visible')).toBe(true);
-};
-
-export const SignedInLongName = Template.bind({});
-SignedInLongName.args = {
-  ...BASE,
-  menuItems: STUDENT_MENU_ITEMS,
-  userAuth: {
-    status: 'signed-in',
-    display_name: 'Bartholomew-Maximilian',
-    user_type: 'student',
+    account.blur();
+    canvasElement.querySelector('a')?.focus();
+    for (let i = 0; i < 12 && document.activeElement !== account; i++) {
+      await userEvent.tab();
+    }
+    expect(document.activeElement).toBe(account);
+    expect(account.matches(':focus-visible')).toBe(true);
   },
 };
+
 // Account-button-width regression: the name span is capped at 120px (truncating
 // the long name) and the button auto-sizes to prod's ~176px. It used to cap the
 // whole button at 120px, over-truncating the email and shifting "New project".
-SignedInLongName.play = async ({canvasElement}) => {
-  const button = canvasElement.querySelector(
-    'button[aria-label="Account menu"]',
-  ) as HTMLElement;
-  const nameSpan = [...button.querySelectorAll('span')].find(span =>
-    (span.textContent || '').includes('Bartholomew'),
-  ) as HTMLElement;
-  expect(Math.round(nameSpan.getBoundingClientRect().width)).toBe(120);
-  const buttonWidth = button.getBoundingClientRect().width;
-  expect(buttonWidth).toBeGreaterThanOrEqual(168);
-  expect(buttonWidth).toBeLessThanOrEqual(184);
+export const SignedInLongName: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {
+      status: 'signed-in',
+      display_name: 'Bartholomew-Maximilian',
+      user_type: 'student',
+    },
+  },
+  play: async ({canvasElement}) => {
+    const button = canvasElement.querySelector(
+      'button[aria-label="Account menu"]',
+    ) as HTMLElement;
+    const nameSpan = [...button.querySelectorAll('span')].find(span =>
+      (span.textContent || '').includes('Bartholomew'),
+    ) as HTMLElement;
+    expect(Math.round(nameSpan.getBoundingClientRect().width)).toBe(120);
+    const buttonWidth = button.getBoundingClientRect().width;
+    expect(buttonWidth).toBeGreaterThanOrEqual(168);
+    expect(buttonWidth).toBeLessThanOrEqual(184);
+  },
 };
 
-export const SignedOut = Template.bind({});
-SignedOut.args = {
-  ...BASE,
-  menuItems: STUDENT_MENU_ITEMS,
-  userAuth: {status: 'signed-out'},
+export const SignedOut: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {status: 'signed-out'},
+  },
 };
 
-export const Loading = Template.bind({});
-Loading.args = {
-  ...BASE,
-  menuItems: STUDENT_MENU_ITEMS,
-  userAuth: {status: 'loading'},
+export const Loading: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {status: 'loading'},
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  ...BASE,
-  menuItems: STUDENT_MENU_ITEMS,
-  userAuth: {status: 'error'},
-};
-
-const TEACHER_ARGS = {
-  ...BASE,
-  menuItems: TEACHER_MENU_ITEMS,
-  userAuth: {
-    status: 'signed-in' as const,
-    display_name: 'Ms. Rivera',
-    user_type: 'teacher' as const,
+export const Error: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {status: 'error'},
   },
 };
 
 // Create-menu open state for Eyes. Opens the "New project" picker (rendered at the
 // desktop viewport); the picker portals to body. Asserts the Sprite Lab item's
 // prod-matched fontWeight 600, which only resolves under real layout.
-export const CreateMenu = Template.bind({});
-CreateMenu.args = {...TEACHER_ARGS};
-CreateMenu.parameters = DESKTOP_LAYOUT_PARAMS;
-CreateMenu.play = async ({canvasElement}) => {
-  await userEvent.click(
-    within(canvasElement).getByRole('button', {name: 'New project menu'}),
-  );
-  const item = await within(document.body).findByRole('menuitem', {
-    name: 'Sprite Lab',
-  });
-  expect(getComputedStyle(item).fontWeight).toBe('600');
+export const CreateMenu: Story = {
+  args: {...TEACHER_ARGS},
+  parameters: DESKTOP_LAYOUT_PARAMS,
+  play: async ({canvasElement}) => {
+    await userEvent.click(
+      within(canvasElement).getByRole('button', {name: 'New project menu'}),
+    );
+    const item = await within(document.body).findByRole('menuitem', {
+      name: 'Sprite Lab',
+    });
+    expect(getComputedStyle(item).fontWeight).toBe('600');
+  },
 };
 
 // Hamburger open + expanded state. Opens the panel and asserts the compact 242px
@@ -282,29 +287,31 @@ CreateMenu.play = async ({canvasElement}) => {
 // the first <details> summary. Caret-inset regression: the summary needs
 // box-sizing:border-box so its 8px padding sits inside the panel; without it the
 // chevron rendered flush to the panel edge (~0–1px inset).
-export const Hamburger = Template.bind({});
-Hamburger.args = {...TEACHER_ARGS};
-Hamburger.play = async ({canvasElement}) => {
-  await userEvent.click(
-    within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),
-  );
-  // Popover panel portals to document.body, outside canvasElement. Retry the
-  // width assert until the MUI Grow transition settles (scale reaches 1).
-  const panel = await waitFor(() => {
-    const p = document.querySelector('.MuiPopover-paper') as HTMLElement;
-    expect(p).not.toBeNull();
-    expect(Math.round(p.getBoundingClientRect().width)).toBe(242);
-    return p;
-  });
+export const Hamburger: Story = {
+  args: {...TEACHER_ARGS},
+  play: async ({canvasElement}) => {
+    await userEvent.click(
+      within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),
+    );
+    // Popover panel portals to document.body, outside canvasElement. Retry the
+    // width assert until the MUI Grow transition settles (scale reaches 1).
+    const panel = await waitFor(() => {
+      const p = document.querySelector('.MuiPopover-paper') as HTMLElement;
+      expect(p).not.toBeNull();
+      expect(Math.round(p.getBoundingClientRect().width)).toBe(242);
+      return p;
+    });
 
-  const summary = panel.querySelector('summary') as HTMLElement;
-  expect(getComputedStyle(summary).boxSizing).toBe('border-box');
+    const summary = panel.querySelector('summary') as HTMLElement;
+    expect(getComputedStyle(summary).boxSizing).toBe('border-box');
 
-  await userEvent.click(summary);
-  expect(summary.closest('details')).toHaveAttribute('open');
+    await userEvent.click(summary);
+    expect(summary.closest('details')).toHaveAttribute('open');
 
-  const chevron = summary.querySelector('i') as HTMLElement;
-  const inset =
-    panel.getBoundingClientRect().right - chevron.getBoundingClientRect().right;
-  expect(inset).toBeGreaterThanOrEqual(10);
+    const chevron = summary.querySelector('i') as HTMLElement;
+    const inset =
+      panel.getBoundingClientRect().right -
+      chevron.getBoundingClientRect().right;
+    expect(inset).toBeGreaterThanOrEqual(10);
+  },
 };
