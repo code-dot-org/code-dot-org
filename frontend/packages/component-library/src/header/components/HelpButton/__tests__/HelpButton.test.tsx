@@ -2,7 +2,7 @@ import {render, screen, within, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import HelpButton from '../components/HelpButton';
+import HelpButton from '../HelpButton';
 
 function renderAs(userType: 'student' | 'teacher') {
   render(<HelpButton userType={userType} />);

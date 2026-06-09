@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import NavLogo from '../components/NavLogo';
+import NavLogo from '../NavLogo';
 
 describe('NavLogo', () => {
   it('names the home link via the button and leaves the image decorative', () => {

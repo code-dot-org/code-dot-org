@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import UserAuthArea from '../components/UserAuthArea';
+import UserAuthArea from '../UserAuthArea';
 
 describe('UserAuthArea', () => {
   it('announces the loading state', () => {

@@ -13,9 +13,9 @@ import {
   headerMenuListSx,
   headerMenuPaperSx,
   headerTriggerBase,
-} from '../shared/headerMenu';
-import {getSupportLinks} from '../shared/supportLinks';
-import type {UserType} from '../shared/types';
+} from '../../shared/headerMenu';
+import {getSupportLinks} from '../../shared/supportLinks';
+import type {UserType} from '../../shared/types';
 
 interface HelpButtonProps {
   userType?: UserType;

@@ -3,8 +3,10 @@ import Skeleton from '@mui/material/Skeleton';
 import {visuallyHidden} from '@mui/utils';
 import type {FunctionComponent} from 'react';
 
-import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
-import SignedOutUserButtons from './SignedOutUserButtons';
+import SignedInUserButton, {
+  UserAuthProp,
+} from '../SignedInUserButton/SignedInUserButton';
+import SignedOutUserButtons from '../SignedOutUserButtons/SignedOutUserButtons';
 
 /** Props for {@link UserAuthArea}. */
 interface UserAuthAreaProps {

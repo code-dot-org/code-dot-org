@@ -3,13 +3,15 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import type {FunctionComponent} from 'react';
 
-import CreateMenu, {type CreateMenuItem} from './components/CreateMenu';
-import HamburgerMenu from './components/HamburgerMenu';
-import HelpButton from './components/HelpButton';
-import NavLogo from './components/NavLogo';
-import NavMenu from './components/NavMenu';
-import {UserAuthProp} from './components/SignedInUserButton';
-import UserAuthArea from './components/UserAuthArea';
+import CreateMenu, {
+  type CreateMenuItem,
+} from './components/CreateMenu/CreateMenu';
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu';
+import HelpButton from './components/HelpButton/HelpButton';
+import NavLogo from './components/NavLogo/NavLogo';
+import NavMenu from './components/NavMenu/NavMenu';
+import {UserAuthProp} from './components/SignedInUserButton/SignedInUserButton';
+import UserAuthArea from './components/UserAuthArea/UserAuthArea';
 import {HEADER_BREAKPOINTS} from './shared/breakpoints';
 import type {MenuItem} from './shared/types';
 

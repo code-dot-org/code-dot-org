@@ -2,7 +2,7 @@ import {render, screen, within, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import CreateMenu from '../components/CreateMenu';
+import CreateMenu from '../CreateMenu';
 
 const ITEMS = [
   {

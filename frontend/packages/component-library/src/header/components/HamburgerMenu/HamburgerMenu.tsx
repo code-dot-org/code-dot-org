@@ -7,9 +7,9 @@ import {Fragment, useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {headerTriggerBase} from '../shared/headerMenu';
-import {getSupportLinks} from '../shared/supportLinks';
-import type {MenuItem, UserType} from '../shared/types';
+import {headerTriggerBase} from '../../shared/headerMenu';
+import {getSupportLinks} from '../../shared/supportLinks';
+import type {MenuItem, UserType} from '../../shared/types';
 
 interface GlobalNavEntry {
   label: string;
