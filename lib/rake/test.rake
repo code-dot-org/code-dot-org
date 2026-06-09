@@ -58,42 +58,33 @@ namespace :test do
     end
   end
 
-  # Runs a single group of UI tests against AWS Device Farm. Shared body
-  # between :devicefarm_desktop_ui and :devicefarm_mobile_ui. The label
-  # carries through to Slack messages and status page headings; "Device
-  # Farm" is no longer surfaced to oncall (provider is an implementation
-  # detail).
-  def run_devicefarm_ui(config:, parallel:, label:)
-    ChatClient.log "Running <b>dashboard</b> #{label} UI tests..."
+  timed_task_with_logging :devicefarm_desktop_ui do
+    # As of June 2026, our concurrency limit for desktop browser sessions in
+    # Device Farm within our prod AWS account is 150.
+    ChatClient.log 'Running <b>dashboard</b> Chrome + Firefox UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
       '--device-farm',
-      '-c', config,
+      '-c', 'Chrome,Firefox',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', parallel.to_s,
+      '--parallel', '50',
       '--retry_count', '2',
       '--with-status-page',
       '--fail_fast'
     )
     if failed_browser_count == 0
-      message = "┬──┬ ﻿ノ( ゜-゜ノ) #{label} UI tests for <b>dashboard</b> succeeded."
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Chrome + Firefox UI tests for <b>dashboard</b> succeeded.'
       ChatClient.log message
       ChatClient.message 'server operations', message, color: 'green'
     else
-      message = "(╯°□°）╯︵ ┻━┻ #{label} UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      message = "(╯°□°）╯︵ ┻━┻ Chrome + Firefox UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "#{label} UI tests failed"
+      raise 'Chrome + Firefox UI tests failed'
     end
-  end
-
-  timed_task_with_logging :devicefarm_desktop_ui do
-    # As of April 2026, our concurrency limit for desktop browser sessions in
-    # Device Farm within our prod AWS account is 150.
-    run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'Chrome + Firefox')
   end
 
   timed_task_with_logging :eyes_ui do
