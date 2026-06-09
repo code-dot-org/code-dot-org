@@ -150,7 +150,6 @@ const styles = {
   },
   emptyPiskelEl: {
     backgroundColor: 'var(--background-neutral-senary)',
-    color: 'var(--text-neutral-white-fixed)',
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -160,6 +159,9 @@ const styles = {
     fontSize: 14,
   },
   helpText: {
+    // MUI Typography's root override sets its own color, so the white text
+    // color must live on the element itself rather than be inherited.
+    color: 'var(--text-neutral-white-fixed)',
     position: 'relative',
     top: '50%',
     transform: 'translateY(-50%)',
