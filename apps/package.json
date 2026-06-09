@@ -204,6 +204,7 @@
     "@blockly/theme-dark": "^8.0.0",
     "@blockly/theme-highcontrast": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
+    "@code-dot-org/ailab": "portal:../frontend/packages/labs/ailab/",
     "@code-dot-org/artist": "0.2.1",
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/",
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/",
