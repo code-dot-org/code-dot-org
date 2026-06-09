@@ -8,7 +8,7 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {headerTriggerBase} from './headerMenu';
+import {headerTriggerBase} from '../shared/headerMenu';
 
 export interface CreateMenuItem {
   id: string;

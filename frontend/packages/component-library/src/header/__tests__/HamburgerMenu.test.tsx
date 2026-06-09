@@ -2,7 +2,7 @@ import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import HamburgerMenu from './HamburgerMenu';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 // Teacher menu items include Incubator in the app-nav list; the hamburger
 // re-injects it once into the global-nav region (regression: it used to

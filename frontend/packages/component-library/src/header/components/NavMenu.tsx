@@ -3,8 +3,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import type {FunctionComponent} from 'react';
 
-import {HEADER_BREAKPOINTS} from './breakpoints';
-import type {MenuItem} from './types';
+import {HEADER_BREAKPOINTS} from '../shared/breakpoints';
+import type {MenuItem} from '../shared/types';
 
 /** Props for {@link NavMenu}. */
 interface NavMenuProps {

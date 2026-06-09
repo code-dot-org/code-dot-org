@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import Header from './Header';
+import Header from '../Header';
 
 const BASE_PROPS = {
   logoImageUrl: '/logo.png',

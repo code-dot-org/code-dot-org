@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import SignedOutUserButtons from './SignedOutUserButtons';
+import SignedOutUserButtons from '../components/SignedOutUserButtons';
 
 describe('SignedOutUserButtons', () => {
   it('renders Sign In link', () => {

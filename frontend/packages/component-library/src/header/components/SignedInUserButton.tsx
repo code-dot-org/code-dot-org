@@ -12,8 +12,8 @@ import {
   headerMenuListSx,
   headerMenuPaperSx,
   headerTriggerBase,
-} from './headerMenu';
-import type {UserType} from './types';
+} from '../shared/headerMenu';
+import type {UserType} from '../shared/types';
 
 /**
  * Account-menu trigger (teal pill with the display name + chevron). The compound

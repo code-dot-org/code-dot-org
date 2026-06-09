@@ -2,7 +2,7 @@ import {render, screen, within, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
-import SignedInUserButton from './SignedInUserButton';
+import SignedInUserButton from '../components/SignedInUserButton';
 
 function renderAs(user_type: 'student' | 'teacher') {
   render(

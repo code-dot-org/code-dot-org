@@ -1,4 +1,4 @@
-import {getSupportLinks} from './supportLinks';
+import {getSupportLinks} from '../shared/supportLinks';
 
 describe('getSupportLinks', () => {
   it('gives teachers the forum link', () => {
