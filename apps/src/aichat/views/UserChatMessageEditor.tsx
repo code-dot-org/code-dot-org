@@ -36,7 +36,8 @@ interface UserChatMessageEditorProps {
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
   currentLevelId?: string | null;
-  logLevelActivity?: () => void;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   lessonId?: number;
 
@@ -63,7 +64,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   multimodalAvailable,
   responseCallback,
   currentLevelId,
-  logLevelActivity,
   lessonId,
   levelName,
   hasStarterAssets,
@@ -71,6 +71,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   uploadDisabled,
   onAssetUploaded,
   chatDisabled,
+  sendDisabled = false,
+  onMessageSent,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -79,11 +81,6 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
-  );
-
-  // TODO: Remove dependency on aichatLab redux slice.
-  const saveInProgress = useAppSelector(
-    state => state.aichatLab.saveInProgress
   );
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file =>
@@ -105,7 +102,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const disabled =
     isWaitingForChatResponse ||
-    saveInProgress ||
+    sendDisabled ||
     uploadsPending ||
     viewingAiTutorVersionFileUpdates ||
     !!chatDisabled;
@@ -132,10 +129,10 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
-            logLevelActivity,
             lessonId,
           })
         );
+        onMessageSent?.();
         clearUserMessage();
       }
     },
@@ -149,8 +146,8 @@ const UserChatMessageEditor: React.FunctionComponent<
       chatAssets,
       userAddedSelectionContext,
       responseCallback,
-      logLevelActivity,
       lessonId,
+      onMessageSent,
     ]
   );
 
