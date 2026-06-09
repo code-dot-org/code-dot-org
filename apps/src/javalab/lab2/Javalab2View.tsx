@@ -7,11 +7,13 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {
@@ -163,11 +165,49 @@ const Javalab2View: React.FunctionComponent<
   const sourceLevelId = useAppSelector(
     state => state.lab2Project.projectSourceLevelId
   );
-  const source = useAppSelector(
-    state =>
-      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  const projectSources = useAppSelector(
+    state => state.lab2Project.projectSources
   );
+  const source = projectSources?.source as MultiFileSource | undefined;
   const hasSource = !!source;
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
+  // Javabuilder loads source from S3 by channel id. A brand-new project (no
+  // sources on the server, so initialSources is undefined) shows the level's
+  // start code in the editor, but the framework treats that start code as
+  // already-saved and never writes it to S3 until the user edits. Persist it
+  // once here so a first Run with no edits still has sources to fetch.
+  const startCodeSavedForChannel = useRef<string | undefined>(undefined);
+  useEffect(() => {
+    const channelId = channel?.id;
+    if (
+      initialSources ||
+      isReadOnly ||
+      getIsStartMode() ||
+      !projectSources ||
+      !channelId ||
+      sourceLevelId !== levelProperties.id ||
+      startCodeSavedForChannel.current === channelId
+    ) {
+      return;
+    }
+    startCodeSavedForChannel.current = channelId;
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save(
+        projectSources,
+        /* forceSave */ true,
+        /* forceNewVersion */ false,
+        /* skipSourcesChangedCheck */ true
+      );
+  }, [
+    initialSources,
+    isReadOnly,
+    projectSources,
+    channel?.id,
+    sourceLevelId,
+    levelProperties.id,
+  ]);
 
   const onRun = async (
     runTests: boolean,
