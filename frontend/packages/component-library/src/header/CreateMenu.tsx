@@ -32,6 +32,7 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
         aria-haspopup="true"
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
+        color="inherit"
         disableElevation
         onClick={event => setAnchorEl(event.currentTarget)}
         endIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
