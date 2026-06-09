@@ -31,6 +31,9 @@ namespace :test do
     TestRunUtils.run_local_ui_test
   end
 
+  # Safari (Desktop) runs on SauceLabs because Device Farm does not support it.
+  # Mobile browsers run on SauceLabs because they are very expensive to run on
+  # Device Farm.
   timed_task_with_logging :saucelabs_ui do
     ChatClient.log 'Running <b>dashboard</b> Safari + iPad + iPhone UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
