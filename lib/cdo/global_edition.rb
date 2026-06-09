@@ -29,6 +29,8 @@ module Cdo
       # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
       # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
       '/users/auth/',
+      # Exclude LTI routes.
+      '/lti/',
       # Exclude health check routes.
       '/health_check',
       '/home/health_check'
