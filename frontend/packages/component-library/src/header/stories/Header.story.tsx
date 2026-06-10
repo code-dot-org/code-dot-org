@@ -168,16 +168,23 @@ const DESKTOP_LAYOUT_PARAMS = {
   eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
 };
 
-// Phone viewport exercising the mobile auth behavior: the signed-in pill stays
-// on the bar (prod keeps it visible), while signed-out auth moves to the hamburger.
-const MOBILE_LAYOUT_PARAMS = {
+// Responsive auth states: Eyes captures the story at desktop + phone via the
+// eyes.browser array (so the mobile render needs no separate story). The viewport
+// addon keeps the interactive/play render at desktop, where the >1200px New
+// project trigger is present.
+const RESPONSIVE_EYES = {
   viewport: {
     viewports: {
-      mobile: {name: 'Mobile', styles: {width: '375px', height: '800px'}},
+      desktop: {name: 'Desktop', styles: {width: '1280px', height: '800px'}},
     },
-    defaultViewport: 'mobile',
+    defaultViewport: 'desktop',
   },
-  eyes: {browser: {width: 375, height: 800, name: 'chrome'}},
+  eyes: {
+    browser: [
+      {width: 1280, height: 800, name: 'chrome'},
+      {width: 375, height: 800, name: 'chrome'},
+    ],
+  },
 };
 
 export const StudentSignedIn: Story = {
@@ -209,16 +216,8 @@ export const StudentSignedIn: Story = {
 //  - focus-visible (F-5): keyboard-tabbing to the Account button engages
 //    :focus-visible (programmatic .focus() does not, in Chromium).
 export const TeacherSignedIn: Story = {
-  args: {
-    ...BASE,
-    menuItems: TEACHER_MENU_ITEMS,
-    userAuth: {
-      status: 'signed-in',
-      display_name: 'Ms. Rivera',
-      user_type: 'teacher',
-    },
-  },
-  parameters: DESKTOP_LAYOUT_PARAMS,
+  args: TEACHER_ARGS,
+  parameters: RESPONSIVE_EYES,
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const white = 'rgb(255, 255, 255)';
@@ -302,6 +301,7 @@ export const SignedOut: Story = {
     createMenuItems: undefined,
     userAuth: {status: 'signed-out'},
   },
+  parameters: RESPONSIVE_EYES,
 };
 
 export const Loading: Story = {
@@ -371,45 +371,6 @@ export const Hamburger: Story = {
   },
 };
 
-// Signed-in at phone width: the account pill stays on the bar (prod keeps
-// #header_user_menu visible). Regression guard — it used to be hidden below 768px.
-export const SignedInMobile: Story = {
-  args: {...TEACHER_ARGS},
-  parameters: MOBILE_LAYOUT_PARAMS,
-  play: async ({canvasElement}) => {
-    const account = canvasElement.querySelector(
-      'button[aria-label="Account menu"]',
-    ) as HTMLElement;
-    expect(account).not.toBeNull();
-    expect(account.getBoundingClientRect().width).toBeGreaterThan(0);
-  },
-};
-
-// Signed-out at phone width: the bar Sign in / Create account buttons are hidden
-// (prod hides #sign_in_or_user below 768px); the auth lives in the hamburger
-// instead (prod's #hamburger-sign-up-buttons).
-export const SignedOutMobile: Story = {
-  args: {
-    ...BASE,
-    menuItems: [],
-    createMenuItems: undefined,
-    userAuth: {status: 'signed-out'},
-  },
-  parameters: MOBILE_LAYOUT_PARAMS,
-  play: async ({canvasElement}) => {
-    const barSignIn = canvasElement.querySelector('a[href="/users/sign_in"]');
-    if (barSignIn) {
-      expect(barSignIn.getBoundingClientRect().width).toBe(0);
-    }
-    await userEvent.click(
-      within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),
-    );
-    const drawer = within(document.body);
-    expect(
-      await drawer.findByRole('link', {name: 'Sign in'}),
-    ).toBeInTheDocument();
-    expect(
-      drawer.getByRole('link', {name: 'Create account'}),
-    ).toBeInTheDocument();
-  },
-};
+// Mobile renders are captured by the RESPONSIVE_EYES eyes.browser array on
+// TeacherSignedIn / SignedOut above (no separate phone-width stories). The
+// hamburger signed-out auth interaction is covered by HamburgerMenu's unit test.

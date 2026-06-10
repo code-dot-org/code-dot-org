@@ -186,4 +186,24 @@ describe('HamburgerMenu', () => {
     await screen.findByText('Districts');
     expect(screen.getAllByText('Incubator')).toHaveLength(1);
   });
+
+  it('surfaces Sign in / Create account when signed out', async () => {
+    const user = userEvent.setup();
+    render(
+      <HamburgerMenu
+        menuItems={[]}
+        globalNavItems={GLOBAL_NAV}
+        supportLinks={[]}
+        userAuth={{status: 'signed-out'}}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('Districts');
+    expect(screen.getByRole('link', {name: 'Sign in'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {name: 'Create account'}),
+    ).toBeInTheDocument();
+  });
 });
