@@ -18,7 +18,7 @@ Resources:
       Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
       FunctionName: AMIManager
       Code:
-        ZipFile: <%=inline_js 'ami-manager.js' %>
+        ZipFile: "var response=require(\"cfn-response\"),AWS=require(\"aws-sdk\"),ec2=new AWS.EC2;exports.handler=function(e,a){function n(n,s){r.Error=s,console.log(r.Error+\":\\n\",n),response.send(e,a,response.FAILED,r,c)}function s(){response.send(e,a,response.SUCCESS,r,c)}function t(t){try{e.waiter=t,e.ResponseData=r,e.PhysicalResourceId=c;var o,i=!0;ec2.waitFor(t.state,t.params,function(e,a){i?(o&&clearTimeout(o),e?n(e,\"error waiting for \"+t.state):s()):console.log(\"No longer waiting:\",e,a)}),o=setTimeout(function(){console.log(\"Timeout reached, re-executing function. Params:\\n\",JSON.stringify(e)),i=!1,(new AWS.Lambda).invoke({FunctionName:a.invokedFunctionArn,InvocationType:\"Event\",Payload:JSON.stringify(e)},function(e,s){e?n(e,\"error in lambda recurse\"):a.done()})},a.getRemainingTimeInMillis()-5e3)}catch(e){n(e,\"\")}}console.log(\"REQUEST RECEIVED:\\n\",JSON.stringify(e));var o=e.StackId.split(\":\").slice(-1)[0].split(\"/\")[1],i=e.ResourceProperties.InstanceId,l=!e.ResourceProperties.hasOwnProperty(\"WaitImageAvailable\")||e.ResourceProperties.WaitImageAvailable,r=e.ResponseData||{},c=e.PhysicalResourceId;if(console.log(\"REQUEST TYPE:\",e.RequestType),e.waiter)ec2.describeImages({ImageIds:[c]},function(a,s){a?n(a,\"DescribeImages call failed\"):0===s.Images.length?n(null,\"Image not found\"):t(e.waiter)});else if(\"Delete\"==e.RequestType){if(0!==c.indexOf(\"ami-\"))return r.Info=\"No image to delete\",void s();var d={ImageIds:[c]};ec2.describeImages(d,function(e,a){if(e)n(e,\"DescribeImages call failed\");else if(0===a.Images.length)r.Info=\"No snapshot to delete\",s();else if(1==a.Images.length){var t=a.Images[0].ImageId;console.log(\"DELETING:\",t),ec2.deregisterImage({ImageId:t},function(e,a){e?n(e,\"DeregisterImage call failed\"):(r.ImageId=t,ec2.describeSnapshots({Filters:[{Name:\"description\",Values:[\"*\"+t+\"*\"]}]},function(e,a){if(e)n(e,\"DescribeSnapshots call failed\");else if(0===a.Snapshots.length)r.Info=\"No snapshot to delete\",s();else{var t=a.Snapshots[0].SnapshotId;console.log(\"DELETING SNAPSHOT:\",t),ec2.deleteSnapshot({SnapshotId:t},function(e,a){e?n(e,\"DeleteSnapshot call failed\"):s()})}}))})}else n(null,\"DescribeImages returned multiple Images, expected one\")})}else\"Create\"==e.RequestType?i?ec2.waitFor(\"instanceStopped\",{InstanceIds:[i]},function(a,d){if(a)return void n(a,\"waitFor instanceStopped failed\");var I={InstanceId:i,Name:o+\"-\"+i+\"-\"+e.RequestId};ec2.createImage(I,function(a,i){if(a)l&&\"InvalidAMIName.Duplicate\"==a.code?(c=a.message.match(\"already in use by AMI (.*)\")[1],r.ImageId=c,t({state:\"imageAvailable\",params:{ImageIds:[c]}})):n(a,\"CreateImage call failed\");else{var d=i.ImageId;c=d,console.log(\"SUCCESS: \",\"ImageId - \"+d);var I={Resources:[d],Tags:[{Key:\"cloudformation:amimanager:stack-name\",Value:o},{Key:\"cloudformation:amimanager:stack-id\",Value:e.StackId},{Key:\"cloudformation:amimanager:logical-id\",Value:e.LogicalResourceId}]};ec2.createTags(I,function(e,a){e?n(e,\"Create tags call failed\"):(r.ImageId=d,l?t({state:\"imageAvailable\",params:{ImageIds:[c]}}):s())})}})}):n(null,\"InstanceId not specified\"):\"Update\"==e.RequestType?c?(r.ImageId=c,s()):n(null,\"In-place updates not supported\"):n(null,\"Invalid RequestType: \"+e.RequestType)};\n"
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 300
@@ -59,7 +59,7 @@ Resources:
       Description: 'Returns the current number of InService instances in an Auto Scaling Group.'
       FunctionName: CountASG
       Code:
-        ZipFile: <%=inline_js 'count_asg.js' %>
+        ZipFile: "var response=require(\"cfn-response\"),AWS=require(\"aws-sdk\"),autoscaling=new AWS.AutoScaling,errorExit=(exports.handler=function(n,o){var e,s,i,a,t,u,c;console.log(\"REQUEST RECEIVED:\\\\n\",JSON.stringify(n)),\"Delete\"==n.RequestType?response.send(n,o,response.SUCCESS):(e=n.ResourceProperties.AutoScalingGroupTags||errorExit(\"No AutoScalingGroupTags found\",n,o),s=n.ResourceProperties.Default||{MinSize:1,MaxSize:10,DesiredCapacity:1},i={},a=function(e){var r={};return e.forEach(function(e){r[e.Key]=e.Value}),r},\"Create\"==n.RequestType||\"Update\"==n.RequestType?(t=a(e),u=function(e,r){e&&(i.Error=\"No AutoScalingGroup found\",i.OriginalError=e,r=s),i.MinSize=r.MinSize,i.MaxSize=r.MaxSize,i.DesiredCapacity=r.DesiredCapacity,response.send(n,o,response.SUCCESS,i)},c=s,autoscaling.describeAutoScalingGroups({},function(e,r){e?u(e,r):(r.AutoScalingGroups.forEach(function(e){var r,n,o;r=t,n=a(e.Tags),o=!0,Object.keys(r).forEach(function(e){r[e]!=n[e]&&(o=!1)}),o&&(c={MinSize:e.MinSize,MaxSize:e.MaxSize,DesiredCapacity:e.DesiredCapacity})}),u(null,c))})):response.send(n,o,response.SUCCESS,i))},function(e,r,n){responseData={Error:e},console.log(responseData.Error),response.send(r,n,response.FAILED,responseData)});\n"
       Handler: index.handler
       Runtime: nodejs6.10
       Timeout: 30
@@ -88,7 +88,7 @@ Resources:
     Properties:
       Description: 'Publish a CloudWatch Event to a Slack channel.'
       FunctionName: SlackEvent
-      Code: <%=js_zip ['slackCloudWatchEvent.js']%>
+      Code: {"S3Bucket":"cdo-dist","S3Key":"lambdajs-782e037d87e901ed56a61adfb9385981.zip"}
       Environment:
         Variables:
           SLACK_ENDPOINT: '{{resolve:secretsmanager:production/cdo/slack_endpoint}}'
@@ -114,7 +114,7 @@ Resources:
       FunctionName: S3Object
       Role: !GetAtt S3ObjectRole.Arn
       Code:
-        ZipFile: <%=inline_js 's3Object.js' %>
+        ZipFile: "let response=require(\"cfn-response\"),AWS=require(\"aws-sdk\"),s3=new AWS.S3;exports.handler=function(r,s){console.log(\"Request received:\\n\",JSON.stringify(r));let t=r.ResourceProperties.Bucket+\"/\"+r.ResourceProperties.Key,o=e=>response.send(r,s,e?response.FAILED:response.SUCCESS,e||{},t);var e=r.ResourceProperties;delete e.ServiceToken,\"Create\"===r.RequestType||\"Update\"===r.RequestType?s3.putObject(e).promise().then(e=>o()).catch(e=>o(e)):\"Delete\"===r.RequestType?(e={Bucket:r.ResourceProperties.Bucket,Key:r.ResourceProperties.Key},s3.deleteObject(e).promise().then(e=>o()).catch(e=>o(e))):o({Error:\"Invalid request type\"})};\n"
       Handler: index.handler
       Timeout: 30
       Runtime: nodejs6.10
@@ -151,7 +151,7 @@ Resources:
           ATHENA_DB: elb_logs
           ATHENA_TABLE: cloudfront_logs
       Code:
-        ZipFile: <%=inline_js 's3PartitionCloudFrontLog.js'%>
+        ZipFile: "let AWS=require(\"aws-sdk\"),s3=new AWS.S3,glue=new AWS.Glue,inputFormat=\"org.apache.hadoop.mapred.TextInputFormat\",outputFormat=\"org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat\",serdeInfo={Name:\"LazySimpleSerde\",SerializationLibrary:\"org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe\",Parameters:{\"field.delim\":\"\\t\",\"serialization.format\":\"\\t\"}},createdPartitions={};exports.handler=(t,e,o)=>{function r(e){return t.Records?null:{invocationSchemaVersion:t.invocationSchemaVersion,treatMissingKeysAs:\"PermanentFailure\",invocationId:t.invocationId,results:[{taskId:t.tasks[0].taskId,resultCode:e?\"TemporaryFailure\":\"Succeeded\",resultString:e?e.toString():\"OK\"}]}}console.log(\"Request received:\\n\",JSON.stringify(t)),process.on(\"uncaughtException\",e=>o(e));let a,i;var n=(i=t.Records?(a=t.Records[0].s3.bucket.name,t.Records[0].s3.object.key):(a=t.tasks[0].s3BucketArn.split(\":\").pop(),t.tasks[0].s3Key)).split(\"/\").map(e=>e.replace(/-tmp$/,\"\")),s=n.pop();let c=[\"year\",\"month\",\"day\",\"hour\"],p=s.split(\".\")[1].split(\"-\");var u=p.map((e,t)=>c[t]+\"=\"+e).join(\"/\"),n=[\"cloudfront\",n.join(\"/\"),u].filter(e=>e).join(\"/\"),u=[n,s].join(\"/\");let l=`s3://${a}/`+n;s3.copyObject({CopySource:[a,i].join(\"/\"),Bucket:a,Key:u}).promise().catch(e=>{if(\"NoSuchKey\"!==e.code)throw e}).then(e=>s3.deleteObject({Bucket:a,Key:i}).promise()).catch(e=>{if(\"NoSuchKey\"!==e.code)throw e}).then(e=>{if(!t.tasks&&!createdPartitions[p.join()])return glue.getPartition({DatabaseName:process.env.ATHENA_DB,TableName:process.env.ATHENA_TABLE,PartitionValues:p}).promise().catch(e=>{if(\"EntityNotFoundException\"===e.code)return glue.createPartition({DatabaseName:process.env.ATHENA_DB,TableName:process.env.ATHENA_TABLE,PartitionInput:{Values:p,StorageDescriptor:{Location:l,InputFormat:inputFormat,OutputFormat:outputFormat,SerdeInfo:serdeInfo}}}).promise().catch(e=>{if(\"AlreadyExistsException\"!==e.code)throw e});throw e}).then(e=>createdPartitions[p.join()]=!0)}).then(e=>o(null,r(null))).catch(e=>o(e,r(e)))};\n"
       Handler: index.handler
       Runtime: nodejs12.x
       Timeout: 30
@@ -245,7 +245,7 @@ Resources:
     Properties:
       Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
       FunctionName: SQLUser
-      Code: <%=package_node_lambda('sql-user')[:code_props].to_json %>
+      Code: {"S3Bucket":"cdo-dist","S3Key":"lambda-sql-user-0c8cac2f488b3b56880072e7a9040717.zip"}
       Handler: index.handler
       Runtime: nodejs18.x
       MemorySize: 1024
@@ -295,7 +295,7 @@ Resources:
     Type: AWS::CloudFront::Function
     Properties:
       Name: AcceptLanguage
-      FunctionCode: <%=js_erb 'accept-language.js.erb', max: FUNCTION_MAX %>
+      FunctionCode: "var tags=[\"ar-sa\",\"ar\",\"cs-cz\",\"cs\",\"de-de\",\"de\",\"en-in\",\"en-us\",\"en\",\"es-es\",\"es\",\"es-mx\",\"es-la\",\"fa-ir\",\"fr-fr\",\"fr\",\"gu-in\",\"gu\",\"hi-in\",\"hi\",\"id-id\",\"id\",\"it-it\",\"it\",\"ja-jp\",\"ja\",\"kn-in\",\"kn\",\"ko-kr\",\"ko\",\"mr-in\",\"mr\",\"or-in\",\"or\",\"pl-pl\",\"pl\",\"pt-br\",\"pt-pt\",\"ro-ro\",\"ro\",\"ru-ru\",\"ru\",\"sk-sk\",\"sk\",\"ta-in\",\"ta\",\"te-in\",\"te\",\"th-th\",\"th\",\"tr-tr\",\"tr\",\"uk-ua\",\"uk\",\"zh-cn\",\"zh-tw\"],defaultTag=\"en\";function handler(e){var a=e.request.headers,r=e.request.cookies.language_,u=a[\"accept-language\"]?a[\"accept-language\"].value:\"\";return a[\"accept-language\"]={value:r&&r.value||lookup(u,tags,defaultTag)},e.request}function lookup(e,a,r){e=e.toLowerCase();for(var u,t=/(?<range>([a-z]{1,8})(-([a-z0-9]{1,8}))*|\\*)(\\s*;\\s*q=(?<qvalue>0(\\.[0-9]{0,3})?|1(\\.0{0,3})?))?(\\s*,\\s*)?/g,n=r,s=0;null!==(u=t.exec(e));){var l=u.groups.qvalue?parseFloat(u.groups.qvalue):1;if(s<l)for(var i=u.groups.range,o=null;i!==o;){if(a.includes(i)){s=l,n=i;break}i=(o=i).replace(/-([a-z0-9]{1,8})$/,\"\")}}return n}\n"
       FunctionConfig:
         Comment: "Normalizes Accept-Language header from viewer requests"
         Runtime: cloudfront-js-1.0
