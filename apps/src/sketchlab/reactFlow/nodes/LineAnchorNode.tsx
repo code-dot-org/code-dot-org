@@ -19,8 +19,8 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
         position={handlePosition}
         // The handle exists only so the line edge has an attachment point.
         // Anchors aren't used for interactive connections (user drags from anchor to create a new edge),
-        // so we mark them as not connectable. Anchors are still 'connectable' when you drag or move them
-        // to a node's handle.
+        // so we mark them as not connectable. You can still drag an anchor and connect it to
+        // a node.
         isConnectable={false}
         isConnectableStart={false}
         isConnectableEnd={false}
