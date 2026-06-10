@@ -7,6 +7,7 @@ require 'cdo/git_utils'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
+require 'cdo/playwright_report'
 require 'cdo/mysql_console_helper'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
@@ -136,10 +137,13 @@ namespace :test do
       'yarn workspace @code-dot-org/e2e-tests exec playwright install chromium firefox webkit &&',
       "TARGET_URL=#{CDO.studio_url('')} yarn workspace @code-dot-org/e2e-tests test:ui:ci"
     )
+    report_dir = frontend_dir('packages', 'e2e-tests', 'playwright-report')
+    report_url = Cdo::PlaywrightReport.upload(report_dir)
+    report_link = report_url ? %( See <a href="#{report_url}">the HTML report</a>.) : ''
     if status == 0
-      ChatClient.log 'Playwright e2e tests for <b>dashboard</b> succeeded.'
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
     else
-      message = 'Playwright e2e tests for <b>dashboard</b> failed (non-blocking).'
+      message = "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}"
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'yellow'
     end
