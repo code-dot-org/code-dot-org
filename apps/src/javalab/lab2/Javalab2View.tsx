@@ -9,6 +9,7 @@ import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
