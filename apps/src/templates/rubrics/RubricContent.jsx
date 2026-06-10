@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
@@ -200,14 +201,11 @@ export const InfoAlert = ({text, dismissable}) => {
         </Typography>
       </div>
       {!!dismissable && (
-        <button
-          type="button"
+        <CloseButton
           onClick={closeButtonCallback}
-          className={classnames('close', style.infoAlertRight)}
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+          className={style.infoAlertRight}
+          aria-label={i18n.closeDialog()}
+        />
       )}
     </div>
   );

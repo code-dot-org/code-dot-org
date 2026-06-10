@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
@@ -320,23 +320,28 @@ function RubricContainer({
           <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
           <div className={style.rubricHeaderRightSide}>
             {canProvideFeedback && teacherHasEnabledAi && (
-              <button
+              <MuiIconButton
                 id="ui-restart-product-tour"
                 aria-label="restart product tour"
                 type="button"
+                variant="text"
+                color="white"
                 onClick={tourRestartHandler}
                 className={classnames(style.buttonStyle, style.closeButton)}
               >
                 <FontAwesomeV6Icon iconName="circle-question" />
-              </button>
+              </MuiIconButton>
             )}
-            <button
+            <MuiIconButton
               type="button"
+              variant="text"
+              color="white"
+              aria-label={i18n.closeDialog()}
               onClick={closeRubric}
               className={classnames(style.buttonStyle, style.closeButton)}
             >
               <FontAwesomeV6Icon iconName="xmark" />
-            </button>
+            </MuiIconButton>
           </div>
         </div>
 

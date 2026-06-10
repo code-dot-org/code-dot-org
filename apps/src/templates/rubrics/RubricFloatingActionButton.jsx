@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -46,13 +46,16 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
         <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
       </div>
       <div className={style.rubricHeaderRightSide}>
-        <button
+        <MuiIconButton
           type="button"
+          variant="text"
+          color="white"
+          aria-label={i18n.closeDialog()}
           onClick={_ => setIsOpen(!isOpen)}
           className={classnames(style.buttonStyle, style.closeButton)}
         >
           <FontAwesomeV6Icon iconName="xmark" />
-        </button>
+        </MuiIconButton>
       </div>
     </div>
     <div className={classnames(style.fabBackground, style.fabErrorBackground)}>

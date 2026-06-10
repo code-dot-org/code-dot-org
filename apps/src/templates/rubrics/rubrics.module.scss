@@ -1154,6 +1154,7 @@ p.aiTokenText {
 .progressRingText {
   text-anchor: middle;
   font-size: smaller;
+  fill: var(--text-neutral-primary);
 }
 
 .learningGoalsTips {
@@ -1188,6 +1189,7 @@ p.evidenceLevelHeaderText {
 
 .evidenceLevelLabelV2 {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
