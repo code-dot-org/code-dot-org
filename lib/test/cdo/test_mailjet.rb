@@ -20,6 +20,38 @@ class MailJetTest < Minitest::Test
     refute_nil MailJet.find_or_create_contact(email, name)
   end
 
+  def test_create_contact_swallows_already_exists_error
+    email = 'fake.email@test.xx'
+    name = 'Fake Name'
+
+    # MailJet raises if a contact with this email already exists, even when the
+    # initial find missed it. The duplicate error should be swallowed and the
+    # now-existing contact re-found and returned.
+    mock_contact = mock('Mailjet::Contact')
+    Mailjet::Contact.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
+    Mailjet::Contact.expects(:create).raises(
+      Mailjet::ApiError.new(400, "A Contact resource with value \"#{email}\" for Email already exists.", nil, nil, nil)
+    )
+
+    MailJet.expects(:valid_email?).with(email).returns(true).once
+
+    assert_equal mock_contact, MailJet.find_or_create_contact(email, name)
+  end
+
+  def test_create_contact_reraises_other_api_errors
+    email = 'fake.email@test.xx'
+    name = 'Fake Name'
+
+    Mailjet::Contact.stubs(:find).with(email).returns(nil)
+    Mailjet::Contact.expects(:create).raises(Mailjet::ApiError.new(500, 'Something else went wrong.', nil, nil, nil))
+
+    MailJet.expects(:valid_email?).with(email).returns(true).once
+
+    assert_raises(Mailjet::ApiError) do
+      MailJet.find_or_create_contact(email, name)
+    end
+  end
+
   def test_find_existing_contact
     email = 'fake.email@test.xx'
     name = 'Fake Name'

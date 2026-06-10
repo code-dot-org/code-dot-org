@@ -114,11 +114,19 @@ module MailJet
     contact = Mailjet::Contact.find(email)
     return contact if contact&.id.present?
 
-    Mailjet::Contact.create(
-      is_excluded_from_campaigns: false,
-      email: email,
-      name: name
-    )
+    begin
+      Mailjet::Contact.create(
+        is_excluded_from_campaigns: false,
+        email: email,
+        name: name
+      )
+    rescue Mailjet::ApiError => exception
+      # MailJet raises if a contact with this email already exists. This can
+      # happen even though the find above missed it, due to eventual
+      # consistency or a concurrent create. In that case, fall through and
+      # re-find the now-existing contact rather than crashing the caller.
+      raise unless exception.message.include?('for Email already exists')
+    end
     Mailjet::Contact.find(email)
   end
 
