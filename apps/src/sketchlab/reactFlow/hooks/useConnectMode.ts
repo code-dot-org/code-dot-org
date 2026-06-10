@@ -7,13 +7,19 @@ import {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import {ShapeNodeData} from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
+function isTriangle(node: SketchlabReactFlowNode): boolean {
+  return (node.data as ShapeNodeData | undefined)?.shapeType === 'triangle';
+}
+
 /**
  * Pick source/target handles based on relative node positions so the arrow
- * points in a sensible direction.
+ * points in a sensible direction. Triangles have no top handle, so vertical
+ * edges on triangle nodes use bottom instead.
  */
 function pickHandles(
   source: SketchlabReactFlowNode,
@@ -26,9 +32,16 @@ function pickHandles(
       ? {sourceHandle: 'right-source', targetHandle: 'left-target'}
       : {sourceHandle: 'left-source', targetHandle: 'right-target'};
   }
-  return deltaY >= 0
-    ? {sourceHandle: 'bottom-source', targetHandle: 'top-target'}
-    : {sourceHandle: 'top-source', targetHandle: 'bottom-target'};
+  if (deltaY >= 0) {
+    return {
+      sourceHandle: 'bottom-source',
+      targetHandle: isTriangle(target) ? 'bottom-target' : 'top-target',
+    };
+  }
+  return {
+    sourceHandle: isTriangle(source) ? 'bottom-source' : 'top-source',
+    targetHandle: 'bottom-target',
+  };
 }
 
 interface UseConnectModeOptions {
