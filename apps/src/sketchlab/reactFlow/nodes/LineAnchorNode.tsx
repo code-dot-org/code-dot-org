@@ -20,8 +20,8 @@ function LineAnchorNode({
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
   const connections = useNodeConnections();
 
-  // The free end of an unattached line accepts a connection; once attached it
-  // doesn't. If nodeConnectable is false, it never does.
+  // Line anchors should not accept additional connections once they're already part
+  // of an edge. If nodeConnectable is false, they never do.
   const isConnectable = nodeConnectable && connections.length === 0;
 
   return (
