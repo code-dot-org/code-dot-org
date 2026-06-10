@@ -94,8 +94,8 @@ class ShareFilteringTest < Minitest::Test
     assert_equal '123 Post Road Westport CT', Geocoder.extract_address_candidate('Hi I live at 123 Post Road Westport CT')
     assert_equal '123, Post Road, Westport, CT', Geocoder.extract_address_candidate('Hi I live at 123, Post Road, Westport, CT')
 
-    # Semicolon, a geocoder delimiter, is stripped.
-    assert_equal '00100 player', Geocoder.extract_address_candidate('00100; player')
+    # Semicolon and other non-address characters, which can be geocoder delimiters, are stripped.
+    assert_equal '00,100 player.setAnimation fly bot player.scale 0.8', Geocoder.extract_address_candidate('00,100; player.setAnimation(fly_bot); player.scale = 0.8')
 
     # Caps at MAX_ADDRESS_WORDS words.
     long_text = "Hi 12 #{(['word'] * 20).join(' ')}"
