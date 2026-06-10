@@ -3,7 +3,17 @@
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    // Stories render the *built* package (e.g. `@code-dot-org/component-library/header`)
+    // so Storybook/Eyes bundle the externalized-MUI artifact consumers ship. For
+    // typecheck, resolve those self-imports to source so it doesn't require the dist
+    // to be built first (Vite has no tsconfig-paths plugin, so the runtime bundle is
+    // unaffected and still uses the `exports` map -> dist). Re-list `@/*` since paths
+    // replace, not merge, across `extends`.
+    "paths": {
+      "@/*": ["src/*"],
+      "@code-dot-org/component-library/*": ["src/*"]
+    }
   },
   "include": ["src", "types"]
 }
