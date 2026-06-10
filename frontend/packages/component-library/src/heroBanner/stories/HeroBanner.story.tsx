@@ -317,9 +317,6 @@ export const Tablet: Story = {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'tablet',
     },
-    eyes: {
-      browser: {width: 834, height: 1112, name: 'chrome'},
-    },
   },
 };
 
@@ -343,9 +340,6 @@ export const TabletWithHiddenImage: Story = {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'tablet',
     },
-    eyes: {
-      browser: {width: 834, height: 1112, name: 'chrome'},
-    },
   },
 };
 
@@ -367,9 +361,6 @@ export const Mobile: Story = {
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'mobile2',
-    },
-    eyes: {
-      browser: {width: 414, height: 896, name: 'chrome'},
     },
   },
 };
@@ -393,9 +384,6 @@ export const MobileWithHiddenImage: Story = {
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'mobile2',
-    },
-    eyes: {
-      browser: {width: 414, height: 896, name: 'chrome'},
     },
   },
 };

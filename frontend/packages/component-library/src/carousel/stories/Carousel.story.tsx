@@ -93,11 +93,10 @@ DefaultCarousel.parameters = {
         "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content.",
     },
   },
-  eyes: {waitBeforeCapture: 4000},
 };
 // There are no unit (Jest) tests for this component because there are
 // integration issues between Swiper and Jest, and we can cover what we
-// need using Storybook play functions and Eyes tests.
+// need using Storybook play functions and visual tests.
 // See https://codedotorg.atlassian.net/browse/CMS-361 for more context.
 DefaultCarousel.play = async ({
   canvasElement,
@@ -494,10 +493,6 @@ VideoCarousels.parameters = {
       story:
         'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
     },
-  },
-  eyes: {
-    waitBeforeCapture: 4000,
-    ignoreRegions: [{selector: '.ytp-impression-link'}],
   },
 };
 VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {

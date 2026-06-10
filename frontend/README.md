@@ -106,24 +106,24 @@ yarn release:dryrun
 
 This command executes all lint, test, and build commands.
 
-### Visual Snapshot Testing (Eyes)
+### Visual Snapshot Testing (Argos)
 
-The design system uses [Applitools Eyes](https://applitools.com/platform/eyes/) via their [Storybook integration](https://applitools.com/tutorials/sdks/storybook) to take a visual snapshot of
-a storybook component and
-compare it with baselines. Visual snapshots on pull requests and during the CI build.
+The design system uses [Argos](https://argos-ci.com/docs) via its
+[Storybook Vitest integration](https://argos-ci.com/docs/quickstart/storybook-quickstart)
+to take a visual snapshot of each storybook story and compare it against the
+`staging` baseline. Snapshots are captured during the storybook test run in CI
+and uploaded to Argos; the result is reported as a pull request comment.
 
-To run visual snapshots locally, first obtain an [Applitools API Key](https://applitools.com/docs/topics/overview/obtain-api-key.html).
-
-Then, assign the API key to `frontend/.env` in the `APPLITOOLS_API_KEY` key. (If this file does not exist,
-copy it from `frontend/.env.example`)
-
-To run the visual tests:
+To run the storybook tests locally (screenshots are written to
+`apps/design-system-storybook/screenshots` but not uploaded):
 
 ```bash
-yarn workspace @code-dot-org/design-system-storybook eyes-storybook
+yarn workspace @code-dot-org/design-system-storybook test-storybook
 ```
 
-If differences are detected, follow the [baseline update](https://applitools.com/docs/topics/overview/overview-reviewing-test-results.html) guide to resolve.
+If CI detects differences, open the Argos build linked from the PR comment.
+If the differences are expected, approve the build in the Argos UI and re-run
+the failed job; otherwise push a fix.
 
 ## Cleaning
 

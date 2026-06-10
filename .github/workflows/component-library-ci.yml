@@ -49,6 +49,10 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
 
+    permissions:
+      pull-requests: write
+      issues: write
+
     steps:
       - name: Install LFS
         run: apt-get update && apt-get install -y git-lfs
@@ -68,74 +72,90 @@ jobs:
         run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
         working-directory: ./frontend
 
+      # The Argos vitest plugin captures a screenshot per story during this run
+      # and uploads the batch to Argos at the end, printing the build URL.
       - name: UI Tests
-        run: yarn workspace @code-dot-org/design-system-storybook test-storybook
-        working-directory: ./frontend
-
-  eyes:
-    runs-on: ubuntu-24.04
-
-    permissions:
-      pull-requests: write
-      issues: write
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: |
-            frontend
-            .github
-          lfs: true
-
-      - name: Setup Frontend
-        uses: ./.github/actions/frontend/setup
-
-      - name: Build
-        run: yarn build --filter @code-dot-org/design-system-storybook
-        working-directory: ./frontend
-
-      - name: Eyes Tests
-        id: eyes
+        id: ui-test
+        shell: bash
         run: |
-          EYES_REPORT=$(COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn eyes-storybook)
-          echo "$EYES_REPORT"
-          # Send multiline report to environment var
-          echo "EYES_REPORT<<EOF" >> $GITHUB_OUTPUT
-          echo "$EYES_REPORT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-          # Check if the report was successful, failing if not.
-          if echo "$EYES_REPORT" | grep -q "✅"; then
-            echo "✅ Eyes report was successful, exiting with 0"
-            exit 0
-          else
-            echo "❌ Eyes report unsuccessful, exiting with 1"
-            exit 1
-          fi
-        working-directory: ./frontend/apps/design-system-storybook
-        continue-on-error: ${{ github.event_name == 'pull_request' }}
+          yarn workspace @code-dot-org/design-system-storybook test-storybook | tee test-output.log
+          BUILD_URL=$(grep -oP '(?<=Argos build created: )\S+' test-output.log | tail -1 || true)
+          echo "argos-build-url=$BUILD_URL" >> "$GITHUB_OUTPUT"
+        working-directory: ./frontend
         env:
-          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
+          ARGOS_REFERENCE_BRANCH: staging
+
+      # We do not use the Argos GitHub App, so poll the build result ourselves
+      # and report it as a PR comment. Build status meanings:
+      #   no-changes / accepted    -> pass
+      #   pending / progress       -> still diffing, keep polling
+      #   changes-detected / other -> fail; review and approve in the Argos UI,
+      #                               then re-run this job to turn it green.
+      - name: Argos Visual Comparison Gate
+        id: argos
+        if: steps.ui-test.outputs.argos-build-url != ''
+        shell: bash
+        continue-on-error: ${{ github.event_name == 'pull_request' }}
+        working-directory: ./frontend/apps/design-system-storybook
+        env:
+          ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
+          BUILD_URL: ${{ steps.ui-test.outputs.argos-build-url }}
+        run: |
+          for i in $(seq 1 60); do
+            STATUS=$(npx argos build get "$BUILD_URL" --json | node -pe 'JSON.parse(require("fs").readFileSync(0, "utf8")).status')
+            echo "Argos build status: $STATUS"
+            [ "$STATUS" != "pending" ] && [ "$STATUS" != "progress" ] && break
+            sleep 10
+          done
+
+          case "$STATUS" in
+            no-changes) SUMMARY="✅ No Storybook visual differences detected!";;
+            accepted)   SUMMARY="✅ Storybook visual differences were reviewed and approved in [Argos]($BUILD_URL).";;
+            *)          SUMMARY="⚠️⚠️⚠️ Detected Storybook visual differences (status: \`$STATUS\`), see [report]($BUILD_URL)!";;
+          esac
+
+          {
+            echo "ARGOS_REPORT<<EOF"
+            echo "# 🖼️ Storybook Visual Comparison Report"
+            echo ""
+            echo "$SUMMARY"
+            if [ "$STATUS" != "no-changes" ] && [ "$STATUS" != "accepted" ]; then
+              echo ""
+              echo "A difference was found in our Storybook front-end visual comparison testing against the \`staging\` baseline."
+              echo ""
+              echo "## Remediation steps:"
+              echo ""
+              echo "1. Open the [report]($BUILD_URL)"
+              echo "2. Determine whether the differences are expected based on this PR's changes"
+              echo "  a. <ins>**If expected**</ins>: Approve the build in Argos and re-run this job, it should pass."
+              echo "  b. <ins>**If not expected**</ins>: Push updates to this PR to correct the differences."
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          [ "$STATUS" = "no-changes" ] || [ "$STATUS" = "accepted" ]
 
       - name: Find Report Comment
-        if: github.event.pull_request.number
+        if: github.event.pull_request.number && steps.argos.outputs.ARGOS_REPORT != ''
         uses: peter-evans/find-comment@3eae4d37986fb5a8592848f6a574fdf654e61f9e # v3.1.0
-        id: eyes-report-comment
+        id: argos-report-comment
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: "github-actions[bot]"
           body-includes: "Visual Comparison Report"
 
       - name: Create comment (if not exists)
-        if: github.event.pull_request.number && steps.eyes-report-comment.outputs.comment-id == ''
+        if: github.event.pull_request.number && steps.argos.outputs.ARGOS_REPORT != '' && steps.argos-report-comment.outputs.comment-id == ''
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.eyes.outputs.EYES_REPORT }}
+          body: ${{ steps.argos.outputs.ARGOS_REPORT }}
 
       - name: Update comment (if exists)
-        if: github.event.pull_request.number && steps.eyes-report-comment.outputs.comment-id != ''
+        if: github.event.pull_request.number && steps.argos.outputs.ARGOS_REPORT != '' && steps.argos-report-comment.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
         with:
-          comment-id: ${{ steps.eyes-report-comment.outputs.comment-id }}
+          comment-id: ${{ steps.argos-report-comment.outputs.comment-id }}
           edit-mode: replace
-          body: ${{ steps.eyes.outputs.EYES_REPORT }}
+          body: ${{ steps.argos.outputs.ARGOS_REPORT }}

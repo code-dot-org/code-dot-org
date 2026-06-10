@@ -20,9 +20,9 @@ export const DefaultVideo: Story = {
     isYouTubeCookieAllowed: true,
   },
   parameters: {
-    eyes: {
-      // Skip eyes for video as this auto plays
-      include: false,
+    argos: {
+      // Skip visual snapshots for video as this auto plays
+      modes: {default: {disabled: true}},
     },
   },
   play: async ({canvasElement, args}) => {
@@ -88,9 +88,9 @@ export const VideoWithFallback: Story = {
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
-    eyes: {
-      // Skip eyes for video as this auto plays
-      include: false,
+    argos: {
+      // Skip visual snapshots for video as this auto plays
+      modes: {default: {disabled: true}},
     },
   },
 };

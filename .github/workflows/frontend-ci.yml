@@ -19,7 +19,6 @@ on:
       - ".github/**"
 
 env:
-  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
   # Playwright container image tag. Version must match the catalog pin in
   # frontend/.yarnrc.yml; variant (noble/jammy) must match the runner's Ubuntu release.
   PLAYWRIGHT_IMAGE_TAG: 'v1.59.1-noble'
@@ -99,16 +98,3 @@ jobs:
     with:
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     secrets: inherit
-
-  # Common teardown actions that must occur after _all_ workflows have completed.
-  # For example, closing the Applitools batch after its completion.
-  teardown:
-    needs: [setup, component-library, oceans]
-    if: always()
-    runs-on: ubuntu-24.04
-    steps:
-      # Close the eyes batch after all distributed eyes tests have completed
-      - name: Update Applitools batch status
-        shell: bash
-        run: |
-          curl -X POST "https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/${{ github.run_id }}/complete?apiKey=${{secrets.APPLITOOLS_API_KEY}}"
