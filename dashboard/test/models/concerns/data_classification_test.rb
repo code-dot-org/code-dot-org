@@ -1,144 +1,188 @@
 require 'test_helper'
 
 class DataClassificationTest < ActiveSupport::TestCase
-  test 'data_classification registers declarations' do
-    model = build_model
-    model.data_classification(name: :restricted, hashed_password: :highly_restricted)
-    assert_equal({name: :restricted, hashed_password: :highly_restricted}, model.declared_data_classifications)
+  # A column double exposing the `#name` and `#type` the concern reads.
+  def mock_column(name, type)
+    stub(name: name, type: type)
   end
 
-  test 'data_classification merges across calls and symbolizes keys' do
-    model = build_model
-    model.data_classification('name' => :restricted)
-    model.data_classification(email: :restricted)
-    assert_equal({name: :restricted, email: :restricted}, model.declared_data_classifications)
-  end
+  # Columns the test model exposes; override per context.
+  let(:columns) {[mock_column('id', :integer)]}
 
-  test 'a later declaration overrides an earlier one for the same attribute' do
-    model = build_model
-    model.data_classification(name: :restricted)
-    model.data_classification(name: :public)
-    assert_equal :public, model.declared_data_classifications[:name]
-  end
-
-  test 'data_classification raises ArgumentError on an unknown classification' do
-    model = build_model
-    error = assert_raises(ArgumentError) {model.data_classification(name: :super_secret)}
-    assert_includes error.message, ':super_secret'
-    assert_includes error.message, ':name'
-  end
-
-  test 'an STI subclass inherits parent declarations and extends without clobbering' do
-    parent = build_model('Parent')
-    parent.data_classification(name: :restricted)
-    # An STI subclass inherits the concern (and its class_attribute) from its parent;
-    # it does not re-include it, just as real models inherit from ApplicationRecord.
-    child = Class.new(parent)
-    child.data_classification(email: :public)
-
-    assert_equal :public, child.declared_data_classifications[:email]
-    assert_equal :restricted, child.declared_data_classifications[:name], 'child should inherit parent declaration'
-    assert_equal({name: :restricted}, parent.declared_data_classifications, 'parent must not be mutated by child')
-  end
-
-  test 'effective_data_classification returns the declared classification when present' do
-    model = build_model(columns: [mock_column('name', :string)])
-    model.data_classification(name: :public)
-    assert_equal :public, model.effective_data_classification(:name)
-  end
-
-  test 'effective_data_classification defaults text/string columns to restricted' do
-    model = build_model(columns: [mock_column('bio', :text), mock_column('title', :string)])
-    assert_equal :restricted, model.effective_data_classification('bio')
-    assert_equal :restricted, model.effective_data_classification('title')
-  end
-
-  test 'effective_data_classification defaults json columns to restricted' do
-    # JSON columns are property bags that routinely hold free-form user content.
-    model = build_model(columns: [mock_column('new_message', :json), mock_column('settings', :jsonb)])
-    assert_equal :restricted, model.effective_data_classification('new_message')
-    assert_equal :restricted, model.effective_data_classification('settings')
-  end
-
-  test 'effective_data_classification defaults timestamp columns to public' do
-    columns = %w[created_at updated_at deleted_at].map {|c| mock_column(c, :datetime)}
-    model = build_model(columns: columns)
-    columns.each {|col| assert_equal :public, model.effective_data_classification(col.name)}
-  end
-
-  test 'effective_data_classification defaults other date/time columns to restricted' do
-    model = build_model(columns: [mock_column('birthday', :date), mock_column('last_login', :datetime)])
-    assert_equal :restricted, model.effective_data_classification('birthday')
-    assert_equal :restricted, model.effective_data_classification('last_login')
-  end
-
-  test 'effective_data_classification defaults scalar columns to public' do
-    model = build_model(columns: [mock_column('age', :integer), mock_column('admin', :boolean), mock_column('score', :float)])
-    assert_equal :public, model.effective_data_classification('age')
-    assert_equal :public, model.effective_data_classification('admin')
-    assert_equal :public, model.effective_data_classification('score')
-  end
-
-  test 'column_names_classified_as for the non-PII set excludes restricted and highly_restricted' do
-    model = pii_test_model
-    assert_equal %w[id created_at], model.column_names_classified_as(:public, :confidential)
-  end
-
-  test 'column_names_classified_as for the PII set excludes only highly_restricted' do
-    model = pii_test_model
-    assert_equal %w[id name created_at], model.column_names_classified_as(:public, :confidential, :restricted)
-  end
-
-  test 'data_classification_errors flags a declared key that is not a real column' do
-    model = build_model(columns: [mock_column('name', :string)])
-    model.data_classification(name: :restricted, nonexistent: :public)
-    assert_equal ['declares data classification for unknown column(s): nonexistent'], model.data_classification_errors
-  end
-
-  test 'data_classification_errors is empty when every declared key is a real column' do
-    model = build_model(columns: [mock_column('name', :string)])
-    model.data_classification(name: :restricted)
-    assert_empty model.data_classification_errors
-  end
-
-  test 'undeclared_data_classification_columns lists columns without an explicit declaration' do
-    model = build_model(columns: [mock_column('id', :integer), mock_column('name', :string), mock_column('email', :string)])
-    model.data_classification(name: :restricted)
-    assert_equal %w[id email], model.undeclared_data_classification_columns
-  end
-
-  private def mock_column(name, type)
-    col = stub
-    col.stubs(:name).returns(name)
-    col.stubs(:type).returns(type)
-    col
-  end
-
-  # A model whose columns span every classification once defaults and one
-  # declaration are applied: id (public), name (text -> restricted default),
-  # auth_token (highly_restricted, declared), created_at (public default).
-  private def pii_test_model
-    columns = [
-      mock_column('id', :integer),
-      mock_column('name', :string),
-      mock_column('auth_token', :string),
-      mock_column('created_at', :datetime),
-    ]
-    model = build_model(columns: columns)
-    model.data_classification(auth_token: :highly_restricted)
-    model
-  end
-
-  # Builds an anonymous class that includes the concern, stubbing the class-level
-  # `columns` the concern reads. Mirrors the helper style in
-  # analytics_exportable_test.rb.
-  private def build_model(name = 'DataClassificationTestModel', columns: nil)
-    columns ||= [mock_column('id', :integer)]
-    klass = Class.new do
-      include DataClassification
-      define_singleton_method(:name) {name}
-      define_singleton_method(:columns) {columns}
+  # An anonymous class that mixes in the concern under test, stubbing the class-level `columns` it
+  # reads. Mirrors how real models include it via ApplicationRecord.
+  let(:model) do
+    concern = described_class
+    declared_columns = columns
+    Class.new do
+      include concern
+      define_singleton_method(:name) {'DataClassificationTestModel'}
+      define_singleton_method(:columns) {declared_columns}
     end
-    klass
+  end
+
+  describe '.data_classification' do
+    it 'registers declarations' do
+      model.data_classification(name: :restricted, hashed_password: :highly_restricted)
+      _(model.declared_data_classifications).must_equal({name: :restricted, hashed_password: :highly_restricted})
+    end
+
+    it 'merges across calls and symbolizes keys' do
+      model.data_classification('name' => :restricted)
+      model.data_classification(email: :restricted)
+      _(model.declared_data_classifications).must_equal({name: :restricted, email: :restricted})
+    end
+
+    context 'when an attribute is declared more than once' do
+      it 'keeps the last declaration' do
+        model.data_classification(name: :restricted)
+        model.data_classification(name: :public)
+        _(model.declared_data_classifications[:name]).must_equal :public
+      end
+    end
+
+    context 'with an unknown classification' do
+      it 'raises ArgumentError naming the bad value and its attribute' do
+        error = _ {model.data_classification(name: :super_secret)}.must_raise ArgumentError
+        _(error.message).must_include ':super_secret'
+        _(error.message).must_include ':name'
+      end
+    end
+
+    context 'with an STI subclass' do
+      # A subclass inherits the concern (and its `class_attribute`) from its parent rather than
+      # re-including it, just as real models inherit from ApplicationRecord.
+      let(:child) {Class.new(model)}
+
+      before do
+        model.data_classification(name: :restricted)
+        child.data_classification(email: :public)
+      end
+
+      it 'inherits the parent declarations' do
+        _(child.declared_data_classifications[:name]).must_equal :restricted
+      end
+
+      it 'extends them with its own' do
+        _(child.declared_data_classifications[:email]).must_equal :public
+      end
+
+      it 'does not mutate the parent' do
+        _(model.declared_data_classifications).must_equal({name: :restricted})
+      end
+    end
+  end
+
+  describe '.effective_data_classification' do
+    context 'when the column is explicitly declared' do
+      let(:columns) {[mock_column('name', :string)]}
+      before {model.data_classification(name: :public)}
+
+      it 'returns the declared classification' do
+        _(model.effective_data_classification(:name)).must_equal :public
+      end
+    end
+
+    context 'with an undeclared text column' do
+      let(:columns) {[mock_column('bio', :text), mock_column('title', :string)]}
+
+      it 'defaults to restricted' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :restricted}
+      end
+    end
+
+    context 'with an undeclared JSON column' do
+      # JSON columns are property bags that routinely hold free-form user content, so they are
+      # treated as text.
+      let(:columns) {[mock_column('new_message', :json), mock_column('settings', :jsonb)]}
+
+      it 'defaults to restricted' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :restricted}
+      end
+    end
+
+    context 'with an undeclared created_at/updated_at/deleted_at column' do
+      let(:columns) {%w[created_at updated_at deleted_at].map {|name| mock_column(name, :datetime)}}
+
+      it 'defaults to public' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :public}
+      end
+    end
+
+    context 'with another undeclared date/time column' do
+      let(:columns) {[mock_column('birthday', :date), mock_column('last_login', :datetime)]}
+
+      it 'defaults to restricted' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :restricted}
+      end
+    end
+
+    context 'with an undeclared numeric or boolean column' do
+      let(:columns) {[mock_column('age', :integer), mock_column('admin', :boolean), mock_column('score', :float)]}
+
+      it 'defaults to public' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :public}
+      end
+    end
+  end
+
+  describe '.column_names_classified_as' do
+    # Spans every classification once defaults and one declaration are applied: id (public),
+    # name (text -> restricted default), auth_token (highly_restricted, declared), created_at (public).
+    let(:columns) do
+      [
+        mock_column('id', :integer),
+        mock_column('name', :string),
+        mock_column('auth_token', :string),
+        mock_column('created_at', :datetime),
+      ]
+    end
+    before {model.data_classification(auth_token: :highly_restricted)}
+
+    context 'for the non-PII set (:public, :confidential)' do
+      subject(:column_names) {model.column_names_classified_as(:public, :confidential)}
+
+      it 'excludes restricted and highly_restricted columns' do
+        _column_names.must_equal %w[id created_at]
+      end
+    end
+
+    context 'for the PII set (:public, :confidential, :restricted)' do
+      subject(:column_names) {model.column_names_classified_as(:public, :confidential, :restricted)}
+
+      it 'excludes only highly_restricted columns' do
+        _column_names.must_equal %w[id name created_at]
+      end
+    end
+  end
+
+  describe '.data_classification_errors' do
+    let(:columns) {[mock_column('name', :string)]}
+    subject(:errors) {model.data_classification_errors}
+
+    context 'when a declared attribute is not a real column' do
+      before {model.data_classification(name: :restricted, nonexistent: :public)}
+
+      it 'flags the unknown column' do
+        _errors.must_equal ['declares data classification for unknown column(s): nonexistent']
+      end
+    end
+
+    context 'when every declared attribute is a real column' do
+      before {model.data_classification(name: :restricted)}
+
+      it 'is empty' do
+        _errors.must_be_empty
+      end
+    end
+  end
+
+  describe '.undeclared_data_classification_columns' do
+    let(:columns) {[mock_column('id', :integer), mock_column('name', :string), mock_column('email', :string)]}
+    before {model.data_classification(name: :restricted)}
+
+    it 'lists the columns without an explicit declaration' do
+      _(model.undeclared_data_classification_columns).must_equal %w[id email]
+    end
   end
 end
