@@ -21,6 +21,24 @@ $gradient-box-shadow-outer: rgba(0, 0, 0, 0.05);
   border-color: $gradient-border $gradient-border $gradient-border $gradient-border-bottom;
   line-height: 20px;
   text-shadow: 0 -1px 0 $gradient-text-shadow;
+  padding: 4px 12px;
+}
+
+$btn-default-gradient: #e6e6e6;
+$btn-default-border: #ccc;
+$btn-default-border-bottom: #b3b3b3;
+
+.btn.btn-default {
+  text-shadow: 0 1px 1px $gradient-box-shadow-inner;
+  background-image: linear-gradient(to bottom, $white, $btn-default-gradient);
+  background-repeat: repeat-x;
+  border-color: $btn-default-border;
+  border-bottom-color: $btn-default-border-bottom;
+}
+
+.btn-default:hover {
+  background-position: 0 -15px;
+  transition: background-position 0.1s linear;
 }
 
 .btn-lg {
@@ -66,10 +84,22 @@ select.form-control {
   height: 30px;
 }
 
+/* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_forms.scss:94 */
 input,
 textarea,
 .uneditable-input {
   width: 220px;
+}
+
+/* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_forms.scss:144 */
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
 }
 
 img {
