@@ -1,9 +1,4 @@
-import {
-  Handle,
-  type NodeProps,
-  Position,
-  useNodeConnections,
-} from '@xyflow/react';
+import {Handle, type NodeProps, Position} from '@xyflow/react';
 import React, {memo} from 'react';
 
 import {LineAnchorNodeType} from '../types';
@@ -11,18 +6,10 @@ import {lineAnchorHandleId} from '../utils/lineAnchors';
 
 import styles from './line-anchor-node.module.scss';
 
-function LineAnchorNode({
-  data,
-  isConnectable: nodeConnectable,
-}: NodeProps<LineAnchorNodeType>) {
+function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
   const isSourceAnchor = data.lineAnchorRole === 'source';
   const handleType = isSourceAnchor ? 'source' : 'target';
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
-  const connections = useNodeConnections();
-
-  // Line anchors should not accept additional connections once they're already part
-  // of an edge. If nodeConnectable is false, they never do.
-  const isConnectable = nodeConnectable && connections.length === 0;
 
   return (
     <div className={styles.anchorNode}>
@@ -30,7 +17,13 @@ function LineAnchorNode({
         type={handleType}
         id={lineAnchorHandleId(handleType)}
         position={handlePosition}
-        isConnectable={isConnectable}
+        // The handle exists only so the line edge has an attachment point.
+        // Anchors aren't used for interactive connections (user drags from anchor to create a new edge),
+        // so we mark them as not connectable. Anchors are still 'connectable' when you drag or move them
+        // to a node's handle.
+        isConnectable={false}
+        isConnectableStart={false}
+        isConnectableEnd={false}
         className={`${styles.anchorHandle} ${styles.hidden}`}
       />
     </div>
