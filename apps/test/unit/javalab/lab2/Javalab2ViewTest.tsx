@@ -10,6 +10,7 @@ import Javalab2View from '@cdo/apps/javalab/lab2/Javalab2View';
 import {handleRunClick} from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
 import {JavalabLevelProperties} from '@cdo/apps/javalab/lab2/types';
 import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2Project, {
   setProjectSource,
   setProjectSourceLevelId,
@@ -63,16 +64,24 @@ const channel: Channel = {
 
 describe('Javalab2View', () => {
   let store: Store;
+  let addSaveSuccessListener: jest.Mock;
 
   beforeEach(() => {
     jest.clearAllMocks();
     stubRedux();
     registerReducers({progress, lab2Project, lab, lab2System, currentUser});
     store = getStore();
+
+    addSaveSuccessListener = jest.fn();
+    jest
+      .spyOn(Lab2Registry.getInstance(), 'getProjectManager')
+      // The view only registers a save-success listener; a partial mock is enough.
+      .mockReturnValue({addSaveSuccessListener} as never);
   });
 
   afterEach(() => {
     restoreRedux();
+    jest.restoreAllMocks();
   });
 
   function renderView(initialSources: ProjectSources | undefined) {
@@ -117,6 +126,17 @@ describe('Javalab2View', () => {
 
   it('does not request an initial sources save when the project was loaded from the server', async () => {
     renderView(projectSources);
+
+    const {needsInitialSourcesSave} = await runFromView();
+    expect(needsInitialSourcesSave).toBe(false);
+  });
+
+  it('stops requesting the initial sources save once a save has succeeded', async () => {
+    renderView(undefined);
+
+    // Simulate a successful save (e.g. the first run's force-save landing).
+    const onSaveSuccess = addSaveSuccessListener.mock.calls[0][0];
+    onSaveSuccess();
 
     const {needsInitialSourcesSave} = await runFromView();
     expect(needsInitialSourcesSave).toBe(false);

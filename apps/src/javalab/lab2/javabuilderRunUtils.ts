@@ -63,10 +63,9 @@ export async function handleRunClick(
     isReadOnlyWorkspace(state);
 
   if (!useOverrideSources) {
-    // Javabuilder reads source from S3. Flush the in-memory editor first so S3
-    // reflects what the user sees before the WS connection opens. A brand-new
-    // project's start code has never been saved at all (saves normally begin
-    // with the first edit), so force a full save instead.
+    // Flush the in-memory editor first so S3 reflects what the user sees before the
+    // WS connection opens. A brand-new project's start code has never been saved at all
+    // (saves normally begin with the first edit), so force a full save instead.
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (needsInitialSourcesSave && state.lab2Project.projectSources) {
       await projectManager?.save(

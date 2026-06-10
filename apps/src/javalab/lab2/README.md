@@ -131,9 +131,6 @@ but we don't persist that information yet.
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Starter assets** and image asset support in general.
-- **TS port of `JavabuilderConnection`** — currently imported from
-  `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
-  redux-thunk side effects and emit events instead.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
   version of predict levels. We will need to support converting these levels
   to the lab2 predict level setup.

@@ -7,8 +7,9 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
@@ -169,6 +170,18 @@ const Javalab2View: React.FunctionComponent<
   );
   const hasSource = !!source;
 
+  // We track first save so we know whether handleRunClick needs to force a save
+  // before running. We need to ensure the user has saved at least once before
+  // running so their code is in S3 for Javabuilder to read.
+  const initialSourcesSaved = useRef(false);
+  useEffect(() => {
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.addSaveSuccessListener(() => {
+        initialSourcesSaved.current = true;
+      });
+  }, []);
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
@@ -180,10 +193,8 @@ const Javalab2View: React.FunctionComponent<
       levelProperties.id,
       labConfig?.miniApp?.name || 'console',
       progressManager,
-      // Javabuilder loads source from S3 by channel id. A brand-new project
-      // shows the level's start code in the editor, but nothing is saved until
-      // the user edits, so the run must persist the start code first.
-      /* needsInitialSourcesSave */ !initialSources
+      /* needsInitialSourcesSave */ !initialSources &&
+        !initialSourcesSaved.current
     );
   };
 
