@@ -42,6 +42,8 @@ interface AiTutorChatProps {
   tutorVideos?: JsonVideoFileMetadata[];
   isLessonDeepDive?: boolean;
   lessonId?: number;
+  // Start the chat empty without loading the shared level/lesson history.
+  skipHistoryFetch?: boolean;
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
@@ -60,6 +62,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   tutorVideos,
   isLessonDeepDive = false,
   lessonId,
+  skipHistoryFetch,
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
@@ -161,6 +164,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
+        skipHistoryFetch={skipHistoryFetch}
         disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
         disableSendingMessages={viewingOldVersion}
