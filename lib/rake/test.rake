@@ -128,8 +128,9 @@ namespace :test do
   # Run the Playwright e2e suite, upload its HTML report, and report start /
   # success / failure to Slack the way the Cucumber UI tests do (ChatClient.log
   # → the env's log room; #infra-test on the test server, stdout under CI).
-  # Shared by DTT (via ui_all) and the Drone ui pipeline (ui_tests.sh): the
-  # target comes from TARGET_URL, defaulting to this environment's studio URL.
+  # Run by the Drone ui pipeline (ui_tests.sh) and on demand (rake
+  # test:playwright_ui); not yet in ui_all (DTT) pending manual verification.
+  # Target comes from TARGET_URL, defaulting to this environment's studio URL.
   # Non-blocking — a failure warns but never fails the deploy or the PR build.
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'] || CDO.studio_url('')
@@ -155,12 +156,13 @@ namespace :test do
   end
 
   # Run the deploy-time UI suites in parallel: SauceLabs Safari and Eyes
-  # alongside the Device Farm desktop (Chrome+Firefox) suite, plus the
-  # non-blocking Playwright suite. If one suite raises, allow the others to
-  # complete, then make sure this task raises.
+  # alongside the Device Farm desktop (Chrome+Firefox) suite. If one suite
+  # raises, allow the others to complete, then make sure this task raises.
+  # NOTE: :playwright_ui is intentionally not listed yet — run it manually
+  # (rake test:playwright_ui) to verify before wiring it into DTT.
   timed_task_with_logging :ui_all do
     Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
       in_threads: 4,
     ) do |target|
       Rake::Task["test:#{target}"].invoke
