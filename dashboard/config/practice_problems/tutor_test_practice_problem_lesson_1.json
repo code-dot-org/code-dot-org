@@ -1,0 +1,14 @@
+{
+  "key": "tutor_test_practice_problem_lesson_1",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What is the best way to improve the accuracy of an AI's response?",
+  "solution": [
+    {"option": "Ask the same question multiple times until you get the answer you want", "correct":false},
+    {"option":"Keep the prompt as short as possible to avoid confusion", "correct":false},
+    {"option":"Change the AI settings to \\\"high accuracy mode\\\"", "correct":false},
+    {"option":"Provide a more detailed and specific prompt", "correct":true}],
+  "objective_keys": [
+    "7aa95c9a-567e-4082-8ccc-28022066f3ec"
+  ]
+}

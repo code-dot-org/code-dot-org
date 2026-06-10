@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -16,7 +17,7 @@ describe('UnitCalendarButton', () => {
       />
     );
 
-    wrapper.find('Button').simulate('click');
+    wrapper.find(MuiButton).simulate('click');
     expect(wrapper.state('isDialogOpen')).toBe(true);
     expect(
       wrapper.containsMatchingElement(

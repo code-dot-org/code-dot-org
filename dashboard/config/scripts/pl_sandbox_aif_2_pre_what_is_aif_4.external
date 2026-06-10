@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # What is AI Foundations (Semester 2)?
 
-#### AI Foundations Semester 2 empowers students to become intentional designers who work with AI to solve problems, express ideas, and build interactive systems they understand and control. 
+AI Foundations Semester 2 empowers students to become intentional designers who work with AI to solve problems, express ideas, and build interactive systems they understand and control. 
 
 ## Course Units
 
-#### Over six units, students learn to code in JavaScript alongside AI, creating dynamic applications that integrate HTML, CSS, and AI-driven features.
+Over six units, students learn to code in JavaScript alongside AI, creating dynamic applications that integrate HTML, CSS, and AI-driven features.
 
-#### Each unit builds on the next and units must be completed in order. 
+Each unit builds on the next and units must be completed in order. 
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
@@ -78,12 +78,12 @@ markdown <<MARKDOWN
 
 ## Learning Foundations
 
-#### Students practice computational thinking, human-centered design, and AI literacy as they design projects like brand websites, dialogue apps, and recommendation systems.
+Students practice computational thinking, human-centered design, and AI literacy as they design projects like brand websites, dialogue apps, and recommendation systems.
 
 <img src="https://images.code.org/7479360e2d350345b2156ad0a54ca15b-image-1760467409776.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### By the end, students build a capstone project and leave prepared to design AI-powered technologies with clarity, confidence, and care.
+By the end, students build a capstone project and leave prepared to design AI-powered technologies with clarity, confidence, and care.
 
 ![]()
 MARKDOWN

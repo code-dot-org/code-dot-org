@@ -13,11 +13,11 @@ markdown <<MARKDOWN
   </p>
 </div>
 
-#### Language models use **embeddings** to represent the meaning of words. Words with similar meanings have embeddings that are “close” to each other numerically even though they don’t look similar in language. This lets models figure out how words are related by using math.
+Language models use **embeddings** to represent the meaning of words. Words with similar meanings have embeddings that are “close” to each other numerically even though they don’t look similar in language. This lets models figure out how words are related by using math.
 
-#### Embeddings don't need to be identical to be useful. Similarity in position across these numeric representations signals that two words or ideas share related meanings. 
+Embeddings don't need to be identical to be useful. Similarity in position across these numeric representations signals that two words or ideas share related meanings. 
 
-#### Embeddings allow language models to do more than just store meanings. They use them for tasks like finding related ideas, making predictions, or understanding user intent.
+Embeddings allow language models to do more than just store meanings. They use them for tasks like finding related ideas, making predictions, or understanding user intent.
 
 <br>
 <br>

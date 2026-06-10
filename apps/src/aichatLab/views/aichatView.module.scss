@@ -43,7 +43,7 @@ $column-min-width: 200px;
 
   .presentationArea {
     flex: 1;
-    background: $light_white;
+    background: var(--background-neutral-primary);
   }
 }
 

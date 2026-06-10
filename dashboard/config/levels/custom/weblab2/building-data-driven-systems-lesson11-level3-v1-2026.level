@@ -1,0 +1,82 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-05-15T04:03:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Build Your Schema and Dataset\r\n\r\nIn this level, you’ll create the first version of your app’s data.\r\n\r\n## Do This:\r\n\r\n1. Open `script.js`.\r\n\r\n2. Create a `schema` array that describes the fields each item in your dataset will have.\r\n\r\n3. Use your schema to help AI generate a starter dataset.\r\n\r\n4. Paste the generated items into the `data` array.\r\n\r\n5. Review your dataset and remove or revise any items that do not fit your app idea.\r\n\r\nYour goal is to create data that matches your schema and is ready to render in your app.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-v1-2026",
+    "display_name": "Build Schema & Data",
+    "thumbnail_url": "https://images.code.org/ba2b8431c524d5db87fbdecfe0aaf95f-laptop2.jpg",
+    "bubble_choice_description": "Create your schema in code, generate a first version of your dataset, and refine the data so it fits your app idea and chosen value.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-05-15T04:03:02.142+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level1-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level1-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-15 04:12:37 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

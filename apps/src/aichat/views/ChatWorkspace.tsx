@@ -70,23 +70,27 @@ interface ChatWorkspaceProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   // Multimodal support
   multimodalEnabled?: boolean;
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 
   // Optional callback to process the model's response before it is recorded in chat
   // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
 
-  // Optional callback to log level activity
-  logLevelActivity?: () => void;
-
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
   disabledState?: AiChatDisabledState;
+  // If true, disables the ability to send messages. disabledState takes precendence over this, and
+  // will disable the entire workspace.
+  disableSendingMessages?: boolean;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
@@ -108,13 +112,17 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       levelName,
       channelId,
       hasStarterAssets = false,
+      onAssetUploaded,
+      onAssetRemoved,
       hideModelChangeMessage = false,
       responseCallback,
-      logLevelActivity,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
+      disableSendingMessages,
       renderLastMessagePostText,
+      sendDisabled = false,
+      onMessageSent,
     },
     ref
   ) => {
@@ -358,11 +366,18 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       () => ({
         addFiles: (files, onUploadFinished) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
+            dispatch(
+              uploadFiles({
+                files,
+                buildAssetUrl,
+                onUploadFinished,
+                onAssetUploaded,
+              })
+            );
           }
         },
       }),
-      [canUploadAssets, dispatch, buildAssetUrl]
+      [canUploadAssets, dispatch, buildAssetUrl, onAssetUploaded]
     );
 
     return (
@@ -391,7 +406,10 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
         <div className={moduleStyles.footer}>
           <div className={moduleStyles.chipsRow}>
             {canUploadAssets && (
-              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+              <StagedFilesPreview
+                buildAssetUrl={buildAssetUrl}
+                onAssetRemoved={onAssetRemoved}
+              />
             )}
             <UserAddedSelectionContextPreview />
           </div>
@@ -408,11 +426,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
-              logLevelActivity={logLevelActivity}
+              onAssetUploaded={onAssetUploaded}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
               lessonId={lessonId}
-              chatDisabled={disabled}
+              chatDisabled={disabled || disableSendingMessages}
+              sendDisabled={sendDisabled}
+              onMessageSent={onMessageSent}
             />
           )}
         </div>

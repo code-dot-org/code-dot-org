@@ -12,7 +12,7 @@
     "name_suffix": "_2024",
     "parent_level_id": 21366,
     "encrypted": "false",
-    "long_instructions": "## Conditionals \r\n\r\n#### **Conditionals** are decision points in an algorithm, like answering a question: \"**If** it's raining, **then** take an umbrella.\" They guide the computer's choices using \"**if** this, **then** that.\" You'll practice these with \"if\" blocks.\r\n\r\n#### Conditionals allow computers to make choices, like 'if this is true, then, do that; otherwise, do something else. Conditionals are like decision-making points in an algorithm. It's like choosing what to do based on a question. For example, If it's raining, then, take an umbrella; if it's not, then, leave it behind. \r\n\r\n##Watch the video below to learn more about conditionals.\r\n"
+    "long_instructions": "## Conditionals \r\n\r\n**Conditionals** are decision points in an algorithm, like answering a question: \"**If** it's raining, **then** take an umbrella.\" They guide the computer's choices using \"**if** this, **then** that.\" You'll practice these with \"if\" blocks.\r\n\r\nConditionals allow computers to make choices, like 'if this is true, then, do that; otherwise, do something else. Conditionals are like decision-making points in an algorithm. It's like choosing what to do based on a question. For example, If it's raining, then, take an umbrella; if it's not, then, leave it behind. \r\n\r\n##Watch the video below to learn more about conditionals.\r\n"
   },
   "published": true,
   "notes": "",

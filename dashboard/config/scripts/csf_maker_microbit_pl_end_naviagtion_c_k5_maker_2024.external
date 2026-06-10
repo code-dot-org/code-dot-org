@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # End of Unit 
 
-#### 🎉**Congratulations!** You have completed **Unit 2: Course C**. This is the end of the unit, but not the end of the professional learning module. Review the module components to choose your next steps.  
+🎉**Congratulations!** You have completed **Unit 2: Course C**. This is the end of the unit, but not the end of the professional learning module. Review the module components to choose your next steps.  
 
 <br>
 
@@ -23,13 +23,13 @@ markdown <<MARKDOWN
 ## What's next? 
 ### **Choose your learning experience:**
 
-- #### Continue to **Course D** (3rd-4th grade)
-#### *Click the 'Continue' button on the bottom right of the page*
+- Continue to **Course D** (3rd-4th grade)
+*Click the 'Continue' button on the bottom right of the page*
 
 ###  **OR** 
 
-- #### Return to the **overview page** to select the next unit
-#### *Click the 'Return to Overview Page' button on the bottom left of the page*
+- Return to the **overview page** to select the next unit
+*Click the 'Return to Overview Page' button on the bottom left of the page*
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/courses/k5-maker-pilot-2024" rel="noopener noreferrer" style="float:left;">Return to Overview Page</a>
 

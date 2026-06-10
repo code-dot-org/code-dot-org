@@ -23,7 +23,7 @@ import {
   SubView,
 } from './types';
 
-// This dialog is shown to the teacher whenever they have requested Code.org to
+// This dialog is shown to the teacher whenever they have requested CodeAI to
 // import/sync the teacher's sections and students managed by their LMS.
 export default function LtiSectionSyncDialog({
   syncResult,

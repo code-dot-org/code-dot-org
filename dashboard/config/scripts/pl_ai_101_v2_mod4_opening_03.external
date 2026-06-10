@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Bringing AI to the Classroom
 
-#### Whe we talk about bringing AI to the students in your school and classroom we can talk about teaching with AI or teaching about AI. 
+Whe we talk about bringing AI to the students in your school and classroom we can talk about teaching with AI or teaching about AI. 
 
 
 <div style="text-align:center;">
@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 *Image: TeachAI*
 
 
-#### Take a look at the chart below to explore some examples of these two concepts and to preview what you'll be learning about in this module.
+Take a look at the chart below to explore some examples of these two concepts and to preview what you'll be learning about in this module.
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <div style="max-width:980px; margin:0 auto;">
@@ -110,7 +110,7 @@ markdown <<MARKDOWN
 </div>
 </body>
 
-#### We covered some aspects of teaching with AI, including supporting teaching practice aspects and asssisting with school operations, in Module 3, Transforming Teaching with AI.
+We covered some aspects of teaching with AI, including supporting teaching practice aspects and asssisting with school operations, in Module 3, Transforming Teaching with AI.
 
-#### In this moduel, we'll continue to learn more about teaching with AI as well as all aspects of teaching about AI.
+In this module, we'll continue to learn more about teaching with AI as well as all aspects of teaching about AI.
 MARKDOWN

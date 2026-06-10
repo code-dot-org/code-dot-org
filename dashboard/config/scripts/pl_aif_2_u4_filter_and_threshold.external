@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Filters, Labels, and What Gets Seen
 
-#### When you browse a website or app, filters help narrow down large lists of items.
+When you browse a website or app, filters help narrow down large lists of items.
 
-### But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
+But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
 ## Two Websites, Same Goal
-#### Below are two websites that sell similar products.
-#### Both allow users to filter results, but they do it differently.
+Below are two websites that sell similar products.
+Both allow users to filter results, but they do it differently.
 
 <div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/8450f6ede3493d945da1a84d3313bea4-image-1770049168398.png" alt="Two shopping websites with different filter options" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
 
-<details style="background-color:#ececec; padding:12px; margin:18px auto; border:1px solid transparent; border-radius:8px; max-width:85%;">
+<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
   <summary style="font-size:1.4em; font-weight:bold;">🔍 Check your thinking</summary>
 
 <div style="margin-top:12px; line-height:140%;">
@@ -64,14 +64,11 @@ markdown <<MARKDOWN
 
 <div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
 
----
 
 
-## Example
+
 
 <div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%; display:flex; gap:18px; align-items:flex-start;">
-
-
 
   <!-- Text content -->
  <div>
@@ -90,17 +87,12 @@ markdown <<MARKDOWN
 
 </div>
 
+---
+
+### **Key Terms**
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit4_testing/threshold_fallback_flip_cards.html" width="100%" height="280" style="border:none;" title="Threshold and fallback value flip cards"></iframe>
 
 
-## Key Terms
-
-<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Threshold</strong> <p style="font-size:14pt;"> A <strong>threshold</strong> is a cutoff value used to decide which items pass a filter. </p> <p style="font-size:14pt;"> <strong>Example:</strong> An art site only features artists with at least <strong>500 followers</strong>. The threshold is 500. </p> </div>
-
-<div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Fallback value</strong> <p style="font-size:14pt;"> A <strong>fallback value</strong> is a default label or value used when data is missing or doesn’t match a category. </p> <p style="font-size:14pt;"> <strong>Example:</strong> If a user doesn’t enter an email, the app shows <em>Email: Not provided</em> instead of leaving it blank. </p> </div> </div>
-
-
-
-## Next up
-#### You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
 
 MARKDOWN

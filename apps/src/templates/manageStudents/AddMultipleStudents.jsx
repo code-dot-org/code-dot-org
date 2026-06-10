@@ -21,6 +21,7 @@ import moduleStyles from './addMultipleStudents.module.scss';
 class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
+    disabled: PropTypes.bool,
     // Provided by redux
     addMultipleStudents: PropTypes.func.isRequired,
   };
@@ -257,6 +258,7 @@ class AddMultipleStudents extends Component {
           color="tertiary"
           size="small"
           onClick={this.openDialog}
+          disabled={this.props.disabled}
           type="button"
           startIcon={<FontAwesomeV6Icon iconName="plus" />}
         >

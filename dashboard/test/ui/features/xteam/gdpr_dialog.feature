@@ -30,7 +30,7 @@ Feature: GDPR Dialog - data transfer agreement
     And I am a teacher
     And I am on "http://studio.code.org/home"
     When element "#gdpr-dialog" is visible
-    And the link reading "Visit Code.org" within element "#gdpr-dialog" goes to "http://code.org/privacy"
+    And the link reading "Visit CodeAI" within element "#gdpr-dialog" goes to "http://code.org/privacy"
 
   Scenario: Accept, sign out, sign in again, no dialog
     Given I am in Europe

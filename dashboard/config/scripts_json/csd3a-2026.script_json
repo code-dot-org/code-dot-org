@@ -2,7 +2,7 @@
   "script": {
     "name": "csd3a-2026",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
@@ -10,7 +10,9 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
+      "student_detail_progress_view": true,
       "topic_tags": [
         "music_lab"
       ],
@@ -19,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-06 17:06:11 UTC",
+    "serialized_at": "2026-05-19 11:10:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

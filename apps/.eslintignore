@@ -1,3 +1,5 @@
+/generated-scripts/studioRoutes.js
+
 /src/**/*.min.js*
 /src/code-studio/vendor/**/*.js
 /src/third-party/**/*.js

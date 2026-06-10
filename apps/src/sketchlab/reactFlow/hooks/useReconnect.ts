@@ -23,6 +23,7 @@ interface UseReconnectOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   screenToFlowPosition: (position: XYPosition) => XYPosition;
+  pushSnapshot: () => void;
 }
 
 // Owns the lifecycle for React Flow's edge-endpoint reconnect:
@@ -35,6 +36,7 @@ export function useReconnect({
   setNodes,
   setEdges,
   screenToFlowPosition,
+  pushSnapshot,
 }: UseReconnectOptions) {
   const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
 
@@ -43,9 +45,11 @@ export function useReconnect({
     []
   );
 
+  // Push snapshot at drag start, before the endpoint mutation commits.
   const handleReconnectStart = useCallback(() => {
+    pushSnapshot();
     reconnectingEdgeRef.current = {landed: false};
-  }, []);
+  }, [pushSnapshot]);
 
   const handleReconnect = useCallback(
     (oldEdge: Edge, newConnection: Connection) => {

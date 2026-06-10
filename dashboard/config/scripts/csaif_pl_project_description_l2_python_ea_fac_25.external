@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/66f86ca5d8e42abfe1a34e51af2ea606-image-1741790839525.png" alt="Mario made out of pixels" width="170px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
 
-#### In this project, students will create a digital pixel artifact that represents an aspect of their identity — such as a hobby, interest, future career, or favorite book/movie.
+In this project, students will create a digital pixel artifact that represents an aspect of their identity — such as a hobby, interest, future career, or favorite book/movie.
 
-#### They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.
+They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.
 
 <div style="clear:both;"></div>
 
@@ -23,8 +23,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Break down their design into smaller components (decomposition).
-- #### Identify patterns and simplify code using abstraction.
+- Break down their design into smaller components (decomposition).
+- Identify patterns and simplify code using abstraction.
 
 
 </p></div>
@@ -36,8 +36,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Use sequencing, loops, and selection statements to structure their code.
-- #### Implement functions with descriptive names for clarity.
+- Use sequencing, loops, and selection statements to structure their code.
+- Implement functions with descriptive names for clarity.
 
 
 </p></div>
@@ -49,7 +49,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Add comments to explain the purpose of key functions and code segments.
+- Add comments to explain the purpose of key functions and code segments.
 
 
 </p></div>
@@ -61,8 +61,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Participate in a TAG Method peer review to refine their work.
-- #### Reflect on their computational thinking process and problem-solving strategies.
+- Participate in a TAG Method peer review to refine their work.
+- Reflect on their computational thinking process and problem-solving strategies.
 
 
 
@@ -75,8 +75,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Use AI tools for brainstorming, debugging, or refining their code.
-- #### Reflect on AI’s role in their project and discuss its ethical implications.
+- Use AI tools for brainstorming, debugging, or refining their code.
+- Reflect on AI’s role in their project and discuss its ethical implications.
 
 
 </p></div>
@@ -84,7 +84,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### This project allows students to apply their coding skills creatively while practicing structured problem-solving, peer collaboration, and responsible AI use.
+This project allows students to apply their coding skills creatively while practicing structured problem-solving, peer collaboration, and responsible AI use.
 
 ![]()
 MARKDOWN

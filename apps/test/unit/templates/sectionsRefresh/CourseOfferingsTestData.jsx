@@ -825,7 +825,7 @@ export const plCourseOfferings = {
                 },
                 4163: {
                   id: 4163,
-                  name: 'Module 2: Navigating Code.org',
+                  name: 'Module 2: Navigating CodeAI',
                   path: '/courses/self-paced-pl-csa-2022/units/2',
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,

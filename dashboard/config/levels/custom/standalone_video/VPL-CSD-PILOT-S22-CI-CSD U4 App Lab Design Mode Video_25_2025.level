@@ -11,7 +11,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "name_suffix": "_2025",
-    "long_instructions": "## Designing Your Own App\r\n\r\n#### The next several levels will guide you through how to design your own app in App Lab. Watch the video for more specifics on how to get started. Then, click \"Continue\" to start designing!"
+    "long_instructions": "## Designing Your Own App\r\n\r\nThe next several levels will guide you through how to design your own app in App Lab. Watch the video for more specifics on how to get started. Then, click \"Continue\" to start designing!"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-12T15:26:13.403+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video_25\"}]",

@@ -5,21 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # micro:bit Classroom
 
-#### Organizing your students’ code and lessons is simple with the micro:bit classroom feature. 
+Organizing your students’ code and lessons is simple with the micro:bit classroom feature. 
 
 <img src="https://images.code.org/3643dad9f52c859b08241f2e9bfe0e7b-image-1707320963106.png" alt="micro:bit logo" width="250px" style="border-radius:10px; float:right; margin: 0 40px 40px 20px;">
 
 ## Using micro:bit classroom + Code.org
 
-#### Each micro:bit project lesson will have its own custom link for starting a new classroom session. Your students will be have easy access to micro:bit classroom via their Code.org lesson page. 
+Each micro:bit project lesson will have its own custom link for starting a new classroom session. Your students will be have easy access to micro:bit classroom via their Code.org lesson page. 
 
 
 ## Key features of micro:bit classroom: 
-- #### Free of charge 
-- #### No logins, registration, or passwords needed for teachers or students 
-- #### Set starter code for your students
-- #### View students’ code from your computer in real time 
-- #### Keep control of all your students’ data
+- Free of charge 
+- No logins, registration, or passwords needed for teachers or students 
+- Set starter code for your students
+- View students’ code from your computer in real time 
+- Keep control of all your students’ data
 
 ---
 
@@ -45,7 +45,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### ***Return to this module when you have finished exploring.*** 
+***Return to this module when you have finished exploring.*** 
 
 
 MARKDOWN

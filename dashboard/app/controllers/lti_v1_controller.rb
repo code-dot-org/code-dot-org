@@ -58,7 +58,7 @@ class LtiV1Controller < ApplicationController
       scope: 'openid',
       response_type: 'id_token',
       client_id: lti_integration[:client_id],
-      redirect_uri: CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme),
+      redirect_uri: CDO.studio_url('/lti/v1/authenticate'),
       login_hint:  params[:login_hint],
       lti_message_hint: params[:lti_message_hint].to_s, # Required by Canvas
       state: state_and_nonce[:state],
@@ -128,7 +128,7 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
-      auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
+      auth_url_base = CDO.studio_url('/lti/v1/authenticate')
 
       query_params = {
         id_token: params[:id_token],

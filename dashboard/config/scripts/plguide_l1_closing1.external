@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Closing a Lesson 
 
-#### This page should include: 
+This page should include: 
 
-* #### A congratulations for the Learner
-* #### A review of the objectives
-* #### What's up next for the learner
+* A congratulations for the Learner
+* A review of the objectives
+* What's up next for the learner
 
 ___
 
@@ -17,15 +17,15 @@ ___
 
 ## Great job! 🎉
 
-#### So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
+So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
 
-* #### Use the coordinate grid in Game Lab to draw colorful shapes.
-* #### Customize shapes by adjusting multiple parameters.
-* #### Use variables to store information that is used multiple times in a program.
+* Use the coordinate grid in Game Lab to draw colorful shapes.
+* Customize shapes by adjusting multiple parameters.
+* Use variables to store information that is used multiple times in a program.
 
 ## Up Next
 
-#### In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
+In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
 <br>
 
 ```html
@@ -33,16 +33,16 @@ ___
 
 ## Great job! 🎉
 
-#### So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
+So far, you've learned the basics of Game Lab and how to create and customize shapes. The skills you've learned thus far will take you through Unit 3, Lesson 7. You learned how to:
 
-* #### Use the coordinate grid in Game Lab to draw colorful shapes.
-* #### Customize shapes by adjusting multiple parameters.
-* #### Use variables to store information that is used multiple times in a program.
+* Use the coordinate grid in Game Lab to draw colorful shapes.
+* Customize shapes by adjusting multiple parameters.
+* Use variables to store information that is used multiple times in a program.
 
 ## Up Next
 
-#### In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
+In the next section of this professional learning module, you'll learn more about **sprites**, which will allow you to make creative and exciting scenes and games in Game Lab.
 
-#### Click continue to keep going!
+Click continue to keep going!
 ```
 MARKDOWN

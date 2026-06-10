@@ -13,7 +13,7 @@
     "parent_level_id": 28811,
     "name_suffix": "_1",
     "encrypted": "false",
-    "long_instructions": "## Consider the following when watching this video:\r\n#### What features are available on the Code.org learning platform to support me in teaching CS Discoveries?\r\n\r\n#### **Additional Resource:**\r\n\r\n* #### <a href=\"https://support.code.org/hc/en-us/articles/228116468-I-d-like-to-start-using-Code-org-in-my-classroom-How-should-I-start-\" target=\"blank\" rel=\"noopener noreferrer\" >Getting Started on Code.org</a> \r\n "
+    "long_instructions": "## Consider the following when watching this video:\r\nWhat features are available on the Code.org learning platform to support me in teaching CS Discoveries?\r\n\r\n**Additional Resource:**\r\n\r\n* <a href=\"https://support.code.org/hc/en-us/articles/228116468-I-d-like-to-start-using-Code-org-in-my-classroom-How-should-I-start-\" target=\"blank\" rel=\"noopener noreferrer\" >Getting Started on Code.org</a> \r\n "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-05-07T19:34:34.514+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod2-tour-vid_2024\\\"\"],\"cloned_from\":\"SP-VPL-21-mod2-tour-vid_2024\"},{\"changed_at\":\"2024-12-05 00:00:07 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",

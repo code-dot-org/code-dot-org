@@ -1,11 +1,12 @@
-/// <reference types="vitest/config" />
 // https://vite.dev/config/
 import {storybookTest} from '@storybook/addon-vitest/vitest-plugin';
 import react from '@vitejs/plugin-react';
 import {playwright} from '@vitest/browser-playwright';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {defineConfig} from 'vite';
+// `defineConfig` from `vitest/config` accepts the `test` property; the one
+// from `vite` does not. See: https://vitest.dev/config/#defineconfig
+import {defineConfig} from 'vitest/config';
 const dirname =
   typeof __dirname !== 'undefined'
     ? __dirname

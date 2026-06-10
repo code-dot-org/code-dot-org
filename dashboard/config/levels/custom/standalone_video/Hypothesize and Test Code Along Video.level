@@ -13,7 +13,7 @@
     "parent_level_id": 28494,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "long_instructions": "#Hypothesize and Test Code-Along Video (Placeholder)\r\n\r\n\r\n\r\n##Great job! You just debugged a program!\r\n#### Watch the video below to learn more about debugging. "
+    "long_instructions": "#Hypothesize and Test Code-Along Video (Placeholder)\r\n\r\n\r\n\r\n##Great job! You just debugged a program!\r\nWatch the video below to learn more about debugging. "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-08-29T22:00:02.766+00:00\",\"changed\":[\"cloned from \\\"Trace code execution code along\\\"\"],\"cloned_from\":\"Trace code execution code along\"},{\"changed_at\":\"2024-08-29 22:00:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",

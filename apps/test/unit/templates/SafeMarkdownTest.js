@@ -397,6 +397,35 @@ describe('SafeMarkdown', () => {
     );
   });
 
+  it('strips iframes by default (student-safe)', () => {
+    const wrapper = shallow(
+      <SafeMarkdown markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>' />
+    );
+    // iframes are stripped when allowEmbeds is not set — students never see embeds
+    expect(wrapper.equals(<div />)).toBe(true);
+  });
+
+  it('renders iframes when allowEmbeds is true (PL/teacher content)', () => {
+    const wrapper = shallow(
+      <SafeMarkdown
+        allowEmbeds
+        markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>'
+      />
+    );
+    expect(wrapper.html()).toContain('<iframe');
+    expect(wrapper.html()).toContain('src="https://padlet.com/embed/123"');
+  });
+
+  it('strips iframes when explicitly set to allowEmbeds false', () => {
+    const wrapper = shallow(
+      <SafeMarkdown
+        allowEmbeds={false}
+        markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>'
+      />
+    );
+    expect(wrapper.equals(<div />)).toBe(true);
+  });
+
   it('handles whitespace', () => {
     // Test with full mount to reproduce the React runtime error "Nothing was returned from render..."
     const emptyWhitespace = mount(<SafeMarkdown markdown="" />);

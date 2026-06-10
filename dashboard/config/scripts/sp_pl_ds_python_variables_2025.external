@@ -9,16 +9,16 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
 
 ## Variables
-#### A **variable** is a container that stores a value in memory. 
-#### A variable can only hold **one value** at a time. 
+A **variable** is a container that stores a value in memory. 
+A variable can only hold **one value** at a time. 
 
 
 
 ## Data Type
-#### A **data type** is the format of the data that can be stored in a variable.
+A **data type** is the format of the data that can be stored in a variable.
 
 ![](https://images.code.org/83801bad4dc34715b6cfd9ada97d5313-image-1727203773189.png)
-#### *Notice how data types are not named when defining variables in Python. Instead, Python automatically assigns the data type based on the value you input.*
+*Notice how data types are not named when defining variables in Python. Instead, Python automatically assigns the data type based on the value you input.*
 
 ## Creating a Variable 
 

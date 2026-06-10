@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Types of Educational AI Tools
 
-#### Below are a few examples of the types of education-specific AI tools that have been developed.
+Below are a few examples of the types of education-specific AI tools that have been developed.
 
-#### Take a moment to learn more about what these tools can do for you and your teaching practice.
+Take a moment to learn more about what these tools can do for you and your teaching practice.
 
-#### 👉 Click on each box to reveal examples from the classroom.
+👉 Click on each box to reveal examples from the classroom.
 
 <div style="max-width:90%; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
 
@@ -168,6 +168,6 @@ These tools act as thought partners to help teachers reflect and improve their w
 
 <br>
 
->#### **💬 Quick Reflection:** What's one category of tools that you'd like to try out?
+> **💬 Quick Reflection:** What's one category of tools that you'd like to try out?
 
 MARKDOWN

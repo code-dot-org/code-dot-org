@@ -1,4 +1,7 @@
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatModelIds,
+  SafeAndSupportedImageTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {ValueOf} from '../types/utils';
 
@@ -21,7 +24,9 @@ export function getAssetUrl(
   levelName?: string
 ) {
   if (asset.source === 'project' && channelId) {
-    return `/v3/assets/${channelId}/${encodeURIComponent(asset.filename)}`;
+    return `/v3/assets/${channelId}/${encodeURIComponent(
+      asset.bucketKey ?? asset.filename
+    )}`;
   }
 
   if (asset.source === 'level' && levelName) {
@@ -63,12 +68,16 @@ export const getAllowedFileTypes = (
   if (!model || !model.multimodal) {
     return [];
   }
-  // Currently, our system only supports moderating images files. For the
+  // Currently, our system only supports moderating image files. For the
   // Gemini 2.5 Flash Image model, we have stricter input criteria so only
   // safe image uploads are allowed. For other multimodal models, we don't
   // do any input moderation, and allow both image and PDF uploads.
-  const images = ['.jpg', '.jpeg', '.png'];
+  // image/gif is in SafeAndSupportedImageTypes but excluded here since gifs
+  // are not currently supported by Gemini 2.5 Flash Image model.
+  const images = (SafeAndSupportedImageTypes as readonly string[]).filter(
+    t => t !== 'image/gif'
+  );
   return modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
     ? images
-    : [...images, '.pdf'];
+    : [...images, 'application/pdf'];
 };

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Tools Across The Course
 
-#### AI Discoveries introduces students to **tools and programming languages that are accessible for beginners** while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+AI Discoveries introduces students to **tools and programming languages that are accessible for beginners** while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
 
 <div style="clear:both"></div>
 
@@ -13,11 +13,11 @@ markdown <<MARKDOWN
 
 ## AI Chat Lab
 
-#### AI Chat Lab is an interactive tool where students engage in conversations with a large language model. The platform is designed with classroom use in mind: student interactions are moderated, and teachers can view all chats to support safe and appropriate use. AI Chat Lab can generate text and images.
+AI Chat Lab is an interactive tool where students engage in conversations with a large language model. The platform is designed with classroom use in mind: student interactions are moderated, and teachers can view all chats to support safe and appropriate use. AI Chat Lab can generate text and images.
 
 ### **Units that use AI Chat Lab:** 
 
-* #### Thinking Critically About AI
+* Thinking Critically About AI
 
 ___
 
@@ -25,11 +25,11 @@ ___
 
 ## Sketch Lab
 
-#### Sketch Lab is an interactive whiteboard environment, similar to Canva, that allows students to brainstorm and draft ideas. Students can add text, shapes, images, and color to their designs.
+Sketch Lab is an interactive whiteboard environment, similar to Canva, that allows students to brainstorm and draft ideas. Students can add text, shapes, images, and color to their designs.
 
 ### **Units that use Sketch Lab:** 
 
-* #### Thinking Critically About AI
+* Thinking Critically About AI
 
 ___
 
@@ -37,11 +37,11 @@ ___
 
 ## AI Lab
 
-#### AI Lab is a browser-based tool for creating machine learning models from tabular data. 
+AI Lab is a browser-based tool for creating machine learning models from tabular data. 
 
 ### **Units that use AI Lab:** 
 
-* #### AI and Machine Learning
+* AI and Machine Learning
 
 ___
 
@@ -49,11 +49,11 @@ ___
 
 ## Web Lab
 
-#### Web Lab is a browser-based tool for creating and publishing HTML and CSS web sites. 
+Web Lab is a browser-based tool for creating and publishing HTML and CSS web sites. 
 
 ### **Units that use Web Lab:** 
 
-* #### Web Development
+* Web Development
 
 <hr style="clear:both">
 
@@ -61,11 +61,11 @@ ___
 
 ## Game Lab
 
-#### Game Lab is a browser-based JavaScript programming environment designed to create sprite-based drawings, animations, and games. Students are able to switch between programming in blocks or text. 
+Game Lab is a browser-based JavaScript programming environment designed to create sprite-based drawings, animations, and games. Students are able to switch between programming in blocks or text. 
 
 ### **Units that use Game Lab:** 
 
-* #### Interactive Animations and Games
+* Interactive Animations and Games
 
 <hr style="clear:both">
 
@@ -73,14 +73,14 @@ ___
 
 ## App Lab
 
-#### App Lab is a browser-based JavaScript programming environment for creating interactive apps. Students are able to switch between programming in blocks or text. 
+App Lab is a browser-based JavaScript programming environment for creating interactive apps. Students are able to switch between programming in blocks or text. 
 
 ### **Units that use App Lab:** 
 
-* #### The Design Process  
-* #### Creating Apps with Devices - Option A: Circuit Playground  
-* #### Creating Apps with Devices - Option B: micro:bit  
-* #### AI and Machine Learning  
+* The Design Process  
+* Creating Apps with Devices - Option A: Circuit Playground  
+* Creating Apps with Devices - Option B: micro:bit  
+* AI and Machine Learning  
 
 <hr style="clear:both">
 
@@ -88,11 +88,11 @@ ___
 
 ## Music Lab
 
-#### Music Lab is a programming environment that allows students to create music using a timeline-based interface. Students place blocks at specific measures, use loops to repeat patterns, and trigger sounds or events, combining coding concepts with musical creativity.
+Music Lab is a programming environment that allows students to create music using a timeline-based interface. Students place blocks at specific measures, use loops to repeat patterns, and trigger sounds or events, combining coding concepts with musical creativity.
 
 ### **Units that use Music Lab:** 
 
-* #### Programming with Music Lab
+* Programming with Music Lab
   
 <div style="clear:both"></div>
 

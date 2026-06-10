@@ -32,6 +32,7 @@ class Ailab < Level
     is_project_level
     mode
     dynamic_instructions
+    uses_lab2
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -96,6 +97,10 @@ class Ailab < Level
       level_prop.compact!
     end
     options.freeze
+  end
+
+  def uses_lab2?
+    uses_lab2
   end
 
   # Attributes that are stored as JSON strings but should be passed through to the app as

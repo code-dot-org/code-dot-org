@@ -12,7 +12,7 @@
     "parent_level_id": 28731,
     "name_suffix": "_pl",
     "encrypted": "false",
-    "long_instructions": "## Printing Objects \r\n\r\n#### Finally, the `toString()` method is used to easily display information about an object.\r\n\r\n#### The `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.\r\n\r\n#### Watch the video below to learn more about the `toString()` method."
+    "long_instructions": "## Printing Objects \r\n\r\nFinally, the `toString()` method is used to easily display information about an object.\r\n\r\nThe `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.\r\n\r\nWatch the video below to learn more about the `toString()` method."
   },
   "published": true,
   "notes": "",

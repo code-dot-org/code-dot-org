@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 11:09:42 UTC",
+    "serialized_at": "2026-06-03 22:35:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6121,7 +6121,8 @@
       "url": "https://docs.google.com/presentation/d/1-WeP7YX9XekGn-r8c7RPh0Oq85GtVrqx7jnxn7ZcORA/edit?slide=id.g347c06ff755_2_174#slide=id.g347c06ff755_2_174",
       "key": "_key_pc_builder_activity",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -6260,7 +6261,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6849,7 +6851,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8097,6 +8100,34 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-41"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-37"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
@@ -8128,6 +8159,27 @@
         "lesson.key": "Lesson 11: User Testing",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: User Testing",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: User Testing",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: User Testing",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
       }
     },
     {
@@ -8170,6 +8222,34 @@
         "lesson.key": "Lesson 12: Just Because We Can, Should We?",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-36"
       }
     },
     {
@@ -8237,6 +8317,34 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Computer Systems",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-01"
@@ -8265,6 +8373,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-46"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 2: Hardware",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-01"
@@ -8286,6 +8415,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Hardware",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Hardware",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Hardware",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-17"
@@ -8296,6 +8446,13 @@
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
       }
     },
     {
@@ -8321,6 +8478,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 4: Software and Operating Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Software and Operating Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
@@ -8331,6 +8502,20 @@
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
       }
     },
     {
@@ -8377,6 +8562,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 6: Build a Computer System",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Build a Computer System",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-10"
@@ -8384,9 +8583,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
       }
     },
     {
@@ -8401,6 +8635,27 @@
         "lesson.key": "Lesson 9: How AI Uses Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: How AI Uses Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: How AI Uses Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: How AI Uses Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
       }
     }
   ],

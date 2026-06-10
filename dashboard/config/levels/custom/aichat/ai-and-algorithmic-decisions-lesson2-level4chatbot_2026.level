@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Meet a Front-End Developer\r\n\r\nStart a conversation with Maya, a Front-End Developer at a music streaming startup. Interview her about her job. Use the questions below to get started, or ask your own.\r\n\r\n### Questions to Get You Started\r\n\r\n- What did you actually work on yesterday?\r\n- What tools do you use every day?\r\n- What's the best part of your job? What's the worst part?\r\n- Do you use AI at work? How?\r\n- How did you get this job?\r\n- What would you tell a student who's curious about this kind of work?",
+    "long_instructions": "## Meet a Front-End Developer\r\n\r\nStart a conversation with Maya, a Front-End Developer at a music streaming startup. Interview her about her job. Use the questions below to get started, or ask your own.\r\n\r\n### Questions to Get You Started\r\n\r\n- What did you actually work on yesterday?\r\n- What tools do you use every day?\r\n- What's the best part of your job? What's the worst part?\r\n- Do you use AI at work? How?\r\n- Have you ever shipped something AI suggested that turned out wrong? How did you catch it? What did you do?\r\n- How did you get this job?\r\n- What would you tell a student who's curious about this kind of work?",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -46,6 +46,6 @@
       "multimodalEnabled": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-11 15:50:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 15:50:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-11 15:50:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-11 15:50:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-17 01:58:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

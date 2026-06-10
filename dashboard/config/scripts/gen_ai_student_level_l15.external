@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Neural Networks: How They're Trained
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Use trial-and-error and past data to increase their accuracy in a supervised learning process
+* Use trial-and-error and past data to increase their accuracy in a supervised learning process
 
 ## **Key Terms**
 
-* #### **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
+* **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
 
 ## Resources
 

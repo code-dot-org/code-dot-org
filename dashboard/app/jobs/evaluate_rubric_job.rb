@@ -232,7 +232,7 @@ class EvaluateRubricJob < ApplicationJob
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     # Find the rubric (or raise RecordNotFound)
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+    rubric = Rubric.includes(:learning_goals).find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
@@ -362,7 +362,7 @@ class EvaluateRubricJob < ApplicationJob
     unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
       raise "CDO.ai_proxy_origin is required outside of development and test environments"
     end
-    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH)
   end
 
   private def validate_evaluations(evaluations, rubric)

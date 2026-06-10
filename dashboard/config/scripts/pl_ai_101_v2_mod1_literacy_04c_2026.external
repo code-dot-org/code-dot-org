@@ -1,0 +1,92 @@
+name 'pl-ai-101-V2-mod1-literacy-04c_2026'
+title 'title'
+description 'description here'
+display_name 'High School'
+bubble_choice_description 'Explore AI Literacy Skills with High School Examples'
+thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
+
+markdown <<MARKDOWN
+# AI Literacy Skills, High School
+
+<div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+<!-- Skill 1 -->
+<div style="background:#F4FBFE; border:1px solid #CFEAF5; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#0284B7; margin-bottom:10px;">
+🔍 1. Recognize AI
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students can identify when AI is being used and describe, in simple terms, how it works.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> A high school student compares a rule-based chatbot with a generative AI tool and explains how each produces different kinds of responses.
+</div>
+</div>
+
+<!-- Skill 2 -->
+<div style="background:#F4FBFE; border:1px solid #CFEAF5; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#0284B7; margin-bottom:10px;">
+✅ 2. Evaluate AI Outputs
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students critically assess AI-generated content before accepting or using it.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> A 10th-grade class evaluates an AI-generated article summary for accuracy, missing context, bias, and unsupported claims before deciding whether to use it.
+</div>
+</div>
+
+<!-- Skill 3 -->
+<div style="background:#F7F4FC; border:1px solid #DDD6F3; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#7A6FA6; margin-bottom:10px;">
+⚙️ 3. Understand How AI Learns
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students understand, at an age-appropriate level, how AI systems learn from data and patterns.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> An 11th-grade class examines a sample training dataset and discusses how missing or unbalanced data could affect the model’s results.
+</div>
+</div>
+
+<!-- Skill 4 -->
+<div style="background:#F7F4FC; border:1px solid #DDD6F3; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#7A6FA6; margin-bottom:10px;">
+✍️ 4. Use AI Responsibly
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students use AI to support their learning while maintaining ownership, effort, and judgment.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> A student uses AI to improve a college essay draft, then revises the final version themselves and notes how AI influenced their choices.
+</div>
+</div>
+
+<!-- Skill 5 -->
+<div style="background:#F7F8FA; border:1px solid #D9DDE3; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#555; margin-bottom:10px;">
+🤔 5. Decide When to Use AI
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students determine whether AI is appropriate for a given task and learning goal.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> A student decides AI can help compare study strategies, but should not complete a personal reflection meant to show their own growth.
+</div>
+</div>
+
+<!-- Skill 6 -->
+<div style="background:#F7F8FA; border:1px solid #D9DDE3; border-radius:10px; padding:18px;">
+<div style="font-size:18px; font-weight:700; color:#555; margin-bottom:10px;">
+🌎 6. Consider AI's Impact
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555; margin-bottom:12px;">
+Students explore how AI affects people, communities, and the world around them.
+</div>
+<div style="font-size:15px; line-height:1.5; color:#555;">
+<strong>Example:</strong> A high school class debates the benefits and risks of using AI in hiring, including fairness, transparency, privacy, and accountability.
+</div>
+</div>
+
+</div>
+MARKDOWN

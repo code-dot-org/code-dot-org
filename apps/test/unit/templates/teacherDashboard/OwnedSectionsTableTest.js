@@ -218,7 +218,7 @@ describe('OwnedSectionsTable', () => {
     ).toBeTruthy();
   });
 
-  it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
+  it('loginInfoFormatter shows the section code for sections managed on CodeAI', () => {
     renderOwnedSectionsTable();
 
     // For sections with third-party login types, display the provider name rather than the section code

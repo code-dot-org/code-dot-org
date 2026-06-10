@@ -1,0 +1,71 @@
+{
+  "name": "global_happines_raw",
+  "card": {
+    "description": "2019 Global Happiness report rankings, where countries are rated on different attributes that contribute to a total happiness score then ranked. The features in this dataset are taken from the years 2008 to 2018, which were averaged together for the report to create scores. This 'raw' data contains more rows than the 'Global Happiness 2019' dataset, but may give different results.",
+    "source": "United Nations (https://worldhappiness.report/ed/2019/)",
+    "lastUpdated": "2019",
+    "context": {
+      "createdBy": "United Nations",
+      "potentialUses": "Predict a country's happiness score based on other features like GDP per capita and freedom to make life choices.",
+      "potentialMisuses": "Predicting rank is difficult. This also shouldn't be used as an objective metric for which countries are 'best' - what factors might contribute to these scores that aren't covered by the data?"
+    }
+  },
+  "defaultLabelColumn": "Life Ladder",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Country name",
+      "description": "The country or region's name."
+    },
+    {
+      "type": "categorical",
+      "id": "Year",
+      "description": "The year of the survey results."
+    },
+    {
+      "type": "numerical",
+      "id": "Life Ladder",
+      "description": "The subjective well-being score, as the average of the response to a question of life evaluation: \"Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?\""
+    },
+    {
+      "type": "numerical",
+      "id": "GDP per capita",
+      "description": "The country's GDP per capita in dollars."
+    },
+    {
+      "type": "numerical",
+      "id": "Social support",
+      "description": "This is the national average of a 0 (no) or 1 (yes) response to the question 'If you were in trouble, do you have relatives or firends you can count on to help you whenever you need them?'"
+    },
+    {
+      "type": "numerical",
+      "id": "Healthy life expectancy at birth",
+      "description": "Healthy life expectancy at birth, based on data from the World Health Organization global Health Observatory."
+    },
+    {
+      "type": "numerical",
+      "id": "Freedom to make life choices",
+      "description": "The national average of a 0 (no) to 1 (yes) response to the question \"Are you satisfied or dissatisfied with your freedom to choose what you do with your life?\""
+    },
+    {
+      "type": "numerical",
+      "id": "Generosity",
+      "description": "The national average of a response to the question \"Have you donated money to a charity in the past month?\""
+    },
+    {
+      "type": "numerical",
+      "id": "Perceptions of corruption",
+      "description": "The national average of the response to two 0-1 questions: \"Is corruption widespread throughout the government or not\" and \"Is corrpution widespread within businesses or not\"?"
+    },
+    {
+      "type": "numerical",
+      "id": "Positive affect",
+      "description": "The average of three positive measures, asking respondents how often they experience happiness, how often they experience enjoyment, and how often they smile or laugh."
+    },
+    {
+      "type": "numerical",
+      "id": "Negative affect",
+      "description": "The average of three negative measures, asking how often respondents feel worry, sadness, or anger."
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## IT Ticket: Captions Not Working\r\n\r\nThe closed captions feature is not working as expected.\r\n\r\n### Do This:\r\n\r\n1. Test the captions switch. What’s wrong?\r\n\r\n2. Check the `captionsOn` value and how the captions update.\r\n\r\n3. Fix the issue so the captions show and hide correctly.\r\n\r\nUse AI (if needed) to explain the code before making changes.",
+    "long_instructions": "## Closed Captions\r\n\r\nThe closed captions feature is not working as expected.\r\n\r\n### Do This:\r\n\r\n1. Test the captions switch. What's wrong?\r\n\r\n2. Check the `captionsOn` value and how the captions update.\r\n\r\n3. Fix the issue so the captions show and hide correctly.\r\n\r\nUse AI (if needed) to explain the code before making changes.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -27,7 +27,7 @@
       "allowMultipleAttempts": false
     },
     "display_name": "Fix Captions Toggle",
-    "bubble_choice_description": "Investigate and fix a broken captions toggle. Figure out what’s wrong and make sure captions show and hide correctly.",
+    "bubble_choice_description": "Investigate and fix a broken captions toggle. Figure out what's wrong and make sure captions show and hide correctly.",
     "thumbnail_url": "https://images.code.org/d03031afc37a066ec5620eb49bc1ab8d-caption.png",
     "start_sources": {
       "folders": {
@@ -89,6 +89,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:39.150+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4c_2025\"},{\"changed_at\":\"2026-04-16 18:54:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:57:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:01:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:02:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:04:33 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:39.150+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level4c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level4c_2025\"},{\"changed_at\":\"2026-04-16 18:54:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 18:57:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:01:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:02:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:04:33 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-16 18:39:33 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>
