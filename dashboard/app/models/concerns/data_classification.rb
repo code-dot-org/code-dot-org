@@ -11,15 +11,19 @@
 # The four classifications, least to most sensitive. Each column gets exactly one.
 #
 # * :public - Safe to share with anyone, including anonymous/guest users of our Learning Platform
-#   and external parties. For information meant to be shared publicly.
-#   Examples: Level.name, Lesson.lockable, User.created_at, Project.id
+#   and external parties. For information meant to be shared publicly. Never a default; a column is
+#   :public only when explicitly declared so.
+#   Examples: Level.name, Lesson.lockable, Script.name
 #
 # * :confidential - Should hold no personal information, though a user might store sensitive data
-#   here against our guidance. Not shared publicly without careful review.
+#   here against our guidance. Not shared publicly without careful review. Default classification
+#   for numeric/boolean types that do not have an explicit classification (and created_at, updated_at,
+#   deleted_at date/time attributes).
 #   Examples: UserScript.properties
 #
 # * :restricted - Personally identifiable / compliance-regulated data: name, home address,
-#   birthdate, SSN, phone number, email address, IP address, etc.
+#   birthdate, SSN, phone number, email address, IP address, etc. Default classification for text
+#   and date columns.
 #   Examples: User.email, LevelSource.data, Project.updated_ip, Project.uuid
 #
 # * :highly_restricted - Extremely sensitive secrets, guarded with the strongest protections.
@@ -28,7 +32,8 @@
 # Any column you don't classify falls back to a fail-safe,
 # type-based default (see `effective_data_classification`): text and most date/time
 # columns are assumed :restricted; created_at/updated_at/deleted_at and scalar types
-# (integer, boolean, float, ...) are :public.
+# (integer, boolean, float, ...) are assumed :confidential. Nothing defaults to :public —
+# that classification is opt-in.
 #
 # Usage (attribute-keyed hash; each column maps to exactly one classification):
 #   class User < ApplicationRecord
@@ -40,7 +45,7 @@
 #   end
 #
 #   User.effective_data_classification(:name)          # => :restricted
-#   User.column_names_classified_as(:public)           # => ["id", "created_at", ...]
+#   User.column_names_classified_as(:confidential)     # => ["id", "created_at", ...]
 module DataClassification
   extend ActiveSupport::Concern
 
@@ -48,10 +53,11 @@ module DataClassification
 
   # Fail-safe defaults for undeclared columns, by data type. Free-text and JSON columns
   # and non-timestamp date/time columns are assumed to contain PII (:restricted);
-  # timestamps and scalar numeric types are assumed safe (:public). JSON columns are
-  # property bags that routinely hold free-form user content, so they are treated as
-  # text. This is a general "when in doubt, treat as restricted" policy any consumer
-  # can rely on.
+  # created_at/updated_at/deleted_at timestamps and scalar numeric/boolean types are
+  # assumed :confidential. JSON columns are property bags that routinely hold free-form
+  # user content, so they are treated as text. Nothing defaults to :public — that
+  # classification is opt-in. This is a general "when in doubt, keep it non-public"
+  # policy any consumer can rely on.
   TEXT_DATA_TYPES = %i[string text json jsonb].freeze
   DATE_TIME_DATA_TYPES = %i[date datetime timestamp].freeze
   NON_PII_DATE_TIME_COLUMN_NAMES = %w[created_at updated_at deleted_at].freeze
@@ -89,9 +95,9 @@ module DataClassification
       if TEXT_DATA_TYPES.include?(col.type)
         :restricted
       elsif DATE_TIME_DATA_TYPES.include?(col.type)
-        NON_PII_DATE_TIME_COLUMN_NAMES.include?(col.name) ? :public : :restricted
+        NON_PII_DATE_TIME_COLUMN_NAMES.include?(col.name) ? :confidential : :restricted
       else
-        :public
+        :confidential
       end
     end
 

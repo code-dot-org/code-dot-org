@@ -104,8 +104,8 @@ class DataClassificationTest < ActiveSupport::TestCase
     context 'with an undeclared created_at/updated_at/deleted_at column' do
       let(:columns) {%w[created_at updated_at deleted_at].map {|name| mock_column(name, :datetime)}}
 
-      it 'defaults to public' do
-        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :public}
+      it 'defaults to confidential' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :confidential}
       end
     end
 
@@ -120,15 +120,16 @@ class DataClassificationTest < ActiveSupport::TestCase
     context 'with an undeclared numeric or boolean column' do
       let(:columns) {[mock_column('age', :integer), mock_column('admin', :boolean), mock_column('score', :float)]}
 
-      it 'defaults to public' do
-        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :public}
+      it 'defaults to confidential' do
+        columns.each {|col| _(model.effective_data_classification(col.name)).must_equal :confidential}
       end
     end
   end
 
   describe '.column_names_classified_as' do
-    # Spans every classification once defaults and one declaration are applied: id (public),
-    # name (text -> restricted default), auth_token (highly_restricted, declared), created_at (public).
+    # Spans confidential, restricted, and highly_restricted once defaults and one declaration are
+    # applied: id (scalar -> confidential default), name (text -> restricted default),
+    # auth_token (highly_restricted, declared), created_at (timestamp -> confidential default).
     let(:columns) do
       [
         mock_column('id', :integer),
