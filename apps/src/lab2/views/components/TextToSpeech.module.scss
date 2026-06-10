@@ -1,8 +1,8 @@
-@import '../../../mixins.scss';
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .playButton {
-  @include remove-button-styles;
-  @include focus-styles;
+  @include mixins.remove-button-styles;
+  @include mixins.focus-styles;
   border-radius: 4px;
   cursor: pointer;
   // opacity was previously used here but fails WCAG 1.4.11 non-text contrast.

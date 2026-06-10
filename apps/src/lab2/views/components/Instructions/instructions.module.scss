@@ -1,5 +1,5 @@
 @import 'font.scss';
-@import '../../../../mixins.scss';
+@use '@cdo/apps/mixins.scss' as mixins;
 
 @keyframes slidein {
   from {
@@ -324,7 +324,7 @@
 }
 
 .scrollingContent {
-  @include focus-styles($outline-offset: -2px);
+  @include mixins.focus-styles($outline-offset: -2px);
   border-radius: 4px;
   flex: 1;
   overflow-y: auto;
