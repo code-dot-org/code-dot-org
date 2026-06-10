@@ -87,6 +87,10 @@ interface ChatWorkspaceProps {
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
+  // When true, the workspace starts empty: it still clears stale state on mount
+  // but does not load the user's persisted chat history. Use for self-contained
+  // chats that should not share the level/lesson conversation.
+  skipHistoryFetch?: boolean;
   disabledState?: AiChatDisabledState;
   // If true, disables the ability to send messages. disabledState takes precendence over this, and
   // will disable the entire workspace.
@@ -118,6 +122,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       responseCallback,
       hasInstructionsDrawer,
       lessonId,
+      skipHistoryFetch = false,
       disabledState,
       disableSendingMessages,
       renderLastMessagePostText,
@@ -206,6 +211,12 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       dispatch(clearStagedFiles());
       dispatch(clearUserAddedSelectionContext());
 
+      // A self-contained chat (e.g. a standalone activity) starts empty and
+      // must not load the shared level/lesson history.
+      if (skipHistoryFetch) {
+        return;
+      }
+
       if (selectedStudent) {
         dispatch(
           fetchUserChatHistory({
@@ -232,6 +243,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       selectedStudent,
       channelId,
       lessonId,
+      skipHistoryFetch,
     ]);
 
     useEffect(() => {

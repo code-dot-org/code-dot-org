@@ -330,6 +330,10 @@ const EVENTS = {
     'AI Tutor Lesson Deep Dive Modality Navigation',
   AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED:
     'AI Tutor Lesson Deep Dive Modality Clicked',
+  AI_TUTOR_LESSON_DEEP_DIVE_CHALLENGE_NAVIGATION:
+    'AI Tutor Lesson Deep Dive Challenge Navigation',
+  AI_TUTOR_LESSON_DEEP_DIVE_CHALLENGE_CLICKED:
+    'AI Tutor Lesson Deep Dive Challenge Clicked',
 
   // Lesson Tutor
   LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
