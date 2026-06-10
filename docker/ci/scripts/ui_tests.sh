@@ -16,15 +16,7 @@ bundle exec rake ci:run_ui_tests
 
 # Puma is still live from ci:run_ui_tests; run the Playwright e2e suite against
 # it. Non-blocking: a failure here warns but does not fail the pipeline.
-# TODO: move the browser install steps into the CI Docker image.
 echo "--- running Playwright e2e tests (non-blocking) ---"
-if ! (
-  cd frontend &&
-  yarn install --immutable &&
-  yarn workspace @code-dot-org/e2e-tests exec playwright install-deps chromium firefox webkit &&
-  yarn workspace @code-dot-org/e2e-tests exec playwright install chromium firefox webkit &&
-  TARGET_URL=http://localhost-studio.code.org:3000 \
-    yarn workspace @code-dot-org/e2e-tests test:ui:ci
-); then
+if ! frontend/packages/e2e-tests/bin/run-playwright-tests-ci.sh http://localhost-studio.code.org:3000; then
   echo "WARNING: Playwright e2e tests failed (non-blocking)"
 fi

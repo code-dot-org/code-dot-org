@@ -131,11 +131,8 @@ namespace :test do
   # TODO: provision Playwright browsers via chef instead of installing at runtime.
   timed_task_with_logging :playwright_ui do
     status = RakeUtils.system_with_chat_logging(
-      "cd #{frontend_dir} &&",
-      'yarn install --immutable &&',
-      'yarn workspace @code-dot-org/e2e-tests exec playwright install-deps chromium firefox webkit &&',
-      'yarn workspace @code-dot-org/e2e-tests exec playwright install chromium firefox webkit &&',
-      "TARGET_URL=#{CDO.studio_url('')} yarn workspace @code-dot-org/e2e-tests test:ui:ci"
+      frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh'),
+      CDO.studio_url('')
     )
     report_dir = frontend_dir('packages', 'e2e-tests', 'playwright-report')
     report_url = Cdo::PlaywrightReport.upload(report_dir)
