@@ -193,6 +193,7 @@ export const StudentSignedIn: Story = {
     menuItems: STUDENT_MENU_ITEMS,
     userAuth: {status: 'signed-in', display_name: 'Alex', user_type: 'student'},
   },
+  parameters: DESKTOP_LAYOUT_PARAMS,
   // Opens the account menu and asserts its items render with prod-matched type
   // metrics (fontWeight 500, lineHeight 20px) that only resolve under real layout.
   play: async ({canvasElement}) => {
@@ -344,6 +345,7 @@ export const CreateMenu: Story = {
 // chevron rendered flush to the panel edge (~0–1px inset).
 export const Hamburger: Story = {
   args: {...TEACHER_ARGS},
+  parameters: DESKTOP_LAYOUT_PARAMS,
   play: async ({canvasElement}) => {
     await userEvent.click(
       within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),

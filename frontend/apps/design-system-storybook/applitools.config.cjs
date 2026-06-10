@@ -16,6 +16,10 @@ module.exports = {
     {width: 1200, height: 800, name: 'chrome'},
     {width: 1200, height: 800, name: 'firefox'},
   ],
+  // Local render + DOM-snapshot viewport (SDK default 1024). >=1201 so the header's
+  // New project trigger (hidden <=1200px) is present, and matches the width the
+  // open-menu stories render at so JS-positioned MUI popovers stay anchored.
+  viewportSize: {width: 1280, height: 800},
   showStorybookOutput: true,
   storybookStaticDir: 'dist/component-library-storybook',
   runInDocker: isDocker,
