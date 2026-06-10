@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
-import Javalab2View from '@cdo/apps/javalab/lab2/Javalab2View';
 import {handleRunClick} from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
+import Javalab2View from '@cdo/apps/javalab/lab2/Javalab2View';
 import {JavalabLevelProperties} from '@cdo/apps/javalab/lab2/types';
 import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
