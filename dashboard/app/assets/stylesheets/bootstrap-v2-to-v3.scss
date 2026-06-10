@@ -101,3 +101,10 @@ td, th {
 .nav > li > a {
   padding: 10px 12px;
 }
+
+// Undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_normalize.scss:33
+// May also want to apply to: article, aside, details, figcaption, figure,
+// footer, header, hgroup, main, menu, nav, or section.
+summary {
+  display: revert;
+}
