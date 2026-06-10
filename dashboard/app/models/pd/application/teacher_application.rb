@@ -372,8 +372,9 @@ module Pd::Application
       status
     end
 
-    # This is called by the scheduled_pd_application_emails cronjob which is run
-    # on the production-daemon machine every day
+    # Formerly invoked daily by the scheduled_pd_application_emails cronjob, which
+    # was removed along with the deprecated Teacher Application mailers. This method
+    # is now unused and slated for removal in the model-removal pass.
     def self.send_admin_approval_reminders_to_teachers
       where(
         application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
@@ -416,8 +417,9 @@ module Pd::Application
         raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
       end
 
-      # email_type maps to the mailer action
-      TeacherApplicationMailer.send(email.email_type, self).deliver_now
+      # Teacher Applications are deprecated; the TeacherApplicationMailer was
+      # removed, so email delivery is now a no-op. Email records are still
+      # created and logged by the surrounding send_pd_application_email flow.
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
