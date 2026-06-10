@@ -4,61 +4,34 @@ import type {FunctionComponent} from 'react';
 
 import {AUTH_LINKS} from '../../shared/authLinks';
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
+import {headerTriggerBase} from '../../shared/headerMenu';
 
-/** Sign In button — full-height stretch to match prod's header_button anchor style. */
-const signInSx = {
-  '&&': {
+// Prod renders signed-out auth on the teal bar as plain white text links (13px,
+// weight 400, no border/fill) — not pills. Both links share this style.
+const barAuthLinkSx = {
+  ...headerTriggerBase,
+  alignSelf: 'stretch',
+  minWidth: 0,
+  px: '1rem',
+  borderRadius: 0,
+  color: 'var(--neutral-base-white)',
+  fontSize: '13px',
+  fontWeight: 400,
+  textTransform: 'none' as const,
+  whiteSpace: 'nowrap',
+  '&:hover, &:active, &:focus-visible': {
     backgroundColor: 'transparent',
-    color: 'var(--neutral-base-white)',
-    border: '1px solid var(--neutral-base-white)',
-    borderRadius: '4px',
-    boxShadow: 'none',
-    textTransform: 'none' as const,
-    minWidth: 0,
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    paddingTop: 0,
-    paddingBottom: 0,
-    alignSelf: 'stretch',
-    fontSize: '16px',
-  },
-  '&&:hover, &&:active, &&:focus-visible': {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     boxShadow: 'none',
   },
 };
 
-/** Create Account button — full-height stretch to match prod's header_button anchor style. */
-const createAccountSx = {
-  '&&': {
-    backgroundColor: 'var(--neutral-base-white)',
-    color: 'var(--background-brand-teal-primary)',
-    borderRadius: '4px',
-    boxShadow: 'none',
-    textTransform: 'none' as const,
-    minWidth: 0,
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    paddingTop: 0,
-    paddingBottom: 0,
-    alignSelf: 'stretch',
-    fontSize: '16px',
-  },
-  '&&:hover, &&:active, &&:focus-visible': {
-    backgroundColor: 'rgba(255, 255, 255, 0.85)',
-    boxShadow: 'none',
-  },
-};
-
-/** Sign In and Create Account buttons shown when no user session is active. */
+/** Sign In and Create Account links shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
   <Box
     sx={{
-      // On the bar at >=768px; hidden below (prod hides #sign_in_or_user on
-      // mobile, where the hamburger surfaces these). Authored default-visible
-      // so jsdom (which ignores @media) keeps the buttons testable.
+      // On the bar at >=768px; hidden below (the hamburger surfaces these).
+      // Authored default-visible so jsdom (which ignores @media) keeps the links testable.
       display: 'flex',
-      gap: 1,
       alignSelf: 'stretch',
       alignItems: 'stretch',
       [`@media (max-width:${HEADER_BREAKPOINTS.mobileAuth - 1}px)`]: {
@@ -66,13 +39,19 @@ const SignedOutUserButtons: FunctionComponent = () => (
       },
     }}
   >
-    <Button href={AUTH_LINKS.signIn} disableElevation sx={signInSx}>
+    <Button
+      href={AUTH_LINKS.signIn}
+      color="inherit"
+      disableElevation
+      sx={barAuthLinkSx}
+    >
       Sign in
     </Button>
     <Button
       href={AUTH_LINKS.createAccount}
+      color="inherit"
       disableElevation
-      sx={createAccountSx}
+      sx={barAuthLinkSx}
     >
       Create account
     </Button>

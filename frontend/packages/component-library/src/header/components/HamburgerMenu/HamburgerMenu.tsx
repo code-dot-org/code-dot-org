@@ -17,11 +17,14 @@ import type {GlobalNavItem, MenuItem} from '../../shared/types';
 import type {UserAuthProp} from '../SignedInUserButton/SignedInUserButton';
 
 import {
+  authDividerSx,
   barsIconSx,
   dividerSx,
   expandTextSx,
+  hamburgerCreateAccountSx,
   hamburgerListSx,
   hamburgerSectionSx,
+  hamburgerSignInSx,
   hamburgerTriggerSx,
   linkSx,
   mobileAuthOnlyItemSx,
@@ -118,15 +121,20 @@ const HamburgerPanel: FunctionComponent<
       {userAuth?.status === 'signed-out' && (
         <>
           <Box component="li" sx={mobileAuthOnlyItemSx}>
-            <Box component="a" href={AUTH_LINKS.signIn} sx={linkSx}>
+            <Box component="a" href={AUTH_LINKS.signIn} sx={hamburgerSignInSx}>
               Sign in
             </Box>
           </Box>
           <Box component="li" sx={mobileAuthOnlyItemSx}>
-            <Box component="a" href={AUTH_LINKS.createAccount} sx={linkSx}>
+            <Box
+              component="a"
+              href={AUTH_LINKS.createAccount}
+              sx={hamburgerCreateAccountSx}
+            >
               Create account
             </Box>
           </Box>
+          <Box component="li" sx={authDividerSx} />
         </>
       )}
 

@@ -18,8 +18,13 @@ import {
 export default function SiteHeader() {
   const auth = useAuth();
   const userType = auth.status === 'signed-in' ? auth.user_type : undefined;
-  const menuItems =
-    userType === 'teacher' ? TEACHER_MENU_ITEMS : STUDENT_MENU_ITEMS;
+  // App nav is signed-in only; signed-out (and pre-auth) shows no app nav — the
+  // marketing nav lives in globalNavItems / the hamburger.
+  const menuItems = !userType
+    ? []
+    : userType === 'teacher'
+      ? TEACHER_MENU_ITEMS
+      : STUDENT_MENU_ITEMS;
   const supportLinks = useMemo(() => buildSupportLinks(userType), [userType]);
 
   return (

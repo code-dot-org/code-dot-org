@@ -299,7 +299,7 @@ export const SignedInLongName: Story = {
 export const SignedOut: Story = {
   args: {
     ...BASE,
-    menuItems: STUDENT_MENU_ITEMS,
+    menuItems: [],
     userAuth: {status: 'signed-out'},
   },
 };
@@ -391,7 +391,7 @@ export const SignedInMobile: Story = {
 export const SignedOutMobile: Story = {
   args: {
     ...BASE,
-    menuItems: STUDENT_MENU_ITEMS,
+    menuItems: [],
     userAuth: {status: 'signed-out'},
   },
   parameters: MOBILE_LAYOUT_PARAMS,

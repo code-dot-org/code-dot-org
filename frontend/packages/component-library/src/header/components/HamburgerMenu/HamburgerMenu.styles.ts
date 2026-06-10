@@ -80,6 +80,48 @@ export const mobileAuthOnlyItemSx: SxProps = {
   },
 };
 
+/** Hamburger signed-out auth (mobile). Sign in = DSCO secondary (neutral text). */
+export const hamburgerSignInSx = {
+  display: 'block',
+  boxSizing: 'border-box',
+  width: '100%',
+  padding: '8px',
+  textAlign: 'center',
+  color: 'var(--text-neutral-primary)',
+  fontSize: '16px',
+  fontWeight: 400,
+  textDecoration: 'none',
+  borderRadius: '4px',
+  '&:visited, &:active': {color: 'var(--text-neutral-primary)'},
+  '&:hover': {backgroundColor: '#e7e8ea'},
+};
+
+/** Create account = DSCO primary (brand-purple fill, white text). */
+export const hamburgerCreateAccountSx = {
+  display: 'block',
+  boxSizing: 'border-box',
+  width: '100%',
+  marginTop: '4px',
+  padding: '8px',
+  textAlign: 'center',
+  color: 'var(--neutral-base-white)',
+  backgroundColor: 'var(--background-brand-purple-primary)',
+  fontSize: '16px',
+  fontWeight: 400,
+  textDecoration: 'none',
+  borderRadius: '4px',
+  '&:visited, &:active, &:hover': {color: 'var(--neutral-base-white)'},
+};
+
+/** Separator after the signed-out auth block; mobile-only like the auth itself. */
+export const authDividerSx = {
+  height: '1px',
+  margin: '0.5rem 0',
+  padding: 0,
+  background: '#d1d4d8',
+  [`@media (min-width: ${HEADER_BREAKPOINTS.mobileAuth}px)`]: {display: 'none'},
+};
+
 export const dividerSx: SxProps = {
   height: '1px',
   margin: '0.5rem 0',
