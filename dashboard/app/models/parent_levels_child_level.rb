@@ -37,11 +37,11 @@ class ParentLevelsChildLevel < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    parent_level_id: :confidential,
-    child_level_id: :confidential,
-    position: :confidential,
-    kind: :confidential,
+    id: :public,
+    parent_level_id: :public,
+    child_level_id: :public,
+    position: :public,
+    kind: :public,
   )
 
   belongs_to :parent_level, class_name: 'Level', optional: true

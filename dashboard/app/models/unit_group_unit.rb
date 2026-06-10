@@ -18,11 +18,11 @@ class UnitGroupUnit < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    course_id: :confidential,
-    script_id: :confidential,
-    position: :confidential,
-    unit_prefix: :confidential,
+    id: :public,
+    course_id: :public,
+    script_id: :public,
+    position: :public,
+    unit_prefix: :public,
   )
 
   self.table_name = 'course_scripts'

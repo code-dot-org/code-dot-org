@@ -20,15 +20,15 @@ class LearningGoal < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    key: :confidential,
-    position: :confidential,
-    rubric_id: :confidential,
-    learning_goal: :confidential,
-    ai_enabled: :confidential,
-    tips: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
+    id: :public,
+    key: :public,
+    position: :public,
+    rubric_id: :public,
+    learning_goal: :public,
+    ai_enabled: :public,
+    tips: :public,
+    created_at: :public,
+    updated_at: :public,
   )
 
   belongs_to :rubric, inverse_of: :learning_goals

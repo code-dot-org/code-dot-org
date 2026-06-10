@@ -18,13 +18,13 @@ class LearningGoalEvidenceLevel < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    learning_goal_id: :confidential,
-    understanding: :confidential,
-    teacher_description: :confidential,
-    ai_prompt: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
+    id: :public,
+    learning_goal_id: :public,
+    understanding: :public,
+    teacher_description: :public,
+    ai_prompt: :public,
+    created_at: :public,
+    updated_at: :public,
   )
 
   belongs_to :learning_goal

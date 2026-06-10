@@ -18,13 +18,13 @@ class Skill < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    description: :confidential,
-    evaluation_criteria: :confidential,
-    concept: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
-    key: :confidential,
+    id: :public,
+    description: :public,
+    evaluation_criteria: :public,
+    concept: :public,
+    created_at: :public,
+    updated_at: :public,
+    key: :public,
   )
 
   validates :description, presence: true

@@ -29,18 +29,18 @@ class Lesson < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    name: :confidential,
-    absolute_position: :confidential,
-    script_id: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
-    lockable: :confidential,
-    relative_position: :confidential,
-    properties: :confidential,
-    lesson_group_id: :confidential,
-    key: :confidential,
-    has_lesson_plan: :confidential,
+    id: :public,
+    name: :public,
+    absolute_position: :public,
+    script_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    lockable: :public,
+    relative_position: :public,
+    properties: :public,
+    lesson_group_id: :public,
+    key: :public,
+    has_lesson_plan: :public,
   )
 
   include LevelsHelper

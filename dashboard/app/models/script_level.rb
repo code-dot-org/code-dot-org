@@ -37,20 +37,20 @@ class ScriptLevel < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    script_id: :confidential,
-    chapter: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
-    stage_id: :confidential,
-    position: :confidential,
-    assessment: :confidential,
-    properties: :confidential,
-    named_level: :confidential,
-    bonus: :confidential,
-    activity_section_id: :confidential,
-    seed_key: :confidential,
-    activity_section_position: :confidential,
+    id: :public,
+    script_id: :public,
+    chapter: :public,
+    created_at: :public,
+    updated_at: :public,
+    stage_id: :public,
+    position: :public,
+    assessment: :public,
+    properties: :public,
+    named_level: :public,
+    bonus: :public,
+    activity_section_id: :public,
+    seed_key: :public,
+    activity_section_position: :public,
   )
 
   include SerializedProperties

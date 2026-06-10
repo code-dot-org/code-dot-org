@@ -27,15 +27,15 @@ class UnitGroup < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    name: :confidential,
-    properties: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
-    published_state: :confidential,
-    instruction_type: :confidential,
-    instructor_audience: :confidential,
-    participant_audience: :confidential,
+    id: :public,
+    name: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
+    published_state: :public,
+    instruction_type: :public,
+    instructor_audience: :public,
+    participant_audience: :public,
   )
 
   include Curriculum::SharedCourseConstants

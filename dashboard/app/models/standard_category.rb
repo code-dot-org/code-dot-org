@@ -20,14 +20,14 @@ class StandardCategory < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    shortcode: :confidential,
-    framework_id: :confidential,
-    parent_category_id: :confidential,
-    category_type: :confidential,
-    properties: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
+    id: :public,
+    shortcode: :public,
+    framework_id: :public,
+    parent_category_id: :public,
+    category_type: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
   )
 
   include SerializedProperties

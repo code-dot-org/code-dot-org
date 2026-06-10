@@ -31,20 +31,20 @@ class Level < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    game_id: :confidential,
-    name: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
-    level_num: :confidential,
-    ideal_level_source_id: :confidential,
+    id: :public,
+    game_id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    level_num: :public,
+    ideal_level_source_id: :public,
     user_id: :confidential,
-    properties: :confidential,
-    type: :confidential,
-    md5: :confidential,
-    published: :confidential,
-    notes: :confidential,
-    audit_log: :confidential,
+    properties: :public,
+    type: :public,
+    md5: :public,
+    published: :public,
+    notes: :public,
+    audit_log: :public,
   )
 
   include SharedConstants
