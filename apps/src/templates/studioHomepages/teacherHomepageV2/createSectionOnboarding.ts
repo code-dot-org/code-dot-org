@@ -127,9 +127,9 @@ export const createHomepageSteps = (
       },
       text: withSparkle(
         loginSelector === LOGIN_SELECTORS.picture
-          ? 'Select <strong>Picture Login</strong> for younger students — they can sign in using a picture instead of a password.'
+          ? 'Picture logins work best for elementary classes.  They are simple for students to recognize and use for students who are new to reading.'
           : loginSelector === LOGIN_SELECTORS.email
-          ? 'Personal logins work best for high school classes. Students '
+          ? 'Personal logins work best for high school classes. Students can use their email address to sign in and reset their password if they forget it.'
           : "Secret words work best for middle school classes. They're simple enough to remember, no email account required. Select a login method to continue."
       ),
       beforeShowPromise: () => waitForElement(loginSelector, controller.signal),
