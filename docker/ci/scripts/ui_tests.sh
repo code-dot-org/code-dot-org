@@ -15,8 +15,6 @@ bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests
 
 # Puma is still live from ci:run_ui_tests; run the Playwright e2e suite against
-# it. Non-blocking: a failure here warns but does not fail the pipeline.
-echo "--- running Playwright e2e tests (non-blocking) ---"
-if ! frontend/packages/e2e-tests/bin/run-playwright-tests-ci.sh http://localhost-studio.code.org:3000; then
-  echo "WARNING: Playwright e2e tests failed (non-blocking)"
-fi
+# it. The script warns on failure; `|| true` keeps it non-blocking here.
+TARGET_URL=http://localhost-studio.code.org:3000 \
+  frontend/packages/e2e-tests/bin/run-playwright-tests-ci.sh || true

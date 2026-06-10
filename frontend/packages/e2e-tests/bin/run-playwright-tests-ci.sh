@@ -1,29 +1,35 @@
 #!/usr/bin/env bash
 #
-# Run the e2e Playwright suite against a target URL, installing the browser
+# Run the e2e Playwright suite against $TARGET_URL, installing the browser
 # binaries at runtime. Shared by the Drone `ui` pipeline
 # (docker/ci/scripts/ui_tests.sh) and the DTT `test:playwright_ui` rake task
-# (lib/rake/test.rake) so the install+run sequence lives in one place.
+# (lib/rake/test.rake) so the install+run sequence and its messaging live in
+# one place.
 #
-# Usage: run-playwright-tests-ci.sh <target-url>
+# Reads the target deployment from $TARGET_URL (e.g.
+# http://localhost-studio.code.org:3000 for Drone, the test env for DTT) and
+# runs every browser engine in playwright.config.ts (chromium, firefox, webkit).
 #
-# Runs every browser engine configured in playwright.config.ts (chromium,
-# firefox, webkit). Exits non-zero if any step fails; both callers treat a
-# non-zero exit as non-blocking (warn, don't fail the job).
+# Non-blocking by contract: on failure it warns and exits non-zero, leaving each
+# caller to report it without treating it as fatal.
 #
 # TODO: bake the browser install into the CI image / provision it via chef and
 # drop the two install steps here.
 set -euo pipefail
 
-target_url="${1:?usage: run-playwright-tests-ci.sh <target-url>}"
+: "${TARGET_URL:?TARGET_URL must be set (e.g. http://localhost-studio.code.org:3000)}"
 
 # Run from the package root (one level up from bin/) regardless of the caller's cwd.
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
+trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
+
+echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
+
 yarn install --immutable
 # install-deps needs root/apt; best-effort so the suite still runs where the
-# system libraries are already present (e.g. the DTT test server). A genuinely
-# missing library then surfaces as a browser-launch failure in the run below.
+# system libraries are already present. A genuinely missing library then
+# surfaces as a browser-launch failure in the run below.
 yarn exec playwright install-deps chromium firefox webkit || echo "WARN: playwright install-deps failed; continuing"
 yarn exec playwright install chromium firefox webkit
-TARGET_URL="$target_url" yarn run test:ui:ci
+yarn run test:ui:ci
