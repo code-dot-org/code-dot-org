@@ -93,6 +93,8 @@ still on the TODO list. Differences from legacy use:
   as a `SYSTEM_IN` message via `sendJavaConsoleInput`.
 - `flushSave()` on the lab2 ProjectManager is awaited before connecting,
   so Javabuilder reads fresh source from S3 instead of a stale version.
+  A brand-new project is force-saved instead (nothing is persisted before
+  the first edit, and Javabuilder can't run a project with no sources).
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
   is supported so far).
@@ -123,8 +125,6 @@ still on the TODO list. Differences from legacy use:
 ## To Dos
 - **Support locked starter files** you can lock starter files in start mode,
 but we don't persist that information yet.
-- **Support run before edit** Right now we only save the project on first edit,
-which prevents running on Javabuilder. We should force a save before run is clicked.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**
