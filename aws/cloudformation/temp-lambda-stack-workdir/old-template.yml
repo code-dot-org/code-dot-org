@@ -1,7 +1,3 @@
-<%
-require 'cdo/cloud_formation/vpc'
-self.class.include VPC
--%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
@@ -53,6 +49,40 @@ Resources:
               - Effect: Allow
                 Action: ['lambda:InvokeFunction']
                 Resource: '*'
+  VpcClassicLink:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
+      FunctionName: VpcClassicLink
+      Code:
+        ZipFile: "var response=require(\"cfn-response\");exports.handler=function(e,s){function n(n,l){c={Error:l},console.log(c.Error+\":\\n\",n),response.send(e,s,response.FAILED,c,o)}console.log(\"REQUEST RECEIVED:\\n\",JSON.stringify(e));var l=e.ResourceProperties.VpcId,i=e.ResourceProperties.DnsSupport,p={VpcId:l},c={},o=e.PhysicalResourceId||l+\":ClassicLink\",r=new(require(\"aws-sdk\").EC2);console.log(\"REQUEST TYPE:\",e.RequestType),\"Delete\"==e.RequestType?r.disableVpcClassicLink(p,function(l,i){l?n(l,\"DisableVpcClassicLink call failed\"):response.send(e,s,response.SUCCESS,c,o)}):\"Update\"==e.RequestType||\"Create\"==e.RequestType?l?r.enableVpcClassicLink(p,function(l,a){l?n(l,\"EnableVpcClassicLink call failed\"):i?r.enableVpcClassicLinkDnsSupport(p,function(l,i){l?n(l,\"EnableVpcClassicLinkDnsSupport call failed\"):response.send(e,s,response.SUCCESS,c,o)}):r.disableVpcClassicLinkDnsSupport(p,function(l,i){l?n(l,\"DisableVpcClassicLinkDnsSupport call failed\"):response.send(e,s,response.SUCCESS,c,o)})}):n(null,\"VpcId not specified\"):n(null,\"Invalid RequestType: \"+e.RequestType)};\n"
+      Handler: index.handler
+      Runtime: nodejs6.10
+      Timeout: 300
+      Role: !GetAtt VpcClassicLinkRole.Arn
+  VpcClassicLinkRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action:
+                  - "ec2:DisableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLink"
+                  - "ec2:EnableVpcClassicLinkDnsSupport"
+                  - "ec2:DisableVpcClassicLinkDnsSupport"
+                Resource: "*"
   CountASG:
     Type: AWS::Lambda::Function
     Properties:
@@ -225,7 +255,7 @@ Resources:
   FastSnapshotRestoreRole:
     Type: AWS::IAM::Role
     Properties:
-      <%=service_role 'lambda'%>
+      AssumeRolePolicyDocument: {"Statement":[{"Effect":"Allow","Action":"sts:AssumeRole","Principal":{"Service":["lambda.amazonaws.com"]}}]}
       Path: /
       ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
       Policies:
@@ -253,11 +283,11 @@ Resources:
       Role: !GetAtt SQLUserLambdaRole.Arn
       VpcConfig:
         SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
-        SubnetIds: <%=subnets.to_json%>
+        SubnetIds: [{"Fn::ImportValue":"VPC-SubnetB"},{"Fn::ImportValue":"VPC-SubnetC"},{"Fn::ImportValue":"VPC-SubnetD"},{"Fn::ImportValue":"VPC-SubnetE"}]
   SQLUserLambdaRole:
     Type: AWS::IAM::Role
     Properties:
-      <%=service_role 'lambda'%>
+      AssumeRolePolicyDocument: {"Statement":[{"Effect":"Allow","Action":"sts:AssumeRole","Principal":{"Service":["lambda.amazonaws.com"]}}]}
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
@@ -304,6 +334,9 @@ Outputs:
     Value: !GetAtt AMIManager.Arn
     Description: ServiceToken for AMIManager Lambda function
     Export: {Name: AMIManager}
+  VpcClassicLink:
+    Value: !GetAtt VpcClassicLink.Arn
+    Description: ServiceToken for VpcClassicLink Lambda function
   SlackEvent:
     Value: !GetAtt SlackEvent.Arn
     Export: {Name: SlackEvent}
