@@ -1,3 +1,9 @@
+/**
+ * We depend on some defaults provided by Bootstrap v2 which were changed in
+ * v3. This stylesheet captures those dependencies, providing a compatibility
+ * layer for us during this upgrade.
+ */
+
 @import "color";
 @import "font";
 @import "mixins";
