@@ -19,6 +19,35 @@ import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
 
+// Triangles lost their top handle in #73003. Remap any stored top-* edges
+// on triangle nodes to bottom-* (as a reasonable substitute).
+export function migrateTriangleTopHandles(
+  source: SketchlabReactFlowSource
+): SketchlabReactFlowSource {
+  const triangleIds = new Set(
+    source.nodes
+      .filter(
+        n =>
+          n.type === 'shape' &&
+          (n.data as ShapeNodeData).shapeType === 'triangle'
+      )
+      .map(n => n.id)
+  );
+  if (triangleIds.size === 0) return source;
+
+  const edges = source.edges.map(edge => {
+    const patch: Partial<SketchlabReactFlowEdge> = {};
+    if (triangleIds.has(edge.target) && edge.targetHandle === 'top-target') {
+      patch.targetHandle = 'bottom-target';
+    }
+    if (triangleIds.has(edge.source) && edge.sourceHandle === 'top-source') {
+      patch.sourceHandle = 'bottom-source';
+    }
+    return Object.keys(patch).length ? {...edge, ...patch} : edge;
+  });
+  return {...source, edges};
+}
+
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';
   if (el.type === 'diamond') return 'diamond';
