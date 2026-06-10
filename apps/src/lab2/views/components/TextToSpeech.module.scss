@@ -2,17 +2,17 @@
 
 .playButton {
   @include remove-button-styles;
-  opacity: 35%;
+  @include focus-styles;
+  border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
-  color: var(--text-neutral-primary);
+  // opacity was previously used here but fails WCAG 1.4.11 non-text contrast.
+  color: var(--text-neutral-quaternary);
+  transition: color 0.2s ease;
 
-  &Playing {
-    opacity: 100%;
-  }
-
-  &:hover {
-    opacity: 100%;
+  &Playing,
+  &:hover,
+  &:focus-visible {
+    color: var(--text-neutral-primary);
   }
 }
 
