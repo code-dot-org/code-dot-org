@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -13,10 +15,12 @@ describe('SendLesson', () => {
       <SendLesson lessonUrl={lessonUrl} lessonTitle={lessonTitle} />
     );
 
-    expect(wrapper.find('Button').length).toEqual(1);
-    expect(wrapper.find('Button').at(0).props().icon).toEqual(
-      'share-from-square'
-    );
+    expect(wrapper.find(MuiButton).length).toEqual(1);
+    // Icon now rides in MUI Button's `startIcon` slot rather than a
+    // top-level `icon` prop on legacy Button.
+    const startIcon = wrapper.find(MuiButton).prop('startIcon');
+    expect(startIcon.type).toEqual(FontAwesomeV6Icon);
+    expect(startIcon.props.iconName).toEqual('share-from-square');
   });
 
   it('opens the SendLessonDialog when the button is clicked', () => {
@@ -28,8 +32,8 @@ describe('SendLesson', () => {
     expect(wrapper.find('Connect(SendLessonDialog)').length).toEqual(0);
 
     // click the button
-    expect(wrapper.find('Button').length).toEqual(1);
-    wrapper.find('Button').props().onClick();
+    expect(wrapper.find(MuiButton).length).toEqual(1);
+    wrapper.find(MuiButton).props().onClick();
 
     // dialog should now be open
     expect(wrapper.find('Connect(SendLessonDialog)').length).toEqual(1);

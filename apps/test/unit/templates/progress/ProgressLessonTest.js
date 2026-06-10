@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -7,7 +8,6 @@ import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
 describe('ProgressLesson', () => {
@@ -39,7 +39,9 @@ describe('ProgressLesson', () => {
 
   it('renders with gray background when not hidden', () => {
     const wrapper = shallow(<ProgressLesson {...defaultProps} />);
-    expect(wrapper.props().style.background).toEqual(color.lightest_gray);
+    expect(wrapper.props().style.background).toEqual(
+      'var(--background-neutral-secondary)'
+    );
   });
 
   it('does not render when isVisible is false', () => {
@@ -63,7 +65,9 @@ describe('ProgressLesson', () => {
         isVisible={true}
       />
     );
-    expect(wrapper.props().style.background).toEqual(color.lightest_gray);
+    expect(wrapper.props().style.background).toEqual(
+      'var(--background-neutral-secondary)'
+    );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
     expect(wrapper.find('div').at(1).props().style.opacity).toEqual(undefined);
@@ -77,7 +81,9 @@ describe('ProgressLesson', () => {
         isLockedForUser={true}
       />
     );
-    expect(wrapper.props().style.background).toEqual(color.lightest_gray);
+    expect(wrapper.props().style.background).toEqual(
+      'var(--background-neutral-secondary)'
+    );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
     expect(wrapper.find('div').at(1).props().style.opacity).toEqual(0.6);
@@ -91,7 +97,9 @@ describe('ProgressLesson', () => {
         isLockedForAllStudents={true}
       />
     );
-    expect(wrapper.props().style.background).toEqual(color.lightest_gray);
+    expect(wrapper.props().style.background).toEqual(
+      'var(--background-neutral-secondary)'
+    );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
     expect(wrapper.find('div').at(1).props().style.opacity).toEqual(undefined);
@@ -119,7 +127,9 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    expect(wrapper.props().style.background).toEqual(color.lightest_gray);
+    expect(wrapper.props().style.background).toEqual(
+      'var(--background-neutral-secondary)'
+    );
   });
 
   it('has an unlocked icon when lesson is lockable but unlocked and lockStatusLoaded', () => {
@@ -131,10 +141,12 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual(
+    expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
       'caret-down'
     );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).toEqual('unlock');
+    expect(wrapper.find(FontAwesomeV6Icon).at(1).props().iconName).toEqual(
+      'unlock'
+    );
   });
 
   it('has a locked icon when lesson is lockable and locked and lockStatusLoaded', () => {
@@ -146,10 +158,12 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual(
+    expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
       'caret-down'
     );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).toEqual('lock');
+    expect(wrapper.find(FontAwesomeV6Icon).at(1).props().iconName).toEqual(
+      'lock'
+    );
   });
 
   it('has both a hidden and a locked icon for instructor when lesson is lockable and locked and hidden and lockStatusLoaded', () => {
@@ -163,11 +177,15 @@ describe('ProgressLesson', () => {
         lockStatusLoaded={true}
       />
     );
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual(
+    expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toEqual(
       'caret-down'
     );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).toEqual('eye-slash');
-    expect(wrapper.find('FontAwesome').at(2).props().icon).toEqual('lock');
+    expect(wrapper.find(FontAwesomeV6Icon).at(1).props().iconName).toEqual(
+      'eye-slash'
+    );
+    expect(wrapper.find(FontAwesomeV6Icon).at(2).props().iconName).toEqual(
+      'lock'
+    );
   });
 
   it('starts collapsed for participant if it is not the current lesson', () => {

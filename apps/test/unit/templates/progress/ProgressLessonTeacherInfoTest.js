@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Immutable from 'immutable';
 import React from 'react';
@@ -45,9 +46,15 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    expect(wrapperWithoutPlan.find('Button').length).toEqual(0);
-    expect(wrapperWithPlan.find('Button').props().color).toEqual('blue');
-    expect(wrapperWithPlan.find('Button').props().href).toEqual('foo/bar');
+    expect(wrapperWithoutPlan.find('#uitest-lesson-plan').length).toEqual(0);
+    const planButton = wrapperWithPlan
+      .find(MuiButton)
+      .filter('#uitest-lesson-plan');
+    expect(planButton.length).toEqual(1);
+    // contained variant = the primary CTA visual (was legacy `color="blue"`)
+    expect(planButton.prop('variant')).toEqual('contained');
+    expect(planButton.prop('color')).toEqual('primary');
+    expect(planButton.prop('href')).toEqual('foo/bar');
   });
 
   it('updates the lesson url to require login', () => {
@@ -104,11 +111,18 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    expect(wrapperWithoutPlan.find('Button').length).toEqual(0);
-    expect(wrapperWithPlan.find('Button').props().color).toEqual('purple');
-    expect(wrapperWithPlan.find('Button').props().href).toEqual(
-      'foo/bar/student'
+    expect(wrapperWithoutPlan.find('#uitest-student-resources').length).toEqual(
+      0
     );
+    const studentButton = wrapperWithPlan
+      .find(MuiButton)
+      .filter('#uitest-student-resources');
+    expect(studentButton.length).toEqual(1);
+    // outlined+secondary distinguishes Student Resources from the
+    // contained+primary "View Lesson Plan" button above it.
+    expect(studentButton.prop('variant')).toEqual('outlined');
+    expect(studentButton.prop('color')).toEqual('secondary');
+    expect(studentButton.prop('href')).toEqual('foo/bar/student');
   });
 
   it('renders our LessonLock button when lesson is lockable and teacher is lockable authorized', () => {

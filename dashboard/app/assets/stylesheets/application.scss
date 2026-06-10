@@ -91,10 +91,10 @@ body:has(#lab2-container) {
 h1 {
   @include main-font-bold;
   font-size: 32px;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
 
   &.text-black {
-    color: $light_black;
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -103,7 +103,7 @@ h2 {
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
-  color: $teal;
+  color: var(--text-brand-teal-primary);
 }
 
 h3 {
@@ -205,10 +205,14 @@ img.video_thumbnail {
     background-color: $contrastTealHeader;
     color: $header_text;
     a:link {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
     a:visited {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
 
     .small_font_on_tablet {
@@ -1205,14 +1209,12 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
     }
   }
 
-  // Wider logo also crowds the inline .headerlinks; bump the mobile
-  // collapse threshold so the whole bar drops into the hamburger sooner.
-  // (The tablet-level create_menu collapse lives in shared/css/user-menu.scss.)
-  .header-wrapper .header {
-    @media screen and (max-width: 1060px) {
-      .hide_on_tablet {
-        display: none !important;
-      }
+  // Wider logo recovers space in the nav gap instead of bumping the collapse
+  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+  // doesn't force links into the hamburger any earlier than the code brand.
+  .header-wrapper .header .headerlinks {
+    @media (min-width: 1024px) and (max-width: 1268px) {
+      gap: 1.5rem;
     }
   }
 }

@@ -11,7 +11,7 @@ module Geocoder
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
           %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
             component = try component_name
-            results["#{prefix}#{component_name}_s"] = component unless component.nil_or_empty?
+            results["#{prefix}#{component_name}_s"] = component unless component.nil? || component.empty?
           end
         end
       end

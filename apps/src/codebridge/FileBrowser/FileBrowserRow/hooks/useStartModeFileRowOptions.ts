@@ -3,8 +3,6 @@ import {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
-import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setFileTypeThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
@@ -16,10 +14,9 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  * Dropdown options for the file dropdown in start mode.
  * In start mode levelbuilders can set the file type to starter, locked starter,
  * support, or validation.
- * There can only be one validation file in a project; the option to set a file
- * as validation will only be shown if there is no validation file in the project.
  * @param file - The ProjectFile object representing the file for which options are generated.
- * @param hasValidationFile - Whether the file has a corresponding validation file.
+ * @param projectHasValidationFile - Whether the project has a corresponding validation file.
+ * @param allowMultipleValidationFiles - Whether to allow multiple validation files in the project.
  * @returns In start mode, an array of objects representing the context menu options.
  *   If not in start mode, returns an empty array.
  *   Each object has the following properties:
@@ -30,31 +27,17 @@ import {setShowLockedFilesBanner} from '../../../redux/workspaceRedux';
  */
 export const useStartModeFileRowOptions = (
   file: ProjectFile,
-  projectHasValidationFile: boolean
+  projectHasValidationFile: boolean,
+  allowMultipleValidationFiles?: boolean
 ) => {
   const dispatch = useAppDispatch();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // setFileType only gets called in start mode. If we are setting a file to
-  // validation or changing a validation file to a non-validation file, also
-  // set the override validation to a passed all tests condition.
-  // This makes it so the progress manager gets updated accordingly and
-  // levelbuilders can run the new validation file and see results.
-  // All files are set to starter by default, so we will catch all new validation
-  // files with this method.
+
   const handleSetFileType = useMemo(
     () => (type: ProjectFileType) => {
-      if (
-        file.type === ProjectFileType.VALIDATION &&
-        type !== ProjectFileType.VALIDATION
-      ) {
-        // If this was a validation file and we are changing it to a non-validation file,
-        // remove the override validation.
-        dispatch(setOverrideValidations([]));
-      } else if (type === ProjectFileType.VALIDATION) {
-        // If the new type is validation, use the passed all tests validation condition.
-        dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
-        // We also now want to show a banner to levelbuilders to remind them to lock any relevent start files.
-        // We only show the banner for 5 seconds.
+      if (type === ProjectFileType.VALIDATION) {
+        // Remind levelbuilders to lock any relevant start files. We only show
+        // the banner for a few seconds.
         dispatch(setShowLockedFilesBanner(true));
         setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
@@ -69,7 +52,10 @@ export const useStartModeFileRowOptions = (
         ? []
         : [
             {
-              condition: !projectHasValidationFile,
+              condition:
+                file.type !== ProjectFileType.VALIDATION &&
+                (!projectHasValidationFile ||
+                  (allowMultipleValidationFiles ?? false)),
               iconName: 'flask',
               labelText: codebridgeI18n.makeValidation(),
               clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
@@ -99,7 +85,13 @@ export const useStartModeFileRowOptions = (
               id: 'uitest-make-locked-starter',
             },
           ],
-    [file.type, isStartMode, handleSetFileType, projectHasValidationFile]
+    [
+      isStartMode,
+      projectHasValidationFile,
+      allowMultipleValidationFiles,
+      file.type,
+      handleSetFileType,
+    ]
   );
 
   return dropdownOptions;
