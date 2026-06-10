@@ -4,12 +4,14 @@ import type {FunctionComponent} from 'react';
 
 import {AUTH_LINKS} from '../../shared/authLinks';
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
-import {headerTriggerBase} from '../../shared/headerMenu';
 
 // Prod renders signed-out auth on the teal bar as plain white text links (13px,
 // weight 400, no border/fill) — not pills. Both links share this style.
 const barAuthLinkSx = {
-  ...headerTriggerBase,
+  '&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
   alignSelf: 'stretch',
   minWidth: 0,
   px: '1rem',

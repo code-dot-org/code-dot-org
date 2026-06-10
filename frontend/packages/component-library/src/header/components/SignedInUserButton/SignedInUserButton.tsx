@@ -11,7 +11,6 @@ import {
   headerMenuItemSx,
   headerMenuListSx,
   headerMenuPaperSx,
-  headerTriggerBase,
 } from '../../shared/headerMenu';
 import type {UserType} from '../../shared/types';
 
@@ -19,7 +18,11 @@ import type {UserType} from '../../shared/types';
  * Account-menu trigger (teal pill with the display name + chevron).
  */
 const accountTriggerSx: SxProps = {
-  ...headerTriggerBase,
+  color: 'var(--neutral-base-white)',
+  '&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
   minWidth: 0,
   height: '35px',
   padding: '6.5px 1rem',

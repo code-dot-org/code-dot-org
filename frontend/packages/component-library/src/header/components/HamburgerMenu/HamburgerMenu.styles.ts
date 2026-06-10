@@ -1,7 +1,7 @@
 import type {SxProps} from '@mui/material/styles';
 
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
-import {headerTriggerBase, MENU_SURFACE} from '../../shared/headerMenu';
+import {MENU_SURFACE} from '../../shared/headerMenu';
 
 /**
  * 3-bar hamburger icon: 25×3px bars with 1px border-radius, 8px gaps. Carries a
@@ -34,7 +34,11 @@ export const barsIconSx: SxProps = {
 
 /** Trigger: always visible (the hamburger shows at every width). */
 export const hamburgerTriggerSx: SxProps = {
-  ...headerTriggerBase,
+  color: 'var(--neutral-base-white)',
+  '&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
   minWidth: 0,
   minHeight: 0,
   // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.

@@ -13,7 +13,6 @@ import {
   headerMenuItemSx,
   headerMenuListSx,
   headerMenuPaperSx,
-  headerTriggerBase,
 } from '../../shared/headerMenu';
 import type {MenuItem as SupportLink} from '../../shared/types';
 
@@ -28,7 +27,11 @@ interface HelpButtonProps {
  * ignores @media) where the unit tests drive it.
  */
 const helpTriggerSx: SxProps = {
-  ...headerTriggerBase,
+  color: 'var(--neutral-base-white)',
+  '&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
   display: 'inline-flex',
   minWidth: 0,
   minHeight: 0,

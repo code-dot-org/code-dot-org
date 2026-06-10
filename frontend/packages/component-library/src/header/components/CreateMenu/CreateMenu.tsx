@@ -8,7 +8,7 @@ import {useId, useState, type FunctionComponent} from 'react';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
-import {headerMenuPaperSx, headerTriggerBase} from '../../shared/headerMenu';
+import {headerMenuPaperSx} from '../../shared/headerMenu';
 
 export interface CreateMenuItem {
   id: string;
@@ -27,7 +27,11 @@ interface CreateMenuProps {
  * query so jsdom (which ignores @media) keeps the button testable.
  */
 const createTriggerSx: SxProps = {
-  ...headerTriggerBase,
+  color: 'var(--neutral-base-white)',
+  '&:focus-visible': {
+    outline: '2px solid var(--text-neutral-inverse)',
+    outlineOffset: '2px',
+  },
   display: 'inline-flex',
   minWidth: 0,
   height: '35px',

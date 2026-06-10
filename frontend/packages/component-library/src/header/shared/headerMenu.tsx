@@ -1,19 +1,6 @@
 import type {CSSObject, SxProps} from '@mui/material/styles';
 
 /**
- * Shared header-trigger styling: white glyph/text on the teal bar plus the
- * brand-inverse focus ring. Spread into each trigger's `sx`; each adds its own
- * specifics (pill border, hover background, breakpoint gate).
- */
-export const headerTriggerBase: CSSObject = {
-  color: 'var(--neutral-base-white)',
-  '&:focus-visible': {
-    outline: '2px solid var(--text-neutral-inverse)',
-    outlineOffset: '2px',
-  },
-};
-
-/**
  * Shared header dropdown-menu styling (Help, Account). Applied to the MUI Menu's
  * paper/list slots and to each MenuItem, each qualified by its MUI class
  * (compound, on-element) so it beats MUI's defaults on specificity regardless of

@@ -49,9 +49,6 @@
     "typecheck": {
       "dependsOn": ["^build", "^typecheck"]
     },
-    "@code-dot-org/component-library#typecheck": {
-      "dependsOn": ["^build", "^typecheck", "build"]
-    },
     "test": {
       "dependsOn": ["^build", "^test"]
     },

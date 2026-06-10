@@ -6,11 +6,7 @@ import logoImage from '@public/images/logo-codeai-inverse.svg';
 import type {Meta, StoryObj} from '@storybook/react-vite';
 import {within, expect, userEvent, waitFor} from 'storybook/test';
 
-// Render the built package (what studio ships), not the relative source.
-// @storybook/react-vite's bundling of the raw source drops the component's MUI
-// sx (var-colored borders, nested `& i` selectors); the dist build — where @mui
-// is external — resolves them. Eyes then snapshots the artifact consumers get.
-import Header from '@code-dot-org/component-library/header';
+import Header from '../index';
 
 export default {
   title: 'DesignSystem/Header',
