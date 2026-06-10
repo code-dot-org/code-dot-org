@@ -70,8 +70,15 @@ SKIP_EYES = 'skip eyes'.freeze
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
-# Use AWS Device Farm instead of SauceLabs for remote browser testing.
-USE_DEVICE_FARM_TAG = 'use device farm'.freeze
+# By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
+# out and falls back to SauceLabs. SauceLabs is automatically selected
+# (without this tag) when any non-Chrome browser tag is present
+# (TEST_FIREFOX_TAG, TEST_SAFARI_TAG, TEST_IPAD_TAG, TEST_IPHONE_TAG,
+# TEST_IOS_TAG, TEST_ALL_BROWSERS_TAG), because the Device Farm path
+# relies on Chrome's --host-resolver-rules to reach puma at
+# localhost-studio.code.org:3000 -- a chromedriver-specific flag we
+# don't have a clean equivalent for in Firefox/Safari.
+USE_SAUCELABS_TAG = 'use saucelabs'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
@@ -123,8 +130,24 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
+    # The Device Farm path requires Chrome (see USE_SAUCELABS_TAG comment),
+    # so auto-fall-back to SauceLabs whenever a non-Chrome browser is tagged.
+    non_chrome_tagged =
+      CI::Utils.tagged?(TEST_FIREFOX_TAG) ||
+      CI::Utils.tagged?(TEST_SAFARI_TAG) ||
+      CI::Utils.tagged?(TEST_IPAD_TAG) ||
+      CI::Utils.tagged?(TEST_IPHONE_TAG) ||
+      CI::Utils.tagged?(TEST_IOS_TAG) ||
+      CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+    if non_chrome_tagged
+      ChatClient.log "Non-Chrome browser tag present; routing UI tests via SauceLabs (Device Farm path only supports Chrome)."
+    elsif CI::Utils.tagged?(USE_SAUCELABS_TAG)
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{USE_SAUCELABS_TAG}], routing UI tests via SauceLabs."
+    end
+    use_device_farm = !(non_chrome_tagged || CI::Utils.tagged?(USE_SAUCELABS_TAG))
     ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
+    # local webdriver only supports Chrome.
+    skip_local_webdriver = CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) || non_chrome_tagged
 
     # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
     needs_sauce_connect = !use_device_farm
@@ -158,9 +181,10 @@ namespace :ci do
       #
       # Use --local to configure the UI tests to run against localhost, and
       # --config to override the local webdriver with the remote provider
-      # (SauceLabs by default, Device Farm under USE_DEVICE_FARM_TAG).
-      # --first-run-local keeps the first attempt on the in-container
-      # chromedriver and only hands off to the remote provider on rerun.
+      # (Device Farm Chrome by default, SauceLabs under [use saucelabs] or any
+      # non-Chrome browser tag). --first-run-local keeps the first attempt on
+      # the in-container chromedriver and only hands off to the remote provider
+      # on rerun.
       RakeUtils.system_stream_output "bundle exec ./runner.rb " \
           "--feature #{container_features.join(',')} " \
           "--local " \
@@ -171,7 +195,7 @@ namespace :ci do
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+          "#{skip_local_webdriver ? '' : '--first-run-local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -187,7 +211,7 @@ namespace :ci do
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+            "#{skip_local_webdriver ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
