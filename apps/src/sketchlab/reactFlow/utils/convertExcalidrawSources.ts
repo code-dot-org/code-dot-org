@@ -19,9 +19,23 @@ import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
 
-// Triangles lost their top handle in #73003. Remap any stored top-* edges
-// on triangle nodes to bottom-* (as a reasonable substitute).
-export function migrateTriangleTopHandles(
+// Triangle handle IDs went through two renames:
+//   original shared with all shape nodes:   left-*, right-*, top-*, bottom-*
+//   triangles updated with 3 handles on sides and renamed: side-left-*, side-right-*, side-bottom-*
+//   triangle's handles renamed to be consistent with other shape nodes: left-*, right-*, bottom-*
+// Remap top-* and ensure names are consistent with other shape nodes.
+const TRIANGLE_HANDLE_MIGRATION: Record<string, string> = {
+  'top-target': 'bottom-target',
+  'top-source': 'bottom-source',
+  'side-left-target': 'left-target',
+  'side-left-source': 'left-source',
+  'side-right-target': 'right-target',
+  'side-right-source': 'right-source',
+  'side-bottom-target': 'bottom-target',
+  'side-bottom-source': 'bottom-source',
+};
+
+export function migrateTriangleHandleIds(
   source: SketchlabReactFlowSource
 ): SketchlabReactFlowSource {
   const triangleIds = new Set(
@@ -37,11 +51,13 @@ export function migrateTriangleTopHandles(
 
   const edges = source.edges.map(edge => {
     const patch: Partial<SketchlabReactFlowEdge> = {};
-    if (triangleIds.has(edge.target) && edge.targetHandle === 'top-target') {
-      patch.targetHandle = 'bottom-target';
+    if (triangleIds.has(edge.target) && edge.targetHandle) {
+      const migrated = TRIANGLE_HANDLE_MIGRATION[edge.targetHandle];
+      if (migrated) patch.targetHandle = migrated;
     }
-    if (triangleIds.has(edge.source) && edge.sourceHandle === 'top-source') {
-      patch.sourceHandle = 'bottom-source';
+    if (triangleIds.has(edge.source) && edge.sourceHandle) {
+      const migrated = TRIANGLE_HANDLE_MIGRATION[edge.sourceHandle];
+      if (migrated) patch.sourceHandle = migrated;
     }
     return Object.keys(patch).length ? {...edge, ...patch} : edge;
   });

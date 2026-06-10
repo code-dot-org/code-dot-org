@@ -34,7 +34,7 @@ import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
-  migrateTriangleTopHandles,
+  migrateTriangleHandleIds,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
 import {handleDownloadSketch} from './utils/handleDownloadSketch';
@@ -204,7 +204,7 @@ function ReactFlowSketchLabViewInner({
         normalized = source as SketchlabReactFlowSource;
       }
       if (normalized) {
-        normalized = migrateTriangleTopHandles(normalized);
+        normalized = migrateTriangleHandleIds(normalized);
       }
       const cloned = normalized ? structuredClone(normalized) : null;
       return {
