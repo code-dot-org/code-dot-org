@@ -94,7 +94,7 @@ describe('HamburgerMenu', () => {
 
   it('exposes the app-nav/support dividers as width-gated separators', async () => {
     await openPanel();
-    const separators = screen.getAllByRole('separator');
+    const separators = [...document.querySelectorAll('li.divider')];
     expect(separators).toHaveLength(2);
     separators.forEach(separator =>
       expect(separator).toHaveClass('mobileOnly'),
@@ -130,7 +130,7 @@ describe('HamburgerMenu', () => {
       screen.getByRole('button', {name: 'Open navigation menu'}),
     );
     await screen.findByText('My Dashboard');
-    expect(screen.queryAllByRole('separator')).toHaveLength(0);
+    expect(document.querySelectorAll('li.divider')).toHaveLength(0);
   });
 
   it('drops the support divider when there are no support links', async () => {
@@ -147,7 +147,7 @@ describe('HamburgerMenu', () => {
     );
     await screen.findByText('Districts');
     // app-nav | global -> a single divider, not two.
-    expect(screen.queryAllByRole('separator')).toHaveLength(1);
+    expect(document.querySelectorAll('li.divider')).toHaveLength(1);
   });
 
   it('still lists Incubator once when no global-nav entry is labeled Donate', async () => {

@@ -73,6 +73,13 @@ export const mobileOnlyItemSx: SxProps = {
   },
 };
 
+/** Signed-out auth rows: shown only below mobileAuth, where the bar hides them. */
+export const mobileAuthOnlyItemSx: SxProps = {
+  [`@media (min-width: ${HEADER_BREAKPOINTS.mobileAuth}px)`]: {
+    display: 'none',
+  },
+};
+
 export const dividerSx: SxProps = {
   height: '1px',
   margin: '0.5rem 0',

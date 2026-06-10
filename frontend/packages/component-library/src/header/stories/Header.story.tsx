@@ -169,6 +169,18 @@ const DESKTOP_LAYOUT_PARAMS = {
   eyes: {browser: {width: 1280, height: 800, name: 'chrome'}},
 };
 
+// Phone viewport exercising the mobile auth behavior: the signed-in pill stays
+// on the bar (prod keeps it visible), while signed-out auth moves to the hamburger.
+const MOBILE_LAYOUT_PARAMS = {
+  viewport: {
+    viewports: {
+      mobile: {name: 'Mobile', styles: {width: '375px', height: '800px'}},
+    },
+    defaultViewport: 'mobile',
+  },
+  eyes: {browser: {width: 375, height: 800, name: 'chrome'}},
+};
+
 export const StudentSignedIn: Story = {
   args: {
     ...BASE,
@@ -356,5 +368,47 @@ export const Hamburger: Story = {
       panel.getBoundingClientRect().right -
       chevron.getBoundingClientRect().right;
     expect(inset).toBeGreaterThanOrEqual(10);
+  },
+};
+
+// Signed-in at phone width: the account pill stays on the bar (prod keeps
+// #header_user_menu visible). Regression guard — it used to be hidden below 768px.
+export const SignedInMobile: Story = {
+  args: {...TEACHER_ARGS},
+  parameters: MOBILE_LAYOUT_PARAMS,
+  play: async ({canvasElement}) => {
+    const account = canvasElement.querySelector(
+      'button[aria-label="Account menu"]',
+    ) as HTMLElement;
+    expect(account).not.toBeNull();
+    expect(account.getBoundingClientRect().width).toBeGreaterThan(0);
+  },
+};
+
+// Signed-out at phone width: the bar Sign in / Create account buttons are hidden
+// (prod hides #sign_in_or_user below 768px); the auth lives in the hamburger
+// instead (prod's #hamburger-sign-up-buttons).
+export const SignedOutMobile: Story = {
+  args: {
+    ...BASE,
+    menuItems: STUDENT_MENU_ITEMS,
+    userAuth: {status: 'signed-out'},
+  },
+  parameters: MOBILE_LAYOUT_PARAMS,
+  play: async ({canvasElement}) => {
+    const barSignIn = canvasElement.querySelector('a[href="/users/sign_in"]');
+    if (barSignIn) {
+      expect(barSignIn.getBoundingClientRect().width).toBe(0);
+    }
+    await userEvent.click(
+      within(canvasElement).getByRole('button', {name: 'Open navigation menu'}),
+    );
+    const drawer = within(document.body);
+    expect(
+      await drawer.findByRole('link', {name: 'Sign in'}),
+    ).toBeInTheDocument();
+    expect(
+      drawer.getByRole('link', {name: 'Create account'}),
+    ).toBeInTheDocument();
   },
 };

@@ -12,7 +12,6 @@ import NavLogo from './components/NavLogo/NavLogo';
 import NavMenu from './components/NavMenu/NavMenu';
 import {UserAuthProp} from './components/SignedInUserButton/SignedInUserButton';
 import UserAuthArea from './components/UserAuthArea/UserAuthArea';
-import {HEADER_BREAKPOINTS} from './shared/breakpoints';
 import type {GlobalNavItem, MenuItem} from './shared/types';
 
 export type {CreateMenuItem};
@@ -49,14 +48,12 @@ const rightClusterSx = {
 // Create + auth share an 8px gap between them, matching prod.
 const createAuthSx = {display: 'flex', alignItems: 'center', gap: 1};
 const hamburgerWrapSx = {flexShrink: 0};
-// Auth area is mobile-first hidden; it appears at the mobileAuth breakpoint.
+// Auth control stays on the bar at every width, matching prod (the legacy
+// #sign_in_or_user account pill / sign-in buttons are visible down to mobile).
 const authAreaSx = {
-  display: 'none',
-  [`@media (min-width:${HEADER_BREAKPOINTS.mobileAuth}px)`]: {
-    display: 'flex',
-    alignSelf: 'stretch',
-    alignItems: 'stretch',
-  },
+  display: 'flex',
+  alignSelf: 'stretch',
+  alignItems: 'stretch',
 };
 
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
@@ -105,6 +102,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                 menuItems={menuItems}
                 globalNavItems={globalNavItems}
                 supportLinks={supportLinks}
+                userAuth={userAuth}
               />
             </Box>
           </Box>

@@ -2,6 +2,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import type {FunctionComponent} from 'react';
 
+import {AUTH_LINKS} from '../../shared/authLinks';
+import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
+
 /** Sign In button — full-height stretch to match prod's header_button anchor style. */
 const signInSx = {
   '&&': {
@@ -50,13 +53,24 @@ const createAccountSx = {
 /** Sign In and Create Account buttons shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
   <Box
-    sx={{display: 'flex', gap: 1, alignSelf: 'stretch', alignItems: 'stretch'}}
+    sx={{
+      // On the bar at >=768px; hidden below (prod hides #sign_in_or_user on
+      // mobile, where the hamburger surfaces these). Authored default-visible
+      // so jsdom (which ignores @media) keeps the buttons testable.
+      display: 'flex',
+      gap: 1,
+      alignSelf: 'stretch',
+      alignItems: 'stretch',
+      [`@media (max-width:${HEADER_BREAKPOINTS.mobileAuth - 1}px)`]: {
+        display: 'none',
+      },
+    }}
   >
-    <Button href="/users/sign_in" disableElevation sx={signInSx}>
+    <Button href={AUTH_LINKS.signIn} disableElevation sx={signInSx}>
       Sign in
     </Button>
     <Button
-      href="/users/sign_up/account_type"
+      href={AUTH_LINKS.createAccount}
       disableElevation
       sx={createAccountSx}
     >

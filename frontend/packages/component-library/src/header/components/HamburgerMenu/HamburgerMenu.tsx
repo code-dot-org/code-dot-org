@@ -12,7 +12,9 @@ import {
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
+import {AUTH_LINKS} from '../../shared/authLinks';
 import type {GlobalNavItem, MenuItem} from '../../shared/types';
+import type {UserAuthProp} from '../SignedInUserButton/SignedInUserButton';
 
 import {
   barsIconSx,
@@ -22,6 +24,7 @@ import {
   hamburgerSectionSx,
   hamburgerTriggerSx,
   linkSx,
+  mobileAuthOnlyItemSx,
   mobileOnlyItemSx,
   popoverSx,
   subListSx,
@@ -34,6 +37,8 @@ interface HamburgerMenuProps {
   globalNavItems: GlobalNavItem[];
   /** Help/support links shown below the top-nav breakpoint. */
   supportLinks: MenuItem[];
+  /** Current auth; when signed-out the drawer surfaces Sign in / Create account below mobileAuth. */
+  userAuth?: UserAuthProp;
 }
 
 /** Shared `name` makes the sections a native exclusive accordion (one open at a time). */
@@ -77,7 +82,7 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavItem}> = ({
  */
 const HamburgerPanel: FunctionComponent<
   HamburgerMenuProps & {newTabId: string}
-> = ({menuItems, globalNavItems, supportLinks, newTabId}) => {
+> = ({menuItems, globalNavItems, supportLinks, userAuth, newTabId}) => {
   // Prod lists Incubator once, in the global-nav region after Donate (not in
   // the app-nav block). Pull it out of `menuItems` unless globalNavItems already
   // supplies one (avoids a double listing), and filter it out of the app nav.
@@ -108,6 +113,23 @@ const HamburgerPanel: FunctionComponent<
 
   return (
     <Box component="ul" sx={hamburgerListSx}>
+      {/* Signed-out auth — shown only below mobileAuth, where the bar hides it
+          (prod's #hamburger-sign-up-buttons). */}
+      {userAuth?.status === 'signed-out' && (
+        <>
+          <Box component="li" sx={mobileAuthOnlyItemSx}>
+            <Box component="a" href={AUTH_LINKS.signIn} sx={linkSx}>
+              Sign in
+            </Box>
+          </Box>
+          <Box component="li" sx={mobileAuthOnlyItemSx}>
+            <Box component="a" href={AUTH_LINKS.createAccount} sx={linkSx}>
+              Create account
+            </Box>
+          </Box>
+        </>
+      )}
+
       {/* App nav — gated below the top-nav breakpoint (prod .show-mobile) */}
       {appNavItems.map(item => (
         <Box
@@ -123,12 +145,7 @@ const HamburgerPanel: FunctionComponent<
       ))}
 
       {showAppNavDivider && (
-        <Box
-          component="li"
-          className="mobileOnly"
-          role="separator"
-          sx={dividerSx}
-        />
+        <Box component="li" className="mobileOnly divider" sx={dividerSx} />
       )}
 
       {/* Support links — gated below the top-nav breakpoint */}
@@ -153,12 +170,7 @@ const HamburgerPanel: FunctionComponent<
       ))}
 
       {showSupportDivider && (
-        <Box
-          component="li"
-          className="mobileOnly"
-          role="separator"
-          sx={dividerSx}
-        />
+        <Box component="li" className="mobileOnly divider" sx={dividerSx} />
       )}
 
       {/* Global site nav — always visible. Incubator (app-nav-gated) is placed
@@ -200,6 +212,7 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
   menuItems,
   globalNavItems,
   supportLinks,
+  userAuth,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -237,6 +250,7 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
           menuItems={menuItems}
           globalNavItems={globalNavItems}
           supportLinks={supportLinks}
+          userAuth={userAuth}
           newTabId={newTabId}
         />
       </Popover>

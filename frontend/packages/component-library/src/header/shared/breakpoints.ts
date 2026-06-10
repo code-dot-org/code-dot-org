@@ -5,7 +5,7 @@
  * (sm/md/lg) — do not fold these into `theme.breakpoints`.
  */
 export const HEADER_BREAKPOINTS = {
-  /** Auth buttons (sign in / create account) appear at this width and above. */
+  /** Signed-out Sign in / Create account sit on the bar at this width and up; below it they move into the hamburger. */
   mobileAuth: 768,
   /** Nav links and help button appear above this width. */
   desktopNav: 1061,
