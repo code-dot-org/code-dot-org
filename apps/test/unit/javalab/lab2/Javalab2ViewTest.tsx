@@ -84,22 +84,29 @@ describe('Javalab2View', () => {
     jest.restoreAllMocks();
   });
 
-  function renderView(initialSources: ProjectSources | undefined) {
-    // Seed the loaded code, as useSource would.
-    store.dispatch(setChannel(channel));
-    store.dispatch(setProjectSource(projectSources));
-    store.dispatch(setProjectSourceLevelId(LEVEL_ID));
-    return render(
+  function viewElement(
+    initialSources: ProjectSources | undefined,
+    viewChannel: Channel
+  ) {
+    return (
       <Provider store={store}>
         <ThemeProvider>
           <Javalab2View
             levelProperties={levelProperties}
             initialSources={initialSources}
-            channel={channel}
+            channel={viewChannel}
           />
         </ThemeProvider>
       </Provider>
     );
+  }
+
+  function renderView(initialSources: ProjectSources | undefined) {
+    // Seed the loaded code, as useSource would.
+    store.dispatch(setChannel(channel));
+    store.dispatch(setProjectSource(projectSources));
+    store.dispatch(setProjectSourceLevelId(LEVEL_ID));
+    return render(viewElement(initialSources, channel));
   }
 
   // The run flow lives in javabuilderRunUtils (mocked); the view's job is
@@ -140,5 +147,33 @@ describe('Javalab2View', () => {
 
     const {needsInitialSourcesSave} = await runFromView();
     expect(needsInitialSourcesSave).toBe(false);
+  });
+
+  it('requests the initial sources save again after a level change', async () => {
+    const {rerender} = renderView(undefined);
+    addSaveSuccessListener.mock.calls[0][0]();
+
+    // A new level brings a new channel (and ProjectManager).
+    rerender(viewElement(undefined, {...channel, id: 'next-level-channel'}));
+
+    const {needsInitialSourcesSave} = await runFromView();
+    expect(needsInitialSourcesSave).toBe(true);
+  });
+
+  it('ignores a save success from the previous level after a level change', async () => {
+    const {rerender} = renderView(undefined);
+    rerender(viewElement(undefined, {...channel, id: 'next-level-channel'}));
+
+    // The previous level's save lands late; it must not mark the new level saved.
+    const staleOnSaveSuccess = addSaveSuccessListener.mock.calls[0][0];
+    staleOnSaveSuccess();
+
+    expect((await runFromView()).needsInitialSourcesSave).toBe(true);
+
+    // A save on the new level's manager does count.
+    const onSaveSuccess = addSaveSuccessListener.mock.calls[1][0];
+    onSaveSuccess();
+
+    expect((await runFromView()).needsInitialSourcesSave).toBe(false);
   });
 });

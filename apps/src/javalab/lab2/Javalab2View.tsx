@@ -173,14 +173,24 @@ const Javalab2View: React.FunctionComponent<
   // We track first save so we know whether handleRunClick needs to force a save
   // before running. We need to ensure the user has saved at least once before
   // running so their code is in S3 for Javabuilder to read.
+  // Each level has its own channel and ProjectManager, so re-register (and
+  // reset) per channel; the stale guard keeps a save from the previous
+  // level's manager from marking the new level saved.
   const initialSourcesSaved = useRef(false);
   useEffect(() => {
+    initialSourcesSaved.current = false;
+    let stale = false;
     Lab2Registry.getInstance()
       .getProjectManager()
       ?.addSaveSuccessListener(() => {
-        initialSourcesSaved.current = true;
+        if (!stale) {
+          initialSourcesSaved.current = true;
+        }
       });
-  }, []);
+    return () => {
+      stale = true;
+    };
+  }, [channel?.id]);
 
   const onRun = async (
     runTests: boolean,
