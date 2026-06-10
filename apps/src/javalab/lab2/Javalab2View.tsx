@@ -180,13 +180,15 @@ const Javalab2View: React.FunctionComponent<
   useEffect(() => {
     initialSourcesSaved.current = false;
     let stale = false;
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.addSaveSuccessListener(() => {
-        if (!stale) {
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.addSaveSuccessListener(() => {
+        // Ensure a new version was actually saved by checking for a version id.
+        if (!stale && projectManager.getCurrentVersionId()) {
           initialSourcesSaved.current = true;
         }
       });
+    }
     return () => {
       stale = true;
     };
