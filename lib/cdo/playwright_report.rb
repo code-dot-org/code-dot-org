@@ -18,6 +18,7 @@ module Cdo
       '.js' => 'text/javascript',
       '.css' => 'text/css',
       '.json' => 'application/json',
+      '.md' => 'text/plain',
       '.png' => 'image/png',
       '.jpeg' => 'image/jpeg',
       '.jpg' => 'image/jpeg',
