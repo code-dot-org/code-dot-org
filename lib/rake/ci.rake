@@ -63,9 +63,12 @@ TEST_IOS_TAG = 'test ios'
 # Run UI tests against all browsers
 TEST_ALL_BROWSERS_TAG = 'test all browsers'
 
-# Browser tags that force UI tests onto SauceLabs. The Device Farm path only
-# supports Chrome (see USE_SAUCELABS_TAG), so the presence of any of these
-# tags routes UI tests to SauceLabs.
+# Browser tags that force UI tests onto SauceLabs, because Device Farm requires
+# Chrome in CI.
+#
+# The CI codepath for Device Farm relies on Chrome's --host-resolver-rules to
+# reach puma at localhost-studio.code.org:3000, which is a chromedriver-specific
+# flag we don't have a clean equivalent for in Firefox/Safari.
 NON_CHROME_TAGS = [
   TEST_FIREFOX_TAG,
   TEST_SAFARI_TAG,
@@ -85,11 +88,7 @@ SKIP_EYES = 'skip eyes'
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'
 
 # By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
-# out and falls back to SauceLabs. SauceLabs is automatically selected
-# (without this tag) when any of the NON_CHROME_TAGS is present, because the
-# Device Farm path relies on Chrome's --host-resolver-rules to reach puma at
-# localhost-studio.code.org:3000 -- a chromedriver-specific flag we
-# don't have a clean equivalent for in Firefox/Safari.
+# out and falls back to SauceLabs.
 USE_SAUCELABS_TAG = 'use saucelabs'
 
 # Maximum parallel browsers to use for UI and eyes tests
@@ -142,8 +141,6 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    # The Device Farm path requires Chrome (see USE_SAUCELABS_TAG comment),
-    # so auto-fall-back to SauceLabs whenever a non-Chrome browser is tagged.
     non_chrome_tagged = NON_CHROME_TAGS.any? {|t| CI::Utils.tagged?(t)}
     if non_chrome_tagged
       ChatClient.log "Non-Chrome browser tag present; routing UI tests via SauceLabs (Device Farm path only supports Chrome)."
