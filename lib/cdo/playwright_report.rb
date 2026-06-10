@@ -22,7 +22,9 @@ module Cdo
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
-      uploader = AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
+      # Absolute ::AWS — inside module Cdo, a bare AWS resolves to Cdo::AWS
+      # (defined by cdo/aws/* siblings) and would miss the top-level uploader.
+      uploader = ::AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
       index_url = nil
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
