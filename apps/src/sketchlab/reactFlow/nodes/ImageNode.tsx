@@ -9,7 +9,7 @@ import ConnectionHandles from './ConnectionHandles';
 
 import styles from './image-node.module.scss';
 
-function ImageNode({data, selected}: NodeProps<ImageNodeType>) {
+function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
   const {src, altText} = data;
   const connection = useConnection();
   const isAnchorDragging = useIsAnchorDragging();
@@ -37,7 +37,7 @@ function ImageNode({data, selected}: NodeProps<ImageNodeType>) {
         />
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
     </div>
   );
 }
