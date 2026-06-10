@@ -40,11 +40,7 @@ import {
   type ToolbarTarget,
 } from '../context';
 import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
-import {
-  DEFAULT_EDGE_TYPE,
-  DEFAULT_LINE_WIDTH,
-  DEFAULT_STROKE_COLOR,
-} from '../elementToolbars/toolbarPalettes';
+import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -89,6 +85,14 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
+
+// Fallbacks for edges that don't specify type/style, kept in sync with the
+// fields a new line gets. markerEnd is intentionally omitted so edges saved
+// without an explicit marker don't gain arrows.
+const DEFAULT_EDGE_OPTIONS = {
+  type: defaultLineEdgeFields().type,
+  style: defaultLineEdgeFields().style,
+};
 
 function stripDisplayFields<T extends object>(item: T): T {
   const result = {...item} as Record<string, unknown>;
@@ -840,13 +844,7 @@ export default function ReactFlowCanvas({
                     disableKeyboardA11y={false}
                     autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
                     zIndexMode={'manual'}
-                    defaultEdgeOptions={{
-                      type: DEFAULT_EDGE_TYPE,
-                      style: {
-                        stroke: DEFAULT_STROKE_COLOR,
-                        strokeWidth: DEFAULT_LINE_WIDTH,
-                      },
-                    }}
+                    defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
                     defaultMarkerColor={DEFAULT_STROKE_COLOR}
                   >
                     <CornerToolbarPanel

@@ -3,20 +3,19 @@ import {
   getBezierPath,
   getSmoothStepPath,
   getStraightPath,
+  useStore,
 } from '@xyflow/react';
+import {getMarkerId} from '@xyflow/system';
 import React from 'react';
 
 import {useReconnectingEdge} from '../context';
-import {
-  DEFAULT_EDGE_TYPE,
-  DEFAULT_LINE_WIDTH,
-  DEFAULT_STROKE_COLOR,
-} from '../elementToolbars/toolbarPalettes';
+import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 /**
- * Ghost line shown while dragging a connection. Mirrors the path type and
- * stroke styling of the edge being reconnected (or the defaults a new line
- * will get) so the line doesn't change shape when the drag lands.
+ * Ghost line shown while dragging a connection. Mirrors the path type,
+ * stroke styling, and arrow marker of the edge being reconnected (or the
+ * defaults a new line will get) so the line doesn't change appearance when
+ * the drag lands.
  */
 export default function ConnectionLine({
   fromX,
@@ -25,13 +24,20 @@ export default function ConnectionLine({
   toY,
   fromPosition,
   toPosition,
+  fromHandle,
 }: ConnectionLineComponentProps) {
   const reconnectingEdge = useReconnectingEdge();
-  const edgeType = reconnectingEdge?.type ?? DEFAULT_EDGE_TYPE;
-  const style = reconnectingEdge?.style ?? {
-    stroke: DEFAULT_STROKE_COLOR,
-    strokeWidth: DEFAULT_LINE_WIDTH,
-  };
+  // React Flow prefixes marker ids with the flow's id.
+  const flowId = useStore(state => state.rfId);
+  const defaults = defaultLineEdgeFields();
+  const edgeType = reconnectingEdge?.type ?? defaults.type;
+  const style = reconnectingEdge?.style ?? defaults.style;
+  const marker = reconnectingEdge?.markerEnd ?? defaults.markerEnd;
+
+  const markerUrl = marker
+    ? `url('#${getMarkerId(marker, flowId)}')`
+    : undefined;
+  const arrowAtStart = fromHandle.type === 'target';
 
   const pathParams = {
     sourceX: fromX,
@@ -63,6 +69,8 @@ export default function ConnectionLine({
       fill="none"
       className="react-flow__connection-path"
       style={style}
+      markerStart={arrowAtStart ? markerUrl : undefined}
+      markerEnd={arrowAtStart ? undefined : markerUrl}
     />
   );
 }
