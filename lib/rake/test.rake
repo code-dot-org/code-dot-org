@@ -134,15 +134,21 @@ namespace :test do
   # TODO: provision Playwright browsers via chef instead of installing at runtime.
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'] || CDO.studio_url('')
+    script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
     ChatClient.log "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}..."
-    status = RakeUtils.system_with_chat_logging(
-      "TARGET_URL=#{target_url}",
-      frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
-    )
-    report_dir = frontend_dir('packages', 'e2e-tests', 'playwright-report')
-    report_url = Cdo::PlaywrightReport.upload(report_dir)
+    # Stream the suite's output (the list reporter, banner, warnings) straight to
+    # the log via system_stream_output (system_with_chat_logging would capture and
+    # discard it). Rescue its non-zero raise so the run stays non-blocking.
+    passed =
+      begin
+        RakeUtils.system_stream_output("TARGET_URL=#{target_url}", script)
+        true
+      rescue StandardError
+        false
+      end
+    report_url = Cdo::PlaywrightReport.upload(frontend_dir('packages', 'e2e-tests', 'playwright-report'))
     report_link = report_url ? %( See <a href="#{report_url}">the HTML report</a>.) : ''
-    if status == 0
+    if passed
       ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
     else
       ChatClient.log "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}", color: 'red'
