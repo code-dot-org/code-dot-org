@@ -508,7 +508,7 @@ export default function ReactFlowCanvas({
         return {
           ...edge,
           selected,
-          ...(locked && {deletable: false}),
+          deletable: !locked && !readOnly,
           ariaLabel: getEdgeLabel(
             edge,
             nodeMap,
