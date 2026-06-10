@@ -315,7 +315,7 @@ export const createLearnHowToEvaluateProgressSteps = (
       id: CFU_STEP_ID,
       attachTo: {element: CFU_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        "Before you look at their code, see what they understood or didn't.  Their answeres here often relveal the misonception underneath the bug"
+        "Before you look at their code, see what they understood or didn't. Their answers here often reveal the misconception underneath the bug."
       ),
       buttons: [nextButton(tour)],
       beforeShowPromise: () =>

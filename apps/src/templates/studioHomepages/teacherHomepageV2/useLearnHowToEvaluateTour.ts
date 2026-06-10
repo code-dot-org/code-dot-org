@@ -18,7 +18,7 @@ export {
 
 // Returns true when the tour has navigated to the Student Snapshot page and
 // is waiting to show the snapshot-page steps.  Used by StudentSnapshot to
-// know it should auto-select a lesson and student.
+// know it should auto-select a lesson.
 export const isLearnToEvaluateTourOnSnapshotPage = (): boolean => {
   const saved = tryGetSessionStorage(
     LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
