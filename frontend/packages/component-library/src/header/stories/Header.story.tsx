@@ -300,6 +300,7 @@ export const SignedOut: Story = {
   args: {
     ...BASE,
     menuItems: [],
+    createMenuItems: undefined,
     userAuth: {status: 'signed-out'},
   },
 };
@@ -392,6 +393,7 @@ export const SignedOutMobile: Story = {
   args: {
     ...BASE,
     menuItems: [],
+    createMenuItems: undefined,
     userAuth: {status: 'signed-out'},
   },
   parameters: MOBILE_LAYOUT_PARAMS,
