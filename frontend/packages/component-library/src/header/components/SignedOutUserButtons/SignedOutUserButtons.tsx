@@ -19,7 +19,9 @@ const pillBaseSx = {
   textTransform: 'none' as const,
   whiteSpace: 'nowrap',
   boxShadow: 'none',
-  '&:focus-visible': {
+  // && beats the theme's `a&:focus-visible` teal ring (these pills render as
+  // <a href>), so the focus outline stays the inverse-white that shows on the bar.
+  '&&:focus-visible': {
     outline: '2px solid var(--text-neutral-inverse)',
     outlineOffset: '2px',
   },

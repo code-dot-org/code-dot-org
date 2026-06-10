@@ -51,6 +51,56 @@ describe('Header', () => {
     expect(screen.queryByText('Alice')).not.toBeInTheDocument();
   });
 
+  it('shows the global nav on the bar when there is no app nav (signed out)', () => {
+    render(
+      <Header
+        {...BASE_PROPS}
+        menuItems={[]}
+        globalNavItems={[
+          {label: 'Districts', href: '//code.org/administrators'},
+          {
+            label: 'Teach',
+            subItems: [{label: 'Educator Overview', href: '//code.org/teach'}],
+          },
+        ]}
+        userAuth={{status: 'signed-out'}}
+      />,
+    );
+    // Hamburger is closed, so these resolve to the top-bar NavMenu. A group links
+    // to its overview (the first sub-item's href).
+    expect(
+      screen.getByRole('link', {name: 'Districts', hidden: true}),
+    ).toHaveAttribute('href', '//code.org/administrators');
+    expect(
+      screen.getByRole('link', {name: 'Teach', hidden: true}),
+    ).toHaveAttribute('href', '//code.org/teach');
+  });
+
+  it('keeps hamburgerOnly global nav entries off the bar', () => {
+    render(
+      <Header
+        {...BASE_PROPS}
+        menuItems={[]}
+        globalNavItems={[
+          {label: 'Districts', href: '//code.org/administrators'},
+          {
+            label: 'Privacy & Legal',
+            hamburgerOnly: true,
+            subItems: [{label: 'Privacy Policy', href: '//code.org/privacy'}],
+          },
+        ]}
+        userAuth={{status: 'signed-out'}}
+      />,
+    );
+    expect(
+      screen.getByRole('link', {name: 'Districts', hidden: true}),
+    ).toBeInTheDocument();
+    // Legal lives in the hamburger (closed here), never on the bar.
+    expect(
+      screen.queryByRole('link', {name: 'Privacy & Legal', hidden: true}),
+    ).not.toBeInTheDocument();
+  });
+
   it('renders brand and menu items in every auth state', () => {
     const states = [
       {

@@ -33,9 +33,7 @@ export default function SiteHeader() {
       brandName={BRAND_NAME}
       menuItems={menuItems}
       userAuth={auth}
-      createMenuItems={
-        auth.status === 'signed-in' ? CREATE_MENU_ITEMS : undefined
-      }
+      createMenuItems={CREATE_MENU_ITEMS}
       globalNavItems={GLOBAL_NAV}
       supportLinks={supportLinks}
     />

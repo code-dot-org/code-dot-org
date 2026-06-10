@@ -126,6 +126,7 @@ export const GLOBAL_NAV: GlobalNavItem[] = [
   {label: 'Districts', href: '//code.org/administrators'},
   {label: 'Stats', href: '//code.org/promote'},
   {label: 'Donate', href: '//code.org/donate'},
+  {label: 'Incubator', href: '//code.org/incubator'},
   {
     label: 'About',
     subItems: [
@@ -140,8 +141,11 @@ export const GLOBAL_NAV: GlobalNavItem[] = [
       {label: 'FAQs', href: '//code.org/faq'},
     ],
   },
+  // Legal lives in the hamburger drawer only (matches the legacy header's "Legal"
+  // expander); the top bar never shows it.
   {
     label: 'Privacy & Legal',
+    hamburgerOnly: true,
     subItems: [
       {label: 'Privacy Policy', href: '//code.org/privacy'},
       {label: 'Cookie Notice', href: '//code.org/cookies'},

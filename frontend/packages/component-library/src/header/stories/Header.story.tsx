@@ -106,6 +106,7 @@ const GLOBAL_NAV_ITEMS = [
   {label: 'Districts', href: '//code.org/administrators'},
   {label: 'Stats', href: '//code.org/promote'},
   {label: 'Donate', href: '//code.org/donate'},
+  {label: 'Incubator', href: '//code.org/incubator'},
   {
     label: 'About',
     subItems: [
@@ -122,6 +123,7 @@ const GLOBAL_NAV_ITEMS = [
   },
   {
     label: 'Privacy & Legal',
+    hamburgerOnly: true,
     subItems: [
       {label: 'Privacy Policy', href: '//code.org/privacy'},
       {label: 'Cookie Notice', href: '//code.org/cookies'},
@@ -295,14 +297,37 @@ export const SignedInLongName: Story = {
   },
 };
 
+// Signed-out matches the legacy header: marketing nav + New project on the bar,
+// Sign in / Create account pills, legal in the hamburger only.
+// focus-visible (F-5): keyboard-tabbing to the Sign in pill engages the
+// inverse-white focus ring. The pills render as <a>, so the theme's teal
+// a&:focus-visible rule wins unless the sx specificity is bumped (&&).
 export const SignedOut: Story = {
   args: {
     ...BASE,
     menuItems: [],
-    createMenuItems: undefined,
     userAuth: {status: 'signed-out'},
   },
   parameters: RESPONSIVE_EYES,
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+
+    const probe = document.createElement('div');
+    probe.style.color = 'var(--text-neutral-inverse)';
+    canvasElement.appendChild(probe);
+    const inverse = getComputedStyle(probe).color;
+    probe.remove();
+
+    const signIn = canvas.getByRole('link', {name: 'Sign in'});
+    canvasElement.querySelector('a')?.focus();
+    for (let i = 0; i < 18 && document.activeElement !== signIn; i++) {
+      await userEvent.tab();
+    }
+    expect(document.activeElement).toBe(signIn);
+    expect(signIn.matches(':focus-visible')).toBe(true);
+    expect(getComputedStyle(signIn).outlineColor).toBe(inverse);
+    signIn.blur();
+  },
 };
 
 export const Loading: Story = {

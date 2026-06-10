@@ -66,6 +66,18 @@ const Header: FunctionComponent<HeaderProps> = ({
   globalNavItems = [],
   supportLinks = [],
 }) => {
+  // Top bar nav: the app nav when signed in; when there's no app nav (signed
+  // out), the site nav flattened to links — a group links to its overview (its
+  // first sub-item's href) — matching prod's signed-out bar.
+  const barNavItems: MenuItem[] = menuItems.length
+    ? menuItems
+    : globalNavItems
+        .filter(item => !item.hamburgerOnly)
+        .map(item => ({
+          label: item.label,
+          href: item.href ?? item.subItems?.[0]?.href ?? '#',
+        }));
+
   return (
     <Box component="header">
       <AppBar
@@ -77,7 +89,7 @@ const Header: FunctionComponent<HeaderProps> = ({
       >
         <Toolbar variant="dense" disableGutters sx={toolbarSx}>
           <NavLogo logoImageUrl={logoImageUrl} brandName={brandName} />
-          <NavMenu menuItems={menuItems} />
+          <NavMenu menuItems={barNavItems} />
 
           {/* Flex spacer pushes right items to the edge */}
           <Box sx={spacerSx} />
