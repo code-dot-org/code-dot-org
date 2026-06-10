@@ -4,9 +4,9 @@
 # pipeline (docker/ci/scripts/ui_tests.sh) and the DTT `test:playwright_ui` rake
 # task (lib/rake/test.rake) so the run and its messaging live in one place.
 #
-# Browsers: baked into the Drone CI image (docker/ci/Dockerfile, at
-# PLAYWRIGHT_BROWSERS_PATH) so the install below no-ops there; on the
-# long-running DTT test daemon the install below provisions them at runtime.
+# Browsers: baked into the Drone CI image (docker/ci/Dockerfile), so in CI the
+# install below is skipped; on the long-running DTT test daemon (off CI) the
+# install below provisions them at runtime.
 #
 # Reads the target deployment from $TARGET_URL (e.g.
 # http://localhost-studio.code.org:3000 for Drone, the test env for DTT) and
@@ -26,9 +26,13 @@ trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
 echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
 
 yarn install --immutable
-# Best-effort: a fast no-op on the baked Drone image, the real install on the
-# DTT daemon. install-deps needs root/apt — guard it so the run still proceeds
-# where the system libraries are already present.
-yarn exec playwright install-deps chromium firefox webkit || echo "WARN: playwright install-deps failed; continuing"
-yarn exec playwright install chromium firefox webkit
+# In CI (Drone) the browsers are baked into the image, so skip the install —
+# re-running install-deps hits apt every build, a needless flake/hang source.
+# Off CI (the DTT daemon) install them at runtime; install-deps needs root/apt,
+# so guard it best-effort. $CI is the repo's CI signal (prepare_ci_env.sh sets
+# it; CI::Utils.running_on_ci? reads it).
+if [ -z "${CI:-}" ]; then
+  yarn exec playwright install-deps chromium firefox webkit || echo "WARN: playwright install-deps failed; continuing"
+  yarn exec playwright install chromium firefox webkit
+fi
 yarn run test:ui:ci
