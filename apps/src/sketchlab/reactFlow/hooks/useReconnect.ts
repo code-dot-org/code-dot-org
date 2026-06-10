@@ -100,9 +100,14 @@ export function useReconnect({
         dropPosition = screenToFlowPosition(clientPosition);
       }
 
+      // React Flow reports the type of the handle that stayed fixed during
+      // the reconnect (it draws the drag as a new connection from that
+      // end), so the endpoint the user dragged is the opposite side.
+      const draggedSide: HandleType =
+        handleType === 'source' ? 'target' : 'source';
       const {anchor, edgePatch} = attachEdgeToFreshAnchor(
         dropPosition,
-        handleType
+        draggedSide
       );
       setNodes(currentNodes => [...currentNodes, anchor]);
       setEdges(currentEdges =>
