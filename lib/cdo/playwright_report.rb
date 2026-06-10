@@ -45,7 +45,11 @@ module Cdo
         url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type(path))
         end
-        index_url = url if name == 'index.html'
+        # Return the unversioned URL: the report SPA resolves sibling data/
+        # attachments relative to its own URL, so a ?versionId= (which belongs
+        # to index.html) leaks onto those requests and 404s. The bare key serves
+        # the latest upload, matching the overwrite-per-run behavior anyway.
+        index_url = url.split('?', 2).first if name == 'index.html'
       end
       index_url
     rescue StandardError => exception
