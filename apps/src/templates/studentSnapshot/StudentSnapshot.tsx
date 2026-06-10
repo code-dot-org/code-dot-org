@@ -84,7 +84,9 @@ const StudentSnapshot: React.FC = () => {
           .unitPosition
       : null
   );
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const {selectedStudents, demoPresets} = useAppSelector(
+    state => state.teacherSections
+  );
 
   const aiTaEnabled = useAppSelector(
     state => state.currentUser.aiDifferentiationEnabled
@@ -112,15 +114,14 @@ const StudentSnapshot: React.FC = () => {
           // page, pre-select the lesson that the tour is focused on (which may not be the first lesson in the unit, depending on the section's demo type).
           if (isLearnToEvaluateTourOnSnapshotPage()) {
             const lessonList = lessonsData.lessons;
-            // TODO: Put in official lesson positions when available.
-            const tourLessonIndex =
-              sectionDemoType === 'high'
-                ? 1
-                : sectionDemoType === 'middle'
-                ? 3
-                : 0;
+            const defaultTourLesson = sectionDemoType
+              ? demoPresets[sectionDemoType]
+                  ?.studentSnapshotDefaultTourLesson ?? null
+              : null;
             const targetLesson =
-              lessonList[tourLessonIndex] ??
+              (defaultTourLesson !== null
+                ? lessonList.find(l => l.position === defaultTourLesson)
+                : null) ??
               lessonList[lessonList.length - 1] ??
               null;
             if (targetLesson) setSelectedLessonId(targetLesson.id);
@@ -142,6 +143,7 @@ const StudentSnapshot: React.FC = () => {
     sectionCourseId,
     selectedUnitPosition,
     sectionDemoType,
+    demoPresets,
   ]);
 
   return (

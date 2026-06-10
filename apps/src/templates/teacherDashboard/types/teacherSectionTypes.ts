@@ -75,6 +75,7 @@ export interface DemoPresetView {
   participantType: NonNullable<Section['participantType']>;
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
+  studentSnapshotDefaultTourLesson: number | null;
 }
 
 type Course = {
@@ -184,6 +185,7 @@ export interface ServerDemoPresetView {
   participant_type: NonNullable<Section['participantType']>;
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
+  student_snapshot_default_tour_lesson: number | null;
 }
 
 //TODO: better types here

@@ -17,6 +17,7 @@ class Policies::DemoSections
       avatar_color: 2,
       avatar_emoji: 10,
       ai_chat_access_level: 'essential_only',
+      student_snapshot_default_tour_lesson: 1,
     }.freeze,
     middle: {
       section_name: 'Middle School Practice Section',
@@ -29,6 +30,7 @@ class Policies::DemoSections
       avatar_color: 1,
       avatar_emoji: 0,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 3,
     }.freeze,
     high: {
       section_name: 'High School Practice Section',
@@ -41,6 +43,7 @@ class Policies::DemoSections
       avatar_color: 8,
       avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 1,
     }.freeze,
   }.freeze
 
@@ -73,6 +76,7 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
+      student_snapshot_default_tour_lesson: preset[:student_snapshot_default_tour_lesson],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,
