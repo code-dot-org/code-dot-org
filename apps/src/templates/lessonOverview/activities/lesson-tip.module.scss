@@ -17,25 +17,27 @@
   cursor: pointer;
 }
 
-// The tab's foreground/background swap on expand and invert on hover. White is
-// kept as a literal pending its own migration; --tip-primary is set per tip type.
+// The tab's foreground/background swap on expand and invert on hover.
+// --tip-primary is the per-tip-type strong color; it pairs against the neutral
+// surface (--background-neutral-primary) and inverse text (--text-neutral-inverse)
+// tokens, which both resolve to white in light mode and flip together in dark.
 .tab.expanded {
   background-color: var(--tip-primary);
-  color: #fff;
+  color: var(--text-neutral-inverse);
 
   &:hover {
-    background-color: #fff;
+    background-color: var(--background-neutral-primary);
     color: var(--tip-primary);
   }
 }
 
 .tab.collapsed {
-  background-color: #fff;
+  background-color: var(--background-neutral-primary);
   color: var(--tip-primary);
 
   &:hover {
     background-color: var(--tip-primary);
-    color: #fff;
+    color: var(--text-neutral-inverse);
   }
 }
 
