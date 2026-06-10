@@ -295,12 +295,11 @@ const markdownToReactExternalLinks = (rehypeMap, localized) => {
     // We use `()` to get a new unfrozen "copy" of the processor created
     // (or returned from cache) by `markdownToReact(rehypeMap)`.
     // See: https://github.com/unifiedjs/unified?tab=readme-ov-file#processor
-    const processor = markdownToReact(rehypeMap)().use(
+    const processor = markdownToReact(rehypeMap, localized)().use(
       externalLinks,
       {
         links: 'all',
-      },
-      localized
+      }
     );
     cache.set(rehypeMap, processor);
   }
@@ -319,12 +318,11 @@ const markdownToReactWithEmbedsAndExternalLinks = (rehypeMap, localized) => {
     : markdownProcessorWithEmbedsAndExternalLinksCache;
 
   if (!cache.has(rehypeMap)) {
-    const processor = markdownToReactWithEmbeds(rehypeMap)().use(
+    const processor = markdownToReactWithEmbeds(rehypeMap, localized)().use(
       externalLinks,
       {
         links: 'all',
-      },
-      localized
+      }
     );
     cache.set(rehypeMap, processor);
   }
