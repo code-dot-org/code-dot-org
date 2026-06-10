@@ -21,6 +21,7 @@ import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
 import externalLinks from './plugins/externalLinks';
 import localizeMarkdownParagraphs from './plugins/localizeMarkdownParagraphs';
+import notranslateMarkdownParagraphs from './plugins/notranslateMarkdownParagraphs';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -225,7 +226,7 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema, localized) => {
 
   const possiblyLocalized = localized
     ? preface.use(localizeMarkdownParagraphs)
-    : preface;
+    : preface.use(notranslateMarkdownParagraphs);
 
   return possiblyLocalized.use(rehypeReact, {
     createElement: React.createElement,
