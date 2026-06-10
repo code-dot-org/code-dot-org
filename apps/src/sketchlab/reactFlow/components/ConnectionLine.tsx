@@ -1,5 +1,6 @@
 import {
   type ConnectionLineComponentProps,
+  type EdgeMarkerType,
   getBezierPath,
   getSmoothStepPath,
   getStraightPath,
@@ -32,12 +33,21 @@ export default function ConnectionLine({
   const defaults = defaultLineEdgeFields();
   const edgeType = reconnectingEdge?.type ?? defaults.type;
   const style = reconnectingEdge?.style ?? defaults.style;
-  const marker = reconnectingEdge?.markerEnd ?? defaults.markerEnd;
+  // When reconnecting, mirror the edge's own markers — including their
+  // absence; the default arrow applies only to brand-new lines.
+  const sourceMarker = reconnectingEdge?.markerStart;
+  const targetMarker = reconnectingEdge
+    ? reconnectingEdge.markerEnd
+    : defaults.markerEnd;
 
-  const markerUrl = marker
-    ? `url('#${getMarkerId(marker, flowId)}')`
-    : undefined;
-  const arrowAtStart = fromHandle.type === 'target';
+  const markerUrl = (marker?: EdgeMarkerType) =>
+    marker ? `url('#${getMarkerId(marker, flowId)}')` : undefined;
+
+  // The ghost runs from the fixed endpoint to the pointer, so when the
+  // fixed endpoint is the target, the edge's markers render swapped.
+  const fixedEndIsTarget = fromHandle.type === 'target';
+  const startMarker = fixedEndIsTarget ? targetMarker : sourceMarker;
+  const endMarker = fixedEndIsTarget ? sourceMarker : targetMarker;
 
   const pathParams = {
     sourceX: fromX,
@@ -69,8 +79,8 @@ export default function ConnectionLine({
       fill="none"
       className="react-flow__connection-path"
       style={style}
-      markerStart={arrowAtStart ? markerUrl : undefined}
-      markerEnd={arrowAtStart ? undefined : markerUrl}
+      markerStart={markerUrl(startMarker)}
+      markerEnd={markerUrl(endMarker)}
     />
   );
 }
