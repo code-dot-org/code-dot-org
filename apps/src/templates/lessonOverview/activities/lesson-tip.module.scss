@@ -8,7 +8,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-width: 1px;
-  border-color: var(--tip-color);
+  border-color: var(--tip-border);
   padding: 5px 10px;
   width: 200px;
   display: flex;
@@ -18,23 +18,23 @@
 }
 
 // The tab's foreground/background swap on expand and invert on hover. White is
-// kept as a literal pending its own migration; --tip-color is set per tip type.
+// kept as a literal pending its own migration; --tip-primary is set per tip type.
 .tab.expanded {
-  background-color: var(--tip-color);
+  background-color: var(--tip-primary);
   color: #fff;
 
   &:hover {
     background-color: #fff;
-    color: var(--tip-color);
+    color: var(--tip-primary);
   }
 }
 
 .tab.collapsed {
   background-color: #fff;
-  color: var(--tip-color);
+  color: var(--tip-primary);
 
   &:hover {
-    background-color: var(--tip-color);
+    background-color: var(--tip-primary);
     color: #fff;
   }
 }
@@ -42,8 +42,8 @@
 .box {
   border-style: solid;
   border-width: 1px;
-  border-color: var(--tip-color);
-  background-color: var(--tip-bg);
+  border-color: var(--tip-border);
+  background-color: var(--tip-secondary);
   padding: 10px;
 }
 

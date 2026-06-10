@@ -13,32 +13,38 @@ export const tipTypes = {
     displayName: i18n.teachingTip(),
     icon: 'lightbulb',
     iconStyle: 'regular',
-    color: 'var(--background-accent-orange-strong)',
-    backgroundColor: 'var(--background-accent-orange-light)',
+    primaryColor: 'var(--background-accent-orange-strong)',
+    secondaryColor: 'var(--background-accent-orange-light)',
+    // Orange has no analogous border token, so reuse the accent strong color.
+    borderColor: 'var(--background-accent-orange-strong)',
   },
   contentCorner: {
     displayName: i18n.contentCorner(),
     icon: 'graduation-cap',
-    color: 'var(--background-brand-teal-strong)',
-    backgroundColor: 'var(--background-brand-teal-extra-light)',
+    primaryColor: 'var(--background-brand-teal-strong)',
+    secondaryColor: 'var(--background-brand-teal-extra-light)',
+    borderColor: 'var(--borders-brand-teal-strong)',
   },
   discussionGoal: {
     displayName: i18n.discussionGoal(),
     icon: 'comments',
-    color: 'var(--background-brand-purple-strong)',
-    backgroundColor: 'var(--background-brand-purple-extra-light)',
+    primaryColor: 'var(--background-brand-purple-strong)',
+    secondaryColor: 'var(--background-brand-purple-extra-light)',
+    borderColor: 'var(--borders-brand-purple-strong)',
   },
   assessmentOpportunity: {
     displayName: i18n.assessmentOpportunity(),
     icon: 'check-circle',
-    color: 'var(--background-brand-purple-strong)',
-    backgroundColor: 'var(--background-brand-purple-extra-light)',
+    primaryColor: 'var(--background-brand-purple-strong)',
+    secondaryColor: 'var(--background-brand-purple-extra-light)',
+    borderColor: 'var(--borders-brand-purple-strong)',
   },
   ethicsOpportunity: {
     displayName: i18n.ethicsOpportunity(),
     icon: 'head-side-heart',
-    color: 'var(--background-info-strong)',
-    backgroundColor: 'var(--background-info-extra-light)',
+    primaryColor: 'var(--background-info-strong)',
+    secondaryColor: 'var(--background-info-extra-light)',
+    borderColor: 'var(--borders-info-strong)',
   },
 };
 
@@ -55,8 +61,9 @@ class LessonTip extends Component {
     const {expanded} = this.state;
     const caretIcon = expanded ? 'caret-up' : 'caret-down';
     const {
-      color: tipColor,
-      backgroundColor,
+      primaryColor,
+      secondaryColor,
+      borderColor,
       icon,
       iconStyle,
       displayName,
@@ -64,7 +71,11 @@ class LessonTip extends Component {
     return (
       <div
         className={styles.tip}
-        style={{'--tip-color': tipColor, '--tip-bg': backgroundColor}}
+        style={{
+          '--tip-primary': primaryColor,
+          '--tip-secondary': secondaryColor,
+          '--tip-border': borderColor,
+        }}
       >
         <div
           className={classNames(
