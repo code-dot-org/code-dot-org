@@ -73,6 +73,7 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
+      grades: preset[:grades],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,
