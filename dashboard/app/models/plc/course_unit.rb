@@ -24,15 +24,15 @@ class Plc::CourseUnit < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    plc_course_id: :public,
+    id: :confidential,
+    plc_course_id: :confidential,
     unit_name: :confidential,
     unit_description: :confidential,
-    unit_order: :public,
-    created_at: :public,
-    updated_at: :public,
-    script_id: :public,
-    started: :public,
+    unit_order: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    script_id: :confidential,
+    started: :confidential,
   )
 
   belongs_to :script, class_name: 'Unit', optional: true

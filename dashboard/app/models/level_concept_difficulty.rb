@@ -26,20 +26,20 @@ class LevelConceptDifficulty < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    level_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    sequencing: :public,
-    debugging: :public,
-    repeat_loops: :public,
-    repeat_until_while: :public,
-    for_loops: :public,
-    events: :public,
-    variables: :public,
-    functions: :public,
-    functions_with_params: :public,
-    conditionals: :public,
+    id: :confidential,
+    level_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    sequencing: :confidential,
+    debugging: :confidential,
+    repeat_loops: :confidential,
+    repeat_until_while: :confidential,
+    for_loops: :confidential,
+    events: :confidential,
+    variables: :confidential,
+    functions: :confidential,
+    functions_with_params: :confidential,
+    conditionals: :confidential,
   )
 
   include ConceptDifficulties

@@ -22,12 +22,12 @@ class Plc::UserCourseEnrollment < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     status: :confidential,
-    plc_course_id: :public,
-    user_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    plc_course_id: :confidential,
+    user_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :plc_course, class_name: '::Plc::Course'

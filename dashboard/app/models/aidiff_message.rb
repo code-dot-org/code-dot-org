@@ -24,18 +24,18 @@ class AidiffMessage < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    aidiff_thread_id: :public,
+    id: :restricted,
+    aidiff_thread_id: :restricted,
     external_id: :restricted,
-    role: :public,
+    role: :restricted,
     content: :restricted,
-    is_preset: :public,
-    created_at: :public,
-    updated_at: :public,
+    is_preset: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
     preset_chip_text: :restricted,
     raw_content: :restricted,
     source_links: :restricted,
-    is_artifact_candidate: :public,
+    is_artifact_candidate: :restricted,
     artifact_candidate_type: :restricted,
   )
 

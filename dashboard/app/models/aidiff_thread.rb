@@ -24,18 +24,18 @@ class AidiffThread < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :restricted,
+    user_id: :restricted,
     external_id: :restricted,
     llm_version: :restricted,
     title: :restricted,
-    unit_id: :public,
-    lesson_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    unit_id: :restricted,
+    lesson_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
     session_created: :restricted,
-    course_id: :public,
-    level_id: :public,
+    course_id: :restricted,
+    level_id: :restricted,
     context_type: :restricted,
   )
 

@@ -42,13 +42,13 @@ class Unit < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     name: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    wrapup_video_id: :public,
-    user_id: :public,
-    login_required: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    wrapup_video_id: :confidential,
+    user_id: :confidential,
+    login_required: :confidential,
     properties: :confidential,
     new_name: :confidential,
     family_name: :confidential,
@@ -56,8 +56,8 @@ class Unit < ApplicationRecord
     instruction_type: :confidential,
     instructor_audience: :confidential,
     participant_audience: :confidential,
-    original_unit_group_id: :public,
-    hide_within_course: :public,
+    original_unit_group_id: :confidential,
+    hide_within_course: :confidential,
     md5: :confidential,
   )
 

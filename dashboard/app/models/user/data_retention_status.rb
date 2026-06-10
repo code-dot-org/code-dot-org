@@ -21,12 +21,12 @@ class User::DataRetentionStatus < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :confidential,
+    user_id: :confidential,
     pii_scrubbed_at: :confidential,
     anonymized_at: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
     deletion_warning_email_sent_at: :confidential,
   )
 

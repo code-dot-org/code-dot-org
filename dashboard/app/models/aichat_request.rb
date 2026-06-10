@@ -24,18 +24,18 @@ class AichatRequest < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    script_id: :public,
-    project_id: :public,
+    id: :restricted,
+    user_id: :restricted,
+    level_id: :restricted,
+    script_id: :restricted,
+    project_id: :restricted,
     model_customizations: :restricted,
     stored_messages: :restricted,
     new_message: :restricted,
-    execution_status: :public,
+    execution_status: :restricted,
     response: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   belongs_to :user

@@ -20,13 +20,13 @@ class Foorm::SimpleSurveySubmission < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    foorm_submission_id: :public,
-    user_id: :public,
-    simple_survey_form_id: :public,
+    id: :restricted,
+    foorm_submission_id: :restricted,
+    user_id: :restricted,
+    simple_survey_form_id: :restricted,
     misc_form_path: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true

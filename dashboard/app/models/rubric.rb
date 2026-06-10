@@ -17,11 +17,11 @@ class Rubric < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    lesson_id: :public,
-    level_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    lesson_id: :confidential,
+    level_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
     s3_config_dir: :confidential,
   )
 

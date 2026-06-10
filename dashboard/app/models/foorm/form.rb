@@ -19,13 +19,13 @@ class Foorm::Form < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     name: :restricted,
-    version: :public,
+    version: :restricted,
     questions: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    published: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    published: :restricted,
   )
 
   include Seeded

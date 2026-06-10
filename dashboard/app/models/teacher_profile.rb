@@ -23,13 +23,13 @@ class TeacherProfile < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    studio_person_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    studio_person_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
     course: :confidential,
-    facilitator: :public,
-    teaching: :public,
+    facilitator: :confidential,
+    teaching: :confidential,
     pd_year: :confidential,
     pd: :confidential,
     other_pd: :confidential,

@@ -17,10 +17,10 @@ class SignIn < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :confidential,
+    user_id: :confidential,
     sign_in_at: :confidential,
-    sign_in_count: :public,
+    sign_in_count: :confidential,
   )
 
   belongs_to :user, optional: true

@@ -29,8 +29,8 @@ class Pd::FacilitatorTeacherconAttendance < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :restricted,
+    user_id: :restricted,
     tc1_arrive: :restricted,
     tc1_depart: :restricted,
     fit1_arrive: :restricted,

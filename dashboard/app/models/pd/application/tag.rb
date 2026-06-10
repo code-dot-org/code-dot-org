@@ -17,10 +17,10 @@ module Pd::Application
     export_to_analytics
 
     data_classification(
-      id: :public,
+      id: :restricted,
       name: :restricted,
-      created_at: :public,
-      updated_at: :public,
+      created_at: :restricted,
+      updated_at: :restricted,
     )
 
     self.table_name = 'pd_application_tags'

@@ -29,20 +29,20 @@ class SchoolInfo < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     country: :confidential,
     school_type: :confidential,
-    zip: :public,
+    zip: :confidential,
     state: :confidential,
-    school_district_id: :public,
-    school_district_other: :public,
+    school_district_id: :confidential,
+    school_district_other: :confidential,
     school_district_name: :confidential,
     school_id: :confidential,
-    school_other: :public,
+    school_other: :confidential,
     school_name: :confidential,
     full_address: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
     validation_type: :confidential,
   )
 

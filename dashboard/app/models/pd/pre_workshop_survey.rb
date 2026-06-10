@@ -17,11 +17,11 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    pd_enrollment_id: :public,
+    id: :restricted,
+    pd_enrollment_id: :restricted,
     form_data: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   include Pd::Form

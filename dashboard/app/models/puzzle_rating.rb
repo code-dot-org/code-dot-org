@@ -21,13 +21,13 @@ class PuzzleRating < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    script_id: :public,
-    level_id: :public,
-    rating: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    user_id: :confidential,
+    script_id: :confidential,
+    level_id: :confidential,
+    rating: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user, optional: true

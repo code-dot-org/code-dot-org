@@ -23,14 +23,14 @@ class SectionInstructor < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    instructor_id: :public,
-    section_id: :public,
-    invited_by_id: :public,
-    deleted_at: :public,
-    status: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    instructor_id: :confidential,
+    section_id: :confidential,
+    invited_by_id: :confidential,
+    deleted_at: :confidential,
+    status: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   acts_as_paranoid

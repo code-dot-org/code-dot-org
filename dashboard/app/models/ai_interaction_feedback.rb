@@ -22,17 +22,17 @@ class AiInteractionFeedback < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    script_id: :public,
-    thumbs_up: :public,
+    id: :restricted,
+    user_id: :restricted,
+    level_id: :restricted,
+    script_id: :restricted,
+    thumbs_up: :restricted,
     school_year: :restricted,
     metadata: :restricted,
     ai_interaction_type: :restricted,
-    ai_interaction_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    ai_interaction_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   belongs_to :ai_interaction, polymorphic: true

@@ -21,13 +21,13 @@ class LtiUserIdentity < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     subject: :confidential,
-    lti_integration_id: :public,
-    user_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    lti_integration_id: :confidential,
+    user_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
   )
 
   acts_as_paranoid

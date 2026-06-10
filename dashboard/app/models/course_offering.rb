@@ -36,13 +36,13 @@ class CourseOffering < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     key: :confidential,
     display_name: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    is_featured: :public,
-    assignable: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    is_featured: :confidential,
+    assignable: :confidential,
     curriculum_type: :confidential,
     marketing_initiative: :confidential,
     grade_levels: :confidential,
@@ -55,8 +55,8 @@ class CourseOffering < ApplicationRecord
     professional_learning_program: :confidential,
     video: :confidential,
     published_date: :confidential,
-    self_paced_pl_course_offering_id: :public,
-    ai_teaching_assistant_available: :public,
+    self_paced_pl_course_offering_id: :confidential,
+    ai_teaching_assistant_available: :confidential,
     facilitator_course_permissions: :confidential,
   )
 

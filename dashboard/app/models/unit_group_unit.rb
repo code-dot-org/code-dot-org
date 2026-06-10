@@ -18,10 +18,10 @@ class UnitGroupUnit < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    course_id: :public,
-    script_id: :public,
-    position: :public,
+    id: :confidential,
+    course_id: :confidential,
+    script_id: :confidential,
+    position: :confidential,
     unit_prefix: :confidential,
   )
 

@@ -20,13 +20,13 @@ class LtiSection < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    lti_course_id: :public,
-    section_id: :public,
+    id: :confidential,
+    lti_course_id: :confidential,
+    section_id: :confidential,
     lms_section_id: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
   )
 
   acts_as_paranoid

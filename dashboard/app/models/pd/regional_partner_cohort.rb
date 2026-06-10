@@ -23,16 +23,16 @@ class Pd::RegionalPartnerCohort < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    regional_partner_id: :public,
-    role: :public,
+    id: :restricted,
+    regional_partner_id: :restricted,
+    role: :restricted,
     year: :restricted,
     course: :restricted,
     name: :restricted,
-    size: :public,
-    summer_workshop_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    size: :restricted,
+    summer_workshop_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   ALLOWED_COURSES = [

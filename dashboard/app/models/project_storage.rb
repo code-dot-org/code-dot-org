@@ -14,8 +14,8 @@ class ProjectStorage < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :confidential,
+    user_id: :confidential,
   )
 
   # Conceptually, an instance of this class represents blob storage for all of

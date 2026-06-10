@@ -24,14 +24,14 @@ class Pd::ScholarshipInfo < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :restricted,
+    user_id: :restricted,
     application_year: :restricted,
     scholarship_status: :restricted,
-    pd_application_id: :public,
-    pd_enrollment_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    pd_application_id: :restricted,
+    pd_enrollment_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
     course: :restricted,
   )
 

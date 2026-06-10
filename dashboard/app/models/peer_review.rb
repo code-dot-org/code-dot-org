@@ -30,17 +30,17 @@ class PeerReview < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    submitter_id: :public,
-    reviewer_id: :public,
-    from_instructor: :public,
-    script_id: :public,
-    level_id: :public,
-    level_source_id: :public,
+    id: :restricted,
+    submitter_id: :restricted,
+    reviewer_id: :restricted,
+    from_instructor: :restricted,
+    script_id: :restricted,
+    level_id: :restricted,
+    level_source_id: :restricted,
     data: :restricted,
-    status: :public,
-    created_at: :public,
-    updated_at: :public,
+    status: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
     audit_trail: :restricted,
   )
 

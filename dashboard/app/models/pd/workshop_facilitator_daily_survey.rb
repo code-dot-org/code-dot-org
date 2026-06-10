@@ -34,17 +34,17 @@ module Pd
     export_to_analytics
 
     data_classification(
-      id: :public,
-      form_id: :public,
-      submission_id: :public,
-      user_id: :public,
-      pd_session_id: :public,
-      pd_workshop_id: :public,
-      facilitator_id: :public,
+      id: :restricted,
+      form_id: :restricted,
+      submission_id: :restricted,
+      user_id: :restricted,
+      pd_session_id: :restricted,
+      pd_workshop_id: :restricted,
+      facilitator_id: :restricted,
       answers: :restricted,
-      day: :public,
-      created_at: :public,
-      updated_at: :public,
+      day: :restricted,
+      created_at: :restricted,
+      updated_at: :restricted,
     )
 
     include JotFormBackedForm

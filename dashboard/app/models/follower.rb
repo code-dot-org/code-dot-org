@@ -21,12 +21,12 @@ class Follower < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    student_user_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    section_id: :public,
-    deleted_at: :public,
+    id: :confidential,
+    student_user_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    section_id: :confidential,
+    deleted_at: :confidential,
   )
 
   acts_as_paranoid

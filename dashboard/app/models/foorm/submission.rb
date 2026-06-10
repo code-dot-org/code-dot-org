@@ -14,12 +14,12 @@ class Foorm::Submission < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     form_name: :restricted,
-    form_version: :public,
+    form_version: :restricted,
     answers: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   include Pd::Foorm::Constants

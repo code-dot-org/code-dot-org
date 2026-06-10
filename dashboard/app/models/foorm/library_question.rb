@@ -20,14 +20,14 @@ class Foorm::LibraryQuestion < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     library_name: :restricted,
-    library_version: :public,
+    library_version: :restricted,
     question_name: :restricted,
     question: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    published: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    published: :restricted,
   )
 
   include Seeded

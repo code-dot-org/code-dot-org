@@ -23,14 +23,14 @@ class Pd::Attendance < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    pd_session_id: :public,
-    teacher_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
-    pd_enrollment_id: :public,
-    marked_by_user_id: :public,
+    id: :restricted,
+    pd_session_id: :restricted,
+    teacher_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    pd_enrollment_id: :restricted,
+    marked_by_user_id: :restricted,
   )
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

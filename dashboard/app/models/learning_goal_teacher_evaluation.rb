@@ -24,17 +24,17 @@ class LearningGoalTeacherEvaluation < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    teacher_id: :public,
-    learning_goal_id: :public,
-    project_id: :public,
+    id: :confidential,
+    user_id: :confidential,
+    teacher_id: :confidential,
+    learning_goal_id: :confidential,
+    project_id: :confidential,
     project_version: :confidential,
-    understanding: :public,
+    understanding: :confidential,
     feedback: :restricted,
     submitted_at: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :learning_goal

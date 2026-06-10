@@ -29,21 +29,21 @@ class TeacherFeedback < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     comment: :restricted,
-    student_id: :public,
-    level_id: :public,
-    teacher_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    student_id: :restricted,
+    level_id: :restricted,
+    teacher_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
     performance: :restricted,
-    student_visit_count: :public,
+    student_visit_count: :restricted,
     student_first_visited_at: :restricted,
     student_last_visited_at: :restricted,
     seen_on_feedback_page_at: :restricted,
-    script_id: :public,
-    analytics_section_id: :public,
+    script_id: :restricted,
+    analytics_section_id: :restricted,
     review_state: :restricted,
   )
 

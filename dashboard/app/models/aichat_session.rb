@@ -20,15 +20,15 @@ class AichatSession < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    script_id: :public,
-    project_id: :public,
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    script_id: :confidential,
+    project_id: :confidential,
     model_customizations: :confidential,
     messages: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user

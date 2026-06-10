@@ -17,10 +17,10 @@ class Pd::EnrollmentNotification < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    created_at: :public,
-    updated_at: :public,
-    pd_enrollment_id: :public,
+    id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    pd_enrollment_id: :restricted,
     name: :restricted,
   )
 

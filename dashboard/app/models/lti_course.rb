@@ -25,16 +25,16 @@ class LtiCourse < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    lti_integration_id: :public,
-    lti_deployment_id: :public,
+    id: :confidential,
+    lti_integration_id: :confidential,
+    lti_deployment_id: :confidential,
     context_id: :confidential,
     course_id: :confidential,
     nrps_url: :confidential,
     resource_link_id: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
   )
 
   acts_as_paranoid

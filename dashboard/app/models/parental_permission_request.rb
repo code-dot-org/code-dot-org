@@ -20,14 +20,14 @@ class ParentalPermissionRequest < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    parent_email: :restricted,
+    id: :confidential,
+    user_id: :confidential,
+    parent_email: :highly_restricted,
     uuid: :confidential,
-    reminders_sent: :public,
-    created_at: :public,
-    updated_at: :public,
-    resends_sent: :public,
+    reminders_sent: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    resends_sent: :confidential,
   )
 
   belongs_to :user

@@ -25,13 +25,13 @@ class Plc::LearningModule < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     name: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    plc_course_unit_id: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    plc_course_unit_id: :confidential,
     module_type: :confidential,
-    stage_id: :public,
+    stage_id: :confidential,
   )
 
   MODULE_TYPES = [

@@ -19,10 +19,10 @@ class Standard < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     description: :confidential,
-    category_id: :public,
-    framework_id: :public,
+    category_id: :confidential,
+    framework_id: :confidential,
     shortcode: :confidential,
   )
 

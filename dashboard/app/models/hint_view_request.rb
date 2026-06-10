@@ -22,14 +22,14 @@ class HintViewRequest < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    script_id: :public,
-    level_id: :public,
-    feedback_type: :public,
+    id: :confidential,
+    user_id: :confidential,
+    script_id: :confidential,
+    level_id: :confidential,
+    feedback_type: :confidential,
     feedback_xml: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user

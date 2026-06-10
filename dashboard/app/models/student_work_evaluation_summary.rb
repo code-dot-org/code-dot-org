@@ -17,11 +17,11 @@ class StudentWorkEvaluationSummary < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    student_work_evaluation_id: :public,
-    student_work_evaluation_summary_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    student_work_evaluation_id: :confidential,
+    student_work_evaluation_summary_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   # student_work_evaluation_id is the ID of the StudentWorkEvaluation that was summarized

@@ -16,11 +16,11 @@ class TeachingProfileData < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
+    id: :restricted,
+    user_id: :restricted,
     individual_data: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   belongs_to :user

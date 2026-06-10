@@ -28,15 +28,15 @@ class Pd::Session < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    pd_workshop_id: :public,
+    id: :restricted,
+    pd_workshop_id: :restricted,
     start: :restricted,
     end: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
     code: :restricted,
-    session_format: :public,
+    session_format: :restricted,
     time_zone: :restricted,
     meeting_link: :restricted,
     location_name: :restricted,

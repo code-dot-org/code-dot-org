@@ -19,12 +19,12 @@ class NewFeatureFeedback < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    form_key: :public,
-    satisfied: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    user_id: :confidential,
+    form_key: :confidential,
+    satisfied: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user

@@ -25,7 +25,7 @@ class LtiIntegration < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     name: :confidential,
     platform_id: :confidential,
     issuer: :confidential,
@@ -34,9 +34,9 @@ class LtiIntegration < ApplicationRecord
     auth_redirect_url: :confidential,
     jwks_url: :confidential,
     access_token_url: :confidential,
-    admin_email: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    admin_email: :highly_restricted,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   validates :platform_id, uniqueness: true

@@ -31,18 +31,18 @@ class Level < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    game_id: :public,
+    id: :confidential,
+    game_id: :confidential,
     name: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
     level_num: :confidential,
-    ideal_level_source_id: :public,
-    user_id: :public,
+    ideal_level_source_id: :confidential,
+    user_id: :confidential,
     properties: :confidential,
     type: :confidential,
     md5: :confidential,
-    published: :public,
+    published: :confidential,
     notes: :confidential,
     audit_log: :confidential,
   )

@@ -25,18 +25,18 @@ class UserScript < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    script_id: :public,
+    id: :confidential,
+    user_id: :confidential,
+    script_id: :confidential,
     started_at: :confidential,
     completed_at: :confidential,
     assigned_at: :confidential,
     last_progress_at: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
     properties: :confidential,
-    deleted_at: :public,
-    unit_group_id: :public,
+    deleted_at: :confidential,
+    unit_group_id: :confidential,
   )
 
   include SerializedProperties

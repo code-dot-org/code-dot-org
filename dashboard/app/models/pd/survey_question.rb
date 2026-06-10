@@ -19,12 +19,12 @@ module Pd
     export_to_analytics
 
     data_classification(
-      id: :public,
-      form_id: :public,
+      id: :restricted,
+      form_id: :restricted,
       questions: :restricted,
-      created_at: :public,
-      updated_at: :public,
-      last_submission_id: :public,
+      created_at: :restricted,
+      updated_at: :restricted,
+      last_submission_id: :restricted,
     )
 
     # Sync question data for the specified form_id, upsert the DB row, and return the latest model instance

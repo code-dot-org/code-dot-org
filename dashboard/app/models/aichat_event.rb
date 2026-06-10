@@ -27,16 +27,16 @@ class AichatEvent < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    script_id: :public,
-    project_id: :public,
+    id: :restricted,
+    user_id: :restricted,
+    level_id: :restricted,
+    script_id: :restricted,
+    project_id: :restricted,
     aichat_event: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    request_id: :public,
-    lesson_id: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    request_id: :restricted,
+    lesson_id: :restricted,
   )
 
   belongs_to :user

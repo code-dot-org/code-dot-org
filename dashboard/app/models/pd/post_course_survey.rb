@@ -29,15 +29,15 @@ module Pd
     export_to_analytics
 
     data_classification(
-      id: :public,
-      form_id: :public,
-      submission_id: :public,
+      id: :restricted,
+      form_id: :restricted,
+      submission_id: :restricted,
       answers: :restricted,
       year: :restricted,
-      user_id: :public,
+      user_id: :restricted,
       course: :restricted,
-      created_at: :public,
-      updated_at: :public,
+      created_at: :restricted,
+      updated_at: :restricted,
     )
 
     include JotFormBackedForm

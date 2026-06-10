@@ -26,13 +26,13 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    plc_user_course_enrollment_id: :public,
-    plc_course_unit_id: :public,
+    id: :confidential,
+    plc_user_course_enrollment_id: :confidential,
+    plc_course_unit_id: :confidential,
     status: :confidential,
-    created_at: :public,
-    updated_at: :public,
-    user_id: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
+    user_id: :confidential,
   )
 
   UNIT_STATUS_STATES = [

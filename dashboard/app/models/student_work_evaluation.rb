@@ -30,14 +30,14 @@ class StudentWorkEvaluation < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     type: :restricted,
-    student_id: :public,
-    requester_id: :public,
-    level_id: :public,
-    unit_id: :public,
-    skill_id: :public,
-    section_id: :public,
+    student_id: :restricted,
+    requester_id: :restricted,
+    level_id: :restricted,
+    unit_id: :restricted,
+    skill_id: :restricted,
+    section_id: :restricted,
     school_year: :restricted,
     evaluator: :restricted,
     evaluation_criteria: :restricted,
@@ -45,8 +45,8 @@ class StudentWorkEvaluation < ApplicationRecord
     evaluation: :restricted,
     ai_model_version: :restricted,
     code_version: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   self.inheritance_column = :type

@@ -32,22 +32,22 @@ class UserLevel < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    attempts: :public,
-    created_at: :public,
-    updated_at: :public,
-    best_result: :public,
-    script_id: :public,
-    level_source_id: :public,
-    submitted: :public,
-    readonly_answers: :public,
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    attempts: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    best_result: :confidential,
+    script_id: :confidential,
+    level_source_id: :confidential,
+    submitted: :confidential,
+    readonly_answers: :confidential,
     unlocked_at: :confidential,
-    time_spent: :public,
-    deleted_at: :public,
+    time_spent: :confidential,
+    deleted_at: :confidential,
     properties: :confidential,
-    unit_group_id: :public,
+    unit_group_id: :confidential,
   )
 
   AUTOLOCK_PERIOD = 1.day

@@ -25,10 +25,10 @@ class UserGeo < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    user_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
     indexed_at: :confidential,
     ip_address: :restricted,
     city: :confidential,

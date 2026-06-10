@@ -17,12 +17,12 @@ class Foorm::Library < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     name: :restricted,
-    version: :public,
-    published: :public,
-    created_at: :public,
-    updated_at: :public,
+    version: :restricted,
+    published: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   include Seeded

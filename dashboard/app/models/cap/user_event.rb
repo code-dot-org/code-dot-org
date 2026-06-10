@@ -22,12 +22,12 @@ module CAP
     export_to_analytics
 
     data_classification(
-      id: :public,
+      id: :confidential,
       name: :confidential,
-      user_id: :public,
+      user_id: :confidential,
       policy: :confidential,
-      created_at: :public,
-      updated_at: :public,
+      created_at: :confidential,
+      updated_at: :confidential,
       state_before: :confidential,
       state_after: :confidential,
     )

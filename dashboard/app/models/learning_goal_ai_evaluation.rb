@@ -22,15 +22,15 @@ class LearningGoalAiEvaluation < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    rubric_ai_evaluation_id: :public,
-    learning_goal_id: :public,
-    understanding: :public,
-    ai_confidence: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    rubric_ai_evaluation_id: :confidential,
+    learning_goal_id: :confidential,
+    understanding: :confidential,
+    ai_confidence: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
     observations: :restricted,
-    ai_confidence_exact_match: :public,
+    ai_confidence_exact_match: :confidential,
     evidence: :restricted,
   )
 

@@ -33,20 +33,20 @@ class Experiment < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    created_at: :public,
-    updated_at: :public,
+    id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
     name: :confidential,
     type: :confidential,
     start_at: :confidential,
     end_at: :confidential,
-    section_id: :public,
-    min_user_id: :public,
-    max_user_id: :public,
-    overflow_max_user_id: :public,
+    section_id: :confidential,
+    min_user_id: :confidential,
+    max_user_id: :confidential,
+    overflow_max_user_id: :confidential,
     earliest_section_at: :confidential,
     latest_section_at: :confidential,
-    script_id: :public,
+    script_id: :confidential,
   )
 
   belongs_to :script, class_name: 'Unit', optional: true

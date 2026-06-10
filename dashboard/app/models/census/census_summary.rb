@@ -19,13 +19,13 @@ class Census::CensusSummary < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     school_id: :confidential,
-    school_year: :public,
+    school_year: :confidential,
     teaches_cs: :confidential,
     audit_data: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :school

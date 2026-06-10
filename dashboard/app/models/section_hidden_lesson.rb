@@ -16,9 +16,9 @@ class SectionHiddenLesson < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    section_id: :public,
-    stage_id: :public,
+    id: :confidential,
+    section_id: :confidential,
+    stage_id: :confidential,
   )
 
   belongs_to :section, optional: true

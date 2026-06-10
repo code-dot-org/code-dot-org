@@ -26,14 +26,14 @@ class EmailPreference < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     email: :restricted,
-    opt_in: :public,
+    opt_in: :restricted,
     ip_address: :restricted,
     source: :restricted,
     form_kind: :restricted,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
   )
 
   include EmailPreferenceConstants

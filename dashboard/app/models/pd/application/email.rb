@@ -20,12 +20,12 @@ module Pd::Application
     export_to_analytics
 
     data_classification(
-      id: :public,
-      pd_application_id: :public,
+      id: :restricted,
+      pd_application_id: :restricted,
       application_status: :restricted,
       email_type: :restricted,
       to: :restricted,
-      created_at: :public,
+      created_at: :restricted,
       sent_at: :restricted,
     )
 

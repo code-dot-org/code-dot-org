@@ -27,10 +27,10 @@ class RegionalPartner < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :restricted,
     name: :restricted,
-    group: :public,
-    urban: :public,
+    group: :restricted,
+    urban: :restricted,
     attention: :restricted,
     street: :restricted,
     apartment_or_suite: :restricted,
@@ -39,11 +39,11 @@ class RegionalPartner < ApplicationRecord
     zip_code: :restricted,
     phone_number: :restricted,
     notes: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
     properties: :restricted,
-    is_active: :public,
+    is_active: :restricted,
   )
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

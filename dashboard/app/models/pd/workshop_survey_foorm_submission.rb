@@ -25,15 +25,15 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    foorm_submission_id: :public,
-    user_id: :public,
-    pd_session_id: :public,
-    pd_workshop_id: :public,
-    day: :public,
-    created_at: :public,
-    updated_at: :public,
-    facilitator_id: :public,
+    id: :restricted,
+    foorm_submission_id: :restricted,
+    user_id: :restricted,
+    pd_session_id: :restricted,
+    pd_workshop_id: :restricted,
+    day: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    facilitator_id: :restricted,
     workshop_agenda: :restricted,
   )
 

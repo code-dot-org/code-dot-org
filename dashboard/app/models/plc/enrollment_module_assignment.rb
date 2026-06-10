@@ -24,12 +24,12 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    plc_enrollment_unit_assignment_id: :public,
-    plc_learning_module_id: :public,
-    created_at: :public,
-    updated_at: :public,
-    user_id: :public,
+    id: :confidential,
+    plc_enrollment_unit_assignment_id: :confidential,
+    plc_learning_module_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    user_id: :confidential,
   )
 
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'

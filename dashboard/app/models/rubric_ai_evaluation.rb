@@ -24,15 +24,15 @@ class RubricAiEvaluation < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    requester_id: :public,
-    rubric_id: :public,
-    project_id: :public,
+    id: :confidential,
+    user_id: :confidential,
+    requester_id: :confidential,
+    rubric_id: :confidential,
+    project_id: :confidential,
     project_version: :confidential,
-    status: :public,
-    created_at: :public,
-    updated_at: :public,
+    status: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user

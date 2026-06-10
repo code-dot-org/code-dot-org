@@ -30,19 +30,19 @@ class Project < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    storage_id: :public,
+    id: :restricted,
+    storage_id: :restricted,
     value: :restricted,
-    updated_at: :public,
+    updated_at: :restricted,
     updated_ip: :restricted,
     state: :restricted,
-    created_at: :public,
-    abuse_score: :public,
+    created_at: :restricted,
+    abuse_score: :restricted,
     project_type: :restricted,
     published_at: :restricted,
-    standalone: :public,
-    remix_parent_id: :public,
-    skip_content_moderation: :public,
+    standalone: :restricted,
+    remix_parent_id: :restricted,
+    skip_content_moderation: :restricted,
     uuid: :restricted,
   )
 

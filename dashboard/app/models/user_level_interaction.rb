@@ -27,17 +27,17 @@ class UserLevelInteraction < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    user_id: :public,
-    level_id: :public,
-    script_id: :public,
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    script_id: :confidential,
     school_year: :confidential,
     interaction: :confidential,
     code_version: :confidential,
     metadata: :confidential,
-    deleted_at: :public,
-    created_at: :public,
-    updated_at: :public,
+    deleted_at: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
   )
 
   belongs_to :user

@@ -21,13 +21,13 @@ class Pd::RegionalPartnerMapping < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    regional_partner_id: :public,
+    id: :restricted,
+    regional_partner_id: :restricted,
     state: :restricted,
     zip_code: :restricted,
-    created_at: :public,
-    updated_at: :public,
-    deleted_at: :public,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
   )
 
   acts_as_paranoid # use deleted_at column instead of deleting rows

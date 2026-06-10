@@ -16,8 +16,8 @@ class Pd::CourseFacilitator < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
-    facilitator_id: :public,
+    id: :restricted,
+    facilitator_id: :restricted,
     course: :restricted,
   )
 

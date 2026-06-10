@@ -27,11 +27,11 @@ class UnitGroup < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :public,
+    id: :confidential,
     name: :confidential,
     properties: :confidential,
-    created_at: :public,
-    updated_at: :public,
+    created_at: :confidential,
+    updated_at: :confidential,
     published_state: :confidential,
     instruction_type: :confidential,
     instructor_audience: :confidential,
