@@ -344,6 +344,7 @@ export default function ReactFlowCanvas({
     setEdges,
     screenToFlowPosition,
     flowToScreenPosition,
+    pushSnapshot,
   });
   const isAnchorDragging = isDirectAnchorDragging || isLineDragging;
 

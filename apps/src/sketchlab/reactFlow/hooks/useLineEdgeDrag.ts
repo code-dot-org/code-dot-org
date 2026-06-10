@@ -43,6 +43,7 @@ interface UseLineEdgeDragOptions {
   ) => void;
   screenToFlowPosition: (position: XYPosition) => XYPosition;
   flowToScreenPosition: (position: XYPosition) => XYPosition;
+  pushSnapshot: () => void;
 }
 
 // Dragging the body of a line edge moves the line as a whole. Free
@@ -56,6 +57,7 @@ export function useLineEdgeDrag({
   setEdges,
   screenToFlowPosition,
   flowToScreenPosition,
+  pushSnapshot,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -69,6 +71,12 @@ export function useLineEdgeDrag({
       const dragState = draggingLineEdgeRef.current;
       if (!dragState) {
         return;
+      }
+
+      // Push the undo snapshot on the first move, before any mutation, so
+      // a bare click on the line doesn't create a history entry.
+      if (!dragState.hasMoved) {
+        pushSnapshot();
       }
 
       // On detach, create fresh anchors at any attached endpoint
@@ -129,7 +137,7 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges]
+    [screenToFlowPosition, setNodes, setEdges, pushSnapshot]
   );
 
   const stopLineEdgeDrag = useCallback(
