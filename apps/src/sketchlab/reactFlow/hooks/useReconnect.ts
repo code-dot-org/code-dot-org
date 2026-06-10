@@ -1,11 +1,5 @@
-import {
-  Connection,
-  Edge,
-  FinalConnectionState,
-  HandleType,
-  XYPosition,
-} from '@xyflow/react';
-import {useCallback, useRef} from 'react';
+import {Connection, Edge, HandleType, XYPosition} from '@xyflow/react';
+import React, {useCallback, useRef, useState} from 'react';
 
 import {
   SketchlabReactFlowEdge,
@@ -39,6 +33,10 @@ export function useReconnect({
   pushSnapshot,
 }: UseReconnectOptions) {
   const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
+  // The in-flight edge is also tracked as state so the connection ghost
+  // can render with its styling.
+  const [reconnectingEdge, setReconnectingEdge] =
+    useState<SketchlabReactFlowEdge | null>(null);
 
   const isReconnecting = useCallback(
     () => reconnectingEdgeRef.current !== null,
@@ -46,10 +44,14 @@ export function useReconnect({
   );
 
   // Push snapshot at drag start, before the endpoint mutation commits.
-  const handleReconnectStart = useCallback(() => {
-    pushSnapshot();
-    reconnectingEdgeRef.current = {landed: false};
-  }, [pushSnapshot]);
+  const handleReconnectStart = useCallback(
+    (_event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
+      pushSnapshot();
+      reconnectingEdgeRef.current = {landed: false};
+      setReconnectingEdge(edge);
+    },
+    [pushSnapshot]
+  );
 
   const handleReconnect = useCallback(
     (oldEdge: Edge, newConnection: Connection) => {
@@ -75,30 +77,24 @@ export function useReconnect({
   );
 
   const handleReconnectEnd = useCallback(
-    (
-      event: MouseEvent | TouchEvent,
-      edge: Edge,
-      handleType: HandleType,
-      connectionState: FinalConnectionState
-    ) => {
+    (event: MouseEvent | TouchEvent, edge: Edge, handleType: HandleType) => {
       const reconnectState = reconnectingEdgeRef.current;
       reconnectingEdgeRef.current = null;
+      setReconnectingEdge(null);
       if (reconnectState?.landed) {
         return;
       }
 
       // Drop on empty canvas: spawn a fresh anchor at the pointer and
-      // attach the dragged endpoint to it. Prefer the flow-coordinate
-      // position React Flow already computed; fall back to the raw
-      // pointer if that's missing.
-      let dropPosition = connectionState.to;
-      if (!dropPosition) {
-        const clientPosition = getEventClientPosition(event);
-        if (!clientPosition) {
-          return;
-        }
-        dropPosition = screenToFlowPosition(clientPosition);
+      // attach the dragged endpoint to it. The connectionState argument's
+      // `to` looks tempting here, but it's in container-relative screen
+      // coordinates, not flow coordinates; convert the raw pointer
+      // position instead.
+      const clientPosition = getEventClientPosition(event);
+      if (!clientPosition) {
+        return;
       }
+      const dropPosition = screenToFlowPosition(clientPosition);
 
       // React Flow reports the type of the handle that stayed fixed during
       // the reconnect (it draws the drag as a new connection from that
@@ -123,6 +119,7 @@ export function useReconnect({
 
   return {
     isReconnecting,
+    reconnectingEdge,
     handleReconnectStart,
     handleReconnect,
     handleReconnectEnd,
