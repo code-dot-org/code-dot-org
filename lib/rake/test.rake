@@ -131,7 +131,6 @@ namespace :test do
   # Shared by DTT (via ui_all) and the Drone ui pipeline (ui_tests.sh): the
   # target comes from TARGET_URL, defaulting to this environment's studio URL.
   # Non-blocking — a failure warns but never fails the deploy or the PR build.
-  # TODO: provision Playwright browsers via chef instead of installing at runtime.
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'] || CDO.studio_url('')
     script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
