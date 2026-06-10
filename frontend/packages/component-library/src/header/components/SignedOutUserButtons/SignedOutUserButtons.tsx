@@ -5,37 +5,59 @@ import type {FunctionComponent} from 'react';
 import {AUTH_LINKS} from '../../shared/authLinks';
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
 
-// Prod renders signed-out auth on the teal bar as plain white text links (13px,
-// weight 400, no border/fill) — not pills. Both links share this style.
-const barAuthLinkSx = {
+// Signed-out auth pills on the teal bar (match prod): Sign in is the outlined
+// variant (white border, transparent); Create account is filled white with teal text.
+const pillBaseSx = {
+  alignSelf: 'center',
+  minWidth: 0,
+  height: '35px',
+  padding: '6.5px 1rem',
+  border: '1px solid var(--neutral-base-white)',
+  borderRadius: '4px',
+  fontSize: '14px',
+  lineHeight: 1.5,
+  textTransform: 'none' as const,
+  whiteSpace: 'nowrap',
+  boxShadow: 'none',
   '&:focus-visible': {
     outline: '2px solid var(--text-neutral-inverse)',
     outlineOffset: '2px',
   },
-  alignSelf: 'stretch',
-  minWidth: 0,
-  px: '1rem',
-  borderRadius: 0,
+};
+
+const signInSx = {
+  ...pillBaseSx,
   color: 'var(--neutral-base-white)',
-  fontSize: '13px',
+  backgroundColor: 'transparent',
   fontWeight: 400,
-  textTransform: 'none' as const,
-  whiteSpace: 'nowrap',
-  '&:hover, &:active, &:focus-visible': {
+  '&:hover, &:active': {
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    border: '1px solid var(--neutral-base-white)',
   },
 };
 
-/** Sign In and Create Account links shown when no user session is active. */
+const createAccountSx = {
+  ...pillBaseSx,
+  color: 'var(--text-brand-teal-primary)',
+  backgroundColor: 'var(--neutral-base-white)',
+  fontWeight: 600,
+  '&:hover, &:active': {
+    backgroundColor: 'var(--neutral-base-white)',
+    boxShadow: 'none',
+    border: '1px solid var(--neutral-base-white)',
+  },
+};
+
+/** Sign in / Create account pills shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
   <Box
     sx={{
       // On the bar at >=768px; hidden below (the hamburger surfaces these).
-      // Authored default-visible so jsdom (which ignores @media) keeps the links testable.
+      // Authored default-visible so jsdom (which ignores @media) keeps the buttons testable.
       display: 'flex',
-      alignSelf: 'stretch',
-      alignItems: 'stretch',
+      alignItems: 'center',
+      columnGap: '8px',
       [`@media (max-width:${HEADER_BREAKPOINTS.mobileAuth - 1}px)`]: {
         display: 'none',
       },
@@ -45,7 +67,7 @@ const SignedOutUserButtons: FunctionComponent = () => (
       href={AUTH_LINKS.signIn}
       color="inherit"
       disableElevation
-      sx={barAuthLinkSx}
+      sx={signInSx}
     >
       Sign in
     </Button>
@@ -53,7 +75,7 @@ const SignedOutUserButtons: FunctionComponent = () => (
       href={AUTH_LINKS.createAccount}
       color="inherit"
       disableElevation
-      sx={barAuthLinkSx}
+      sx={createAccountSx}
     >
       Create account
     </Button>
