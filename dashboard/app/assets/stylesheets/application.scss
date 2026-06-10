@@ -656,7 +656,7 @@ html, body {
 
   .container {
     .row {
-      [class*="span"] {
+      [class*="col-md"] {
         html[dir=rtl] & {
           float: right;
           margin-right: 20px;
@@ -2260,7 +2260,7 @@ a.download-video {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -4379,7 +4379,7 @@ a {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
