@@ -9,7 +9,6 @@ import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
@@ -175,9 +174,6 @@ const Javalab2View: React.FunctionComponent<
     dispatch: AppDispatch,
     _source: MultiFileSource | undefined
   ) => {
-    // Javabuilder reads source from S3. Flush the in-memory editor first so
-    // S3 reflects what the user sees before the WS connection opens.
-    await Lab2Registry.getInstance().getProjectManager()?.flushSave();
     await handleRunClick(
       runTests,
       dispatch,

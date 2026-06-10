@@ -32,6 +32,7 @@ When you run a function to filter that list, one of two things happens:
 > 2. Try to predict: will the original array change, or stay the same?
 > 3. Press **Run this code** and compare the original array to the result.
 
+
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe 
     src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/array-state-visualizer.html"

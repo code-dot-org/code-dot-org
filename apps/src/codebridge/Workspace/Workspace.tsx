@@ -22,8 +22,7 @@ import {
   isPermanentlyReadOnlyWorkspace,
   isTemporarilyReadOnlyWorkspace,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
-import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
+import WorkspaceAlerts from '@cdo/apps/lab2/views/alerts/workspaceAlerts';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -51,9 +50,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-  const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId)
-  );
   const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
   const isTemporarilyReadOnly = useAppSelector(isTemporarilyReadOnlyWorkspace);
 
@@ -82,10 +78,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
-        {teacherViewingStudent && (
-          <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-        )}
-        <PreviousVersionAlert />
+        {!hideHeaders && <WorkspaceAlerts inWorkspaceContainer />}
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,

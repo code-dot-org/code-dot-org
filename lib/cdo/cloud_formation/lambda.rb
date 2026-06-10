@@ -156,9 +156,11 @@ module Cdo::CloudFormation
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
         end
 
-        # Return both S3 location and hash of source code.
+        # Return both the S3 location and content hash for use in CloudFormation template.
+        # Use the content_hash if lambda versioning is necessary. Otherwise, the S3 bucket and key should be passed
+        # into the template directly via the Code property, e.g. Code: <%= result[:s3_location].to_json %>
         {
-          s3_location: {
+          code_props: {
             S3Bucket: S3_LAMBDA_BUCKET,
             S3Key: key
           },
