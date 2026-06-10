@@ -37,7 +37,6 @@ export const tipTypes = {
   ethicsOpportunity: {
     displayName: i18n.ethicsOpportunity(),
     icon: 'head-side-heart',
-    // TODO: migrate to a semantic token once the designer chooses a green replacement.
     color: 'var(--background-info-strong)',
     backgroundColor: 'var(--background-info-extra-light)',
   },
