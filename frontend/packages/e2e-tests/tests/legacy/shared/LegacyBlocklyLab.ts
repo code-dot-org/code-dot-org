@@ -1,0 +1,293 @@
+import {expect, type Locator, type Page} from '@playwright/test';
+
+/** Minimal typed window extension for Blockly globals. */
+interface BlocklyWindow {
+  Blockly: {
+    getMainWorkspace(): BlocklyBaseWorkspace;
+    serialization: {
+      workspaces: {
+        load(json: object, workspace: BlocklyBaseWorkspace): void;
+      };
+    };
+  };
+}
+
+interface BlocklyBaseWorkspace {
+  getBlockById(id: string): BlocklyBaseBlock | null;
+  getAllBlocks(): BlocklyBaseBlock[];
+}
+
+interface BlocklyBaseBlock {
+  previousConnection: unknown;
+  nextConnection: {connect(conn: unknown): void};
+  dispose(): void;
+}
+
+/**
+ * Page Object base for legacy CSF labs built on the Blockly workspace.
+ *
+ * Covers Maze, Farmer, Bee, Artist, Bounce, Flappy, and any future lab that
+ * shares the same control IDs and feedback selectors. The Blockly workspace
+ * lives in the main window; no iframe switching required.
+ *
+ * Subclass contract:
+ *   — implement buildLevelUrl(level) to own the URL scheme
+ *   — override instructionsSelector getter if not using .csf-top-instructions p
+ *   — override congratsSelector getter if not using .congrats
+ *   — add lab-specific locators and game-event methods in the subclass
+ */
+export abstract class LegacyBlocklyLab {
+  /** Underlying Playwright page. */
+  readonly page: Page;
+
+  /** Runs the current workspace program. */
+  readonly runButton: Locator;
+
+  /** Resets the lab to its initial state after a run. */
+  readonly resetButton: Locator;
+
+  /** Advances to the next level after a successful run. */
+  readonly continueButton: Locator;
+
+  /** Returns to the current level after the congratulations dialog. */
+  readonly againButton: Locator;
+
+  /** Congratulations overlay shown on puzzle completion. */
+  readonly congratsMessage: Locator;
+
+  /** Inline feedback rendered in the top-instructions panel after a failed run. */
+  readonly inlineFeedback: Locator;
+
+  /** Static puzzle instructions shown at the top of the level. */
+  readonly instructions: Locator;
+
+  /**
+   * Outer instructions container (.csf-top-instructions).
+   * Authored hint text is appended here; use toContainText rather than
+   * the narrower `instructions` locator (.csf-top-instructions p).
+   */
+  readonly instructionsPanel: Locator;
+
+  /**
+   * Authored-hints lightbulb toggle button.
+   * Not present on levels without authored hints — use not.toBeAttached()
+   * for the negative assertion.
+   */
+  readonly lightbulb: Locator;
+
+  /**
+   * Hint count badge shown next to the lightbulb.
+   * Removed from the DOM after the last hint is viewed.
+   */
+  readonly hintCount: Locator;
+
+  /**
+   * Returns the relative URL for the given level number.
+   * Each lab owns its own URL scheme — allthethingscourse path, events course,
+   * standalone /flappy/ route, etc.
+   */
+  protected abstract buildLevelUrl(level: number): string;
+
+  /**
+   * CSS selector for the level's instruction text.
+   * Override in subclasses that use a different instructions component
+   * (e.g. Farmer uses .instructions-markdown p).
+   */
+  protected get instructionsSelector(): string {
+    return '.csf-top-instructions p';
+  }
+
+  /**
+   * CSS selector for the congratulations overlay.
+   * Override in subclasses where the overlay is nested differently
+   * (e.g. Flappy uses .modal .congrats).
+   */
+  protected get congratsSelector(): string {
+    return '.congrats';
+  }
+
+  constructor(page: Page) {
+    this.page = page;
+    this.runButton = page.locator('#runButton');
+    this.resetButton = page.locator('#resetButton');
+    this.continueButton = page.locator('#continue-button');
+    this.againButton = page.locator('#again-button');
+    this.congratsMessage = page.locator(this.congratsSelector);
+    this.inlineFeedback = page.locator(
+      '.uitest-topInstructions-inline-feedback',
+    );
+    this.instructions = page.locator(this.instructionsSelector);
+    this.instructionsPanel = page.locator('.csf-top-instructions');
+    this.lightbulb = page.locator('#lightbulb');
+    this.hintCount = page.locator('#hintCount');
+  }
+
+  /** Click the 'Yes' confirm button on the authored-hint prompt. */
+  async acceptHint(): Promise<void> {
+    await this.page.getByRole('button', {name: 'Yes', exact: true}).click();
+  }
+
+  /** Navigate to a level via reset_session, then wait for full load. */
+  async gotoLevel(level: number): Promise<void> {
+    await this.navigate(this.buildLevelUrl(level));
+  }
+
+  /**
+   * Wait until the page has rendered enough to reliably check for optional
+   * overlays. Override in subclasses where #runButton is absent (e.g. Jigsaw).
+   */
+  protected async waitForInitialLoad(): Promise<void> {
+    await expect(this.runButton).toBeVisible();
+  }
+
+  /** Navigate directly to a level without session reset. */
+  async reloadLevel(level: number): Promise<void> {
+    await this.navigateDirect(this.buildLevelUrl(level));
+  }
+
+  /** Wait for the URL to match the given level. */
+  async waitForLevel(level: number): Promise<void> {
+    const path = this.buildLevelUrl(level).split('?')[0];
+    await this.page.waitForURL(`**${path}`);
+  }
+
+  /**
+   * Load a Blockly workspace from a serialisation object.
+   * Mirrors load_json_blocks() from blockly_helpers.rb.
+   */
+  async loadBlocks(blocksJson: object): Promise<void> {
+    await this.page.evaluate(json => {
+      const blockly = (window as unknown as BlocklyWindow).Blockly;
+      blockly.serialization.workspaces.load(json, blockly.getMainWorkspace());
+    }, blocksJson);
+  }
+
+  /** Returns a locator for a Blockly block's top-level SVG element. */
+  blockLocator(blockId: string): Locator {
+    return this.page.locator(`.blocklySvg g[data-id="${blockId}"]`).first();
+  }
+
+  async run(): Promise<void> {
+    await this.runButton.click();
+  }
+
+  async reset(): Promise<void> {
+    await this.resetButton.click();
+  }
+
+  async nextLevel(): Promise<void> {
+    await this.continueButton.click();
+  }
+
+  async tryAgain(): Promise<void> {
+    await this.againButton.click();
+  }
+
+  /**
+   * Connect one block's previousConnection to another's nextConnection via JS.
+   * Mirrors connect_block() from blockly_helpers.rb.
+   */
+  async connectBlock(fromId: string, toId: string): Promise<void> {
+    await this.page.evaluate(
+      ({from, to}: {from: string; to: string}) => {
+        const workspace = (
+          window as unknown as BlocklyWindow
+        ).Blockly.getMainWorkspace();
+        const blockToMove = workspace.getBlockById(from);
+        const targetBlock = workspace.getBlockById(to);
+        targetBlock?.nextConnection.connect(blockToMove?.previousConnection);
+      },
+      {from: fromId, to: toId},
+    );
+  }
+
+  /** Remove a block from the workspace via the Blockly JS API. */
+  async disposeBlock(blockId: string): Promise<void> {
+    await this.page.evaluate((id: string) => {
+      const workspace = (
+        window as unknown as BlocklyWindow
+      ).Blockly.getMainWorkspace();
+      workspace.getBlockById(id)?.dispose();
+    }, blockId);
+  }
+
+  /** Post-navigation wait: initial load + optional overlays + ready. */
+  async waitForLabPage(): Promise<void> {
+    await this.waitForInitialLoad();
+    await this.dismissOptionalOverlays();
+    await this.waitForReady();
+  }
+
+  /**
+   * Wait for the run button to be visible and the sign-in callout to be gone.
+   */
+  async waitForReady(): Promise<void> {
+    await expect(this.runButton).toBeVisible();
+    await this.waitForCodeStudioHeaderReady();
+    await expect(this.page.locator('.uitest-signincallout')).toBeHidden();
+  }
+
+  /**
+   * Waits for dashboard's level header to finish rendering.
+   * Absence of the header is a ready state for this POM.
+   */
+  protected async waitForCodeStudioHeaderReady(): Promise<void> {
+    const header = this.page.locator('.header_level').first();
+    if (!(await header.isVisible({timeout: 1_000}).catch(() => false))) {
+      return;
+    }
+
+    await expect(this.page.locator('#header_middle_content')).toBeVisible({
+      timeout: 30_000,
+    });
+
+    const progressContainer = this.page
+      .locator('#lesson_progress_container')
+      .first();
+    if (
+      !(await progressContainer.isVisible({timeout: 1_000}).catch(() => false))
+    ) {
+      return;
+    }
+
+    await expect(
+      this.page.locator('.header_level .progress-bubble').first(),
+    ).toBeVisible({timeout: 30_000});
+  }
+
+  /**
+   * Full navigation: reset session, load URL, dismiss optional overlays, then
+   * confirm the lab is ready.
+   */
+  protected async navigate(url: string): Promise<void> {
+    await this.page.goto('/reset_session', {waitUntil: 'commit'});
+    await this.page.goto(url, {waitUntil: 'commit'});
+    await this.waitForInitialLoad();
+    await this.dismissOptionalOverlays();
+    await this.waitForReady();
+  }
+
+  private async navigateDirect(url: string): Promise<void> {
+    await this.page.goto(url, {waitUntil: 'commit'});
+    await this.waitForReady();
+  }
+
+  /**
+   * Click away any one-time overlays that appear on first visit.
+   */
+  protected async dismissOptionalOverlays(): Promise<void> {
+    const overlay = this.page.locator('#overlay');
+    if (await overlay.isVisible()) {
+      // JS click mirrors Cucumber's $(selector)[0].click() — bypasses browser
+      // hit-testing so a modal-backdrop on top does not intercept the event.
+      await this.page.evaluate(() =>
+        (document.querySelector('#overlay') as HTMLElement)?.click(),
+      );
+    }
+
+    const closeBtn = this.page.locator('[aria-label="Close"]');
+    if (await closeBtn.isVisible()) {
+      await closeBtn.click();
+    }
+  }
+}
