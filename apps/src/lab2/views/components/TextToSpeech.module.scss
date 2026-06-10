@@ -5,7 +5,6 @@
   @include mixins.focus-styles;
   border-radius: 4px;
   cursor: pointer;
-  // opacity was previously used here but fails WCAG 1.4.11 non-text contrast.
   color: var(--text-neutral-quaternary);
   transition: color 0.2s ease;
 
