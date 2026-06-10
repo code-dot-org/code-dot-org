@@ -124,13 +124,34 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the four deploy-time UI suites in parallel: SauceLabs Safari and
-  # Eyes alongside the Device Farm desktop (Chrome+Firefox) and mobile
-  # (iPhone+iPad) suites. If one suite raises, allow the others to
+  # Run the Playwright e2e suite against the deployed test server during DTT.
+  # Non-blocking: a failure warns but does not fail the deploy. baseURL defaults
+  # to this environment's studio URL (see e2e-tests/playwright.config.ts).
+  # TODO: provision Playwright browsers via chef instead of installing at runtime.
+  timed_task_with_logging :playwright_ui do
+    status = RakeUtils.system_with_chat_logging(
+      "cd #{frontend_dir} &&",
+      'yarn install --immutable &&',
+      'yarn workspace @code-dot-org/e2e-tests exec playwright install-deps chromium firefox webkit &&',
+      'yarn workspace @code-dot-org/e2e-tests exec playwright install chromium firefox webkit &&',
+      "TARGET_URL=#{CDO.studio_url('')} yarn workspace @code-dot-org/e2e-tests test:ui:ci"
+    )
+    if status == 0
+      ChatClient.log 'Playwright e2e tests for <b>dashboard</b> succeeded.'
+    else
+      message = 'Playwright e2e tests for <b>dashboard</b> failed (non-blocking).'
+      ChatClient.log message, color: 'red'
+      ChatClient.message 'server operations', message, color: 'yellow'
+    end
+  end
+
+  # Run the deploy-time UI suites in parallel: SauceLabs Safari and Eyes
+  # alongside the Device Farm desktop (Chrome+Firefox) suite, plus the
+  # non-blocking Playwright suite. If one suite raises, allow the others to
   # complete, then make sure this task raises.
   timed_task_with_logging :ui_all do
     Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
       in_threads: 4,
     ) do |target|
       Rake::Task["test:#{target}"].invoke
