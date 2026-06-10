@@ -107,6 +107,8 @@ export default class JavabuilderConnection {
   private seenMessage: boolean;
   private hadWebsocketConnectionError: boolean;
   private socket?: WebSocket;
+  private programIsRunning: boolean;
+  private interruptSignal: boolean;
 
   constructor(
     onMessage: (message: string) => void,
@@ -159,6 +161,8 @@ export default class JavabuilderConnection {
     this.allValidationPassed = true;
     this.seenMessage = false;
     this.hadWebsocketConnectionError = false;
+    this.programIsRunning = false;
+    this.interruptSignal = false;
 
     if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
       // Route console output through the mini app as PARTIAL_LOG signals,
@@ -269,6 +273,8 @@ export default class JavabuilderConnection {
     checkProjectEdited: boolean,
     usePostRequest?: boolean
   ) {
+    this.interruptSignal = false;
+
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -279,6 +285,7 @@ export default class JavabuilderConnection {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
+    this.programIsRunning = true;
 
     const ajaxPayload: JQuery.AjaxSettings = usePostRequest
       ? {
@@ -301,9 +308,20 @@ export default class JavabuilderConnection {
 
     try {
       const result: AccessTokenResponse = await $.ajax(ajaxPayload);
+      // The user may have stopped the program while we were fetching the
+      // access token. Bail out before opening the socket, since closeConnection
+      // could not close a socket that did not yet exist.
+      if (this.interruptSignal) {
+        return;
+      }
       this.resetRunState();
       this.establishWebsocketConnection(result.javabuilder_url, result.token);
     } catch (error) {
+      // The user may have stopped while the request was in flight, no need to
+      // report the failure.
+      if (this.interruptSignal) {
+        return;
+      }
       const ajaxError = error as AjaxError;
       if (ajaxError.status === 403) {
         if (ajaxError.responseJSON?.captcha_required === true) {
@@ -320,6 +338,7 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         console.error(ajaxError.responseText);
       }
+      this.programIsRunning = false;
     }
   }
 
@@ -593,11 +612,20 @@ export default class JavabuilderConnection {
   closeConnection() {
     if (this.socket) {
       this.socket.close();
-      this.onOutputMessage(
-        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
-      );
-      this.onNewlineMessage();
+    } else if (this.programIsRunning) {
+      // The socket does not exist yet, so we are still fetching the access
+      // token. Flag the interrupt so initiateConnection bails before opening
+      // the socket.
+      this.interruptSignal = true;
+    } else {
+      return;
     }
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
+    );
+    this.onNewlineMessage();
+    // Turn off run/test state so callers awaiting completion can resolve.
+    this.turnOffRunningOrTesting();
   }
 
   handleExecutionFinished() {
@@ -697,6 +725,7 @@ export default class JavabuilderConnection {
   }
 
   turnOffRunningOrTesting() {
+    this.programIsRunning = false;
     switch (this.executionType) {
       case ExecutionType.RUN:
         this.setIsRunning(false);

@@ -143,7 +143,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal request.user_id, @authorized_teacher1.id
     assert_equal request.level_id, @level.id
     assert_equal request.script_id, @script.id
-    assert_equal request.project_id, @project_id
+    assert_nil request.project_id
     assert_equal request.model_customizations, @default_model_customizations
     assert_equal request.stored_messages, []
     assert_equal request.new_message, @valid_params_chat_completion[:newMessage].stringify_keys

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-08 16:08:50 UTC",
+    "serialized_at": "2026-06-09 14:58:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -299,6 +299,27 @@
     },
     {
       "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-embedded-sandbox-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      },
+      "level_keys": [
+        "pl-embedded-sandbox-project-overview-4"
+      ]
+    },
+    {
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -319,7 +340,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -340,7 +361,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -361,7 +382,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -382,7 +403,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -403,7 +424,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -424,7 +445,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -523,6 +544,18 @@
         "level.key": "pl_sandbox_embed-debugging_loops-rebrand",
         "script_level.level_keys": [
           "pl_sandbox_embed-debugging_loops-rebrand"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-embeddings",
+        "activity_section.key": "66bdd70f-1c96-4e7a-93b5-9dd98dfef2dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-embedded-sandbox-project-overview-4",
+        "script_level.level_keys": [
+          "pl-embedded-sandbox-project-overview-4"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
