@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-06-09T06:13:02.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Debug a Game Loop\r\n\r\nYou're a Game Engineer reviewing AI-generated code for an NPC patrol system. The AI wrote the loop that controls how the guard patrols. Run it and find the bug before shipping.\r\n\r\n**What's supposed to happen:** You're a Game Engineer reviewing AI-generated code for an NPC (Non-Player Character) patrol system. The AI wrote the loop that controls how the guard patrols. Run it and find the bug before shipping.\r\n\r\n**Your job:** Run the code and use the Debugging Checklist to find what's missing. Then fix the loop so the guard actually notices the player and stops patrolling when spotted.",
+    "long_instructions": "# Debug a Game Loop\r\n\r\nYou're a Game Engineer reviewing AI-generated code for an NPC patrol system. The AI wrote the guard patrol loop, but something is wrong.\r\n\r\nThe guard is supposed to patrol a castle hallway. Each step:\r\n- the guard moves to the next patrol point\r\n- the program checks whether the player has been spotted\r\n- the patrol continues only while the player has not been spotted\r\n\r\nThe loop should stop when the guard notices the player. Then the game should show that the player was spotted.\r\n\r\n**Your job:** Run the code and use the Debugging Checklist to find what is missing. Fix the loop so the guard checks for the player each step and stops patrolling when the player is spotted.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -80,7 +81,6 @@
     "display_name": "Castle Patrol",
     "bubble_choice_description": "The loop keeps runing even when the guard spots the player!"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-09T06:13:02.931+00:00\",\"changed\":[\"cloned from \\\"Iterating-with-ai-lesson3-level1c-v1-2026\\\"\"],\"cloned_from\":\"Iterating-with-ai-lesson3-level1c-v1-2026\"},{\"changed_at\":\"2026-06-09 06:13:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 06:39:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 08:02:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-09T06:13:02.931+00:00\",\"changed\":[\"cloned from \\\"Iterating-with-ai-lesson3-level1c-v1-2026\\\"\"],\"cloned_from\":\"Iterating-with-ai-lesson3-level1c-v1-2026\"},{\"changed_at\":\"2026-06-09 06:13:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 06:39:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 08:02:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-10 03:20:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

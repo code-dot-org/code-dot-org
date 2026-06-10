@@ -3,7 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-This is a final iteration that was designed with the rebrand guide and includes the localization and ARIA capablities. 
 
 <div style="width:100%; max-width:900px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid #2d3350;">
   <iframe 
