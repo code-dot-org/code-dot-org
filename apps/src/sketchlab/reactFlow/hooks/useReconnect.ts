@@ -87,9 +87,8 @@ export function useReconnect({
 
       // Drop on empty canvas: spawn a fresh anchor at the pointer and
       // attach the dragged endpoint to it. The connectionState argument's
-      // `to` looks tempting here, but it's in container-relative screen
-      // coordinates, not flow coordinates; convert the raw pointer
-      // position instead.
+      // `to` is in container-relative screen coordinates, not flow coordinates;
+      // convert the raw pointer position instead.
       const clientPosition = getEventClientPosition(event);
       if (!clientPosition) {
         return;
