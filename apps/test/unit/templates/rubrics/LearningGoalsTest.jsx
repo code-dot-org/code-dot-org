@@ -1,9 +1,7 @@
-import {Typography} from '@mui/material';
 import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
@@ -732,33 +730,37 @@ describe('LearningGoals - Enzyme', () => {
     restoreAnnotator();
   });
 
-  it('changes learning goal when left and right buttons are pressed', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  it('changes learning goal when left and right buttons are pressed', async () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+    const user = userEvent.setup();
+    screen.getByText(learningGoals[0].learningGoal);
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
     );
-    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
-    wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.text()).to.contain(
-      i18n.rubricLearningGoalSummary()
+    screen.getByText(i18n.rubricLearningGoalSummary());
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
     );
-    wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
-    wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
+    screen.getByText(learningGoals[0].learningGoal);
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
+    );
+    screen.getByText(learningGoals[1].learningGoal);
   });
 
-  it('renders the summary page after AI evaluations are run', () => {
-    const wrapper = shallow(
+  it('renders the summary page after AI evaluations are run', async () => {
+    render(
       <LearningGoals
         learningGoals={learningGoals}
         aiEvaluations={aiEvaluations}
         teacherHasEnabledAi
       />
     );
-    wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.text()).to.contain(
-      i18n.rubricLearningGoalSummary()
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
     );
+    screen.getByText(i18n.rubricLearningGoalSummary());
   });
 
   it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
@@ -827,13 +829,15 @@ describe('LearningGoals - Enzyme', () => {
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
-  it('does not show AI token when AI is disabled', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
+  it('does not show AI token when AI is disabled', async () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
     );
-    wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
-    deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
+    screen.getByText(learningGoals[1].learningGoal);
+    // AiToken renders the i18n.usesAi() label; absent on AI-disabled goals
+    deprecatedExpect(screen.queryByText(i18n.usesAi())).to.be.null;
   });
 
   it('does not show AI token when teacher has disabled AI', () => {
@@ -860,17 +864,20 @@ describe('LearningGoals - Enzyme', () => {
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
-  it('sends event when new learning goal is selected', () => {
+  it('sends event when new learning goal is selected', async () => {
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    const wrapper = shallow(
+    render(
       <LearningGoals
         learningGoals={learningGoals}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
         studentLevelInfo={studentLevelInfo}
       />
     );
-    wrapper.find('button').at(1).simulate('click');
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricNextLearningGoal()})
+    );
     deprecatedExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED,
       {
@@ -881,7 +888,9 @@ describe('LearningGoals - Enzyme', () => {
         studentId: 1,
       }
     );
-    wrapper.find('button').first().simulate('click');
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
+    );
     deprecatedExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED,
       {
@@ -922,7 +931,7 @@ describe('LearningGoals - Enzyme', () => {
       })
     );
 
-    const wrapper = mount(
+    render(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
@@ -931,13 +940,9 @@ describe('LearningGoals - Enzyme', () => {
     );
 
     // Need to have it 'load' all the prior evaluations
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
 
-    deprecatedExpect(wrapper.find('textarea').getDOMNode().disabled).to.equal(
-      false
-    );
+    deprecatedExpect(screen.getByRole('textbox').disabled).to.equal(false);
     postStub.restore();
   });
 
@@ -954,7 +959,7 @@ describe('LearningGoals - Enzyme', () => {
       })
     );
 
-    const wrapper = mount(
+    render(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
@@ -963,30 +968,19 @@ describe('LearningGoals - Enzyme', () => {
     );
 
     // Need to have it 'load' all the prior evaluations
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
 
-    wrapper.find('button').first().simulate('click');
-
-    const title = wrapper
-      .find(Typography)
-      .filterWhere(node => node.props().variant === 'h5')
-      .at(0);
-    deprecatedExpect(title.find('span').text()).to.equal(
-      i18n.rubricLearningGoalSummary()
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {name: i18n.rubricPreviousLearningGoal()})
     );
 
-    const strongNodes = wrapper
-      .find(Typography)
-      .filterWhere(node => node.props().variant === 'strong');
-    deprecatedExpect(strongNodes.at(0).text()).to.equal('Learning Goal 1');
-
-    const body3Texts = wrapper
-      .find(Typography)
-      .filterWhere(node => node.props().variant === 'body3')
-      .map(node => node.text());
-    deprecatedExpect(body3Texts).to.include('Limited Evidence');
+    // The summary page shows its title, each goal name, and its submitted score
+    screen.getByText(i18n.rubricLearningGoalSummary());
+    screen.getByText('Learning Goal 1');
+    deprecatedExpect(
+      screen.getAllByText('Limited Evidence').length
+    ).to.be.at.least(1);
     postStub.restore();
   });
 

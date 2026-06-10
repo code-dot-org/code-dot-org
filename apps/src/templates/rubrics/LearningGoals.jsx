@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef, useMemo} from 'react';
@@ -434,8 +434,10 @@ export default function LearningGoals({
     <div className={style.learningGoalsContainer}>
       <div className={style.learningGoalsHeader}>
         <div className={style.learningGoalsHeaderLeftSide}>
-          <button
+          <MuiIconButton
             type="button"
+            variant="text"
+            color="secondary"
             className={classnames(
               style.learningGoalButton,
               style.learningGoalButtonLeft
@@ -444,7 +446,7 @@ export default function LearningGoals({
             onClick={() => onCarouselPress(-1)}
           >
             <FontAwesomeV6Icon iconName="angle-left" />
-          </button>
+          </MuiIconButton>
           <ProgressRing
             className={style.learningGoalRing}
             learningGoals={learningGoals}
@@ -511,9 +513,11 @@ export default function LearningGoals({
               )}
             </div>
           )}
-          <button
+          <MuiIconButton
             id="uitest-next-goal"
             type="button"
+            variant="text"
+            color="secondary"
             className={classnames(
               style.learningGoalButton,
               style.learningGoalButtonRight
@@ -522,7 +526,7 @@ export default function LearningGoals({
             onClick={() => onCarouselPress(1)}
           >
             <FontAwesomeV6Icon iconName="angle-right" />
-          </button>
+          </MuiIconButton>
         </div>
       </div>
       <div className={style.learningGoalOuterBlock}>
