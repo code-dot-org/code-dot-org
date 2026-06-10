@@ -155,3 +155,8 @@ td, th {
 summary {
   display: revert;
 }
+
+// Undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_utilities.scss:45
+.hidden {
+  display: revert !important;
+}
