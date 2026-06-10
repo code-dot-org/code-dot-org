@@ -111,7 +111,10 @@ module Geocoder
     return nil unless text
     match = text.match(/\b\d{2,}/)
     return nil unless match
-    candidate = text[match.begin(0)..].split.first(MAX_ADDRESS_WORDS).join(' ')
+    # Strip chars geocoding APIs treat as component delimiters (e.g. ';') but
+    # that are never valid in a street address, to prevent false positives.
+    text_stripped = text[match.begin(0)..].tr(';!?', '   ')
+    candidate = text_stripped.split(/\s+/, MAX_ADDRESS_WORDS + 1).first(MAX_ADDRESS_WORDS).join(' ')
     return nil if candidate.length < MIN_ADDRESS_LENGTH
     return nil if candidate.count(' ') < 2
     candidate

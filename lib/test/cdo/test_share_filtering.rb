@@ -94,6 +94,9 @@ class ShareFilteringTest < Minitest::Test
     assert_equal '123 Post Road Westport CT', Geocoder.extract_address_candidate('Hi I live at 123 Post Road Westport CT')
     assert_equal '123, Post Road, Westport, CT', Geocoder.extract_address_candidate('Hi I live at 123, Post Road, Westport, CT')
 
+    # Semicolon, a geocoder delimiter, is stripped.
+    assert_equal '00100 player', Geocoder.extract_address_candidate('00100; player')
+
     # Caps at MAX_ADDRESS_WORDS words.
     long_text = "Hi 12 #{(['word'] * 20).join(' ')}"
     candidate = Geocoder.extract_address_candidate(long_text)
