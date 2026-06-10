@@ -1,0 +1,122 @@
+import {getStore} from '@cdo/apps/code-studio/redux';
+import CodebridgeRegistry from '@cdo/apps/codebridge/CodebridgeRegistry';
+import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
+import {
+  handleRunClick,
+  stopJavaCode,
+} from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+jest.mock('@cdo/apps/javalab/JavabuilderConnection');
+jest.mock('@cdo/apps/util/AuthenticityTokenStore');
+jest.mock('@cdo/apps/lab2/Lab2Registry');
+jest.mock('@cdo/apps/codebridge/CodebridgeRegistry');
+jest.mock('@cdo/apps/code-studio/redux');
+jest.mock('@cdo/apps/lab2/projects/utils');
+jest.mock('@cdo/apps/lab2/redux/lab2ReduxSelectors');
+jest.mock('@cdo/apps/lab2/redux/systemRedux');
+jest.mock('@cdo/apps/javalab/lab2/sourceConverter');
+jest.mock('@cdo/apps/javalab/lab2/progress/JavaValidationTracker');
+
+const mockJavabuilderConnection = JavabuilderConnection as jest.MockedClass<
+  typeof JavabuilderConnection
+>;
+const mockGetAuthenticityToken = getAuthenticityToken as jest.MockedFunction<
+  typeof getAuthenticityToken
+>;
+
+// Resolve all pending microtasks/macrotasks so an awaiting async function
+// reaches its next suspension point.
+function flushPromises() {
+  return new Promise(resolve => setTimeout(resolve, 0));
+}
+
+// handleRunClick resolves its run promise via the setIsRunning callback it
+// hands the connection (6th constructor arg). The real connection fires it on
+// program exit; the mock fires it immediately so the promise can settle.
+const SET_IS_RUNNING_ARG = 5;
+
+describe('javabuilderRunUtils', () => {
+  let neighborhoodOnStop: jest.Mock;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+
+    neighborhoodOnStop = jest.fn();
+
+    // flushSave is awaited before the token fetch; resolve immediately.
+    (Lab2Registry.getInstance as jest.Mock).mockReturnValue({
+      getProjectManager: () => ({
+        flushSave: () => Promise.resolve(),
+        getChannelId: () => 'channel-1',
+      }),
+    });
+
+    (CodebridgeRegistry.getInstance as jest.Mock).mockReturnValue({
+      getNeighborhood: () => ({onStop: neighborhoodOnStop}),
+      getConsoleManager: () => null,
+    });
+
+    // Reached only past the auth check; the interrupted run returns first.
+    (getStore as jest.Mock).mockReturnValue({
+      getState: () => ({
+        lab2Project: {projectSources: {source: {}}},
+        currentUser: {},
+      }),
+    });
+  });
+
+  it('does not open a javabuilder connection when stopped during the auth check', async () => {
+    // Hold the token fetch open so stop can land while handleRunClick is
+    // waiting on the auth check.
+    let resolveToken: (token: string) => void = () => {};
+    mockGetAuthenticityToken.mockReturnValue(
+      new Promise<string>(resolve => {
+        resolveToken = resolve;
+      })
+    );
+
+    const runPromise = handleRunClick(
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null
+    );
+
+    // Let handleRunClick run past flushSave and suspend on the token fetch.
+    await flushPromises();
+    expect(mockGetAuthenticityToken).toHaveBeenCalled();
+    expect(mockJavabuilderConnection).not.toHaveBeenCalled();
+
+    // Stop while the token fetch is still pending, then let it resolve.
+    stopJavaCode();
+    resolveToken('token');
+    await runPromise;
+
+    expect(mockJavabuilderConnection).not.toHaveBeenCalled();
+  });
+
+  it('opens a javabuilder connection when not stopped', async () => {
+    mockGetAuthenticityToken.mockResolvedValue('token');
+    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
+      (args[SET_IS_RUNNING_ARG] as () => void)();
+      return {
+        connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrides: jest.fn(),
+        closeConnection: jest.fn(),
+      } as unknown as JavabuilderConnection;
+    });
+
+    await handleRunClick(
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null
+    );
+
+    expect(mockJavabuilderConnection).toHaveBeenCalledTimes(1);
+  });
+});
