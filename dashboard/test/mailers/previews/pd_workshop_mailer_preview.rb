@@ -138,7 +138,7 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       num_sessions: 2,
       course: course,
       subject: subject,
-      location_name: 'Code.org office',
+      location_name: 'CodeAI office',
       location_address: '1501 4th Ave, Suite 900, Seattle, WA',
       facilitators: [facilitator]
     }

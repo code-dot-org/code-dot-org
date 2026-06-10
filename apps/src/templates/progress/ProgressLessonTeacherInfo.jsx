@@ -3,6 +3,8 @@
  * view for a given lesson.
  */
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -11,7 +13,6 @@ import {
   toggleHiddenLesson,
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
@@ -92,31 +93,39 @@ class ProgressLessonTeacherInfo extends React.Component {
       <TeacherInfoBox>
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
-              text={i18n.viewLessonPlan()}
-              icon="file-lines"
-              color="blue"
+              variant="contained"
+              color="primary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
-            />
+              fullWidth
+            >
+              {i18n.viewLessonPlan()}
+            </MuiButton>
           </div>
         )}
         {lesson.student_lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
-              text={i18n.studentResources()}
-              icon="file-lines"
-              color="purple"
+              variant="outlined"
+              color="secondary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
               onClick={this.props.onClickStudentLessonPlan}
-            />
+              fullWidth
+            >
+              {i18n.studentResources()}
+            </MuiButton>
           </div>
         )}
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
@@ -143,16 +152,20 @@ class ProgressLessonTeacherInfo extends React.Component {
               ...styles.buttonContainer,
             }}
           >
-            <Button
-              __useDeprecatedTag
+            <MuiButton
               href={lesson.lesson_feedback_url}
-              text={i18n.rateThisLesson()}
-              icon="chart-column"
-              color={Button.ButtonColor.gray}
+              variant="outlined"
+              color="secondary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="chart-column" />}
               target="_blank"
+              rel="noopener noreferrer"
               style={styles.button}
               className="rate-lesson-button"
-            />
+              fullWidth
+            >
+              {i18n.rateThisLesson()}
+            </MuiButton>
           </div>
         )}
         {showHiddenForSectionToggle && (

@@ -414,6 +414,8 @@ en:
               name: Unplugged level
             lesson-59:
               name: Java Lab2
+            lesson-60:
+              name: AI Lab Lab2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -29386,6 +29388,17 @@ en:
           lesson_groups: {}
           name: test-brendan
           title: test brendan
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        international-pedagogy-u1:
+          lessons:
+            lesson-1:
+              name: CodeAI Pedagogy
+          lesson_groups: {}
+          name: international-pedagogy-u1
+          title: CodeAI Pedagogy - International Course
           description_audience: ''
           description_short: ''
           description: ''

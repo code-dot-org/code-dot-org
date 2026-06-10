@@ -35,12 +35,12 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
+    <p style = "font-size: 12pt;">
     <ul>
-    <li style = "font-size: 14pt;">In one case, you already know how many times you’ll repeat the action.</li>
-    <li style = "font-size: 14pt;">In the other, you don’t know how many tries it will take—you stop only when a condition is met.</li>
+    <li style = "font-size: 12pt;">In one case, you already know how many times you’ll repeat the action.</li>
+    <li style = "font-size: 12pt;">In the other, you don’t know how many tries it will take—you stop only when a condition is met.</li>
     </ul>
-    <p style = "font-size: 14pt;"> This same distinction shows up in programming.</p>
+    <p style = "font-size: 12pt;"> This same distinction shows up in programming.</p>
 
 </p>
 </div>
@@ -54,7 +54,7 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
+<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
 </p>
 </div>
 

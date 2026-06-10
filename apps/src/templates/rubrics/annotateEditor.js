@@ -1,8 +1,9 @@
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import {ai_rubric_cyan} from '@cdo/apps/util/color';
 
 import tipIcon from './images/AiBot_Icon.svg';
 import infoIcon from './images/info-icon.svg';
+
+const RUBRIC_ANNOTATION_COLOR = 'var(--background-brand-aqua-primary)';
 
 /**
  * Annotation tooltip styling.
@@ -162,13 +163,13 @@ export const annotateLines = (evidence, observations, hoverCallback) => {
           position.firstLine,
           message,
           'INFO',
-          ai_rubric_cyan,
+          RUBRIC_ANNOTATION_COLOR,
           infoIcon,
           tipStyle,
           hoverCallback
         );
         for (let i = position.firstLine; i <= position.lastLine; i++) {
-          EditorAnnotator.highlightLine(i, ai_rubric_cyan);
+          EditorAnnotator.highlightLine(i, RUBRIC_ANNOTATION_COLOR);
         }
 
         if (message === observations) {
@@ -190,13 +191,13 @@ export const annotateLines = (evidence, observations, hoverCallback) => {
         lineNumber,
         message,
         'INFO',
-        ai_rubric_cyan,
+        RUBRIC_ANNOTATION_COLOR,
         infoIcon,
         tipStyle,
         hoverCallback
       );
       for (let i = lineNumber; i <= lastLineNumber; i++) {
-        EditorAnnotator.highlightLine(i, ai_rubric_cyan);
+        EditorAnnotator.highlightLine(i, RUBRIC_ANNOTATION_COLOR);
       }
 
       // If we are forcing these lines to have the bulk annotation of
