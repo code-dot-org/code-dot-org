@@ -13,7 +13,7 @@
         - correct_answers.each do |correct_answer|
           .multi
             .mainblock
-              %span.answerbutton.btn{style: "height: #{height}"}
+              %span.answerbutton.btn.btn-default{style: "height: #{height.to_i + 20}"}
                 .item-mark
                   .fa{class: checked_class}
                 .item-label
