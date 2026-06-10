@@ -16,6 +16,9 @@ export default {
   title: 'DesignSystem/Header',
   component: Header,
   parameters: {
+    // The header spans the full viewport in studio; render it edge-to-edge (not
+    // in Storybook's default 16px-padded canvas) so Eyes/visual baselines match prod.
+    layout: 'fullscreen',
     a11y: {
       config: {
         rules: [
