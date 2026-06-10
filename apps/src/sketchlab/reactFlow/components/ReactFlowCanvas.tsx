@@ -100,6 +100,7 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
+  delete result.reconnectable;
   return result as T;
 }
 
