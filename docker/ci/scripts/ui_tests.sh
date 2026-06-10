@@ -15,6 +15,7 @@ bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests
 
 # Puma is still live from ci:run_ui_tests; run the Playwright e2e suite against
-# it. The script warns on failure; `|| true` keeps it non-blocking here.
+# it via the shared rake task (which also uploads the report and logs the link).
+# The task warns on failure; `|| true` keeps it non-blocking here.
 TARGET_URL=http://localhost-studio.code.org:3000 \
-  frontend/packages/e2e-tests/bin/run-playwright-tests-ci.sh || true
+  bundle exec rake test:playwright_ui || true
