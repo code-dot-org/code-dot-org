@@ -125,13 +125,16 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the Playwright e2e suite, upload its HTML report, and log the link.
+  # Run the Playwright e2e suite, upload its HTML report, and report start /
+  # success / failure to Slack the way the Cucumber UI tests do (ChatClient.log
+  # → the env's log room; #infra-test on the test server, stdout under CI).
   # Shared by DTT (via ui_all) and the Drone ui pipeline (ui_tests.sh): the
   # target comes from TARGET_URL, defaulting to this environment's studio URL.
   # Non-blocking — a failure warns but never fails the deploy or the PR build.
   # TODO: provision Playwright browsers via chef instead of installing at runtime.
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'] || CDO.studio_url('')
+    ChatClient.log "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}..."
     status = RakeUtils.system_with_chat_logging(
       "TARGET_URL=#{target_url}",
       frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
@@ -142,10 +145,7 @@ namespace :test do
     if status == 0
       ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
     else
-      message = "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}"
-      ChatClient.log message, color: 'red'
-      # Only ping the shared ops room on a DTT run, not on every PR build.
-      ChatClient.message 'server operations', message, color: 'yellow' unless ENV['CI']
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}", color: 'red'
     end
   end
 
