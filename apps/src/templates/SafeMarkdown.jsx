@@ -250,8 +250,8 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema, localized) => {
  */
 const markdownToReact = (rehypeMap, localized) => {
   const cache = localized
-    ? markdownProcessorCache
-    : localizedMarkdownProcessorCache;
+    ? localizedMarkdownProcessorCache
+    : markdownProcessorCache;
 
   if (!cache.has(rehypeMap)) {
     cache.set(rehypeMap, buildMarkdownProcessor(rehypeMap, schema, localized));
