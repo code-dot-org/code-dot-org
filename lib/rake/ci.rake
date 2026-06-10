@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
@@ -19,16 +21,16 @@ include TimedTaskWithLogging
 # Supported Tags:
 
 # Run all unit/integration tests, not just a subset based on changed files.
-RUN_ALL_TESTS_TAG = 'test all'.freeze
+RUN_ALL_TESTS_TAG = 'test all'
 
 # Only run apps tests on container 0
-RUN_APPS_TESTS_TAG = 'test apps'.freeze
+RUN_APPS_TESTS_TAG = 'test apps'
 
 # Don't run any apps tests
-SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
+SKIP_APPS_TESTS_FLAG = 'skip apps'
 
 # Don't run any UI or Eyes tests.
-SKIP_UI_TESTS_TAG = 'skip ui'.freeze
+SKIP_UI_TESTS_TAG = 'skip ui'
 
 # Reset the dashboard database before seeding for UI tests. It is recommended to
 # use this tag when running drone against PRs that reduce what gets seeded in
@@ -39,46 +41,56 @@ SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 # If you remove something from UI_TEST_SCRIPTS but do not specify this tag,
 # drone will still have that unit seeded in the database, possibly masking any
 # test failures that might show up in later drone builds after you merge.
-RESET_DB_TAG = 'reset db'.freeze
+RESET_DB_TAG = 'reset db'
 
 # Don't run any unit tests.
-SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
+SKIP_UNIT_TESTS_TAG = 'skip unit'
 
 # Don't run UI tests against Chrome
-SKIP_CHROME_TAG = 'skip chrome'.freeze
+SKIP_CHROME_TAG = 'skip chrome'
 
 # Run UI tests against Firefox
-TEST_FIREFOX_TAG = 'test firefox'.freeze
+TEST_FIREFOX_TAG = 'test firefox'
 
 # Run UI tests against Safari
-TEST_SAFARI_TAG = 'test safari'.freeze
+TEST_SAFARI_TAG = 'test safari'
 
 # Run UI tests against iPad, iPhone or both
-TEST_IPAD_TAG = 'test ipad'.freeze
-TEST_IPHONE_TAG = 'test iphone'.freeze
-TEST_IOS_TAG = 'test ios'.freeze
+TEST_IPAD_TAG = 'test ipad'
+TEST_IPHONE_TAG = 'test iphone'
+TEST_IOS_TAG = 'test ios'
 
 # Run UI tests against all browsers
-TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
+TEST_ALL_BROWSERS_TAG = 'test all browsers'
+
+# Browser tags that force UI tests onto SauceLabs. The Device Farm path only
+# supports Chrome (see USE_SAUCELABS_TAG), so the presence of any of these
+# tags routes UI tests to SauceLabs.
+NON_CHROME_TAGS = [
+  TEST_FIREFOX_TAG,
+  TEST_SAFARI_TAG,
+  TEST_IPAD_TAG,
+  TEST_IPHONE_TAG,
+  TEST_IOS_TAG,
+  TEST_ALL_BROWSERS_TAG,
+].freeze
 
 # Overrides for whether to run Applitools eyes tests
-TEST_EYES = 'test eyes'.freeze
-SKIP_EYES = 'skip eyes'.freeze
+TEST_EYES = 'test eyes'
+SKIP_EYES = 'skip eyes'
 
 # By default, to conserve our SauceLabs credits we run our UI and Eyes tests
 # against a local webdriver first, and only use SauceLabs to rerun any tests
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
-SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
+SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'
 
 # By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
 # out and falls back to SauceLabs. SauceLabs is automatically selected
-# (without this tag) when any non-Chrome browser tag is present
-# (TEST_FIREFOX_TAG, TEST_SAFARI_TAG, TEST_IPAD_TAG, TEST_IPHONE_TAG,
-# TEST_IOS_TAG, TEST_ALL_BROWSERS_TAG), because the Device Farm path
-# relies on Chrome's --host-resolver-rules to reach puma at
+# (without this tag) when any of the NON_CHROME_TAGS is present, because the
+# Device Farm path relies on Chrome's --host-resolver-rules to reach puma at
 # localhost-studio.code.org:3000 -- a chromedriver-specific flag we
 # don't have a clean equivalent for in Firefox/Safari.
-USE_SAUCELABS_TAG = 'use saucelabs'.freeze
+USE_SAUCELABS_TAG = 'use saucelabs'
 
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
@@ -132,13 +144,7 @@ namespace :ci do
     end
     # The Device Farm path requires Chrome (see USE_SAUCELABS_TAG comment),
     # so auto-fall-back to SauceLabs whenever a non-Chrome browser is tagged.
-    non_chrome_tagged =
-      CI::Utils.tagged?(TEST_FIREFOX_TAG) ||
-      CI::Utils.tagged?(TEST_SAFARI_TAG) ||
-      CI::Utils.tagged?(TEST_IPAD_TAG) ||
-      CI::Utils.tagged?(TEST_IPHONE_TAG) ||
-      CI::Utils.tagged?(TEST_IOS_TAG) ||
-      CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+    non_chrome_tagged = NON_CHROME_TAGS.any? {|t| CI::Utils.tagged?(t)}
     if non_chrome_tagged
       ChatClient.log "Non-Chrome browser tag present; routing UI tests via SauceLabs (Device Farm path only supports Chrome)."
     elsif CI::Utils.tagged?(USE_SAUCELABS_TAG)
