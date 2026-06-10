@@ -150,7 +150,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_includes exception.message, "Couldn't find Rubric"
   end
 
-
   test "job is retried when the proxy server returns a 429" do
     # Perform an otherwise successful run
     AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
