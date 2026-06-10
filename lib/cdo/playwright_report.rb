@@ -1,3 +1,4 @@
+require 'rack/mime'
 require 'socket'
 require 'cdo/aws/s3'
 require 'cdo/git_utils'
@@ -13,22 +14,6 @@ module Cdo
   module PlaywrightReport
     BUCKET = 'cucumber-logs'.freeze
 
-    CONTENT_TYPES = {
-      '.html' => 'text/html',
-      '.js' => 'text/javascript',
-      '.css' => 'text/css',
-      '.json' => 'application/json',
-      '.md' => 'text/plain',
-      '.png' => 'image/png',
-      '.jpeg' => 'image/jpeg',
-      '.jpg' => 'image/jpeg',
-      '.svg' => 'image/svg+xml',
-      '.webm' => 'video/webm',
-      '.zip' => 'application/zip',
-      '.woff2' => 'font/woff2',
-      '.ttf' => 'font/ttf',
-    }.freeze
-
     # Recursively upload report_dir, preserving relative paths and per-file
     # content types.
     # @param report_dir [String] path to the playwright-report directory
@@ -42,8 +27,9 @@ module Cdo
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
         name = path.delete_prefix("#{report_dir}/")
+        content_type = Rack::Mime.mime_type(File.extname(path), 'application/octet-stream')
         url = File.open(path, 'rb') do |body|
-          uploader.upload_log(name, body, content_type: content_type(path))
+          uploader.upload_log(name, body, content_type: content_type)
         end
         # Return the unversioned URL: the report SPA resolves sibling data/
         # attachments relative to its own URL, so a ?versionId= (which belongs
@@ -63,10 +49,6 @@ module Cdo
       else
         "#{Socket.gethostname}/#{GitUtils.current_branch}"
       end
-    end
-
-    def self.content_type(path)
-      CONTENT_TYPES.fetch(File.extname(path).downcase, 'application/octet-stream')
     end
   end
 end
