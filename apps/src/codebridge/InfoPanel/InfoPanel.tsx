@@ -49,6 +49,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     onImageFlagged,
     onAssetUploaded,
     onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -172,6 +173,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         hasInstructionsDrawer={appName === 'weblab2'}
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}
+        initialWelcomeMessage={aiTutorInitialWelcomeMessage}
       />
     </div>
   );

@@ -13,7 +13,7 @@ Before we look at how iteration appears in code, let’s ground the idea in a fa
 
 ---
 
-<img src="https://images.code.org/481a5b8b1e9576dd3a25de4e063dc319-image-1768428984811.png" alt="basketball going through hoop" width="250px" style="border-radius:10px; float:right; margin: 0 30px 40px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/481a5b8b1e9576dd3a25de4e063dc319-image-1768428984811.png" alt="basketball going through hoop" width="250px" style="border-radius:10px; float:right; margin: 0 30px 10px 40px; transform: scaleX(-1);">
 
 
 ## Hoop, there it is! 
@@ -29,10 +29,9 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 
 👉**Which round do you think would take longer and why?**
 
-<div style="clear:both;"></div>
 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; width:60%;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
     <p style = "font-size: 12pt;">
@@ -46,6 +45,7 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 </div>
 </details>
 
+<div style="clear:both;"></div>
 
 ---
 
@@ -53,7 +53,7 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 
 Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 80%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
 </p>
 </div>

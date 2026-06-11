@@ -92,20 +92,7 @@ Loops are what allow the program to process each piece of data systematically at
 
 
 
----
 
-<div style="text-align: center; width: 80%; margin: 0 auto;">
-  <p style="
-    font-size: 18px; 
-    background-color: #F5F7F8; 
-    padding: 10px; 
-    border-left: 5px solid #8148B2; 
-    border-right: 5px solid #8148B2;
-    display: inline-block;
-  ">
-    <i>A display pipeline is the plan for moving data, and loops are the mechanism that carry each piece of data through that plan from start to finish.</i>
-  </p>
-</div>
 
 
 
