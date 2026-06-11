@@ -36,6 +36,9 @@ module.exports = {
   // maps) or APPS_DEVTOOL=eval-source-map for the highest fidelity (most
   // memory).
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
+  // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
+  // ~2.5GB of memory during `yarn start`. Your editor and CI still type-check.
+  SKIP_TYPECHECK: getBoolEnv('SKIP_TYPECHECK'),
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
   // 'unit', 'integration', 'storybook', or 'entry'

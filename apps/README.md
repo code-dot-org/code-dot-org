@@ -76,9 +76,16 @@ full-fidelity `eval-source-map`.
 Override the default with `APPS_DEVTOOL` when you need a different tradeoff:
 
 - `APPS_DEVTOOL=eval yarn start` — least memory, no source maps (you step
-  through transpiled code). Also available as `yarn start:lowmem`.
+  through transpiled code).
 - `APPS_DEVTOOL=eval-source-map yarn start` — highest fidelity (column-level
   mappings), most memory.
+
+Type checking runs in a separate process capped at ~2.5GB. Set
+`SKIP_TYPECHECK=1 yarn start` to skip it and reclaim that memory; your editor
+and CI still type-check.
+
+`yarn start:lowmem` combines both levers (`APPS_DEVTOOL=eval` and
+`SKIP_TYPECHECK=1`) for the lowest-memory dev server.
 
 ## Testing
 
