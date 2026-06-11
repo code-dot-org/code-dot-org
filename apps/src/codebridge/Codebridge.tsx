@@ -59,6 +59,7 @@ type CodebridgeProps = {
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
 };
 
@@ -82,6 +83,7 @@ export const Codebridge = React.memo(
     secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
@@ -238,6 +240,7 @@ export const Codebridge = React.memo(
           aiTutorDisabled,
           onAssetUploaded,
           onAssetRemoved,
+          aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
         }}
       >
