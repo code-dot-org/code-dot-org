@@ -71,7 +71,6 @@ const highlightAttachedElement = (selector: string) => ({
 });
 
 // ── Quiz content ──────────────────────────────────────────────────────────────
-
 const QUIZ_LEVEL_QUESTION_HIGH = `
   <div class="onboarding-step-content">
     <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
@@ -96,6 +95,20 @@ const QUIZ_LEVEL_QUESTION_MIDDLE = `
     <button class="quiz-option" data-answer="wrong" type="button">Level 5</button>
     <button class="quiz-option" data-answer="wrong" type="button">Level 8</button>
     <button class="quiz-option" data-answer="wrong" type="button">Level 11</button>
+  </div>
+  <div class="quiz-feedback" aria-live="polite"></div>
+`;
+
+const QUIZ_LEVEL_QUESTION_ELEM = `
+  <div class="onboarding-step-content">
+    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
+    <span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
+  </div>
+  <div class="quiz-options-grid">
+    <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 3</button>
+    <button class="quiz-option" data-answer="wrong" type="button">Level 4</button>
+    <button class="quiz-option" data-answer="correct" type="button">Level 6</button>
   </div>
   <div class="quiz-feedback" aria-live="polite"></div>
 `;
@@ -379,7 +392,7 @@ export const createReviewSyllabusUnitOverviewSteps = (
         createQuizStep(
           tour,
           controller,
-          QUIZ_LEVEL_QUESTION_HIGH,
+          QUIZ_LEVEL_QUESTION_ELEM,
           '#progress-lesson-1'
         ),
         lessonResourcesStep,
