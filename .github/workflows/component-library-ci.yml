@@ -83,9 +83,14 @@ jobs:
         working-directory: ./frontend
         env:
           ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
-          # TRIAL ONLY — revert to `staging` before merge. Staging has no
-          # builds yet, so baseline against the dedicated trial branch.
-          ARGOS_REFERENCE_BRANCH: stephen/argos-ci-baseline
+          # TRIAL ONLY — remove before merge. The Argos project is linked to a
+          # personal fork that lacks these commits, so branch-based baseline
+          # resolution (a GitHub merge-base query against the linked repo)
+          # always orphans. Pin the baseline to the approved build's commit on
+          # stephen/argos-ci-baseline instead; the server resolves an exact
+          # commit from its own records, no repo access needed. Update this
+          # pin whenever the baseline is refreshed.
+          ARGOS_REFERENCE_COMMIT: 5286600356c25b630d49d1d3cf5efb4d8cc4bfd3
 
   # We do not use the Argos GitHub App, so poll the build result ourselves and
   # report it as a PR comment. This is a separate job so that approving diffs
