@@ -300,7 +300,6 @@ const createHomepageSteps = (
         },
       },
     },
-    createTeacherResourcesStep(tour),
   ];
 };
 
@@ -351,6 +350,7 @@ export const createReviewSyllabusUnitOverviewSteps = (
     case 'high':
       return [
         createBreadcrumbStep(tour, controller),
+        createTeacherResourcesStep(tour, controller),
         createQuizStep(
           tour,
           controller,
@@ -363,6 +363,7 @@ export const createReviewSyllabusUnitOverviewSteps = (
     case 'middle':
       return [
         createBreadcrumbStep(tour, controller),
+        createTeacherResourcesStep(tour, controller),
         createQuizStep(
           tour,
           controller,
@@ -375,6 +376,12 @@ export const createReviewSyllabusUnitOverviewSteps = (
     case 'elementary':
       return [
         createTeacherResourcesStep(tour, controller),
+        createQuizStep(
+          tour,
+          controller,
+          QUIZ_LEVEL_QUESTION_HIGH,
+          '#progress-lesson-1'
+        ),
         lessonResourcesStep,
         completionStep,
       ];
