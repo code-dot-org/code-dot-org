@@ -6,6 +6,7 @@ import {
   stopJavaCode,
 } from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 jest.mock('@cdo/apps/javalab/JavabuilderConnection');
@@ -37,18 +38,37 @@ function flushPromises() {
 // program exit; the mock fires it immediately so the promise can settle.
 const SET_IS_RUNNING_ARG = 5;
 
+const projectSources = {source: {}};
+
 describe('javabuilderRunUtils', () => {
   let neighborhoodOnStop: jest.Mock;
+  let projectManagerSave: jest.Mock;
+  let projectManagerFlushSave: jest.Mock;
+
+  // The connection mock resolves the run promise immediately so awaited
+  // handleRunClick calls can settle.
+  function connectImmediately() {
+    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
+      (args[SET_IS_RUNNING_ARG] as () => void)();
+      return {
+        connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrides: jest.fn(),
+        closeConnection: jest.fn(),
+      } as unknown as JavabuilderConnection;
+    });
+  }
 
   beforeEach(() => {
     jest.clearAllMocks();
 
     neighborhoodOnStop = jest.fn();
+    projectManagerSave = jest.fn().mockResolvedValue(undefined);
+    projectManagerFlushSave = jest.fn().mockResolvedValue(undefined);
 
-    // flushSave is awaited before the token fetch; resolve immediately.
     (Lab2Registry.getInstance as jest.Mock).mockReturnValue({
       getProjectManager: () => ({
-        flushSave: () => Promise.resolve(),
+        save: projectManagerSave,
+        flushSave: projectManagerFlushSave,
         getChannelId: () => 'channel-1',
       }),
     });
@@ -58,10 +78,9 @@ describe('javabuilderRunUtils', () => {
       getConsoleManager: () => null,
     });
 
-    // Reached only past the auth check; the interrupted run returns first.
     (getStore as jest.Mock).mockReturnValue({
       getState: () => ({
-        lab2Project: {projectSources: {source: {}}},
+        lab2Project: {projectSources},
         currentUser: {},
       }),
     });
@@ -82,7 +101,8 @@ describe('javabuilderRunUtils', () => {
       /* dispatch */ jest.fn(),
       /* levelId */ 1,
       /* csaViewMode */ 'console',
-      /* progressManager */ null
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ false
     );
 
     // Let handleRunClick run past flushSave and suspend on the token fetch.
@@ -141,23 +161,60 @@ describe('javabuilderRunUtils', () => {
 
   it('opens a javabuilder connection when not stopped', async () => {
     mockGetAuthenticityToken.mockResolvedValue('token');
-    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
-      (args[SET_IS_RUNNING_ARG] as () => void)();
-      return {
-        connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides: jest.fn(),
-        closeConnection: jest.fn(),
-      } as unknown as JavabuilderConnection;
-    });
+    connectImmediately();
 
     await handleRunClick(
       /* runTests */ false,
       /* dispatch */ jest.fn(),
       /* levelId */ 1,
       /* csaViewMode */ 'console',
-      /* progressManager */ null
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ false
     );
 
     expect(mockJavabuilderConnection).toHaveBeenCalledTimes(1);
+    expect(projectManagerFlushSave).toHaveBeenCalled();
+    expect(projectManagerSave).not.toHaveBeenCalled();
+  });
+
+  it('force-saves the start code before connecting when the project has never been saved', async () => {
+    mockGetAuthenticityToken.mockResolvedValue('token');
+    connectImmediately();
+
+    await handleRunClick(
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ true
+    );
+
+    expect(projectManagerSave).toHaveBeenCalledWith(
+      projectSources,
+      /* forceSave */ true,
+      /* forceNewVersion */ false,
+      /* skipSourcesChangedCheck */ true
+    );
+    expect(projectManagerFlushSave).not.toHaveBeenCalled();
+    expect(mockJavabuilderConnection).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not save at all in a read-only workspace, which runs override sources', async () => {
+    (isReadOnlyWorkspace as unknown as jest.Mock).mockReturnValueOnce(true);
+    mockGetAuthenticityToken.mockResolvedValue('token');
+    connectImmediately();
+
+    await handleRunClick(
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ true
+    );
+
+    expect(projectManagerSave).not.toHaveBeenCalled();
+    expect(projectManagerFlushSave).not.toHaveBeenCalled();
   });
 });
