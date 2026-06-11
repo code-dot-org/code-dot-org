@@ -30,6 +30,12 @@ module.exports = {
   // For details, see:
   // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
   DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
+  // Overrides the webpack `devtool` (source map) setting for `yarn start`.
+  // `yarn start` defaults to 'eval-cheap-module-source-map' to keep memory
+  // usage manageable. Set APPS_DEVTOOL=eval for the lowest memory (no source
+  // maps) or APPS_DEVTOOL=eval-source-map for the highest fidelity (most
+  // memory).
+  APPS_DEVTOOL: process.env.APPS_DEVTOOL,
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
   // 'unit', 'integration', 'storybook', or 'entry'

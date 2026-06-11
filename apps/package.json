@@ -28,6 +28,7 @@
     "build:dist:profile": "PROFILE_APPS_BUILD=1 yarn build:dist",
     "grunt": "NODE_OPTIONS=--max-old-space-size=4096 grunt",
     "start": "yarn grunt dev",
+    "start:lowmem": "APPS_DEVTOOL=eval yarn grunt dev",
     "start:applab": "yarn grunt dev --app=applab",
     "start:gamelab": "yarn grunt dev --app=gamelab",
     "start:craft": "yarn grunt dev --app=craft",

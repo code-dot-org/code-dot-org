@@ -66,6 +66,20 @@ yarn build
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
+## Dev server source maps and memory usage
+
+`yarn start` defaults to `devtool: 'eval-cheap-module-source-map'`. The `module`
+part keeps breakpoints in your original TS/JSX; the `cheap` part drops
+column-level mappings (line-level only), which uses far less memory than the
+full-fidelity `eval-source-map`.
+
+Override the default with `APPS_DEVTOOL` when you need a different tradeoff:
+
+- `APPS_DEVTOOL=eval yarn start` — least memory, no source maps (you step
+  through transpiled code). Also available as `yarn start:lowmem`.
+- `APPS_DEVTOOL=eval-source-map yarn start` — highest fidelity (column-level
+  mappings), most memory.
+
 ## Testing
 
 Apps unit tests are run using [jest](https://jestjs.io/) and integration tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
@@ -198,7 +212,7 @@ To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
 
 ## Typescript Migration
 We are trying out Typescript in our repository, and currently have a combination of Typescript and Javascript files. Typescript files can be added anywhere in `/src`, and will
-be linted and built. 
+be linted and built.
 
 ## Contributing
 
