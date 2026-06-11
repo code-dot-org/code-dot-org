@@ -63,6 +63,11 @@ def main(options)
   $options = options
   $browsers = select_browser_configs(options)
   $lock = Mutex.new
+  # Resolve the Device Farm bastion IP once, here in the parent, so every
+  # feature subprocess Parallel forks below inherits it via the environment
+  # (see run_feature). nil for non-Device-Farm or non-localhost runs.
+  $device_farm_bastion_ip = resolve_device_farm_bastion_ip(options)
+  puts "Device Farm: routing localhost traffic via bastion #{$device_farm_bastion_ip}" if $device_farm_bastion_ip
   # We track the number of failed features in this test run so we can abort the run
   # if we exceed a certain limit.  See options.abort_when_failures_exceed.
   $failed_features = 0
@@ -294,6 +299,46 @@ def select_browser_configs(options)
   else
     browsers # Use all of them
   end
+end
+
+# The bastion private IP that Device Farm's Chrome should resolve the
+# localhost-shadowing hostnames to (consumed by features/support/connect.rb via
+# DEVICE_FARM_BASTION_IP), or nil when no rewrite applies. Only meaningful for a
+# local Device Farm run against localhost: in CI connect.rb uses the worker's
+# own IP, and a non-localhost target resolves normally. Precedence:
+#   1. DEVICE_FARM_BASTION_IP env -- explicit, one-off override
+#   2. device_farm_bastion_ip in locals.yml -- a pinned static value
+#   3. an EC2 lookup of the running bastion by Name tag -- so a stopped/started
+#      or relaunched bastion needs no locals.yml edit
+def resolve_device_farm_bastion_ip(options)
+  return nil unless options.device_farm
+  return nil if CI::Utils.running_on_ci?
+  return nil unless /localhost/.match?(options.dashboard_domain.to_s)
+
+  ENV['DEVICE_FARM_BASTION_IP'].presence ||
+    CDO.device_farm_bastion_ip.presence ||
+    lookup_device_farm_bastion_ip(CDO.device_farm_bastion_name.presence || 'device-farm-bastion')
+end
+
+# Private IP of the one running EC2 instance tagged Name=<name> in Device Farm's
+# region (us-west-2, where the bastion must live to share the session ENI's
+# VPC), or nil. Needs ec2:DescribeInstances on the active AWS profile. Mirrors
+# the describe_instances tag-filter pattern in CDO#app_servers.
+def lookup_device_farm_bastion_ip(name)
+  require 'aws-sdk-ec2'
+  instances = Aws::EC2::Client.new(region: 'us-west-2').describe_instances(
+    filters: [
+      {name: 'tag:Name', values: [name]},
+      {name: 'instance-state-name', values: ['running']},
+    ]
+  ).reservations.flat_map(&:instances)
+  ips = instances.map(&:private_ip_address).compact.uniq
+  puts "WARNING: #{ips.size} running instances tagged Name=#{name}; using #{ips.first}".yellow if ips.size > 1
+  ips.first
+rescue => exception
+  puts "WARNING: could not look up Device Farm bastion by Name=#{name} (set device_farm_bastion_ip " \
+       "in locals.yml to skip the lookup): #{exception.message}".yellow
+  nil
 end
 
 # Upload the given log to the cucumber-logs s3 bucket.
@@ -864,6 +909,9 @@ def run_feature(browser, feature, options)
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
   run_environment['TEST_DEVICE_FARM'] = options.device_farm ? "true" : "false"
+  # Routes Device Farm's Chrome to the developer's localhost via the bastion
+  # (resolved once in main). Unset for non-Device-Farm/non-localhost runs.
+  run_environment['DEVICE_FARM_BASTION_IP'] = $device_farm_bastion_ip if $device_farm_bastion_ip
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = mobile_browser?(browser) ? "true" : "false"

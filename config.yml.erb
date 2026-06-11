@@ -227,11 +227,19 @@ device_farm_desktop_project_arn:
 # device_farm_mobile_project_arn is the ARN of a Mobile Device Testing project,
 # used for running mobile browser tests (iPhone, iPad, etc.).
 device_farm_mobile_project_arn:
-# device_farm_bastion_ip is the private IP of a bastion in the codeorg-dev VPC,
-# used only to run UI tests against localhost via Device Farm: Device Farm's
-# browsers reach the developer's dashboard server through a reverse SSH tunnel
-# to this bastion. See dashboard/test/ui/DEVICE_FARM_LOCAL.md.
+# Reaching a developer's localhost from Device Farm (UI tests only): Device
+# Farm's browsers connect to a bastion in the codeorg-dev VPC, which a reverse
+# SSH tunnel forwards back to the workstation. See
+# dashboard/test/ui/DEVICE_FARM_LOCAL.md.
+#
+# device_farm_bastion_ip pins the bastion's private IP (the address Device Farm
+# dials). Leave it blank to have runner.rb look the IP up by Name tag on each
+# run (device_farm_bastion_name below), so a relaunched bastion needs no edit;
+# set it only to pin a value or skip the lookup.
 device_farm_bastion_ip:
+# device_farm_bastion_name is the EC2 Name tag runner.rb filters on when looking
+# up the bastion IP. Defaults to 'device-farm-bastion' when blank.
+device_farm_bastion_name:
 # device_farm_bastion_ssh is the SSH destination (e.g. ec2-user@<public-dns> or
 # an ~/.ssh/config Host alias) used by bin/device_farm_tunnel to open that
 # reverse tunnel. Distinct from device_farm_bastion_ip, which is the address

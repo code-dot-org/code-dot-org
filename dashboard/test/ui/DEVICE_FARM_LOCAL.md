@@ -34,7 +34,8 @@ prefix on the run command.
 1. The test navigates Chrome to `http://localhost-studio.code.org:3000`.
 2. `--host-resolver-rules` (set in `runner.rb`'s cucumber support, see
    `features/support/connect.rb`) rewrites `localhost-studio.code.org` and
-   `localhost.code.org` to the bastion's **private** IP (`device_farm_bastion_ip`).
+   `localhost.code.org` to the bastion's **private** IP -- which `runner.rb`
+   resolves at run time by Name-tag lookup (see "Per-developer setup").
 3. Chrome dials `bastion-private-ip:3000` over the Device Farm ENI in the VPC.
 4. The bastion's reverse-forwarded listener relays that to `localhost:3000` on
    the workstation, where puma is bound.
@@ -126,7 +127,11 @@ Notes:
   x86 AMI use `t3.nano` instead.
 - The instance profile should grant `AmazonSSMManagedInstanceCore` so you can
   reach it via SSM (step 4) without a public IP.
-- Note the instance's **private IP** -- this is `device_farm_bastion_ip`.
+- Keep the `Name=device-farm-bastion` tag: `runner.rb` looks the bastion up by
+  that tag to find its private IP at run time (see "Per-developer setup"), so
+  you never hand-maintain the IP. The instance's private IP is stable across
+  stop/start anyway; only a terminate-and-relaunch would change it, and the
+  tag lookup absorbs even that.
 
 ### 4. SSH access to the bastion
 
@@ -189,16 +194,24 @@ Add to `locals.yml` at the repo root:
 ```yaml
 # ARN from "create-test-grid-project" above
 device_farm_desktop_project_arn: 'arn:aws:devicefarm:us-west-2:<acct>:testgrid-project:<uuid>'
-# the bastion's *private* IP (what Device Farm dials over the VPC)
-device_farm_bastion_ip: '10.0.x.x'
 # the SSH destination for bin/device_farm_tunnel (alias from ~/.ssh/config above)
 device_farm_bastion_ssh: 'device-farm-bastion'
 ```
 
-Confirm your dev-account credentials resolve:
+You do **not** configure the bastion's private IP. On each run, `runner.rb`
+looks it up via `ec2:DescribeInstances`, filtering for the one running instance
+tagged `Name=device-farm-bastion` (override the tag with `device_farm_bastion_name`).
+This needs `ec2:DescribeInstances` on your dev-account profile -- a read-only
+permission most engineers already have. To opt out of the lookup, pin the IP
+with `device_farm_bastion_ip: '10.0.x.x'` instead.
+
+Confirm your dev-account credentials resolve and the lookup will find the host:
 
 ```bash
 AWS_PROFILE=codeorg-dev aws sts get-caller-identity
+AWS_PROFILE=codeorg-dev aws ec2 describe-instances --region us-west-2 \
+  --filters Name=tag:Name,Values=device-farm-bastion Name=instance-state-name,Values=running \
+  --query 'Reservations[].Instances[].PrivateIpAddress' --output text
 ```
 
 ---
@@ -230,11 +243,12 @@ AWS_PROFILE=codeorg-dev ./runner.rb --device-farm -l -c Chrome \
   still using the remote browser (not the local chromedriver).
 - `AWS_PROFILE=codeorg-dev` keeps the run on the dev account; without it the
   AWS SDK would default to most developers' prod profile.
-- `DEVICE_FARM_BASTION_IP=<ip>` on the command line overrides
-  `device_farm_bastion_ip` from `locals.yml` for one run.
+- The bastion IP is resolved automatically (Name-tag lookup). Prepend
+  `DEVICE_FARM_BASTION_IP=<ip>` to override it for a single run.
 
-The run prints a `visual log on device farm (codeorg-dev AWS account)` link to
-the session in the AWS console.
+The run logs `Device Farm: routing localhost traffic via bastion <ip>` once it
+resolves the IP, then prints a `visual log on device farm (codeorg-dev AWS
+account)` link to the session in the AWS console.
 
 ---
 
@@ -276,10 +290,10 @@ Check each hop in order; each step isolates one part of the path.
 ## Cost and teardown
 
 A `t4g.nano` left running is a few US dollars per month; stop it when idle
-(`aws ec2 stop-instances --instance-ids <id>`) -- its private IP is retained
-across stop/start only if it has no public IP or you use a fixed ENI, so
-re-check `device_farm_bastion_ip` after a start. Device Farm desktop sessions
-bill per minute only while a test runs.
+(`aws ec2 stop-instances --instance-ids <id>`). The private IP survives
+stop/start, and the Name-tag lookup re-finds it even after a relaunch, so no
+locals.yml edit is needed either way. Device Farm desktop sessions bill per
+minute only while a test runs.
 
 Full teardown:
 
@@ -294,9 +308,14 @@ aws ec2 delete-security-group --group-id "$ENI_SG"
 
 ## Troubleshooting
 
-- **`runner.rb` warns about an unset bastion IP.** `connect.rb` emits this when
-  a Device Farm run targets a localhost domain with neither
-  `DEVICE_FARM_BASTION_IP` nor `device_farm_bastion_ip` set. Set one.
+- **`runner.rb` warns it can't look up the bastion by Name tag.** The active
+  profile lacks `ec2:DescribeInstances`, or no running instance carries
+  `Name=device-farm-bastion`. Check the `describe-instances` command in
+  "Per-developer setup" returns an IP; or pin `device_farm_bastion_ip` to skip
+  the lookup.
+- **`connect.rb` warns the bastion IP is unset.** The lookup found nothing and
+  no IP is pinned, so no `--host-resolver-rules` was added. Resolve the lookup
+  above, or set `device_farm_bastion_ip`.
 - **Chrome session shows ERR_CONNECTION_REFUSED / TIMED_OUT.** Work the
   verification steps above from 1 to 4; the first one that fails localizes the
   break.
