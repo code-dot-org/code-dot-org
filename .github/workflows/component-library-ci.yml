@@ -49,9 +49,8 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
 
-    permissions:
-      pull-requests: write
-      issues: write
+    outputs:
+      argos-build-url: ${{ steps.ui-test.outputs.argos-build-url }}
 
     steps:
       - name: Install LFS
@@ -84,26 +83,39 @@ jobs:
         working-directory: ./frontend
         env:
           ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
-          ARGOS_REFERENCE_BRANCH: staging
+          # TRIAL ONLY — revert to `staging` before merge. Staging has no
+          # builds yet, so baseline against this PR branch's approved build.
+          ARGOS_REFERENCE_BRANCH: stephen/argos-ci
 
-      # We do not use the Argos GitHub App, so poll the build result ourselves
-      # and report it as a PR comment. Build status meanings:
-      #   no-changes / accepted    -> pass
-      #   pending / progress       -> still diffing, keep polling
-      #   changes-detected / other -> fail; review and approve in the Argos UI,
-      #                               then re-run this job to turn it green.
+  # We do not use the Argos GitHub App, so poll the build result ourselves and
+  # report it as a PR comment. This is a separate job so that approving diffs
+  # in the Argos UI only requires re-running this gate (seconds, no re-upload);
+  # re-running ui-test would upload fresh screenshots and reset the review.
+  # Build status meanings:
+  #   no-changes / accepted    -> pass
+  #   pending / progress       -> still diffing, keep polling
+  #   changes-detected / other -> fail; review and approve in the Argos UI,
+  #                               then re-run this job to turn it green.
+  argos-gate:
+    runs-on: ubuntu-24.04
+    needs: ui-test
+    if: needs.ui-test.outputs.argos-build-url != ''
+
+    permissions:
+      pull-requests: write
+      issues: write
+
+    steps:
       - name: Argos Visual Comparison Gate
         id: argos
-        if: steps.ui-test.outputs.argos-build-url != ''
         shell: bash
         continue-on-error: ${{ github.event_name == 'pull_request' }}
-        working-directory: ./frontend/apps/design-system-storybook
         env:
           ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
-          BUILD_URL: ${{ steps.ui-test.outputs.argos-build-url }}
+          BUILD_URL: ${{ needs.ui-test.outputs.argos-build-url }}
         run: |
           for i in $(seq 1 60); do
-            STATUS=$(npx argos build get "$BUILD_URL" --json | node -pe 'JSON.parse(require("fs").readFileSync(0, "utf8")).status')
+            STATUS=$(npx --yes @argos-ci/cli@5 build get "$BUILD_URL" --json | node -pe 'JSON.parse(require("fs").readFileSync(0, "utf8")).status')
             echo "Argos build status: $STATUS"
             [ "$STATUS" != "pending" ] && [ "$STATUS" != "progress" ] && break
             sleep 10
