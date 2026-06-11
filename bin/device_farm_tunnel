@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'socket'
+
+# Opens a reverse SSH tunnel from a bastion in the codeorg-dev VPC back to the
+# dashboard server on this workstation, so AWS Device Farm browsers can reach
+# localhost during UI tests. The Device Farm counterpart of bin/sauce_connect.
+# See dashboard/test/ui/DEVICE_FARM_LOCAL.md.
+#
+# Usage:
+#   bin/device_farm_tunnel [ssh-destination] [-- extra ssh args]
+#
+# ssh-destination (e.g. ec2-user@<bastion-public-dns> or an ~/.ssh/config Host
+# alias) defaults to CDO.device_farm_bastion_ssh from locals.yml.
+
+# The dashboard server's local port; Device Farm dials the same port on the
+# bastion, since --host-resolver-rules rewrites only the host, not the port.
+PORT = (ENV['DASHBOARD_PORT'].presence || CDO.dashboard_port || 3000).to_i
+
+destination = ARGV.first&.start_with?('-') ? nil : ARGV.shift
+destination ||= CDO.device_farm_bastion_ssh
+ARGV.shift if ARGV.first == '--'
+
+if destination.to_s.empty?
+  abort <<~MSG
+    No bastion SSH destination given.
+    Pass one as the first argument, or set device_farm_bastion_ssh in locals.yml.
+    See dashboard/test/ui/DEVICE_FARM_LOCAL.md.
+  MSG
+end
+
+# A heads-up, not a hard stop: the server may be started after the tunnel.
+begin
+  Socket.tcp('localhost', PORT, connect_timeout: 1) {}
+rescue SystemCallError
+  warn "WARNING: nothing is listening on localhost:#{PORT}. Start the dashboard " \
+       "server (bin/dashboard-server) so the tunnel has something to forward to."
+end
+
+# -N: forwarding only, no remote command.
+# -R 0.0.0.0:PORT: bind the bastion's listener on all interfaces -- requires
+#    `GatewayPorts clientspecified` (or `yes`) in the bastion sshd_config -- so
+#    Device Farm, dialing the bastion's private IP, reaches the forward. The
+#    bastion's security group is what restricts who may connect to PORT.
+# -o ExitOnForwardFailure=yes: fail immediately if the remote port can't bind
+#    (e.g. a stale tunnel still holds it) rather than sit open but useless.
+# -o ServerAliveInterval=30: keep the connection alive across idle test gaps.
+cmd = [
+  'ssh', '-N',
+  '-R', "0.0.0.0:#{PORT}:localhost:#{PORT}",
+  '-o', 'ExitOnForwardFailure=yes',
+  '-o', 'ServerAliveInterval=30',
+  *ARGV,
+  destination,
+]
+
+puts "Forwarding bastion #{destination} :#{PORT} -> localhost:#{PORT}"
+puts 'Leave this running while your Device Farm tests execute. Ctrl-C to close.'
+exec(*cmd)

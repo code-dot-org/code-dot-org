@@ -85,6 +85,14 @@ bin/sauce_connect
 - Log output can be found in `log/*.html`
 - You can watch your tests run on the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
+### With remote browsers: AWS Device Farm
+
+Device Farm (`--device-farm`) is our SauceLabs alternative for remote browsers.
+Against `test-studio.code.org` it needs no tunnel. To run it against your
+localhost dashboard, Device Farm reaches your workstation through a bastion +
+reverse SSH tunnel instead of Sauce Connect; see
+[DEVICE_FARM_LOCAL.md](./DEVICE_FARM_LOCAL.md).
+
 ## Options
 
 Here are some example command line options. Run `./runner.rb --help` for a full list.

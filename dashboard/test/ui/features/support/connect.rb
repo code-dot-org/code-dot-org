@@ -95,23 +95,20 @@ def device_farm_desktop_browser(http_client: nil)
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
-  # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
-  # and localhost.code.org to the drone worker's IP address.
-  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
-    # AWS::EC2 handles the IMDSv2 token/metadata fetch (with timeouts and
-    # error handling); on the drone worker this should always resolve. Fail
-    # loudly rather than set empty host-resolver-rules, which would silently
-    # break localhost name resolution and produce confusing connection errors.
-    worker_ip = AWS::EC2.local_ipv4
-    if worker_ip.blank?
-      raise 'Could not resolve drone worker IP when building Chrome --host-resolver-rules'
+  # Device Farm's Chrome runs inside AWS and can only reach the dashboard
+  # server by IP over the VPC, so rewrite the localhost-shadowing hostnames
+  # the tests navigate to (localhost-studio.code.org, localhost.code.org) to
+  # that IP via Chrome's --host-resolver-rules. See device_farm_host_resolver_ip
+  # for where the IP comes from in CI versus local development.
+  if $device_farm_browser_config['browserName'] == 'chrome'
+    target_ip = device_farm_host_resolver_ip
+    if target_ip
+      chrome_options = capabilities['goog:chromeOptions'] || {}
+      chrome_args = chrome_options['args'] || []
+      chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{target_ip}, MAP localhost.code.org #{target_ip}"
+      chrome_options['args'] = chrome_args
+      capabilities['goog:chromeOptions'] = chrome_options
     end
-
-    chrome_options = capabilities['goog:chromeOptions'] || {}
-    chrome_args = chrome_options['args'] || []
-    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{worker_ip}, MAP localhost.code.org #{worker_ip}"
-    chrome_options['args'] = chrome_args
-    capabilities['goog:chromeOptions'] = chrome_options
   end
 
   SeleniumBrowser.remote(
@@ -119,6 +116,43 @@ def device_farm_desktop_browser(http_client: nil)
     capabilities: capabilities,
     http_client: http_client
   )
+end
+
+# The IP that Device Farm's Chrome should resolve the localhost-shadowing
+# hostnames (localhost-studio.code.org, localhost.code.org) to, or nil if no
+# rewrite applies (e.g. testing a public domain like test-studio.code.org,
+# which resolves normally).
+#
+#   - In CI, the dashboard server (puma) runs on the drone worker itself, so we
+#     map to the worker's own private IP, reachable from Device Farm over VPC
+#     peering. AWS::EC2 handles the IMDSv2 token/metadata fetch (with timeouts
+#     and error handling); on the worker this should always resolve, so fail
+#     loudly rather than set empty host-resolver-rules, which would silently
+#     break name resolution and produce confusing connection errors.
+#   - In local development, the dashboard server runs on the developer's
+#     workstation, which has no VPC presence. The developer forwards
+#     workstation:3000 to a bastion in the codeorg-dev VPC over a reverse SSH
+#     tunnel (see dashboard/test/ui/DEVICE_FARM_LOCAL.md) and sets
+#     DEVICE_FARM_BASTION_IP (or device_farm_bastion_ip in locals.yml) to that
+#     bastion's private IP. When unset, no rule is added -- tests must then
+#     target a publicly resolvable domain.
+def device_farm_host_resolver_ip
+  if ENV['CI']
+    worker_ip = AWS::EC2.local_ipv4
+    if worker_ip.blank?
+      raise 'Could not resolve drone worker IP when building Chrome --host-resolver-rules'
+    end
+    worker_ip
+  else
+    bastion_ip = ENV['DEVICE_FARM_BASTION_IP'].presence || CDO.device_farm_bastion_ip.presence
+    if bastion_ip.blank? && ENV['DASHBOARD_TEST_DOMAIN'].to_s.include?('localhost')
+      warn 'Device Farm: targeting a localhost domain, but DEVICE_FARM_BASTION_IP ' \
+           '(and device_farm_bastion_ip in locals.yml) are unset. Device Farm browsers ' \
+           'run in AWS and cannot reach your workstation without the bastion tunnel; ' \
+           'see dashboard/test/ui/DEVICE_FARM_LOCAL.md.'
+    end
+    bastion_ip
+  end
 end
 
 # Provisions a real mobile device, then connects Selenium with retries

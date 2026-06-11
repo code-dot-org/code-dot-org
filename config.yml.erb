@@ -227,6 +227,16 @@ device_farm_desktop_project_arn:
 # device_farm_mobile_project_arn is the ARN of a Mobile Device Testing project,
 # used for running mobile browser tests (iPhone, iPad, etc.).
 device_farm_mobile_project_arn:
+# device_farm_bastion_ip is the private IP of a bastion in the codeorg-dev VPC,
+# used only to run UI tests against localhost via Device Farm: Device Farm's
+# browsers reach the developer's dashboard server through a reverse SSH tunnel
+# to this bastion. See dashboard/test/ui/DEVICE_FARM_LOCAL.md.
+device_farm_bastion_ip:
+# device_farm_bastion_ssh is the SSH destination (e.g. ec2-user@<public-dns> or
+# an ~/.ssh/config Host alias) used by bin/device_farm_tunnel to open that
+# reverse tunnel. Distinct from device_farm_bastion_ip, which is the address
+# Device Farm dials over the VPC.
+device_farm_bastion_ssh:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
