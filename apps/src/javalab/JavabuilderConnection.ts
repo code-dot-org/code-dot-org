@@ -338,7 +338,7 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         console.error(ajaxError.responseText);
       }
-      this.programIsRunning = false;
+      this.turnOffRunningOrTesting();
     }
   }
 
