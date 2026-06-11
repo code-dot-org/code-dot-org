@@ -9,100 +9,181 @@ Many apps display information as cards that combine text, images, and ratings in
 
 When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
 
----
+<hr>
+
 ## Why Websites Do This
 
 Below are two versions of the same card. One includes a missing value.
 
 Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
 
-<img src="https://images.code.org/822e82632e65af46a8c2aca29c92adf2-image-1768937250577.png" alt="2 cards with names, titles, emails, but one is missing the image" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<div style="display:flex; justify-content:center; gap:36px; font-family:Arial, sans-serif; margin:24px 0;">
 
+  <div style="text-align:center;">
+    <div style="font-size:30px; font-weight:700; margin-bottom:18px; color:#111827;">Card A</div>
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>fallback value</strong> is a default value shown when data is missing or null.</p>
-</div>
+  <div style="width:250px; min-height:310px; border:3px solid #6b7280; background:#ffffff; padding:28px 18px; box-sizing:border-box;">
+      <img src="https://images.code.org/93113371d45f964fbe653122d4ddbe5f-image-1781109610369.png" alt="Kyle Blake" style="width:125px; height:125px; border-radius:50%; border:2px solid #d1d5db; object-fit:cover; margin:0 auto 18px auto; display:block;">
 
-
---- 
-## Design Thinking: User Perception
-
-The way information is displayed doesn’t just inform users,it can shape their opinions.
-
-Below are three versions of the same product card. Each presents the information slightly differently.
-
-<img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="Three product cards showing different ways information can influence user perception" width="650px" style="display:block;margin-left:auto;margin-right:auto;border-radius:10px;">
-
-<br>
-
-#### 👉 Before expanding the sections below, consider:
-* #### Which version feels the most trustworthy?
-* #### Which version seems designed to persuade the user?
-* #### What information is emphasized, hidden, or framed differently?
-
----
-
-<div style="display:flex;flex-direction:column;gap:12px;margin-top:20px;">
-
-<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:18px;font-weight:bold;">Version 1</summary>
-
-  <div style="margin-top:16px;">
-    <p style="font-size:16px;line-height:1.5;">
-      This version feels more <b>neutral</b> because it presents the rating directly without extra persuasive language.
-    </p>
-
-  <p style="font-size:16px;line-height:1.5;">
-      The user can evaluate the product using the visible information alone.
-    </p>
+  <div style="font-size:18px; font-weight:700; color:#374151; margin-bottom:8px;">Kyle Blake</div>
+      <div style="font-size:15px; color:#6b7280; margin-bottom:10px;">Catering Manager</div>
+      <div style="font-size:14px; color:#111827; margin-bottom:10px;">Email: kyle.blake@burgerbros.com</div>
+      <div style="font-size:14px; color:#6b7280;">Managerial Staff</div>
+    </div>
   </div>
-</details>
 
-<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:18px;font-weight:bold;">Version 2</summary>
+  <div style="text-align:center;">
+    <div style="font-size:30px; font-weight:700; margin-bottom:18px; color:#111827;">Card B</div>
 
-  <div style="margin-top:16px;">
-    <p style="font-size:16px;line-height:1.5;">
-      This version uses <b>persuasive framing</b>, such as the “Top Value Pick!” label and highlighted button styling.
-    </p>
+  <div style="width:250px; min-height:325px; border:3px solid #6b7280; background:#ffffff; padding:28px 18px; box-sizing:border-box;">
+      <div style="width:125px; height:125px; border-radius:50%; background:#9ca3af; margin:0 auto 18px auto;"></div>
 
-  <p style="font-size:16px;line-height:1.5;">
-      Even though the product rating is still low, the design encourages users to view the product more positively.
-    </p>
+  <div style="font-size:18px; font-weight:700; color:#374151; margin-bottom:8px;">David Yang-Blake</div>
+      <div style="font-size:15px; color:#6b7280; margin-bottom:10px;">Catering Manager</div>
+      <div style="font-size:14px; color:#111827; margin-bottom:10px;">david.yangblake@burgerbros.com</div>
+      <div style="font-size:14px; color:#6b7280;">VIP Client Services</div>
+    </div>
   </div>
-</details>
-
-<details style="background-color:#FFFFFF;padding:12px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:18px;font-weight:bold;">Version 3</summary>
-
-  <div style="margin-top:16px;">
-    <p style="font-size:16px;line-height:1.5;">
-      This version removes the rating entirely, which hides potentially important information from the user.
-    </p>
-
-  <p style="font-size:16px;line-height:1.5;">
-      Omitting information can influence perception just as much as adding persuasive language.
-    </p>
-  </div>
-</details>
 
 </div>
 
----
-
-<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
-  <p style="font-size:18px;line-height:1.5;margin:0;">
-    <strong>💡 Teacher Tip:</strong> Encourage students to notice not only what information appears on a page, but also what is emphasized, minimized, or omitted. Small design choices can strongly influence how users interpret information online.
+<div style="background-color:#B7E0E5; border-radius:10px; padding:15px; margin:20px auto; max-width:85%; box-sizing:border-box;">
+  <p style="font-size:14pt; margin:0; line-height:1.4;">
+    📖 A <strong>fallback value</strong> is a default value shown when data is missing or null.
   </p>
 </div>
 
+<hr>
 
----
+## Design Thinking: User Perception
 
+The way information is displayed doesn’t just inform users, it can shape their opinions.
 
+Below are three versions of the same product card. Each presents the information slightly differently.
 
-## Next up
+<div style="height:20px;"></div>
+<div style="border:3px solid #111; padding:24px; margin:0 auto; display:inline-block;">
+<table>
+  <tr>
 
-Let's practice adding fallback values in weblab! 
+  <td style="text-align:center; padding:0 18px; vertical-align:top;">
+      <div style="font-size:24px; font-weight:bold; margin-bottom:12px;">Version 1</div>
 
+  <div style="width:205px; background:#ffffff; border:1px solid #ddd; border-radius:10px; padding:20px 16px; text-align:left;">
+        <div style="font-size:22px; line-height:1.15; color:#374151; margin-bottom:18px;">Basic Wireless<br>Headphones</div>
+
+  <div style="background:#e5e7eb; border-radius:6px; padding:10px; text-align:center; margin-bottom:14px;">
+          <img src="https://images.code.org/2f723529e6cf596aa981347f4e52e595-image-1781109830835.png" alt="Black wireless headphones" style="width:100px; height:auto;">
+        </div>
+
+  <div style="font-size:13px; margin-bottom:8px;">Price: &#36;29.99</div>
+        <div style="font-size:13px; margin-bottom:18px;">Rating: 2.5 stars ★★☆☆☆</div>
+        <div style="background:#e5e7eb; border-radius:6px; text-align:center; padding:10px; font-size:13px;">Add to Cart</div>
+      </div>
+    </td>
+
+  <td style="text-align:center; padding:0 18px; vertical-align:top;">
+      <div style="font-size:24px; font-weight:bold; margin-bottom:12px;">Version 2</div>
+
+  <div style="width:205px; background:#ffffff; border:3px solid #5b5bd6; border-radius:10px; padding:16px 14px; text-align:left;">
+        <div style="display:inline-block; background:#6a62d9; color:white; border-radius:12px; padding:4px 8px; font-size:12px; font-weight:bold; margin-bottom:10px;">Top Value Pick!</div>
+
+  <div style="font-size:22px; line-height:1.15; font-weight:bold; margin-bottom:12px;">Basic Wireless<br>Headphones</div>
+
+  <div style="background:#e5e7eb; border-radius:6px; padding:10px; text-align:center; margin-bottom:14px;">
+          <img src="https://images.code.org/2f723529e6cf596aa981347f4e52e595-image-1781109830835.png" alt="Black wireless headphones" style="width:100px; height:auto;">
+        </div>
+
+  <div style="font-size:13px; margin-bottom:8px;">Price: &#36;29.99</div>
+        <div style="font-size:13px; margin-bottom:16px;">Rating: 2.5 stars ★★☆☆☆</div>
+        <div style="background:#5b5bd6; color:white; border-radius:6px; text-align:center; padding:10px; font-size:13px; font-weight:bold;">Add to Cart</div>
+      </div>
+    </td>
+
+<td style="text-align:center; padding:0 18px; vertical-align:top;">
+      <div style="font-size:24px; font-weight:bold; margin-bottom:12px;">Version 3</div>
+
+  <div style="width:205px; background:#ffffff; border:1px solid #ddd; border-radius:10px; padding:20px 16px; text-align:left;">
+        <div style="font-size:22px; line-height:1.15; color:#374151; margin-bottom:18px;">Basic Wireless<br>Headphones</div>
+
+  <div style="background:#e5e7eb; border-radius:6px; padding:10px; text-align:center; margin-bottom:18px;">
+          <img src="https://images.code.org/2f723529e6cf596aa981347f4e52e595-image-1781109830835.png" alt="Black wireless headphones" style="width:100px; height:auto;">
+        </div>
+
+  <div style="font-size:13px; margin-bottom:54px;">Price: &#36;29.99</div>
+        <div style="background:#e5e7eb; border-radius:6px; text-align:center; padding:10px; font-size:13px;">Add to Cart</div>
+      </div>
+    </td>
+
+  </tr>
+</table>
+</div>
+
+<div style="margin:24px 0;">
+  <p style="font-size:20px; font-weight:bold; margin-bottom:10px;">
+    👉 Before expanding the sections below, consider:
+  </p>
+
+  <ul style="font-size:18px; line-height:1.6;">
+    <li>Which version feels the most trustworthy?</li>
+    <li>Which version seems designed to persuade the user?</li>
+    <li>What information is emphasized, hidden, or framed differently?</li>
+  </ul>
+</div>
+
+<hr>
+
+<div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+
+  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+    <summary style="font-size:18px; font-weight:bold;">Version 1</summary>
+
+<div style="margin-top:16px;">
+      <p style="font-size:16px; line-height:1.5;">
+        This version feels more <b>neutral</b> because it presents the rating directly without extra persuasive language.
+      </p>
+
+  <p style="font-size:16px; line-height:1.5;">
+        The user can evaluate the product using the visible information alone.
+      </p>
+    </div>
+  </details>
+
+  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+    <summary style="font-size:18px; font-weight:bold;">Version 2</summary>
+
+<div style="margin-top:16px;">
+      <p style="font-size:16px; line-height:1.5;">
+        This version uses <b>persuasive framing</b>, such as the “Top Value Pick!” label and highlighted button styling.
+      </p>
+
+  <p style="font-size:16px; line-height:1.5;">
+        Even though the product rating is still low, the design encourages users to view the product more positively.
+      </p>
+    </div>
+  </details>
+
+  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+    <summary style="font-size:18px; font-weight:bold;">Version 3</summary>
+
+<div style="margin-top:16px;">
+      <p style="font-size:16px; line-height:1.5;">
+        This version removes the rating entirely, which hides potentially important information from the user.
+      </p>
+
+  <p style="font-size:16px; line-height:1.5;">
+        Omitting information can influence perception just as much as adding persuasive language.
+      </p>
+    </div>
+  </details>
+
+</div>
+
+<hr>
+
+<div style="background-color:#B7E0E5; border-radius:30px; color:#000000; width:95%; padding:18px 24px; margin:24px 0;">
+  <p style="font-size:18px; line-height:1.5; margin:0;">
+    <strong>💡 Teacher Tip:</strong> Encourage students to notice not only what information appears on a page, but also what is emphasized, minimized, or omitted. Small design choices can strongly influence how users interpret information online.
+  </p>
+</div>
 MARKDOWN
