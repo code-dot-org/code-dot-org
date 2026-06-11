@@ -230,8 +230,8 @@ steps:
       - git merge origin/$DRONE_TARGET_BRANCH
 
   - name: ui-tests
-    # see: docker/ci/Dockerfile (cdo-ci:pw-drone bakes in Playwright browsers)
-    image: codedotorg/cdo-ci:pw-drone
+    # see: docker/ci/Dockerfile
+    image: codedotorg/cdo-ci:1.24
     pull: always
     # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
     # on the worker's primary ENI, reachable from Device Farm's Chrome via
@@ -376,6 +376,6 @@ trigger:
 
 ---
 kind: signature
-hmac: bcf7b3bcdfdd947267195ccce6a31c2ff79389a7eba7ff89eb468753ad1cc64c
+hmac: e75b83c2d058f6f4465e93bf9ebaf9ce75b9120378e5a9198e27eae5599ce56e
 
 ...
