@@ -55,8 +55,10 @@ export function groupSelectedNodes(
   nodes: SketchLabNode[],
   groupId: string
 ): SketchLabNode[] {
-  // Exclude already-grouped nodes — they cannot be nested into a new group.
-  const targets = nodes.filter(n => selectedIds.includes(n.id) && !n.parentId);
+  // Exclude already-grouped and locked nodes.
+  const targets = nodes.filter(
+    n => selectedIds.includes(n.id) && !n.parentId && !n.data?.locked
+  );
   if (targets.length < 2) return nodes;
 
   const {minX, minY, maxX, maxY} = computeBounds(targets);

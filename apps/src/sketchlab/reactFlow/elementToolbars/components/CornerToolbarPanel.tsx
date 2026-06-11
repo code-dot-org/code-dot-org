@@ -67,13 +67,13 @@ export default function CornerToolbarPanel({
 
   // Count logical groupable elements: regular nodes as 1 each, standalone-line
   // anchor pairs as 1 (each line adds 2 lineAnchor IDs to the selection).
-  // Already-grouped nodes are excluded since they cannot be re-grouped.
+  // Already-grouped and locked nodes are excluded.
   const groupableCount = useMemo(() => {
     let anchors = 0;
     let nonAnchors = 0;
     for (const id of multiSelectedNodeIds) {
       const node = nodes.find(n => n.id === id);
-      if (!node || node.parentId) continue;
+      if (!node || node.parentId || node.data?.locked) continue;
       if (node.type === 'lineAnchor') anchors++;
       else nonAnchors++;
     }

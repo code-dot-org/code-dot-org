@@ -795,23 +795,28 @@ export default function ReactFlowCanvas({
       const nodeType = fullNode?.type;
       if (isLineAnchorNodeId(node.id, nodes)) return;
 
-      // Shift+click: toggle this node in the multi-selection. Group nodes and
-      // already-grouped children are excluded — they cannot be re-grouped.
+      // Shift+click: toggle this node in the multi-selection. Group nodes,
+      // already-grouped children, and locked nodes are excluded.
       if (
         event.shiftKey &&
         nodeType !== 'group' &&
-        !isGroupedChildNode(fullNode)
+        !isGroupedChildNode(fullNode) &&
+        !fullNode?.data?.locked
       ) {
         setMultiSelectedNodeIds(prev => {
           const next = new Set(prev);
           // On the first Shift+click of a fresh selection, automatically include
           // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
           // selects two nodes in one extra click, matching standard UX.
-          // Skip anchors that are already in a group.
+          // Skip anchors that are already grouped or locked.
           if (next.size === 0) {
             multiSelectAnchorRef.current?.forEach(anchorId => {
               const anchorNode = nodes.find(n => n.id === anchorId);
-              if (anchorId !== node.id && !isGroupedChildNode(anchorNode)) {
+              if (
+                anchorId !== node.id &&
+                !isGroupedChildNode(anchorNode) &&
+                !anchorNode?.data?.locked
+              ) {
                 next.add(anchorId);
               }
             });
@@ -828,9 +833,13 @@ export default function ReactFlowCanvas({
       }
 
       // Plain click: record anchor, clear any multi-selection, open toolbar.
-      // Group nodes and grouped children get null anchor — neither is groupable.
+      // Group nodes, grouped children, and locked nodes get null anchor.
       multiSelectAnchorRef.current =
-        nodeType === 'group' || isGroupedChildNode(fullNode) ? null : [node.id];
+        nodeType === 'group' ||
+        isGroupedChildNode(fullNode) ||
+        fullNode?.data?.locked
+          ? null
+          : [node.id];
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'node', id: node.id}, {trapFocus: false});
     },
@@ -844,12 +853,13 @@ export default function ReactFlowCanvas({
       const anchorIds = clickedEdge
         ? getStandaloneLineAnchorIds(clickedEdge, getNode)
         : null;
-      // A standalone line whose anchors are already grouped cannot be re-grouped.
+      // A standalone line that is grouped or locked cannot be re-grouped.
       const lineIsGrouped =
         anchorIds?.some(id => isGroupedChildNode(getNode(id))) ?? false;
+      const lineIsLocked = clickedEdge?.data?.locked ?? false;
 
       if (event.shiftKey) {
-        if (anchorIds && !lineIsGrouped) {
+        if (anchorIds && !lineIsGrouped && !lineIsLocked) {
           // Shift+click on a standalone line: toggle both anchor nodes in the
           // multi-selection, applying the same anchor-inclusion logic as nodes.
           setMultiSelectedNodeIds(prev => {
@@ -872,13 +882,13 @@ export default function ReactFlowCanvas({
           });
           closeToolbar();
         }
-        // Shift+click on an attached line or a grouped line: ignore.
+        // Shift+click on an attached, grouped, or locked line: ignore.
         return;
       }
 
-      // Plain click: record standalone, ungrouped line as anchor for subsequent
-      // Shift+clicks, clear any multi-selection, and open the edge toolbar.
-      multiSelectAnchorRef.current = lineIsGrouped ? null : anchorIds;
+      // Plain click: record standalone, ungrouped, unlocked line as anchor.
+      multiSelectAnchorRef.current =
+        lineIsGrouped || lineIsLocked ? null : anchorIds;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },
