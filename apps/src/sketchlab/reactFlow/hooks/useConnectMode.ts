@@ -33,6 +33,7 @@ function pickHandles(
       : {sourceHandle: 'left-source', targetHandle: 'right-target'};
   }
   // Target is below source. Triangle nodes have no top handle so use the nearest side handle for the target.
+  // All other shapes use top handle.
   if (deltaY >= 0) {
     return {
       sourceHandle: 'bottom-source',
@@ -42,6 +43,7 @@ function pickHandles(
     };
   }
   // Target is above source. Since triangle nodes have no top handle, use the nearest side handle for the source.
+  // All other shapes use bottom handle.
   return {
     sourceHandle: isTriangle(source)
       ? nearestTriangleSideHandle(source, target, 'source')
