@@ -18,16 +18,15 @@ Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-
 
 ### DTT (CD) Tests
 
-The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches four suites in parallel against two providers:
+The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches three suites in parallel against two providers:
 
 | Suite | Provider | Browsers |
 |-------|----------|----------|
-| Safari UI | SauceLabs | `macOS Safari` (`browsers_saucelabs.json`) |
 | Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
-| Mobile UI | AWS Device Farm | `iPhone Safari`, `iPad Safari` (`browsers_device_farm.json`) |
-| Eyes | SauceLabs | `Windows Chrome`, `iPhone Safari` (Applitools visual diff, `@eyes` / `@eyes_mobile`) |
+| Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
+| Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
 
-Each suite uploads its own status page (`test_status_{Safari_UI,Chrome_Firefox_UI,Mobile_UI,Eyes}.html`) to the test machine and to S3. Provider names ("SauceLabs", "Device Farm") are not surfaced in Slack messages or status page headings -- the suite label is what oncall sees.
+Each suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3.
 
 ## Local Setup
 

@@ -54,6 +54,7 @@ const HIGH_DEMO_PRESETS = {
     avatar_emoji: 5,
     login_type: 'email',
     participant_type: 'student',
+    grades: ['9', '10', '11', '12'],
     unit: {
       name: 'aif2-2025',
       display_name: 'Artificial Intelligence Foundations',

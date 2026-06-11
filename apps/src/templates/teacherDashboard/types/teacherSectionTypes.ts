@@ -73,6 +73,7 @@ export interface DemoPresetView {
   avatarEmoji: number;
   loginType: NonNullable<Section['loginType']>;
   participantType: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
   studentSnapshotDefaultTourLesson: number | null;
@@ -183,6 +184,7 @@ export interface ServerDemoPresetView {
   avatar_emoji: number;
   login_type: NonNullable<Section['loginType']>;
   participant_type: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
   student_snapshot_default_tour_lesson: number | null;

@@ -45,6 +45,7 @@ interface AiTutorChatProps {
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  initialWelcomeMessage?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -63,6 +64,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
+  initialWelcomeMessage,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -164,6 +166,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
         disableSendingMessages={viewingOldVersion}
+        initialWelcomeMessage={initialWelcomeMessage}
       />
     </div>
   );

@@ -124,6 +124,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       const cmContentDiv = document.querySelector(
         '.cm-content'
       ) as HTMLElement | null;
+      const cmGutters = document.querySelector(
+        '.cm-gutters'
+      ) as HTMLElement | null;
       if (!cmScroller || !cmContentDiv) return false;
 
       // Make scroller part of tab order, make editor hidden from tab order, and
@@ -133,6 +136,14 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       cmContentDiv.setAttribute('aria-label', i18n.codeEditorEditing());
       cmScroller.setAttribute('id', 'uitest-codebridge-editor');
       cmScroller.setAttribute('aria-label', i18n.codeEditorDescription());
+
+      // CodeMirror hardcodes aria-hidden="true" on the gutter container.
+      // Line numbers are informative content; expose them to AT.
+      // Guard is defensive — cmGutters should always be present given all
+      // editor configs include lineNumbers().
+      if (cmGutters) {
+        cmGutters.removeAttribute('aria-hidden');
+      }
 
       // Keydown handler for cmScroller
       const onScrollerKeyDown = (event: KeyboardEvent) => {

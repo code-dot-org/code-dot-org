@@ -1,8 +1,8 @@
-# ml-playground
+# @code-dot-org/ailab
 
-This is the repo for AI Lab from Code.org.
+This package is AI Lab from Code.org.
 
-Like the [Dance Party](https://github.com/code-dot-org/dance-party) and [AI for Oceans](https://github.com/code-dot-org/ml-activities) repos, it is a standalone repo that is published and consumed by the [main repo](https://github.com/code-dot-org/code-dot-org).
+It lives in this monorepo at `frontend/packages/labs/ailab` and is consumed by the main repo's `apps/` directory (CodeAI Studio). It was previously a standalone, separately-published repo, like [Dance Party](https://github.com/code-dot-org/dance-party) and [AI for Oceans](https://github.com/code-dot-org/ml-activities).
 
 AI Lab is a highly configurable environment providing a student experience for doing the following:
 
@@ -20,8 +20,6 @@ AI Lab is a highly configurable environment providing a student experience for d
 - saving the trained model to the server for use in App Lab
 
 It can be run standalone for more rapid development, though its ultimate destination is to appear in [Code Studio](https://studio.code.org/). When run standalone, it does not have all of the styling of Code Studio. It also calls stub functions for completion, saving a trained model, and indicating which [Dynamic](https://github.com/code-dot-org/code-dot-org/pull/39384) [Instruction](https://github.com/code-dot-org/ml-playground/pull/97) should be shown. The standalone runtime does have a dropdown for selecting which set of level parameters are used, in lieu of a level providing these parameters, and it also shows the current Dynamic Instruction identifier.
-
-The standalone runtime is also deployed to https://code-dot-org.github.io/ml-playground/ though we might vary which branch is published there.
 
 ## Demo recording
 
@@ -47,7 +45,7 @@ The app is vertically responsive, and uses flexbox to fill the vertical space wi
 
 #### Adding a dataset
 
-To add a new "pre-canned" dataset to the tool, add three files - `.csv`, `.json`, and `.jpg` - to [this directory](https://github.com/code-dot-org/ml-playground/tree/951bbad5562e01fa0c81279aab0239db26d17f15/public/datasets). Then add the dataset to [this file](https://github.com/code-dot-org/ml-playground/blob/12c25ce5257e69fbcc6f94ccdba3670f120a5631/src/datasetManifest.js).
+To add a new "pre-canned" dataset to the tool, add three files - `.csv`, `.json`, and `.jpg` - to the `public/datasets/` directory. Then add the dataset to `public/datasets-manifest.json`.
 
 Take care that each column is correctly listed in the `.json` file, and test that it's working in the tool by highlighting each column and ensuring that its metadata shows correctly in the panel on the right.
 
@@ -104,121 +102,37 @@ The student can see a summary of the model that they have just saved. Proceeding
 
 ## Common operations
 
-### First time:
-
-```
-git clone git@github.com:code-dot-org/ml-playground.git
-cd ml-playground
-nvm install
-nvm use
-yarn install
-yarn start
-```
-
-The app will be running at http://localhost:8080.
+This package is a workspace in [`frontend/`](../../..); there is no separate clone, `yarn link`, or publish step. Run these from this directory (`frontend/packages/labs/ailab`).
 
 ### Running a local standalone server
 
-Borrowing one step from above:
-
 ```
-yarn start
+yarn dev
 ```
 
-The app will be running at http://localhost:8080.
+The app will be running at http://localhost:5173. This is the standalone runtime described above — it runs without Code Studio's styling, calls stub functions for completion / saving / instructions, and offers a dropdown to choose level parameters.
 
-### First time integration with local Code Studio
-
-In this repo:
+### Other scripts
 
 ```
-yarn link
+yarn build       # Vite library build -> dist/
+yarn test        # Vitest unit tests
+yarn typecheck   # tsc
+yarn lint
 ```
 
-In main repo's `apps/` directory:
+### Integration with local Code Studio
+
+The main repo's `apps/` consumes this package as a [`portal:`](https://yarnpkg.com/protocol/portal) workspace dependency, symlinked into `apps/node_modules/@code-dot-org/ailab` — no `yarn link` needed.
+
+When `apps/` builds (`yarn build`, or `yarn start` for continuous builds), its `script/build-frontend-dependencies.sh` builds this package's `dist/` first, and the apps Gruntfile copies `dist/assets/` (datasets and images) into `build/package/media/skins/ailab/`. To pick up local changes, rebuild this package (`yarn build`); the next `apps` build will use it.
+
+### Verifying the symlink
+
+In the main repo:
 
 ```
-yarn link @code-dot-org/ml-playground
+ls -l apps/node_modules/@code-dot-org/ailab
 ```
 
-This will set up a symlink in main repo's `apps/node_modules/` to point at your local changes.
-
-Run
-
-```
-yarn run build
-```
-
-in this repo, and then the main repo's `apps` build should pick the changes up next time it builds.
-
-If you are running `yarn start` for continuous builds in the main repo, it will pick up the changes once the build in this repo has completed.
-
-### Building changes for a local Code Studio
-
-In main repo:
-
-```
-bin/dashboard-server
-```
-
-In main repo's `apps/` directory:
-
-```
-yarn start
-```
-
-If you see an error, run `yarn` before running `yarn start` again.
-
-In this repo:
-
-```
-yarn run build
-```
-
-Then the local Code Studio apps build will pick up changes.
-
-See AI Lab changes at http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1.
-
-Note that running `yarn start` will erase this build, and so for now it seems best to alternate between using `yarn start` for testing the standalone build, and using `yarn run build` to make a single build for consumption by the main repo.
-
-### Publishing a new version
-
-Once we want the official main repo build to get the latest updates from this repo, we need to publish the changes.
-
-In this repo, modify `package.json` with the incremented version number.
-
-Then produce a build:
-
-```
-npm run build
-```
-
-Then publish the build, skipping the option to adjust the build version.
-User name and password for shared account are available in password manager:
-
-```
-yarn publish
-```
-
-Then commit the changed `package.json` for posterity.
-
-In the main repo, modify `package.json` to use the new version of `ml-playground`.
-
-Pick up the new version:
-
-```
-yarn
-```
-
-Then commit the changed `package.json` and `yarn.lock` files so that the official build pipeline uses the new version.
-
-### Verifying a symlink exists between the main repo and ML playground
-
-In main repo:
-
-```
- cd apps/node_modules/@code-dot-org
- ls -l
-```
-
-In the output, you should see something like this: `ml-playground -> ../../../../../.config/yarn/link/@code-dot-org/ml-playground`
+You should see it point at `../../../frontend/packages/labs/ailab`.

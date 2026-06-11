@@ -77,6 +77,7 @@ class Policies::DemoSections
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
       student_snapshot_default_tour_lesson: preset[:student_snapshot_default_tour_lesson],
+      grades: preset[:grades],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,
