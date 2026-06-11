@@ -37,6 +37,7 @@ import {
 } from './utils/convertExcalidrawSources';
 import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
+import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
 
@@ -179,8 +180,8 @@ function ReactFlowSketchLabViewInner({
   );
 
   // Read sources, converting from Excalidraw if this project was last
-  // saved by the old lab. Deep-clone so React Flow can mutate node
-  // style objects during resize.
+  // saved by the old lab. Migrates stale triangle handle IDs from prior
+  // renames. Deep-clone so React Flow can mutate node style objects during resize.
   const {initialNodes, initialEdges, initialViewport, convertedFromExcalidraw} =
     useMemo(() => {
       const source = currentSources.source as
@@ -196,6 +197,12 @@ function ReactFlowSketchLabViewInner({
         didConvert = true;
       } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
         normalized = source as SketchlabReactFlowSource;
+      }
+      // TODO: once all start sources and student projects have been audited and
+      // confirmed free of stale triangle handle IDs, remove this migration call
+      // and delete migrateReactFlowSources.ts.
+      if (normalized) {
+        normalized = migrateTriangleHandleIds(normalized);
       }
       const cloned = normalized ? structuredClone(normalized) : null;
       return {

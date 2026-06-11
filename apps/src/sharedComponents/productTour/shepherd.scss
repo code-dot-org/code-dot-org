@@ -130,7 +130,8 @@
   }
 }
 
-.onboarding-completion-step .shepherd-footer {
+.onboarding-completion-step .shepherd-footer,
+.onboarding-stacked-buttons .shepherd-footer {
   flex-direction: column;
   align-items: stretch;
 }
