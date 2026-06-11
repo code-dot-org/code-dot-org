@@ -18,15 +18,15 @@ import {createUuid} from '@cdo/apps/utils';
 import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
+import {nearestTriangleSideHandle} from '../utils/nearestTriangleSideHandle';
 
 // Triangle handle IDs went through two renames:
-//   original shared with all shape nodes:   left-*, right-*, top-*, bottom-*
-//   triangles updated with 3 handles on sides and renamed: side-left-*, side-right-*, side-bottom-*
-//   triangle's handles renamed to be consistent with other shape nodes: left-*, right-*, bottom-*
-// Remap top-* and ensure names are consistent with other shape nodes.
-const TRIANGLE_HANDLE_MIGRATION: Record<string, string> = {
-  'top-target': 'bottom-target',
-  'top-source': 'bottom-source',
+//   stage 0: left-*, right-*, top-*, bottom-*  (shared with all shapes)
+//   stage 1: side-left-*, side-right-*, side-bottom-*  (no top)
+//   stage 2: left-*, right-*, bottom-*  (no top)
+// side-left -> left, side-right -> right is 1:1. top-* has no equivalent.
+// pick left or right based on the other endpoint's X position relative to the triangle center.
+const TRIANGLE_SIDE_HANDLE_MIGRATION: Record<string, string> = {
   'side-left-target': 'left-target',
   'side-left-source': 'left-source',
   'side-right-target': 'right-target',
@@ -38,6 +38,7 @@ const TRIANGLE_HANDLE_MIGRATION: Record<string, string> = {
 export function migrateTriangleHandleIds(
   source: SketchlabReactFlowSource
 ): SketchlabReactFlowSource {
+  const nodeById = new Map(source.nodes.map(n => [n.id, n]));
   const triangleIds = new Set(
     source.nodes
       .filter(
@@ -52,12 +53,30 @@ export function migrateTriangleHandleIds(
   const edges = source.edges.map(edge => {
     const patch: Partial<SketchlabReactFlowEdge> = {};
     if (triangleIds.has(edge.target) && edge.targetHandle) {
-      const migrated = TRIANGLE_HANDLE_MIGRATION[edge.targetHandle];
-      if (migrated) patch.targetHandle = migrated;
+      const h = edge.targetHandle;
+      if (TRIANGLE_SIDE_HANDLE_MIGRATION[h]) {
+        patch.targetHandle = TRIANGLE_SIDE_HANDLE_MIGRATION[h];
+      } else if (h === 'top-target') {
+        const tri = nodeById.get(edge.target);
+        const other = nodeById.get(edge.source);
+        patch.targetHandle =
+          tri && other
+            ? nearestTriangleSideHandle(tri, other, 'target')
+            : 'left-target';
+      }
     }
     if (triangleIds.has(edge.source) && edge.sourceHandle) {
-      const migrated = TRIANGLE_HANDLE_MIGRATION[edge.sourceHandle];
-      if (migrated) patch.sourceHandle = migrated;
+      const h = edge.sourceHandle;
+      if (TRIANGLE_SIDE_HANDLE_MIGRATION[h]) {
+        patch.sourceHandle = TRIANGLE_SIDE_HANDLE_MIGRATION[h];
+      } else if (h === 'top-source') {
+        const tri = nodeById.get(edge.source);
+        const other = nodeById.get(edge.target);
+        patch.sourceHandle =
+          tri && other
+            ? nearestTriangleSideHandle(tri, other, 'source')
+            : 'left-source';
+      }
     }
     return Object.keys(patch).length ? {...edge, ...patch} : edge;
   });

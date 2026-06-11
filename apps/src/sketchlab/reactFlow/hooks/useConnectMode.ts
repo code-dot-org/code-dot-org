@@ -11,6 +11,7 @@ import {ShapeNodeData} from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
+import {nearestTriangleSideHandle} from '../utils/nearestTriangleSideHandle';
 
 function isTriangle(node: SketchlabReactFlowNode): boolean {
   return (node.data as ShapeNodeData | undefined)?.shapeType === 'triangle';
@@ -18,8 +19,7 @@ function isTriangle(node: SketchlabReactFlowNode): boolean {
 
 /**
  * Pick source/target handles based on relative node positions so the arrow
- * points in a sensible direction. Triangles have no top handle, so vertical
- * edges on triangle nodes use bottom instead.
+ * points in a sensible direction.
  */
 function pickHandles(
   source: SketchlabReactFlowNode,
@@ -32,14 +32,20 @@ function pickHandles(
       ? {sourceHandle: 'right-source', targetHandle: 'left-target'}
       : {sourceHandle: 'left-source', targetHandle: 'right-target'};
   }
+  // Target is below source. Triangle nodes have no top handle so use the nearest side handle for the target.
   if (deltaY >= 0) {
     return {
       sourceHandle: 'bottom-source',
-      targetHandle: isTriangle(target) ? 'bottom-target' : 'top-target',
+      targetHandle: isTriangle(target)
+        ? nearestTriangleSideHandle(target, source, 'target')
+        : 'top-target',
     };
   }
+  // Target is above source. Since triangle nodes have no top handle, use the nearest side handle for the source.
   return {
-    sourceHandle: isTriangle(source) ? 'bottom-source' : 'top-source',
+    sourceHandle: isTriangle(source)
+      ? nearestTriangleSideHandle(source, target, 'source')
+      : 'top-source',
     targetHandle: 'bottom-target',
   };
 }
