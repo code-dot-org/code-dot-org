@@ -65,6 +65,7 @@ const channel: Channel = {
 describe('Javalab2View', () => {
   let store: Store;
   let addSaveSuccessListener: jest.Mock;
+  let getCurrentVersionId: jest.Mock;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -73,10 +74,12 @@ describe('Javalab2View', () => {
     store = getStore();
 
     addSaveSuccessListener = jest.fn();
+    getCurrentVersionId = jest.fn().mockReturnValue('test-version-id');
     jest
       .spyOn(Lab2Registry.getInstance(), 'getProjectManager')
-      // The view only registers a save-success listener; a partial mock is enough.
-      .mockReturnValue({addSaveSuccessListener} as never);
+      // The view only registers a save-success listener and reads the current
+      // version id; a partial mock is enough.
+      .mockReturnValue({addSaveSuccessListener, getCurrentVersionId} as never);
   });
 
   afterEach(() => {
@@ -147,6 +150,19 @@ describe('Javalab2View', () => {
 
     const {needsInitialSourcesSave} = await runFromView();
     expect(needsInitialSourcesSave).toBe(false);
+  });
+
+  it('still requests the initial sources save when a save success has no version id', async () => {
+    renderView(undefined);
+
+    // A save success without a version id means no new version actually
+    // landed in S3, so the next run must still force a save.
+    getCurrentVersionId.mockReturnValue(undefined);
+    const onSaveSuccess = addSaveSuccessListener.mock.calls[0][0];
+    onSaveSuccess();
+
+    const {needsInitialSourcesSave} = await runFromView();
+    expect(needsInitialSourcesSave).toBe(true);
   });
 
   it('requests the initial sources save again after a level change', async () => {
