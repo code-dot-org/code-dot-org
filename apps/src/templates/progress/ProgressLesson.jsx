@@ -285,7 +285,7 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    background: 'var(--background-neutral-secondary)',
+    background: 'var(--background-neutral-primary)',
     borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderRadius: 2,
