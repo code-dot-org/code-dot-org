@@ -118,12 +118,6 @@ img {
   height: auto;
 }
 
-$code-border-color: #e1e1e8;
-code {
-  font-size: 12px;
-  border: 1px solid $code-border-color;
-}
-
 button, input, select, textarea {
   vertical-align: middle;
 }
@@ -159,4 +153,21 @@ summary {
 // Undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_utilities.scss:45
 .hidden {
   display: revert !important;
+}
+
+$code-border-color: #e1e1e8;
+code {
+  font-size: 12px;
+  border: 1px solid $code-border-color;
+}
+
+// bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_code.scss:26
+pre {
+  line-height: 20px;
+
+  // bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_code.scss:47
+  code {
+    border: 0;
+    font-size: 12px;
+  }
 }
