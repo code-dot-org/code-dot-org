@@ -216,7 +216,12 @@ function LessonLockDialog({
 
   const renderStudentTable = () => (
     <>
-      <MuiTypography variant="h4">{i18n.studentControl()}</MuiTypography>
+      <MuiTypography
+        variant="h4"
+        className={classNames(hiddenUnlessSelectedSection)}
+      >
+        {i18n.studentControl()}
+      </MuiTypography>
       <div
         className={classNames(
           styles.descriptionText,
@@ -261,7 +266,7 @@ function LessonLockDialog({
     <Modal
       className={styles.modal}
       onClose={handleClose}
-      title="Assessment Lock Settings"
+      title={i18n.assessmentLockSettings()}
       customContent={
         <div id="dsco-dialog-description" className={styles.main}>
           <div className={styles.sectionSelectorRow}>
