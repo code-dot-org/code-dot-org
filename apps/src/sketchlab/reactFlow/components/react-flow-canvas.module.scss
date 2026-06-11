@@ -40,7 +40,7 @@
   }
 
   :global(.react-flow__node-group:focus) {
-    border: 2px dashed var(--neutral-dark-300, #aaaaaa);
+    border: 2px dashed var(--neutral-dark-300, #aaa);
     border-radius: 8px;
     // Replace the generic teal focus ring with the dashed group border.
     outline: none;
