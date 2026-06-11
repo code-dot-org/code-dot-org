@@ -244,10 +244,7 @@ const WEBPACK_BASE_CONFIG = {
   plugins: [
     ...nodePolyfillConfig.plugins,
     // Run TypeScript type checking in parallel with the build, unless
-    // SKIP_TYPECHECK is set. The checker runs in a separate process capped at
-    // 2560MB (see memoryLimit below), so skipping it frees ~2.5GB during
-    // `yarn start`; your editor and CI still type-check. See SKIP_TYPECHECK in
-    // envConstants.js.
+    // SKIP_TYPECHECK is set.
     ...(envConstants.SKIP_TYPECHECK
       ? []
       : [

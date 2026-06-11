@@ -37,7 +37,7 @@ module.exports = {
   // memory).
   APPS_DEVTOOL: process.env.APPS_DEVTOOL,
   // If set, skips the parallel ForkTsCheckerWebpackPlugin type check, freeing
-  // ~2.5GB of memory during `yarn start`. Your editor and CI still type-check.
+  // ~2GB of memory during `yarn start`. Your editor and CI still type-check.
   SKIP_TYPECHECK: getBoolEnv('SKIP_TYPECHECK'),
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),

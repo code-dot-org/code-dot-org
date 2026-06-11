@@ -70,7 +70,7 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 `yarn start` defaults to `devtool: 'eval-cheap-module-source-map'`. The `module`
 part keeps breakpoints in your original TS/JSX; the `cheap` part drops
-column-level mappings (line-level only), which uses far less memory than the
+column-level mappings (line-level only), which uses less memory than the
 full-fidelity `eval-source-map`.
 
 Override the default with `APPS_DEVTOOL` when you need a different tradeoff:
