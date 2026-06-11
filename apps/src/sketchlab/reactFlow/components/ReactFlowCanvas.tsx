@@ -789,20 +789,27 @@ export default function ReactFlowCanvas({
   const handleNodeClick = useCallback(
     (event: React.MouseEvent, node: {id: string}) => {
       if (readOnly) return;
-      const nodeType = nodes.find(n => n.id === node.id)?.type;
+      const fullNode = nodes.find(n => n.id === node.id);
+      const nodeType = fullNode?.type;
       if (isLineAnchorNodeId(node.id, nodes)) return;
 
-      // Shift+click: toggle this node in the multi-selection. Group nodes are
-      // excluded — they are manipulated via their own toolbar, not grouped again.
-      if (event.shiftKey && nodeType !== 'group') {
+      // Shift+click: toggle this node in the multi-selection. Group nodes and
+      // already-grouped children are excluded — they cannot be re-grouped.
+      if (
+        event.shiftKey &&
+        nodeType !== 'group' &&
+        !isGroupedChildNode(fullNode)
+      ) {
         setMultiSelectedNodeIds(prev => {
           const next = new Set(prev);
           // On the first Shift+click of a fresh selection, automatically include
           // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
           // selects two nodes in one extra click, matching standard UX.
+          // Skip anchors that are already in a group.
           if (next.size === 0) {
             multiSelectAnchorRef.current?.forEach(anchorId => {
-              if (anchorId !== node.id) {
+              const anchorNode = nodes.find(n => n.id === anchorId);
+              if (anchorId !== node.id && !isGroupedChildNode(anchorNode)) {
                 next.add(anchorId);
               }
             });
@@ -819,7 +826,9 @@ export default function ReactFlowCanvas({
       }
 
       // Plain click: record anchor, clear any multi-selection, open toolbar.
-      multiSelectAnchorRef.current = nodeType === 'group' ? null : [node.id];
+      // Group nodes and grouped children get null anchor — neither is groupable.
+      multiSelectAnchorRef.current =
+        nodeType === 'group' || isGroupedChildNode(fullNode) ? null : [node.id];
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'node', id: node.id}, {trapFocus: false});
     },
@@ -833,15 +842,21 @@ export default function ReactFlowCanvas({
       const anchorIds = clickedEdge
         ? getStandaloneLineAnchorIds(clickedEdge, getNode)
         : null;
+      // A standalone line whose anchors are already grouped cannot be re-grouped.
+      const lineIsGrouped =
+        anchorIds?.some(id => isGroupedChildNode(getNode(id))) ?? false;
 
       if (event.shiftKey) {
-        if (anchorIds) {
+        if (anchorIds && !lineIsGrouped) {
           // Shift+click on a standalone line: toggle both anchor nodes in the
           // multi-selection, applying the same anchor-inclusion logic as nodes.
           setMultiSelectedNodeIds(prev => {
             const next = new Set(prev);
             if (next.size === 0) {
-              multiSelectAnchorRef.current?.forEach(id => next.add(id));
+              multiSelectAnchorRef.current?.forEach(id => {
+                const anchorNode = getNode(id);
+                if (!isGroupedChildNode(anchorNode)) next.add(id);
+              });
             }
             const allSelected = anchorIds.every(id => next.has(id));
             anchorIds.forEach(id => {
@@ -855,14 +870,13 @@ export default function ReactFlowCanvas({
           });
           closeToolbar();
         }
-        // Shift+click on an attached line: ignore so it doesn't disrupt
-        // a multi-selection in progress.
+        // Shift+click on an attached line or a grouped line: ignore.
         return;
       }
 
-      // Plain click: record standalone line as anchor for subsequent Shift+clicks,
-      // clear any multi-selection, and open the edge toolbar.
-      multiSelectAnchorRef.current = anchorIds;
+      // Plain click: record standalone, ungrouped line as anchor for subsequent
+      // Shift+clicks, clear any multi-selection, and open the edge toolbar.
+      multiSelectAnchorRef.current = lineIsGrouped ? null : anchorIds;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
     },

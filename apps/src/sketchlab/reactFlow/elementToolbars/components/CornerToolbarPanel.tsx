@@ -65,9 +65,24 @@ export default function CornerToolbarPanel({
     pushSnapshot,
   });
 
+  // Count logical groupable elements: regular nodes as 1 each, standalone-line
+  // anchor pairs as 1 (each line adds 2 lineAnchor IDs to the selection).
+  // Already-grouped nodes are excluded since they cannot be re-grouped.
+  const groupableCount = useMemo(() => {
+    let anchors = 0;
+    let nonAnchors = 0;
+    for (const id of multiSelectedNodeIds) {
+      const node = nodes.find(n => n.id === id);
+      if (!node || node.parentId) continue;
+      if (node.type === 'lineAnchor') anchors++;
+      else nonAnchors++;
+    }
+    return nonAnchors + anchors / 2;
+  }, [multiSelectedNodeIds, nodes]);
+
   const body = useMemo(() => {
-    // Multi-selection takes priority: show group button when 2+ nodes selected.
-    if (multiSelectedNodeIds.length >= 2) {
+    // Multi-selection takes priority: show group button when 2+ logical elements.
+    if (groupableCount >= 2) {
       return <MultiNodeSelectionToolbar onGroup={onGroupNodes} />;
     }
 
@@ -116,7 +131,7 @@ export default function CornerToolbarPanel({
     }
     return null;
   }, [
-    multiSelectedNodeIds,
+    groupableCount,
     onGroupNodes,
     onUngroupNode,
     openToolbarTarget,

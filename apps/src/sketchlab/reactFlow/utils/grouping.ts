@@ -11,8 +11,8 @@ export function isGroupNode(node: SketchLabNode): node is GroupNodeType {
   return node.type === 'group';
 }
 
-export function isGroupedChildNode(node: SketchLabNode): boolean {
-  return Boolean(node.parentId);
+export function isGroupedChildNode(node: SketchLabNode | undefined): boolean {
+  return Boolean(node?.parentId);
 }
 
 export function getGroupChildren(
@@ -56,7 +56,8 @@ export function groupSelectedNodes(
   selectedIds: string[],
   nodes: SketchLabNode[]
 ): SketchLabNode[] {
-  const targets = nodes.filter(n => selectedIds.includes(n.id));
+  // Exclude already-grouped nodes — they cannot be nested into a new group.
+  const targets = nodes.filter(n => selectedIds.includes(n.id) && !n.parentId);
   if (targets.length < 2) return nodes;
 
   const {minX, minY, maxX, maxY} = computeBounds(targets);
