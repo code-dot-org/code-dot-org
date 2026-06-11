@@ -32,31 +32,43 @@ export function useReconnect({
   screenToFlowPosition,
   pushSnapshot,
 }: UseReconnectOptions) {
-  const reconnectingEdgeRef = useRef<{landed: boolean} | null>(null);
-  // The in-flight edge is also tracked as state so the connection ghost
-  // can render with its styling.
+  const reconnectRef = useRef<{
+    edge: SketchlabReactFlowEdge;
+    landed: boolean;
+  } | null>(null);
+  // Render mirror of the in-flight edge so the connection ghost can render
+  // with its styling.
   const [reconnectingEdge, setReconnectingEdge] =
     useState<SketchlabReactFlowEdge | null>(null);
 
-  const isReconnecting = useCallback(
-    () => reconnectingEdgeRef.current !== null,
-    []
-  );
+  const beginReconnect = useCallback((edge: SketchlabReactFlowEdge) => {
+    reconnectRef.current = {edge, landed: false};
+    setReconnectingEdge(edge);
+  }, []);
+
+  // Clears the in-flight reconnect and returns its final state.
+  const endReconnect = useCallback(() => {
+    const finished = reconnectRef.current;
+    reconnectRef.current = null;
+    setReconnectingEdge(null);
+    return finished;
+  }, []);
+
+  const isReconnecting = useCallback(() => reconnectRef.current !== null, []);
 
   // Push snapshot at drag start, before the endpoint mutation commits.
   const handleReconnectStart = useCallback(
     (_event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
       pushSnapshot();
-      reconnectingEdgeRef.current = {landed: false};
-      setReconnectingEdge(edge);
+      beginReconnect(edge);
     },
-    [pushSnapshot]
+    [pushSnapshot, beginReconnect]
   );
 
   const handleReconnect = useCallback(
     (oldEdge: Edge, newConnection: Connection) => {
-      if (reconnectingEdgeRef.current) {
-        reconnectingEdgeRef.current.landed = true;
+      if (reconnectRef.current) {
+        reconnectRef.current.landed = true;
       }
       setEdges(currentEdges =>
         currentEdges.map(currentEdge => {
@@ -78,10 +90,8 @@ export function useReconnect({
 
   const handleReconnectEnd = useCallback(
     (event: MouseEvent | TouchEvent, edge: Edge, handleType: HandleType) => {
-      const reconnectState = reconnectingEdgeRef.current;
-      reconnectingEdgeRef.current = null;
-      setReconnectingEdge(null);
-      if (reconnectState?.landed) {
+      const finished = endReconnect();
+      if (finished?.landed) {
         return;
       }
 
@@ -113,7 +123,7 @@ export function useReconnect({
         )
       );
     },
-    [screenToFlowPosition, setEdges, setNodes]
+    [endReconnect, screenToFlowPosition, setEdges, setNodes]
   );
 
   return {
