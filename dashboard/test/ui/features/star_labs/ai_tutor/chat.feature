@@ -37,7 +37,6 @@ Feature: AI Tutor smoke tests on legacy labs and Lab2 resource panels
 
   Scenario: Chat works in the resource panel AI Tutor tab in Weblab2
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?hideProductTours=true"
-    And I wait until element "#instructions-drawer" is visible
     And I wait until element "#resource-panel-tab-button-aiTutor" is visible
 
     When I click selector "#resource-panel-tab-button-aiTutor"

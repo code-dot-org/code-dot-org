@@ -1,6 +1,7 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
+import Papa from 'papaparse';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -189,6 +190,21 @@ const downloadLessonProgressCSV = () => {
   });
 };
 
+// Build an RFC 4180-compliant CSV string. Fields containing commas, quotes, or
+// newlines are wrapped in double quotes by papaparse — lesson titles like
+// "Loops, Part 1" otherwise split across columns.
+export const buildCSVString = (
+  columnNames: string[],
+  table: {[columnName: string]: string}[]
+): string =>
+  Papa.unparse(
+    {
+      fields: columnNames,
+      data: table.map(row => columnNames.map(columnName => row[columnName])),
+    },
+    {newline: '\n'}
+  );
+
 // A custom CSV download function that sets up a fake URL with the CSV and triggers a download
 // We are using this instead of `react-csv` because we want to create the CSV when the user clicks the button
 // and not when the component mounts.
@@ -197,12 +213,7 @@ const downloadCSV = (
   columnNames: string[],
   table: {[columnName: string]: string}[]
 ) => {
-  const csvString = [
-    columnNames,
-    ...table.map(row => columnNames.map(columnName => row[columnName])),
-  ]
-    .map(row => row.join(','))
-    .join('\n');
+  const csvString = buildCSVString(columnNames, table);
 
   const blob = new Blob([csvString], {type: 'text/csv'});
 

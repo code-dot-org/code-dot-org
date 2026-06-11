@@ -19,6 +19,10 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
     DCDO.stubs(:get).with('openai_http_open_timeout', 5).returns(5)
     DCDO.stubs(:get).with('openai_http_read_timeout', 30).returns(30)
+
+    # Default to a passing toxicity verdict so tests that don't care about the
+    # filter aren't forced to wire it up. Toxicity-specific tests override.
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns(nil)
   end
 
   teardown do
@@ -122,6 +126,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "generate_podcast_script reuses an existing objectiveless script and skips OpenAI" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
     empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     other_empty = AiStudentPodcast.create!(
       user_id: @other_user.id,
@@ -139,6 +146,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "generate_podcast_script does not reuse an objective-bearing script for an objectiveless podcast" do
+    # Free the (@user, @lesson) slot held by setup's @podcast so we can use it
+    # for an objectiveless subject without tripping the new unique index.
+    @podcast.destroy
     empty_podcast = AiStudentPodcast.create!(user_id: @user.id, lesson_id: @lesson.id)
     with_objective = AiStudentPodcast.create!(
       user_id: @other_user.id,
@@ -162,6 +172,57 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     assert_equal fresh_script, result
   end
 
+  test "generate_podcast_script regenerates and returns the second script when the first fails toxicity" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    toxic_script = [{'voice_id' => 'Dan', 'text' => 'bad'}].to_json
+    clean_script = [{'voice_id' => 'Dan', 'text' => 'good'}].to_json
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).twice.returns(
+      openai_response_for(toxic_script),
+      openai_response_for(clean_script),
+    )
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns({text: 'bad', blocked_by: 'openai', details: {}}).then.returns(nil)
+
+    result = AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+
+    assert_equal clean_script, result
+    assert_equal clean_script, @podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script raises StudentPodcastToxicityRetriesExceeded after MAX_TOXICITY_RETRIES failed attempts" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    toxic_script = [{'voice_id' => 'Dan', 'text' => 'bad'}].to_json
+    mock_client = mock('client')
+    mock_client.expects(:request_podcast_script).
+      times(AiStudentPodcastsHelper::MAX_TOXICITY_RETRIES).
+      returns(openai_response_for(toxic_script))
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.stubs(:find_toxicity).returns({text: 'bad', blocked_by: 'openai', details: {}})
+
+    assert_raises(StudentPodcastToxicityRetriesExceeded) do
+      AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+    end
+    assert_nil @podcast.reload.podcast_script
+  end
+
+  test "generate_podcast_script passes joined dialog text and role='Model' to the toxicity filter" do
+    AiSystemPrompts::StudentPodcastPromptHelper.stubs(:get_openai_system_prompt).returns('prompt')
+    script_array = [
+      {'voice_id' => 'Dan', 'text' => 'first line'},
+      {'voice_id' => 'Sam', 'text' => 'second line'}
+    ]
+    mock_client = mock('client')
+    mock_client.stubs(:request_podcast_script).returns(openai_response_for(script_array.to_json))
+    AiStudentPodcastsHelper::OpenaiClient.stubs(:new).returns(mock_client)
+
+    AiPodcastsSafetyHelper.expects(:find_toxicity).with("first line\nsecond line", 'Model').returns(nil)
+
+    AiStudentPodcastsHelper.generate_podcast_script(@podcast)
+  end
+
   # *****
   # create_and_save_to_s3 tests
   # *****
@@ -174,6 +235,35 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
 
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+  end
+
+  test "create_and_save_to_s3 backfills podcast_script from a peer record when S3 already has the audio" do
+    peer_script = [{'voice_id' => 'Dan', 'text' => 'shared content'}].to_json
+    peer = AiStudentPodcast.create!(
+      user_id: @other_user.id,
+      lesson_id: @lesson.id,
+      podcast_script: peer_script
+    )
+    peer.ai_student_podcast_objectives.create!(objective_id: @objective.id)
+
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:generate_podcast_script).never
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+
+    assert_equal peer_script, @podcast.reload.podcast_script
+  end
+
+  test "create_and_save_to_s3 leaves podcast_script alone when S3 has the audio and the record already has a script" do
+    @podcast.update!(podcast_script: 'already-saved')
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    AWS::S3.expects(:upload_to_bucket).never
+    AiStudentPodcastsHelper.expects(:find_matching_script_record).never
+
+    AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
+
+    assert_equal 'already-saved', @podcast.reload.podcast_script
   end
 
   test "create_and_save_to_s3 short-circuits without generating script when ElevenLabs credits unavailable" do
@@ -196,7 +286,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(generated_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -215,7 +305,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(existing_script).returns('mp3-bytes')
     AWS::S3.expects(:upload_to_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -230,7 +320,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
   test "retrieve_podcast_from_s3 delegates to AWS::S3.download_from_bucket" do
     AWS::S3.expects(:download_from_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns('mp3-bytes')
 
@@ -240,7 +330,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
   test "exists_in_s3? checks the bucket for the lesson + objective key" do
     AWS::S3.expects(:exists_in_bucket).with(
-      AiStudentPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns(true)
 
@@ -411,5 +501,13 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
     AiStudentPodcastsHelper::OpenaiClient.new(@openai_api_key, AiStudentPodcastsHelper::OPENAI_MODEL).
       request_podcast_script('prompt-here')
+  end
+
+  private def openai_response_for(script_json)
+    body = {choices: [{message: {content: {script: JSON.parse(script_json)}.to_json}}]}.to_json
+    response = mock('response')
+    response.stubs(:code).returns(200)
+    response.stubs(:body).returns(body)
+    response
   end
 end

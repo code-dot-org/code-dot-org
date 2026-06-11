@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.whyCreateSectionLink {
+  margin-bottom: 1rem;
+}
+
 p.noMarginBottomParagraph {
   margin-bottom: 0;
 }
@@ -218,10 +222,6 @@ button.advancedSettingsButton {
   padding-top: 0;
   display: flex;
   justify-content: flex-end;
-}
-
-.textPopUp {
-  cursor: pointer;
 }
 
 .toolTipContainer {

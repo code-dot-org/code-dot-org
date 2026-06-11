@@ -212,6 +212,7 @@ When /^I wait for the lab page to fully load$/ do
     When I wait to see "#runButton"
     And I wait to see ".header_user"
     And I close the instructions overlay if it exists
+    And The header is finished animating
   GHERKIN
 end
 
@@ -438,6 +439,21 @@ When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
     button = @browser.find_element(id: button)
   end
   page_load(load) {button.click}
+end
+
+# Re-clicks the button each poll cycle until the target element is in the DOM.
+# Tolerates a native click that lands before React's delegated onClick handler
+# is wired, or while the node is mid-re-render: a dropped click is simply
+# retried on the next cycle. Use only for buttons whose click is idempotent
+# (e.g. dispatching an "open" action), so redundant presses are harmless.
+When /^I press "([^"]*)" until I see "([.#])([^"]*)"$/ do |button, selector_symbol, name|
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_until do
+    @browser.find_element(id: button).click
+    !@browser.find_elements(selection_criteria).empty?
+  rescue Selenium::WebDriver::Error::WebDriverError
+    false
+  end
 end
 
 When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|

@@ -77,8 +77,8 @@ that format.
 ## Run flow
 
 `javabuilderRunner.ts` reuses the legacy
-`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port can
-come in a later phase. Differences from legacy use:
+`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port is
+still on the TODO list. Differences from legacy use:
 
 - The legacy class reads `project.getCurrentId()` from the legacy
   project singleton, which is not initialized in lab2. The constructor
@@ -95,9 +95,9 @@ come in a later phase. Differences from legacy use:
   so Javabuilder reads fresh source from S3 instead of a stale version.
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
-  is supported in Phase 1).
+  is supported so far).
 
-## Phase 1 (current status of conversion)
+## Current Status of Conversion
 
 - Per-level `uses_lab2` opt-in for `Javalab` (`dancelab` pattern).
 - Horizontal layout (`layout/HorizontalLayout.tsx`)
@@ -112,18 +112,24 @@ come in a later phase. Differences from legacy use:
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
   and committing a named version for free.
+- Can create/edit start sources and exemplars.
+- Validation (student run path): a level with validation files shows the
+  Lab2 Validate button; clicking it runs the level's tests on Javabuilder
+  (`ExecutionType.TEST`), streams per-test results into the Lab2
+  validation table, and an all-pass run reports completion. Plumbed via
+  `get_validations` on `Javalab`, `TestResultValidator`, `ValidationTracker`,
+  and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
 
-## Deferred to later phases
-- **Validation** (`get_validations` override on `Javalab`,
-  `JavaValidator`, `JavaValidationTracker`, test-result handling).
+## To Dos
+- **Support locked starter files** you can lock starter files in start mode,
+but we don't persist that information yet.
+- **Support run before edit** Right now we only save the project on first edit,
+which prevents running on Javabuilder. We should force a save before run is clicked.
 - **Neighborhood mini-app**
 - **Theater mini-app** + photo prompter.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **start_sources and exemplar edit modes** — currently trying
-  to edit start sources will break things, as it will save the MultiFileSource
-  version of the code.
 - **Starter assets** and image asset support in general.
 - **TS port of `JavabuilderConnection`** — currently imported from
   `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
@@ -155,6 +161,8 @@ come in a later phase. Differences from legacy use:
 - `javabuilderRunner.ts` — `handleRunClick`, `stopJavaCode`,
   `sendJavaConsoleInput`. Wraps the legacy
   `JavabuilderConnection`.
+- `progress/JavaValidationTracker.ts` — singleton holding the per-test
+  `ValidationResult[]` from the latest validation run.
 - `codemirrorLangJava.d.ts` — minimal module declaration for
   `@codemirror/lang-java`, whose package.json doesn't expose its types
   via node16 `exports`.
@@ -185,6 +193,13 @@ come in a later phase. Differences from legacy use:
 - `apps/src/javalab/JavabuilderConnection.js` — constructor accepts an
   optional `channelId` (falls back to `project.getCurrentId()`); the
   "project not edited yet" guard now reads `this.channelId` instead of
-  re-fetching from the legacy singleton.
+  re-fetching from the legacy singleton. Also accepts an optional
+  `onValidationResult` callback, invoked per validation `TEST_RESULT` so
+  Lab2 can populate its validation table.
+- `apps/src/javalab/testResultHandler.js` — `onTestResult` additionally
+  returns a `validationResult` (`{message, result}` with a Lab2
+  `TestStatus`) for `TEST_STATUS` messages; legacy callers ignore it.
+- `dashboard/app/models/levels/javalab.rb` — `get_validations` returns a
+  single `PASSED_ALL_TESTS` condition when the level has validation.
 - `dashboard/test/models/javalab_test.rb` — assertion that `uses_lab2?`
   defaults to false and honors the serialized property.

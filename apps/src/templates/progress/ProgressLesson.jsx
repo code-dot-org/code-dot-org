@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,14 +7,10 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import FocusAreaIndicator from './FocusAreaIndicator';
 import {
@@ -184,14 +180,14 @@ class ProgressLesson extends React.Component {
               }}
               aria-expanded={!this.state.collapsed}
             >
-              <FontAwesome icon={caret} style={caretStyle} />
+              <FontAwesomeV6Icon iconName={caret} style={caretStyle} />
               {hiddenForStudents && (
-                <FontAwesome icon="eye-slash" style={styles.icon} />
+                <FontAwesomeV6Icon iconName="eye-slash" style={styles.icon} />
               )}
               {lesson.lockable && this.props.lockStatusLoaded && (
                 <span data-tip data-for={lockedTooltipId}>
-                  <FontAwesome
-                    icon={showAsLocked ? 'lock' : 'unlock'}
+                  <FontAwesomeV6Icon
+                    iconName={showAsLocked ? 'lock' : 'unlock'}
                     style={{
                       ...styles.icon,
                       ...(!showAsLocked && styles.unlockedIcon),
@@ -209,7 +205,9 @@ class ProgressLesson extends React.Component {
                   )}
                 </span>
               )}
-              <span>{title}</span>
+              <Typography variant="h5" component="span">
+                {title}
+              </Typography>
             </div>
             {!isOnLevelView && (
               <div style={styles.buttonColumn}>
@@ -287,8 +285,8 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    background: color.lightest_gray,
-    borderColor: color.border_gray,
+    background: 'var(--background-neutral-secondary)',
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderRadius: 2,
     // When toggling between hidden and not, we change our border size from 1 to 4.
@@ -305,7 +303,7 @@ const styles = {
   },
   heading: {
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
+    fontWeight: 600,
     display: 'flex',
     alignItems: 'center',
   },
@@ -340,14 +338,15 @@ const styles = {
   icon: {
     marginRight: 5,
     fontSize: 18,
-    color: color.cyan,
+    color: 'var(--text-info-primary)',
   },
   unlockedIcon: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
   notAuthorizedWarning: {
-    color: color.red,
-    ...fontConstants['main-font-semi-bold-italic'],
+    color: 'var(--text-error-primary)',
+    fontWeight: 600,
+    fontStyle: 'italic',
     marginTop: 10,
   },
   learnMoreLink: {

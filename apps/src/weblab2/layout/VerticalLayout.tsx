@@ -13,6 +13,7 @@ import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAler
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
+import WorkspaceAlerts from '@cdo/apps/lab2/views/alerts/workspaceAlerts';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -188,6 +189,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         />
 
         <div
+          id="workspace-with-header"
           className={classNames(
             lab2Styles.flexColumn,
             lab2Styles.shrinkAndGrow
@@ -209,12 +211,12 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               </>
             }
           />
+          <WorkspaceAlerts inWorkspaceContainer />
           <div className={weblab2Styles.workspaceContainer}>
             {isAiTutorVersion && (
               <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
             )}
             <div
-              id="editor-preview-container"
               className={classNames(
                 weblab2Styles.editorAndPreviewContainer,
                 isAiTutorVersion && weblab2Styles.aiTutorVersionContainer

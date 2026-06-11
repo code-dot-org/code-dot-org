@@ -1,3 +1,4 @@
+import {INVALID_NAME_ERROR} from '@codebridge/constants';
 import {FolderId} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -32,7 +33,7 @@ export const validateFolderName = ({
     return;
   }
   if (!isValidFolderName(folderName)) {
-    return codebridgeI18n.invalidNameError();
+    return INVALID_NAME_ERROR;
   }
 
   const duplicate = isDuplicateFolderName({

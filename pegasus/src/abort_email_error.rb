@@ -1,2 +1,0 @@
-class AbortEmailError < StandardError
-end

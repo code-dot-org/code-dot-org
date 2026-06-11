@@ -1,0 +1,58 @@
+.main {
+  color: var(--text-neutral-primary);
+  white-space: normal;
+  text-align: left;
+}
+
+.sectionSelectorRow {
+  margin-bottom: 15px;
+}
+
+.title {
+  color: var(--text-brand-teal-primary);
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.headerRow {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--borders-brand-teal-primary);
+  background-color: var(--background-brand-teal-primary);
+  color: var(--text-neutral-inverse);
+  padding: 10px;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.descriptionText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.studentTable {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.saveError {
+  color: var(--text-error-primary);
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+}
+
+.hiddenError {
+  color: var(--text-error-primary);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.stepButton {
+  width: 100%;
+}

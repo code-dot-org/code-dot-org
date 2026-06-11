@@ -110,7 +110,7 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course2025.name}/units/1")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/#{course2025.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do

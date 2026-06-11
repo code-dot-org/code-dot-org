@@ -23,24 +23,6 @@ module Middleware
       REGION_KEY = Cdo::GlobalEdition::REGION_KEY
       LOCALE_KEY = Cdo::I18n::LOCALE_COOKIE_KEY
 
-      # HTTP path prefixes to be excluded from Global Edition scope.
-      def self.excluded_path_prefixes
-        @excluded_path_prefixes ||= [
-          Rails.application.config.assets.prefix + '/', # e.g. `/assets/`
-          '/public/',
-          # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
-          # Instead of repeating this process for each new Global Edition region,
-          # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
-          # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
-          ::OmniAuth.config.path_prefix + '/', # e.g. `/users/auth/`
-          # Exclude HoC legacy API routes from Global Edition scope.
-          ::HocLegacy::API_ROOT_PATH + '/', # e.g. `/api/hour/`
-          # Exclude health check routes such as `/health_check`.
-          Rails.application.routes.url_helpers.health_check_path,
-          Rails.application.routes.url_helpers.home_health_check_path,
-        ].freeze
-      end
-
       # HTTP path prefixes that should be processed as is, without a Global Edition regional redirect.
       def self.non_redirectable_path_prefixes
         @non_redirectable_path_prefixes ||= %w[
@@ -94,8 +76,8 @@ module Middleware
       #
       # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
-        return app.call(env) unless Cdo::GlobalEdition.target_host?(request.hostname)
-        return app.call(env) if excluded_path?(request.path)
+        return app.call(env) unless request.hostname == CDO.dashboard_hostname
+        return app.call(env) if Cdo::GlobalEdition.excluded_path?(request.path)
 
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.GET.key?(REGION_KEY)
@@ -223,23 +205,9 @@ module Middleware
           request.cookies[LOCALE_KEY] = region_locale
           response.set_cdo_cookie(LOCALE_KEY, region_locale)
         end
-
-        Metrics::Events.log_event(
-          event_name: 'Global Edition Region Changed',
-          user: request.user,
-          session: request.session,
-          metadata: {
-            old_region: original_region,
-            old_locale: original_locale,
-            new_region:,
-            new_locale: region_locale,
-          },
-        )
       end
 
       private def existing_route?
-        return false unless request.hostname == CDO.dashboard_hostname
-
         Dashboard::Application.routes.recognize_path_with_request(
           request,
           original_path_info,
@@ -311,7 +279,7 @@ module Middleware
           # - `request.script_name` strips the prefix from the request path
           #   so the application processes requests as if it were running at the root level.
           # - `request.path_info` provides the specific path that should be handled by the application.
-          request.script_name = regional_path_for(url_region, original_script_name).chomp('/') unless excluded_path?(main_path)
+          request.script_name = regional_path_for(url_region, original_script_name) unless Cdo::GlobalEdition.excluded_path?(main_path)
           request.path_info   = main_path
         end
 
