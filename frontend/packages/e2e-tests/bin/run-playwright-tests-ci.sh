@@ -4,9 +4,11 @@
 # pipeline (docker/ci/scripts/ui_tests.sh) and the DTT `test:playwright_ui` rake
 # task (lib/rake/test.rake) so the run and its messaging live in one place.
 #
-# Browsers: baked into the Drone CI image (docker/ci/Dockerfile), so in CI the
-# install below is skipped; on the long-running DTT test daemon (off CI) the
-# install below provisions them at runtime.
+# Browsers: baked into the Drone CI image (docker/ci/Dockerfile) so the install
+# below is skipped in CI; installed at runtime on the long-running DTT daemon.
+# Not provisioned via chef — Playwright and its browsers version together, so a
+# cookbook bump is impractical; longer term, Playwright-in-Docker would drop the
+# runtime install entirely.
 #
 # Reads the target deployment from $TARGET_URL (e.g.
 # http://localhost-studio.code.org:3000 for Drone, the test env for DTT) and
