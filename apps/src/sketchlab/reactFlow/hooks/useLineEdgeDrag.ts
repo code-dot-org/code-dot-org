@@ -198,10 +198,14 @@ export function useLineEdgeDrag({
       // Mousedown on an endpoint's reconnect anchor starts React Flow's
       // reconnect drag (it's a child of the same edge wrapper); don't also
       // start a whole-line drag from the bubbled event.
-      if (
-        (event.target as Element).closest(`.${REACT_FLOW_EDGE_UPDATER_CLASS}`)
-      ) {
-        return;
+      const target = event.target;
+      if (target instanceof Element) {
+        // Mousedown on an endpoint's reconnect anchor starts React Flow's
+        // reconnect drag (it's a child of the same edge wrapper); don't also
+        // start a whole-line drag from the bubbled event.
+        if (target.closest(`.${REACT_FLOW_EDGE_UPDATER_CLASS}`)) {
+          return;
+        }
       }
 
       const anchors: DraggingAnchor[] = [];
