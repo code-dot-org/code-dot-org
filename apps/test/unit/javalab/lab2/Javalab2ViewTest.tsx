@@ -205,7 +205,7 @@ describe('Javalab2View', () => {
       return (useSource as jest.Mock).mock.calls.at(-1);
     }
 
-    it('merges mapping entries into startSources as locked url-backed files', () => {
+    it('merges mapping entries into startSources as url-backed starter files', () => {
       renderWithAssets(undefined);
       const codebridgeProps = (
         Codebridge as unknown as jest.Mock
@@ -218,10 +218,13 @@ describe('Javalab2View', () => {
       expect(image.url).toBe(
         '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
       );
-      expect(image.type).toBe('locked_starter');
+      expect(image.type).toBe('starter');
     });
 
-    it('merges mapping entries into url-free initial sources from the server', () => {
+    it('does not merge mapping entries into a project loaded from the server', () => {
+      // Like any other start-source change, assets reach a student's
+      // project only when it is seeded from the level (fresh load or
+      // start over), never retrofitted into saved sources.
       const loaded: ProjectSources = {
         source: {
           folders: {},
@@ -237,40 +240,11 @@ describe('Javalab2View', () => {
         },
       };
       renderWithAssets(loaded);
-      const mergedInitialSources = lastUseSourceArgs()[2] as ProjectSources;
-      const files = Object.values(
-        (mergedInitialSources.source as MultiFileSource).files
-      );
-      const image = files.find(f => f.name === 'cat.png')!;
-      expect(image.url).toBe(
-        '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
-      );
-    });
-
-    it('does not re-append mapping entries when initial sources already have a url file', () => {
-      // The ghost-file guard: once the project carries url entries of its
-      // own, a deleted starter asset must stay deleted.
-      const loaded: ProjectSources = {
-        source: {
-          folders: {},
-          files: {
-            '0': {
-              id: '0',
-              name: 'student.png',
-              contents: '',
-              folderId: '0',
-              url: '/v3/assets/test-channel/uuid-9.png',
-            },
-          },
-          openFiles: [],
-        },
-      };
-      renderWithAssets(loaded);
-      const mergedInitialSources = lastUseSourceArgs()[2] as ProjectSources;
+      const initialSources = lastUseSourceArgs()[2] as ProjectSources;
       const names = Object.values(
-        (mergedInitialSources.source as MultiFileSource).files
+        (initialSources.source as MultiFileSource).files
       ).map(f => f.name);
-      expect(names).toEqual(['student.png']);
+      expect(names).toEqual(['Main.java']);
     });
   });
 

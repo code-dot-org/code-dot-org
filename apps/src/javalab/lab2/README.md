@@ -56,11 +56,13 @@ URL) it already sends, so the Javabuilder contract is unchanged.
 Starter assets authored in legacy Java Lab exist only as the level's
 `starter_assets` property (`{friendlyName => uuidName}`); their levels'
 start sources carry no url entries. `starterAssets.ts` merges the
-mapping into the source at load — as `LOCKED_STARTER` files for
-students (read-only, like legacy) — but only when the source has no
-url-backed entries of its own, so a delete or rename persisted by a
-lab2 save isn't undone by re-merging the mapping on the next load.
-Url-backed files otherwise stay untyped: lab2 treats typed url files as
+mapping into the level's start/template/exemplar sources as plain
+`STARTER` files. Projects loaded from S3 are never merged: like any
+other start-source change, assets reach a student's project only when
+it is seeded from the level (fresh load or start over). Locking starter
+assets against student edits will arrive with the broader
+locked-starter-files support. User-uploaded url-backed files stay
+untyped in the converter: lab2 treats typed url files as
 levelbuilder-owned and would skip the S3 delete + abuse unflag when a
 student removes one.
 
@@ -144,12 +146,16 @@ still on the TODO list. Differences from legacy use:
 - Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
-  Javabuilder, with legacy `starter_assets` levels loading read-only.
-  Runtime use of the assets lands with the Theater port. Known
-  limitation: deleting a starter-asset image in start mode removes the
-  source entry but not the level's `starter_assets` mapping entry, so
-  the asset stays reachable at run time (follow-up: codebridge
-  delete/rename hooks that call the starter-assets DELETE endpoint).
+  Javabuilder. Legacy `starter_assets` levels seed their assets into the
+  start sources (fresh load or start over only — saved projects aren't
+  retrofitted). Runtime use of the assets lands with the Theater port.
+  Known limitations: starter assets aren't locked yet (students can
+  rename/delete them; locking comes with locked-starter-files support),
+  and deleting a starter-asset image in start mode removes the source
+  entry but not the level's `starter_assets` mapping entry, so the asset
+  stays reachable at run time and reappears in fresh seeds (follow-up:
+  codebridge delete/rename hooks that call the starter-assets DELETE
+  endpoint).
 
 ## To Dos
 - **Support locked starter files** you can lock starter files in start mode,
@@ -178,7 +184,7 @@ but we don't persist that information yet.
 - `types.ts` — `JavalabLevelProperties` extends
   `CodebridgeLevelProperties` with `csaViewMode`.
 - `starterAssets.ts` — merges the level's legacy `starter_assets`
-  mapping into the MultiFileSource and derives starter-asset lock state.
+  mapping into the level's sources as STARTER files.
 - `layout/HorizontalLayout.tsx` — three-panel layout (InfoPanel |
   Editor over Console). Vertical/share/widget slots all point at the
   same horizontal layout for now.
