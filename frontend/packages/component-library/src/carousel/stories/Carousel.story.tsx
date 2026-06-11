@@ -87,6 +87,8 @@ DefaultCarousel.args = {
   })),
 };
 DefaultCarousel.parameters = {
+  // Part of the Argos trial's 5-story visual snapshot set (see preview.js).
+  argos: {modes: {default: {disabled: false}}},
   docs: {
     description: {
       story:

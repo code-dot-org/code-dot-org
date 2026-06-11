@@ -109,6 +109,12 @@ DefaultTabs.args = {
 };
 
 export const DefaultTabsOverflownLabel = SingleTemplate.bind({});
+// Part of the Argos trial's 5-story visual snapshot set (see preview.js).
+// Chosen as the canary for the tooltip-at-capture flake; see argosCSS in
+// vite.config.ts.
+DefaultTabsOverflownLabel.parameters = {
+  argos: {modes: {default: {disabled: false}}},
+};
 DefaultTabsOverflownLabel.args = {
   name: 'default_tabs_with_overflown_label',
   tabs: [

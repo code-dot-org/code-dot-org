@@ -29,6 +29,8 @@ export const Default: Story = {
   },
   parameters: {
     layout: 'fullscreen',
+    // Part of the Argos trial's 5-story visual snapshot set (see preview.js).
+    argos: {modes: {default: {disabled: false}}},
   },
 };
 

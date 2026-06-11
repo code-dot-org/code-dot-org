@@ -62,6 +62,10 @@ DefaultToggle.args = {
 };
 
 export const DefaultToggleGroup = MultipleTemplate.bind({});
+// Part of the Argos trial's 5-story visual snapshot set (see preview.js).
+DefaultToggleGroup.parameters = {
+  argos: {modes: {default: {disabled: false}}},
+};
 DefaultToggleGroup.args = {
   components: [
     {

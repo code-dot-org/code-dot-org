@@ -84,8 +84,8 @@ jobs:
         env:
           ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
           # TRIAL ONLY — revert to `staging` before merge. Staging has no
-          # builds yet, so baseline against this PR branch's approved build.
-          ARGOS_REFERENCE_BRANCH: stephen/argos-ci
+          # builds yet, so baseline against the dedicated trial branch.
+          ARGOS_REFERENCE_BRANCH: stephen/argos-ci-baseline
 
   # We do not use the Argos GitHub App, so poll the build result ourselves and
   # report it as a PR comment. This is a separate job so that approving diffs

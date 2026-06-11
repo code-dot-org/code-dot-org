@@ -35,6 +35,12 @@ const preview = {
     docs: {
       codePanel: true,
     },
+    // Argos trial runs on a small screenshot budget: visual capture is
+    // off by default, and a handful of representative stories opt back in
+    // with `argos: {modes: {default: {disabled: false}}}`.
+    argos: {
+      modes: {default: {disabled: true}},
+    },
   },
 };
 

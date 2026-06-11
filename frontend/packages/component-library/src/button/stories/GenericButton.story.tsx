@@ -160,6 +160,10 @@ ButtonButtonVsLinkButton.args = {
 };
 
 export const GroupOfColorsOfGenericButtons = MultipleTemplate.bind({});
+// Part of the Argos trial's 5-story visual snapshot set (see preview.js).
+GroupOfColorsOfGenericButtons.parameters = {
+  argos: {modes: {default: {disabled: false}}},
+};
 GroupOfColorsOfGenericButtons.args = {
   components: [
     {
