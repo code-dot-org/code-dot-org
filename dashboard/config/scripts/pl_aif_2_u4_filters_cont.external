@@ -26,8 +26,10 @@ Below are two interface styles. One makes filtering visible. One does not.
 
 <br>
 
-<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:16px;font-weight:bold;">💡 Check your thinking</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+
 
   <div style="margin-top:14px;">
     <p style="font-size:13pt;line-height:1.45;margin:0;">
