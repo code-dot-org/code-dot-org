@@ -1,15 +1,23 @@
+.modal {
+  text-align: start;
+}
+
 .main {
   color: var(--text-neutral-primary);
   white-space: normal;
-  text-align: left;
 }
 
 .sectionSelectorRow {
-  margin-bottom: 15px;
+  display: flex;
+  margin-bottom: 10px;
+
+  span {
+    margin-inline-end: 1rem;
+  }
 }
 
 .title {
-  color: var(--text-brand-teal-primary);
+  color: var(--text-neutral-primary);
   font-size: 20px;
   font-weight: 900;
   margin-top: 15px;
@@ -54,5 +62,17 @@
 }
 
 .stepButton {
+  white-space: nowrap;
   width: 100%;
+}
+
+.instructionsTable {
+  td {
+    padding-block: 0.375rem;
+    vertical-align: middle;
+  }
+
+  td:last-child {
+    padding-inline-start: 1rem;
+  }
 }
