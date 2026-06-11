@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-09 18:15:09 UTC",
+    "serialized_at": "2026-06-10 15:44:52 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -450,6 +450,50 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reuseable-routine-loops"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "a1560013-e82c-4d0e-a0b5-66dd0d523a4c"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-reuseable-routine-loops"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "a1560013-e82c-4d0e-a0b5-66dd0d523a4c"
+      },
+      "level_keys": [
+        "pl-aif2-U4_debugging_loops-rebrand"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U4-whileloop-panel"
         ],
@@ -470,9 +514,9 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 7,
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -495,8 +539,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -517,8 +561,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
+      "chapter": 18,
+      "position": 18,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -542,8 +586,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
+      "chapter": 19,
+      "position": 19,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -567,8 +611,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
+      "chapter": 20,
+      "position": 20,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -592,8 +636,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -617,8 +661,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 20,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -642,8 +686,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -664,8 +708,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -686,8 +730,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -711,8 +755,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -736,8 +780,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -758,8 +802,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -783,8 +827,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -808,8 +852,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -833,8 +877,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -858,8 +902,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -883,8 +927,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -905,8 +949,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -930,8 +974,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 35,
+      "position": 35,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -955,8 +999,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 36,
+      "position": 36,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -965,7 +1009,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-reuseable-routine-loops"
+          "pl-aif-2-U4-wrap-up-project"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -973,35 +1017,13 @@
         "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
       },
       "level_keys": [
-        "pl-aif-2-U4-reuseable-routine-loops"
+        "pl-aif-2-U4-wrap-up-project"
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 37,
+      "position": 37,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Wrapping Up (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif2-U4_debugging_loops-rebrand"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      },
-      "level_keys": [
-        "pl-aif2-U4_debugging_loops-rebrand"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 36,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1024,9 +1046,9 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
-      "activity_section_position": 4,
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1049,9 +1071,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 38,
-      "activity_section_position": 5,
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1212,6 +1234,30 @@
         "level.key": "pl-aif-2-U4-forloop-debug-weblab",
         "script_level.level_keys": [
           "pl-aif-2-U4-forloop-debug-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "a1560013-e82c-4d0e-a0b5-66dd0d523a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-reuseable-routine-loops",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reuseable-routine-loops"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "a1560013-e82c-4d0e-a0b5-66dd0d523a4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U4_debugging_loops-rebrand",
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1473,21 +1519,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-reuseable-routine-loops",
+        "level.key": "pl-aif-2-U4-wrap-up-project",
         "script_level.level_keys": [
-          "pl-aif-2-U4-reuseable-routine-loops"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif2-U4_debugging_loops-rebrand",
-        "script_level.level_keys": [
-          "pl-aif2-U4_debugging_loops-rebrand"
+          "pl-aif-2-U4-wrap-up-project"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
