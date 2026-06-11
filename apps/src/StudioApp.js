@@ -2106,15 +2106,35 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     return ids;
   };
   // Applab API functions whose string arguments at the given positions
-  // are semantic identifiers (event types, property names) and must not
+  // are semantic identifiers (event types, property names, and the
+  // dataset/table/column/key/model names of the data API) and must not
   // be translated. Position 0 (ids) is already covered by the startHtml
   // exclusion above for most of these, but positions 1+ aren't, so the
   // applab API calls need this slot-level map. Extend as more functions
   // surface.
+  //
+  // The data API entries are the boundary between user code and stored
+  // data: the table/column/key/model names are matched by exact English
+  // spelling at runtime, so a translated literal would no longer resolve.
+  // Slots holding records/searchParams/testValues are objects rather than
+  // string literals (their keys are object-literal property keys, which
+  // the localizer already skips), so only the name slots are listed here.
   const applabExcludeCallArgs = {
     onEvent: [1],
     setProperty: [1],
     getProperty: [1],
+    // Datablock storage: first arg is the table name.
+    createRecord: [0],
+    readRecords: [0],
+    updateRecord: [0],
+    deleteRecord: [0],
+    getColumn: [0, 1], // (table, column)
+    getKeyValue: [0],
+    setKeyValue: [0],
+    drawChartFromRecords: [0],
+    // ML: prediction model name + id, and feature-pair key.
+    getPrediction: [0, 1], // (modelName, modelId)
+    addPair: [1], // (object, key, value)
   };
   // Lines whose translated content would break the level's runtime
   // logic — typically data tables keyed on the English spelling of
