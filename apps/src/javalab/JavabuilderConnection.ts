@@ -109,6 +109,7 @@ export default class JavabuilderConnection {
   private socket?: WebSocket;
   private programIsRunning: boolean;
   private interruptSignal: boolean;
+  private userRequestedClose: boolean;
 
   constructor(
     onMessage: (message: string) => void,
@@ -163,6 +164,7 @@ export default class JavabuilderConnection {
     this.hadWebsocketConnectionError = false;
     this.programIsRunning = false;
     this.interruptSignal = false;
+    this.userRequestedClose = false;
 
     if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
       // Route console output through the mini app as PARTIAL_LOG signals,
@@ -515,6 +517,13 @@ export default class JavabuilderConnection {
   }
 
   onClose(event: CloseEvent) {
+    // A user-requested close can arrive unclean (e.g. code 1006 when the
+    // socket was still connecting); closeConnection already reported the
+    // stop and reset the run state.
+    if (this.userRequestedClose) {
+      console.log(`[close] after stop. code=${event.code}`);
+      return;
+    }
     // Event code 1000 is "connection closed normally", so we should treat
     // it as an expected close event. For some reason many close events with code
     // 1000 are not marked as clean. We should treat them as clean.
@@ -563,12 +572,18 @@ export default class JavabuilderConnection {
   }
 
   onError(error: Event) {
+    const errorMessage = (error as ErrorEvent).message || 'unknown error';
+    // Not an error from the user's point of view: closeConnection already
+    // reported the stop and reset the run state.
+    if (this.userRequestedClose) {
+      console.log(`[error] ignored after stop: ${errorMessage}`);
+      return;
+    }
     this.onOutputMessage(
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
     );
     this.onNewlineMessage();
     this.handleExecutionFinished();
-    const errorMessage = (error as ErrorEvent).message || 'unknown error';
     console.error(`[error] ${errorMessage}`);
     this.reportWebSocketConnectionError(errorMessage);
   }
@@ -611,6 +626,7 @@ export default class JavabuilderConnection {
   // Closes web socket connection
   closeConnection() {
     if (this.socket) {
+      this.userRequestedClose = true;
       this.socket.close();
     } else if (this.programIsRunning) {
       // The socket does not exist yet, so we are still fetching the access
