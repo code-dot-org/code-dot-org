@@ -33,6 +33,7 @@ const ELEMENTARY_PRESET: DemoPresetView = {
   grades: ['2'],
   unit: {name: 'coursea-2024', displayName: 'Course A'},
   unitGroup: null,
+  studentSnapshotDefaultTourLesson: null,
 };
 
 const HIGH_PRESET: DemoPresetView = {
@@ -48,6 +49,7 @@ const HIGH_PRESET: DemoPresetView = {
     name: 'artificial-intelligence-foundations-2025',
     displayName: 'Artificial Intelligence Foundations',
   },
+  studentSnapshotDefaultTourLesson: null,
 };
 
 describe('CreateDemoSectionPopup', () => {
