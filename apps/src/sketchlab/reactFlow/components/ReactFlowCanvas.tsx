@@ -185,23 +185,6 @@ export default function ReactFlowCanvas({
     setOpenToolbarInfo({target: null, trapFocus: false});
   }, []);
 
-  const handleGroupNodes = useCallback(() => {
-    const selectedIds = [...multiSelectedNodeIds];
-    pushSnapshot();
-    setNodes(current => groupSelectedNodes(selectedIds, current));
-    setMultiSelectedNodeIds(new Set());
-    closeToolbar();
-  }, [multiSelectedNodeIds, pushSnapshot, setNodes, closeToolbar]);
-
-  const handleUngroupNode = useCallback(
-    (groupId: string) => {
-      pushSnapshot();
-      setNodes(current => ungroupNode(groupId, current));
-      closeToolbar();
-    },
-    [pushSnapshot, setNodes, closeToolbar]
-  );
-
   const toolbarVisibility = useMemo(
     () => ({
       openToolbarTarget,
@@ -326,6 +309,25 @@ export default function ReactFlowCanvas({
     nodeOrEdgeFocused,
     setLastFocusedEntry,
     setNodeOrEdgeFocused
+  );
+
+  const handleGroupNodes = useCallback(() => {
+    const selectedIds = [...multiSelectedNodeIds];
+    const groupId = createUuid();
+    pushSnapshot();
+    setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
+    setMultiSelectedNodeIds(new Set());
+    closeToolbar();
+    setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
+  }, [multiSelectedNodeIds, pushSnapshot, setNodes, closeToolbar, focusEntry]);
+
+  const handleUngroupNode = useCallback(
+    (groupId: string) => {
+      pushSnapshot();
+      setNodes(current => ungroupNode(groupId, current));
+      closeToolbar();
+    },
+    [pushSnapshot, setNodes, closeToolbar]
   );
 
   const handleNodeDragStop = useCallback(

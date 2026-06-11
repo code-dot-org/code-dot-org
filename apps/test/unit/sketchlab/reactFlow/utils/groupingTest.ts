@@ -25,7 +25,8 @@ describe('grouping', () => {
   it('marks grouped children as immovable until ungrouped', () => {
     const grouped = groupSelectedNodes(
       ['a', 'b'],
-      [makeTextNode('a', 100, 100), makeTextNode('b', 200, 100)]
+      [makeTextNode('a', 100, 100), makeTextNode('b', 200, 100)],
+      'test-group-id'
     );
     const child = grouped.find(node => node.id === 'a');
     const group = grouped.find(node => node.type === 'group');

@@ -1,5 +1,3 @@
-import {createUuid} from '@cdo/apps/utils';
-
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
@@ -54,7 +52,8 @@ function computeBounds(nodes: SketchLabNode[]) {
  */
 export function groupSelectedNodes(
   selectedIds: string[],
-  nodes: SketchLabNode[]
+  nodes: SketchLabNode[],
+  groupId: string
 ): SketchLabNode[] {
   // Exclude already-grouped nodes — they cannot be nested into a new group.
   const targets = nodes.filter(n => selectedIds.includes(n.id) && !n.parentId);
@@ -65,8 +64,6 @@ export function groupSelectedNodes(
   const groupY = minY - GROUP_PADDING_PX;
   const groupWidth = maxX - minX + GROUP_PADDING_PX * 2;
   const groupHeight = maxY - minY + GROUP_PADDING_PX * 2;
-
-  const groupId = createUuid();
   const groupNode: GroupNodeType = {
     id: groupId,
     type: 'group',
