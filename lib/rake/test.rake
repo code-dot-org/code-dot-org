@@ -43,7 +43,7 @@ namespace :test do
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '65', # The total saucelabs concurrency budget is 65
+      '--parallel', '65',
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
@@ -62,8 +62,6 @@ namespace :test do
   end
 
   timed_task_with_logging :devicefarm_desktop_ui do
-    # As of June 2026, our concurrency limit for desktop browser sessions in
-    # Device Farm within our prod AWS account is 150.
     ChatClient.log 'Running <b>dashboard</b> Chrome + Firefox UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
