@@ -84,8 +84,11 @@ Type checking runs in a separate process capped at ~2.5GB. Set
 `SKIP_TYPECHECK=1 yarn start` to skip it and reclaim that memory; your editor
 and CI still type-check.
 
-`yarn start:lowmem` combines both levers (`APPS_DEVTOOL=eval` and
-`SKIP_TYPECHECK=1`) for the lowest-memory dev server.
+Two shortcuts combine these levers:
+
+- `yarn start:cheap` — `APPS_DEVTOOL=eval` with type checking left on.
+- `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
+  lowest-memory dev server.
 
 ## Testing
 
