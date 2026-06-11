@@ -11,6 +11,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'spritelab',
   'poetry',
   'game_design',
+  'javalab',
 ];
 
 type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';

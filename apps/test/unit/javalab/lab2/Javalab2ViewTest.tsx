@@ -36,9 +36,10 @@ jest.mock('@cdo/apps/javalab/lab2/javabuilderRunUtils', () => ({
 }));
 
 // useSource normally writes the start code into redux and triggers a throttled
-// (no-op) save of its own. Stub it and seed redux directly below.
+// (no-op) save of its own. Stub it (capturing its args for the starter-asset
+// tests) and seed redux directly below.
 jest.mock('@codebridge/hooks/useSource', () => ({
-  useSource: () => ({startSources: undefined}),
+  useSource: jest.fn(() => ({startSources: undefined})),
 }));
 
 const LEVEL_ID = 5;
@@ -89,13 +90,14 @@ describe('Javalab2View', () => {
 
   function viewElement(
     initialSources: ProjectSources | undefined,
-    viewChannel: Channel
+    viewChannel: Channel,
+    viewLevelProperties: JavalabLevelProperties = levelProperties
   ) {
     return (
       <Provider store={store}>
         <ThemeProvider>
           <Javalab2View
-            levelProperties={levelProperties}
+            levelProperties={viewLevelProperties}
             initialSources={initialSources}
             channel={viewChannel}
           />
@@ -174,6 +176,102 @@ describe('Javalab2View', () => {
 
     const {needsInitialSourcesSave} = await runFromView();
     expect(needsInitialSourcesSave).toBe(true);
+  });
+
+  describe('starter assets', () => {
+    // Legacy levels store starter assets only as the level's
+    // {friendlyName => uuidName} mapping; the view merges them into the
+    // sources it hands to codebridge/useSource.
+    const assetLevelProperties: JavalabLevelProperties = {
+      ...levelProperties,
+      name: 'Asset Level',
+      startSources: {
+        'Main.java': {text: 'class Main {}', isVisible: true},
+        // The shared LevelProperties contract types startSources as
+        // MultiFileSource | ProjectSources; javalab sends the flat shape.
+      } as unknown as JavalabLevelProperties['startSources'],
+      starterAssets: {'cat.png': 'uuid-1.png'},
+    };
+
+    function renderWithAssets(initialSources: ProjectSources | undefined) {
+      store.dispatch(setChannel(channel));
+      store.dispatch(setProjectSource(projectSources));
+      store.dispatch(setProjectSourceLevelId(LEVEL_ID));
+      return render(viewElement(initialSources, channel, assetLevelProperties));
+    }
+
+    function lastUseSourceArgs() {
+      const {useSource} = jest.requireMock('@codebridge/hooks/useSource');
+      return (useSource as jest.Mock).mock.calls.at(-1);
+    }
+
+    it('merges mapping entries into startSources as locked url-backed files', () => {
+      renderWithAssets(undefined);
+      const codebridgeProps = (
+        Codebridge as unknown as jest.Mock
+      ).mock.calls.at(-1)[0];
+      const startSources = codebridgeProps.levelProperties
+        .startSources as MultiFileSource;
+      const image = Object.values(startSources.files).find(
+        f => f.name === 'cat.png'
+      )!;
+      expect(image.url).toBe(
+        '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
+      );
+      expect(image.type).toBe('locked_starter');
+    });
+
+    it('merges mapping entries into url-free initial sources from the server', () => {
+      const loaded: ProjectSources = {
+        source: {
+          folders: {},
+          files: {
+            '0': {
+              id: '0',
+              name: 'Main.java',
+              contents: 'class Main {}',
+              folderId: '0',
+            },
+          },
+          openFiles: ['0'],
+        },
+      };
+      renderWithAssets(loaded);
+      const mergedInitialSources = lastUseSourceArgs()[2] as ProjectSources;
+      const files = Object.values(
+        (mergedInitialSources.source as MultiFileSource).files
+      );
+      const image = files.find(f => f.name === 'cat.png')!;
+      expect(image.url).toBe(
+        '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
+      );
+    });
+
+    it('does not re-append mapping entries when initial sources already have a url file', () => {
+      // The ghost-file guard: once the project carries url entries of its
+      // own, a deleted starter asset must stay deleted.
+      const loaded: ProjectSources = {
+        source: {
+          folders: {},
+          files: {
+            '0': {
+              id: '0',
+              name: 'student.png',
+              contents: '',
+              folderId: '0',
+              url: '/v3/assets/test-channel/uuid-9.png',
+            },
+          },
+          openFiles: [],
+        },
+      };
+      renderWithAssets(loaded);
+      const mergedInitialSources = lastUseSourceArgs()[2] as ProjectSources;
+      const names = Object.values(
+        (mergedInitialSources.source as MultiFileSource).files
+      ).map(f => f.name);
+      expect(names).toEqual(['student.png']);
+    });
   });
 
   it('ignores a save success from the previous level after a level change', async () => {

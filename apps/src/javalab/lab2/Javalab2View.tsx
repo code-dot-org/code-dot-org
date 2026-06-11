@@ -40,6 +40,7 @@ import {
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
+import {mergeStarterAssets} from './starterAssets';
 import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
@@ -102,7 +103,10 @@ const Javalab2View: React.FunctionComponent<
   }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
-  // Convert here before passing to codebridge.
+  // Convert here before passing to codebridge. Starter assets authored in
+  // legacy Java Lab exist only as the level's starterAssets mapping, so each
+  // conversion merges them in as url-backed files (and re-derives their
+  // locked state, which the flat shape doesn't persist).
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
     const flatTemplate = flatSourceFromLevelProperties(
       levelProperties.templateSources
@@ -117,25 +121,43 @@ const Javalab2View: React.FunctionComponent<
       ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
       : flatStartRaw;
 
+    const convert = (flat: ReturnType<typeof flatSourceFromLevelProperties>) =>
+      flat
+        ? mergeStarterAssets(
+            flatToMultiFile(flat),
+            levelProperties.starterAssets,
+            levelProperties.name,
+            getIsStartMode()
+          )
+        : undefined;
+
     return {
       ...levelProperties,
       miniApp: labConfig?.miniApp?.name,
-      startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
-      templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
-      exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
+      startSources: convert(flatStart),
+      templateSources: convert(flatTemplate),
+      exemplarSources: convert(flatExemplar),
     };
   }, [levelProperties, labConfig]);
 
   // A loaded project's sources come from the flat S3 shape, which carries no
   // labConfig. Merge it back in so codebridge shows the mini-app for existing
-  // miniApp-based projects.
-  const initialSourcesWithLabConfig = useMemo(
-    () =>
-      initialSources && labConfig
-        ? {...initialSources, labConfig}
-        : initialSources,
-    [initialSources, labConfig]
-  );
+  // miniApp-based projects. Starter assets are merged here too: projects
+  // saved before this level had assets (or saved by legacy Java Lab) have no
+  // url entries of their own.
+  const initialSourcesWithLabConfig = useMemo(() => {
+    if (!initialSources) return initialSources;
+    const merged = {
+      ...initialSources,
+      source: mergeStarterAssets(
+        initialSources.source as MultiFileSource,
+        levelProperties.starterAssets,
+        levelProperties.name,
+        getIsStartMode()
+      ),
+    };
+    return labConfig ? {...merged, labConfig} : merged;
+  }, [initialSources, labConfig, levelProperties]);
 
   // Levelbuilder save needs Javalab's flat shape, not codebridge's
   // MultiFileSource. For start mode, split validation files off into a

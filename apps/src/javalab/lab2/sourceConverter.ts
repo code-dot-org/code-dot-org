@@ -19,9 +19,14 @@ import {
 
 import {JavalabFlatFile, JavalabFlatSource} from './types';
 
-function projectFileType(flat: JavalabFlatFile): ProjectFileType {
+function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
+  // Url-backed (asset) files stay untyped: lab2 treats typed url files as
+  // levelbuilder-owned and skips the S3 delete + abuse unflag on removal
+  // (see getStudentFileAssetInfo). Starter-asset locking is re-derived from
+  // the level's starterAssets mapping in mergeStarterAssets.
+  if (flat.url) return undefined;
   return ProjectFileType.STARTER;
 }
 
@@ -50,6 +55,8 @@ export function flatToMultiFile(
       folderId: DEFAULT_FOLDER_ID,
       type: projectFileType(props),
     };
+    if (props.url) files[id].url = props.url;
+    if (props.flagged) files[id].flagged = props.flagged;
   });
 
   // Visible files (including validation files surfaced in start mode) are
@@ -132,6 +139,8 @@ export function multiFileToFlat(
       isOpen,
       isActive: file.active === true,
     };
+    if (file.url) flat[file.name].url = file.url;
+    if (file.flagged) flat[file.name].flagged = file.flagged;
     if (openIndex.has(file.id)) {
       flat[file.name].tabOrder = openIndex.get(file.id);
     }

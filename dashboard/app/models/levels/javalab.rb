@@ -211,6 +211,10 @@ class Javalab < Level
       is_levelbuilder = current_user&.permission?(UserPermission::LEVELBUILDER)
       level_properties['validation'] = is_levelbuilder ? validation : validation.transform_values {''}
     end
+    # Resolve starter assets through the project template, matching the
+    # precedence JavalabFilesHelper#get_level_files uses at run time.
+    resolved_starter_assets = project_template_level&.starter_assets || starter_assets
+    level_properties['starterAssets'] = resolved_starter_assets if resolved_starter_assets.present?
     level_properties
   end
 end

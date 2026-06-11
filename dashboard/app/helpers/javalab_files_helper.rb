@@ -32,7 +32,7 @@ module JavalabFilesHelper
 
     # get main.json
     source_data = SourceBucket.new.get(channel_id, "main.json")
-    all_files["sources"]["main.json"] = source_data[:body].string
+    all_files["sources"]["main.json"] = strip_asset_entries(source_data[:body].string, all_files["assetUrls"])
 
     # get level assets
     get_assets_for_channel(channel_id, all_files)
@@ -54,6 +54,8 @@ module JavalabFilesHelper
   # If the level doesn't have validation and/or a maze, those fields will not be present.
   def self.get_project_files_with_overrides(sources, level_id, channel_id, override_validation = nil)
     all_files = get_level_files(level_id)
+    sources = sources.to_unsafe_h if sources.respond_to?(:to_unsafe_h)
+    sources = extract_asset_entries(sources, all_files["assetUrls"]) if sources.is_a?(Hash)
     all_files["sources"]["main.json"] = {source: sources}.to_json
     all_files["validation"] = {source: override_validation}.to_json if override_validation
     get_assets_for_channel(channel_id, all_files) if channel_id
@@ -138,5 +140,34 @@ module JavalabFilesHelper
     asset_list.each do |asset|
       all_level_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
     end
+  end
+
+  # Lab2 Java Lab stores asset (image/audio) files in the source as entries
+  # with a "url" pointing at where the bytes live. Javabuilder only
+  # understands code files plus the assetUrls map, so pull those entries out
+  # of the main.json blob and fold them into asset_urls. Blobs that aren't
+  # the expected {source: {filename => {...}}} shape pass through untouched.
+  def self.strip_asset_entries(main_json, asset_urls)
+    parsed = JSON.parse(main_json)
+    return main_json unless parsed.is_a?(Hash) && parsed["source"].is_a?(Hash)
+    parsed["source"] = extract_asset_entries(parsed["source"], asset_urls)
+    parsed.to_json
+  rescue JSON::ParserError, TypeError
+    main_json
+  end
+
+  # Remove url-backed entries from a flat source hash, recording each in
+  # asset_urls as filename => absolute URL. Returns the remaining entries.
+  def self.extract_asset_entries(source, asset_urls)
+    source.reject do |filename, file|
+      url = file.is_a?(Hash) ? file["url"] : nil
+      next false if url.blank?
+      asset_urls[filename] = absolutize_asset_url(url)
+      true
+    end
+  end
+
+  def self.absolutize_asset_url(url)
+    url.match?(%r{\Ahttps?://}) ? url : get_dashboard_url_prefix + url
   end
 end

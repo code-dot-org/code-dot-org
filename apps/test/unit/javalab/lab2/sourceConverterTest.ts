@@ -557,6 +557,97 @@ describe('javalab2 sourceConverter', () => {
     });
   });
 
+  describe('asset (url-backed) files', () => {
+    const assetEntry = {
+      text: '',
+      isVisible: true,
+      url: '/v3/assets/abc123/uuid-1.png',
+    };
+
+    it('flatToMultiFile leaves url-backed visible files untyped and copies url', () => {
+      // Untyped is load-bearing: lab2 treats typed url files as
+      // levelbuilder-owned and skips the S3 delete + abuse unflag when a
+      // student removes them (getStudentFileAssetInfo).
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry, tabOrder: 1},
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBeUndefined();
+      expect(image.url).toBe(assetEntry.url);
+      expect(image.contents).toBe('');
+    });
+
+    it('flatToMultiFile passes flagged through and omits absent url/flagged', () => {
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry, flagged: true},
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.flagged).toBe(true);
+      const main = Object.values(mf.files).find(f => f.name === 'Main.java')!;
+      expect('url' in main).toBe(false);
+      expect('flagged' in main).toBe(false);
+    });
+
+    it('multiFileToFlat emits url and flagged when present', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'cat.png',
+            contents: '',
+            folderId: 'root',
+            url: assetEntry.url,
+            flagged: true,
+          },
+          '1': {
+            id: '1',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['1'],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['cat.png'].url).toBe(assetEntry.url);
+      expect(flat['cat.png'].flagged).toBe(true);
+      expect(flat['cat.png'].isVisible).toBe(true);
+      expect('url' in flat['Main.java']).toBe(false);
+      expect('flagged' in flat['Main.java']).toBe(false);
+    });
+
+    it('round-trips an open image tab through flat -> multiFile -> flat', () => {
+      const original: JavalabFlatSource = {
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry, tabOrder: 1, isOpen: true},
+      };
+      const round = multiFileToFlat(flatToMultiFile(original));
+      expect(round['cat.png'].url).toBe(assetEntry.url);
+      expect(round['cat.png'].isOpen).toBe(true);
+      expect(round['cat.png'].tabOrder).toBe(1);
+      expect(round['cat.png'].isVisible).toBe(true);
+    });
+
+    it('splitForLevelbuilderSave puts url entries in startSources, never validation', () => {
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': assetEntry,
+        'Test.java': flatFile('class Test {}', 1, false, true),
+      });
+      const {startSources, validation} = splitForLevelbuilderSave(mf);
+      expect(Object.keys(startSources).sort()).toEqual([
+        'Main.java',
+        'cat.png',
+      ]);
+      expect(startSources['cat.png'].url).toBe(assetEntry.url);
+      expect(Object.keys(validation)).toEqual(['Test.java']);
+    });
+  });
+
   describe('start + validation round trip', () => {
     // What Javalab2View actually does in start mode: merge validation
     // into start, hand to codebridge as MultiFileSource, then on save
