@@ -33,6 +33,13 @@ export default defineConfig({
           argosVitestPlugin({
             uploadToArgos: !!process.env.CI && !!process.env.ARGOS_TOKEN,
             buildName: 'component-library-storybook',
+            // The real pointer never moves in headless runs, and Argos
+            // un-scales the test iframe before capture, which can shift a
+            // hover target under the stationary pointer and open its tooltip
+            // mid-screenshot. Hide tooltips at capture time only; no story
+            // intentionally captures an open tooltip (Tooltip stories show
+            // hover triggers). !important beats WithTooltip's inline style.
+            argosCSS: '[role="tooltip"] { visibility: hidden !important; }',
           }),
         ],
         // Pre-bundle everything the stories and addons import. Without this,
