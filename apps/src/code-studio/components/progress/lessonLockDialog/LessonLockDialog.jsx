@@ -1,3 +1,6 @@
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -12,16 +15,14 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
-import fontConstants from '@cdo/apps/fontConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {refetchSectionLockStatus} from '../../../lessonLockRedux';
-import progressStyles from '../progressStyles';
 import SectionSelector from '../SectionSelector';
+
+import styles from './lesson-lock-dialog.module.scss';
 
 function LessonLockDialog({
   unitId,
@@ -136,79 +137,73 @@ function LessonLockDialog({
   // Rendering helpers that each render a section of the dialog
   //
   const hasSelectedSection = selectedSectionId !== NO_SECTION;
-  const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
+  // Many rows below are hidden until a section is selected; compose this once
+  // so each callsite stays a single classNames argument.
+  const hiddenUnlessSelectedSection = !hasSelectedSection && styles.hidden;
+
+  // Step-action button (Allow editing / Lock lesson / Show answers /
+  // Re-lock lesson). Use MUI Button in the primary-CTA visual so each
+  // step's action stands out from the surrounding instructions.
+  const stepButton = (onClick, label) => (
+    <MuiButton
+      type="button"
+      variant="contained"
+      color="primary"
+      size="small"
+      className={styles.stepButton}
+      onClick={onClick}
+    >
+      {label}
+    </MuiButton>
+  );
 
   const renderHiddenWarning = () => (
-    <div style={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
+    <div className={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
   );
 
   const renderInstructionsAndButtons = () => (
     <>
-      <table style={hiddenUnlessSelectedSection}>
+      <table className={classNames(hiddenUnlessSelectedSection)}>
         <tbody>
           <tr>
             <td>1. {i18n.allowEditingInstructions()}</td>
-            <td>
-              <button
-                type="button"
-                style={progressStyles.orangeButton}
-                onClick={allowEditing}
-              >
-                {i18n.allowEditing()}
-              </button>
-            </td>
+            <td>{stepButton(allowEditing, i18n.allowEditing())}</td>
           </tr>
           <tr>
             <td>2. {i18n.lockStageInstructions()}</td>
-            <td>
-              <button
-                type="button"
-                style={progressStyles.orangeButton}
-                onClick={lockLesson}
-              >
-                {i18n.lockStage()}
-              </button>
-            </td>
+            <td>{stepButton(lockLesson, i18n.lockStage())}</td>
           </tr>
           <tr>
             <td>3. {i18n.showAnswersInstructions()}</td>
-            <td>
-              <button
-                type="button"
-                style={progressStyles.orangeButton}
-                onClick={showAnswers}
-              >
-                {i18n.showAnswers()}
-              </button>
-            </td>
+            <td>{stepButton(showAnswers, i18n.showAnswers())}</td>
           </tr>
           <tr>
             <td>4. {i18n.relockStageInstructions()}</td>
-            <td>
-              <button
-                type="button"
-                style={progressStyles.orangeButton}
-                onClick={lockLesson}
-              >
-                {i18n.relockStage()}
-              </button>
-            </td>
+            <td>{stepButton(lockLesson, i18n.relockStage())}</td>
           </tr>
           <tr>
             <td>5. {i18n.reviewResponses()}</td>
             <td>
-              <button
+              <MuiButton
                 type="button"
-                style={progressStyles.whiteButton}
+                variant="outlined"
+                color="secondary"
+                size="small"
+                className={styles.stepButton}
                 onClick={viewSection}
               >
                 {i18n.viewSection()}
-              </button>
+              </MuiButton>
             </td>
           </tr>
         </tbody>
       </table>
-      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+      <div
+        className={classNames(
+          styles.descriptionText,
+          hiddenUnlessSelectedSection
+        )}
+      >
         {i18n.autolock()}
       </div>
     </>
@@ -216,22 +211,27 @@ function LessonLockDialog({
 
   const renderStudentTable = () => (
     <>
-      <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
+      <div className={classNames(styles.title, hiddenUnlessSelectedSection)}>
         {i18n.studentControl()}
       </div>
-      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+      <div
+        className={classNames(
+          styles.descriptionText,
+          hiddenUnlessSelectedSection
+        )}
+      >
         {i18n.studentLockStateInstructions()}
       </div>
       <table
         id="ui-test-student-table"
-        style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}
+        className={classNames(styles.studentTable, hiddenUnlessSelectedSection)}
       >
         <thead>
           <tr>
-            <th style={styles.headerRow}>{i18n.student()}</th>
-            <th style={styles.headerRow}>{i18n.locked()}</th>
-            <th style={styles.headerRow}>{i18n.editable()}</th>
-            <th style={styles.headerRow}>{i18n.answersVisible()}</th>
+            <th className={styles.headerRow}>{i18n.student()}</th>
+            <th className={styles.headerRow}>{i18n.locked()}</th>
+            <th className={styles.headerRow}>{i18n.editable()}</th>
+            <th className={styles.headerRow}>{i18n.answersVisible()}</th>
           </tr>
         </thead>
         <tbody>
@@ -254,49 +254,31 @@ function LessonLockDialog({
     </>
   );
 
-  //
-  // Main rendering logic
-  //
-  const responsiveHeight = {
-    maxHeight: window.innerHeight * 0.8 - 100,
-  };
-
   return (
-    <BaseDialog isOpen handleClose={handleClose}>
-      <div style={{...styles.main, ...responsiveHeight}}>
-        <div>
-          <span style={styles.title}>{i18n.assessmentSteps()}</span>
-          <SectionSelector
-            style={{marginLeft: 10}}
-            requireSelection={hasSelectedSection}
-          />
+    <Modal
+      onClose={handleClose}
+      title={i18n.assessmentSteps()}
+      customContent={
+        <div id="dsco-dialog-description" className={styles.main}>
+          <div className={styles.sectionSelectorRow}>
+            <SectionSelector requireSelection={hasSelectedSection} />
+          </div>
+          {lessonIsHidden && renderHiddenWarning()}
+          {renderInstructionsAndButtons()}
+          {renderStudentTable()}
+          {error && <span className={styles.saveError}>{error}</span>}
         </div>
-        {lessonIsHidden && renderHiddenWarning()}
-        {renderInstructionsAndButtons()}
-        {renderStudentTable()}
-      </div>
-      <div style={styles.buttonContainer}>
-        {error && <span style={styles.saveError}>{error}</span>}
-        <button
-          type="button"
-          style={progressStyles.baseButton}
-          onClick={handleClose}
-        >
-          {i18n.dialogCancel()}
-        </button>
-        <button
-          type="button"
-          style={{
-            ...progressStyles.blueButton,
-            ...hiddenUnlessSelectedSection,
-          }}
-          onClick={handleSave}
-          disabled={saving}
-        >
-          {saving ? i18n.saving() : i18n.save()}
-        </button>
-      </div>
-    </BaseDialog>
+      }
+      primaryButtonProps={{
+        onClick: handleSave,
+        children: saving ? i18n.saving() : i18n.save(),
+        disabled: saving || !hasSelectedSection,
+      }}
+      secondaryButtonProps={{
+        onClick: handleClose,
+        children: i18n.dialogCancel(),
+      }}
+    />
   );
 }
 
@@ -311,69 +293,11 @@ LessonLockDialog.propTypes = {
   refetchSectionLockStatus: PropTypes.func.isRequired,
 };
 
-const styles = {
-  main: {
-    marginTop: 20,
-    marginBottom: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    color: color.charcoal,
-    whiteSpace: 'normal',
-    // maxHeight provided in render method based on window size
-    overflowY: 'scroll',
-    textAlign: 'left',
-  },
-  title: {
-    color: color.teal,
-    fontSize: 20,
-    fontWeight: 900,
-    marginTop: 15,
-    marginBottom: 15,
-  },
-  headerRow: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.teal,
-    backgroundColor: color.teal,
-    padding: 10,
-    fontSize: '100%',
-    ...fontConstants['main-font-regular'],
-  },
-  descriptionText: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  studentTable: {
-    width: '100%',
-  },
-  buttonContainer: {
-    textAlign: 'right',
-    marginRight: 15,
-  },
-  hidden: {
-    display: 'none',
-  },
-  saveError: {
-    color: color.red,
-    fontStyle: 'italic',
-    marginRight: 10,
-  },
-  hiddenError: {
-    color: color.red,
-    fontStyle: 'italic',
-    marginBottom: 10,
-  },
-};
-
 export const UnconnectedLessonLockDialog = LessonLockDialog;
 
 export default connect(
   state => ({
     selectedSectionId: state.teacherSections.selectedSectionId,
   }),
-  dispatch => ({
-    refetchSectionLockStatus(sectionId, lockStatus) {
-      dispatch(refetchSectionLockStatus(sectionId, lockStatus));
-    },
-  })
+  {refetchSectionLockStatus}
 )(LessonLockDialog);

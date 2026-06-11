@@ -118,4 +118,18 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  describe 'lti' do
+    [Dashboard::Application.routes.url_helpers.new_lti_v1_integration_path].each do |path|
+      it "#{path.inspect} path is not affected by regional redirection" do
+        get path
+        must_respond_with 200
+      end
+
+      it "regional #{path.inspect} path is accessible" do
+        get ::File.join('/', ge_region, path)
+        must_respond_with 200
+      end
+    end
+  end
 end

@@ -1691,25 +1691,25 @@ class SectionTest < ActiveSupport::TestCase
 
     before do
       allow(section).to receive(:students).and_return([student])
-      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
+      allow(student).to receive(:at_risk_age_gated_date).and_return(student_at_risk_age_gated_date)
     end
 
     it 'does not return a student' do
-      _(at_risk_age_gated_student).must_equal nil
+      _(at_risk_age_gated_student).must_be_nil
     end
 
     context 'has an at risk student' do
       let(:student_at_risk_age_gated_date) {DateTime.now}
 
       it 'returns the at risk student' do
-        _(at_risk_age_gated_student).must_equal at_risk_age_gated_student
+        _(at_risk_age_gated_student).must_equal student
       end
 
       context 'the section is archived' do
         let(:archived?) {true}
 
         it 'does not return a student' do
-          _(at_risk_age_gated_student).must_equal nil
+          _(at_risk_age_gated_student).must_be_nil
         end
       end
     end

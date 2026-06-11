@@ -1,5 +1,5 @@
 class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
-  NO_REPLY = 'Code.org <noreply@code.org>'
+  NO_REPLY = 'CodeAI <noreply@code.org>'
   default from: 'Sam Morris <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -9,7 +9,7 @@ class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
     pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
-    subject = "Question about Code.org program"
+    subject = "Question about CodeAI program"
 
     mail(
       to: pm.email,
@@ -25,7 +25,7 @@ class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
 
     mail(
       to: email,
-      subject: "A " + role + " wants to connect with Code.org"
+      subject: "A " + role + " wants to connect with CodeAI"
     )
   end
 
@@ -37,7 +37,7 @@ class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
     mail(
       from: NO_REPLY,
       to: form[:email],
-      subject: "Thank you for contacting your Code.org Regional Partner",
+      subject: "Thank you for contacting your CodeAI Regional Partner",
     )
   end
 end

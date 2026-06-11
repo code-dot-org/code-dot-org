@@ -105,6 +105,42 @@ const SECTIONS: Section[] = [
     ttsAutoplayEnabled: false,
     unitId: null,
   },
+  {
+    id: 13,
+    name: 'High School Practice Section',
+    hidden: false,
+    courseVersionName: 'csd-2024',
+    unitName: null,
+    unitPosition: null,
+    atRiskAgeGatedDate: new Date(),
+    atRiskAgeGatedUsState: 'xyz',
+    anyStudentHasProgress: false,
+    code: 'DEMO-123',
+    codeReviewExpiresAt: null,
+    course: null,
+    courseDisplayName: "Computer Science Discoveries ('24-'25)",
+    courseId: 52,
+    courseOfferingId: 192,
+    courseVersionId: 553,
+    createdAt: '2024-10-04T18:19:41.000Z',
+    demoType: 'high',
+    grades: [],
+    isAssignedCSA: false,
+    lessonExtras: false,
+    loginType: 'picture',
+    loginTypeName: 'Picture Password',
+    pairingAllowed: false,
+    participantType: undefined,
+    postMilestoneDisabled: false,
+    providerManaged: false,
+    restrictSection: false,
+    sectionInstructors: [],
+    sharingDisabled: false,
+    studentCount: 3,
+    syncEnabled: false,
+    ttsAutoplayEnabled: false,
+    unitId: null,
+  },
 ];
 
 const STUDENTS: Student[] = [
@@ -332,5 +368,23 @@ describe('SectionOptionsDropdown', () => {
   it('does not display delete option if section has students', async () => {
     renderComponent(SECTIONS[1]);
     expect(screen.queryByText(i18n.delete())).toBeNull();
+  });
+
+  it('displays delete instead of archive for a demo section', () => {
+    renderComponent(SECTIONS[2]);
+    expect(screen.queryByText(i18n.archive())).toBeNull();
+    screen.getByText(i18n.delete());
+  });
+
+  it('displays delete for a demo section even though it has students', () => {
+    // SECTIONS[2] is a demo section with studentCount === 3; the usual
+    // "no students" gate must not hide delete for demo sections.
+    renderComponent(SECTIONS[2]);
+    const link = screen.getByText(i18n.delete());
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_DELETE_CLICKED,
+      {}
+    );
   });
 });
