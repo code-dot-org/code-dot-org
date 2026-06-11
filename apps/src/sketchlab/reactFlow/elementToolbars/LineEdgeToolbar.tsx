@@ -1,11 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {useNodesData, useReactFlow} from '@xyflow/react';
+import {useReactFlow} from '@xyflow/react';
 import React, {useMemo} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
-import {useClipboard, usePushSnapshot} from '../context';
-import {ArrowHeadValue, LineAnchorNodeType} from '../types';
+import {DEFAULT_ROTATION} from '../constants';
+import {useClipboard} from '../context';
+import {ArrowHeadValue} from '../types';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import LockedNotice from './components/LockedNotice';
@@ -14,6 +15,7 @@ import ToolbarSection from './components/ToolbarSection';
 import ToolbarShell from './components/ToolbarShell';
 import ActionsGroup from './sections/ActionsGroup';
 import ColorDropdownRow from './sections/ColorDropdownRow';
+import RotationGroup from './sections/RotationGroup';
 import {
   ARROW_HEAD_OPTIONS,
   DEFAULT_EDGE_TYPE,
@@ -35,6 +37,7 @@ interface LineEdgeToolbarProps {
   onSelectStrokeStyle: (value: LineStrokeStyleValue) => void;
   onSelectEdgeType: (value: EdgeTypeValue) => void;
   onSelectArrowHeads: (value: ArrowHeadValue) => void;
+  onSelectRotation: (value: number) => void;
   onSetLocked: (value: boolean) => void;
 }
 
@@ -45,31 +48,13 @@ export default function LineEdgeToolbar({
   onSelectStrokeStyle,
   onSelectEdgeType,
   onSelectArrowHeads,
+  onSelectRotation,
   onSetLocked,
 }: LineEdgeToolbarProps) {
-  const {deleteElements, updateEdge, updateNodeData, getNodes, getEdges} =
+  const {deleteElements, updateEdge, getNode, getNodes, getEdges} =
     useReactFlow();
-  const pushSnapshot = usePushSnapshot();
 
   const isLocked = edge.data?.locked === true;
-
-  const endpointInfo = useNodesData<LineAnchorNodeType>([
-    edge.source,
-    edge.target,
-  ]);
-  const anchorEndpoints = endpointInfo.filter(
-    (n): n is LineAnchorNodeType => !!n && n.type === 'lineAnchor'
-  );
-
-  // The edge holds the handle visibility preference so it survives attach/detach cycles.
-  const handlesVisible = edge.data?.showHandles ?? true;
-  const hasAnchors = anchorEndpoints.length > 0;
-  const onToggleHandles = () => {
-    const next = !handlesVisible;
-    pushSnapshot();
-    updateEdge(edge.id, {data: {...edge.data, showHandles: next}});
-    anchorEndpoints.forEach(n => updateNodeData(n.id, {showHandles: next}));
-  };
 
   const selectedColor =
     (typeof edge.style?.stroke === 'string' && edge.style.stroke) ||
@@ -105,6 +90,10 @@ export default function LineEdgeToolbar({
     else value = 'none';
     return ARROW_HEAD_OPTIONS.find(option => option.value === value)!;
   }, [edge.markerStart, edge.markerEnd]);
+  const sourceNode = getNode(edge.source);
+  const targetNode = getNode(edge.target);
+  const isFullyDetachedLine =
+    sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
 
   const {duplicateLine} = useClipboard();
 
@@ -177,6 +166,11 @@ export default function LineEdgeToolbar({
               onSelect={onSelectArrowHeads}
             />
           </ToolbarSection>
+          <RotationGroup
+            value={edge.data?.rotation ?? DEFAULT_ROTATION}
+            onChange={onSelectRotation}
+            disabled={!isFullyDetachedLine}
+          />
           <ActionsGroup
             onDelete={() => deleteElements({edges: [{id: edge.id}]})}
             onLock={() => onSetLocked(true)}
@@ -189,11 +183,6 @@ export default function LineEdgeToolbar({
               const items = [...getNodes(), ...getEdges()];
               updateEdge(edge.id, {zIndex: newBackZIndex(items, edge.id)});
             }}
-            handlesToggle={
-              hasAnchors
-                ? {visible: handlesVisible, onToggle: onToggleHandles}
-                : undefined
-            }
           />
         </>
       )}

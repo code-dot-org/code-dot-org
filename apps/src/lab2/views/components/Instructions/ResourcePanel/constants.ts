@@ -3,6 +3,8 @@ export const RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN =
 
 export const VALIDATION_TOUR_SEEN = 'validationTourSeen';
 
+export const AI_TUTOR_DOT_SEEN_KEY_PREFIX = 'aiTutorDotSeen';
+
 export const resourcePanelInstructionsElementId = 'resource-panel-instructions';
 
 export const resourcePanelTabsElementId = 'resource-panel-tabs';

@@ -275,8 +275,9 @@ export const deleteFileThunk = createAsyncThunk<
     try {
       // In the case of a failure, we just end up with an orphaned file in S3.
       await HttpClient.delete(deletedFileAsset.url);
-      // If the project is blocked for abuse, unblock the project if the abuse score is now < 15.
-      if (isBlockedAbuse) {
+      // If the project is blocked for abuse and the deleted file was flagged,
+      // unblock the project if the abuse score is now < 15.
+      if (deletedFileAsset.flagged && isBlockedAbuse) {
         await unflagProjectChannel(
           deletedFileAsset.channelId,
           thunkAPI.dispatch

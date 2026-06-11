@@ -20,13 +20,13 @@ markdown <<MARKDOWN
 
 <div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
     <h2 style="text-align: center">Start Teaching</h2>
-    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Go to the <a href="https://studio.code.org/home" target="blank" rel="noopener noreferrer">teacher homepage</a> to make a section for your students and start teaching this course. Check out the Getting Started with Code.org self-paced learning module to learn more.</p>
+    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Go to the <a href="https://studio.code.org/home" target="blank" rel="noopener noreferrer">teacher homepage</a> to make a section for your students and start teaching this course. Check out the Getting Started with CodeAI self-paced learning module to learn more.</p>
    <p style="text-align: center;">
         <a class="btn btn-large btn-primary" 
            href="https://studio.code.org/courses/getting-started-2025/" 
            target="_blank" rel="noopener noreferrer" 
            style="display: inline-block; background: #048899; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-            Getting Started with Code.org
+            Getting Started with CodeAI
         </a>
     </p>
 
@@ -57,7 +57,7 @@ Boost your coding confidence with Code.org’s free, self-paced professional lea
 <div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
     <h2 style="text-align: center">Stay Connected</h2>
     <p style="padding-left: 20px; font-size: 14pt">
-    Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>.</p>
+    Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">CodeAI teacher forum</a>.</p>
     
     <p style="padding-left: 20px; font-size: 14pt"> Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.</p>
     

@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
@@ -119,27 +120,46 @@ describe('CourseOverviewActionRow', () => {
     expect(screen.queryByLabelText('Version')).toBeNull();
   });
 
-  it('renders teacher resource dropdown', () => {
+  it('renders teacher resource dropdown', async () => {
+    const openSpy = jest.spyOn(window, 'open').mockImplementation();
     renderDefault({teacherResources: TEACHER_RESOURCES, isInstructor: true});
 
-    const dropdown = screen.getByText('Teacher resources');
-    fireEvent.click(dropdown);
+    // DSCO ActionDropdown options only render when the menu is open, and the
+    // open state is keyed off a real click (mousedown→mouseup→click). Use
+    // userEvent to simulate that sequence; fireEvent.click on a text node
+    // doesn't dispatch the full chain.
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {
+        name: 'teacher-resources-dropdown filter dropdown',
+      })
+    );
 
-    expect(
-      screen.getByRole('link', {name: 'Curriculum'}).getAttribute('href')
-    ).toEqual('/link/to/curriculum');
+    // DSCO ActionDropdown renders each option as a <button> that calls
+    // `window.open` rather than as an <a href>. Verify the click forwards
+    // the resource URL through window.open.
+    fireEvent.click(screen.getByRole('button', {name: 'Curriculum'}));
+    expect(openSpy).toHaveBeenLastCalledWith(
+      '/link/to/curriculum',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
-    expect(
-      screen
-        .getByRole('link', {name: 'Professional Learning'})
-        .getAttribute('href')
-    ).toEqual('/link/to/professional/learning');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Professional Learning'})
+    );
+    expect(openSpy).toHaveBeenLastCalledWith(
+      '/link/to/professional/learning',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
-    expect(
-      screen.getByRole('link', {name: 'Teacher Forum'}).getAttribute('href')
-    ).toEqual('https://forum.code.org/');
-
-    expect(screen.getAllByRole('link')).toHaveLength(3);
+    fireEvent.click(screen.getByRole('button', {name: 'Teacher Forum'}));
+    expect(openSpy).toHaveBeenLastCalledWith(
+      'https://forum.code.org/',
+      '_blank',
+      'noopener,noreferrer'
+    );
   });
 
   it('doesnt render teacher resource dropdown for students', () => {
@@ -148,27 +168,39 @@ describe('CourseOverviewActionRow', () => {
     expect(screen.queryByText('Teacher resources')).toBeNull();
   });
 
-  it('renders student resource dropdown for students', () => {
+  it('renders student resource dropdown for students', async () => {
+    const openSpy = jest.spyOn(window, 'open').mockImplementation();
     renderDefault({studentResources: TEACHER_RESOURCES});
 
-    const dropdown = screen.getByText('Student Resources');
-    fireEvent.click(dropdown);
+    const user = userEvent.setup();
+    await user.click(
+      screen.getByRole('button', {
+        name: 'student-resources-dropdown filter dropdown',
+      })
+    );
 
-    expect(
-      screen.getByRole('link', {name: 'Curriculum'}).getAttribute('href')
-    ).toEqual('/link/to/curriculum');
+    fireEvent.click(screen.getByRole('button', {name: 'Curriculum'}));
+    expect(openSpy).toHaveBeenLastCalledWith(
+      '/link/to/curriculum',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
-    expect(
-      screen
-        .getByRole('link', {name: 'Professional Learning'})
-        .getAttribute('href')
-    ).toEqual('/link/to/professional/learning');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Professional Learning'})
+    );
+    expect(openSpy).toHaveBeenLastCalledWith(
+      '/link/to/professional/learning',
+      '_blank',
+      'noopener,noreferrer'
+    );
 
-    expect(
-      screen.getByRole('link', {name: 'Teacher Forum'}).getAttribute('href')
-    ).toEqual('https://forum.code.org/');
-
-    expect(screen.getAllByRole('link')).toHaveLength(3);
+    fireEvent.click(screen.getByRole('button', {name: 'Teacher Forum'}));
+    expect(openSpy).toHaveBeenLastCalledWith(
+      'https://forum.code.org/',
+      '_blank',
+      'noopener,noreferrer'
+    );
   });
 
   it('renders assign to sections button', () => {

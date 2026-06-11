@@ -143,4 +143,87 @@ describe('uploadFiles', () => {
       expect(mockHttpClient.put).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe('onAssetUploaded callback', () => {
+    it('invokes onAssetUploaded with the sanitized filename and resolved URL on success', async () => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('my photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({
+          filename: 'my_photo.png',
+          source: AssetSource.PROJECT,
+        }),
+        expect.stringMatching(/^\/files\/.*\.png$/)
+      );
+    });
+
+    it('does not invoke onAssetUploaded when upload fails', async () => {
+      mockHttpClient.put.mockRejectedValue(new Error('network error'));
+      const onAssetUploaded = jest.fn();
+      const file = makeFile('photo.png');
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('bucketKey', () => {
+    it('builds the upload URL from bucketKey rather than filename', async () => {
+      const onAssetUploaded = jest.fn();
+      // Mimic production getAssetUrl: prefer bucketKey over filename
+      const buildAssetUrlWithBucketKey = (asset: ChatAsset) =>
+        `/files/${asset.bucketKey ?? asset.filename}`;
+      const file = makeFile('photo.png');
+
+      await uploadFiles({
+        files: [file],
+        buildAssetUrl: buildAssetUrlWithBucketKey,
+        onAssetUploaded,
+      })(dispatch, makeGetState(), undefined);
+
+      const [[putUrl]] = mockHttpClient.put.mock.calls;
+      // URL must use the UUID bucket key, not the display filename
+      expect(putUrl).not.toBe('/files/photo.png');
+      expect(putUrl).toMatch(/^\/files\/[0-9a-f-]+\.png$/i);
+      // onAssetUploaded receives the same bucket-key URL and the display filename
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({filename: 'photo.png'}),
+        putUrl
+      );
+    });
+  });
+
+  describe('filename sanitization', () => {
+    it.each([
+      ['.png', '_png'],
+      ['my file (1).png', 'my_file__1_.png'],
+      ['hello world.jpg', 'hello_world.jpg'],
+    ])('normalizes "%s" to "%s"', async (inputName, expectedFilename) => {
+      const onAssetUploaded = jest.fn();
+      const file = makeFile(inputName);
+
+      await uploadFiles({files: [file], buildAssetUrl, onAssetUploaded})(
+        dispatch,
+        makeGetState(),
+        undefined
+      );
+
+      expect(onAssetUploaded).toHaveBeenCalledWith(
+        expect.objectContaining({filename: expectedFilename}),
+        expect.any(String)
+      );
+    });
+  });
 });

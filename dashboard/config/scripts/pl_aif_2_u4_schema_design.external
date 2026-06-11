@@ -11,58 +11,157 @@ When the schema isn’t clear, different people (and systems) may read the same 
 
 ## Same Fields, Different Interpretations
 
-Look at how three different users interpret the same three fields:
+Look at how three different users interpret the same three fields: **Title, Experience, and Payment.**
 
-- Title
+<div style="max-width:600px; margin:0 auto; font-family:Arial, sans-serif;">
 
-- Experience
+  <!-- Recent Graduate -->
+  <div style="display:flex; align-items:center; margin-bottom:20px;">
+    <div style="width:90px; height:90px; margin-right:-15px; z-index:2;">
+      <img src="https://images.code.org/6354c6ebefb3eb450926f36bf280cf60-image-1781103946980.png"
+           alt="Recent Graduate"
+           style="width:90px; height:90px; border-radius:50%; border:3px solid #6b7280; object-fit:cover;">
+    </div>
 
-- Payment
+<div style="border:4px solid #6b7280; background:#f3f0ff; padding:12px 18px 12px 55px; width:420px;">
+      <div style="font-weight:700; font-size:20px; margin-bottom:10px; color:#1f2937;">
+        Recent Graduate
+      </div>
 
-<img src="https://images.code.org/f7bf83ba1632cbdd5e20352851fbb680-image-1770054965407.png" alt="Three users interpreting Title, Experience, and Payment differently" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Title:</strong> Desired job position
+      </div>
 
-<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin-top:0;"> 💡 <strong>Think about it:</strong> If humans interpret these fields differently, how might an AI system interpret them when sorting, filtering, or summarizing? </p> </div>
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Experience:</strong> Description of past roles
+      </div>
 
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Payment:</strong> Salary expectation
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Recruiter -->
+  <div style="display:flex; align-items:center; margin-bottom:20px;">
+    <div style="width:90px; height:90px; margin-right:-15px; z-index:2;">
+      <img src="https://images.code.org/35971a04209b977d503d98f2132d306c-image-1781104130841.png"
+           alt="Job Recruiter"
+           style="width:90px; height:90px; border-radius:50%; border:3px solid #6b7280; object-fit:cover;">
+    </div>
+
+  <div style="border:4px solid #6b7280; background:#f2fcf7; padding:12px 18px 12px 55px; width:420px;">
+      <div style="font-weight:700; font-size:20px; margin-bottom:10px; color:#1f2937;">
+        Job Recruiter
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Title:</strong> Candidate recent job title
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Experience:</strong> Number of years in job
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Payment:</strong> Candidate's current salary
+      </div>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div style="display:flex; align-items:center;">
+    <div style="width:90px; height:90px; margin-right:-15px; z-index:2;">
+      <img src="https://images.code.org/305f0a2fcd61b8bdcec59ddb6e76e590-image-1781104202730.png"
+           alt="AI"
+           style="width:90px; height:90px; border-radius:50%; border:3px solid #6b7280; object-fit:cover;">
+    </div>
+
+<div style="border:4px solid #6b7280; background:#f7f8fa; padding:12px 18px 12px 55px; width:420px;">
+      <div style="font-weight:700; font-size:20px; margin-bottom:10px; color:#1f2937;">
+        AI
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Title:</strong> A prefix like Dr. or Mrs.
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Experience:</strong> Product testimonial
+      </div>
+
+  <div style="font-size:16px; line-height:1.6; color:#374151;">
+        <strong>Payment:</strong> Credit card information
+      </div>
+    </div>
+  </div>
+
+</div>
+
+## Try It: Predict the Problem
+
+Imagine an app uses the fields **Title**, **Experience**, and **Payment** to recommend job opportunities. What might go wrong?
+
+<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:16px;font-weight:bold;">Title</summary>
+  <div style="margin-top:14px;">
+    <p style="font-size:13pt;line-height:1.45;margin:0;">
+      The app may not know whether <strong>Title</strong> means a job title, a person’s title, or a project title. This could lead to incorrect filtering or confusing recommendations.
+    </p>
+  </div>
+</details>
+
+<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:16px;font-weight:bold;">Experience</summary>
+  <div style="margin-top:14px;">
+    <p style="font-size:13pt;line-height:1.45;margin:0;">
+      The app may not know whether <strong>Experience</strong> means years in a job, past roles, or a review from someone else. This can make sorting and comparing data unreliable.
+    </p>
+  </div>
+</details>
+
+<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:16px;font-weight:bold;">Payment</summary>
+  <div style="margin-top:14px;">
+    <p style="font-size:13pt;line-height:1.45;margin:0;">
+      The app may not know whether <strong>Payment</strong> means salary, a required fee, or credit card information. This could create privacy issues or misleading results.
+    </p>
+  </div>
+</details>
 
 <div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"> <strong>Big idea:</strong> A well-designed schema makes an app more trustworthy, scalable, and easier to maintain. </p> </div>
 
-## Why this is important
+## Why This Matters
 
-Inconsistent schemas can cause:
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;margin:18px 0;">
 
-- Filters that “miss” items because the field names don’t match
+  <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
+    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">🔎 Filters</p>
+    <p style="font-size:13pt;line-height:1.4;margin:0;">Unclear fields can cause filters to miss or include the wrong items.</p>
+  </div>
 
-- Incorrect comparisons (like sorting numbers that are stored as text)
+  <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
+    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">🔢 Sorting</p>
+    <p style="font-size:13pt;line-height:1.4;margin:0;">Numbers stored as text can sort incorrectly or compare unpredictably.</p>
+  </div>
 
-- AI outputs that sound confident but are based on messy, unclear data
+  <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
+    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">🤖 AI Outputs</p>
+    <p style="font-size:13pt;line-height:1.4;margin:0;">AI may generate confident responses from messy or unclear data.</p>
+  </div>
 
-- User confusion (because labels don’t match what people expect)
+  <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
+    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">👤 Users</p>
+    <p style="font-size:13pt;line-height:1.4;margin:0;">Labels that do not match user expectations can reduce trust.</p>
+  </div>
 
-👉A consistent schema helps your app behave in ways users can understand and trust.
+</div>
 
----
-
-<img src="https://images.code.org/0cfb39609bf485b0f1be4e67d06ecef4-image-1770055318925.png" alt="icon with graduation hat and magnifying glass" width="200px" style="border-radius:10px; float:left; margin: 0 40px 0px 20px;">
-
-## Career Connection: Database Architect
-
-
-A Database Architect plans how data is stored and labeled so that:
-
-- Systems can use it correctly
-
-- People do not get confused
-
-- New features are easier to build
-
-<div style="clear:both;"></div>
-
----
+These are things your students will have to consider when designing their **final project**. 
 
 
-## Next up
 
-Let’s review how these concepts get put together in the final project.
+
 
 
 MARKDOWN

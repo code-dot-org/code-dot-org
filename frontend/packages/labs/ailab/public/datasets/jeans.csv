@@ -1,0 +1,81 @@
+Brand,Style,Mens or womens,Cotton contents,Price in dollars,Max height of front pocket,Min height of front pocket,Front rivet height,Max width of front pocket,Min width of front pocket,Max height of back pocket,Min height of back pocket,Max width of back pocket,Min width of back pocket
+Arizona,skinny,women,0.78,42,14.5,15,6.5,16.5,13,15,12.2,13.7,12
+Arizona,straight,women,0.78,42,14.5,14,6.5,16,12.5,15.5,12.2,13,11.2
+Ralph Lauren,skinny,women,0.92,89.5,13,13.5,6.5,14.5,12,15.5,13,13.5,12.5
+Ralph Lauren,straight,women,0.92,89.5,13,13.5,6.5,14.5,12,14.5,13,13,12.2
+Uniqlo,skinny,women,0.87,39.9,13,13,5.5,14,11.5,14,12,14.2,11.7
+Uniqlo,straight,women,0.98,39.9,15.5,12,6.5,16.5,12.5,14.5,12.5,12.5,11.5
+Calvin Klein,skinny,women,0.98,79.5,12,12,6.5,14.5,12,16.5,13.7,13,12
+Calvin Klein,straight,women,0.85,69.5,14,11.2,6.5,15.5,12,15,12,14,12.5
+Lucky,skinny,women,0.69,99,13,14.5,6,13.5,12.7,16,12.7,14.5,12.5
+Lucky,straight,women,0.96,79.5,15,16.5,5.5,15.5,12.2,14.5,12.7,13,11
+Levi's,skinny,women,0.6,54.5,12.5,14,6.5,15,12,14.5,11.5,12,10.5
+Levi's,straight,women,0.79,54.5,12.2,14.5,7,17,12.7,15.5,12.5,12.5,11.5
+Lee,skinny,women,0.55,19.94,13.7,13,6,18.5,14.5,14.5,12.5,14,12.5
+Lee,straight,women,0.81,19.94,13.5,13,6.2,17,14,15,12.5,14.5,12.5
+7 for All Mankind,skinny,women,0.89,199,13,13.5,6,15,12.5,16.5,13.7,12.5,11.5
+7 for All Mankind,straight,women,0.45,159,14,13.5,7,15,11.5,15.5,14,12.5,12
+True Religion,skinny,women,0.55,179,14,11,6.2,15,12,13,10.5,11.5,9.7
+True Religion,straight,women,0.62,249,14.5,11.7,5.7,14,11.7,14.7,12.5,13,9.5
+Guess,skinny,women,0.56,98,11.5,11.5,6,14.5,12.5,14.7,11.5,12.5,12
+Guess,straight,women,0.51,89,12.5,12,7.5,14,11.5,14.5,11.5,13.5,13
+Tommy Hilfiger,skinny,women,0.9,69.5,12.5,12.5,6.5,16,12,14,11.7,13,11.5
+Tommy Hilfiger,straight,women,0.99,69.5,15,15.5,7.5,16.7,13,15.5,13,15,12.5
+Express,skinny,women,0.75,79.9,15.7,12,6.5,16,13,16.5,12.5,14,13
+Express,straight,women,0.75,79.9,15.5,14.2,7,15.2,12.5,15.5,12.2,15,13
+H&M,straight,women,0.71,49.99,14.5,13,6.5,14,12,16,13.5,13,12
+H&M,skinny,women,0.78,9.99,19,13.5,6.5,14.5,12,15,13,12.5,12
+Old Navy,boot-cut,women,0.86,29.99,12,12.5,5.5,14.5,11.5,15,12,13.5,11
+Old Navy,skinny,women,0.86,29.99,14.5,12.5,6,14,12,16.5,13.5,13,12
+J. Crew,straight,women,0.9,125,14,14.5,6,15.5,12.5,15,13,14.5,13
+J. Crew,skinny,women,0.88,110,11.5,12,5.5,15,12,14.5,12,13.5,12
+Gap,boot-cut,women,0.87,69.95,14,9.5,4.5,12,11,15,12,13.5,11
+Gap,skinny,women,0.87,69.95,13,12,5,12.5,11.5,15.5,12.5,13,10.5
+American Eagle,skinny,women,0.71,39.95,19,17,6.5,14,11,15,13,12.5,10.5
+American Eagle,boot-cut,women,0.94,39.95,16,15,5.5,13.5,11,15,12.5,13,11
+Abercrombie,skinny,women,0.99,88,21.5,17,5.5,15.5,12.5,16,13.5,12.5,12
+Abercrombie,straight,women,0.99,78,18,12,6,18.5,12.5,16,14,14,12
+Wrangler,skinny,women,0.78,99,14,11.5,6.5,17,13.5,15,11.7,14.5,11.7
+Wrangler,straight,women,0.98,99,15,12.5,7.5,15,11,16,13.5,13.2,12.5
+Arizona,skinny,men,0.72,50,26,20.5,7.5,17,14,17,14.7,14,13
+Arizona,boot-cut,men,1,50,24.5,21.5,8.75,18,13.5,16,13.5,15.2,13.5
+Ralph Lauren,slim,men,1,89.5,23,23,7.5,15.5,14.5,16,14.2,15,13.5
+Ralph Lauren,straight,men,1,89.5,24,24,8,17.5,14.5,17,15,15,12.5
+Guess,skinny,men,0.98,98,22.5,16.5,7,14,12,17,14.5,14.5,12
+Guess,straight,men,0.91,98,25.5,17,8.7,17.5,13,16,14.5,14,11.5
+Calvin Klein,skinny,men,0.98,89.5,22,14.5,6,15,13.5,16.5,13.5,14.2,11.5
+Calvin Klein,straight,men,0.98,69.5,21.5,20.5,6,18,13.5,17,14.5,15.5,12.5
+Levi's,skinny,men,0.99,69.5,25.5,19,7.5,14.5,13,16.5,15,13,11.5
+Levi's,straight,men,1,59.5,26,17.5,9,16.5,11.5,15,12.5,13.2,11.7
+Uniqlo,skinny,men,0.9,49.9,22.5,22.5,7,15.5,13,14.5,12,13,10.5
+Uniqlo,regular,men,1,49.9,21.5,21.5,7.5,16,13,15,12.5,14,11.5
+Express,skinny,men,0.75,88,20.5,17,7,15.5,12.5,16,12.5,14,12
+Express,boot-cut,men,0.98,79.9,21.5,16,7.5,16,13,16.2,13.5,13.5,12.7
+Lucky,slim,men,0.98,99,21,16.5,6,16.7,14.5,15.2,13,14.5,12
+Lucky,straight,men,0.98,129,22.5,18,6.5,17,13.5,16.2,14.7,13,12
+7 for all Mankind,skinny,men,0.92,209,21,23,7.5,16.5,13.5,15.5,14,14.5,13
+7 for all Mankind,straight,men,0.98,179,21.5,23,7,16.5,12.5,16,13,14,12.5
+True Religion,slim,men,0.98,159,26.2,13.5,7.7,15.2,13.5,15,12.5,13,11
+True Religion,straight,men,0.98,179,21,14,7,16.5,13,16,13,13.5,11
+J. Crew,skinny,men,0.83,98,25,16,6,17,13,15,12,12.5,11.5
+J. Crew,straight,men,0.83,98,22.5,14,6,14.5,13,15.5,13,13.5,12
+Old Navy,skinny,men,0.99,39.99,24.5,16.5,6,15.5,14,15.5,13,13,11
+Old Navy,boot-cut,men,0.99,39.99,24.5,21.5,6,17,14.5,14,12,12,11
+Gap,boot-cut,men,1,59.95,23,16.7,7.2,17.5,14,15.5,13.5,14,12.5
+Gap,skinny,men,0.9,69.95,22,16.5,6.5,17.5,14,15.5,13.5,13.5,11.5
+H&M,skinny,men,0.9,39.99,20,16,7,14.5,12,16.5,13.5,13.5,12.5
+H&M,straight,men,1,49.99,21.5,17,7,16.5,14,16,14.5,14.5,13
+American Eagle,skinny,men,0.65,49.95,21,15,6,14.5,12,15,12,11.5,11
+American Eagle,straight,men,0.85,49.95,22,18,6.5,16.5,12,17,14,13.5,12.5
+Abercrombie,straight,men,0.95,78,22.5,15,5,16,12,16,14,13,11
+Abercrombie,slim,men,0.95,78,22,15,4.5,17,12.5,17.5,14,14,12
+Tommy Hilfiger,slim,men,0.99,59.5,25,16.5,7,17,15,15,12,12.5,11.5
+Tommy Hilfiger,boot-cut,men,1,59.5,22.5,22.5,6.7,18.2,14.5,17,14,13,13
+Lee,slim,men,0.98,48,25.5,25,7,16.5,14,16.5,13.7,14,12.5
+Lee,straight,men,0.98,48,24.5,15.5,7.5,16.2,13.5,17.5,14,15,14
+Wrangler,slim,men,0.98,58,27.5,19,9.2,17.5,13,17,14,13,12.5
+Wrangler,boot-cut,men,0.99,48,28,15.5,9,13,12,16.7,13.5,14.5,14
+Buckle Black,boot-cut,women,0.92,89.95,15,14,7,16,13.5,14.5,13,13.5,11
+Buckle Black,skinny,women,0.98,92.95,14.5,13.5,6,16,13,14,12.5,14,11.5
+Buckle Black,boot-cut,men,0.92,94.95,21,18.5,8.5,18.5,14.5,16,14,13,12.5
+Buckle Black,slim,men,0.53,94.95,21,14.5,7,19,16,16,12,14,13.5

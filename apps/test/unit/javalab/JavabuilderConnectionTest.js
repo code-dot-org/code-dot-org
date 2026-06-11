@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -144,6 +145,66 @@ describe('JavabuilderConnection', () => {
         `${STATUS_MESSAGE_PREFIX} Program stopped.`
       );
       window.WebSocket.restore();
+    });
+
+    it('flags an interrupt and logs program stopped when no socket exists yet', () => {
+      // Simulate being mid-token-fetch: a program is running but the socket
+      // has not been created.
+      connection.programIsRunning = true;
+
+      connection.closeConnection();
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Program stopped.`
+      );
+      // Run state must settle so the caller's run promise resolves.
+      expect(setIsRunning).to.have.been.calledWith(false);
+    });
+
+    it('does nothing when no socket exists and no program is running', () => {
+      connection.closeConnection();
+
+      expect(connection.interruptSignal).to.be.false;
+      expect(onOutputMessage).not.to.have.been.called;
+    });
+  });
+
+  describe('initiateConnection', () => {
+    it('does not open a socket when interrupted while fetching the token', async () => {
+      const establishStub = sinon.stub(
+        connection,
+        'establishWebsocketConnection'
+      );
+      // Resolve the access-token request, then interrupt before the socket
+      // would be established.
+      sinon.stub($, 'ajax').callsFake(() => {
+        connection.closeConnection();
+        return Promise.resolve({javabuilder_url: 'url', token: 'token'});
+      });
+
+      await connection.initiateConnection('/url', {}, false);
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(establishStub).not.to.have.been.called;
+      $.ajax.restore();
+    });
+
+    it('does not report a connection error when interrupted during the token fetch', async () => {
+      const consoleError = sinon.stub(console, 'error');
+      // Reject the access-token request, but interrupt first to simulate a
+      // stop click while the request was in flight.
+      sinon.stub($, 'ajax').callsFake(() => {
+        connection.closeConnection();
+        return Promise.reject({status: 500, responseText: 'boom'});
+      });
+
+      await connection.initiateConnection('/url', {}, false);
+
+      expect(connection.interruptSignal).to.be.true;
+      expect(consoleError).not.to.have.been.called;
+      $.ajax.restore();
+      consoleError.restore();
     });
   });
 

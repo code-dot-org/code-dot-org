@@ -36,7 +36,6 @@ Scenario: Toggle on Hidden Maze Level
   Then I click selector ".uitest-togglehidden:eq(1) div:contains('Hidden')"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
-  And The header is finished animating
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"

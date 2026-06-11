@@ -80,6 +80,20 @@ class JavalabTest < ActiveSupport::TestCase
     refute summary.key?('encryptedValidation')
   end
 
+  test 'get_validations returns PASSED_ALL_TESTS condition when level has validation' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_get_validations")
+    level.properties['encrypted_validation'] = 'ciphertext'
+    validations = level.get_validations
+    assert_equal 1, validations.length
+    assert_equal [{name: 'PASSED_ALL_TESTS', value: 'true'}], validations.first[:conditions]
+    assert validations.first[:next]
+  end
+
+  test 'get_validations returns nil when level has no validation' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_no_get_validations")
+    assert_nil level.get_validations
+  end
+
   test 'get_serialized_maze returns template level maze if level doesnt have one' do
     template_data = {game_id: 68, level_num: "custom", name: "template_neighborhood"}
     serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"

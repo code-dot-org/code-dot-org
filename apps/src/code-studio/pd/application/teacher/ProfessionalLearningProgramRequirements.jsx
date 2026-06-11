@@ -147,7 +147,7 @@ const ProfessionalLearningProgramRequirements = props => {
     return (
       <div>
         <p>
-          Code.org’s Professional Learning Program for{' '}
+          CodeAI’s Professional Learning Program for{' '}
           {getProgramName(data.program)} is a yearlong program, meant to support
           you throughout your first year teaching the course. Starting in the
           summer, the program begins with a multi-day workshop to prepare you to
@@ -208,10 +208,10 @@ const ProfessionalLearningProgramRequirements = props => {
           label={
             <span>
               {PageLabels.professionalLearningProgramRequirements.agree.replace(
-                'my local Code.org Regional Partner',
+                'my local CodeAI Regional Partner',
                 regionalPartner
                   ? regionalPartner.name
-                  : 'my local Code.org Regional Partner'
+                  : 'my local CodeAI Regional Partner'
               )}{' '}
               <a onClick={openPrivacyDialog}>Learn more.</a>
             </span>

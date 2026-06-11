@@ -36,23 +36,23 @@ export default class PrivacyDialog extends React.Component {
           {this.props.mode === PrivacyDialogMode.TEACHER_APPLICATION && (
             <div>
               <p style={STYLE.bodyText}>
-                Code.org works closely with local Regional Partners to organize
+                CodeAI works closely with local Regional Partners to organize
                 and deliver the Professional Learning Program. By submitting
-                this application, you are agreeing to allow Code.org to share
-                information on how you use Code.org and the Professional
-                Learning resources with your Regional Partner and school
-                district. In order to organize the workshops and support you,
-                our partners need to know who is attending and what content is
-                relevant for them. So, we will share your contact information,
-                which courses/units you are using in your classrooms and
-                aggregate data about your classes. This includes the number of
-                students in your classes, the demographic breakdown of your
-                classroom, and the name of your school and district. We will not
-                share any information about individual students with our
-                Regional Partners - all information will be de-identified and
-                aggregated. Our Regional Partners are contractually obliged to
-                treat this information with the same level of confidentiality as
-                Code.org. To see the full Code.org privacy policy, visit{' '}
+                this application, you are agreeing to allow CodeAI to share
+                information on how you use CodeAI and the Professional Learning
+                resources with your Regional Partner and school district. In
+                order to organize the workshops and support you, our partners
+                need to know who is attending and what content is relevant for
+                them. So, we will share your contact information, which
+                courses/units you are using in your classrooms and aggregate
+                data about your classes. This includes the number of students in
+                your classes, the demographic breakdown of your classroom, and
+                the name of your school and district. We will not share any
+                information about individual students with our Regional Partners
+                - all information will be de-identified and aggregated. Our
+                Regional Partners are contractually obliged to treat this
+                information with the same level of confidentiality as CodeAI. To
+                see the full CodeAI privacy policy, visit{' '}
                 <a
                   href="https://code.org/privacy"
                   target="_blank"
@@ -68,7 +68,7 @@ export default class PrivacyDialog extends React.Component {
                 approval for their application to the Professional Learning
                 Program. As part of this process administrators/school leaders
                 may opt in to let the College Board share de-identified and
-                aggregated Computer Science AP scores with Code.org to help us
+                aggregated Computer Science AP scores with CodeAI to help us
                 improve the program and curriculum. AP test scores will not be
                 shared with Regional Partners.
               </p>
@@ -77,24 +77,23 @@ export default class PrivacyDialog extends React.Component {
 
           {this.props.mode === PrivacyDialogMode.PRINCIPAL_APPROVAL && (
             <p style={STYLE.bodyText}>
-              Code.org works closely with local Regional Partners to organize
-              and deliver the Professional Learning Program. By submitting their
+              CodeAI works closely with local Regional Partners to organize and
+              deliver the Professional Learning Program. By submitting their
               application to the professional learning program, teachers have
-              agreed to allow Code.org to share information on how they use
-              Code.org and the Professional Learning resources with their
-              Regional Partner and school district. In order to organize the
-              workshops and support teachers, our partners need to know who is
-              attending and what content is relevant for them. So, we will share
-              teachers’ contact information, which courses/units they are using
-              in their classrooms and aggregate data about their classes. This
-              includes the number of students in their classes, the demographic
-              breakdown of their classroom, and the name of their school and
-              district. We will not share any information about individual
-              students with our Regional Partners - all information will be
-              de-identified and aggregated. Our Regional Partners are
-              contractually obliged to treat this information with the same
-              level of confidentiality as Code.org. To see Code.org’s complete
-              Privacy Policy, visit{' '}
+              agreed to allow CodeAI to share information on how they use CodeAI
+              and the Professional Learning resources with their Regional
+              Partner and school district. In order to organize the workshops
+              and support teachers, our partners need to know who is attending
+              and what content is relevant for them. So, we will share teachers’
+              contact information, which courses/units they are using in their
+              classrooms and aggregate data about their classes. This includes
+              the number of students in their classes, the demographic breakdown
+              of their classroom, and the name of their school and district. We
+              will not share any information about individual students with our
+              Regional Partners - all information will be de-identified and
+              aggregated. Our Regional Partners are contractually obliged to
+              treat this information with the same level of confidentiality as
+              CodeAI. To see CodeAI’s complete Privacy Policy, visit{' '}
               <a
                 href="http://code.org/privacy"
                 target="_blank"

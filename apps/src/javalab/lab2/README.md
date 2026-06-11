@@ -93,6 +93,8 @@ still on the TODO list. Differences from legacy use:
   as a `SYSTEM_IN` message via `sendJavaConsoleInput`.
 - `flushSave()` on the lab2 ProjectManager is awaited before connecting,
   so Javabuilder reads fresh source from S3 instead of a stale version.
+  A brand-new project is force-saved instead (nothing is persisted before
+  the first edit, and Javabuilder can't run a project with no sources).
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
   is supported so far).
@@ -113,11 +115,14 @@ still on the TODO list. Differences from legacy use:
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
   and committing a named version for free.
 - Can create/edit start sources and exemplars.
+- Validation (student run path): a level with validation files shows the
+  Lab2 Validate button; clicking it runs the level's tests on Javabuilder
+  (`ExecutionType.TEST`), streams per-test results into the Lab2
+  validation table, and an all-pass run reports completion. Plumbed via
+  `get_validations` on `Javalab`, `TestResultValidator`, `ValidationTracker`,
+  and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
 
 ## To Dos
-- **Validation** (`get_validations` override on `Javalab`,
-  `JavaValidator`, `JavaValidationTracker`, test-result handling).
-- **File name validation** there are no checks for invalid file names yet.
 - **Support locked starter files** you can lock starter files in start mode,
 but we don't persist that information yet.
 - **Neighborhood mini-app**
@@ -126,9 +131,6 @@ but we don't persist that information yet.
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Starter assets** and image asset support in general.
-- **TS port of `JavabuilderConnection`** — currently imported from
-  `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
-  redux-thunk side effects and emit events instead.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
   version of predict levels. We will need to support converting these levels
   to the lab2 predict level setup.
@@ -156,6 +158,8 @@ but we don't persist that information yet.
 - `javabuilderRunner.ts` — `handleRunClick`, `stopJavaCode`,
   `sendJavaConsoleInput`. Wraps the legacy
   `JavabuilderConnection`.
+- `progress/JavaValidationTracker.ts` — singleton holding the per-test
+  `ValidationResult[]` from the latest validation run.
 - `codemirrorLangJava.d.ts` — minimal module declaration for
   `@codemirror/lang-java`, whose package.json doesn't expose its types
   via node16 `exports`.
@@ -186,6 +190,13 @@ but we don't persist that information yet.
 - `apps/src/javalab/JavabuilderConnection.js` — constructor accepts an
   optional `channelId` (falls back to `project.getCurrentId()`); the
   "project not edited yet" guard now reads `this.channelId` instead of
-  re-fetching from the legacy singleton.
+  re-fetching from the legacy singleton. Also accepts an optional
+  `onValidationResult` callback, invoked per validation `TEST_RESULT` so
+  Lab2 can populate its validation table.
+- `apps/src/javalab/testResultHandler.js` — `onTestResult` additionally
+  returns a `validationResult` (`{message, result}` with a Lab2
+  `TestStatus`) for `TEST_STATUS` messages; legacy callers ignore it.
+- `dashboard/app/models/levels/javalab.rb` — `get_validations` returns a
+  single `PASSED_ALL_TESTS` condition when the level has validation.
 - `dashboard/test/models/javalab_test.rb` — assertion that `uses_lab2?`
   defaults to false and honors the serialized property.

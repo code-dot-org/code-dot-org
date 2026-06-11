@@ -1,0 +1,42 @@
+name 'pl-aif-2-U4-filters-cont'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Seeing the Filters
+
+Filters shape what shows up in a feed, but they are not always easy to notice. In the last level, you compared two feeds and saw how filters can emphasize some ideas while leaving others out.
+
+In this level, you’ll review a few key terms and think about how platforms can make filtering more transparent.
+
+### **Terms to Know**
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit4_testing/vocab_flip_cards.html" width="100%" height="280" style="border:none;" title="Vocabulary flip cards"></iframe>
+
+---
+
+## Transparency Check: What would you want to see?
+
+Many platforms apply filters quietly. But designers can make filters more transparent.
+Below are two interface styles. One makes filtering visible. One does not.
+
+👉 Which design feels more trustworthy? Why?
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1: Transparent</div> <div style="background:#dccbea; border:1px solid #8c52ba; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>Active filters:</strong> Following • Education • Last 7 days<br> <span style="font-size:11pt;">(You can edit these)</span> </div> <div style="font-size:12pt; color:#444;">Users can tell what’s shaping the feed and adjust it.</div> </div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2: Hidden</div> <div style="background:#dccbea; border:1px solid #8c52ba; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>For you</strong><br> <span style="font-size:11pt;">(No explanation)</span> </div> <div style="font-size:12pt; color:#444;">Users may assume this is “what’s out there,” not what was selected.</div> </div> </div>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+
+
+  <div style="margin-top:14px;">
+    <p style="font-size:13pt;line-height:1.45;margin:0;">
+      Version 1 may feel more trustworthy because it shows which filters are shaping the feed and lets the user edit them. Version 2 may look simple, but it hides why certain content was selected. When filters are hidden, people may think they are seeing a complete or neutral view, even though the algorithm is still choosing what appears.
+    </p>
+  </div>
+</details>
+
+
+MARKDOWN

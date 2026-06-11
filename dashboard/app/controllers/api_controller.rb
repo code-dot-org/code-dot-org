@@ -594,7 +594,7 @@ class ApiController < ApplicationController
 
     # length of time these cookies are considered valid by cloudfront
     expiration_date = Time.now + 4.hours
-    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+    resource = CDO.studio_url('/restricted/*')
 
     cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
 

@@ -165,7 +165,8 @@ def parse_options
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
                                "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
                                "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
-                               "Note: Device Farm browsers cannot reach localhost; use a public domain."
+                               "Note: Device Farm cannot reach localhost on development machines -- " \
+                               "use a public domain (e.g. via ngrok)."
               ) do
         options.device_farm = true
       end
@@ -400,26 +401,16 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
-# Human-readable suite label used in Slack/log report headers and as
-# the status page <title> and <h1>. The provider (SauceLabs / Device
-# Farm) is no longer surfaced -- oncall sees a label that names the
-# suite by its browsers. Eyes runs are always "Eyes" (eyes only runs
-# on SauceLabs today). Non-eyes runs derive the label from their
-# active browser configs and append "UI" so it's clear the suite is
-# UI tests:
-#   -c Safari          => "Safari UI"
-#   -c Chrome,Firefox  => "Chrome + Firefox UI"
-#   -c iPhone,iPad     => "Mobile UI"
-#   -c iPad            => "iPad UI"
-#   -c iPhone          => "iPhone UI"
-# The "Mobile UI" collapse only applies when both mobile browsers are
-# present. A single-device run (such as a manual rerun copied from the
-# status page) keeps its device name.
+# Human-readable suite label used in Slack/log report headers and as the status
+# page <title> and <h1>. Eyes runs are always "Eyes". UI runs derive the label
+# from their browser config names and append "UI":
+#   -c Chrome             => "Chrome UI"
+#   -c iPhone             => "iPhone UI"
+#   -c Chrome,Firefox     => "Chrome + Firefox UI"
+#   -c Safari,iPad,iPhone => "Safari + iPad + iPhone UI"
 def test_type_label
   return test_type if eyes?
-  browser_names = $browsers.map {|b| b['name']}.uniq.sort
-  return 'Mobile UI' if browser_names.length > 1 && $browsers.all? {|b| mobile_browser?(b)}
-  "#{browser_names.join(' + ')} UI"
+  "#{$browsers.map {|b| b['name']}.join(' + ')} #{test_type}"
 end
 
 def eyes?
@@ -530,10 +521,9 @@ end
 # page is being generated, so the active entry can be rendered unlinked.
 # The four entries are the four suites rake test:ui_all dispatches.
 STATUS_PAGES_NAVIGATION = [
-  {filename: 'test_status_Safari_UI.html',         display_name: 'Safari UI'},
-  {filename: 'test_status_Chrome_Firefox_UI.html', display_name: 'Chrome + Firefox UI'},
-  {filename: 'test_status_Mobile_UI.html',         display_name: 'Mobile UI'},
-  {filename: 'test_status_Eyes.html',              display_name: 'Eyes'},
+  {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
+  {filename: 'test_status_Eyes.html',                  display_name: 'Eyes'},
 ].freeze
 
 def status_pages_navigation
@@ -548,10 +538,9 @@ def status_pages_navigation
   end
 end
 
-# Status page filename per suite. Eyes keeps a stable name across
-# providers (we only run eyes on SauceLabs). Other suites name their
-# page after the suite label so the four ui_all suites
-# (Safari UI, Chrome + Firefox UI, Mobile UI, Eyes) get unique pages
+# Status page filename per suite. Eyes keeps a stable name across providers.
+# Other suites name their page after the suite label so each ui_all suite
+# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) gets unique pages
 # and don't overwrite each other in the shared S3 prefix or in
 # dashboard/public/ui_test/.
 def status_page_filename

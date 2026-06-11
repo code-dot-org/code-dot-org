@@ -14,32 +14,17 @@ const Template = args => (
   <Provider store={reduxStore()}>
     <ProgressDetailToggle
       setIsSummaryView={action('setIsSummaryView')}
-      isPlc={false}
       {...args}
     />
   </Provider>
 );
 
-export const YesSummaryNoGroups = Template.bind({});
-YesSummaryNoGroups.args = {
+export const SummarySelected = Template.bind({});
+SummarySelected.args = {
   isSummaryView: true,
-  hasGroups: false,
 };
 
-export const NoSummaryNoGroups = Template.bind({});
-NoSummaryNoGroups.args = {
+export const DetailSelected = Template.bind({});
+DetailSelected.args = {
   isSummaryView: false,
-  hasGroups: false,
-};
-
-export const YesSummaryYesGroups = Template.bind({});
-YesSummaryYesGroups.args = {
-  isSummaryView: true,
-  hasGroups: true,
-};
-
-export const NoSummaryYesGroups = Template.bind({});
-NoSummaryYesGroups.args = {
-  isSummaryView: false,
-  hasGroups: true,
 };

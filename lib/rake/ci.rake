@@ -70,13 +70,15 @@ SKIP_EYES = 'skip eyes'.freeze
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
-# Use AWS Device Farm instead of SauceLabs for remote browser testing.
-# Requires DEVICE_FARM_DESKTOP_PROJECT_ARN to be set as a CI secret.
-# Note: Device Farm browsers connect to public URLs; they cannot reach localhost.
-# When this tag is present, SauceLabs browser configs are replaced with
-# browsers_device_farm.json (Chrome and Firefox only) and no Sauce Connect
-# proxy is started.
-USE_DEVICE_FARM_TAG = 'use device farm'.freeze
+# By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
+# out and falls back to SauceLabs. SauceLabs is automatically selected
+# (without this tag) when any non-Chrome browser tag is present
+# (TEST_FIREFOX_TAG, TEST_SAFARI_TAG, TEST_IPAD_TAG, TEST_IPHONE_TAG,
+# TEST_IOS_TAG, TEST_ALL_BROWSERS_TAG), because the Device Farm path
+# relies on Chrome's --host-resolver-rules to reach puma at
+# localhost-studio.code.org:3000 -- a chromedriver-specific flag we
+# don't have a clean equivalent for in Firefox/Safari.
+USE_SAUCELABS_TAG = 'use saucelabs'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
@@ -128,89 +130,86 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
-    if use_device_farm
-      # AWS Device Farm: no proxy tunnel needed; browsers connect to public URLs.
-      # Tests are pointed at the public test domain rather than localhost.
-      RakeUtils.wait_for_url('http://test-studio.code.org')
-      Dir.chdir('dashboard/test/ui') do
-        container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
-        eyes_features = `grep -lr '@eyes' features`.split("\n")
-        container_eyes_features = container_features & eyes_features
-        device_farm_browsers = device_farm_browsers_to_run
+    # The Device Farm path requires Chrome (see USE_SAUCELABS_TAG comment),
+    # so auto-fall-back to SauceLabs whenever a non-Chrome browser is tagged.
+    non_chrome_tagged =
+      CI::Utils.tagged?(TEST_FIREFOX_TAG) ||
+      CI::Utils.tagged?(TEST_SAFARI_TAG) ||
+      CI::Utils.tagged?(TEST_IPAD_TAG) ||
+      CI::Utils.tagged?(TEST_IPHONE_TAG) ||
+      CI::Utils.tagged?(TEST_IOS_TAG) ||
+      CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+    if non_chrome_tagged
+      ChatClient.log "Non-Chrome browser tag present; routing UI tests via SauceLabs (Device Farm path only supports Chrome)."
+    elsif CI::Utils.tagged?(USE_SAUCELABS_TAG)
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{USE_SAUCELABS_TAG}], routing UI tests via SauceLabs."
+    end
+    use_device_farm = !(non_chrome_tagged || CI::Utils.tagged?(USE_SAUCELABS_TAG))
+    ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
+    # local webdriver only supports Chrome.
+    skip_local_webdriver = CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) || non_chrome_tagged
 
-        # The default per-account limit for concurrent desktop sessions is 50.
-        # Because CI runs Device Farm in the codeorg-dev AWS account, this limit
-        # is not shared with the prod limits in the prod AWS account, which
-        # affect local development and the chef-managed test environment.
+    # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
+    needs_sauce_connect = !use_device_farm
+    if needs_sauce_connect
+      Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
+    end
+
+    # In order for Device Farm to reach localhost, the Device Farm project
+    # (set in DEVICE_FARM_DESKTOP_PROJECT_ARN) must live in the same VPC as the
+    # drone workers and belong to the DeviceFarmToDroneWorker security group.
+    # This works because:
+    # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
+    #   puma accessible at port 3000 on the drone worker's primary ENI
+    # - the DroneRunnerEcsSecurityGroup on the drone worker allows inbound
+    #   traffic on port 3000 from the DeviceFarmToDroneWorker security group
+    # - Chrome's --host-resolver-rules maps localhost-studio.code.org to drone
+    #   worker IP (see connect.rb).
+    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
+
+    Dir.chdir('dashboard/test/ui') do
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
+      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      container_eyes_features = container_features & eyes_features
+      # Use --local to configure the UI tests to run against localhost, and
+      # --config to override the local webdriver with the remote provider
+      # (Device Farm Chrome by default, SauceLabs under [use saucelabs] or any
+      # non-Chrome browser tag). --first-run-local keeps the first attempt on
+      # the in-container chromedriver and only hands off to the remote provider
+      # on rerun.
+      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "--feature #{container_features.join(',')} " \
+          "--local " \
+          "--ci " \
+          "--db " \
+          "#{use_device_farm ? '--device-farm ' : ''}" \
+          "#{ui_test_browsers.empty? ? '' : "--config #{ui_test_browsers.join(',')} "}" \
+          "--parallel #{PARALLEL_COUNT} " \
+          "--abort_when_failures_exceed 10 " \
+          "--retry_count 2 " \
+          "#{skip_local_webdriver ? '' : '--first-run-local '}" \
+          "--output-synopsis " \
+          "--with-status-page " \
+          "--html"
+      if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-            "--feature #{container_features.join(',')} " \
-            "--device-farm " \
-            "#{device_farm_browsers.empty? ? '' : "--config #{device_farm_browsers.join(',')} "}" \
-            "--ci " \
-            "--parallel #{PARALLEL_COUNT} " \
-            "--abort_when_failures_exceed 10 " \
-            "--retry_count 2 " \
-            "--output-synopsis " \
-            "--with-status-page " \
-            "--html"
-        if test_eyes?
-          RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-              "--eyes " \
-              "--feature #{container_eyes_features.join(',')} " \
-              "--device-farm " \
-              "--config Chrome " \
-              "--ci " \
-              "--parallel #{PARALLEL_COUNT} " \
-              "--retry_count 1 " \
-              "--with-status-page " \
-              "--html"
-        end
-      end
-    else
-      ui_test_browsers = saucelabs_browsers_to_run
-      use_saucelabs = !ui_test_browsers.empty?
-      if use_saucelabs || test_eyes?
-        Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
-      end
-      RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
-      Dir.chdir('dashboard/test/ui') do
-        container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
-        eyes_features = `grep -lr '@eyes' features`.split("\n")
-        container_eyes_features = container_features & eyes_features
-        # Use --local to configure the UI tests to run against localhost and
-        # use --config to override the local webdriver so SauceLabs is used
-        # instead.
-        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-            "--feature #{container_features.join(',')} " \
+            "--eyes " \
+            "--feature #{container_eyes_features.join(',')} " \
             "--local " \
             "--ci " \
             "--db " \
-            "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
+            "#{use_device_farm ? '--device-farm ' : ''}" \
+            "--config Chrome " \
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+            "#{skip_local_webdriver ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"
-        if test_eyes?
-          RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-              "--eyes " \
-              "--feature #{container_eyes_features.join(',')} " \
-              "--config Chrome,iPhone " \
-              "--local " \
-              "--ci " \
-              "--db " \
-              "--parallel #{PARALLEL_COUNT} " \
-              "--retry_count 1 " \
-              "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
-              "--with-status-page " \
-              "--html"
-        end
       end
-      close_sauce_connect if use_saucelabs || test_eyes?
     end
+    close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
   end
 

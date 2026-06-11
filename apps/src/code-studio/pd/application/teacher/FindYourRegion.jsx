@@ -82,13 +82,13 @@ const FindYourRegion = props => {
       <Modal show={data.country === INTERNATIONAL}>
         <Modal.Header>
           <Modal.Title>
-            Thank you for your interest in Code.org’s Professional Learning
+            Thank you for your interest in CodeAI’s Professional Learning
             Program.
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           At this time, we are only able to provide this program to teachers in
-          the United States. Please visit our website for additional Code.org{' '}
+          the United States. Please visit our website for additional CodeAI{' '}
           <a href={PD_RESOURCES_URL} target="_blank" rel="noopener noreferrer">
             professional development resources
           </a>{' '}
@@ -144,9 +144,9 @@ const FindYourRegion = props => {
             </strong>
           </p>
           <p>
-            Code.org will review your application and contact you with options
-            for joining a virtual cohort of {programInfo.name} teachers from
-            another region.
+            CodeAI will review your application and contact you with options for
+            joining a virtual cohort of {programInfo.name} teachers from another
+            region.
           </p>
         </>
       );

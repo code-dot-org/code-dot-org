@@ -1084,7 +1084,7 @@ h5.learningGoalsHeaderTextBody {
   gap: 4px;
   white-space: nowrap;
   border-radius: 30px;
-  background: $ai_rubric_cyan;
+  background: var(--background-brand-aqua-primary);
 }
 
 p.aiTokenText {
@@ -1192,10 +1192,10 @@ p.evidenceLevelHeaderText {
   gap: 10px;
   font-size: 0.875rem;
   height: 32px;
-  box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+  box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
 
   &:hover {
-    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+    box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
     background-color: $light_gray_100;
   }
 
@@ -1207,7 +1207,7 @@ p.evidenceLevelHeaderText {
     padding: 3px 16px 0;
     font-size: 0.875rem;
     height: 32px;
-    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
+    box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
   }
 }
 

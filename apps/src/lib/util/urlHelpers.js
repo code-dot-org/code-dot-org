@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {GlobalEditionExcludedPaths} from '@cdo/generated-scripts/sharedConstants';
+import {configure, root_url} from '@cdo/generated-scripts/studioRoutes';
+
 /**
  * Attempt to construct an absolute Pegasus url (that is,
  * starting with https://code.org or the appropriate
@@ -29,19 +32,56 @@ export function setPegasusOrigin(origin) {
 }
 
 /**
- * Attempt to construct an absolute Studio url (that is,
- * starting with https://studio.code.org or the appropriate
- * equivalent for the current environment) from a given
- * relative url.  If we're already on dashboard we'll
- * just return the relative url.
+ * Construct an absolute Studio URL for a dynamic path.
+ *
+ * Prefer named route helpers from `@cdo/generated-scripts/studioRoutes`
+ * when a named Rails route exists. Use `studio()` only for legacy or fully
+ * dynamic paths that do not map cleanly to a generated helper.
+ *
+ * @see https://github.com/railsware/js-routes/tree/v2.3.7
+ * @see https://guides.rubyonrails.org/v7.0.10/routing.html#listing-existing-routes
+ *
  * @param {string} relativeUrl - should start with a
  *   leading slash.
+ *
+ * @example Find the Rails route helper name by searching for a route prefix or path:
+ *
+ *   cd dashboard
+ *   bundle exec rails routes -g script_lesson_script_level
+ *   bundle exec rails routes -g '/s/'
+ *
+ * Example Rails route output:
+ *
+ *   Prefix: script_lesson_script_level
+ *   URI Pattern: /s/:script_id/lessons/:lesson_position/levels/:id
+ *
+ * The `js-routes` gem generates JavaScript helpers from Rails route prefixes.
+ * For this route, use `script_lesson_script_level_url(...)`.
+ *
+ * @example Prefer the generated route helper when a named route exists:
+ *
+ *   import {script_lesson_script_level_url} from '@cdo/generated-scripts/studioRoutes';
+ *
+ *   const url = script_lesson_script_level_url({
+ *     script_id: 'coursea-2025',
+ *     lesson_position: 1,
+ *     id: 2,
+ *   });
+ *
+ * Generated URL: https://studio.code.org/s/coursea-2025/lessons/1/levels/2
+ *
+ * @example Use positional arguments only when the route helper expects them:
+ *
+ *   const url = script_lesson_script_level_url('coursea-2025', 1, 2);
+ *
+ * Generated URL: https://studio.code.org/s/coursea-2025/lessons/1/levels/2
  */
 export function studio(relativeUrl) {
-  if (window.pegasus && window.pegasus.STUDIO_URL) {
-    return window.pegasus.STUDIO_URL + relativeUrl;
-  }
-  return relativeUrl;
+  const geExcluded = GlobalEditionExcludedPaths.some(excludedPath =>
+    relativeUrl.startsWith(excludedPath)
+  );
+  const rootUrl = geExcluded ? root_url({script_name: null}) : root_url();
+  return rootUrl.replace(/\/$/, '') + relativeUrl;
 }
 
 /**
@@ -51,8 +91,15 @@ export function studio(relativeUrl) {
  * @param {string} origin
  */
 export function setStudioOrigin(origin) {
-  window.pegasus = window.pegasus || {};
-  window.pegasus.STUDIO_URL = origin;
+  const originURL = new URL(origin);
+  configure({
+    default_url_options: {
+      host: originURL.hostname,
+      port: originURL.port,
+      protocol: originURL.protocol.replace(/:$/, ''),
+      script_name: originURL.pathname.replace(/\/$/, ''),
+    },
+  });
 }
 
 /**

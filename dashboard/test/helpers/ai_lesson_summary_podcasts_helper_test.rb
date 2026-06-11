@@ -453,7 +453,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     expected_filename = 'podcasts/lesson_42_podcast.mp3'
     AWS::S3.expects(:upload_to_bucket).with(
-      AiLessonSummaryPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       expected_filename,
       @test_audio_data,
       no_random: true
@@ -495,7 +495,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     expected_filename = 'podcasts/lesson_42_podcast.mp3'
 
     AWS::S3.expects(:download_from_bucket).with(
-      AiLessonSummaryPodcastsHelper::PODCAST_BUCKET,
+      AWS::S3.user_content_bucket,
       expected_filename
     ).returns(@test_audio_data)
 

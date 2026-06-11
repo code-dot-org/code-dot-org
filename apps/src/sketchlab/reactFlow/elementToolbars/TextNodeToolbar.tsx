@@ -26,7 +26,6 @@ interface TextNodeToolbarProps {
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
   const {fontSize, fontColor, textAlign} = data;
-  const handlesVisible = data.showHandles !== false;
 
   return (
     <ToolbarShell
@@ -58,13 +57,7 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
             value={data.rotation ?? DEFAULT_ROTATION}
             onChange={degrees => patchNodeData({rotation: degrees})}
           />
-          <NodeActionsGroup
-            nodeId={nodeId}
-            handlesVisible={handlesVisible}
-            onToggleHandles={() =>
-              patchNodeData({showHandles: !handlesVisible})
-            }
-          />
+          <NodeActionsGroup nodeId={nodeId} />
         </>
       )}
     </ToolbarShell>

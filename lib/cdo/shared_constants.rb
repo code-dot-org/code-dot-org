@@ -1,6 +1,7 @@
 require 'json'
 
 require_relative '../../deployment'
+require_relative 'global_edition'
 require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
@@ -17,6 +18,7 @@ module SharedConstants
   DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
   LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
   LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
+  GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(

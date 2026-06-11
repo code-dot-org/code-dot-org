@@ -21,8 +21,11 @@ require 'aws-sdk-devicefarm'
 module Cdo
   module AWS
     module DeviceFarm
-      # How long (seconds) each desktop test grid session URL remains valid.
-      SESSION_EXPIRY_SECONDS = 600 # 10 minutes
+      # A test session that runs longer than this fails with
+      # "URL has expired". Picked to comfortably exceed the AWS-side
+      # per-session runtime cap (~1h) so this isn't the limit a long
+      # test hits first. AWS API accepts 60..86400.
+      SESSION_EXPIRY_SECONDS = 7200 # 2 hours
 
       # Polling parameters for mobile session provisioning. The three timeouts
       # correspond to the three gating statuses AWS walks a session through:
