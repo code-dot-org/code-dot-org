@@ -1,9 +1,18 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {
+  NodeResizer,
+  useConnection,
+  useReactFlow,
+  type NodeProps,
+} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
+import {
+  useIsAnchorDragging,
+  usePushSnapshot,
+  useSketchLabReadOnly,
+} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -93,7 +102,12 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
   return null;
 }
 
-function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
+function ShapeNode({
+  id,
+  data,
+  selected,
+  isConnectable,
+}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
@@ -101,8 +115,10 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
   const labelRef = useRef<HTMLDivElement>(null);
   const labelAtEditStart = useRef<string>('');
 
+  const connection = useConnection();
+  const isAnchorDragging = useIsAnchorDragging();
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles = data.showHandles !== false;
+  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
@@ -236,7 +252,11 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} shapeType={shapeType} />
+      <ConnectionHandles
+        visible={showHandles}
+        isConnectable={isConnectable}
+        shapeType={shapeType}
+      />
     </div>
   );
 }

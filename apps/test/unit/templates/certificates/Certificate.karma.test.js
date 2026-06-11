@@ -7,7 +7,6 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import * as AuthTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -62,11 +61,11 @@ describe('Certificate', () => {
         certificate_sent: true,
         name: 'Student',
       };
-      server.respondWith(
-        'PATCH',
-        studio(`/api/hour/certificates/${certificateId}`),
-        [200, {'Content-Type': 'application/json'}, JSON.stringify(data)]
-      );
+      server.respondWith('PATCH', `/api/hour/certificates/${certificateId}`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(data),
+      ]);
 
       wrapper = wrapperWithParams({
         certificateData: [

@@ -10,22 +10,6 @@
   min-width: 180px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  padding: 6px 8px;
-  background-color: var(--background-neutral-secondary);
-  max-height: 32px;
-  box-sizing: border-box;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-}
-
-.headerTitle {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-neutral-secondary);
-  font-weight: 600;
-}
 
 .body {
   padding: 8px;

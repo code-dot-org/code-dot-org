@@ -1,3 +1,4 @@
+import {INVALID_NAME_ERROR} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -71,7 +72,7 @@ export const validateFileName = ({
   // its own period — otherwise "My.Class" + dropdown "java" yields the
   // nonsense "My.Class.java". Passing hasDropdown enforces the no-period rule.
   if (!isValidFileName(fileName, Boolean(selectedFileType))) {
-    return codebridgeI18n.invalidNameError();
+    return INVALID_NAME_ERROR;
   }
 
   // When the extension comes from the dropdown, `fileName` is just the base

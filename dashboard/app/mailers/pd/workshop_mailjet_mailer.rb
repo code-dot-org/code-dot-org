@@ -97,7 +97,7 @@ class Pd::WorkshopMailjetMailer
   end
 
   private_class_method def self.contact_name_with_fallback(name)
-    name.presence || 'Code.org'
+    name.presence || 'CodeAI'
   end
 
   private_class_method def self.build_workshop_reminder_email_vars(workshop, name, email, days, enrollment = nil)

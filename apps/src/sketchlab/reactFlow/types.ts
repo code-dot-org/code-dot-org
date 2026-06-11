@@ -14,7 +14,6 @@ export type ReactFlowSketchLabSources = ProjectSources & {
 };
 
 export type NodeDataBase = {
-  showHandles?: boolean;
   // rotation is in degrees, normalized 0-359.
   rotation?: number;
   locked?: boolean;

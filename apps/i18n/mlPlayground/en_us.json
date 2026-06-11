@@ -1004,9 +1004,9 @@
     "boba_toy": {
       "card": {
         "description": "Survey of customers in a bubble tea cafe on whether or not they like certain bubble tea combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of bubble tea a new customer should order.",
           "potentialMisuses": "Anything other than bubble tea recommendations."
         }
@@ -1278,7 +1278,7 @@
         "description": "Nico's dad is in a band and sent an email to everyone on their fan club email list. Most people on the email list filled out the form.",
         "source": "Nico's Survey",
         "context": {
-          "createdBy": "Nico (with help from Code.org)",
+          "createdBy": "Nico (with help from CodeAI)",
           "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
           "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
         }
@@ -1348,7 +1348,7 @@
         "description": "Isaac and his four siblings asked everyone in their classes to fill out the survey. This led to a lot of data from people across many different groups.",
         "source": "Isaac's Survey",
         "context": {
-          "createdBy": "Isaac (with help from Code.org)",
+          "createdBy": "Isaac (with help from CodeAI)",
           "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
           "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
         }
@@ -1409,7 +1409,7 @@
         "description": "Zoey asked everyone in her English class to complete the survey and they all did!",
         "source": "Zoey's Survey",
         "context": {
-          "createdBy": "Zoey (with help from Code.org)",
+          "createdBy": "Zoey (with help from CodeAI)",
           "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
           "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
         }
@@ -1472,7 +1472,7 @@
         "description": "Kim asked her older sister what questions she should put in the survey, then sent the survey in an email to her sister's friends at the private university where she goes to school.",
         "source": "Kim's Survey",
         "context": {
-          "createdBy": "Kim (with help from Code.org)",
+          "createdBy": "Kim (with help from CodeAI)",
           "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
           "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
         }
@@ -1530,9 +1530,9 @@
     "cookies_toy": {
       "card": {
         "description": "Survey of customers in a cookie store on whether or not they like certain cookie combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of cookies a new customer should buy.",
           "potentialMisuses": "Anything other than cookie recommendations."
         }
@@ -2002,9 +2002,9 @@
     "icecream_toppings_key": {
       "card": {
         "description": "Survey of customers in an ice cream shop on whether or not they like certain ice cream combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of ice cream a new customer should buy.",
           "potentialMisuses": "Anything other than ice cream recommendations."
         }
@@ -2626,9 +2626,9 @@
     "medical_priority": {
       "card": {
         "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month.",
-        "source": "Code.org Generated Dataset",
+        "source": "CodeAI Generated Dataset",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
           "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
         }
@@ -2771,9 +2771,9 @@
     "naan": {
       "card": {
         "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of naan a new customer should order.",
           "potentialMisuses": "Anything other than recommendations."
         }
@@ -2964,9 +2964,9 @@
     "pizza_toppings_toy": {
       "card": {
         "description": "Survey of customers in a pizza parlor on whether or not they like certain pizza combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of pizza a new customer should buy.",
           "potentialMisuses": "Anything other than pizza recommendations."
         }
@@ -3027,9 +3027,9 @@
     "poke_toy": {
       "card": {
         "description": "Survey of customers in a poke shop on whether or not they like certain poke combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of poke a new customer should buy.",
           "potentialMisuses": "Anything other than recommendations."
         }
@@ -3086,9 +3086,9 @@
     "poutine_toy": {
       "card": {
         "description": "Survey of customers in a diner on whether or not they like certain poutine combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of poutine a new customer should order.",
           "potentialMisuses": "Anything other than recommendations."
         }
@@ -3145,9 +3145,9 @@
     "raspado_toy": {
       "card": {
         "description": "Survey of customers in a raspado shop on whether or not they like certain raspado combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of raspado a new customer should order.",
           "potentialMisuses": "Anything other than recommendations."
         }
@@ -3200,9 +3200,9 @@
     "safari_toy": {
       "card": {
         "description": "Data collected from 'African Safari Tours', a company that offers tours of the Serengeti plains in Africa.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Can be used to determine the best times to visit the safari to make sure you see the most amount of wildlife.",
           "potentialMisuses": "Only certain types of animals are tracked, so avoid jumping to conclusions on animals that are not a part of this set (like zebras or hippopotamus)."
         }
@@ -3261,9 +3261,9 @@
     "salad_toy": {
       "card": {
         "description": "Survey of customers in a restaurant on whether or not they like certain salad combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of salad a new customer should order.",
           "potentialMisuses": "Anything other than recommendations."
         }
@@ -3320,9 +3320,9 @@
     "salsa_toy": {
       "card": {
         "description": "Survey of customers in a taco shop on whether or not they like certain salsa combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of salsa a new customer should order.",
           "potentialMisuses": "Anything other than salsa recommendations."
         }
@@ -3379,9 +3379,9 @@
     "shapes_v1_toy": {
       "card": {
         "description": "Extracted features from a visual dataset showing different shapes.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Used to train AI Bot on how to classify shapes.",
           "potentialMisuses": "Anything other than the purpose above."
         }
@@ -3433,9 +3433,9 @@
     "shapes_v2_toy": {
       "card": {
         "description": "Extracted features from a visual dataset showing different shapes.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Used to train AI Bot on how to classify shapes.",
           "potentialMisuses": "Anything other than the purpose above."
         }
@@ -3510,9 +3510,9 @@
     "shoe_survey_toy": {
       "card": {
         "description": "Survey about your preferences to help recommend what kind of shoes you should wear.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Recommend a pair of shoes based on personal questions.",
           "potentialMisuses": "Anything other than the intended uses."
         }
@@ -4418,9 +4418,9 @@
     "taco_toppings_toy": {
       "card": {
         "description": "Survey of customers in a taco shop on whether or not they like certain taco combinations.",
-        "source": "Code.org",
+        "source": "CodeAI",
         "context": {
-          "createdBy": "Code.org",
+          "createdBy": "CodeAI",
           "potentialUses": "Help make recommendations for what kind of taco a new customer should buy.",
           "potentialMisuses": "Anything other than taco recommendations."
         }

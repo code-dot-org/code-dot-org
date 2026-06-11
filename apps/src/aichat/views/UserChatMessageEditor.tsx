@@ -36,7 +36,8 @@ interface UserChatMessageEditorProps {
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
   currentLevelId?: string | null;
-  logLevelActivity?: () => void;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   lessonId?: number;
 
@@ -45,6 +46,7 @@ interface UserChatMessageEditorProps {
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  onAssetUploaded?: UploadButtonProps['onAssetUploaded'];
   chatDisabled?: boolean;
 }
 
@@ -62,13 +64,15 @@ const UserChatMessageEditor: React.FunctionComponent<
   multimodalAvailable,
   responseCallback,
   currentLevelId,
-  logLevelActivity,
   lessonId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
+  onAssetUploaded,
   chatDisabled,
+  sendDisabled = false,
+  onMessageSent,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -78,13 +82,12 @@ const UserChatMessageEditor: React.FunctionComponent<
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
   );
-
-  // TODO: Remove dependency on aichatLab redux slice.
-  const saveInProgress = useAppSelector(
-    state => state.aichatLab.saveInProgress
-  );
   const chatAssets = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file => file.asset)
+    state.aichat.stagedFiles.map(file =>
+      file.projectFilename
+        ? {...file.asset, filename: file.projectFilename}
+        : file.asset
+    )
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
@@ -99,7 +102,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const disabled =
     isWaitingForChatResponse ||
-    saveInProgress ||
+    sendDisabled ||
     uploadsPending ||
     viewingAiTutorVersionFileUpdates ||
     !!chatDisabled;
@@ -126,10 +129,10 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
-            logLevelActivity,
             lessonId,
           })
         );
+        onMessageSent?.();
         clearUserMessage();
       }
     },
@@ -143,8 +146,8 @@ const UserChatMessageEditor: React.FunctionComponent<
       chatAssets,
       userAddedSelectionContext,
       responseCallback,
-      logLevelActivity,
       lessonId,
+      onMessageSent,
     ]
   );
 
@@ -180,9 +183,15 @@ const UserChatMessageEditor: React.FunctionComponent<
         .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
-      dispatch(uploadFiles({files, buildAssetUrl}));
+      dispatch(uploadFiles({files, buildAssetUrl, onAssetUploaded}));
     },
-    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
+    [
+      canUploadFiles,
+      buildAssetUrl,
+      dispatch,
+      acceptedFileTypes,
+      onAssetUploaded,
+    ]
   );
 
   const onSpeechToTextFinished = useCallback(
@@ -222,6 +231,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
               acceptedFileTypes={acceptedFileTypes}
+              onAssetUploaded={onAssetUploaded}
             />
           </div>
         )}

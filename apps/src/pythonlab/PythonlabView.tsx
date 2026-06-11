@@ -13,6 +13,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -44,7 +45,6 @@ import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 import {pythonLabVideoFiles} from './pythonLabVideos';
 
@@ -174,7 +174,7 @@ const PythonlabView: React.FunctionComponent<
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
       progressManager.setValidator(
-        new PythonValidator(PythonValidationTracker.getInstance())
+        new TestResultValidator(PythonValidationTracker.getInstance())
       );
     }
   }, [progressManager, levelProperties.appName]);

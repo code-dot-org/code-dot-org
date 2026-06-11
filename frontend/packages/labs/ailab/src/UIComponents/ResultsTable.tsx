@@ -1,0 +1,167 @@
+/* React component to handle displaying test data and A.I. Bot's guesses. */
+import {useCallback} from 'react';
+import {connect} from 'react-redux';
+import type {Dispatch} from 'redux';
+
+import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
+import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
+import {getLocalizedValue} from '../helpers/valueDetails';
+import I18n from '../i18n';
+import type {RootState} from '../redux';
+import {setResultsHighlightRow} from '../redux';
+import type {ResultsData} from '../types';
+
+interface ResultsTableProps {
+  selectedFeatures: string[];
+  labelColumn: string;
+  results: ResultsData;
+  isRegression: boolean;
+  setResultsHighlightRow: (row: number | undefined) => void;
+  resultsHighlightRow: number | undefined;
+  datasetId: string;
+}
+
+const ResultsTable = ({
+  selectedFeatures,
+  labelColumn,
+  results,
+  isRegression: isRegressionMode,
+  setResultsHighlightRow,
+  resultsHighlightRow,
+  datasetId,
+}: ResultsTableProps) => {
+  const getRowCellStyle = useCallback(
+    (index: number) => {
+      return {
+        ...styles.tableCell,
+        ...(index === resultsHighlightRow && styles.resultsCellHighlight),
+      };
+    },
+    [resultsHighlightRow],
+  );
+
+  const featureCount = selectedFeatures.length;
+
+  return (
+    <div style={styles.panel}>
+      {isRegressionMode && (
+        <div style={styles.smallTextRight}>
+          {I18n.t('resultsTablePredictionRange', {
+            percentage: REGRESSION_ERROR_TOLERANCE,
+          })}
+        </div>
+      )}
+
+      <div style={styles.tableParent}>
+        <table style={styles.displayTable}>
+          <thead>
+            <tr>
+              <th
+                colSpan={featureCount}
+                style={{
+                  ...styles.tableHeader,
+                  ...styles.resultsTableFirstHeader,
+                }}
+              >
+                {I18n.t('resultsTableFeatureHeader')}
+              </th>
+              <th
+                style={{
+                  ...styles.tableHeader,
+                  ...styles.resultsTableFirstHeader,
+                }}
+              >
+                {I18n.t('resultsTableActualValueHeader')}
+              </th>
+              <th
+                style={{
+                  ...styles.tableHeader,
+                  ...styles.resultsTableFirstHeader,
+                }}
+              >
+                {I18n.t('resultsTablePredictedValueHeader')}
+              </th>
+            </tr>
+            <tr>
+              {selectedFeatures.map((feature, index) => {
+                return (
+                  <th
+                    style={{
+                      ...styles.tableHeader,
+                      backgroundColor: colors.feature,
+                      ...styles.resultsTableSecondHeader,
+                    }}
+                    key={index}
+                  >
+                    {getLocalizedColumnName(datasetId, feature)}
+                  </th>
+                );
+              })}
+              <th
+                style={{
+                  ...styles.tableHeader,
+                  backgroundColor: colors.label,
+                  ...styles.resultsTableSecondHeader,
+                }}
+              >
+                {getLocalizedColumnName(datasetId, labelColumn)}
+              </th>
+              <th
+                style={{
+                  ...styles.tableHeader,
+                  backgroundColor: colors.label,
+                  ...styles.resultsTableSecondHeader,
+                }}
+              >
+                {getLocalizedColumnName(datasetId, labelColumn)}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {results.examples.map((examples, index) => {
+              return (
+                <tr
+                  key={index}
+                  onMouseEnter={() => setResultsHighlightRow(index)}
+                  onMouseLeave={() => setResultsHighlightRow(undefined)}
+                >
+                  {examples.map((example, i) => {
+                    return (
+                      <td style={getRowCellStyle(index)} key={i}>
+                        {getLocalizedValue(example, datasetId)}
+                      </td>
+                    );
+                  })}
+                  <td style={getRowCellStyle(index)}>
+                    {getLocalizedValue(results.labels[index], datasetId)}
+                  </td>
+                  <td style={getRowCellStyle(index)}>
+                    {getLocalizedValue(
+                      results.predictedLabels[index],
+                      datasetId,
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default connect(
+  (state: RootState) => ({
+    selectedFeatures: state.selectedFeatures,
+    labelColumn: state.labelColumn || 'unknown',
+    isRegression: isRegression(state),
+    resultsHighlightRow: state.resultsHighlightRow,
+    datasetId: state.metadata?.name || 'unknown',
+  }),
+  (dispatch: Dispatch) => ({
+    setResultsHighlightRow(column: number | undefined) {
+      dispatch(setResultsHighlightRow(column as number));
+    },
+  }),
+)(ResultsTable);

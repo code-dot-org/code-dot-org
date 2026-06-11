@@ -28,6 +28,9 @@ class SectionsAsStudentTable extends React.Component {
       return i18n.loginTypeClever();
     } else if (section.login_type === SectionLoginType.google_classroom) {
       return i18n.loginTypeGoogleClassroom();
+    } else if (!section.code) {
+      // Demo sections have no join code; students are pre-enrolled.
+      return i18n.notApplicable();
     } else {
       return section.code;
     }
@@ -143,20 +146,22 @@ class SectionsAsStudentTable extends React.Component {
               </td>
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  <Button
-                    style={styles.leaveButton}
-                    text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(
-                      this,
-                      section.code,
-                      section.name
-                    )}
-                    color={
-                      this.props.isPlSections
-                        ? Button.ButtonColor.neutralDark
-                        : Button.ButtonColor.gray
-                    }
-                  />
+                  {section.code && (
+                    <Button
+                      style={styles.leaveButton}
+                      text={i18n.leaveSection()}
+                      onClick={this.onLeave.bind(
+                        this,
+                        section.code,
+                        section.name
+                      )}
+                      color={
+                        this.props.isPlSections
+                          ? Button.ButtonColor.neutralDark
+                          : Button.ButtonColor.gray
+                      }
+                    />
+                  )}
                 </td>
               )}
             </tr>

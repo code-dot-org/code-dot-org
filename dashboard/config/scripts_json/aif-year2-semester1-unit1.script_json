@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 04:27:20 UTC",
+    "serialized_at": "2026-06-05 22:45:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -831,10 +831,65 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[EXEMPLAR] AI Innovations Activity Guide",
+      "url": "https://docs.google.com/document/d/1cdGJHVvNOFzZmjxMmpWmjqxEL5_kJoySFKH80Qx62_Q/edit",
+      "key": "_exemplar_ai_innovations_activity_guide",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai_innovations_activity_guide"
+      }
+    },
+    {
+      "name": "AI Innovations Activity Guide",
+      "url": "https://docs.google.com/document/d/1IFPSXUJW0dyhD6-UoWaX-ijCm8WXOrYD-NRJVXdjr6I/edit",
+      "key": "ai_innovations_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_innovations_activity_guide"
+      }
+    },
+    {
+      "name": "AI's Past, Present, and Future",
+      "url": "https://docs.google.com/presentation/d/1PC95Cd2pphgf-DAONS7tQCI_4jEhA0_Q6x9eWsCd9L8/edit",
+      "key": "ai_s_past_present_and_future",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_s_past_present_and_future"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_ai_innovations_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "ai_innovations_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "ai_s_past_present_and_future"
+      }
+    }
   ],
   "scripts_resources": [
 

@@ -1,16 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, Paper, Typography} from '@mui/material';
+import {Button, Paper} from '@mui/material';
 import React from 'react';
 
 import styles from './multi-node-selection-toolbar.module.scss';
 
 interface MultiNodeSelectionToolbarProps {
-  count: number;
   onGroup: () => void;
 }
 
 export default function MultiNodeSelectionToolbar({
-  count,
   onGroup,
 }: MultiNodeSelectionToolbarProps) {
   return (
@@ -20,19 +18,10 @@ export default function MultiNodeSelectionToolbar({
       role="toolbar"
       aria-label="Multi-node selection"
     >
-      <div className={styles.header}>
-        <Typography
-          variant="overline3"
-          className={styles.headerTitle}
-          aria-hidden="true"
-        >
-          {count} selected
-        </Typography>
-      </div>
       <div className={styles.body}>
         <Button
           onClick={onGroup}
-          aria-label="Group selected nodes"
+          aria-label="Group selected elements"
           color="secondary"
           variant="outlined"
           size="small"
@@ -40,7 +29,7 @@ export default function MultiNodeSelectionToolbar({
             <FontAwesomeV6Icon iconName="object-group" aria-hidden="true" />
           }
         >
-          Group Nodes
+          Group Elements
         </Button>
       </div>
     </Paper>

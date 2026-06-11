@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 22:36:10 UTC",
+    "serialized_at": "2026-06-03 23:30:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -12027,9 +12027,51 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Algorithms IRL",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Decomposition",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Decomposition",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
       }
     },
     {
@@ -12055,9 +12097,79 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Two-Way Selection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Pixels of Me Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 1: Computing Careers",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-46"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Computing Careers",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-40"
       }
     },
     {
@@ -12076,6 +12188,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Computational Thinking",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Designing Algorithms",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-13"
@@ -12090,9 +12216,51 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Designing Algorithms",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 4: Variables and Data Flow",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Variables and Data Flow",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
       }
     },
     {
@@ -12111,9 +12279,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Working with Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 6: Functions",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
       }
     },
     {
@@ -12139,6 +12342,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Functions with Parameters",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Introduction to Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
@@ -12153,9 +12377,37 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Introduction to Loops",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 9: Conditional Statements",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Conditional Statements",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
       }
     }
   ],

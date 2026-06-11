@@ -61,8 +61,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Complete the level
     And I click selector "#instructions-continue-button"
@@ -102,8 +102,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
     And I wait until element ".teacher-panel" is visible
@@ -120,8 +120,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Go to another Lab2 level (panels)
     And I click selector ".progress-bubble:eq(5)"

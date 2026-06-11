@@ -68,12 +68,7 @@ export default function CornerToolbarPanel({
   const body = useMemo(() => {
     // Multi-selection takes priority: show group button when 2+ nodes selected.
     if (multiSelectedNodeIds.length >= 2) {
-      return (
-        <MultiNodeSelectionToolbar
-          count={multiSelectedNodeIds.length}
-          onGroup={onGroupNodes}
-        />
-      );
+      return <MultiNodeSelectionToolbar onGroup={onGroupNodes} />;
     }
 
     if (openToolbarTarget?.type === 'node') {
