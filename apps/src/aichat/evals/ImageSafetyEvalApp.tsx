@@ -1,3 +1,5 @@
+import {saveAs} from 'filesaver.js';
+import JSZip from 'jszip';
 import React, {useCallback, useRef, useState} from 'react';
 
 import {aggregateResults, formatRate, GATE_LABELS} from './evalScoring';
@@ -113,8 +115,9 @@ const outcomeLabel = (result: EvalResult): string => {
   return `blocked @ ${result.stoppedAtGate}`;
 };
 
-// Serialize results to a CSV the user can download for offline analysis.
-function resultsToCsv(results: EvalResult[]): string {
+// Serialize results to a CSV for offline analysis. When imageFiles is given
+// (the ZIP report), an image_file column links each row to its saved image.
+function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
   const header = [
     'prompt',
     'category',
@@ -124,9 +127,10 @@ function resultsToCsv(results: EvalResult[]): string {
     'moderation_status',
     'detail',
     'elapsed_ms',
+    ...(imageFiles ? ['image_file'] : []),
   ];
   const escape = (value: string) => `"${value.replace(/"/g, '""')}"`;
-  const rows = results.map(r =>
+  const rows = results.map((r, i) =>
     [
       r.prompt,
       r.category,
@@ -136,6 +140,7 @@ function resultsToCsv(results: EvalResult[]): string {
       r.moderationStatus ?? '',
       r.detail ?? '',
       String(r.elapsedMs),
+      ...(imageFiles ? [imageFiles[i] ?? ''] : []),
     ]
       .map(v => escape(String(v)))
       .join(',')
@@ -143,14 +148,167 @@ function resultsToCsv(results: EvalResult[]): string {
   return [header.join(','), ...rows].join('\n');
 }
 
+function downloadBlob(filename: string, blob: Blob) {
+  // Use filesaver.js (same as the applab/gamelab exporters) rather than a
+  // hand-rolled anchor: it handles object-URL lifetime correctly so large blobs
+  // like the ZIP don't get stuck as an unfinished .crdownload.
+  saveAs(blob, filename);
+}
+
 function downloadText(filename: string, text: string, type: string) {
-  const blob = new Blob([text], {type});
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = filename;
-  link.click();
-  URL.revokeObjectURL(url);
+  downloadBlob(filename, new Blob([text], {type}));
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+const EXT_BY_MIME: Record<string, string> = {
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/webp': 'webp',
+  'image/gif': 'gif',
+};
+
+// Decode a data: URL into raw bytes + a file extension (for the ZIP images/).
+function decodeImageDataUrl(dataUrl: string): {bytes: Uint8Array; ext: string} {
+  const comma = dataUrl.indexOf(',');
+  const mime = /data:(.*?);base64/.exec(dataUrl.slice(0, comma))?.[1] ?? '';
+  const binary = atob(dataUrl.slice(comma + 1));
+  const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+  return {bytes, ext: EXT_BY_MIME[mime] ?? 'img'};
+}
+
+function sanitizeForFilename(value: string): string {
+  return value
+    .replace(/[^a-z0-9-]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
+}
+
+// A short, filesystem-safe slug describing where the prompt ended up.
+function outcomeSlug(r: EvalResult): string {
+  if (r.outcome === EvalOutcome.PASSED) {
+    return 'false-negative';
+  }
+  if (r.outcome === EvalOutcome.ERROR) {
+    return `error-${r.stoppedAtGate ?? 'unknown'}`;
+  }
+  return `blocked-${r.stoppedAtGate ?? 'unknown'}`;
+}
+
+// Build the gallery index.html for the ZIP report. Images are referenced by
+// relative path (images/<file>) and lazy-loaded, so the file stays small and
+// opens fast even with many images.
+function buildIndexHtml(
+  results: EvalResult[],
+  imageFiles: string[],
+  summary: EvalSummary
+): string {
+  const severities = (r: EvalResult) =>
+    (r.moderationCategories ?? [])
+      .filter(c => c.severity > 0)
+      .map(c => `${c.category}:${c.severity}`)
+      .join(', ');
+  // False negatives first, then everything else.
+  const rank = (r: EvalResult) => (r.outcome === EvalOutcome.PASSED ? 0 : 1);
+  const items = results
+    .map((r, i) => ({r, file: imageFiles[i]}))
+    .filter(x => x.file)
+    .sort((a, b) => rank(a.r) - rank(b.r));
+
+  const cards = items
+    .map(
+      ({r, file}) => `
+      <figure class="card${r.outcome === EvalOutcome.PASSED ? ' fn' : ''}">
+        <img src="images/${escapeHtml(
+          file
+        )}" loading="lazy" alt="generated image" />
+        <figcaption>
+          <div class="outcome">${escapeHtml(outcomeLabel(r))}</div>
+          <div class="meta">${escapeHtml(r.category)}${
+        r.stoppedAtGate ? ` &middot; ${escapeHtml(r.stoppedAtGate)}` : ''
+      }</div>
+          <div class="prompt">${escapeHtml(r.prompt)}</div>
+          ${
+            severities(r)
+              ? `<div class="sev">Azure: ${escapeHtml(severities(r))}</div>`
+              : ''
+          }
+        </figcaption>
+      </figure>`
+    )
+    .join('\n');
+
+  const funnel = summary.funnel
+    .map(
+      s =>
+        `<tr><td>${escapeHtml(GATE_LABELS[s.gate])}</td><td>${
+          s.entered
+        }</td><td>${s.blocked}</td><td>${s.errored}</td><td>${
+          s.passed
+        }</td></tr>`
+    )
+    .join('');
+  const cats = summary.byCategory
+    .map(
+      c =>
+        `<tr><td>${escapeHtml(c.category)}</td><td>${c.total}</td><td>${
+          c.evaluated
+        }</td><td>${c.blocked}</td><td>${c.falseNegatives}</td><td>${
+          c.errors
+        }</td><td>${formatRate(c.falseNegativeRate)}</td></tr>`
+    )
+    .join('');
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Image safety eval report</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 24px; color: #1b1b1b; }
+  h1 { margin-bottom: 4px; }
+  table { border-collapse: collapse; margin: 8px 0 24px; }
+  th, td { border-bottom: 1px solid #ddd; padding: 4px 10px; text-align: left; }
+  th { background: #e4e4e7; }
+  .big { font-size: 28px; font-weight: 700; color: #b00020; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .card { border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin: 0; }
+  .card.fn { border-color: #b00020; }
+  .card img { width: 100%; height: auto; border-radius: 4px; background: #f3f3f3; }
+  .outcome { font-weight: 700; margin-top: 6px; }
+  .card.fn .outcome { color: #b00020; }
+  .meta { color: #555; font-size: 13px; }
+  .prompt { font-size: 13px; margin-top: 4px; white-space: pre-wrap; }
+  .sev { font-size: 12px; color: #8a4b00; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>Image generation safety eval report</h1>
+<p>Generated ${escapeHtml(new Date().toLocaleString())} &middot; ${
+    summary.total
+  } prompt(s) &middot; ${items.length} generated image(s).</p>
+<p>False-negative rate: <span class="big">${formatRate(
+    summary.falseNegativeRate
+  )}</span>
+ (${summary.falseNegatives} of ${summary.evaluated} evaluated; ${
+    summary.errors
+  } error(s))</p>
+<h2>Pipeline funnel</h2>
+<table><thead><tr><th>Gate</th><th>Reached</th><th>Blocked</th><th>Errored</th><th>Passed</th></tr></thead><tbody>${funnel}</tbody></table>
+<h2>By category</h2>
+<table><thead><tr><th>Category</th><th>Total</th><th>Evaluated</th><th>Blocked</th><th>False negatives</th><th>Errors</th><th>FN rate</th></tr></thead><tbody>${cats}</tbody></table>
+<h2>Generated images (${items.length})</h2>
+<p>Images that defeated the text gate and were generated &mdash; false negatives first. These are the cases to review.</p>
+<div class="gallery">${cards || '<p>No images were generated.</p>'}</div>
+</body>
+</html>`;
 }
 
 const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
@@ -260,6 +418,8 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const [throttle, setThrottle] = useState<ThrottleEvent | null>(null);
   // data: URL of the image shown in the full-size lightbox, or null.
   const [lightbox, setLightbox] = useState<string | null>(null);
+  // True while the ZIP report is being assembled.
+  const [building, setBuilding] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
 
   const handleFile = useCallback(
@@ -328,6 +488,57 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const handleCancel = useCallback(() => {
     abortRef.current?.abort();
   }, []);
+
+  // Bundle results + generated images into a single ZIP: a gallery index.html,
+  // the raw image files, and results.csv/json. Robust for many images.
+  const handleDownloadZip = useCallback(async () => {
+    if (!summary) {
+      return;
+    }
+    setBuilding(true);
+    try {
+      const zip = new JSZip();
+      const images = zip.folder('images');
+      const imageFiles = results.map((r, i) => {
+        if (!r.imageDataUrl) {
+          return '';
+        }
+        const {bytes, ext} = decodeImageDataUrl(r.imageDataUrl);
+        const name = `${String(i + 1).padStart(4, '0')}__${sanitizeForFilename(
+          r.category
+        )}__${outcomeSlug(r)}.${ext}`;
+        images?.file(name, bytes);
+        return name;
+      });
+      zip.file('results.csv', resultsToCsv(results, imageFiles));
+      zip.file(
+        'results.json',
+        JSON.stringify(
+          // Explicitly omit the heavy base64 imageDataUrl; the image lives once
+          // as a file under images/, linked by image_file.
+          results.map((r, i) => ({
+            prompt: r.prompt,
+            category: r.category,
+            outcome: r.outcome,
+            stoppedAtGate: r.stoppedAtGate,
+            finishReason: r.finishReason,
+            moderationStatus: r.moderationStatus,
+            moderationCategories: r.moderationCategories,
+            detail: r.detail,
+            elapsedMs: r.elapsedMs,
+            image_file: imageFiles[i] || null,
+          })),
+          null,
+          2
+        )
+      );
+      zip.file('index.html', buildIndexHtml(results, imageFiles, summary));
+      const blob = await zip.generateAsync({type: 'blob'});
+      downloadBlob('image-safety-eval-report.zip', blob);
+    } finally {
+      setBuilding(false);
+    }
+  }, [results, summary]);
 
   return (
     <div style={styles.page}>
@@ -442,20 +653,11 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             </button>
             <button
               type="button"
+              disabled={building}
               style={{...styles.button, background: '#eee', color: '#333'}}
-              onClick={() =>
-                downloadText(
-                  'image-safety-eval-results.json',
-                  JSON.stringify(
-                    results.map(({imageDataUrl, ...rest}) => rest),
-                    null,
-                    2
-                  ),
-                  'application/json'
-                )
-              }
+              onClick={handleDownloadZip}
             >
-              Download results JSON
+              {building ? 'Building report…' : 'Download report (.zip)'}
             </button>
           </>
         )}
