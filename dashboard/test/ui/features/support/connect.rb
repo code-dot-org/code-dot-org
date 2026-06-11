@@ -109,7 +109,7 @@ def device_farm_desktop_browser(http_client: nil)
 
     chrome_options = capabilities['goog:chromeOptions'] || {}
     chrome_args = chrome_options['args'] || []
-    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{worker_ip}, MAP localhost.code.org #{worker_ip}"
+    chrome_args << "--host-resolver-rules=MAP drone-worker #{worker_ip}, MAP localhost.code.org #{worker_ip}"
     chrome_options['args'] = chrome_args
     capabilities['goog:chromeOptions'] = chrome_options
   end

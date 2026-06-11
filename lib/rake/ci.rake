@@ -192,6 +192,7 @@ namespace :ci do
           "--db " \
           "#{use_device_farm ? '--device-farm ' : ''}" \
           "#{ui_test_browsers.empty? ? '' : "--config #{ui_test_browsers.join(',')} "}" \
+          '-d drone-worker:3000 ' \
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
