@@ -95,6 +95,7 @@ export interface Notification extends BaseChatEvent {
     | 'permissionsError'
     | 'error'
     | 'success'
+    | 'welcomeMessage'
     | typeof AI_TUTOR_VERSION_ACTION_ACCEPT
     | typeof AI_TUTOR_VERSION_ACTION_REJECT;
   includeInChatHistory?: boolean;

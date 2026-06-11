@@ -17,7 +17,7 @@ In the Interactive Data Dashboard project, students build dashboards that update
 *Play around with the filters and see what happens to the playlist.*
 
 <iframe src="https://amandadennard-dotcom.github.io/Unit4_testing/songsurfer.html"
-           width="100%" height="600"
+           width="100%" height="400"
            style="border:none; border-radius:8px;">
 </iframe>
 
