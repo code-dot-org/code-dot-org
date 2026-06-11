@@ -143,6 +143,7 @@ describe('javabuilderRunUtils', () => {
       /* levelId */ 1,
       /* csaViewMode */ 'console',
       /* progressManager */ null,
+      /* needsInitialSourcesSave */ false,
     ] as const;
 
     const firstRun = handleRunClick(...runArgs);
