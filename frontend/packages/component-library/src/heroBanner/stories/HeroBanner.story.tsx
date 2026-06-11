@@ -21,7 +21,7 @@ type Story = StoryObj<typeof HeroBanner>;
 
 export const Default: Story = {
   args: {
-    heading: 'Welcome to Code.org',
+    heading: 'Welcome to Code.org — Argos diff demo',
     subHeading: 'Empowering the next generation of coders',
     description:
       'Join millions of students learning computer science around the world.',
