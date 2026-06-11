@@ -4,13 +4,34 @@ import {
   getBezierPath,
   getSmoothStepPath,
   getStraightPath,
+  type Position,
   useStore,
 } from '@xyflow/react';
 import {getMarkerId} from '@xyflow/system';
 import React from 'react';
 
 import {useReconnectingEdge} from '../context';
+import {type EdgeTypeValue} from '../elementToolbars/toolbarPalettes';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
+
+interface GhostPathParams {
+  sourceX: number;
+  sourceY: number;
+  sourcePosition: Position;
+  targetX: number;
+  targetY: number;
+  targetPosition: Position;
+}
+
+const PATH_BUILDERS: Record<
+  EdgeTypeValue,
+  (params: GhostPathParams) => string
+> = {
+  straight: params => getStraightPath(params)[0],
+  default: params => getBezierPath(params)[0],
+  smoothstep: params => getSmoothStepPath(params)[0],
+  step: params => getSmoothStepPath({...params, borderRadius: 0})[0],
+};
 
 /**
  * Ghost line shown while dragging a connection. Mirrors the path type,
@@ -49,29 +70,18 @@ export default function ConnectionLine({
   const startMarker = fixedEndIsTarget ? targetMarker : sourceMarker;
   const endMarker = fixedEndIsTarget ? sourceMarker : targetMarker;
 
-  const pathParams = {
+  // Saved data can hold edge types we no longer offer; fall back to the
+  // curved path like React Flow does for unknown types.
+  const buildPath =
+    PATH_BUILDERS[edgeType as EdgeTypeValue] ?? PATH_BUILDERS.default;
+  const path = buildPath({
     sourceX: fromX,
     sourceY: fromY,
     sourcePosition: fromPosition,
     targetX: toX,
     targetY: toY,
     targetPosition: toPosition,
-  };
-
-  let path: string;
-  switch (edgeType) {
-    case 'straight':
-      [path] = getStraightPath(pathParams);
-      break;
-    case 'step':
-      [path] = getSmoothStepPath({...pathParams, borderRadius: 0});
-      break;
-    case 'smoothstep':
-      [path] = getSmoothStepPath(pathParams);
-      break;
-    default:
-      [path] = getBezierPath(pathParams);
-  }
+  });
 
   return (
     <path

@@ -6,7 +6,10 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
+import {
+  LINE_RECONNECT_SNAP_RADIUS_PX,
+  REACT_FLOW_EDGE_UPDATER_CLASS,
+} from '../constants';
 import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
@@ -195,7 +198,9 @@ export function useLineEdgeDrag({
       // Mousedown on an endpoint's reconnect anchor starts React Flow's
       // reconnect drag (it's a child of the same edge wrapper); don't also
       // start a whole-line drag from the bubbled event.
-      if ((event.target as Element).closest('.react-flow__edgeupdater')) {
+      if (
+        (event.target as Element).closest(`.${REACT_FLOW_EDGE_UPDATER_CLASS}`)
+      ) {
         return;
       }
 

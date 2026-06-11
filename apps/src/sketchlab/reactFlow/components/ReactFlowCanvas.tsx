@@ -59,6 +59,7 @@ import {
 } from '../types';
 import {
   canCreateConnection,
+  getEdgeReconnectability,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
@@ -513,20 +514,10 @@ export default function ReactFlowCanvas({
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
-        const sourceIsAnchor = nodeMap.get(edge.source)?.type === 'lineAnchor';
-        const targetIsAnchor = nodeMap.get(edge.target)?.type === 'lineAnchor';
-        // Reconnect handles only on endpoints attached to real nodes; a
-        // free endpoint is moved by dragging its anchor node directly,
-        // and a reconnect circle there would fight the anchor for the
-        // mousedown and leave the stale anchor behind during the drag.
-        const reconnectable: boolean | 'source' | 'target' =
-          locked || readOnly || (sourceIsAnchor && targetIsAnchor)
-            ? false
-            : sourceIsAnchor
-            ? 'target'
-            : targetIsAnchor
-            ? 'source'
-            : true;
+        const reconnectable = getEdgeReconnectability(edge, nodeMap, {
+          locked,
+          readOnly,
+        });
         return {
           ...edge,
           selected,
