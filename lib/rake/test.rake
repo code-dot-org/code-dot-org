@@ -155,8 +155,7 @@ namespace :test do
     end
   end
 
-  # Run the deploy-time UI suites in parallel: SauceLabs Safari and Eyes
-  # alongside the Device Farm desktop (Chrome+Firefox) suite. If one suite
+  # Run the deploy-time UI suites in parallel. If one suite
   # raises, allow the others to complete, then make sure this task raises.
   # NOTE: :playwright_ui is intentionally not listed yet — run it manually
   # (rake test:playwright_ui) to verify before wiring it into DTT.
