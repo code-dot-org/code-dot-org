@@ -90,7 +90,7 @@ jobs:
           # stephen/argos-ci-baseline instead; the server resolves an exact
           # commit from its own records, no repo access needed. Update this
           # pin whenever the baseline is refreshed.
-          ARGOS_REFERENCE_COMMIT: 81b0ef45dd3064824f2c73e1dd54db3618b7419f
+          ARGOS_REFERENCE_COMMIT: 5286600356c25b630d49d1d3cf5efb4d8cc4bfd3
 
   # We do not use the Argos GitHub App, so poll the build result ourselves and
   # report it as a PR comment. This is a separate job so that approving diffs
