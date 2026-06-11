@@ -210,8 +210,8 @@ class UnitOverviewHeader extends Component {
           <div className={styles.heading}>
             <div className={styles.titleWrapper}>
               <Typography
-                variant="h1"
-                component="h1"
+                variant="h2"
+                component="h2"
                 className={styles.title}
                 id="script-title"
               >
