@@ -7,6 +7,7 @@ require 'cdo/git_utils'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
+require 'cdo/playwright_report'
 require 'cdo/mysql_console_helper'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
@@ -122,10 +123,40 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the four deploy-time UI suites in parallel: SauceLabs Safari and
-  # Eyes alongside the Device Farm desktop (Chrome+Firefox) and mobile
-  # (iPhone+iPad) suites. If one suite raises, allow the others to
-  # complete, then make sure this task raises.
+  # Run the Playwright e2e suite, upload its HTML report, and report start /
+  # success / failure to Slack the way the Cucumber UI tests do (ChatClient.log
+  # → the env's log room; #infra-test on the test server, stdout under CI).
+  # Run by the Drone ui pipeline (ui_tests.sh) and on demand (rake
+  # test:playwright_ui); not yet in ui_all (DTT) pending manual verification.
+  # Target comes from TARGET_URL, defaulting to this environment's studio URL.
+  # Non-blocking — a failure warns but never fails the deploy or the PR build.
+  timed_task_with_logging :playwright_ui do
+    target_url = ENV['TARGET_URL'] || CDO.studio_url('')
+    script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
+    ChatClient.log "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}..."
+    # Stream the suite's output (the list reporter, banner, warnings) straight to
+    # the log via system_stream_output (system_with_chat_logging would capture and
+    # discard it). Rescue its non-zero raise so the run stays non-blocking.
+    passed =
+      begin
+        RakeUtils.system_stream_output("TARGET_URL=#{target_url}", script)
+        true
+      rescue StandardError
+        false
+      end
+    report_url = Cdo::PlaywrightReport.upload(frontend_dir('packages', 'e2e-tests', 'playwright-report'))
+    report_link = report_url ? %( See <a href="#{report_url}">the HTML report</a>.) : ''
+    if passed
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
+    else
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}", color: 'red'
+    end
+  end
+
+  # Run the deploy-time UI suites in parallel. If one suite
+  # raises, allow the others to complete, then make sure this task raises.
+  # NOTE: :playwright_ui is intentionally not listed yet — run it manually
+  # (rake test:playwright_ui) to verify before wiring it into DTT.
   timed_task_with_logging :ui_all do
     Parallel.each(
       [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
