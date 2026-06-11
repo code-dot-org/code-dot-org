@@ -98,6 +98,47 @@ describe('javabuilderRunUtils', () => {
     expect(mockJavabuilderConnection).not.toHaveBeenCalled();
   });
 
+  it('does not revive a stopped run when a second run starts', async () => {
+    // Hold run #1's token fetch open; run #2's resolves immediately.
+    let resolveFirstToken: (token: string) => void = () => {};
+    mockGetAuthenticityToken
+      .mockReturnValueOnce(
+        new Promise<string>(resolve => {
+          resolveFirstToken = resolve;
+        })
+      )
+      .mockResolvedValue('token');
+    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
+      (args[SET_IS_RUNNING_ARG] as () => void)();
+      return {
+        connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrides: jest.fn(),
+        closeConnection: jest.fn(),
+      } as unknown as JavabuilderConnection;
+    });
+
+    const runArgs = [
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null,
+    ] as const;
+
+    const firstRun = handleRunClick(...runArgs);
+    // Let run #1 get past flushSave and suspend on the token fetch.
+    await flushPromises();
+
+    stopJavaCode();
+    await handleRunClick(...runArgs);
+    expect(mockJavabuilderConnection).toHaveBeenCalledTimes(1);
+
+    // Run #1 wakes from the token fetch; it must not open a second connection.
+    resolveFirstToken('token');
+    await firstRun;
+    expect(mockJavabuilderConnection).toHaveBeenCalledTimes(1);
+  });
+
   it('opens a javabuilder connection when not stopped', async () => {
     mockGetAuthenticityToken.mockResolvedValue('token');
     mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
